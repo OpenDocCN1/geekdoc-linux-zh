@@ -1,0 +1,12 @@
+| Directive | Function | order | Indicates the order in which services will be queried. Its parameter may be any combination of lookup methods separated by commas. The lookup methods supported are bind, hosts, and nis; respectively, DNS, /etc/hosts, and NIS. trim | Indicates a domain that will be trimmed of the hostname when doing an IP address-to-hostname translation via DNS. trim may be included several times for several domains. trim doesn't affect /etc/hosts or NIS lookups. You should take care that hosts are listed appropriately (with or without full domain names) in the /etc/hosts file and in the NIS tables. multi | Controls whether a query to the name system will always return only one result, or whether it may return several results. Its parameter may be either on, meaning that several results may be returned when appropriate, or off, meaning that just one result will be returned. Default value is off. nospoof | Controls a security feature to prevent hostname spoofing. If nospoof is on, after every name-to-IP lookup a reverse IP-to-name lookup will be made. If the names don't match, the operation will fail. Valid parameters are on or off. Default value is off. alert | If the nospoof directive is on, alert controls whether spoofing attempts will be logged through the syslog facility Default value is off. reorder | If set to on, all lookups will be reordered so that hosts on the same subnet will be returned first. Default value is off. |
+
+This is the default /etc/host.conf file included with Red Hat:  
+order hosts,bind
+
+This indicates that lookups will be done first to the /etc/hosts file and then to DNS. If several hosts match, all will be returned. This file is appropriate for most installations, although installations using NIS or where the nospoof behavior is desired will have to modify it.
+
+# ### /etc/nsswitch.conf
+
+The /etc/nsswitch.conf file was originally created by Sun Microsystems to manage the order in which several configuration files are looked for in the system. As such, it includes more functionality than the /etc/host.conf file.
+
+Each line of /etc/nsswitch.conf is either a comment (which starts with a hash sign), or a keyword followed by a colon and a list of methods listed in the order they will be tried.

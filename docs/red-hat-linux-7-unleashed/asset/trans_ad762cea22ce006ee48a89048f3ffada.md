@@ -1,0 +1,329 @@
+
+
+## 索引
+
+### R
+
+- Ritchie, Dennis, 10, 768
+- rjx 命令, 960
+- .rl 文件扩展名, 214
+- .rle 文件扩展名, 214
+- rlpr 命令, 631
+- rm 命令, 884, 960
+- rmdir 命令, 547, 960
+- rmt 软件包, 1012
+- -ro 选项（mount 命令）, 515, 585
+- ro 权限, 513
+- Rock Ridge 扩展, 601
+- Room Three 网站, 878
+- root 账户
+  - 身份验证, 47
+  - 配置, 46-47
+- root 目录, 940
+- root 显示（KDE）, 126
+- root 用户, 260, 702-703
+- 仅限 root 的软件, 15
+- root= 选项（引导提示符）, 62
+- rootfiles 软件包, 1012
+- route 命令, 670, 961
+  - 编辑路由表, 672
+  - 基于主机的静态路由, 673
+  - 查看路由表, 670-671
+- routed 软件包, 1012
+- routed 脚本, 247
+- 路由器, 654-655
+- 路由, 654-655
+  - CDR（无类别域间路由）, 650-651
+  - 动态路由, 655
+  - 基于主机的静态路由, 673
+- 路由表
+  - 编辑, 672
+  - 查看, 670-671
+  - 静态路由, 655
+- RP（责任方）
+  - 记录, 461
+- rp-pppoe 软件包, 1012
+- rp3 软件包, 1012
+- rp3-config 工具, 151-154
+- rpc.mountd 程序, 511
+- rpc.rstatd 程序, 511
+- rpc.portmapper 程序, 511
+- rpc.cinfo 命令, 511
+- RPM（Red Hat 软件包管理器）, 13, 50, 710. 另见 Gnome-RPM
+  - 安装, 710-711
+  - 查询, 712
+    - 信息选项, 713
+    - 显示软件包规范选项, 712
+  - 软件包安装/卸载, 50
+  - 卸载, 711
+  - 升级, 711-712
+- rpm 命令, 45, 50, 72, 356, 710-713, 901
+- rpm 软件包, 1012
+- rpm-build 软件包, 1012
+- rpm-devel 软件包, 1012
+- rpm-list 邮件列表, 734
+- rpm-python 软件包, 1012
+- rpm2html 软件包, 1012
+- rpmdb-redhat 软件包, 1012
+- rpmfind 软件包, 1012
+- rpmlint 软件包, 1012
+- .rpmnew 文件扩展名, 357
+- rsaref 程序, 752
+- rsh 软件包, 1012
+- rsh-server 软件包, 1013
+- -rsize 选项（mount 命令）, 515
+- RSS 字段（top 命令）, 725
+- rsstat 脚本, 247
+- rsrc 软件包, 1013
+- RTC（实时时钟）, 877
+- 规则（sendmail）, 295
+- 规则集
+  - 调用, 296
+  - 定义, 292
+  - 评估, 296
+  - 处理运行, 292-294
+  - sendmail, 292
+  - 测试, 296-299
+- 运行级别, 249-251
+  - 运行级别 0, 251
+  - 运行级别 1, 252
+  - 运行级别 2, 252
+  - 运行级别 3, 252
+  - 运行级别 4, 252
+  - 运行级别 5, 252
+  - 运行级别 6, 253
+- 正在运行
+  - 程序
+    - at 命令, 935
+    - batch 命令, 936
+    - Samba, 525-526
+  - 正在运行的服务器配置设置（Apache 服务器）, 359-360
+    - .htaccess 文件, 363
+    - 示例, 364
+    - Options 指令, 364-365
+    - httpd.conf 文件
+      - 配置指令, 361-363
+      - 编辑, 360-363
+- rusers 软件包, 1013
+- rusers-server 软件包, 1013
+- rusersd 脚本, 247
+- -rw 选项（mount 命令）, 515, 585
+- rw 权限, 513
+- rwall 软件包, 1013
+- rwall-server 软件包, 1013
+- rwall 脚本, 247
+- rwho 软件包, 1013
+- rwhod 脚本, 247
+- rxvt 命令, 961
+- rxvt 软件包, 1013
+
+### S
+
+- %s 变量（LogFormat 指令）, 382
+- s 命令（SysRQ）, 884
+- s 对象类型标识符, 757
+- S 运算符（sentinel）, 292
+- -S 选项
+  - gcc 编译器, 778
+  - httpd 命令, 391
+- -s 选项
+  - ipchains 命令, 690
+  - rpm 命令, 713
+  - tcddump 命令, 683
+- s3virge 驱动程序, 98
+- Salz, Richard, 423
+- Samba, 510
+  - adduser 命令, 526
+  - 管理, 566-567
+  - 配置, 532
+  - 测试配置, 543-544
+  - [global] 部分, 533-534
+  - [home] 部分, 534-536
+  - [printers] 部分, 536-539
+  - 约定, 549-550
+  - DIAGNOSIS.txt, 532
+  - 目录位置, 524
+  - 文档, 557-559
+  - 下载, 525
+  - 文件共享, 540-541
+  - 安装, 525
+  - 作为 Linux 镜像工具, 569
+  - 数据目录共享, 570
+  - 数据编辑, 371-572
+  - VNC 服务器, 572
+  - 登录服务器, 559
+  - 服务器托管的登录脚本, 561-562
+  - Windows 9x 登录身份验证, 560-561
+  - 网络邻居, 528-532
+  - nmbd 守护进程, 524, 545, 548
+  - passwd 命令, 526
+  - 密码
+    - 添加, 526
+    - 清空, 528-529
+    - 加密, 528-530
+  - 性能优化, 541-543
+  - 打印机
+    - printcap, 536
+    - 共享, 540-541
+    - 故障排除, 538-539
+  - 正在运行, 525-526
+  - 安全性, 564-566
+    - 特殊参数, 565-566
+    - SWAT, 565
+  - 服务器
+    - 重启命令, 526
+    - 正在运行, 545
+  - 共享
+    - 访问, 545-547
+    - 挂载, 548-549
+  - SMB（会话消息块）协议服务, 524
+  - smb.conf 选项, 526, 549
+    - allow hosts, 553
+    - browsable, 552-553
+    - comments, 554
+    - config files, 554
+    - create mask=, 552
+    - create mode=, 552
+    - delay hosts, 553
+    - domain logons=, 554, 557
+    - domain master=, 557
+    - encrypt passwords=, 554
+    - guest ok, 553
+    - hosts allow=, 553
+    - hosts deny=, 553
+    - hosts equiv=, 554
+    - interfaces=, 554
+    - invalid users=, 550
+    - load printers=, 555
+    - local master=, 556
+    - netbios name=, 556
+    - null passwords=, 555
+    - os level=, 557
+    - password level=, 555
+    - path=, 551
+    - preferred master, 556-557
+    - printable=, 553
+    - public=, 553
+    - read lists, 551
+    - read only=, 550
+    - security=, 555
+    - server string=, 554
+    - smb pass word file=, 554
+    - users name level=, 555
+    - valid users=, 550
+    - work servers=, 556
+    - win support=, 556
+    - workgroup, 548-550
+    - writable=, 550
+    - write lists, 551
+    - write ok=, 550
+  - smcclient 程序, 558
+  - smbd 守护进程, 524, 545, 558
+  - smbmount 命令, 548, 558
+  - snmpasswd 命令, 558
+  - snblur 命令, 558
+  - snmbstat 命令, 558
+  - snmbtar shell 脚本, 558
+  - snmbumount 命令, 558
+  - SWAT, 566–567
+    - 激活, 567–568
+    - smb.conf 配置, 568–569
+    - Web 浏览器
+      - 关闭, 568
+    - 测试
+      - 使用 Linux 客户端, 527–528
+      - 使用 Windows 客户端, 528–532
+  - testpar 命令, 524, 543, 558
+  - 故障排除, 562
+    - 访问层级, 563
+    - 浏览器问题, 563–564
+    - DIAGNOSIS.txt 文件, 562
+    - 日志文件, 563
+    - smb.conf 文件, 563
+    - testpar 命令, 562
+    - 故障排除过程, 564
+  - 用户
+    - 添加, 526
+    - %H（用户主目录）, 549
+    - %u（用户名）, 549
+    - 网站, 573
+- samba 软件包, 1013
+- samba-client 软件包, 1013
+- samba-common 软件包, 1013
+- sane 软件包, 1013
+- sane-devel 软件包, 1013
+- sash 软件包, 1013
+- satan 程序, 752
+- satisfies 指令, 369
+- 保存内核配置, 885
+- sawfish 软件包, 1013
+- sawfish 窗口管理器, 120
+- sawfish-0.30.3-1 文件, 111
+- sawfish-themer 软件包, 1013
+- sawfish-themer-0.30.3-1 文件, 111
+- sawfish-ui 客户端, 120
+- sbin/lilo 文件, 58
+- 任务调度
+  - at 命令, 826
+  - cron 命令, 823–826
+- --screen 选项（XFree86 命令）, 100
+- screen 软件包, 1013
+- Screen 部分（XFree86Config 文件）, 76, 98–99
+- Screensaver 对话框（KDE）, 131
+- 屏幕保护程序（KDE）, 131
+- 脚本语言
+  - Expect, 826–828
+  - Perl, 828–829
+  - Python, 829
+- 脚本
+  - 初始化脚本, 245–248
+    - amd, 245
+    - anaconf, 245
+    - apmd, 245
+    - arpwatch, 245
+    - atd, 245
+    - autof, 245
+    - bootparamd, 245
+    - crond, 245
+    - dhcpcd, 245
+    - functions, 245
+    - gated, 245
+    - gpm, 245
+    - halt, 245
+    - httpd, 246
+    - idlend, 246
+    - innd, 246
+    - irid, 246
+    - isda, 246
+    - kdesktop, 246
+    - keytable, 246
+    - killall, 246
+    - krb5Server, 246
+    - kudzu, 246
+    - lslp, 246
+    - linuxconf, 246
+    - mwa-irce, 246
+    - mesero, 246
+    - named, 246
+    - netifs, 246
+    - network, 246
+    - nfs, 246
+    - nfsfs, 246
+    - nislock, 246
+    - nscd, 246
+    - pwcida, 246
+    - phiphtd, 246
+    - prompx, 246
+    - postgresql, 246
+    - pulse, 246
+    - pxe, 246
+    - random, 246
+    - rarpd, 246
+    - rc.local, 249
+    - rs.system, 248–249
+    - reconfig, 247
+    - routed, 247
+    - rsutd, 247
+    - rsuserd, 247
+    - rwsuid, 247
+

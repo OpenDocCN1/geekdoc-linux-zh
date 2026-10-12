@@ -1,0 +1,404 @@
+
+1047
+
+- deny hosts= option (Samba), 553
+- DENY target (ipchains), 686
+- -depth option (XFree86 command), 100
+- DESIGN file (XFree86 documentation), 73
+- desk calculator, 941
+- desktop borders (KDE), 134-135
+- desktop-backgrounds package, 989
+- desktops, remote, 920-921
+- deslogin program, 751
+- desparate command (Executor), 908
+- -dev option (mount command), 584
+- dev package, 989
+- /dev/full devices, 618
+- /dev/null devices, 618
+- /dev/tty devices, 616
+- /dev/vcs* devices, 619
+- dev86 package, 989
+- Development/Debuggers group (packages), 1026
+- Development/Languages group (packages), 1026
+- Development/Libraries group (packages), 1026
+- Development/System group (packages), 1027
+- Development/Tools group (packages), 1027
+- Device section (XF86Config file), 76, 97-98
+- devices (hardware), 578-579
+    - block, 578-580
+    - CD-ROM drives, 600-601
+    - creating filesystems, 588-591, 593-595
+    - floppy disks, 600
+    - hard disks, 598-599
+    - lookup devices, 604-606
+    - mount command, 583
+    - mounting onto filesystems, 581-586
+    - RAID, 602-604
+    - RAM disks, 607
+    - repairing filesystems, 595-597
+    - USB devices, 608
+    - Zip drives, 608
+    - character, 578-579, 608-609
+        - audio devices, 617
+        - CD-ROM recorders, 615
+        - controlling terminals, 616
+        - Idea fall, 618
+        - Idea hall, 618
+        - memory devices, 618
+        - nonserial mice, 616
+        - parallel ports, 609
+        - random number generators, 617-618
+        - SCSI devices, 614
+        - serial ports, 614
+        - tape drives, 609-611
+        - terminals, 611-614
+        - virtual console screen devices, 619-620
+    - files, 578
+    - kernel configuration. See kernel
+    - Linux support for, 12
+    - major device number, 578
+    - minor device number, 578
+    - parallel-port drivers, 627-629
+    - printer devices, 622
+        - choosing, 623
+        - Ghostscript support, 624-627
+        - infrared printers, 642
+        - local printers, 634-635
+        - parallel printers, 622
+        - PPA (Printing Performance Architecture) support, 623
+        - remote printers, 630-634
+        - serial printers, 622-623
+        - testing, 627
+        - troubleshooting, 643-644
+        - XFree86 drivers, 97-98
+- df command, 942
+- DHCIF (Dynamic Host Configuration Protocol), 485
+    - client configuration
+        - Linux-based clients, 488-489
+        - Windows-based clients, 489
+    - releasing and renewing leases, 489
+    - server configuration, 488-489
+    - tracking server changes, 489
+- dhcp package, 989
+- dhcpd package, 989
+- dhcpd, 245, 485-488
+- dia graphics client, 219
+- dia package, 989
+- DIAGNOSIS.txt file, 532, 562
+- diagnostic tools, 677
+    - nslookup, 452, 482
+    - ping, 678-679, 958
+    - tcpdump, 681-683
+    - traceroute, 452-454, 679-681
+- dial-in servers (PPP), 169-171
+- dialog boxes
+    - Configure filter, 635
+    - KDE (K Desktop Environment)
+        - Accessibility, 134
+        - Background, 130
+        - Borders, 134
+        - Configuration, 126
+        - Login Manager, 129
+        - ScreenSaver, 131
+        - Windows, 133
+    - kppp client
+        - Accounts, 158
+        - Configuration, 155
+        - DNS, 157
+        - New Account, 156-157
+        - Statistics, 160
+- dialog package, 989
+- dialup networking, 874
+- diffstat package, 989
+- difftitles package, 989
+- Digital Subscriber Lines. See DSL service
+- digital video
+    - DVD support, 237
+    - formats, 235-236
+    - playing, 235-237
+    - Web cams, 237-238
+- dir package, 989
+- dir command, 547, 942
+- direction field [var/log/xferlog file], 342
+- directives, 661
+    - Apache server
+        - allow, 366-367
+        - AllowOverrides, 365
+        - CustomLog, 382
+        - deny, 366-367
+        - DirectoryIndex, 363
+        - DocumentRoot, 362
+        - Group, 361
+        - LogFormat, 381-382
+        - NameVirtualHost, 380
+        - Options, 364-365
+        - Port, 361
+        - require, 369
+        - satisfy, 369
+        - ServerAdmin, 362
+        - ServerName, 362, 380
+        - ServerRoot, 361
+        - ServerType, 361
+        - User, 361
+        - UserDir, 363
+    - SSI (Server-Side Includes), 385
+        - config, 385-386
+        - echo, 387
+        - exec, 387
+        - flatmud, 387
+        - fsize, 387
+        - include, 387
+        - printer, 388
+        - set, 388
+- directories. See also individual directory names
+    - file locations, 524
+    - home, 549
+    - listing contents of, 942
+        - ls command, 952
+        - vdir command, 966
+    - navigating, 938
+    - permissions, 757
+        - changing, 760
+        - character, 759
+        - compared to file permissions, 758
+        - default mode, 761
+        - numeric, 759
+    - printing working directory, 959
+    - root, 940
+    - searching, 968
+    - XFree86 directory tree, 70-71
+- DirectoryIndex directive, 363
+- disabling
+    - disk quotas, 959
+    - network interfaces, 668
+- /disconnect command (ircII), 186
+- Disk Druid, 30
+    - buttons, 31
+    - Drive Summary section, 31
+    - mounting information, 32-33
+    - Partitions section, 30-31
+- disk geometry, 599
+- disk heads, 599
+- disk quotas
+    - changing, 943
+    - checking usage, 959
+    - setting, 719-720
+    - turning off, 959
+    - turning on, 959
+- disks, floppy. See floppy
+- disks
+- display command, 228, 942
+- display managers, 108
+    - kdm (X display manager), 124
+    - xdm (X display manager), 103-104
+- displaying
+    - directory contents
+        - ls command, 952
+        - vdir command, 966
+    - directory contexts, 942
+    - exported environment variables, 943-944
+    - free disk space, 942
+    - graphics, 226-229
+    - hostname, 949
+    - man pages, 953-954
+    - pre-login messages, 709
+    - routing tables, 670-671
+- distributions
+    - kernel sources, 841
+    - Rawhide, 355
+- dmesg command, 628, 942
+- /dmesg command (ircII), 186
+- DNS (Domain Name Service), 446, 449
+    - BIND (Berkeley Internet Name Domain), 445-446
+    - caching DNS implementation, 464, 468
+    - /etc/named.conf file, 465
+    - /etc/resolv.conf file, 465
+    - testing, 466-468
+    - clients, 448, 664-665
+    - configuration files
+        - /etc/host.conf, 451
+        - /etc/named.conf, 454-456, 465
+        - /etc/resolv.conf, 450, 462-465
+    - delegation of authority, 474-477
+    - documentation, 484-485
+    - history of, 443-444
+    - host naming schemes, 450
+    - In-addr.arpa domain, 449
+    - master server configuration, 448, 468-469
+    - local domain resolution, 469-473
+    - virtual domain resolution, 473-474
+    - resolvers, 447-448
+    - restarting, 449
+    - server configuration, 459, 461
+    - slave server implementation, 448, 478-481
+    - tools, 451
+        - named daemons, 451
+        - nslookup, 452
+        - resolver library, 452
+        - traceroute, 452-454
+    - troubleshooting, 481
+- dnswalk tool, 483-484
+- dnups, 482
+    - log files, 483
+    - scripts, 481-482
+- zone data files, 456, 458
+    - A (address) records, 274, 460
+    - CNAME (canonical name) records, 461
+    - data substitutions, 457
+    - editing, 469
+    - HINFO (host information) records, 462
+    - MX (mail exchanger) records, 275, 460-461
+    - naming conventions, 457
+    - NS (nameserver) record, 459-460
+    - NULL records, 462
+    - PTR (pointer) records, 460
+    - relaying, 449
+    - RP (responsible party) records, 461
+    - SOA (start of authority), 458-459
+    - synonyms, 456
+    - TXT (text) records, 461
+    - zones, 448
+    - synchronization, 449
+    - zone transfer, 448
+- DNS dialog box (kppp), 157
+- dnscnf command, 254
+- .do file extension, 210
+- dobook package, 989
+- documentation, 12, 14
+    - Apache server, 354, 370
+    - DNS (Domain Name Service), 484-485
+    - DOSEMU, 903
+    - LDP (Linux Documentation Project)
+- double quotes ("."), 792
+- license requirements, 928
+- mailing lists, 926
+- overview, 926-927
+- publishing documents, 929
+- Web sites, 927
+    - Linux Documentation Project
+        - Web site, 736
+- man pages, 729-730
+    - creating, 731-732
+    - displaying, 953-954
+    - searching, 731, 935
+    - sections of, 730-731
+- naming conventions, 15
+- Samba, 557-559
+- XFree86, 73-74
+- Documentation group (packages), 1027
+- DocumentRoot directive, 362
+- dollar sign ($), 789, 791
+- domain keyword, 664
+- domain logname option (Samba), 554, 557
+- domain master option (Samba), 557
+- Domain Name Service. See DNS
+- domainname command, 494
+- domains
+    - In-addr.arpa, 449
+    - NIS (Network Information Service), 492-493
+- DOS, emulating, 900-902
+    - DOSEMU, 900
+        - configuring, 901-902
+        - documentation and updates, 903
+        - DOS emulation, 901
+        - downloading, 901
+        - installing, 901
+- dostools package, 989
+- DoubleTalk speech synthesizer, 877
+- downloading
+    - Apache server source code, 357
+    - DOSEMU, 901
+    - FTP (File Transfer Protocol) servers, 320
+    - Leanfode+, 436
+    - Red Hat Linux, 18-19
+    - Samba, 525
+    - VMWare, 909
+    - vnc software, 918
+    - Wine emulator, 903
+- doxygen package, 990
+- -dpl option (XFree86 command), 100
+- drawing programs, xfig, 969
+- DRI section (XF86Config file), 76
+- Drive Summary section (Disk Druid), 31
+- drivers
+    - Ghostscript drivers, 624-626
+    - parallel-port drivers, 627-629
+    - PPP (Point-to-Point Protocol), 151
+    - XFree86 drivers, 97-98
+- drives
+    - CD-ROM, 600-601
+    - floppy, 600, 961
+    - hard. See hard drives
+    - tape, 609-611
+    - Zip, 608, 740
+- DSL (Digital Subscriber Line) service, 163-166
+- dst host qualifier (tcpcdunp command), 682
+- dst port qualifier (tcpdump command), 682
+- du command, 942
+- dummy interfaces, 142-145
+- Dummy network devices, 874
+- dump command, 263, 611, 942
+- dump package, 990
+- dump-static package, 990
+- dumper2fs command, 264
+- dumping cache, 482
+- duplicate newgroup posting, preventing, 423-424
+- dummy command, 588
+- DVD
+    - as backup media, 740
+    - DVD Playing HOWTO, 237
+    - support for, 237
+- .dvi file extension, 210
+- dxf file extension, 210
+- dynamic content (Apache server), 382-383
+    - CGI (Common Gateway Interface), 383-384
+    - flow control, 388-389
+    - PHP, 389
+    - SSI (Server-Side Includes), 384-388
+- Dynamic Host Configuration Protocol. See DHCP
+- dynamic routing, 655
+- e command (SysRQ), 844
+- -e option (gcc compiler), 778
+- -e option
+    - netstat command, 674
+    - rpm command, 711
+- e2fsck command, 263
+- e2fsprogs package, 990
+- e2fsprogs-devel package, 990
+- echo command, 387, 942
+- ed command, 943
+- ed package, 990
+- Edit button (Disk Druid), 31
+- editing
+    - directory permissions, 760
+    - disk quotas, 943
+    - /etc/fstab file, 586-588
+    - finger information, 938
+    - group associations, 938
+    - history file, 945
+    - .htaccess files
+        - AllowOverrideS directive, 365
+        - Options directive, 364-365
+        - php conf files, 360
+    - DirectoryIndex directive, 363
+    - DocumentRoot directive, 362
+    - Group directive, 361
+    - Port directive, 361
+    - ServerAdmin directive, 362
+    - ServerName directive, 362
+    - ServerRoot directive, 361
+    - ServerType directive, 361
+    - User directive, 361
+    - UserDir directive, 363
+    - passwords, 717
+    - permissions, 938-939
+    - process priorities, 727-728
+    - routing tables, 672
+    - terminal settings, 965
+    - user accounts, 716
+    - zone data files, 469
+- editors
+    - emacs, 829-830, 943
+    - emacs-xx, 943
+    - jed, 949
+    - joe, 950

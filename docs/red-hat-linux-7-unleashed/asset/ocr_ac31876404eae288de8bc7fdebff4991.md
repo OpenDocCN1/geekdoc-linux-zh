@@ -1,0 +1,13 @@
+press the OK button. Now you are asked to select which basic keyboard type you are using. After you make your selection, press the OK button again. A screen will now come up asking which type of install you would like to do. Make your selection and follow the directions for that choice as outlined in the following sections.
+
+# ## Starting an NFS Install
+
+The first screen that will appear after selecting any of the network options is the TCP/IP Settings screen. It asks you for the IP, netmask, default gateway IP, and the primary nameserver of the computer you are setting up. If you have a BOOTP or DHCP server available on your network, you can also check the box above the form to have the system attempt to resolve these addresses for itself. After inputting this information, press the OK button to proceed to the next step. This next screen asks for your NFS server name and the path to the directory where the Red Hat installation files are. From this point on the install will be just like the standard install outlined in the section “Step-by-Step Installation” later in this chapter.
+
+# ## Starting an FTP Install
+
+Starting an FTP install is almost exactly like starting an NFS install. You have to supply the same information regarding your network card and your network properties. Also, you must know the IP and point the installation program at the FTP site of your choice. Enter the name or IP address of the FTP site you are installing from and the name of the directory there that contains the Red Hat directory for your architecture. For example, if the FTP site contains the directory `/pub/mirrors/redhat/i386/RedHat`, enter `/pub/mirrors/redhat/i386`. If you are not using anonymous FTP, or if you need to use a proxy FTP server (if you’re behind a firewall, for example), check the check box, and another dialog box will request the FTP account and proxy information.
+
+# ## Starting an HTTP Install
+
+Again, follow exactly the same steps as you would for an NFS install except choose HTTP as the method of installation. Point the installation program at the HTTP site of your choice. Enter the name or IP address of the HTTP site you are installing from and the name of the directory there that contains the Red Hat directory for your architecture. For example, if the HTTP site contains the directory `/pub/mirrors/redhat/i386/RedHat`, enter `/pub/mirrors/redhat/i386`. If you are not using anonymous HTTP, or if you need to use a proxy HTTP server (if you’re behind a firewall, for example), check the check box, and another dialog box will request the HTTP account and proxy information.

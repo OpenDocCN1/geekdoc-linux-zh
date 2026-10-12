@@ -1,0 +1,297 @@
+
+- anacron package, **985**
+- anacron script, **245**
+- analyzing performance, **722**
+- available memory, **726-727**
+- CPU usage, **722-724**
+- process priorities, **727-728**
+- processor activity, **724-726**
+- anonftp package, **985**
+- anonymous FTP (File Transfer Protocol) servers, **320**
+- ANSI (American National Standards Institute) C, **769**
+- AOL Instant Messaging (AIM), **201**
+- Apache Group Web site, **354**
+- Apache Module Registry Web site, **370**
+- apache package, **985**
+- Apache server, **354-355**
+  - access control
+    - access restrictions, 366-367
+    - authentication, 367-369
+    - combining host-based and user-based protection, 369-370
+  - configuration file listings, 393
+    - /conf/access.conf, 418
+    - /conf/httpd.conf, 394-417
+    - /conf/srm.conf, 418
+  - directives. See configuration directives documentation, 354
+  - dynamic content, 382-383
+    - CGI (Common Gateway Interface), 383-384
+    - flow control, 388-389
+    - PHP, 389
+    - SSI (Server-Side Includes), 384-388
+  - installing from RPM, 355-357
+  - installing manually, 357-358
+    - .configure file, 357
+    - file locations, 359
+  - logging, 381-382
+  - modules, 370-371
+    - Apache Module Registry, 370
+      - documentation, 370
+    - mod_access, 371
+    - mod_actions, 371
+    - mod_alias, 371
+    - mod_aspi, 371-372
+    - mod_auth, 372
+    - mod_auth_anon, 372
+    - mod_auth_db, 372
+    - mod_auth_digest, 372-373
+    - mod_bandwidth, 373
+    - mod_cern_meta, 373
+    - mod_cgi, 373
+    - mod_dlgext, 374
+    - mod_dir, 374
+    - mod_env, 374
+    - mod_example, 374
+    - mod_expires, 374
+    - mod_headers, 374
+    - mod_inap, 375
+    - mod_include, 375
+    - mod_log_agent, 375
+    - mod_log_config, 375
+    - mod_log_referer, 375
+    - mod_mime, 375
+    - mod_mime_magic, 376
+    - mod_mmap_static, 376
+    - mod_negotiation, 376
+    - mod_proxy, 376
+    - mod_put, 376-377
+    - mod_rewrite, 377
+    - mod_status, 377
+    - mod_throttle, 377-378
+    - mod_unique_id, 378
+    - mod_userdir, 378
+    - mod_usertrack, 378
+    - mod_whois_alias, 378
+  - performance tuning, 869
+  - runtime server configuration settings, 359-360
+    - .haccess files, 363-365
+    - httpd.conf, 360-363
+  - source code, 357
+  - starting and stopping, 389
+    - /etc/rc.d/init.d/httpd scripts, 391-393
+    - manually, 390-391
+  - virtual hosting, 378-379
+    - address-based virtual hosts, 379
+    - name-based virtual hosts, 379-380
+  - Web sites, 354
+    - Apache Week Web site, 354
+- apache-devel package, 985
+- apache-manual package, 985
+- APM (Advanced Power Management), 860-862
+- apt drivers, 97
+- apmd package, 985
+- apmd script, 245
+- APOF authentication, 309-311
+- append (Iwo right angle brackets) operator, 934
+- Apple Macintosh, emulating, 906-909
+- Appletalk, 870-871
+- Application Starter button (KDE), 126
+- application-level firewalls (proxies), 684-685
+- Applications/Archiving group (packages), 1024
+- Applications/Communications group (packages), 1024
+- Applications/Databases group (packages), 1024
+- Applications/Editors group (packages), 1024
+- Applications/Engineering group (packages), 1024
+- Applications/file group (packages), 1024
+- Applications/Internet group (packages), 1025
+- Applications/Multimedia group (packages), 1025
+- Applications/Productivity group (packages), 1025
+- Applications/Publishing group (packages), 1025
+- Applications/System group (packages), 1025
+- Applications/Text group (packages), 1026
+- apzlove command (Executor), 908
+- apros command, 935
+- Apsfilter, 640-641
+- ar command, 773-774
+- archives
+  - compared to backups, 738
+  - defined, 738
+  - tables of contents, 747
+- ARPAnet, 442
+- arpwatch package, 245, 985
+- artwork. See graphics
+- .asc file extension, 209
+- ash command, 935
+- ash package, 985
+- asp2php package, 985
+- asp2php-gtk package, 985
+- aspell package, 985
+- aspell-ca package, 985
+- aspell-cs package, 985
+- aspell-da package, 985
+- aspell-de package, 985
+- aspell-devel package, 985
+- aspell-en-ca package, 985
+- aspell-en-gb package, 985
+- aspell-es package, 985
+- aspell-fi package, 985
+- aspell-fr package, 986
+- aspell-nl package, 985
+- aspell-pl package, 986
+- aspell-sv package, 986
+- assigning values to variables, 788-789
+- asterisk (*), 791
+- -async option (mount command), 584
+- at command, 826, 887, 935
+- at package, 986
+- ATA/IDE support, 872
+- ATAPI CD-ROM standard, 601
+- atq script, 245
+- ati drivers, 97
+- atu command, 935
+- atrm command, 935
+- audio. See sound
+- audio devices, 617
+- audiofile-devel package, 986
+- audits, 750
+  - knowledge gathering, 753-754
+  - security plans, 750-751
+  - tools, 751-752
+- aumix command, 232
+- aumix package, 986
+- aumix-X11 package, 986
+- auth_ldap package, 986
+- authconfig package, 986
+- authenticated-userid (log/logetxferlog file), 342
+- authentication
+  - Apache server, 367-369
+  - root users, 47
+  - SSHT (secure shell), 696-697
+- authentication-method field (log/logetxferlog file), 342
+- -auto option (mount command), 584
+- Autoboot.bat, 36
+- autoconf package, 986
+- AutoConfig switch (AllowOverrides directive), 365
+- autoexpect command, 346-347, 828
+- autofs package, 986
+- autofs script, 245
+- autogroup command (FTP), 327
+- automate package, 986
+- automating tasks, 814
+  - at command, 826
+  - cron command, 823-826
+  - data entry, 814
+  - analysis of implementation
+  - shell script to update database, 814-815
+  - emacs editor, 829-830
+  - FTP retrieval, 821-822
+  - HTTP retrieval, 822
+  - improving automation technique, 817-819
+  - internal scripts, 831
+  - mounting filesystems, 517-519
+  - partitioning, 29
+  - procmail program, 830-831
+  - quantifying benefits of, 831-832
+  - scripting languages
+    - *Expect*, 826-828
+    - *Perl*, 828-829
+    - *Python*, 829
+  - shell scripts. **See shell programs**
+- autourn package, 986
+- auxiliary files, 279
+- .avs file extension, 210
+- /away command (irrl), 185
+- /-away option (\wh\ co\mmand), 190
+- awesfx package, 986
+- Axis Communications' 2100 Network Camera, 238
+- axp-list mailing list, 733
+
+## B
+
+- b command (SysRQ), 884
+- .B directive (troff), 732
+- b field (vmstat), 724
+- b object type identifier, 757
+- %B variable (LogFormat directive), 381
+- Back button (Disk Druid), 32
+- back-out plans, 704
+- Background dialog box (KDE), 130
+- backslash (\), 793
+- backtick (`), 793
+- backups= parameter (lilo.conf file), 60
+- backups, 738
+  - backup media, 739-740
+  - compared to archives, 738
+  - creating, 743-745
+  - defined, 738
+  - qualities of good backups, 738-739
+  - restoring files from, 747
+  - strategies
+    - *choosing*, 742-743
+    - *full backups*, 742
+    - *incremental backups*, 742
+  - tape drives, 609-611
+  - tools, 740
+    - *AMANDA*, 741-742
+    - *cpio*, 741
+    - *taper script*, 745-747
+    - *tux*, 740-745
+  - writing to block devices, 579-580
+- bad blocks, finding, 263
+- badblocks command, 263
+- banner command, 330, 936
+- banner messages (FTP servers)
+  - banner command, 330
+  - email command, 330
+  - message command, 330-331
+  - readline command, 331
+- basename command, 816
+- basesystem package, 986
+- bash command, 936
+- bash package, 986
+- bash shell program
+  - bash command, 936
+  - bash package, 986
+  - comparing expressions, 794
+    - *files*, 797-798
+    - *logical operators*, 798
+    - *numbers*, 795-796
+    - *strings*, 794-795
+- bash-doc package, 986
+- batch command, 936
+- batching, 424
+- --BatchMode option (ssh_config file), 698
+- Baulig, Martin, 161
+- bc command, 937
+- bc package, 986
+- bdflush package, 986
+- Berkeley Internet Name Domain (BIND), 445-446
+- bg command, 937
+- .bg file extension, 210
+- -bg option (mount command), 515
+- bi field (vmstat), 724
+- .bie file extension, 210
+- BIND (Berkeley Internet Name Domain), 445-446
+- bind command, 937
+- bind package, 987
+- bind-devel package, 987
+- bind-utils package, 987
+- binfmt_misc Java support, 859
+- binutils package, 987
+- bison package, 987
+- bitcch client, 181
+- block devices, 578-580
+  - CD-ROM drives, 600-601
+  - creating filesystems, 588-589
+    - *fsconf utility*, 591-595
+    - *mfs command*, 589-590
+  - floppy disks, 600
+  - hard disks
+    - disk *geometry*, 599
+    - *partition table*, 598
+  - kernel configuration options, 864
+    - floppy disk drives, 864-865
+    - loopback disk devices, 866
+    - LVM (Logical Volume Manager), 866
+    - multiple devices and Software-RAID, 866
+    - network block devices, 866
+    - PARIDE (parallel-IDE support), 866

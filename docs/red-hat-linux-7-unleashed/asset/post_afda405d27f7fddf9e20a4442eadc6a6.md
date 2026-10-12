@@ -1,0 +1,563 @@
+
+- quota, 1011
+- raidtools, 1011
+- rarpd, 1011
+- rcs, 1011
+- rdapte, 1011
+- rdist, 1011
+- readline, 1011
+- readline-devel, 1011
+- readline2.2.1, 1011
+- redirect-logos, 1011
+- redhat-release, 1011
+- rep-gtk, 1011
+- rep-gtk-gnome, 1011
+- rep-gtk-libglade, 1011
+- rgrep, 1011
+- rhelpfile, 1011
+- rhelpfile-devel, 1011
+- rhclib, 1011
+- rhclib-devel, 1011
+- rhmask, 1012
+- rhs-printfilters, 1012
+- rmt, 1012
+- rootfiles, 1012
+- routed, 1012
+- rp-pppoe, 1012
+- rp3, 1012
+- rpm, 1012
+- rpm-build, 1012
+- rpm-devel, 1012
+- rpm-python, 1012
+- rpm2html, 1012
+- rpmdb-redhat, 1012
+- rpnfil, 1012
+- rpmlint, 1012
+- rsh, 1012
+- rsh-server, 1013
+- rync, 1013
+- users, 1013
+- users-server, 1013
+- rwall, 1013
+- rwall-server, 1013
+- rwho, 1013
+- rxvt, 1013
+- samba, 1013
+- samba-client, 1013
+- samba-common, 1013
+- sane, 1013
+- sane-devel, 1013
+- sash, 1013
+- sawfish, 1013
+- sawfish-theme, 1013
+- screen, 1013
+- SDL, 1013
+- SDL-devel, 1013
+- SDL_image, 1013
+- SDL_image-devel, 1013
+- sed, 1014
+- sendmail, 1014
+- sendmail-cf, 1014
+- sendmail-doc, 1014
+- setserial, 1014
+- setup, 1014
+- setuptool, 1014
+- sgml-common, 1014
+- sgml-tools, 1014
+- sh-utils, 1014
+- shadow-utils, 1014
+- shapcfg, 1014
+- sharutils, 1014
+- slang, 1014
+- slang-devel, 1014
+- slirplink, 1014
+- slocate, 1014
+- slrm, 1014
+- slrm-pull, 1014
+- smpeg, 1014
+- smpeg-devel, 1014
+- sndconfig, 1014
+- sox, 1015
+- sox-devel, 1015
+- speex, 1015
+- squid, 1015
+- stat, 1015
+- staterial, 1015
+- strace, 1015
+- stylesheets, 1015
+- sudo, 1015
+- SVGATexMode, 1015
+- switchdesk, 1015
+- switchdesk-gnome, 1015
+- switchdesk-kde, 1015
+- sysmlinks, 1015
+- systclconf, 1015
+- syslogd, 1015
+- sysutils, 1015
+- sysreport, 1015
+- systat, 1016
+- SysVinit, 1016
+- talk, 1016
+- talk-server, 1016
+- taper, 1016
+- tar, 1016
+- tel, 1016
+- tcblib, 1016
+- tccls, 1016
+- tcpcump, 1016
+- tcp_wrappers, 1016
+- tcsd, 1016
+- telnet, 1016
+- telnet-server, 1016
+- tencent, 1016
+- texe, 1016
+- tctex-afm, 1016
+- tctex-doc, 1016
+- tctex-dvii, 1016
+- tctex-dvips, 1016
+- tctex-fonts, 1016
+- tctex-latex, 1016
+- tctex-xdvii, 1017
+- tefino, 1017
+- texutils, 1017
+- tfip, 1017
+- tfip-server, 1017
+- time, 1017
+- timeconfig, 1017
+- timed, 1017
+- timetool, 1017
+- tin, 1017
+- tix, 1017
+- tk, 1017
+- tcltcler, 1017
+- tkssv, 1017
+- tmpwatch, 1017
+- traceroute, 1017
+- transfig, 1017
+- tree, 1017
+- trn, 1017
+- trojka, 1017
+- ucd-snmp, 1018
+- ucd-snmp-devel, 1018
+- ucd-snmp-utils, 1018
+- umb-scheme, 1018
+- unarj, 1018
+- uninstalling
+- RPN (Red Hat Package Manager), 50
+- units, 1018
+- unixODBC, 1018
+- unixODBC-devel, 1018
+- unzip, 1018
+- up2date, 1018
+- urview, 1018
+- urw-fonts, 1018
+- userview, 1018
+- usermode, 1018
+- utempter, 1018
+- util-linux, 1018
+- uucp, 1018
+- vim-common, 1018
+- vim-enhanced, 1018
+- vim-minimal, 1018
+- vim-X11, 1018
+- vixie-cron, 1019
+- vlock, 1019
+- vnc, 1019
+- vnc-doe, 1019
+- vnc-server, 1019
+- w3c-libwww, 1019
+- w3c-libwww-apps, 1019
+- w3c-libwww-dev-el, 1019
+- wget, 1019
+- which, 1019
+- whois, 1019
+- Window Maker, 1019
+- Window Maker-libs, 1019
+- wireless-tools, 1019
+- wmakeconf, 1019
+- wmconfig, 1019
+- words, 1019
+- wu-ftpd, 1019
+- wudial, 1019
+- x3270, 1019
+- Xaw3d, 1019
+- Xaw3d-devel, 1019
+- xbill, 1019
+- xbi, 1020
+- xboard, 1020
+- xboxing, 1020
+- xcdrast, 1020
+- xchat, 1020
+- Xconfiurator, 1020
+- xcpustate, 1020
+- xdalictok, 1020
+- xemacs, 1020
+- xemacs-el, 1020
+- xemacs-info, 1020
+- xfig, 1020
+- XFree86, 1020
+- XFree86-100dpi-fonts, 1020
+- XFree86-cyrillic-fonts, 1020
+- XFree86-devel, 1020
+- XFree86-doc, 1020
+- XFree86-FBDev, 1020
+- XFree86-ISO8859-2, 1020
+- XFree86-ISO8859-2-100dpi-fonts, 1020
+- XFree86-ISO8859-2-75dpi-fonts, 1020
+- XFree86-ISO8859-7, 1020
+- XFree86-ISO8859-7-100dpi-fonts, 1020
+- XFree86-ISO8859-9, 1021
+- XFree86-KOI8-R, 1021
+- XFree86-KOI8-R-100dpi-fonts, 1021
+- XFree86-KOI8-R-75dpi-fonts, 1021
+- XFree86-libs, 1021
+- XFree86-tools, 1021
+- XFree86-twm, 1021
+- XFree86-V4L, 1022
+- XFree86-xdm, 1022
+- XFree86-xfbcfg, 1022
+- XFree86-xfs, 1022
+- XFree86-Xnest, 1022
+- XFree86-Xvfb, 1022
+- xgammon, 1022
+- xined, 1022
+- xinitre, 1022
+- xsidnald, 1022
+- xjwet, 1022
+- xlpstat, 1022
+- xloadimage, 1022
+- xlockmore, 1022
+- xmailbox, 1022
+- xnmfs, 1022
+- xnsnsv-devel, 1022
+- xnpm-gnome, 1022
+- xmorph, 1022
+- xosview, 1022
+- xpamit, 1022
+- xpat2, 1022
+- xpdf, 1023
+- xplot, 1023
+- xpuzzles, 1023
+- rn, 1023
+- xgame, 1023
+- xsane-gimp, 1023
+- xscensever, 1023
+- xsri, 1023
+- xsysinfo, 1023
+- xtoolwait, 1023
+- xtroka, 1023
+- xxdgb, 1023
+- yp-tools, 1023
+- ypbind, 1023
+- ypserv, 1023
+- ytail, 1023
+- zip, 1023
+- zlib, 1023
+- zlib-devel, 1023
+- zsh, 1023
+
+**Packet Radio Homepage**, 875
+
+**packet sniffers**, 681. See also **tcpdump** command
+
+**packet-filtering firewalls**, 684-685
+
+**packet-oriented protocols**, 655
+
+**pam package**, 1007
+
+**pam_krb5 package**, 1007
+
+**pamels**
+
+GNOME, 118-120
+
+KDE, 126
+
+**pango-gtkbeta package**, 1007
+
+**panic messages (kernel)**, 896
+
+**parallel ports**, 609
+
+- drivers, 627-629
+- kernel configuration, 862-863
+- sharing, 863
+
+**parallel printers**, 622, 877
+
+**parallel-IDE (PARIDE) support**, 866
+
+**parameters**
+
+**lilo.conf file**, 60-61
+
+- positional parameters, 789-790
+
+**PARIDE (parallel-IDE) support**, 866
+
+**parport file**, 892
+
+**partports**
+
+- kernel configuration, 862-863
+- modules, 628
+- parport file, 892
+
+**parsing addresses**, 294
+
+**/part** command (irssi), 186
+
+**parted package**, 1007
+
+**parted-devel package**, 1007
+
+**partitioning hard drives**, 56, 28, 598
+
+- Disk Druid, 30
+  - *buttons*, 31-32
+  - *Drive Summary section*, 31
+  - *mounting information*, 32-33
+  - *Partitions section*, 30-31
+- **fdisk** command, 29-30
+- kernel configuration, 880
+- partition table, 598
+- suggested partition sizes, 34-35
+- swap space, 33-34
+
+**Partitions section (Disk Druid)**, 30-31
+
+**passwd command**, 526, 717, 957
+
+**passwd file**, 505, 761
+
+**passwd package**, 1007
+
+**passwd-check command (FTP)**, 336-337
+
+**password level= option (Samba)**, 555
+
+**password prompt**, 51
+
+**password= parameter (lilo.conf file)**, 61
+
+**passworlds**, 762
+
+- changing, 717
+- choosing, 728
+- clear, 528-529
+- encrypted, 528-530
+- /etc/passwd file, 505, 761
+- /etc/shadow file, 762
+- Samba, 526
+
+**patch package**, 1007
+
+**patches**, 843-845
+
+**path-filter command (FTP)**, 337
+
+**path= option (Samba)**, 551
+
+**paths**, 423
+
+**pax package**, 1007
+
+**pbm command**, 643
+
+**.pbm** file extension, 212
+
+**pbm2ppa** command, 639-640
+
+**pbmto10x** command, 640
+
+**pbmtoepsn** command, 226
+
+**pbmtops** command, 226
+
+**pbmtopsn** command, 640
+
+**pbmto10x** command, 640
+
+**.pcd** file extension, 212
+
+**pciltws package**, 1007
+
+**pcutils-devel package**, 1007
+
+**.pci** file extension, 212
+
+**PCMCIa issues (Red Hat Linux installation)**, 38-39
+
+**PCMCIa option (kernel configuration)**, 855
+
+**pcntra script**, 246
+
+**.pcx** file extension, 212
+
+**.pdf** file extension, 212
+
+**pdftosc** command, 226
+
+**pdftops** command, 226
+
+**pdftops** command, 226
+
+**pdksh** command, 957
+
+**pdksh package**, 1008
+
+**pdksh shell program**, 794
+
+- sharing expressions in, 794
+  - files, 797-798
+  - logical operators, 798
+  - numbers, 795-796
+  - strings, 794-795
+
+-pedantic option (gcc compiler), 778
+
+**performance analysis**, 722
+
+- available memory, 726-727
+- CPU usage, 722-724
+- process priorities, 727-728
+- processor activity, 724-726
+
+**performance optimization**
+
+- Apache server, 869
+- filesystems, 857
+- floppy controllers, 865
+- Samba, 541-543
+
+**period ( ) operator**, 933
+
+**Perl**, 828-829
+
+**perl package**, 1008
+
+**permissions**, 756
+
+- changing, 938-939
+- directory permissions, 757
+  - changing, 760
+  - character, 759
+  - compared to file permissions, 758
+  - default mode, 761
+  - numeric, 759
+- file permissions, 756
+  - compared to directory permissions, 758
+  - default mode, 761
+  - execute, 757
+  - filemodes, 756
+  - object type identifiers, 757
+  - read, 757
+  - write, 757
+
+**FTP** (File Transfer Protocol)
+
+- chmod command, 335
+- delete command, 336
+- overwrite command, 336
+- passwd-check command, 336-337
+- path-filter command, 337
+- rename command, 336
+- umask command, 336
+- upload command, 337-338
+
+- no_root_squash, 514
+- no_subtype_check, 514
+- ro, 513
+- rw, 513
+- sync, 514
+
+**-pg** option (**gcc** compiler), 778
+
+- .pgm file extension, 213
+- phpfdd script, 246
+- photos. See graphics
+- PHP, 389
+
+**php** package, 1008
+
+- php-imap package, 1008
+- php-ldap package, 1008
+- php-manual package, 1008
+- php-mysql package, 1008
+- php-pgsql package, 1008
+- .pi3 file extension, 213
+- pico command, 957
+- .pict file extension, 213
+- pictures. See graphics
+
+**PID** field (**top** command), 725
+
+- pidient package, 1008
+- .pil file extension, 213
+- pilot-link package, 1008
+- pilot-pilot-devel package, 1008
+- pine command, 958
+- pine package, 1008
+- pinfo command, 1008
+- ping command, 467, 527, 678-679, 958
+- pipe character (|), 791, 933
+- pixle graphics client, 223
+- .pj file extension, 213
+- .pk file extension, 213
+
+**planning**
+
+- back-out plans, 704
+- incremental changes, 704
+- security plans, 750-751
+- test plans, 704-705
+
+**.plasma** file extension, 213
+
+**platters**, 599
+
+**playing**
+
+- audio CDs, 233
+- MP3 files, 234-235
+- video, 235-237
+
+**playmidi** package, 1008
+
+- playmidi-X11 package, 1008
+- **PLP**, 874
+- .plot file extension, 213
+
+**plug-and-play** support
+
+- kernel configuration, 864
+- sound cards, 882
+
+**plugger** package, 1008
+
+- Plugs10t Ltd., program, 752
+- **pmake** package, 1008
+- pmake-customs package, 1008
+- .png file extension, 213
+- .pm file extension, 213
+- pnm2ppa package, 1008
+- pnmtopls command, 226
+- pnmpopup command, 882
+- pnt file extension, 213
+
+**Point-to-Point Protocol**. See PPP
+
+- Point-to-Point Protocol over Ethernet. See **PPPOE**
+- **pointer** (PTR) records, 460
+- Pointer section (**XF86Config** file), 76
+- **pointers**, 84
+- **POP** (**Post Office Protocol**), 271, 307-308
+  - APOP authentication, 310-311
+  - ipop3d options, 308-310
+  - POP3, 308
+  - server configuration, 308
+
+**popt** package, 1008
+
+**popularity** of **Red Hat Linux**, 13

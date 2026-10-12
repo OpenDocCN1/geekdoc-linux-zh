@@ -1,0 +1,14 @@
+These options are binary, auto, and text. Text files are stored differently in DOS than in Linux. In Linux, the end-of-file marker is a single ASCII line feed. In DOS, the end-of-file marker is an ASCII carriage return followed by an ASCII line feed. The three options listed allow for translation from one type of system to the other. **Binary** indicates no translation. **Auto** means to translate all files that are not named to indicate that they are an executable, program code, graphics, TeX, or an archive file. Executable files have an extension of BIN, COM, EXE, or SYS. Program code has an extension of APP, DLL, DRV, LIB, OBJ, OVL, OVR, or PIF. Graphic files have an extension of BMP, GIF, GL, JPG, PCX, and TIF. TeX files end in DVI, GF, F, PX, PXL, TFm, and VF. Archive files traditionally have an extension of ARC, ARJ, DEB, GZ, LHA, LZH, TAR, TAZ, TPZ, TZ, ZIP, Z, ZIP, and ZOO. Finally, *text* means to translate all files regardless of type. This third option can cause problems if you accidentally translate a file that should not be translated.
+
+# Repairing Filesystems
+
+Some disk data is kept in memory temporarily before being written to disk for performance reasons. (See the earlier discussion of the sync mount option.) If the kernel does not have an opportunity to actually write this data, the filesystem can become corrupted. This can happen in several ways, for example:
+
++   * The storage device (for example, a diskette) can be manually removed before the kernel has finished with it.
++   * The system might suffer a power loss.
++   * The Linux kernel locks up or reboots the system. Thankfully this is a very rare occurrence.
++   * The user might mistakenly turn off the power or accidentally press the Reset button.
+
+As part of the boot process, Linux runs the **fsck** program, whose job it is to check and repair filesystems. Most of the time, the boot follows a controlled shutdown (see the manual page for **shutdown**), and in this case, the filesystems will have been unmounted before the reboot. In this case, **fsck** says that they are "clean." It knows this because before unmounting them, the kernel writes a special signature on the filesystem to indicate that the data is intact. When the filesystem is mounted again for writing, this signature is removed.
+
+If, on the other hand, one of the disasters listed takes place, the filesystems will not be marked "clean:" when **fsck** is invoked, as usual, it will notice this and begin a full check of the filesystem. This also occurs if you specify the *-f* flag to **fsck**. To prevent errors creeping up on it, **fsck** also enforces a periodic check; a full check is done at an interval specified on the filesystem itself (usually every 20 boots or 6 months, whichever comes sooner), even if it were unmounted cleanly.

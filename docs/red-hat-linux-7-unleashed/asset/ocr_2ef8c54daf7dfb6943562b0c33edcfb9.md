@@ -1,0 +1,13 @@
+Apart from this setting there are multitudes of others. However, there are far too many settings with too many options to cover in detail here. The default options are very good and should suit almost anyone’s needs. It is probably better to keep them as they are while you get to know both IRC and the xchat client better. Be sure to take a look at http://xchat.org/docs.html, where you will find the online user documentation for xchat.
+
+# Running an IRC Server
+
+Finally, it is possible to run your own IRC server. However, if you want to join one of the major IRC nets, you should be aware that this requires a huge amount of bandwidth and major computer power! Also you will need to tweak your system quite a lot to get the needed performance from your system. You may even need to compile a special version of the Linux kernel to be able to cope with the resource drains imposed by an IRC server. Because each connection to the IRC server will consume file handles, you will need to increase the number of file handles that each process can use. You can do this dynamically by changing the value in `/proc/sys/fs/file-max`. You will also need to increase the number of file handles available for the whole system. In the Linux 2.2 kernel series this can only be changed at compile time.
+
+There is no IRC server included with the Red Hat 7 distribution even though there are several available in RPM format. Running an IRC server is not something the casual user would want to do, and to run one that is to have lots of traffic is something that is best left up to power users and gurus.
+
+# Instant Messaging
+
+Instant messaging, or IM as it is often referred to, provides you with several nice features, the first of which is an easy way to see when your friends and chat buddies are online and available for communication. Instant messaging also allows you to send messages directly to your friends to which your friends may reply immediately or when they feel like it. Different instant message protocols offer different features, but in the end they all supply more or less the same basic functionality.
+
+There are Linux clients available for most of the instant message protocols. Included with your Red Hat system are clients for the two most widely used: the ICQ and the AIM protocols. There are also Linux versions of several other instant messaging protocols. For example, there are clients for Yahoo IM. However, these are not included with Red Hat 7. If you need to get a hold of such a client, you might want to check out `http://freshmeat.net/` and use their search engine do a search with Yahoo as the keyword.

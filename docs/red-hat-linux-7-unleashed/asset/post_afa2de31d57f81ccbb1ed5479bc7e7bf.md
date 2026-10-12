@@ -1,0 +1,208 @@
+
+## TABLE D.2 continued
+
+| Group | Packages |
+| :--- | :--- |
+| System Environment/Libraries | audiofile, compat-libstdc++, cracklib, cracklib-dicts, cyrus-sasl, db1, db2, db3, db3-devel, flib, freetype, fribidi-gtkbeta, gd, gdbm, gdk-pixbuf, glmb, glib, glibc, glib-cfgeditor, kdelibs, gmp, gnome-audio-extra, gnome-core, gnome-libs, gsl, gtk+10, gtk+, gtk-engines, gtk+-gtkbeta, imlib, imlib-cfgeditor, kdeutils, krb5-libs, krbafs, libconf, libelf, libgci, libghttp, libgstable, libgtop, libgrope examples, libjpeg, libpaper, libuuid, libxml2, libxml++, libpng, libPopList, libstdc++, libtermcap, libzip, libtool-libs, libzip, libunicode, libxml10, libxml, lockdev, lockdev-devel, Mesa, ncurse, ncurses6, netpbm, news, openssl, pango-gtkbeta, pythonlib, qt1x, qt1x-GL, qt, qt-xt, readline 2.2.1, readline, SDL, SDL_image, slang, snmep, unixODBC, w3e-libwww words, Xaw3d, XFree86-libs, zlib |
+| System Environment/Shells | ash, bash, mc, pkddsh, sash, sh-utils, csh, zsh |
+| User Interface/Desktops | control-center, enlightenment, fvwm2, fvwm2-icons, gmc, gnome-applets, kderase, kderase-3d-screensavers, kdebase-lowcolor-icons, kdesupport, sash, sash-themer, switchdesk, switchdesk-gnome, switchdesk-kde, vnc, vnc-doe, WindowMaker, wmakercon, wiconfig |
+| User Interface/X | gdm, glms, gnome-kerberos, gvge, ktrem, rxvt, urw-fonts, vnc-server, x3270, Xfree86-100dpi-fonts, Xfree86, Xfree86-75dpi-fonts, Xfree86-cyrillic-fonts, Xfree86-ISO8859-2-100dpi-fonts, Xfree86-ISO8859-2-75dpi-fonts, Xfree86-ISO8859-2, Xfree86-ISO8859-2-Type1-fonts, Xfree86-ISO8859-7-100dpi-fonts, Xfree86-ISO8859-7, Xfree86-ISO8859-7-75dpi-fonts, Xfree86-ISO8859-7-Type1-fonts, Xfree86-ISO8859-9-100dpi-fonts, Xfree86-ISO8859-9-75dpi-fonts, Xfree86-ISO8859-9, Xfree86-K018-R, Xfree86-K018-R-100dpi-fonts, Xfree86-K018-R-75dpi-fonts, Xfree86-tools, Xfree86-twm, Xfree86-xdm, Xfree86-x86cfg, xinitrc |
+| User Interface/X Hardware | Xconfigurator, Xvfb |
+| | AGX, Xfree86-FBDev, Xfree86-1128, Xfree86-Mach32, Xfree86-Mach64, Xfree86-Mach8, Xfree86-Mono, Xfree86-P9000, Xfree86-S3, Xfree86-S3V, Xfree86-SVGA, Xfree86-V4L, Xfree86-VGA16, Xfree86-W32, Xfree86-Xnest, Xfree86-Xvfb |
+
+## INDEX
+
+### SYMBOLS
+
+- & (ampersand), 791, 933
+- >> (append) operator, 934
+- * (asterisk), 791
+- ` (backtick), 793
+- ! command (smblintent), 546
+- ? command (smblintent), 546
+- $ (dollar sign), 296, 791, 789
+- " (double quotes), 792
+- ! (exclamation point), 785
+- / (forward slash), 183
+- << (here document) operator, 934
+- - (hyphen) object type identifier, 757
+- > (input redirection) operator, 791
+- >> (input redirection) operator, 791
+- < (output redirection) operator, 791
+- << (output redirection) operator, 791
+- . (period), 786, 933
+- | (pipe) operator, 791, 933
+- # (pound sign), 526, 785, 791
+- $< (preface), 296
+- ? (question mark), 791
+- ; (semicolon), 526
+- ' (single quotes), 792-793
+- $# special variable, 790
+- $* special variable, 790
+- $0 special variable, 790
+- $? special variable, 790
+- > (standard input) operator, 791, 934
+- < (standard output) operator, 791, 933-934
+- .3d file extension, 209
+- 4Front Technologies Web site, 881
+- .10x file extension, 209
+- 2100 Network Camera, 238
+
+### A
+
+- %a variable (LogFormat directive), 381
+- A (Address) records, 274, 460
+- A option (picahins command), 690
+- a option
+  - ifconfig command, 669
+  - netstat command, 674
+  - rpm command, 712
+  - uname command, 839
+- abiword package, 984
+- ACCEPT target (picahins), 686
+- access control
+  - Apache server, 366-367
+    - access restrictions, 366
+    - authentication, 367-369
+    - combining host-based and user-based protection, 369-370
+  - FTP (File Transfer Protocol) servers
+    - autolog command, 327
+    - clnt command, 326
+    - deny command, 327
+    - guestlog command, 327-328
+    - limit command, 328
+    - logfiles command, 328
+    - private command, 329
+    - talk, 177-178
+- access-mode file
+  - (var/log/xlerlog file), 342
+- access.conf file (Apache server), 418
+- accessibility (KDE), 134
+- Accessibility dialog box (KDE), 134
+- accessing
+  - Samba shares, 545-547
+  - values of variables, 789
+- accounts (user)
+  - creating, 934
+  - lincuxcod, 715
+  - useradd command, 717
+  - editing, 716
+  - passwords, 717
+  - PPP (Point-to-Point Protocol), 146-147
+  - removing, 718
+  - root, 46-47
+  - special accounts, 721
+- Accounts dialog box (kppp), 158
+- @acct (Group account), 549
+- ACPI (Advanced Configuration and Power Interface), 860
+- active lists (Leafnode+), 436
+- Add button (Disk Druid), 31
+- add-on postfix (etc/tcpcon-versions file), 339
+- add-on prefix (etc/tcpcon-versions file), 339
+- address (A) records, 460
+- address-based virtual hosts, 379
+- addresses
+  - broadcast, 650
+  - IP (Internet Protocol), 648-649
+  - list-request, 281
+  - network, 650
+  - parsing, 294
+- adduser command, 526, 934
+- adjtime package, 984
+- administration, 702-703
+  - communicating with users, 705-706
+  - mesg command, 708
+  - motd command, 708
+  - pre-login messages, 709
+  - talk command, 708
+  - wall command, 707
+  - write command, 706-707
+- disk quotas, 719-720
+- FTP (File Transfer Protocol)
+  - administrative tools, 342
+  - ftpcount command, 344
+  - ftprestart command, 342
+  - ftpshut command, 342-343
+  - ftpwho command, 343
+- Gnome-RPM, 713-714
+- groups
+  - adding users to, 718
+  - creating, 716-718
+  - deleting, 718
+  - etc/groups file, 718-719
+- help and resources, 729
+- mailing lists, 732-734
+- man pages, 729-732
+- newsgroups, 734-735
+- Web sites. See Web sites
+- linuxconf utility. See linuxconf
+- passwords, 728
+- performance analysis, 722
+  - available memory, 726-727
+  - CPU usage, 722-724
+    - process priorities, 727-728
+    - processor activity, 724-726
+- planning
+  - back-out plans, 704
+  - incremental changes, 704
+  - test plans, 704-705
+- root users, 702-703
+- RPM (Red Hat Package Manager), 710
+  - installing, 710-711
+  - package installation/uninstallation, 50
+  - querying, 712-713
+  - uninstalling, 711
+  - upgrading, 711-712
+  - security updates, 729
+  - special accounts, 721
+- users
+  - changing user passwords, 717
+  - creating, 715, 717
+  - editing, 716
+  - removing, 718
+- Advanced Configuration and Power Interface (ACPI), 860
+- Advanced Linux Sound Architecture (ALSA) project, 20
+- Advanced Power Management (APM), 860-862
+- Advanced Programmable Interrupt Controller (APIC), 854
+- advantages of Linux, 11-13
+- aio command, 611
+- AIM (AOL Instant Messaging), 201
+- alert directive (Vet/host.conf file), 661
+- alias command, 935
+  - FTP (File Transfer Protocol), 333
+    - icIl, 184
+    - aliases, 277
+    - creating, 935
+    - FTP (File Transfer Protocol), 333
+    - icIl program, 184
+- network aliasing, 669-670
+- sendmail, 280-281
+- undoing, 966
+- aliases file, 279-280
+- aliasing (IP), 869
+- -ALL option
+  - hist command, 187
+  - /names command, 188
+- All switch (Options directive), 364
+- Allman, Eric, 270
+- allow directive, 366-367
+- allow hosts= option (Samba), 553
+- -allowMouseCommandFail option (KFreeBuse command), 100
+- AllowOverrides directive, 365
+- Alpha systems, 19
+- ALSA (Advanced Linux Sound Architecture) project, 20
+- alternate kernel configurations, 885
+- ami-utils package, 984
+- Amanda backup utility, 611
+  - AMANDA command, 741-742
+- amanda package, 984
+  - amanda-client package, 984
+  - amanda-server package, 984
+- amateur radio support, 875
+- and script, 245
+- American National Standards Institute (ANSI) C, 769
+- ampersand (&), 791, 933
+- Amusement/Games group (packages), 1024
+- Amusement/Graphics group (packages), 1024
+- anaconda package, 985
+- anaconda-runtime package, 985

@@ -1765,6 +1765,7 @@
 +   [Red Hat Linux 6.2：Red Hat Linux 官方指南](docs/red-hat-linux-62-the-official-red-hat-linux-reference-guide/README.md)
 +   [Red Hat Linux 7 圣经，无限版 [电子资源]](docs/red-hat-linux-7-bible-unlimited-edition-electronic-resource/README.md)
 +   [Red Hat Linux 7 服务器](docs/red-hat-linux-7-server/README.md)
++   [Red Hat Linux 7 完全指南](docs/red-hat-linux-7-unleashed/README.md)
 +   [Red Hat Linux 7.0：官方 Red Hat Linux 安装指南](docs/red-hat-linux-70-the-official-red-hat-linux-installation-gui/README.md)
 +   [Red Hat Linux 7.1 圣经](docs/red-hat-linux-71-bible-none/README.md)
 +   [Red Hat Linux 7.2 圣经无限版（附 CD-ROM）](docs/red-hat-linux-72-bible-unlimited-edition-with-cd-rom/README.md)

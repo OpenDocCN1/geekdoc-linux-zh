@@ -1,0 +1,291 @@
+
+## U
+
+- %u（用户名），549
+- u 命令（SysRQ），884
+- -U 选项（rpm 命令），711–712
+- %U 变量（LogFile 指令），382
+- ucd-snmp 命令，1018
+- ucd-snmp-devel 软件包，1018
+- ucd-snmp-utils 软件包，1018
+- UDF 文件系统，879
+- UDP，655
+- udp 限定符（tcptrace 命令），682
+- .uil 文件扩展名，215
+- ulimit 命令，965
+- umask 命令，336
+- umb-scheme 软件包，1018
+- umount 命令，516, 965
+- unalias 命令，966
+- uname 命令，839, 966
+- unarj 软件包，1018
+- 卸载。另请参阅“安装”
+    - LILO（Linux 引导加载程序），62
+    - 软件包，50
+    - RPM（Red Hat 软件包管理器），711
+    - XFree86，71
+- units 软件包，1018
+- UNIX，10
+- UNIX Guru Universe 网站，735
+- Unix98 PTY，876
+- unixODBC 软件包，1018
+- unixODBC-devel 软件包，1018
+- 卸载文件系统，516, 965
+- 解包 sendmail，283
+- unsafe 参数（ilo.conf 文件），61
+- until 语句，805
+- unzip 命令，966
+- unzip 软件包，1018
+- up 字段（top 命令），725
+- up2date 软件包，1018
+- .upc 文件扩展名，215
+- updatedb 命令，966
+- 更新，DOSEMU，903
+- 升级
+    - 内核，845–846
+    - RPM（Red Hat 软件包管理器），711–712
+- upload 命令，337–338
+- uptime 命令，966
+- urlview 软件包，1018
+- urw-fonts 软件包，1018
+- us 文件（vstatst），723
+- USB 设备，608, 883
+- usviev 软件包，1018
+- used 字段（free 命令），726
+- Usenet 新闻组，422–423, 734–735
+    - 泛滥，423
+    - INN（Internet News），424–426
+        - 配置，433–435
+        - 硬件和软件要求，425
+    - INN FAQ 网站，426
+        - 安装，426–428
+            - 启动文件，428–433
+        - Leafnode+，435–436
+            - 配置，437
+            - 下载，436
+            - 安装，437
+    - 新闻通讯，423
+    - 防止重复发帖，423–424
+    - 推送和拉取新闻，424
+    - 阅读，424
+    - 线程，438
+        - thr，438
+- User 指令，361
+- USER 字段（top 命令），725
+- 用户界面/桌面组（软件包），1028
+- 用户界面/X 组（软件包），1028
+- -user 选项（mount 命令），585
+- User 选项（ssh_config 文件），698
+- 用户变量，788
+- useradd 命令，717
+- userconf 命令，255
+- userdir 命令，718
+- UserDir 指令，363
+- usermod 命令，718
+- usermode 软件包，1018
+- username 字段
+    - /var/log/xferlog 文件，342
+    - username level= 选项（Samba），555
+- 用户
+    - 添加到组，718
+    - 身份验证
+        - Apache 服务器，367–369
+            - root 用户，47
+        - SSH（安全外壳协议），696–697
+    - 与用户通信，705–706
+        - mesg 命令，708
+        - mon 命令，708
+        - 登录前消息，709
+        - talk 命令，708
+    - wall 命令，707
+    - write 命令，706–707
+    - 创建，934
+    - linuxconf，715
+    - useradd 命令，717
+    - 编辑，716
+    - 主目录，549
+    - licq，199
+    - 名称，549
+    - 密码，717
+    - 删除，718
+    - 获取相关信息，968
+    - root，702-703
+        - 身份验证，47
+        - 注意事项，260
+        - 配置，46-47
+    - Samba，526
+- suid（set user ID，设置用户 ID），755
+    - 查找 suid 文件，755
+    - 设置，755-756, 760-761
+- USERS 选项（/ls 列表命令），187
+- /usr 目录
+    - /usr/bin 子目录，356
+    - /usr/bin/ue.news 文件，430-433
+    - /usr/local/apache 子目录，359
+        - /usr/local/apache/bin 子目录，359
+        - /usr/local/apache/conf 子目录，359
+        - /usr/local/apache/logs 子目录，359
+    - /usr/sbin 子目录，356
+    - /usr/share/man 子目录，356
+    - /usr/src/relaynet/SOURCES 子目录，357
+- utempter 软件包，1018
+- util-linux 软件包，1018
+- 实用工具。另请参阅“命令”
+- uu cp 软件包，1018
+- uudecode 命令，966
+- .uvy 文件扩展名，215
+
+## V
+
+- V Communications' System Commander，54
+- V 运算符（sendmail），290
+- -v 选项
+    - htpd 命令，390
+    - ping 命令，678
+    - rpm 命令，713
+    - sendmail，273
+    - tcpdump 命令，683
+- %V 变量（LogFormat 指令），382
+- V4L（Video for Linux，Linux 视频），847, 878
+- valid user= 选项（Samba），550
+- Valkonen, Choose-OS，54
+- 值
+    - 从变量访问，789
+    - 赋值给变量，788-789
+- Var Riel, Rik，848
+- /var 目录
+    - /var/log/htpd 子目录，357
+    - /var/log/xferlog 文件，341-342
+    - /var/run 子目录，357
+    - /var/run/lock 子目录，357
+    - /var/www 子目录，356
+    - /var/www/html/manual 子目录，356
+- 变量
+    - 环境变量
+        - 临时更改，961
+        - 显示导出变量，943-944
+    - shell 程序，788
+        - 访问值，789
+        - 给变量赋值，788-789
+        - 内置，790-791
+- vdir 命令，966
+- Vendor 部分（XF86Config 文件），76
+- verbose= 参数（lilo.conf 文件），60
+- 验证补丁更新，844
+- --version 命令（lcll），189
+- 版本控制
+    - CVS（Concurrent Versions System，并发版本系统），774-776
+    - RCS（Revision Control System，修订控制系统），774-776
+- 版本级别指示器（sendmail），290
+- -version 选项（Xfree86 命令），100
+- 版本（内核），839-840, 843
+- VFAT 文件系统，879
+- vga 驱动程序，98
+- vgast 选项（引导提示符），62
+- vi 命令，966
+- .vicar 文件扩展名，215
+- 视频
+    - DVD 支持，237
+    - 文件格式，235-236
+    - 播放，235-237
+    - V4L（Video for Linux，Linux 视频），847, 878
+    - 网络摄像头，237-238
+- 显卡，87-90
+- Linux 视频（V4L），847, 878
+- Videomode 部分（XF86Config 文件），76
+- VideoX8689f 文件（Xfree86 文档），74
+- view 命令，967
+- 查看远程桌面，920-921
+- .viff 文件扩展名，215
+- vim 命令，967
+- vim-common 软件包，1018
+- vim-enhanced 软件包，1018
+- vim-minimal 软件包，1018
+- vim-X11 软件包，1018
+- vimx 命令，967
+- 虚拟控制台屏幕设备，619-620
+- 虚拟控制台，42, 100-101
+- 虚拟桌面（KDE），126
+- 虚拟主机（Apache 服务器），378-379
+    - 基于地址的虚拟主机，379
+    - 基于名称的虚拟主机，379-380
+- 虚拟内存，12
+    - 统计信息，967
+    - 调优，856-857
+- 虚拟网络计算。另请参阅“vnc 软件”
+- vixie-cron 软件包，1019
+- vlock 软件包，1019
+- vmstat 命令，722-724, 967
+    - 字段，723-724
+    - 输出，723
+    - 语法，722
+- VMware 模拟器，909
+    - 配置，911-912
+    - 下载，909
+    - 安装，909-910
+    - 操作系统安装，913
+    - 启动，910
+- vnc 软件包，1019
+- VNC 服务器，572
+- vnc 软件，917
+    - 下载，918
+    - 启用虚拟网络服务，919
+    - 安装，918-919
+    - 查看远程桌面，920-921
+- vnc-doc 软件包，1019
+- vnc-server 软件包，1019
+- vncserver，917, 919
+- vncviewer 命令，920
+- -vt 选项（XFree86 命令），100
+- -w 选项（tcpdump 命令），683
+
+## W
+
+- w 命令，967
+- w 字段（vmstat），724
+- -w 选项
+    - gcc 编译器，778
+    - tcpdump 命令，683
+- w3c-libwww 软件包，1019
+- w3c-libwww-apps 软件包，1019
+- w3c-libwww-dev 软件包，1019
+- wall 命令，707, 967
+- -Wall 选项（gcc 编译器），778
+- 壁纸（KDE），129-130
+- 看门狗支持（内核配置），862
+- 看门狗定时器，877
+- wc 命令，967
+- Web 浏览器
+    - 使用 SWAT 后关闭，568
+    - lynx，953
+    - smb.conf 配置，568-569
+- Web 摄像头，237-238
+- Web 网站，735
+    - 4Front Technologies，881
+    - ACPI（高级配置和电源接口），860
+    - ALSA（高级 Linux 声音架构）项目，20
+    - Apache 组，354
+    - Apache 模块注册表，370
+    - Apache 周刊，354
+    - Apsfilter，641
+    - bitrix，181
+    - Choose-OS，54
+    - Coda 主页，880
+    - 计算机应急响应小组，272
+    - Eggplus，874
+    - 以太网桥接邮件列表主页，871
+    - 文件系统碎片整理程序，266
+    - GNU 通用公共许可证，974
+    - GRUB（Grand Unified Bootloader，全局统一引导加载程序），54
+    - HPTools，641
+    - INN（Internet News）FAQ，426
+    - irDA 实用工具，642
+    - KDE（K 桌面环境），124
+    - 内核 FAQ，838
+    - LDP（Linux 文档项目），927
+    - LILO（Linux 引导加载程序）FAQ，59
+    - Linux 文档项目，736
+    - Linux 操纵杆，878
+    - Linux 内核，11, 840
+    - Linux 笔记本用户，75
+

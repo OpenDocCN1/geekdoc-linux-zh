@@ -1,0 +1,13 @@
+The ihave/sendme protocol is excellent for updating a few newsgroups but starts to bog down dramatically when handling very large volumes of newsgroups. For this reason, a method called *batching* is used to transfer large newsgroup feeds. With *batching*, everything on one end of the newsfeed is transferred as a block. Your machine then sorts through the download, discarding any duplicates. Batching adds more overhead to your local Linux machine than ihave/sendme, but involves a lot less messaging between the two ends of the newsfeeds.
+
+# # Pushing and Pulling the News
+
+Two other terms are used to describe the transfer of newsgroup postings from one machine to another, and these terms apply especially to smaller systems that don't download the entire newsfeed every day. Your system can download articles from the newsfeed using the ihave/sendme protocol, a technique called *pushing* the news. Alternatively, your machine can request specific postings or entire newsgroups from the newsfeed based on the post's arrival date, a technique called *pulling* the news.
+
+# # Alternative Methods to Downloading Newsgroups
+
+Before looking at how to download Usenet newsgroups to your machine, there is one alternative you might want to consider. If you don't use Usenet a lot or have limited connection time to the newseed, consider interacting with a news server on a remote network. This method lets you read the postings on that server instead of downloading them to your machine. Many ISPs allow you to choose whether to download newsgroups to your machine or to read them on their news server. Obviously, if you are reading on the server, you must be connected all the time. This might be a better choice, however, if you do not often surf Usenet or you have limited disk space on your machine. Another alternative is to read news via the Web at http://www.deja.com/usenet/. This very powerful Web site contains almost all the newsgroups from around the world and offers a strong search facility. If you are looking to solve a particular problem, chances are you will find an answer if you do a search there.
+
+# # INN Hardware and Software Requirements
+
+INN doesn't impose too many hardware requirements; most Linux-capable hardware is sufficient to run INN. If you do download a lot of newsgroup postings, however, slow processors will be affected. Because INN often works in the background, your

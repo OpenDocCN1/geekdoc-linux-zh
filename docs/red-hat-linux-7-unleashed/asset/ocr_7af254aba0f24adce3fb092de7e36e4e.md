@@ -1,0 +1,10 @@
+# **TABLE D.2** continued
+
+| Group | Packages |
+| :--- | :--- |
+| System Environment/ Libraries | audiofile, compat-libstdc++, cracklib, cracklib-dicts, cyrus-sasl, db1, db2, db3, db3-devel, flib, freetype, fribidi-gtkbeta, gd, gdbm, gdk-pixbuf, glmb, glib, glibc, glib-cfgeditor, kdelibs, gmp, gnome-audio-extra, gnome-core, gnome-libs, gsl, gtk+10, gtk+, gtk-engines, gtk+-gtkbeta, imlib, imlib-cfgeditor, kdeutils, krb5-libs, krbafs, libconf, libelf, libgci, libghttp, libgstable, libgtop, libgrope examples, libjpeg, libpaper, libuuid, libxml2, libxml++, libpng, libPopList, libstdc++, libtermcap, libzip, libtool-libs, libzip, libunicode, libxml10, libxml, lockdev, lockdev-devel, Mesa, ncurse, ncurses6, netpbm, news, openssl, pango-gtkbeta, pythonlib, qt1x, qt1x-GL, qt, qt-xt, readline 2.2.1, readline, SDL, SDL_image, slang, snmep, unixODBC, w3e-libwww words, Xaw3d, XFree86-libs, zlib |
+| System Environment/ Shells | ash, bash, mc, pkddsh, sash, sh-utils, csh, zsh |
+| User Interface/ Desks | control-center, enlightenment, fvwm2, fvwm2-icons, gmc, gnome-applets, kderase, kderase-3d-screensavers, kdebase-lowcolor-icons, kdesupport, sash, sash-themer, switchdesk, switchdesk-gnome, switchdesk-kde, vnc, vnc-doe, WindowMaker, wmakercon, wiconfig |
+| User Interface/X | gdm, glms, gnome-kerberos, gvge, ktrem, rxvt, urw-fonts, vnc-server, x3270, Xfree86-100dpi-fonts, Xfree86, Xfree86-75dpi-fonts, Xfree86-cyrillic-fonts, Xfree86-ISO8859-2-100dpi-fonts, Xfree86-ISO8859-2-75dpi-fonts, Xfree86-ISO8859-2, Xfree86-ISO8859-2-Type1-fonts, Xfree86-ISO8859-7-100dpi-fonts, Xfree86-ISO8859-7, Xfree86-ISO8859-7-75dpi-fonts, Xfree86-ISO8859-7-Type1-fonts, Xfree86-ISO8859-9-100dpi-fonts, Xfree86-ISO8859-9-75dpi-fonts, Xfree86-ISO8859-9, Xfree86-K018-R, Xfree86-K018-R-100dpi-fonts, Xfree86-K018-R-75dpi-fonts, Xfree86-tools, Xfree86-twm, Xfree86-xdm, Xfree86-x86cfg, xinitrc |
+| User Interface/X Hardware | Xconfigurator, Xvfb |
+| | AGX, Xfree86-FBDev, Xfree86-1128, Xfree86-Mach32, Xfree86-Mach64, Xfree86-Mach8, Xfree86-Mono, Xfree86-P9000, Xfree86-S3, Xfree86-S3V, Xfree86-SVGA, Xfree86-V4L, Xfree86-VGA16, Xfree86-W32, Xfree86-Xnest, Xfree86-Xvfb |
