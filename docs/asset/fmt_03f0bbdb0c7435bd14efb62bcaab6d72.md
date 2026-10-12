@@ -1,0 +1,20 @@
+
+<a href="http://www.opensourcewebbook.com/">www.opensourcewebbook.com</a>
+
+`include`指令允许你在当前文档中包含另一个文件的内容。如果你希望每个页面都有相同的页眉或页脚，这将非常方便。假设我们在`header.html`中有这样的内容：
+
+```html
+<html>
+<head>
+<title>服务器端包含: echo 指令</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>include 示例</h1>
+```
+
+假设我们在`footer.html`中有这样的内容：
+
+```html
+<hr>
+<a href="http://www.opensourcewebbook.com/">www.opensourcewebbook.com</a>
+```
