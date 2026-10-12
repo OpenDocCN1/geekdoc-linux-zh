@@ -1,0 +1,550 @@
+
+
+## 附录 A Qt 工具包内容
+
+- editor()
+- elapsed()
+- emitRenamed()
+- emitSelectionChanged()
+- enableClipper()
+- enabled()
+- enabledChange()
+- enableRewind()
+- encode()
+- encodedData()
+- encodedEntryList()
+- encodedPathAndQuery()
+- encodedName()
+- encodingName()
+- end()
+- endMovingToolBar()
+- enforceSortOrder()
+- enqueue()
+- ensureCurrentVisible()
+- ensureItemVisible()
+- ensureVisible()
+- enter_loop()
+- enterAllocContext()
+- enterEvent()
+- enterInstance()
+- enterWhatIsThisMode()
+- entryInfoList()
+- entryList()
+- enumKeys()
+- eof()
+- eor()
+- equal()
+- erase()
+- erased()
+- eraseRect()
+- error()
+- errorCode()
+- event()
+- eventFilter()
+- exactMatch()
+- excludeIndicatorSize()
+- exec()
+- exists()
+- exit()
+- exit_loop()
+
+### 类参考条目
+
+- **QSpinBox**
+- **QTime**
+- **QIconView**
+- **QIconView**
+- **QScrollViewer**
+- **QToolTipGroup** QToolTip
+- **QListView** QButton QWidget
+- **QIODeviceSource** QDataSource
+- **QUrl**
+- **QStoredDrag** QDropEvent QIconDrag QTextDrag QImageDrag QMimeSource
+- **QDir**
+- **QUrl**
+- **QFile**
+- **QFont**
+- **QMultiLineEdit** QImageConsumer QByteArray QMap QPainter QNPStream QValueList QArray QLineEdit
+- **QMainWindow**
+- **QListViewItem**
+- **QQueue**
+- **QListBox**
+- **QIconView** QListView
+- **QScrollView**
+- **QApplication**
+- **QColor**
+- **QToolButton** QIconView QWidget
+- **QNPWidget**
+- **QWhatIsThis**
+- **QDir**
+- **QMetaProperty**
+- **QDataStream** QTextStream QDataSink
+- **QRegion**
+- **QUrlInfo**
+- **QWidget**
+- **QPaintEvent**
+- **QPainter**
+- **QStyleSheet**
+- **QNetworkOperation**
+- **QClipboard** QWidget QMainWindow QTime QToolBar QSocketNotifier QSplitter QObject
+- **QWorkspace** QMenuBar QFileLayout QLayout QScrollView QMainWindow QComboBox QFontDialog
+- **QListBox** QIconView QLabel QWizard QTabWidget
+- **QObject** QSpinBox QToolBar
+- **QFont** QFontInfo
+- **QWindowTextStyle** QMotifStyle QPlatinumStyle QStyle
+- **QPopupMenu** QApplication QDialog
+- **QFileInfo** QDir QFile
+- **QApplication**
+- **QApplication**
+
+**expand()**
+QGridLayout
+
+**expanded()**
+QListView
+
+**expandedRows()**
+QSize
+
+**expanding()**
+QLayoutItem QSpacerItem QLayout QBoxLayout
+QGridLayout QSizePolicy QWidgetItem
+
+**extension()**
+QFileInfo
+
+**extraData()**
+QWidget
+
+**extraPopupMenuWidth()**
+QPlatinumStyle QWindowsStyle QMotifStyle QStyle
+
+**families()**
+QFontDatabase
+
+**family()**
+QFont QFontInfo
+
+**familyListBox()**
+QFontDialog
+
+**fileHighlighted()**
+QFileDialog
+
+**fileName()**
+QFileInfo QUrl QImageIO
+
+**filePath()**
+QDir QMimeSourceFactory QFileInfo
+
+**fileSelected()**
+QFileDialog
+
+**fill()**
+QGArray QBitArray QCString QString QByteArray
+QArray QVector QTextStream QImage QVector
+QPixmap
+
+**fillRect()**
+QPainter
+
+**filter()**
+QDir
+
+**find()**
+QGList QVector QWidget QAsciiDict QGArray
+QAsciiCache QIntCache QButtonGroup QCache QIntDict QCString QMap QGList QPixmapCache QWaluelist QArray QTranslator QVector QPtrDict
+QDict QByteArrayList QString
+
+**find_other()**
+QGCache
+
+**find_string()**
+QGCache
+
+**findCol()**
+QTableView
+
+**findFirstVisibleItem()**
+QIconView
+
+**findIndex()**
+QValueList
+
+**findItem()**
+QIconView QMenuData QListBox
+
+**findKey()**
+QCache
+
+**findLastVisibleItem()**
+QIconView
+
+**findNext()**
+QList
+
+**findNextRef()**
+QList
+
+**findPopup()**
+QMenuData
+
+**findRef()**
+QGList QGList QVector QVector
+
+**findRow()**
+QCString QGString
+
+**findRow()**
+QTableView
+
+**findWidget()**
+QGridLayout QBoxLayout
+
+**finishButton()**
+QWizard
+
+**finished()**
+QNetworkProtocol QUrlOperator QMovie
+
+**first()**
+QGList QValueList QGList
+
+**firstChild()**
+QListViewItem QGListBox
+
+**firstItem()**
+QIconView QListBox
+
+**fixedPitch()**
+QFont QFontInfo
+
+**fmap()**
+QValueList
+
+**flags()**
+QTextStream QIODevice
+
+**flash()**
+QFile QIODevice QBuffer QPainter
+
+**flush()**
+QGApplication
+
+**focalsData()**
+QWidget
+
+QListbox QTabbar QGroupBox QLineEdit QRadioButton QSlider QMultiLineEdit QComboBox QButton QWidget QIconView QPushButton QTextView QMenuBar QPopupMenu QListView QScrollview QPopupMenu QButton QWidget QListView QconView QSlider QTextView QLineedit QMultilineEdit QTabbar QWidget QListbox QPopupMenu QMenuBar QButton QPushButton QWidget QWidget QFocusData QApplication QWidget QWidget QWidget QTooltip Qpainter QApplication QFont Database QMenuBar QLabel QWidget QGroupBox QStyleSheetItem QFontDialog QpaintDevice QWidget Qpainter QStyleSheetItem QStyleSheetItem QStyleSheetItem QStyleSheetItem QStyleSheetItem QColorGroup QWidget QImageDrag QMimeSource QStoredDrag QWidget QGLWidget QGLContext QTextDrag QDropEvent QIconDrag QImageQImageDecoder QImageFormatType QImageDecoder QTextBorrower QTextBorrower QLineEdit QFrame QWidgetStack QGrid QHbox QScrollview QImageConsumer QWidget Qmovie Qmovie Qframe Qframe Qframe QWidget QWidget Qframe QNetworkOperation QValueList QString QString QString QPrinter
+
+**fromPage()**
+
+**fromLocal8Bit()**
+
+**fromLatin1()**
+
+**fromAscii()**
+
+**free()**
+
+**frameWidth()**
+
+**frameStyle()**
+
+**frameSize()**
+
+**frameShape()**
+
+**frameShadow()**
+
+**frameRect()**
+
+**framePixmap()**
+
+**frameNumber()**
+
+**frameGeometry()**
+
+**frameChanged()**
+
+**frame()**
+
+**forwardAvailable()**
+
+**forward()**
+
+**format()**
+
+**foregroundColor()**
+
+**foreground()**
+
+**fontWeight()**
+
+**fontUnderline()**
+
+**fontSize()**
+
+**fontSelected()**
+
+**fontPropagation()**
+
+**fontMetrics()**
+
+**fontItalic()**
+
+**fontInfo()**
+
+**font()**
+
+**focusWidget()**
+
+**focusProxy()**
+
+**focusPolicy()**
+
+**focusOutEvent()**
+
+**focusNextPrevChild()**
+
+**focusInEvent()**
+
+QStringList
+
+QTextCodec QJisCodec QEucKrCodec QTextEncoder QCodecOpCode QKbKCodec
+
+QString
+
+QPrinter
+
+QCustomMenuItem
+
+QLayout QSpacerItem QWidget QLayoutItem QWidth-getItem
+
+QGLInterator QGCacheIterator QUrlOperator QGLInt QGLDictIterator
+
+QWindowsStyle QStyle QPlatinumStyle QCommon-Style
+
+QFile QIODevice QBuffer
+
+QColorDialog
+
+QMultiLineEdit
+
+QNode
+
+QInputDialog
+
+QFileDialog_
+
+QList
+
+QFontDialog
+
+QColor
+
+QInputDialog
+
+QInputDialog
+
+QPlugin
+
+QPlugin
+
+QPinInstance
+
+QGLDictIterator QGCacheIterator
+
+QCacheIterator QGLDictIterator
+
+QGLDictIterator
+
+QGLDictIterator QGCacheIterator
+
+QList
+
+QMainWindow
+
+QMultiLineEdit
+
+QPlugin
+
+QNetworkProtocol QUrlOperator
+
+QFileDialog
+
+QPlugin
+
+QPlugin
+
+QPlugin
+
+QSplitter
+
+QColorDialog
+
+QFileDialog
+
+QMultiLineEdit
+
+QInputDialog
+
+QPinInstance
+
+QPinInstance
+
+QMovie
+
+QPlugin
+
+QWidget
+
+QWidget
+
+QLWidget
+
+QLWidget
+
+**globa1Pos()**
+QWheelEvent QMouseEvent
+
+**globa1X()**
+QWheelEvent QMouseEvent
+
+**globa1Y()**
+QMouseEvent QWheelEvent
+
+**getFocus()**
+QFocusEvent
+
+**grabKeyboard()**
+QWidget
+
+**grabMouse()**
+QWidget
+
+**grabWidget()**
+QPixmap
+
+**grabWindow()**
+QPixmap
+
+**greaterThan()**
+QUrlInfo
+
+**green()**
+QColor
+
+**grep2jul()**
+QDate
+
+**grep()**
+QStringList
+
+**gridX()**
+QIconView
+
+**gridY()**
+QIconView
+
+**group()**
+QUrlInfo QToolTip QFileInfo QPushButton
+
+**groupId()**
+QFileInfo
+
+**guiStyle()**
+QStyle
+
+**guiThreadAwake()**
+QApplicat ion
+
+**handle()**
+QFile
+
+**hasAlphaBuffer()**
+QImage
+
+**hasApplyButton()**
+QTabDialog
+
+**hasCancelButton()**
+QTabDialog
+
+**hasClipping()**
+QPainter
+
+**hasDefaultButton()**
+QTabDialog
+
+**hasFocus()**
+QWidget
+
+**hasGlobalMouseTracking()**
+QApplicat ion
+
+**hasHeightForWidth()**
+QBoxLayout QLayoutItem QWidgetItem QGridLayout
+
+**hasHelpButton()**
+QSizePolicy
+
+**hasKeyAction()**
+QTabDialog
+
+**hasKeyString()**
+QDialog
+
+**hasCost()**
+QDialog
+
+**hasMarkedText()**
+QMultiLineEdit QLineEdit
+
+**hasMouseTracking()**
+QWidget
+
+**hasOkButton()**
+QTabDialog
+
+**hasOnlyLocalFileSystem()**
+QNetworkProtocol
+
+**hasOpenGL()**
+QGLFormat
+
+**hasOpenGLOverlays()**
+QGLFormat
+
+**hasOverlay()**
+QGLFormat
+
+**hasPassword()**
+QUrl
+
+**hasPath()**
+QUrl
+
+**hasRef()**
+QTextView
+
+**hasSelectedText()**
+QUrl
+
+**hasUser()**
+QPainter
+
+**hasViewXForm()**
+QPainter
+
+**hasWorldXForm()**
+QQueue
+
+**head()**
+QListView
+
+**header()**
+QWidget
+
+**height()**
+QPaintDeviceMetrics QFontMetrics QList-BoxQPixmap QRect QListViewItem QPixmap QIcon-ViewI tern QListBoxItem QImage QSize QSimpleRich-Text QLabelBoxText
+

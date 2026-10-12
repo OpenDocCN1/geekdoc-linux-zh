@@ -1,0 +1,172 @@
+
+
+## 表 2.2（续）
+
+| 受保护成员 | 用途 |
+| :--- | :--- |
+| `virtual void moveEvent( QMoveEvent * )` | 当小部件被移动时调用 |
+| `virtual void resizeEvent( QResizeEvent * )` | 当小部件被调整大小时调用 |
+| `virtual void closeEvent( QCloseEvent * )` | 由先前对 close() 方法的调用触发。默认行为是 accept() 该事件，这将隐藏小部件。 |
+| `virtual void dragEnterEvent( QDragEnterEvent * )` | 当拖动操作正在进行且鼠标进入小部件区域时调用 |
+| `virtual void dragMoveEvent( QDragMoveEvent * )` | 当拖动操作正在进行且鼠标在小部件区域内移动时调用 |
+| `virtual void dragLeaveEvent( QDragLeaveEvent * )` | 当拖动操作正在进行且鼠标离开小部件区域时调用 |
+| `virtual void dropEvent( QDropEvent * )` | 当拖动操作正在进行且鼠标按钮在该小部件区域内释放时调用 |
+| `virtual void showEvent( QShowEvent * )` | 在小部件显示之前调用 |
+| `virtual void hideEvent( QHideEvent * )` | 在小部件隐藏之后调用 |
+| `virtual void customEvent( QCustomEvent * )` | 显式从 QApplication 的 sendEvent() 或 postEvent() 方法调用，以实现自定义事件类型 |
+| `virtual void updateMask()` | 如果 isAutoMask() 为真，则自动调用。这将更新小部件掩码以适应大小调整和焦点变化 |
+| `virtual void styleChange( QStyle & )` | 当小部件的样式发生变化时调用 |
+| `virtual void enabledChange( bool )` | 每当小部件的启用状态发生变化时调用 |
+| `virtual void backgroundColorChange( const QColor & )` | 当通过调用 setBackgroundColor() 改变小部件的背景颜色时调用 |
+| `virtual void backgroundPixmapChange( const QPixmap & )` | 当背景位图发生变化时调用 |
+| `virtual void paletteChange( const QPalette & )` | 当小部件的调色板发生变化时调用 |
+| `virtual void fontChange( const QFont & )` | 当小部件的字体发生变化时调用 |
+
+| 受保护成员 | 用途 |
+| --- | --- |
+| `virtual void create( WId = 0, bool initializeWindow = TRUE, bool destroyOldWindow = TRUE )` | 如果窗口 ID 参数为零，则创建新的小部件窗口；否则，将小部件移动到具有该 ID 的窗口。initializeWindow 参数指定是否初始化新窗口的几何形状。如果 destroyOldWindow 参数为真，前一个窗口将被销毁 |
+| `virtual void destroy( bool destroyWindow = TRUE, bool destroySubWindows = TRUE )` | 如果 destroyWindow 为真，则销毁小部件窗口。如果 destroySubWindows 为真，则递归地对子小部件调用 destroy( ) |
+| `WFlags getWFlags( )` | 获取当前的小部件标志 |
+| `virtual void setWFlags( WFlags )` | 设置指定的小部件标志 |
+| `void clearWFlags( WFlags )` | 重置（清除）指定的小部件标志 |
+| `virtual bool focusNextPrevChild( bool next )` | 在当前制表顺序中查找一个新的接收键盘焦点的小部件。如果成功则返回 true，否则返回 false |
+| `QFocusData * focusData( )` | 返回指向该小部件的顶级小部件祖先的焦点数据的指针 |
+| `virtual void setKeyCompression( bool )` | 启用/禁用键事件压缩。启用时，可以在单个事件处理中处理多个键事件，这对于多字符 Unicode 输入很有用。默认情况下禁用 |
+| `virtual void setMicroFocusHint( int x, int y, int w, int h, bool text=TRUE )` | 设置用于平台相关输入方法的焦点位置和大小 |
+
+## 父子关系
+
+QWidget 维护其子小部件的列表（可以通过 `QWidget::children()` 方法访问）。给定小部件的子小部件是指其父小部件（作为构造函数第一个参数传入）为给定小部件的新小部件。默认的 QWidget 析构函数在删除自身之前会删除其所有子小部件。要删除一条小部件链，只需删除父小部件即可。
+
+父子关系规则很简单：没有父小部件的 QWidget 是一个*顶级*小部件（通常带有窗口管理器边框、标题栏等），所有以该顶级小部件为父小部件的 QWidget 都是该小部件的子小部件。
+
+QApplication 维护应用程序中顶级小部件的列表，这些顶级小部件维护其子小部件的列表。如果你删除一个小部件，其析构函数将首先删除其所有子小部件。（这种共生关系几乎是完美的。你可能会偶尔发现内存泄漏，但它们总是非常小且不传播的。）
+
+Qt 小部件的几何形状受其父小部件几何形状的限制。创建一个 300 乘 200 像素的列表视图作为 50 乘 50 框架小部件的子小部件，将不会按你预期的那样显示。
+
+以下示例有助于说明父子关系。
+
+### NewWidget.h
+
+```c++
+#ifndef _NEWWIDGET_H
+#define _NEWWIDGET_H
+
+#include <qlabel.h>
+#include <qlayout.h>
+#include <qstring.h>
+
+// A subclass of QWidget
+class NewWidget : public QWidget
+{
+    // To make our two slots work:
+    Q_OBJECT
+public:
+    // The constructor accepts a widget parent but the default
+    // behavior is a toplevel widget.
+    NewWidget( QWidget *parent=0, const char *name=0 );
+public slots:
+    void setLabel( const QString &s ) { left->setText( s ); }
+    void setValue( const QString &s ) { val->setText( s ); }
+
+private:
+    QLabel *left, *val;
+};
+#endif // _NEWWIDGET_H
+```
+
+### NewWidget.cpp
+
+```c++
+NewWidget::NewWidget( QWidget *p, const char *n )
+: QWidget( p, n ) // Pass the arguments to the base class
+{
+    // Add a layout
+    QBoxLayout *top = new QBoxLayout( this, 5 );
+    // 'left' is the label in the pair
+    left = new QLabel( this );
+    left->setAlignment( AlignVCenter|AlignRight );
+    top->addWidget( left );
+    // val displays the value in the pair
+    val = new QLabel( this );
+    top->addWidget( val );
+}
+#include "NewW.moc"
+```
+
+好的，我们得到了一个新的小部件。它暴露了与 QWidget 相同的所有方法、信号和槽，并在此过程中增加了两个新的槽。内部，它维护一个布局和两个标签小部件，但你无需关心管理是如何实现的——对于本次讨论来说，它就是如此。
+
+现在，我们将使用我们的新小部件。我们将创建两个 NewWidget 实例，并在用户点击按钮时删除其中一个，然后讨论你可以预期会发生什么：
+
+### main.cpp
+
+```c++
+#include "NewW.h"
+#include <qapplication.h>
+#include <qpushbutton.h>
+
+class screen : public QWidget
+{
+    Q_OBJECT
+public:
+    screen();
+protected slots:
+    void delbot() { delete bottom; bottom = 0; }
+private:
+    NewWidget *above, *bottom;
+};
+
+screen::screen()
+    : QWidget( 0, 0 )
+{
+    // Vertical layout---two NewWidgets and a button
+    QVBoxLayout *top = new QVBoxLayout( this );
+    above = new NewWidget( this );
+    above->setLabel( "Upper Value:" );
+    above->setValue( "Above it all" );
+    top->addWidget( above );
+    bottom = new NewWidget( this );
+    bottom->setLabel( "Lower Value:" );
+    bottom->setValue( "Bottomed-out" );
+    top->addWidget( bottom );
+    QPushButton *pb = new QPushButton( "Delete Bottom", this );
+    connect(pb, SIGNAL(clicked()), SLOT(delbot()));
+}
+
+int
+main( int argc, char **argv )
+{
+    QApplication app( argc, argv );
+    screen *s = new screen();
+    app.setMainWidget( s );
+    s->show();
+    return app.exec() ;
+}
+
+// We have slots in the above class, so we have to meta compile
+// this code and link to it (or just include the moc output)
+#include "main.moc"
+```
+
+上述代码定义了 QWidget 的一个子类 screen，它在垂直布局中管理两个 NewWidget 小部件和一个按钮。在 screen 的构造函数中，由按钮发出的 clicked() 信号连接到 screen 小部件的 delbot() 槽。delbot() 槽只是检查底部的 NewWidget（指针）是否等于零，如果不等于，则删除其指向的对象。
+
+由于创建的每个小部件实例都会分配资源，当你点击按钮时，`bottom` 指针指向的 NewWidget 实例分配的所有资源会怎么样？你猜对了——该特定 NewWidget 的所有子小部件将首先被删除。这意味着*所有*子小部件。这种行为存在于 QWidget、QObject 及其子类中，你务必考虑到这一点很重要。如果你删除*主*小部件，即传递给 QApplication::setMainWidget() 的参数小部件，你的应用程序将会退出。
+
+## 小部件标志
+
+顶级小部件是指没有父小部件的任何小部件。有时，你希望创建具有与默认不同的*小部件标志*值的顶级小部件。以下示例说明了一个简单的对话框样式顶级小部件。请注意添加了小部件标志参数。
+
+### dialog.h
+
+```c++
+#include <qlabel.h>
+#include <qlayout.h>
+#include <qpushbutton.h>
+
+class dialog : public QWidget
+{
+    Q_OBJECT
+public:
+    dialog( const QString &, const QPixmap & );
+```
+

@@ -1,0 +1,467 @@
+
+# Audio.h
+
+```c
+void	speak( const char * );
+void	midiPlay( const char * );
+void	wavPlay( const char * );
+void	setPitch( int );
+void	setSpeed( int );
+void	setVoice( int );
+void	properties( QWidget *parent );
+void	pause();
+void	resume();
+void	stop();
+void	repeat();
+
+private:
+	int		state;
+	LilMidi	*midi;
+	WCHAR	*spbBuffer[2048];
+	char	file[1024];
+	bool	cantalk;
+};
+
+#endif // _AUDIO_H
+```
+
+# Midi.h
+
+```c
+#ifndef __MIDI_H__
+#define __MIDI_H__
+
+#ifndef WIN32
+#error // Only supported on Win32
+#endif
+
+#include <qobject.h>
+#include <qstring.h>
+
+class LilMidi : public QObject
+{
+Q_OBJECT
+public:
+	LilMidi();
+	virtual	~LilMidi();
+
+	enum		{ Stopped=0, Playing, Paused };
+
+	int		tempo();
+	int		status();
+	int		divisionType();
+	bool	open( const QString & );
+	bool	seek( unsigned long msec );
+	unsigned long pos();
+
+public slots:
+void setTempo( int );
+void close();
+void play();
+void stop();
+void pause();
+void fastPwd( int sec );
+void rewind( int sec );
+private:
+    int state;
+    WORD device;
+    BOOL isopen;
+};
+#endif //__MIDI_H__
+```
+
+# Audio.cpp
+
+```c
+#include <Audio.h>
+#include <string.h>
+#include <stdio.h>
+// Zap this if you don't want to use the SAPI stuff
+#define TTS
+#ifdef TTS
+#include <mmsystem.h>
+#include <initguid.h>
+#include <objbase.h>
+#include <ole2ver.h>
+#include <spchwrap.h>
+#include <qmessagebox.h>
+static CTTSmode *speech;
+#endif // TTS
+#define GOOFY_MS_GLITCH
+#ifdef GOOFY_MS_GLITCH
+int errno;
+#endif
+Audio::Audio()
+{
+#ifdef TTS
+    HRESULT hRes;
+    // Initialize Speech
+    TTMODEINFO mode;
+    memset(&mode, 0, sizeof(TTSMODEINFO));
+    speech = NULL;
+    memset(file, 0, 1024);
+memset( spbBuffer, 0, 2048 * sizeof( WCHAR ));
+state = idle;
+SetMessageQueue(96);
+CoInitialize(NULL);
+speech = new CTTSMode();
+wcopy(mode.szSpeaker, L"Mary");
+if ((hRes = speech->Init ( &mode, NULL )) != S_OKERROR) {
+cantalk = true;
+QString s = QString( (QChar *)mode.szSpeaker,
+TTSI_NAMelen ));
+} else cantalk = false;
+#endif // TTS
+midi = new LiiMidi();
+}
+Audio::~Audio()
+{
+#ifdef TTS
+if(cantalk == true || speech != NULL) {
+delete speech;
+}
+CoUnitialize();
+#endif
+delete midi;
+}
+int
+Audio::pitch()
+{
+#ifdef TTS
+if(cantalk == false || speech == NULL) return(-1);
+#endif
+return( 0 );
+}
+int
+Audio::speed()
+{
+#ifdef TTS
+if(cantalk == false || speech == NULL) return(-1);
+return( speech->SpeedGet( ) );
+#endif
+return(0);
+}
+// Pops a dialog with the properties dialog (if supported
+// by TTS engine)
+void
+Audio::properties( QWidget *p )
+{
+#ifdef TTS
+if(cantalk == false || speech == NULL) return;
+speech->GeneralDlg( p->winID(), "TTS Properties" );
+#endif
+}
+
+int
+Audio::voice()
+{
+#ifdef TTS
+if(cantalk == false || speech == NULL) return(-1);
+#endif
+return(0);
+}
+
+void
+Audio::speak( const char *p )
+{
+#ifdef TTS
+if(cantalk == false || speech == NULL) return;
+state = Speech;
+memset(spksbuffer, 0, 2048*sizeof(WCHAR));
+Qstring msgs = Qstring(p);
+wcsncpy( spksbuffer,
+(WCHAR *) (msgs.unicode(), 1023);
+spksbuffer[strlen(p)] = 0;
+speech->Speak( (PCWSTR)spksbuffer, true, NULL );
+#endif
+}
+
+void
+Audio::midiPlay( const char *p )
+{
+state = Midi;
+
+memset(file, 0, 1024);
+strncpy(file, p, 1023);
+
+midi->close();
+midi->open( p );
+midi->play();
+}
+
+void
+Audio::wavPlay( const char *p )
+{
+state = Wav;
+memset(file, 0, 1024);
+strncpy(file, p, 1023);
+PlaySound( file, NULL, SND_ASYNC|SND_FILENAME );
+}
+
+void
+Audio::setPitch( int v )
+{
+}
+void
+Audio::setSpeed( int v )
+{
+#ifdef TTS
+  speech->SpeedSet(v);
+#endif
+}
+void
+Audio::setVoice( int v )
+{
+}
+void
+Audio::pause()
+{
+  switch(state) {
+    case Speech:
+      #ifdef TTS
+        speech->AudioPause();
+      #endif
+      break;
+    case WAV:
+      PlaySound( NULL, NULL, SND_PURGE );
+      break;
+    case Midi:
+      midi->pause();
+      break;
+    default:
+      break;
+  }
+}
+void
+Audio::resume()
+{
+  switch(state) {
+    case Speech:
+      #ifdef TTS
+        speech->AudioResume();
+      #endif
+      break;
+    case WAV:
+      PlaySound( file, NULL,
+                  SND_ASYNC|SND_FILENAME );
+      break;
+    case Midi:
+      midi->play();
+      break;
+    default:
+      break;
+  }
+}
+
+void
+Audio::stop()
+{
+    switch(state) {
+    case Speech:
+#ifdef TTS
+        speech->AudioReset();
+#endif
+        break;
+    case Wave:
+        PlaySound( NULL, NULL, SND_PURGE );
+        break;
+    case Midi:
+        midi->stop();
+        break;
+    default:
+        break;
+    }
+}
+
+void
+Audio::repeat()
+{
+    switch(state) {
+    case Speech:
+#ifdef TTS
+        speech->Speak( spkbuffer, true, NULL );
+#endif
+        break;
+    case Wave:
+        PlaySound( file, NULL,
+             SND_ASYNC|SND_FILENAME );
+        break;
+    case Midi:
+        midi->seek( 0L );
+        midi->play();
+        break;
+    default:
+        break;
+    }
+}
+
+#include <Audio.moc>
+```
+
+# Midi.cpp
+
+```cpp
+#include <afxwin.h>
+#include <mmsystem.h>
+// Avoids the warning caused by lack of #pragma once
+#define STRICT
+#undef STRICT
+#endif
+#include <Midi.h>
+#include <QFile.h>
+
+// LilMidi ctor
+LilMidi::LilMidi()
+{
+    state = Stopped;
+    device = 0;
+    isopen = false;
+}
+
+// Default dtor
+LilMidi::~LilMidi()
+{
+    close();
+}
+
+// bool open( const QString &file_name )
+// Open the midi file, set stream position to 0
+bool
+LilMidi::open( const QString &filename )
+{
+    QFile fi( filename );
+
+    // If we aren't stopped, stop and close.
+    if( isopen == true ) {
+        if( state != Stopped ) stop();
+        close();
+    }
+
+    device = 0;
+
+    // See if the file exists
+    if( fi.exists() == false ) {
+        return( false );
+    }
+
+    // Get the device
+    MCI_OPEN_PARMS parms;
+    parms.lpstrDeviceType = (LPCSTR)MCI_DEVTYPE_SEQUENCER;
+    parms.lpstrElementName= (LPCSTR)(const char *)filename;
+    parms.wDeviceID = 0;
+
+    if( mciSendCommand( NULL,
+            MCI_OPEN,
+            MCI_WAIT | MCI_OPEN_TYPE |
+            MCI_OPEN_TYPE_ID | MCI_OPEN_ELEMENT,
+            (DWORD)(LPOID)&parms ) ) {
+        return( false );
+    }
+    device = parms.wDeviceID;
+    isopen = true;
+
+// Set the time format to milliseconds
+MCI_SET_PARAMS sparms;
+sparms.dwTimeFormat = MCI_FORMAT_MILLISECONDS;
+if (mciSendCommand( device,
+MCI_SET,
+MCI_SET_TIME_FORMAT,
+(DWORD)(LPVOID)&sparms ) ) {
+close ();
+return( false );
+}
+mciSendCommand( device, MCI_SEEK, MCI_SEEK_TO_START,
+NULL );
+return( true );
+}
+
+// void close()
+// Stop and close the mci stream
+void
+LiiMidi::close()
+{
+if (isopen == true ) {
+// Stop playing and close
+mciSendCommand( device, MCI_STOP, NULL, NULL );
+state = Stopped;
+
+mciSendCommand( device, MCI_CLOSE, NULL, NULL );
+
+device = 0;
+isopen = false;
+}
+}
+
+// void play()
+// begin play from current stream position
+void
+LiiMidi::play()
+{
+if (isopen == true ) {
+MCI_STATUS_PARAMS sparms;
+MCI_PLAY_PARMS parms;
+
+// Start playing from current position
+// if paused
+if( state == Paused ) {
+sparms.dwItem = MCI_STATUS_POSITION;
+if( mciSendCommand(
+device,
+MCI_STATUS,
+MCI_WAIT | MCI_STATUS_ITEM,
+(DWORD)(LPVOID)&sparms ) ) {
+return;
+} else (
+sparms.dwReturn = 0;
+}
+parms.dwCallback = NULL;
+parms.dwFrom = sparms.dwReturn;
+if( mciSendCommand(
+     device,
+     MCI_PLAY,
+     MCI_FROM,
+     (DWORD)(LPVOID)&parms) ) {
+     return;
+}
+state = Playing;
+}
+
+// void stop()
+// Stop and reposistion stream to 0
+void
+LilMidi::stop()
+{
+    if( isopen == true ) {
+        if(state == Playing ) {
+            mciSendCommand( device, MCI_STOP,
+            NULL, NULL );
+        }
+        mciSendCommand( device, MCI_SEEK,
+            MCI_SEEK_TO_START, NULL );
+        state = Stopped;
+    }
+}
+
+// void pause()
+void
+LilMidi::pause()
+{
+    if( isopen == true && state == Playing ){
+        MCI_PLAY_PARMS parms;
+        if( mciSendCommand( device, MCI_PAUSE, 0,
+        (DWORD)(LPVOID)&parms) )
+            return;
+        state = Paused;
+    }
+}
+
+// unsigned long pos()
+// Returns current stream position
+unsigned long
+LilMidi::pos()
+{
+    if( isopen == true ) {
+        MCI_STATUS_PARMS parms;
+        parms.dwItem = MCI_STATUS_POSITION;
+        if( mciSendCommand(
+```

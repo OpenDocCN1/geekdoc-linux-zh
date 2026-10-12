@@ -1686,6 +1686,7 @@
 +   [Python 编程初学者指南：Python 基础入门指南。通过实用示例快速掌握编程的技巧与方法](docs/python-programming-for-beginners-the-beginners-guide-to-lear/README.md)
 +   [Python：完全手册 - Python 用户必备指南 - 立即精通 Python！第一版](docs/python-the-complete-manual---the-essential-handbook-for-pyth/README.md)
 +   [Python：完全手册：Python 用户必备指南](docs/python-the-complete-manual-the-essential-handbook-for-python/README.md)
++   [linux 和 windows 2000 的 Qt 编程](docs/qt-programming-for-linux-and-windows-2000/README.md)
 +   [Mozilla 快速应用开发](docs/rapid-application-development-with-mozilla/README.md)
 +   [Raspberry Pi 完整手册：面向所有 Raspberry Pi 用户的独立手册](docs/rasoberry-pi-the-complete-manual-the-independent-handbook-fo/README.md)
 +   [树莓派 4 初学者指南：Windows、iOS、Linux 及更多平台的树莓派 4 编程入门指南（包含 26 个易于跟随的树莓派 4 项目）](docs/raspberry-pi-4-for-beginners-simplified-introduction-to-rasp/README.md)
