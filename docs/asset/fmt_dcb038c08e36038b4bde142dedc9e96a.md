@@ -1,0 +1,70 @@
+
+第 26 章 APACHE：设置 Web 服务器
+
+`ErrorDocument` 指定了当发生指定的错误时 Apache 采取的操作。
+
+## ErrorDocument code action
+
+其中 `code` 是此指令定义相应响应的错误代码（第 948 页），
+
+`action` 是以下内容之一：
+
+- `string`（字符串）：定义 Apache 返回给客户端的消息。
+- `absolute pathname`（绝对路径）：指向 Apache 重定向到客户端的本地脚本或其他内容。
+- URI：指向 Apache 重定向到客户端的外部脚本或其他内容。当发生该错误时，Apache 会为指定的代码返回硬编码的错误。
+
+`ErrorDocument` 指令的一些示例：
+
+```
+ErrorDocument 403 "Sorry, access is forbidden."
+ErrorDocument 403 /cgi-bin/uh-uh.pl
+ErrorDocument 403 http://errors.example.com/not_allowed.html
+```
+
+反向服务器配置，虚拟主机，`.htaccess`
+
+在 `httpd.conf` 中指定
+
+默认：无；Apache 返回硬编码的错误信息
+
+Ubuntu：无（但请参 `apache2.conf` 中的注释）
+
+`IndexOptions` 指定了 Apache 如何显示目录列表。
+
+`IndexOptions [|z|option]] ...`
+
+其中 `can` 可以是以下内容的任意组合：
+
+- `DescriptionWidth`：将描述列的宽度设置为 n 个字符。使用 `*` 代替 n 以容纳最宽的描述。
+- `FancyIndexing`：在目录中，显示作为链接的列标题。当您选择这些链接之一时，Apache 会根据列的内容对显示进行排序。再次点击该链接将反转顺序。
+- `FoldersFirst`：对列表进行排序，使目录排在普通文件之前。仅配合 `FancyIndexing` 时使用。
+- `HTMLTable`：以表格形式显示目录列表。
+- `IconsAreLinks`：使图标可点击。仅配合 `FancyIndexing` 时使用。
+- `IconHeight`：将图标的高度设置为 n 像素。仅配合 `IconWidth` 时使用。
+- `IconWidth`：将图标的宽度设置为 n 像素。仅配合 `IconHeight` 时使用。
+- `IgnoreCase`：在排序名称时忽略大小写。
+- `IgnoreClient`：忽略客户端在 URI 中提供的选项。
+
+## 配置指令
+
+`NameWidth=n`：将文件名列的宽度设置为 n 个字符。使用 `*` 代替 n 以容纳最宽的文件名。
+
+`ScanTitles`：从 HTML 文档中提取并显示标题。仅配合 `FancyIndexing` 时使用。通常不使用，因为它消耗 CPU 和磁盘。
+
+`SuppressColumnSorting`：隐藏可用于排序列的可点击列标题。仅配合 `FancyIndexing` 时使用。
+
+`SuppressDescription`：隐藏文件描述。仅配合 `FancyIndexing` 时使用。
+
+`SuppressHTMLPreview`：如果存在 `Header-Name` 指令指定的文件，则隐藏该文件的内容。
+
+`SuppressIcon`：隐藏图标。仅配合 `FancyIndexing` 时使用。
+
+`SuppressLastModified`：隐藏修改日期。仅配合 `Fancy-Indexing` 时使用。
+
+`SuppressRules`：隐藏水平线。仅配合 `FancyIndexing` 时使用。
+
+`SuppressSize`：隐藏文件大小。仅配合 `FancyIndexing` 时使用。
+
+`VersionSort`：以自然方式对版本号（文件名中的）进行排序；对于数字子集的字符字符串不受影响。
+
+例如，如果客户端请求一个指向目录的 URI（如 `http://www.example.com/support/`），且 `Directory-Index` 指令（第 914 页）指定的任何文件都不存在其中。如果目录层次结构由 `.htaccess` 文件控制，且 `AllowOverride`（第 930 页）已设置为允许索引，Apache 将根据此指令指定的选项显示目录列表。
