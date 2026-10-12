@@ -1,0 +1,112 @@
+
+该算法的最后一个限制是其对长期（深度事务）连接的支持。如果你的客户端和服务器执行单个事务或短交互，该算法会保持稳定。然而，深度事务连接通常需要多个状态。这会给你的服务器带来极大的复杂性。此外，由于连接处于活动状态的时间更长，负载均衡失衡的可能性也会增加。
+
+## 重新分配负载
+
+如果你从使用进程切换到使用线程，就可以解决负载分配的限制。如上文所述，服务器无法轻松分配每个任务的连接数量。（你可以通过进程间通信（`IPC`）来实现，但这带来的麻烦远大于其价值。）线程允许你在任务之间共享所有内容，包括文件描述符表。
+
+类似地，你的服务器可能有多个线程在运行，这使得连接分配变得困难。你拥有一个描述符数组，可以使用`poll()`系统调用。（你可以使用`select()`调用，但算法不如`poll()`直观。）每个线程拥有数组的一部分。只有当父进程接受所有连接时，这种方式才有效。当服务器看到连接请求时，父进程接受该请求并将其放入描述符数组中。
+
+取决于`poll()`的实现，你的线程可能必须频繁超时，以便拾取描述符数组中的任何变更。一些实现只是循环测试每个描述符；其他实现（在Linux中更常用）实际上是将描述符注册到系统调用中。该系统调用等待并报告描述符的活动。因此，如果父进程添加了新的描述符，线程必须再次调用`poll()`才能开始处理它。
+
+```c
+/*****************************************/
+/*** Fair load distribution example: parent accepts ***/
+/*** and assigns connections to various threads. ***/
+/*** ("fair-load.c" on Web site)   ***/
+/*****************************************/
+int fd_count=0;
+struct pollfd fds[MAXFDs]; /* cleared with bzero() */
+/*---parent---*/
+int sd = socket(PF_INET, SOCK_STREAM, 0);
+/***Bind() and listen() socket***/
+for (;;) {
+    int i;
+    /*--- Find an available slot before accepting conn. ---*/
+    for ( i = 0; i < fd_count; i++ )
+        if ( fds[i].events == 0 )
+            break;
+    if ( i == fd_count  &&  fd_count < MAXFDs )
+        fd_count++;
+    /*---If you have an available slot, accept connection---*/
+    if ( i < fd_count )
+    {
+        fds[i].fd = accept(sd, 0, 0);
+        fds[i].events = POLLIN | POLLHUP;
+    }
+    else                    /* otherwise, yield for a little while */
+                        /* or, some yielding delay */
+        sleep(1);
+}
+/*---child---*/
+
+void *Servlet(void *init)
+{
+    int start = *(int*)init;          /* get the fd-range start */
+    for (;;) {
+        int result;
+                         /* wait for only 0.5 second */
+        if ( (result = poll(fds+start, RANGE, 500)) > 0 ) {
+            int i;
+            for ( i = 0; i < RANGE; i++ ) {
+                if ( fds[i].revents & POLLIN )
+                    /*** Process incoming message ***/
+                else if ( fds[i].revents & POLLHUP )
+                    /*** close connection ***/
+            }
+        }
+        else if ( result < 0 )
+            perror("poll() error");
+    }
+}
+```
+
+这展示了父进程和子进程（线程）的职责。父进程接受连接并将其放入`fds[]`数组中。子进程（线程）等待各自范围内的连接。（如果`pollfd`结构中的`events`字段为零，你对`poll()`的调用会跳过该条目。如果数组中没有活动的描述符，`poll()`只会等待超时期然后返回零。）
+
+你的客户端程序也可以利用线程连接的优势。正如你在第 7 章中读到的，线程非常适合发送多个独立的请求、收集信息并对其进行汇总。你的客户端可以并行执行所有这些操作，因为网络通信中大部分时间都花在等待服务器上。由于线程本质上共享数据，你可以发起多个请求，并在等待其余结果的同时解释部分结果。
+
+## 深入探讨套接字控制
+
+围绕套接字和连接控制你的算法是提高服务器和客户端性能的一部分。你还需要控制套接字本身。前面的章节提到了一些你可以用来根据需求配置套接字的选项。本节将定义更多选项。
+
+你可以使用`getsockopt()`和`setsockopt()`系统调用来控制所有套接字配置选项。这些系统调用配置套接字的一般选项和特定协议的选项。附录 A“数据表”总结了所有可用的选项。这些调用的原型如下：
+
+```c
+int getsockopt(int sd, int level, int optname, void *optval, socklen_t *optlen);
+int setsockopt(int sd, int level, int optname, const void *optval, socklen_t optlen);
+```
+
+每个选项都有一个级别。目前，Linux 定义了四个套接字级别：`SOL_SOCKET`、`SOL_IP`、`SOL_IPV6` 和 `SOL_TCP`。每个选项都有一个类型：布尔值、整数或结构体。当你设置或获取一个选项时，你将选项放入`optval`中，并在`optlen`中声明值的大小。当你获取一个选项时，调用通过`optlen`返回它使用的字节数。
+
+例如，如果你想要禁用`SO_KEEPALIVE`，请使用以下代码：
+
+```c
+/*****************************************/
+/*** setsockopt() example: disable keepalive ***/
+/*****************************************/
+int value=0; /* FALSE */
+if ( setsockopt(sd, SOL_SOCKET, SO_KEEPALIVE, &value,
+               sizeof(value)) != 0 )
+    perror("setsockopt() failed");
+```
+
+同样，如果你想知道套接字类型（`SO_TYPE`），可以使用以下示例：
+
+```c
+/*****************************************/
+/*** getsockopt() example: socket type ***/
+/*****************************************/
+int value;
+int val_size = sizeof(value);
+if ( getsockopt(sd, SOL_SOCKET, SO_TYPE, &value,
+               &val_size) != 0 )
+    perror("getsockopt() failed");
+```
+
+以下各节定义了你可以使用的所有选项。
+
+## 通用选项
+
+通用选项适用于所有套接字。这些选项的级别是`SOL_SOCKET`。
+
+- `SO_BROADCAST`：此选项允许你的套接字发送和接收广播消息。`broadcast`地址将活动的子网位（参见第 2 章“TCP/IP 网络语言流利度”）设置为全 1。并非所有网络都支持广播（以太网和令牌环支持）。支持该功能的网络仅允许数据报消息。（布尔值，默认禁用。）
