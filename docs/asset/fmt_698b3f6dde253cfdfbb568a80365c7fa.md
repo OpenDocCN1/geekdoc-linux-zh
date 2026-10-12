@@ -1,0 +1,130 @@
+
+`/tryflags` 设置同时影响 `/parse` 和 `/try`，但它们对 `/parse` 命令没有意义。`/parse` 执行的第一件事是将地址解释为投递地址。它为特定的邮件传输器（mailer）处理该地址。使用发送者地址来选择用于投递地址的邮件传输器是没有意义的，因为在任何真实情况下，发送者和收件者都不会是同一个地址。由于如此，虽然所有的 `/tryflags` 都影响 `/parse`，但只有 ER 和 HR 是真正有用的。
+
+## 使用 /try 命令进行测试
+
+另一方面，`/try` 命令利用了所有的 `/tryflags` 值。`/try` 命令本质上执行了与 `/parse` 命令后半部分相同的处理。`/try` 命令接收一个地址并为邮件传输器对其进行处理。但与根据提供的地址选择邮件传输器的 `/parse` 命令不同，你告诉了 `/try` 命令它应该使用哪个邮件传输器。列表 10.10 显示了 `/try` 命令以及 `/tryflags` 对其没有任何影响。
+
+列表 10.10 使用 /try 为邮件传输器处理地址
+
+```
+[]# sendmail -bt
+ADDRESS TEST MODE NOT automatically invoked
+Enter <ruleset> <address>
+>/tryflags HR
+>/try smtp al@bird.org
+canonify input: al @ bird . org
+Canonify2 input: al < bird . org
+Canonify2 returns: al < bird . org >
+```
+
+![](img/9639113aa446fb8976cb3d377f7aafdd_308_0.png)
+
+```
+canonify returns: al < @ bird . org >
+2 input: al < @ bird . org >
+2 returns: al < @ bird . org >
+EnvToSMTP input: al < @ bird . org >
+PseudoToReal input: al < @ bird . org >
+PseudoToReal returns: al < @ bird . org >
+MasQSMTP input: al < @ bird . org >
+MasQSMTP returns: al < @ bird . org >
+EnvToSMTP returns: al < @ bird . org >
+final input: al < @ bird . org >
+final returns: al < @ bird . org
+Rcode = 0, addr = al@bird.org
+/tryflags HS
+>/try smtp craig
+Trying header address for mail esmtp
+canonify input: craig
+Canonify2 input: craig
+Canonify2 returns: craig
+canonify returns: craig
+1 input: craig
+1 returns: craig
+HdrFromSMTP input: craig
+PseudoToReal returns: craig
+MasQSMTP input: craig
+MasQSMTP returns: craig < *LOCAL*>
+Masqdr input: craig < *LOCAL*>
+Masqdr returns: craig < wen . foobirds . org >
+HdrFromSMTP returns: craig < wen . foobirds . org >
+final input: craig < wen . foobirds . org >
+final returns: craig < wen . foobirds . org
+Rcode = 0, addr = craig@wren.foobirds.org
+/quit
+```
+
+在列表 10.10 中，处理了两个不同的地址。首先，我们设置 `/tryflags HR` 来处理收件者地址，并使用 `/try` 为 esmtp 邮件传输器处理收件者地址 `al1@bird.org`。你会发现结果与我们在列表 10.9 的 `/parse` 测试中看到的非常相似。接下来，我们设置了 `/tryflags HS` 并使用 `/try` 将 `craig` 作为 esmtp 邮件传输器的头地址进行处理。这是一个真实的测试，显示了针对特定邮件头部的发送者地址和收件者地址会发生的处理过程。单封邮件上的发送者和收件者地址始终通过同一个邮件传输器，因为只有收件者地址用于选择邮件传输器。
+
+`/try` 命令在结束时显示返回码（Rcode）和处理完成后的最终地址。返回码为零意味着一切正常。非零返回码意味着遇到了潜在的投递问题。正如我们之前看到的，通过 `/parse` 运行产生非零返回码的地址将产生一条描述该返回码的错误信息。
+
+我发现我 `/try` 的频率远高于 `/parse`。我处理的大多数配置中邮件传输器的数量有限，通常所有外部邮件都使用 smtp，而内部邮件使用 local。我通常不需要询问 Mailsend 就知道哪个邮件传输器会处理邮件。当你有多个不同的邮件传输器时，`/parse` 命令最有用。你有 mailtable 时是 `/parse` 的绝时刻。对于复杂的配置，`/parse` 会告诉你它将使用的邮件传输器，然后处理收件者地址。
+
+## 显示和设置值
+
+测试 10.8、10.9、10.10 显示了可以检查变量、设置值并查看它们如何影响系统。列表 10.11 显示了变量的影响。
+
+```
+/try smtp craig
+Trying header address for mail esmtp
+canonify input: craig
+Canonify2 input: craig
+Canonify2 returns: craig
+canonify returns: craig
+1 input: craig
+1 returns: craig
+HdrFromSMTP input: craig
+PseudoToReal returns: craig
+MasQSMTP input: craig
+MasQSMTP returns: craig < *LOCAL*>
+Masqdr input: craig < *LOCAL*>
+Masqdr returns: craig < wen . foobirds . org >
+HdrFromSMTP returns: craig < wen . foobirds . org >
+final input: craig < wen . foobirds . org >
+final returns: craig < wen . foobirds . org
+Rcode = 0, addr = craig@wren.foobirds.org
+```
+
+`/try` 命令的输出显示了实际操作。
+
+## 设置变量和类
+
+```
+/try smtp craig
+Trying header address for mail esmtp
+canonify input: craig
+Canonify2 input: craig
+Canonify2 returns: craig
+canonify returns: craig
+1 input: craig
+1 returns: craig
+HdrFromSMTP input: craig
+PseudoToReal returns: craig
+MasQSMTP input: craig
+MasQSMTP returns: craig < *LOCAL*>
+Masqdr input: craig < *LOCAL*>
+Masqdr returns: craig < wen . foobirds . org >
+HdrFromSMTP returns: craig < wen . foobirds . org >
+final input: craig < wen . foobirds . org >
+final returns: craig < wen . foobirds . org
+Rcode = 0, addr = craig@wren.foobirds.org
+```
+
+`/try` 命令的输出显示了返回码。返回码为零意味着一切正常。非零返回码意味着遇到了潜在的投递问题。
+
+## 在测试模式下运行 Sendmail
+
+使用 `.D` 和 `.C` 对配置所做的更改仅在 `sendmail -bt` 期间有效。运行后，这些临时更改就会消失。在地址模式设置值允许你在做出更改之前观察潜在的影响。
+
+在列表 10.12 中，我们并没有实际更改配置。示例中，我们请求 Sendmail 显示从外部获取的值。
+
+## 10.12 从 Sendmail 获取外部信息
+
+- `> /mx(foobirds.org) returns 2 value(s):`
+
+`wren.foobirds.org`
+
+`parrot.foobirds.org.`
+
+- `> /canon redbreast`
