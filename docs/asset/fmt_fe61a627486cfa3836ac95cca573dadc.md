@@ -1,0 +1,98 @@
+
+# 提升应用性能 183
+
+| TEACHER_ID | LAST_NAME | FIRST_NAME | ROOM_NUMBER |
+| :--- | :--- | :--- | :--- |
+| 100 | Bangasser | Viola | 222 |
+| 101 | Massingil | Jeanne | 223 |
+| 102 | Jennings | Steve | 224 |
+| 103 | Dortch | Neil | 225 |
+
+```sql
+SQL> SELECT *
+FROM student;
+```
+
+| STUDENT_ID | LAST_NAME | FIRST_NAME | TEACHER_ID |
+| :--- | :--- | :--- | :--- |
+| 345891001 | Anderson | Jerry | 100 |
+| 345097651 | Smith | Audrey | 100 |
+| 348990122 | Johnson | Emily | 100 |
+| 365778012 | Anderson | Ian | 100 |
+| 368791033 | St. Ubbins | David | 100 |
+| 368211431 | Smalls | Derek | 103 |
+
+你注意到应用程序在没有附带学生信息的情况下，很少检索教师信息。如果每个教师的学生人数是均匀的，你可能决定将数据聚集到同一个物理块中，以提高查询性能。下面的示例显示了创建聚集表 `TEACHER_STUDENT`、在聚集索引 `TEACHER_STUDENT_IDX` 上创建索引，以及在簇中创建 `TEACHER` 和 `STUDENT` 表所需的 SQL 语句：
+
+```sql
+SQL> CREATE CLUSTER teacher_student
+(teacher_id number)
+SIZE 1000
+STORAGE (initial 500K next 500K PCT_increase 0);
+TABLESPACE apps_clist;
+```
+
+上述命令创建了一个名为 `TEACHER_STUDENT` 的簇，并指定列 `TEACHER_ID` 将作为簇键，或者说两个表的数据将围绕该列进行聚集。选择该列是因为它是 `TEACHER` 和 `STUDENT` 表共有的列。`SIZE` 参数指定了我们期望每个 Oracle 块有多少个簇键。如果我们的 Oracle 块大小为 2048 字节（2K），则该参数表示我们预计每个块获得大约两个（2048/1000=2.048）簇键。也就是说，你期望在 Oracle 块中存储两个教师及其所有学生的数据。如果所有的簇值（教师）没有相同数量的聚集记录（学生），选择合适的 `SIZE` 值是很困难的。但是，正确设置此值对于获得最佳的簇性能至关重要：
+
+```sql
+SQL> CREATE INDEX TEACHER_STUDENT_IDX
+ON CL teacher_student
+TABLESPACE apps_idx;
+```
+
+索引已创建。
+注意，在簇段上创建索引时，不需要指定索引列。索引会自动在簇键列 `TEACHER_ID` 上创建。
+现在簇结构已经存在，你可以在簇中创建 `TEACHER STUDENT` 表：
+
+```sql
+SQL> CREATE TABLE teacher
+(teacher_id number,
+last_name varchar2(20),
+first_name varchar2(20),
+room_number number)
+CLUSTER teacher_student
+(teacher_id);
+```
+
+表已创建。
+
+```sql
+SQL> CREATE TABLE student
+(student_id number,
+last_name varchar2(20),
+first_name varchar2(20),
+teacher_id number)
+CLUSTER teacher_student
+(teacher_id);
+```
+
+表已创建。
+注意，在簇中创建表时没有指定表空间。这并不是因为我们想使用用户的默认表空间，而是因为簇本身就是每个表数据的存储区域。通过这种方式，插入到相同物理块中的任何数据——`TEACHER` 或 `STUDENT` 表将存储在相同的物理块中——这些块是簇段的块。图 3.28 显示了两个聚集表、簇插入、簇索引以及它们共同存储的表空间之间的关系。
+
+图 3.28 索引簇与表的关系
+
+聚集表数据
+
+| 表空间 APPS_IDX | TEACHER_STUDENT_IDX B-TREE 索引 |
+| :--- | :--- |
+| 100 Viola Bangasser 222 | 345891001 Anderson Jerry<br>345097651 Smith Audrey<br>348990122 Johnson Emily<br>365778012 Anderson Ian<br>368791033 St. Ubbins David |
+| 101 Jeanne Massingil 223 | |
+
+![](img/c3db8fbb4893c63ad4299bf24.png)
+
+## 哈希簇
+
+哈希簇用于取代传统索引来快速查找表的行。类似于簇索引，哈希簇的有用性也限于特定情况。通常情况下，哈希簇应具有以下属性：
+
+- 在初始加载后很少或没有执行 DML 活动
+- 索引列中的值分布均匀
+- 索引列中的值数量可预测
+- 使用在 SQL 子句中对索引列进行等值匹配的 SQL 语句进行查询
+
+与其检查索引然后从表中检索行，哈希簇的数据存储方式允许查询使用哈希算法。
+
+```sql
+SELECT *
+FROM student
+WHERE teacher_id = 100;
+```
