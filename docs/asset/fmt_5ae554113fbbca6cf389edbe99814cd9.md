@@ -1,0 +1,119 @@
+
+为了查看 `load_defaults()` 是如何工作的，请确保你主目录下有一个 `~/.my.cnf` 文件，并且其中为 `[client]` 组指定了一些设置。（在 Windows 上，你可以使用 `c:\my.ini` 文件代替。）假设该文件看起来像这样：
+
+```ini
+[client]
+user=sampadm
+password=secret
+host=some_host
+```
+
+如果是这种情况，执行 `show_argv` 应该会产生如下的输出：
+
+```bash
+% ./show_argv a b
+Original argument vector:
+arg 0: ./show_argv
+arg 1: a
+arg 2: b
+Modified argument vector:
+arg 0: ./show_argv
+arg 1: -user=sampadm
+arg 2: -password=secret
+arg 3: -host=some_host
+arg 4: a
+arg 5: b
+```
+
+当 `show_argv` 第二次打印参数向量时，选项文件中的值会作为参数列表的一部分出现。你也有可能看到一些未在命令行或你的 `~/.my.cnf` 文件中指定的选项。如果发生这种情况，你很可能会发现系统范围内的选项文件中列出了 `[client]` 组的选项。这种情况可能会发生，因为 `load_defaults()` 实际上会在多个位置查找选项文件。（有关这些位置的列表，请参见 E.2.2 节“选项文件”。）
+
+使用 `load_defaults()` 的客户端程序通常会在选项组名称列表中包含 `'client'`（以便从选项文件中获取通用客户端设置），但你也可以设置你的选项文件处理代码，使其从其他组中获取选项。假设你希望 `show_argv` 读取 `[client]` 和 `[show_argv]` 组中的选项。要实现这一点，请在 `show_argv.c` 中找到以下行：
+
+```
+const char *client_groups[] = {'client', NULL};
+```
+
+将该行修改为：
+
+```
+const char *client_groups[] = {'show_argv', 'client', NULL};
+```
+
+然后重新编译 `show_argv`，修改后的程序将从这两个组中读取选项。为了验证这一点，请在你的 `~/.my.cnf` 文件中添加一个 `[show_argv]` 组：
+
+```
+[client]
+user=sampadm
+password=secret
+host=some_host
+
+[show_argv]
+host=other_host
+```
+
+经过这些更改后，再次调用 `show_argv` 会产生与之前不同的结果：
+
+```
+% ./show_argv a b
+Original argument vector:
+arg 0: ./show_argv
+arg 1: a
+arg 2: b
+
+Modified argument vector:
+arg 0: ./show_argv
+arg 1: --user=sampadm
+arg 2: --password=secret
+arg 3: --host=some_host
+arg 4: --host=other_host
+arg 5: a
+arg 6: b
+```
+
+选项值在参数数组中出现的顺序由它们在选项文件中的列出顺序决定，而不是由选项组名称在 `client_groups[]` 数组中列出的顺序决定。这意味着你通常会在选项文件中将程序特定的组指定在 `[client]` 组之后。这样，如果你在两个组中指定了某个选项，程序特定的值将优先于更通用的 `[client]` 组值。你可以在刚才展示的示例中看到这一点：`host` 选项在 `[client]` 和 `[show_argv]` 组中都有指定，但由于 `[show_argv]` 组在选项文件中最后出现，其主机设置随后出现在参数向量中并优先生效。
+
+`load_defaults()` 不会获取你环境设置中的值。如果你想使用如 `MYSQL_TCP_PORT` 或 `MYSQL_UNIX_PORT` 等环境变量的值，你必须通过自行使用 `getenv()` 来安排。我不会在我们的客户端中添加此功能，但下面是一个简短的代码片段，展示了如何检查几个标准 MySQL 相关环境变量的值：
+
+```
+extern char *getenv();
+char *p;
+int port_num = 0;
+char *socket_name = NULL;
+
+if ((p = getenv ("MYSQL_TCP_PORT")) != NULL)
+  port_num = atoi (p);
+if ((p = getenv ("MYSQL_UNIX_PORT")) != NULL)
+  socket_name = p;
+```
+
+在标准的 MySQL 客户端中，环境变量的值优先级低于在选项文件或命令行中指定的值。如果你希望在自己的程序中检查环境变量，并希望符合这一惯例，请在调用 `load_defaults()` 或处理命令行选项之前（而不是之后）检查环境。
+
+## load_defaults() 与安全性
+
+在多用户系统上，诸如 `ps` 程序这样的实用程序可以显示来自任意进程（包括由其他用户运行的进程）的参数列表。因此，你可能会想知道 `load_defaults()` 将选项文件中找到的密码放入你的参数列表是否存在进程窥探的问题。这实际上不是问题，因为 `ps` 显示的是原始 `argv[]` 的内容。任何由 `load_defaults()` 创建的密码参数都指向其自行分配的内存区域。该区域不属于原始向量的一部分，因此 `ps` 永远看不到它。
+
+另一方面，在命令行上给出的密码确实会显示在 `ps` 中。这是不建议以这种方式指定密码的原因之一。程序可以采取的一项预防措施是，在开始执行时尽快从参数列表中移除密码。第 7.3.2.2 节“处理命令行参数”展示了如何做到这一点。
+
+### 7.3.2.2 处理命令行参数
+
+使用 `load_defaults()`，我们可以将所有连接参数放入参数向量中，但现在我们需要一种处理该向量的方法。`handle_options()` 函数就是为此设计的。`handle_options()` 是 MySQL 客户端库的一部分，因此只要你链接了该库，就可以访问它。
+
+客户端库选项处理例程的一些特性如下：
+
+- 对选项类型和合法值范围的精确指定。例如，你不仅可以指定某个选项必须具有整数值，还可以指定它必须是正的且为 1024 的倍数。
+- 集成帮助文本，使调用标准库函数打印帮助消息变得容易。无需编写自己的特殊代码来生成帮助消息。
+- 对标准 `--no-defaults`、`--print-defaults`、`--defaults-file` 和 `--defaults-extra-file` 选项的内置支持。（这些选项在第 F.2 节“选项文件”中有描述。）
+- 对标准选项前缀集合（如 `--disable-`、`--enable-` 和 `--loose-`）的支持，这使得实现布尔值（开/关）和可忽略选项变得更加容易。（本章未使用此功能，但在第 F.2 节“指定程序选项”中有描述。）
+
+为了演示如何使用 MySQL 的选项处理功能，本节描述了一个 `show_opt` 程序，该程序调用 `load_defaults()` 来读取选项文件并设置参数向量，然后使用 `handle_options()` 处理结果。
+
+`show_opt` 使你能够尝试指定连接参数的各种方式（无论是在选项文件中还是在命令行上），并通过展示将用于连接到 MySQL 服务器的值来查看结果。`show_opt` 对于了解我们下一个客户端程序 `connect2` 中会发生什么很有用，该程序将把这个选项处理代码与实际连接服务器的代码结合起来。
+
+为了说明参数处理的每个阶段发生了什么，`show_opt` 执行以下操作：
+
+- 为主机名、用户名、密码和其他连接参数设置默认值。
+- 打印原始的连接参数和参数向量值。
+- 调用 `load_defaults()` 重写参数向量以反映选项文件的内容，然后打印结果向量。
+- 调用选项处理例程 `handle_options()` 处理参数向量，然后打印结果的连接参数值以及参数向量中剩余的任何内容。
+
+以下讨论解释了 `show_opt` 的工作原理，但请先查看其源文件 `show_opt.c`：
