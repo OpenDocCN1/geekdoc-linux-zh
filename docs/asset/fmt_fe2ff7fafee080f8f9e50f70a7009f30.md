@@ -1,0 +1,67 @@
+
+你可能已经注意到，在密码上添加了 `addslashes()` 函数作为包装器，而在之前 PHP 执行密码哈希的情况下并不存在这种情况。这再次是为了防止任何 SQL 注入攻击，甚至是一些简单的错误，即用户密码中可能包含撇号的情况。当首先使用 PHP 对密码进行哈希处理时，没有必要使用 `addslashes()` 转义结果，因为 `md5()` 和 `sha1()` 函数产生的输出仅由十六进制值组成——撇号或其他危险字符不可能溜进来。
+
+要完成 `check_login()` 函数，将返回占位符设置为 true，并创建一个会话变量，稍后在脚本中使用它以避免不必要的重复查询：
+
+```php
+    // Check if a match was found
+    if (($row = mysql_fetch_array($result)) && $row['account'])
+    {
+        $ret = true;
+        $_SESSION['username'] = $username;
+    }
+
+    // Close connection
+    mysql_close($conn);
+}
+
+return $ret;
+```
+
+接下来进入脚本中实际首次解释的代码，你开始初始化会话数据：
+
+```php
+    session_start();
+```
+
+然后，你首先检查来自 `check_login()` 的会话变量是否已设置。如果尚未设置——意味着该用户尚未通过身份验证——检查 PHP `AUTH_USER` 服务器变量并调用 `check_login()` 函数。当 PHP 尝试使用基本身份验证获取登录信息时，服务器变量 `PHP_AUTH_USER` 和 `PHP_AUTH_PW` 均存在。如果它们未设置，则用户尚未被提示输入登录信息。在这种情况下，如果没有传入登录信息，或者之前传入的凭据无效，你希望提示用户输入登录信息。如果未找到有效的用户信息，将调用 `attempt_auth()`，用户将再次获得登录的机会。只有当且仅当用户在登录提示中点击“取消”时，才会显示“Authorization Required”消息：
+
+```php
+    // Check if using valid credentials
+    if ((!isset($_SESSION['username']) ||
+        (!isset($_SERVER['PHP_AUTH_USER']) &&
+           check_login($_SERVER['PHP_AUTH_USER'],
+                        $_SERVER['PHP_AUTH_PW']))))
+    {
+        // Show login prompt
+        attempt_auth();
+        echo 'Authorization Required';
+        exit;
+    }
+    ?>
+```
+
+为了测试 PHP 身份验证，你可以简单地尝试在浏览器中加载此脚本，但最好将其包含在你创建的任何标准 PHP 页面中。你可以使用以下代码将此授权测试作为简单的包含进行测试：
+
+```php
+<?php
+
+require_once 'phpauthbasic.php';
+
+echo "Authentication Successful!";
+
+?>
+```
+
+当你尝试在浏览器中加载此脚本时，请使用 `testuser`/`testpass` 组合，或者你最初添加到 `users` 表中的任何凭据。如果用户名和密码正确，你应该看到一条漂亮的“Authentication Successful!”消息；如果你点击取消，你将得到令人恐惧的“Authorization Required”消息。
+
+现在你看到了它的工作方式，你可能会认为使用这种方法没有任何理由不这么做。但正如你在决定如何编写应用程序时会做出的许多选择一样，这种方法存在一些缺点。
+
+在使用此身份验证方法之前，必须满足两个主要要求。
+
+- 首先，`safe_mode` 必须在 `php.ini` 中未启用。启用时，`safe_mode` 会阻止创建 `PHP_AUTH_USER` 和 `PHP_AUTH_PW` 服务器变量。如果这些变量不存在，无论使用的凭据是否真正有效，脚本都将不断重新显示登录提示，直到用户点击取消为止。快速确定 `safe_mode` 是否确实启用的方法：脚本的 uid 会添加到登录提示中域信息的末尾。
+- 其次，此方法不能与 Apache 的基本身份验证系统一起使用。这适用于同一脚本级别或任何父目录下的任何 Apache 控制的访问（`.htaccess`）。如果启用了两个身份验证系统，Apache 系统将获得初始优先权。会发生的情况是，用户最初可以使用 Apache 基本身份验证的有效凭据登录，随后是 PHP 身份验证提示。然而，此时 HTTP 实际上已经清除了浏览器针对 Apache 控制的身份验证状态——这是 HTTP 401 响应的结果。由于浏览器不再针对 Apache 经过身份验证，它将重新提示输入 Apache 级别的凭据，然后回到 PHP 凭据，如此循环，直到用户在浏览器中点击“取消”或“停止”。
+
+### PHP 表单身份验证
+
+如果 PHP 基本身份验证（Basic Authentication）对你来说不是可行的解决方案，或者你不喜欢浏览器登录面板的外观，请不要担心；你还有另一个选项。与其依赖浏览器自带的标准内置登录窗口，你可以轻松创建自己的登录表单，甚至可以复用之前大部分 PHP 身份验证代码。将以下内容输入到 `phpauthforms.php` 文件中。请注意，其中大部分内容直接提取自你之前使用的 `phpauthbasic.php` 文件：
