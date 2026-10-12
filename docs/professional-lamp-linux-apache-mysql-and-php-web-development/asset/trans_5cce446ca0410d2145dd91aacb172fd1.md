@@ -1,0 +1,239 @@
+
+## G
+- stream_open() 函数，70–71
+- stream_read() 函数，71
+- stream_tell() 函数，71
+- 数据库网站，67
+- glob() 函数 (PHP)，60–61
+- GMail 应用程序 (Google)，273
+- GNU 缩进风格，215
+- GRANT 命令 (MySQL)
+  - 用于 Apache 访问凭证，149
+  - 创建列级权限，95
+  - 为特定表创建权限，95
+  - 用于极度受限的访问，96
+  - 授予所有权限，96
+  - 授予有限的表级权限，96
+  - IDENTIFIED BY 短语，96
+  - ON 子句，95
+  - 用于 PHP 身份验证示例，166
+  - 权限，94–95
+  - 语法，94
+  - TO 子句，95
+
+## H
+- httpd.conf 文件
+  - 启用 SSL 功能，157
+  - HostnameLookups 选项，212
+  - KeepAlive 选项，212
+  - KeepAliveTimeout 选项，212
+  - MaxClients 选项，211
+  - MaxKeepAliveRequests 选项，212
+  - MaxRequestsPerChild 选项，211
+  - MaxSpareServers 选项，212
+  - 用于 mod_auth_mysql，151–152
+  - 用于 mod_dav，158
+  - 用于 mod_deflate (Apache)，146–147
+  - 用于 mod_ssl，155
+  - 与性能相关，211–212
+  - StartServers 选项，212
+  - 用于 WebDAV 身份验证，159
+- 硬盘，与性能相关，211
+- 用于性能提升的硬件改进，210–211
+- 隐藏框架技术以避免页面刷新，275–276
+- 隐藏 IFRAME 技术以避免页面刷新，276–277
+- .htaccess 文件
+  - 用于 mod_auth_mysql，151–152
+  - 与性能相关，213
+  - 用于关闭 register_globals 指令，179
+  - 用于 WebDAV 身份验证，159
+- HTML_CSS PEAR 包，192–193
+- HTML_Page PEAR 包，192–193
+- HTML_QuickForm PEAR 包，193–194
+- HTML_Table PEAR 包，194–195
+- HTTP GET 值，345
+- HTTP POST 值，345
+
+## I
+- IFRAME 元素，隐藏，276–277
+- 图像源技巧以避免页面刷新，275
+- imagealphaBlending() 函数
+  - (ImageResize 类)，248
+- GD 库的 ImageCaption 类
+  - 代码列表，250–251
+  - imageline() 函数，253–254
+  - imagegettext() 函数，253
+  - process() 方法，252–253
+  - imagecopy() 函数 (ImageLogo 类)，257
+  - imagecopymerge() 函数 (GD 库)，257
+  - imagecopyresampled() 函数
+    - (ImageResize 类)，248
+  - imagecopyresized() 函数 (ImageResize 类)，248
+  - imageline() 函数 (ImageCaption 类)，253–254
+- GD 库的 ImageLogo 类
+  - 代码列表，254–255
+  - imagecopy() 函数，257
+  - process() 方法，256–257
+- GD 库的 ImageResize 类
+  - 代码列表，245–246
+  - imagealphaBlending() 函数，248
+  - imagecopyresampled() 函数，248
+  - imagecopyresized() 函数，248
+  - imagesavealpha() 函数，248
+  - process() 方法，247–248
+- GD 库的 ImageRotate 类，249–250
+- imagesavealpha() 函数
+  - ImageResize 类，248
+  - WebImage 类，244
+- imagerotate() 函数 (ImageCaption 类)，253
+- implements 关键字 (PHP)，36, 37
+- 编码的缩进标准，214–217
+- 索引透明度，244
+- info 命令 (PEAR 管理器)，185
+- 继承 (PHP)
+  - 抽象类与，7–8, 34–35
+  - 描述，31
+  - extends 关键字与，31–33
+  - final 关键字与，6, 33
+  - 语言翻译，340–341
+  - parent:: 引用，33–34
+  - 在子类中重新定义属性和方法，32–33
+  - static 关键字与，7
+- ini_get() 函数 (PHP)，109
+- ini_get_all() 函数 (PHP)
+  - 访问指令的值，115
+  - 概述，109, 110
+  - 在 XMLConfigProcessor.php 类中，126, 127
+- ini_set() 函数 (PHP)，114–115, 127–128
+- 初始化属性 (PHP)，21
+- 内连接 (MySQL)
+  - 表别名，78–79
+  - 按评估顺序链式处理，79
+  - 逗号分隔的表列表用于，79–81
+  - 定义，78
+  - 局限性，81
+  - 与外连接结合使用，82
+  - 语法，78
+  - 表前缀用于，78–79
+  - 配合 USING 语句使用，79
+  - 配合 WHERE 子句使用，79, 80, 81
+- Innobase Oy 公司，88
+- InnoDB 表 (MySQL)
+  - 优点，88–89
+  - 将 MyISAM 表转换为，90
+  - 转换为 MyISAM 表，93
+  - 从头创建表，89
+  - InnoDB 存储引擎的开发，88
+  - 缺点，89
+  - 外键约束，88–89, 90–93
+- INSERT 语句 (MySQL)，75–76
+- 安装
+  - APC 缓存引擎，288
+  - DocuWiki 微内容管理系统，326
+  - eAccelerator 缓存引擎，291
+  - ExponentCMS，309–310
+  - JPCache 缓存引擎，296–297
+  - MediaWiki 微内容管理系统，325
+  - memcached 缓存引擎，300–301
+  - Ming 扩展 (PHP)，263
+  - mod_auth_mysql (Apache)，150–151
+  - PEAR 包，186
+  - phpWebsite CMS，315–317
+  - Serendipity 博客微内容管理系统，324
+  - TikiWiki CMS，318–320
+  - WordPress 博客微内容管理系统，323
+  - Xoops CMS，312–313
+  - Zend Optimizer 缓存引擎，294–295
+- 实例化
+  - 类，22–23
+  - SWFMovie 对象 (Ming)，263
+- interface 关键字 (PHP)，36
+- 接口 (PHP)
+  - 描述，35
+  - 使用 extends 关键字，36–37
+  - 实现，36, 37
+  - 语言翻译，342–343
+  - 一个类对应多个接口，37
+  - 概述，35–37
+  - PHP5 变更，5
+  - 用途，35
+- 互联网编号分配机构，72
+- 互联网资源
+  - AJAX 信息，285
+  - Apache mod_ssl 信息，157
+  - APC 缓存引擎，288
+  - Auth_HTTP PEAR 包信息，188
+  - CMS 资源，327–328
+  - CPAIN_，283
+  - CVS 版本控制系统，351
+  - DocuWiki 微内容管理系统，326
+  - Drupal CMS，321
+  - eAccelerator 缓存引擎，291
+  - ExponentCMS，309, 310
+  - Fileinfo PECL 包，196
+  - PHP 手册中的 GD 章节，263
+  - Google 的 Gmail 应用程序，273
+  - 互联网编号分配机构，72
+  - JavaWebStart 网站，351
+  - JPCache 缓存引擎，296, 300
+  - JSPAN，283
+  - 新西兰土地信息网，67
+  - Mambo CMS，321
+  - MediaWiki 微内容管理系统，325
+  - memcached 缓存引擎，300, 301
+  - 微内容管理系统，323, 324, 325, 326, 327
+  - Ming 信息，263
+  - MyBench 工具，350
+  - MySQL Administrator 工具，348
+  - MySQL Query Browser 工具，349
+  - MySQL Super Smack 工具，350
+  - PDF 开源库，233
+  - PDFLib 扩展 (PHP)，233, 234
+  - PDFLib Lite 扩展 (PHP)，234
+  - PDO PECL 包，196, 197
+  - PEAR 配置变量，185
+  - PEAR 数据库包，191
+  - PEAR 管理器命令，184
+  - PEAR 包，195
+  - PEAR::DB 包，187
+  - PEPr 网站，184
+  - PHP Wiki 网站，196
+  - PHP-Nuke CMS，321
+  - phpWebsite CMS，315
+  - Postruke CMS，322
+  - Sajax 信息，282
+  - 与安全性相关的网站，182
+  - Serendipity 博客微内容管理系统，324
+  - SourceForge 网站，263, 353
+  - SQLite 信息，17
+  - Subversion 版本控制系统，351
+  - Tidy 库，17
+  - TikiWiki CMS，318
+  - Umbrello UML 工具，353
+  - WordPress 博客微内容管理系统，323
+  - WROX 网站，76
+  - Xdebug PECL 包，197
+  - XOOPS，312
+  - Zend Optimizer，295
+- 插值，基准测试速度，201–205
+- iterator 类 (PHP)，5
+- 迭代器 (PHP)，5–6
+
+## J
+- Java。参见 *语言翻译*
+- JavaDoc 风格注释，220
+- JavaScript。另见 *AJAX (Asynchronous JavaScript and XML)*
+  - 隐藏框架技术，275–276
+  - 图像源技巧，275
+- JavaWebStart 网站，351
+- JPCache 缓存引擎
+  - 配置，297–299
+  - 安装，296–297
+  - 与其他缓存引擎配合使用，305
+  - 概述，296
+  - 移除，300
+  - 适用场景，305
+  - 网站，296, 300
+- JSPAN AJAX 库，283
+- JSP。参见 *语言翻译*
+

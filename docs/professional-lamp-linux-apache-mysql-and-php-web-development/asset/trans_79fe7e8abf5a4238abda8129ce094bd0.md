@@ -1,0 +1,305 @@
+
+## 索引
+
+- **WordPress**，323
+- **XOOPS**，312–315
+- **CMSWire 网站**，328
+- **代码效率。参见 性能编码标准（PHP）**
+  - 花括号和缩进，214–217
+  - 注释，216, 217, 220
+  - 通过解析错误强制执行，222–223
+  - 命名约定，220–222
+  - 概述，213–214
+  - PEAR，214
+  - 减少嵌套级别，217–220
+- **冒号 (:)**
+  - 用于类常量 (::)，28–29
+  - PHP URL 方案名称后 (://)，72
+  - 用于 self 关键字 (self::)，7, 27–28
+- **columns_priv 表 (MySQL)**，99, 100
+- **注释**
+  - Big Flashy Box 风格，216, 217
+  - 编码标准，220
+  - Javadoc 风格，220
+  - 语言翻译，329
+  - 用于缩进的制表符，216, 217
+- **完全自动公共图灵测试，用于区分计算机和人类 (CAPTCHA)**，175–177
+- **压缩内容。参见 内容压缩 (Apache)**
+- **字符串连接，速度基准测试**，201–205
+- **条件语句**
+  - 语言翻译，331–336
+  - 与性能相关，230
+- **config-help 命令 (PEAR 管理器)**，186
+- **ConfigManager.php 类**
+  - 代码清单，117
+  - configfile 属性，118
+  - configtype 属性，118
+  - 构造方法，118
+  - 声明，117
+  - errors 属性，118
+  - processConfig 方法，118–119
+- **ConfigProcessor 接口 (PHP)**，119
+- **config-set 命令 (PEAR 管理器)**，186
+- **config-show 命令 (PEAR 管理器)**，185–186
+- **配置检查器 (PHP)**
+  - ConfigManager.php 类，117–119
+  - ConfigProcessor 接口，119
+  - reqs.xml 文件，116
+  - test.php 代码，128
+  - XMLConfigProcessor.php 类，119–128
+- **配置变量 (PEAR)**，185
+- **配置 PHP。参见 php.ini 配置文件；运行时配置 (PHP)**
+- **const 关键字 (PHP)**，29
+- **常量**
+  - 类常量 (PHP)，28–29
+  - 语言翻译，330
+  - 命名约定，222
+- **__construct() 魔术方法 (PHP)**
+  - Circle 类示例，25–26
+  - ConfigManager.php 类，118
+  - 描述，37
+  - 概述，6, 25–26
+  - 与 PHP4 构造器的区别，25
+  - XMLConfigProcessor.php 类，122–123
+- **构造器 (PHP)**
+  - Circle 类示例，25–26
+  - 使用 __construct() 魔术方法，6, 25–26
+  - 语言翻译，339
+  - 概述，25–26
+  - PHP4 构造器，25
+- **内容压缩 (Apache)**
+  - 配置指令，147–148
+  - 描述，145–146
+  - mod_deflate 的有效性，148
+  - 用于此的 httpd.conf 文件，146–147
+  - 需求，145
+  - 用于 PHP 脚本，148–149
+  - 使用 mod_deflate，146–148
+- **内容管理系统。参见 CMSs 表转换**
+  - InnoDB 到 MyISAM，93
+  - MyISAM 到 InnoDB，90
+
+### 坐标系
+- Ming 扩展 (PHP)，264
+- PDFLib 扩展 (PHP)，237
+
+- **Coppermine CMS**，327
+- **使用 clone 语句复制对象 (PHP)**，29–30
+- **Cowgill, Daniel (APC 创造者)**，287
+- **CPAINT (跨平台异步接口工具包)**，283
+- **CREATE DATABASE 语句 (MySQL)**，75
+- **CREATE TABLE 语句 (MySQL)**，75
+  - 用于 Apache 身份验证示例，149–150
+  - 启用全文搜索，86–87
+  - 概述，75
+  - 用于 PHP 身份验证示例，166–167
+  - _create_function() 函数_，57–58
+- **交叉连接 (MySQL)**，81, 82
+- **跨平台异步接口工具包 (CPAINT)**，283
+- **跨站脚本 (XSS)**，180–181
+- **CSS 样式表**
+  - AJAX 的使用，273
+  - 用于此的 PEAR 包，192–193
+- **cURL (客户端 URL 库函数) 扩展 (PHP)**，271
+- **CVE 网站**，182
+- **CVS 版本控制系统**，350–351
+
+### D
+
+- **数据对象，用于集成的 PEAR PDO 包**，196–197
+- **数据库分析 (MySQL)**，100–102
+- **数据库维护 (MySQL)**，103–104
+- **数据库相关包 (PEAR)**
+  - _Auth_HTTP_，187–188
+  - DB，190–192
+  - _HTML_Table_，194–195
+  - PEAR::Auth，187, 188
+  - PEAR::DB，187
+  - 相关网站，191
+- **数据库 (MySQL)。参见 MySQL**
+- **Date PEAR 包**，189–190
+- **DB PEAR 包**，190–192
+- **db 表 (MySQL)**，98–99, 100
+- **调试脚本，用于此的 Xdebug PECL 包**，197
+- _DeflateCompressionLevel 指令_ (Apache 的 mod_deflate)，147
+- _DeflateFilterNote 指令_ (Apache 的 mod_deflate)，148
+- _DeflateWindowSize 指令_ (Apache 的 mod_deflate)，148
+- **DELETE 语句 (MySQL)**，77, 92
+- **删除数据库信息 (MySQL)**，77, 92
+- _destruct() 魔术方法 (PHP)_，6, 26–27, 37
+- **析构函数 (PHP)**
+  - Circle 类示例，26–27
+  - 使用 _destruct()_ 魔术方法，6, 26–27
+  - 语言翻译，339–340
+  - 概述，26–27
+- **指令 (PHP)。参见 _php.ini_ 配置文件**
+- **目录**
+  - 自动重定向 URL，132
+  - 为 SSL 网站创建，157
+  - 使用 _glob()_ 进行模式匹配读取，60–61
+  - 用于 WebDAV 文件仓库，158
+- _DirectoryIterator_ 类 (PHP)，5
+- **磁盘访问，与性能相关**，211
+- _display()_ 方法 (_WebImage_ 类)，244
+- **DocuWiki Micro CMS**，326
+- **美元符号 ($)**
+  - 不用于类常量 (PHP)，29
+  - _$this_ 引用变量 (PHP)，23, 50
+- **DOM (文档对象模型)**
+  - AJAX 操作，273, 281–282
+  - DOM 扩展 (PHP)，16, 271
+- **双冒号 (::)。参见 冒号 (:)**
+  - do...while 循环，语言翻译，334
+- **drawHR() 函数 (PDFLib)**，236
+- **Drupal CMS**，321
+
+360
+
+### E
+
+- **eAccelerator 缓存引擎**
+  - 配置，291–294
+  - 安装，291
+  - 其他缓存引擎及此，305
+  - 概述，290–291
+  - 移除，294
+  - 网站，291
+- **DSO (动态共享对象)**
+  - 安装 APC 作为 DSO，287, 288
+  - 安装 eAccelerator 作为 DSO，291
+  - 安装 memcached 作为 DSO，301
+  - PDFLib 配置及此，234
+- **eXtensible Object Oriented Portal System。参见 XOOPS**
+- **extends 关键字 (PHP)**
+  - emailException 示例，3–4
+  - 继承及此，31–33
+  - 接口及此，36–37
+  - 概述，3, 31–33
+- **extension_loaded() 函数 (PHP)**
+  - 概述，111
+  - 在 XMLConfigProcessor.php 类中，124, 125
+- **外部文件，用于包含的语言翻译**，343–344
+- **echo 语句 (PHP)**
+  - 与 print 语句对比，228–229
+  - 与 __toString() 魔术方法一起使用，44
+- **emailException 类**，3–4
+- **企业级 CMS**，307–308。另参见 CMS (内容管理系统)
+- **等号 (=) 在相等运算符与赋值运算符中**，219
+- **错误消息，php.ini 设置**，106
+- **Exception 类 (PHP)**，2–4
+- **异常 (PHP)**
+  - 描述，1
+  - 用于此的 Exception 类，2–4
+  - 语言翻译，344–345
+  - PHP5 变更与增强，1–5
+  - 与 set_error_handler() 函数对比，1–2
+  - 用于此的 try/catch/throw 块，2, 234, 344–345
+- **Expires: 头，与缓存相关**，227
+- **ExponentCMS**
+  - 额外模块，310
+  - 自定义默认设置，310–311
+  - 默认功能，309
+  - “非活动”功能，309
+  - 安装，309–310
+  - 优势与劣势，311
+  - 网站，309, 310
+
+### F
+
+- **胖客户端 Web 应用程序。参见 AJAX (异步 JavaScript 和 XML)**
+- **文件访问日志记录器示例**
+  - 代码清单，64–66
+  - 注册流封装器，66
+  - stream_close() 函数，67
+  - stream_open() 函数，67
+  - stream_read() 函数，67
+  - stream_write() 函数，67
+  - 使用日志记录流，66–67
+- **使用 Apache 的文件仓库。参见 WebDAV (基于 Web 的分布式创作和版本管理)**
+- **FileInfo PEAR 包**，196
+- **final 关键字 (PHP)**，6, 33
+- **Flash 文件 (Shockwave)。参见 Ming 扩展 (PHP)**
+- **FLUSH PRIVILEGES 命令 (MySQL)**，100
+- **for 循环**
+  - 不需要的数组函数，48
+  - 语言翻译，335
+- **foreach 循环**
+  - 不需要的数组函数，48
+  - 用于避免此的 array_walk() 函数，49, 51–52
+  - 语言翻译，335
+
+### G
+
+- **外键约束 (MySQL)**
+  - 优势，89
+  - 使用 *ALTER_TABLE* 语句创建，90–91, 92
+  - 命名，90
+  - 与 *NULL* 值相关，89
+  - 指定行为选项，92
+  - 与 *UPDATE* 语句相关，91–93
+- **表单 (HTML)，用于此的 PEAR 包**，193–194
+- **表单 (PHP)**
+  - 用于登录身份验证，172–174
+  - *php.ini* 设置，105, 107
+- **404 处理器，与缓存相关**，226
+- **框架 (Ming)**，264
+- **FTP，使用此安装 PEAR**，186
+- **全文搜索 (MySQL)**
+  - 修改现有表以支持此，87
+  - 创建启用此的新表，86–87
+  - 局限性，88
+  - 最小全文词长指定，88
+  - InnoDB 不支持，89
+  - 用于此的 *SELECT* 语句，87–88
+- **函数 (MySQL)，过程式调用**，13
+- **函数 (PHP)。另参见 数组函数 (PHP): 特定函数**
+  - 匿名，57–58
+  - *ArrayIterator* 类，6
+  - 回调及此，49
+  - 检查扩展及其属性，111–112
+  - 检查已安装版本，108
+  - 检查魔术引号设置，113
+  - *Exception* 类，3
+  - *Iterator* 类，5
+  - 语言翻译，336–337
+  - 命名约定，220, 221–222
+  - PHP5 新增，91–92
+  - 运行时检索配置设置，109–110
+  - 多样性与数量，47
+- **FusionNews CMS**，327
+- /*G 用于 MySQL 查询的终止符，86
+- **GD 库扩展 (PHP)**
+  - 添加字幕，250–254
+  - 添加徽标，254–257
+  - alpha 透明度及此，244
+  - 创建图像基础，241–245
+  - 描述，241
+  - *ImageCaption* 类，250–254
+  - *ImageLogo* 类，254–257
+  - *ImageResize* 类，245–248
+  - *ImageRotate* 类，249–250
+  - 索引透明度及此，244
+  - 手册，263
+  - 调整图像大小，245–248
+  - 旋转图像，248–250
+  - 测试，257–261
+  - 用于此的 *WebImage 基类*，241–245, 246–247, 249, 251–252
+  - *WebImage* 类，255–256
+- ***__get() 魔术方法 (PHP)***
+  - *Circle* 类示例，39
+  - 示例，8
+  - 概述，38–39
+- *get_cfg_var()* **函数 (PHP)，109**
+- *get_defined_functions()* **函数 (PHP)，57**
+- *get_extension_funcs() 函数 (PHP)，112**
+- *get_loaded_extensions()* **函数 (PHP)，111–112, 116**
+- *get_magic_quotes_gpc()* **函数 (PHP)，113**
+- *get_magic_quotes_runtime()* **函数 (PHP)，113**
+- *getMessage()* **函数 (PHP)，2, 3**
+- *getResponseHeader()* **方法 (AJAX)，277**
+- **GIS 摄影数据库查询示例**
+  - 解决方案方法，67–68
+  - 代码清单，68–70
+  - nznq 协议，70
+  - 用于图像的 PNG 文件，70, 71–72
+

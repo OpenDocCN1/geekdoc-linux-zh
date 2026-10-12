@@ -1,0 +1,81 @@
++   **phpWebsite CMS**
++   customizing default settings, 317
++   default features, 316–317
++   installing, 315–317
++   PEAR libraries for, 316
++   strengths and weaknesses, 317–318
++   website, 315
++   **pi() function (PHP), 29**
++   **Portable Document Format**. See PDF
++   **Postnuke CMS, 322**
++   **preg_grep() function, 53**
++   **preg_replace_callback() function, 53–55**
++   **PrestoPoll CMS, 327**
++   **print statement (PHP)**
++   echo statement versus, 228–229
++   __toString() magic method with, 44
++   **private keyword (PHP), 6, 23**
++   **privkey.pem file (SSL), 156**
++   **process() method**
++   ImageCaption class, 252–253
++   ImageLogo class, 256–257
++   ImageResize class, 247–248
++   ImageRotate class, 249–250
++   **processConfig method (PHP), 118–119**
++   **processors, performance and, 210**
++   **profiling, defined, 207**
++   **properties (MySQL)**
++   mysqli class, 14–15
++   mysqli_result class, 16
++   mysqli_stmt class, 15
++   **properties (PHP)**
++   Circle class example, 21
++   defining, 20–21
++   described, 20
++   initializing, 21
++   language translation, 338
++   naming conventions, 221, 222
++   real versus synthetic, 221
++   redefining in subclasses, 32–33
++   **static keyword with, 27**
++   This is reference variable for, 23
++   **protected keyword (PHP), 6, 24**
++   **public keyword (PHP), 6, 23, 24**
+
++   **Q**
++   **querying multiple tables (MySQL)**
++   inner joins, 78–81
++   outer joins, 81–82
++   unions, 82–86
++   **quotation marks ("**)
++   for function names within
++   set_exception_handler(), 5
++   speed of strings and, 201–205
++   **R**
++   **RAM (memory)**
++   performance and, 200, 210–211
++   series of array functions and, 59–60
++   **rar extension (PHP), 271**
++   **Raymond, Eric S. (Jargon File author), 214**
++   **readdir() function (PHP), 61**
++   **reading**
++   directories (PHP), 60–61
++   streams (PHP), 62
++   **readyState property (AJAX), 278, 279**
++   **recreate_function() function, 58**
++   **RecursionTerminator class (PHP), 6**
++   **register_globals directive**
++   coding to reduce likelihood of exploits, 179, 182
++   exploits, 178–179
++   .htaccess file for turning off, 179
++   HTTP_REFERER value and, 174
++   recommended configuration, 105, 116
++   **regular expressions**
++   performance and, 230
++   with RewriteRule directive (mod_rewrite of Apache), 133–134
++   **reqs.xml file for configuration checker (PHP), 116**
++   **resize() function (WebImage class), 246–247, 259**
++   **responseText property (AJAX), 278**
++   **responseXML property (AJAX), 278**
++   **RESTRICT option (MySQL), 92**
++   **REVOKE command (MySQL), 96–97**

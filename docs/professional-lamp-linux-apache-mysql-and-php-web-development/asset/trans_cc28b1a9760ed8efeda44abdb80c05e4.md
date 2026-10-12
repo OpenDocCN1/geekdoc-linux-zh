@@ -1,0 +1,168 @@
+
+
+## noescape | NE
+
+当 mod_rewrite 执行转换时，它会竭尽全力确保重写 URL 中的特殊字符在执行任何内部或外部重定向之前都经过转义。例如：
+
+```
+RewriteRule  ^some dir/?  index.php?page=foo\%3b  [R]
+```
+
+根据此规则，Apache 会按要求重定向 some dir/ 目录，并且 `$_GET` 中 `page` 的值将是 `foo\%3b` 的“安全”转义值——mod_rewrite 转义了 `\%3b` 的值，而不是将其替换为分号。要告诉 mod_rewrite 避免任何自动转义，你可以使用 `noescape` 标志：
+
+```
+RewriteRule  ^some dir/?  index.php?page=foo\%3b  [R, NE]
+```
+
+根据此规则，`page` 查询字符串参数的新值将是 `foo;`。
+
+## passthrough | PT
+
+当你希望将 mod_rewrite 与其他提供类似 URL 处理功能的 Apache 模块（如 mod_alias）结合使用时，请使用 `passthrough` 标志。例如，如果你想将 `/foo` 重写为指向 `/bar`，然后使用 mod_alias 将 `/bar` 转换为 `/baz`，你可能会尝试以下方法：
+
+```
+RewriteRule  ^/foo  /bar
+Alias  /bar  /baz
+```
+
+不幸的是，由于 Apache 内部处理 URL 的方式，按原样编写它是行不通的。要使其生效，请添加 `passthrough` 标志：
+
+```
+RewriteRule  ^/foo  /bar  [PT]
+Alias  /bar  /baz
+```
+
+一个通用的经验法则是，如果你使用多个 URL 转换模块来处理文件，请使用 `passthrough`。
+
+## nosubreq | NS
+
+使用 `nosubreq` 标志强制重写引擎在请求实际上是内部子请求时跳过某条规则。当同时使用 PHP 和 Apache 时，很少有真正需要此标志的情况。然而，在某些 CGI 脚本实例中，这个标志会发挥作用。更多信息，请参阅 Apache 手册中关于 RewriteRule 的部分：[http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html#rewriterule](http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html#rewriterule)。
+
+## proxy | P
+
+`proxy` 标志告诉重写引擎立即停止处理规则集，并强制请求通过 Apache 代理模块 mod_proxy。
+
+鉴于对 RewriteRule 的所有关注，你可能会认为它是 mod_rewrite 背后的主要推动力。实际上，它最好的角色是与 RewriteCond 组成的动态双人组的一部分。
+
+# RewriteCond
+
+`RewriteCond` 指令的行为非常类似于 PHP 的 `if ( )` 语句：它将一个字符串与模式或条件进行测试。如果输入匹配该模式或字符串，则紧跟在 `RewriteCond` 指令之后的 `RewriteRule` 将被处理。`RewriteCond` 的一般格式如下：
+
+`RewriteCond TestString CondPattern`
+
+`TestString` 是你评估的字符串，而 `CondPattern` 是要检查的正则表达式或比较值。
+
+## RewriteCond 用法
+
+`RewriteCond` 最常见的用法是将输入字符串与正则表达式进行匹配，类似于 `RewriteRule`。然而，当你使用 `RewriteCond` 时，你可以访问大量服务器变量，因此你的输入字符串可以比简单的文件名匹配更复杂。下表列出了可在 `RewriteCond` 中使用的服务器变量。
+
+以下是 HTTP 头部变量：
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| HTTP_USER_AGENT | 列出浏览器识别信息的字符串，例如：Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1;, NET CLR 1.1, 4322) |
+| HTTP_REFERER | 用户访问的前一个页面，由其浏览器报告 |
+| HTTP_COOKIE | 请求中的一部分 Cookie 字符串 |
+| HTTP_FORWARDED | 如果请求由代理服务器处理，则包含任何转发信息 |
+| HTTP_HOST | 请求中引用的主机名 |
+| HTTP_PROXY_CONNECTION | HTTP Proxy-Connection 标头的内容 |
+| HTTP_ACCEPT | 返回 Accept 标头的值；指示浏览器可以处理何种类型的内容，以及哪些类型具有优先权 |
+
+以下是请求变量：
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| REMOTE_ADDR | 请求文件的用户的 IP 地址。 |
+| REMOTE_HOST | 请求文件的用户的主机名。 |
+| REMOTE_USER | 请求文件的人员的用户名，由浏览器报告。 |
+| REMOTE_IDENT | 为识别目的设置的变量。可能包含用户名。 |
+| REQUEST_METHOD | 请求中使用的方法，例如 GET 或 POST。 |
+
+# 第 6 章
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| SCRIPT_FILENAME | 请求文件的完整本地路径。 |
+| PATH_INFO | 添加到 URL 末尾的任何额外路径信息。 |
+| QUERY_STRING | 请求的任何查询字符串或 GET 参数，通常指带参数的 GET 请求中问号后面的所有内容。 |
+| AUTH_TYPE | 用于验证用户身份的认证类型。 |
+
+以下是服务器变量：
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| DOCUMENT_ROOT | 网站的根文件夹，由 DocumentRoot 指令指定 |
+| SERVER_ADMIN | 服务器管理员的电子邮件地址，使用 ServerAdmin 指令指定 |
+| SERVER_ADDR | 服务器的主机名或 IP 地址 |
+| SERVER_PORT | 请求中指定的服务器端口号 |
+| SERVER_PROTOCOL | 请求协议的名称和版本，例如 HTTP/1.1 |
+| SERVER_SOFTWARE | 服务器软件名称（Apache） |
+
+以下是时间变量：
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| TIME_YEAR | 请求的当前年份 |
+| TIME_MON | 请求的当前月份 |
+| TIME_DAY | 请求的当前日期 |
+| TIME_HOUR | 请求的当前小时 |
+| TIME_MIN | 请求的当前分钟 |
+| TIME_SEC | 请求的当前秒 |
+| TIME_WDAY | 当前星期几 |
+| TIME | 当前时间 |
+
+这些是各种特殊变量：
+
+| VARIABLE | DESCRIPTION |
+|---|---|
+| API_VERSION | Apache 模块 API 的版本（与 Apache 版本号不同，但密切相关）；主要用于模块开发（内部使用） |
+| THE_REQUEST | 完整的 HTTP 文件请求字符串，包括方法、请求的文件和使用的 HTTP 版本 |
+| REQUEST_URI | HTTP 请求中请求的资源 |
+| REQUEST_FILENAME | 匹配 HTTP 请求的项目的完整本地文件系统路径 |
+| IS_SUBREQ | 正在处理的请求是否为内部子请求；如果请求是子请求，值为 "true"，否则为 "false" |
+| HTTPS | 值为 "on" 表示正在使用 SSL/TLS，"off" 表示未使用 |
+
+要使用该列表中的任何变量，你需要将变量名放在花括号中，并以前缀百分号开头，如下所示：
+
+```
+%(SCRIPT_FILENAME)
+```
+
+要查看 RewriteCond 的实际操作，首先重写一条 RewriteRule 以利用 RewriteCond。旧规则如下所示：
+
+```
+# 将 /category/ 重写为 catalog.php
+RewriteRule ^(\w+)?/ catalog.php?cat=$1&item=$2
+```
+
+要使用 RewriteCond 与 RewriteRule 结合来实现相同的目标，请使用以下方法：
+
+```
+# 将 /category/item/ 重写为 catalog.php
+RewriteCond %(SCRIPT_FILENAME) /(\w+)/?(\w+)/?$
+RewriteRule .+ catalog.php?cat=$1&item=$2
+```
+
+注意服务器变量 SCRIPT_FILENAME 是如何用作测试输入字符串的。结合使用这些服务器变量将 RewriteCond 与 RewriteRule 结合起来，你可以想出一些有趣的组合。以下示例检查用户浏览器是否可以接受 XHTML MIME 类型，如果是，则更改为 .html 文件发送的 MIME 类型头：
+
+```
+RewriteCond $(HTTP_ACCEPT) application/xhtml+xml
+RewriteRule .+.html$ - [T=application/xhtml+xml]
+```
+
+RewriteCond 的另一个有用功能是能够多行链接。当在一行中列出多个 RewriteCond 语句时，它们都像编程中的 AND 一样被处理——只有当所有 RewriteCond 匹配都返回 true 时，末尾的 RewriteRule 才会被处理。上一组规则可以使用多个 RewriteCond 语句重写，如下所示：
+
+```
+RewriteCond $(HTTP_ACCEPT) application/xhtml+xml
+RewriteCond %(SCRIPT_FILENAME) \.html$
+RewriteRule .+ - [T=application/xhtml+xml]
+```
+
+除了标准的字符串与正则表达式比较之外，你实际上可以使用 RewriteCond 进行简单的比较和系统检查条件。要将输入字符串与另一个简单字符串进行比较，你可以使用以下条件模式：
+
+```
+<CondPattern
+>CondPattern
+=CondPattern
+```
+

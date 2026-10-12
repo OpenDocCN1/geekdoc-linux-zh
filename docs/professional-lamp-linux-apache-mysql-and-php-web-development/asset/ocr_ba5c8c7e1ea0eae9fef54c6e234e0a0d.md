@@ -1,0 +1,41 @@
+# What’s Covered in the Book
+
+A variety of topics are covered in this book:
+
++   A guide to what’s new in PHP 5.0
+
++   In-depth discussion of OOP in PHP
+
++   Code efficiency, benchmarking, and improving results
+
++   Configuring PHP for optimal performance
+
++   Advanced MySQL queries
+
++   Apache tips and tricks
+
++   Site security, locally and remotely
+
++   Using advanced PHP extensions
+
++   Common PEAR packages
+
++   Ajax and PHP
+
++   Obscure PHP commands
+
++   CMSs compared and explained
+
++   Blogging packages
+
++   A guide for transitioning from other programming languages
+
++   Caching engines
+
+# What You Need to Use This Book
+
+This book is designed to be used with Linux machines, although much of the information in this book can be applied to Windows users as well. You will need PHP, MySQL, and Apache to do the exercises in this book. All three are Open Source programs, so you can download and use them free of charge. You will also need a text editor to enter your code. Finally, you’ll need a web browser, such as Internet Explorer, Netscape Navigator, Firefox, Safari, or Opera, to view your web pages.
+
+As any programmer knows, software is constantly being improved and debugged, and while we used the latest and greatest versions of our modules at the time of publishing, chances are those versions won’t be around for long. It is important for you to visit the source websites for PHP, Apache, and MySQL to get the most updated versions and recent release notes. When developing websites using applications, we recommend that you always use the most recent stable release. Using software versions that have not been fully tested can be dangerous to your application and leave bugs in your code. The same is true for the new learner—you should be learning on a stable release of the application, not on a beta version.
+
+The most recent stable versions that were in effect at the time of this book’s writing were:

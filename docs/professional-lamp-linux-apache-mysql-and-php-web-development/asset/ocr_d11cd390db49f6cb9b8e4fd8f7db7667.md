@@ -1,0 +1,25 @@
+# # Site Security
+
+To better understand the exact flow of the attack, consider the following scenario:
+
++   1. The attacker fills out a comment form on a blog or other website. A malicious script is included in the comments.
++   2. The comments are displayed on the page, with the script intact and active.
++   3. An innocent user visits the site, and reads the attacker’s comments which may or may not contain a clickable link.
++   4. By either clicking the attacker’s link, or merely visiting the page, the user is asked to verify private information, such as a username or password.
++   5. The user unknowingly submits the private information, believing it was requested by the legitimate site they were visiting.
++   6. The user’s stolen information is instead routed to a different location on the Internet, either to be stored for later analysis or the attacker is notified with the new information.
+
+How can this happen? Cross-site scripting is effective when the “trusted” website does not properly cleanse special characters before sending them as output or markup. In the case of the web, that means the less-than symbol <, greater-than symbol >, ampersand &, single and double quotes, and any UTF-8 character that is present in the dynamic output.
+
+Luckily, PHP gives you an assortment of options to choose from when dealing with cleaning your dynamic output:
+
++   • `htmlspecialchars()`: Escapes any ampersand, less-than, greater-than, single quote, and double quote, making it a suitable choice for most dynamically generated HTML.
++   • `htmlentities()`: Similar to htmlspecialchars(), but htmlentities() will escape *any* special character that has an HTML entity equivalent, in addition to the core five covered by htmlspecialchars().
++   • `strip_tags()`: Removes all HTML and PHP tags from a string. You can even provide a list of allowed tags, so you can whitelist “safe” tags, such as formatting, and remove any of the more dangerous tags, such as `<script>`.
++   • `utf8_decode()`: Converts UTF-8 encoded characters to equivalent ISO-8859-1 characters.
+
+# ## Other Considerations
+
+Aside from issues immediately impacting the code you write or how your server is configured, there are a handful of other issues that must be considered during the design, development, and maintenance of your application.
+
+One of the easiest issues to address is that of keeping your system current and updated with all the latest patches. If your operating system has an automated method for updating core system software, it’s usually a good idea to take advantage of it. Many recent web server exploits have actually exploited flaws in older versions of the software—virus and worm writers often use vendor-published information about recent server patches to write their own malicious code they know will affect older versions.

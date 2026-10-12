@@ -1,0 +1,91 @@
+# Appendix A
+
+# **Loop: Advance to Next Round**
+
+```
+**PHP**
+
+```
+continue;
+```
+```
+
+```
+**ASP/VBScript**
+
+```
+Not supported
+```
+```
+
+```
+**ASP.NET/C#**
+
+```
+continue;
+```
+```
+
+```
+**JSP/Java**
+
+```
+continue;
+```
+```
+
+# **Function/Method Declaration**
+
+```
+**PHP**
+
+```
+function name (args) {
+...
+}
+```
+```
+
+```
+**ASP/VBScript**
+
+```
+Function name (args)
+...
+End Function
+
+Sub name (args)
+...
+End Sub
+```
+```
+
+```
+**ASP.NET/C#**
+
+```
+visibility returnType name (args) {
+...
+}
+```
+```
+
+```
+**JSP/Java**
+
+```
+visibility returnType name (args) {
+...
+}
+```
+```
+
+# **Returning Function Values**
+
+```
+**PHP**
+
+```
+return value;
+```
+```

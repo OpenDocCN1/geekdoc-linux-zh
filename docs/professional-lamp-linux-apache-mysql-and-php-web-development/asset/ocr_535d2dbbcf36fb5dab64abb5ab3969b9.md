@@ -1,0 +1,46 @@
+If you run this code, you would see something like the following:
+
+```
+```
+The area of the circle is 314.15926535898
+Fatal error: Cannot access private property Circle::$radius in /www/plamp/ch02/02-002.php on line 31
+```
+```
+
+As you can see, it is not much different from your previous use of `Circle`, but because of the public/private specifications, you must now use methods to access the `$center` and `$radius` properties, instead of accessing the properties directly. Notice what happens when you try to directly access a private member at the end—a fatal error occurs.
+
+# ## Constructors and Destructors
+
+In some situations when dealing with classes, you might want to have a way to automatically perform actions when the object is created. You might want to initialize object parameters or automatically call a class method. Perhaps you want the object to check the local environment to see that necessary resources are available or maybe even set up initial connections. For such situations, PHP provides `constructors`.
+
+A constructor is nothing more than a specially named method that is automatically called when an object is instantiated. In `PHP5`, to implement a constructor, all you need to do is implement a method named `__construct`. For example:
+
+```
+```php
+<?php
+class Circle
+{
+    public function __construct()
+    {
+        // Perform actions when object is created
+        echo "A circle object is being created.\n";
+    }
+
+    $c = new Circle();
+?>
+```
+```
+
+When you execute this code, you see the following:
+
+```
+```
+A circle object is being created.
+```
+```
+
+As expected, the code defined inside the constructor method executed automatically when the object was instantiated.
+
+> > You can still use PHP4-style constructors (methods with the same name as the class) with `PHP5`, but the new-style `__construct` method is preferred.
+
+Like standard methods and functions, constructors can also process arguments. To pass arguments to a constructor, you include them inside the parentheses when an object is created, like this:

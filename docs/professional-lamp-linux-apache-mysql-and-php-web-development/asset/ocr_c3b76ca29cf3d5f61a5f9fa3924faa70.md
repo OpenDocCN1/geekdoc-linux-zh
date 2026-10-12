@@ -1,0 +1,11 @@
+As the implications for PDO grow, so does the documentation. There is documentation on this extension in the PHP manual (http://us3.php.net/manual/en/ref_pdo.php) and also at the PHP Wiki mentioned earlier (http://www.wiki.cc/php/PDO_Basics).
+
+# # Xdebug
+
+This is another top PECL download that is available at http://pecl.php.net/package/Xdebug. Its function is to assist the PHP developer in debugging a script by providing valuable information on code, activation, execution, and variable values. It also provides for memory allocation and protection from infinite loops, as well as stack and function traces.
+
+Documentation for this package is more extensive than the others; it even has its own Web site at http://www.xdebug.org.
+
+# # Summary
+
+You should now be well-equipped to delve into PEAR and PECL and able to stop writing and rewriting the same code over and over again. Once you are familiar with the PEAR and PECL setup, perhaps you will take some of the code you have written and join the ranks of the prestigious contributors by turning it over to the masses as a new package.

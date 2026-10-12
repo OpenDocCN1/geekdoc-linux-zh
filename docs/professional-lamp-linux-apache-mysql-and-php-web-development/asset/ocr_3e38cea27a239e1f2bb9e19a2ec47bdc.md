@@ -1,0 +1,43 @@
+# **Built-in Classes and Properties**
+
+With the *mysqli* extension comes a new set of built-in classes and properties that you can access in your PHP scripts. These new methods can also be used as functions if your script is procedural in nature as opposed to being object-oriented. To call the functions procedurally, simply use the syntax *mysqli_* before the method name. For example, to create a new connection using OOP, you would type the following:
+
+```
+```php
+<?php
+    $connect = new mysqli("server", "user", "pass", "dbname");
+    //call methods through the mysqli class
+    $connect->close();
+?>
+```
+```
+
+To accomplish the same thing using traditional procedural programming, you would type the following:
+
+```
+```php
+<?php
+    $connect = mysqli_connect("server", "user", "pass", "dbname");
+    //call functions using mysqli_ prefix
+    mysqli_close($connect);
+?>
+```
+```
+
+The following sections describe the type of functions inherent in PHP5.
+
+# class *mysqli*
+
+This class addresses a basic MySQL connection. The constructor of this class creates a new PHP/MySQL connection, and thus a new *mysqli* object. You would use this class to manipulate or retrieve information about the current connection, or perform basic query functions.
+
+The methods available to this class are:
+
++   * ***autocommit***: Toggles whether or not transactions are automatically committed to the database.
++   * ***change_user***: Switches to another user.
++   * ***character_set_name***: Returns the default character set.
++   * ***close***: Closes a database connection.
++   * ***commit***: Commits a transaction to the database.
++   * ***connect***: Opens a new connection to MySQL database server (also the *mysqli* constructor).
++   * ***debug***: Uses the Fred Fish debugging library to debug.
++   * ***dump_debug_info***: Uses the Fred Fish debugging library to dump debugging information.
++   * ***get_client_info***: Retrieves information about the client.
