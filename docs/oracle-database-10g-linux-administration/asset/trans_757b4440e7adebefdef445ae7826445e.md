@@ -1,0 +1,62 @@
+
+
+## 什么是Oracle E-Business Suite？
+
+Oracle E-Business Suite 适用于八种不同的平台，其中包括 Linux。应用层（application tier）和数据库层（database tier）不必驻留在同一个操作系统上。应用层位于 32 位系统而数据库层位于 64 位系统也是可以接受的。两者都可以是 Linux 系统，或者应用层使用 Linux 而数据库层使用另一种操作系统，反之亦然。
+
+我亲身参与了将 E-Business Suite 从 HP-UX 和 Solaris 迁移到 Linux 的项目，其中数据库层在不同于应用层的时间点进行转换。各层可以在彼此独立的不同时间点进行转换。
+
+由于不同模块及其交互的复杂性，E-Business Suite 的安装包含所有可用的模块。实际使用哪些模块取决于获取的许可证。许多不同的应用程序相互依赖。例如，[应付账款](https://en.wikipedia.org/wiki/Accounts_payable)、[应收账款](https://en.wikipedia.org/wiki/Accounts_receivable)和其他财务模块都依赖[总账](https://en.wikipedia.org/wiki/General_ledger)模块。
+
+Oracle E-Business Suite 是一组旨在运行企业前台和后台业务的集成产品。Oracle E-Business Suite 是一个极其复杂且庞大的应用程序。其二进制文件大小达数十 GB。在 Oracle E-Business Suite 11i 中，整个套件基于 Web 和 Forms，并利用 [Oracle Application Server 9i](https://en.wikipedia.org/wiki/Oracle_Application_Server)（OracleAS 9i）运行。然而，由于安装是完全集成的，因此无需单独安装 Oracle Application Server。所有组件的整个安装都是通过 [Oracle E-Business Suite Rapid Installer](https://en.wikipedia.org/wiki/Oracle_E-Business_Suite_Rapid_Installer)（rapidwiz）完成的。
+
+Oracle E-Business Suite 是为规模较大的企业设计的。整个应用程序过于复杂，且维护要求过高，不适合小型企业使用。为了正确维护 E-Business Suite，至少需要一名专职的 Oracle E-Business Suite DBA。
+
+## E-Business Suite 架构
+
+Oracle E-Business Suite 是一个多层应用程序，可以存在于一个或多个计算机系统中。该应用程序有多个层（tiers），根据您的需求，它们可以驻留在相同或不同的系统上。各层包括以下内容：
+
+- 桌面层（Desktop tier）：用于较新的基于 HTML 应用程序的 Web 浏览器，以及提供传统基于 Forms 用户界面的附加 Java Applet。
+- 应用层（Application tier）：该层通常被称为中间层（middle tier），由许多不同的组件组成，如 Web 服务器（Web Server）、
+  Forms 服务器（Forms Server）、并发处理服务器（Concurrent Processing Server）、报表服务器（Reports Server）、管理服务器（Admin Server）以及可选的 Discoverer 服务器。
+
+### 数据库层（Database tier）
+
+这是存放业务数据和元数据的数据库。
+
+应用层和数据库层可以根据系统的工作负载以多种不同的方式拆分。应用层可以在多个系统上运行，以达到所需的性能。最好只在一个平台上使用应用层，以简化维护，因为只需要应用一组补丁。数据库层可以是独立系统，也可以是根据需求配置的 RAC 集群。也可以在同一个系统上运行应用层和数据库层。
+
+## 桌面层（Desktop Tier）
+
+桌面层（或客户端层）是一个 [Java Archive](https://en.wikipedia.org/wiki/Java_Archive)（JAR）文件集合，它被下载并在客户端浏览器中运行。JAR 文件由应用层下载到客户端系统的 [Oracle JInitiator](https://en.wikipedia.org/wiki/Oracle_JInitiator)（由 [Oracle Java 虚拟机](https://en.wikipedia.org/wiki/Oracle_Java_Machine)（JVM）提供）运行。在 Netscape 浏览器中，这实现为一个插件；在 Microsoft Internet Explorer 浏览器中，它实现为 [ActiveX](https://en.wikipedia.org/wiki/ActiveX) 组件。Oracle 依赖自己的 JVM，因为依赖他人的组件并不安全。
+
+## 应用层（Application Tier）
+
+应用层是最复杂的层。这里驻留着 Web 服务器（基于 [Apache web 服务器](https://httpd.apache.org/)）、Forms 服务器、并发处理服务器、报表服务器和管理服务器。该层还可能包含可选的 Discoverer 服务器。通常，所有这些组件都驻留在同一个系统上，但也可以拆分。如果拆分，并发处理服务器和管理服务器通常与数据库层运行在同一个系统上。让我们看看不同的组件及其在整个图中的位置。
+
+### Web 服务器（Web Server）
+
+Oracle HTTP 服务器基于 [Apache web 服务器](https://httpd.apache.org/)，但经过 Oracle 修改以更好地与 Oracle 应用层和 Oracle 数据库服务器集成。Web 服务器包括 Apache web 服务器、Web 监听器（Web Listener）、Java Servlet 引擎（JServ）和 [JavaServer Pages](https://en.wikipedia.org/wiki/JavaServer_Pages)（JSP）。如果可能，Web 服务器本身处理请求。但对于高级处理，Web 监听器将请求传递给 Java Servlet 引擎，该引擎根据需要联系数据库服务器。
+
+### Forms 服务器（Forms Server）
+
+Forms 服务器支持 Oracle E-Business Suite 的 forms。这是传统的 [Oracle Forms](https://en.wikipedia.org/wiki/Oracle_Forms)，而非基于 HTML 的应用程序（formerly known as Self-Service）。Forms 服务器是一个 Oracle 9i 组件，提供桌面客户端与 Oracle 数据库服务器之间的通信，显示客户端屏幕并根据用户操作初始化数据库中的更改。
+
+Oracle E-Business Suite 支持使用 [Socket](https://en.wikipedia.org/wiki/Socket) 模式用于内网用户，[HTTPS](https://en.wikipedia.org/wiki/HTTPS) 用于互联网用户，以及 [HTTP](https://en.wikipedia.org/wiki/HTTP) 模式用于基于 Forms 的通信。Forms 监听器 Servlet 允许您通过 HTTP 和 HTTPS 运行 Oracle Forms 应用程序。它为每个客户端创建一个 Forms 服务器运行时进程，以便通过 Web 服务器进行通信。由于 HTTP 协议比套接字更“健谈”，Forms 监听器 Servlet 会使网络流量增加大约 40%。但它提供了重新建立丢失网络连接、需要更少的机器和端口暴露在防火墙外以及允许更健壮和安全地通过 Internet 部署的好处。
+
+### 报表服务器（Reports Server）
+
+报表服务器用于创建[商业智能系统](https://en.wikipedia.org/wiki/Business_intelligence_system)（Business Intelligence System）的报表。使用报表服务（reports services），而不是允许报表非计划运行。使用报表服务，您可以调整和管理报表处理，这可能非常消耗资源。当有大量的用户时，报表服务可以根据需要拆分到几个报表服务器上。其中一个报表服务器被指定为主报表服务器（master reports server），它接收初始请求并将其分配给其他报表服务器之一。
+
+### 并发处理服务器（Concurrent Processing Server）
+
+当自助服务（Self-Service）和 Oracle Forms 应用程序在前台运行用户请求时，数据密集型操作在后台作为批处理作业运行。并发处理服务器负责运行这些批处理作业。这个专门的服务器确保资源密集型并发处理操作不会干扰交互式操作。在 Oracle RAC 环境中，并发处理服务器配置为在集群的不同节点上定义不同的队列，以便将并发处理分散到不同的集群节点上。这被称为并行并发处理（parallel concurrent processing）。在 Linux RAC 环境中使用并行并发处理正变得非常流行。
+
+### 管理服务器（Admin Server）
+
+管理（Administration）服务器用于维护 Oracle 数据库中的数据模型。在 Oracle RAC 集群中，管理服务器仅在一个节点上运行，但配置为主节点不可用时故障转移到另一个节点。管理服务器用于升级 Oracle E-Business Suite、应用补丁以及维护数据库中的数据。
+
+### Discoverer 服务器（Discoverer Server）
+
+Oracle Discoverer 服务器是一个旨在帮助分析服务和即时查询处理的工具。它也用于执行业务预测，是一个业务分析工具。Oracle Discoverer 服务器是一个可选组件，可能不会在所有情况下部署。
+

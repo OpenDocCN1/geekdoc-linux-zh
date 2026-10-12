@@ -1,0 +1,13 @@
+One of the most important tasks that you must perform when designing an Oracle system is sizing. Sizing is the act of determining the amount of hardware resources you must configure for your system. It is closely related to another subject: *capacity planning*. This chapter will begin by introducing these topics and will explain a bit of the mathematics behind sizing and capacity planning. Some of the basic performance characteristics of different components of your computer system will be covered as well.
+
+Although sizing and capacity planning are closely related, there are some significant differences in their end goal. Sizing is the estimation of the hardware requirements necessary to process a workload within specified parameters. These parameters are often known as the *service-level agreement (SLA)*. The service-level agreement is a contract between the customers of the system and the department that is in charge of managing the system. It is usually written in such a way that the response times of certain transactions must fall within a designated limit. Service-level agreements will be covered in more detail later in this chapter.
+
+*Capacity planning* is different from sizing in that capacity planning is the art and science of determining when an existing system will reach its capacity and what new hardware might need to be added to avoid the consequences of reaching that limit. This chapter is different from other chapters in this book in that you will finally get to use some of the mathematics you learned in high school and college.
+
+# An Introduction to Sizing
+
+In any system, there are basic fundamental limits. As the utilization of the system nears those limits, the way things operate starts to change. This is mainly due to the fact that as you near a fundamental limitation of a resource, queuing begins to occur. When you have reached the fundamental limit of the resource, queuing is guaranteed. Once queuing is happening, response times will increase. In this section of the chapter, we will look at capacity and queuing as well as service-level agreements and performance metrics.
+
+# Sizing for Peak Utilization and Steady-State Utilization
+
+When sizing a system, you must look at both peak utilization and steady-state utilization. The *peak-utilization period* refers to the period of time that causes the most stress on the system. The peak-utilization period might occur at a certain time of day, or at a certain time of the week, month, or quarter. In many financial systems, the peak utilization period comes at the end of month, quarter, and year. It is often necessary to size a system for the peak-utilization period, since that is when the most response time problems will occur.

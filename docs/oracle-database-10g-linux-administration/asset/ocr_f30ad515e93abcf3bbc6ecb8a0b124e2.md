@@ -1,0 +1,9 @@
+![](bbox=[0.15, 0.15, 0.85, 0.45])
+
+**FIGURE 14-1.  Multimaster replication sites**
+
+With synchronous and asynchronous replication, information about a DML change on a table is stored in the deferred transactions queue at the master site where the change occurred. These changes are called *deferred transactions*. The deferred transactions are pushed to the other participating master sites at regular intervals, which you define. It is possible to configure asynchronous replication so that it simulates synchronous replication.
+
+*Synchronous* replication keeps systems more up-to-date, but at a price in performance. Table updates are immediately replicated to all master sites. If one master site cannot process a transaction for any reason, then the transaction is rolled back at all master sites. Although you avoid the possibility of conflicts with synchronous replication, it requires a very stable environment to operate smoothly. If communication to one master site is not possible because of a network problem, for example, then users can still query replicated tables, but no transactions can be completed until communication is reestablished.
+
+In addition, there is procedural replication as well. *Procedural* replication replicates only the call to a stored procedure that an application uses to update a table. It does not replicate the data modifications themselves. Procedural replication is typically used with batch processing applications that change large amounts of data within a single transaction. In such cases, typical row-level replication might load a network with many data changes. To use procedural replication, you must replicate the packages that modify data in the system to all sites. After replicating

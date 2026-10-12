@@ -1,0 +1,15 @@
+![](bbox=[0.18, 0.11, 0.45, 0.28])
+
+![](bbox=[0.52, 0.11, 0.82, 0.28])
+
+# 3-Node Relay Channel
+
+# 4-Node Interference Channel
+
+Figure 2.7 Simple ad hoc networks for which capacity is unknown.
+
+on the $K \times (K-1)$-dimensional network capacity region. In particular, a network's scaling law defines how the ratio of the sum-rate divided by the number of users behaves in an asymptotically large network. The sum-rate point, i.e., the point on the capacity region corresponding to the maximum sum of user rates simultaneously achievable, can also be of interest for finite-size networks, especially symmetric networks where this point defines the maximum symmetric rate per user. Similarly, *interference alignment* can achieve the sum-rate point in interference networks, but does not achieve the full capacity region [7, 57].
+
+Cognitive radio networks are wireless networks where secondary users overhear the transmissions of primary users in the network and use that information in their encoding and decoding. From a Shannon capacity perspective, the two-user cognitive radio channel is a generalization of the two-user interference channel of Fig. 2.7 in that information about the primary user (source-destination pair 2) is assumed known to the secondary user (source-destination pair 1). In particular, in the underlay paradigm source 1 knows the amount of interference it causes to destination 2; for the interweave paradigm source 1 knows the activity of source 2 across time, space, and frequency dimensions (possibly through coordination with destination 1) and refrains from transmitting in those dimensions when the primary user is active; for the overlay paradigm source 1 is assumed to know the data sequence and encoding scheme of source 2 along with network channel gains, and uses that information in its encoding. Capacity results for the $K$-user interference channel are given in Section 2.4, and the capacity of the different cognitive radio paradigms are given in Sections 2.5-2.7.
+
+Figure 2.8 illustrates a slice of the wireless network performance region (the slice is for one source-destination pair in a $K$-node network) where capacity is not the only performance metric of interest. Indeed, delay (average, maximum, tail probability, or the entire delay distribution) is an important metric for many applications. In addition, dynamic wireless channels may exhibit improved rates if some outage or error is allowed (Shannon capacity regions assume zero outage). To illustrate tradeoffs for a set of network performance metrics, the region in Fig. 2.8 shows a hypothetical tradeoff between data rate (capacity), average delay, and outage (measured as the percentage of outage time $100 \times P_{out}$) for a given source-destination pair in a $K$-node network. Since this region includes three performance metrics, the performance region for the entire

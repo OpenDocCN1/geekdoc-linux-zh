@@ -1,0 +1,14 @@
+and the relationship between the ID and the Parent ID columns. Step 4 is a hash-join. Both steps 5 and 7 pass their results to step 4. Step 5 works with an index (step 6). The hash-join will create an intermediate output that will be passed to step 2. Notice that step 3 also sends its output to step 2. This table (table C) will be joined with the intermediate result set from step 4 and then passed to step 1 where Oracle will complete the request of the SQL. In this case, it is the aggregate function count. Other aggregate functions include min, max, avg, and so forth.
+
+> **NOTE**
+> 
+> Oracle 10g still supports the Rule-Based Optimizer,
+> but just for backward compatibility.
+
+The explain plan contains verbiage that indicates how the SQL is being processed. The first line is always the type of SQL that is being processed: SELECT Statement, INSERT Statement, UPDATE Statement, or DELETE Statement. Oracle 10g uses the Cost-Based Optimizer (CBO) to decide which explain plan step to even consider. The CBO considers thousands of explain plans and selects the one with the total lowest cost. Event dump 10053 will show all of the explain plans considered. These dumps are discussed later in this chapter under the TKPro tool topic. The cost column on the first line of the explain plan is the total cost. This cost figure constitutes an estimation of the amount of Disk I/O/CPU time/computer load and arrives at this “cost” figure for each line of the explain plan. Some of these cost figures come from statistics collected on the various database objects using DBMS_STATS or by letting Oracle 10g derive its own object statistics using dynamic sampling.
+
+If the explain plan is lengthy, sometimes just using the indentation is not enough. The `show_plan.sql` script (Listing 16-2) and [TUNER (see Figure 16-3) shows the ID and Parent\_ID columns.
+
+If there is more than one table in the FROM clause, you will see terms like Nested Loop, Merge Join, and Hash Join as the tables are being processed. Table 16-3 contains the basic description of these terms. Nested Loop processes the second table (inner table), once for each row returned in the first table (outer table). Merge Join sorts both tables involved and merges the rows based on the lookup criteria. Hash Join creates a work area in the user's program global area (controlled by HASH\_SIZE) and creates a key for lookup based on an arithmetic function. This allows Oracle to “read” the table once and then look up its values based on this arithmetic function.
+
+When there are two or more tables in the FROM clause, Oracle creates a result set, which is an internal temporary table (if this result set gets over 64K in size, it is written out/worked with from the assigned temporary tablespace). Each inner step of an explain plan creates a result set that is passed to the parent ID explain plan step.

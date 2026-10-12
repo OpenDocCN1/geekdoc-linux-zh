@@ -1,0 +1,15 @@
+The control files are used to store information such as the name of the database and the locations of data and redo log files. Oracle needs this information to start up the database instance. It is essential that the control files be protected. Oracle provides a mechanism for storing multiple copies of the control files. In a clustered environment, the control files must be accessible by all members of the cluster.
+
+# ## Redo Log Files
+
+The redo log files, collectively known as the redo log, store a record of all changes made to the database. This information is used in the event of a system failure to reapply changes that have been made and committed but may not have been made to the datafiles. It is essential that the redo log files have good performance and are protected against hardware failures (either through software or hardware fault tolerance). If redo log information is lost, you cannot fully recover the system in the event of a failure.
+
+Oracle provides a method for multiplexing redo log files by creating a duplicate of each redo log file. Depending on the amount of redo log activity, you may or may not want to use this. In most cases, by using hardware RAID technology you can avoid the Oracle and OS overhead by doing redo log fault tolerance in hardware, rather than using Oracle mirroring. However, if you do this, it is recommended that caching be disabled on that disk volume because of the criticality of the redo information. In some extreme cases where redo activity is very high, you can enable caching on the I/O subsystem if the Oracle mirrored caches are on different RAID systems with independent caches.
+
+The redo log is used for media recovery, which is necessary when a backup of the database must be restored, as well as for instance recovery. In the event of a power failure, the information in the redo log files is used to restore the database to the point of failure. This is why the redo log files are so important.
+
+In a clustered environment, each instance has its own set of redo log files, but they must all be accessible from every system. In the event of a loss of one of the nodes in a cluster, one of the other nodes can use the failed node’s redo log files to recover the portions of the database that were in use by the failed node. This will be covered in more detail in the Real Application Clusters (RAC) chapters.
+
+# ## Archive Log Files
+
+The archive log files are essentially backups of the online redo log files described earlier. When running in archivelog mode, these backups of the online redo log files are done automatically. The archive log files are essential for restoring the Oracle database from a media failure. Archive log files are also used in Oracle Data Guard. Later in this chapter, where Oracle logging is described, the archive log process is covered in more detail.

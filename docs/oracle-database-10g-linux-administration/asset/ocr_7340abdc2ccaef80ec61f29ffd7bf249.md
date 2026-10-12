@@ -1,0 +1,17 @@
+disabled, then Oracle 10g reverts back to the assumptions it used in prior versions of Oracle.
+
+The first thing the CBO looks for is how many tables are in the FROM clause. If there is more than one table, then the CBO starts looking to see the best way to join these tables together. It first looks to see if one or more of the involved tables' result set would contain only one row. The CBO can easily tell this if the selection criteria involves a unique or primary-key index. The CBO will then start with this table (called the driving table) and work on processing all the other tables from there. The ORDERED hint overrides this selection process by telling the CBO to process the tables in the order they appear in the from clause.
+
+In the event of any tie condition (in the preceding example: two tables have primary key selection), the CBO uses the object with the newer object_id.
+
+If the SQL contains an outer join (using the + syntax) or contains a subquery, then this table is not considered for the driving table.
+
+The CBO then generates a series of execution plans using the different join methods and access paths previously discussed. The CBO, based on statistics, estimates the IO cost of each plan step. The CBO then factors into the cost various other collected statistics such as machine load, buffer cache hit ratio, DB IO load, sort area size, multiblock read-ahead, and so on. Then the CBO simply chooses the one with the lowest overall cost. All of these considered execution plans can be visualized using the Oracle trace 10053. Running these traces is discussed in the "Using the Oracle Trace Facility" section later in this chapter. The cost of both the hash join and merge joins is calculated from the amount of IO required to read the objects into memory. The merge join also considers the amount of sorting (if any) that will be required. Oracle 10g will return the rows to the execution plan based on an index that is in the correct order. Nested loop costs are based on reading the individual rows from the outer table times the number of expected IOs from the inner table.
+
+A full table scan retrieves all the rows and checks them for the selection criteria. The tables blocks are read up to the block marked as the high-water mark (the last block to receive inserts).
+
+Index scans show up as full scan or fast full scan and the index is named as the object. Oracle processes just the leaf level of the index in this instance. The full scan proceeds one leaf block at a time, while the fastfull scan reads the leaf blocks using multiblock read-ahead (controlled by startup parameter DB_FILE_MULTIBLOCK_READ_COUNT).
+
+Index scans are always related to a table access unless the index key columns satisfy the SQL request for data.
+
+Full table scans can be selected based on a number of criteria. The simple solution is the lack of an index on any of the table's selection criteria. If the CBO determines, based on the selection criteria, that most of the rows need to be examined, then the CBO will cost out an execution plan for consideration using a full table scan. Other criteria include if the table is small in that it has less total blocks than the multiblock read-ahead value, and thus the index has a poor clustering factor (the clustering factor

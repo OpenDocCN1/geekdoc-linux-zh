@@ -1,0 +1,5 @@
+![](bbox=[0.27, 0.12, 0.78, 0.72])
+
+Figure 5.12 Throughput and probability of missed detection as a function of the sensing instance for the two-stage multiuser Q-learning-based sensing policy with ε-greedy action selection [148]. With an appropriately chosen ε the proposed algorithm is able to achieve high throughput while minimizing the probability of missed detection. The ideal policy accesses always the unoccupied frequency bands providing the best throughput.
+
+algorithm, called the tiling algorithm, is proposed for balancing between exploitation and exploration in single-user spectrum sensing. A single frequency band case is considered in which the secondary user's policy determines how long the secondary user waits until it senses the frequency band again, depending on the previous sensing result. Sensing is assumed to incur a fixed cost. In the proposed scheme the secondary user first performs an exploration phase to learn the model parameters. Then in the second phase a fixed sensing policy based on the learned parameters is employed to exploit the spectrum. In [54] a single secondary user multiband sensing and access policy is

@@ -1,0 +1,393 @@
+
+## I
+- index segments, 37, 52
+- indexes, 85-86
+  - bitmap, 404, 408-409, 414
+  - b-tree, 404, 405
+  - composite key selection, 414
+  - function-based, 407, 414
+  - globally partitioned, 422-423
+  - index clustering factor, 415-417
+  - index-organized tables (IOTs), 410-412
+  - key fields, 404
+  - locally partitioned, 421-422
+  - monitoring, 412-413
+  - multiple-key, 409-410, 414
+  - nonunique, 406, 414
+  - partitioning, 421-424
+  - pseudo-columns, 404
+  - reverse-key, 407, 414
+  - ROWID, 405
+  - space utilization, 413
+  - tips, 413-414
+  - unique, 406, 414
+- InfiniBand, network support for, 60
+- installing Oracle 10g on Linux
+  - configuring, 159-161, 162
+  - downloading and installing patches, 158-159
+  - file for downloading, 154
+  - kernel configuration parameters, 142
+  - running the installer, 155-158
+  - staging the install, 154-155
+  - storage requirement, 142-154
+  - testing and validating, 162
+- instances
+  - ASM instances, 32
+  - monitoring, 246-253
+  - Oracle instances, 30, 54-58, 159
+  - recovery, 275-276, 306, 307-308, 318-319
+  - starting up, 222-223
+  - tuning, 243-246
+- interconnect, 168, 181
+  - bonding the public interface and the interconnect, 202
+  - configuring, 205
+- I/O performance and queuing, 97-98
+- response time vs. utilization, 98
+- I/O subsystem sizing, 105
+  - disk drive, 105-109
+  - performance, 109
+  - random I/O performance, 112-113
+  - reading the disk spec sheet, 109-110
+  - rotational latency, 108-109
+  - seek time, 107-108
+  - sequential I/O performance, 111
+- I/O tuning, 359-364
+- I/O utilities, 10
+  - iostat, 221
+  - monitoring Linux with, 257-258
+- IOTs, 410-412
+  - partitioning, 423
+- Java 2 Enterprise Edition, 429
+- Java Authentication and Authorization Service (JAAS), 430
+- Java Monitoring Tool, 61
+- Job Queue, 180
+- JSTuner, 374
+
+## K
+- K Desktop Environment. See KDE
+- KDE, user interface, 19
+- Keep Cache, 57
+- kernel, 5
+  - changing parameters, 195-196
+  - configuring parameters, 131-133
+  - configuring semaphores and other parameters, 216-217
+  - configuring shared memory, 216
+  - hybrid kernel, 6, 7-8
+  - microkernel, 6-7
+  - monitoring and changing configuration parameters, 217-218
+  - monolithic kernel, 5-6
+  - patches, 194-195
+  - rebuilding the Linux kernel, 21-22
+  - setting parameter and shell limit values, 195
+  - setting shell limits for Oracle users, 196
+  - setting up the Linux kernel, 193-196
+  - software requirements for Linux kernel, 193-194
+- Kernel Loadable Modules (KLMs), 7-8
+- key fields, 404
+- knee of the curve, 96
+- kswapd process, 99
+- large pool, 57-58
+- latency, 107
+  - rotational latency, 108-109
+- ld (GNU linker), 15
+- LGWR, 56, 69-70, 81, 179, 326
+- Library Cache, 58
+- limitation parameters, 101-102
+- Linux
+  - account creation, 196-198
+  - adding users and groups, 133-134
+  - /bin utilities, 12
+  - choosing components, 128-131
+  - configuring filesystems, 127-128
+  - configuring for RAC, 190-198
+  - configuring kernel parameters, 131-133
+  - configuring shell limits for the Oracle user, 134
+  - creating directory structures, 134-135
+  - development environment, 13-14
+  - devices, 24-25
+  - directory structure, 8-9, 134-135
+  - identifying user and group IDs, 198
+  - installation checklist for Oracle 10g R1, 137-138
+  - installation checklist for Oracle 10g R2, 138-139
+  - memory tuning for Oracle, 357
+  - minimum requirements, 126-127
+  - monitoring, 218-221
+  - monitoring the Linux system, 234-260
+  - Oracle support for 64-bit Linux, 63
+  - overview, 8
+  - post-installation, 131-136
+  - preinstallation, 126-131
+  - processes, 23
+  - /sbin utilities, 9-11
+  - setting up the Oracle environment, 135-136
+  - threads, 23-24
+  - tuning for network performance, 366-367
+  - upgrades, 222
+  - user interfaces, 17-19
+  - /usr/bin utilities, 12-13
+  - /usr/sbin utilities and daemons, 11
+  - utilities and directories, 9-13
+  - web server utilities, 19-22
+
+## L
+- list partitioning, 85, 420-421
+- LMS, 56
+- load balancing, 43, 44
+- load testing, 262-264
+  - batch jobs, 264-265
+  - loading, 265
+  - OLTP applications, 265-267
+  - performance metrics, 367, 368
+  - tips, 268-269
+- locally managed tablespaces, 37-38
+  - See also tablespaces
+- locking, 67
+- log file recovery, 309-310
+- log switches, 71
+  - forcing, 72
+- Log Writer Process. See LGWR
+- LOG_CHECKPOINT_INTERVAL, 71-72
+- LOG_CHECKPOINT_TIMEOUT, 72
+- logging, 280-281
+- logical standby databases, 330-332, 338-340
+- Logical Volume Managers (LVMs), 25
+- LogLoader, 434-435
+- LRU (Least Recently Used) algorithm, 68
+
+## M
+- make utility, 16-17
+- manageability, 61-62
+- mapped base, 260
+- massively parallel processing systems, 355-356
+- materialized views, 86
+  - replication, 345
+- media recovery, 275-276, 306, 308, 319-320
+- memory, 98-99
+  - configuring shared memory, 216
+  - RAM, 356-357
+  - sizing, 104-105
+  - virtual memory systems, 99, 358
+- metrics, 99-101
+  - load testing, 267-268
+  - See also utilization
+- migrated rows, 45, 46-47
+  - listing, 47-48
+- mirroring, 116
+- MPP. See massively parallel processing systems
+- MTS, vs. dedicated server processes, 59-60
+- multimaster replication, 343-345
+- multiprocessors, 355-356
+- multithreaded server. See MTS
+
+## N
+- NAS, 183-184
+- network parameters, configurable, 60
+- network performance, 98
+- network utilities, 10
+- network-attached storage. See NAS
+- networking
+  - bonding the public interface and the interconnect, 202
+  - checking network requirements, 201
+  - choosing the right network, 366-367
+  - configuring the network, 218
+  - IP address requirements and host names, 200-201
+  - testing, 202
+  - tuning, 365
+  - verifying shared storage, 202-203
+- nm utility, 16
+- NOARCHIVELOG mode, 282-283
+- nodes, 167
+- normal tablespaces, 37
+  - See also tablespaces
+
+## O
+- O_DIRECT, 364-365
+- objcopy utility, 16
+- objdump utility, 16
+- object privileges, 232
+- objects, 168
+- OCFS, 26, 363
+  - configuring the shared disk, 206
+  - coreutils, 365
+  - tuning, 364-365
+- offline backup, 295
+- online backup, 295-297
+- online redefinition, 61
+- operating system, overview, 5-8
+- operator error recovery, 320
+- Optimizer. See CBO
+- Oracle 10g
+  - 64-bit Linux support, 63
+  - application development, 62-63
+  - availability, 61
+  - backing up the Oracle Database and binaries, 159
+  - business intelligence, 62
+  - Client Static Library, 160-161
+  - clustering, 61
+  - configuring the database, 159
+  - documenting the system, 159
+  - downloading and installing patches, 158-159
+  - initial tuning of the Oracle instance, 159
+  - installation checklist for Oracle 10g R1, 137-138
+  - installation checklist for Oracle 10g R2, 138-139
+  - installation files to download, 154
+  - kernel configuration parameters, 142
+  - manageability, 61-62
+  - performance and scalability features, 51-61
+  - recompiling invalid PL/SQL modules, 160
+  - running the installer, 155-158
+  - setting up Oracle Net, 161
+  - staging the install, 154-155
+  - storage requirements, 142-154
+  - testing and validating, 162
+- Oracle Advanced Replication, 342-343
+  - database layout, 346
+  - hybrid replication, 345
+  - I/O capacity, 346
+  - on Linux, 345-348
+  - materialized view replication, 345
+  - multimaster replication, 343-345
+  - network bandwidth, 347
+  - network capacity, 346
+  - network latency, 348
+  - network throughput calculation, 347-348
+- Oracle Application Server 10g, 431-437
+  - components of, 428-429
+  - configuring, 438-442
+  - installing, 438
+- Oracle Application Server Certificate Authority, 429
+- Oracle Application Server interConnect, 431
+- Oracle Application Server Portal, 430
+- Oracle Application Server Portal Developer Kit, 430
+- Oracle Application Server Process Connect, 431
+- Oracle Application Server Syndication Services, 430
+- Oracle Cluster Filesystem. See OCFS
+- Oracle Database Registry (OCR), 178
+- Oracle Database
+  - alert and trace files, 34
+  - archive log files, 33
+  - backup files, 34-35
+  - control files, 33
+  - data blocks, 44-51
+  - datafiles, 31-32, 35
+  - extents, 52-53
+  - logical data structures, 35-36
+  - multiple block sizes, 51-52
+  - overview, 31
+  - parameter files, 34
+  - physical data structures, 31
+  - redo log files, 33
+  - segments, 53-54
+  - tablespaces, 35, 36-44
+- Oracle Database server. See server
+- Oracle Data Pump. See Data Pump
+- Oracle directories, 198-199
+- Oracle base directory, 199
+- Oracle Inventory directory, 199
+- Oracle Enterprise Manager Application Server/Grid Control, 429
+- Oracle Flashback, 294-295, 311-318
+- Oracle instances, 30
+  - background processes, 55-57
+  - components, 54-58
+  - defined, 54
+  - initial tuning of, 159
+  - monitoring, 246-253
+  - recovery, 275-276, 306, 307-308, 318-319
+  - starting up, 222-223
+  - tuning, 243-246
+- Oracle Internet Directory, 430
+- Oracle Inventory group, 197
+- Oracle Maximum Availability Architecture (MAA), 166, 167
+- Oracle Net, setting up, 161
+- Oracle RAC. See Real Application Clusters
+- Oracle RAC Lock Manager Service. See LMS
+- Oracle Single Sign-On, 429
+- Oracle software owner user, 197-198
+- Oracle Trace Facility, SQL tuning using, 396-401
+- Oracle Ultra Search, 430
+- Oracle Wireless, 430
+- OracleAS 10g, 431-437
+  - configuring, 438-442
+  - installing, 438
+- OS facilities, 309
+- offline backup, 295
+- online backup, 295-297
+- OSDBA group, 196
+- OSOPER group, 196-197
+
+## P
+- paging, 99, 358
+- parameter files, 34
+- parity, 120
+  - creating, 120
+  - example, 120
+  - maintaining, 120-121
+  - See also RAID
+- partitioning, 84-85, 417-418
+  - / root partition), 127
+  - composite partitioning, 85, 418-420
+  - hash partitioning, 85, 418, 419-420
+  - index partitioning, 421-424
+  - IOTs, 423
+  - for Linux installation, 128
+  - list partitioning, 85, 420-421
+  - range partitioning, 85, 418-419
+  - raw partitions, 145-146
+  - swap partition, 127
+- passive nodes, 167
+- PCTFREE, 48-50, 413
+- PCTUSED, 48-49, 50-51, 413
+- peak-utilization period, 92-93
+- peer-to-peer replication, 343-345
+- performance metrics, 99-101
+- performance tuning. See tuning
+- pfile, 34, 179, 243, 246
+- PGA, 59
+- PHP, 20
+- physical standby databases, 329-330, 332-337
+- PMON, 56, 180
+- point-in-time recovery, 306, 310-311
+- portals, 430
+- privileges
+  - object, 232
+  - system, 231, 234
+- /proc pseudo filesystem, 132-133
+- procedural replication, 344-345
+- Process Monitor Process. See PMON
+- processes
+  - background processes, 55-57
+  - defined, 23
+  - MTS vs. dedicated server processes, 59-60
+  - Oracle's use of, 23
+  - server processes, 59
+  - user processes, 58
+- ps, 255-256
+- pseudo-columns, 404
+
+## Q
+- QMON, 56
+- QMON, 180
+- Queue Manager Process(es). See QMON
+- Queue Monitor. See QMON
+- queuing
+  - CPU performance and, 96-97
+  - I/O performance and, 97-98
+  - I/O queuing, 113
+  - knee of the curve, 96
+  - and memory, 98-99
+  - and network performance, 98
+  - queue length vs. utilization, 97
+  - and system resources, 95-96
+
+## R
+- RAC. See Real Application Clusters
+- RAID, 114
+  - hardware vs. software, 114-115
+  - level performance comparison, 122-123
+  - load balancing with, 43
+  - parity, 120-121
+  - performance, 121-122, 123
+- RAID0, 115, 122
+- RAID1, 116, 122
+- RAID10, 116-117, 122
+- RAID2, 117

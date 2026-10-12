@@ -1,0 +1,55 @@
+
+## References
+
+- [187] G. Taricco, "Optimization of linear cooperative spectrum sensing for cognitive radio networks," IEEE J. Sel. Topics Signal Process., 5, no. 1, 77–86, Nov. 2009.
+- [188] A. G. Tartakovsky and G. V. Moustakides, "State-of-the-art in Bayesian changepoint detection." Sequential Anal., 29, no. 2, 125–145, Apr. 2009.
+- [189] A. G. Tartakovsky, M. Pollak, and A. S. Polunchenko, "Third-order asymptotic optimality of the generalized Shiryaev-Roberts changepoint detection procedures," Teor. Veroyatnost. i Primenen., 56, no. 3, 534–565, 2011; and Theory Probab. Appl., to be published.
+- [190] A. G. Tartakovsky and A. S. Polunchenko, "Quickest changepoint detection in distributed multisensor systems under unknown parameters," Proc. 11th Int. Conf. Information Fusion, Cologne, Germany, June 30–July 3, 2008.
+- [191] A. G. Tartakovsky and V. V. Veeravalli, "Change-point detection in multichannel and distributed systems with applications," in N. Mukhopadhyay, S. Datta, and S. Chattopadhyay (eds.), Applications of Sequential Methodologies, pp. 331–363, Marcel Dekker, Inc., 2004.
+- [192] A. G. Tartakovsky and V. V. Veeravalli, "Asymptotically optimal quickest change detection in distributed sensor systems," Sequential Anal., 27, no. 4, 441–475, 2008.
+- [193] C. Tekin and M. Liu, "Online learning in opportunistic spectrum access: a restless bandit approach," Proc. 30th IEEE Int. Conf. Computer Communications, Shanghai, China, Apr. 10–15, 2011.
+- [194] S. C. A. Thomopoulos, R. Viswanathan, and D. K. Bougoulias, "Optimal distributed decision fusion," IEEE Trans. Aerosp. Electron. Syst., 25, no. 5, 761–765, Sep. 1989.
+- [195] M. Tokic, "Adaptive ε-greedy exploration in reinforcement learning based on value differences," in R. Dillmann, J. Beyerer, U. D. Hanebeck, and T. Schultz (eds.), Advances in Artificial Intelligence, Lecture Notes in Computer Science, vol. 6359, pp. 203–210, Springer, 2010.
+- [196] J. N. Tsitsiklis, "Asymptotic stochastic approximation and Q-learning," Mach. Learn., 16, no. 3, 185–202, Sep. 1994.
+- [197] J. Unnikrishnan and V. V. Veeravalli, "Algorithms for dynamic spectrum access with learning for cognitive radio," IEEE Trans. Signal Process., 58, no. 2, 750–760, Feb. 2010.
+- [198] J. Unnikrishnan, V. V. Veeravalli, and S. Meyn, "Minimax robust quickest change detection," IEEE Trans. Inf. Theory, 57, no. 3, 1604–1614, Mar. 2011.
+- [199] P. P. Varaiya, J. C. Walrand, and C. Buyukkoc, "Extensions of the multiarmed bandit problem: the discounted case," IEEE Trans. Autom. Control, AC–30, no. 5, 426–439, May 1985.
+- [200] P. K. Varshney, Distributed Detection and Data Fusion, Springer-Verlag, 1996.
+- [201] V. V. Veeravalli, "Decentralized quickest change detection," IEEE Trans. Theory, 47, no. 4, 1657–1665, May 2001.
+- [202] V. V. Veeravalli, T. Basar, and H. V. Poor, "Decentralized sequential detection with a fusion center performing the sequential test," IEEE Trans. Inf. Theory, 39, no. 2, 433–442, Mar. 1993.
+- [203] V. V. Veeravalli and C. W. Baum, "Asymptotic efficiency of a sequential multihypothesis test," IEEE Trans. Inf. Theory, 41, no. 6, 1994–1997, Nov. 1995.
+- [204] J. Vermorel and M. Mohri, "Multi-armed bandit algorithm and empirical evaluation," in J. Gama, R. Camacho, P. Brazdil, A. Jorge, and L. Torgo (eds.), Machine Learning: ECML 2005, Lecture Notes in Computer Science, 3720/2005, 437–448, Springer-Verlag 2005.
+- [205] W. Vickrey, "Counterspeculation, auctions, and competitive sealed tenders," J. Financ., 16, no. 1, 8–37, Mar. 1961.
+- [206] R. Viswanathan and P. K. Varshney, "Distributed detection with multiple sensors: Part I – Fundamentals," Proc. IEEE, 85, no. 1, 54–63, Jan. 1997.
+- [207] A. Wald, "Sequential tests of statistical hypotheses," Ann. Math. Stat., 16, no. 2, 117–186, June 1945.
+- [208] A. Wald and J. Wolfowitz, "Optimum character of the sequential probability ratio test," Ann. Math. Stat., 19, no. 3, 326–339, 1948.
+- [209] B. Wang, Y. Wu, and K. J. R. Liu, "Game theory for cognitive radio networks: an overview," Comput. Netw., 54, no. 14, 2537–2561, Oct. 2010.
+- [210] C.-C. Wang, S. R. Kulkarni, and H. V. Poor, "Bandit problems with side observations," IEEE Trans. Autom. Control, 50, no. 3, 338–355, Mar. 2005.
+- [211] C.-C. Wang, S. R. Kulkarni, and H. V. Poor, "Arbitrary side observations in bandit problems," Adv. Appl. Math. – Special Issue Dedicated to Dr. David P. Robbins, 34, no. 4, 903–938, May 2005.
+- [212] H. Wang, G. Noh, D. Kim, S. Kim, and D. Hong, "Advanced sensing techniques of energy detection in cognitive radios," J. Commun. Netw., 12, no. 1, 19–29, Feb. 2010.
+- [213] J. Wang, G. Scutari, and D. P. Palomar, "Robust MIMO cognitive radio via game theory," IEEE Trans. Signal Process., 59, no. 3, 1183–1201, Mar. 2011.
+- [214] K. Wang and L. Chen, "On optimality of myopic policy for restless multi-armed bandit problem: an axiomatic approach," IEEE Trans. Signal Process., 60, no. 1, 300–309, Jan. 2012.
+- [215] C. J. C. H. Watkins, Learning from Delayed Rewards, Ph.D. Dissertation, University of Cambridge, Cambridge, UK, 1989.
+- [216] C. J. C. H. Watkins and P. Dayan, "Q-learning," Mach. Learn., 8, 279–292, 1992.
+- [217] R. R. Weber and G. Weiss, "On an index policy for restless bandits," J. Appl. Prob., 27, no. 3, 637–648, Sep. 1990.
+- [218] R. R. Weber and G. Weiss, "Addendum to 'On an index policy for restless bandits'," Adv. Appl. Prob., 23, no. 2, 429–430, June 1991.
+- [219] P. Whittle, "Arm-absorbing bandits," Ann. Probab., 9, no. 2, 284–292, Apr. 1981.
+- [220] P. Whittle, "Restless bandits: activity allocation in a changing world," J. Appl. Prob., 25, 287–298, 1988.
+- [221] B. Wild and K. Ramachandran, "Detecting primary receivers for cognitive radio applications," Proc. 1st IEEE Int. Symp. New Frontiers in Dynamic Spectrum Access Networks (DySPAN 2005), Baltimore, MD, USA, Nov. 8–11, 2005, pp. 124–130.
+- [222] L. A. Wolsey, Integer Programming, Wiley, 1998.
+- [223] C. Wu, K. Chowdhury, M. Di Felice, and W. Meleis, "Spectrum management of cognitive radio using multi-agent reinforcement learning," Proc. 9th Int. Conf. Autonomous Agents and Multi-Agent Systems (AAMAS 2010), Toronto, Canada, May 10–14, 2010.
+- [224] Y. Xin, H. Zhang, and S. Rangarajan, "SSCT: a simple sequential spectrum sensing scheme for cognitive radio," Proc. IEEE Global Communications Conf. (GLOBECOM 2009), Honolulu, HI, Nov. 30–Dec. 4, 2009.
+- [225] K. Yamazaki, Essays on Sequential Analysis: Multi-Armed Bandit with Availability Constraints and Sequential Change Detection and Identification, Ph.D. Dissertation, Princeton University, Princeton, NJ, Apr. 2009.
+- [226] E. Yang and D. Gu, "Multiagent reinforcement learning for multi-robot system: a survey," Technical Report CSM-2004, Department of Computer Science, University of Essex, UK, 2004.
+- [227] K.-L. A. Yau, P. Komisarczuk, and P. D. Teal, "A context-aware and intelligent dynamic channel selection scheme for cognitive radio networks," Proc. Conf. Cognitive Radio Oriented Wireless Networks and Communications (CROWNCOM 2009), Hanover, Germany, June 2009.
+- [228] K.-L. A. Yau, P. Komisarczuk, and P. D. Teal, "Context awareness and intelligence in distributed cognitive radio networks: a reinforcement learning approach," Proc. 11th Australian Communications Theory Workshop (AusCTW 2010), Canberra, Australia, Feb. 2010.
+- [229] K.-L. A. Yau, P. Komisarczuk, and P. D. Teal, “Achieving efficient and optimal joint action in distributed cognitive radio networks using payoff propagation,” Proc. IEEE Int. Conf. Communications (ICC 2010), Cape Town, South Africa, May 23–27, 2010.
+- [230] W. Yuan, H. Leung, S. Chen, and W. Cheng, “A distributed sensor selection mechanism for cooperative spectrum sensing,” IEEE Trans. Signal Process., 59, no. 12, 6033–6044, Dec. 2011.
+- [231] L. Zacharias and R. Sundaresan, “Decentralized sequential change detection using physical layer fusion,” IEEE Trans. Wireless Commun., 7, no. 12, 4999–5008, Dec. 2008.
+- [232] Y. Zeng, Y. C. Liang, E. C. Y. Peh, and A. T. Hoang, “Cooperative covariance and eigenvalue based detections for robust sensing,” Proc. IEEE Global Communications Conf. (GLOBECOM 2009), Honolulu, HI, Nov. 30–Dec. 4, 2009, pp. 1–6.
+- [233] Q. Zhao, B. Krishnamachari, and K. Liu, “On myopic sensing for multi-channel opportunistic access: structure, optimality, and performance,” IEEE Trans. Wireless Commun., 7, no. 12, 5431–5440, Dec. 2008.
+- [234] Q. Zhao, L. Tong, A. Swami, and Y. Chen, “Decentralized cognitive MAC for opportunistic spectrum access in ad hoc networks: a POMDP framework,” IEEE J. Sel. Areas Commun., 25, no. 3, 589–600, Apr. 2007.
+- [235] Q. Zhao and J. Ye, “Quickest detection in multiple on-off processes,” IEEE Trans. Signal Process., 58, no. 12, 5994–6006, Dec. 2010.
+- [236] K. Zheng, H. Li, S. M. Djouadi, and J. Wang, “Spectrum sensing in low SNR regime via stochastic resonance,” Proc. 44th Annu. Conf. Information Sciences and Systems (CISS 2010), Princeton, NJ, Mar. 17–19, 2010.
+- [237] F. Zhu and S.-W. Seo, “Enhanced robust cooperative spectrum sensing in cognitive radio,” J. Commun. Netw., 11, no. 2, 122–133, Apr. 2009.
+- [238] Q. Zou, S. Zheng, and A. H. Sayed, “Cooperative sensing via sequential detection,” IEEE Trans. Signal Process., 58, no. 12, 6266–6283, Dec. 2010.

@@ -1,0 +1,96 @@
+
+
+S. Biswas 和 R. Morris，“多跳无线网络中的机会路由”，ACM SIGCOMM 会议录，2004。
+
+R. S. Blum, S. A. Kassam, 和 H. V. Poor,“分布式检测与多个传感器：第二部分 – 高级专题”，IEEE 会议录，85，第 1 期，64–79，1997年1月。
+
+R. S. Blum 和 B. M. Sadler,“传感器网络中利用有序传输进行节能信号检测”，IEEE 信号处理汇刊，56，第 7 期，3229–3235，2008年7月。
+
+H. Bölcskei, R. U. Nabar, O. Oyman, 和 A. J. Paulraj,“MIMO 中继网络中的容量扩展定律”，IEEE 无线通信汇刊，5，第 6 期，1433–1444，2006年6月。
+
+M. Bowling 和 M. Veloso,“使用可变学习率的多智能体学习”，人工智能（Artif. Intell.），136，第 2 期，215–250，2002年4月。
+
+R. Branzei, D. Dimitrov, 和 S. Tijs,《合作博弈论模型》，第 2 版，Springer-Verlag，2008。
+
+V. Brik, E. Rozner, S. Banerjee, 和 P. Bahl,“DSAP：一种协调频谱接入协议”，IEEE 动态频谱接入网络新前沿国际研讨会，2005，2005年11月，第 611–614 页。
+
+J. Brito,“频谱公地理论与实践”，斯坦福技术法评论（Stanford Technology Law Review），讨论论文，2007。stlr.stanford.edu/pdf/brito-commons.pdf。
+
+R. Brodersen, A. Wolisz, D. Cabric, S. M. Mishra, 和 D. Willkomm,“CORVUS：利用虚拟未授权频谱的认知无线电方法”，白皮书：伯克利无线研究中心。bwrc.eecs.berkeley.edu/research/mcma/CR_White_paper_final1.pdf。
+
+B. E. Brodsky 和 B. S. Darkhovsky,《变化点问题中的非参数方法》，Kluwer 学术出版社，1993。
+
+B. E. Brodsky 和 B. S. Darkhovsky,“针对许多复合假设的最小最大序贯检验。I”，理论与概率应用（Theory Probab. Appl.），52，第 4 期，565–579，2008。
+
+B. E. Brodsky 和 B. S. Darkhovsky,“针对许多复合假设的最小最大序贯检验。II”，理论与概率应用（Theory Probab. Appl.），53，第 1 期，1–12，2009。
+
+I. Broustis, J. Eriksson, S. Krishnamurthy, 和 M. Faloutsos,“可管理和可负担的无线试验床蓝图：设计、陷阱与经验教训”，第 3 届测试床与网络及社区发展研究基础设施国际会议，TridentCom 2007，2007年5月，第 1–6 页。
+
+T. X. Brown,“对授权广播服务频段中未授权设备运行的分析”，载于第 1 届 IEEE 动态频谱接入网络新前沿国际研讨会（DySPAN 2005）会议录，马里兰州巴尔的摩，2005年11月8–11日，第 11–29 页。
+
+T. Brown 和 A. Sethi,“认知无线电拒绝服务潜在漏洞与防护对策：多维分析与评估”，第 2 届认知无线电导向无线网络与通信国际会议（CrownCom.），2007年8月，第 456–464 页。
+
+M. Buddhikot,“理解动态频谱接入：模型、分类法与挑战”，第 2 届 IEEE 动态频谱接入网络新前沿国际研讨会，DySPAN，2007年4月。
+
+M. Buddhikot, P. Kolodzy, S. Miller, K. Ryan, 和 J. Evans,“DIMSUMNet：利用协调动态频谱接入在无线通信中的新方向”，IEEE WoWMoM，2005年6月。
+
+T. N. Bui, V. Krishnamurthy, 和 H. V. Poor,“DS/CDMA 网络中的在线贝叶斯活动检测”，IEEE 信号处理汇刊，53，第 1 期，371–375，2005年1月。
+
+L. Buşoniu, R. Babuška, 和 B. De Schutter,“多智能体强化学习综述”，IEEE 系统、人与网络学报 C：应用综述（IEEE Trans. Syst., Man, Cybern. C, Appl. Rev.），38，第 2 期，156–172，2008年3月。
+
+L. Buşoniu, R. Babuška, B. De Schutter, 和 D. Ernst,《使用函数逼近器进行强化学习与动态规划》，CRC 出版社，2010。
+
+V. R. Cadambe 和 S. A. Jafar,“K 用户干扰信道的干扰对齐与自由度”，IEEE 信息论汇刊，54，第 8 期，3425–3441，2008年8月。
+
+V. R. Cadambe 和 S. A. Jafar,“并行高斯干扰信道并非总是可分离的”，IEEE 信息论汇刊，55，第 9 期，3983–3990，2009年9月。
+
+G. Calcev, D. Chizhik, B. Goransson, 等,“用于系统级仿真的宽带空间信道模型”，IEEE 车辆技术汇刊，56，第 2 期，389–403，2007年3月。
+
+Y. Cao 和 B. Chen,“具有一个认知发射机的干扰信道”，信号、系统与计算机阿西洛玛会议（Asilomar Conference on Signals, Systems, and Computers）会议录，加利福尼亚州 Pacific Grove，2008年10月26–29日。
+
+A. B. Carleial,“干扰不降低容量的一种情况”，IEEE 信息论汇刊，21，第 5 期，569–570，1975年9月。
+
+A. B. Carleial,“干扰信道”，IEEE 信息论汇刊，24，第 1 期，60–70，1978年1月。
+
+D. Cassioli, M. Z. Win, 和 A. Molisch,“超宽带室内信道：从统计模型到仿真”，IEEE 通信选集，20，第 6 期，1247–1257，2002年8月。
+
+H. Celebi 和 H. Arslan,“认知无线电的自适应定位系统”，第 2 届 IEEE 动态频谱接入网络新前沿国际研讨会（DySPAN 2007）会议录，爱尔兰都柏林，2007年4月17–20日，第 78–84 页。
+
+H. Celebi 和 H. Arslan,“认知定位系统”，IEEE 无线通信汇刊，6，第 12 期，4475–4483，2007年12月。
+
+S. Chaudhuri 和 V. Koivunen,“量化和信道错误对协作频谱感知的影响”，第 43 届阿西洛玛信号、系统与计算机会议（43rd Asilomar Conf. Signals, Systems, and Computers）会议录，加利福尼亚州 Pacific Grove，2009年11月1–4日，第 528–533 页。
+
+S. Chaudhuri, V. Koivunen, 和 H. V. Poor,“基于自相关的去中心化序贯检测认知无线电中的 OFDM 信号”，IEEE 信号处理汇刊，57，第 7 期，2690–2700，2009年7月。
+
+S. Chaudhuri, J. Lundén, 和 V. Koivunen,“协作频谱感知的 BEP 墙”，第 36 届 IEEE 声学、语音与信号处理国际会议（ICASSP 2011）会议录，捷克布拉格，2011年5月22–27日。
+
+S. Chaudhari, J. Lundén, 和 V. Koivunen,“存在报告信道错误时协作频谱感知的性能限制”，第 22 届 IEEE 个人、室内和移动通信国际研讨会（PIMRC 2011）会议录，加拿大多伦多，2011年9月11–14日。
+
+S. Chaudhari, J. Lundén, V. Koivunen, 和 H. V. Poor,“存在不完美的报告信道时的协作感知：硬判决还是软判决？”，IEEE 信号处理汇刊，60，第 1 期，18–28，2012年1月。
+
+B. Chen 和 H. Wang,“OFDM 载波频率偏移的最大似然估计”，载于 IEEE 通信国际会议（IEEE International Conference on Communications），2002年5月，ICC 2002，I，第 49–53 页。
+
+B. Chen 和 P. K. Willett,“在非理想信道存在情况下局部传感器判决规则中似然比检验的最优性”，IEEE 信息论汇刊，51，第 2 期，693–699，2005年2月。
+
+H. Chen, B. Chen, 和 P. K. Varshney,“关于在非理想信道存在情况下局部传感器判决规则中似然比检验最优性的进一步结果”，IEEE 信息论汇刊，55，第 2 期，828–832，2009年2月。
+
+M. Chen 和 H. Asplund,“城市微小区中视距条件下无线电波到达方向的测量与模型”，IEEE 个人、室内和移动通信国际研讨会（IEEE International Symposium on Personal, Indoor and Mobile Radio Communications）会议录，第 100–104 页，2001。
+
+R. Chen, J.-M. Park, 和 K. Bian,“认知无线网络中的鲁棒分布式频谱感知”，第 27 届 IEEE 计算机通信会议（INFOCOM 2008）会议录，亚利桑那州凤凰城，2008年4月13–18日。
+
+R. Chen, J.-M. Park, 和 J. Reed,“抵御认知无线网络中的主用户模仿攻击”，IEEE 通信选集，26，第 1 期，25–37，2008年1月。
+
+S. H. Chen, J. S. Row, 和 K. L. Wong,“具有图案分集的可重构方环贴片天线”，IEEE 天线与传播汇刊（IEEE Trans. Antennas and Propag.），55，第 2 期，472–475，2007年2月。
+
+Y. Chen,“考虑资源使用效率的协作频谱感知中次级用户的最优数量”，IEEE 通信快报（IEEE Commun. Lett.），12，第 12 期，877–879，2008年12月。
+
+Y. Chen, Q. Zhao, 和 A. Swami,“存在感知错误时机会式频谱接入的联合设计与分离原理”，IEEE 信息论汇刊，54，第 5 期，2053–2071，2008年5月。
+
+Z. Chen, Z. Hu, 和 R. C. Qui,“使用隐马尔可夫模型进行认知无线电的最快频谱检测”，IEEE 军事通信会议（MILCOM 2009）会议录，马萨诸塞州波士顿，2009年10月18–21日。
+
+M. Chiani 和 A. Giorgetti,“UWB 与窄带无线通信系统之间的共存”，IEEE 会议录（Proc. IEEE），97，第 2 期，231–254，2009年2月。
+
+K. W. Choi, W. S. Jeon, 和 D. G. Jeong,“认知无线电系统中循环平稳信号的序贯检测”，IEEE 无线通信汇刊，8，第 9 期，4480–4485，2009年9月。
+
+C.-C. Chong, C.-M. Tan, D. I. Laurenson, S. McLaughlin, M. A. Beach, 和 A. R. Nix,“用于 5-GHz 频段 WLAN 系统的新统计宽带时空信道模型”，IEEE 通信选集，21，第 2 期，139–150，2003年2月。
+

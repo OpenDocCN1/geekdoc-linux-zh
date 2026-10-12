@@ -1,0 +1,19 @@
++   [127] J. Ma, G. Zhao, and Y. Li, “Soft combination and detection for cooperative spectrum sensing in cognitive radio networks,” IEEE Trans. Wireless Commun., 7, no. 11, 4502–4507, Nov. 2008.
++   [128] Z. Ma, W. Chen, K. B. Letaief, and Z. Cao, “A semi range-based iterative localization algorithm for cognitive radio networks,” IEEE Trans. Veh. Technol., 59, no. 2, 704–717, Feb. 2010
++   [129] A. B. MacKenzie and L. A. DaSilva, Game Theory for Wireless Engineers, Morgan & Claypool, 2006.
++   [130] A. Mahajan and D. Teneketzis, “Multi-armed bandit problems,” in A. O. Hero III, D. Castañón, D. Cochran, and K. Kastella (eds.), Foundations and Applications of Sensor Management, pp. 121–151, Springer, 2008.
++   [131] Y. Mei, “Sequential change-point detection when unknown parameters are present in the pre-change distribution,” Ann. Stat., 34, no. 1, 92–122, 2006.
++   [132] Y. Mei, “Asymptotic optimality theory for decentralized sequential hypothesis testing in sensor networks,” IEEE Trans. Inf. Theory, 54, no. 5, 2072–2089, 2008.
++   [133] Y. Mei, “Is average run length to false alarm always an informative criterion?,” Sequential Anal., 27, no. 4, 354–376, Oct. 2008.
++   [134] U. Mitra and H. V. Poor, “Activity detection in a multi-user environment,” Wireless Pers. Commun. — Special Issue on Signal Separation and Cancellation for Personal, Indoor and Mobile Radio Communications, 3, Nos. 1–2, 149–174, Jan. 1996.
++   [135] A. Motamedi and A. Bahai, “Optimal channel selection for spectrum-agile low-power wireless packet switched networks in unlicensed band,” EURASIP J. Wireless Commun. Netw., 2008, Article ID 896420, 2008.
++   [136] G. V. Moustakides, “Optimal stopping times for detecting changes in distributions,” Ann. Stat., 14, no. 4, 1379–1387, 1986.
++   [137] G. V. Moustakides, A. S. Polunchenko, and A. G. Tartakovsky, “A numerical approach to performance analysis of quickest change-point detection procedures,” Statist. Sinica, 21, no. 2, 571–596, 2011.
++   [138] J. Niño-Mora, “Restless bandits, partial conservation laws and indexability,” Adv. Appl. Prob., 33, no. 1, 76–98, 2001.
++   [139] J. Niño-Mora, “Dynamic priority allocation via restless bandit marginal productivity indices,” TOP, 15, no. 2, 161–198, 2007.
++   [140] J. Niño-Mora, “A (2/3)n^3 fast-pivoting algorithm for the Gittins index and optimal stopping of a Markov chain,” INFORMS J. Comput., 19, no. 4, 596–606, 2007.
++   [141] J. Niño-Mora, “An index policy for dynamic fading-channel allocation to heterogeneous mobile users with partial observations,” Proc. 4th Euro-NGI Conf. Next Generation Internet Networks, Kraków, Poland, Apr. 28–30, 2008.
++   [142] J. Niño-Mora, “A restless marginal productivity index for opportunistic spectrum access with sensing errors,” in R. Núñez-Queija and J. Resing (eds.), Network Control and Optimization, 3rd Euro-NF Conf., NET-COOP 2009 Eindhoven, The Netherlands, Nov. 23–25, 2009 Proceedings, Lecture Notes in Computer Science, vol. 5894, Springer, 2009.
++   [143] J. Niño-Mora and S. S. Villar, “Multitarget tracking via restless bandit marginal productivity indices and Kalman filter in discrete time,” Proc. Joint 48th IEEE Conf. Decision and Control and 28th Chinese Control Conf., Shanghai, China, Dec. 16–18, 2009.
++   [144] D.-C. Oh, H.-C. Lee, and Y.-H. Lee, “Linear hard decision combining for cooperative spectrum sensing in cognitive radio systems,” Proc. 72nd IEEE Vehicular Technology Conf. (VTC 2010-Fall), Ottawa, ON, Canada, Sep. 6–9, 2010, pp. 1–5.
++   [145] J. Oksanen, V. Koivunen, J. Lundén, and A. Huttunen, “Diversity-based spectrum sensing policy for detecting primary signals over multiple frequency bands,” Proc. 35th IEEE Int. Conf. Acoust., Speech, and Signal Processing (ICASSP 2010), Dallas, TX, Mar. 14–19, 2010.

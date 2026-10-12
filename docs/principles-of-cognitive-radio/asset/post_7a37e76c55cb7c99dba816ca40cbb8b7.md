@@ -1,0 +1,66 @@
+
+- [40] A. Goldsmith, Wireless Communications, Cambridge University Press, 2005.
+- [41] A. J. Goldsmith and L. J. Greenstein, "A measurement-based model for predicting coverage areas of urban microcells," IEEE J. Sel. Areas Commun., 11, no. 7, 1013–1023, Sept. 1993.
+- [42] F. Graziosi and F. Santucci, "A general correlation model for shadow fading in mobile radio systems," IEEE Commun. Letters, 6, no. 3, 102–104, 2002.
+- [43] L. J. Greenstein and V. Erceg, "Gain reductions due to scatter on wireless paths with directional antennas," IEEE Commun. Letters, 3, no. 6, 169–171, Jun. 1999.
+- [44] L. J. Greenstein, V. Erceg, Y. S. Yeh, and M. V. Clark, "A new path-gain/delay-spread propagation model for digital cellular channels," IEEE Trans. Veh. Technol., 46, no. 2, 477–485, May 1997.
+- [45] L. J. Greenstein, S. S. Ghassemzadeh, V. Erceg, and D. G. Michelson, "Rician K-factors in narrowband fixed wireless channels: theory, experiments and statistical models," IEEE Trans. Veh. Technol., 58, no. 9, 4000–4012, Oct. 2009.
+- [46] L. J. Greenstein, S. S. Ghassemzadeh, S. C. Hong, and V. Tarokh, "Comparison study of UWB indoor channel models," IEEE Trans. Wireless Commun., 6, no. 1, 128–135, Jan. 2007.
+- [47] M. Gudmundson, "Correlation model for shadow fading in mobile radio systems," Electronics Letters, 27, no. 23, 2145–2146, 7 Nov. 1991.
+- [48] Guidelines for Evaluation of Radio Transmission Technologies for IMT-2000, Recommendation ITU-R M.1225, 1997.
+- [49] D. Hampicke, A. Richter, A. Schneider, G. Sommerkorn, R. S. Thoma, and U. Trautwein, "Characterization of the directional mobile radio channel in industrial scenarios, based on wideband propagation measurements," Proc. Veh. Technol. Conf., 2258–2262, 1999.
+- [50] K. V. S. Hari and C. Bushrue, "Interim channel models for G2 MMDS fixed wireless applications," IEEE 802.16c-004pr2.
+- [51] F. Harrysson, J. Medbo, A. F. Molisch, et al., "Efficient experimental evaluation of MIMO and set with user influence," IEEE Trans. Wireless Commun., 9, no. 2, 853–863, Feb. 2010.
+- [52] H. Hashemi and D. Tholl, "Statistical modeling and simulation of the RMS delay spread of indoor radio propagation channels," IEEE Trans. Veh. Technol., 43, no. 1, 110–120, Feb. 1994.
+- [53] M. Hata, "Empirical formula for propagation loss in land mobile radio services," IEEE Trans. Veh. Technol., 29, no. 3, 317–325, Aug. 1980.
+- [54] M. H. Hayes, Statistical Digital Signal Processing and Modeling, J. Wiley & Sons, 1996.
+- [55] IEEE 802.16j standardization group, "Multi-hop relay system evaluation methodology (channel model and performance metric)," IEEE 802.16j/06/013r3, Feb. 2, 2007.
+- [56] W. C. Jakes, Microwave Mobile Communications, J. Wiley & Sons, 1974 (Reprinted by IEEE Press, 1994).
+- [57] A. Kanatas, N. Moraitis, G. Pantos, and P. Constantinou, "Wideband characterization of microcellular suburban mobile radio channels at 1.89 GHz," Proc. IEEE Veh. Technol. Conf., 1060–1064, 2002.
+- [58] J. Karedal, N. Czink, A. Paier, F. Tufvesson, and A. F. Molisch, "Path loss modeling for vehicle-to-vehicle communications," IEEE Trans. Veh. Technol., 60, no. 1, 323–328, Jan. 2011.
+- [59] P. Karlsson, C. Bergljung, E. Thomsen, and H. Borjeson, "Wideband measurement and analysis of penetration loss in the 5 GHz band," Proc. IEEE Veh. Technol. Conf., 2323–2328, 1999.
+- [60] R. Kattenbach, "Statistical modeling of small-scale fading in directional radio channels," IEEE J. Sel. Areas Commun., 20, no. 3, 584–592, Apr. 2002.
+- [61] J. F. Kepler, T. P. Krauss, and S. Mukhavaram, "Delay spread measurements on a wideband MIMO channel at 3.7 GHz," Proc. IEEE Veh. Technol. Conf., 2498–2502, 2002.
+- [62] J. Kivinen, X. Zhao, and P. Vainikainen, "Empirical characterization of wideband indoor radio channel at 5.3 GHz," IEEE Trans. Antennas Propag., 49, no. 8, 1192–1203, Aug. 2001.
+- [63] S. Kozono and A. Taguchi, "Mobile propagation loss and delay spread characteristics with a low base station antenna on an urban road," IEEE Trans. Veh. Technol., 42, no. 1, 103–109, Feb. 1993.
+- [64] A. Kuchar, J. P. Rossi, and E. Bonek, "Directional macro-cell channel characterization from urban measurements," IEEE Trans. Antennas Propag., 48, no. 2, 137–146, Feb. 2000.
+- [65] M. Larsson, "Spatio-temporal channel measurements at 1800 MHz for adaptive antennas," Proc. IEEE Veh. Technol. Conf., 376–380, 1999.
+- [66] P. Laspougeas, P. Pajusco, and J. C. Bic, "Radio propagation in urban small cells environment at 2 GHz: experimental spatio-temporal characterization and spatial wideband channel model," Proc. IEEE Veh. Technol. Conf., 885–892, 2000.
+- [67] J. Laurila, K. Kalliola, M. Toeltsch, K. Hugl, P. Vainikainen, and E. Bonek, "Wideband 3D characterization of mobile radio channels in urban environment," IEEE Trans. Antennas Propag., 50, no. 2, 233–243, Feb. 2002.
+- [68] M. Lienard and P. Degauque, "Natural wave propagation in mine environments," IEEE Trans. Antennas Propag., 48, no. 9, 1326–1339, Sep. 2000.
+- [69] J. MacLellan, S. Lam, and X. Lee, "Residential indoor RF channel characterization," Proc. IEEE Veh. Technol. Conf., 210–213, 1993.
+- [70] U. Martin, "Spatio-temporal radio channel characteristics in urban macrocells," IEE Proc. Radar, Sonar and Navigation, 145, 42–49, Feb. 1998.
+- [71] D. Matolak and J. Frolik, "Worse-than-Rayleigh fading: experimental results and theoretical models," IEEE Commun. Mag., 49, issue 4, 140–146, 2011.
+- [72] C. F. Mecklenbräuker, A. F. Molisch, J. Karedal, et al., "Vehicle channel characterization and its implications for wireless system design and performance," Proc. IEEE, 99, no. 7, 1189–1212, July 2011.
+- [73] J. Medbo, H. Hallenberg, and J. E. Berg, "Propagation characteristics at 5 GHz in typical radio-LAN scenarios," Proc. IEEE Veh. Technol. Conf., 185–189, 1999.
+- [74] J. Medbo and P. Schramm, "Channel models for HIPERLAN/2," ETSI/BRAN document no. 3ERI085B.
+- [75] W. Mohr, "Wideband propagation measurements of mobile radio channels in mountainous areas in the 1800 MHz frequency range," Proc. IEEE Veh. Technol. Conf., 49–52, 1993.
+- [76] A. F. Molisch, Wireless Communications (2nd edn.), J. Wiley & Sons, 2011.
+- [77] A. F. Molisch, H. Asplund, R. Heddergott, M. Steinbauer, and T. Zwick, "The COST259 directional channel model part I: overview and methodology," IEEE Trans. Wireless Commun., 5, no. 12, 3421–3433, Dec. 2006.
+- [78] A. F. Molisch, K. Balakrishnan, C. C. Chong, et al., "A comprehensive model for ultrawideband propagation channels," IEEE Trans. Antennas Propag., 54, no. 11, 3151–3166, Nov. 2006.
+- [79] A. F. Molisch, J. R. Foerster, and M. Pendergrass, "Channel models for ultra-wideband personal area networks," IEEE Wireless Commun. Mag., 10, no. 6, 14–21, Dec. 2003.
+- [80] A. F. Molisch, L. J. Greenstein, and M. Shafi, "Propagation issues for cognitive radio," Proc. IEEE, 97, no. 5, 787–804, May 2009.
+- [81] A. F. Molisch and H. Hofstetter, "The COST 273 MIMO channel model," in L. Correia (ed.), Mobile Broadband Multimedia Networks, Academic Press, 2006.
+- [82] A. F. Molisch and F. Tufvesson, "Multipath propagation models for broadband wireless systems," in M. Ibnkahla (ed.) Handbook of Signal Processing for Wireless Communications, CRC Press, 2004.
+- [83] A. F. Molisch, F. Tufvesson, J. Karedal, and C. Mecklenbraeuer, "A survey on vehicle-to-vehicle propagation channels," IEEE Wireless Comm. 16, issue 6, 12–22, 2009.
+- [84] M. Nakagami, "The M-distribution: a general formula of intensity of rapid fading," in W. C. Hoffman (ed.), Statistical Methods Radio Wave Propagation, Pergamon Press, 1960.
+- [85] Y. Okumura, E. Ohmori, T. Kawano, and K. Fukuda, "Field strength and its variability in UHF and VHF land-mobile radio service," Rev. Elec. Commun. Lab., 16, no. 9, 1968.
+- [86] I. Oppermann, J. Talvitie, and D. Hunter, "Wide-band wireless local loop channel for urban and sub-urban environments at 2 GHz," Proc. IEEE Int. Conf. Commun., 61–65, 1997.
+- [87] P. Pajusco, "Experimental characterization of DOA at the base station in rural and urban area," Proc. IEEE Veh. Technol. Conf., 993–997, 1998.
+- [88] K. I. Pedersen, P. E. Mogensen, and B. H. Fleury, "Power azimuth spectrum in outdoor environments," Electronics Letters, 33, 1583–1584, Aug. 1997.
+- [89] K. I. Pedersen, P. E. Mogensen, B. H. Fleury, F. Frederiksen, K. Olesen, and S. L. Larsen, "Analysis of time, azimuth, and doppler dispersion in outdoor radio channels," Proc. ACTS Mobile Communications Summit, Aalborg, Denmark, pp. 308–313, 1997.
+- [90] A. Rahman and P. Gburzynski, "Hidden problems with the hidden node problem," 23rd Biennial Symposium on Communications, pp. 270–273, May 29–June 1, 2006.
+- [91] T. S. Rappaport, "Characterization of UHF multipath radio channels in factory buildings," IEEE Trans. Antennas Propag., 37, no. 8, 1058–1069, Aug. 1989.
+- [92] T. S. Rappaport, Wireless Communications: Principles and Practice, 2nd edition, Prentice Hall, 2001.
+- [93] T. S. Rappaport, S. Y. Seidel, and R. Singh, "900-MHz multipath propagation measurements for US digital cellular radiotelephone," IEEE Trans. Veh. Technol., 39, no. 2, 132–139, May 1990.
+- [94] Recommendation ITU P 1546-3, "Method for point-to-area predictions for terrestrial services in the frequency range 30 MHz to 3000 MHz," 2007.
+- [95] A. Saleh and R. A. Valenzuela, "A statistical model for indoor multipath propagation," IEEE J. Sel. Areas Commun., 5, no. 2, 128–137, Feb. 1987.
+- [96] M. Schwartz, W. R. Bennett, and S. Stein, Communication Systems and Techniques, McGraw-Hill, 1966.
+- [97] S. Y. Seidel, T. S. Rappaport, S. Jain, M. L. Lord, and R. Singh, "Path loss, scattering and multipath delay statistics for digital cellular and microcellular radiotelephone," IEEE Trans. Veh. Technol., 40, no. 4, 721–730, Nov. 1991.
+- [98] M. Shafi, M. Zhang, A. L. Moustakas, et al., "Polarized MIMO channels in 3-D: models, measurements and mutual information," IEEE J. Sel. Areas Commun., 24, no. 3, 514–527, Mar. 2006.
+- [99] M. Shafi, M. Zhang, A. L. Moustakas, P. J. Smith, A. F. Molisch, T. Tuveson, and S. H. Simon, "Polarized MIMO channels in 3-D: models, measurements and mutual information," IEEE J. Sel. Areas Commun., 24, no. 3, 514–527, March 2006.
+- [100] B. Sklar, "Rayleigh fading channels in mobile digital communication systems. I. Characterization," IEEE Commun. Mag., 35, no. 9, 136–146, Sep. 1997.
+- [101] E. S. Sousa, V. M. Jovanovic, and C. Daigneault, "Delay spread measurements for the digital cellular channel in Toronto," IEEE Trans. Veh. Technol., 43, no. 4, 837–847, Nov. 1994.
+- [102] "Spatial channel model for multiple input multiple output (MIMO) simulations (Rel. 7)," 3GPP TR 25.996 V7.0.0, 2007.
+- [103] Q. H. Spencer, B. D. Jeffs, M. A. Jensen, and A. L. Swindlehurst, "Modeling the statistical time and angle of arrival characteristics of an indoor multipath channel," IEEE J. Sel. Areas Commun., 18, 347–360, Mar. 2000.
+- [104] M. Steinbauer and A. F. Molisch (chapter eds.), "Directional channel models," in L. Correia (ed.), Flexible Personalized Wireless Communications, Wiley & Sons, 2001.

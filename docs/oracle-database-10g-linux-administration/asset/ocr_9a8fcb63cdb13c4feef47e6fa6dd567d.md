@@ -1,0 +1,15 @@
+Oracle has been heavily developing OCFS, but raw devices have seen no innovation for some time. Raw devices are recommended only if you really need that last bit of performance.
+
+# Configuring the Shared Disk Using ASM
+
+The third way to configure the shared disks is using Automatic Storage Management (ASM). ASM is a new feature in Oracle Database 10g that frees the DBA from a series of mundane tasks. Here's how it works.
+
+With ASM, you will no longer need to manage files and drives individually. Instead, disk groups can be created consisting of disks and their assigned files. Essentially, the combination of OMF and ASM eliminates the need for a DBA to specify the filenames and locations for the physical database files when creating a new database, as well as in other database operations - you simply identify the destination disk group, and Oracle takes care of the rest. ASM can also be extended to support other administrative procedures, including backup/recovery and disk management.
+
+The physical files must be located using the data provided by the control file before the database can be opened. But the control file itself is part of a disk group, so ASM needs to have its own separate instance available before the actual database instance is started.
+
+As part of the ASM instance startup procedure, the various disk groups and their files are identified. The ASM instance mounts the disks and then creates an extent map, which is passed to the database instance. The database instance itself is responsible for any actual input/output operations. The ASM instance is involved only during the creation or deletion of files and when disk configurations change. When these types of changes happen, the ASM instance will rebalance the disks and provide the necessary information to refresh the extent map in the SGA of the database instance. This then requires the database instance and the ASM instance to be run concurrently. The ASM instance should be shut down only after the database has been closed.
+
+The impact of the ASM instance on performance of the database instance is minimal. The former does not process transactions affecting the individual database objects; therefore, the average SGA allocation needed by the database instance for ASM is no more than 64MB. Unless the server's memory is already at the maximum recommended operating system/DBMS allocation, 64MB should have no impact on the memory available for the database instance.
+
+Because ASM will manage the disk groups and the database files internally, you simply need to identify the appropriate disks, desired file groups, and the level of redundancy for the disk group. Because ASM internally balances the workload across all the disks in the disk group, disk contention is reduced and performance increases. An added benefit of ASM is that it automatically and dynamically rebalances the files if you need to change a size of a disk group (adding or dropping a disk). This task can be accomplished without shutting down the database.

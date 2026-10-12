@@ -1,0 +1,58 @@
+
+
+## 参考文献
+
+- A. G. Tartakovsky 和 V. V. Veeravalli，“分布式传感器系统中的渐近最优最快变点检测”，*顺序分析 (Sequential Anal.)*，第 27 卷，第 4 期，441–475 页，2008 年。
+- C. Telatar 和 M. Liu，“机会频谱接入中的在线学习：一种静止臂赌博机方法”，*第 30 届 IEEE 国际计算机通信会议论文集*，中国上海，2011 年 4 月 10–15 日。
+- E. Telatar，“多天线高斯信道的容量”，*欧洲电信传输 (European Trans. Telecommun.)*，第 10 卷，第 6 期，585–596 页，1999 年 11 月。
+- J. Tellado 编著，*低峰均比 (PAR) 的多载波调制：DSL 和无线应用*。Kluwer 学术出版社，2000 年。
+- N. M. Temme，“非中心卡方分布的渐近与数值特性”，*计算机数学与应用 (Computers Math. Applic.)*，第 25 卷，第 5 期，55–63 页，1993 年。
+- “通用软件无线电外设”，www.ettus.com/。
+- S. C. A. Thomopoulos, R. Viswanathan 和 D. K. Bougoulias，“最优分布式判决融合”，*IEEE 航空航天与电子系统汇刊 (IEEE Trans. Aerosp. Electron. Syst.)*，第 25 卷，第 5 期，761–765 页，1989 年 9 月。
+- Z. Tian 和 G. Giannakis，“宽频认知无线电中的压缩感知”，*IEEE 声学、语音与信号处理国际会议*，ICASSP，第 4 部分，2007 年 4 月，IV-1357–IV-1360 页。
+- M. Tötsch, J. Laurila, K. Kalliola, A. F. Molisch, P. Vainikainen 和 E. Bonek，“城市空间无线信道的统计特性”，*IEEE 通信领域汇刊 (IEEE J. Sel. Areas Commun.)*，第 20 卷，第 3 期，539–549 页，2002 年 4 月。
+- M. Tokic，“基于价值差异的强化学习中的自适应 ε-greedy 探索”，收录于 R. Dillmann, J. Beyerer, U. D. Hanebeck 和 T. Schultz 编辑的 *KI 2010：人工智能进展*，计算机科学讲义 (Lecture Notes in Computer Science)，第 6359 卷，203–210 页，Springer，2010 年。
+- P. Tortelier 和 M. M. Azeem，“改进机会频谱接入中短码的擦除恢复性能”，*第 14 届国际无线个人多媒体通信研讨会* (WPMC’11)，法国布雷斯特，2011 年 10 月 3–7 日。
+- S. Toumpis 和 A. J. Goldsmith，“无线 Ad Hoc 网络的容量区域”，*IEEE 无线通信汇刊 (IEEE Trans. Wireless Commun.)*，第 2 卷，第 4 期，736–748 页，2003 年 7 月。
+- D. N. C. Tse 和 P. Viswanath，《无线通信基础》，剑桥大学出版社，2005 年。
+- J. N. Tsitsiklis，“异步随机逼近与 Q-学习”，*机器学习 (Mach. Learn.)*，第 16 卷，第 3 期，185–202 页，1994 年 9 月。
+- “超宽带无线通信 – 理论与应用”，*IEEE 通信领域汇刊 (IEEE J. Sel. Areas Commun.)*，第 24 卷，第 4 期，2006 年 4 月。
+- J. Unnikrishnan 和 V. V. Veeravalli，“认知无线电中学习算法的动态频谱接入”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 58 卷，第 2 期，750–760 页，2010 年 2 月。
+- J. Unnikrishnan, V. V. Veeravalli 和 S. Meyn，“极小极大鲁棒最快变点检测”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 57 卷，第 3 期，1604–1614 页，2011 年 3 月。
+- “900 和 1800 MHz 频段移动无线电的城市传播损耗模型”，欧洲科学与技术研究合作组织 EURO-COST 231，修订版 2，海牙，1991 年 9 月。
+- H. Urkowitz，“未知确定性信号的能量检测”，*IEEE 汇刊 (Proc. IEEE)*，第 55 卷，第 4 期，523–531 页，1967 年 4 月。
+- J. van de Beek, M. Sandell 和 P. Borjesson，“OFDM 系统中时间和频率偏移的最大似然估计”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 45 卷，第 7 期，1800–1805 页，1997 年 7 月。
+- P. P. Varaiya, J. C. Walrand 和 C. Buyukkoc，“多臂赌博机问题的扩展：折扣情形”，*IEEE 自动控制汇刊 (IEEE Trans. Autom. Control)*，AC–30 卷，第 5 期，426–439 页，1985 年 5 月。
+- P. K. Varshney，《分布式检测与数据融合》，Springer-Verlag，1996 年。
+- V. V. Veeravalli，“去中心化最快变点检测”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 47 卷，第 4 期，1657–1665 页，2001 年 5 月。
+- V. V. Veeravalli, T. Basar 和 H. V. Poor，“具有执行序贯检验融合中心的去中心化序贯检测”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 39 卷，第 2 期，433–442 页，1993 年 3 月。
+- V. V. Veeravalli 和 C. W. Baum，“序贯多假设检验的渐近效率”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 41 卷，第 6 期，1994–1997 页，1995 年 11 月。
+- S. Verdu，“关于单位成本信道容量”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 36 卷，第 5 期，1019–1030 页，1990 年 9 月。
+- S. Verdu 和 T. S. Han，“信道容量的通用公式”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 40 卷，第 4 期，1147–1157 页，1994 年 7 月。
+- J. Vermorel 和 M. Mohri，“多臂赌博机算法与经验评估”，收录于 J. Ceama, R. Camacho, P. Brazdil, A. Jorge 和 L. Torgo 编辑的 *机器学习：ECML 2005*，计算机科学讲义 (Lecture Notes in Computer Science)，3720/2005，437–448 页，2005 年。
+- W. Vickrey，“反投机、拍卖与竞争性密封投标”，*金融杂志 (J. Financ.)*，第 16 卷，第 1 期，8–37 页，1961 年 3 月。
+- S. Vishwanath, N. Jindal 和 A. Goldsmith，“高斯 MIMO 广播信道的对偶性、可达速率和总和率容量”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 49 卷，第 10 期，2658–2668 页，2003 年 10 月。
+- R. Viswanathan 和 P. K. Varshney，“多传感器分布式检测：第一部分 – 基础”，*IEEE 汇刊 (Proc. IEEE)*，第 85 卷，第 1 期，54–63 页，1997 年 1 月。
+- M. Vu, N. Devroye, M. Sharif 和 V. Tarokh，“认知网络的缩放定律”，*IEEE 认知无线电导向无线网络与通信国际会议论文集* (CrownCom)，佛罗里达州奥兰多，2007 年 7 月 31 日至 8 月 3 日，第 2–8 页。
+- A. Wald，“统计假设的序贯检验”，*数学统计年刊 (Ann. Math. Stat.)*，第 16 卷，第 2 期，117–186 页，1945 年 6 月。
+- A. Wald 和 J. Wolfowitz，“序贯概率比检验的最优特性”，*数学统计年刊 (Ann. Math. Stat.)*，第 19 卷，第 3 期，326–339 页，1948 年。
+- B. Wang 和 K. J. R. Liu，“认知无线电网络的进展：综述”，*IEEE 信号处理专题汇刊 (IEEE J. Sel. Topics Signal Process.)*，第 5 卷，第 1 期，5–23 页，2011 年 2 月。
+- B. Wang, Y. Wu 和 K. J. R. Liu，“认知无线电网络的博弈论：概述”，*计算机网络 (Comput. Netw.)*，第 54 卷，第 14 期，2537–2561 页，2010 年 10 月。
+- C.-C. Wang, S. R. Kulkarni 和 H. V. Poor，“带侧观测的赌博机问题”，*IEEE 自动控制汇刊 (IEEE Trans. Autom. Control)*，第 50 卷，第 3 期，338–355 页，2005 年 3 月。
+- C.-C. Wang, S. R. Kulkarni 和 H. V. Poor，“赌博机问题中的任意侧观测”，*应用数学进展 – 献给 David P. Robbins 博士的特刊 (Adv. Appl. Math. — Special Issue Dedicated to Dr. David P. Robbins)*，第 34 卷，第 4 期，903–938 页，2005 年 5 月。
+- C.-J. Wang 和 W. T. Tsai，“用于可切换辐射图案的槽天线模块”，*IEEE 天线与无线传播快报 (IEEE Antennas and Wireless Propag. Lett.)*，第 4 卷，202–204 页，2005 年。
+- H. Wang, J. Lee, S. Kim 和 D. Hong，“通过频谱共享中的空间分集增强二级链路容量”，*IEEE 无线通信汇刊 (IEEE Trans. Wireless Commun.)*，第 9 卷，第 2 期，494–499 页，2010 年 2 月。
+- H. Wang, G. Noh, D. Kim, S. Kim 和 D. Hong，“认知无线电中能量检测的高级感知技术”，*通信网络杂志 (J. Commun. Netw.)*，第 12 卷，第 1 期，19–29 页，2010 年 2 月。
+- J. Wang, G. Scutari 和 D. P. Palomar，“基于博弈论的鲁棒 MIMO 认知无线电”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 59 卷，第 3 期，1183–1201 页，2011 年 3 月。
+- K. Wang 和 L. Chen，“关于非静止多臂赌博机问题中短视策略最优性的公理方法”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 60 卷，第 1 期，300–309 页，2012 年 1 月。
+- C. J. C. H. Watkins，《从延迟奖励中学习》，博士学位论文，剑桥大学，英国剑桥，1989 年。
+- C. J. C. H. Watkins 和 P. Dayan，“Q-学习”，*机器学习 (Mach. Learn.)*，第 8 卷，279–292 页，1992 年。
+- R. R. Weber 和 G. Weiss，“关于非静止赌博机的索引策略”，*应用概率杂志 (J. Appl. Prob.)*，第 27 卷，第 3 期，637–648 页，1990 年 9 月。
+- R. R. Weber 和 G. Weiss，“‘关于非静止赌博机的索引策略’的补遗”，*应用概率进展 (Adv. Appl. Prob.)*，第 23 卷，第 2 期，429–430 页，1991 年 6 月。
+- H. Weingarten, Y. Steinberg 和 S. Shamai，“高斯多输入多输出广播信道的容量区域”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 52 卷，第 9 期，3936–3964 页，2006 年 9 月。
+- T. Weiss 和 F. Jondral，“频谱池：提高频谱效率的创新策略”，*IEEE 通信杂志 (IEEE Commun. Magazine)*，第 42 卷，第 3 期，S8–14 页，2004 年 3 月。
+- J. Weitzen 和 T. J. Lowe，“1900 MHz 下对数正态阴影效应的角度和距离相关性测量及其在 PCS 系统设计中的应用”，*IEEE 车载技术汇刊 (IEEE Trans. Veh. Technol.)*，第 51 卷，第 2 期，265–273 页，2002 年 3 月。
+- P. Whittle，“获取臂的赌博机”，*概率年刊 (Ann. Probab.)*，第 9 卷，第 2 期，284–292 页，1981 年 4 月。
+- P. Whittle，“非静止赌博机：变化世界中的活动分配”，*应用概率杂志 (J. Appl. Prob.)*，第 25 卷，287–298 页，1988 年。
+- J. Wiart, P. Pajusco, A. Levy 和 J. C. Bic，“巴黎微小区宽带测量分析”，*IEEE 个人、室内和移动无线电通信国际研讨会论文集*，第 144–147 页，1995 年。
+
