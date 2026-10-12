@@ -1,0 +1,87 @@
+
+The administrators set reserved IP addresses (192.168.x.x) for each internal MASQed computer they wanted to provide with Internet access. The administrators now needed to point each internal client machine to the Linux server providing the Masquerading services, using this server as the default gateway.
+
+The process simply involved the administrators entering the address of the Linux host as the machine's gateway address. The server's networking hardware included two Intel Pro 100 network interface cards. In setting up the network interface card, the administrators assigned an IP address to it. They obtained an IP address for the outside network interface card via DHCP (Dynamic Host Configuration Protocol) from their Internet service provider.
+
+Client machines connected to the server required name resolution services in order to navigate the Web. By running either the ROUTED protocol (on smaller networks), or configuring DNS, the client machines could use the same DNS servers that the Linux server used.
+
+## 分发生产力应用程序
+
+As stated before, Centennial utilized the features and capabilities of the Apache Web server to distribute their productivity application. In addition, the District needed mail, file transfer capabilities, and multi-user access to applications.
+
+## 电子邮件
+
+Red Hat 6.0 includes the sendmail Mail Transfer Agent (MTA). Sendmail allows a Red Hat 6.0 system to complete mail services such as the following:
+
+- SMTP—Simple Mail Transport Protocol. This service allows users to send email over the Internet. When someone configures a mail client on the PC or MAC, he specifies an SMTP server on his ISP's network to provide mail transport. This service is the "send" part of the email process.
+- POP3—The POP3 server in sendmail allows users to retrieve their mail from the Internet. So, the sending agent and the receiving agent function on the same server and in the same mail program—sendmail.
+- Internal Mail—On the local area networks, clients specify the Linux computer as both their internal and external mail transport agent. This allows seamless mail access internally and externally. Using the Linux computer, the administrator creates an alias in the configuration file that refers to the sendmail server as mail.domain-name.com.
+
+The mail user agents on the local desktop specify the alias as their mail server, which provides all their email services. The user must have a mail client on his desktop that can send and receive standard Internet protocol mail.
+
+Sendmail provided on the Red Hat distribution is a complete mail server and can reside on the same computer as the authentication server and the Samba application.
+
+People have found configuring sendmail challenging. Red Hat provides excellent documentation on configuring sendmail.
+
+Two initial configuration files Centennial used as a guide were provided in the Red Hat 6.0 distribution. These included the /etc/sendmail.cw file and the /etc/sendmail.cf file.
+
+It should be noted as well that there exists a facility called m4, which makes the configuration of sendmail's cryptic configuration files a more manageable task. M4 allows the administrator to produce sendmail configuration files much more easily by converting these simpler text files into actual Sendmail.cf files.
+
+The sendmail configuration Centennial used had a single machine act as a mail gateway for all the machines on the network. For example, the authentication server handled internal mail and acted as the main gateway to the Internet gateway. The Pentium II server handled all Internet mail accounts.
+
+When the administrators added the hostnames of other machines in the District to the configuration file, mail sent to those machines were captured by the main mail server.
+
+Then on the other machines, they edited the /etc/sendmail.cf file to “masquerade” as the main server when sending mail, and to forward any local mail processing to the Samba server. To do this, the administrators found the DH and DM lines in /etc/sendmail.cf and edited them.
+
+## 示例：sendmail.cf 文件
+
+```
+# who gets all local e-mail traffic ($A has precedence for unqualified
+# who|Masquerade as (null for no masquerading) Centennial.com.
+```
+
+With this type of configuration, all mail sent appeared as if it were sent from the main server and any mail sent to the the Pentium II server or the other hosts was delivered to the Dell authentication server.
+
+## 系统管理
+
+Administration tasks on Centennial's Red Hat 6.0 system appeared overwhelming when Dave Pierce began planning for resources. As chief technology supervisor, Dave felt relief to discover the many administration tools available for Linux. For example, Nick Donovan introduced the Centennial team to Cheops—a graphical scanning program that provides a means to see all computers on the network, their operating system, IP address, the tables in routers, and statistics on each machine on the network.
+
+One of the responsibilities of a network administrator is to have an in-depth understanding of how the operating system works. A fundamental building block of that understanding is knowing how the system boots up and initializes itself. This is something we breezed through when assisting the District administrators in understanding their tasks.
+
+The startup process for Red Hat 6.0 is based on the UNIX SystemV initialization system. After the Linux kernel is started by the LILO boot manager or Master Boot program located in the Master Boot Record, the following steps occur, under the control of the Linux kernel:
+
+- 1. The kernel initializes its own internal systems.
+- 2. The init program is started.
+- 3. The init program reads the `/etc/inittab` file and prepares for the run level defined in that file.
+- 4. The `/etc/rc.d/rc.modules` script is executed by init. This loads all auto-loaded kernel modules.
+- 5. The `/etc/rc.d/rc.boot` script is executed by init. This processes other system information.
+- 6. Depending on the mode of operation (run level) indicated by the inittab file, one of the run-level directories is examined and all of the services listed in that directory are started or stopped. Services that start with an S are started. Services that start with a K are stopped and their associated parent processes killed. For example, if run level 3 is specified, the services in directory `/etc/rc.d/rc3.d` are processed.
+- 7. The getty program (terminal startup manager) is started on each of the virtual consoles defined by the inittab file.
+
+Among the programs generally started by the run-level scripts is the inetd super-server, which watches for traffic on the network ports defined by `/etc/services` and starts server programs when a request is received, according to the server specified in `/etc/inetd.conf`.
+
+The virtual consoles defined by /etc/inittab are accessed on Alt+F1 through Alt+F6. These consoles each provide a character-based login, as if you were working from a dumb terminal. You can log in from these consoles using any valid user account, then switch between the consoles using the Alt+F1 through F6 key combinations.
+
+If you are in the graphical system, you can switch to the other virtual consoles by pressing Ctrl+Alt+Fx (Fx is one of the keyboard function keys from F1 to F6, inclusive). Once you are in the character-mode consoles, the user can use Alt+Fx. To switch back to the graphical system, press Ctrl+Alt+F7.
+
+## 管理用户和组
+
+As mentioned previously, Linux is a multi-user operating system. OS multi-usability refers to many requirements that an OS must possess. Among these characteristics are the ability to run applications at the server itself, the underlying object model of request handling, and that multiple users can simultaneously access and use Linux.
+
+Multi-usability is an important requirement for any OS in the enterprise. Not all OS's are multi-user (DOS and Windows are examples of single-user operating systems). Managing users on a multi-user OS such as Open Linux is a critical task for the system administrator.
+
+This section illustrates how to set up and manage multiple user accounts.
+
+To create a new user account on their system, Centennial had a choice of methods:
+
+- Use the command adduser new_user_name
+- Use the command useradd new_user_name
+- Use the Linuxconf administration tools by selecting Linuxconf, System, Accounts on the KDE main menu
+- Use the character-mode lisa tool by entering the command lisa useradd
+
+In each case, the administrators could follow the onscreen prompts to enter information about the user account they wanted to create.
+
+## Different User Account Management Scenarios
+
+When setting up the main server, the tasks become very data entry intensive. In this case, the administrators chose to use Linuxconf because of its simplicity. The less technical members of Dave's staff could enter the user information and allow the other members to attend to the many technical challenges ahead of them.
+

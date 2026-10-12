@@ -1,0 +1,3 @@
+# Summary
+
+In your role as a systems administrator, you are expected to have skills beyond those of the regular user. This chapter has taken a look at some of the concepts and utilities that you as a power user should know. It also examined the systems administration utilities provided with the Red Hat Linux distribution. Finally, you have learned some of the resources available to the Linux administrator on the Internet, including Web sites, mailing lists, FTP archives, and Usenet newsgroups. All of these tools are available to make your job easier. It is up to you to learn to use them and to take advantage of them.

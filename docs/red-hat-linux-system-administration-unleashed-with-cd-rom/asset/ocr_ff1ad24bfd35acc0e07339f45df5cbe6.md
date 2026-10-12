@@ -1,0 +1,13 @@
+# Coax-based or UTP-based Ethernets
+
+Coax-based Ethernets incur lower costs than the alternatives, mainly because there is no requirement to use a hub, but also because 10Base-2 NICs tend to be cheap. (Some would say that you get what you pay for with the very cheapest 10Base-2 cards, though.) Compared to UTP-based Ethernets, they use one fewer piece of cable for a given number of hosts. (Moreover, depending on the physical location of the hub in relation to the hosts, UTP-based networks may need substantially more cable overall.) Coax networks are also very simple to set up.
+
+The biggest problem with 10Base-2 is precisely the requirement for a single backbone connecting all the nodes. If there is a failure at any point in the backbone cable, the entire network goes down. This also makes it comparatively difficult to expand them if requirements change. This makes it hard to recommend a 10Base-2 network for the majority of new installations; however, home users may find that 10Base-2 Ethernet is an ideally cheap and simple mechanism for connecting a few machines together.
+
+# 10Base-T or 100Base-T UTP Ethernets
+
+As for the UTP media types, the principal difference between 10Base-T and 100Base-T is obviously speed. Of course, this difference comes at a price: 100Base-T parts are more expensive than 10Base-T equivalents, especially for high-quality components. However, the price differential is getting smaller, and it may be cheaper in the long run to go for 100Base-T initially, rather than to start with 10Base-T only to discover at some later date that a 100 Mbps network is in fact necessary.
+
+I would normally recommend investing in Category 5 cable even for 10Base-T networks because re-cabling a network is an expensive and time-consuming procedure. Using Category 5 for 10Base-T is unlikely to be prohibitively expensive unless you are connecting a large number of machines together. Once you have Category 5 cables in place, upgrading from 10Base-T to 100Base-T is a simple matter of installing dual-speed hubs; then individual hosts can be upgraded to 100 Mbps Ethernet cards when appropriate. Indeed, in some situations it can make sense to get dual-speed hubs initially, even if to begin with no host on the network has a NIC that can run at 100Mbps.
+
+Now that we've described the workings of Ethernet and how it fits in with TCP/IP, the next stage is to actually get an Ethernet interface working under Red Hat Linux. The next section discusses how this is done.

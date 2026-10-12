@@ -1816,6 +1816,7 @@
 +   [Red Hat Linux 安全与优化 [CD-ROM 安全工具]](docs/red-hat-linux-security-and-optimization-security-tools-on-cd/README.md)
 +   [Red Hat Linux 生存指南](docs/red-hat-linux-survival-guide/README.md)
 +   [Red Hat Linux 系统管理手册](docs/red-hat-linux-system-administration-handbook/README.md)
++   [Red Hat Linux 系统管理 完全掌握 (CD-ROM)](docs/red-hat-linux-system-administration-unleashed-with-cd-rom/README.md)
 +   [Red Hat Linux：第三版](docs/red-hat-linux-third-edition/README.md)
 +   [Red Hat Linux 释放指南](docs/red-hat-linux-unleashed/README.md)
 +   [Red Hat Linux 解锁指南，第2版](docs/red-hat-linux-unleashed-2nd-edition/README.md)

@@ -1,0 +1,13 @@
+> **Note**
+> 
+> Unrequired services rarely put a load on a Linux system; however, some of them can actually cause a system to become somewhat unstable.
+
+Unrequired services should be a no-brainer. Always look for unrequired services that were started or installed that you don't need. Aside from the obvious possible load they may put on the system, running unused (and subsequently unmonitored) services is a security risk. Coupled with the security issues is another very important issue: startup and/or recovery time. In a multiuser environment (in my own case, nearly 500 users at peak times) startup and recovery time is crucial. Unrequired services should be eliminated for the sole purpose of speed at boot time. A prime example of this is the Apache Web Server. Many distributions have Apache turned on by default; however, what if you never plan to use it? It is wasting processor cycles regardless of how lightweight the Apache processes may be. This also relates to the troubles of micro-examining a system and changing configurations, as discussed in the following section.
+
+# Weighing Costs and Benefits
+
+There is a wide variety of different costs with a common benefit—better performance. The costs come in the form of money and time. They include money required for more hardware, the time (which ends up costing money) a system must be down, or the time in man-hours required to increase a system's level of performance.
+
+Many performance issues (especially memory-related ones) can only be solved by purchasing newer or additional hardware. Granted, this is often the case with Linux systems and more so with other operating systems, but it certainly does happen. Sometimes the question arises as to whether it is worth the expense. Not only does the hardware cost issue arise, but man-hours are also a pertinent cost. Is it really worth the headache to spend hours, days, or sometimes weeks to find a better solution? Is it worth the cost in your or your department's man-hours? Piled on top of both of these is the ultimate cost-weighted (and most loaded) question: Is the whole system a bottleneck? Is it time for more than just more memory or more cache?
+
+Ultimately, the question is when do you have to buy hardware and when can you get away with not buying it? The best way to answer this is through an example. One time that more hardware must be bought is when meeting minimum specifications. To install a certain database product, you may have to have a minimum of 512MB of memory and 1GB of swap space. Sometimes to scale that appropriately you may have to have a TB of memory and swap, whatever the case may be. If you do not have the required amount, chances are

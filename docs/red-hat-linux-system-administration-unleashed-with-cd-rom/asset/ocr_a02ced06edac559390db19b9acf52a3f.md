@@ -1,0 +1,3 @@
+# Summary
+
+In this chapter, we have covered the proper procedures for starting up and shutting down your Red Hat Linux system, including a discussion of boot loaders, the kernel boot process, and the different runlevels at which you can run your Linux systems. Special emphasis was given to the LILO boot loader and on the structure employed by Red Hat to start up all of the processes and services required to make your system a useful server.

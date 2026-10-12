@@ -1,0 +1,1 @@
+installing large numbers of machines can be created. The homegrown approach described here also shows a network push method of installation that allows the systems administrator to remotely install systems once a simple network setup script has been run to connect new systems to a network.

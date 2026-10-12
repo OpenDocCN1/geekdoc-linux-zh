@@ -1,0 +1,11 @@
+Telnet is not quite as bad in that it always requires a password before granting access, but it suffers from another flaw that is also shared by the R-commands: Because passwords, like all other data, are sent as plain text over the network, they are very susceptible to packet sniffing attacks. The risk of this approach may also be unacceptable for confidential data.
+
+Telnet and Rlogin also have a number of problems from the user's point of view. Remote file copying is less than convenient. FTP can be seen as Telnet's file transfer mechanism, but it is rather unwieldy and difficult to script. Rcp is simple to use, but it will not work at all until the user grants account-level equivalence between machines.
+
+# Handling X11 Connections with Telnet and the R-Commands
+
+Perhaps a bigger problem for users is the handling of X11 connections. Both Telnet and Rlogin have some support for users running in an X11 environment, but it is far from perfect. Rlogin is particularly bad: As you have seen, it cannot even inform the remote system which X11 display is in use. A bigger problem relates to X11's authentication of remote connection attempts: By default, X11 will refuse client connections from remote hosts. Many users respond to this by running xhost +—that is, by disabling all X11 authentication—which obviously results in a significant decrease in security.
+
+# Secure Shell Can Provide a Solution
+
+The Secure Shell service, SSH, makes an excellent attempt at solving all these problems. Chief among its advantages is its use of strong encryption for data transmitted, so passwords and other data cannot be stolen even by an attacker who can listen to the data being transmitted. The use of encryption also prevents attacks where the intruder enters an existing connection and changes data in both directions. Attacks of this sort can be used to add commands to login sessions, even where the login session was authenticated by a secure one-time password. SSH uses other cryptographic techniques to perform strong authentication of hosts and clients. This means that you can have a very high degree of confidence that only authorized users are allowed to connect. SSH is also concerned with ease-of-use, and it has complete support for running X11 applications through the encrypted, authenticated channel.

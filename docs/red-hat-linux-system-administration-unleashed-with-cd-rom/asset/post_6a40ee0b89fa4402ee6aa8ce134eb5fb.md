@@ -1,0 +1,407 @@
+
+-   RSA authentication
+-   public-key cryptography, 549
+-   SSH, 549
+-   rsh command, 543
+-   rsize option, NFS
+-   mounting, 425
+-   RSS process field
+-   (top utility), 1057
+-   rules. See policies
+-   runlevel editor, 136
+-   runlevels, 134-139
+-   running
+-   BitchX, 728
+-   fetchmail, 580-581
+-   gated daemon, 394
+-   ircII, 724-725
+-   JavaICQ, 731
+-   licq, 732
+-   mirc, 732-733
+-   QSeeMe, 736
+-   smail, 575
+-   Speak Freely, 735
+-   system as NIS client, 406-407
+-   system as NIS server, 407
+-   TCP/IP over Ethernet, 377
+-   Ethernet cards/cables, 378
+-   Ethernet collision examination, 380
+-   Ethernet hubs, 379
+-   Ethernet media selections, 380-381
+-   Ethernet switches, 379-380
+-   Usenet servers, 674-675
+-   X-Chat, 727
+-   Zircon, 726
+-   runtime support, 70
+-   rw option
+-   /etc/exports file, 422
+-   mount command, 195
+-   5
+-   ls character (command prompt), 944
+-   -s command-line option
+-   amq utility, 430
+-   atd, 1029
+-   bindkey command, 957
+-   csh command, 891
+-   free utility, 1061
+-   fsck utility, 188
+-   history command, 951
+-   httpd script, 641
+-   kill command, 939, 954
+-   mount command, 194
+-   Squid, 666
+-   su command, 892
+-   sudo command, 821
+-   top utility, 1058
+-   user administration, 1160
+-   -s filename operator, 980-981
+-   -s partition command-line option (fdisk utility), 178
+-   -s sectors command-line option
+-   cfdisk utility, 182
+-   fdisk utility, 185
+-   -s option
+-   useradd command, 874
+-   usermod command, 893
+-   -s --show-size command-line option (sfdisk utility), 184
+-   SAGE (Systems Administration Guild), 9-11
+-   SAINT (Security Administrator's Integrated Network Tool), 851
+-   salaries of systems administrators, 8-9
+-   Samba, 462, 465
+-   Centennial School District case study, 1148-1151
+-   as client OS, 484-487
+-   installing, 1149
+-   mailing lists, 491-492
+-   newsgroups, 492
+-   printing services, 1151
+-   Red Hat access from Windows PCs, 1152
+-   as server OS, 487
+-   shares, accessing, 468
+-   smb.conf configuration file, 476-478
+-   custom sections, 453-454
+-   [global] section, 478-480
+-   [homes] section, 481-482
+-   [printers] section, 482-483
+-   setting up, 484, 487-488
+-   testing, 485-489
+-   utilities, 465-466
+-   Samba Web Administration Tool (SWAT), 471-473, 476
+-   smbclient, 466-469
+-   smbmount, 469
+-   smbmount, 469-470
+-   Web address, 492
+-   Samba Web Administration Tool (SWAT), 471-473, 476
+-   Globals screen, 472
+-   home screen, 472
+-   Password screen, 473
+-   Printers screen, 473
+-   Shares screen, 473
+-   Status screen, 473
+-   View screen, 473
+-   sanity checks (NetWare), 511
+-   SATAN (Security Analysis Tool for Analyzing Networks), 829
+-   savehist variable, 951
+-   saving
+-   IPX route flags, 504-505
+-   kernel configuration, 1126
+-   scalability issues, 55
+-   -scanbus command-line option (cdrecord command), 281
+-   scanners (security), 829-830
+-   scenarios, data loss, 346
+-   destructive software, 355
+-   fire example, 365-366
+-   hard drive failures, 359
+-   malcontents, 357
+-   memory errors, 359
+-   mistyped commands, 347-348
+-   outlining, 365
+-   output redirection and piping errors, 348-349
+-   root access users, 349
+-   system crackers, 357
+-   trojan horses, 354
+-   user errors, 347
+-   viruses, 354
+-   worms, 354
+-   scheduled tasks, 880
+-   scheduling user request time, 900-901
+-   screened hosts, 789
+-   screened subnets, 789
+-   ScriptAlias directive, 652
+-   scripting interpreters, 970-971
+-   scripting languages
+-   Eiffel, 1013-1014
+-   Perl. See Perl scripting
+-   Python, 1012-1013
+-   Tcl/Tk, 1010-1011
+-   scripting shells. See shell
+-   scripting
+-   scripts
+-   autofs, 294
+-   backup, creating, 323
+-   full backups/file restoration, 324-326
+-   quick archiving, 326
+-   tar command, 323-324
+-   bash
+-   filenames, converting to lowercase, 1003-1004
+-   specific words in files, finding, 1004-1005
+-   CGI scripting, 652-653
+-   checkspace, 199-204
+-   cloning (clone trees), 1128-1131
+-   custom installation, 1131-1132
+-   debugging, 1005-1006
+-   /etc/rc.d/init.d/ and, 429
+-   executable, 971
+-   executing, 971
+-   here-documents, 183
+-   httpd
+-   command-line options, 641
+-   starting/stopping Apache, 640-641
+-   news.daily, 700
+-   Perl, 664
+-   creating, 1008-1009
+-   executable, 1008
+-   PHP server-side scripting, 663
+-   rc.news, starting INN, 700
+-   standardizing, 972
+-   system initialization scripts, 112, 128-129
+-   booted, 130
+-   editing, 137
+-   init, 129-134
+-   rc scripts, 130-131
+-   runlevels, 134
+-   SCSI (Small Computer System Interface)
+-   chains, 217-218
+-   changer device driver, 336
+-   devices, 217, 340-341
+-   active/passive terminators, 222-223
+-   benefits, 217
+-   cabling requirements, 221-222
+-   controller selection, 218-219
+-   IDs, 222-223
+-   naming, 223-225
+-   SCSI chains, 217-218
+-   supported, 219-221
+-   technologies/capabilities, 218
+-   terminating, 222-223
+-   kernel support, 1115
+-   /scsi directory, 1076
+-   search directive, 401
+-   search-and-replace, 30-31
+-   secure option (/etc/exports file), 422
+-   Secure Shell service. See SSH
+-   securing
+-   DNS, 770
+-   filesystems, 770-772
+-   finger command, 769
+-   LILO, 768
+-   sendmail, 770
+-   security. See also access;
+-   firewalls
+-   admins, 820
+-   command replacements, 830-831
+-   operator menu implementation example, 826-827
+-   operator menu script example, 822-826
+-   security scanners, 829-830
+-   sudo command, 820-829
+-   sudoers file example, 828-829
+-   tool resources, 832-833
+-   tools, finding, 832
+-   aliases (mail), 587
+-   altered system files, checking, 774
+-   anonymous FTP, 769
+-   Apache, 653-654
+-   breaches, 842
+-   action plan, 842
+-   backups, 856
+-   cleaning up, 854-855
+-   evidence, 843-844
+-   extent, 844
+-   indicators, 843-844
+-   intrusion detection tools, 846-848
+-   reinstallation (media), 856-857
+-   remain calm, 842
+-   system log analysis, 843-846
+-   Trinux, 848-854
+-   when to start from scratch, 855-856
+-   written records, 843
+-   CERT, 774
+-   determining security needs, 740-741
+-   FTP, 621-631
+-   kernel hacking, 1125
+-   log files, checking, 772-773
+-   mailing lists, 590
+-   maintenance policies, 777
+-   monitoring, 772
+-   network interfaces, 773
+-   NFS, 420
+-   physical, 767
+-   disabling floppy drive boot, 767
+-   LILO settings, 767-768
+-   policies, 775-776
+-   privileges
+-   granting, 820-829
+-   operator menu implementation example, 826-827
+-   operator menu script example, 822-826
+-   R-commands, 547-548
+-   reaction policies, 777
+-   resources, 836
+-   mailing lists, 837-839
+-   Usenet newsgroups, 836-837
+-   security scanners, 829-830
+-   security shared accounts, 863
+-   servers, 743
+-   setgid files, 773
+-   setuid files, 773
+-   setup policies, 776
+-   software, updating, 775
+-   SSH
+-   benefits, 548
+-   connection process, 549
+-   downloading, 551
+-   encryption, 548
+-   installing, 551
+-   international packages, 551
+-   RSA authentication, 549
+-   setting secure password-free access, 549-550
+-   U.S. packages, 551
+-   system
+-   /etc directory, 750-760
+-   /etc/security directory, 761-762
+-   system attacks, 742
+-   system crackers, 358
+-   system policies, 777-778
+-   TCP-Wrappers
+-   access-control rules, 536-537
+-   configuration language extensions, 537
+-   configuring, 536-537
+-   /etc/hosts.allow files, 535
+-   /etc/hosts.deny files, 535
+-   logging, 535
+-   process, 534
+-   testing, 538
+-   Telnet, 542, 547-548, 769
+-   trust-based authentication (R-commands), 544-545
+-   /var/spool/atjobs files, 773
+-   /var/spool/cron files, 773
+-   Web resources, 834-835
+-   Security Administrator's Integrated Network Tool (SAINT), 851
+-   Security Analysis Tool for Analyzing Networks (SATAN), 829
+-   sed command, 30-31
+-   selecting
+-   backup media, 334-335
+-   backup site strategies, 313
+-   default shells, 927
+-   help desk personnel, 905
+-   Internet services, 530-531
+-   kernel configuration options, 1102
+-   APM (Advanced Power Management) support, 1108
+-   binary support, 1106-1107
+-   block devices, 1108-1110
+-   BSD processes accounting support, 1105
+-   CD-ROM drives (created before 1994) support, 1117
+-   character devices support, 1118-1119
+-   code maturity level, 1102-1103
+-   console drivers, 1123-1124
+-   doubletalk speech synthesizer, 1120
+-   filesystems, 1120-1121
+-   floppy tape device drivers, 1120
+-   hacking, 1125
+-   ISDN support, 1117
+-   joysticks, 1120
+-   loading, 1126
+-   loopback devices, 1111
+-   mice support, 1119
+-   module support, 1105
+-   native languages, 1123
+-   network block devices, 1111
+-   network devices support, 1115-1117
+-   network filesystems, 1121, 1123
+-   networking support, 1105
+-   NVRAM devices support, 1119
+-   parallel port IDE devices, 1111
+-   parallel port support, 1107-1108
+-   parallel printer support, 1119
+-   partitions, 1123
+-   plug-and-play support, 1108
+-   processor types, 1103-1104
+-   real-time clock support, 1119
+-   saving, 1126
+-   SCSI support, 1115
+-   serial port support, 1118
+-   software RAID, 1111
+-   sound, 1124
+-   sysctl support, 1105-1106
+-   System V Interprocess Communications support, 1105
+-   terminal support, 1118
+-   video4linux, 1120
+-   watchdog timer devices support, 1119
+-   kernel networking options, 1111-1112
+-   IP aliasing, 1113
+-   IP masquerading, 1113
+-   IP tunneling, 1113
+-   IPX/Appletalk protocols, 1114-1115
+-   TCP/IP packet-based firewalls, 1113
+-   TCP/IP protocol stack, 1115
+-   WAN routers, 1114
+-   MTA, 558-559
+-   scripting interpreters, 970-971
+-   SCSI controller, 218-219
+-   shells, 927-928
+-   tape backups, 334-337
+-   4mm DDS, 337
+-   8mm, 338
+-   8mm/AITB (Advanced Intelligent Tapes), 339
+-   DLTs (Digital Linear Tapes), 338-339
+-   variable values, 960
+-   /self directory, 1076
+-   sendmail, 558-559
+-   configuring
+-   central mail server, 562-563
+-   LAN workstation, 562
+-   standalone computer with dial-up connection, 561
+-   standalone computer with permanent Internet connection, 560
+-   features/options, 559-560
+-   m4 macros, 559
+-   multiple domains, 563-564
+-   securing, 770
+-   testing, 565
+-   virtual user tables, 564-565
+-   Web site, 560
+-   sendmail spam Web site, 557
+-   sendmail.cf file, 760
+-   sequence numbers, 374
+-   serial devices, parallel port combination networking, 1116
+-   serial ports, 1118
+-   Server-Side Includes. See SSI
+-   ServerAdmin directive, 643
+-   ServerAlias directive, 660-662
+-   ServerName directive, 643
+-   ServerRoot directive, 644
+-   servers
+-   Apache. See Apache
+-   backup domain controller (BDC), 463
+-   caching-only servers, 400
+-   finding on networks, 497
+-   FTP, file downloads, 1162-1163
+-   inetd
+-   chargen, 533
+-   daytime, 533
+-   discard, 533
+-   echo, 533
+-   /etc/inetd.conf files, 532-534
+-   process, 531
+-   time, 533
+-   Linux NetWare, 498-512
+-   automatically mapping NetWare/Linux usernames, 510-511
+-   DOS client password handling, 505-506
+-   IPX device configuration, 502, 504
+-   IPX route flags, 504-505
+-   network number configuration, 501-502
+-   non-privileged user/group IDs, 506-507
+-   printer configuration, 511-512
+-   servername configuration, 500-501
+-   startup sanity checks, 511
+-   supervisor login, 507, 509
+-   user logins, 509-510
+-   version spoofing, 505
+-   volume configuration, 499-500
+-   mars-nwe, 512-513

@@ -1,0 +1,13 @@
+A connection to the Multicast Backbone (mbone) is desirable but hard to find—an increasing number of ISPs are supporting the mbone but they are still in the minority. Failing an mbone connection, a 64K ISDN connection to a well connected (T3 or better) ISP should be used. A small ISP will probably be unable to provide the bandwidth required for good quality audio-visual transmission and reception. Note that for the connection type to make a difference, all participants must be similarly connected—a chain is only as strong as its weakest link.
+
+# The Multicast Backbone (mbone)
+
+mbone is the way of the future for Internet telephony and conferencing. Note that the discussion that follows is not meant to be an in-depth exploration of multi-casting and the mbone and is, of necessity, somewhat simplified. If you already have an idea of what multi-casting is, please feel free to skip this part.
+
+The mbone is a part of the Internet that is reserved for streaming applications. A streaming application is one that requires a reliable and continuous flow of data—such as the live radio that many of us have listened to over the Web. If you have listened to a broadcast over the Internet, you will have noticed that the quality is somewhat variable. It is sometimes perfect, but more often speech is clipped or the volume varies. Sometimes the broadcast drops out altogether or sounds like a regular radio station that isn't tuned in properly (complete with static). This occurs because the broadcast is being sent over the "regular" Internet.
+
+# Understanding Data Flow
+
+To understand how the mbone works, you need to understand a little bit about data flow on the Internet. When we send or receive data over the Internet, it is sent in little pieces called packets. The packets are sent out in order from the originator but may take any one of (probably) millions of different routes to reach their destination and may (in fact, probably will) reach the destination in a completely random order. The receiver then puts these packets back into the correct order and makes the data available to the application.
+
+Each packet of data has extra information apart from the actual information required by the requesting application. Most importantly, each packet is individually addressed so that when it reaches the router in charge of the receiver's network, the router knows to send it to the receiver rather than sending on to another router. Packets are also given a Time To Live (TTL) to stop them from circulating forever and clogging up the system—if a packet is received by a router and its TTL is zero, the router simply discards the packet.

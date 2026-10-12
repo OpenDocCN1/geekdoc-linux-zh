@@ -1,0 +1,12 @@
+comma-separated list of keywords that allows this class statement to be limited to a particular type of FTP user. The anonymous, guest, and real keywords are supported. The anonymous keyword makes this command string apply only to anonymous FTP logins, the guest parameter applies only to guest accounts, and the real parameter applies to actual system users logged in to the FTP server. The address-data parameter specifies that only users connecting from a particular source host may be considered in the given user class. Multiple address-data parameters may be given, in the following format:
+
++   [ip_address]—A single IP address.
++   [ip_address]:[netmask]—An IP address with a netmask.
++   [ip_address]/[cidr]—An IP address with CIDR data.
++   ![address-data]—A negated identifier, which specifies that hosts not matching the given address parameter will be evaluated as true.
++   /[file-name]—An absolute path to a text file containing more address-data parameters; one on each line.
+
++   - `compress yes|no [class-name] [...]`—Allows for file compression privileges to be given to or revoked from a particular user class or group of user classes. Multiple classes may be specified in the command string.
++   - `delete yes|no [keyword-list]`—Allows for delete command privileges to be given to or revoked from a particular user class or group of user classes. The keyword-list is a comma-separated list of keywords that allows deletion access to be controlled for a particular type of FTP user. The anonymous, guest, and real keywords are supported. The anonymous keyword makes this command string apply only to anonymous FTP logins, the guest parameter applies only to guest accounts, and the real keyword applies to actual system users logged in to the FTP server.
++   - `file-limit [raw] [in|out|total] [files-count] [class-name]`—Applies a limit to the number of files that a user in class-name may transfer. This limit may be set to apply to files sent, received, or both. The raw parameter is an optional setting that allows the raw traffic instead of the number of data files sent/received to be limited using this command string. If the class-name parameter is not specified, this setting will apply to all user classes that have not explicitly been given a file-limit configuration setting.
++   - `guestgroup [group-name] [...]`—Allows any user whose group matches one of the group names specified in this command string to be authenticated as a guest user.

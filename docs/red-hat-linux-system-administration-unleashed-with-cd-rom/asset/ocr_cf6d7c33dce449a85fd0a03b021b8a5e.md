@@ -1,0 +1,11 @@
+# So You Want to Be a Systems Administrator
+
+If you are like many systems administrators, you did not choose this career, it was chosen for you. Unlike many other areas of the computer industry, like software engineering and integrated circuit design, there are few, if any, schools that offer UNIX systems administration as a degree choice. Many of the best administrators are self-taught. I have worked with systems administrators with degrees in Psychology, Economics, and Business Administration, as well as people without any degree at all. What is common among all of these people, and the reason why they were chosen to do this job, is a keen interest in systems and the ability to jump quickly from one emergency to the next. These are people who thrive on interrupts and have a higher than normal tolerance for stress. I think that this attitude is what separates systems administrators from others in the computer industry. A co-worker of mine once described the level of intensity at our place of work accurately when he said, "If I wanted a low-stress job, I'd become an air-traffic controller." So strap on your pagers, order some takeout Chinese food, and prepare yourself for a descent into the madness that is Linux systems administration.
+
+# Who Is This Book’s Intended Audience?
+
+This book is intended for intermediate to experienced computer users who have been tasked with the administration of a Linux system. It is not a beginner's book—it is intended to be most useful to people already serving as systems administrators of other network operating systems, such as UNIX, Windows NT, and Netware. If you are ready to take the next step in your knowledge of Linux, this book is for you.
+
+# What Do You Need to Know Prior to Reading This Book?
+
+This book assumes that you have at least some familiarity with Linux or UNIX commands, that you are comfortable using a command shell, and that you have more than a basic knowledge of networks. It also assumes that even if you are not a Linux expert, you are familiar with the commands that you can use to get help, such as man.

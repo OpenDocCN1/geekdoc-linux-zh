@@ -1,0 +1,15 @@
+# Patch Announcement
+
+Another thing to consider is where the patch was announced and indeed whether it was widely announced at all. A good place to watch for patch announcements is the linux-kernel mailing list. This list is frequented by many of the key Linux developers and it is on this list that many patches to the kernel are discussed to determine their merit. By following this list and seeing the responses, if any, to patch announcements, you can often gauge whether it is likely to become part of the kernel proper. You should also not be afraid to directly raise the question of whether this patch has a chance of inclusion into a future kernel. The kernel developers are not the least bit shy about voicing their opinions on the merits or flaws of a patch. Patches that are never discussed on the linux-kernel mailing list are usually not likely to become part of the kernel, but it never hurts to ask the author of a patch whether he plans on submitting it to Linus or to the mailing list. The answers to these questions are a good indication of whether the author will likely be around for awhile or if the patch is destined for patch abandonment.
+
+Patches that make it into the kernel proper and eventually become part of the official patches are those that are generally useful. If the patch addresses a problem that affects only a tiny subset of installations, or if it implements a driver for a highly specialized piece of hardware, it becomes less likely to make it into the kernel. It fails to meet the generally useful criteria. An example of this might be a driver to support connecting a floppy drive from an Apple II+ to a PC. This is opposed to patches that add support for new hardware that is likely to be found in many systems, such as a driver for a DVD decoder board. In the case of patches that are highly specialized and not generally useful, it is very important to try to establish whether the author is likely to remain committed to keeping the patch up to date with newer kernels. If the answer to this question is no, I would question the wisdom of relying on it for your production systems.
+
+In order to minimize the effect of using unofficial patches, you should consider all of these factors and based on your answers to these questions make the decision to use or not to use the patch.
+
+# Where to Obtain Patches
+
+You may be asking where all of these patches come from. There are many sources for patches to the kernel, and this section takes a look at some of the more popular ones.
+
+# The linux-kernel Mailing List
+
+A good place to begin looking for kernel patches is in the archives of the linux-kernel mailing list. This mailing list is where the majority of kernel patches that make it into the final kernels can be found and discussed. Any person who is serious about tracking the development of the kernel and seeing what features are coming in future releases should

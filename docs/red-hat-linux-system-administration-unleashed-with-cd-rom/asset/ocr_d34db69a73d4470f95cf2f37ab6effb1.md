@@ -1,0 +1,11 @@
+# Frequency of Bottlenecks
+
+How often does a particular bottleneck occur? This is a very big question that pertains mostly to user inquiries. More often than not, you may discover later that there was no cause for alarm because the user was doing something that was not routine or that was a one-time, isolated incident. Some good examples of this are when a user improperly invokes a command or application, when a user is trying a new way of performing some task, or when a user is trying something completely new. This can happen a great deal in very progressive environments where change is the norm. Such an environment, for example, is one in which new systems and methods are being developed and brought online rapidly. Sometimes, users may not even be aware of them until they start wondering why a job is taking so long.
+
+# Bottleneck Location
+
+Where exactly is the bottleneck occurring? This will be examined later in this chapter in the section “Performance Measurement Techniques,” but it is worth glancing at now. Is the bottleneck staring at you right now? If so, you may want to investigate it as soon as possible. Prolonged, easily identifiable bottlenecks should at least be made known so that users and/or managers might better understand that there is a problem, that you know what it is, and that you will identify a recourse. Sometimes bottlenecks can mask other bottlenecks or are a result of another bottleneck. Figuring which is happening can be puzzling, especially when you consider it can be only one of three general areas. Where this is seen most often is between paging and disk I/O.
+
+# Bottleneck Duration
+
+Is the bottleneck sustained? This is a very important and often overlooked factor about performance—a “take it with a grain of salt” issue. When a user complains that the system is sluggish or perhaps you look at a quick snapshot of the CPU and notice high usage, how long does it really last? Is it long enough to become apparent to other users? A prime example of this might be a user compiling a program. Of course, to the user and even to the system it will appear to be very resource-intensive—but how long does it take to finish and what sort of system-level impact is it having?

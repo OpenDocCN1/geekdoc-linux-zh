@@ -1,0 +1,12 @@
+# Getting Along with Your Neighbors
+
+As you saw with the examination of Samba, which is covered in Chapter 17, “Integrating with Windows NT Networks,” one of the strengths of Linux is its ability to interact with other network operating systems. This is true not only of the various flavors of UNIX and Windows, but also with NetWare and AppleTalk networks. This chapter examines some of the tools that allow Linux to communicate with these other network operating systems and how to configure Linux so that it can share resources with them. It starts with an examination of Linux and NetWare, looking at Linux in roles as both a server and as a client, and then takes a look at the tools available that allow Linux to share resources in an AppleTalk network. In these days of heterogeneous networks, which consist of systems from multiple vendors, the ability to interoperate with other network operating systems is essential. Companies have significant investments in networks and interoperability with them means that this investment is not lost when adding Linux to them.
+
+# Using the Right Tool for the Job
+
+One of the reasons why Linux is so often called on to work with other network operating systems is the explosive growth of the Internet. As businesses see the need to be connected, they also see that while their current network operating systems are well suited for their corporate networks, they may need to look at other options for Internet services. This is where Linux shines because a Linux server with a mail transport agent, Web serving capabilities, name services, and all of the other standard Internet features is a cost-effective way to get connected. In fact, in the small office environment, a single Linux server can provide all of the services required to get a company connected without costing an exorbitant amount of money, which explains the market for Linux-based Internet appliances, such as the Cobalt Cube.
+
+With this opportunity for Linux to move into such environments, you may wonder why anyone would bother trying to get Linux to interoperate with these other network operating systems, when the majority of the functions that are provided by them are also provided by Linux. Why not just replace the other systems with Linux systems and go with an all Linux solution? There are many reasons why you might not want to do this. Some of these reasons are
+
++   - The cost of conversion, both in time and money is too high.
++   - Needed features are available only on the existing network operating system.

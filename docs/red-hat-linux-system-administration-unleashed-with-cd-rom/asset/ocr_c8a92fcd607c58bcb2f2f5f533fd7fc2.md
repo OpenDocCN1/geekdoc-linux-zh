@@ -1,0 +1,11 @@
+# TABLE 21.4 continued
+
+| Content Type | Description |
+|---|---|
+| `[hidden_dir]/[directory]` | In an attempt to hide warez repositories from normal users and system administrators, illegal content is often hidden inside a hierarchy of hidden directories. Hidden directories are normally marked as such by prepending a leading "." character to the directory name. Directories can also be made to look like the system "." and ".." directories by appending extra spaces to the end of their filenames. Examples: `/incoming/.warez/` `uploadz/pub/uploads/./warez-site incoming/./utilz/` `pub//gamez` |
+| `[trojan_dir]/[directory]` | Trojan directory names are also used in order to hide warez repositories from users and system administrators. These directory names are fashioned in such a manner that they look like innocuous files that would normally be on the system. Examples: `/incoming/index.txt/warez/` `/incoming/gifs/Starscape.GIF/Filez/` `pub/uploads/gcc.tar.gz/gamez` |
+| `[filename]` | The filenames of data stored on warez FTP sites often contain many similarities, which may be used to help in the detection of warez-related activity. Warez trading groups generally make use of standard filenaming techniques that are easy to identify. Filenames often contain actual warez group names, the names of commercial software products, and so on. Files containing several popular archive/compression extensions can also serve as indicators to warez-oriented activity. Files containing such extensions should not automatically be considered illegal content, but should simply be examined for other possible pointers to illegal activity. Examples: `*.zip`, `*.arj`, `*.mp3`, `*.nfo` |
+
+**Note**
+
+As stated above, filenames containing these extensions should not automatically be considered illegal content. The above extensions are popular in both the legal and illegal software trading communities. Therefore, care must be taken to examine actual content before determinations can be made as to its legal status.

@@ -1,0 +1,262 @@
+
+
+```
+# all of our gateway names (as opposed to proper host names):
+more_hostnames=mailhub.mydomain.com:mydomain.com
+
+# If something is wrong with the aliases file, use "pat" as postmaster:
+postmaster_address = pat
+
+# Allow smail spool files to overrun into alternate filesystem:
+spool_dirs = /usr/spool/smail:/u2/spool/smail
+
+# Disallow any group or other access to spool files:
+spool_mode = 0600
+
+# mailhub is under the following domains:
+visible_domains = mydomain.com
+
+# We are the gateway for the entire domain. We hide the network
+# topology (by default) in outgoing addresses:
+visible_name = mydomain.com
+```
+
+## Director 文件
+
+以下文件的主要功能是整理别名和转发。工作站可能会使用 NIS（也称为 YP）来访问主别名文件，而邮件中继服务器可能会直接引用主文件，从而偶然避免依赖 NIS。
+
+此文件纯属样板内容。你可能不想更改它，除非可能扩展“unsecure”列表。
+
+```
+# the following two directors are magic for accessing mailing
+# list literal addresses supplied by the 'aliasfile' driver and
+# the 'forwardfile' driver respectively.
+
+# aliasinclude - expand ":include:filename" addresses produced
+# by alias files
+aliasinclude:
+driver = aliasinclude,   # use this special-case
+# driver
+nobody;                 # associate nobody user
+# with addresses when mild
+# permission violations
+# are encountered
+
+copysecure,        # get permissions from
+# alias director
+copyowners          # get owners from alias
+# director
+
+# forwardinclude - expand ":include:filename" addrs produced by
+# forward files
+forwardinclude:
+    driver = forwardinclude,    # use this special-
+    # case driver
+    nobody;
+    copysecure,                 # get perms from forwarding
+    # director
+    copyowners                  # get owners from
+    # forwarding director
+
+# get aliases from /private/usr/lib/smail/aliases, which is
+# optional. This is not present on the mail hub.
+private_aliases:
+    owner=owner-$user,
+    driver=aliasfile;
+    file=/private/usr/lib/smail/aliases,
+    optional,
+    proto=lsearch               # straight text ASCII file
+
+# aliases - search for alias expansions stored in a database
+aliases:
+    driver = aliasfile,         # general-purpose
+    # aliasing director
+    owner = owner-$user;        # problems go to an
+    # owner address
+    file = mail.aliases,        # use this for YP
+    proto = yp                  # use this for YP
+
+# forward - search for forward expansions stored in a database
+forward:
+    driver = aliasfile,         # general-purpose
+    # aliasing director
+    sender_okay,                # sender can be in
+    # the list
+    owner = postmaster@mydomain.com; # problems to
+    # forward maintainers
+
+    file = mail.forward,        # use this for YP
+    proto = yp                  # use this for YP
+
+# dotforward - expand .forward files in user home directories
+dotforward:
+driver = forwardfile,      # general-purpose
+# forwarding director
+owner = Postmaster,        # problems go to the
+# Postmaster
+nobody,
+sender_okay;               # sender never
+#removed from
+# expansion
+file = ~/.forward,         # .forward file in
+#home directories
+checkowner,                # the user can own
+# this file
+owners = root,             # or root can own the
+#file
+modemask = 002,            # it should not be
+# globally writable
+caution = daemon:root,     # don't run things as
+# root or daemon
+# be extra careful of remotely accessible home directories
+unsecure = '~:ftp:uucp:nuucp:/tmp:/usr/tmp'
+
+# forwardto - expand a "Forward to " in user mailbox files
+#
+# This emulates the V6/V7/System-V forwarding mechanism which
+# uses a line of forward addresses stored at the beginning of
+# user mailbox files prefixed with the string "Forward to "
+forwardto:
+driver = forwardfile,
+owner = real-$user, nobody, sender_okay;
+
+file = /usr/spool/mail/${lc:user},   # point at user
+# mailbox files
+forwardto,                 # enable "Forward to "
+#                       # function
+checkowner,                # the user can own this
+# file
+owners = root,             # or root can own the file
+modemask = 0022,           # only owner should be able
+                           # to write
+caution = daemon:root      # don't run things as root
+# or daemon
+
+# user - match users on the local host with delivery to their
+# mailboxes
+user:  driver = user;        # driver to match usernames
+
+transport = local          # local transport goes to mailboxes
+
+# real_user - match usernames when prefixed with the string "real-"
+#
+# This is useful for allowing an address which explicitly
+# delivers to a user's mailbox file. For example, errors in a
+# .forward file expansion can be delivered here, or forwarding
+# loops between multiple machines can be resolved by using a
+# real-username address.
+real_user:
+  driver = user;
+  transport = local,
+  prefix = "real-"        # for example, match real-root
+
+# let users put mailing lists on their local machines
+private_lists:
+  caution,
+  owner=owner-$user,
+  driver=forwardfile;
+  file=/private/usr/lib/smail/lists/${lc:user}
+
+# lists - expand mailing lists stored in a list directory
+#
+# mailing lists can be created simply by creating a file in the
+# /usr/lib/smail/lists directory.
+lists:  driver = forwardfile,
+  caution,
+  # flag all addresses with
+  # caution
+  nobody,                 # and then associate the
+  # nobody user
+  owner = owner-$user;
+
+# map the name of the mailing list to lower case
+file = lists/${lc:user}
+
+# smart_user - a partially specified smartuser director
+#
+# If the config file attribute smart_user is defined as a string
+# such as "$user@domain-gateway" then users not matched otherwise will be sent off to the host 'domain-gateway'.
+#
+# If the smart_user attribute is not defined, this director is
+# ignored.
+smart_user:
+driver = smartuser;      # special-case driver
+
+# do not match addresses which cannot be made into valid
+# RFC822 local addresses without the use of double quotes.
+well_formed_only
+```
+
+## Router 文件
+
+路由器文件在工作站和邮件中继服务器之间略有不同。
+
+由于 smail 默认假设使用 uucp 传输，这些路由器文件只是强制所有内容通过 IP 链路使用 SMTP。两个文件唯一的区别在于工作站配置使用 smarthost 路由，但中继服务器期望能够连接到消息的真实目的地。
+
+### 工作站路由器文件
+
+```
+# inet_addrs - match domain literals containing literal IP
+# addresses. The library routine gethostbyaddr(3N) will be
+# called to see if a reverse mapping to the canonical hostname
+# is available.
+inet_addrs:
+driver = gethostbyaddr,    # router to match IP domain
+# literals
+transport = smtp;          # deliver using SMTP over
+# TCP/IP
+
+fail_if_error,             # fail malformed domain
+# literal addrs
+check_for_local            # see if this is really the
+# local host
+
+# paths - force some routes using the YP network path database
+paths:  driver = pathalias,    # general-use paths router
+transport = smtp;             # for matches, deliver over
+# SMTP
+file = mail_paths,    # database containing path info
+proto = yp,           # look in yp database
+
+# inet_hosts - match hostnames with gethostbyname(3N) or bind
+inet_hosts:
+    driver = gethostbyname,   # match hosts with the
+    # library function
+    # driver=bind,            # Alternative for DNS
+    transport = smtp;
+    domain = mydomain.com
+
+# smart_host - a partially specified smarthost director
+#
+# If the config file attribute smart_path is defined as a path
+# from the local host to a remote host, then hostnames not
+# matched otherwise will
+# be sent off to the stated remote host. The config file
+# attribute smart_transport can be used to specify a different
+# transport.
+#
+# If the smart_path attribute is not defined, this router is
+# ignored.
+smart_host:
+    driver = smarthost,       # special-case driver
+    transport = smtp          # by default deliver over SMTP
+```
+
+### 邮件中继服务器的路由器文件
+
+邮件中继服务器的路由器文件并没有本质上的不同。主要区别在于它可能没有定义 smart_path，因为它期望能够访问整个互联网，而不仅仅是一个上游邮件服务器。此文件已删除所有 uucp 路由。
+
+```
+# match_inet_addrs - match literal Internet-family addresses
+#
+# This director will match hostnames such as [192.2.12.200],
+# which are literal addresses on a TCP/IP network. This form
+# should only be used when the actual hostname cannot be found
+# in the network databases, or to get around a "forces" file
+# that reroutes mail to a host listed in the databases for the
+# TCP/IP network.
+Match_inet_addrs:
+    driver=gethostbyaddr,    # match inet domain
+    # literal addrs
+        transport=smtp;      # delivery is over
+```

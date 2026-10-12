@@ -1,0 +1,15 @@
+When jobs are queued by either at or batch, they are stored in the /var/spool/at directory. This directory should be mode 700 and owned by the daemon user. To view the contents of the directory, you must log in as root, or you will be denied. Within the /var/spool/at directory is a subdirectory spool where all output is stored. This directory is useful when examining the results of at jobs and is also of mode 700 and owned by the daemon user.
+
+When invoking either at or batch, you must pass the commands that are to be executed on standard input or specify a file that contains the commands. To specify a file, pass the -f option to either at or batch. When passing the commands to at or batch on standard input, you can end your input with the EOF character (Ctrl+D).
+
+When at or batch is invoked, it has access to all the current environment variables except for TERM, DISPLAY, and _. It also retains the current working directory and the umask of the user invoking at. If a user invokes at or batch from an su shell, the real userid of the user is kept.
+
+When atd executes any commands in the at queue, any results sent to either standard error or standard output are mailed to the user who originally queued the commands. The command used to send the mail is the standard /usr/sbin/sendmail. If you choose to install an MTA other than the Red Hat default of sendmail, be sure to keep /usr/sbin/sendmail as a symbolic link to your new MTA, or you will break that mail feature of atd. If a user invokes at or batch while in an su shell, because the actual userid of that user is retained, when the commands are executed, mail will be sent to the actual user, not root.
+
+# Specifying Which Users Can Use at
+
+You can have complete control over which users on your system can use the at utility. System security is the primary reason to limit access to at. Allowing users to start jobs when they are not logged in can be a potential security hole, however this is a matter best left to the system administrator. There are two files located in the /etc directory that allow you to limit which users are allowed to use the at utility. The /etc/at.deny file allows you specify users that are not allowed to use the at utility. Usernames are listed one per line.
+
+The /etc/at.allow file allows you to specify exactly which users are allowed to use at. Again, usernames are listed one per line. If /etc/at.allow does not exist but /etc/at.deny does exist, all users are allowed to use at, except the users listed in /etc/at.deny. If /etc/at.allow does exist but the /etc/at.deny file does not exist, only the users listed in /etc/at.allow are allowed to use at. If neither file exists, only the superuser account can be used to invoke at.
+
+The default Red Hat 6.0 configuration for at comes with a blank /etc/at.deny, so all users can use at and batch out-of-the-box.
