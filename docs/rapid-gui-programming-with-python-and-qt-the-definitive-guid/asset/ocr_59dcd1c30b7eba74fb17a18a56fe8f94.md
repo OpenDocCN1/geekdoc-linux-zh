@@ -1,0 +1,15 @@
+object to write data using setValue() and to read data using value(), in both cases converting between QVariant and the relevant type.
+
+In the following section we will look at the high-level file handling and data presentation that are performed by the application's main window subclass. In the second section, we will look at the application's data module, including the implementation of individual data items, and of the data item container in which the application's data is held.
+
+Then, in the subsequent sections, we will look at saving and loading data in various formats. In the section on binary files, we will look at how to use PyQt's QData5Stream class and also the standard Python library's cPickle module to load and save our collection of movie records. In the section on txt files, we will see how to load and save our movie records in plain text using PyQt's QText5Stream and the Python standard library's codecs module. And in the last section we will write the code to save the records as XML by hand, and see how to use both DOM and SAX parsers to read back the XML data.
+
+# ## Main Window Responsibilities
+
+The main window is usually given responsibility for offering the user the high-level file-handling actions, and for presenting the application's data. In this section, we will focus particularly on the file actions, since they differ from what we did in Chapter 6's Image Changer application and are more representative of what happens in larger applications. We will also look at how the data is presented to the user. In the My Movies application, the data is held in a “container” (a MovieContainer), and all the work of saving and loading (and exporting and importing) is passed on to the container by the main window. We will look at the container in the next section, and at the container's saving and loading code in the sections that follow that.
+
+The source code is in the chapp8 directory, and it includes a Qt Designer-designed user interface for adding and editing movie records. Figure 8.2 shows the application's Python modules.
+
+We have chosen to make a distinction between saving and exporting, and between loading and importing. When we load a file, the filename we used becomes the application's current filename for when we save. If we save a file, we use the application's current filename, so subsequent saves will be to the same file. We can change the current filename by using the “save as” action. When we import a file, we clear the current filename; this means that the data must be given a new filename if the user wants to save it. If the user exports the data, they are asked for a new filename, and the current filename is not affected.
+
+Now we are ready to look at the main window's file-handling functionality. We will begin by looking at the start of the main window's initializer, to see

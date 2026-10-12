@@ -1,0 +1,311 @@
+
+# 索引
+
+## S
+
+- setPageSize() (QPrinter), 353, 398, 400
+- setPen() (QPainter), 337, 338, 343, 344, 345, 374, 377, 409, 410, 481
+- setPixmap()
+    - QClipboard, 311
+    - QDrag, 316
+    - QLabel, 199
+- setPlainText() (QTextEdit), 384
+- setPointSize() (QFont), 335, 336
+- setPos() (QGraphicsItem), 356, 362, 364, 367, 373, 375
+- setPosition() (QTextCursor), 406
+- setProperty() (QObject), 322, 324
+- setQuery() (QSqlQueryModel), 464
+- setQuitOnLastWindowClosed() (QApplication), 121
+- setRange()
+    - QAbstractSlider, 369
+    - QSpinBox, 180, 340, 440
+- setRelation() (QSqlRelationalTableModel), 456, 460, 462
+- setRenderHint()
+    - QGraphicsView, 352, 369
+    - QPainter, 306, 337, 342, 343, 361, 363
+- setRight() (QRect/QRectF), 365
+- setRowCount() (QTableWidget), 231, 418
+- setRowStretch() (QGridLayout), 146
+- setScene() (QGraphicsView), 354, 369
+- setSceneRect() (QGraphicsScene), 354, 369
+- setSelected()
+    - QGraphicsItem, 356, 362, 364, 367
+    - QTableWidgetItem, 232, 419
+- setSelectionBehavior() (QAbstractItemView), 231, 460, 463, 495
+- setSelectionMode() (QAbstractItemView), 231, 460, 463
+- setSeparator() (QAction), 172
+- setShortcut() (QAction), 171, 172
+- setSingleStep() (QSpinBox), 440
+- setSizeConstraint (QLayout), 277, 279
+- setSizeGripEnabled()
+    - QDialog, 154
+    - QStatusBar, 170
+- setSizePolicy() (QWidget), 330, 331, 340
+- setSort() (QSqlTableModel), 453, 456, 460, 462
+- setSortingEnabled() (QTableView), 418, 419
+- setStatusTip()
+    - QAction, 172
+    - QWidget, 171, 180
+- setStretchFactor()
+    - QBoxLayout, 146
+    - QSplitter, 283
+- setStyleSheet() (QWidget), 323, 330
+- setSubmitPolicy() (QDataWidgetMapper), 453, 456
+- setSuffix() (QSpinBox), 180, 340
+- setTabChangesFocus() (QTextEdit), 390
+- setTable() (QSqlTableModel), 453, 456, 460, 462
+- setTabOrder() (QWidget), 206
+- setText()
+    - QAbstractButton, 370
+    - QAction, 172
+    - QClipboard, 297, 311
+    - QLineEdit, 441, 462
+- setTextAlignment()
+    - QTableWidgetItem, 231, 419
+    - QTreeWidgetItem, 421
+- setTextColor() (QTextEdit), 393
+- setToolTip()
+    - QAction, 172
+    - QWidget, 171, 180, 390
+- setUniformRowHeights() (QTreeView), 495
+- setupUi() (由 pyuic4 生成), 217, 218
+- setValidator() (QLineEdit), 461
+- setValue()
+    - QAbstractSlider, 128, 369
+    - QSpinBox, 128, 180, 340, 441
+- setVersion() (QDataStream), 241, 243, 245, 525, 528, 531, 533, 540
+- setViewport() (QPainter), 329, 342, 343, 363
+- setVisible() (QWidget), 277, 280
+- setWhatsThis() (QAction), 172
+- setWidth() (QPen), 368
+- setWindow() (QPainter), 329, 342, 343, 363
+- setWindowFlags() (QWidget), 529
+- setWindowIcon() (QWidget), 186, 330
+- setWindowModified() (QWidget), 192
+- setWindowTitle() (QWidget), 146, 151, 186, 330, 370
+- setZValue() (QGraphicsItem), 367
+- 影子复制, 34, 51, 98
+- shape() (QGraphicsItem), 365, 367, 374, 377
+- shear()
+    - QGraphicsItem, 367
+    - QPainter, 343
+- Shift 键按键, 365
+- 短路逻辑, 47
+- 短路信号, 130–131
+    - 另见 信号与槽
+- 快捷键；见 键盘快捷键 和 QKeySequence
+- show() (QWidget), 115, 155, 280, 286, 330, 511
+- 显示对话框, 160
+- 显示图像, 168
+- 显示部件, 277, 280
+- showMessage() (QStatusBar), 170, 233
+- showMinimized() (QWidget), 297
+- showNormal() (QWidget), 297
+- sibling() (QModelIndex), 491
+- SIGNAL() (QtCore), 131
+- 信号与槽, 115, 120, 124, 127–136, 206, 215, 217, 292, 307, 333, 385, 440, 482, 539, 544
+    - 另见 短路信号
+- 信号与槽应用程序, 128–131
+- 函数、方法、信号或槽的签名, 56, 129
+- simplified() (QString), 61, 422
+- sin() (math), 371, 375
+- 单击；见 mousePressEvent() 和 mouseReleaseEvent()
+- 单文档界面；见 SDI
+- 单引号字符串, 21
+- singleShot() (QTimer), 115, 306
+- sip 模块, 288
+- 大小；见 QSize
+- 大小调整手柄, 170
+- 大小提示, 271
+- size()
+    - QImage, 363, 400
+    - QRect/QRectF, 405
+    - QSqlQuery, 450
+- 布局或部件的大小
+    - 固定, 277
+    - 最大, 271
+    - 最小, 270, 271, 335
+    - 首选, 271
+- 大小策略, 270–271, 335
+- sizeHint()
+    - QAbstractItemDelegate, 436, 439, 489
+    - QWidget, 335, 390, 479
+- sleep() (time), 114, 115
+- 切片, 22, 30, 32
+- 槽；见 信号与槽
+- SLOT() (QtCore), 131
+- slots 类属性, 103, 115
+- 软件专利, 缺点, 222
+- sort() (list), 33, 53, 63, 95, 239
+- sorted(), 52, 53, 63, 432, 434, 551
+- 排序, 52, 418, 425, 432–435
+- 填充物；见 QSpacerItem
+- 布局中的填充物, 212, 214
+- 特殊方法, 81
+    - __abs__() (abs), 84
+    - __add__() (+), 84, 90
+    - __call__(), 81
+    - __cmp__() (cmp()), 81, 82, 89, 416, 432
+    - __contains__() (in), 93
+    - __del__() (del 语句), 78
+    - __delitem__() (del 语句), 93, 95
+    - __eq__() (==), 81
+    - __float__() (float()), 84, 91
+    - __floordiv__() (//), 84
+    - __ge__() (>=), 81
+    - __getitem__() ([=]), 93, 94
+    - __gt__() (>), 81
+    - __iadd__() (+=), 84, 90
+    - __ifloordiv__() (//=), 84
+    - __imod__() (%=), 84
+    - __imul__() (*=), 84, 91
+    - __init__(), 77, 78, 437
+    - __int__() (int()), 84, 91
+    - __isub__() (−=), 84
+    - __iter__() (iter()), 93, 97
+    - __itruediv__() (/=), 84, 91
+    - __le__() (<=), 81
+    - __len__() (len()), 93, 96
+    - __lt__() (<), 81, 82, 432
+    - __mod__() (%), 84
+    - __mul__() (*), 84, 91
+    - __ne__() (!=), 81
+    - __neg__() (−), 84
+    - __new__(), 77, 78, 81
+    - __nonzero__() (bool()), 81, 83
+    - __radd__() (+), 84
+    - __repr__() (repr()), 81, 83, 90
+    - __rfloordiv__() (//), 84
+    - __rmod__() (%), 84
+    - __rmul__() (*), 84, 91
+    - __rsub__() (−), 84
+    - __rtruediv__() (/), 84
+    - __setitem__() ([]), 93, 95
+    - __str__() (str()), 81, 83, 90, 98, 100
+    - __sub__() (−), 84
+    - __truediv__() (/), 84, 91
+    - __unicode__() (unicode()), 81, 83
+- 自旋框；见 QDoubleSpinBox 和 QSpinBox
+- split()
+    - QString, 253
+    - str/unicode, 25, 114, 238, 501
+- 分隔器；见 QSplitter
+- SQL 查询；见 QSqlQuery 和 SQL 语句
+- SQL Server 数据库, 445
+- SQL 语句, 445, 446, 447, 448, 449, 449–451, 458, 464, 468, 469
+- SQLite 数据库, 445, 446, 447
+- 堆叠部件；见 QStackedWidget
+- 标准按键序列；见 键盘快捷键 和 QKeySequence
+- start()
+    - QDialog, 316
+    - QThread, 539, 547, 553
+    - QTimer, 373, 376
+- 启动处理, 184
+- startDrag() (QAbstractItemView), 316
+- startElement() (QXmlContentHandler), 263
+- startsWith() (str/unicode), 25, 238, 255
+- startsWith() (QString), 252
+- startTimer() (QObject), 370
+- 状态, 更改；见 信号与槽
+- state() (QAbstractSocket), 540
+- 状态, 使用生成器保留, 58, 97
+- 语句分隔符, 51
+- 静态数据, 85–86
+- 静态方法, 78, 85–86
+- 静态类型, 12
+- __static__(), 85, 239, 288
+- 状态栏；见 QStatusBar
+- statusBar() (QMainWindow), 170, 186
+- StopIteration 异常, 52, 58, 59
+- 存储过程, 在数据库中, 448
+- str 类型, 20–28, 25
+    - % 格式化, 24, 98
+    - % 格式说明符, 26
+    - * 重复运算符, 25
+    - + 连接运算符, 25
+    - count(), 25
+    - endswith(), 25, 31, 555
+    - find(), 24, 25, 68
+    - index(), 24, 25, 68
+    - 索引, 22
+    - isalpha(), 25
+    - isdigit(), 25, 238, 554
+    - 迭代, 50
+    - join(), 23, 25, 61, 193, 477
+    - 字面量, 21
+    - lower(), 25, 238
+    - 提升为 unicode, 20
+    - replace(), 25, 238
+    - rfind(), 25
+    - rindex(), 25
+    - 切片, 22
+    - split(), 25, 114, 238, 501
+    - startswith(), 25, 238, 255
+    - strip(), 25, 59, 255
+    - title(), 24
+    - upper(), 25
+    - *另见* QString 和 unicode 类型
+- __str__() (str()), 81, 83, 90, 98, 100
+- 流读写, 242, 245, 250, 252, 258
+- 流；见 QDataStream 和 QTextStream
+- 拉伸因子, 144, 212, 271, 283
+- 字符串字面量, 20
+- string 模块, 26
+- Template 类, 26
+- String10 模块, 23
+    - *另见* cString10 模块
+- 字符串；见 QString, str 类型, 和 unicode
+- strip() (str/unicode), 25, 59, 255
+- 样式表, 322–324
+- sub() (re), 220, 556
+- __sub__() (~), 84
+- 部件中的子控件, 324
+- submit() (QDataWidgetMapper), 454
+- submitAll() (QSqlTableModel), 455, 466, 469
+- 代码块, 46, 47
+- sum(), 38
+- super(), 100, 153, 217
+- 键盘用户支持；*见* 键盘用户, 支持
+- supportedImageFormats()
+    - QImageReader, 193
+    - QImageWriter, 196
+- SVG (可缩放矢量图形) 格式, 363
+- switch 语句；*见* if 语句
+- Sybase 数据库, 445
+
+## T
+
+- sys 模块, 60, 63, 114
+    - argv 变量, 114
+    - path 变量, 60, 104
+    - version info 元组, 63
+- system() (platform), 200, 217, 336, 390
+- Tab 键按键, 206, 218, 310, 386, 390, 421, 422, 511
+- 标签页顺序, 206, 215, 217, 310
+- 标签部件；见 QTabWidget
+- 表格部件；见 QTableWidget
+- tagName() (QDomElement), 260
+- takeItem() (QListWidgetItem), 316
+- takeLast() (QStringList), 189
+- 任务栏条目, 142
+- TCP (传输控制协议), 522
+- Template 类 (string), 26
+- 终止应用程序, 115, 121, 185
+- 术语, 13, 75
+- 三元运算符；*见* 条件表达式
+- 错误测试 vs. 异常处理, 68
+- 测试, 用户界面, 221–222
+- testmod() (doctest), 106
+- 文本光标；见 插入点
+- 文本编辑器；见 QTextEdit
+- 文本文件, 249–256
+- text()
+    - QClipboard, 297, 311
+    - QLineEdit, 441
+    - QTableWidgetItem, 422
+- 文本流；见 QTextStream
+- 文本流读写, 250, 252, 258
+- textCursor() (QTextEdit), 297, 384, 385
+- textEdited() 信号 (QLineEdit), 161, 217, 218
+- textFromValue() (QSpinBox), 327, 328
+- *this* 指针；*见* self

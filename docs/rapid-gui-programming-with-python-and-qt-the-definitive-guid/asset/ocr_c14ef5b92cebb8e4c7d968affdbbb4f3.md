@@ -1,0 +1,15 @@
+Networking support for Python can also be found in other third-party libraries, the most well known being the Twisted networking framework; see http://twistedmatrix.com for further details.
+
+In this chapter we will only concern ourselves with creating a simple client/server application, and we will create both the client and the server using just two of PyQt's networking classes: `QTcpSocket` and `QTcpServer`. In the next chapter, we will look at a multithreaded version of the server that is capable of handling multiple simultaneous requests without having to block.
+
+Client/server applications are normally implemented as two separate programs: a server that waits for and responds to requests, and one or more clients that send requests to the server and read back the server's response. For this to work, the clients must know where to connect to the server, that is, the server's IP address and port number. Also, both clients and server must send and receive data using an agreed-upon socket protocol, and using data formats that they both understand.
+
+PyQt provides two different kinds of socket. The UDP (User Datagram Protocol) is supported by the `QUdpSocket` class. UDP is lightweight, but unreliable—there are no guarantees that data will be received. UDP is connectionless, so data is just sent or received as discrete items. The TCP (Transmission Control Protocol) is supported by the `QTcpSocket` class. TCP is a reliable connection- and stream-oriented protocol; any amount of data can be sent and received—the socket is responsible for breaking the data into chunks that are small enough to send, and for reconstructing the data at the other end.
+
+UDP is often used to monitor instruments that give continuous readings, and where the odd missed reading is not significant. Client/server applications normally use TCP because they need reliability; this is the protocol we will use in this chapter.
+
+Another decision that must be made is whether to send and receive data as lines of text, or as blocks of binary data. PyQt's TCP sockets can use either approach, but we have opted to work with binary data since this is the most versatile and easiest to handle.
+
+The example we will use is the Building Services application. The server holds details of the rooms in a building and the dates they have been booked. The client is used to book and unbook particular rooms for particular dates. Any number of clients can be used, but if two clients make a request that arrives at *exactly* the same time, one will be blocked until the other's request has been handled. This problem can be mitigated by using a threaded server, as we will see in the next chapter.
+
+For the sake of the example, we will run the server and clients on the same machine; this means that we can use “localhost” as the IP address. The server and two clients are shown in Figure 18.1. We have also chosen a port number of `9407`—this is just an arbitrary number. The port number should be greater than 1023 and is normally between 5001 and 32767, although port numbers

@@ -1,0 +1,15 @@
+Although printing using a QPainter requires more care and calculation than using a QTextDocument, it does give us complete control over the output.
+
+# Summary
+
+Using QSyntaxHighlighter to provide syntax highlighting for plain text that has a regular syntax, such as source code, is quite straightforward. Handling multiline constructs can also be done quite easily. The hardest part is handling ambiguous and some special cases, such as quotes inside quoted strings or start-of-comment symbols that are inside quotes or other constructs that cancel their syntactic meaning. An alternative is to use the QScintilla editor.
+
+The QTextEdit class is very powerful and versatile. Out of the box it can be used to edit both plain text and HTML. It is not difficult to create QTextEdit subclasses that provide key and context menu event handlers to give the user basic formatting options, and the techniques can easily be extended to provide menus and toolbars through which users could add, edit, and delete lists, tables, and images, and could apply formatting whether at the character level, such as underline and strikethrough, or at the paragraph level, such as aligning left, right, center, or justifying.
+
+The HTML returned by QTextEdit.toHTML() is rather verbose because it must support a wide range of HTML tags. We can provide our own methods to traverse a QTextDocument's structure and output our own format. In the example we output a much simpler and shorter HTML, but the same approach could be used to output XML or other kinds of markup.
+
+Applying most simple formatting to the underlying QTextDocument used by QTextEdit, QTextBrowser, QLabel, and QGraphicsTextItem is quite straightforward. Applying more advanced formatting, such as tables can be trickier because we must be careful not to keep nesting blocks inside each other.
+
+Printed documents can be produced indirectly by outputting HTML or SVG, or directly by using a QPrinter to print on a physical printer, or from Qt 4.1 to output PDF files. Printed documents can be produced by creating an HTML string and giving it to a QTextDocument, or by programmatically inserting items into a blank QTextDocument. In both cases, the QTextDocument can be asked to print itself on a printer, or to draw itself on a QPainter.
+
+Using HTML is the easiest approach for those familiar with HTML tags, and a fair amount of control can be achieved by using style attributes and a style sheet. Using a QTextCursor to insert into a QTextDocument makes finer control quite easy to achieve, especially for those unfamiliar with style sheets. The greatest control over page appearance is achieved by using a QPainter directly. This is also the easiest approach for those who are comfortable using the QPainter API, or who want to reuse the same code for painting and for printing. Such code reuse can also be achieved using a QTextDocument, since they can be rendered in QLabel and other widgets that use QTextDocument.

@@ -1689,6 +1689,7 @@
 +   [Python：完全手册：Python 用户必备指南](docs/python-the-complete-manual-the-essential-handbook-for-python/README.md)
 +   [linux 和 windows 2000 的 Qt 编程](docs/qt-programming-for-linux-and-windows-2000/README.md)
 +   [Mozilla 快速应用开发](docs/rapid-application-development-with-mozilla/README.md)
++   [Python 与 Qt 快速 GUI 编程：PyQt 编程权威指南](docs/rapid-gui-programming-with-python-and-qt-the-definitive-guid/README.md)
 +   [Raspberry Pi 完整手册：面向所有 Raspberry Pi 用户的独立手册](docs/rasoberry-pi-the-complete-manual-the-independent-handbook-fo/README.md)
 +   [树莓派 4 初学者指南：Windows、iOS、Linux 及更多平台的树莓派 4 编程入门指南（包含 26 个易于跟随的树莓派 4 项目）](docs/raspberry-pi-4-for-beginners-simplified-introduction-to-rasp/README.md)
 +   [树莓派 5 系统管理基础](docs/raspberry-pi-5-system-administration-basics/README.md)
