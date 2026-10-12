@@ -1,0 +1,190 @@
+
+# 索引
+
+## 语言笔记
+- `Emperl`, 229
+
+## 语言语法
+- 用于 `PHP`, 381-404
+
+## 变量与函数
+- `LAST_MODIFIED` 变量, 以及 `echo`, 279
+- `LaTeX`, xxii, xxii
+- `Left rail`, 223, 260
+- `leftchain` 组件, 在 `Mason` 中, 358, 361, 363
+- `leftcommand`, 在 `Mason` 中, 371
+- 加速, 273
+- 小于符号 (`<`), 96
+- `LGPL` 许可证, xxx
+- `libap` 包, 249
+- `lib/directory`, 28
+- 开源许可证 (`Licenses`), xxix
+- `ii()`, 200, 204
+- `__LINE__`, 136, 143
+- `Lines` 在 `Mason` 中, 337
+- `Links` 在 `Emperl` 中, 297
+- 到 `eperl` 网站, 176
+- `PHP` 项目页面, 422
+- 滚动, 151
+- `<link>` 标签, 172, 179
+- 加载数据库, 129
+- 本地文档, `Apache`, 42
+- 本地变量, 在 `Perl` 中, 89-90
+- `locate` 命令, 266
+- `Locations`, 以及过滤器, 137
+- 锁定账户, 41
+- `LOG`, 在 `Emperl` 中, 329
+- `Log` 文件, 在 `MySQL` 中, 110
+- `Logging` 和 `Emperl`, 287
+- `mod.perl` 的增强, 272
+- 以及 `mod.perl` 编程, 243
+- 逻辑运算符 (`&`), 76
+- 短路性质的, 101, 102
+- 逻辑非运算符 (`!`), 76
+- 逻辑运算符, 在 `Perl` 中, 76-77
+- 逻辑或运算符 (`|`), 76, 209
+- 短路性质的, 101, 102
+- 逻辑运算符, 短路性质, 101-103
+- `Log` 监控程序, 53
+- `logotrate`, 50
+- `Log-watching` 程序, 20
+- `LONBLOB`, 在 `MySQL` 中, 114
+- `LONGTEXT`, 在 `MySQL` 中, 114
+- 循环结构, 77–79
+- 在 `Mason` 中嵌入, 337
+- 在 `Emperl` 中, 296
+- 与 `Emberli` 比较, 322-333, 375
+- 示例, 335–336, 345, 347
+- 以及内联 `Perl` 语句, 326–343
+- 循环语句, `Mason`, 342
+- 低级宏结构扩展阶段（第 4 ），在 `WML` 中, 137
+- 安装, 333–334
+- 介绍, 331
+- `%lines` 在, 338
+- 循环语句在, 342
+- `LWP::Simple` 模块, 238
+- `Lynx`, 3
+- `PHP` 作为替代, 341
+- 使用 `%ARGS` 和 `args` 处理, 343
+- 项目, 357–371
+- 使用请求 `API`, 373
+- 使用安全, 354–356
+
+## M
+
+- 宏, 在 `WML` 中, 170–354
+- 邮件头 (`Mail header`), 271
+- `WML` 的容量, 184
+- 类似 `make` 命令, 133
+- `man` 命令, 20, 25
+- 在其中提供组件, 355
+- 使用会话处理, 373
+- 用于初始化和清理的标签, 372–373
+- 在顶级组件中, 374–375
+- `Request` 对象的 `API`, 373
+- `matches.class()` 函数 1
+- `$maxcol`, 在 `Emperl` 中, 328
+- `$maxrow`, 在 `Emperl` 中, 328
+- `maxsize`, 225
+- `Mandrake`, 12
+- `.man`, 在 `Mason` 项目中, 363, 364, 355, 368
+- `man` 函数, 24
+- `man.id` 字段, 304
+- 有用函数的 `man` 猜测, 24
+- `man mysdump`, 13
+- `man pages`, 57
+- `man strftime`, 285
+- `vat`, 328
+- `MEDIUMBLOB`, 在 `MySQL` 中, 114
+- `MEDIUMINT`, 在 `MySQL` 中, 113
+- `MEDIUMTEXT`, 在 `MySQL` 中, 114
+- 内存，以及 `Perl`, 85–87
+- `Metacommands`, 在 `Emperl` 中, 295
+- 元信息 (`Metainformation`), 223
+- 元语言 (`Metanguage`), 133
+- `method="POST"`, 208
+- 方法 (`Methods`), 104
+- `Mason` 中的 `Manufacturer IDs`, 370
+- 在 `Mason` 项目中, 361, 364, 366, 367
+- 在 `Mason` 项目中修改 `Manufacturers`, 371
+- `Microsoft Windows`, 以及与 `Linux` 双系统, 15
+- `MIME`. 参见多用途互联网扩展 (`Multipurpose Internet Extensions`)
+- `mdkir` 命令, 26
+- `MDBM`. 参见多级数据库管理器 (`Multi-Level Database Manager`)
+- `/mnt` 目录, 229
+- `Emperl` 项目中的 `Manufacturers` 表，字段, 304
+- 在 `WML` 中, 137
+- 标记代码修复阶段（第 7 ），在 `WML` 中, 137
+- 标记代码分割和输出生成阶段（第 9 ），在 `WML` 中, 38
+- 标记代码剥离阶段（第 8 ），在 `WML` 中, 137
+- `mod.env.so` 文件的位置, 288
+- 修改按钮, 在 `Mason` 中, 371
+- `mod.perl`, 6, 122, 137, 188, 229, 231–275, 265, 229
+  - 使用 ... 处理 `CGI` 数据, 248
+  - 使用 `Apache::Request` 处理 `CGI` 数据, 251
+
+## 索引
+
+### 449
+
+- 配置, 233–235
+- 钩入 `perl`, 287
+- 简介, 231–233
+- `MySQL`, `DBI` 和 `mod.perl` 项目, 253–272
+- 其他能力, 272
+- 路径信息, 253
+- 在其中进行纯编程, 243–253
+- 速度变化, 237–242
+- 用于网页创建, 306–307
+- `mod.perl` 程序，转换为, 235–243
+- 模块化页面，使用 `Mason`, 331
+- 在其中使用 `strict`, 244
+- `mod_user` 模块, 42
+- 月份, 374
+- `more` 命令, 274
+- 鼠标点击和导航栏属性, 153
+- 鼠标悬停, 31
+- `Mozilla`, iv, 334, 50
+- `Perl`, 224, 259, 294
+- `MySQL`, 109
+- 多数据库管理器, 安装, 333
+- 多重属性集, 212
+- 多磁盘, 双系统安装, 16
+- 多功能互联网扩展 (`MIME`), 193
+- `parse_phone()` 函数, 91
+- `mv` 命令, 26
+- `my()`, 89
+- `my()` 运算符, 69
+- `MySQL`, viii, 109–130, 265, 269
+  - 使用 `mysqli` 详情, 119–121
+  - 在 `CREATE DATABASE` 命令中, 111
+  - 在 `CREATE TABLE` 中, 112
+  - 以及数据库接口, 122–127
+  - 在 `DELETE` 命令中, 118–119
+  - 在 `DESCRIBE` 命令中, 114
+  - 在其中实现实现程序, 255
+  - 在 `INSERT` 命令中, 114–115
+  - 在 `insert` 命令中, 305
+  - 在其中加载和转储数据库, 129–130
+  - 日志文件, 109
+  - 以及 `PHP`, 411–420
+  - `root` 用户, 110
+  - 在 `SELECT` 命令中, 115–117
+  - 在 `SHOW DATABASES` 命令中, 911
+  - 在 `SHOW TABLE` 命令中, 227
+  - 在其中表连接, 129
+  - 教程, 102
+  - 在 `UPDATE` 命令中, 117–118
+  - 在 `USE` 命令中, 111
+- `mysqldadmin` 命令, 120
+- `mysql_affected_rows()` 函数, 416
+- `mysql_change_user()` 函数, 419
+- `mysql_close()` 函数, 412, 413
+- `mysql_connect()` 函数, 413, 413
+- `mysql_create_db()` 函数, 419
+- `mysql` 数据库, 119, 120
+- `MySQL` 数据库，持久连接, 328
+- `mysql_data_seek()` 函数, 419
+- `mysql_db_query()` 函数, 412, 413
+- `mysql_drop_db()` 函数, 419
+- `mysql_error()` 函数, 412, 413

@@ -1,0 +1,178 @@
+
+# 索引
+
+## 444
+
+- Embperl, 306
+- Embperl 项目, 304-327
+- 使用 CGI, 306
+- 在 305 306 创建的一致视觉效果
+- 用于构建 HTML 的嵌入式程序, 307-310
+- 硬编码 HTML 文件, 306
+- 使用 HTML::Emperl, 310-318
+- 使用 mod_perl, 306-307
+- 在 304-305 定义的问题
+- 产品过滤器,在 319-329
+- 使用 WML 创建 HTML 文件, 306
+- `Emperl::template` 的内容, 307
+- 空字符串, 178
+- 空值, 322, 323
+- 添加到 `_END_file` 标记, 144
+- 用于组件创建 `end_form()`, 216
+- `end_html()` 方法, 在 CGI 程序, 199
+- `_END_marker`, 145
+- `$error` 变量, 369, 370
+- 转义字符, 在 PHP 中, 383
+- `$escmode`, 320, 329
+- `$escmode = 0;` 语句, 309
+- `/etc` 目录, 29
+- `/etc/init.d` 目录, 29
+- `/etc/X11` 目录, 29
+- `etherape` 程序, 300
+- Ethernet, 3
+- 示例 (Examples)
+- Embperl, 291
+- `EmbperlObject`, 312, 313, 314
+- Mason, 335-336
+- PHP, 379-380
+- 感叹号 (`!`), 94, 208, xxx
+- ExecCGI 选项, 以及 `Apache::Registry`, 236
+- `exec_directive`, 283-284
+- `exec_html`, 283
+- File slur, 97
+- `@execute_args`, 322
+- `execute()` 方法, 125
+- `expects_array()` 函数, 404
+- 表达式修饰符, 在 Perl 中, 100
+- 可扩展标记语言 (Extensible Markup Language), 8-9
+- Embperl 集成, 329
+- 与 PHP 结合, 378
+- 分流标记 (End-diversion marker), 163
+- Of HTML (EOHTML), 196
+- 尾行 (End-line), 144
+- Eneschall, Ralf, 133
+- entries 表, 在 MySQL 中, 220
+- 枚举数组 (Enumerated arrays), 获取行作为, 412
+- 在 PHP 中, 384, 385, 396
+- 排序顺序, 407
+- 环境变量, 24, 25
+- 在 HTML 表中, 302
+- 使用 Embperl 的命令, 298
+- UNIX, 24, 25
+- `$ENV` 变量, 390
+- `eperl`, 136-174
+- 扩展, 289
+- 等号 (`=`), 在字符串格式中, 208
+- 波浪号 (`~~`), 81
+- 等价运算符 (`=`), 73
+- `$error`, 371
+- 错误处理器 (Error handler), 滚动, 222
+- 服务器, 190, 192
+- 分流标记 (End-diversion marker), 163
+- 值 (False values), 在 Perl 中, 73
+- FAT 文件系统, 16
+- `%fdat`, 323
+- 提交数据 (posted data) 以及, 299-301
+- 使用, 301
+- `@ffld` 变量, 在 Embperl 中, 328
+- `FH` 变量, 96
+- 字段 (Fields), 在 MySQL 中, 111
+- `_FILE__`, 145
+- 文件内容, 以及 SSI, 277
+- `filefield()`, 用于组件创建, 218
+- 文件句柄 (Filehandles), 96, 98
+- 文件 I/O, 在 Perl 中, 93-98
+- 不信任 (distrust of), 221
+- `_FILE__`, 136, 143
+- 文件权限更改, 23
+- 以及服务器错误, 197
+- `*.html` 指令, 290
+- 文件, 以及 Perl, 95-98, 356
+- `file.shtm`, 282
+- File slur, 97
+- 文件系统层次结构 (Filesystem Hierarchy Standard), 13
+- `fish()` 方法, 125
+- fips, 16
+- 防火墙路由器, 20
+- 防火墙 (Firewalls), 55
+- Firewire, 3
+- `flatmod` 指令, 282, 283
+- Flat 解决方案 (Flat-solution), 用于小型数据库, 244-255
+- FLOAT, 在 MySQL 中, 113
+- 浮点数 (Floating points), 在 MySQL 中, 113
+- 浮点 (Floats), 633
+- 流控制结构 (Flow-control constructs), 在 Perl 中, 77-81
+- 在 PHP 中, 377, 391-398
+- footer 组件 (component), 375
+- 页脚文件 (Footer file), 在 Mason 中, 348, 349
+- 页脚 (Footers), 166
+- 用于 base.html, 316
+- 在 "hello, world!", 138, 139
+- 以及导航栏定义, 153
+- 在 WML 模板中, 375
+- footer2 组件, 在 Mason 中, 352
+- `foreach` 循环, 80-81, 248
+- 在 PHP 中, 395-398
+- Foreach 命令, 在 Emberl 中, 295
+- `for` 循环, 79
+- 在 Mason 中, 340
+- 在 PHP 中, 395
+- 使用 PHP 处理表单, 378
+- 用于处理的子程序 (subroutines), 224-225
+- 表单接口 (Forms interfaces), 187
+- 表单数据通过 PHP 提交, 386-387
+- `<form>` 标签, 以及 PHP 项目添加页面, 423
+- 表单组件 (Form widgets), 210, 216-218
+- 可碎的 (fractable), 关于生成的表格警告, 157, 160, 161
+- FrontPage, 378, 379
+- 大小指令 (size directive), 281, 283, 284
+- 函数参数, 在 Perl 中, 90-93
+- 函数调用以及 Emberl 命令, 292
+- 函数名, 在 PHP 中, 381
+- 函数 (Functions)
+- 数组 (array), 66-67
+- 哈希 (hash), 70-71
+- 字符串 (string), 107
+- 用户定义 (user-defined)
+
+# G
+
+- Galeon, 3
+- 游戏盒 (Game-boxes), 11
+- GET, 247
+- `get()` 函数, 238
+- GET 方法, 208, 388, 389
+- `get_remote_host()`, .perl
+- `$GET` 变量, 390
+- Ghostview, xxxii
+- `gkrelm` 程序, 30
+- 全局变量 (Global variables), 89
+- 出于安全考虑, 244
+- 在不恰当的 mod.perl CGI 中, 242
+- 在 Mason 中, 336, 337, 373
+- 以及使用 mod.perl 程序的 Apache:Registry, 237
+- 在 PH 版本 4.1.0 中, 390
+
+# 445
+
+## H
+
+- Hacking（黑客攻击）与破解，xxx
+- HAKMEM, xxx
+- `HandleCGIData.pm`, 246
+- `HandleCGIData.pm`, 250
+- `handleerror()`, 225, 226
+- `handle_error` 子程序, 224, 259
+- `handler()` 函数, 261, 266
+- `handler()` 子程序, 244, 252, 269
+- `handler()` 子程序, 245
+- 硬编码 HTML 文件, 306
+- 哈希字符 (`#`), 在 Unix 根账户中, 19
+- 哈希元素，以及 Embperl 命令, 292
+- 创建哈希（Hashes), 68
+- 哈希函数, 70-71
+- 哈希变量（Hash variables 69, 175
+- `header_component`, 在 Mason 中, 375
+- 头文件 (Header file), 在 Mason 中, 348
+- `header()`, 105, 199
+- 请求头 (Headers), 35, 50, 165, 146, 216
