@@ -1,0 +1,90 @@
+
+```sh
+$ ./lpe-install.sh
+This part won't work if you're not root!
+$ ls -l /tmp/lpe-install/10
+total 388
+drwxr-xr-x   2 kwall users            1024 Jul 20 04:14 ./
+drwxr-xr-x   5 kwall users            1024 Jul 20 04:14 ../
+---x--x--x   1 kwall users            15723 Jul 20 04:14 ansi2knr.c*
+--x--x--x    1 kwall users            10045 Jul 20 04:14 chgrp.c*
+--x--x--x    1 kwall users             9522 Jul 20 04:14 chmod.c*
+---x---x---x  1 kwall   users        11121 Jul 20 04:14 chown.c*
+---x---x---x  1 kwall   users        24645 Jul 20 04:14 copy.c*
+---x---x---x  1 kwall   users         6354 Jul 20 04:14 cp-hash.c*
+---x---x---x  1 kwall   users        21121 Jul 20 04:14 cp.c*
+---x---x---x  1 kwall   users        30694 Jul 20 04:14 dd.c*
+---x---x---x  1 kwall   users        20320 Jul 20 04:14 df.c*
+.
+$ su -
+Password:
+# cd /home/kwall/projects/lpe/21/src
+# ./lpe-install.sh
+# ls -l /tmp/lpe-install
+.
+..,
+drwxr-xr-x   2 root    xfs          1024 Jul 20 04:21 xfs
+# ls -l /tmp/lpe-install/xfs
+total 1002
+-rw-r--x---   1 root    xfs          67312 Jul 20 04:21 cs.po
+-rw-r--x---   1 root    xfs          75552 Jul 20 04:21 de.po
+-rw-r--x---   1 root    xfs          74117 Jul 20 04:21 el.po
+-rw-r--x---   1 root    xfs          99148 Jul 20 04:21 es.po
+-rw-r--x---   1 root    xfs          77667 Jul 20 04:21 fr.po
+-rw-r--x---   1 root    xfs          65223 Jul 20 04:21 ko.po
+-rw-r--x---   1 root    xfs          70329 Jul 20 04:21 nl.po
+-rw-r--x---   1 root    xfs          67108 Jul 20 04:21 no.po
+-rw-r--x---   1 root    xfs          67227 Jul 20 04:21 pl.po
+-rw-r--x---   1 root    xfs          70748 Jul 20 04:21 pt.po
+-rw-r--x---   1 root    xfs          68834 Jul 20 04:21 ru.po
+-rw-r--x---   1 root    xfs          68908 Jul 20 04:21 sk.po
+-rw-r--x---   1 root    xfs          65714 Jul 20 04:21 sl.po
+-rw-r--x---   1 root    xfs          66882 Jul 20 04:21 sv.po
+```
+
+这里的兴趣点在于 `install` 的行为，所以不必费心去理解 shell 语法。但请注意，第二个代码块如果非 root 用户运行将会失败。第一个代码块创建三个根目录分别为 `/tmp/`、`/tmp/lpe-install/10`、`/tmp/lpe-install/20` 和 `/tmp/lpe-install/30`，并将当前工作目录的 `src` 子目录中所有的 C 源文件复制到这三个子目录中。`-o` 选项设置用户所有权，在此例中这是冗余的，因为默认所有者就是执行脚本的用户。
+
+第二个代码块创建了一组以系统中定义的每个组命名的目录。每个目录的拥有者是默认用户，但组所有权与目录名相同。所有以 `*.po` 结尾的文件从 `src` 复制到相应的目录，再次将组所有权设置为目录名，并使文件对所有者/用户只读。其他用户或组对这些文件没有任何权限。
+
+这种对 `install` 的使用方式很奇怪，且如列表所示，文件权限也很不寻常，但该示例确实说明了 `install` 为何是一个比 `cp` 命令更好的工具，以及如何使用它。
+
+## 使用 RPM
+
+Red Hat Package Manager（RPM），尽管冠以 Red Hat 之名，却是一个强大、通用且开放的软件打包系统，被许多 Linux 发行版使用，包括（但不限于）Caldera 的 OpenLinux、S.u.S.E.，以及当然的 Red Hat。它最常用于 Linux，但其版本也可用于许多 UNIX 版本，包括 Solaris、SunOS、HP-UX、SCO、AIX 和 Digital UNIX。
+
+本章对 RPM 的讨论重点在于创建源代码软件包。如果你感兴趣的是诸如安装、升级和移除 RPM 等平淡无奇的问题，请阅读 Ed Bailey 的优秀书籍 `Maximum RPM`。将浏览器指向 `http://www.rpm.org/` 可下载最新版本的 RPM，获取完整文档、FAQ 和 HOWTO，甚至可以下载该书的电子版。
+
+> **注意**
+>
+> 强烈建议购买 `Maximum RPM`，以奖励作者和出版社免费提供的贡献。你可能会发现拥有纸质版比查看电子版更合适。
+
+### 最低要求
+
+要创建 RPM，你需要 RPM 本身、想要编译的源代码、一个 `rpmlc` 文件（用于设置一些 RPM 默认值并控制其行为），以及一个 spec 文件（用于控制软件包构建过程）。你应该已经拥有一个可用的开发环境（编译器、工具、编辑器、冷披萨、Jolt 可乐、咖啡等），并且你的源代码应能成功编译。
+
+然而，在继续之前，传达 RPM 背后的思维模式至关重要。RPM 始终从原始源代码开始。在此上下文中，*原始*（pristine）指开发者提供的、未经修补的原始代码。RPM 旨在允许你向原始源代码应用补丁。此功能使你能够使用 RPM 来为特定系统定制软件或应用错误修复。
+
+强调未修改的源代码允许你或你的用户始终从一个已知的基准开始构建，并根据特定情况进行定制。作为开发者，这为你在创建有用且可靠的软件方面提供了相当大的灵活性，同时也赋予了对软件如何编译和安装的可贵控制级别。
+
+将其概括为两条简单规则：
+
+1. 始终使用未修改的源代码开始创建 RPM。
+2. 根据需要应用补丁以适应构建环境。
+
+### 创建 RPM
+
+第一次创建 RPM 可能会有些令人望而却步。幸运的是，大部分工作在前期完成。创建 RPM 最重要的部分——生成 spec 文件——只需执行一次。在创建 spec 文件后，你大部分时间将用于做你想做的事，即维护代码。只需对 spec 文件进行少量修改即可。
+
+#### 配置 RPM
+
+`rpmrc` 文件控制 RPM 行为的几乎每个元素。你的系统管理员可能拥有一个全局 `rpmrc` 文件位于 `/etc`。如果你想要覆盖一个或多个全局设置，请创建一个包含你首选设置的 `~/.rpmrc`。但在开始之前，你可能希望查看 RPM 的当前配置。`rpm --showrc` 可以实现这一点。
+
+![](img/be588b36b489136ce784030a08a1d3d4_498_0.png)
+
+## 示例
+
+1. 这是 Red Hat 6.0 上 RPM 版本 3.0.2 的默认配置：
+
+![](img/be588b36b489136ce784030a08a1d3d4_498_1.png)
+
+### 输出
