@@ -1,0 +1,5 @@
+Figure 5-34 shows a sample output of the iostat command. The output of iostat is for each device, which when collated will give the I/O detail for each rank of the storage subsystem. The number of I/O operations (IOPS) corresponds to r/s and w/s. The amount of data transfer corresponds to rkB/s and wkB/s. The average response time corresponds to await and svctm. If there is a big difference between await and svctm, there is a lot of time spent in the device driver queue and channel is busy. If the svctm value is high, there is a bottleneck at the storage subsystem (the storage server) side. If the value of avgqu-sz is high, it means that there are many I/O operations happening and the waiting time is high as well.
+
+![](bbox=[0.22, 0.32, 0.8, 0.82])
+
+Figure 5-34 Investigating the disk bottlenecks by using iostat

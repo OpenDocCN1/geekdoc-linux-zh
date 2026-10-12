@@ -1,0 +1,216 @@
+
+| 统计时间 | 输出格式 | 行数 |
+|---|---|---|
+| array | `<name> "=<Xn> <区间总和> <name> "> <Xm> <区间总和>` | 由 base_interval, scale, range_min, range_max 确定的区间数量 |
+| history (mode=increments, mode=products) | `<name> <时间戳> <总和>` | <= entries_max |
+| history (mode=range) | `<name> <时间戳> <总和> <最小值> <平均值> <最大值>` | <= entries_max |
+| raw | `<name> <时间戳> <序列号> <X> <Y>` | <= entries_max |
+
+使用 SCSI 时延迟的分解（即数据从一个点移动到另一个点所需的最短时间）可以在图 3-3 中看到。
+
+## zFCP 统计
+
+## 可获取的 SCSI 延迟分解
+
+![](img/f332344337ca8bf6846cb313a66ee0b3_93_0.png)
+
+图 3-3 SCSI 延迟分解
+
+SCSI 延迟统计的示例可以在示例 3-24 中看到。
+
+## 示例 3-24 SCSI 延迟统计示例
+
+```text
+cat /proc/statistics/zfcp-0.3c00-0x5005076300c20b8e-0x5500000000000000/data
+request_sizes_scsi_write >4096 339
+request_sizes_scsi_read <=0 0
+request_sizes_scsi_read <=512 0
+request_sizes_scsi_read <=1024 0
+request_sizes_scsi_read <=1536 0
+request_sizes_scsi_read <=2048 0
+request_sizes_scsi_read <=2560 0
+request_sizes_scsi_read <=3072 0
+request_sizes_scsi_read <=3584 0
+request_sizes_scsi_read <=4096 16259
+request_sizes_scsi_read >4096 0
+request_sizes_scsi_nodata <=0 0
+request_sizes_scsi_nodata <=512 0
+request_sizes_scsi_nodata <=1024 0
+:
+:
+:
+request_sizes_scsi_write 137
+request_sizes_scsi_read 14308
+request_sizes_scsi_nodata 0
+request_sizes_scsi_nofit 0
+request_sizes_scsi_nomen 0
+request_sizes_timedout_write 0
+request_sizes_timedout_read 0
+request_sizes_timedout_nodata 0
+latencies_scsi_write 137
+latencies_scsi_read 14308
+latencies_scsi_nodata 0
+pending_scsi_write 137
+pending_scsi_read 14309
+occurrence_erp 0
+```
+
+### 3.1.12 信息收集工具摘要
+
+为了方便起见，我们提供了一份摘要，列出了您可以在 Linux 环境中使用的用于收集信息的工具（表 3-2）。
+
+表 3-2 Linux 信息收集工具摘要
+
+| 工具 | 描述 | CPU | 内存 | 磁盘 | 网络 |
+|---|---|---|---|---|---|
+| vmstat | 可以在指定时间间隔内获取资源利用率。 | X | X | X | |
+| mpstat | 可以在指定时间间隔内获取 CPU 利用率。 | X | | | |
+| sar | 可以在指定时间间隔内获取资源利用率。 | X | X | X | X |
+| top | 报告每个进程的 CPU 和内存利用率。 | X | X | | |
+| ps | 报告进程信息、状态和资源利用率。 | X | X | | |
+| free | 报告内存和交换空间利用率。 | X | X | | |
+| ipcs | 报告共享内存、信号量和消息队列的利用率。 | | X | | |
+| iostat | 提供设备 I/O 活动的信息。 | X | | X | |
+| netstat | 报告网络连接和统计信息。 | | | | X |
+| OProfile | 报告已执行函数的统计信息。 | X | | | |
+| DASD 统计 | 提供 DASD 设备的 I/O 统计信息。 | | | X | |
+| zFCP 统计 | 提供每个 FCP LUN 的 I/O 统计信息。 | | | X | |
+
+### 3.2 转储和跟踪
+
+当发生意外系统错误时，系统转储命令会将选定的内核结构复制到转储文件或设备中。转储设备可以动态配置，这意味着可以使用磁带或 DASD 设备来接收系统转储。
+
+系统内核转储包含运行系统的所有重要结构，例如进程表、内核的全局内存段以及每个进程的数据和堆栈段。当我们检查映射到这些结构的系统数据时，我们可以获得有关内核的有价值信息，这些信息可以解释为什么调用转储。此外，转储技术只能在给定时间点获取内核结构的快照。
+
+另一方面，通过跟踪机制，我们可以动态记录系统调用和其他基于应用程序的问题。
+
+#### 3.2.1 何时使用转储
+
+当应用程序失败并停止执行，或者系统因内核恐慌而崩溃时，我们建议进行转储，因为通过转储，我们可以记录并分析系统出现问题时的执行和内存快照。参见图 3-4。
+
+![](img/f332344337ca8bf6846cb313a66ee0b3_96_0.png)
+
+图 3-4 何时使用转储的示例
+
+#### 3.2.2 何时应运行跟踪
+
+与第 81 页的图 3-4 不同，存在应用程序仍在执行但无响应的情况。在这种情况下，我们建议使用跟踪功能，而不是转储。
+
+![](img/f332344337ca8bf6846cb313a66ee0b3_97_0.png)
+
+*图 3-5 何时使用跟踪功能的示例*
+
+如果我们使用转储，那将只是一个快照。因此，需要在各个执行点使用一系列转储。相反，跟踪功能可以为我们提供关于系统调用和信号跟踪到标准错误设备的信息。
+
+#### 3.2.3 独立转储
+
+独立转储用于收集整个系统的诊断信息。获取独立转储后，系统无法恢复正常处理——需要 IPL。独立转储在调查系统挂起、内核内存和系统调用状态时非常有用。
+
+![](img/f332344337ca8bf6846cb313a66ee0b3_98_0.png)
+
+图 3-6 独立转储
+
+s390-tools 包中随 zipl 包提供了三个独立转储工具：
+
+-   用于 DASD 卷上转储的 DASD 转储工具
+-   用于（通道连接的）磁带设备上转储的磁带转储工具
+-   用于 SCSI 磁盘上转储的 SCSI 磁盘转储工具
+
+要创建独立转储：
+
+1.  创建用于转储内存的转储设备。我们建议您分配大约内存大小加 10 MB 左右空间作为设备存储。您可以在 /etc 目录中的 zipl.conf 文件中定义转储设备。
+2.  要启动转储，我们必须 IPL 转储设备。这是破坏性的。也就是说，正在运行的 Linux 操作系统将被终止。
+3.  重新启动原始 Linux 映像并挂载已创建的转储 DASD。
+
+#### 3.2.4 转储验证
+
+在转储设备挂载到系统上后，我们需要检查转储以识别问题，也称为转储设备的后处理。在 Linux 中，我们有工具来验证转储设备或文件。
+
+##### zgetdump
+
+使用 zgetdump 工具读取给定的转储设备并将其内容写入标准输出或重定向到文件。
+
+*示例 3-25 使用 zgetdump 将转储映像转换为文件*
+
+```bash
+zgetdump /dev/dasdXX > dump.X
+```
+
+##### lcrash
+
+也可以使用 lcrash——Linux 转储分析器来验证和检查转储。
+
+*示例 3-26 使用 lcrash 验证转储文件*
+
+```bash
+lcrash -i -d /dev/dasdXX
+```
+
+要将转储从 DASD 复制到文件系统，请调用带有 -s（保存转储）和 -d（转储设备）选项的 lcrash。-s 选项指定结果转储文件（dumpfile）的目标目录。
+
+*示例 3-27 使用 lcrash 将转储映像转换为文件*
+
+```bash
+lcrash -d /dev/dasdx1 -s dumpfile
+```
+
+> **注意：** 在验证转储映像期间，工具应显示消息 Dump End Marker found: this dump is valid. 这意味着该转储是一个有效的转储，可用于进一步处理。
+
+##### 使用 lcrash 从独立转储创建报告
+
+如果系统中未找到 lcrash，请安装 lkcdutils。
+
+要为转储文件创建报告，请执行示例 3-28 中所示的命令。
+
+###### 示例 3-28 要发出的命令
+
+```bash
+lcrash -r $System.map dumplin Kerntypes > report.txt
+```
+
+从报告中，我们可以获取以下信息：
+
+-   转储摘要
+-   日志缓冲区
+-   任务列表
+-   分配给 CPU 的进程信息
+
+图 3-7 显示了一个 lcrash 转储摘要。
+
+```text
+LCRASH CORE FILE REPORT
+====================
+GENERATED ON:
+  Mon Mar 1 18:11:54 2008
+
+TIME OF CRASH:
+  Mon Mar 1 15:34:02 2008
+
+PANIC STRING:
+  zSeries-dump (CPUID = ff08212320640000)
+
+MAP:
+/boot/System.map-2.6.5-7.282-s390x
+DUMP:
+  dump
+KERN TYPES:
+/boot/Kerntypes-2.6.5-7.282-s390x
+
+====================
+COREFILE SUMMARY
+====================
+  The system died due to a software failure.
+====================
+UTSNAME INFORMATION
+====================
+  sysname :
+  nodename :
+  release :
+  version :
+  machine : s390x
+```
+
+图 3-7 lcrash 报告示例转储摘要
+
+如图 3-7 所示，摘要表明系统因软件故障而崩溃。同样，报告包含如上列出的其他信息，这些信息对于高层次的问题确定非常有用。
+

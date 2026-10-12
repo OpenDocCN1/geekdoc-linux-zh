@@ -1,0 +1,13 @@
+where it is eligible to receive system resources. Before it is given any resources, however, the virtual machine is examined by the scheduler. The scheduler looks in the VMDBK of your virtual machine to see what resources you have used in the past. Processor, storage, and paging are some of the resources examined.
+
+If you have just logged on, there will not be much information in the VMDBK, so the scheduler thinks of you as an interactive user, also known as a class 1 user. A class 1 user is normally a CMS interactive user or a very lightly loaded guest operating system. When the scheduler determines that there is enough resource available to satisfy your needs without putting any other users in jeopardy, you will be moved to the dispatch list, where you wait in turn for your allowance of CPU time (time slice). When your turn arrives, your virtual machine is run on an available processor.
+
+The time slice comes to an end after a certain time known as the dispatcher minor time slice. If you have more work to do, you can stay in the dispatch list and get another time slice until you have finished (in which case you will be moved to the dormant list), or you will have to pay a visit to the scheduler again so that it can reassess your resource requirements before rescheduling you.
+
+The scheduler may decide, after you have visited the dispatch list a few times, that you are not really an interactive user but that you need more processing capacity. You will then be upgraded to class 2 user and allowed to stay in the dispatch list for longer intervals to see whether you then manage to finish your work.
+
+This has an additional benefit because it reduces the amount of policy decisions that the scheduler has to make to manage eligible users. A class 2 user might typically be a CMS user compiling programs, or a Linux Web server.
+
+After you have visited the dispatch list as a class 2 user several times and still not finished your work, the scheduler will upgrade you to a class 3 user and you will be allowed to stay in the dispatch list even longer to see whether you manage to finish your work. Normally, a class 3 user will be a production guest operating system.
+
+There are drawbacks to being a higher class user. For instance, if the system resources (such as paging or storage) become constrained, then the scheduler will hold higher class users in the eligible list and let lower class users run. However, there is one type of user, known as a class 0 user (it has OPTIONQUICKDSP in its directory entry or has had SET QUICKDSP issued on its behalf) who will never be held in the eligible list. Typically, this user type is only used for important servers and special user IDs.

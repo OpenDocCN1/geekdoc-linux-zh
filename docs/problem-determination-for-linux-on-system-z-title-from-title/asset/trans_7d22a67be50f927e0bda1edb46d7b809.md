@@ -1,0 +1,190 @@
+
+
+## 检查 DASD 识别状态
+
+接下来，您需要通过检查以下内容来查看 DASD 识别的状态：
+
+- 通用 I/O
+  - 检查 `lsscss` 输出。
+    - 检查是否显示了目标设备的地址。
+    - 检查是否收集了 DevType 和 CU 类型。
+- 设备驱动程序
+  - 检查 `/sys/bus/ccw/drivers/dasd-eckd` 目录。
+  - 检查目标设备的符号链接是否位于 `/sys/bus/ccw/drivers/dasd-eckd` 中。
+- 在线状态
+  - 检查 `lssdasd`。
+  - 检查 `lscss`。
+  - 检查 `/sys/bus/ccw/drivers/dasd-eckd/0.0.<address>/online`。
+
+## 检查 FCP 设备识别状态
+
+您需要检查 FCP 设备识别的状态：
+
+- System z 上的 FCP 端口
+  - 检查 `lsscss`。
+  - `Use="yes"` 表示该 FCP 端口在 System z 上处于在线状态。
+  - `/sys/bus/ccw/drivers/zfcp/0.0.xxxx/online` 含义相同。
+- 存储系统上的 FCP 端口
+  - 检查 `/sys/bus/ccw/drivers/zfcp/0.0.xxxx/` 目录。
+  - 如果存在以 WWPN 命名的目录，则表示该 FCP 端口在存储系统上处于在线状态。
+- LUN 识别
+  - 检查 `/sys/bus/ccw/drivers/zfcp/0.0.xxxx/yyy...yyy/` 目录（`yyy...yyy` 为 WWPN）。
+  - 如果存在以 LUN 号命名的目录，则表示该 LUN 已被识别。
+- SCSI 磁盘识别
+  - 检查 `lscss`。
+  - 检查 `/proc/scsi/scsi`。
+
+## 检查 OSA 识别状态
+
+您需要检查 OSA 识别的状态：
+
+- 通用 I/O
+  - 检查 `lscss`。
+- 设备驱动程序
+  - 检查 `/sys/bus/ccwgroup/drivers/qeth/*` 中与设备相关的符号链接。
+  - 检查 `/proc/qeth` 中的条目。
+- 在线状态
+  - 检查 `lscss`。
+  - 检查 `/proc/qeth` 中的状态。
+
+## 共享设备的排查
+
+在许多 Linux on System z 环境中，系统资源（CPU、内存、通道、网络）是共享的。当发生硬件故障时，所有共享该硬件的系统都会出现相同的问题。
+
+如果难以区分问题是与硬件还是软件相关，可能需要通过更改软件版本或软硬件组合进行额外的测试。
+
+- 更改软件版本。
+  - 如果更改软件或硬件版本后故障不再发生，则问题出在软件上。
+- 将相同的硬件分配给其他系统。
+  - 如果故障在其他系统上发生，则问题出在硬件上。
+  - 如果故障在其他系统上没有发生，则问题出在软件上。
+- 将不同的硬件分配给同一系统。
+  - 如果问题在其他硬件上发生，则问题出在软件上。
+  - 如果问题在其他硬件上没有发生，则问题出在硬件上。
+
+### 8.3.4 确定问题是软件还是硬件之后
+
+如果看起来软件是问题所在：
+
+- 确定问题是否位于设备驱动层。
+- 确定问题是否位于某个组件上。
+
+如果看起来硬件是问题所在：
+
+- 联系硬件支持人员。
+- 准备硬件更换的流程。
+
+如果您无法区分是软件问题还是硬件问题，请复现问题并收集信息：
+
+- 确认问题复现的步骤。
+- 在 s390dbf 及其他日志和跟踪中设置适当的调试级别。
+- 运行问题复现测试。
+- 从 dbginfo.sh 或其他工具中获取信息。
+
+## 8.4 案例研究
+
+本节提供了一些硬件问题的案例研究。
+
+### 8.4.1 内存卡
+
+内存卡问题的特征包括：
+
+- HMC 上显示内存错误消息。
+- 远程支持设施（RSF）的通知。
+- 共享同一张内存卡的某些 LPAR 中发生了检查点（Check stop）或系统挂起。
+- 环境：System z9 LPAR 上的 RHEL4 update 4。
+- 收集的信息：来自 HMC OS 消息的系统消息。
+- 分析步骤：联系硬件支持人员。
+- 结果和解决方案：硬件问题。更换内存卡。
+- 提示：如果报告了 RSF，我们可以确定故障是硬件问题。
+
+### 8.4.2 OSA
+
+OSA 问题的特征可能是：
+
+- **状态：** 网络接口伴随 qeth 错误消息断开（示例 8-11）。
+
+  ```text
+  Example 8-11 /var/log/messages
+  qeth: check on device 0.0.3600, dstat=x0, cstat=x4 <4>
+  qeth: irb: 00 c2 40 17 03 77 50 38 00 04 00 00 00 00 00 00
+  qeth: irb: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  qeth: irb: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  qeth: irb: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 15 00 5d
+  qdio : received check condition on activate queues on device 0.0.3602
+  (cs=x4, ds=x0).
+  qeth: Recovery of device 0.0.3600 started ...
+  bonding: bond1: link status definitely down for interface eth2, disabling it
+  bonding: bond1: making interface eth3 the new active one.
+  ```
+
+- **环境：** System z 上的 SLES9 SP3（与 LPAR 或 z/VM 无关）。
+- **收集的信息：** dbginfo.sh（特别是 /var/log/messages）。
+- **分析步骤**
+  - /var/log/messages 上的子通道状态显示了子通道状态（通道控制检查）。
+  - “qeth: check on device...” 中的 “cstat” 显示了子通道状态。
+  - 当发生硬件问题时，会报告通道控制检查。
+  - 联系您的硬件支持人员。
+- **结果和解决方案：** 硬件问题。更换 OSA 卡将解决问题。
+- **提示：** 设备状态或子通道代码通常提供线索，有助于区分硬件和软件问题。
+
+### 8.4.3 DASD 错误
+
+DASD 错误的特征包括：
+
+- **状态：** /var/log/messages 中的 DASD 错误消息（参见示例 8-12）。
+
+  ```text
+  Example 8-12 /var/log/messages
+  Apr 19 15:14:09 xx kernel: dasd: 0.0.0104: Interrupt fastpath failed!
+  Apr 19 15:14:09 xx kernel: dasd: 0.0.0106: Interrupt fastpath failed!
+  Apr 19 15:14:09 xx kernel: dasd_erp: 0.0.0104: default ERP called (254 retries left)
+  Apr 19 15:14:09 xx kernel: dasd_erp: 0.0.0106: default ERP called (254 retries left)
+  Apr 19 15:14:09 xx kernel: dasd_erp: 0.0.0100: default ERP called (255 retries left)
+  Apr 19 15:14:09 xx kernel: dasd_erp: 0.0.0103: default ERP called (255 retries left)
+  Apr 19 15:14:10 xx kernel: dasd: 0.0.010c: Interrupt fastpath failed!
+  ```
+
+- **环境：** System z 上的 SLES9 SP3（与 LPAR 或 z/VM 无关）。
+- **收集的信息：** dbginfo.sh（特别是 /var/log/messages）。
+- **分析步骤**
+  - 搜索错误消息。当执行 I/O 请求时，消息会报告错误。
+  - 错误消息显示在同一路径上的某个设备地址。与硬件支持人员确认这是硬件错误还是硬件变更。
+- **结果和解决方案：** 硬件临时错误。ESS 同时检测到了 FC 适配器的临时错误。ESS 执行了一次暖启动（大约 2 秒）。如果问题不再出现，ESS 已正常恢复。
+- **提示：** 如果错误发生在同一路径上的某个地址，则看起来像是路径错误。
+
+### 8.4.4 重启时网络接口错误
+
+重启时网络接口错误的特征包括：
+
+- **状态**
+  - 重启后 boot.msg 中显示“未找到接口”的网络接口消息（示例 8-13）。
+  - 绑定接口未配置。
+  - 共享 OSA 端口的某些 LPAR 中出现相同的现象。
+
+  ```text
+  Example 8-13 /var/log/boot.msg
+  [1A..done qeth-bus-ccw-0.0.3700 No interface found
+  [1A..failed qeth-bus-ccw-0.0.3700 No interface found
+  [1A..failed bond0
+          bond0 enslaving interfaces: eth0 eth1
+          bond0 IP address: x.xx.xx.x/24 as bonding master
+  [1A..done bond1
+          bond1 Could not get an interface for slave device
+  'qeth-bus-ccw-0.0.3700'
+          bond1 enslaving interfaces: eth2
+          bond1 IP address: x.xx.xx.x/24 as bonding master
+  ```
+
+- **环境：** System z 上的 SLES9 SP3（与 LPAR 或 z/VM 无关）。
+- **收集的信息：** dbginfo.sh。
+- **分析步骤：** 由于共享 OSA 端口的某些 LPAR 中出现相同的现象，因此看起来像是硬件问题。
+
+c. 您的硬件支持工程师确认硬件状态正常。
+d. 您从 lscss 中得知设备故障。
+"DevType";"CU Type" 是作为来自硬件的 SenseID 响应接收到的。
+原因之一是：
+- SenseID 未发送到设备。
+- SenseID 已发送，但 OSA 没有回复。
+e. 从源代码和跟踪（由支持中心）中检查设备初始化过程。当 LACP 开启时，会发送 SenseID。
+

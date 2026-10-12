@@ -1,0 +1,9 @@
+Figure 4-13 compares the network communication layer for Linux on System z with the OSI reference model. The hardware layer in the OSI reference model is made up of the HW, VM, QDIO, and QETH layers. The data link layer of the OSI model is represented by the ARP layer. Also, part of the ARP layer, along with the IP layer, makes up the network layer of OSI. The OSI transport layer is implemented as the TCP/UDP layer and, finally, the application layer in the network communication model for Linux on System z represents the session, presentation, and application layers of the OSI reference model.
+
+![](bbox=[0.27, 0.37, 0.82, 0.7])
+
+Figure 4-13 Network communication layer for Linux on System z and the OSI reference model
+
+# Problem determination flow chart
+
+While trying to narrow down a problem, it is important to analyze any information already available. Figure 4-14 on page 126 shows a high-level flow chart demonstrating how this can be done. This flow chart describes an approach that can be used for problem determination on the local system. Usually, when there is a problem, the first thing to try is to capture as many error logs as possible. In some cases it may happen that the error messages get overwritten. So, it is very important to try capturing the error messages as and when they are available. An examination of error messages will help us to narrow down the problem to a layer or at least to a set of layers. When a working system suddenly stops working, before jumping in and editing configuration files, it is important to investigate whether any changes were made on the system before the problem occurred. In most cases we will notice that there was a change made and that it resulted in an error. If the problem is occurring on a newly installed system, it is worth checking all the configurations for any mistake. Sometimes changes made at the network
