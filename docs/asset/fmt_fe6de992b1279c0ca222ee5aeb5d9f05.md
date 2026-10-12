@@ -1,0 +1,149 @@
+
+- 源代码 (source code)
+  - 兼容性 (compatibility), 340
+  - 编译 (compiling), 347-349
+- 磁盘空间 (space hard drives)
+  - `df` 命令, 117
+  - 隐藏 (hidden), 123
+  - TeX 实例, 815
+  - 文件名中的空格 (spaces in filenames), 20
+- 垃圾邮件 (spam)
+  - 邮件过滤器 (email filters), 281-282
+  - 减少 (reducing), 280-281
+  - 网站 (Web sites), 280
+- 进程创建 (spawning processes), 538
+- 特殊字符 (special characters), 24-27
+- 速度 (PPP 连接), 260
+- 拼写检查 (spell checking)
+  - 邮件消息 (email messages), 273
+  - `ispell` 命令, 78-79
+  - 打印机文件池化打印 (spooling files to printer), 92-93
+  - st 模块, 130
+  - 标准错误输出 (standard error output), 26
+  - 标准输出重定向 (standard output redirection), 24
+- StarOffice, 66, 595
+- 启动 (starting)。另见 引导 (booting)
+  - 桌面中的客户端 (clients in desktop), 199
+  - 守护进程 (demons), 441
+  - Enlightenment, 194
+  - GIMP, 217
+  - mc 客户端, 533
+  - GNOME, 194
+  - KDE, 194
+  - kkpage, 493
+  - kppf, 255
+  - ksvs 工具 (KDE), 446
+  - linuxconf 工具, 109
+  - 多个 XI 会话, 172
+- Netscape
+  - 命令行启动 (from command line), 238
+  - Communicator, 303
+  - Messenger, 275
+- 网络服务 (network services), 447
+- ttsysv 工具 (Red Hat Linux), 448
+- 父进程 (parent processes), 257-258
+- PPP 进程 (init 进程), 538
+- 运行级别服务 (run level services), 446-448
+- 脚本编辑 (scripts, editing), 438-441
+- tksys 工具 (X11), 443
+- `top` 命令, 541
+- usercfg 代码, 303-364
+- Window Maker, 195
+- 窗口管理器 (window managers), 193
+- X11, 170, 171-176
+  - 剪贴板客户端 (clipboard client), 207
+  - xculent 客户端, 206
+  - xrpm 客户端, 496
+  - xwud 客户端, 209
+  - `startkde` 命令, 194
+  - `startx` 命令, 171, 245
+  - startx 脚本, 171
+- 语句 (statements), 536
+  - else, 333
+  - for, 336
+  - 文件测试表达式 (file-testing expressions), 335
+  - 整数表达式 (integer expressions), 334
+  - 字符串表达式 (string expressions), 334
+  - 进程进程 (test processes), 333
+- Null, 636
+- while, 336
+- 传真状态 (status faxes), 164
+- stderr, 639
+- stdin, 639
+- stdout, 639
+- 步值 (step values command-settings), 398
+- 粘滞位 (sticky bits), 639
+- 内存节省设置 (GIMP), 223
+- 停止 (stopping)
+  - 网络服务, 447
+  - 运行级别服务, 446-448
+- Sony VAIO 计算机, 595
+- 目录列表排序 (sorting directory lists), 38
+- 音频 (sound), 588
+- 声卡 (sound cards)
+  - 配置 (configuring), 240
+  - knedes, 532-534, 560-562, 570
+  - 即插即用 (Plug and Play), 532
+  - 设备地址 (device addresses), 533
+  - 驱动程序选择 (drivers, selecting), 532-533
+  - 音乐 (music), 240
+- SoundBlaster, 533
+- SoundBlaster AWE 声卡, 595
+- 存储 (storing)
+  - 设备 (storage devices), 116-117
+  - 系统备份 (system backups), 478
+- 流编辑器 (stream editor), 275
+- 触摸板配置 (Synaptics touchpad configuration), 149
+- 同步选项 (sync option mount), 461
+- System V, 434
+- 系统 (systems)
+  - 备份 (backups), 476, 517
+  - 运行级别 (run levels), 432
+  - 创建 (creating), 434-435
+  - 编辑 (editing), 434-435
+  - 停止 (Halt), 432
+  - init 进程, 434
+  - 多用户网络 (Multi-User Networking), 433
+  - 重启 (Reboot), 433
+  - 单用户模式 (Single User Mode), 432
+  - XDM Mode, 333
+  - 流 (streams), 639
+  - 字符串表达式 (string expressions), 334
+  - 字符串 (strings), 60-62, 327
+- 语法 (syntax)
+  - `crontab` 命令, 396
+  - `/etc/exports` 文件, 426
+  - if 语句, 333
+  - `kill` 命令, 543
+  - 验证软件包 (verifying packages), 492
+  - `while` 语句, 336
+  - `string` 命令, 61
+  - `su` 命令, 11, 515
+  - 子网 (subnets), 640
+  - 子 shell (subshells), 640
+  - `fetchmail` 选项 (soft fetchmail), 268
+  - `mail` 程序 (soft mail), 271
+  - `top` 命令选项 (soft top), 541
+  - 替换变量 (substitution variables), 641
+  - 系统管理员 (sysadmin), 640
+- syslog 守护进程 (syslog daemon), 525
+- 系统备份 (system backups)
+  - 全量 (full), 519-520
+  - 增量 (incremental), 519-520
+  - 可移动式驱动器 (removable drives), 518-519
+  - 系统文件 (system files), 159
+  - SUID (用户 ID), 640
+  - suid 挂载点 (mountpoint), 461
+  - `tail` 命令, 616
+  - 磁带驱动 (tape drives), 132
+  - 磁带控制器 (tape controller), 130-131
+  - (磁带驱动) 留存磁带 (retention tapes), 132
+  - 回卷磁带 (rewinding tapes), 130-132, 518-519
+  - 符号链接 (symbolic links), 131
+  - 清理磁带 (cleaning tapes), 525
+  - 设备类型选项 (device type options), 513
+  - 菜单 (menus), 514-515
+  - 格式化磁带 (preformatted tapes), 516
+  - 标记磁带 (Test Mark Tape), 516
+  - 站点存档 (site archive), 357
+  - 超块 (superblocks), 损坏的 475
