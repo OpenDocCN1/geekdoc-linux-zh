@@ -1,0 +1,193 @@
+
+### 索引条目
+
+- FIB 数据结构, 370–373
+- FIB 内部接口, 367–369
+- FIB 规则, 374–379
+- FIB 哈希, 393–395
+- FIB 表, 369
+- IPv4 路由, 555
+- 慢路径, 281
+- `socket` 桶, 265
+- TCP 接收, 481–484
+
+- 队列规则
+  - 数据包传输, 100–103
+  - 队列, 186–201
+  - 接收数据包, 95–100
+  - `ip` 数据包处理, 198
+  - 在网络设备配置中, 85
+  - 输出数据包处理, 198
+  - 队列传输数据包, 191–192
+  - 队列接收器，数据包, 193–200
+  - `netif_rx_skb`, 198–203
+  - 覆盖, 193–195
+  - `process_block`, 196–198
+
+- IGMP, 497
+- 请求, 597
+- 请求 (Request for Comments) 预留媒介, 260
+- 资源映射分配, 242–245
+- 删除函数, 82
+- 重传超时 (RTO), 值, 507–508
+- 附带光盘上的 RFCs, 3
+- RFC 列表, 603–604
+- TCP/IP 标准, 38
+- 往返时间 (RTT), TCP, 333
+- 路由缓存, 354–369
+  - 数据结构, 365–361
+- 使用流规则搜索, 351–357
+- RA (路由器公告), 395
+- 速率限制, 238
+- 原始 `socket`, 144
+- `rcu_read` 函数, 157
+- `RCV_SOCK_TICKET`, 115
+- 接收处理程序函数, 474
+- 设备, 435–436
+- 接收状态处理, TCP, 486–495
+- 接收队列, 481–484
+- IP 中接收数据包, 450–457
+- `rcv_call` `socket`, 141
+- `rcv_from_call`, `socket` API, 140
+- `rcm_call`, `socket` API, 140
+- `rcvmsg` 函数, 277
+- 在路由决策中 UDP, 351–352
+- 工具函数, 365–369
+- 路由哈希表, 364
+- `route` (程序), 381
+- 处理 IGMP 请求, 447–448
+- IPv6, 556
+- 输入数据包, 395–407
+- 内部包, 210–205
+- IPv4, 351
+- IPv4 与 IPv6, 355
+- IPv6 和, 598–601
+- 输出数据包, 407–419
+- `sock` 表, 146–159
+- ACKS, 332
+- 通信历史, 66
+- Linux 内核, 4, 181
+- RFCs, 57, 603–604
+- 路由配置, 351
+- `register_netdevice` 函数, 83–86
+- `register_netdevice` 函数, 84–86
+- 路由策略数据库, de, 592
+- (路由策略数据库)
+- 路由表，组件, 352
+- `rt_bind_route_function`, 363
+- `rt_cache_function`, 367
+- `rt_expire_function`, 366
+- `rt_flush_timer`, 365
+- `rt_garbage_collect` 函数, 367
+- `rt_hash_bucket` 函数, 354–355
+- `rt_hash_code`, 357
+- 路由缓存, 354–355
+- 路由规则, 357
+- 路由输出数据包, 429
+- `rt_internal_function`, 364
+- `rt_periodic_timer`, 365
+- `rt_run_flush_function`, 368–369
+- `rt_set_function`, 364
+- `rt_info_structure`, 598
+- `rtkey` 结构, 599
+- `rt_data` 结构, 355–361
+- `rtentry` 结构, 382–383
+- `rt_mapping` 结构, 384–386
+- `netlink` `sockets` 使用, 383
+- `netlink_recv_function`, 169
+- `netlink` `socket` 注册, 169
+- `netlink` 结构, 168–169
+- 来自用户, 170
+- RTO (重传超时), 值, 507–508
+- RTT (往返时间), TCP, 333
+- FIB 规则, 374–379
+- SACK (选择性确认), TCP, 319–321
+- SAR (分段与重组), ATM, 32, 35–36
+- S (安全关联), 236
+- IO, 101
+- 范围, 358–359
+- SDLC (同步数据链路), 270
+- 和 Linux 能力, 146–147
+- TCP 接收处理程序, 477
+- TCP 接收处理, 303
+- 拷贝, 333
+- S (安全关联), 安全策略数据库 (SPD), 236
+- 分段, TCP, 260
+- 概述, 261–262
+- `sock_info` 结构和, 263–264
+- 分段组 (SAR), AT, 32–35
+- 选择性推进 (ACK), 216
+- 保护, 256
+- `send` 调用, API, 137
+- `send` 函数, API, 113
+- SHUTDOWN `socket`, 112
+- `sendsock`, API, 237
+- `sendsock` 函数, API, 140–143
+- `sent` 函数, API, 127
+- `net_device` 初始化, 77
+- 网络接口驱动, 90–95
+- 服务连接函数 (SSCF), 35
+- 服务子系统 (SCS), 225
+- 会话协议 (SIP), 54
+- 会话层, OS, 52–53
+- `ss_multicast_list` 函数, 92
+- `set`, 272–286
+- 协议, FI, 31
+- 简单互联网事务 (SIT), 655
+- 网络管理协议 (SMP), 506
+- SIP (会话建立), 765
+- SIT (简单项目事务), 655
+- `sit_init_function`, 555–566
+- `sock_add_backlog` 函数, 477
+- `sock_backlog_function`, 117
+- `sock_bufs`, 119
+- `sock_bufs_set` `buffer`, 369
+- `sock_async_function`, 490
+- `sock_append_function`, 272
+- `sock_clone_function`, 268
+- `sock_copy_buffer`, 269
+- `sock_copy_function`, 269
+- `sock_copy_and_csum_datagram_info` 函数, 454
+- `sock_cow_function`, 268
+- `sock_dequeue_function`, 272
+- `sock_dequeue_tail_function`, 272
+- `sock_frag_t` 结构, 263–264
+- `sock_get` 函数, 270
+- `sock_headroom` 函数, 270
+- `sock_create`, 271
+- `sock_tail` 函数, 271
+- `sock_pull` 函数, 271
+- `sock_push` 函数, 271
+- `sock_queue_head` 函数, 273
+- `sock_queue_init` 函数, 273
+- `sock_queue_len_init` 函数, 273
+- `sock_queue_purge` 函数, 273
+- `sock_queue_reset` 函数, 273
+- `sock_recv_datagram` 函数, 470
+- `sock_reserve` 函数, 271
+- `sock_check` 函数, 271
+- `sock_shared`, 271
+- `sock_shared_function`, 271
+- `sock_info_function`, 271
+- `sock_tail_function`, 271
+- `sock_trink_function`, 272
+- `sock_buffer_function`, 272
+
+### 624 索引
+
+- 分配与释放函数, 266–268
+- 分配与列表, 264–265
+- 克隆, 267
+- 复制与拷贝, 269–278
+- 定义, 113
+- 碎片与分段, 260–264
+- `netlink`, 144–145, 165–168
+- 视图, 110–112
+- 数据包, 144
+- 端口对比, 134
+- 协议函数. 见 协议族 (protocol families)
+- 斯特罗格交换机 (Strowger Switch), 10
+- `struct nic`, 95
+- `struct proto`, 281, 282
+- 管理信息结构
+- 管理列表, 272–273
