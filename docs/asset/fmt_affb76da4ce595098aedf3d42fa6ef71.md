@@ -1,0 +1,98 @@
+
+- "amphibolite and granulite facies" -> 角闪岩相和麻粒岩相
+- "METAMORPHISM" -> 变质作用
+- "Earth's upper mantle" -> 地球上地幔
+- "Mg-, Ca-poor pyroxenes" -> 贫镁、钙辉石
+- "olivine" -> 橄榄石
+- "spinel" -> 尖晶石
+- "stishovite" -> 斯石英
+- "ilmenite structure" -> 钛铁矿结构
+- "garnet structure" -> 石榴石结构
+- "pyroxene depending on temperature" -> 辉石（取决于温度）
+- "360–420 mi (600–700 km)" -> 360–420 英里（600–700 公里）
+- "MgSiO3 perovskite structure" -> MgSiO3 钙钛矿结构
+- "ASTHENOOSPHERE; EARTH INTERIOR; GARNET; ILMENITE; OLIVINE; PEROVSKITE; SILICATE MINERALS; SPINEL; STISHOVITE" -> 软流圈；地球内部；石榴石；钛铁矿；橄榄石；钙钛矿；硅酸盐矿物；尖晶石；斯石英
+
+## 辉石岩
+- "## Pyroxenite" -> ## 辉石岩
+- "heavy, dark-colored, phaneritic" -> 重质、暗色、显晶质
+- "visibly crystalline" -> 肉眼可见结晶的
+- "pyroxene with smaller amounts of olivine or hornblende" -> 辉石，含少量橄榄石或角闪石
+- "anorthosite" -> 苏长岩
+- "banded gabbro bodies" -> 条带状辉长岩体
+- "chromium" -> 铬
+- "clinopyroxene" -> 斜辉石
+- "magmatic origin" -> 岩浆成因
+- "limestone" -> 石灰岩
+- "metamorphism and metasomatism" -> 变质作用和交代作用
+- "GABBRO; IGNEOUS ROCKS; PERIDOTITE; PYROXENE" -> 辉长岩；火成岩；辉石岩；辉石
+
+## 辉石族矿物
+- "## Pyroxenoid" -> ## 辉石族矿物（或 假辉石/斜辉石族？Standard term is Pyroxenoid 辉石状硅酸盐或 假辉石. I will use 辉石族矿物 or 类似辉石矿物. Let's stick to 辉石状矿物.)
+- "physical properties resemble those of pyroxene" -> 物理性质类似辉石
+- "two-tetrahedral periodicity" -> 二四面体周期性
+- "single silicate chains" -> 单链硅酸盐
+- "repeat periodicities ranging from three to nine" -> 重复周期性从3到9
+- "geometric representation" -> 几何表示
+- "basic building block" -> 基本构建模块
+- "corner of a tetrahedron" -> 四面体的顶点
+- "shared between two Si4+ cations" -> 在两个 Si4+ 阳离子之间共享
+- "divalent cations" -> 二价阳离子
+- "coordination polyhedra" -> 配位多面体
+- "PYROXENE; SILICATE MINERALS" -> 辉石；硅酸盐矿物
+- "[C.A.C.]" -> [C.A.C.]
+- "![](img/...)" -> keep
+- "composite structural units" -> 复合结构单元
+- "strips of octahedra" -> 八面体条带
+- "sharing of polyhedral edges" -> 多面体棱共享
+- "triclinic" -> 三斜晶系
+- "space-group symmetry" -> 空间群对称性
+- "stacking" -> 堆叠
+- "nanometer" -> 纳米
+- "CRYSTAL STRUCTURE" -> 晶体结构
+- "anhydrous" -> 无水
+- "hydrous" -> 含水
+- "inversely proportional to mean divalent cation size" -> 与平均二价阳离子尺寸成反比
+- "hydrogen-bonded" -> 氢键结合
+- "sanctoraitite" -> 圣克拉斯石
+- "hydroxyl (OH)" -> 羟基（OH）
+- "water molecule" -> 水分子
+- "[C.W.H.B.]" -> [C.W.H.B.]
+
+## 磁黄铁矿
+- "## Pyrrhotite" -> ## 磁黄铁矿
+- "Fe_{1-x}S" -> keep
+- "Eskombrilite" -> 硒磁黄铁矿
+- "Fe_{1-x}Se" -> keep
+- "selenium analog" -> 硒类似物
+- "ferromagnetic" -> 铁磁性
+- "paramagnetic" -> 顺磁性
+- "vacancy disorder" -> 空位无序
+- "rounded grains to large masses" -> 圆粒至大块
+- "tabular pseudohexagonal crystals and globules" -> 板状假六方晶体和球粒
+- "brownish bronze-yellow" -> 棕黄色
+- "dark grayish-black streaks" -> 深灰黑色条痕
+- "specific gravity" -> 比重
+- "Fe3S4" -> keep
+- "basic igneous rocks" -> 基性火成岩
+- "late-stage fractional differentate" -> 晚期分异结晶产物
+- "norites and gabbros" -> 煌斑岩（注意：Norite is 二辉岩/诺理岩）and 辉长岩
+- "ore of iron" -> 铁矿石
+- "magnetite and chromite" -> 磁铁矿和铬铁矿
+- "contact metamorphic marbles" -> 接触变质大理岩
+- "sulfides and sulfosalts" -> 硫化物和硫盐
+- "[P.B.M.]" -> [P.B.M.]
+
+## 吡咯
+- "## Pyrrole" -> ## 吡咯
+- "doubly unsaturated five-membered ring" -> 双不饱和五元环
+- "nitrogen occupies one of the ring positions" -> 氮占据其中一个环位置
+- "Pyrrole (1)" -> 吡咯（1）
+- "chlorophyll" -> 叶绿素
+- "hemoglobin" -> 血红蛋白
+- "indigo" -> 靛蓝
+- "Tetrahydropyrrole, or pyrrolidine (2)" -> 四氢吡咯，或吡咯烷（2）
+- "proline and hydroxyproline" -> 脯氨酸和羟脯氨酸
+- "HETEROCYCLIC COMPOUNDS; INDOLE; PYRRUBIN" -> 杂环化合物；吲哚；胆红素
+- "![](img/...)" -> keep
+- "darkens and resinsifies on standing in air" -> 在空气中放置时会变黑并树脂化
