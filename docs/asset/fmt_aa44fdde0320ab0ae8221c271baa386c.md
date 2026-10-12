@@ -1,0 +1,110 @@
+
+### F.6.1 关于 CVU 网格验证命令选项
+
+导航到升级阶段（即 `runcluvfy.sh` 命令所在阶段），运行命令 `runcluvfy.sh stage -pre crsinint -upgrade` 以检查你的 Oracle Clusterware 安装升级的就绪性。带有 `-pre crsinint -upgrade` 标志运行 `runcluvfy.sh` 会执行系统检查，以确认集群是否处于从现有集群升级的正确状态。
+
+该命令使用以下语法，变量内容用斜体表示：
+
+```
+runcluvfy.sh -pre crsinint -upgrade [-n nodelist list] [-rolling] -src_crshome src_Gridhome -dest_crsshome dest_Gridhome -dest_version dest_version [-fixup (fixupdir path)] [-verbose]
+```
+
+选项如下：
+
+- `-nodelist`
+`-n` 标志指示集群成员节点，即你想要运行升级前验证的非域限定节点名称的逗号分隔列表。如果你不在验证命令中没有添加 `-n` 标志，则将对集群中的所有节点进行验证。如果在运行 `runcluvfy.sh` 的节点上集群软件处于关闭状态，则必须添加 `-n` 标志。
+- `-rolling`
+使用此标志验证滚动升级的就绪性。
+
+## 从早期版本执行滚动升级
+
+- `src_crshome src_Gridhome`
+使用此标志指示你想要升级的现有 Oracle Cluster 或 Grid home 的位置，其中 `src_Gridhome` 是 home 的路径。
+- `-dest_crsshome dest_Gridhome`
+使用此标志指示升级的位置，其中 `dest_Gridhome` 是 home 的路径。
+- `-dest_version dest_version`
+使用此标志指示升级的发行版本号，其中 `dest_version` 是版本号。
+- `[-fixup (fixupdir path)]`
+使用此标志指示修复目录的路径。
+- `-verbose`
+使用此标志产生详细输出。
+
+### F.6.2 验证 Oracle 集群更新的就绪性
+
+导航到升级阶段（即 `runcluvfy.sh` 命令所在阶段），运行命令 `runcluvfy.sh stage -pre crsinint -upgrade` 以检查你的 Oracle Clusterware 安装升级的就绪性。带有 `-pre crsinint -upgrade` 标志运行 `runcluvfy.sh` 会执行系统检查，以确认集群是否处于从现有集群升级的正确状态。
+
+该命令使用以下语法，变量内容用斜体表示：
+
+```
+runcluvfy.sh -pre crsinint -upgrade [-n nodelist list] [-rolling] -src_crshome src_Gridhome -dest_crsshome dest_Gridhome -dest_version dest_version [-fixup (fixupdir path)] [-verbose]
+```
+
+选项：
+
+- `-nodelist`
+`-n` 标志指示集群成员节点，即你想要运行升级前验证的非域限定节点名称的逗号分隔列表。如果你不在验证命令中没有添加 `-n` 标志，则将对集群中的所有节点进行验证。如果在运行 `runcluvfy.sh` 的节点上集群软件处于关闭状态，则必须添加 `-n` 标志。
+- `-rolling`
+使用此标志验证滚动升级的就绪性。
+
+### F.6.3 关于 CVU 网格验证命令选项
+
+导航到升级阶段（即 `runcluvfy.sh` 命令所在阶段），运行命令 `runcluvfy.sh stage -pre crsinint -upgrade` 以检查你的 Oracle Clusterware 安装升级的就绪性。带有 `-pre crsinint -upgrade` 标志运行 `runcluvfy.sh` 会执行系统检查，以确认集群是否处于从现有集群升级的正确状态。
+
+该命令使用以下语法，变量内容用斜体表示：
+
+```
+runcluvfy.sh -pre crsinint -upgrade [-n nodelist list] [-rolling] -src_crshome src_Gridhome -dest_crsshome dest_Gridhome -dest_version dest_version [-fixup (fixupdir path)] [-verbose]
+```
+
+选项：
+
+- `-nodelist`
+`-n` 标志指示集群成员节点，即你想要运行升级前验证的非域限定节点名称的逗号分隔列表。如果你不在验证命令中没有添加 `-n` 标志，则将对集群中的所有节点进行验证。如果在运行 `runcluvfy.sh` 的节点上集群软件处于关闭状态，则必须添加 `-n` 标志。
+- `-rolling`
+使用此标志验证滚动升级的就绪性。
+
+## F.5 准备现有 Oracle 集群安装
+
+如果你有现有的 Oracle 集群安装，则通过执行离地升级（out-of-place upgrade）来升级现有集群。你无法执行原地升级（in-place upgrade）。
+
+本节包含以下主题：
+
+- 升级现有 Oracle 集群安装前完成的检查
+- 运行 Oracle RACcheck 升级就绪评估
+
+### F.5.1 升级现有 Oracle 集群安装前完成的检查
+
+在开始升级之前完成以下任务：
+
+- 1. 针对每个节点，使用集群验证工具（Cluster Verification Utility）确保你已完成安装前的准备步骤。它可以生成修复脚本（Fixup scripts）来帮助你准备服务器。此外，安装程序将帮助你确保满足必要的先决条件。
+
+确保你拥有安装期间所需的各种，包括：
+
+- Oracle Cluster 的 Oracle 基础位置（base location）
+- 与你现有 Oracle Cluster 路径不同的 Grid Infrastructure home 路径
+- 一个 SCAN 扫描地址
+- 用于授予 Oracle ASM 数据文件访问权限的特权用户组（ASM 的 OSDBA 组）、用于授予 Oracle ASM 实例管理权限的组（OSASM 实例），以及用于授予 Oracle ASM 实例一组管理权限的组（ASM 的 OSOPER）
+- root 用户权限，以便在安装期间以 root 身份运行脚本
+- 2. 对于运行安装的安装所有者，如果你为现有安装设置了环境变量，请取消环境变量 `$ORACLE_HOME` 和 `$ORACLE_SID`，因为这些环境变量在升级期间会持续使用。例如：
+
+```
+$ORACLE_BASE
+$ORACLE_HOME
+$ORACLE_SID
+```
+
+另参阅：章节 F2，“取消 Oracle 环境变量”
+
+### F.5.2 运行 RACCheck 升级就绪评估
+
+RACCheck（Oracle RAC 配置审计工具）升级就绪评估可以为升级到 Oracle Infrastructure 11.2.0.3、11.2.0.4 和 12.1.0.1 获取自动化的针对升级的健康检查。你可以运行 RACCheck 升级就绪评估工具，并自动化许多手动的升级前和升级后检查。
+
+Oracle 建议从 My Oracle Support 下载并运行最新版本的 RACcheck。有关下载、配置和运行 RACcheck 配置审计工具的信息，请参阅 My Oracle Support 备注 1457357.1，该 URL 如下：
+
+`https://support.oracle.com/csp/main/article?cmd=showtype=NOTID&id=1457357.1`
+
+## F.6 使用 CVU 验证 Oracle Clusterware 更新的就绪性
+
+查看本节内容以验证你的集群是否已准备好升级。
+
+### F.6.1 关于 CVU 网格验证命令选项
