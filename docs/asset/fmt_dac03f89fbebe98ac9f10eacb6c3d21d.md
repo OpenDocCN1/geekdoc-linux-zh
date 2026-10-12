@@ -1,0 +1,34 @@
+
+# 参考文献
+
+- V. V. Veeravalli, T. Basar 和 H. V. Poor，“具有执行序贯检验融合中心的去中心化序贯检测”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 39 卷，第 2 期，433–442 页，1993 年 3 月。
+- V. V. Veeravalli 和 C. W. Baum，“序贯多假设检验的渐近效率”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 41 卷，第 6 期，1994–1997 页，1995 年 11 月。
+- S. Verdu，“关于单位成本信道容量”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 36 卷，第 5 期，1019–1030 页，1990 年 9 月。
+- S. Verdu 和 T. S. Han，“信道容量的通用公式”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 40 卷，第 4 期，1147–1157 页，1994 年 7 月。
+- J. Vermorel 和 M. Mohri，“多臂赌博机算法与经验评估”，收录于 J. Ceama, R. Camacho, P. Brazdil, A. Jorge 和 L. Torgo 编辑的 *机器学习：ECML 2005*，计算机科学讲义 (Lecture Notes in Computer Science)，3720/2005，437–448 页，2005 年。
+- W. Vickrey，“反投机、拍卖与竞争性密封投标”，*金融杂志 (J. Financ.)*，第 16 卷，第 1 期，8–37 页，1961 年 3 月。
+- S. Vishwanath, N. Jindal 和 A. Goldsmith，“高斯 MIMO 广播信道的对偶性、可达速率和总和率容量”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 49 卷，第 10 期，2658–2668 页，2003 年 10 月。
+- R. Viswanathan 和 P. K. Varshney，“多传感器分布式检测：第一部分 – 基础”，*IEEE 汇刊 (Proc. IEEE)*，第 85 卷，第 1 期，54–63 页，1997 年 1 月。
+- M. Vu, N. Devroye, M. Sharif 和 V. Tarokh，“认知网络的缩放定律”，*IEEE 认知无线电导向无线网络与通信国际会议论文集* (CrownCom)，佛罗里达州奥兰多，2007 年 7 月 31 日至 8 月 3 日，第 2–8 页。
+- A. Wald，“统计假设的序贯检验”，*数学统计年刊 (Ann. Math. Stat.)*，第 16 卷，第 2 期，117–186 页，1945 年 6 月。
+- A. Wald 和 J. Wolfowitz，“序贯概率比检验的最优特性”，*数学统计年刊 (Ann. Math. Stat.)*，第 19 卷，第 3 期，326–339 页，1948 年。
+- B. Wang 和 K. J. R. Liu，“认知无线电网络的进展：综述”，*IEEE 信号处理专题汇刊 (IEEE J. Sel. Topics Signal Process.)*，第 5 卷，第 1 期，5–23 页，2011 年 2 月。
+- B. Wang, Y. Wu 和 K. J. R. Liu，“认知无线电网络的博弈论：概述”，*计算机网络 (Comput. Netw.)*，第 54 卷，第 14 期，2537–2561 页，2010 年 10 月。
+- C.-C. Wang, S. R. Kulkarni 和 H. V. Poor，“带侧观测的赌博机问题”，*IEEE 自动控制汇刊 (IEEE Trans. Autom. Control)*，第 50 卷，第 3 期，338–355 页，2005 年 3 月。
+- C.-C. Wang, S. R. Kulkarni 和 H. V. Poor，“赌博机问题中的任意侧观测”，*应用数学进展 – 献给 David P. Robbins 博士的特刊 (Adv. Appl. Math. — Special Issue Dedicated to Dr. David P. Robbins)*，第 34 卷，第 4 期，903–938 页，2005 年 5 月。
+- C.-J. Wang 和 W. T. Tsai，“用于可切换辐射图案的槽天线模块”，*IEEE 天线与无线传播快报 (IEEE Antennas and Wireless Propag. Lett.)*，第 4 卷，202–204 页，2005 年。
+- H. Wang, J. Lee, S. Kim 和 D. Hong，“通过频谱共享中的空间分集增强二级链路容量”，*IEEE 无线通信汇刊 (IEEE Trans. Wireless Commun.)*，第 9 卷，第 2 期，494–499 页，2010 年 2 月。
+- H. Wang, G. Noh, D. Kim, S. Kim 和 D. Hong，“认知无线电中能量检测的高级感知技术”，*通信网络杂志 (J. Commun. Netw.)*，第 12 卷，第 1 期，19–29 页，2010 年 2 月。
+- J. Wang, G. Scutari 和 D. P. Palomar，“基于博弈论的鲁棒 MIMO 认知无线电”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 59 卷，第 3 期，1183–1201 页，2011 年 3 月。
+- K. Wang 和 L. Chen，“关于非静止多臂赌博机问题中短视策略最优性的公理方法”，*IEEE 信号处理汇刊 (IEEE Trans. Signal Process.)*，第 60 卷，第 1 期，300–309 页，2012 年 1 月。
+- C. J. C. H. Watkins，《从延迟奖励中学习》，博士学位论文，剑桥大学，英国剑桥，1989 年。
+- C. J. C. H. Watkins 和 P. Dayan，“Q-学习”，*机器学习 (Mach. Learn.)*，第 8 卷，279–292 页，1992 年。
+- R. R. Weber 和 G. Weiss，“关于非静止赌博机的索引策略”，*应用概率杂志 (J. Appl. Prob.)*，第 27 卷，第 3 期，637–648 页，1990 年 9 月。
+- R. R. Weber 和 G. Weiss，“‘关于非静止赌博机的索引策略’的补遗”，*应用概率进展 (Adv. Appl. Prob.)*，第 23 卷，第 2 期，429–430 页，1991 年 6 月。
+- H. Weingarten, Y. Steinberg 和 S. Shamai，“高斯多输入多输出广播信道的容量区域”，*IEEE 信息论汇刊 (IEEE Trans. Inf. Theory)*，第 52 卷，第 9 期，3936–3964 页，2006 年 9 月。
+- T. Weiss 和 F. Jondral，“频谱池：提高频谱效率的创新策略”，*IEEE 通信杂志 (IEEE Commun. Magazine)*，第 42 卷，第 3 期，S8–14 页，2004 年 3 月。
+- J. Weitzen 和 T. J. Lowe，“1900 MHz 下对数正态阴影效应的角度和距离相关性测量及其在 PCS 系统设计中的应用”，*IEEE 车载技术汇刊 (IEEE Trans. Veh. Technol.)*，第 51 卷，第 2 期，265–273 页，2002 年 3 月。
+- P. Whittle，“获取臂的赌博机”，*概率年刊 (Ann. Probab.)*，第 9 卷，第 2 期，284–292 页，1981 年 4 月。
+- P. Whittle，“非静止赌博机：变化世界中的活动分配”，*应用概率杂志 (J. Appl. Prob.)*，第 25 卷，287–298 页，1988 年。
+- J. Wiart, P. Pajusco, A. Levy 和 J. C. Bic，“巴黎微小区宽带测量分析”，*IEEE 个人、室内和移动无线电通信国际研讨会论文集*，第 144–147 页，1995 年。
+- B. Wild 和 K. Ramchandran，“Detecting primary receivers for cognitive radio applications（用于认知无线电应用的主接收机检测）”，Proc. 1st IEEE Int. Symp. New Frontiers in Dynamic Spectrum Access Networks (DySPAN 2005)（第一届 IEEE 动态频谱接入网络新前沿国际研讨会论文集），Baltimore, MD, USA, Nov. 8–11, 2005，第 124–130 页。
