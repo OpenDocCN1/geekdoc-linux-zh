@@ -1,0 +1,45 @@
+
+## 参考文献
+
+- [44] S. Haykin，“认知无线电：受大脑启发的无线通信”，IEEE 选定通信领域汇刊，23 卷，第 2 期，201–220 页，2005 年 2 月。
+- [45] B. Horine 和 D. Turgut，“认知无线电网络的链路会合协议”，IEEE 动态频谱接入网络新前沿国际研讨会，2007 年，2007 年 4 月，第 444–447 页。
+- [46] S. H. Hsu 和 K. Chang，“一种具有可切换圆极化的新型可重构微带天线”，IEEE 天线与无线传播快报，6 卷，160–162 页，2007 年。
+- [47] G. H. Huff、J. Feng、S. Zhang 和 J. T. Bernhardt，“一种新型辐射方向图和频率可重构单匝方形螺旋微带天线”，IEEE 微波无线组件快报汇刊，13 卷，第 2 期，57–59 页，2003 年 2 月。
+- [48] IEEE 802.11，“无线局域网介质访问控制（MAC）和物理层（PHY）规范”，技术报告，2007 年 6 月。
+- [49] Ö. İleri 和 N. Mandalayam，“动态频谱接入模型：频谱争论中的工程视角”，IEEE 通讯杂志，46 卷，第 1 期，153–160 页，2008 年 1 月。
+- [50] Ö. İleri、D. Samardzija、T. Sizer 和 N. Mandayam，“通过频谱策略服务器实现需求响应定价和竞争性频谱分配”，IEEE DySPAN 会议论文集，2005 年 11 月。巴尔的摩，MD。
+- [51] X. Jing 和 D. Raychaudhuri，“认知无线电网络的全局控制平面架构”，2007 年 IEEE 国际通信会议，ICC ’07，2007 年 6 月，第 6466–6470 页。
+- [52] J. R. Kelly、E. Elrahimali、P. S. Hall、P. Gardner 和 F. Ghanam，“用于认知无线电应用的宽带和窄带组合天线”，IET 认知无线电和软件定义无线电研讨会：技术与方法，2008 年 9 月，第 1–4 页。
+- [53] M. Koumoulen、M. Berg、H. Jantunen、E. T. Salonen 和 C. Free，“平面倒 F 天线的频率调谐方法”，IEEE 天线与传播汇刊，56 卷，第 4 期，944–950 页，2008 年 4 月。
+- [54] U. Labeschnik 和 C. Liss，“地面数字视频广播（DVB-T）：一种用于固定、便携和移动使用的广播技术”，IEEE 会议论文集，94 卷，第 1 期，183–193 页，2006 年 1 月。
+- [55] T. Li、N. Mandayam 和 A. Reznik，“认知数字家庭中的资源分配框架”，2010 年 IEEE 全球电信大会，2010 年 12 月，第 1–5 页。
+- [56] T. Li、N. Mandayam 和 A. Reznik，“认知数字家庭中联合信道和 RAT 分配的分布式算法”，移动、Ad Hoc 和无线网络建模与优化国际研讨会（WiOpt），2011 年 5 月，第 213–219 页。
+- [57] P. Marshall，《认知无线电和网络性能的定量分析》，Artech House，2010 年。
+- [58] M. McHenry、E. Livisies、T. Nguyen 和 N. Majumdar，“Xg 动态频谱接入现场测试结果”，IEEE 通讯杂志，45 卷，第 6 期，51–57 页，2007 年 6 月。
+- [59] M. McHenry、D. McClokey 和 G. Lane-Roberts，“纽约市频谱占用测量 2004 年 9 月”，技术报告，2004 年 12 月。
+- [60] Z. Miliunas、I. Sekar、K. Le 和 D. Raychaudhuri，“WINLAB 网络中心认知无线电硬件平台 – WinC2R”，《移动网络与应用》，13 卷，第 5 期，2008 年 10 月。
+- [61] G. Minden、J. Evans、L. Searl 等，“用于动态频谱接入的认知无线电——无线创新的敏捷无线电”，IEEE 通讯杂志，45 卷，第 5 期，113–121 页，2007 年 5 月。
+- [62] J. Mitola 和 G. Q. Maguire，“认知无线电：让软件无线电更个性化”，IEEE 个人通信，6 卷，第 4 期，13–18 页，1999 年 8 月。
+- [63] 国家电信和信息管理局（NTIA），“FCC 频率分配表”，技术报告，2003 年，`www.ntia.doc.gov/files/ntia/publications/2003-allocchart.pdf`.
+- [64] T. Newman、S. Hasan、D. Depoy、T. Bose 和 J. Reed，“设计和部署建筑范围的认知无线电网络测试床”，IEEE 通讯杂志，48 卷，第 9 期，106–112 页，2010 年 9 月。
+- [65] S. Nikolov、R. Bairavasubramanian、C. Lugo Jr. 等，“使用 PIN 二极管的图案和频率可重构环形槽天线”，IEEE 天线与传播汇刊，54 卷，第 2 期，439–448 页，2006 年 2 月。
+- [66] FCC 工程技术办公室，“了解低功率非许可发射机的 FCC 规定”，技术报告，1993 年，`transition.fcc.gov/Bureau/Engineering_Technology/Documents/bulletins/oet63/oet63rev.pdf`.
+- [67] “ORBIT：面向下一代无线网络的开放访问研究测试床”，`www.orbit-lab.org`.
+- [68] H. Pan、J. T. Bernhard 和 V. K. Nair，“可重构单臂方形螺旋微带天线设计”，IEEE 天线技术国际研讨会 小型天线与新型超材料，6–8，2006 年，第 180–183 页。
+
+## 参考文献
+
+- [69] H. K. Pan、J. Tsai、J. Martinez、S. Golden、V. K. Nair 和 J. T. Bernhard，“多无线电平台中的可重构天线实现”，IEEE 天线与传播学会国际研讨会，2008 年，2008 年 7 月，第 1–4 页。
+- [70] C. E. Perkins，《Ad Hoc 网络》，Addison-Wesley，2001 年。
+- [71] C. Prehofer 和 C. Bettstetter，“通信网络中的自组织：原理与设计范式”，IEEE 通讯杂志，43 卷，第 7 期，78–85 页，2005 年 7 月。
+- [72] “以服务质量和移动性驱动的认知无线电系统”，`www.ict-gosmos.eu/home.html`.
+- [73] R. Rajbanshi、Q. Chen、A. M. Wyglinski、G. J. Minder 和 J. B. Evans，“认知无线电收发器的敏捷调制技术的定量比较”，IEEE 消费者通信与网络会议，2007 年，2007 年 1 月，第 1–5 页。
+- [74] R. Rajbanshi、A. M. Wyglinski 和 G. J. Minder，“认知无线电 NC-OFDM 收发器的高效实现”，认知无线电导向无线网络与通信国际会议，2006 年 6 月，第 1–5 页。
+- [75] R. Rajbanshi、A. M. Wyglinski 和 G. J. Minder，“NC-OFDM 传输的峰均功率比分析”，IEEE 车辆技术会议，2007 年 9 月，第 1351–1355 页。
+- [76] C. Raman，《干扰受限无线网络中的调度与中继》，博士论文，罗格斯大学，2010 年。
+- [77] C. Raman、R. Yates 和 N. Mandayam，“通过频谱服务器调度可变速率链路”，IEEE DySPAN 会议论文集，2005 年，巴尔的摩，MD。
+- [78] D. Raychaudhuri、N. Mandayam、J. Evans、B. Ewy、S. Seshan 和 P. Steenkiste，“CogNet——未来互联网中实验性认知无线电网络的架构基础”，MobiArch 会议论文集，2006 年。
+- [79] “Rice University WARP”，`warp.rice.edu`.
+- [80] T. Schmidl 和 D. Cox，“OFDM 的鲁棒频率和定时同步”，IEEE 通讯汇刊，45 卷，第 12 期，1613–1621 页，1997 年 12 月。
+- [81] S. Sesia、I. Toufik 和 M. Baker 编，《LTE——UMTS 长期演进》，Wiley & Sons，2009 年。
+- [82] Shared Spectrum Company，“30 MHz 至 3 GHz 无线电频段总体调查”，技术报告，2010 年 9 月。
