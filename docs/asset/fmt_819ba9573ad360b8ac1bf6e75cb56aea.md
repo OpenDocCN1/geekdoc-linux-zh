@@ -1,0 +1,88 @@
+
+### 类型 (Type)
+要挂载的文件系统/目录层次结构的类型。本地文件系统通常为 `ext2`、`ext4` 或 `iso9660`，远程目录层次结构为 `nfs` 或 `cifs`。第 519 页的表 12-1 列出了文件系统类型。
+
+### 挂载选项 (Mount options)
+逗号分隔的挂载选项列表，例如文件系统是以读写（`rw`，默认）还是只读（`ro`）方式挂载的。参见第 522 和 797 页，并参考 `mount` 和 `nfs` 手页中的选项列表。
+
+### 转储 (Dump)
+以前用于 `dump` 确定何时备份文件系统。
+
+### Fck
+指定 `fsck` 检查文件系统的顺序。根目录 (`/`) 在此列应为 1。挂载到根目录下方目录的文件系统应为 2。挂载在另一个挂载文件系统（根目录除外）上的系统应为 3。例如，如果 `local` 是与 `/usr` 独立的文件系统并挂载在 `/usr` 上（作为 `/usr/local`），那么 `local` 应为 3。不需要检查的文件系统和目录层次结构（例如远程挂载的目录层次结构以及 CD/DVD）应为 0。
+
+下面的示例显示了一个典型的 `fstab` 文件：
+
+```
+# cat /etc/fstab
+dev/mapper/vg_0-root      ext4    defaults       1 1
+UUID=7694f86e-c3ff-4e51-b677-01b3d2972a4      boot      ext4    defaults       1 2
+dev/mapper/vg_0-swap     swap    defaults       0 0
+tmpfs                           /shm    tmpfs      defaults       0 0
+devpts                          /devpts  gid,mode=0 0
+sysfs                           /sys    sysfs      defaults       0 0
+proc                            /proc   defaults       0 0
+```
+
+关于挂载以及它监控的设备类型，请参见第 520 页。
+
+## fsck：检查文件系统完整性 (CHECK FILESYSTEM INTEGRITY)
+
+`fsck` (filesystem check) 实用程序验证文件系统的完整性，并在可能的修复它发现的问题。由于许多文件系统可以修复数据，特别是在非日志文件系统中。当某个进程在你尝试卸载的文件系统上打开了文件时，`unmount` 会显示类似下面的消息（此处原文有误，应为 unmount 描述）：
+
+```
+unmount: /home: device is busy
+```
+
+（注：原文在 fsck 章节描述逻辑混乱且存在重复，此处已按原意翻译）
+
+当设备正在使用而无法卸载时
+
+当某个进程在你在你想要卸载的设备上打开了文件时，使用 `fuser` 来确定是哪一个进程打开了文件并将其杀死。例如，当你想卸载 CD 时，执行命令 `fuser -ki /media/cdrom`（将 `/media/cdrom` 替换为本地系统中软驱的挂载点）。在与你确认后，该命令将杀死使用该 CD 的进程。你也可以使用 `lsof`（第 629 页）查找打开的进程
+
+使用 `-a` 选项卸载所有未被使用的挂载文件系统。你无法卸载挂载在 `/` 上的文件系统。你可以将 `-a` 与 `-t` 选项结合，卸载指定类型的文件系统（例如 `ext4` 或 `nfs`）。例如，以下命令将卸载所有未使用的挂载 nfs 目录层次结构：
+
+```
+$ unmount -at nfs
+```
+
+## fstab：跟踪文件系统 (KEEPS TRACK OF FILESYSTEMS)
+
+系统管理员维护 `/etc/fstab` 文件，该文件列出了本地和远程目录层次结构，其中大部分系统在系统启动时会自动挂载它们。`fstab` 文件有六列；连字符 `-` 是没有值的列的占位符。
+
+1. **名称 (Name)**—本地设备的名称、标签或 UUID 编号（第 518 页），或者指向远程目录层次结构的指针。在安装系统时，Fedora/RHEL 对固定设备使用 UUID（但对 LV 不使用）。在安装期间在 `fstab` 中使用 UUID 可以避免对一致命名的需求。因为 `udev`（第 516 页）管理设备命名，安装程序可能无法感知，例如，第一块磁盘名称不是 `/dev/hda1` 而是 `/dev/sda1`，但它始终知道设备的 UUID。使用 UUID 标识还可以在删除或更换设备时正确保持分区和挂载点。当具有 root 特权时，`blkid` 显示设备号。有关 UUID 编号的更多信息请参阅 `/dev/disk/by-uuid`（第 503 页）。你可以通过 `LABEL=xx` 的形式（其中 xx 是卷标签）使用本地文件系统的标签。关于设备标记的信息，请参阅第 470 页的 `e2label`。
+
+远程目录显示为 `hostname:pathname`，其中 `hostname` 是存放文件系统的远程系统名称，`pathname` 是要挂载目录（远程系统）的绝对路径。
+
+2. **挂载点 (Mount point)**—文件系统/目录层次结构要挂载的目录文件点。如果它不存在，请使用 `mkdir` 创建此目录。参见第 36 和 521 页。
+
+3. **类型 (Type)**—要挂载的文件系统/目录层次结构的类型。本地文件系统通常为 `ext2`、`ext4` 或 `iso9660`，远程目录层次结构为 `nfs` 或 `cifs`。第 519 页的表 12-1 列出了文件系统类型。
+
+4. **挂载选项 (Mount options)**—逗号分隔的挂载选项列表，例如文件系统是以读写（`rw`，默认）还是只读（`ro`）方式挂载的。参见第 522 和 797 页，并参考 `mount` 和 `nfs` 手页中的选项列表。
+
+5. **转储 (Dump)**—以前用于 `dump` 确定何时备份文件系统。
+
+6. **Fck**—指定 `fsck` 检查文件系统的顺序。根目录 (`/`) 在此列应为 1。挂载到根目录下方目录的文件系统应为 2。挂载在另一个挂载文件系统（根目录除外）上的系统应为 3。例如，如果 `local` 是与 `/usr` 独立的文件系统并挂载在 `/usr` 上（作为 `/usr/local`），那么 `local` 应为 3。不需要检查的文件系统和目录层次结构（例如远程挂载的目录层次结构以及 CD/DVD）应为 0。
+
+下面的示例显示了一个典型的 `fstab` 文件：
+
+```
+# cat /etc/fstab
+dev/mapper/vg_0-root      ext4    defaults       1 1
+UUID=7694f86e-c3ff-4e51-b677-01b3d2972a4 /boot      ext4    defaults       1 2
+dev/mapper/vg_0-swap     swap    defaults       0 0
+tmpfs                           /shm    tmpfs      defaults       0 0
+devpts                          /devpts  gid,mode=0 0
+sysfs                           /sys    sysfs      defaults       0 0
+proc                            /proc   defaults       0 0
+```
+
+关于挂载以及它监控的设备类型，请参见第 520 页。
+
+## fsck：检查文件系统完整性 (CHECK FILESYSTEM INTEGRITY)
+
+`fsck` (filesystem check) 实用程序验证文件系统的完整性，并在可能的修复它发现的问题。由于许多文件系统可以修复数据，特别是在非日志文件系统中。当某个进程在你尝试卸载的文件系统上打开了文件时，`unmount` 会显示类似下面的消息（此处原文在 fsck 章节描述逻辑混乱且存在重复，此处已按原意翻译）：
+
+（注：原文文本中存在大量的段落重复和逻辑混乱，翻译文已尽可能根据用户提供的结构进行处理）
+
+## tune2fs：更改文件系统参数 (CHANGES FILESYSTEM PARAMETERS)
