@@ -1,0 +1,156 @@
+
+图 4.45：从系统中移除包的输出示例。
+
+3. 移除之前卸载软件 `lftp` 时留下的配置，如图 4.46 所示：
+
+```bash
+root@ubuntu:~# dpkg --purge lftp
+
+(Reading database ... 108799 files and directories currently installed.)
+
+Purging configuration files for lftp (4.9.2-1build1) ...
+```
+
+图 4.46：移除剩余配置文件的输出示例。
+
+## 命令 `apt-get`, `apt-cache`, 和 `apt-apt`
+
+这三个命令与 `/etc/apt/sources.list` 文件或 `/etc/apt/sources.list.d/` 目录下的文件中指定的仓库配合工作。仓库文件包含仓库列表，每个仓库都指定了它是用于二进制包 (`deb`) 还是源码 (`deb-src`)，以及仓库的地址、发行版版本以及该仓库中软件的类型；（`main` 表示免费，`restricted` 表示非自由软件。这里“free”一词的语境限于开源，而与成本无关）。以下是代号为 `jammy` 的 Ubuntu Server 仓库条目示例：
+
+```
+deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+
+deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
+```
+
+`apt-get` 命令用于使用软件仓库安装、更新或删除软件。常见操作如表 4.22 所示：
+
+| 操作 | 描述 |
+| --- | --- |
+| `update` | 从源处重新同步软件包索引文件。 |
+| `upgrade` | 安装系统中当前已安装的所有包的最新版本。 |
+| `dist-upgrade` | 升级与发行版核心相关的包。 |
+| `install` | 安装指定的包。 |
+| `reinstall` | 重新安装指定的包。它是使用 `--reinstall` 的别名。 |
+| `remove` | 移除指定的包。 |
+| `purge` | 移除指定的包及其所属的配置。 |
+| `source` | 获取源码而非二进制包。 |
+| `download` | 将包下载到当前目录。 |
+| `clean` | 清理与软件仓库信息相关的本地文件。 |
+| `autoremove` | 自动移除不再需要的、曾作为依赖项自动安装的包。 |
+
+**表 4.22：** `apt-get` 命令的操作
+
+`apt-get` 命令的一些常用选项如表 4.23 所示：
+
+| 选项 | 描述 |
+| --- | --- |
+| `-q, --quiet` | 减少输出中的信息。 |
+| `-s, --dry-run` | 不在系统中执行任何更改；而是模拟要执行的操作。 |
+| `-y, --yes` | 对对请求的任务进行进行询问确认。 |
+
+**表 4.23：** `apt-get` 命令的常用选项
+
+以下图提供了结合前述操作使用 `apt-get` 的示例：
+
+- 从仓库更新本地的软件包索引副本，如图 4.47 所示：
+
+```bash
+root@ubuntu:~# apt-get update
+
+Hit:1 http://es.archive.ubuntu.com/ubuntu jammy InRelease
+
+Hit:2 http://es.archive.ubuntu.com/ubuntu jammy-updates InRelease
+
+Hit:3 http://es.archive.ubuntu.com/ubuntu jammy-backports InRelease
+
+Hit:4 http://es.archive.ubuntu.com/ubuntu jammy-security InRelease
+```
+
+- 从软件仓库安装新包 `vaftpd`，如图 4.48 所示：
+
+```bash
+root@ubuntu:~# apt-get install -y vaftpd
+
+Reading package lists... Done
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+The following additional packages will be installed:
+
+ssl-cert
+
+The following NEW packages will be installed:
+
+ssl-cert vaftpd
+
+0 upgraded 2 newly installed, 0 to remove and 0 not upgraded.
+
+Need to get 140 KB of archives.
+
+After this operation, 391 KB of additional disk space will be used.
+
+Get:1 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 KB]
+
+Get:2 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 vaftpd amd64 3.0.5-ubuntu [123 k]
+```
+
+**图 4.47：** 更新本地包索引的输出。
+
+**图 4.48：** 安装新包的输出。
+
+```bash
+B)
+
+Fetched 140 kB in 1s (98.1 kB/s)
+
+Preconfiguring packages ...
+
+Selecting previously unselected package ssl-cert.
+
+(Reading database ... 108812 files and directories currently installed.)
+
+Preparing to unpack ssl-cert.
+
+The following additional packages will be installed:
+
+ssl-cert
+
+The following NEW packages will be installed:
+
+ssl-cert vaftpd
+
+0 upgraded 2 newly installed, 0 to remove and 0 not upgraded.
+
+Need to get 140 KB of archives.
+
+After this operation, 391 KB of additional disk space will be used.
+
+Get:1 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 KB]
+
+Get:2 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 vaftpd amd64 3.0.5-ubuntu [123 k]
+```
+
+`B)`
+`Fetched 140 kB in 1s (98.1 kB/s)`
+`Preconfiguring packages ...`
+`Selecting previously unselected package ssl-cert.`
+`(Reading database ... 108812 files and directories currently installed.)`
+`Preparing to unpack ssl-cert.`
+`The following additional packages will be installed:`
+`ssl-cert`
+`The following NEW packages will be installed:`
+`ssl-cert vaftpd`
+`0 upgraded 2 newly installed, 0 to remove and 0 not upgraded.`
+`Need to get 140 KB of archives.`
+`After this operation, 391 KB of additional disk space will be used.`
+`Get:1 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 KB]`
+`Get:2 http://es.archive.ubuntu.com/ubuntu jammy/main amd64 vaftpd amd64 3.0.5-ubuntu [123 k]`
+
+（注：此处原文示例中似乎存在重复或混乱，翻译已根据逻辑对齐）
+
+**图 4.47：** 更新本地包索引的输出。
+
+**图 4.48：** 安装新包的输出。
