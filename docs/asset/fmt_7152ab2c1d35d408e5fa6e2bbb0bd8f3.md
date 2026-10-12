@@ -1,0 +1,89 @@
+
+使用 `cron` 任务自动化这些脚本可以确保定期对磁盘使用进行监控和清理。以下 `cron` 任务示例安排了日志文件清理脚本每天午夜运行一次：
+
+```
+0 * * * * /path/to/log_cleanup.sh
+```
+
+定期执行此类脚本有助于保持充足的空磁盘空间，确保系统的最佳性能并防止意外的存储相关问题。
+
+## 12.7 进程管理脚本
+
+进程管理是系统管理中至关重要的方面，允许管理员监控、控制和自动化 Linux 系统上各种进程的执行。本节深入探讨了用于解决常见进程管理任务的实用 shell 脚本，包括监控资源使用、终止无响应进程以及自动化进程执行。
+
+首先，让我们考虑一个监控特定进程资源使用的脚本。这对于确保没有单个进程独占系统资源特别有用。下面的脚本使用 `ps` 和 `grep` 命令来实现这一目标：
+
+```bash
+#!/bin/bash
+
+# 检查是否提供了进程名
+if [ -z "$1" ]; then
+    echo "Usage : $0 <process_name>"
+    exit 1
+fi
+
+PROCESS_NAME=$1
+# 获取进程的 PID
+PID=$(pgrep -f$PROCESS_NAME)
+
+# 检查进程是否运行
+if [ -z "$PID" ]; then
+    echo "Process $PROCESS_NAME not found."
+    exit 1
+fi
+
+# 获取进程的 CPU 和内存占用
+CPU=$(ps -p $PID -o %cpu --no-headers)
+MEM=$(ps -p $PID -o %mem --no-headers)
+
+echo "Process $PROCESS_NAME (PID: $PID)"
+echo "CPU Usage: $CPU%"
+echo "Memory Usage: $MEM%"
+```
+
+该脚本接受进程名作为参数，使用 `pgrep` 获取进程 ID (PID)，然后使用 `ps` 显示 CPU 和内存占用。注意在 `ps` 中使用了 `--no-headers` 选项以从输出中排除标题行。
+
+接下来，让我们探索一个可以终止无响应进程的脚本。以下示例使用 `kill` 命令向进程发送信号：
+
+```bash
+#!/bin/bash
+
+# 检查是否提供了进程名
+if [ -z "$1" ]; then
+    echo "Usage : $0 <process_name>"
+    exit 1
+fi
+
+PROCESS_NAME=$1
+# 获取进程的 PID
+PID=$(pgrep -f$PROCESS_NAME)
+
+# 检查进程是否运行
+if [ -z "$PID" ]; then
+    echo "Process $PROCESS_NAME not found."
+    exit 1
+fi
+
+# 向进程发送 SIGTERM 信号
+kill -15 $PID
+
+# 等待宽限
+sleep 5
+
+# 检查进程是否已终止
+if ps -p $PID > /dev/null ; then
+    echo "Process did not terminate, sending SIGKILL"
+fi
+```
+
+`rm` 命令的 `-i` 选项会在每次删除前提示用户确认，增强了对清理过程的控制。
+
+使用 `cron` 任务自动化这些脚本可以确保定期对磁盘使用进行监控和清理。以下 `cron` 任务示例安排了日志文件清理脚本每天午夜运行一次：
+
+```
+0 * * * * /path/to/log_cleanup.sh
+```
+
+定期执行此类脚本有助于保持充足的空磁盘空间，确保系统的最佳性能并防止意外的存储相关问题。
+
+## 12.8 用户账户管理 (User Account Management)
