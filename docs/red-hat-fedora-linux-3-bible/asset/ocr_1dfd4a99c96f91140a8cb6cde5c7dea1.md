@@ -1,0 +1,23 @@
+# Chapter 25
+Making Servers Public with DNS
+
+# In This Chapter
+
++   - Determining goals for your server
++   - Connecting a public server
++   - Configuring a public server
++   - Setting up a DNS server
+
+In previous chapters you built Web, mail, and FTP servers in Linux. Now you want to expose those servers to the outside world. Options range from handing them to a hosting company and saying, “Take care of it,” to managing the servers yourself out of your own home or office.
+
+The following are some cases where you may want to consider some level of self-hosting:
+
++   - You’re willing to provide the level of support that your organization needs in its servers.
++   - You just want an inexpensive way to publish some documents on the Web or maintain a public mail server for a few people, and 24/7 support isn’t critical.
++   - You think self-hosting is cool and you want to try it.
+
+The first goal of this chapter is to help you decide how much server support you want to maintain or provide to someone else. The second goal is to suggest how to set up your own public servers, including possibly configuring your own Domain Name System (DNS) server.
+
+The descriptions of setting up your LAN (see Chapter 15) and connecting it to the Internet (see Chapter 16) focus on how to share information locally and let local users share an outgoing Internet connection, respectively. Building on that information, this chapter explains how to set up a DNS server, as well as other issues that relate to securing and maintaining public servers.
+
+> CAUTION: After you open your server to Internet traffic, break-in attempts will occur. Most will come from automated scripts, sent from infected computers on the Internet. Because Red Hat Linux comes with good built-in security features, many attacks bounce off harmlessly (after logging messages). Allowing incoming connections, however, creates vulnerabilities that aren’t there with an outgoing-only Internet connection. I recommend you use security tools, described in Chapter 14, to protect your servers.

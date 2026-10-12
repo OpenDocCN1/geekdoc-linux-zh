@@ -1,0 +1,121 @@
+
+## DHCP 客户端日志
+
+监听 LPF/lo/
+发送至 LPF/lo/
+监听 LPF/eth0/00:a0:24:aa:f5:17
+发送至 LPF/eth0/00:a0:24:aa:f5:17
+通过套接字/回退机制发送
+在 eth0 上向 255.255.255.255 端口 67 发送 DHCPREQUEST
+来自 192.168.2.254 的 DHCPACK
+save_previous /etc/yp.conf
+save_previous /etc/resolv.conf
+已绑定到 192.168.2.253 -- 将在 9906 秒后续约。
+
+在此示例中，第一个以太网设备 eth0 已从位于 192.168.2.254 的 DHCP 服务器获得 IP 地址 192.168.2.253。续约将在大约两小时四十五分钟后进行。
+
+> **注意**
+> /etc/sysconfig 目录下的 dhcpcd 文件可以包含任何可选的命令行参数，例如网卡租约时间（接口拥有已分配地址的时长）。有关选项，请参阅 dhcpcd 的手册页。
+
+## DHCP 软件安装与配置
+
+在安装 Fedora 的初始过程中，安装 DHCP 客户端和服务器可能最为简便，但您稍后也可以使用 RPM 软件包，或者自行下载并构建源代码。RPM 软件包可在您的 Fedora DVD 或镜像 FTP 站点上获取（更多信息请参阅第 7 章）。本节描述如何配置 dhclient 以及设置和运行 dhcpd 守护进程。
+
+### DHCP dhclient
+
+如前所述，在安装 Fedora 到主机时，为已安装的网卡使用 DHCP 非常容易（有关安装的详细信息，请参阅第 3 章“安装 Fedora”），并且在安装的网络步骤中，您可以选择在启动时启动 DHCP。如果您选择这样做（并选择安装 DHCP 客户端软件包），DHCP 客户端 dhclient 会发送一条广播消息，DHCP 服务器将回复您主机的网络信息。就这么简单；任务完成。
+
+如果您选择从源代码安装，您将需要（作为 root 用户）下载并安装包含 dhclient 的服务器软件包。解包源文件，在源目录根目录下运行 ./configure，运行 make，然后运行 make install。这应该会将在正确的启动时间启动的 DHCP 客户端二进制文件放置到正确的位置。
+
+但是，您可以微调 dhclient 的工作方式，以及它获取或查找 DHCP 信息的位置和方法。您可能不需要付出这些额外的努力；但如果需要，您可以创建并编辑一个名为 dhclient.conf 的文件，并将您的设置保存在 /etc 目录中。dhclient.conf 的一些选项包括：
+
+- `timeout time ;`—在放弃尝试之前等待多长时间（默认值为 60 秒）
+- `retry time ;`—在重试之前等待多长时间（默认值为五分钟）
+- `select timeout time ;`—在选择 DHCP 报价之前等待多长时间（默认值为零秒）
+- `reboot time ;`—在尝试获取先前设置的 IP 之前等待多长时间（默认值为 10 秒）
+- `renew date ;`—何时续约 IP 租约，其中 `date` 的格式为 `<weekday>-<year>/<month>/<day> <hour>:<minute>:<second>`，例如 `4 2004/1/1 22:01:01` 表示 2004 年 1 月 4 日（星期四）晚上 10:01。
+
+有关其他设置的更多信息，请参阅 `dhclient.conf` 的手册页。
+
+### DHCP 服务器
+
+同样，在计算机上安装 DHCP 服务器最简单的方法是，在安装时包含 RPM 软件包，或者如果您在没有安装 DHCP 服务器 RPM 的情况下安装了机器，也可以使用 RPM 软件包。如果您愿意，可以前往 Internet 软件联盟 (ISC) 网站（http://www.isc.org/）自行下载并构建源代码。
+
+如果您决定从 ISC 网站下载的源代码进行安装，安装过程非常直接。只需解包您的 `tar` 文件，在源目录根目录下运行 `./configure`，运行 `make`，最后，如果没有错误，运行 `make install`。这将 DHCPd 守护进程使用的文件放置在正确的位置。如果有足够的磁盘空间，最好保留源文件直到您确定 DHCP 运行正常；否则，您可以删除源树。
+
+> **注意**
+> 无论您选择哪种安装方法，请确保创建了一个名为 `/etc/dhcpd.leases` 的文件。该文件可以为空，但 dhcpd 正常启动需要它存在。
+
+## 使用 DHCP 配置网络主机
+
+使用 DHCP 配置网络看起来可能很困难，但如果需求简单，实际上很容易。如果网络更复杂，并且取决于您希望 DHCP 执行多少任务，服务器配置可能需要更多工作。
+
+## DHCP 服务器配置
+
+配置服务器需要一些思考和少量工作。幸运的是，工作仅涉及编辑单个配置文件 `/etc/dhcpd.conf`。要在启动时启动服务器，请使用 `service`、`ntsysv` 或 `system-config-services` 命令。
+
+/etc/dhcpd.conf 文件包含运行 dhcpd 所需的所有信息。Fedora 在 /usr/share/doc/dhcp*/dhcpd.conf.sample 中包含一个示例 dhcpd.conf。DHCP 服务器源文件也包含一个示例 dhcpd.conf 文件。
+
+/etc/dhcpd.conf 文件可以看作是一个三部分文件。第一部分包含针对 DHCP 本身的配置。配置包括：
+
+- 设置域名——option domain-name "example.org"
+- 设置 DNS 服务器——option domain_name_servers ns1.example.org, ns2.example.org （可以替换为 IP 地址）
+- 设置默认和最大租约时间——default-lease-time 3600 和 max-lease-time 14400
+
+第一部分中的其他设置包括服务器是否为主服务器（授权服务器）以及 DHCP 应使用何种类型的日志。这些设置被视为默认值，在更复杂的情况下，可以被配置中的子网和主机部分覆盖。
+
+> **注意**
+> dhcpd.conf 文件要求在每个命令语句后使用分号 (;)。如果配置文件有错误或运行不当，请检查这一点。
+
+dhcpd.conf 的下一部分处理 DHCP 服务器提供的不同子网；这部分非常直接。每个子网都是单独定义的，可以如下所示：
+
+```
+subnet 10.5.5.0 netmask 255.255.255.224 {
+range 10.5.5.26 10.5.5.30;
+option domain-name-servers ns1.internal.example.org;
+option domain-name "internal.example.org";
+option routers 10.5.5.1;
+option broadcast-address 10.5.5.31;
+default-lease-time 600;
+max-lease-time 7200;
+}
+```
+
+这定义了 10.5.5.0 子网的 IP 编址。它定义了从 10.5.5.26 到 10.5.5.30 的 IP 地址范围，动态分配给位于该子网的主机。此示例表明，可以从配置文件中的子网部分设置任何 TCP/IP 选项。它显示了子网将连接的 DNS 服务器，这对 DNS 服务器负载均衡很有用，或者可以用于限制通过 DNS 可达到的主机。它定义了域名，因此您可以在网络上拥有多个域。它还可以更改默认和最大租约时间。
+
+如果您希望服务器忽略特定子网，可以使用以下条目来实现：
+
+```
+subnet 10.152.187.0 netmask 255.255.255.0 {
+}
+```
+
+这未为 10.152.187.0 子网定义任何选项；因此，DHCP 服务器忽略它。
+
+您的 dhcp.conf 的最后部分用于定义主机。如果您希望网络中的某台计算机拥有特定的 IP 地址或该主机特有的其他信息，这将很有用。完成主机部分的关键在于知道主机的硬件地址。如您在本章前面“网络硬件设备”中所学到的，硬件地址用于区分主机以进行配置。您可以使用前面描述的 ifconfig 命令获取硬件地址。硬件地址位于标记为“hwaddr”的 eth0 行上。
+
+```
+host fantasia {
+    hardware ethernet 08:00:07:26:c0:a5;
+    fixed-address fantasia.fugue.com;
+};
+```
+
+此示例获取硬件地址为 08:00:07:26:c0:a5 的主机，执行 DNS 查找，并将 fantasia.fugue.com 的 IP 地址分配给该主机。
+
+DHCP 还可以为无盘客户端定义和配置启动，如下所示：
+
+```
+host passacaglia {
+    hardware ethernet 0:0:c0:5d:bd:95;
+    filename “vmlinux.passacaglia”;
+    server-name “toccata.fugue.com”;
+}
+```
+
+无盘主机 passacaglia 将从服务器 toccata.fugue.com 获取其启动信息并使用 vmlinux.passacaglia 内核。还可以包含所有其他 TCP/IP 配置。
+
+> **警告**
+> 
+> 请记住，为避免问题，本地网络上应只有一个 DHCP 服务器。如果您的局域网上有运行过时遗留操作系统的主机，您的 DHCP 可能无法正常工作。通常，Windows NT 服务器默认安装了 Windows DHCP 服务器。由于没有 NT 的配置文件可供整理，如果两台机器在同一个 LAN 上，该 DHCP 服务器会在 Linux 服务器之前配置您的主机。检查您的 NT 服务器是否存在这种情况，并禁用 NT 服务器上的 DHCP；之后，您的其他启用 DHCP 的主机应该能正确配置。另外，如果您在 LAN 上使用可以提供 DHCP 的电缆或 DSL 调制解调器、无线接入点 (WAP) 或其他智能路由器，请检查是否存在冲突。
+

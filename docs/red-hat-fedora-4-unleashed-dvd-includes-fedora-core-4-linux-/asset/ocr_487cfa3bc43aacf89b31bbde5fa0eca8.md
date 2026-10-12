@@ -1,0 +1,29 @@
+# # Kernel Versions
+
+The Linux kernel is in a constant state of development. As new features are added, bugs are fixed, and new technology is incorporated into the code base, it becomes necessary to provide stable releases of the kernel for use in a production environment. It is also important to have separate releases that contain the newest code for developers to test. To keep track of the kernels, version numbers are assigned to them. Programmers enjoy using sequential version numbers that have abstract meaning. Is version 8 twice as advanced as version 4 of the same application? Is version 1 of one application less developed than version 3 of another? The version numbers cannot be used for this kind of qualitative or quantitative comparison. It is entirely possible that higher version numbers can have fewer features and more bugs than older versions. The numbers exist solely to differentiate and organize sequential revisions of software.
+
+For the latest development version of the kernel at the time of writing, for example, the kernel version number is 2.6.10-1.
+
+The kernel version can be broken down into four sections:
+
++   * major version—This is the major version number, now at 2.
++   * minor version—This is the minor version number, now at 6.
++   * sublevel number—This number indicates the current iteration of the kernel; here it is number 10.
++   * extraversion level—This is the number representing a collection of patches and additions made to the kernel by the Red Hat engineers to make the kernel work for them (and you). Each collection is numbered, and the number is indicated here in the kernel name. From our preceding example, it is 1.
+
+Typing `uname -r` at the command prompt displays your current kernel version.
+
+```
+```
+# uname -r
+2.6.10-1
+```
+```
+
+Even-numbered minor versions are stable kernels, whereas odd-numbered minor versions are development releases. Version 2.6.x is the stable production kernel, whereas version 2.5.x is the development Linux kernel. When a new version of the development kernel is started, it will be labeled 2.7.x.
+
+For production machines, you should always use the kernels with even minor numbers. The odd minor numbers introduce new features, so you might want to use those on a test machine if you need features they provide.
+
+# # Obtaining the Kernel Sources
+
+The Linux kernel has always been freely available to anyone who wants it. If you just want to recompile the existing kernel, install the kernel-sources RPM from the CD. To get the very latest “vanilla” version, open an FTP connection to ftp.kernel.org using your

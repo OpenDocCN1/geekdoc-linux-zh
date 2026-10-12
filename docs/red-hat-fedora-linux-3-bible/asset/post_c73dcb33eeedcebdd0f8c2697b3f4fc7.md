@@ -1,0 +1,338 @@
+
+## Index
+
+- troubleshooting, 729-731
+- shared directories
+  - status checking, 726
+  - SWAT, 722-723
+  - using from Linux, 727-728
+  - using from Windows, 728-729
+  - sharing, 713
+  - starting, 726
+  - unix password sync setting, 718
+  - update encrypted setting, 718
+  - username, 713
+  - username map setting, 718
+- users
+  - adding, 725
+  - guest account, 713
+  - guest user account, 711
+  - smb.conf file, 725
+  - workgroup settings, 716
+
+- Samba window, Server Settings, 364
+- SANE (Scanner Access Now Easy), 252-253
+- /sbin directory, 155, 366
+- scanners, SANE (Scanner Access Now Easy), 252-253
+- scheduling
+  - kernel and, 954
+- system tasks
+  - at command, 471
+  - at.allow, 470
+  - at.deny, 470
+  - atq command, 472
+  - arm, 472
+  - batch command, 472-473
+  - cron command, 473-476
+  - cron files, 475-476
+  - crontab, 475
+  - scheduled jobs, 472-476
+    - deletion, 472
+    - submission, 471
+    - view, 472
+  - when jobs run, 470-471
+
+- schemas, LDAP, 827
+- scp command, 355, 569-571
+- screen captures, GIMP, 251
+
+- Screen section, xorg.conf file, 127
+- screensaver, 85, 121
+- Screensaver, GNOME preferences, 101
+- scripts
+  - Navigator (Mozilla), 321
+  - netalk, atalk (startup), 934
+- run-level
+  - run level determination, 469
+  - shut down run levels, 469
+  - system startup/shutdown, 459-462
+    - adding, 466
+    - behavior changes, 464
+    - removing, 465-466
+    - reorganization, 465-466
+    - xinetd, 467
+  - shell scripts, 441
+    - arithmetic, 445
+    - backup example, 453
+    - case command, 448-449
+    - command-line arguments and, 442
+    - debugging, 442
+    - executing, 442
+    - for loop, 449-450
+    - if then statements, 446-448
+    - overview, 441
+    - telephone list example, 453
+    - until loops, 450
+    - variables, 443
+    - while loop, 450
+  - startup, quota package, 434-435
+  - system startup/shutdown, 462-464
+
+- searches
+  - Firefox (Mozilla), 329
+  - grep, 451
+  - htdig conf file, 815
+  - Konqueror File Manager, 112
+  - LDAP, 838
+  - vi text editor, 167
+- seaudit, SELinux, 964
+- secondary (slave) name server, DNS, 910
+- SECONDS environment variable, 148
+- security
+  - attacks
+    - DDOS (Distributed Denial of Service), 514, 518-522
+    - DOS (Denial of Service), 514-518
+    - intrusion, 579, 580
+    - intrusion attacks, 523-528
+    - intrusion attacks, 515
+    - log file initiations, 540, 543-546
+    - log file monitoring, 546-555
+  - encryption
+    - private-key cryptography, 559
+    - public-key cryptography, 559
+    - SSH, 569-571
+    - SSL (secure sockets layer), 560-568
+    - symmetric cryptography, 559
+  - technology exportation, 568
+  - Firefox (Mozilla), 329
+  - firewalls, 528-540
+  - hackers/cracker comparison, 513-514
+  - NSA (National Security Agency), 962
+  - passwords, 555
+    - encrypted, 557
+    - selection tips, 555-556
+    - shadow password file, 556-558
+  - PortSentry, 571
+    - as is use, 573
+    - configuration, 573-578
+    - downloading, 572
+    - installation, 572
+    - modes, 572
+    - testing, 578-579
+  - tracking intrusions, 579-580
+  - remote X applications, 205
+  - Samba, 711
+  - Samba global settings options, 717-719
+  - scriptkiddies, 514
+  - server-info page (Apache Web server), 820-821
+  - servers, 907
+    - firewalls, 908
+    - logs, 908
+    - system files, 908
+    - updates, 909
+  - server-status page (Apache Web server), 820-821
+  - Transport Layer Security, LDAP, 837
+  - volumes (metaltalk)
+    - directory-level, 939-942
+    - file-level, 939-942
+    - host-level, 938
+    - user-level, 938
+  - security enhancement, SELinux, 962-963
+  - Security Level Configuration window (SELinux), 967
+  - Security Level window, administration and, 365
+  - security option, Samba, 717
+  - security services, networks, 1029
+    - proxy/caching server, 1029
+    - system logging, 1029
+    - VPNs, 1029
+  - Security Violations, Log Sentry, 547
+  - sed (Stream Editor) command, bash shell, 452
+  - selfo, SELinux, 964
+  - self-signed certificates, SSL, 563-568
+  - SELinux (Security Enhanced Linux), 16, 961
+    - enabling, 963-966
+    - Fedora Core 3 and, 964-965
+    - libselinux, 965
+    - policies, 963
+      - changing, 969-970
+      - enforcing, 963
+      - permissions, 961
+      - permissive, 963
+      - policycontexts, 965
+      - roles, 962
+      - seaudit, 964
+      - Security Level Configuration window, 967
+      - seinfo, 964
+      - selinux-doc, 965
+      - selinux-policy-strict, 965
+      - selinux-policy-strict-sources, 965
+      - selinux-policy-targeted, 965
+      - selinux-policy-targeted-sources, 965
+      - sepcut, 964
+      - SePcuT (SELinux Policy Customization Tool), 969
+      - sesearch, 964
+      - seetools, 965
+      - seuser, 964
+      - seuseradd, 964
+      - seuserdel, 964
+      - seusermod, 964
+      - status checking, 966-968
+      - system-config-securitylevel, 964
+      - types, 962
+      - users, 963
+      - Web sites, 970
+    - selinux-doc, SELinux, 965
+    - selinux-policy-strict, SELinux, 965
+    - selinux-policy-strict-sources, SELinux, 965
+    - selinux-policy-targeted, SELinux, 965
+    - selinux-policy-targeted-sources, SELinux, 965
+    - semicolon (;), sequential commands, 144
+  - sending e-mail messages
+    - all users, 438-439
+    - Evolution, 334-335
+    - Mozilla Mail client, 337
+  - sendmail
+    - Mac OS X and, 926
+    - mailbombing attack protection, 516-517
+  - SePCut (SELinux Policy Customization Tool), 969
+  - sepcut, SELinux, 964
+  - sequential access, magnetic tape backups, 485
+  - sequential commands, 144
+  - server name, httpd.conf (Apache Web server) configuration, 791
+  - server processes, httpd.conf file, 782
+  - server root directory, httpd.conf global environment, 781
+  - server settings, KDE versus GNOME, 82
+  - Server Settings window, administration and, 364
+  - server string option, Samba, 716
+  - server-info page (Apache Web server), 818
+    - security, 820-821
+  - ServerLayout section, xorg.conf file, 127
+  - servers
+    - AppleTalk
+      - Linux configuration, 931-945
+      - settings, netalk and, 935-936
+    - configuration, 907
+      - FTP server, 907
+      - mail servers, 907
+      - networking, 906-907
+      - Web servers, 907
+    - CUPS, administration, 683-684
+    - DHCP
+      - setup, 842-846, 850-851
+      - starting, 850-851
+    - dhcp.conf file options, 847
+    - DNS servers, 905
+      - status, checking, 922-923
+    - e-mail servers, 1023
+    - file server, 1021
+    - FTP servers, 1021
+    - Netatalk server, 1022
+    - Samba server, 1021
+    - FTP, 763
+      - hosting services and, 900
+    - information servers, 1025
+      - DHCP, 1026
+      - DNS, 1027
+      - LDAP, 1026
+      - NIS (Network Information System), 1026
+      - RARP, 1027
+    - install servers, 45
+      - disk images and, 46
+      - files and, 45-46
+      - FTP server and, 47
+      - hard disk and, 47
+      - NFS server and, 46
+      - Web server and, 47
+      - installation and, 32
+      - hardware and, 27
+    - kernel and performance, 956
+    - login servers, 1022
+    - MySQL
+      - configuration, 866-874
+      - starting, 874
+      - status, 875-876
+    - name servers, 910, 913-914
+    - netatalk
+      - settings configuration, 933
+      - setup, 933-937
+    - network administration, 1024
+      - Arprwatch server, 1025
+      - NTP (Network Time Protocol) server, 1024
+      - portmap server, 1024
+      - SNMP (Simple Network Management Protocol), 1025
+      - SWAT (Samba Web Administration Tool), 1025
+    - network servers, 9
+    - news servers, 1023
+    - NFS, access from Macintosh, 945-948
+    - NIS
+      - Fedora as master server, 857-861
+      - Fedora as slave server, setup, 861
+    - OpenLDAP
+      - configuration (slapd.conf), 829-831
+      - package installation, 829
+    - print servers
+      - configuration, 688-691
+      - CUPS, 1024
+    - proxy/caching server, 1029
+    - public, connecting, 901-906
+    - remote execution servers, 1027
+      - finger user, 1028
+      - remote user identification, 1029
+      - talk server, 1028
+      - write-to-all server, 1029
+    - Samba
+      - Mac OS X and, 929-931
+      - troubleshooting, 729-731
+      - security, 907
+        - firewalls, 908
+        - logs, 908
+        - system files, 908
+        - updates, 909
+    - VPNs (virtual private networks), 1029
+    - Web server, 1020
+    - Web servers. See Web servers
+    - server-status page (Apache Web server), 819-820
+      - security, 820-821
+    - Serverice iServer 1.1 Web server, 776
+
+- Service Configuration window, run-level scripts and, 465
+- services, amanda services, 507-508
+- services configuration file, /etc directory, 369
+- Services window, Server Settings, 364
+- research, VPNs, 964
+- Set Root Password, installation and, 23
+- setkey command, VPNs, IPsec setup, 656
+- setools, SELinux, 965
+- seuser, SELinux, 964
+- seuseradd, SELinux, 964
+- seuserdel, SELinux, 964
+- seusermod, SELinux, 964
+- sftp command, 569-571
+- SGML (Standard Generalized Markup Language), 241
+  - DocBooks and, 241-244
+- shadow configuration file, /etc directory, 369
+- shadow password file, 556-558
+- shared directories
+  - netatalk, 932
+  - Samba
+    - mounting in Linux, 727
+    - status check, 726
+    - using from Linux, 727-728
+    - using from Windows, 728-729
+    - SWAT, 722-723
+- sharing
+  - file systems, NFS, 696-709
+  - files, netatalk and Samba, 942
+  - printers, netatalk, 934, 943
+  - Samba, 713
+  - volumes
+    - netatalk, 932-937
+    - sharing files, NIS and, 852-853
+- shell
+  - arguments, 135
+  - bash shell, 134
+  - external programs, 451-452
+  - C Shell, 134
+  - command line, editing, 138-140
+  - commands, 136
+    - aliases, 137

@@ -1,0 +1,47 @@
+```
+/etc/sysconfig/desktop
+/etc/sysconfig/diskdump
+/etc/sysconfig/dynd
+/etc/sysconfig/firstboot
+/etc/sysconfig/grub
+/etc/sysconfig/harddisks
+/etc/sysconfig/hdcd
+/etc/sysconfig/httpd
+/etc/sysconfig/hwconf
+/etc/sysconfig/lilo
+/etc/sysconfig/lint
+/etc/sysconfig/installinfo
+/etc/sysconfig/iptables
+/etc/sysconfig/iptables-config
+/etc/sysconfig/irda
+/etc/sysconfig/kernel
+/etc/sysconfig/keyboard
+/etc/sysconfig/kudzu
+/etc/sysconfig/lm_sensors
+/etc/sysconfig/modules
+/etc/sysconfig/mouse
+/etc/sysconfig/mouse.BeforeVMwareToolsInstall
+/etc/sysconfig/named
+/etc/sysconfig/netdump
+/etc/sysconfig/netdump_id_dsa
+/etc/sysconfig/netdump_id_dsa.pub
+/etc/sysconfig/network
+/etc/sysconfig/network-scripts
+   /etc/sysconfig/network-scripts/ifcfg-eth0
+   /etc/sysconfig/network-scripts/ifcfg-lo
+   /etc/sysconfig/network-scripts/ifdown -> ../../sbin/ifdown
+/etc/sysconfig/network-scripts/ifdown-aliases
+/etc/sysconfig/network-scripts/ifdown-bnep
+/etc/sysconfig/network-scripts/ifdown-eth
+/etc/sysconfig/network-scripts/ifdown-ib
+/etc/sysconfig/network-scripts/ifdown-ippp
+/etc/sysconfig/network-scripts/ifdown-ipsrc
+/etc/sysconfig/network-scripts/ifdown-isdn -> ifdown-ippp
+/etc/sysconfig/network-scripts/ifdown-post
+/etc/sysconfig/network-scripts/ifdown-ppp
+/etc/sysconfig/network-scripts/ifdown-sit
+/etc/sysconfig/network-scripts/ifdown-sl
+/etc/sysconfig/network-scripts/ifup -> ../../sbin/ifup
+/etc/sysconfig/network-scripts/ifup-aliases
+/etc/sysconfig/network-scripts/ifup-bnep
+```

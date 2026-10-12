@@ -1,0 +1,110 @@
+
+
+iptables 系统之所以有效，是因为它使用了*有状态过滤*。防火墙可以跟踪每个网络连接的状态。这是一种技术性表述，意思是 iptables 知道哪些 IP 数据包是有效的，哪些不是。例如，如果你正在浏览 www.dummies.com，iptables 会跟踪属于该连接的所有数据包。iptables 工具可以拒绝试图到达你的电脑但不属于你当前连接的数据包，从而防止黑客将数据包偷偷传入你的防火墙。
+
++ **提示** Fedora Core 默认安装基于 iptables 的防火墙。安装系统在安装过程中会配置一个良好的保护级别。你可能记得在第 3 章中我们建议你使用默认防火墙配置。然而，默认防火墙的安全性不如我们偏好用于连接互联网的标准高。因此，本章描述如何构建一个更全面且安全的防火墙。
+
++ **技术说明** **端口**——信息进入或离开计算机的地方——对于互联网协议至关重要。端口用于组织客户端和服务器之间的通信。例如，当你在网页上点击一个链接时，你的浏览器通过使用端口与 Web 服务器进行通信。当然，这是一种粗略的简化，但它描述了基本概念。只需说明，端口有助于控制互联网的内部运作，例如用于 Web 浏览等任务。
+
+## 设置防火墙
+
+你知道你需要一个防火墙并希望创建一个。接下来该怎么办？本节解释如何设置一个基于 iptables 的防火墙，使用限制性模型。完成规则设置后，请参见本章稍后的部分“将过滤规则保存到脚本”，这样你每次开机时就不必重新输入这些规则。
+
+在本节中，你设计一个基于 iptables 的防火墙，该防火墙关闭互联网连接（调制解调器、局域网或宽带）上的所有传入连接，同时仍允许你建立到互联网的传出连接。然后你放宽对传入通信的完全限制，允许传入安全 Shell 连接。（Secure Shell 提供加密通信。）
+
++ **警告！** 不要通过远程连接执行这些指令！你必须从计算机的控制台运行这些命令。也就是说，你必须坐在你的计算机前操作，而不是通过其他位置的網絡连接进行工作。原因很简单：这些防火墙规则在恢复外部网络连接之前会关闭它们。
+
+构建防火墙的步骤如下，一步一个脚印：
+
+1. **以 *root* 身份登录你的计算机，然后打开一个 GNOME 终端窗口**（在桌面的任何空白处右击，并从菜单中选择“打开终端”）。
+2. **输入以下命令以关闭默认的 Fedora Core 防火墙：**
+
+   ```
+   service iptables stop
+   ```
+
+   该防火墙是在第 3 章描述的安装过程中创建的。iptables 条目会移除任何现有的过滤或网络地址转换（NAT）规则。NAT 规则常用于使你的计算机看起来像是来自你的 ISP，这样你就不必为计算机注册一个官方的互联网协议（IP）地址。
+3. **通过输入以下规则开始构建你的防火墙，这些规则过滤掉所有到、从及经过你计算机的网络通信：**
+
+   ```
+   iptables --policy INPUT DROP
+   iptables --policy OUTPUT DROP
+   iptables --policy FORWARD DROP
+   ```
+
+   这些命令将你的防火墙默认策略设置为不允许任何网络流量进入（*INPUT* 规则）或离开（*OUTPUT* 规则）任何网络接口；如果你拥有多个网络接口，也不允许任何流量在它们之间传递（*FORWARD* 规则）。此时，你拥有一个极其安全的防火墙。然而，到目前为止，你的计算机对于网络相关任务来说毫无用处。因此，下一步稍微打开防火墙，让你可以安全地访问互联网（或你连接的任何网络）。
+4. **输入以下规则以允许网络流量通过回环设备：**
+
+   ```
+   iptables -A OUTPUT -j ACCEPT -o lo
+   iptables -A INPUT -j ACCEPT -i lo
+   ```
+
+   Linux 计算机使用通过*回环接口*（*lo*）连接的虚拟内部网络。回环不是一个物理设备，而是一个虚拟设备。Linux 使用 *lo* 进行内部通信。
+5. **为了允许你的计算机进行所有传出通信，输入以下两个命令：**
+
+   ```
+   iptables -A OUTPUT -m state --state NEW,RELATED,ESTABLISHED -j ACCEPT
+   iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+   ```
+
+   这些规则没有指定任何特定的网络接口。然而，由于过滤器是有状态的，这些规则实际上在你的以太网、无线或拨号点对点（PPP）接口上有效工作。
+
+   第一个过滤规则允许所有传出通信。`--state NEW,RELATED,ESTABLISHED` 选项告诉防火墙允许新连接和已建立连接的数据包通过。（数据包是所有网络通信的基本构建模块。）还允许与现有连接相关但使用不同端口的数据包，例如 FTP 数据传输。
+
+   第二个过滤规则控制从传出连接返回的数据包。例如，当你连接到一个网站时，你的浏览器发出数据包，Web 服务器对它们作出响应。你可以点击网站上的按钮，一个新的显示窗口弹出。点击按钮发出一个数据包，Web 服务器发回数据包。你一开始就阻止了来自互联网的数据包；这个规则创建了一个例外，允许属于现有连接的数据包——例如代表你点击按钮的那个连接——通过防火墙返回你的计算机。请注意，我们不允许新的传入连接（`--state NEW`）建立；这样做会破坏此防火墙的目的。
+6. （可选）使用以下规则允许 SSH 连接进入你的 Linux 计算机：
+
+   ```
+   iptables -A INPUT -p tcp -m state --state NEW,ESTABLISHED -j ACCEPT --dport 22
+   ```
+
+   该规则允许通过 22 端口的 SSH 连接进入你的计算机。
+
+   OpenSSH 服务器在第 3 章描述的安装过程中默认安装。该服务也会自动启动。
+
+   你可以修改此规则以允许其他类型的传入连接进入你的计算机。例如，如果你想创建一个 Web 服务器并允许传入连接，运行此过滤器：
+
+   ```
+   iptables -A INPUT -p tcp -m state --state NEW,ESTABLISHED -j ACCEPT --dport 80
+   ```
+
+   80 端口用于 Web 服务器连接。（第 16 章向你展示如何创建 Web 服务器。）
+
+你刚刚创建了一个简单、有效的防火墙，保护你的计算机免受僵尸和黑客的侵害。你的防火墙保持活动状态，直到你关闭规则或重启计算机。以下部分展示如何显示你的新防火墙规则。
+
+## 显示防火墙规则
+
+配置防火墙后，你自然会想要验证过滤规则是否正确设置。要显示防火墙规则，请按照以下步骤操作：
+
+1. 打开一个 GNOME 终端仿真器窗口（在 GNOME 桌面的任何空白处右击并选择*新建终端*菜单）。你也可以通过点击 GNOME 菜单并选择*工具 > 终端*来打开 GNOME 终端。
+2. 如果你还不是 *root* 用户，请在 GNOME 终端窗口中输入 *su-* 命令。
+3. 输入 *root* 密码并输入以下命令以显示防火墙规则：
+
+   ```
+   iptables -L -v
+   ```
+
+完成这些步骤后，你会看到终端窗口中显示的防火墙过滤规则（在前面的命令中使用*详细 -v* 选项可以显示额外信息，包括网络接口——为了简洁起见，我们在此例中未使用该选项）：
+
+```
+Chain INPUT (policy DROP)
+target prot opt in out source destination
+ACCEPT all -- lo in lo anywhere anywhere
+ACCEPT all -- any any anywhere anywhere
+ state RELATED,ESTABLISHED
+ACCEPT tcp -- any any anywhere anywhere
+ tcp dpt:ssh state NEW,ESTABLISHED
+
+Chain FORWARD (policy DROP)
+target prot opt in out source destination
+
+Chain OUTPUT (policy DROP)
+target prot opt in out source destination
+ACCEPT all -- any lo anywhere anywhere
+ACCEPT all -- any any anywhere anywhere
+ state NEW,RELATED,ESTABLISHED
+```
+
+iptables 使用链的概念。*链*是一个或多个相互关联规则的列表。每个规则是链中的一个环节。iptables 有三个内置链：*INPUT、OUTPUT* 和 *FORWARD*。你可以创建自定义链来执行你想要的任何过滤功能。（例如，默认的 Fedora Core 防火墙过滤器创建一个名为 *RH-Firewall-1-INPUT* 的自定义链）。然而，对于此防火墙，创建自定义链并非必要，因此我们只使用内置链。
+

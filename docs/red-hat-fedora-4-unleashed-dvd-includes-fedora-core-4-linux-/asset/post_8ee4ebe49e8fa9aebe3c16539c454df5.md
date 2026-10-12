@@ -1,0 +1,275 @@
+
+## Index
+
+- example of, 650  
+- external commands, 649  
+- strip postfixes, 648  
+- strip prefixes, 648  
+- gdm, 174  
+- GNOME desktop environments, 183  
+- hardware devices, kudu service, 82-83  
+- kdm, 174-175  
+- kernel
+    - make config utility, 1007  
+    - make menuconfig utility, 1007  
+    - make xconfig utility, 1008  
+    - RAM disk images, 1012  
+    - selecting kernel type, 997  
+    - subsections of, 1009-1011  
+- keyboards, 84-87, 131  
+- local printers, print queue creation/configuration, 300-303  
+- logwatch command, 378  
+- loopback interfaces, 490  
+- masquerading (Sendmail), 665  
+- minicom scripts for modems, 99-100  
+- modems
+    - fax modems, 99  
+    - for dial-in PPP servers, 501  
+    - serial-port modems, 96-99  
+    - WinModems, 100  
+- monitors, X Window System configurations, 167-169  
+- mouse devices for Fedora installation, 63  
+- MySQL, 568  
+- nameservers for local caching, 721  
+- network hardware, 464
+    - configuration files, 469-472  
+    - ifconfig network configuration command line tool, 465-467  
+    - netstat network configuration command line tool, 469  
+    - route network configuration command line tool, 467-468  
+    - system-config-network graphical configuration tool, 472-473  
+- network interface cards, 452  
+- networks for Fedora installation, 70-71  
+- OpenOffice.org, 239-240  
+- PCI cards, 274  
+- peripherals, 125  
+- pointers, 88-92  
+- Postfix, 670  
+- PostgreSQL, initializing data directories, 571-573  
+- power-management, 101-102  
+- print queues, 300-303  
+- print services
+    - console-based printers, 297  
+    - GUI-based printers, 296  
+    - local printers, print queue creation/configuration, 300-303  
+- resolvers, for providing DNS for real domains via BIND, 732  
+- security for Fedora installation, 71-72  
+- Sendmail, 664-665  
+- sound cards, 269  
+- sound devices, 95-96  
+- Squid proxy server
+    - ACL, 685-689  
+    - client configuration, 684  
+    - examples of, 691-692  
+    - specifying client IP addresses, 690  
+- TWiki interactive collaboration tool documentation website, 230  
+- voice modems, 501  
+- vsftpd servers, 632-633  
+- Wu-FTpd servers, via ftpaccess configuration file, 635
+    - access control directives, 636-639  
+    - cdpath directed commands, 646-647  
+    - permission control directives, 644-646  
+    - shutdown file structures, 647  
+    - system logging directives, 643-644  
+    - user information directives, 639-643  
+- X Window System, 169
+    - manual configuration, 172  
+    - via system-config-display client, 170-172  
+- X11, troubleshooting, 95  
+- xinetd daemons for wu-ftpd servers, 630-631  
+- xminicom scripts for modems, 99-100  
+- Yum command, 946  
+
+### C
+
+- **consistency (ACID), database compliance comparisons, 566**
+- **consoles**
+    - basic commands list, 917-918
+    - cat command, 918-919
+    - cd command, 919-920
+    - chmod command, 921
+    - commands, combining, 936-938
+    - cp command, 921
+    - Ctrl+Alt+Del, 129
+    - custom menu creation, 131
+    - dial-up logins, 131
+    - du command, 922
+    - find command, 923-924
+    - grep command, 925-926
+    - less command, 926-928
+    - ln command, 928-929
+    - locate command, 930
+    - logins, 128, 131
+    - ls command, 930-931
+    - man command, 932
+    - mkdir command, 932
+    - mv command, 933
+    - print control
+        - managing print jobs, 605-606
+        - print commands, 604
+        - printer configuration, 297, 603
+    - ps command, 933
+    - reasons for using, 916-917
+    - rm command, 933
+    - screen command, 938-940
+    - scrolling screen contents, 130
+    - sessions, logging out of, 131-132
+    - system monitoring, 405-407
+    - tail command, 934
+    - text
+        - copying/pasting, 130
+        - logins, 128
+    - top command, 935-936
+    - virtual consoles, jumping between, 129
+    - which command, 936
+- **constants**
+    - in C/C++, 870
+    - in PHP, 826-827
+- **constructor function (PHP), 857**
+- **constructor methods in Python, 815**
+- **continue keyword (Python), controlling loops, 812**
+- **Control Center dialog**
+    - KDE, 183
+    - kdm, 174-175
+- **controllerless modems. See WinModems**
+- **convert utility (ImageMagick), 285**
+
+### D
+
+- **converting**
+    - ext3 disk file systems to ext2 disk file systems, 984-986
+    - files, configuring FTP server file-conversion actions, 647-650
+    - graphic file formats, 285
+    - number types in Python, 804
+    - sound file formats, 270-271
+    - video, 276
+- **copying**
+    - directory structures, tar command-line backup software, 435
+    - files
+        - cp command, 435-436
+        - cp shell command, 921
+        - cpio command-line backup software, 434-436
+        - FTP, 437
+        - mc command-line file management software, 436
+        - rsync command, 439-440
+        - rtools, 437
+        - scp command, 437-438
+        - SFTP, 438
+        - tar command-line backup software, 434-435
+        - to remote servers, 696
+        - uucp, 437
+        - with scp, 437
+    - lists, 808
+    - MBR, 444
+    - multiple files between servers, 697
+    - remote files, 696
+    - text in consoles, 130
+- **cos() math function, 844**
+- **cp command, 448**
+    - configuration file backups, 416
+    - copying files, 435-436
+- **cp file1 file2 command, 142**
+- **cp shell command, 921**
+- **CPAN (Comprehensive Perl Archive Network), 792-795**
+- **cpio command, 448**
+- **cpio command-line backup software, 427**
+    - backups, creating, 428
+    - copying files, 434-436
+    - file contents, listing, 428-429
+    - restoring backups, 428
+    - restoring files from backups, 428
+    - RPM files, 428
+- **CPU, Fedora hardware problems, 38-39**
+- **crackers, 890**
+- **cramfs modules, 952**
+- **CREATE DATABASE statement**
+    - MySQL, 569
+    - PostgreSQL, 573
+- **CREATE statement (SQL), 560**
+- **CREATE USER statement (PostgreSQL), 574**
+- **createdb command (PostgreSQL), 581**
+- **createrepo command, creating Yum command repositories, 947-948**
+- **createuser command (PostgreSQL), 581**
+- **cron daemon**
+    - crontab files, reading, 363
+    - repeatedly running tasks, 362-364
+    - scheduling tasks, 359, 362-364
+- **crontab files**
+    - cron deamon, reading, 363
+    - editing, 364
+- **csh shell, 365**
+- **ctlindd command, innnd operation (InterNetNews package), 770**
+- **Ctrl+Alt+Del consoles, 129**
+
+### E
+
+- **CUPS (Common Unix Printing System), 606**
+    - database of defined printers, 294
+    - overview of, 295
+    - printer entries, creating, 608-610
+    - website, 610
+- **cupsd, 295**
+- **curl command, file transfers, 620**
+- **current directory, listing files via ls shell command, 930-931**
+- **Current website, 197**
+- **current() array function, 847**
+- **custom installation option (Fedora), 18, 34**
+- **custom menu creation (consoles), 131**
+- **customizing shell prompts, 140-141**
+- **CustomLog directive (Apache web server), 540**
+- **CVS (Concurrent Versions System), C/C++ programming, 873-875**
+- **cyclic buffer spool article storage method (news servers), 765**
+
+### F
+
+- **xinetd daemon**
+    - configuring wu-ftp servers, 630-631
+    - /etc/xinetd.conf files, 355-356
+    - running through system services, 355-356
+
+### G
+
+- **DAO (Disk-At-Once) audio, creating, 113**
+
+### H
+
+- **data directories, initializing**
+    - in MySQL, 568
+    - in PostgreSQL, 571-573
+- **data**
+    - integrity, database comparisons, 565-566
+    - locking, database comparisons, 564-565
+    - loss of, reasons for, 416
+    - mirroring, 421
+    - storage in RDBMS, 557
+- **data=journal / data=ordered / data=write-back mode, ext3 disk file system, 969**
+- **database administrators (DBAs), responsibilities of, 555-556**
+- **database clients**
+    - as middleware, 578
+    - command-line clients, 575
+    - local GUI database access, 577
+    - MySQL
+        - command-line client, 578-580
+        - graphical clients, 580
+    - PostgreSQL command-line client, 580
+    - SSH database access, 576
+    - web database access, 577-578
+- **database-level privileges (MySQL), 569**
+- **databases**
+    - access/permission issues, 576
+    - client/server model, 556
+    - comparisons
+        - ACID compliance, 565-566
+        - data locking, 564-565
+
+### I
+
+- **-d file comparison operators, 386, 390**
+- **daemons**
+    - amd, mounting file systems, 975
+    - cron daemon
+        - reading crontab files, 363
+        - repeatedly running tasks, 362-364
+        - scheduling tasks, 359, 362-364
+    - kudzu daemon, NIC initialization, 462
+    - mail daemons, 677
+    - smbd daemon, starting, 592

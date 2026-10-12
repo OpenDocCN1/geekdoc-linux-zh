@@ -1,0 +1,333 @@
+
+## L
+
+- LANG environment variable, 144
+- languages
+  - for localization, 64
+  - for keyboard, 87
+- laptops, 996
+- large enterprise backup strategies, 427
+- last command, 335, 779
+- lastb command, 335
+- LBA (Logical Block Addressing), 949-950
+- LD_LIBRARY_PATH environment variable, 144
+- LDAP (Lightweight Directory Access Protocol)
+  - adding people to, 746, 748
+  - C, 744, 747
+  - C++, 744, 747
+  - email client
+    - Evolution, 748-750
+    - managing, 750-751
+    - Thunderbird, 750
+  - functions of, 743
+  - ldapadd command, 748
+  - ldapsearch command, 748
+  - LDIF, 746
+  - OpenLDAP, 743
+  - file permissions, 748
+  - management tools, 751
+  - phpldapAdmin administration tool, 751
+  - refresh, 751
+  - root user
+    - assigning passwords to, 745
+    - defining, 744
+  - server configuration, 744, 746
+  - slapadd tool, 745
+- ldapadd command, 748
+- ldapsearch command, 748
+- LDIF (LDAP Data Interchange Format), 746
+- -le number comparison operators, 392
+- leaf node news servers, 754
+- legacy hardware, 33-34
+- less command, 141, 147, 900-902
+  - plain-text files, reading, 24
+  - software package documentation, reading, 132
+- less than (<) operator, 397
+- less than or equal (<=) operator, 397
+- Lightweight Directory Access Protocol. See LDAP
+- LILO, 353
+  - Fedora support, 956
+  - HOWTO document websites, 984
+- linkers, 846
+- linking files, 902-903
+- links, 902-903
+- linux asmcheck boot prompt option, 61
+- linux dd boot prompt option, 61
+- Linux Documentation Project, 993
+- Linux guides, 993
+- Linux Hardware HOWTO, 36
+- Linux Laptop website, 996
+- linux mediacheck boot prompt option, 61
+- linux nofb boot prompt option, 62
+- linux noprobe boot prompt option, 61
+- Linux Professional Institute, 992
+- linux rescue boot prompt option, 61
+- linux resolution=width x height boot prompt option, 62
+- Linux SMP HOWTO, 39
+- linux updates boot prompt option, 61
+- Linux USB project, 622
+- Linux Users Groups (LUG), 993
+- Linux Zaurus PDAs, 996
+- Linux-USB device over website, 36
+- LinuxPrinting.org, 36
+- Listen directive (http.conf file), 536
+- lists, 797-798
+- Linnx repository, 317
+- lm_sensors package, 105
+- ln command, 100, 528, 902-903
+- loading modules, 470-471, 970
+- loadkeys command, 90-91, 136
+- LOADLN kernel size issues, 57
+- local caches, 710
+- local disk file systems, 928
+  - ext2, 929
+    - creating via mke2fs command, 941
+    - defragmentation, 931
+  - ext3, 929
+    - creating via mke2fs command, 941
+    - creating via mke2fs command, 941-942
+    - defragmentation, 931
+    - development of, 930-931
+    - ext2 conversion, 955-957
+    - ext2 transitions, 931
+    - file/directory sizes, 931
+    - journaling options, 932, 942
+    - performance, 931
+    - structure of, 931
+    - verifying file integrity, 933
+  - FAT, 929, 935, 940
+  - reiserfs, 929, 934, 940-942
+- local news servers, 755
+- local printers, 307
+  - print queue configuration, 310
+  - print queue creation, 308-310
+  - settings, editing, 311-312
+- local repositories (yum), 922-924
+- localhost interface, 455
+  - checking availability of, 456
+  - manual configuration, 456-457
+- locate command, 147, 904
+- locking data, 576
+- LogFormat statement, 553-554
+- logging
+  - Apache, 553-554
+  - BIND (Berkeley Internet Name Domain), 724-725
+  - Perl system logging, 770
+- logging out, 137-139
+- logical comparisons, 395-396, 399
+- logical unit number (lun), 265
+- Logical Volume Management (LVM), 19, 66, 951-952
+- login process, 82, 133, 346-347
+  - dial-up logins, 136
+  - remote computers, 137-139
+  - sessions, 134
+  - text-based console logins, 134
+  - virtual consoles, 134-135
+- loginame command, 350
+- logs
+  - purging, 785
+  - system logs, 386, 654-655, 770
+- logwatch command, 386
+- lookit command, 504, 871, 874
+- long integers, 794
+- lookups
+  - forward, 710
+    - dig command, 711-712
+    - host command, 712
+    - nslookup command, 713
+  - reverse, 711
+    - dig command, 712
+    - host command, 712
+    - nslookup command, 713
+- loop blocks, 801
+- loopback file systems
+  - creating, 952-953
+  - mounting, 953-954
+- loopback interface. See localhost interface
+- loops
+  - endless, 401-402
+  - Perl
+    - do until loops, 780
+    - do while loops, 780
+    - for loops, 778
+    - foreach loops, 778
+    - last statements, 779
+    - next statements, 779
+    - redo statements, 779-780
+    - until loops, 779
+    - while loops, 779
+  - PHP
+    - actions, 826
+    - conditions, 826
+    - declarations, 826
+    - do while loops, 827
+    - for loops, 826
+    - foreach loops, 826-827
+    - while loops, 825
+    - break keyword, 802
+    - continue keyword, 802
+    - for loops, 800-801
+    - infinite loops, 801
+    - loop blocks, 801
+    - multiline loops, 801
+    - while loops, 801
+- losetup command, 953
+- losing data, reasons for, 424
+- lp command, 306, 312, 614, 622
+- lpadmin command, 305
+- lpc command, 306, 312, 614–615, 622
+- lpdf command, 306
+- lpq command, 312, 614–615, 622
+- lpr command, 615
+- lprm command, 306, 312, 614–615, 622
+- LPng, 609
+- lpsat command, 306, 312, 614–616, 622
+- ls command, 123, 155
+  - fedora installation, verifying, 50
+  - software versions, tracking, 194
+  - user account permissions, viewing, 326
+- ls shell command, 904-906
+- lsmod command, 118
+  - modular kernel management, 968-969
+  - pointer configuration, 93-94
+- lsraid command, 960
+- lsusb command, 295
+- -lt number comparison operators, 392
+- LUG (Linux Users Group), 993
+- lun (logical unit number), 265
+- LVM (Logical Volume Management), 19, 66, 951–952
+
+## M
+
+- .m3u file format, 276
+- MAC (media access control), 464
+- MACHINE environment variable, 144
+- Maelstrom, 316
+- magic cookies, 653
+  - ftpshut command, 665
+  - list of, 652
+  - shutdown file magic cookies list, 658
+- mail. See email
+- mail command, 224, 690
+- mail daemons, 686
+- Mail Delivery Agents. See MDAs
+- mail relaying, 677
+- mail server options (Fetchmail), 682
+- Mail Transport Agents, 215
+- Mail User Agents (MUAs), 215, 673–674
+- mail utility, 223–224
+- mailcmd parameter (innd.conf), 758
+- maildir, 672
+- mailing lists, 25, 998–999
+- mailpost file, 756
+- MailScanner, 686
+- MAILTO lines (/etc/crontab file), 370
+- Mail:Sendmail module (Perl), 784–785
+- major version section (kernel), 971
+- make command, 848–850, 859, 985, 966
+  - make blzmake command, 976
+  - make clean command, 976
+  - make config utility, 977
+  - make dep command, 976
+  - make install command, 976
+  - make menuconfig utility, 977–978
+  - make modules command, 976
+  - make modules_install command, 976
+  - make config utility, 978–982
+  - makedbz file, 756
+- makefiles, 848–850, 964
+- makehistory file, 756
+- man command, 24, 140
+- man pages, 23–24
+  - accessing, 140, 906
+  - graphics file formats, 297–298
+  - searching, 140–141
+- man shell command, 906
+- manual pages. See man pages
+- MARC (Mailing list ARChives), 984
+- masquerading, 460, 675
+- Master Boot Record. See MBR
+- master nameservers, 710
+- master/slave jumpers, 949-950
+- Math (OpenOffice.org), 244
+- math operators, 775
+- max clients setting (vsftpd), 645
+- max per ip setting (vsftpd), 645
+- maxconnections parameter (innnd.conf), 758
+- mbox format, 672
+- MBR (Master Boot Record), 936
+  - backups, 448
+  - boot loading process, initiating, 353
+  - copying, 448
+  - restoring, 448
+- mc (Midnight Commander), 410
+  - copying files, 441
+  - file recovery, 446-447
+- mcedit (text editor), 150
+- MDAs (Mail Delivery Agents), 673
+  - choosing, 684-685
+  - defining, 216
+  - FetchYahoo, 686
+  - Gotmail, 686
+  - Hotwavy, 686
+  - MailScanner, 686
+  - Procmail, 685
+  - Spamassassin, 685
+  - Squirrelmail, 685-686
+- media access control (MAC), 464
+- memory
+  - cache, 710
+  - free memory, displaying, 418
+  - testing, 18
+- memtest86 boot prompt option, 61
+- Message of the Day (MOTD), 161
+- metadata, 925
+- methods. See also specific methods
+  - class methods, 803
+  - constructor methods, 805
+  - destructor methods, 805
+  - in lists, 798
+  - string methods, 796
+- mformat command, 960
+- mget command, 626, 629-630
+- Microsoft Exchange Server, 687
+- middleware, database clients as, 588
+- MIDI mappers, 275
+- Midnight Commander. See mc
+- migration, 29-30
+- mimrod command, 284
+- MIME (Multipurpose Internet Mail Extensions) protocol, 216
+- mini-CD Linux distribution websites, 994
+- minicom, 103, 497
+- minor version section (kernel), 971
+- mirroring data, 429
+- mkbootdisk command, 985
+- mkdir shell command, 906-907
+- mkfs command, 940-943
+- mke2fs command, 446
+  - command-line options, 941
+  - file system optimization, 878
+  - file systems, creating, 941
+- mkfs command, 960
+- mks.bfs, 940
+- mks.ext2, 940
+- mks.ext3, 941-942
+- mks.minix, 940
+- mks.msdos, 940
+- mks.vfat, 940
+- mkinitrd command, 956, 985
+- mkisos command, 265-266, 284, 960
+- mkmod command, 959
+- mkpasswd command, 139
+- mkreiserfs command, 940-942, 960
+- mkswap command, 960
+- mnemonic characters, 154
+- .mng graphics file format, 296
+- mod_access module, 546
+- mod_alias module, 546
+- mod_asis module, 546
+- mod_auth module, 547
+- mod_auth_anon module, 547
+- mod_auth_dbm module, 547
+- mod_auth_digest module, 547
+- mod_autoindex module, 548

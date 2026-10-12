@@ -1,0 +1,145 @@
+
+还有一些特殊的列类型，例如 `DATE` 只接受日期格式的数据，以及 `ENUM` 枚举，可用于指定仅允许某些值。例如，如果你想记录 CD 的流派，可以使用一个仅接受 `POP`、`ROCK`、`EASY_LISTENING` 等值的 `ENUM` 列。你将在本章后面了解更多关于 `ENUM` 的内容。
+
+查看 `cd_collection` 表，你可以看到其中三个列包含数值数据，另外两个列包含字符串数据。此外，这些字符串是变长的。基于这些信息，你可以判断出文本列最适合使用 `VARCHAR` 类型，而其他列最适合使用 `INT` 类型。关于 `cd_collection` 表，你还会注意到另一个细节：其中一张 CD 缺少评分，也许是因为我们还没有听它。因此，这个值是*可选*的；它最初为空，可以在稍后填入。
+
+现在你准备创建表了。如前所述，你需要使用 `CREATE` 语句来执行此操作，其语法如下：
+
+```
+CREATE TABLE table_name (column_name column_type (parameters) options, ...);
+```
+
+关于 `CREATE` 语句，你应该知道以下几点：
+
+-   SQL 命令不区分大小写。例如，`CREATE TABLE`、`create table` 和 `Create Table` 都是有效的。
+-   空白符通常会被忽略。这意味着你应该使用它们来使 SQL 命令更清晰。
+
+以下示例展示了如何为 `cd_collection` 数据库创建表：
+
+```
+CREATE TABLE cd_collection (
+ id INT NOT NULL,
+ title VARCHAR(50) NOT NULL,
+ artist VARCHAR(50) NOT NULL,
+ year VARCHAR(50) NOT NULL,
+ rating VARCHAR(50) NULL
+);
+```
+
+注意该语句以分号结尾。这就是 SQL 知道你已完成语句中所有输入的方式。在某些情况下，分号可以省略，当出现这些情况时，我们会特别指出。
+
+> SQL 有许多保留关键字，不能用作表名或字段名。例如，如果你记录想要在度假时带走的 CD，你就不能使用字段名 `select`，因为这是一个保留关键字。相反，你应该选择另一个名称（`selected`？）或者仅用 `f` 作为前缀，例如 `fselect`。
+
+### 向表中插入数据
+
+创建表后，你可以向其中放入数据。你可以使用 INSERT 语句手动插入数据，其语法如下：
+
+```
+INSERT INTO table_name VALUES('value1', 'value2', 'value3', ...);
+```
+
+此语句将 `value1`、`value2` 等插入到表 `table_name` 中。插入的值构成数据库中的一行，即一条`记录`。除非另有说明，否则值将按照数据库表中列出的列的顺序插入。如果由于某种原因，你想以不同的顺序插入值（或者只插入几个值且它们不是按顺序排列的），你可以使用以下语法指定数据应放入哪些列：
+
+```
+INSERT INTO table_name (column1, column4) VALUES('value1', 'value2');
+```
+
+你也可以使用单条 INSERT 语句填充多行，使用的语法如下：
+
+```
+INSERT INTO table_name VALUES('value1', 'value2'), ('value3', 'value4');
+```
+
+在此语句中，`value1` 和 `value2` 被插入到第一行，而 `value3` 和 `value4` 被插入到第二行。
+
+以下示例展示了如何向 cd_collection 表中插入 Nevermind 条目：
+
+```
+INSERT INTO cd_collection VALUES(9, 'Nevermind', 'Nirvana', '1991', 'NULL');
+```
+
+如果不想包含评分，MySQL 要求最后一个列（`rating`）的值为 NULL。另一方面，PostgreSQL 允许你简单地省略最后一个列。当然，如果中间有列为空，你需要在 INSERT 语句中显式声明 NULL。
+
+通常，INSERT 语句会被编码到前端程序中，这样用户在向数据库添加数据时就不必担心相关的 SQL 语句。
+
+### 从数据库检索数据
+
+当然，将数据存储在数据库中的主要目的是以便日后能够查询、排序并生成关于该数据的报告。基本的数据检索是通过 SELECT 语句完成的，其语法如下：
+
+```
+SELECT column1, column2, column3 FROM table_name WHERE search_criteria;
+```
+
+语句的前两部分——SELECT 和 FROM 部分——是必需的。WHERE 部分是可选的。如果省略它，将返回表 `table_name` 中的所有行。
+
+![](img/2045828cf45e5632bf056f9ca99d6755_608_0.png)
+
+`column1`、`column2`、`column3` 指示你想查看的列的名称。如果你想查看所有列，也可以使用通配符 `*` 来显示所有符合搜索条件的列。例如，以下语句显示 `cd_collection` 表中的所有列：
+
+```
+SELECT * FROM cd_collection;
+```
+
+如果只想查看表中所有 CD 的标题，可以使用如下的语句：
+
+```
+SELECT title FROM cd_collection;
+```
+
+要选择 CD 的标题和年份，可以使用以下方法：
+
+```
+SELECT title, year FROM cd_collection;
+```
+
+如果你想要一些更花哨的效果，可以使用 SQL 打印 CD 标题，后面跟着括号内的年份，这是惯例。MySQL 和 PostgreSQL 都提供了字符串连接函数来处理此类问题。但是，这两个系统中的语法不同。
+
+在 MySQL 中，可以使用 `CONCAT()` 函数将 `title` 和 `year` 列组合成一个输出列，并加上括号。以下语句是一个示例：
+
+```
+SELECT CONCAT(title, ' (', year, ')') AS TitleYear FROM cd_collection;
+```
+
+该语句在一个标记为 `TitleYear` 的列下列出了标题和年份。注意 `CONCAT()` 函数中有两个字符串与字段一起使用——这些用于添加空白和括号。
+
+在 PostgreSQL 中，字符串连接函数只是一个双管道（`||`）。以下命令是前述 MySQL 命令在 PostgreSQL 中的等价形式：
+
+```
+SELECT (title || ' (' || year || ')') AS TitleYear FROM cd_collection;
+```
+
+注意括号是可选的，但它们使语句更容易阅读。再次强调，中间和结尾的字符串（注意引号之间的空格）用于在标题和年份之间插入间隔和括号。
+
+当然，通常情况下，你不想要数据库中每一行的列表。相反，你只想查找符合某些特征的行。为此，你在 `SELECT` 语句中添加 `WHERE` 语句。例如，假设你想查找 `cd_collection` 表中所有评分为 5 的 CD。你会使用如下的语句：
+
+```
+SELECT * FROM cd_collection WHERE rating = 5;
+```
+
+使用图 22.2 中的表，你可以看到此查询将返回 Tricer Jazz、Life for Rent 和 The Two Towers 的行。这是一个简单的查询，而 SQL 能够处理比这复杂得多的查询。可以使用逻辑 **AND** 和逻辑 **OR** 语句编写复杂的查询。例如，假设你想细化查询，使其仅列出未在 2003 年发布的 CD。你会使用如下的查询：
+
+```
+SELECT * FROM cd_collection WHERE rating = 5 AND year != 2003;
+```
+
+在 SQL 中，`!=` 意味着“不等于”。再次查看图 22.2 中的表，你可以看到此查询返回 *Trouser Jazz* 和 *The Two Towers* 的行，但没有返回 *Life for Rent* 的行，因为它是 2003 年发布的。
+
+那么，如果你想列出所有评分为 3 或 4 的 CD，除了 2000 年发布的那些呢？这次，你组合逻辑 **AND** 和逻辑 **OR** 语句：
+
+```
+SELECT * FROM cd_collection WHERE rating = 3 OR rating = 4 AND year != 2000;
+```
+
+此查询将返回 *Mind Bomb*、*Natural Elements* 和 *Combat Rock* 的条目。但是，它不会返回 *Adiemus 4* 的条目，因为它是 2000 年发布的。
+
+> **提示**
+> 新数据库程序员中最常见的错误之一是混淆逻辑 **AND** 和逻辑 **OR**。例如，在日常对话中，你可能会说“给我找出所有在 2003 年和 2004 年发布的 CD”。乍一看，你可能会认为如果将此语句以 SQL 格式输入数据库，它会返回 *For All You've Done* 和 *Life for Rent* 的行。事实上，它根本不会返回任何行。这是因为数据库将该语句解释为“查找所有 CD 在 2003 年发布且在 2004 年发布的行”。当然，同一张 CD 不可能发布两次，因此无论表中存储了多少张 CD，该语句都不会返回任何行。正确形成此语句的方法是使用 **OR** 语句而不是 **AND** 语句。
+
+SQL 能够做的事情远不止这里展示的内容。但正如之前提到的，本节并不旨在教你有关 SQL 编程的所有知识；相反，它教你基础知识，以便你成为更高效的 DBA。
+
+### 选择数据库：MySQL 与 PostgreSQL
+
+如果你刚开始学习如何在 Linux 上使用数据库，第一个合乎逻辑的步骤是研究哪种数据库最能满足你的需求。Linux 上可用的数据库软件包有很多；有些是免费的，其他则需要数万美元。昂贵的商业数据库，如 Oracle，超出了本书的范围。相反，本章重点介绍两种免费可用的数据库：MySQL 和 PostgreSQL。
+
+这两个数据库都相当强大，其中任何一个可能都能满足你的需求。然而，每个数据库都有一组独特的功能和能力，可能更好地满足你的需求，或者使开发数据库应用程序更容易。
+

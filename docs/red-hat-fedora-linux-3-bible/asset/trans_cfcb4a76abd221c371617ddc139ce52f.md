@@ -1,0 +1,143 @@
+
+
+## MySQL 客户端变量
+
+除了可配置的选项外，MySQL 客户端还有许多可设置的变量。这些变量用于设置缓冲区大小、超时值以及可接受的包长度。这些变量也列在 `-help` 输出中。要修改变量值，你可以使用 `--set-variable` 选项，后跟变量名和值。例如，要将 `sort_buffer` 变量设置为 10MB，你可以在 [mysqld] 组下添加以下选项：
+
+```
+[mysqld]
+set-variable = sort_buffer=10M
+```
+
+以下列表标识了你可以为服务器设置的其他变量。通常，提高这些变量的值可以提高性能，但也会消耗更多的系统资源。因此，在不专门用于 MySQL 或内存资源有限的机器上提高这些值时需要小心。
+
+> **注意：** 对于需要输入大小的变量，请使用 M 表示兆字节（例如，10M），或使用 K 表示 KiB（例如，256k）。
+
+- `key_buffer_size` = `size` — 设置用于保存所有线程使用的索引块的缓冲区大小。这是提高 MySQL 性能的关键值。
+- `max_allowed_packet` = `size` — 限制单个数据包的最大大小。如果你需要处理非常大的列，请提高此限制。
+- `myisam_sort_buffer_size` = `size` — 设置在修复索引、创建索引或更改表时用于排序的缓冲区大小。
+- `record_buffer` = `size` — 设置执行顺序扫描的线程使用的缓冲区大小。每个执行顺序扫描的过程都会分配此处设置大小的缓冲区。
+- `sort_buffer` = `size` — 定义分配给每个需要执行排序的线程的缓冲区大小。提高此值可使排序线程运行得更快。
+- `table_cache` = `#` — 限制所有线程可以同时打开的表的总数。该变量的值表示 MySQL 可以同时打开的文件描述符总数。
+- `thread_cache` = `size` — 设置保留在缓存中等待 MySQL 使用的线程数量。当一个线程使用完毕后，它会放回缓存中。如果所有线程都已使用，必须创建新线程来处理请求。
+
+## 检查选项
+
+除了查看选项文件中如何设置选项和变量外，你还可以查看当前系统上所有变量的设置。你可以查看 MySQL 服务器正在使用的默认值和当前值。
+
+`--help` 命令行参数允许你查看服务器和每个 MySQL 客户端的选项和变量的设置情况。以下是显示 `mysqld` 服务器守护程序此信息的输出示例：
+
+```
+# /usr/libexec/mysqld --help | less
+```
+
+默认值（解析命令行参数后）为：
+
+```
+basedir: /usr/
+dataadir: /var/lib/mysql/
+tmpdir: /tmp/
+language: /usr/share/mysql/english/
+pid file: /var/lib/mysql/maple.pid
+TCP port: 3306
+Unix socket: /var/lib/mysql/mysql.sock
+
+system locking is not in use
+```
+
+选项 `--set-variable` (-O) 的可能变量：
+
+| 变量 | 值 |
+| :--- | :--- |
+| back_log | 当前值: 50 |
+| bdb_cache_size | 当前值: 8388600 |
+| bdb_log_buffer_size | 当前值: 0 |
+| bdb_max_lock | 当前值: 10000 |
+| bdb_lock_max | 当前值: 10000 |
+| binlog_cache_size | 当前值: 32768 |
+| connect_timeout | 当前值: 5 |
+| table_cache | 当前值: 64 |
+| thread_concurrency | 当前值: 10 |
+| thread_cache_size | 当前值: 0 |
+| tmp_table_size | 当前值: 33554432 |
+| thread_stack | 当前值: 65536 |
+| wait_timeout | 当前值: 28800 |
+
+服务器启动后，你可以运行带有 `variables` 选项的 `mysqladmin` 命令来查看实际使用的值。（将输出管道传输到 `less` 命令，以便你可以翻页浏览信息。）这里是一个示例（如果你没有保存密码，在看到任何输出之前，你会被提示输入密码）：
+
+```
+# mysqladmin variables | less
++-----------------+------+
+| Variable_name   | Value|
++-----------------+------+
+| back_log        | 50   |
++-----------------+------+
+| basedir         | /usr/ |
+| db_buffer_size  | 8388600 |
+| db_log_buffer_size | 32768 |
+| db_home         | /var/lib/mysql/ |
+| db_max_lock     | 10000 |
+| db_logdir       | |
+| db_shared_data  | OFF |
+| db_tmpdir       | /tmp/ |
+| tmp_table_size  | 33554432 |
+| tmpdir          | /tmp/ |
+| version         | 3.23.58 |
+| wait_timeout    | 28800 |
++-----------------+------+
+```
+
+如果你认为默认的 MySQL 系统自带的选项和变量设置并不完全适合你，你不必从头开始。mysql 包中附带的示例 my.cnf 文件可以让你从更接近所需选项和变量的一组设置开始。
+
+### 使用示例 my.cnf 文件
+
+示例 my.cnf 文件位于 /usr/share/doc/mysql-server* 目录中。要使用其中一个文件，请执行以下操作：
+
+1. 保留旧 my.cnf 文件的副本：
+   ```
+   # mv /etc/my.cnf /etc/my.cnf.old
+   ```
+2. 将所需的示例 my.cnf 文件复制到 /etc/my.cnf 文件。例如，要使用 my-medium.cnf 文件，请输入以下内容：
+   ```
+   # cp /usr/share/doc/mysql-server*/my-medium.cnf /etc/my.cnf
+   ```
+3. 使用任何文本编辑器编辑新的 /etc/my.cnf 文件（作为 root 用户），以进一步调整你的 MySQL 变量和选项。
+
+以下小节描述了每个示例 my.cnf 文件。
+
+### my-small.cnf
+
+推荐将此选项文件用于内存少于 64MB 且仅偶尔用于 MySQL 的计算机系统。使用此选项文件，MySQL 将无法处理大量使用，但它不会拖慢你的计算机性能。
+
+对于 mysqld 服务器，缓冲区大小设置较低——`sort_buffer` 仅为 64K，`key_buffer` 仅为 16K。`thread_stack` 仅设置为 64K，`net_buffer_length` 仅为 2K。`table_cache` 设置为 4。
+
+### my-medium.cnf
+
+与小型选项文件类似，`my-medium.cnf` 文件旨在用于 MySQL 不是唯一重要应用程序运行的系统。该系统可用的总内存量也较小——介于 32MB 和 64MB 之间——但预计会更频繁地使用 MySQL。
+
+此文件中 `key_buffer` 大小设置为 16M，而 mysqld 服务器的 `sort_buffer` 值提高至 512K。`table_cache` 设置为 64（允许更多同时活动的线程）。`net_buffer_length` 提高至 8K。
+
+### my-large.cnf
+
+`my-large.cnf` 示例文件旨在用于主要专门用于 MySQL 服务的计算机。它假设约 512M 可用内存。
+
+服务器缓冲区允许更多活动线程和更好的排序性能。假设系统 512M 内存的一半分配给 `key_buffer` 变量（256M）。`sort_buffer` 大小提高至 1M。`table_cache` 允许更多同时用户（最多 256 个活动线程）。
+
+### my-huge.cnf
+
+与 `my-large.cnf` 文件类似，`my-huge.cnf` 文件预期计算机主要用于 MySQL。然而，其目标系统提供更多的总内存（介于 1G 和 2G 内存之间）。
+
+排序缓冲区大小（`sort_buffer`）提高至 2M，而 `key_buffer` 设置为消耗 384M 内存。`table_cache` 大小加倍，允许最多 512 个活动线程。
+
+## 启动 MySQL 服务器
+
+在 Fedora 中，MySQL 服务器默认是关闭的。然而，打开它相当简单。/etc/init.d/mysqld 启动脚本随 mysql-server 包一起提供。要启动服务器，你可以运行 `mysqld` 启动脚本使其立即启动，然后设置它在每次系统启动时都启动。
+
+要立即启动 MySQL 服务器，请从终端窗口作为 root 用户输入以下内容：
+
+```
+# service mysqld start
+```
+
+要设置 MySQL 服务器在每次计算机重启时都启动，请输入以下内容（作为 root）：
+

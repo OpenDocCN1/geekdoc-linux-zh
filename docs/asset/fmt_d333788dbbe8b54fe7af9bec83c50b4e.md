@@ -1,0 +1,78 @@
+
+以下是你可以使用的 `rpm -q` 命令的有用形式，用于查询软件包的信息。（要使用任何这些 `rpm -q` 命令：）
+
+- `rpm -qa` 列出所有已安装的 RPM 包。
+- `rpm -qc` 列出软件包中所有的配置文件。
+- `rpm -qd` 列出软件包中所有的文档文件。这些通常是在线帮助手册页（也称为 man pages）。
+- `rpm -qi` 显示软件包的详细信息：版本号、大小、安装日期和简短描述。
+- `rpm -ql` 列出软件包中所有的文件。对于某些软件包，这可能是一个很列表。
+- `rpm -qs` 列出软件包中所有文件的状态。
+
+## 安装 RPM
+
+要安装一个 RPM，你必须使用 `rpm -i` 命令。你必须提供 RPM 文件的名称作为参数。一个典型的示例是从本图书的配套 CD-ROM 中安装 RPM，该光盘包含了 Red Hat Linux RPM。像往常一样，你必须先挂载 CD-ROM，然后切换到 RPM 所在的目录。然后使用 `rpm -i` 命令安装 RPM，后面跟上 RPM 的名称。
+
+例如，为了从我的 CD-ROM 安装 `kernel-source` RPM（包含 Linux 操作系统的源文件），我输入了以下命令：
+
+```
+mount /mnt/cdrom
+cd /mnt/cdrom/RedHat/RPMS
+rpm -i kernel-source*
+```
+
+![](img/448aa2bd6846782b632c764b035753bc_306_0.png)
+
+你不需要输入完整的 RPM 文件名——你可以使用名称开头的几个字符，后跟一个星号。确保你输入的名称足够长能够唯一标识该 RPM 文件。
+
+如果你尝试安装一个已经安装的 RPM，`rpm` 命令会显示错误信息。例如，当我通过输入 `rpm -i emacs-20` 在你的系统上安装 Emacs 编辑器时，发生了以下情况：
+
+```
+package emacs-20.7-13 is already installed
+```
+
+如果存在错误，要强制 `rpm` 命令安装软件包，只需如下所示在 `rpm` 命令中添加 `--force` 即可：
+
+```
+rpm -i --force emacs-20*
+```
+
+## 移除 RPM
+
+当你意识到不再需要某个软件时，可以移除——卸载一个软件包。例如，如果你安装了 X Window System 开发包但你不再对编写 X 应用程序感兴趣，你可以使用 `rpm -e` 命令轻松地移除该软件包。
+
+在移除软件包之前，你需要该软件包的名称。找到名称的一种好方法是使用 `rpm -qa` 配合 `grep` 来搜索适当的 RPM 文件。例如，你可以输入此命令：
+
+```
+rpm -qa | grep XFree
+```
+
+以定位 X Window System 开发 RPM。
+
+```
+Free86-7dpi-fonts-4.0.1-0.43
+Free86-twm-4.0.1-0.43
+Free86-libs-4.0.1-0.43
+Free86-xfs-4.0.1-0.43
+Free86-kernel-4.0.1-0.43
+Free86-devel-4.0.1-0.43
+Free86-tools-4.0.1-0.43
+Free86-xdm-4.0.1-0.43
+Free86-SVGA-4.0.1.0.43
+```
+
+## 第 23 节—安装软件包
+
+要查询软件包的信息，你可以使用 `rpm -q` 命令的有用形式（如下）。
+
+查看内核包中的文件。
+
+```
+/boot/System.map-2.2.16-21
+/boot/module-info-2.2.16-21
+/boot/vmlin-2.2.16-21
+/boot/vmlinuz-2.2.16-21
+/lib/modules
+/lib/modules/2.2.16-21
+/lib/modules/2.2.16-21/.rkmvtag
+/lib/modules/2.2.16-21/block
+```

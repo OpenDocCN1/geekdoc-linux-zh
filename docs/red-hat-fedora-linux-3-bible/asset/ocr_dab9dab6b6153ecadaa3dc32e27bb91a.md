@@ -1,0 +1,41 @@
+Block grace time: 7days; inode grace time: 7days
+
+User used soft hard grace used soft hard grace
+root -- 1973984 0 0 2506 3 0 0
+jake -- 1296 700 1700 6days
+
+In this example, jake has exceeded his soft limit of 700 blocks. He currently has six days left in his grace period to remove enough files so that he does not become the hard limit.
+
+# ## Using du to check disk use
+
+You can discover the most voracious consumers of disk space using the du command. Invoke du with the -s option and give it a list of directories; it reports the total disk space used by all the files in each directory. Add an -h option to display disk space used in numbers, followed by kilobytes (k), megabytes (M), or gigabytes (G). The -c option adds a total of all requested directories at the end. The following checks disk usage for several home directories:
+
+```
+# du -hcs /home/tom /home/bill /home/tina /home/sally
+```
+
+This should result in a list of all of your users' home directories preceded by the number of kilobytes that each directory structure uses. It looks something like this:
+
+```
+339M	/home/tom
+81M	/home/bill
+31M	/home/tina
+44k	/home/sally
+450M	total:
+```
+
+# ## Removing temp files automatically
+
+Some potential disk-consumption problems are set up to take care of themselves. For example, directories for storing temporary files used by applications (such as /tmp and /var/tmp) can consume lots of disk space over time. To deal with the problem, Fedora includes the tmpwatch facility. The tmpwatch command runs from the cron file /etc/cron.daily/tmpwatch to delete unused temporary files. Here's what that file contains:
+
+```
+/usr/sbin/tmpwatch 240 /tmp
+/usr/sbin/tmpwatch 720 /var/tmp
+for d in /var/{cache/man,catman}[/cat?;X11R6/cat?,local/cat?]; do
+    if [ -d "$d" ]; then
+        /usr/sbin/tmpwatch -f 720 $d
+    fi
+done
+```
+
+Each day, this tmpwatch script runs to delete temporary files that haven't been used for a while. Files from the /tmp and /var/tmp directories are removed after 240 and 720 hours of not being accessed, respectively. Temporary man page files stored in /var/cache subdirectories are also checked and deleted after 720 hours of disuse.

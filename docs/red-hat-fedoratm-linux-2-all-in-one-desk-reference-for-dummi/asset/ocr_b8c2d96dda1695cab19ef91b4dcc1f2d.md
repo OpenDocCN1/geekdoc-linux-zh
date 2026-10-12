@@ -1,0 +1,19 @@
++   ♦ **Newsgroups**: Read newsgroups and post news items to newsgroups with names such as comp.os.linux.networking or comp.os.linux.setup.
+
++   ♦ **Information sharing**: Download software, music files, videos, and so on. Reciprocally, you may provide files that users on other systems can download.
+
++   ♦ **Remote access**: Log on to another computer on the Internet, assuming that you have access to that remote computer.
+
+The techies among us say the Internet is a worldwide network of networks. The term internet (without capitalization) is a short form of internetworking — the interconnection of networks. The Internet Protocol (IP) was designed with the idea of connecting many separate networks.
+
+![](bbox=[0.14, 0.37, 0.22, 0.46])
+
+In terms of physical connections, the Internet is similar to a network of highways and roads. This similarity is what has prompted the popular press to dub the Internet “the Information Superhighway.” Just as the network of highways and roads includes some interstate highways, many state roads, and many more residential streets, the Internet has some very high-capacity networks (for example, a 10-Gbps backbone can handle 10 billion bits per second) and a large number of lower-capacity networks ranging from 56 Kbps dial-up connections to 45 Mbps T3 links (Kbps is thousand-bits-per-second and Mbps is million-bits-per-second). The high-capacity network is the backbone of the Internet.
+
+In terms of management, the Internet is not run by a single organization, nor is it managed by any central computer. You can view the physical Internet as a “network of networks” managed collectively by thousands of cooperating organizations. Yes, a collection of networks managed by *thousands* of organizations — sounds amazing, but it works!
+
+# # Deciding How to Connect to the Internet
+
+So you want to connect to the Internet, but don’t know how? Let me count the ways. Nowadays you have three popular options for connecting homes and small offices to the Internet (*of course*, huge corporations and governments have many other ways to connect):
+
++   ♦ **Digital Subscriber Line (DSL)**: Your local telephone company, as well as other telecommunications companies, may offer DSL. DSL provides a way to send high-speed digital data over a regular phone line. Typically, DSL offers data-transfer rates of between 128 Kbps and 1.5 Mbps. You can download from the Internet at much higher rates than when you send data from your PC to the Internet (upload). One caveat with DSL is

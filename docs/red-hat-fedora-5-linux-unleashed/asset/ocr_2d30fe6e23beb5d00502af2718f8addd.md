@@ -1,0 +1,19 @@
+provided by Fedora Core have been upgraded to work with both ext2 and ext3. We mention the ext2 tools only because you will see the ext2 file system mentioned frequently; ext3, as supplied with Fedora Core Linux, is completely compatible with ext2.
+
+# ## Understanding the ext3 File System Structure
+
+Fedora's rationale for choosing ext3 might be compelling. Although it provides availability, data integrity, and speed similar to other file system choices, ext3 has one unique advantage: It is an easy transition from ext2 to ext3, and the transition is forgiving of mistakes along the way. It is also potentially possible to recover a deleted file from an ext3 file system; such a recovery is not possible at all for a reiserfs file system.
+
+> > **NOTE**
+> > The downside to using ext3 seems to be performance related. A recent benchmarking evaluation (see http://fsbench.netration.com/ ) of all Linux file systems placed ext3 at the bottom for general performance. What the study really demonstrates is that you must match the file system to the application for best all-around performance.
+
+The ext3 file system can accommodate files as large as 2TB, directories as large as 2TB, and a maximum filename length of 255 characters. (With special kernel patches, this limit can be increased to 1,024 characters if the standard length is insufficient for your use.) The ext3 file system can allocate and use empty space in a very efficient manner.
+
+The usage of space is so efficient that ext3 file systems typically do not need defragmenting (rearranging the files to make them contiguous). The dynamic allocation of resources is also the source of one Achilles heel for the file system. When a file is deleted, its inode is erased and the data blocks associated with it are freed; they might very well be reallocated immediately, and the old data lost forever.
+
+> > **NOTE**
+> > A defragmentation program for the ext2 file system does exist, but it is infrequently used, is not typically included with standard Linux distributions such as Fedore Core Linux, and is not recommended for general use. The ext2/3 file system assigns blocks of space for files based on their parent directories; these spaces files all over the physical disk, leaving room to keep files contiguous and reduce fragmentation. However, a file system full of files at 90% of its capacity can become badly fragmented.
+
+Every file system varies in structure, depending on its efficiency, security, and even proprietary designs to limit cross-compatibility deliberately. The ext2/3 file systems were designed to follow UNIX design concepts, particularly “everything is a file.”
+
+For example, a directory in the ext3 file system is simply a file; that file contains the names of the files to be found in that directory, and the locations of those files. The list of names is linked so that space is not wasted because of varying filename lengths.

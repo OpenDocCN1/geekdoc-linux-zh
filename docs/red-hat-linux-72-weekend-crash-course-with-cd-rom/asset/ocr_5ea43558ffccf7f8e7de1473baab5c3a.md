@@ -1,0 +1,16 @@
+# Sunday Afternoon Review Answers
+
++   1.  Many open source software packages are distributed in source code form without any executable binaries. Before you can use such software, you have to build the executable binary files. That’s why it’s important to learn how to build software from source files.
++       2.  Open source software is typically distributed in compressed tar archives, also known as compressed tarballs. You can download the file using anonymous FTP or through a Web browser. To unpack it, use a command of the form `tar zxvf tarball_name` where `tarball_name` is the name of the file you tar zxvf tarball_name where tarball_name is the name of the file you downloaded.
++       3.  After downloading and unpacking the source files, look for files with the names resembling `README` or `INSTALL` for instructions on how to build and install the software.
++       4.  First download the file using anonymous FTP. Then use the `tar zxvf` command to unpack the file. Next, check the `README` or `INSTALL` files, in any, for instructions. In most cases, type `/configure` to configure the software; make to build the software; and `make install` to install it.
++       5.  The XMMs package is the X Multimedia System, a graphical X application for playing MP3 and other multimedia files. Build and install XMMs with the command `/configure; make; make install`.
++       6.  Look for information such as CPU usage, physical memory and swap space usage, and hard disk usage to monitor your system’s performance.
++       7.  Red Hat Linux includes tools such as the Gnome System Monitor, and the top and `vmstat` commands to monitor system performance.
++       8.  The **system load average** is the average number of processes that were ready to run in the last 1, 5, and 15 minutes.
++       9.  The `vostat 60 10` command line displays 60-second averages and prints a total of 10 lines of output. The first line of output from vstat shows the averages since the last reboot.
++       10. The purpose of `/proc` is to allow users to access information about the Linux kernel and the processes that are currently running on the system.
++       11. The **security policy** provides the rules you use when setting up your Red Hat Linux system’s security. The security policy should address areas such as how users are authenticated, what various users can do, what data must be protected, which Internet services are allowed to run, and who is responsible for maintaining and auditing security.
++       12. The general steps are to install only those packages that you need, create user accounts with strong passwords, enable only the necessary Internet services, and periodically check log files for signs of break-in attempts. You should also keep up with security news and install upgrades from Red Hat.
++       13. Shadow passwords and the use of MD5 encryption are two ways in which passwords are made more secure in Red Hat Linux.
++       14. The `chage -M 30 marys` command line forces the user named *marys* to change her password every 30 days.

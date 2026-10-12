@@ -1,0 +1,17 @@
+After you press Enter, you’re asked to type the root password. You then see the main client window shown in Figure 19.2.
+
+![](bbox=[0.24, 0.15, 0.79, 0.42])
+
+In the Main tab, you can set the server name, indicate where to send email addressed to the webmaster, and set the port that Apache will use. If you want, you can also configure specific virtual hosts to listen on different ports.
+
+# ### Configuring Virtual Host Properties
+
+In the Virtual Hosts tab, you can configure the properties of each virtual host. The Name list box contains a list of all virtual hosts operating in Apache. Edit a virtual host by opening the Virtual Hosts Properties dialog box, shown in Figure 19.3. You do this by highlighting the name of a virtual host in the Name list box of the Virtual Hosts tab and clicking the Edit button at the right of the tab. Use the General Options item in the Virtual Hosts Properties dialog box to configure basic virtual host settings.
+
+Click the Site Configuration listing in the General Options list of this dialog box to set defaults, such as which files are loaded by default when no files are specified (the default is index.*) in the URL.
+
+The SSL listing in the General Options pane gives you access to settings used to enable or disable SSL, specify certificate settings, and define the SSL log filename and location. Select the Logging listing to access options for configuring where the error messages are logged, as well as where the transfer log file is kept and how much information is put in it.
+
+Use the Environment Variables options to configure settings for the env\_mod module, used to pass environment directives to CGI programs.
+
+The Directories section configures the directory options (such as whether CGI programs are allowed to run) as well as the order entries mentioned in the httpd.conf section.

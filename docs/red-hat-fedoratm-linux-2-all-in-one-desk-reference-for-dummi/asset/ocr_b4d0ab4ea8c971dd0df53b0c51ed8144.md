@@ -1,0 +1,42 @@
+```
+/* s h o w
+ *
+ * Show the object.
+ */
+void show(void *data)
+{
+    OBJDATA *d = (OBJDATA*)data;
+    printf("Show: %s\n", d->name);
+}
+/*---------------------------------------------------------*/
+/* d e s t r o y
+ *
+ * Destroy the object (free all storage).
+ */
+void destroy(void *data)
+{
+    OBJDATA *d = (OBJDATA*)data;
+    if(d)
+    {
+        if(d->name)
+        {
+            printf("Destroying: %s\n", d->name);
+            free(d->name);
+        }
+        free(d);
+    }
+}
+```
+
+The object offers three interface functions:
+
++   ◆ *init* to allocate any necessary storage and initialize the object
++   ◆ *show* to display the object (here, it simply prints a message)
++   ◆ *destroy* to free any storage
+
+To build the shared library named libdobj.so, follow these steps:
+
++   1. Compile all source files with the `-fPIC` flag. In this case, compile the dynobj.c file by using this command:
++      `gcc -fPIC -c dynobj.c`
++   2. Link the objects into a shared library with the `-shared` flag and provide appropriate flags for the linker. To create the shared library named `libdobj.so.1`, use the following:
++      `gcc -shared -Wl,-soname,libdobj.so.1 -o libdobj.so.1.0 dynobj.o`

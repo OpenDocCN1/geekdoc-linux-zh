@@ -1,0 +1,19 @@
+# # Chapter 3: Reading Newsgroups
+
+# In This Chapter
+
++   - Understanding newsgroups
++   - Reading newsgroups from your ISP
++   - Reading and searching newsgroups at some Web sites
+
+Internet newsgroups are like the bulletin-board systems (BBSs) of the pre-Web age or the forums offered on online systems such as AOL and MSN. Essentially, newsgroups provide a distributed conferencing system that spans the globe. You can post articles — essentially e-mail messages to a whole group of people — and respond to articles others have posted.
+
+Think of an Internet newsgroup as a gathering place — a virtual meeting place where you can ask questions and discuss various issues (and best of all, everything you discuss gets archived for posterity).
+
+To participate in newsgroups, you need access to a news server — your Internet Service Provider (ISP) can give you this access. You also need a newsreader. Luckily, Fedora Core comes with software that you can use to read newsgroups: Pan and Mozilla Mail. In this chapter, I introduce you to newsgroups and show you how to read newsgroups with a few of the newsreaders. I also briefly explain how you can read and search newsgroups for free from a few Web sites.
+
+# ## Understanding Newsgroups
+
+Newsgroups originated in Usenet — a store-and-forward messaging network that was widely used for exchanging e-mail and news items. Usenet works like a telegraph in that news and mail are relayed from one system to another. In Usenet, the systems are not on any network; they simply dial up and use the UNIX-to-UNIX Copy Protocol (UUCP) to transfer text messages.
+
+Although it’s a very loosely connected collection of computers, Usenet works well and continues to be used because very little expense is involved in connecting to it. All you need is a modem and a site willing to store and forward your mail and news. You have to set up UUCP on your system, but you don’t need a sustained network connection; just a few phone calls are all you need to keep the e-mail and news flowing. The downside is that you cannot use TCP/IP services such as the Web, TELNET, or FTP.

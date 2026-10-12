@@ -1,0 +1,17 @@
+can walk you through the process in as little as 15 minutes. The system itself is very flexible: you can install and uninstall individual software “packages” with only a few mouse clicks. It is easy to maintain: package installations can be verified and corrected, and packages can be installed and uninstalled simply and reliably. Furthermore, Red Hat Linux is easy to administer: a set of graphical administration tools bundled into a “control-panel” reduce the hassle of everyday system administration. Complete source code is provided for the freely distributable components of the system.
+
+# ## An Overview of This Book
+
+This manual is organized in the following fashion:
+
++   Chapter 1, Quick Start contains enough information for experienced users to perform a basic installation of Red Hat Linux/Intel without much trouble. We recommend that new Linux users read through the manual before installing to get a good understanding of the system.
+
++   Chapter 2, Installing Red Hat Linux/Intel contains detailed instructions for installing Red Hat Linux on an Intel or compatible PC.
+
++   Chapter 3, Installing Red Hat Linux/Alpha contains instructions for installing Red Hat Linux on a Digital Alpha.
+
++   Chapter 4, Installing Red Hat Linux/SPARC contains instructions for installing Red Hat Linux on a Sun SPARC machine.
+
++   Chapters 5 – 10 explain how to configure various services once you have installed Red Hat Linux, how to find documentation on your system, and how to use the various system management and administration tools which accompany Red Hat Linux. They also include an explanation of what’s special about your Red hat Linux system, including where special files live and how to shut down Red Hat Linux.
+
++   Appendices contain extra information about Red Hat Linux, including a list of hardware requirements, a manual for the MetroLink X server included with Red Hat Linux/Intel, the Red Hat Linux Frequently Asked Questions (FAQ), and instructions on obtaining technical support.

@@ -1,0 +1,43 @@
+After you press Enter, a file named `xorg.conf.new` is created in root's home directory, the `/root` directory. You can then use this file for a test session, like this:
+
+```
+# X -config /root/xorg.conf.new
+```
+
+# # Starting X
+
+You can start X sessions in a variety of ways. The Fedora installer sets up the system initialization table `/etc/inittab` to have Linux boot directly to an X session using a *display manager* (that is, an X client that provides a graphical login). After you log in, you use a local session (running on your computer) or, if the system is properly configured, an X session running on a remote computer on the network. Logging in via a display manager requires you to enter a username and password. You can also start X sessions from the command line. The following sections describe these two methods.
+
+# ## Using a Display Manager
+
+An X display manager presents a graphical login that requires a username and password to be entered before access is granted to the X desktop. It also allows you to choose a different desktop for your X session. Whether or not an X display manager is presented after you boot Linux is controlled by a *runlevel*—a system state entry in `/etc/inittab`. The following runlevels are defined in the file:
+
+```
+# 0 - halt (Do NOT set initdefault to this)
+# 1 - Single user mode
+# 2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+# 3 - Full multiuser mode
+# 4 - unused
+# 5 - X11
+# 6 - reboot (Do NOT set initdefault to this)
+```
+
+Runlevel 5 is used for multiuser mode with a graphical X login via a display manager; booting to runlevel 3 provides a console, or text-based, login. The `initdefault` setting in the `/etc/inittab` file determines the default runlevel:
+
+```
+id:5:initdefault:
+```
+
+In this example, Linux boots and then runs X.
+
+The default display manager might also be specified in `/etc/inittab`, like this:
+
+```
+x:5:respawn:/usr/bin/xdm -nodaemon
+```
+
+However, Fedora uses a shell script named `prefdm`, found under the `/etc/X11` directory, to set the display manager:
+
+```
+x:5:respawn:/etc/X11/prefdm -nodaemon
+```

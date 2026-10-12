@@ -1,0 +1,1 @@
+Besides being able to set up your computer as a Fedora Linux print server, you can also have your computer emulate an SMB (Windows) print server. After your network is configured properly and a local printer is installed, sharing that printer over the network as a UNIX or SMB print server is not very complicated.

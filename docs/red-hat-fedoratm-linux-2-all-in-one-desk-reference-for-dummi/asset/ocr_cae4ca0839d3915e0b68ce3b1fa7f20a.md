@@ -1,0 +1,33 @@
+After the installation is complete, follow these steps to use Nessus:
+
++   1. **Log in as root** and type the following command to create the Nessus SSL certificate used for secure communication between the Nessus client and the Nessus server:
++      ```
++      nessus-mkcert
++      ```
++   2. **Provide the requested information** to complete the certificate generation process.
++   3. **Create a nessus account** with the following command:
++      ```
++      nessus-adduser
++      ```
++   4. **When prompted, enter your username, password, and any rules** (press Ctrl+D if you don’t know what rules to enter). Then press the Y key.
++   5. **If you want to, you can configure nessusd by editing the configuration file /usr/local/etc/nessus/nessusd.conf.**
++      If you want to try out Nessus, you can proceed with the default configuration file.
++   6. **Start the Nessus server** with this command:
++      ```
++      nessusd -D
++      ```
++   7. **Run the Nessus client** by typing the following command in a terminal window:
++      ```
++      nessus
++      ```
++      The Nessus Setup window appears.
++   8. **Type a nessusd username and password** and then click the **Log In** button (shown in Figure 4-1).
++   9. **When Nessus displays the certificate used to establish the secure connection and asks if you accept it, click Yes.**
++      After the client connects to the server, the Log In button changes to Log Out, and a Connected label appears at its left.
++   10. **On the Target Selection tab, enter a range of IP addresses to scan** all hosts in a network.
++       For example, to scan the first eight hosts in a private network 192.168.0.0, I enter the address as:
++       ```
++       192.168.0.0/29
++       ```
++   11. **Click Start the Scan.**
++       Nessus starts scanning the IP addresses and checks for many different vulnerabilities. Progress bars show the status of the scan (see Figure 4-2).

@@ -1,0 +1,15 @@
+over the Internet. It’s easy to track which packages are installed or to look at the contents of a package. Because RPM is available to the Linux community, it has become one of the de facto standards for packaging Linux software.
+
+> **CROSS-REFERENCE**: Chapter 5 describes how to install RPM packages.
+
++   * **Easy installation** — The Fedora installation process (called *anaconda*) provides easy steps for installing Linux. During installation, anaconda also helps you take the first few steps toward configuring Linux. You can choose which packages to install and how to partition your hard disk. You can even get your desktop GUI ready to go by configuring your video card, user accounts, and even your network connection.
+
+> **CROSS-REFERENCE**: Chapter 2 covers Fedora Core installation.
+
++   * **UNIX System V-style run-level scripts** — To have your system services (daemon processes) start up and shut down in an organized way, Fedora uses the UNIX System V mechanism for starting and stopping services. Shell scripts (that are easy to read and change) are contained in subdirectories of /etc. When the run level changes, such as when the system boots up or you change to single-user mode, messages tell you whether each service started correctly or failed to execute properly. Chapter 12 describes how to use runlevel scripts.
+
++   * **Desktop environments (GNOME and KDE)** — To make it easier to use Linux, Fedora comes packaged with the GNOME and KDE desktop environments. GNOME is installed by default and offers some nice features that include drag-and-drop protocols and tools for configuring the desktop look and feel. KDE is another popular desktop manager that includes a wide range of tools tailored for the KDE environment, such as the KDE Control Center for configuring the desktop.
+
++   * **Desktop look-and-feel** — With the latest Fedora and other Red Hat Linux distributions, whether you use KDE or GNOME as your desktop environment, you can expect to see many of the same icons and menus to help standardize how you use your Linux system. Tools you can launch from those environments help you configure your network, set up servers, watch log files, and manage system services.
+
++   * **GUI Administration tools** — There are some helpful configuration tools for setting up some of the trickier tasks in Linux. Several different GUI tools provide a graphical, form-driven interface for configuring networking, users, file systems, and initialization services. Instead of creating obtuse command lines or having to create tricky configuration files, these graphical tools can set up those files automatically. (Prior to Fedora Core 2, many of these GUI administration tools were launched from commands that began with *redhat-config-*. Now, those commands have been renamed to start with *system-config-*.

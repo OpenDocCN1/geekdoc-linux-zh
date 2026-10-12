@@ -1,0 +1,53 @@
+-v—Verbose mode for debugging problems
+
+-C—Enables file compression
+
+The syntax of an scp copy command is
+
+```
+scp [arguments] [source] [target]
+```
+
+For example, if we want to copy the file /home/paul/fedora.txt to ~/docs on our account on a remote host
+
+```
+$ scp -p /home/paul/fedora.txt paul@192.168.168.4:/home/paul/docs
+```
+
+After it prompts us for a password, we see
+
+```
+fedora.txt 100% ........................ 0 00:00
+```
+
+This indicates that the transfer was completed. If we had subdirectories to transfer, we would have used the -r (recursive) argument.
+
+Actually, it can be much easier than the example because scp assumes that all paths are relative to the home directory of the user unless the full path is given.
+
+Taking this into consideration, our example becomes
+
+```
+$ scp -p fedora.txt paul@192.168.168.5:docs
+```
+
+And it can be made even easier. Creating a file named ~/.ssh/config with the following contents:
+
+```
+Host = titan
+HostName = 192.168.168.5
+User = paul
+ForwardAgent = yes
+ForwardX11 = yes
+Compression = yes
+```
+
+allows us to simply use
+
+```
+$ scp -p fedora.txt titan:docs
+```
+
+> **NOTE**  
+> If you are comfortable with FTP, you might want to consider a cousin of scp: sftp. It provides the common FTP command set. If no sftp server is running on the remote host, simply use scp to copy the sftp-server binary to your remote home directory. (Often, ~/bin is in your path.) The FTP client gftp supports sftp and gives you a GUI client as well.
+> 
+> You can find more information on both scp and sftp in Chapter 19, “Remote Access with SSH and Telnet.”

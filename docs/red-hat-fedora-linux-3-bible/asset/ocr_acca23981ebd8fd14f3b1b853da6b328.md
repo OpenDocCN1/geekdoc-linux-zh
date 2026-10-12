@@ -1,0 +1,30 @@
+specify a desired run level, causing the termination of all system processes that shouldn't exist in that run level, and starting all processes that should be running.
+
+> **NOTE:** The `telinit` command is also used to instruct `init` to reload its configuration file, /etc/inittab. This is accomplished with either the `telinit q` or the `telinit Q` commands.
+
+For example, if you encounter a problem with your hard disk on startup, you may be placed in single-user mode (runlevel 1) to perform system maintenance. After the machine is stable, you can execute the command as follows:
+
+```
+`# telinit 5`
+```
+
+The `init` command handles terminating and starting all processes necessary to present you with a graphical login window.
+
+# *Determining the current run level*
+
+You can determine the machine's current run level with the apply named `runlevel` command. Using the previous example of booting into single-user mode and then manually changing the run level, the output of the `runlevel` command would be:
+
+```
+```
+# runlevel
+S 5
+```
+```
+
+This means that the previous run level was S (for single-user mode) and the current run level is 5. If the machine had booted properly, the previous run level would be listed as N to indicate that there really wasn't a previous run level.
+
+# *Changing to a shutdown run level*
+
+Shutting down the machine is simply a change in run level. With that in mind, other ways to change the run level include the `reboot`, `halt`, `poweroff`, and `shutdown` commands. The `reboot` command, which is a symbolic link to the `halt` command, executes a `shutdown -r now`, terminating all processes and rebooting the machine. The `halt` command executes `shutdown -h now`, terminating all processes and leaving the machine in an idle state (but still powered on). Similarly, the `poweroff` command, which is also a link to the `halt` command, executes a change to run level 0, but if the machine's BIOS supports Advanced Power Management (APM), it will switch off the power to the machine.
+
+> **NOTE:** A time must be given to the `shutdown` command, either specified as `+m` (representing the number of minutes to delay before beginning shutdown) or as `hh:mm` (an absolute time value, where `hh` is the hour and `mm` is the minute that you would like the shutdown to begin). Alternatively, `now` is commonly used to initiate the shutdown immediately.

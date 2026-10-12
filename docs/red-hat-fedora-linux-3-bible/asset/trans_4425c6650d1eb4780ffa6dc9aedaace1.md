@@ -1,0 +1,145 @@
+
+
+-   **octave**：用于执行数值计算的 GNU octave 工具。
+-   **Omni**：使用 Ghostscript 的打印机驱动程序支持。
+-   **Omni-foomatic**：Omni 打印机驱动程序系统的 Foomatic 数据。
+-   **open**：用于使用虚拟控制台运行程序的实用工具。
+-   **openh323**：H323 视频会议协议的库实现。
+-   **openh323-devel**：使用 openh323 进行开发所需的库和头文件。
+-   **openhci***：用于家庭银行计算机接口 (HBCI) 支持的客户端工具。
+-   **openjade**：用于解析 DSSSL SGML 内容的实用工具。
+-   **openjade-devel**：openjade 的开发工具。
+-   **opendap**：运行 OpenDAP 程序所需的组件。
+-   **opendap-clients**：用于处理 OpenLDAP 目录的客户端程序。
+-   **opendap-devel**：创建 LDAP 客户端程序所需的工具和文档。
+-   **opendap-servers**：用于提供 OpenLDAP 目录可用的服务器程序。
+-   **opendap-servers-sql**：将 slapd 服务器与 RDBMS 服务进行接口的工具。
+-   **openmotif**：OpenMotif 库和程序。
+-   **openmotif21**：OpenMotif 2.1 的兼容性库。
+-   **openmotif-devel**：允许创建 Motif 应用程序的开发库。
+-   **openobex**：开放 OBEX 共享 C 库。
+-   **openobex-apps**：使用 OBEX 的应用程序。
+-   **openobex-devel**：openOBEX 的开发工具。
+-   **openoffice**：OpenOffice.org 综合办公套件。
+-   **openoffice-i18n**：OpenOffice 办公套件的国际化支持。
+-   **openoffice-libs**：OpenOffice 共享库。
+-   **openssh***：OpenSSH 客户端和服务器进程所需的组件。
+-   **openssl***：提供安全套接层 (SSL) 服务所需的组件。
+-   **openswan**：用于 Linux 的 IPSEC 和 IKE 的免费实现。
+-   **oprofile**：用于 x86 处理器的系统级性能分析器。
+-   **oprofile-devel**：用于开发使用 oprofile 的应用程序的标头文件和库。
+-   **ORBit***：与 ORBit CORBA（公共对象请求代理体系结构）ORB（对象请求代理）一起使用的组件。
+-   **ots**：文本摘要工具。
+-   **ots-devel**：用于开发 ots 程序的工具。
+-   **pam_ccreds**：允许缓存网络认证凭据。
+-   **pam**：可插拔认证模块库，用于选择认证机制。
+-   **pam_krb5**：用于 Kerberos 5 认证的 PAM 库。
+-   **pam_passwdqc**：用于 pam 应用程序的密码强度检查模块。
+-   **pam_smb**：用于针对外部 SMB 服务器进行认证的 PAM 模块。
+-   **pam-devel**：pam 应用程序所需的静态库和标头文件。
+-   **pan**：一个图形化的 USENET 新闻阅读器。
+-   **pango**：用于渲染国际文本的 Pango 软件。
+-   **pango-devel**：用于渲染国际文本的 Pango 软件的开发工具。
+-   **parted**：用于创建和调整磁盘分区大小的实用工具。
+-   **parted-devel**：用于操作磁盘分区的 GNU parted 库。
+-   **passtex**：处理 XSL 格式化对象的 TeX 宏。
+-   **passwd**：用于添加或更改用户密码的 passwd 命令。
+-   **patch**：用于修改和升级文件的 GNU Patch 实用工具。
+-   **patchutils**：操作补丁文件的程序。
+-   **pax**：用于创建和读取归档文件的 pax 实用工具。
+-   **pccts**：帮助实现编译器和其他翻译系统的软件工具。
+-   **pcituts**：用于查看和配置连接到 PCI 总线的设备信息的实用工具。
+-   **pcituts-devel**：与 PCI 实用工具相关的标头文件。
+-   **pcmcia-cs**：处理 PCMCIA 设备的实用工具。
+-   **pcre**：Perl 兼容的正则表达式库。
+-   **pcre-devel**：使用 pcre 开发应用程序所需的标头和库。
+-   **pdsh**：David Korn 的 Korn shell 的 pdsh 实现。
+-   **perl**：Perl 高级编程语言及其组件。
+-   **php**：PHP 嵌入式脚本语言及其组件。
+-   **pilot-link**：用于将 USR Palm Pilot 与 Red Hat Linux 系统同步的工具。
+-   **pilot-link-devel**：构建 pilot-link 应用程序所需的组件。
+-   **pinfo**：手册和 info 页面查看器。
+-   **pkgconf**：用于输入包编译选项的 pkg-config 实用工具。
+-   **planner**：Planner 可视化项目管理应用程序。
+-   **plugin**：用于与标准 Linux 程序一起使用的通用 Netscape 插件。
+-   **pmake**：BSD 4.4 版本的 make。
+-   **pnm2ppa**：用于向 HP PNA 打印机打印的驱动程序。
+-   **policycoreutils**：SELinux 策略核心实用工具的包。
+-   **port**：用于解析命令行参数的 C 语言库。
+-   **portmap**：用于管理 NFS 和 NIS 的 RPC 连接的实用工具。
+-   **postfix**：邮件传输代理 (MTA)。
+-   **postgresql**：用于创建和维护 PostgreSQL 数据库服务器的一组包。
+-   **ppp**：用于管理串行线路 TCP/IP 连接的点对点协议守护进程。
+-   **prelink**：ELF 预链接实用工具。
+-   **printman**：GNOME 打印监控工具。
+-   **privoxy**：隐私代理。在单个工作站上增强 Web 隐私很有用。
+-   **procpinfo**：用于显示来自 /proc 的内核信息的实用工具。
+-   **procmail**：本地电子邮件投递管理工具。
+-   **procs**：用于显示系统信息的实用工具，如 ps、free 和 top。
+-   **psacct**：进程核算实用工具，如 ac、lastcomm、accton 和 sa。
+-   **psgml**：允许 GNU Emacs 编辑 SGML 和 XML 文档的 PSGML 软件。
+-   **psmisc**：用于管理进程的实用工具，如 pstree、killall 和 fuser。
+-   **pstack**：显示运行中进程堆栈跟踪的程序。
+-   **psutils**：用于操作 PostScript 文档的实用工具。
+-   **pump-devel**：用于与 pump 功能接口的软件开发库。
+-   **pvm**：用于协调多个虚拟机的 pvm4 守护进程及相关实用工具。
+-   **pvm-gui**：基于 X 的 xpvim 工具，用于图形化管理虚拟机。
+-   **pwlib**：便携式 Windows 库，用于生成在 Windows 和 UNIX 上运行的程序。
+-   **pwlib-devel**：用于创建使用 pwlib 的应用程序的开发库。
+-   **pychecker**：Python 源代码检查工具。
+-   **pydict**：用 Python 编写的英中字典。
+-   **pygk2**：允许您在 Python 中使用 gtk 功能的模块。
+-   **pygk2-devel**：用于构建包装器以让 GTK+ 库与 pygk2 互操作的文件。
+-   **pygk2-libglade**：libglade 模块：为 libglade 库提供包装器。
+-   **pyOpenSSL**：OpenSSL 库的 Python 包装器。
+-   **pyorblit**：用于访问 ORBit2 CORBA ORB 的 Python 绑定。
+-   **pyorblit-devel**：用于构建 ORBit2 附加库包装器的开发库。
+-   **PyQt**：包含 Qt 的 Python 绑定。
+-   **PyQt-devel**：用于基于任何 Qt 类构建 C++ 类绑定所需的文件。
+-   **PyQt-examples**：演示如何使用 Qt 的 Python 绑定的示例代码。
+-   **Pyrex**：允许根据需要混合 Python 和 C 数据类型。
+-   **python**：Python 解释器，一种面向对象的脚本语言。
+-   **python-devel**：用于添加动态加载 Python 扩展的标头文件和库。
+-   **python-docs**：Python 编程语言的文档（文本和 LaTeX）。
+-   **python-optik**：Optik 命令行解析库的 Python 绑定。
+-   **python-tools**：为 Python 提供基于 Tkinter 的集成开发环境 (IDE) 的工具。
+-   **pyx86config**：XFree86 配置文件的 Python 包装器。
+-   **PyXML**：Python 的 Xml 库。
+-   **qt-MySQL**：Qt 的 SQL 类的 MySQL 驱动程序。
+-   **qt-ODBC**：Qt 的 SQL 类的 ODBC 驱动程序。
+-   **qt-PostgreSQL**：Qt 的 SQL 类的 Postgres 驱动程序。
+-   **quagga**：管理 TCP/IP 路由协议的工具。
+-   **quagga-contrib**：与 quagga 一起使用的第三方工具。
+-   **quagga-devel**：用于开发 quagga 应用程序的工具。
+-   **quantum**：用于 KDE 环境的 HTML 编辑器。
+-   **quota**：用于管理磁盘空间的 quota、quotacheck 和 quotatox 工具。
+-   **radvd**：IPv6 的路由器通告守护进程。
+-   **rarpd**：反向地址解析协议守护进程。
+-   **rcs**：修订控制系统。管理文件的多个版本。
+-   **rdist**：从网络时间服务器检索和设置日期和时间。
+-   **rdesktop**：开源 Windows 终端服务器客户端。不需要服务器扩展。
+-   **rdist**：在多台计算机上维护文件的精确副本。
+-   **readline**：允许程序使用 emacs 键编辑文本行。
+-   **readline-devel**：用于开发使用 readline 库的应用程序的组件。
+-   **recode**：在字符集之间进行转换。
+-   **recode-devel**：允许应用程序使用 recode 的开发文件。
+-   **redhat-artwork**：构成 Red Hat 标准外观和感觉的艺术作品。
+-   **redhat-lsb**：Red Hat Linux 的 Linux 标准基 (LSB) 支持。
+-   **redhat-menus**：用于桌面菜单的基于 XML 的配置和数据文件。
+-   **redhat-rpm-config**：Red Hat 特定的 RPM 配置文件。
+-   **reiserfs-utils**：用于检查和修复 ReiserFS 文件系统的实用工具。
+-   **rhdb-utils**：PostgreSQL（Red Hat 版）的杂项实用工具。
+-   **rhgb**：Red Hat 图形启动。
+-   **rhn-applet**：表明有新 Red Hat 包可用的面板小部件。
+-   **rhlib**：Red Hat 网络项目的库库。
+-   **rhpl**：Red Hat Linux 中程序使用的 Python 代码库。
+-   **rhythmbox**：用于抓取音频 CD、管理音乐和烧录 CD-ROM 的工具。
+-   **rmt**：远程磁带设备访问实用工具。
+-   **rootfiles**：提供给 root 用户的默认用户配置文件。
+-   **routed**：处理路由流量并维护路由表的守护进程。
+-   **rpm**：用于安装和管理 RPM (.rpm) 软件包的实用工具。
+-   **rpm-build**：用于创建 RPM 包的开发工具。
+-   **rpmbdb-fedora**：整个 Fedora Linux 发行版的 RPM 数据库。
+-   **rpm-devel**：用于创建操作 RPM 包的应用程序的组件。
+-   **rpm-libs**：共享 RPM 库。
+

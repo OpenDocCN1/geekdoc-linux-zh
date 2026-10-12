@@ -1,0 +1,130 @@
+
+device is used to read the CPU temperature and fan speed on our system. These lines for /etc/modprobe.conf were suggested for our use by the program’s documentation. We added them with a text editor.
+
+```
+alias char-major-89 i2c-dev
+options eeprom ignore=2,0x50,2,0x51,2,0x52
+```
+
+A partial listing of lsmod is shown here, piped through the less command, allowing us to view it a page at a time:
+
+```
+# lsmod | less
+Module			Size Used by
+parport_pc		19392	1
+Module			Size Used by
+parport_pc		19392	1
+lp			8236	0
+parport		29640	2 parport_pc,lp
+autofs4		10624	0
+sunrpc		101064	1
+```
+
+The list is actually much longer, but here we see that the input module is being used by the joydev (joystick device) module, but the joystick module is not being used. This computer has a joystick port that was autodetected, but no joystick is connected. A scanner module is also loaded, but because the USB scanner is unplugged, the module is not being used. You would use the lsmod command to determine whether a module was loaded and what other modules were using it. If you examine the full list, you would see modules for all the devices attached to your computer.
+
+To remove a module, joydev in this example, use
+
+```
+# rmmod joydev
+```
+
+or
+
+```
+# modprobe -r joydev
+```
+
+A look at the output of lsmod would now show that it is no longer loaded. If we removed input as well, we could then use modprobe to load both input and joydev (one depends on the other, remember) with a simple
+
+```
+# modprobe joydev
+```
+
+If Fedora Core Linux were to balk at loading a module (because it had been compiled using a different kernel version from what we are currently running; for example, the NVIDIA graphics card module), we could force it to load like this:
+
+```
+# insmod -f nvidia
+```
+
+We would ignore the complaints (error messages) in this case if the kernel generated any.
+
+In Chapter 10, "Multimedia Applications," we talked about loading a scanner module; in the example there, we manually loaded the scanner module and passed it the vendor ID. The scanner was not included in the lookup list because it is not supported by the GPL scanner programs; as a result, the scanner module was not automatically detected and loaded. However, the scanner will work with a closed-source application after the module is loaded. Automatic module management is nice when it works, but sometimes it is necessary to work with modules directly.
+
+## When to Recompile
+
+Fedora Core systems use a modified version of the plain vanilla Linux kernel (a modified version is referred to as a *patched kernel*) with additional drivers and other special features compiled into it.
+
+Fedora Core has quite an intensive testing period for all distribution kernels and regularly distributes updated versions. The supplied Fedora Core kernel is compiled with as many modules as possible to provide as much flexibility as possible. A running kernel can be further tuned with the `sysctl` program, which enables direct access to a running kernel and permits some kernel parameters to be changed (see "Kernel Tuning with sysctl" at the end of the chapter). As a result of this extensive testing, configurability, and modularity, the precompiled Fedora Core Linux kernel does everything most users need it to do. Most users only need to recompile the kernel to
+
+- Accommodate an esoteric piece of new hardware.
+- Conduct a system update when Fedora Core has not yet provided precompiled kernels.
+- Experiment with the system capabilities.
+
+Fedora Core supplies several precompiled versions of the kernel for Athlon and Pentium processors, for single- and multi-processor motherboards, and for Enterprise-class systems (higher security; uses 4GB of memory). These kernel versions are provided in RPM format. Installing them is as easy as
+
+```
+# rpm -Uvh new_kernel.rpm
+```
+
+The kernel (but not the source) RPM files include installation scripts that will automatically alter your bootloader configuration, making the new kernel the default. If you do not want that to happen, just manually edit the `/etc/lilo.conf` or `/boot/grub/grub.conf` files and change them back.
+
+> **CAUTION**
+> You always `rpm -U` (upgrade), rather than `rpm -i` (install), a new kernel rpm to avoid overwriting the old, but still working, kernel. This is done as a safety measure. What if the new one does not work?
+
+## Kernel Versions
+
+The Linux kernel is in a constant state of development. As new features are added, bugs are fixed, and new technology is incorporated into the code base, it becomes necessary to provide stable releases of the kernel for use in a production environment. It is also important to have separate releases that contain the newest code for developers to test. To keep track of the kernels, version numbers are assigned to them. Programmers enjoy using sequential version numbers that have abstract meaning. Is version 8 twice as advanced as version 4 of the same application? Is version 1 of one application less developed than version 3 of another? The version numbers cannot be used for this kind of qualitative or quantitative comparison. It is entirely possible that higher version numbers can have fewer features and more bugs than older versions. The numbers exist solely to differentiate and organize sequential revisions of software.
+
+For the latest development version of the kernel at the time of writing, for example, the kernel version number is 2.6.10-1.
+
+The kernel version can be broken down into four sections:
+
+- * major version—This is the major version number, now at 2.
+- * minor version—This is the minor version number, now at 6.
+- * sublevel number—This number indicates the current iteration of the kernel; here it is number 10.
+- * extraversion level—This is the number representing a collection of patches and additions made to the kernel by the Red Hat engineers to make the kernel work for them (and you). Each collection is numbered, and the number is indicated here in the kernel name. From our preceding example, it is 1.
+
+Typing `uname -r` at the command prompt displays your current kernel version.
+
+```
+# uname -r
+2.6.10-1
+```
+
+Even-numbered minor versions are stable kernels, whereas odd-numbered minor versions are development releases. Version 2.6.x is the stable production kernel, whereas version 2.5.x is the development Linux kernel. When a new version of the development kernel is started, it will be labeled 2.7.x.
+
+For production machines, you should always use the kernels with even minor numbers. The odd minor numbers introduce new features, so you might want to use those on a test machine if you need features they provide.
+
+## Obtaining the Kernel Sources
+
+The Linux kernel has always been freely available to anyone who wants it. If you just want to recompile the existing kernel, install the kernel-sources RPM from the CD. To get the very latest “vanilla” version, open an FTP connection to ftp.kernel.org using your favorite FTP client and log in as anonymous. Because you are interested in the 2.6 kernel, change directories to `/pub/linux/kernel/v2.6`. The latest stable kernel as of this writing is `2.6.11`.
+
+**Note**
+
+ftp.kernel.org receives more than its share of requests for download. It is considered a courtesy to use a mirror site to reduce the traffic that ftp.kernel.org bears. http://www.kernel.org/mirrors/ has a list of all mirrors around the world. Find one close to your geographic location and substitute that address for ftp.kernel.org.
+
+A number of different entries are on the FTP archive site for each kernel version, but because you are only interested in the full kernel it is only necessary to get the full package of source code. There are two of these packages:
+
+```
+linux-2.6.11.tar.gz
+linux-2.6.11.bz2
+```
+
+Although these are the same kernel packages, they are built using different compression utilities: The `.gz` extension is the gzip package, found on almost every Linux system available. The `.bz2` extension is the newer bzip2 utility, which has better compression than gzip. Both packages have the same content, so download the one compressed with the program you use.
+
+Once downloaded, move the package to a directory other than `/usr/src` and unpack it. If you downloaded the `.gz` package, the unpacking command is `tar -xzvf linux-2.6.11.tar.gz`. Otherwise, the bzip2 unpack command is `tar -xjvf linux-2.6.11.tar.bz2`. Once unpacked, the package will create a new directory, `linux-2.6.11`. Copy it to `/usr/src` or move it there. Then, create a symbolic link of `linux-2.6` to `linux-2.6.11` (otherwise, some scripts will not work). Here is how to create the symbolic link:
+
+```
+# rm /usr/src/linux-2.6
+# ln -s /usr/src/linux-2.6.11 /usr/src/linux-2.6
+```
+
+By creating a symbolic link to `/usr/src/linux-2.6`, it is possible to allow multiple kernel versions to be compiled and tailored for different functions: You will just change the symbolic link to the kernel directory you want to work on.
+
+**CAUTION**
+
+The correct symbolic link is critical to the operation of make. Always have the symbolic link point to the version of the kernel sources you are working with.
+
+## Patching the Kernel
+
+It is possible to patch a kernel to the newest Linux kernel version as opposed to downloading the entire source code. This choice can be beneficial for those who are not using a

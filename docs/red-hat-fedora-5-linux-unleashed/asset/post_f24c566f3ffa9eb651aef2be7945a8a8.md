@@ -1,0 +1,363 @@
+
+## information on any IRC channels relevant to your requirements
+
+To get started with IRC, browse to `http://www.irchelp.org`. Some of the channels of interest might be:
+
+- #Linux—General discussions about Linux
+- #linuxhelp—Help chat discussion for new users
+
+Most IRC networks provide one or more Linux channels, although some providers require sign up and registration before you can access any chat channel.
+
+# Index
+
+## Symbols
+
+- `&` (ampersand), 377, 399
+- `*` (asterisk), 148, 796
+  - in /etc/passwd files, 336
+  - shell pattern-matching searches, 374
+  - wildcards, 662
+- `|` (bar operator), 376
+- `/` (backslash), 390
+- ``` (backtick), 390
+- `{}` (braces), 799
+- `$#` built-in variable, 387
+- `$*` built-in variable, 387
+- `$?` built-in variable, 387
+- `$0` built-in variable, 387
+- `::` (colon), 798-799
+- `||` (double pipe)
+  - number comparison operator, 399
+  - string concatenation function, 574
+- `""` (double quotes), 388-389
+- `=` (equal sign), 391, 816
+- `==` string comparison operator, 396
+- `\'` escape sequence, 818
+- `\"` escape sequence, 818
+- `\\` escape sequence, 818
+- `!` (exclamation point), 333
+  - logical comparison operator, 395
+  - number comparison operator, 399
+- `>` (greater than) operator, 397
+- `>=` (greater than or equal) operator, 397
+- `<<` here operator, 376
+- `!=` (is not equal) symbol, 575
+- `<` (less than) operator, 397
+- `<=` (less than or equal) operator, 397
+- `[]` operator, 814
+- `!=` operator, 391, 396
+- `+` (plus sign), 796, 797
+- `?` (question mark), 375
+- `#` (run-parts lines (/etc-crontab files)), 370
+- `#!` (shebang lines), 380, 381, 771
+- `'` (single quotes), 389
+- `~` (tilde), 147
+
+## Numbers and Miscellaneous
+
+- `00` (INDEX) files, 965
+- 10BASE-T, 464
+- 64-bit Fedora, 22
+- 100BASE-T, 464, 465
+- 1000BASE-T, 465
+
+## A
+
+- `a` (logical comparison operator), 395
+- `a2p` command, 788
+- `a2ps` command, 305
+- AbiWord, 254-255
+- `abiword` command, 261
+- `ac` command, 335, 349
+- `accept` command, 305, 312, 622
+- access
+  - access control lists (ACLs), 657, 763
+  - X access control lists, 695, 699, 736-737, 927
+  - file system file systems, controlling, 441, 443, 448
+  - file permissions, changing, 895
+  - wireless access points, 867
+- accounts, See user accounts
+- ACID (Atomicity Consistency Isolation Durability), 577
+- ACLs (access control lists), 695, 699, 736-737, 927
+- actions (PHP loops), 826
+- active file (INN), 762-763
+- ad blocking, 716
+- Add a New Print Queue configuration dialog, 308
+- add-on postfiles, 659
+- add-on prefixes, 659
+- address-based virtual hosts, 551
+- addresses
+  - broadcast, 464
+  - IP addresses, 458-459
+  - dotted quad IP addresses, 703
+  - IP masquerading, 460
+  - limitations, 459-460
+  - netmask, 459, 462-463
+  - network classes, 458-459
+  - Squid proxy server, 700
+  - multicast, 463
+  - unicast, 463
+- `adduser` command, 333-334
+- Administrator Mode button (kdm), 181
+- administrative privileges, granting to users
+  - restricted shells, 346
+  - root privileges, granting on occasion, 343-345
+  - UIDs (user IDs), temporarily changing, 341-343
+- administrators, See root users
+- Adobe Photoshop, 288
+- Advanced Linux Sound Architecture (ALSA), 98, 273
+- Advanced Power Management (APM), 104-106
+- aio backup software, 439
+- `alias` command, 657-658
+- aliases
+  - mycnn shell script, 378
+  - Sendmail, 677-678
+- `allow` directive (Apache), 541-542
+- `AllowOverrides` directive (Apache), 540-541
+- ALSA (Advanced Linux Sound Architecture), 98, 273
+- `alsamixer` command, 98, 273, 284
+- Amanda, 438
+- amd (automount daemon), 948
+- `amdump` command, 453
+- America Online (AOL), 491
+- America's Army, 316
+- American Registry for Internet Numbers, 458
+- ampersand (&), 377, 399
+- SMTP email protocol, 216
+
+## Apache and Related Tools
+
+- `Apache` command, 665
+- Anaconda, 18, 63
+- AND statement (SQL), 575
+- anonymous access control (vsftpd), 643
+- anonymous FTP servers, 636
+  - compared to authenticated servers, 637
+  - configuring, 646
+- AOL (America Online), 491
+- Apache Software Foundation, 524
+- Apache server
+  - development of, 524
+  - documentation websites, 524
+  - downloading, 525-526
+  - dynamic content
+    - CGI, 555-556
+    - flow control, 561
+    - PHP, 555
+    - SSI, 556
+  - file system access control, 545, 541-542
+  - file system authentication, 542-544
+  - graphic interface configuration, 561
+  - peak performance configuration, 564
+  - server configuration, 563
+  - virtual host properties, 562
+  - installing
+    - file locations, 529
+    - from RPM, 525-527
+    - Internet security, 541
+  - logging
+    - common log format, 553
+    - CustomLog directive, 554
+  - modules
+    - mod_access, 546
+    - mod_alias, 546
+    - mod_asis, 546
+    - mod_auth, 547
+    - mod_auth_anon, 547
+    - mod_auth_dbm, 547
+    - mod_auth_digest, 547
+    - mod_autoindex, 548
+    - mod_cgi, 548
+    - mod_dir, 548
+    - mod_env, 548
+    - mod_expires, 548
+    - mod_headers, 548
+    - mod_include, 549
+    - mod_info, 549
+    - mod_log_config, 549
+    - mod_mime, 549
+    - mod_mime_magic, 549
+    - mod_negotiation, 549
+    - mod_proxy, 549
+    - mod_rewrite, 549
+    - mod_senvinfo, 550
+    - mod_sil, 550
+    - mod_speling, 550
+    - mod_status, 550
+    - mod_unique_id, 550
+    - mod_userdir, 550
+    - mod_usertrack, 550
+    - mod_vhost_alias, 550
+
+## General Commands and Concepts
+
+- APM (Advanced Power Management), 104-106
+- `apm` command, 105, 118
+- apm file, 87
+- `apmsleep` command, 105
+- application development (Fedora deployment plans), 30
+- `apropos` command, 140, 147
+- `apt-get` command-line software package tool, 17
+- `ar` command, 859
+- arch directory, 966
+- ark backup tool, 435-437, 453
+- ARPAnet, 212
+- array keys() function, 832
+- array unique() function, 832
+- array values() function, 832
+- arrays, 772-773, 814-815
+  - string class type, 814
+  - array functions, 812-833
+- `assert()` function, 833
+- articles (newsgroups), 227
+- `as` command, 859
+- `asci` command, 626
+- ash shell, 372
+- ash-static shell, 372
+- `assert()` function, 832-833
+- assigning
+  - FTP user permissions, 629
+  - permissions, 154
+  - values to shell script variables, 882
+  - values to strings, 794
+- asterisk (*), 148, 796
+  - in /etc/passwd files, 336
+  - shell pattern-matching searches, 374
+  - wildcards, 962
+- `at` command, 367-369
+- ATAPI (AT Attachment Packet Interface), 111
+- atime (files), disabling, 879-880
+- atomicity, 577
+- `atq` command, 368-369
+- `atrm` command, 369
+- Audio Format FAQ, 274
+- audio, See sound
+- authenticated FTP servers, 636-637
+- authentication
+  - Apache, 542-544
+  - BIND (Berkeley Internet Name Domain), 718
+  - PAM (Pluggable Authentication Modules), 898-940
+- AuthGroupFile directive, 544
+- AuthName directive, 544
+- authoritative nameservers, 709-710
+- AuthType directive, 544
+- AuthUserFile directive, 544
+- `autoconf` command, 851, 859
+- autofs, 596
+- autohacking, 864
+- automating tasks
+  - scheduling tasks
+    - `at` command, 367-369
+    - batch command, 368-369
+    - cron daemon, 369-372
+    - shell scripts, 384-386
+  - `#!` (shebang lines), 380-381
+  - built-in variables, 380, 387
+  - commands as, 377
+  - environment variables, 382
+  - executing, 379
+  - positional parameters, 383-384
+  - reasons for using, 377
+  - special characters, 387-388
+  - storing for systemwide access, 380
+  - testing, 386
+  - trojan scripts, 380
+  - user variables, 382-383
+  - writing, 378
+- shells
+  - `/` (backslashes), 390
+  - `` ` `` (backticks), 390
+  - changing, 380
+  - Fedora Core shells list, 372-373
+  - job-control commands, 373
+  - maintaining shell strings with unexpanded variables, 389
+  - man pages, 373
+  - resolving variables with embedded spaces, 388-389
+  - shell command line, 373-377
+
+## System Services and Booting
+
+- system services, 352
+- booting to default runlevel, 356-358
+- booting to nondefault runlevel, 358-359
+- booting to runlevel, 354
+- controlling at boot, 360-363
+- init scripts, 359-360
+- initiating boot loading process, 352-353
+- loading Linux kernel, 353-354
+- manually starting/stopping, 366
+- runlevels, 364-366
+- running through xinetd daemon, 363-364
+- websites, 410-411
+- autosenders (email), 687
+- .avi file format, 280
+- Axis Linux-based cameras, 289
+
+## B
+
+- background processing, 377
+- backreferencing, 839
+- backslash (\\), 390
+- backtick (`), 390
+- backups, 423
+  - configuration files, 159, 424
+  - consultants, 425
+  - data loss, reasons for, 424
+  - `dd` command, 437
+  - frequency of, 425-426
+  - FTP configuration files, 646
+  - full backups
+    - incremental backup strategies with, 429
+    - `tar` command-line backup software, 433
+  - hardware
+    - CD-RW drives, 431
+    - FireWire (IEEE-1394) drives, 431
+    - floppy disks, 437
+    - NAS, 431-432
+    - solid-state drives, 430
+    - tape drives, 432
+    - USB drives, 430-431
+    - Zip drives, 430
+  - incremental backups
+    - full backup strategies with, 428-429
+    - `tar` command-line backup software, 433
+  - informational websites, 453-454
+  - kernel, 975
+  - levels of, 428
+  - MBR, 448
+  - needs assessments, 425-426
+  - resource availability, 425
+  - restoring files from, 434-435
+  - as security, 868
+  - software
+    - aio, 439
+    - Amanda, 438
+    - ark, 435-437
+    - cdbackup, 439
+    - File Roller, 435-436
+    - flexbackup, 439
+    - free software websites, 439
+    - kdat, 435
+    - tar, 433-435
+  - sound practices, 426
+  - strategies
+    - choosing, 429
+    - evaluating, 427
+    - full strategies, 428-429
+    - home user strategies, 427
+    - inheriting, 427
+    - large enterprise strategies, 427
+    - mirroring data, 429
+    - principles of, 426
+    - RAID arrays, 429
+    - simple strategies, 428
+    - small enterprise strategies, 427
+    - small office strategies, 427
+  - xorg.conf file, 98
+- `badblocks` command, 879
+- Bagwell, Chris, 274
+- Balsa, 219, 255, 689
+- bang (!), 333
+- banners
+  - display banners, 654
+  - prelogin banners, 650-651

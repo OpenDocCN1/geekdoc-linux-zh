@@ -1,0 +1,39 @@
+# ### **User and Group**
+
+The user and group directives should be set to the UID and group ID (GID) the server uses to process requests. In Fedora, set these configurations to a user with few or no privileges. In this case, they're set to user apache and group apache-a user defined specifically to run Apache. If you want to use a different UID or GID, be aware that the server will run with the permissions of the user and group set here. That means in the event of a security breach, whether on the server or (more likely) in your own CGI programs, those programs run with the assigned UID. If the server runs as root or some other privileged user, someone can exploit the security holes and do nasty things to your site. Always think in terms of the specified user running a command such as `rm -rf /` because that would wipe all files from your system. That should convince you that leaving apache as a user with no privileges is probably a good thing.
+
+Instead of specifying the User and Group directives using names, you can specify them using the UID and GID numbers. If you use numbers, be sure that the numbers you specify correspond to the user and group you want and that they're preceded by the pound (#) symbol.
+
+Here's how these directives look if specified by name:
+
+```
+```
+User apache
+Group apache
+```
+```
+
+Here's the same specification by UID and GID:
+
+```
+```
+User #48
+Group #48
+```
+```
+
+> > **TIP**
+> >
+> > If you find a user on your system (other than root) with a UID and GID of 0, your system has been compromised by a malicious user.
+
+# ### **ServerAdmin**
+
+The ServerAdmin directive should be set to the address of the webmaster managing the server. This address should be a valid email address or alias, such as webmaster@gnulix.org, because this address is returned to a visitor when a problem occurs on the server.
+
+# ### **ServerName**
+
+The ServerName directive sets the hostname that the server returns. Set it to a fully qualified domain name (FQDN). For example, set it to www.your.domain rather than simply ". This is particularly important if this machine will be accessible from the Internet rather than just on your local network.
+
+You don't need to set this unless you want a name other than the machine's canonical name returned. If this value isn't set, the server will figure out the name by itself and set it to its canonical name. However, you might want the server to return a friendlier
+
+![](bbox=[0.9, 0.13, 0.95, 0.21])

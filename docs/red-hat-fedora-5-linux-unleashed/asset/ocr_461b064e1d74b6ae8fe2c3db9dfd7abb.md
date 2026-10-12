@@ -1,0 +1,28 @@
+Hey, Nick,
+
+The new issue looks great! Where did you get the idea for the cover from?
+
+Seeya
+
+&
+
+If you want to respond to this message, you can type respond and press Enter. You can also simply type r and press Enter. By default, the command is applied to the currently active message, which is indicated in the message list by a > (and will be the last message that you read). If you want to have the command applied to a different message, you can simply specify the message number after the command. For example, typing r 2 will respond to message number 2.
+
+A complete list of commands is available within mail by typing ? at the prompt. Note that you can abbreviate all commands to the shortest abbreviation that is not ambiguous.
+
+# Shell Scripting with mail
+
+As mentioned previously, mail’s most useful application is its use in shell scripting. The complete instruction to create and send a message can be done from the command line. For example, suppose that we have a shell script that generates a report and stores it as a text file. Now we want to email that text file to a user at the end of the script. With mail, we could use a command such as the following:
+
+```
+$ mail andrew@andbhudson.co.uk -s 'Report from shell script' < report.txt
+```
+
+The -s specifies a subject line on the command line, and then we use simple shell redirection to use the file report.txt as the body for the message (see Chapter 15, “Automating Tasks”). It is simple, clean, and requires no user interaction to send the message. For other options available on the mail command line, see the man page for mail.
+
+> NOTE
+> The venerable pine email client is no longer provided by Fedora, not because it is not a good application; it just uses a license that is incompatible with distribution by Fedora and Red Hat.
+
+# mutt
+
+mutt is a relatively new command-line mail client that is rapidly becoming popular with users. The client is called mutt because it is known as “the mongrel of email clients” in that it attempts to combine the best features of several other clients such as elm and pine. Mutt is an extremely feature-rich email client, although it is not as easy to use as pine. It is however, more secure than pine. Figure 8.14 shows the mutt interface.

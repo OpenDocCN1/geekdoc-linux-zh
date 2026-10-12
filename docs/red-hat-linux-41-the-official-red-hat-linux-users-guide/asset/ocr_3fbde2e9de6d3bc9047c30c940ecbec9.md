@@ -1,0 +1,63 @@
+# 7.3. IMPRESSING YOUR FRIENDS WITH RPM
+
+
+
+```
+```
+rpm -Va
+```
+```
+
+If some files are missing, or appear to have been corrupted, you should probably either re-install the package or uninstall, then re-install the package.
+
++   - Let’s say you run across a file that you don’t recognize. To find out which package owns it, you would enter:
+
+```
+```
+rpm -qf /usr/Xl1R6/bin/xjewel
+```
+```
+
+The output would look like:
+
+```
+```
+xjewel-1.6-1
+```
+```
+
++   - We can combine the above two examples in the following scenario. Say you are having problems with /usr/bin/paste. You would like to verify the package that owns that program but you don’t know which package that is. Simply enter:
+
+```
+```
+rpm -Vf /usr/bin/paste
+```
+```
+
+and the appropriate package will be verified.
+
++   - If you are using a program and want to find out more information about it, you can enter the following to find out what documentation came with the package that “owns” that program (in this case ispell):
+
+```
+```
+rpm -qdf /usr/bin/ispell
+```
+```
+
+The output would be:
+
+```
+```
+/usr/man/man4/ispell.4
+/usr/man/man4/english.4
+/usr/man/man1/unsq.1
+/usr/man/man1/tryaffix.1
+/usr/man/man1/sq.1
+/usr/man/man1/munchlist.1
+/usr/man/man1/ispell.1
+/usr/man/man1/findaffix.1
+/usr/man/man1/buildhash.1
+/usr/info/ispell-info.gz
+/usr/doc/ispell-3.1.18-1/README
+```
+```

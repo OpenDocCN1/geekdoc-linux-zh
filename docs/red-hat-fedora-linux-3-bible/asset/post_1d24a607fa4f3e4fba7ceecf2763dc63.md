@@ -1,0 +1,149 @@
+
+## Appendix B: Fedora Core 3 RPMs
+
+- **dbh:** Disk-based hash library.
+- **db-devel:** Header files for disk-based hash library.
+- **dskdkd-cdtb:** A dictionary server for the SKK Japanese input method.
+- **dbus:** Systemwide message bus service.
+- **dbus-devel:** Development tools for systemwide message bus service.
+- **dbus-glib:** GLIB library for using D-BUS.
+- **dbus-python:** Allows Python programming using the interface D-BUS library interface.
+- **dbus-x11:** Xlib tools required by DBUS, so X doesn't have to be installed.
+- **ddd:** The Data Display Debugger, a GUI that interacts with command-line debuggers.
+- **ddskk:** A simple Kana to Kanji conversion tool for emacs.
+- **dssk-xemacs:** Simple Kana to Kanji conversion tool for XEmacs.
+- **dejagnu:** An Expect/Tcl framework for testing programs.
+- **desktop-backgrounds-basic:** A selection of images to use as screen backgrounds.
+- **desktop-backgrounds-extra:** Supplements desktop-backgrounds-basic.
+- **desktop-file-utils:** Creates and validates desktop files.
+- **desktop-printing:** Desktop icon and code to support drag-n-drop printing.
+- **dev86:** An x86 assembler and linker.
+- **devhelp:** An API document browser for GNOME 2.
+- **device-mapper:** Userspace support for the device-mapper.
+- **dhclient:** DHCP client application.
+- **dhcp:** Dynamic Host Configuration Protocol (DHCP) server and relay agent.
+- **dhcp-devel:** Libraries for interfacing with the ISC DHCP server.
+- **dhcpv6_client:** DHCP client that supports IPv6 parameters.
+- **dhcpv6:** DHCP server package supporting IPv6.
+- **dia:** Visio-like diagramming and drawing program.
+- **dialog:** The dialog utility for showing dialog boxes in text mode interfaces.
+- **dictd:** The Ict client, used to access to dictionary definitions from a DICT server.
+- **dietlibc:** A small implementation of libc.
+- **diffstat:** Generates statistics from the output of the diff command.
+- **diffutils:** Contains the diff, cmp, diff3, and sdiff utilities for comparing files.
+- **diskcheck:** A utility that monitors the remaining free space on a hard drive.
+- **diskdump-tools:** Utilities used to set up the kernel to save memory image to the specified partition.
+- **disticache:** Distributed SSL session cache.
+- **disticache-devel:** Development tools for disticache distributed session cache.
+- **dmalloc:** A drop-in replacement for memory management routines.
+- **docbook-x:** A set of packages containing DocBook SGML DTDs and style sheets.
+- **dos2unix:** Converts text files from DOS to UNIX format.
+- **dosfstools:** Tools for creating and working with DOS file systems.
+- **dovecot:** Dovecot secure imap server.
+- **doxygen:** Creates documents from C or C++ source code.
+- **doxygen-doxywizard:** A GUI front-end to create and edit doxygen configuration files.
+- **dtach:** A simple program that emulates the detach feature of screen.
+- **dump:** Utilities for backing up and restoring ext2/3 file systems.
+- **dvd+rw-tools:** Tools for mastering DVD+RW/+R media.
+- **dvgrab:** Captures digital video from a firewire connected device.
+- **e2fsprogs:** Programs for finding and fixing inconsistencies in ext2 file systems.
+- **e2fsprogs-devel:** Libraries and header files to develop programs for the ext2 file system.
+- **eej:** Java bytecode compiler of the Eclipse Project.
+- **ed:** A line-oriented text editor (which was the original UNIX text editor).
+- **eel2:** The Eazel Extensions Library, a collection of widgets and functions for GNOME.
+- **eel2-devel:** Libraries and include files for developing with eel.
+- **efax:** Sends and receives faxes using any Class 1, 2, or 2.0 fax modem.
+- **eject:** Ejects CDs, floppies, Jazz disks, or other media.
+- **ElectricFence:** Detects memory allocation violations.
+- **eflutils:** Collection of utilities for handling compiled objects.
+- **eflutils-devel:** Development utilities for handling compiled objects.
+- **eflutils-libelf:** Provides a DSO that facilitates the reading and writing of ELF files.
+- **elinks:** A text-mode Web browser with support for frames.
+- **emacs:** Libraries needed to run the emacs editor.
+- **emacs-common:** The libraries needed to run the GNU Emacs text editor.
+- **emacs-elisp:** The emacs-elisp sources of elisp programs used with the emacs text editor.
+- **emacs-leim:** The Emacs Lisp code used with international character scripts.
+- **emacs-nox:** The Emacs text editor without support for the X Window System.
+- **emacspeak:** A speech interface that allows visually impaired users to use the computer.
+- **enscript:** Print filter for formatting ASCII text into PostScript output.
+- **eog:** Eye of GNOME image viewer.
+- **epic:** Enhanced ircii chat client.
+- **epiphany:** A GNOME Web browser based on Mozilla.
+- **eruby:** A Ruby interpreter for Ruby code embedded in text files.
+- **eruby-devel:** Header files and libraries allowing an application to use ERuby.
+- **eruby-libs:** Libraries required for ERuby.
+- **esound:** Allows multiple programs to share a sound card.
+- **esound-devel:** Libraries and include files for developing ESound applications.
+- **ethereal:** A tool for analyzing network traffic on UNIX-like operating systems.
+- **ethereal-gnome:** GNOME desktop environment integration for ethereal.
+- **ethtool:** Displays and changes Ethernet card settings.
+- **evolution:** GNOME’s groupware suite of integrated information-management tools.
+- **exim:** The exim mail transfer agent.
+- **exim-doc:** Exim documentation.
+- **exim-moo:** X11 monitor application for exim.
+- **exim-sa:** Exim SpamAssassin at SMTP time - d/l plugin.
+- **expat:** C library for stream-oriented XML parsing.
+- **expat-devel:** Documentation and libraries for developing XML applications with expat.
+- **expect:** A tcl extension for automating interactive utilities such as FTP, fsck, and telnet.
+- **expect-devel:** Expect development libraries.
+- **expctk:** A program-script interaction and testing utility.
+- **fbset:** Used to change video modes on fbccon consoles.
+- **fedora-logos:** Red Hat-related icons and pictures.
+- **fedora-release:** Fedora Core release file.
+- **festival:** A free multilingual speech synthesizer.
+- **festival-devel:** Header files and libraries allowing applications to use festival.
+- **fetchmail:** Retrieves and forwards mail over SLIP and PPP links.
+- **file:** Identifies file type based on file contents.
+- **file-roller:** Manages archives such as tar files.
+- **filesystem:** The basic directory level layout of the Red Hat Linux system.
+- **findutils:** GNU versions of the find and xargs utilities.
+- **finger:** Client for displaying information about system users.
+- **finger-server:** Server for providing the finger service to network clients.
+- **firefox:** Open Source web browser.
+- **firstboot:** Runs after installation to facilitate easier configuration of the system.
+- **flac:** An encoder/decoder for the Free Lossless Audio Codec.
+- **flac-devel:** Static libraries and header files from FLAC.
+- **flex:** Generates C source code for recognition of lexical patterns in text.
+- **film:** A library that provides basic features for message encoding in emacs.
+- **film-xemacs:** A library that provides basic features for message encoding in XEmacs.
+- **fontconfig:** Locates and sets fonts based on requirements set by applications.
+- **fontconfig-devel:** Headers and documentation for developing fontconfig applications.
+- **fonts-arabic:** Arabic fonts from the King Abdulaziz City for Science and Technology.
+- **fonts-bengali:** Fonts for Bengali.
+- **fonts-hebrew:** Hebrew fonts from the Culmus project.
+- **fonts-ISO8859-2:** Various Central European- and Greek-language fonts.
+- **fonts-ja:** Japanese bitmap fonts.
+- **fonts-KOI8-R:** Various Russian- and Ukrainian-language fonts.
+- **fonts-xorg:** Contains fonts which have been separated from X.Org X11 source code.
+- **foomatic:** A spooler-independent database of printers and printer drivers.
+- **freeciv:** The freeciv clone of the Civilization II strategy game.
+- **freetglut:** A free implementation of the GLUT library.
+- **freetglut-devel:** Development tools for freeGLUT.
+- **freeradius:** Highly configurable RADIUS server.
+- **freeradius-mysql:** MySQL bindings for freeradius.
+- **freeradius-postgresql:** PostgreSQL bindings for freeradius.
+- **freeradius-unixODBC:** unixODBC bindings for freeradius.
+- **freetype:** A free and portable font rendering engine for TrueType fonts.
+- **freetype-demos:** A collection of freetype demos.
+- **freetype-devel:** Components for using the FreeType font rendering engine.
+- **freetype-utils:** Several utilities for managing fonts.
+- **FreeWnn:** Converts Japanese Kana characters to Kanji characters and vice versa.
+- **FreeWnn-devel:** Tools for developing applications for FreeWnn.
+- **FreeWnn-libs:** Runtime libraries for running FreeWnn applications.
+- **fribidi:** A free implementation of the Unicode BiDi algorithm.
+- **fribidi-devel:** Development tools for the Unicode BiDi algorithm.
+- **fsh:** The fssh command for creating Secure network tunnels.
+- **ftp:** Generic client for the File Transfer Protocol.
+- **ftpmirror:** Tools to facilitate mirroring of FTP sites.
+- **g-wrap:** A tool for creating Scheme interfaces to C libraries.
+- **g-wrap-devel:** Include files and libraries needed for g-wrap development.
+- **gail:** Implements the ATK accessibility interfaces for packages such as at-spi.
+- **gail-devel:** Files required to compile applications that use GAIL.
+- **gaim:** Open source clone of the popular AOL instant messanger client.
+- **gal:** The GNOME Applications Library (GAL), including GNOME utilities and widgets.
+- **gal-devel:** Development tools associated with the GNOME Applications Library.
+- **gamin:** Provides a daemonless, FAM and API/ABI compatible file alteration monitor mechanism.
+- **gamin-devel:** Used with gamin package for same purpose.
+- **gawk:** The gawk (GNU awk) text processing utility.
+- **gcc:** This set of packages contains GNU C language compilers and related tools.
+- **GConf:** The GNOME configuration database system.

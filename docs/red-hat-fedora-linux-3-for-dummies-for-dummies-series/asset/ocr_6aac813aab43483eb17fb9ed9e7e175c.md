@@ -1,0 +1,15 @@
+Fedora Core needs at least a root partition in your directory structure and a swap space partition. The root partition stores all personal and system files and directories; Linux uses swap space to extend memory capabilities temporarily beyond the limit of your random-access memory (RAM). If you have 512MB of RAM and 512MB of swap space, for example, you can run a program that uses almost 1GB of memory. Part of it is stored in memory and the rest sits in swap space.
+
+This configuration isn’t much different from the Windows and MS-DOS file systems — Windows, after all, uses the concept of a hierarchical directory tree — but the syntax is somewhat different. The top-level directory in Fedora Core, *root*, is designated with a forward slash (/). Every subsequent subdirectory name follows that initial slash. For example, the home directory is a subdirectory of root and is shown as /home. In the Windows world, the equivalent of the root directory is designated with an initial backslash (\). The famous C: prompt is synonymous with C:\. The theme for both operating systems is carried forward when dividing subdirectories: Linux uses forward slashes and Windows uses backslashes. For instance, a directory can be shown as /x/y/z in Linux and as C:\x\y\z in Windows. Both operating system can have subdirectories, such as /x/y/z/abc in Linux or C:\x\y\z\abc in Windows.
+
+The location of a file or directory is given as a path. For instance, /x/y/z/abc describes the path to the subdirectory abc; if the file i23 lives in subdirectory abc, then its path is /x/y/z/abc/i23. Paths can be absolute or relative. Absolute paths always refer to the root directory (as in the examples just given). Relative paths refer to wherever you happen to be in the system; they’re relative to your current location.
+
+![](bbox=[0.05, 0.58, 0.18, 0.69])
+
+Another fundamental difference between Linux and Windows file systems is that Linux requires you to explicitly mount file systems. Windows does so automatically. Explicitly mounting the file system isn’t as onerous as it sounds. Fedora Core installs utilities that automatically sense and mount file systems when necessary. For example, the default Fedora Core configuration mounts a DVD or CD-ROM automatically whenever you insert it in the drive.
+
+The Workstation installation type we describe in Chapter 3 automatically sets up your root and swap partitions in addition to an extra root partition used for storing the Fedora Core kernel and other files used for booting your computer. (The Personal Desktop installation type uses the same partitioning scheme as the Workstation installation type.)
+
+# ## Creating User Accounts
+
+Because Fedora Core is a multiuser system, more than one person at a time can use it. For example, you can be logged in at the computer console (the attached keyboard and monitor) while someone else is logged in via a network connection. Therefore you — and every other user — must have an

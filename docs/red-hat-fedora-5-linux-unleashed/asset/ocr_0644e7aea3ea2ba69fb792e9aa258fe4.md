@@ -1,0 +1,16 @@
+> NOTE
+> This book was developed and written using a complete install of all the software included with Fedora. You can use the DVD included with this book for your install or download your own copy, available as ISO9660 images (with filenames ending in `.iso`), and burn it onto 700MB CD-Rs or a DVD.
+> 
+> Along with the full distribution, you will get the complete source code to the Linux kernel and source for all software in the distribution—more than 21 million lines of C and nearly 5 million lines of C++ code. Browse to http://fedora.redhat.com/download/ to get started.
+
+# Fedora Developers and Documentation
+
+If you are interested in helping with The Fedora Project, you can assist in the effort by testing beta releases, writing documentation, and contributing software for the core or contributed software repositories. You should have some experience in installing Linux distributions, a desire to help with translation of documentation into different languages, or be able to use various software project management system, such as CVS.
+
+Going beyond future versions of Fedora, you can also get involved with the continuing support of legacy versions. The Fedora Legacy Project aims to provide security and critical bug fixes for retired versions of Fedora. Fedora Core 1 was the first version to be moved to the Fedora Legacy Project, and future versions will be moved across when their operational lifetime is up. Because Red Hat views Fedora as a sand pit in which to test new technologies for possible inclusion into Red Hat Enterprise Linux, it is frequently updated and versions supersede each other. A rough guide for each version is that it is supported for about 11 months, at which time it is moved into the Fedora Legacy Project. The project can be found at http://fedoralegacy.org/—bear in mind that it is a community-supported project and, as such, is reliant upon the contributions of people just like you.
+
+Reporting problems with Fedora Core during development is also part of the process! Bug reports are welcome and can be submitted according to guidelines outlined in Tammy Fox's and Havoc Pennington's *Fedora Project Developer's Guide*, found at http://fedoraredhat.com/participate/developers-guide/.
+
+Writing documentation for Fedora requires a bit of discipline and experience with open source document publishing tools. You can read more about the process by browsing to http://fedora.redhat.com/participate/documentation-guide/.
+
+Mailing lists are also available as an outlet or forum for discussions about Fedora. The lists are categorized. For example, general users of Fedora Core can discuss issues on the fedora-list mailing list. Beta testers communicate via the fedora-test-list, developers via the fedora-devel-list, and documentation contributors via the fedora-docs-list. Mailing lists can be subscribed to by sending mail to name_of_the_list-request@redhat.com. Finally you could also join the Fedora Marketing mailing list and help discuss ways of increasing Fedora usage across the world. If you have plenty of energy and are pretty creative, this is the way to go.

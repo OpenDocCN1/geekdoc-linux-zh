@@ -1,0 +1,265 @@
+
+# 360
+
+Red Hat Fedora Linux 3 For Dummies
+
+### A
+- audio (continued)
+  - playing CD, 135, 153–154
+  - playlist, 160, 279, 285–286
+  - RealPlayer, listening to audio stream
+    - using, 163–164
+    - recording, 135
+  - Rhythmbox, listening to audio stream
+    - using, 157–158, 288
+  - ripping CD, 135, 154–155, 279
+  - sound card, 45, 152–153, 316
+  - volume, 135, 154
+- Audio Devices dialog box (GNOME), 152–153
+- Audio→OGG audio (GNOME), 124
+- Authentication utility, 316
+- authorized_keys file, 248
+- Automatic Partitioning window, 34
+
+### B
+- Background Preferences window (GNOME), 116
+- backslash (\), 184
+  - bash escape character, 184
+  - Windows root directory symbol, 56
+- backup, 261, 306–307
+- Bandel, David A. (Linux Security Toolkit), 305
+- bar (\i) dim_g command operator, 270
+- Barkakati, Naba (Red Hat Fedora Linux 2 All-in-One For Dummies), 111
+- bash (Bourne-Again Shell), 50, 184
+- Blackjack game, 132
+- Boot Loader Configuration window, 36
+- booting computer
+  - CD-ROM, from, 297–298
+  - described, 47
+  - dual-boot system, 17, 34, 35–36, 185, 299
+  - DVD, from, 301
+  - loader, 36, 48, 258, 298–299
+  - MS-DOS floppy disk, from, 22
+  - network, from, 317
+  - NT boot record, 36
+  - rebooting, 47, 60, 179
+- Bourne-Again Shell (bash), 50, 184
+- bridge, network, 76
+- Broadband Connection window, 82
+- Broadband Connection–PPP window, 82
+- buffer overflow, 187, 307–310
+- Bug Buddy software, 135
+- BZFlag, 132
+
+### C
+- C (canonical) record, 218
+- C drive partition, 17
+- CA (certificate authority), 251–252, 255
+- cable modem, 73–78, 216
+- cable television Internet connection, 73, 74–75
+- cabling, 74, 196–197, 266
+- Calc software, 134, 167, 170
+- calculator utility, 131
+- camera, downloading image from, 133
+- canary (buffer overflow check number), 308
+- canonical (C) record, 218
+- case sensitivity, 326
+- cat command, 248
+- cathode ray tube (CRT) monitor, 53
+- CD, audio
+  - burning, 155–157
+  - playing, 135, 153–154
+  - ripping, 135, 154–155, 279
+- CD command, 331
+- CD Creator software, 156–157
+- CD Player software, 153–154
+- CD-ROM
+  - backup medium, using as, 261
+  - booting from, 297–298
+  - Fedora Core 3, obtaining on, 13
+  - FireWire, 320
+  - mount point, 55
+  - sharing CD-ROM drive on network, 226–227
+  - USB, 320
+  - validation mechanism, 33
+- central office (CO), 72
+- central processing unit (CPU), 320
+- CERT Coordination Center Web site, 262
+- certificate authority (CA), 251–252, 255
+- certificate, encryption, 251–255
+- Certificate Manager (Mozilla), 251, 255
+- channel, Web server, 255
+- character, inserting special in OpenOffice document, 171
+- Checking System Status dialog box, 213
+- chgrp command, 336
+- chip set, 87
+- chkcconfig utility, 215, 240–241
+- chkrootkit system, 258
+- chmod command, 338
+- chown command, 336
+- CLI (command-line interface), 50, 116, 242
+- clock
+  - GNOME Panel, adding to, 122
+  - utility, 179
+  - xclock utility, 131, 243
+- CO (Central Office), 72
+- CodeWeavers CrossOver Office software, 182, 184, 186–188
+- color
+  - depth, 54
+  - desktop background, 117
+  - true, 53
+  - video card setup, 53
+  - virtual color map, 54
+- Command-line Interface (CLI), 50, 115, 242
+- Common Unix Printing System (CUPS), 229, 232, 234, 241, 294
+- compiling, 30, 280
+- Completed System Preparation dialog box, 163, 164
+- CompuGlobalMegaHyperNet Network, 65
+- CompuServe ISP, 65
+- Computer icon (GNOME), 115
+- config file, 179
+- Configuration Editor utility, 317
+- configuration file, commenting, 284
+- Configure Network Settings window, 77
+- Configure Wireless Connection window, 94
+- Confirm Choices dialog box (PartitionMagic), 27
+- Control Panel (Windows), 323
+- copyleft, 295
+- Counter Hack Web site, 262
+- cp command, 333
+- CPU (central processing unit), 320
+- Create Dialup Connection window (Dialup Configuration utility), 68
+- Create Ethernet Device dialog box, 93
+- Create Launcher Applet window (GNOME), 120–121
+- Create New Partition dialog box (PartitionMagic), 25
+- Create New User Dialog box (User Manager), 57–58
+- CrossOver Office software, 182, 184, 186–188
+- CRT (cathode ray tube) monitor, 53
+- cryptography, public-key, 246–249
+- CUPS (Common Unix Printing System), 229, 232, 234, 241, 294
+
+### D
+- DAC (Discretionary Access Control), 259
+- daemon, 108, 215
+- Data Over Cable Service Interface Specification (DOCSIS), 75–76, 77
+- date
+  - displaying, 112
+  - setting, 44, 316
+- Date & Time utility, 316
+- Date and Time window, 44
+- date command, 112
+- defragmenting hard disk, 18, 19–21
+- Delete Panel window (GNOME), 122
+- desktop
+  - background, 117–118
+  - described, 14
+  - Fedora Core, 14–15, 31
+  - GNOME desktop, 113–119
+  - icon, adding, 120, 130
+  - KDE, 41, 111–112
+  - picture, 116
+  - theme, 116
+  - window border, 116
+  - window management, 118–119
+  - workspace, 117
+  - X Window System as desktop environment, 111–112
+- dev
+  - command, 272
+  - directory, 69, 327
+- DevHelp software, 135
+- device
+  - detection, 45, 66, 91, 152, 323–324
+  - file, 69
+- DHCP (Dynamic Host Configuration Protocol), 37–38, 76–77, 91, 205
+- Dia Diagrams software, 134
+- dial-up Internet connection, 66–69
+- dictionary
+  - MIT dictionary server, 131
+  - password cracker, 58, 311
+- Digital Signature Standard (DSA) encryption, 246
+- digital subscriber line (DSL), 71, 72–73, 78–83, 205, 216
+- directory
+  - See also specific directory
+  - copying, 129, 333
+  - creating, 130, 332
+  - deleting, 115, 129, 334
+  - desktop icon, adding, 130
+  - file, 326
+  - icons view, 130
+  - listing directories, 130, 328
+  - listing directory content, 329
+  - moving, 128, 333
+  - name, 328
+  - Nautilus, directory management using, 128–131
+  - navigating directory structure, 328–332
+  - nesting, 327
+  - path, 328, 329–330
+  - subdirectory, 327
+  - tree structure, 327
+  - working directory, 329, 331
+- Discretionary Access Control (DAC), 259
+- Disk Defragmenter utility (Windows), 20–21
+- Disk Management utility, 317
+- Display Configurator utility, 51–54
+- Display utility, 316
+- dmesg command, 270, 341
+- DNS (Domain Name System)
+  - A record, 218
+  - address request, 218–219
+  - aliasing, 221
+  - C record, 218
+  - caching, 218
+  - client, 222–223
+  - configuration files, 219, 220–221, 222
+  - database, 217
+  - domain component, 217
+  - Ethernet NIC setup, 86
+  - host name, entering, 95
+  - hosts file, using as alternative to, 217
+  - ISP, 65
+  - LAN, 95–96
+  - MX record, 218
+  - NS record, 218
+  - primary, 39, 95–96
+  - querying, 222–223
+  - RR, 218
+  - search path, 96
+  - secondary, 39, 96
+  - server, 39, 95–96, 216–218, 219–222
+  - SOA record, 218, 221
+  - starting, 221–222
+  - tertiary, 39
+  - zone component, 217, 220
+- doc directory, 294
+- DOCSIS (Data Over Cable Service Interface Specification), 75–76, 77
+- domain
+  - described, 217
+  - name, 96
+  - subdomain, 217
+- Domain Name Service window, 220
+- Domain Name System. See DNS
+- DOS For Dummies (Gookin), 294
+- Download Manager dialog box (Mozilla), 143
+- downloading
+  - CrossOver Office, 186–187
+  - Fedora Core, 29
+  - Fedora Core update, 306
+  - FIPS, 22
+  - Microsoft Word Viewer, 182–183
+  - Mplayer, 15, 159
+  - RealPlayer, 15, 163–164
+  - Windows plug-in, 187–188
+  - WINE, 176–177
+- Draw software, 134, 168, 169
+- DSA (Digital Signature Standard) encryption, 246
+- DSL (digital subscriber line), 71, 72–73, 78–83, 205, 216
+- dual-boot system, 17, 34, 35–36, 185, 299
+- Dummies Web site, 182
+- DVD
+  - backup medium, using as, 261
+  - booting from, 301
+  - burning, 156
+  - mounting, 301
+  - playing, 161
+  - sharing DVD drive on network, 226–227
+  - validation mechanism, 33

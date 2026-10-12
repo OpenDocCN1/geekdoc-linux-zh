@@ -1,0 +1,17 @@
+# CHAPTER 14
+Automating Tasks
+
++   • Running Services at Bootup
++   • Starting and Stopping Services Manually
++   • Scheduling Tasks
++   • Basic Shell Control
++   • Writing and Executing a Shell Script
++   • Reference
+
+I n this chapter you learn about the five ways to automate tasks on your system: making them services that run as your system starts, making them services you start and stop by hand, scheduling them to run at specific times, connecting multiple commands together on the shell, and writing custom scripts that group everything together under one command.
+
+After you turn on the power switch, the boot process begins with the computer executing code stored in a chip called the BIOS; this process occurs no matter what operating system you have installed. The Linux boot process begins when the code known as the boot loader starts loading the Linux kernel and ends only when the login prompt appears.
+
+As a system administrator, you will use the skills you learn in this chapter to control your system’s services and manage runlevels on your computer. Understanding the management of the system services and states is essential to understanding how Linux works (especially in a multi-user environment) and will help untangle the mysteries of a few of your Fedora Core Linux system’s configuration files. Furthermore, a good knowledge of the cron daemon that handles task scheduling is essential for administrators at all skill levels.
+
+This chapter is also an introduction to the basics of creating shell scripts, or executable text files written to conform to shell syntax. Shell scripts run like any other command under Linux and can contain complex logic or a simple series of Linux command-line instructions. You can also run other shell scripts from within a shell program. The features and functions for several Linux shells are discussed in this chapter after a short introduction to working from

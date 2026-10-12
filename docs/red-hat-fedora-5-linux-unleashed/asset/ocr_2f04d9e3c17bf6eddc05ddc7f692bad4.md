@@ -1,0 +1,17 @@
+The /usr/src/kernels/<yourkernelversion> directory contains the .config and the Makefile files among others. The .config file is the configuration of your Linux kernel as it was compiled. There is no .config file by default; you must select one from the /configs subdirectory. There you will find configuration files for each flavor of the kernel Fedora provides; simply copy the one appropriate for your system to the default directory and rename it .config.
+
+We have already discussed the contents of the /configs subdirectory, so let us examine the other directories found under /usr/src/kernels/<yourkernelversion>. The most useful for us is the Documentation directory. In it and its subdirectories, you will find almost all the documentation concerning every part of the kernel. The 00_INDEX file (each Documentation subdirectory also contains a 00_INDEX file as well) contains a list of the files in the main directory and a brief explanation of what they are. Many files are written solely for kernel programmers and application writers, but a few are useful to the intermediate or advanced Linux user when attempting to learn about kernel and device driver issues.
+
+Some of the more interesting and useful documents are
+
++   * devices.txt—A list of all possible Linux devices that are represented in the /dev directory, giving major and minor numbers and a short description. If you have ever gotten an error message that mentions char_major-xxx, this file is where that list is kept. Devices are mentioned in Chapter 38, “Managing the File System.”
+
++   * ide.txt—If your system uses IDE hard drives, this file discusses how the kernel interacts with them and lists the various kernel commands that can be used to solve IDE-related hardware problems, manually set data transfer modes, and otherwise manually manage your IDE devices. Most of this management is automatic, but if you want to understand how the kernel interacts with IDE devices, this file explains it.
+
++   * instd.t—Chapter 38 also discusses the initial RAM disk. This file provides much more in-depth knowledge of initial RAM disks, giving details on the loopback file system used to create and mount them and explaining how the kernel interacts with them.
+
++   * kernel_parameters.txt—This file is a list of most of the arguments that you can pass at boot time to configure kernel or hardware settings. but it does not appear too useful at first glance because it is just a list. However, knowing that a parameter exists and might relate to something you are looking for can assist you in tracking down more information because now you have terms to enter into an Internet search engine such as http://www.google.com/linux.
+
++   * sysrq.txt—If you have ever wondered what that SysRq key on your keyboard is used for, this file has the answer. Briefly, it is a key combination hardcoded into the kernel that can help you recover from a system lockup. Fedora disables this function by default for security reasons. You can re-enable it by entering the command `# echo '1' > /proc/sys/kernel/sysrq` and disable it by echoing a value of 0 instead of 1.
+
+In the other directories found in Documentation, you will find similar text files that deal with the kernel modules for CD-ROM drivers, file system drivers, gameport and joystick drivers, video drivers (not graphics card drivers—those belong to X11R6 and not to the

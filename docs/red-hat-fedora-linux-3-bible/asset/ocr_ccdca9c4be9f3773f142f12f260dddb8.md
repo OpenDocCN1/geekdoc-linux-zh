@@ -1,0 +1,31 @@
+- You can set fixed addresses for particular host computers, also called **address reservations**. In particular, you would want to do this for your server computers so that their addresses don't change. While you could simply omit the fixed IP addresses from your pool of DHCP assigned addresses, you would lose centralized management of IP configurations. The DHCP reservations allow you to centrally configure all IP address information. One way to do this is based on the Ethernet hardware address of the server's Ethernet card. All information for that computer can be contained in a host definition, such as the following:
+
+```
+host pine {
+   hardware ethernet 00:04:5A:4F:8E:47;
+   fixed-address 10.0.0.254;
+}
+```
+
+Here, when the DHCP server encounters the Ethernet address, the **fixed-address** (10.0.0.254) is assigned to it. Type **ifconfig -a** on the server computer to see the address of its Ethernet hardware (while the interface is up). Within this host definition, you can add other options as well. For example, you can set the location of different routes (*routers* option).
+
+- Many of the options enable you to define the locations of various server types. These options can be set globally or within particular host or subnet definitions. For example:
+
+```
+option netbios-name-servers 10.0.0.252;
+option time-servers 10.0.0.253;
+```
+
+In these examples, the **netbios-name-servers** option defines the location of the WINS server (if you are doing Windows file and print server sharing using Samba). The **time-servers** option sets the location of a time server on your network.
+
+- The DHCP server can be used to provide the information an X Terminal or diskless workstation could use to boot up on the network. The following is an example of a definition you could use to start such a computer on your network:
+
+```
+host maple {
+   filename "/dwboot/maple.nb";
+   hardware ethernet 00:04:5A:4F:8E:47;
+   fixed-address 10.0.0.150;
+}
+```
+
+In the previous example, the boot file used by the diskless workstation from the DHCP server is located at */dwboot/maple.nb*. The **hardware ethernet** value identifies the address of the Ethernet card on the client. The client's IP address is set to 10.0.0.150. All of these lines are contained within a host definition, where the host name is defined as **maple**. (See the Thin Clients heading in Table 23-2 for other options that may be useful for configuring thin clients.)

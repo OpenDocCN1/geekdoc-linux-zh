@@ -1,0 +1,4569 @@
+- pgno: 0
+  md: '![](img/f097eb927132822630978994ad35bce4_0_0.png)
+
+
+    # INSTALLATION GUIDE
+
+
+    REDHAT
+
+    Linux 7
+
+    OPERATING SYSTEM
+
+
+    # redhat'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: Digitized by the Internet Archive in 2024
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Red Hat Linux 7.0
+
+
+    # The Official Red Hat Linux Installation Guide'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'ISBN: N/A
+
+
+    Red Hat, Inc.
+
+    2600 Meridian Parkway Durham NC 27713 US 919-547-0012 1-888-733-4281 919-547-0024
+
+    docs@redhat.com 13588 Research Triangle Park NC 27709
+
+
+    © 2000 Red Hat, Inc.
+
+
+    Inst(EN)-7.0-Print-RHI (2000-07-18T15:39-0400)
+
+
+    Red Hat is a registered trademark and the Red Hat Shadow Man logo, RPM, the RPM
+    logo, and Glint are trademarks of Red Hat, Inc.
+
+
+    Linux is a registered trademark of Linus Torvalds.
+
+
+    Motif and UNIX are registered trademarks of The Open Group.
+
+
+    Alpha is a trademark of Digital Equipment Corporation.
+
+
+    SPARC is a registered trademark of SPARC International, Inc. Products bearing
+    the SPARC trademark are based on an architecture developed by Sun Microsystems,
+    Inc.
+
+
+    Netscape is a registered trademark of Netscape Communications Corporation in the
+    United States and other countries.
+
+
+    TrueType is a registered trademark of Apple Computer, Inc.
+
+
+    Windows is a registered trademark of Microsoft Corporation.
+
+
+    All other trademarks and copyrights referred to are the property of their respective
+    owners.
+
+
+    Copyright © 2000 by Red Hat, Inc. This material may be distributed only subject
+    to the terms and conditions set forth in the Open Publication License, V1.0 or
+    later (the latest version is presently available at http://www.opencontent.org/openpub/).
+
+
+    Distribution of substantively modified versions of this document is prohibited
+    without the explicit permission of the copyright holder.
+
+
+    Distribution of the work or derivative of the work in any standard (paper) book
+    form for commercial purposes is prohibited unless prior permission is obtained
+    from the copyright holder.
+
+
+    Printed in Canada'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Contents
+
+
+    Red Hat Linux 7.0
+
+
+    +   * **Chapter 1 Introduction** **7**
+
+    +     * 1.1 How to Use This Manual **8**
+
+    +   * **Chapter 2 New Features of Red Hat Linux 7.0** **11**
+
+    +     * 2.1 Installation-Related Enhancements **11**
+
+    +   * **Chapter 3 Seven Steps to Get You Started** **13**
+
+    +     * 3.1 Step 1 - Do You Have the Right Red Hat Linux Components? **13**
+
+    +     * 3.2 Step 2 - Is Your Hardware Compatible? **14**
+
+    +     * 3.3 Step 3 - Do You Need Errata? **15**
+
+    +     * 3.4 Step 4 - Do You Have Enough Disk Space? **16**
+
+    +     * 3.5 Step 5 - Can You Install Using the Red Hat Linux CD-ROM? **17**
+
+    +     * 3.6 Step 6 - Is a Workstation-Class Installation Best For You? **20**
+
+    +   * **Chapter 4 System Requirements Table** **23**
+
+    +   * **Chapter 5 Installing Red Hat Linux From Start to Finish** **27**
+
+    +     * 5.1 The Installation Program User Interface **27**
+
+    +     * 5.2 Starting the Installation Program **29**
+
+    +     * 5.3 Selecting an Installation Method **32**
+
+    +     * 5.4 Beginning the Installation **32**
+
+    +     * 5.5 Language Selection **34**
+
+    +     * 5.6 Keyboard Configuration **35**
+
+    +     * 5.7 Mouse Configuration **36**
+
+    +     * 5.8 Welcome to Red Hat Linux **38**
+
+    +     * 5.9 Install Options **39**
+
+    +     * 5.10 Automatic Partitioning **41**
+
+    +     * 5.11 Manually Partitioning Your System **43**
+
+    +     * 5.12 Network Configuration **47**'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   5.13 Time Zone Configuration 48
+
+    +   5.14 Account Configuration 49
+
+    +   5.15 Selecting Package Groups 51
+
+    +   5.16 GUI X Configuration Tool 57
+
+    +   5.17 Preparing to Install 60
+
+    +   5.18 Installing Packages 61
+
+    +   5.19 Boot Disk Creation 62
+
+    +   5.20 Installation Complete 63
+
+
+    # Chapter 6 Text Mode Installations at a Glance 67
+
+
+    +   6.1 Using the Keyboard to Navigate 67
+
+    +   6.2 Text Mode Boot Options 67
+
+    +   6.3 Installing in Text Mode 68
+
+    +   6.4 Language Selection 68
+
+    +   6.5 Keyboard Configuration 69
+
+    +   6.6 Choosing an Installation Method 70
+
+    +   6.7 Welcome to Red Hat Linux 72
+
+    +   6.8 Choosing an Installation Type 72
+
+    +   6.9 Automatic Partitioning 73
+
+    +   6.10 Partitioning with Disk Druid 74
+
+    +   6.11 Hostname Configuration 78
+
+    +   6.12 Network Configuration 79
+
+    +   6.13 Mouse Configuration 80
+
+    +   6.14 Time Zone 81
+
+    +   6.15 Root Password 82
+
+    +   6.16 Creating User Accounts 83
+
+    +   6.17 Package Selection 85
+
+    +   6.18 Configuring Your Video Adapter 88
+
+    +   6.19 Package Installation 90
+
+    +   6.20 Boot Disk 92
+
+    +   6.21 Configuring the X Window System 93
+
+    +   6.22 Congratulations! Your Installation is Complete 104
+
+
+    # Appendix A Upgrading Your Current System 107'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   A.1 What it Means to Upgrade ... 107
+
+    +   A.2 Upgrading Your System ... 107
+
+    +   A.3 Customizing Your Upgrade ... 108
+
+    +   A.4 Selecting Packages to Upgrade ... 109
+
+    +   A.5 Installing LILO ... 111
+
+    +   A.6 Upgrading Packages ... 116
+
+    +   A.7 Upgrade Complete ... 116
+
+
+    +   ## Appendix B Installing Without Partitioning ... 119
+
+    +   B.1 The Ups and Downs of a Partitionless Installation ... 119
+
+    +   B.2 Performing a Partitionless Installation ... 121
+
+
+    +   ## Appendix C Removing Red Hat Linux ... 127
+
+
+    +   ## Appendix D Getting Technical Support ... 129
+
+    +   D.1 Remember to Sign Up ... 129
+
+    +   D.2 An Overview of Red Hat Support ... 129
+
+    +   D.3 Scope of Red Hat Support ... 131
+
+    +   D.4 The Red Hat Support System ... 131
+
+    +   D.5 How to Get Technical Support ... 131
+
+    +   D.6 Questions for Technical Support ... 133
+
+    +   D.7 Support Frequently Asked Questions (FAQ) ... 134
+
+
+    +   ## Appendix E Troubleshooting Your Installation of Red Hat Linux ... 135
+
+    +   E.1 Trouble Booting Red Hat Linux ... 135
+
+    +   E.2 Trouble Beginning the Installation ... 136
+
+    +   E.3 Trouble During the Installation ... 136
+
+    +   E.4 Trouble After the Installation ... 137'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Appendix 1: Suggested List of Indicators for M&A Due Diligence
+
+
+    # Appendix 2: Indicative List of Documents Needed to Complete Due Diligence Report,
+    Including Financial Due Diligence
+
+
+    Appendix 3: Suggested List of Documents and Information to Identify Key Audit
+    Risks
+
+
+    Appendix 4: Guide'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# ## 1 Introduction
+
+
+    Welcome to the *Official Red Hat Linux Installation Guide*. This manual will walk
+    you through a typical workstation-class¹ installation of Red Hat Linux. Once you
+    have completed the installation as outlined in this manual, you will have a fully
+    functioning Red Hat Linux desktop system.
+
+
+    Throughout this manual, you will find the following symbols:
+
+
+    **Tip**
+
+
+    Suggestions for installation options and post installation configurations.
+
+
+    **Please Note**
+
+
+    Additional information that you may find to be helpful during your installation.
+
+
+    CAUTION
+
+
+    Notes that certain choices or configurations could cause problems with your system
+    setup. Please read the text carefully before continuing with the installation.
+
+
+    ¹ A workstation-class installation is the perfect solution for a home or desktop
+    machine. It will present you with a graphical environment to work in and all the
+    basic applications you will need to get started.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/f097eb927132822630978994ad35bce4_9_0.png)
+
+
+    Explains that changes will occur to your current system, such as the removal of
+    existing data. Read carefully to determine if the choice you are making is in
+    your best interest.
+
+
+    # 1.1 How to Use This Manual
+
+
+    This manual, focusing on a workstation-class installation, is ideal for users
+    new to Red Hat Linux and for those who want a quick and simple installation solution.
+    It will help you prepare your system for the installation, walk you through the
+    installation, and assist you in the configuration of your Red Hat Linux system.
+
+
+    For those of you who need to perform a *server* -2 or a *custom-class*3 installation,
+    refer to the *Official Red Hat Linux Reference Guide* on the Documentation CD.
+
+
+    ![](img/f097eb927132822630978994ad35bce4_9_1.png)
+
+
+    If you currently use Red Hat Linux 3.0.3 (or greater), you can perform an upgrade.
+    Skim Chapter 3, *Seven Steps to Get You Started* to review the basics, then read
+    Chapter 5, *Installing Red Hat Linux From Start to Finish*, following the directions
+    as you go. Once you have chosen to perform an upgrade in the installation program,
+    refer to Appendix A, *Upgrading Your Current System*.
+
+
+    If you are an experienced user who wants to perform a workstation-class installation,
+    but do not need a review of the basics, you can skip ahead to Chapter 5, *Installing
+    Red Hat Linux From Start to Finish* to begin the installation process.
+
+
+    2 A server-class installation sets up a typical server environment. Please note,
+    no graphical environment is installed during a server-class installation.
+
+
+    3 A custom-class installation allows you to choose and configure every option
+    for your system. While this does allow for the most flexible installation, it
+    is not recommended that a new user attempt this installation type.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '> **Tip**
+
+    > Refer to the **Red Hat Frequently Asked Questions** for answers to questions
+    and problems that may occur before, during or after the installation. You''ll
+    find the FAQ online at: www.redhat.com/support/docs/faqs/rhl_general_faq/FAQ.html
+
+
+    # 1.1.1 We Need Feedback!
+
+
+    If you spot a typo in the Installation Guide, or if you''ve thought of a way to
+    make this manual better, we''d love to hear from you! Be sure to mention the manual''s
+    identifier:
+
+
+    ```
+
+    Inst (EN)-7.0-Print-RHL (2000-07-18T15:39-0400)
+
+    ```
+
+
+    That way we''ll know exactly which version of the guide you have.
+
+
+    Please send mail to: docs@redhat.com
+
+
+    If you have a suggestion for improving the documentation, try to be as specific
+    as possible when describing it. If you''ve found an error, please include the
+    section number and some of the surrounding text so we can find it easily. We may
+    not be able to respond to every message sent to us, but you can be sure that we''ll
+    be reading them all!
+
+
+    If you have a support question (for example, if you need help configuring X, or
+    if you aren''t sure how to partition you hard drive[s]), please register your
+    product at www.redhat.com/how and use the online support system for those type
+    of requests.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 2 New Features of Red Hat Linux 7.0
+
+
+    This chapter describes installation features new to Red Hat Linux 7.0. To learn
+    about non-installation-related new features, please refer to the *Official Red
+    Hat Linux Reference Guide* on the Documentation CD or online at http://www.redhat.com/support/manuals.
+
+
+    # 2.1 Installation-Related Enhancements
+
+
+    Improvements to Red Hat Linux 7.0 which will make installation even easier include:
+
+
+    New Multi-CD Install
+
+
+    As the installation program continues to grow, Red Hat has developed an installation
+    program capable of installing Red Hat Linux from multiple CD-ROMs.
+
+
+    XFree 4.0
+
+
+    Configuration of your X Window System during the installation has never been more
+    thorough. From choosing your monitor and its correct settings, to video card probing,
+    to testing your desired X setup, Xconfigurator will help you set everything just
+    right.
+
+
+    USB Support
+
+
+    Red Hat Linux 7.0 now supports USB devices (mice and keyboards). With USB support,
+    there is no need to reboot when a new device is added -- just attach the device
+    and go.
+
+
+    Help Text Available in Text Mode Installation
+
+
+    Help text has been added to the text mode installation program to further assist
+    you during your installation of Red Hat Linux 7.0. By pressing [F1], you can enable
+    help text for that specific screen. Press [Enter] to close the help text screen.
+
+
+    New GNOME Default Window Manager
+
+
+    The Sawfish window manager has been added as the new default manager for the GNOME
+    desktop interface.
+
+
+    LDAP and Kerberos Configuration
+
+
+    Network security has been enhanced with the addition of LDAP and Kerberos to Red
+    Hat Linux 7.0. For more information on these programs, refer to the *Official
+    Red Hat Linux Reference Guide*.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# ## 3 Seven Steps to Get You Started
+
+
+    There are seven steps you should perform prior to installing Red Hat Linux:
+
+
+    # ### 3.1 Step 1 - Do You Have the Right Red Hat Linux Components?
+
+
+    If you''ve purchased the Official Red Hat Linux boxed set, you''re ready to go!
+    However, mistakes occasionally happen, so now is a good time to double-check the
+    contents of your boxed set.
+
+
+    In your Red Hat Linux box, there is a red and white **Registration Card**. On
+    the back of that card is a list of the contents of your boxed set version. Please
+    read over this list and check to make sure that you have all the diskettes and
+    manuals that are available with your version.
+
+
+    If you''ve purchased the Official Red Hat Linux boxed set from Red Hat, Inc. (or
+    one of its distributors), and you''re missing one or more of the items listed,
+    please let us know! Contact information is also available on the Registration
+    Card.
+
+
+    *How to identify our official boxed set:* The bottom of our box has an ISBN number
+    next to one of the bar codes. That ISBN number should be in this form:
+
+
+    ```
+
+    1-58569-xx-y
+
+    ```
+
+
+    (The xx and y will be unique numbers.)
+
+
+    Red Hat partners with companies (international and domestic) so that we can make
+    Red Hat Linux available to you in the most convenient form. Because of these partnerships,
+    you might find that your Red Hat Linux boxed set may not have been actually produced
+    by Red Hat.
+
+
+    If your box has a different ISBN number (or none at all), you''ll need to contact
+    the company that produced your boxed set. Normally, third-party producers will
+    include their logo and/or contact information on the outside of the box; an official
+    Red Hat Linux boxed set lists only our name and contact information.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 3.1.1 Why You Should Register Your Red Hat Linux Boxed Set
+
+
+    If you have purchased an official Red Hat Linux 7.0 boxed set, you should register
+    your prod-uct. Registration offers you many useful services, such as installation
+    help support, priority FTP access, and more.
+
+
+    To register your product, go to http://www.redhat.com/now. You’ll find your Personal
+    Prod-uct ID on the red and white registration card in your Official Red Hat Linux
+    boxed set. Once registered, you will be able to partake of all the extras Red
+    Hat provides to its registered users.
+
+
+    For more information on registering and the scope of Red Hat’s technical support
+    offerings, see Appendix D, Getting Technical Support.
+
+
+    # 3.1.2 No Boxed Set? No Problem!
+
+
+    Of course, not everyone purchases a Red Hat Linux boxed set. It’s entirely possible
+    to install Red Hat Linux using a CD created by another company, or even via FTP.
+    In these cases, you may need to create one or more diskettes to get started.
+
+
+    For information on downloading and installing Red Hat Linux via FTP, refer to
+    http://www.redhat.com/download/howto\_download.html.
+
+
+    For people installing Red Hat Linux from a CD-ROM not from Red Hat, you may need
+    a boot disk, or if using a PCMCIA device during the installation (such as a laptop),
+    a PCMCIA boot disk. It may also be possible to start the installation directly
+    from the CD. We’ll discuss this in more detail when we outline the various installation
+    methods.
+
+
+    For information on making diskettes, see Section 3.5.2, Making Installation Diskettes.
+
+
+    # 3.2 Step 2 - Is Your Hardware Compatible?
+
+
+    Hardware compatibility is particularly important if you have an older system or
+    a system that you may have built yourself. Red Hat Linux 7.0 should be compatible
+    with most hard-ware in systems that were factory built within the last two years.
+    However, with hardware specifications changing almost daily, it’s hard to guarantee
+    that your hardware will be 100% compatible.
+
+
+    First, gather all the system hardware information you can; the Official Red Hat
+    Linux Refer-ence Guide on the Documentation CD has instructions in the Installation-Related
+    Reference'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '(including instructions for Windows users) which may assist you. In Chapter
+    4, *System Requirements Table*, a table is available for you to fill out and reference
+    during the installation.
+
+
+    Second, use Red Hat''s online resources to make sure your hardware is compatible
+    and/or supported. The hardware compatibility list is located at: `http://www.redhat.com/hardware`.
+
+
+    # ## 3.3 Step 3 - Do You Need Errata?
+
+
+    Occasionally, we find that the installation may fail, and that a revised diskette
+    image is needed for the installation to work properly. In these cases, we make
+    special images available via the Red Hat Linux errata listing. Since this is relatively
+    rare, you will save time if you try to use the standard diskette images first.
+    Review the errata only if you experience problems completing the installation.
+
+
+    Although most of the time it''s not necessary to check for errata before the installation,
+    it is also not a bad idea, either.
+
+
+    Red Hat offers updated diskette images, documentation and other errata downloads
+    for your convenience.
+
+
+    There are two ways to review the errata:
+
+
+    +   1.  Online -- `http://www.redhat.com/support/errata`; supplies errata you
+    can read online, and you can download diskette images easily.
+
+    +   2.  E-mail -- By sending an empty mail message to `errata@redhat.com`, you
+    will receive an e-mail containing a text listing of the complete errata of the
+    installation program and related software (if errata exist at that time). Also
+    included are URLs to each updated package and diskette image in the errata. Using
+    these URLs, you can download any necessary diskette images. Please note: use binary
+    mode when transferring a diskette image.
+
+
+    If you experience problems, focus on entries that include new diskette images
+    (the filenames always end in `.img`). If you find an entry that applies to your
+    problem, get a copy of the diskette images, and create them using the instructions
+    in Section 3.5.2, *Making Installation Diskettes*.
+
+
+    Also available are documentation errata. When significant changes are made to
+    the manuals, we make sure to update these online as well. Documentation updates
+    can be found at `http://www.redhat.com/support/errata/doc_errata`.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 3.4 Step 4 - Do You Have Enough Disk Space?
+
+
+    Nearly every modern-day operating system uses disk partitions, and Red Hat Linux
+    is no exception. When installing Red Hat Linux, it may be necessary to work with
+    disk partitions. If you have not worked with disk partitions before (or would
+    like a quick review of the basic concepts) please read An Introduction to Disk
+    Partitions in the appendix of the Official Red Hat Linux Reference Guide on the
+    Documentation CD before proceeding.
+
+
+    If Red Hat Linux will share your system with another OS, you will need to make
+    sure you have enough available disk space on your hard drive(s) for this installation.
+
+
+    This disk space must be separate from the disk space used by other OSes you may
+    have installed on your system, such as Windows, OS/2, or even a different version
+    of Linux. This is done by dedicating one or more partitions to Red Hat Linux.
+
+
+    Before you start the installation process, one of the following conditions must
+    be met:
+
+
+    +   - Your computer must have enough unpartitioned disk space.
+
+    +   - You must have one or more partitions that may be deleted, thereby freeing
+    up enough disk space to install Red Hat Linux.
+
+    +   - You must have a preexisting, formatted FAT (DOS) partition with sufficient
+    disk space, and install using the partitionless installation method (Appendix
+    B, Installing Without Partitioning).
+
+
+    > > **Please Note**
+
+    > > To perform a partitionless installation, you also must choose the class of
+    installation you want to perform. However, unlike a typical installation, you
+    will not have to worry about losing any information on your system. A partitionless
+    installation will not remove existing partitions. For more information, turn to
+    Appendix B, Installing Without Partitioning.
+
+
+    A workstation-class installation requires at least 900MB of free space. This installation
+    size requirement is the same for partitionless installations.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '**Please Note**
+
+
+    To use the automatic partitioning feature of Red Hat Linux you must have enough
+    free disk space available (900MB or more), otherwise this option will not appear
+    during your installation.
+
+
+    If you are not sure that you meet these conditions or want to know how to free
+    up more space for your Red Hat Linux installation, please refer to the partitioning
+    appendix in the Official *Red Hat Linux Reference Guide* on the Documentation
+    CD.
+
+
+    # 3.5 Step 5 - Can You Install Using the Red Hat Linux CD-ROM?
+
+
+    Although there are several methods that can be used to install Red Hat Linux,
+    this manual only focuses on installing from the CD-ROM. For instructions on alternative
+    installation methods, refer to the Official Red Hat Linux Reference Guide on the
+    Documentation CD.
+
+
+    Installing from a CD requires that you have purchased a Red Hat Linux 7.0 boxed
+    set (or have a Red Hat Linux CD-ROM) and have a CD-ROM drive. Most new computers
+    will allow booting from the CD-ROM. With this method, you can easily use the Red
+    Hat Linux CD-ROM to boot the installation program and perform a local CD-ROM installation.
+
+
+    # 3.5.1 Alternative Boot Methods
+
+
+    There are alternative boot methods available, if you cannot boot from the CD-ROM
+    drive.
+
+
+    # Local Boot Disk
+
+
+    +   • You may need a **local boot disk** or a **PCMCIA boot disk**, if you cannot
+    boot from the CD-ROM drive.
+
+
+    +   • Included in your Official Red Hat Linux 7.0 boxed set is a local boot disk.
+    However, if you do not have a local boot disk (for example, you downloaded Red
+    Hat Linux rather than purchasing an official boxed set) you can make one. Refer
+    to Section 3.5.2, *Making Installation Diskettes* for those instructions.
+
+
+    # PCMCIA Boot Disk'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "You may need a PCMCIA boot disk if you are using a PCMCIA device to install\
+    \ Red Hat Linux. If you need a PCMCIA boot disk, you must create one. Refer to\
+    \ Section 3.5.2, *Making Installation Diskettes* for those instructions.\n\nHere’s\
+    \ a checklist to help you determine if you’ll need to create a PCMCIA boot disk:\n\
+    \n+   • You will install Red Hat Linux from a CD-ROM, and your CD-ROM drive is\
+    \ attached to your computer through a PCMCIA card.\n+   • You will use a PCMCIA\
+    \ network adapter during the installation.\n\nThe PCMCIA boot disk image file\
+    \ is **pcmcia.img**, and is located in the **images** directory on your Red Hat\
+    \ Linux/Intel CD. Refer to Section 3.5.2, *Making Installation Diskettes* for\
+    \ more information.\n\n> **Please Note**\n> \n> Although not required to boot\
+    \ your installation, you may occasionally find that a driver disk is needed for\
+    \ you to continue with the installation. The **Driver Disks** appendix in the\
+    \ **Official Red Hat Linux Reference Guide** (on the Documentation CD) explains\
+    \ why a driver disk may be necessary for your installation, and how to obtain\
+    \ one if needed.\n\n# 3.5.2 Making Installation Diskettes\n\nIt is sometimes necessary\
+    \ to create a diskette from an **image file**; for example, you may need to use\
+    \ updated image images obtained from the Red Hat Linux errata page or you may\
+    \ need to create a boot disk.\n\nAn image file contains an exact copy (or image)\
+    \ of a diskette’s contents. Since a diskette contains filesystem information in\
+    \ addition to the data contained in files, the image file is not usable until\
+    \ it has been written to a diskette.\n\nTo start, you’ll need a blank, formatted,\
+    \ high-density (1.44MB), 3.5-inch diskette. You’ll need access to a computer with\
+    \ a 3.5-inch diskette drive, and capable of running an MS-DOS program, or the\
+    \ **dd** utility found on most Linux-based operating systems.\n\nThe **images**\
+    \ directory on your Red Hat Linux CD contains the boot images for Red Hat Linux/Intel.\
+    \ Once you’ve selected the proper image, transfer the image file onto a diskette."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'Section 3.5:Step 5 - Can You Install Using the Red Hat Linux CD-ROM?
+
+
+    # Making a Diskette Under MS-DOS
+
+
+    To make a diskette under MS-DOS, use the `rawrite` utility included on the Red
+    Hat Linux CD in the `dosutils` directory. First, label a blank, formatted 3.5-inch
+    diskette appropriately (such as "Boot Disk" or "Updates Disk"). Insert it into
+    the diskette drive. Then, use the following commands (assuming your CD is drive
+    d:):
+
+
+    ```
+
+    ```
+
+    C:\> d:
+
+    D:\> cd \dosutils
+
+    D:\dosutils> rawrite
+
+    Enter disk image source file name: ..\images\boot.img
+
+    Enter target diskette drive: a:
+
+    Please insert a formatted diskette into drive A: and
+
+    press --ENTER-- : [Enter]
+
+    D:\dosutils>```
+
+
+    ```
+
+
+    First, `rawrite` asks you for the `filename` of a diskette image; enter the directory
+    and name of the image you wish to write (for example, `..\images\boot.img`). Then
+    `rawrite` asks for a diskette drive to write the image to; enter `a:`. Finally,
+    `rawrite` asks for confirmation that a formatted diskette is in the drive you''ve
+    selected. After pressing [Enter] to confirm, `rawrite` copies the image file onto
+    the diskette. If you need to make another diskette, label that diskette, and run
+    `rawrite` again, specifying the appropriate image file.
+
+
+    # Making a Diskette Under a Linux-Like OS
+
+
+    To make a diskette under Linux (or any other Linux-like operating system), you
+    must have permission to write to the device representing a 3.5-inch diskette drive
+    (known as `/dev/fd0` under Linux).
+
+
+    First, label a blank, formatted diskette appropriately (such as "Boot Disk" or
+    "Updates Disk"). Insert it into the diskette drive (but don''t issue a `mount`
+    command). After mounting the Red Hat Linux CD, change directory to the directory
+    containing the desired image file, and use the following command (changing the
+    name of the image file and diskette device as appropriate):
+
+
+    ```
+
+    ```
+
+    # dd if=boot.img of=/dev/fd0 bs=1440k
+
+    ```
+
+    ```
+
+
+    To make another diskette, label that diskette, and run `dd` again, specifying
+    the appropriate image file.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# ## 3.6 Step 6 - Is a Workstation-Class Installation Best For You?
+
+
+    Although Red Hat Linux includes four different classes, or types of installations,
+    this manual only discusses workstation-class installations.
+
+
+    # ### 3.6.1 What a Workstation-Class Installation Will Do
+
+
+    In choosing automatic partitioning, a workstation-class installation removes all
+    Linux-related partitions on all installed hard drives (and uses all free unpartitioned
+    disk space) to create the following partitions:
+
+
+    +   - A 64MB swap partition.
+
+    +   - A variable-sized root partition (mounted as /) in which all other files
+    are stored (the exact size of this partition is dependent on your available disk
+    space).
+
+    +   - A 16MB partition (mounted as /boot) in which the Linux kernel and related
+    files reside.
+
+
+    > **Please Note**
+
+    > You''ll need at least 900MB of free disk space in order to perform a workstation-class
+    installation.
+
+
+    This installation will remove *all* existing Linux partitions on *all* hard drives
+    in your system; non-Linux partitions will not be removed.
+
+
+    A workstation-class installation will install your choice of a GNOME or KDE (or
+    both) desktop environment, and the X Window System.
+
+
+    # ### 3.6.2 What a Workstation-Class Installation Will Not Do
+
+
+    A workstation-class installation will not erase your Windows 3.1/95/98 configuration.
+    Instead, it will automatically configure your system to dual-boot using LILO (the
+    Linux Loader).
+
+
+    A workstation-class installation will not allow you to customize your group package
+    selection. If you do not want the installation program to select packages for
+    you, please choose a custom-class installation and refer to the *Official Red
+    Hat Linux Reference Guide* on the Documentation CD.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/f097eb927132822630978994ad35bce4_22_0.png)
+
+
+    A workstation-class installation will not install correctly if you plan to create
+    a dual-boot system with Windows NT as the second OS. If you''re sharing a system
+    with Windows NT, you will be unable to boot Windows NT. LILO will write over NT''s
+    boot loader and you will be unable to boot NT. You must perform a custom-class
+    installation and configure LILO so that it is not installed on the Master Boot
+    Record (MBR).
+
+
+    # Please Note
+
+
+    Unlike earlier workstation-class installations, performing a Red Hat Linux 7.0
+    workstation-class installation will not install the network daemon xinetd (inet
+    services). Withholding xinetd results in a more secure installation; however,
+    in-bound¹, network-related services such as finger, telnet, talk, and FTP will
+    not work. If you require these types of services, choose a server- or a custom-class
+    installation.
+
+
+    ¹ In-bound services mean that you can telnet, for instance, out to other systems,
+    but that other systems cannot telnet into your system.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'Use the space provided to fill in your system settings and requirements. This
+    will help you keep a record of your current system, as well as make the installation
+    process easier.
+
+
+    | | | |
+
+    | :--- | :--- | :--- |
+
+    | Hard Drive(s): Type, label, size; ex: IDE hda=1.2G | 1) | |
+
+    | Partitions: map of partitions and mount points; ex: /dev/hda1= /home, /dev/hda2=
+    / (fill this in once you know where they will reside). | 2) | |
+
+    | Memory: Amount of RAM installed on your system; ex: 64MB, 128MB | 3) | |
+
+    | CD-ROM: Interface Type; ex: SCSI, IDE (ATAPI) | 4) | |
+
+    | SCSI Adapter: If present, make and model number; ex: BusLogic SCSI Adatper,
+    Adaptec 2940UW | 5) | |
+
+    | Network Card: If present, make and model number; ex: Tulip, 3COM 3C590 | 6)
+    | |'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '| | |
+
+    |---|---|
+
+    | *Mouse:* Type, protocol, and number of buttons; ex: generic 3 button PS/2 mouse,
+    MouseMan 2 button serial mouse | 7) |
+
+    | *Monitor:* Make, model, and manufacturer specifications; ex: Optiquest Q53,
+    ViewSonic G773 | 8) |
+
+    | *Video Card:* Make, model number and size of VRAM; ex: Creative Labs Graphics
+    Blaster 3D, 8MB | 9) |
+
+    | *Sound Card:* Make, chipset and model number; ex: S3 SonicVibes, Sound Blaster
+    32/64 AWE | 10) |
+
+    | *IP, DHCP, and BOOTP Addresses:* Four numbers, separated by dots; ex: 10.0.2.15
+    *(contact your netadmin for help)* | 11) |
+
+    | *Netmask:* Usually four numbers, separated by dots; ex: 255.255.248.0 *(contact
+    your netadmin for help)* | 12) |'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '| Gatewy IP address: Four numbers, separated by dots; ex: 10.0.2.245 (contact
+    your netadmin for help) | 13) |
+
+
+    | One or more name server IP Addresses (DNS): Usually one or more sets of dot-separated
+    numbers; ex: 10.0.2.1 (contact your netadmin for help) | 14) |
+
+
+    | Domain name: the name given to your organization; ex: Red Hat''s would be redhat.com
+    (contact your netadmin for help) | 15) |
+
+
+    | Hostname: the name of your computer; your personal choice of names ex: cookie,
+    southpark (contact your netadmin for help) | 16) |'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # 5 Installing Red Hat Linux From Start to Finish
+
+
+    This chapter discusses all steps of a Red Hat Linux workstation-class installation.
+    We''ll cover the following areas:
+
+
+    +   - Getting familiar with the installation program''s user interface
+
+    +   - Starting the installation program
+
+    +   - Selecting an installation method
+
+    +   - Configuration steps during the installation (language, keyboard, mouse,
+    etc.)
+
+    +   - Finishing the installation
+
+
+    By the end of this chapter, you will have Red Hat Linux 7.0 installed on your
+    system.
+
+
+    # ## 5.1 The Installation Program User Interface
+
+
+    If you''ve used a **graphical user interface (GUI)** before, you''ll be familiar
+    with this process. If not, simply use your mouse to navigate the screens, "click"
+    buttons or enter text fields. You can also navigate through the installation using
+    the [Tab] and [Enter] keys.
+
+
+    If you do not wish to use the GUI installation program, the text mode installation
+    program is also available. To enter text mode, enter the following boot command:
+
+
+    ```
+
+    boot: text
+
+    ```
+
+
+    # ### 5.1.1 Mouse Not Detected?
+
+
+    If the **Mouse Not Detected** screen (see Figure 5-1, *Mouse Not Detected*) appears,
+    then the installation program was not able to identify your mouse correctly.
+
+
+    You can choose to continue with the GUI installation or use the text mode installation,
+    which does not require using a mouse. If you choose to continue with the GUI installation,
+    you will need to provide the installation program with your mouse configuration
+    information (see Figure 5-4, *Mouse Configuration*).'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# **Figure 5–1 Mouse Not Detected**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_29_0.png)
+
+
+    For text mode workstation-class installation instructions, please refer to Chapter
+    6, *Text Mode Installations at a Glance*.
+
+
+    For text mode custom installation instructions, please refer to the *Official
+    Red Hat Linux Reference Guide* on the Documentation CD.
+
+
+    # **5.1.2 A Note About Virtual Consoles**
+
+
+    The Red Hat Linux installation program offers more than the dialog boxes of the
+    installation process. Several types of diagnostic messages are available to you,
+    and you’re additionally provided a way to enter commands from a shell prompt.
+    This information is presented on five **virtual consoles**, among which you can
+    switch using a single keystroke.
+
+
+    These virtual consoles are helpful if you encounter a problem while installing
+    Red Hat Linux. Messages displayed on the installation or system consoles can help
+    pinpoint a problem. Please see Table 5–1, *Console, Keystrokes, and Contents*
+    for a listing of the virtual consoles, keystrokes to switch to them, and their
+    contents.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "Generally, there’s no reason to leave the default console (virtual console\
+    \ #7) unless you are attempting to diagnose installation problems. But if you\
+    \ get curious, feel free to look around.\n\n# Table 5–1 Console, Keystrokes, and\
+    \ Contents\n\n| Console | Keystrokes | Contents |\n| :--- | :--- | :--- |\n| 1\
+    \ | [Ctrl]+[Alt]+[F1] | installation dialog |\n| 2 | [Ctrl]+[Alt]+[F2] | shell\
+    \ prompt |\n| 3 | [Ctrl]+[Alt]+[F3] | install log (messages from installation\
+    \ program) |\n| 4 | [Ctrl]+[Alt]+[F4] | system-related messages |\n| 5 | [Ctrl]+[Alt]+[F5]\
+    \ | other messages |\n| 7 | [Ctrl]+[Alt]+[F7] | X graphical display |\n\n# 5.2\
+    \ Starting the Installation Program\n\nNow it’s time to begin installing Red Hat\
+    \ Linux. To start the installation, you must first boot the installation program.\
+    \ Please make sure you have all the resources you’ll need for the installation.\
+    \ If you’ve already read through Chapter 3, *Seven Steps to Get You Started*,\
+    \ and followed the instructions, you should be ready to begin.\n\n> **Please Note**\n\
+    > \n> Occasionally, some hardware components require a **driver disk** during\
+    \ the installation. The driver disk could be produced by Red Hat, it could be\
+    \ a disk made by you, or it could be a disk that a hardware vendor includes with\
+    \ a piece of hardware. Another source for finding driver disks is http://www.redhat.com/support/errata/.\n\
+    > \n> If a screen appears prompting you to insert a driver disk, please do so.\
+    \ For more information about driver disks, refer to *Appendix C, Driver Disks*\
+    \ in the *Official Red Hat Linux Reference Guide* on the Documentation CD."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# 5.2.1 Booting the Installation Program
+
+
+    **Please Note**
+
+
+    If you need to create a boot disk, please refer to Section 3.5.2, *Making Installation
+    Disquettes*.
+
+
+    Insert the boot disk into your computer''s first diskette drive and reboot (or
+    boot using the CD-ROM, if your computer supports this).
+
+
+    Your BIOS settings may need to be changed to allow you to boot from the diskette
+    or CD-ROM.
+
+
+    **Tip**
+
+
+    To change your BIOS, take note of the instructions given when your computer first
+    begins to boot. Often you will see a line of text telling you to press the [Del]
+    or [F1] key to enter the BIOS settings.
+
+
+    Next, find the section where you can alter your boot sequence. The default is
+    often C, A or A, C (depending on whether you boot from your hard drive [C] or
+    a floppy drive [A]). Change this sequence so that the CD-ROM is first in your
+    boot order and that C or A (whichever is your typical boot default) is second.
+    This instructs the computer to first look at the CD-ROM drive for bootable media;
+    if it cannot be found there, it will look at your hard drive or floppy next.
+
+
+    Save your changes before exiting the BIOS. For more information please refer to
+    the documentation that came with your system.
+
+
+    There are three possible workstation-class boot methods:
+
+
+    +   - *Bootable CD-ROM* -- your machine supports a bootable CD-ROM drive and you
+    want to perform a local CD-ROM installation.
+
+    +   - *Local boot disk* -- your machine will not support a bootable CD-ROM and
+    you want to install from a local CD-ROM or a hard drive.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   *   *PCMCIA boot disk* -- use in cases where you need PCMCIA support, but
+    your machine does not support booting from the CD-ROM drive *or* if you need PCMCIA
+    support in order to make use of the CD-ROM drive on your system. This boot disk
+    offers you all installation methods (CD-ROM, hard disk, NFS, FTP, and HTTP).
+
+
+    After a short delay, a screen containing the *boot :* prompt should appear. The
+    screen contains information on a variety of boot options. Each boot option also
+    has one or more help screens associated with it. To access a help screen, press
+    the appropriate function key as listed in the line at the bottom of the screen.
+
+
+    You should keep two things in mind:
+
+
+    +   *   The initial screen will automatically start the installation program if
+    you take no action within the first minute. To disable this feature, press one
+    of the help screen function keys.
+
+    +   *   If you press a help screen function key, there will be a slight delay
+    while the help screen is read from the installation media.
+
+
+    Normally, you''ll only need to press `Enter` to boot. Watch the boot messages
+    to see whether the *Linux* kernel detects your hardware. If it does not properly
+    detect your hardware, you may need to restart the installation in "expert" mode.
+    If your hardware is properly detected, please continue to the next section. For
+    more information about "expert" mode, refer to section *Starting the Installation
+    Program* in the chapter *Installing Red Hat Linux via the GUI* in the *Official
+    Red Hat Linux Reference Guide* on the Documentation CD.
+
+
+    # Booting without diskettes
+
+
+    Another way to start the installation without using a boot disk depends on whether
+    you have *MS-DOS* on your system. The following method is specific to Intel-based
+    computers only.
+
+
+    Assuming your CD-ROM is drive *a*:*, use the following commands:
+
+
+    ```
+
+    C:\>  *a*:
+
+    D:\>  *cd \dosutiles*
+
+    D:\dosutiles> *autoboot.bat*
+
+    ```
+
+
+    This method will not work if run in a DOS window -- the *autoboot.bat* file must
+    be executed with DOS as the only operating system. In other words, you should
+    reboot your system and choose to "restart in MS-DOS mode."
+
+
+    If your computer can''t boot directly from CD-ROM (and you can''t use a DOS-based
+    auto-boot), you''ll have to use a boot diskette to get things started.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 5.3 Selecting an Installation Method
+
+
+    Next, you will be asked what type of installation method you wish to use. For
+    our purposes, choose **CD-ROM**. However, you can install Red Hat Linux via any
+    of the following basic methods:
+
+
+    +   - **CD-ROM**
+
+    +     - If you have a CD-ROM drive and the Red Hat Linux CD-ROM. Requires a boot
+    disk, a bootable CD-ROM or a PCMCIA boot disk. Refer to Section *5.4, Beginning
+    the Installation* for further instructions.
+
+
+    +   - **Hard Drive**
+
+    +     - If you copied the Red Hat Linux files to a local hard drive. Refer to
+    the *Official Red Hat Linux Reference Guide* on the Documentation CD for hard
+    drive installation instructions. Requires a boot disk or a PCMCIA boot disk.
+
+
+    +   - **NFS Image**
+
+    +     - If you are installing from an NFS Image server which is exporting the
+    Red Hat Linux CD-ROM or a mirror image of Red Hat Linux. Requires a network or
+    PCMCIA boot disk. Refer to the *Official Red Hat Linux Reference Guide* on the
+    Documentation CD for network installation instructions. Please note: NFS installations
+    may also be performed in GUI mode.
+
+
+    +   - **FTP**
+
+    +     - If you are installing directly from an FTP server. Requires a network
+    or PCMCIA boot disk. Refer to the *Official Red Hat Linux Reference Guide* on
+    the Documentation CD for FTP installation instructions.
+
+
+    +   - **HTTP**
+
+    +     - If you are installing directly from an HTTP Web server. Requires a network
+    or PCMCIA boot disk. Refer to the *Official Red Hat Linux Reference Guide* on
+    the Documentation CD for HTTP installation instructions.
+
+
+    # 5.4 Beginning the Installation
+
+
+    If you are planning to install via CD-ROM using the graphical interface, please
+    read on.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Please Note
+
+
+    If you''d rather perform a text mode custom-class installation, reboot your system
+    and at the **boot** : prompt, type **text**. Refer to the *Official Red Hat Linux
+    Reference Guide on the Documentation CD* for further instructions. Text mode workstaion-class
+    installation instructions can be found at Chapter 6, *Text Mode Installations
+    at a Glance*.
+
+
+    # ## 5.4.1 Installing from CD-ROM
+
+
+    To install Red Hat Linux from CD-ROM, choose **CD-ROM** and select **OK**. When
+    prompted, insert the Red Hat Linux CD into your CD-ROM drive (if you did not boot
+    from the CD-ROM). Select **OK**, and press [Enter].
+
+
+    The installation program will then probe your system and attempt to identify your
+    CD-ROM drive. It will start by looking for an IDE (also known as ATAPI) CD-ROM
+    drive. If found, you will continue to the next stage of the installation process
+    (see Section 5.5, *Language Selection* ).
+
+
+    If a drive is not detected, you''ll be asked what type of CD-ROM drive you have.
+    Choose from the following types:
+
+
+    +   SCSI
+
+    +   Select this if your CD-ROM drive is attached to a supported SCSI adapter;
+    the installation program will then ask you to choose a SCSI driver. Choose the
+    driver that most closely reassembles your adapter. You may specify options for
+    the driver if necessary; however, most drivers will detect your SCSI adapter automatically.
+
+
+    +   Other
+
+    +   If your CD-ROM drive is neither an IDE nor a SCSI, it''s an "other." Sound
+    cards with proprietary CD-ROM interfaces are good examples of this CD-ROM type.
+    The installation program presents a list of drivers for supported CD-ROM drives
+    -- choose a driver and, if necessary, specify any driver options.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '![](img/f097eb927132822630978994ad35bce4_35_0.png)
+
+
+    A partial list of optional parameters for CD-ROM drives can be found in the Official
+    Red Hat Linux Reference Guide, in the General Parameters and Modules appendix.
+
+
+    # What If the IDE CD-ROM Was Not Found?
+
+
+    If the installation program fails to find your IDE (ATAPI) CD-ROM (it asks you
+    what type of CD-ROM drive you have), restart the installation, and at the boot:
+    prompt enter 1linux hdx=c d r o m. Replace the x with one of the following letters,
+    depending on the interface the unit is connected to, and whether it is configured
+    as master or slave:
+
+
+    +   • a - First IDE controller, master
+
+    +   • b - First IDE controller, slave
+
+    +   • c - Second IDE controller, master
+
+    +   • d - Second IDE controller, slave
+
+
+    (If you have a third and/or fourth controller, simply continue assigning letters
+    in alphabetical order, going from controller to controller, and master to slave.)
+
+
+    Once identified, you will be asked to insert the Red Hat Linux CD into your CD-ROM
+    drive. Select OK when you have done so. After a short delay, the next dialog box
+    will appear.
+
+
+    ![](img/f097eb927132822630978994ad35bce4_35_1.png)
+
+
+    To abort the installation process at this time, reboot your machine and eject
+    the boot disk or CD-ROM. You can safely abort the installation at any point before
+    the About to Install screen (see Section 5.17, Preparing to Install).
+
+
+    # 5.5 Language Selection
+
+
+    Using your mouse, select the language you would prefer to use for the installation
+    and as the system default (see Figure 5-2, Language Selection).'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'Selecting the appropriate language will also help target your time zone configuration
+    later in the installation. The installation program will try to define the appropriate
+    time zone based on your specification.
+
+
+    # Figure 5–2 Language Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_36_0.png)
+
+
+    # 5.6 Keyboard Configuration
+
+
+    Choose the model that best fits your system (see Figure 5–3, *Keyboard Configuration*).
+    If you cannot find an exact match, choose the best **Generic** match for your
+    keyboard type (for example, **Generic 101-key PC**).
+
+
+    Next, choose the correct layout type for your keyboard (for example, U.S. English).
+
+
+    Creating special characters with multiple keystrokes (such as N, Ö, and Ç) is
+    done using "dead keys" (also known as compose key sequences). Dead keys are enabled
+    by default. If you do not wish to use them, select **Disable dead keys**.
+
+
+    To test your keyboard configuration, use the blank text field at the bottom of
+    the screen to enter text.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Tip
+
+
+    To change your keyboard type post-installation, become root and use the /usr/sbin/kbdconfig
+    command, or you can type setup at the root prompt (seen as [root@localhost root]#).
+
+
+    To become root, type su at the shell prompt in a terminal window and then press
+    [Enter]. Then, enter the root password and press [Enter].
+
+
+    # Figure 5–3 Keyboard Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_37_0.png)
+
+
+    # 5.7 Mouse Configuration
+
+
+    Choose the correct mouse type for your system. If an exact match cannot be found,
+    choose a mouse type that you are sure is compatible with your system (see Figure
+    5–4, Mouse Configuration).'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'To determine your mouse’s interface, follow the mouse cable back to where it
+    plugs into your system. If the connector at the end of the mouse cable plugs into
+    a rectangular connector, you have a serial mouse; if the connector is round, you
+    have a PS/2 mouse. If you are installing Red Hat Linux on a laptop computer, in
+    most cases the pointing device will be PS/2 compatible.
+
+
+    If you cannot find a mouse that you are sure is compatible with your system, select
+    one of the *Generic* entries, based on your mouse’s number of buttons, and its
+    interface.
+
+
+    # Figure 5—4 Mouse Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_38_0.png)
+
+
+    If you have a PS/2 or a Bus mouse, you do not need to pick a port and device.
+    If you have a serial mouse, you should choose the correct port and device that
+    your serial mouse is on.
+
+
+    The *Emulate 3 Buttons* check box allows you to use a two-button mouse as if it
+    had three buttons. If you select this check box, you can emulate a third, “middle”
+    button by pressing both mouse buttons simultaneously. Generally, it’s easiest
+    to use the X Window System if you have a three-button mouse.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Tip
+
+
+    To change your mouse configuration post-installation, become root. You can then
+    use the /usr/sbin/mouseconfig command from the shell prompt.
+
+
+    To configure your mouse as a left-handed mouse, you can reset the order of the
+    mouse buttons. This can be done after you have booted your Red Hat Linux system,
+    by becoming root and typing gpm -B 321 at the shell prompt.
+
+
+    # 5.8 Welcome to Red Hat Linux
+
+
+    The Welcome screen (see Figure 5-5, *Welcome to Red Hat Linux*) does not prompt
+    you for any installation input. Please read over the help text in the left panel
+    for additional instructions and information.
+
+
+    # Figure 5-5 Welcome to Red Hat Linux
+
+
+    ![](img/f097eb927132822630978994ad35bce4_39_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'The **help screen** is open by default, but if you do not want to view the
+    help information, click on the **Hide Help** button to minimize the screen.
+
+
+    Click on the **Next** button to continue.
+
+
+    # ## 5.9 Install Options
+
+
+    > **Please Note**
+
+    > Feature: Red Hat Linux 7.0 has a installation method known as a "partitionless"
+    installation. If your system has a FAT (DOS/Windows) partition with sufficient
+    free space, you can install Red Hat Linux without repartitioning your hard drive.
+    This method is perfect for people who are new to Linux, and would like to try
+    Red Hat Linux with a minimum of disruption to their computer. To learn more about
+    this method, refer to Appendix B, *Installing Without Partitioning*.
+
+
+    Red Hat Linux allows you to choose the installation type that best fits your needs.
+    Your options include: **Workstation**, **Server**, **Custom**, or **Upgrade**.
+
+
+    > **WARNING**
+
+    > Installing Red Hat Linux over another installation of Linux (including Red Hat
+    Linux) does *not* preserve any information (files or data) from a prior installation.
+    Make sure you save any important files! If you are worried about saving the current
+    data on your existing system (without making a backup on your own), you should
+    consider performing an upgrade instead (see Appendix A, *Upgrading Your Current
+    System*).'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Figure 5-6 Choosing Install or Upgrade
+
+
+    ![](img/f097eb927132822630978994ad35bce4_41_0.png)
+
+
+    Choosing your specific installation type also determines where you should go for
+    documentation on that choice.
+
+
+    +   * Graphical Workstation Installation -- Official Red Hat Linux Installation
+    Guide, (this chapter, please continue reading)
+
+    +   * Graphical Server Installation -- Official Red Hat Linux Reference Guide
+    on the Documentation CD; Chapter: *Installing Red Hat Linux via the GUI*
+
+    +   * Graphical Custom Installation -- Official Red Hat Linux Reference Guide
+    on the Documentation CD; Chapter: *Installing Red Hat Linux via the GUI*
+
+    +   * Text Mode Workstation Installation -- Official Red Hat Linux Installation
+    Guide; Chapter *Installing in Text Mode*
+
+    +   * Text Mode Server Installation -- Official Red Hat Linux Reference Guide
+    on the Documentation CD; Chapter: *Installing Red Hat Linux via Text Mode*
+
+    +   * Text Mode Custom Installation -- Official Red Hat Linux Reference Guide
+    on the Documentation CD; Chapter: *Installing Red Hat Linux via Text Mode*'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# 5.9.1 Choosing a Workstation Installation\n\n> **WARNING**\n> \n> A workstation-class\
+    \ installation will erase *all information in all Linux-related partitions from\
+    \ every one of your computer's hard drive(s).*\n\nYou usually install Red Hat\
+    \ Linux on a clean disk partition or set of partitions, or over another installation\
+    \ of Linux.\n\n> **WARNING**\n> \n> Do not choose a workstation-class installation\
+    \ if you're sharing a disk with Windows NT; if you do, you will be unable to boot\
+    \ Windows NT. LILO will write over NT's boot loader and you will be unable to\
+    \ boot NT. You must perform a custom-class installation and configure LILO so\
+    \ that it is not installed on the Master Boot Record (MBR).\n> \n> To create a\
+    \ dual-boot environment on a system that currently has NT, you must install LILO\
+    \ on the first sector of the root partition, not the MBR. Please be sure to create\
+    \ a boot disk. In a case such as this, you will either need to use the boot disk,\
+    \ or configure the NT system loader to boot LILO from the first sector of the\
+    \ root partition. Be sure to check out http://www.linux-doc.org/HOWTO/mini/Linux+NT-Loader.html\
+    \ for more information on setting up LILO and NT.\n\n# 5.10 Automatic Partitioning\n\
+    \nAutomatic partitioning allows you to perform an installation without having\
+    \ to partition your drive(s) yourself. If you feel uncomfortable about manually\
+    \ partitioning your system, choosing automatic partitioning is the best solution\
+    \ for you."
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'The **Automatic Partitioning** screen is only seen when performing a workstation-
+    or server-class installation.
+
+
+    If you choose to manually partition, refer to the *Official Red Hat Linux Reference
+    Guide* on the Documentation CD; see the Chapter *Installing Red Hat Linux via
+    the GUI*.
+
+
+    # ## Please Note
+
+
+    If the **Automatic Partitioning** screen does not appear, then you do not have
+    enough free space available for this installation option. You can either exit
+    out of the installation program and then make space available, or you can partition
+    manually.
+
+
+    # ### Figure 5-7 Automatic Partitioning
+
+
+    ![](img/f097eb927132822630978994ad35bce4_43_0.png)
+
+
+    In this screen, you can choose to continue with this installation, to partition
+    **manually** using **Disk Druid**, to partition manually using **fdisk**, or use
+    the **Back** button to choose a different installation method (see *Figure 5-7,
+    Automatic Partitioning*).'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Please Note
+
+
+    Manual partitioning using Disk Druid or fdisk is outside the scope of this manual.
+    Although Disk Druid will be briefly discussed, detailed information on both Disk
+    Druid and fdisk is available in the *Official Red Hat Linux Reference Guide* on
+    the Documentation CD.
+
+
+    Automatic partitioning in a workstation-class installation will create / (“root”),
+    <swap>, and /boot partitions for you in the free space available on your hard
+    drive.
+
+    If you do *not* want to lose some or all of your data, you should either choose
+    to partition manually or choose a different installation class.
+
+
+    # CAUTION
+
+
+    *A workstation-class installation will remove all data on all currently existing
+    Linux partitions.*
+
+
+    If you do not want Red Hat Linux to be installed on your master boot record (MBR)
+    or if you want to use a boot manager other than LILO, do not choose this installation
+    method.
+
+
+    If you are unsure how you want your system to be partitioned, please read the
+    chapter on partitioning in the *Official Red Hat Linux Reference Guide*, on the
+    Documentation CD.
+
+
+    # 5.11  Manually Partitioning Your System
+
+
+    If you chose *Automatic Partitioning*, please skip to Section 5.12, *Network Configuration*.
+
+    For information concerning fdisk, refer to the *Official Red Hat Linux Reference
+    Guide* on the Documentation CD.
+
+    Now it’s necessary to let the installation program know where it should install
+    Red Hat Linux. This is done by defining *mount points*¹ for one or more disk partitions
+    in which Red Hat
+
+
+    ¹ A mount point is defined as the directory, such as */* (root), under which a
+    filesystem becomes accessible after being mounted.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'Linux will be installed. You may also need to create and/or delete partitions
+    at this time (refer to Figure 5–8, Partitioning with Disk Druid).
+
+
+    # Please Note
+
+
+    If you have not planned how you’ll set up your partitions, refer to the partitioning
+    appendix in the *Official Red Hat Linux Reference Guide*. As a bare minimum, you’ll
+    need a root partition of 900M, and a swap partition of 16 MB.
+
+
+    # Figure 5–8  Partitioning with Disk Druid
+
+
+    ![](img/f097eb927132822630978994ad35bce4_45_0.png)
+
+
+    The partitioning tool used in Red Hat Linux 7.0 is Disk Druid. With the exception
+    of certain esoteric situations, Disk Druid can handle the partitioning requirements
+    for a typical Red Hat Linux installation.
+
+
+    Unless you have a reason for doing otherwise, we recommend that you create the
+    following partitions:'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Section 5.11:Manually Partitioning Your System
+
+
+    +   - A swap partition (at least 16MB) -- Swap partitions are used to support
+    virtual memory. In other words, data is written to a swap partition when there
+    is not enough RAM to store the data your system is processing. If your computer
+    has 16MB of RAM or less, you *must create* a swap partition. Even if you have
+    more memory, a swap partition is still recommended. The minimum size of your swap
+    partition should be equal to the amount of RAM in your system or 16MB (whichever
+    is larger). In Disk Druid, the partition field for *swap* should look similar
+    to: ` <Swap>  hda2  125M  125M  Linux  swap`
+
+
+    +   - A */boot* partition (16MB, maximum) -- The partition mounted on */boot*
+    contains the operating system kernel (which allows your system to boot Red Hat
+    Linux), along with files used during the bootstrap process. Due to the limitations
+    of most PC BIOSes, creating a small partition to hold these files is a good idea.
+    This partition should be no larger than 16MB. In Disk Druid, the partition field
+    for */boot* should look similar to: ` /boot  hda1  16M  19M  Linux  native`
+
+
+    +   - A root partition (900MB-1.7GB) -- This is where "/" (the root directory)
+    resides. In this setup, all files (except those stored in */boot*) reside on the
+    root partition. A 900MB root partition will permit the equivalent of a workstation-class
+    installation (with very little free space), while a 1.7GB root partition will
+    let you install every package in Red Hat Linux. In Disk Druid, the partition field
+    for */* should look similar to: ` /  hda2  900M  3669M  Linux  native`
+
+
+    # 5.11.1 Problems When Adding a Partition
+
+
+    If you attempt to add a partition and Disk Druid can''t carry out your request,
+    you''ll see a dialog box listing partitions that are currently **unallocated**,
+    along with the reason they could not be allocated. Unallocated partitions(s) are
+    also displayed on Disk Druid''s main screen (though you may have to scroll through
+    the "Partitions" section to see them).
+
+
+    To fix an unallocated requested partition, you must move the partition to another
+    drive which has the available space, resize the partition to fit on the current
+    drive, or delete the partition entirely. Make changes by selecting a partition
+    and using the **Edit** button or by double-clicking on the partition.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# **5.11.2 Choose Partitions to Format**
+
+
+    Choose partitions that you would like to format. All newly created partitions
+    should be formatted. Any existing partitions that contain data you no longer need
+    should also be formatted (see Figure 5–9, *Choosing Partitions to Format*).
+
+
+    # **Figure 5–9 Choosing Partitions to Format**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_47_0.png)
+
+
+    Checking for bad blocks can help prevent data loss by locating the bad blocks
+    on a drive and making a list of them to prevent their future use. If you wish
+    to check for bad blocks while formatting each filesystem, please make sure to
+    select the **check for bad blocks** option.
+
+
+    # **Please Note**
+
+
+    > Selecting **check for bad blocks** may dramatically increase your total installation
+    time. Since most newer hard drives are quite large in size, checking for bad blocks
+    may take a while depending on the size of your hard drive.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# 5.12  Network Configuration
+
+
+    If you do not have a network card then you will not see this screen. Please skip
+    ahead to the next section, Section 5.13, Time Zone Configuration.
+
+
+    If you have a network card, you now have the opportunity to configure networking
+    (as shown in Figure 5–10, Network Configuration).
+
+
+    Choose your device type and whether you would like to configure using DHCP (Dynamic
+    Host Configuration Protocol). If you have multiple Ethernet devices, each device
+    will keep the information you have provided. You may switch between devices, for
+    example eth0 and eth1, and the information you give will be specific to each device.
+    If you select **Activate on boot**, your network interface will be started when
+    you boot. If you do not have DHCP client access or are unsure of the proper configuration,
+    please contact your network administrator.
+
+
+    Next enter, where applicable, the **IP Address**, **Netmask**, **Network**, and
+    **Broadcast** addresses. If you are unsure about any of these, please contact
+    your network administrator.
+
+
+    # Figure 5–10  Network Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "If you have a network card, enter a fully qualified domain name in this format:\
+    \ *host-name.domain.name*\n\n> **Tip**\n> \n> Even if your computer is not part\
+    \ of a network, you can enter a hostname for your system. Take this opportunity\
+    \ to enter in a *name*; if you do not, your system will be known as `localhost`.\n\
+    \nFinally, enter the **Gateway** and **Primary DNS** (and if applicable the **Secondary\
+    \ DNS** and **Ternary DNS**) addresses.\n\n# ## 5.13 Time Zone Configuration\n\
+    \nYou can set your time zone either by selecting your computer's physical location,\
+    \ or by your time zone's offset from Universal Coordinated Time (also known as\
+    \ UTC).\n\n# Figure 5-11 Configuring Time Zone\n\n![](img/f097eb927132822630978994ad35bce4_49_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'Notice the two tabs at the top of the screen (see Figure 5-11, Configuring
+    Time Zone). The first tab offers you the ability to configure by location. With
+    this option, you can choose your view. In choosing view, your options are: **World**,
+    **North America**, **South America**, **Pacific Rim**, **Europe**, **Africa**,
+    and **Asia**.
+
+
+    From the interactive map, you can also click on a specific city, as indicated
+    by the yellow dots; a red **X** will appear indicating your selection. You can
+    also scroll through a list and choose your desired time zone.
+
+
+    The second tab offers you the ability to use the UTC offset. UTC presents you
+    with a list of offsets to choose from, as well as an option to set daylight saving
+    time.
+
+
+    For both tabs, there is the option of selecting **System Clock uses UTC**. Please
+    select this if you know that your system is set to UTC.
+
+
+    # Tip
+
+
+    If you wish to change your time zone configuration after you have booted your
+    Red Hat Linux system, become root and use the */usr/sbin/timeconfig* command.
+
+
+    # 5.14 Account Configuration
+
+
+    The **Account Configuration** screen allows you to set your root password. Additionally,
+    you can set up user accounts for you to log into once the installation is complete
+    (see Figure 5-12, *Account Creation*).
+
+
+    # 5.14.1 Setting the Root Password
+
+
+    The installation program will prompt you to set a **root password** for your system.
+    Entering a root password is required. The installation program will not let you
+    proceed to the next section without entering a root password.
+
+
+    The root password must be at least six characters long; the password you type
+    is not echoed to the screen. You must enter the password twice; if the two passwords
+    do not match, the installation program will ask you to enter them again.
+
+
+    A root password is the administrative password for your Red Hat Linux system.
+    You should only log in as root when needed for system maintenance. Changes that
+    are made when logged in as root will affect the the system and all users created
+    on the system.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'You should make the root password something you can remember, but not something
+    that is easy for someone else to guess. Your name, your phone number, **qwerty,
+    password, root, 123456**, and **ant eater** are all examples of poor passwords.
+    Good passwords mix numerals with upper and lower case letters and do not contain
+    dictionary words: **Aard387vark** or **429BkIIKT**, for example. Remember that
+    the password is case-sensitive. Write down this password and keep it in a secure
+    place.
+
+
+    # Please Note
+
+
+    Do not use one of the example passwords offered in this manual. Using one of these
+    passwords could be considered a security risk.
+
+
+    # Figure 5-12 Account Creation
+
+
+    ![](img/f097eb927132822630978994ad35bce4_51_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '![](img/f097eb927132822630978994ad35bce4_52_0.png)
+
+
+    > The **root** user (also known as the **superuser**) has complete access to the
+    entire system; for this reason, logging in as the root user is best done *only*
+    to perform system maintenance or administration.
+
+
+    # 5.14.2 Setting Up User Accounts
+
+
+    A user account allows you to safely and easily log into your computer without
+    having to be root to create other accounts.
+
+
+    Enter an account name. Then enter and confirm a password for that user account.
+    Enter the full name of the account user and press [Enter]. Your account information
+    will be added to the account list, clearing the user account fields so you can
+    add another user.
+
+
+    You can also choose **New** to add a new user. Enter the user’s information and
+    use the **Add** button to add the user to the account list.
+
+
+    You can also **Edit** or **Delete** the user accounts you have created or no longer
+    want.
+
+
+    # 5.15 Selecting Package Groups
+
+
+    Although a workstation-class installation will automatically choose most of the
+    packages for you, you must select either GNOME or KDE (or both). You can also
+    choose whether to install the **Games** package.
+
+
+    Additionally, if you would like to select individual packages, check **Select
+    Individual Packages** and click **Next**.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Figure 5–13 Package Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_53_0.png)
+
+
+    GNOME and KDE are both graphical **desktop environments**³ that handle the overall
+    look and feel of your system. You must choose one of these to have a default graphical
+    setup, but you can also install both to determine for yourself which you prefer.
+
+
+    If you do not have unlimited space (at least 1.7G) to install both, the following
+    section will help make the choice a little easier for you.
+
+
+    > ³ A desktop environment in Linux is similar to the environment you might see
+    in other operating systems. However, environments differ in their look and feel
+    and are easily customized for your individual needs.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# **Figure 5–14** Individual Package Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_54_0.png)
+
+
+    # 5.15.1 A Brief Introduction to GNOME
+
+
+    GNOME is a powerful graphics-driven environment. GNOME includes a panel (for starting
+    applications and displaying status), a desktop (where data and applications can
+    be placed), multiple window managers (which control the look and feel of your
+    desktop), and a standard set of desktop tools and applications.
+
+
+    GNOME allows you to set your desktop the way you want it to look and “feel.” GNOME’s
+    session manager remembers settings and currently running programs, so once you’ve
+    set things the way you like they’ll stay that way.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/f097eb927132822630978994ad35bce4_55_0.png)
+
+
+    # 5.15.2 A Brief Introduction to KDE
+
+
+    KDE provides a complete desktop environment, including a file manager, a window
+    manager, an integrated help system, a configuration system, numerous tools and
+    utilities, and an ever increasing number of applications.
+
+
+    KDE offers a contemporary desktop, a searchable help system with convenient access
+    to help on the use of the KDE desktop and its applications, standardized menu
+    and toolbars, keybindings, color schemes, and more.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# Figure 5-16  KDE User Screen\n\n![](img/f097eb927132822630978994ad35bce4_56_0.png)\n\
+    \n# 5.15.3  Selected Features Chart\n\nThe Table 5-2, *Available Features of GNOME\
+    \ and KDE* offers you an opportunity to com-  \nplore GNOME and KDE for yourself.\
+    \ Key features of both desktop environments have been  \nhighlighted, covering\
+    \ a broad range of applications and tools.\n\n| Features | GNOME | KDE |\n| ---\
+    \ | --- | --- |\n| highly configurable | yes | yes |\n| multiple window managers\
+    \ | yes | no |\n| Internet applications | yes | yes |\n| changeable desktop themes\
+    \ | yes | yes |\n| panel applications | yes | yes |\n| ability to add/edit panel\
+    \ applications | yes | yes |\n\n*Table 5-2    Available Features of GNOME and\
+    \ KDE*"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '| Features | GNOME | KDE |
+
+    |---|---|---|
+
+    | file manager | yes | yes |
+
+    | drag and drop functionality | yes | yes |
+
+    | online help | yes | yes |
+
+    | multiple desktops | yes | yes |
+
+    | font manager | yes | yes |
+
+    | multimedia applications | yes | yes |
+
+    | text editors | yes | yes |
+
+    | graphics applications | yes | yes |
+
+    | games | yes | yes |
+
+    | network applications | yes | yes |
+
+    | utility applications | yes | yes |
+
+    | spreadsheet | yes | yes |
+
+    | "trashcan" for temporary file removal | yes | yes |
+
+
+    # **5.15.4 Unresolved Dependencies**
+
+
+    The **Unresolved Dependencies** screen will only appear if you are missing certain
+    packages that are needed by your selected packages.
+
+
+    Many software packages, in order to work correctly, depend on other software packages
+    that must be installed on your system. For example, many of the graphical Red
+    Hat system administration tools require the **python** and **pythonlib** packages.
+    To make sure your system has all the packages it needs in order to be fully functional,
+    Red Hat Linux checks these package **dependencies** each time you install or remove
+    software packages.
+
+
+    If any package requires another package which you have not selected to install,
+    the program presents a list of these **unresolved dependencies** and gives you
+    the opportunity to resolve them (see Figure 5–17, *Unresolved Dependencies*).
+
+
+    Under the list of missing packages, there is an **Install packages to satisfy
+    dependencies** check box at the bottom of the screen which is selected by default.
+    If you leave this checked, the'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'installation program will resolve package dependencies automatically by adding
+    all required packages to the list of selected packages.
+
+
+    # Figure 5–17 Unresolved Dependencies
+
+
+    ![](img/f097eb927132822630978994ad35bce4_58_0.png)
+
+
+    # 5.16 GUI X Configuration Tool
+
+
+    If you decided to install the X Window System packages, you now have the opportunity
+    to configure an X server for your system. If you did not choose to install the
+    X Window System packages, skip ahead to Section 5.18, *Installing Packages*.
+
+
+    # 5.16.1 Configuring Your Monitor
+
+
+    *Xconfigurator*, the X Window System configuration tool, first presents a list
+    of monitors for you to choose from. In the list, you can either use the monitor
+    that is autodetected for you, or choose another monitor.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Figure 5–18   Monitor Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_59_0.png)
+
+
+    If your monitor does not appear on the list, select the most appropriate **Generic**
+    model available. If you do select a *Generic* monitor, *Xconfigurator* will suggest
+    horizontal and vertical sync ranges. These values are generally available in the
+    documentation which accompanies your monitor, or from your monitor’s vendor or
+    manufacturer; please check your documentation to make sure these values are set
+    correctly.
+
+
+    > **CAUTION**
+
+    > Do not select a monitor *similar* to your monitor unless you are certain that
+    the monitor you are selecting does not exceed the capabilities of your monitor.
+    Doing so may overclock your monitor and damage or destroy it.
+
+
+    Also presented are the horizontal and vertical ranges that *Xconfigurator* suggests.
+    Click **Next** when you have finished configuring your monitor.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# 5.16.2 Video Card Configuration
+
+
+    Xconfigurator will now present a list of video cards for you to choose from.
+
+
+    If your video card does not appear on the list [see Figure 5–19, Video Card Setup),
+    X may not support it. However, if you have technical knowledge about your card,
+    you may choose Unlisted Card and attempt to configure it by matching your card''s
+    video chipset with one of the available X servers.
+
+
+    # Figure 5–19  Video Card Setup
+
+
+    ![](img/f097eb927132822630978994ad35bce4_60_0.png)
+
+
+    Next, enter the amount of video memory installed on your video card. If you are
+    not sure, please consult the documentation accompanying your video card. You will
+    not damage your video card by choosing more memory than is available, but the
+    X server may not start correctly if you do.
+
+
+    Once your hardware has been identified, you can test the configuration settings.
+    We recommend that you test your configuration, to make sure the resolution and
+    color settings are usable.
+
+
+    If you would like to customize the X configuration, make sure the Customize X
+    Configuration button is selected. If you choose to customize, you will be presented
+    with another screen that'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'lets you select what your resolution should be (see Figure 5-20, X Customization).
+    Again, you will have the option of testing the configuration.
+
+
+    Be sure to select either GNOME or KDE as your desktop default, if you installed
+    one or both of them.
+
+
+    # Figure 5-20 X Customization
+
+
+    ![](img/f097eb927132822630978994ad35bce4_61_0.png)
+
+
+    You may also choose to **Skip X Configuration** if you would rather configure
+    X after the installation or not at all.
+
+
+    # 5.17 Preparing to Install
+
+
+    You will now see a screen preparing you for the installation of Red Hat Linux
+    (see Figure 5-21, Ready to Install).'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '**WARNING**
+
+
+    If, for some reason, you would rather not continue with the installation process,
+    this is your last opportunity to safely cancel the process and reboot your machine.
+    Once you press the **Next** button, partitions will be written (writing over any
+    data present on other Linux partitions) and packages will be installed. If you
+    wish to abort the installation, you should reboot now before your hard drive(s)
+    are rewritten.
+
+
+    # **Figure 5–21 Ready to Install**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_62_0.png)
+
+
+    # 5.18 Installing Packages
+
+
+    At this point there''s nothing left for you to do until all the packages have
+    been installed (see Figure 5–22, Installing Packages). How quickly this happens
+    depends on the number'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'of packages you''ve selected, your computer''s speed and your hard drive size
+    (for formatting and bad block checks).
+
+
+    # Figure 5-22 Installing Packages
+
+
+    ![](img/f097eb927132822630978994ad35bce4_63_0.png)
+
+
+    Additionally, you may be asked to insert another Red Hat Linux CD-ROM for package
+    installation to continue. If you chose a workstation-class installation, and did
+    not select packages individually, you will not have to insert a second CD-ROM.
+
+
+    # 5.19 Boot Disk Creation
+
+
+    A boot disk can be handy in several situations, including:
+
+
+    +   • For use when another operating system overwrites LILO ${ }^{4}$ -- Other
+    operating systems may not be as flexible as Red Hat Linux when it comes to supported
+    boot methods. Quite often, installing or updating another operating system can
+    cause the master boot record (originally containing LILO) to be overwritten, making
+    it impossible to boot your Red
+
+
+    ${ }^{4}$ LILO (the Linux LOader) is automatically set up during a workstation
+    installation. LILO enables you to boot Red Hat Linux without having to use a diskette.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'Hat Linux installation. The boot disk can then be used to boot Red Hat Linux
+    so you can reinstall LILO.
+
+
+    To create a boot disk, you should now insert a blank, formatted diskette into
+    your floppy drive (see Figure 5-23, *Creating Your Boot Disk*).
+
+
+    After a short delay, your boot disk will be created; remove it from your floppy
+    drive and label it clearly. Note that if you would like to create a boot disk
+    after the installation, you''ll be able to do so. For more information, please
+    see the mkbootdisk man page, by typing man mkbootdisk at the shell prompt.
+
+
+    If you make changes to your kernel, and you boot your system with the boot disk
+    (instead of LILO), make sure you create a new boot disk.
+
+
+    # Figure 5-23 Creating Your Boot Disk
+
+
+    ![](img/f097eb927132822630978994ad35bce4_64_0.png)
+
+
+    # 5.20 Installation Complete
+
+
+    Congratulations! Your Red Hat Linux 7.0 installation is now complete!'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "# Figure 5-24 Installation Complete\n\n![](img/f097eb927132822630978994ad35bce4_65_0.png)\n\
+    \nThe installation program will prompt you to prepare your system for reboot (see\
+    \ Figure 5-24, Installation Complete). Don’t forget to remove any diskette in\
+    \ the floppy drive or CD in the CD-ROM drive.\n\nAfter your computer’s normal\
+    \ power-up sequence has completed, you should see LILO’s graphical prompt, at\
+    \ which point you can do any of the following things:\n\n+   Press [Enter] --\
+    \ Causes LILO’s default boot entry (whichever OS is listed as default) to be booted.\n\
+    +   \n+   Choose a boot label, followed by [Enter] -- Causes LILO to boot the\
+    \ operating system corresponding to the boot label. (Press [?] at the LILO text\
+    \ boot: for a list of valid boot labels.)\n+   \n+   Do nothing -- After LILO’s\
+    \ timeout period, (which, by default, is five seconds) LILO will automatically\
+    \ boot the default boot entry.\n\nDo whatever is appropriate to boot Red Hat Linux.\
+    \ You should see one or more screens of messages scroll by. Eventually, you should\
+    \ see a login: prompt or a GUI login screen (if you installed the X Window System\
+    \ and chose to start X automatically)."
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Tip
+
+
+    If for some reason you need to disable the graphical boot screen, you can do so
+    by editing the lilo.conf file and then rerunning LILO.
+
+
+    To do this, comment out (or delete) the line which reads message=/boot/message
+    in the lilo.conf file. To comment a line out, insert the [#] character at the
+    beginning of the line. Once you have done this, rerun LILO. To rerun LILO, type
+    /sbin/lilo -v which will also save changes you make. The next time you boot, you
+    will see the text LILO: prompt, as is seen in previous Red Hat Linux releases.
+
+
+    You may also re-enable the graphical boot screen by adding the above line back
+    into the lilo.conf file and rerunning LILO.
+
+
+    # Tip
+
+
+    If you''re not sure what to do next, we suggest you begin with the Official Red
+    Hat Linux Getting Started Guide (available online at http://www.redhat.com/support/manuals
+    if not included as part of your boxed set), which covers topics relating to the
+    basics of your system, as an introduction to using Red Hat Linux.
+
+
+    If you are a more experienced user looking for information on system configuration
+    or administration topics, you may find the Official Red Hat Linux Reference Guide
+    on the Documentation CD to be more helpful.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# ## 6 Text Mode Installations at a Glance
+
+
+    This chapter covers the basics of a CD-ROM text mode, workstation-class installation.
+    If for some reason you are not able to boot into the GUI installation program,
+    or prefer the text mode based installation, these instructions are designed as
+    a quick reference to get you through a basic workstation-class installation.
+
+
+    # ### Please Note
+
+
+    Server- and custom-class installations are not covered in this chapter. For those
+    instructions, please refer to the Documentation CD which contains the *Official
+    Red Hat Linux Reference Guide*. This chapter is only a quick review of the installation
+    program and may not contain all the information you need. It is strongly recommended
+    that you read this chapter as well as the content on the Documentation CD prior
+    to performing a text mode installation of Red Hat Linux.
+
+
+    # ### 6.1 Using the Keyboard to Navigate
+
+
+    Navigation through the installation dialogs is performed through a simple set
+    of keystrokes. To move the cursor, use [Left], [Right], [Up], and [Down] arrow
+    keys. Use [Tab], and [Alt]-[Tab] to cycle forward or backward through each widget
+    on the screen. Along the bottom, most screens display a summary of available cursor
+    positioning keys.
+
+
+    To “press” a button, position the cursor over the button (using [Tab], for instance)
+    and press [Space] or [Enter]. To select an item from a list of items, move the
+    cursor to the item you wish to select and press [Enter]. To select an item with
+    a check box, move the cursor to the check box and press [Space] to select an item.
+    To deselect, press [Space] a second time.
+
+
+    Pressing [F12] accepts the current values and proceeds to the next dialog; it
+    is equivalent to selecting the OK button.
+
+
+    # ### 6.2 Text Mode Boot Options
+
+
+    To start the text mode installation program explained here, before pressing [Enter]
+    at the boot prompt, type:'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\nboot: text\n```\n\nIf the installation program does not properly detect\
+    \ your hardware, you may need to restart the installation in \"expert\" mode.\
+    \ To start an expert mode installation, type:\n\n```\nboot: text expert\n```\n\
+    \nExpert mode disables most hardware probing, and gives you the option of entering\
+    \ options for the drivers loaded during the installation.\n\n> **Please Note**\n\
+    > \n> The initial boot messages will not contain any references to SCSI or network\
+    \ cards. This is normal; these devices are supported by modules that are loaded\
+    \ during the installation process.\n\nNote that the command to start a serial\
+    \ installation has changed. If you must perform the installation in serial mode,\
+    \ type:\n\n```\nboot: linux console=<device>\n```\n\nWhere `<device>` should be\
+    \ the device you are using (such as ttyS0 or ttyS1).\n\n# 6.3 Installing in Text\
+    \ Mode\n\nNow that you have booted into text mode, you are ready to install Red\
+    \ Hat Linux on your system. The next section has been broken down into basic steps\
+    \ that will take you screen by screen and help you make the correct choices while\
+    \ installing.\n\nThis chapter only offers the basic information needed to perform\
+    \ a text mode installation. The content in the *Official Red Hat Linux Reference\
+    \ Guide* on the Documentation CD is more thorough and complete. We recommend that\
+    \ you only use this chapter as a quick reference for the material that is presented\
+    \ in the *Official Red Hat Linux Reference Guide*.\n\n# 6.4 Language Selection\n\
+    \nUsing the arrow keys, select the appropriate language to use both during the\
+    \ installation and as the system default, and press [Enter]."
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '**Figure 6-1 Language Configuration**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_70_0.png)
+
+
+    # ## 6.5 Keyboard Configuration
+
+
+    Using the arrow keys, select the appropriate keyboard type to use both during
+    the installation and as the system default, and press [Enter].'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Figure 6-2 Keyboard Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_71_0.png)
+
+
+    # 6.6 Choosing an Installation Method
+
+
+    If you booted directly from the Red Hat Linux CD-ROM, you''ll see the **Welcome**
+    dialog: go to Section 6.7, _Welcome to Red Hat Linux_.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Figure 6-3 Installation Method
+
+
+    ![](img/f097eb927132822630978994ad35bce4_72_0.png)
+
+
+    If you booted from a local boot disk or PCMCIA boot disk, insert the Red Hat Linux
+    CD-ROM and then select Local CDROM (see Figure 6-3, Installation Method) and press
+    [Enter].'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# 6.7  Welcome to Red Hat Linux
+
+
+    # Figure 6-4 The Welcome Screen
+
+
+    ![](img/f097eb927132822630978994ad35bce4_73_0.png)
+
+
+    Select OK and press [Enter] to continue with the installation.
+
+
+    # 6.8  Choosing an Installation Type
+
+
+    Select Workstation (see Figure 6-5, Installation Type) and press [Enter] to continue
+    with the workstation-class installation instructions.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "# Figure 6-5 Installation Type\n\n![](img/f097eb927132822630978994ad35bce4_74_0.png)\n\
+    \nOther installation type instructions are discussed in the Official Red Hat Linux\
+    \ Reference Guide on the Documentation CD.\n\n# ## 6.9 Automatic Partitioning\n\
+    \nDuring a workstation-class installation, the Automatic Partitioning screen (Figure\
+    \ 6-6, Auto-matic Partitioning) will appear.\n\n> **Please Note**\n> \n> If the\
+    \ Automatic Partitioning screen does not appear, you may not have enough free\
+    \ disk space for this installation. You can either reboot your system and try\
+    \ to allocate more disk space, or you can choose to partition manually."
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/f097eb927132822630978994ad35bce4_75_0.png)
+
+
+    **Automatic partitioning** in a workstation-class installation will create / (“root”),
+    <swap>, and /boot partitions for you in the free space available on your hard
+    drive.
+
+
+    If you would rather partition your system yourself, choose **Manually partition
+    with Disk Druid** or **Manually partition with fdisk**.
+
+
+    # 6.10 Partitioning with Disk Druid
+
+
+    If you are performing a workstation-class installation and you choose **automatic
+    partitioning**, please skip to Section 6.12, *Network Configuration*.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Please Note
+
+
+    Manual partitioning is outside the scope of this chapter. Although **Disk Druid**
+    will be briefly covered, `fdisk` will not be discussed. For complete instructions
+    on using **Disk Druid** or `fdisk`, please refer to the *Official Red Hat Linux
+    Reference Guide* on the Documentation CD.
+
+
+    At this point, it’s necessary to let the installation program know where it should
+    install Red Hat Linux. This is done by defining mount points for one or more disk
+    partitions in which Red Hat Linux will be installed. You may also need to create
+    and/or delete partitions at this time (refer to Figure 6–7, *Partitioning with
+    Disk Druid* ).
+
+
+    # Figure 6–7 **Partitioning with Disk Druid**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_76_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# **Please Note**\n\nIf you have not yet planned how you will set up your partitions,\
+    \ refer to the partitioning appendix in the *Official Red Hat Linux Reference\
+    \ Guide* on the Documentation CD. As a bare minimum, you’ll need an appropriately-sized¹\
+    \ root partition, and a swap partition of at least 16 MB.\n\nThe partitioning\
+    \ tool used in Red Hat Linux 7.0 is *Disk Druid*. With the exception of certain\
+    \ esoteric situations, Disk Druid can handle the partitioning requirements for\
+    \ a typical Red Hat Linux installation.\n\nUnless you have a reason for doing\
+    \ otherwise, we recommend that you create the following partitions:\n\n+   - A\
+    \ swap partition (at least 16MB) -- Swap partitions are used to support **virtual\
+    \ memory**. In other words, data is written to a swap partition when there is\
+    \ not enough RAM to store the data your system is processing. If your computer\
+    \ has 16MB of RAM or less, you *must* create a swap partition. Even if you have\
+    \ more memory, a swap partition is still recommended. The minimum size of your\
+    \ swap partition should be equal to your computer’s RAM, or 16MB (whichever is\
+    \ larger). In Disk Druid, the partition field for swap should look similar to:\n\
+    +   \n+   \t`<swap> hda2 125M 125M Linux swap`\n\n+   - A /boot partition (16MB,\
+    \ maximum) -- The partition mounted on /boot contains the operating system kernel\
+    \ (which allows your system to boot Red Hat Linux), along with files used during\
+    \ the bootstrap process. Due to the limitations of most PC BIOSes, creating a\
+    \ small partition to hold these files is a good idea. This partition should be\
+    \ no larger than 16MB. In Disk Druid, the partition field for /boot should look\
+    \ similar to:\n+   \n+   \t`/boot hda1 16M 19M Linux native`\n\n+   - A root partition\
+    \ (900MB-1.7GB) -- This is where \"/\" (the root directory) resides. In this setup,\
+    \ all files (except those stored in /boot) reside on the root partition. A 850MB\n\
+    \n¹ Appropriately-sized is best defined by the amount of available space you have\
+    \ to dedicate to Red Hat Linux, the size of the installation you are preparing\
+    \ for, and the space you will physically dedicate to Red Hat Linux. We recommend\
+    \ 900M for a minimum root partition size."
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'root partition will permit the equivalent of a workstation-class installation
+    (with very little free space), while a 1.7GB root partition will let you install
+    every package. In **Disk Druid**, the partition field for / should look similar
+    to:
+
+
+    ```
+
+    / hda2 900M 3669M Linux native
+
+    ```
+
+
+    # ### 6.10.1 Problems When Adding a Partition
+
+
+    If you attempt to add a partition and **Disk Druid** can''t carry out your request,
+    you''ll see a dialog box listing partitions that are currently unallocated, along
+    with the reason they could not be allocated. Unallocated partition(s) are also
+    displayed on **Disk Druid''s** main screen (though you may have to scroll through
+    the "Partitions" section to see them).
+
+
+    To fix an unallocated requested partition, you must move the partition to another
+    drive which has the available space, resize the partition to fit on the current
+    drive, or delete the partition entirely. Make changes using the Edit button or
+    by double clicking on the partition.
+
+
+    # ### 6.10.2 Formatting Partitions
+
+
+    Next, select which partitions you want to format (see Figure 6–8, Formatting Partitions).
+    You must format all newly created partitions. Partitions containing data that
+    you wish to keep (such as /home or /usr) should not be formatted.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# Figure 6–8  Formatting Partitions
+
+
+    ![](img/f097eb927132822630978994ad35bce4_79_0.png)
+
+
+    When you have selected the partitions to format, press [Space]. If you wish to
+    check for **bad blocks** while formatting each filesystem (recommended for those
+    with older disk drives), select Check for bad blocks during format. Select OK,
+    and press [Space].
+
+
+    > **Please Note**
+
+    > Selecting check for bad blocks may dramatically increase your total installation
+    time. Since most newer hard drives are quite large in size, checking for bad blocks
+    may take a while depending on the size of your hard drive.
+
+
+    # 6.11  Hostname Configuration
+
+
+    If you have a network card in your computer, enter a *fully-qualified domain name*
+    in this format: `hostname.domain.name`'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# Figure 6–9  Entering a Hostname
+
+
+    ![](img/f097eb927132822630978994ad35bce4_80_0.png)
+
+
+    If your computer is not part of a network, you can enter a hostname for your system.
+    Take this opportunity to enter in a name; if you do not, your system will be known
+    as localhost.
+
+
+    # 6.12 Network Configuration
+
+
+    If you are installing from CD-ROM and have a network card in place, you can now
+    configure your networking information.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Figure 6–10 Entering Network Information
+
+
+    ![](img/f097eb927132822630978994ad35bce4_81_0.png)
+
+
+    You have two choices in this dialog (see Figure 6–10, Entering Network Information):
+
+
+    +   • Select Use bootp/dhcp. In this case, an existing server on your LAN dynamically
+    supplies network-related information needed to add this system to your network
+    at connect-time. (Note that if you do this, the remaining fields in this dialog
+    will be disabled, as DHCP and BOOTP essentially “fill in the blanks” for you.)
+
+    +   • Enter static network information in the fields provided. In this case, the
+    network information you supply is assigned to this system.
+
+
+    # 6.13 Mouse Configuration
+
+
+    Next, the installation program probes for a mouse. Use the [Up] and [Down] arrow
+    keys to confirm or change the selection as required.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Figure 6–11 Mouse Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_82_0.png)
+
+
+    Check *Emulate 3 Buttons* to emulate a three-button mouse if your mouse only has
+    two buttons.
+
+
+    # 6.14 Time Zone
+
+
+    Select your appropriate time zone as seen in the **Time Zone** configuration screen
+    (Figure 6–12, *Time Zone Configuration*)
+
+
+    If you wish to set the hardware (CMOS) clock to GMT (Greenwich Mean Time, also
+    known as UTC, or Universal Coordinated Time), select **Hardware clock set to GMT**.
+    Setting it to GMT means your system will properly handle daylight-saving time,
+    if your time zone uses it.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# Figure 6–12 Time Zone Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_83_0.png)
+
+
+    # 6.15 Root Password
+
+
+    Enter a root password. The password must be at least six characters long; the
+    password you type is not echoed to the screen. You must enter the password twice;
+    if the two passwords do not match, the installation program will prompt you to
+    enter them again.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '![](img/f097eb927132822630978994ad35bce4_84_0.png)
+
+
+    # 6.16 Creating User Accounts
+
+
+    Next, create a user account for yourself which is for your everyday use. A user
+    account allows you to safely and easily log into your computer without having
+    to be root. The password you enter must be at least six characters long and is
+    not echoed to the screen. Enter the password twice; if the two passwords do not
+    match, the installation program will prompt you to enter them again.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Figure 6–14 Entering a User Account
+
+
+    ![](img/f097eb927132822630978994ad35bce4_85_0.png)
+
+
+    # 6.16.1 Creating Additional User Accounts
+
+
+    To create additional user accounts, select **Add** in the **User Account Setup**
+    dialog (see Figure 6–15, *Entering Additional User Account*), or **OK** to continue
+    with the installation.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '![](img/f097eb927132822630978994ad35bce4_86_0.png)
+
+
+    # 6.17 Package Selection
+
+
+    Select the desktop environment (GNOME, KDE or both) you wish to install. You can
+    also choose whether to install games on your system. All other necessary packages
+    are installed automatically by performing a workstation-class installation.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# **Figure 6-16 Choosing Package Groups**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_87_0.png)
+
+
+    If you are not sure which desktop environment you would like to install, please
+    read Section 5.15, *Selecting Package Groups* for more information.
+
+
+    Check the **Select individual packages** check box to select individual packages.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# # 6.17.1 Individual Package Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_88_0.png)
+
+
+    To see the list of packages, use the arrow keys to select the group and press
+    [Enter] or [Space]. When a list is selected, the **+** sign (closed) changes to
+    a - sign (open) and a list of packages in that category appears. An *** appears
+    beside currently selected packages. Press the [Enter] or [Space] keys to select
+    or deselect packages.
+
+
+    To see a description of a particular package, make sure that package is highlighted
+    and press [F1].
+
+
+    # # 6.17.2 Unresolved Dependencies
+
+
+    If any package requires another package which you have not selected to install,
+    the program presents a list of these **unresolved dependencies** and gives you
+    the opportunity to resolve them. If you simply press **OK**, the program will
+    resolve them automatically by adding all required packages to the list of selected
+    packages.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Figure 6–18 Unresolved Dependencies
+
+
+    ![](img/f097eb927132822630978994ad35bce4_89_0.png)
+
+
+    # 6.18 Configuring Your Video Adapter
+
+
+    The installation program then probes for your video card. If your card is detected,
+    click **OK** to continue.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Figure 6-19  Video Card Confirmation
+
+
+    ![](img/f097eb927132822630978994ad35bce4_90_0.png)
+
+
+    If the installation program cannot detect your video adapter, you''ll see a card
+    list, as in Figure 6–20, *Video Card Selection Dialog*. Select your video card
+    from the list using the arrow keys and [Space]. If your card is not listed, choose
+    **Unlisted Card** and press [Space].'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'Figure 6-20 **Video Card Selection Dialog**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_91_0.png)
+
+
+    # 6.19 Package Installation
+
+
+    A dialog similar to Figure 6-21, **Installation to Begin Dialog** appears when
+    the installation program is ready to format partitions and load software packages.
+    The installation program names the log file */tmp/install.log* for this Red Hat
+    Linux installation. Select **OK** and press [Space] to continue.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Figure 6–21 Installation to Begin Dialog
+
+
+    ![](img/f097eb927132822630978994ad35bce4_92_0.png)
+
+
+    While software packages are being installed, a progress screen like Figure 6–22,
+    *Package Installation Status Dialog* appears.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Figure 6--22 Package Installation Status Dialog
+
+
+    ![](img/f097eb927132822630978994ad35bce4_93_0.png)
+
+
+    # 6.20 Boot Disk
+
+
+    After package installation, you will be prompted to create a **boot disk**.
+
+
+    If you want to create a boot disk, select **Yes** and press [Space]. If not, select
+    **Skip** and press [Space].'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '![](img/f097eb927132822630978994ad35bce4_94_0.png)
+
+
+    If you selected **Yes**, insert a blank, formatted diskette when prompted. Select
+    **OK** and press [Space] when ready.
+
+
+    After a short delay, your boot disk will be created; remove it from your floppy
+    drive and label it clearly. Note that if you would like to create a boot disk
+    after the installation, you’ll be able to do so. For more information, please
+    see the `mkbootdisk` man page, by typing `man mkbootdisk` at a shell prompt.
+
+
+    # 6.21 Configuring the X Window System
+
+
+    The `Xconfigurator` utility gives you the opportunity to configure the X server
+    for your system.
+
+
+    First, `Xconfigurator` presents a list of monitors (see Figure 6-24, *Monitor
+    Setup Dialog*). If your monitor is listed, select it and press [Enter]. Otherwise,
+    select **Custom**.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'Figure 6–24  Monitor Setup Dialog
+
+
+    ![](img/f097eb927132822630978994ad35bce4_95_0.png)
+
+
+    If you select a monitor from the list, you will next enter your video memory,
+    see Figure 6–29, *Video Memory*.
+
+
+    If you select Custom, Xconfigurator prompts you to select the horizontal sync
+    range and vertical sync range of your monitor (these values are usually available
+    in the documentation which accompanies your monitor, or from your monitor’s vendor
+    or manufacturer).'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "# Figure 6–25 Custom Monitor Setup\n\n![](img/f097eb927132822630978994ad35bce4_96_0.png)\n\
+    \n> **WARNING**\n> \n> Do not select any range that exceeds the capacity of your\
+    \ monitor. If you do this, it is possible you may overclock your monitor and damage\
+    \ or destroy it.\n\nChoose a horizontal sync range for your monitor (see Figure\
+    \ 6–26, *Custom Monitor Setup - Horizontal Sync*. Be sure not to choose a range\
+    \ outside of your monitor's capacity. For custom settings, refer to Figure 6–28,\
+    \ *Custom Monitor Information*."
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Figure 6–26 Custom Monitor Setup - Horizontal Sync
+
+
+    ![](img/f097eb927132822630978994ad35bce4_97_0.png)
+
+
+    Next, choose a vertical sync range.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Figure 6-27 Custom Monitor Setup - Vertical Sync
+
+
+    ![](img/f097eb927132822630978994ad35bce4_98_0.png)
+
+
+    If you chose to enter custom monitor settings, please enter both the horizontal
+    and vertical sync ranges for your monitor (see Figure 6-28, Custom Monitor Information).'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# Figure 6-28 Custom Monitor Information
+
+
+    ![](img/f097eb927132822630978994ad35bce4_99_0.png)
+
+
+    After you''ve selected your monitor (and its settings), you must choose the amount
+    of memory present on your video card (see Figure 6-29, *Video Memory*).'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: 'Figure 6-29 Video Memory
+
+
+    ![](img/f097eb927132822630978994ad35bce4_100_0.png)
+
+
+    If you are not sure how much memory your card has, consult the documentation accompa-nying
+    your video card. Choosing more memory than is present in your card will not damage
+    it, but may cause the XFree86 server to start incorrectly.
+
+
+    Next, choose a clockchip setting if your video card supports it (if it has one).
+    The recom-mended choice, for most video cards, is No Clockchip Setting, since
+    XFree86 can automati-cally detect the proper clockchip in most cases.'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Figure 6-30  Clockchip Configuration Dialog
+
+
+    ![](img/f097eb927132822630978994ad35bce4_101_0.png)
+
+
+    The Probe for Clocks screen (see Figure 6-31, Probe for Clocks) prompts you to
+    allow the installation program to detect what video modes your video card and
+    monitor are capable of using.
+
+
+    You should select Probe for best results. However, if a previous attempt to probe
+    video modes ended with a bad result (such as having to reboot your system), you
+    should choose Skip and then choose your preferred video modes (see Figure 6-32,
+    Select Video Modes).'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Figure 6-31 Probe for Clocks
+
+
+    ![](img/f097eb927132822630978994ad35bce4_102_0.png)
+
+
+    To choose your preferred display mode (see Figure 6–32, Select Video Modes), select
+    one or more modes by pressing [Space].'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Figure 6—32  Select Video Modes
+
+
+    ![](img/f097eb927132822630978994ad35bce4_103_0.png)
+
+
+    Do not select a mode that exceeds the capacity of your monitor.
+
+
+    # Tip
+
+
+    Minimum recommended settings for video modes are 16 bit for most applications
+    (video modes set higher than 16 bit tend to run more slowly) in 1024x768.
+
+
+    Once you’ve either selected the default video mode or specified a different mode,
+    the **Starting X** dialog lets you test your *X* configuration.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# **Figure 6–33** Test Your X Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_104_0.png)
+
+
+    If you select **OK**, you''ll have the opportunity to go back and enter different
+    configuration values should there be an error. If there is no error, X will start,
+    and a small display window will ask you if you can read its contents clearly;
+    using the mouse, click **Yes** within ten seconds. Then you will be asked whether
+    you want X to start when the system boots.
+
+
+    In most cases, X configuration is complete at this point, and you''ll see the
+    completion screen. *Xconfigurator* then saves all of your choices to the configuration
+    file `/etc/X11/XF86Config`. To modify your X configuration after installation,
+    issue the *Xconfigurator* command as root.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# 6.22 Congratulations! Your Installation is Complete
+
+
+    ![](img/f097eb927132822630978994ad35bce4_105_0.png)
+
+
+    ![](img/f097eb927132822630978994ad35bce4_105_1.png)
+
+
+    Remove any diskette from the diskette drive or the Red Hat Linux CD if your system
+    booted from the CD-ROM.
+
+
+    To reboot your newly installed Red Hat Linux system, press [Enter].
+
+
+    After your computer’s normal power-up sequence has completed, you should see LILO’s
+    graphical prompt, at which point you can do any of the following things:
+
+
+    +   • Press [Enter] -- Causes LILO’s default boot entry (whichever OS is listed
+    as default) to be booted.
+
+
+    +   • Choose a Boot Label, followed by [Enter] -- Causes LILO to boot the operating
+    system corresponding to the boot label. (Press [?] at the LILO text boot: for
+    a list of valid boot labels.
+
+
+    +   • Do Nothing -- After LILO’s timeout period, (which, by default, is five seconds)
+    LILO will automatically boot the default boot entry.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'Do whatever is appropriate to boot Red Hat Linux. You should see one or more
+    screens of messages scroll by. Eventually, you should see a login: prompt or a
+    GUI login screen (if you installed the X Window System and chose to start X automatically).
+
+
+    # Tip
+
+
+    If for some reason you need to disable the graphical boot screen, you can do so
+    by editing the lilo.conf file and then rerunning LILO.
+
+
+    To do this, comment out (or delete) the line which reads message=/boot/message
+    in the lilo.conf file. To comment a line out, insert the [#] character at the
+    beginning of the line. Once you have done this, rerun LILO. The next time you
+    boot, you will see the text LILO: prompt, as is seen in previous Red Hat Linux
+    releases.
+
+
+    You may also re-enable the graphical boot screen by adding the above line back
+    into the lilo.conf file and rerunning LILO.
+
+
+    # Tip
+
+
+    If you''re not sure what to do next, we suggest you begin with the Official Red
+    Hat Linux Getting Started Guide, which covers topics relating to the basics of
+    your system, as an introduction to using Red Hat Linux.
+
+
+    If you are a more experienced user looking for information on system configuration
+    or administration topics, you may find the Official Red Hat Linux Reference Guide
+    on the Documentation CD to be more helpful.'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# # A Upgrading Your Current System
+
+
+    This appendix walks you through a typical Red Hat Linux 7.0 upgrade.
+
+
+    # ## A.1 What it Means to Upgrade
+
+
+    The installation process for Red Hat Linux 7.0 includes the ability to upgrade
+    from prior versions of Red Hat Linux (version 3.0.3 and later) which are based
+    on RPM technology.
+
+
+    Upgrading your system installs the modular 2.2.x kernel as well as updated versions
+    of the packages which are currently installed on your system.
+
+
+    The upgrade process preserves existing configuration files by renaming them using
+    an `.rpm-save extension` (e.g. `sendmail.cf.rpm save`) and leaves a log of the
+    actions it took in `/tmp/upgrade.log`. As software evolves, configuration file
+    formats can change, so you should carefully compare your original configuration
+    files to the new files before integrating your changes.
+
+
+    > > **Please Note**
+
+    > >
+
+    > > Some upgraded packages may require that other packages are also installed
+    for proper operation. If you choose to customize your packages to upgrade, you
+    may be required to resolve any *dependency* problems. Otherwise, the upgrade procedure
+    takes care of these dependencies, but it may need to install additional packages
+    which are not on your existing system.
+
+
+    # ## A.2 Upgrading Your System
+
+
+    At this point, you should have chosen **Upgrade** as your preferred installation
+    type (see Figure A–1, *Choosing to Upgrade*).'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '![](img/f097eb927132822630978994ad35bce4_109_0.png)
+
+
+    ![](img/f097eb927132822630978994ad35bce4_109_1.png)
+
+
+    # A.3 Customizing Your Upgrade
+
+
+    Do you want to choose your packages to be upgraded or let the installation program
+    perform an automated installation (see Figure A-2, *Upgrade Customization*)?
+
+
+    To let the installation program begin the upgrade process for you, make sure the
+    **Customize packages to upgrade** is *not* selected and click **Next** (see Section
+    A.6, *Upgrading Packages*).
+
+
+    To customize your upgrade packages, select this option and then click **Next**.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '![](img/f097eb927132822630978994ad35bce4_110_0.png)
+
+
+    # A.4  Selecting Packages to Upgrade
+
+
+    Here, you are given the opportunity to choose which packages you would like to
+    upgrade (see Figure A-3, Individual Package Selection).
+
+
+    On the left side of the screen you will see a directory listing of various package
+    groups. When you expand this list (double-click to select it) and double-click
+    on a single directory, the list of packages available for installation will appear
+    on the right.
+
+
+    To select an individual package, double-click on it, or click on it once to highlight
+    it and click on the Select Package For Installation button below. A red check
+    mark will appear on any of the packages you have selected for installation.
+
+
+    To read information about a particular package before choosing it for installation,
+    left-click on it once to highlight it, and the information will appear at the
+    bottom of the screen along with the name and size of the package.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'Some packages (such as the kernel and certain libraries) are required for every
+    Red Hat Linux system and are not available to select or deselect. These **base
+    packages** are selected by default.
+
+
+    # Figure A–3  Individual Package Selection
+
+
+    ![](img/f097eb927132822630978994ad35bce4_111_0.png)
+
+
+    # A.4.1  Unresolved Dependencies
+
+
+    If any package requires another package which you have not selected to install,
+    the program presents a list of these **unresolved dependencies** and gives you
+    the opportunity to resolve them (see Figure A–4, *Unresolved Dependencies*).
+
+
+    The **Unresolved Dependencies** screen will only appear if you are missing certain
+    packages that are needed by your customized package selection. Under the list
+    of missing packages, there is an **Install packages to satisfy dependencies**
+    check box at the bottom of the screen which is selected by default. If you leave
+    this checked, the installation program will resolve package dependencies automatically
+    by adding all required packages to the list of selected packages.'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# Figure A-4 Unresolved Dependencies
+
+
+    ![](img/f097eb927132822630978994ad35bce4_112_0.png)
+
+
+    # A.5 Installing LILO
+
+
+    In order to be able to boot your Red Hat Linux system, you usually need to install
+    LILO (the Linux LOader). You may install LILO in one of two places:
+
+
+    The master boot record (MBR)
+
+
+    The recommended place to install LILO, unless the MBR already starts another operating
+    system loader, such System Commander or OS/2’s Boot Manager. The master boot record
+    is a special area on your hard drive that is automatically loaded by your computer’s
+    BIOS, and is the earliest point at which LILO can take control of the boot process.
+    If you install LILO in the MBR, when your machine boots, LILO will present a boot:
+    prompt. You can then boot Red Hat Linux or any other operating system you configure
+    LILO to boot.
+
+
+    The first sector of your root partition'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'Recommended if you are already using another boot loader on your system (such
+    as OS/2''s Boot Manager). In this case, your other boot loader will take control
+    first. You can then configure that boot loader to start LILO (which will then
+    boot Red Hat Linux).
+
+
+    # Figure A–5 LILO Configuration
+
+
+    ![](img/f097eb927132822630978994ad35bce4_113_0.png)
+
+
+    If you choose to install LILO, please select where you would like LILO to be installed
+    on your system (see Figure A–5, *LILO Configuration*). If your system will use
+    only Red Hat Linux you should choose the master boot record (MBR). For systems
+    with Win95/98, you also should install LILO to the MBR so that LILO can boot both
+    operating systems.
+
+
+    If you have Windows NT (and you want to install LILO) you should choose to install
+    LILO on the first sector of the root partition, not the MBR. Please be sure to
+    create a boot disk. In a case such as this, you will either need to use the boot
+    disk, or configure the NT system loader to boot LILO from the first sector of
+    the root partition. Be sure to check out <http://www.linuxdoc.org/HOWTO/mini/Linux+NT-Loader.html>
+    for more information on setting up LILO and NT.'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# CAUTION
+
+
+    If you choose not to install LILO for any reason, you will not be able to boot
+    your Red Hat Linux system directly, and will need to use another boot method (such
+    as a boot diskette). Use this option only if you are sure you have another way
+    of booting your Red Hat Linux system!
+
+
+    The `Use linear mode` button is selected by default. In most cases, linear mode
+    should be enabled; if your computer cannot use linear mode to access your hard
+    drives, deselect this option.
+
+
+    If you wish to add default options to the LILO boot command, enter them into the
+    `kernel parameters` field. Any options you enter will be passed to the Linux kernel
+    every time it boots.
+
+
+    Bootable Partition -- Every bootable partition is listed, including partitions
+    used by other operating systems. The "Boot label" column will be filled in with
+    the word `linux` on the partition holding your Red Hat Linux system''s root filesystem.
+    Other partitions may also have boot labels. If you would like to add boot labels
+    for other partitions (or change an existing boot label), click once on the partition
+    to select it. Once selected, you can change the boot label.
+
+
+    # Please Note
+
+
+    The "Boot label" column lists what you must enter at LILO''s `boot:` prompt in
+    order to boot the desired operating system. However, if you forget the boot labels
+    defined on your system, you can always press [Tab] at LILO''s `boot:` prompt to
+    display a list of defined boot labels.
+
+
+    # A.5.1 Configuring LILO
+
+
+    +   - **Create boot disk** -- The **Create boot disk** option is checked by default.
+    If you do not want to create a boot disk, you should deselect this option. However,
+    we strongly urge you to create a boot disk. A boot disk can be handy for a number
+    of reasons:'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '+   - Use It Instead of LIL0 -- You can use a boot disk instead of LIL0. This
+    is handy if you’re trying Red Hat Linux for the first time, and you’d feel more
+    comfortable if the boot process for your other operating system is left unchanged.
+    With a boot disk, going back to your other operating system is as easy as removing
+    the boot disk and rebooting. If you would rather use a boot disk instead of LIL0,
+    make sure you enable the Do not install LIL0 option.
+
+
+    +   - Use It If Another Operating System Overwrites LIL0 -- Other operating systems
+    may not be as flexible as Red Hat Linux when it comes to supported boot methods.
+    Quite often, installing or updating another operating system can cause the master
+    boot record (originally containing LIL0) to be overwritten, making it impossible
+    to boot your Red Hat Linux installation. The boot disk can then be used to boot
+    Red Hat Linux so you can reinstall LIL0.
+
+
+    +   - Do not install LIL0 -- If you have Windows NT installed on your system,
+    you may not want to install LIL0. If you choose not to install LIL0 for this reason,
+    make sure that you have chosen to create a boot disk; otherwise you will not be
+    able to boot Linux. You can also choose to skip LIL0 if you do not want to write
+    LIL0 to your hard drive.
+
+
+    # Tip
+
+
+    To use the boot disk with rescue mode, you have several options:
+
+
+    +   - Using the CD-ROM to boot, type linux rescue at the boot: prompt.
+
+
+    +   - Using the network boot disk, type linux rescue at the boot: prompt. You
+    will then be prompted to pull the rescue image from the network.
+
+
+    +   - Using the boot disk included with the Red Hat Linux boxed set, type linux
+    rescue at the boot: prompt. You then pick an installation method and choose a
+    valid installation tree to load from.
+
+
+    For more information regarding rescue mode, refer to the System Administration
+    chapter of the Official Red Hat Linux Reference Guide.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# A.5.2 Alternatives to LILO
+
+
+    If you do not wish to use LILO to boot your Red Hat Linux system, there are several
+    alternatives:
+
+
+    # Boot Disk
+
+
+    As previously stated, you can use the boot disk created by the installation program
+    (if you elected to create one).
+
+
+    # LOADLIN
+
+
+    You can load Linux from MS-DOS. Unfortunately, it requires a copy of the Linux
+    kernel (and an initial RAM disk, if you have a SCSI adapter) to be available on
+    an MS-DOS partition. The only way to accomplish this is to boot your Red Hat Linux
+    system using some other method (e.g., from LILO on a diskette) and then copy the
+    kernel to an MS-DOS partition. LOADLIN is available from ftp://metalab.unc.edu/pub/Linux/system/boot/dualboot/
+    and associated mirror sites.
+
+
+    # SYSLINUX
+
+
+    An MS-DOS program very similar to LOADLIN. It is also available from ftp://metalab.unc.edu/pub/Linux/system/boot/loaders/
+    and associated mirror sites.
+
+
+    # Some commercial bootloaders
+
+
+    For example, System Commander and Partition Magic, which are able to boot Linux
+    (but still require LILO to be installed in your Linux root partition).
+
+
+    # A.5.3 SMP Motherboards and LILO
+
+
+    This section is specific to SMP motherboards only. If the installer detects a
+    SMP motherboard on your system, it will automatically create two lilo.conf entries,
+    rather than the usual single entry.
+
+
+    One entry will be called linux and the other will be called linux-up. The linux
+    will boot by default. However, if you have trouble with the SMP kernel, you can
+    elect to boot the linux-up entry instead. You will retain all the functionality
+    as before, but you will only be operating with a single processor.'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# ### A.6 Upgrading Packages
+
+
+    At this point there''s nothing left for you to do until all the packages have
+    been upgraded or installed (see Figure A–6, *Installing Packages*).
+
+
+    # **Figure A–6 Installing Packages**
+
+
+    ![](img/f097eb927132822630978994ad35bce4_117_0.png)
+
+
+    # ### A.7 Upgrade Complete
+
+
+    Congratulations! Your Red Hat Linux 7.0 upgrade is now complete!
+
+
+    You will now be prompted to prepare your system for reboot. Don''t forget to remove
+    any diskette in the floppy drive or CD in the CD-ROM drive. If you do not have
+    LILO installed, you''ll need to use your boot disk now.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# Tip
+
+
+    If you need a quick review of some of the basic concepts of Red Hat Linux refer
+    to the *Official Red Hat Linux Getting Started Guide*.
+
+
+    For information dealing with system configuration and administration, refer to
+    the *Official Red Hat Linux Reference Guide* on the documentation CD-ROM.
+
+
+    # Figure A-7   Upgrade Complete
+
+
+    ![](img/f097eb927132822630978994ad35bce4_118_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: 'This chapter explains how to install Red Hat Linux 7.0 without creating Linux
+    partitions on your system.
+
+
+    # Please Note
+
+
+    Although this is a great way to explore the world of Red Hat Linux without having
+    to put Linux partitions on your system, please note that you will still have to
+    perform a full Red Hat Linux installation as outlined in this manual.
+
+
+    # Please Note
+
+
+    You must currently have a formatted DOS (FAT) filesystem in order to perform this
+    type of installation. Users who have Win95/98 should have no problems with this
+    type of installation. Users who have NTFS partitions (such as those using Windows
+    NT) will have to create and format a DOS (FAT) filesystem before this installation
+    can be performed. This installation will not work unless the DOS (FAT) filesystem
+    has been formatted prior starting the Red Hat Linux installation.
+
+
+    # B.1 The Ups and Downs of a Partitionless Installation
+
+
+    There may be reasons why you might want to perform a partitionless installation,
+    but there also are some drawbacks (depending on how you look at them). We’ll discuss
+    these potential drawbacks below.
+
+
+    Here we will cover the basics of what will happen, both during an installation
+    and as a result of this type of installation, and how your system will be affected.
+
+
+    Basic Installation'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'You will perform a basic Red Hat Linux installation. However, instead of adding
+    Linux partitions to your system, you will edit an existing, formatted DOS (FAT)
+    partition (that must have enough free space) to be named root (/).
+
+
+    Unlike a typical Red Hat Linux installation, you will not need to format any partitions,
+    since you will not be adding any partitions to your system.
+
+
+    # LILO (Linux Loader) and Boot Disk
+
+
+    In a partitionless installation, you will not configure LILO (the Linux Loader).
+    In a typical installation, you are able to choose where you would like LILO to
+    be installed -- either on the master boot record (MBR) or on the first sector
+    of your root partition -- or you can choose not to install LILO at all.
+
+
+    You must create a boot disk in order to access Red Hat Linux with a partitionless
+    installation, and you will be prompted to create a boot disk at the end of the
+    installation.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '121
+
+
+    # Please Note
+
+
+    In order to boot Red Hat Linux in a partitionless installation using the boot
+    disk, you must have your BIOS configured correctly. Your BIOS must be set to boot
+    from the floppy drive (A) in order for it to use the boot disk.
+
+
+    To change your BIOS settings, you will need to take note of the instructions given
+    when your computer first begins to boot. Often you will see a line of text telling
+    you to press the [Del] or [F1] key to enter the BIOS settings.
+
+
+    Next, you must find the section that allows you to alter your boot sequence. The
+    default is often C, A or A, C (depending if you boot from your hard drive [C]
+    or a floppy drive [A]). Change this sequence so that the floppy drive (A) is first
+    in your boot order and that your hard drive (C) is second. This instructs the
+    computer to first look at the floppy drive for bootable media, if it cannot be
+    found there, it will look at your hard drive next.
+
+
+    Make sure to save your changes before exiting the BIOS. For more information please
+    refer to the documentation that came with your system.
+
+
+    # Performance Implications
+
+
+    Red Hat Linux will perform slower than it would if it had its own dedicated partitions.
+    However, for those of you unconcerned with speed, a partitionless installation
+    is a great way of seeing what Red Hat Linux has to offer without having to deal
+    with partitioning your system.
+
+
+    # B.2 Performing a Partitionless Installation
+
+
+    If you have a DOS (FAT) filesystem you must first make sure you have a DOS (FAT)
+    partition with enough free space to dedicate to this installation.'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# B.2.1 How Much Space Do I Need?
+
+
+    Like a typical installation, you will need to have enough available space in order
+    to install Red Hat Linux on your system. To give you an idea, below is a list
+    of installation methods and their *minimum* space requirements.
+
+
+    For more information about these installation classes, see Section 3.6, *Step
+    6 - Is a Workstation-Class Installation Best For You?*
+
+
+    +   - Workstation - 900MB
+
+    +   - Server - 1.7GB
+
+    +   - Custom (choosing *Everything*) - 1.7GB
+
+
+    # B.2.2 Using Disk Druid
+
+
+    Since you will not be adding partitions or creating new partitions, there is relatively
+    little that you actually need to do with **Disk Druid** (a GUI partitioning tool).
+
+
+    What you should see when **Disk Druid''s** main screen appears is a list of your
+    DOS (FAT) partitions (see Figure B-1, *Choosing DOS (FAT) Partition to Define
+    as /*). Choose a DOS (FAT) partition with enough available free space to install
+    your choice of installation classes. Highlight the partition by clicking on it
+    with your mouse or by using the [Tab], [Up] and [Down] keys.'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Figure B-1  Choosing DOS (FAT) Partition to Define as /
+
+
+    ![](img/f097eb927132822630978994ad35bce4_124_0.png)
+
+
+    Once the desired partition is highlighted, choose **Edit**. A new window will
+    appear allowing you to name this partition (see Figure B-2, *Editing a DOS (FAT)
+    Partition*). In the **mount point** field, label this partition as / (known as
+    root) and click **Enter**.
+
+
+    A confirmation window (see Figure B-3, *Confirmation*) will appear next asking
+    you to confirm that you do want to continue with this installation. It also explains
+    that you cannot have any Linux partitions on your system other than the / labeled
+    DOS partition that you have just created. Click **Yes** to continue.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Figure B-2 Editing a DOS (FAT) Partition
+
+
+    ![](img/f097eb927132822630978994ad35bce4_125_0.png)
+
+
+    Next, you will be able to determine the root filesystem size and the swap size
+    of this `/` partition.
+
+
+    The installation program will determine the maximum size for the root filesystem
+    (Figure B-4, *Configuration of Filesystem*). You can make the root filesystem
+    anything you would like, as long as it does not exceed the maximum size recommendation.
+
+
+    The size you create for the root filesystem is the amount of disk space available
+    for the entire filesystem (this means that you need to keep in mind the size of
+    the installation class as well as allow you space to write and save data to).
+
+
+    Swap space acts like virtual memory. In other words, data is written to a swap
+    partition when there is not enough RAM to store the data your system is processing.
+    The installation program will set swap to 32MB as a default. You can choose to
+    increase the swap size if desired, but there is no need to create a swap space
+    larger than 256MB.'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Figure B-3  Confirmation
+
+
+    ![](img/f097eb927132822630978994ad35bce4_126_0.png)
+
+
+    From here, you can continue following the main installation chapter (see Section
+    5.12, *Network Configuration*) for further installation instructions. The only
+    difference you will see from this point is a screen prompting you to create a
+    boot disk. Once you make the boot disk and follow the other instructions, your
+    installation will be complete.
+
+
+    To access Red Hat Linux, make sure the boot disk that you created during the installation
+    is in your floppy drive. When you reboot your system it will enter into Red Hat
+    Linux rather than your other OS. To access your other OS, remove the boot disk
+    and reboot your system.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# Figure B–4  Configuration of Filesystem
+
+
+    ![](img/f097eb927132822630978994ad35bce4_127_0.png)
+
+
+    # B.2.3  How to Remove a Partitionless Installation From Your System
+
+
+    To remove this partitionless installation, you will need to delete the following
+    files from your DOS/Windows partition:
+
+
+    ```
+
+    redhat.img
+
+    rh-swap.img
+
+    ```
+
+
+    These files can be found in the partition''s root directory (known as \ under
+    DOS/Windows.) Once these files have been removed, Red Hat Linux will no longer
+    boot on your system. Your system will return to its previous state and you will
+    be able to access the space used by Red Hat Linux as you normally would.'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# C Removing Red Hat Linux
+
+
+    To uninstall Red Hat Linux from your system, you will need to remove the LILO
+    information from your Master Boot Record (MBR).
+
+
+    There are several methods to removing LILO from the master boot record of the
+    machine. Inside of Linux, you can replace the MBR with an earlier saved version
+    of the MBR using the /sbin/lilo command:
+
+
+    ```
+
+    /sbin/lilo -u
+
+    ```
+
+
+    In DOS, NT, and Windows 95 you can use fdisk to create a new MBR with the "undocumented"
+    flag /mbr. This will ONLY rewrite the MBR to boot the primary DOS partition. The
+    command should look like:
+
+
+    ```
+
+    fdisk /mbr
+
+    ```
+
+
+    If you need to remove Linux from a hard drive, and have attempted to do this with
+    the default DOS fdisk, you will experience the "Partitions exist but they don''t
+    exist" problem. The best way to remove non-DOS partitions is with a tool that
+    understands partitions other than DOS.
+
+
+    You can perform this with the installation floppy by typing "linux expert" (without
+    the quotes) at the boot: prompt.
+
+
+    ```
+
+    boot: linux expert
+
+    ```
+
+
+    Select install (versus upgrade) and when it comes to partitioning the drive, choose
+    fdisk. In fdisk type [p] to print out the partition numbers, and remove the Linux
+    partitions with the [d] command. When you''re satisfied with the changes you have
+    made, you can quit with a [w] and the changes will be saved to disk. If you deleted
+    too much, type [q] and no changes will occur.
+
+
+    Once you have removed the Linux partitions, you can reboot your computer by pressing
+    [Control]+[Alt]+[Delete] instead of continuing with the install.'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "# D **Getting Technical Support**\n\n# D.1 **Remember to Sign Up**\n\nIf you\
+    \ have an official edition of Red Hat Linux 7.0, please remember to sign up for\
+    \ the benefits you're entitled to as a Red Hat customer.\n\nYou'll be entitled\
+    \ to any or all of the following benefits, depending upon the Official Red Hat\
+    \ Linux product you purchased:\n\n+   -   Official Red Hat support -- Get help\
+    \ with your installation questions from Red Hat, Inc.'s support team.\n+   \n\
+    +   -   Priority FTP access -- No more late-night visits to congested mirror sites.\
+    \ Owners of Red Hat Linux 7.0 receive free access to priority.redhat.com, Red\
+    \ Hat's preferred customer FTP service, offering high bandwidth connections day\
+    \ and night.\n+   \n+   -   Red Hat Update Agent -- Receive e-mail directly from\
+    \ Red Hat as soon as updated RPMs are available. Use Update Agent filters to receive\
+    \ notification about only those subjects that interest you.\n+   \n+   -   Under\
+    \ the Brim: The Official Red Hat E-Newsletter -- Every month, get the latest news\
+    \ and product information directly from Red Hat.\n\nTo sign up, go to [http://www.redhat.com/now](http://www.redhat.com/now).\
+    \ You'll find your **Personal Product ID** on a red and white card in your Official\
+    \ Red Hat Linux boxed set.\n\n# D.2 **An Overview of Red Hat Support**\n\nRed\
+    \ Hat provides installation assistance for Official Red Hat Linux boxed set products\
+    \ and covers installation on a single computer. This assistance is intended to\
+    \ help customers successfully install Red Hat Linux. Assistance with installation\
+    \ is offered via telephone and the Web.\n\nRed Hat Support will attempt to answer\
+    \ any questions you may have before the installation process is initiated. This\
+    \ includes the following:\n\n+   -   Hardware compatibility questions\n+   - \
+    \  Basic hard drive partitioning strategies\n\nRed Hat, Inc. Support can also\
+    \ provide assistance during the installation process:"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '+   - Getting any supported hardware recognized by the Red Hat Linux operating
+    system
+
+    +   - Assistance with drive partitioning
+
+    +   - Configuring Red Hat Linux and up to one other operating system (on Intel
+    platforms only) to dual-boot using the Linux boot loader LILO. Please note that
+    third party boot loaders and partitioning software are not supported.
+
+
+    We can also help you with basic post-installation tasks, such as:
+
+
+    +   - Successfully configuring the X Window System using XF86Setup or Xconfigurator
+
+    +   - Configuring a local parallel port printer to print text
+
+    +   - Configuring a mouse
+
+
+    Our installation assistance service is designed to get you up and running with
+    Red Hat Linux as quickly and as easily as possible. However, there are many other
+    things that you may want to do with your Red Hat Linux system (from compiling
+    a custom kernel to setting up a Web server) which are not covered.
+
+
+    For assistance with these tasks, there is a wealth of on-line information available
+    in the form of HOWTO documents, Linux-related websites, and commercial publications.
+    The Red Hat Linux operating system includes the various Linux HOWTO documents
+    on the installation CD in the `/doc/HOWTO` directory as plain text files that
+    can easily be read from within Red Hat Linux and other operating systems.
+
+
+    A large number of Linux-related websites are available. The best starting point
+    for finding information on Red Hat Linux is the Red Hat, Inc. website at:
+
+
+    `http://www.redhat.com/`
+
+
+    Many Linux-related books are available. If you''re new to Linux, a book that covers
+    Linux basics will be invaluable. We can recommend several titles: Using Linux,
+    by Bill Ball; Linux Clearly Explained, by Bryan Pfaffenberger; Linux for Dummies,
+    by Jon "maddog" Hall; and A Practical Guide to Linux, by Mark G. Sobell.'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# **D.3 Scope of Red Hat Support**
+
+
+    Red Hat, Inc. can only provide installation assistance to customers who have purchased
+    an Official Red Hat Linux boxed set. If you have obtained Linux from any other
+    company, you must contact that company for support. Examples of such companies
+    are as follows:
+
+
+    +   - Macmillan
+
+    +   - Sams/Que
+
+    +   - Linux Systems Labs (LSL)
+
+    +   - Mandrake
+
+    +   - CheapBytes
+
+
+    Additionally, Red Hat Linux obtained via any of the following methods does not
+    qualify for support from Red Hat:
+
+
+    +   - Red Hat Linux PowerTools Archive
+
+    +   - Downloaded via FTP on the Internet
+
+    +   - Included in a package such as Motif or Applixware
+
+    +   - Copied or installed from another user''s CD
+
+
+    # **D.4 The Red Hat Support System**
+
+
+    As of October 1999, Red Hat, Inc. has implemented a new technical support system.
+    If you signed up for technical support in the past with Red Hat, it may be necessary
+    for you to sign up again. The new system will implement a unified login and password
+    that will work across the entire Red Hat website. The support system will also
+    automatically route and track service requests.
+
+
+    If you haven''t signed up yet, then you should. Instructions for how to sign up
+    are provided next, in Section D.5. *How to Get Technical Support*.
+
+
+    # **D.5 How to Get Technical Support**
+
+
+    In order to receive technical support for your Official Red Hat product, you first
+    have to sign up.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: 'Every Official Red Hat product comes with a Personal Product Identification
+    code: a 16-character alphanumeric string. The Personal Product ID for Red Hat
+    Linux 7.0 is located on a red and white card that can be found inside the box.
+    Your Personal Product ID is on a perforated card that you can punch out and keep
+    in a safe place. You need this code, so don''t lose the card!
+
+
+    > Please Note
+
+    > Do not throw away the card with your Personal Product ID. You need the Personal
+    Product ID to get technical support. If you lose the certificate, you may not
+    be able to receive support.
+
+
+    The Personal Product ID is the code that will enable your technical support and
+    any other benefits or services that you purchased from Red Hat, depending upon
+    which Red Hat product you purchased. The Personal Product ID may also enable priority
+    FTP access, depending on the product that you purchased, for a limited amount
+    of time.
+
+
+    # D.5.1 Signing up for Technical Support
+
+
+    You''ll need to:
+
+
+    +   1. Create a customer profile at [http://www.redhat.com/now](http://www.redhat.com/now).
+    You may have already completed this step; if you have, continue to the next step.
+    If you do not already have a customer profile on the Red Hat website, please create
+    a new one.
+
+    +   2. With your login name and password, please login at the Red Hat Support
+    website at [http://www.redhat.com/support](http://www.redhat.com/support).
+
+    +   3. Update your contact information if necessary.
+
+
+    > Please Note
+
+    > If your e-mail address is not correct, communications regarding your technical
+    support requests CANNOT be delivered to you, and you will not be able to retrieve
+    your login and password by e-mail. Be sure that you give us your correct e-mail
+    address.
+
+
+    If you''re worried about your privacy, please see Red Hat''s privacy statement
+    at [http://www.redhat.com/legal/privacy\_statement.html](http://www.redhat.com/legal/privacy_statement.html).'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '+   4.  Add a product to your profile. Please enter the following information:
+
+    +       *   The Personal Product ID for the boxed set product
+
+    +       *   A description of the hardware on which the Red Hat Linux product will
+    be installed
+
+    +       *   The Support Certificate Number or Entitlement Number if the product
+    is a contract
+
+    +   5.  Set your customer preferences.
+
+    +   6.  Answer the optional customer questionnaire.
+
+    +   7.  Submit the form.
+
+
+    If the previous steps were completed successfully, you can now login at http://www.redhat.com/support
+    and open a new technical service request. However, you must still use your Personal
+    Product ID in order to obtain technical support via telephone (if the product
+    you purchased came with phone support). Please do not lose your Personal Product
+    ID, or you might not be able to receive support.
+
+
+    # D.6 Questions for Technical Support
+
+
+    Technical support is both a science and a mystical art form. In most cases, support
+    technicians must rely on customer observations and communications with the customer
+    in order to diagnose and solve the problem. Therefore, it is extremely important
+    that you are as detailed and clear as possible when you state your questions and
+    report your problems. Examples of what you should include are:
+
+
+    +   *   Symptoms of the problem (for example: "Linux is not able to access my
+    CD-ROM drive. When it tries, I get timeout errors.")
+
+    +   *   When the problem began (for example: "My system was working fine until
+    yesterday, when a lightning storm hit my area.")
+
+    +   *   Any changes you made to your system (for example: "I added a new hard
+    drive and used ''Partition Wizzo'' to add Linux partitions.")
+
+    +   *   Other information that may be relevant to your situation, such as the
+    installation method (CD-ROM, NFS, HTTP)
+
+
+    # D.6.1 How to Send Support Questions
+
+
+    Please login at http://www.redhat.com/support and open a new service request,
+    or call the phone number for support. If your product came with phone support,
+    or you''ve purchased a'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: 'phone support contract, the phone number you''ll need to call will be provided
+    to you during the sign up process.
+
+
+    # ## D.7 Support Frequently Asked Questions (FAQ)
+
+
+    # ### D.7.1 Q: E-Mail Messages to support@redhat.com Bounce
+
+
+    I send e-mail to support@redhat.com but my messages bounce back to me. What is
+    the problem?
+
+
+    # ### D.7.2 A: support@redhat.com Is Not Used at This Time
+
+
+    To better serve our customers, Red Hat is re-engineering our e-mail support process.
+    At this time, the support@redhat.com address is not functional. In the meantime,
+    please use support via the Web or by telephone.
+
+
+    # ### D.7.3 Q: System Won''t Allow Login
+
+
+    I know that I have already signed up, but the system will not let me log in.
+
+
+    # ### D.7.4 A: Old Logins and Passwords Won''t Work
+
+
+    You could be trying to use an old login and password, or simply mistyping your
+    login or password.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# E Troubleshooting Your Installation of Red Hat Linux
+
+
+    This appendix discusses some common installation problems you could encounter
+    and solutions to those problems.
+
+
+    # E.1 Trouble Booting Red Hat Linux
+
+
+    # E.1.1 Trouble Booting from the CD-ROM?
+
+
+    If you cannot boot from your Red Hat Linux CD-ROM, you have two options:
+
+
+    +   1.  You can change your BIOS so that booting from CD-ROM is recognized first,
+    or
+
+    +   2.  Boot from the boot diskette included in the boxed set.
+
+
+    To change your BIOS, you should refer to your system manual for the correct keyboard
+    combination that will allow you to access your BIOS, or you can read the key sequence
+    needed while the system begins to boot.
+
+
+    To boot from the boxed set Red Hat Linux boot disk, insert the diskette into your
+    floppy drive and then boot/reboot your computer.
+
+
+    # E.1.2 Trouble Booting from the Red Hat Linux Boot Disk?
+
+
+    If you are experiencing difficulties in getting the Red Hat Linux boot disk to
+    boot your system correctly, you may need an updated boot disk.
+
+
+    Check the online errata for updated diskette images and follow the instructions
+    provided to make a new boot disk for your system.
+
+
+    # E.1.3 Trouble Booting from a PCMCIA Boot Disk?
+
+
+    If you are experiencing difficulties in getting the PCMCIA boot disk you made
+    to boot your system correctly, you may need an updated boot disk.
+
+
+    Check the online errata for updated diskette images and follow the instructions
+    provided to make a new boot disk for your system.'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# E.1.4 Trouble Booting from a Network Boot Disk?
+
+
+    If you are experiencing difficulties in getting the network boot disk you made
+    to boot your system correctly, you may need an updated boot disk.
+
+
+    Check the online errata for updated diskette images and follow the instructions
+    provided to make a new boot disk for your system.
+
+
+    # E.2 Trouble Beginning the Installation
+
+
+    # E.2.1 Trouble Using Options Needed with a PCMCIA Boot Disk?
+
+
+    If you booted using a PCMCIA boot disk and want to install via FTP (or NFS or
+    HTTP), but do not see these installation options, you may have a problem with
+    your network card.
+
+
+    If the network card is not initialized during the boot process, the Red Hat Linux
+    installation program will *not* enable you to configure your system for networking
+    (either at boot time or during the installation itself).
+
+
+    Check the hardware compatibility list (http://www.redhat.com/support/hardware)
+    to see if your network card is compatible and/or supported. If your card is not
+    listed, chances are it is not compatible with Red Hat Linux.
+
+
+    # E.3 Trouble During the Installation
+
+
+    # E.3.1 Trouble Getting the Automatic Partitioning Screen?
+
+
+    If the **Automatic Partitioning** screen does not appear during your installation,
+    you probably do not have enough free space in which to install Red Hat Linux.
+
+
+    If you do not want to partition manually, you should exit out of the installation,
+    which can be done by rebooting your system once you have removed any diskettes
+    or CD-ROMs, and then you can reallocate space for your installation.
+
+
+    # E.3.2 Trouble Creating Partitions?
+
+
+    If you are having trouble creating a partition, for instance a root (\ /) partition,
+    there are a couple of things you should be aware of.
+
+
+    Make sure you are setting it as a Linux Native partition type.'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: 'Unless your BIOS supports otherwise, make sure you are not exceeding 1023 cylinders,
+    otherwise you will not be able to create a /boot or a / partition. Some new systems
+    will allow you to exceed the 1023 limit (with the new LILO version that is available),
+    but most machines with older BIOS will not.
+
+
+    # E.3.3 Trouble Completing Partitions?
+
+
+    If you are using Disk Druid to create partitions, but cannot move to the next
+    screen, you probably have not created all the partitions necessary for Disk Druid''s
+    dependencies to be satisfied.
+
+
+    You must have the following partitions as a bare minimum:
+
+
+    +   - / (root) partition, Linux native type
+
+    +   - <swap> partition, Linux swap type
+
+
+    ![](img/f097eb927132822630978994ad35bce4_138_0.png)
+
+
+    If your system will be a dual-boot system using LILO, then you also must create:
+
+
+    +   - /boot partition, Linux native type
+
+
+    # E.3.4 Trouble Installing Packages?
+
+
+    If you are having trouble installing packages (for example the installation program
+    stalls while reading the packages or you get error messages), you may have a disk
+    or drive problem.
+
+
+    # E.4 Trouble After the Installation
+
+
+    # E.4.1 Trouble With the Graphical LILO Screen?
+
+
+    If for some reason you need to disable the graphical boot screen, you can do so
+    by editing the lilo.conf file and then rerunning LILO.
+
+
+    To do this, comment out (or delete) the line which reads message=/boot/message
+    in the lilo.conf file. Once you have done this, rerun LILO. The next time you
+    boot, you will see the text LILO: prompt, as is seen in previous Red Hat Linux
+    releases.'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: 'You may also re-enable the graphical boot screen by adding the above line back
+    into the `lilo.conf` file and rerunning LILO.
+
+
+    # E.4.2 Trouble With Server Installations and X?
+
+
+    If you performed a server installation and you are having trouble getting X to
+    start it is because the X Window System is not installed during a server-class
+    installation.
+
+
+    You can have the X Window System interface running with a server class installation
+    by selecting to do an upgrade after the install. During the upgrade, select the
+    X Window System packages, and choose GNOME or KDE (or both).
+
+
+    # E.4.3 Trouble Logging In?
+
+
+    If you did not create a user account during the installation you will need to
+    log in as *root* and use the password you assigned to root.
+
+
+    If you cannot remember your root password, you will need to boot your system as
+    `linux single` at the LILO `boot:` prompt. Then at the `#` prompt, you will need
+    to type `passwd root`, which will allow you to enter in a new password for root.
+    At this point you can type `shutdown -r now` and the system will reboot with your
+    new password.
+
+
+    If you cannot remember your user account password, you must become root, then,
+    type `passwd <username>`. This allows you to enter a new password for the specified
+    user account.
+
+
+    If you selected either the custom- or workstation-class installation and do not
+    find the graphical login screen, check your hardware for compatibility issues.
+    The hardware compatibility list can be found at http://www.redhat.com/support.'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# # Index
+
+
+    A
+
+    auto boot . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+    automatic partitioning . . . . . . . . . . . . . . 41, 73
+
+    server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+
+    workstation . . . . . . . . . . . . . . . . . . . . . . . 41
+
+
+    B
+
+    /boot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45, 76
+
+    boot disk . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+
+    boot methods
+
+    &emsp;&emsp;&emsp;local boot disk . . . . . . . . . . . . . . . . . . 17
+
+    &emsp;&emsp;&emsp;PCMCIA boot disk . . . . . . . . . . . . . 17
+
+    bootable CD-ROM . . . . . . . . . . . . . . . . . . . . 31
+
+    booting installation program . . . . . . . . . . . 30
+
+
+    C
+
+    canceling the installation . . . . . . . . . . . . . . 34
+
+    CD-ROM
+
+    &emsp;&emsp;&emsp;ATAPI . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    33
+
+    &emsp;&emsp;&emsp;ATAPI, unrecognized, problems
+
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;with . . . . . . . . . . . . . . . . . . .
+    . . . . 34
+
+    &emsp;&emsp;&emsp;bootable . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+    &emsp;&emsp;&emsp;IDE . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 33
+
+    &emsp;&emsp;&emsp;IDE, unrecognized, problems with . . 34
+
+    &emsp;&emsp;&emsp;installation . . . . . . . . . . . . . . . . . . . . . 33
+
+    &emsp;&emsp;&emsp;other . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 33
+
+    &emsp;&emsp;&emsp;SCSI . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 33
+
+    class
+
+    &emsp;&emsp;&emsp;installation . . . . . . . . . . . . . . . . . . . . . . . 39
+
+    consoles, virtual . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+
+    D
+
+    dd, creating installation diskette with . . . . 19
+
+
+    dependencies
+
+    &emsp;&emsp;&emsp;installing packages . . . . . . . . . . . . . . . 56
+
+    &emsp;&emsp;&emsp;upgrading packages . . . . . . . . . . . . . 110
+
+    disk
+
+    &emsp;&emsp;&emsp;boot . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 113
+
+    Disk Druid . . . . . . . . . . . . . . . . . . . . . . . . . . . 43, 75
+
+    &emsp;&emsp;&emsp;partitions . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 43
+
+    &emsp;&emsp;&emsp;problems adding partitions . . 45, 77
+
+    diskette
+
+    &emsp;&emsp;&emsp;boot, creating . . . . . . . . . . . . . . . . . . . . 18
+
+    &emsp;&emsp;&emsp;making under Linux-like OS . . . . . . . 19
+
+    &emsp;&emsp;&emsp;making with MS-DOS . . . . . . . . . . . . . 19
+
+    &emsp;&emsp;&emsp;network boot, creating . . . . . . . . . . . . . 18
+
+    &emsp;&emsp;&emsp;PCMCIA support, creating . . . . . . . . . . . 18
+
+    driver disk . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+    (See also Official Red Hat Linux Reference Guide on the Documentation CD)
+
+
+    E
+
+    eratta, how to check for . . . . . . . . . . . . . . . . 15
+
+    expert mode, installation . . . . . . . . . . . . . . . . 68
+
+
+    F
+
+    features, new to 7.0
+
+    ( See new features )
+
+    feedback
+
+    &emsp;&emsp;&emsp;contact information for this manual . 9
+
+    formatting partitions . . . . . . . . . . . . . . . . . . . . . 46, 77
+
+    fsck . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 46
+
+
+    G
+
+    GNOME, a brief introduction . . . . . . . . . . . . . . 53'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "# H\n\n+   hardware compatibility ........ 14  \n+   hostname configuration\
+    \ ..... 47, 78  \n+   how to use this manual ....... 8\n\n# I\n\n+   install \
+    \ \n+   CD-ROM ....................... 32  \n+   FTP ........................\
+    \ 32  \n+   Hard Drive ................. 32  \n+   HTTP ........................\
+    \ 32  \n+   NFS Image ................... 32\n\n+   installation ....................\
+    \ 27  \n+   aborting ....................... 34  \n+   boot options, text mode\
+    \ ....... 67  \n+   can you install with a CD ..... 17  \n+   CD-ROM .......................\
+    \ 33  \n+   disk space ..................... 16  \n+   FTP  \n+   (See Official\
+    \ Red Hat Linux Refer-  \n+   ance Guide on the Documentation  \n+   CD)  \n+\
+    \   getting Red Hat Linux ........... 13\n\n+   hard drive  \n+   (See Official\
+    \ Red Hat Linux Refer-  \n+   ance Guide on the Documentation  \n+   CD)  \n+\
+    \   HTTP  \n+   (See Official Red Hat Linux Refer-  \n+   ance Guide on the Documentation\
+    \  \n+   CD)  \n+   installing without partitioning .. 119\n\n+   keyboard navigation\
+    \ ......... 67  \n+   no boxed set ............... 14  \n+   registering your\
+    \ product .... 14  \n+   starting ........................ 32\n\n+   text mode\
+    \  \n+   (See Official Red Hat Linux Refer-  \n+   ance Guide on the Documentation\
+    \  \n+   CD)  \n+   quick review ............... 67\n\n+   via network  \n+  \
+    \ (See Official Red Hat Linux Refer-  \n+   ance Guide on the Documentation  \n\
+    +   CD)  \n+   workstation-class ......... 20\n\n+   installation class ............\
+    \ 39  \n+   installation method  \n+   selecting ........... 32, 70\n\n+   installation\
+    \ mode  \n+   expert ................... 68  \n+   serial ...................\
+    \ 68  \n+   installation partitioning .... 43\n\n+   installation program  \n\
+    +   booting ................... 30  \n+   booting without diskette ..... 31  \n\
+    +   starting ................... 29  \n+   user interface ............ 27  \n\
+    +   virtual consoles .......... 28\n\n# K\n\n+   KDE, a brief introduction ......\
+    \ 54  \n+   keyboard  \n+   configuration .... 35, 69  \n+   keyboard navigation,\
+    \ installation  \n+   program ............... 67\n\n# L\n\n+   language  \n+ \
+    \  selecting ............ 34, 68  \n+   Lilo  \n+   alternatives to ....... 115"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "# Index\n\nboot disk...... 115  \ncommercial products... 115  \nLOADLIN...\
+    \ 115  \nSYSLINUX.... 115  \nchoosing not to install.... 114  \nconfiguration....\
+    \ 111  \nMBR...... 111  \noverwriting.. 114  \nremoving...... 127  \nroot partition,\
+    \ installing on... 112  \nSMP Motherboards.. 115  \nusing boot disk in replace\
+    \ of... 114\n\nLinux-like OS  \ncreating installation diskette with.... 19  \n\
+    LOADLIN... 115\n\n+   **M**\n\nmaster boot record  \nsee MBR.. 111\n\nMBR  \n\
+    installing LILO on..... 111\n\nmouse, configuration.. 36  \nmouse, selecting..\
+    \ 36\n\nMS-DOS  \ncreating installation diskette with... 19\n\n+   **N**\n\nnetwork\
+    \ configuration.. 47, 79\n\nnew features... 11  \ninstall-related... 11  \nkerberos....\
+    \ 11  \nLDAP...... 11\n\nmulti-CD install... 11  \nsawfish, window manager...\
+    \ 11  \ntext mode help text... 11\n\nUSB support.. 11\n\nX configuration... 11\n\
+    \n+   **O**\n\nOS/2...... 111\n\n+   **P**\n\npackage  \ngroup selection.... 51,\
+    \ 85  \ninstallation screen.... 90\n\nPartition Magic.... 115  \npartition problems....\
+    \ 45, 77\n\npartitioning  \n... 43  \nautomatic... 41\n\npartitionless installation..\
+    \ 119\n\nbehind the scenes.... 119\n\ninstall class options... 16  \nLILO... 120\n\
+    \nperformance.... 121  \nperforming.... 121  \nspace requirements... 122\n\npassword\
+    \  \nsetting root... 49\n\n+   **R**\n\nrawrite, creating installation diskette\
+    \  \nwith.... 19\n\nrecursion  \n(See recursion)\n\nRed Hat FAQ... 9\n\nregistering\
+    \ your product.... 14\n\nremoving  \nLILO... 127  \nRed Hat Linux... 127\n\nrescue\
+    \ mode.. 114  \nroot \"/\" partition.... 45, 76  \nroot password.. 49"
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "+   * serial mode, installation 68\n+   * SMP Motherboards  \n+       * LILO\
+    \ 115\n+       * support, technical \n+           * ( See technical support )\n\
+    +       * swap 45, 76\n+       * manually partitioning 44, 76\n+       * workstation\
+    \ auto-partition 20\n+   * SYSLINUX 115\n+   * System Commander 115\n\n+   * technical\
+    \ support 129\n+       * FAQ 134\n+       * how to send questions for 133\n+ \
+    \      * how to state problems for 133\n+       * not provided for other companies'\
+    \  \n+           * products 131\n+           * policy overview 129\n+        \
+    \   * registering online 132\n+           * signing up for 131\n+       * text\
+    \ mode 32\n+       * ( See also Official Red Hat Linux Reference Guide on the\
+    \ Documentation CD )\n+       * boot options 67\n+       * installing 68\n+  \
+    \     * time zone configuration 48\n+       * troubleshooting 135\n+       * after\
+    \ the installation 137\n+       * Automatic Partitioning 136\n+       * beginning\
+    \ installation 136\n+       * booting 135\n+       * booting from CD 135\n+  \
+    \     * booting from local boot disk 135\n\n+   * booting from network boot disk\
+    \ 136\n+   * booting from PCMCIA disk 135\n+   * creating partitions 136\n+  \
+    \ * during the installation 136\n+   * graphical LILO 137\n+   * logging in \n\
+    +       * as root 138\n+       * user account 138\n+   * package installation\
+    \ 137\n+   * partitioning, completing 137\n+   * PCMCIA boot disk 136\n+   * server\
+    \ installations and X 138\n+   * why you may not see the GUI install 27\n\n+ \
+    \  * unallocated partition(s) 45, 77\n+   * uninstalling 127\n+   * unresolved\
+    \ dependencies \n+       * full installation 56\n+       * upgrade 110\n+   *\
+    \ upgrade 107\n+       * customizing 108-109\n+       * description of 107\n+\
+    \       * package selection 109\n+   * packages 108\n+   * starting 107\n+   *\
+    \ unresolved dependencies 110\n+   * user account creation 51, 83\n+   * user\
+    \ accounts \n+       * setting up 51\n+   * user interface, installation program\
+    \ 27\n\n+   * virtual consoles 28"
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '+   X Window System . . . . . . . . . . . . . . . . . . . . . . 57, 93
+
+    +      X, configuration . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . 57
+
+    +      Xconfigurator . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 57, 93
+
+    +          monitor setup . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 57
+
+    +          video card setup . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 59'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '+   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *
+
+    +   *   * * * * * * * * * * * *'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# The Red Hat Linux Installation Guide walks you through the installation process,
+    using helpful screenshots and important tips.
+
+
+    # Use this guide to:
+
+
+    +   - Make sure you have what you need to begin
+
+    +   - Help you decide how to install Red Hat Linux
+
+    +   - Help you decide what to install
+
+    +   - How to partition your system
+
+
+    The included Documentation CD¹ also contains additional resources
+
+
+    that will help you learn more about your new Red Hat Linux system
+
+
+    ![](img/f097eb927132822630978994ad35bce4_147_0.png)
+
+
+    Red Hat, Inc. www.redhat.com 919-547-0012 or 888-redhat-1
+
+
+    ¹ The Documentation CD is only included in Official Red Hat products such as Red
+    Hat Linux 7,
+
+    Red Hat Deluxe Workstation, and Red Hat Professional Server.
+
+
+    ![](img/f097eb927132822630978994ad35bce4_147_1.png)
+
+
+    ![](img/f097eb927132822630978994ad35bce4_147_2.png)
+
+
+    Copyright © 2000 Red Hat, Inc. All rights reserved. “Red Hat” and the Red Hat
+    “Shadow
+
+    Man” logo are registered trademarks and “RPM” is a trademark of Red Hat, Inc.
+    in the
+
+    U.S. and other countries. Linux is a registered trademark of Linus Torvalds. All
+    other
+
+    trademarks are the property of their respective holders.'
+  merge: -1
+  img_proc: true

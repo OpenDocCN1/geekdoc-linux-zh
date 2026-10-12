@@ -1,0 +1,253 @@
+
+## 索引
+
+- add-on postfixes, 648
+- add-on prefixes, 648
+- adding
+    - hosts to /etc/host network configuration file, 470
+    - users, 324
+- address-based virtual hosts, 537
+- adduser command, user management, 323-324
+- Administrator Mode button (kdm), 175
+- Adobe Photoshop versus GIMP, 283
+- adsl-setup command, 498
+- adsl-start command, 499
+- adsl-stop command, 499
+- afio backup software, 433
+- agetty command, modem configuration for dial-in PPP servers, 501
+- alias command, 646-647
+- aliases
+    - myenv shell script, 370-371
+    - Sendmail, forwarding email, 668
+- all-in-one (print/fax/scan) devices, troubleshooting, 610-611
+- allow directive (Apache web server), 527-528
+- AllowOverrides configuration directive (Apache web server), 526
+- ALSA (Advanced Linux Sound Architecture), 95
+- ALSA (Advanced Linux Sound Architecture) sound card drivers, 268
+- alsactl command, sound device configurations, 95
+- alsamixer command
+    - sound balance/volume, adjusting, 269
+    - sound device configurations, 95
+- Amanda backup application, 432-433
+- amd (autount daemon), mounting file systems, 975
+- amdump command, 448
+- America's Army, 307
+- American Registry for Internet Numbers website, 452
+- ampersand (&), shell background processing, 369
+- AMTP email protocol, 212
+- Anaconda installer, 18
+    - Release Notes button, 63
+    - virtual console, accessing, 65
+    - Welcome screen, Fedora installation, 62-63
+- AND statements (SQL), 563
+- an mkdir write enable setting (vsftpd server anonymous access control), 632
+- an other write enable setting (vsftpd server anonymous access control), 632
+- an upload enable setting (vsftpd server anonymous access control), 632
+- an world readable only setting (vsftpd server anonymous access control), 632
+- anonymous access control (vsftpd server), 632
+- anonymous enable setting (vsftpd server anonymous access control), 632
+- anonymous FTP servers
+    - configuring, 635
+    - versus authenticated servers, 625
+- ANSI (American National Standards Institute), defining C programming language, 866
+- AOL (America Online) service, DSL Internet connections, 488
+- Apache Group website, 510
+- Apache Software Foundation, 510
+- Apache web server
+    - development of, 510
+    - documentation websites, 510
+    - downloading, 511-512
+    - dynamic content
+    - flow control, 547
+    - via CGI, 541-542
+    - via PHP, 541
+    - via SSI, 542
+    - file systems
+        - access control, 527-528, 531
+        - authentication, 528-530
+        - graphic interface configuration, 547
+        - peak performance configuration, 550
+        - server configuration, 549
+        - virtual host properties, 548
+    - installing
+        - file locations, 515
+        - from RPM, 511-513
+    - Internet security, 527
+    - logging
+        - common log format, 539
+        - CustomLog directive, 540
+    - mod_access module, 532
+    - mod_alias module, 532
+    - mod_asis module, 532
+    - mod_auth module, 533
+    - mod_auth_anon module, 533
+    - mod_auth_dbm module, 533
+    - mod_auth_digest module, 533
+    - mod_autoindex module, 534
+    - mod_cgi module, 534
+    - mod_dir module, 534
+    - mod_env module, 534
+    - mod_expires module, 534
+    - mod_headers module, 534
+    - mod_imap module, 534
+    - mod_include module, 535
+    - mod_info module, 535
+    - mod_log_config module, 535
+    - mod_mime module, 535
+    - mod_mime_magic module, 535
+    - mod_negotiation module, 535
+    - mod_proxy module, 535
+    - mod_rewrite module, 535
+    - mod_setenvif module, 536
+    - mod_ssl module, 536
+    - mod_spelling module, 536
+    - mod_status module, 536
+    - mod_unique_id module, 536
+    - mod_userdir module, 536
+    - mod_usertrack module, 536
+    - mod_vhost_alias module, 536
+    - MPM, Apache web server configuration, 524-525
+    - optimizing, 907-908
+    - quick start guide, 515-516
+    - runtime configuration
+        - configuration directives, 521-526
+        - httpd.conf configuration file, 521
+        - MPM, 524-525
+    - security report websites, 512
+    - source code, building, 513-514
+    - starting/stopping
+        - manually starting, 516-517
+        - via /etc/rc.d/init.d/httpd script, 517-518
+        - via chkconfig command (Red Hat), 519-520
+        - via ntsysv command (Red Hat), 520
+        - via service command (Red Hat), 519
+        - via system-config-services client (Red Hat), 520
+    - upgrading, file locations, 513
+    - usage statistics, 509
+    - version information, 511
+    - virtual hosting, 537-539
+
+- apachectl command, 552
+- APM (Advanced Power Management), 101-102
+- apm command, power-management configuration, 101
+- apmsleep command, power-management configuration, 101
+- application development (Fedora deployment plans), 29
+- apropos command, 135, 142
+- APT, installing, 198-199
+- apt-get command-line software package tool (Debian Project), 17
+- ar command (C/C++ programming), 876
+- arch directory (/usr/src/linux-2.6 directory), 996
+- archives. See backups
+- ark backup tool, 430-431
+- ark command, 448
+- ARP (Address Resolution Protocol), MAC addresses, 458
+- ARPANet, Internet development, 207
+- array
+    - keys() array function, 846
+    - unique() array function, 845
+    - values() array function, 846
+    - arrays, 824-825
+    - Perl, 779-780
+    - PHP
+        - browsing, 847-848
+        - functions, 845-848
+    - arsort() array function, 846
+- articles (newsgroups), formats of, 223
+- asci command, FTP text-based client interface, 614
+- ash shell, 365
+- ash.static shell, 365
+- asort() array function, 846
+- ASP tags (PHP), 822
+- assigning
+    - file permissions, 148-149
+    - FTP user permissions, 628
+    - IP addresses, 488
+    - permissions via chfn command, 151
+    - specific user permissions, 153
+    - usernames, 133
+    - values
+        - to shell script variables, 374-375
+        - to strings in Python, 804
+- asterisk (*)
+    - in /etc/passwd files, 327
+    - shell pattern-matching searches, 367
+    - as wildcards, 651
+- at command, 359-361, 493
+- ATAPI (AT Attachment Packet Interface), 108
+- ATI video drivers, installing, 308
+- atime (files), disabling for file system optimization, 905-906
+- atomicity (ACID), database compliance comparisons, 565
+- atq command, viewing batch job numbers, 361
+- atrm command, deleting batch jobs, 361
+- audio, streaming, 272
+- AUS-CERT advisory AL-1999.004, DNS attacks, 745
+- authentication
+    - Apache web server file systems, 528-530
+    - FTP servers, 625
+    - PAM, 330
+- AuthGroupFile directive (Apache web server), 530
+- AuthName directive (Apache web server), 530
+- authoritative nameservers, 709
+- AuthType directive (Apache web server), 530
+- AuthUserFile directive (Apache web server), 530
+- autoconf utility (C/C++ programming), 873
+- autofs, NFS client configuration, 586
+- autohacking, 890
+- automated installation (Fedora), 47-49
+- Automatically Partition button (Disk Partitioning Setup screen), 66
+- automating tasks
+    - scheduling tasks
+        - at command, 359-361
+        - batch command, 360-361
+        - cron daemon, 362-364
+    - shell scripts, 377-378
+        - #! (shebang lines), 372-373
+    - aliases, 370-371
+    - built-in variables, 374, 379
+    - commands as, 370
+    - comments, 370
+    - environment variables, 374
+    - executing, 371
+    - positional parameters, 375-377
+    - reasons for using, 369
+    - special characters, list of, 380
+    - storing for systemwide access, 372
+    - testing, 378
+    - text wrapping, 370
+    - trojan scripts, 372
+    - user variables, 374
+    - variables, assigning values to, 374-375
+    - writing, 370-371
+- shells
+    - backslashes (\) as escape characters, 382
+    - backticks (`), replacing strings with output, 383
+    - changing, 372
+    - Fedora Core shells list, 364-365
+    - job-control commands, 365
+    - maintaining shell strings with unexpanded variables, 381
+    - manual pages, 365
+    - resolving variables in strings with embedded spaces, 381
+    - shell command line, 365-369, 375-377
+- system services
+    - changing runlevels, 356
+    - manually starting/stopping, 358
+    - running through xinetd daemon, 355-356
+    - troubleshooting runlevels, 357-358
+- system services operation at bootup, 344, 353-355
+    - booting to default runlevel, 348-350
+    - booting to nondefault runlevel, 350-351
+    - booting to runlevel, 346
+    - init scripts, 351-352
+    - initiating boot loading process, 344-345
+    - loading Linux kernel, 345-346
+- autoresponders (email), 677
+- avi video file format, 275
+- Ax, shell pattern-matching searches, 367
+- Axis Linux-based cameras website, 279
+
+### B
+
+- background processing, 369
+- backreferencing, 853
+- backslashes (\) as escape characters, 382
+- backticks (`), replacing strings with output, 383

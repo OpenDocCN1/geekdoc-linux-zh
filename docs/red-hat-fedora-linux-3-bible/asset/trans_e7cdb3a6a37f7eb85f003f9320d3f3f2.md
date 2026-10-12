@@ -1,0 +1,124 @@
+
+
+对于低流量的 Web 服务器，您可能可以保持支持 MPM 功能的参数不变。您将拥有足够多的进程来处理传入请求，但又不会多到耗尽服务器资源。但是，如果您的服务器需要持续提供大量内容，或需要偶尔应对大量请求高峰，您应该考虑调整 `httpd.conf` 文件中与 MPM 相关的参数。
+
+如果您希望更改任何与 MPM 相关的参数，以下是需要考虑的几个问题：
+
+- **RAM 至关重要** — 每个活动的进程和线程都会消耗一定数量的内存。如果活动的进程和线程数量超过您的 RAM 容量，您的计算机将开始使用交换空间，性能会迅速下降。请确保系统上有足够的 RAM 来处理您预期在 Apache Web 服务器上运行的最大数量的服务器进程和线程。
+- **按最大负载配置** — Apache 能够根据需要创建新的服务器进程和线程。您不需要始终保持最大数量的进程和线程可用。相反，您可以根据服务器需求动态配置 Apache 可以增加的最大服务器数量和线程数量。
+- **按性能配置** — 当 Apache 必须启动新线程（少量开销）、启动服务器进程（较多开销）或使用交换空间（最大开销）时，性能会下降。在理想情况下，您所需的服务器数量应恰好是正在运行的默认服务器数量，并保留少量备用以应对合理的峰值。如果响应速度至关重要，您可能会选择运行比实际所需更多的服务器，以免在峰值来临时影响性能。
+
+当 Apache 启动时，它会启动一组固定数量的 `httpd` 服务器进程（一个父进程和多个子 `httpd` 进程）来处理 Web 服务器内容的传入请求。定义可用的 `httpd` 服务器进程数量的参数包括以下设置：
+
+- 父 `httpd` 服务器应启动多少个子服务器进程（`StartServers`）
+- 保持备用的最小服务器进程数（`MinSpareServers`）
+- 保持备用的最大服务器进程数（`MaxSpareServers`）
+- 服务器生命周期内 `MaxClients` 可取的最大值（`ServerLimit`）
+- 允许启动的最大服务器进程数（`MaxClients`）
+- 一个进程可处理的最大请求数（`MaxRequestsPerChild`）
+
+定义每个 `httpd` 服务器进程可用线程数量的参数包括以下设置：
+
+- 在创建更多线程之前，始终可用的最小备用线程数（`MinSpareThreads`）
+- 备用线程的最大数量，超过此数量后，将删除活动线程以回到每个子进程的线程数（`MaxSpareThreads`）
+- 每个子进程始终可用的线程数（`ThreadsPerChild`）
+
+下面的代码示例展示了 httpd.conf 文件中 MPM 特定参数如何为 prefork.c 模块（用于管理服务器进程的非线程模块）和 worker.c（多线程、多进程 Web 服务器模块）进行设置。
+
+```text
+###
+## Server-Pool Size Regulation (MPM-specific)
+###
+
+<IfModule prefork.c>
+    StartServers      8
+    MinSpareServers   5
+    MaxSpareServers  20
+    ServerLimit    256
+    MaxClients     256
+    MaxRequestsPerChild  4000
+</IfModule>
+
+<IfModule worker.c>
+    StartServers     2
+    MaxClients      150
+    MinSpareThreads   25
+    MaxSpareThreads   75
+    ThreadsPerChild   25
+    MaxRequestsPerChild  0
+</IfModule>
+```
+
+Apache 启动一个由 root 拥有的主守护进程，该进程绑定到相应的端口，然后切换到非特权用户。随后，将启动更多服务器（等同于 prefork.c 中 StartServers 指令的值），这些服务器使用相同的非特权用户（在这种情况下是 apache 用户）。
+
+Apache 试图根据当前负载智能地启动和终止服务器。如果流量减少且空闲服务器过多，一些服务器将被终止（直至达到 MinSpareServers 中注明的服务器数量）。同样，如果大量请求在短时间内到达且等待新连接的服务器过少，将启动更多服务器（直至达到 MaxClients 中注明的服务器数量）。
+
+> **注意：** 正确设置 MaxClients 的值至关重要，因为它限制了同时可活动的客户端连接总数。如果正在使用的 MaxClients 服务器数量达到上限，将不再创建新的服务器，后续对服务器的请求将失败。
+
+使用上述指定的值，当守护进程启动时，父进程和八个子服务器进程将运行，等待连接（如 StartServers 所定义）。随着更多请求的到来，Apache 将确保至少有五个服务器进程准备好响应请求。当请求得到处理且没有新连接到达时，Apache 将开始终止进程，直到空闲 Web 服务器进程数量低于 20。StartServers 的值始终应在 MinSpareServers 和 MaxSpareServers 之间。
+
+Apache 使用 MaxClients 指令限制同时运行的线程总数。默认值为 150，这应该足够高。但是，如果您发现经常有接近该数量的线程在运行，请记住，超过第 150 个连接将被拒绝。在这种情况下，如果您的硬件足够强大（且您的网络连接能够承受负载），您应该增加 MaxClients 的值。
+
+> **注意：** 您可以通过查看本章后面描述的服务器状态页面来查看 Apache 服务器进程的状态，并了解服务器的活动情况。
+
+为了最小化可能的内存泄漏的影响（并保持服务器池“新鲜”），每个服务器进程在处理请求的数量上受到限制（等于 MaxRequestsPerChild 的值）。在处理完 4000 个请求（上述指定的值）后，该进程将被终止。更准确地说，每个进程可以服务 4000 个连接，因为所有 KeepAlive 请求（在遇到 KeepAliveTimeout 之前发生的）都只计算为一个请求。
+
+在多处理器环境中，设置前面描述的线程值既可以限制服务器可消耗的线程数量，也可以提供尽可能多的线程来处理服务器请求。MinSpareThreads 和 MaxSpareThreads 控制可用但未使用的线程数量。如果可用线程低于 MinSpareThreads，则会添加更多线程。如果备用线程超过 MaxSpareThreads，则会丢弃一些线程。
+
+## 绑定到特定地址
+
+您可以使用 Listen 指令绑定到特定的 IP 地址。Listen 指令可用于添加到您已有的默认绑定中。
+
+```text
+# Listen: Allows you to bind Apache to specific IP addresses and/or
+# ports, in addition to the default. See also the <VirtualHost>
+# directive.
+#
+# Change this to Listen on specific IP addresses as shown below to
+# prevent Apache from glomming onto all bound IP addresses (0.0.0.0)
+Listen 12.34.56.78:80
+Listen 80
+```
+
+Listen 指令比 BindAddress 和 Port 指令更灵活。可以指定多个 Listen 命令，从而允许您指定多个 IP 地址/端口号组合。它还可以用于指定 IP 地址（此时仍需要 Port 指令）或仅指定端口号。默认情况下，Apache 监听本机所有接口上的 80 端口（用于标准 http 服务）和 443 端口（用于安全 https 服务）（这是 Web 浏览器期望找到 Web 内容的地方）。
+
+### 包含模块特定配置文件
+
+以下行使 Apache 从 `/etc/httpd/conf.d` 目录加载配置文件。此目录包含与特定模块关联的配置文件。
+
+```text
+# Load config files from the config directory "/etc/httpd/conf.d".
+#   Include conf.d/*.conf
+```
+
+> **交叉引用：** 本章后面的“配置模块 (/etc/httpd/conf.d/*.conf)”部分描述了 `conf.d` 目录中您可能感兴趣的一些配置文件。
+
+### 在 httpd.conf 中选择模块
+
+在编译过程中，可以选择单独的 Apache 模块进行动态链接。动态链接的模块不会加载到内存中的 httpd 服务器进程中，除非 `LoadModule` 指令明确标识要加载的模块。接下来的代码块通过使用 `LoadModule` 指令以及模块名称和模块路径（相对于 `ServerRoot`）来选择几个模块以加载到内存中。以下文本显示了这些模块的部分列表：
+
+```text
+# Dynamic Shared Object (DSO) Support
+# Example:
+# LoadModule foo_module modules/mod_foo.so
+#
+LoadModule access_module modules/mod_access.so
+LoadModule auth_module modules/mod_auth.so
+LoadModule auth_anon_module modules/mod_auth_anon.so
+LoadModule auth_dbm_module modules/mod_auth_dbm.so
+LoadModule auth_digest_module modules/mod_auth_digest.so
+LoadModule include_module modules/mod_include.so
+LoadModule log_config_module modules/mod_log_config.so
+LoadModule env_module modules/mod_env.so
+LoadModule mime_magic_module modules/mod_mime_magic.so
+...
+
+LoadModule actions_module modules/mod_actions.so
+LoadModule speling_module modules/mod_speling.so
+LoadModule userdir_module modules/mod_userdir.so
+LoadModule alias_module modules/mod_alias.so
+LoadModule rewrite_module modules/mod_rewrite.so
+```
+
+通过 `LoadModule` 指令将 Apache 模块包含在活动模块列表中。`ClearModuleList` 指令从当前活动模块列表中删除所有条目。Apache 随附的每个标准模块都在表 21-1 中进行了描述。
+

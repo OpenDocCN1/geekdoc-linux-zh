@@ -1,0 +1,31 @@
+testable and is quite a handy reference. (If you’re in a hurry, you can type `help test` on the command line to get the same information.)
+
+# Table 12-2: Operators for Test Expressions
+
+| Operator | What Is Being Tested? |
+| --- |
+| `-a file` | Does the file exist? (same as -e) |
+| `-b file` | Is the file a special block device? |
+| `-c file` | Is the file character special (for example, a character device)? Used to identify serial lines and terminal devices. |
+| `-d file` | Is the file a directory? |
+| `-e file` | Does the file exist? (same as -a) |
+| `-f file` | Does the file exist, and is it a regular file (for example, not a directory, socket, pipe, link, or device file)? |
+| `-g file` | Does the file have the set-group-id bit set? |
+| `-h file` | Is the file a symbolic link? (same as -L) |
+| `-k file` | Does the file have the sticky bit set? |
+| `-L file` | Is the file a symbolic link? |
+| `-n string` | Is the length of the string greater than 0 bytes? |
+| `-O file` | Do you own the file? |
+| `-p file` | Is the file a named pipe? |
+| `-r file` | Is the file readable by you? |
+| `-s file` | Does the file exist, and is it larger than 0 bytes? |
+| `-S file` | Does the file exist, and is it a socket? |
+| `-t fd` | Is the file descriptor connected to a terminal? |
+| `-u file` | Does the file have the set-user-id bit set? |
+| `-w file` | Is the file writable by you? |
+| `-x file` | Is the file executable by you? |
+| `-z string` | Is the length of the string 0 (zero) bytes? |
+| `expr1 -a expr2` | Are both the first expression and the second expression true? |
+| `expr1 -o expr2` | Is either of the two expressions true? |
+| `file1 -nt file2` | Is the first file newer than the second file (using the modification timestamp)? |
+| `file1 -ot file2` | Is the first file older than the second file (using the modification timestamp)? |

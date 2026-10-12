@@ -1,0 +1,154 @@
+
+# 智能闹钟
+
+![](img/bab7f65683e8ebca10d1e8aa808ba7ff_66_0.png)
+
+## 闹钟外壳
+
+| 文件 | 编辑 | 书签 | 视图 | 帮助 |
+| :--- | :--- | :--- | :--- | :--- |
+| | | | | `/home/pi/alarm` |
+| 位置 | | | | |
+| 桌面 | `whitenoise.mp` | `alarm.py` | `alarm.mp3` | |
+| 根目录 | | | | |
+| 应用程序 | | | | |
+
+面包板是电路原型设计的极佳工具。如果你想开始你的树莓派项目，可能为你的面包板买一个外壳会更好，因为这样焊接和直接连接到 `GPIO` 端口要容易得多。外壳会让整个设备看起来很整洁。
+
+## 04 更多准备工作
+
+一旦打开按钮，树莓派就会启动；如果接线正确，它应该立即启动。等桌面加载后，在 `home` 目录下创建一个名为 `alarm` 的新文件夹。在我们创建的代码版本中，已经包含了你应该使用的必要 `mp3` 文件。
+
+## 05 获取代码
+
+在下一页获取完整代码，无论它是什么类型，你可以在过程中对其进行编辑，或者直接从网上下载：
+
+```
+http://linuxuser.co.uk/wp-content/uploads/2014/09/alarm.zip
+```
+
+## 06 设置你的闹钟
+
+在代码中有两个变量：`hour`（小时）和 `minute`（分钟）。根据你的输入确定闹钟响的时间并对其进行操作。默认设置为早上 7:30，请将其更改为你想要醒来的时间。
+
+## 02 安装音频播放器
+
+在本教程中，我们将使用 `VLC` 来播放白噪音和闹钟声。`Python` 可以很容易地使用它来实现我们想要的任务。在终端中使用以下命令安装：
+
+## 03 `sudo apt-get install vlc`
+
+```
+user@pi:~~$ sudo apt-get update
+
+读取软件包列表... 完成
+
+正在构建依赖树... 完成
+
+读取信息表... 完成
+
+user@pi:~~$ sudo apt-get install vlc
+
+正在读取软件包列表... 完成
+
+正在构建依赖树... 完成
+
+读取信息表... 完成
+
+以下将安装新软件包：
+
+ vlc/3.0.16-1ubuntu4 [arm64] 48.5 MB
+
+升级 0 个，安装 1 个，移除 0 个，未升级 0 个。
+
+此操作后，将使用 112 MB 的额外磁盘空间。
+```
+
+![](img/bab7f65683e8ebca10d1e8aa808ba7ff_66_1.png)
+
+![](img/bab7f65683e8ebca10d1e8aa808ba7ff_66_2.png)
+
+## 03 接线你的按钮
+
+按照上面的接线图进行操作——它非常简单，只需要一个按钮和一个面包板。在当前的示例中，我们只使用一个按钮来关闭闹钟，但稍后我们将介绍如何添加一个贪睡按钮。
+
+## 08 继续起床
+
+对于一个简单的闹钟，有很多可以改进的地方。看一眼下一页的代码并进行测试，以确保音量水平和增量符合你的喜意，一旦你满意了，我们将提供一些进一步改进它的想法。
+
+## 07 音频选择
+
+你可以为白噪音和闹钟声使用任何声音。这些文件需要放在我们为闹钟文件创建的目录中，并按照你在修改该特定部分时代码中的方式进行命名。闹钟还支持播放列表，如果你更喜欢听音乐醒来的话。
+
+## 教程
+
+# 完整代码列表
+
+```python
+#!/usr/bin/env python
+
+import time
+
+import subprocess
+
+import RPi.GPIO as GPIO
+```
+
+```python
+alarm_hour = 7
+
+alarm_minute = 30
+
+alarm_volume = 10
+```
+
+```python
+subprocess.call('mixer set Pcm 10%%', shell=True)
+
+subprocess.call('vlc-wrapper /home/pi/alarm/whitenoise.mp3 --repeat -1 dummy', shell=True)
+```
+
+```python
+GPIO.setmode(GPIO.BOARD)
+
+GPIO.setup(3, GPIO.IN)
+```
+
+```python
+while(True):
+
+    current_time = time.localtime()
+
+    current_hour = current_time[3]
+
+    current_minute = current_time[4]
+```
+
+```python
+if current_hour == alarm_hour and current_minute == alarm_minute:
+
+    subprocess.call('vlc-wrapper /home/pi/alarm/alarm.mp3 --repeat -1 dummy', shell=True)
+
+    time.sleep(2.5)
+```
+
+```python
+while True:
+
+    if GPIO.input(3) == 0:
+
+        subprocess.call('killall vlc', shell=True)
+
+    else:
+
+        alarm_volume = 5
+
+        new_volume = 'mixer set Pcm ' + str(alarm_volume) + '%'
+
+        subprocess.call(new_volume, shell=True)
+
+        time.sleep(2.5)
+```
+
+```python
+GPIO.cleanup()
+```

@@ -1,0 +1,113 @@
+
+# Appendix B: Fedora Core 3 RPMs
+
+- **GConf2**: A configuration database API used to store user preferences.
+- **GConf-devel**: Library files required for developing with GConf.
+- **GConf2-devel**: Library files required for developing with GConf2.
+- **gconf-editor**: Editor and admin tool for GConf configuration sources.
+- **gde**: A graphics library for creating JPEG and PNG image files.
+- **gda-mysql**: GDA MySQL provider.
+- **gda-odbc**: GDA ODBC provider.
+- **gda-postgres**: GDA PostgreSQL provider.
+- **gdb**: A command-driven debugger.
+- **gdbm**: The Gdbm database indexing library.
+- **gdbm-devel**: Components to develop applications to use the GNU database system.
+- **gd-devel**: Components to develop applications that use the gd graphics library.
+- **gdk-pixbuf**: The GDK Pixbuf image loading libraries.
+- **gdk-pixbuf-devel**: Development tools associated with GDK Pixbuf.
+- **gdk-pixbuf-gnome**: GNOME Canvas support for displaying images.
+- **gdm**: The GNOME display manager, maintains an X-based graphical login.
+- **gd-progs**: Utility programs associated with the gd graphics library.
+- **gedit**: A compact, GNOME-based text editor.
+- **gedit-devel**: The files needed for developing plug-ins for the gEdit editor.
+- **genromfs**: Utilities for building romfs file systems for initial RAM disks.
+- **gettext**: Tools and utilities for creating multilingual messages.
+- **gettext-devel**: Provides tools for creating, using, and modifying natural language catalogs.
+- **gftp**: A multithreaded graphical ftp program.
+- **ggv**: A Ghostscript front-end, adding panning and persistent user settings to Ghostscript.
+- **ghostscript**: Displays and prints PostScript files.
+- **ghostscript-devel**: Header files for developing Ghostscript-enabled applications.
+- **ghostscript-fonts**: A set of type fonts used with the Ghostscript program.
+- **ghostscript-gtk**: A GTK-enabled PostScript interpreter and renderer.
+- **giftrans**: Converts GIF87 files to GIF89 format.
+- **gimp**: GNU Image Manipulation Program.
+- **gimp-data-extras**: Patterns, gradients, and other graphical elements to use with GIMP.
+- **gimp-devel**: Libraries needed to develop GIMP plug-ins and extensions.
+- **gimp-gap**: Plug-ins to create and edit animations in GIMP.
+- **gimp-help**: User manual for GIMP.
+- **gimp-print**: Drivers that provide enhanced printing during demanding tasks.
+- **gimp-print-cups**: Native drivers for Canon, Epson, and compatible printers.
+- **gimp-print-devel**: Libraries, and documentation to the GIMP printing interface.
+- **gimp-print-plugin:** GIMP plug-in for gimp-print.
+- **gimp-print-utils:** Utility programs from gimp-print.
+- **gkrellm:** Monitoring software that charts CPU use, disk activity, and network traffic.
+- **gkrellm-daemon:** Server side of gkrellm.
+- **gkrellm-devel:** Header files for gkrellm.
+- **gkrellm-wireless:** Plug-in to monitor wireless LAN cards with gkrellm.
+- **glade2:** A version of glade for GTK+ 2.0.
+- **glib:** Glib version 1.2 library of common functions used to improve portability.
+- **glib2:** Glib version 2 library of common functions used to improve portability.
+- **glib2-devel:** Static libraries and header files used with the glib2 development package.
+- **glibc:** Standard libraries used by a multitude of programs.
+- **glibc-common:** Common binaries, locale support, and time zone databases.
+- **glibc-devel:** Standard header and object files to develop most C language programs.
+- **glibc-headers:** Header files for development using standard C libraries.
+- **glibc-kernheaders:** Header files for the Linux kernel to use by glibc.
+- **glibc-profile:** The libraries needed to create programs being profiled with gprof.
+- **glibc-utils:** Various tools useful during program debugging.
+- **glib-devel:** Static libraries and header files to support the GIMP Xlibrary.
+- **GLide3:** A programming interface to 3DFx Voodoo graphics cards.
+- **GLide3-devel:** Interface for using 3D accelerators in 3DFx Interactive Voodoo cards.
+- **gmp:** The MP library for handling arithmetic and floating-point number functions.
+- **gmp-devel:** Components to develop GNU MP arbitrary precision applications.
+- **gnome-applets:** Applets (tiny graphical applications) used on the GNOME desktop.
+- **gnome-audio:** A set of sounds that you can use with your GNOME environment.
+- **gnome-audio-extra:** Sound files that can be used with the GNOME desktop.
+- **gnome-bluetooth:** Simple GUI to control Bluetooth devices.
+- **gnome-desktop:** Code shared among GNOME components.
+- **gnome-desktop-devel:** Libraries for compiling GNOME-desktop components.
+- **gnome-games:** GNOME games such as solitaire, gnometletto, and tetris.
+- **gnome-icon-theme:** Base GNOME desktop environment icons.
+- **gnome-kerberos:** The krb5 tools for managing Kerberos 5 tickets.
+- **gnome-keyring:** Keyring and password manager for the GNOME desktop.
+- **gnome-keyring-devel:** Development libraries and header files for gnome-keyring.
+- **gnome-keyring-manager:** Used to manage passwords and secrets saved in the keyring.
+- **gnome-libs:** Libraries needed by the GNOME desktop environment and applications.
+- **gnome-libs-devel:** Libraries needed to create applications to run on a GNOME desktop.
+- **gnome-mag:** GNOME magnifying library for AT-SPI applications.
+- **gnome-mag-devel:** Development tools for the GNOME AT-SPI magnifying library.
+- **gnome-media:** The GNOME CD player and other multimedia tools.
+- **gnomemeeting:** An H323 teleconferencing tool compatible with Microsoft NetMeeting.
+- **gnome-mime-data:** The file-type recognition data files for GNOME-VFS.
+- **gnome-netstatus:** Network interface monitoring applet for GNOME panel.
+- **gnome-nettool:** Graphical front-end for various command line network tools.
+- **gnome-panel:** Provides desktop management utilities.
+- **gnome-pilot:** Files needed to integrate GNOME and PalmOS devices like Palm Pilots.
+- **gnome-pilot-conduits:** Additional conduits for gnome-pilot.
+- **gnome-pilot-devel:** Libraries needed to enable applications to use gnome-pilot.
+- **gnome-print:** Fonts and tools needed by GNOME applications to print from GNOME.
+- **gnome-print-devel:** Software development tools associated with printing in GNOME.
+- **gnome-python2\*:** Wrappers that allow GNOME components to be written in Python.
+- **gnome-session:** Handles startup and shutdown of core GNOME components.
+- **gnome-speech:** GNOME text-to-speech tools.
+- **gnome-speech-devel:** Development tools for GNOME text-to-speech features.
+- **gnome-spell:** A bonobo component for spell checking.
+- **gnome-system-monitor:** A simple process and system monitor.
+- **gnome-terminal:** A GNOME terminal emulator.
+- **gnome-themes:** Themes collection for GNOME.
+- **gnome-user-docs:** A glossary, introduction, and other documentation for GNOME.
+- **gnome-utils:** Several useful GNOME utilities, such as a calculator and a calendar.
+- **gnome-vfs:** The GNOME virtual file system libraries.
+- **gnome-vfs-devel:** Libraries and header files to develop GNOME-VFS2 applications.
+- **gnome-vfs-extras:** GNOME-VFS modules including a Samba smb network browser.
+- **gnome-volume-manager:** Monitors volume-related events and responds in accord with user-specified policy.
+- **gnome-vfs2:** Revision 2.0 of the GNOME virtual file system libraries.
+- **gnome-vfs2-devel:** Libraries and header files to develop GNOME-VFS2 applications.
+- **gnome-vfs2-smb:** Windows filesystem support for gnome-vfs.
+- **gnomericus:** The gnomericus screen magnifier.
+- **gnucash:** A personal finance tracker.
+- **gnucash-backend-postgres:** Backend for storing GnuCash data in PostgreSQL.
+- **gnuchess:** The GNU chess program and related utilities.
+- **gnumeric:** The GNOME-based gnumeric spreadsheet program.
+- **gnumeric-devel:** Development tools for the gnumeric spreadsheet application.
+- **gnupg:** GNU Privacy Guard, used for secure communication and data storage.

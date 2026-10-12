@@ -1,0 +1,41 @@
+In conditional statements, any number other than 0 is considered to be equivalent to the Boolean value `true`, so `$i` always evaluates to `true`. There is a similar case for strings: if your string has any characters in it, then it evaluates to `true`, with empty strings evaluating to `false`. This is important because you can then use that `$i` in another condition through `&&` or `||` operators. For example, if you want to check whether `$i` is greater than 10 but less than 40, you could write this:
+
+```
+```php
+if ($i > 10 && $i < 40) {
+    echo "11 or higher";
+} else {
+    echo "10 or lower";
+}
+```
+```
+
+If we presume that `$i` is set to 50, the first condition ($i > 10) is replaced with 1 and the second condition ($i < 40) is replaced with 0. Those two numbers are then used by the `&&` operator, which requires both the left and right operands to be `true`. While 1 is equivalent to `true`, 0 is not, so the `&&` operand is replaced with 0 and the condition fails.
+
+`=`, `==`, `===`, and similar operators are easily confused and often the source of programming errors. The first, a single equal sign, assigns the value of the right operand to the left operand. However, all too often you see code like this:
+
+```
+```php
+if ($i = 10) {
+    echo "The variable is equal to 10!";
+} else {
+    echo "The variable is not equal to 10";
+}
+```
+```
+
+That is incorrect. Rather than checking whether `$i` is equal to 10, it assigns 10 to `$i` and returns `true`. What is needed is `==`, which compares two values for equality. In PHP, this is extended so that there is also `===` (three equal signs), which checks whether two values are identical—more than just equal.
+
+The difference is slight but important: If you have a variable with the string value "10" and compare it against the number value of 10, they are equal. Thus, PHP converts the type and checks the numbers. However, they are not identical. To be considered identical, the two variables must be equal (that is, have the same value) and be of the same data type (that is, both are strings, both are integers, and so on).
+
+![](bbox=[0.15, 0.81, 0.88, 0.83])
+
+It is common practice to put function calls in conditional statements rather than direct comparisons. For example:
+
+```
+```php
+if (do_something()) {
+```
+
+If the `do_something()` function returns `true` (or something equivalent to `true`, such as a nonzero number), the conditional statement evaluates to `true`.
+```

@@ -1,0 +1,5 @@
++   - [x] Friday
+
++   - [ ] Saturday
+
++   - [ ] Sunday

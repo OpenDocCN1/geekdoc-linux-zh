@@ -1,0 +1,19 @@
+# # Using OpenOffice.org
+
+Some have called OpenOffice.org a significant threat to Microsoft’s dominance of the desktop market. If a need to work with documents in Microsoft Word format has kept you from using Linux as your desktop computer, OpenOffice.org is a big step toward removing that obstacle.
+
+> **NOTE:** If you are willing to pay a few dollars, CrossOver Office from Codeweavers.com lets you install and run different versions of Microsoft Office (97, 2000, XP, and so on) from your Linux desktop. See Chapter 5 for further information or check out www.codeweavers.com/products/office.
+
+Fedora includes the entire OpenOffice.org suite of desktop applications. Based on the StarOffice source code, OpenOffice.org consists of the following office-productivity applications:
+
++   * **OpenOffice.org Writer** — A word-processing application that can work with documents in file formats from Microsoft Word, StarOffice, and several others. Writer also has a full set of features for using templates, working with fonts, navigating your documents, including images and effects, and generating tables of contents.
+
++   * **OpenOffice.org Calc** — A spreadsheet application that lets you incorporate data from Microsoft Excel, StarOffice, DBase, and several other spreadsheet formats. Some nice features in Calc enable you to create charts, use cell database ranges (to easily sort data in an area of a spreadsheet), and use the data pilot tool to arrange data in different points of view.
+
++   * **OpenOffice.org Draw** — A drawing application that enables you to create, edit, and align objects; incorporate textures; include textures and colors; and work with layers of objects. It lets you incorporate images, vector graphics, AutoCAD, and a variety of other file formats into your drawings. Then, you can save your drawing in the OpenOffice.org Drawing or StarDraw formats.
+
++   * **OpenOffice.org Math** — A calculation program that lets you create mathematical formulas.
+
++   * **OpenOffice.org Impress** — A presentation application that includes a variety of slide effects. Using Impress, you can create and save presentations in the Microsoft PowerPoint, StarDraw, and StarImpress formats.
+
+Unlike other applications that were created to work with Microsoft document and data formats, OpenOffice.org (although not perfect) does a very good job of opening and saving those files with fewer problems. Very basic styles and formatting that open in OpenOffice.org often don’t look noticeably different from the way they appear in Microsoft Office. In other cases, such things as bullets, alignment and indentation can appear quite different in Writer than they do in Word. Also, some features such as macros and scripting features in Word may not work at all in Writer.

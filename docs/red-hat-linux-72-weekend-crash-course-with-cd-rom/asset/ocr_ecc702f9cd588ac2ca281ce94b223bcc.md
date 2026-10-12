@@ -1,0 +1,5 @@
+By breaking the seal of this software packet, you accept the terms and conditions of the End-User License Agreement and/or the GNU General Public License included with this product.
+
+"The book includes a copy of the Publisher's Edition of Red Hat Linux from Red Hat, Inc., which you may use in accordance with the license agreements accompanying the software. The Official Red Hat Linux, which you may purchase from Red Hat, includes the complete Official Red Hat Linux distribution, Red Hat's documentation, and may include technical support for Official Red Hat Linux. You also may purchase technical support from Red Hat. You may purchase Official Red Hat Linux and technical support from Red Hat through the company's web site (www.redhat.com) or its toll-free number 1.888.REDHAT1."
+
+![](bbox=[0.1, 0.44, 0.78, 0.84])

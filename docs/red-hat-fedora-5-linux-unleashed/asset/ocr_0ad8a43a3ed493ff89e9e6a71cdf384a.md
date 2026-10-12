@@ -1,0 +1,15 @@
+# Evaluating Backup Strategies
+
+Now that you are convinced you need backups, you need a strategy. It is difficult to be specific about an ideal strategy because each user or administrator's strategy will be highly individualized, but here are a few general examples:
+
++   *   **Home user**—At home, the user has the fedora installation DVD that takes an hour or so to reinstall, so the time issue is not a major concern. The home user will want to back up any configuration files that have been altered, keep an archive of any files that have been downloaded, and keep an archive of any data files created while using any applications. Unless the home user has a special project in which constant backups are useful, a weekly backup is adequate. The home user will likely use a DVD-RW drive or other removable media for backups.
+
++   *   **Small office**—Many small offices tend to use the same strategy as the home user, but are more likely to back up critical data daily and use manually changed tape drives. If they have a tape drive with adequate storage, they will likely have a full system backup as well because restoring from the tape is quicker than reinstalling from the CDs. They also might be using CD-RW or DVD writers for backups. Although they will use scripts to automate backups, most of it is probably done by hand.
+
++   *   **Small enterprise**—Here is where backups begin to require higher-end equipment such as autoloading tape drives with fully automated backups. Commercial backup software usually makes an introduction at this level, but a skillful system administrator on a budget can use one of the basic applications discussed in this chapter. Backups are highly structured and supervised by a dedicated system administrator.
+
++   *   **Large enterprise**—These are the most likely settings for the use of expensive, proprietary, highly automated backup solutions. At this level, data means money, lost data means lost money, and delays in restoring data means money lost as well. These system administrators know that backups are necessary insurance and plan accordingly.
+
+Does all this mean that enterprise-level backups are better than those done by a home user? Not at all. The “little guy” with fedora can do just as well as the enterprise operation at the expense of investing more time in the process. By examining the higher-end strategies, we can apply useful concepts across the board.
+
+> If you are a new sysadmin, you might be inheriting an existing backup strategy. Take some time to examine it and see whether it meets the current needs of the organization. Think about what backup protection your organization really needs, and determine whether the current strategy meets that need. If it does not, change the strategy. Consider whether the current policy is being practiced by the users, and, if not, why it is not.

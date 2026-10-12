@@ -1,0 +1,2 @@
++   [红帽 Fedora 4  unleashed: “DVD 包含 Fedora Core 4 Linux 发行版”——封面](README.md)
++   [红帽 Fedora 4  unleashed: “DVD 包含 Fedora Core 4 Linux 发行版”——封面](red-hat-fedora-4-unleashed-dvd-includes-fedora-core-4-linux-.md)

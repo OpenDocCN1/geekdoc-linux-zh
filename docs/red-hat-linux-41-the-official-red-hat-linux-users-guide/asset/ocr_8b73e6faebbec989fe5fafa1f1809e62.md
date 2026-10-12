@@ -1,0 +1,40 @@
++   Image too narrow horizontally: To stretch an image that is too narrow
++   horizontally (extra space appears on the left and right), increase the
++   Horizontal Total by amount x, then add one-half of x to both the
++   Horizontal Sync Start and Horizontal Sync End values.
+
++   Image too narrow vertically: To stretch an image that is too narrow
++   vertically (extra space appears on the top and bottom), increase the
++   Vertical Total by amount x, then add one-half of x to both the
++   Vertical Sync Start and Vertical Sync End values.
+
++   Image too wide horizontally: To shrink an image that is too wide
++   horizontally (the image extends beyond the left and right edges), de-
++   crease the Horizontal Total by amount x, then subtract one-half
++   of x from both the Horizontal Sync Start and Horizontal Sync
++   End values.
+
++   Image too tall vertically: To shrink an image that is too tall vertically
++   (the image extends beyond the top and bottom edges), decrease the
++   Vertical Total by amount x, then subtract one-half of x from both
++   the Vertical Sync Start and Vertical Sync End values.
+
+# Extensions
+
+Extensions are configured in the /usr/lib/X11/Metro/Extensions file.
+Most extensions are dynamically loaded; that is, if they are needed they
+are loaded automatically without any additional manual configuration. An
+extension that is “ON” is loaded at server startup and never unloaded. An
+extension that is “DYN” is dynamically loaded on request by an X client
+XQueryExtension call. These extensions display with XListExtensions or
+xdpyinfo. An extension that is “OFF” can not be used, nor is it displayed
+with XListExtensions or xdpyinfo.
+
+# Special Notes
+
++   Multi-Buffering and DOUBLE-BUFFER can not be dynamically loaded.
++   They must be set to “ON” or “OFF”.
+
++   GLX (OpenGL) can be dynamically loaded, however GLX depends on
++   DOUBLE-BUFFER being “ON”. Therefore, to use GLX, set DOUBLE-BUFFER
++   to “ON” and GLX to “DYN”.

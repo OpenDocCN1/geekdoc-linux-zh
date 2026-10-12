@@ -1,0 +1,43 @@
+# **LISTING 24.3** xinetd Configuration File for wu-ftpd
+
+```
+# default: on
+# description: The wu-ftpd FTP server serves FTP connections. It uses \
+#          normal, unencrypted usernames and passwords for authentication.
+
+service ftp
+{
+disable          = yes
+          socket_type      = stream
+          wait             = no
+          user             = root
+          server           = /usr/sbin/in.ftpd
+          server_args      = -l -a
+          log_on_success   += DURATION
+          nice             = 10
+}
+
+```
+
+Using an editor, change the `disable = yes` line to `disable = no`. Save the file and exit the editor. You then must restart xinetd because configuration files are parsed only at startup. To restart xinetd as root, issue the command `/etc/rc.d/init.d/xinetd restart`. This makes a call to the same shell script that is called at any runlevel to start or stop the xinetd daemon (and thus start up or shut down the system). xinetd should report its status as
+
+```
+# /etc/rc.d/init.d/xinetd restart
+Stopping xinetd:                            [  OK  ]
+Starting xinetd:                             [  OK  ]
+
+```
+
+After it is restarted, the FTP server is accessible to all incoming requests.
+
+# **Starting the Very Secure FTP Server (vsftpd) Package**
+
+Previous versions of Red Hat's Linux distributions required you to edit a file named vsftpd under the `/etc/xinetd.d` directory in order to enable and start the Very Secure FTP server, vsftpd. With Fedora, you can now simply use the system-config-services client or service command to start vsftpd. For example, start the server using the service command like this:
+
+```
+# service vsftpd start
+Starting vsftpd for vsftpd:                [  OK  ]
+
+```
+
+Use the system-config-services client or service command to start, stop, or restart the vsftpd server. Do not run two FTP servers on your system at the same time!

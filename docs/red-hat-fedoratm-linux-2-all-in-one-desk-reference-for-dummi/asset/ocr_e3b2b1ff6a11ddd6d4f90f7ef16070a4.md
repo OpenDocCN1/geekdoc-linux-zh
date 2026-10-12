@@ -1,0 +1,16 @@
+# The GNU debugger
+
+Although *make* automates the process of building a program, that part of programming is the least of your worries when a program doesn't work correctly or when a program suddenly quits with an error message. You need a debugger to find the cause of program errors. Fedora Core includes `gdb` — the versatile GNU debugger with a command-line interface.
+
+Like any debugger, `gdb` lets you perform typical debugging tasks, such as the following:
+
++   * Set the breakpoint so the program stops at a specified line.
++   * Watch the values of variables in the program.
++   * Step through the program one line at a time.
++   * Change variables in an attempt to fix errors.
+
+The `gdb` debugger can debug C and C++ programs.
+
+# Preparing to debug a program
+
+If you want to debug a program by using `gdb`, you have to ensure that the compiler generates and places debugging information in the executable. The debugging information contains the names of variables in your program and the mapping of addresses in the executable file to lines of code in the source file. `gdb` needs this information to perform its functions, such as stopping after executing a specified line of source code.

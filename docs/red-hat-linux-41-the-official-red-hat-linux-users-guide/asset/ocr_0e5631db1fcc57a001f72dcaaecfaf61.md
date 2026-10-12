@@ -1,0 +1,11 @@
+# Choosing a Network Driver
+
+If you are installing via FTP, you must have a supported network card installed in your computer. The installation program prompts you to choose the driver that supports your network card and to specify any options necessary for the driver to locate and recognize the card. Most of the time, the driver can locate the card automatically by **probing**; however, it is possible that probing your hardware might cause your machine to hang. If this happens, reboot the machine, start the installation again, and specify additional driver options when you get to this step (see Appendix B).
+
+# Configuring TCP/IP Networking
+
+After the installation program has found your network card, it presents several dialogs for configuring TCP/IP networking. This information is only used during the installation process; you will be able to configure permanent networking information later. This feature allows greater flexibility if you want to install from a network other than the one where the machine will “live”. Figure 2.4 contains example networking information.
+
+The first dialog asks you for IP and other network addresses (see Figure 2.5). Enter the **IP address** you are using during installation and press `Enter`. The installation program attempts to guess your **Netmask** based on your IP address; you may change the netmask if it is incorrect. Press `Enter`. The installation program guesses the **Default gateway** and **Primary nameserver** addresses from your IP address and netmask; you may change them if they are incorrect. Choose **OK** to continue.
+
+The second dialog prompts you for a domain name, a hostname, and other networking information (see Figure 2.6). Enter the **Domain name** for your system and press `Enter`; the installation program carries the domain name down to the **Host name** field. Enter the hostname you are using in front of the domain name to form a fully qualified domain name (FQDN). If your network has more than one nameserver, you may enter IP addresses for additional nameservers in the **Secondary nameserver** and **Tertiary nameserver** fields. Choose **OK** to continue.

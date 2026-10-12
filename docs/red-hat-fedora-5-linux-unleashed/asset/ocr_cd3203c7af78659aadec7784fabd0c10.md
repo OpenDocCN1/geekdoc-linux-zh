@@ -1,0 +1,22 @@
+# # Features of the Fedora Install
+
+Installing Fedora can be accomplished in a number of ways. Many new users choose to simply boot from the first CD-ROM or from the DVD. The Fedora installer, named Anaconda (because it is written in the Python programming language), provides a default graphical interface for the installation process. The installer can be used to perform various initial actions before proceeding to an install, such as
+
++   * **Testing the installation media**—Useful for testing the integrity of your copies of the Fedora CD-ROMs/DVD. If you download .iso images of the Fedora CDs or DVD, you can also use an MD5SUM client to compare the prepublished checksums for the media against your .iso files.
+
++   * **Testing your PC's memory**—Useful for ensuring that your PC is in good form with functioning memory. Linux will use every available byte of RAM, and you should ensure that you do not run into problems after the operating system is installed.
+
++   * **Updating the installer before the install**—in some cases, you might need to use the latest version of the installer to work around a bug or problematic hardware, and this option can be used to use a new version of the installer even though it is not on the CD-ROM or DVD.
+
++   * **Rescuing the system**—In instances where a boot loader configuration has failed, or for some reason the system will not boot, the installer can be used to boot to a rescue mode; the existing file system can then be mounted and data can be rescued or the system reconfigured to resolve the problem.
+
++   * **Specifying hardware workarounds**—Various options at the installer command line can be used to get around problematic or unsupported hardware posing an obstacle to your install.
+
++   * **Specifying an install method**—Fedora Core can be installed from a hard drive partition or over a network using FTP, NFS, HTTP, or virtual networking.
+
+See Chapter 3, "Installing Fedora," for specific details about various installer options.
+Fedora's installation process also allows you to install Linux in a variety of ways, using a text-based or graphical interface. See Chapter 2, "Preparing to Install Fedora," for some important considerations to help you prepare to install Fedora. See Chapter 3 to learn how to install using a CD-ROM/DVD, a hard drive, or a network.
+
+# # Fedora File System Features
+
+Fedora also uses the ext3 file system, developed by Dr. Stephen C. Tweedie and used by Red Hat's Enterprise Linux products. ext3 supports a form of low-level storage data handling known as journaling, previously available only under very expensive computer

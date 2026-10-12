@@ -1,0 +1,218 @@
+
+当`sendmail`启动时，它会查找你的主机名（在本例中，为`yourbox`）。然后它发现`yourbox`的IP是`127.0.0.1`，`sendmail`不喜欢这样，于是再次进行查找。它会持续进行`while`循环，直到最终放弃并退出。解决这个问题非常简单，编辑你的`/etc/hosts`文件并将其更改如下内容：
+
+```
+127.0.0.1 localhost
+10.56.142.1 yourbox
+```
+
+## 2.19 我如何配置 RedHat 使用带颜色的 `ls`？
+
+Paul Anderson, paul@geeky1.ebtech.net
+
+RedHat的发行版带有一个`color-ls`，然而，我不明白他们为什么不默认配置为彩色使用。以下是修复方法。
+
+首先，输入`eval ls='--color=yes'`
+
+接下来，设置`alias ls='--color=yes'`
+
+并将`alias...`放入你的`/etc/bashrc`中
+
+## 2.20 我如何找到 `/usr/lib` 中哪个库持有某个特定函数？
+
+Pavel Veselow, vps@unicorn.niimm.spb.su
+
+如果你在编译时漏掉了一个需要链接的库怎么办？所有的`gcc`都会报告函数名……这里有一个你需要的简单命令：
+
+```
+for i in; do echo $i;nm|grep tgetname 2>/dev/null; done
+```
+
+其中`tgetname`是你正在查找的函数名。
+
+## 3.1 在 Linux 和 Windows 之间共享交换分区。
+
+Tony Acero, ace3@midway.uchicago.edu
+
+对于除`/`以外的所有挂载文件系统，在调用`unmount -a`之前执行。这意味着如果由于某种原因，关机未能杀死所有进程并挂载了磁盘，它们在重启时仍然是洁净的。这为我节省了大量的重启时间。
+
+## 2.12 如何在你的硬盘上找到最大的文件。
+
+Simon Amor, simon@foobar.co.uk
+
+```
+ls -1 | sort +4n
+```
+
+或者，对于那些空间非常紧缺的人，这个方法需要一些时间，但效果非常棒：
+
+```
+cd /
+ls -lR | sort +4n
+```
+
+## 2.13 如何打印带有留边距以便打孔的页码。
+
+Mike Dickey, mdickey@thorplus.lib.purdue.edu
+
+```bash
+#!/bin/sh
+# /usr/local/bin/print
+# 一个简单的格式化输出，以便某人
+# 对输出进行 3 孔打孔并将其放入文件夹
+cat $1 | pr -t -o 5 -w 85 | lpr
+```
+
+## 2.14 一种在文件树中搜索特定正则表达式的方法。
+
+Raul Deluth Miller, rockwell@nova.umd.edu
+
+我将此脚本称为`forall`。使用方法如下：
+
+```
+forall /usr/include grep -i ioctl
+forall /usr/man grep ioctl
+```
+
+这里是`forall`：
+
+```bash
+#!/bin/sh
+if [ 1 = '$(expr 2 $#)' ]
+then
+	echo "Usage: $0 dir cmd [optargs]"
+	exit 1
+fi
+dir=$1
+shift
+$dir -type f -print | xargs "$@"
+```
+
+## 2. 短贴士
+
+## 2.15 一个用于清理创建自动保存和备份文件的程序的脚本。
+
+Barry Tolnas, tolnas@nestor.eng.utk.edu
+
+这是一个简单的双行命令，它可以递归进入目录层次结构，删除`emacs`自动保存（`#`）和备份（`~`）文件、`.o`和`TeX`日志文件。它还会压缩`.tex`文件和`README`文件。在我的系统中，我称之为`squeeze`。
+
+```bash
+#!/bin/sh
+# SQUEEZE 去除不必要文件并压缩 .tex 和 README 文件
+# Barry Tolnas, tolnas@suni.eng.utk.edu
+#
+echo squeezing $PWD
+find $PWD -name "*" -name *.o -name *.log -name "*" -exec rm -f {} \;
+find $PWD -name *.tex -name *README* -name readme* -exec gzip -n 9 {} \;
+```
+
+## 2.16 如何找出占用内存的进程。
+
+Simon Amor, simon@foobar.co.uk
+
+-或-
+
+`ps -aux | sort +4n`
+
+`ps -aux | sort +5n`
+
+## 2.17 为 C 语言配置 vi，
+
+Paul Anderson, Tips-HOWTO Maintainer
+
+我在空闲时间进行大量的`C`编程，我花时间将`vi`配置对`C`友好。这里是我的`.exrc`：
+
+```vim
+set autindent
+set shiftwidth=4
+set backspace=2
+set ruler
+vi +20 myfile.c
+```
+
+这有什么用？`autindent`导致第一行之后的每一行都自动缩进，`shiftwidth`设置制表距离为4个空格，`backspace`设置退格模式，`ruler`让其显示行号。记住，要跳转到特定行号（例如20），使用：
+
+## 2.18 为什么 sendsmail 在 RedHat 上启动时挂起 5 分钟？
+
+Paul Anderson, paul@geeky1.ebtech.net
+
+这是一个相当常见的问题，甚至到了常见问题解答（FAQ）的程度。我不知道RedHat是否在发行版中修复了这个错误，但你可以自己修复它。如果你查看你的`/etc/hosts`文件，你会发现类似如下的内容：
+
+`127.0.0.1 localhost yourbox`
+
+当`sendmail`启动时，它会查找你的主机名（在本例中，为`yourbox`）。然后它发现`yourbox`的IP是`127.0.0.1`，`sendmail`不喜欢这样，于是再次进行查找。它会持续进行`while`循环，直到最终放弃并退出。解决这个问题非常简单，编辑你的`/etc/hosts`文件并将其更改如下内容：
+
+```
+127.0.0.1 localhost
+10.56.142.1 yourbox
+```
+
+## 2.19 我如何配置 RedHat 使用带颜色的 `ls`？
+
+Paul Anderson, paul@geeky1.ebtech.net
+
+RedHat的发行版带有一个`color-ls`，然而，我不明白他们为什么不默认配置为彩色使用。以下是修复方法。
+
+首先，输入`eval ls='--color=yes'`
+
+接下来，设置`alias ls='--color=yes'`
+
+并将`alias...`放入你的`/etc/bashrc`中
+
+## 2.20 我如何找到 `/usr/lib` 中哪个库持有某个特定函数？
+
+Pavel Veselow, vps@unicorn.niimm.spb.su
+
+如果你在编译时漏掉了一个需要链接的库怎么办？所有的`gcc`都会报告函数名……这里有一个你需要的简单命令：
+
+```
+for i in; do echo $i;nm|grep tgetname 2>/dev/null; done
+```
+
+其中`tgetname`是你正在查找的函数名。
+
+## 3.1 在 Linux 和 Windows 之间共享交换分区。
+
+Tony Acero, ace3@midway.uchicago.edu
+
+对于除`/`以外的所有挂载文件系统，在调用`unmount -a`之前执行。这意味着如果由于某种原因，关机未能杀死所有进程并挂载了磁盘，它们在重启时仍然是洁净的。这为我节省了大量的重启时间。
+
+## 2.12 如何在你的硬盘上找到最大的文件。
+
+Simon Amor, simon@foobar.co.uk
+
+```
+ls -1 | sort +4n
+```
+
+或者，对于那些空间非常紧缺的人，这个方法需要一些时间，但效果非常棒：
+
+```
+cd /
+ls -lR | sort +4n
+```
+
+## 2.13 如何打印带有留边距以便打孔的页码。
+
+Mike Dickey, mdickey@thorplus.lib.purdue.edu
+
+```bash
+#!/bin/sh
+# /usr/local/bin/print
+# 一个简单的格式化输出，以便某人
+# 对输出进行 3 孔打孔并将其放入文件夹
+cat $1 | pr -t -o 5 -w 85 | lpr
+```
+
+## 2.14 一种在文件树中搜索特定正则表达式的方法。
+
+Raul Deluth Miller, rockwell@nova.umd.edu
+
+我将此脚本称为`forall`。使用方法如下：
+
+```
+forall /usr/include grep -i ioctl
+forall /usr/man grep ioctl
+```
+
+这里是`forall`：

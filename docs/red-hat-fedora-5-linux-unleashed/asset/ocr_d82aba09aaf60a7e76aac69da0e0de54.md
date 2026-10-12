@@ -1,0 +1,37 @@
+The **-sort** parameter allows you to reorder the output from the default alphabetical sorting. You can sort by various things, although the most popular are extension (alphabetically), size (largest first), and time (newest first). To flip the sorting (making size sort by smallest first), use the **-r** parameter also. So, this command lists all **.ogg** files, sorted smallest to largest:
+
+```
+ls -sort size -r *.ogg
+```
+
+Finally, the **-R** parameter recurses through subdirectories. For example, typing `ls /etc` lists all the files and subdirectories in `/etc`, but `ls -R /etc` lists all the files in and subdirectories in `/etc`, all the files and subdirectories in `/etc/acro`, all the files and subdirectories in `/etc/acri/webfonts`, and so on until every subdirectory has been listed.
+
+# ## Reading Manual Pages with man
+
+Time for a much-needed mental break. The man command is easy to use. Most people use only the topic argument, like this `man gcc`. However, two other commands work closely with man that are very useful — **whatis** and **apropos**.
+
+The **whatis** command returns a one-line description of another command, which is the same text you get at the top of that command’s man page. For example:
+
+```
+```\n[paul@caustin -]$ whatis ls\nls (1) - list directory contents\n```
+```
+
+The output there explains what ls does but also provides the man page section number for the command so that you can query it further.
+
+On the other hand, the **apropos** command takes a search string as its parameter and returns all man pages that match the search. For example, **apropos mixer** gives this list:
+
+```
+alsamixer (1) - soundcard mixer for ALSA soundcard driver\nmixer (1) - command-line mixer for ALSA soundcard driver\naumix (1) - adjust audio mixer
+```
+
+So, use **apropos** to help you find commands and use **whatis** to tell you what a command does.
+
+# ## Making Directories with mkdir
+
+Making directories is as easy as it sounds, although there is one parameter you should be aware of: **-p**. If you are in `/home/paul` and you want to create the directory `/home/paul/audio/sound`, you will get an error like this:
+
+```
+mkdir: cannot create directory 'audio/sound': No such file or directory
+```
+
+At first glance this seems wrong because `mkdir` cannot create the directory because it does not exist. What it actually means is that it cannot create the directory `sound` because the directory `audio` does not exist. This is where the **-p** parameter comes in: If you try to

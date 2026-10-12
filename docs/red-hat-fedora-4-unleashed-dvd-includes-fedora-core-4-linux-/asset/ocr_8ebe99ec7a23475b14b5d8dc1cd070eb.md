@@ -1,0 +1,21 @@
+You can now determine how much of your key buffer is being used by multiplying key_blocks_used by 1024, dividing by key_buffer_size, and multiplying by 100. For example, if key_blocks_used is 8000, you multiply that by 1024 to get 8192000; then you divide that by your key_buffer_size (8388600) to get 0.97656, and finally multiplying that by 100 to get 97.656. Thus, almost 98% of your key buffer is being used.
+
+Now, onto the important part: You have ascertained that you are reading lots of keys from disk, and you also now know that the reason for reading from disk is almost certainly because you do not have enough RAM allocated to the key buffer. A general rule of thumb is to allocate as much RAM to the key buffer as you can, up to a maximum of 25% of system RAM—128MB on a 512MB system is about the ideal for systems that read heavily from keys. Beyond that, you will actually see drastic performance decreases because the system has to use virtual memory for the key buffer.
+
+Open /etc/my.cnf in your text editor, and look for the line that contains key_buffer_size. If you do not have one, you need to create a new one—it should be under the line [mysqld]. When you set the new value, do not just pick some arbitrarily high number. Try doubling what is there right now (or try 16MB if there's no line already); then see how it goes. To set 16MB as the key buffer size, you would need line like this:
+
+```
+```text
+[mysqld]
+set-variable = key_buffer_size=16M
+datadir=/var/lib/mysql
+```
+```
+
+Restart your MySQL server with service mysqld restart, and then go back into MySQL and run SHOW VARIABLES again to see the key_buffer_size. It should be 16773120 if you have set it to 16M. Now, because MySQL just got reset, all its values for key hits and the like will also have been reset. You need to let it run for a while so you can assess how much has changed. If you have a test system you can run, this is the time to run it.
+
+After your database has been accessed with normal usage for a short while (if you get frequent accesses, this might be only a few minutes), recalculate how much of the key buffer is being used. If you get another high score, double the size again, restart, and retest. You should keep repeating this until you see your key buffer usage is below 50% or you find you don't have enough RAM to increase the buffer further—remember that you should never allocate more than 25% of system RAM to the key buffer.
+
+# ## Using the Query Cache
+
+Newer versions of MySQL allow you to cache the results of queries so that, if new queries come in that use exactly the same SQL, the result can be served from RAM. In some ways the query cache is quite intelligent: If, for example, part of the result changes due to another query, the cached results are thrown away and recalculated next time. However, in other ways it is very simple. For example, it uses cached results only if the new query is exactly the same as a cached query, even down to the capitalization of the SQL.

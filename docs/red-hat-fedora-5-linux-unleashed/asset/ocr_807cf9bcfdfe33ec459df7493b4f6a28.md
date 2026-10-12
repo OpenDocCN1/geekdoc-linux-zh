@@ -1,0 +1,17 @@
+kernel, network drivers, and all the other drivers and systems found in the Linux operating system. Again, these documents are usually written for programmers, but they can provide useful information to the intermediate and advanced Linux user as well.
+
+The directory named *scripts* contains many of the scripts that *make* uses. It really does not contain anything of interest to anyone who is not a programmer or a kernel developer (also known as a *kernel hacker*).
+
+After a kernel is built, all the compiled files will wind up in the *arch* directory and its subdirectories. Although you can manually move them to their final location, we will show you later in this chapter how the *make* scripts will do it for you. In the early days of Linux, this post-compilation file relocation was all done by hand; you should be grateful for *make*.
+
+> **NOTE**
+> 
+> The *make* utility is a very complex program. Complete documentation on the structure of *Makefiles*, as well as the arguments that it can accept, can be found at http://www.gnu.org/software/make/manual/make.html.
+
+The remainder of the directories contain the source code for the kernel and the kernel drivers. When you install the kernel sources, these files are placed there automatically. When you patch kernel sources, these files are altered automatically. When you compile the kernel, these files are accessed automatically. Although you never need to touch the source code files, they can be useful. The kernel source files are nothing more than text files with special formatting, which means that we can look at them and read the *programmers'* comments. Sometimes, a programmer will write an application, but cannot or often will not write the documentation. The comments he puts in the source code are often the only documentation that exists for the code.
+
+Small testing programs are even hidden in the comments of some of the code, along with comments and references to other information. Because the source code is written in a language that can be read as easily-almost-as English, a nonprogrammer might be able to get an idea of what the application or driver is actually doing (see Chapter 33, “C/C++ Programming Tools for Fedora”). This information might be of use to an intermediate-to-advanced Linux user when he is confronted with kernel- and driver-related problems.
+
+> **NOTE**
+> 
+> The interaction and control of hardware is handled by a small piece of the kernel called a *device driver*. The driver tells the computer how to interact with a modem, a SCSI card, a keyboard, a mouse, and so on in response to a user prompt. Without the device driver, the kernel does not know how to interact with the associated device.

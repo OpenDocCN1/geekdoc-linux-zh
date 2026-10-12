@@ -1,0 +1,7 @@
+Shown in Figure 9.1 are icons on the left of the top desktop panel that represent the different components of OpenOffice.org as well as other applications. From left to right, beginning with the Applications and Actions menus, the icons represent the Firefox web browser, Evolution email, OpenOffice.org Writer, OpenOffice.org Impress, and OpenOffice.org Calc. The icons displayed on your desktop might vary from those shown here. If you click the Applications icon, the main menu opens, and all the OpenOffice.org applications can be accessed from the Office menu.
+
+![](bbox=[0.19, 0.24, 0.81, 0.69])
+
+The OpenOffice.org suite provided by Fedora Core is simple to configure and use. After you configure the address book, the application is ready to go to work.
+
+As with many Linux applications, in OpenOffice.org you can be overwhelmed with configuration options. The dialog to configure those many options is well organized in the OpenOffice.org suite. From the Tools menu (which you open by selecting Tools from the menu bar in any OpenOffice.org application), you select Options to launch the Options dialog, as shown in Figure 9.2. All the settings for the entire suite of applications can be configured from this dialog, and each application provides access to this same dialog. For example, the default work path is set to your home directory, but you can change that default work path. To do so, select Tools, Options to open the dialog. Then click the Paths list item and click and edit the My Documents setting, as shown in Figure 9.2.

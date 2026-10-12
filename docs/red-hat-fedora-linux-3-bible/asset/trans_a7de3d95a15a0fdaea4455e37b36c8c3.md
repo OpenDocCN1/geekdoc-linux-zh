@@ -1,0 +1,113 @@
+
+
+# DVD 上的 Red Hat Linux 软件包
+
+Fedora Core 3 安装光盘中包含的软件包如下：
+
+-   **4Suite**：用于处理 XML 内容和对象数据库的 Python 编程工具。
+-   **a2ps**：用于将文本和其他类型文件转换为 PostScript 进行打印的工具。
+-   **abiword**：AbiWord 文字处理应用程序。
+-   **acl**：操作访问控制列表所需的实用工具。
+-   **acpid**：将 ACPI 事件分发给用户空间程序。
+-   **adjtimex**：用于调节系统时钟的 adjtimex 命令。
+-   **aikaurus***：包含英语同义词库 RPM 软件包的集合。
+-   **alchemist**：基于 XML 的应用程序配置架构后端。
+-   **alchemist-devel**：开发使用 alchemist 的程序所需的文件。
+-   **alsa-lib**：高级 Linux 声音架构 (ALSA) 库。
+-   **alsa-lib-devel**：高级 Linux 声音架构 (ALSA) 头文件。
+-   **alsa-utils**：高级 Linux 声音架构 (ALSA) 实用工具。
+-   **amanda**：amanda 具备网络功能的机器备份应用程序。
+-   **amanda-client**：用于 amanda 网络备份的客户端组件。
+-   **amanda-devel**：开发 amanda 应用程序所需的库和文档。
+-   **amanda-server**：运行 amanda 网络备份所需的服务器组件。
+-   **am-utils**：用于自动挂载文件系统的实用工具。包括 amd 守护进程。
+-   **anaconda**：Red Hat Linux 安装程序。
+-   **anaconda-help**：在 anaconda 安装程序中使用的帮助信息。
+-   **anaconda-runtime**：用于构建 Red Hat 媒体集。
+-   **anacron**：用于未每天 24 小时运行的机器的定期命令调度器。
+-   **ant**：用于构建独立于平台的 Java 应用程序的工具，适用于 Apache Jakarta 和 XML。
+-   **ant-core**：Ant 应用程序所需的核心类。
+-   **ant-devel**：Ant 应用程序的 JNI 扩展所需的头文件。
+-   **ant-optional**：可选 Ant 任务所需的头文件。
+-   **apel**：用于自定义 emacs 的可移植 emacs 库。
+-   **apel-xemacs**：一个可移植的 emacs 库。
+-   **apmd**：用于监控电池电量的高级电源管理软件。
+-   **apr**：Apache 可移植运行时库。
+-   **apr-devel**：APR 库开发工具。
+-   **apr-util**：APR 实用工具库。
+-   **apr-util-devel**：APR 实用工具库开发工具。
+-   **arptables**：控制 Linux 内核中 arplilter 网络数据包过滤代码。
+-   **arpwatch**：用于跟踪以太网/IP 地址配对的 arpwatch 实用工具。
+-   **arts**：与 KDE 3 声音系统一起使用的模拟实时合成器软件。
+-   **arts-devel**：开发使用 arts 的程序所需的库和文档。
+-   **ash**：一种轻量级 shell，类似于 UNIX System V sh (Bourne) shell。
+-   **asp2php**：将活动服务器页面转换为 PHP 格式的工具。
+-   **asp2php-gtk**：asp2php 应用程序的 gtk+ 前端界面。
+-   **aspell**：用于多种语言拼写检查的一组软件包。
+-   **aspell-devel**：开发使用 aspell 的应用程序所需的库和文档。
+-   **at**：at 和 batch 命令促进一次性、面向时间的作业控制。
+-   **atk**：为应用程序添加无障碍支持的一组接口。
+-   **atk-devel**：atk 的库、头文件和文档。
+-   **at-spi**：允许屏幕阅读器、放大镜或脚本与 GUI 控件交互。
+-   **at-spi-devel**：用于编译 at-spi 的库和头文件。
+-   **attr**：用于操作扩展文件系统属性的工具。
+-   **audit**：用于存储和处理由 2.6 内核生成的审计记录。
+-   **audiofile**：实现 SGI 音频文件库以处理音频文件的实用工具。
+-   **audiofile-devel**：与音频软件开发相关的开发工具。
+-   **aumix**：用于调整音频混合设备 (/dev/mixer) 设置的 aumix 程序。
+-   **authconfig**：用于配置系统授权资源的工具。
+-   **authconfig-gtk**：用于配置系统授权资源的图形工具。
+-   **auth**：使用 RSA 公钥加密技术获取和验证用户凭证。
+-   **autoconf**：创建脚本来制作可移植、可配置的源代码包的工具。
+-   **autoconf213**：较旧版本的 autoconf。
+-   **autoconvert**：用于转换中文 GB/GBK/Big5 编码的自动转换工具。
+-   **autoconf-xchat**：Autoconf-xchat 插件。
+-   **autofs**：通过 automount 守护进程自动挂载和卸载文件系统。
+-   **automake**：automake 制作文件生成器。
+-   **automake14**：包含在未更新为与新版本 automake 兼容的项目中。
+-   **automake15**：包含在未更新为与新版本 automake 兼容的项目中。
+-   **automake16**：包含在未更新为与新版本 automake 兼容的项目中。
+-   **automake17**：包含在未更新为与新版本 automake 兼容的项目中。
+-   **autorun**：自动检测和挂载 CD-ROM 的软件。
+-   **awsfs**：用于控制 AWE52 声音驱动的实用工具。
+-   **balsa**：balsa 电子邮件阅读器（它是 GNOME 桌面的一部分）。
+-   **basesystem**：Red Hat Linux 基础系统的一部分。
+-   **bash**：GNU Bash shell (Bourne Again Shell) 的 2.05b 版本。
+-   **bc**：bc 高精度计算器命令行实用工具和语言。
+-   **bcel**：用于处理 Java 类文件的字节码工程库 (BCEL)。
+-   **bcel-devel**：字节码工程库 (BCEL) 开发工具。
+-   **beecrypt**：通用密码学库。
+-   **beecrypt-devel**：开发使用 beecrypt 的应用程序所需的文件。
+-   **beecrypt-python**：用于开发使用 beecrypt 的应用程序的 Python 绑定。
+-   **bg5ps**：将 BIG5 编码的中文转换为可打印 PostScript 的工具。
+-   **libqc-kde**：liqc 的 KDE 前端。
+-   **libqc-qt**：liqc 的 Qt 前端。
+-   **libqc-texst**：liqc 的文本模式前端。
+-   **lvm**：Linux 的逻辑卷管理器旧版本。
+-   **magidev**：用于检测和播放音频 CD 的 magidev 守护进程。
+-   **mx4j**：支持 Java 管理扩展 (JMX) 的库。
+-   **mx4j-devel**：支持 Java 管理扩展 (JMX) 所需的头文件。
+-   **mx4j-tools**：用于 Java 管理扩展 (JMX) 的工具。
+-   **mysql**：已移除 Jdbc 和 jdbc-tomcat。
+-   **ncurses-c++-devel**：到 ncurses 的 C++ 绑定。
+-   **njamd**：用于检测内存分配错误的高级调试器。
+-   **pidentd**：用于返回身份信息的 pident 守护进程。
+-   **pilot-link095-compat**：pilot-link095 的兼容库。
+-   **polecly**：SELinux 示例策略配置。
+-   **raidtools**：用于配置 raid 文件系统设备的几个 raid 实用工具。
+-   **redhat-java-rpm-scripts**：Java 配置脚本。
+-   **rep-gtk**：rep Lisp 解释器的 GTK+ 的 rep-gtk 绑定。
+-   **sawfish**：sawfish X11 窗口管理器。
+-   **servletapi**：Jakarta Servlet 和 JSP API。
+-   **struts**：用于构建 Java Web 应用程序的框架。
+-   **struts-webapps**：使用 Struts 的示例 Web 应用程序。
+-   **system-config-proc**：这是一个用于配置操作系统可调参数的工具。
+-   **tomcat**：构成 Java Servlet 和 JavaServer Pages 参考技术的组件。
+-   **tomcat-devel**：与 Java Servlet 和 JavaServer Pages 相关的开发工具。
+-   **tomcat-libs**：与 Java Servlet 和 JavaServer Pages 相关的库。
+-   **tomcat-test**：Tomcat 技术的测试套件。
+-   **unarj**：用于解压缩 .arj 压缩归档文件的实用工具。
+-   **Wnn6-SDK**：Wnn6 客户端运行时库。
+-   **Wnn6-SDK-devel**：用于 Wnn6 客户端开发的库和头文件。
+-   **xorg-x11**：移除了一些字体，libs-data，syriac-fonts 和 truetype-font。
+

@@ -1,0 +1,66 @@
+# # Sample Configurations
+
+To help you fully understand how Squid access control works, and also to help give you a head start developing your own rules, the following are some ACL lines you can try. Each line is preceded with one or more comment lines (starting with a #) explaining what it does:
+
+```
+# include the domains news.bbc.co.uk and slashdot.org
+# and not newsimg.bbc.co.uk or www.slashdot.org.
+acl newsites dstdomain news.bbc.co.uk slashdot.org
+```
+
+```
+# include any subdomains or bbc.co.uk or slashdot.org
+acl newsites dstdomain .bbc.co.uk .slashdot.org
+```
+
+```
+# only include sites located in Canada
+acl canadasites dstdomain .ca
+```
+
+```
+# only include working hours
+acl workhours time MTWHF 9:00-18:00
+```
+
+```
+# only include lunchtimes
+acl lunchtimes time MTWHF 13:00-14:00
+```
+
+```
+# only include weekends
+acl weekends time AS 00:00-23:59
+```
+
+```
+# include URLs ending in ".zip". Note: the \ is important,
+# because "." has a special meaning otherwise
+acl zipfiles url_regex -i \.zip$
+```
+
+```
+# include URLs starting with https
+acl httpsurls url_regex -i ^https
+```
+
+```
+# include all URLs that match "hotmail"
+url_regex hotmail url_regex -i hotmail
+```
+
+```
+# include three specific IP addresses
+acl directors src 10.0.0.14 10.0.0.28 10.0.0.31
+```
+
+```
+# include all IPs from 192.168.0.0 to 192.168.0.255
+acl internal src 192.168.0.0/24
+```
+
+```
+# include all IPs from 192.168.0.0 to 192.168.0.255
+# and all IPs from 10.0.0.0 to 10.255.255.255
+acl internal src 192.168.0.0/24 10.0.0.0/8
+```

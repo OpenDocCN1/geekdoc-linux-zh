@@ -1,0 +1,43 @@
+As the MySQL monitor welcome text notes, be sure to end each command that you type with a semicolon (;) or \g. If you type a command and it appears to be waiting for more input, it's probably because you forgot to put a semicolon at the end.
+
+Before you begin using the `mysql` interface to create databases, try checking the status of the MySQL server using the status command. The following is an example of output from the status command:
+
+```
+```mysql
+mysql> status
+--------------------
+mysql  Ver 11.18_Distrib 3.23.58, for pc-linux-gnu (i686)
+Connection id:          43
+Current database:       mysql
+Current user:           root@localhost
+Current pager:          stdout
+Using outfile:          ''
+Server version:         3.23.58
+Protocol version:       10
+Connection:             localhost via UNIX socket
+Client character-set:   latin1
+Server character-set:   latin1
+UNIX socket:            /var/lib/mysql/mysql.sock
+Uptime:                 1 day 2 hours 57 min 19 sec
+
+Threads: 1  Questions: 136  Slow queries: 0  Opens: 12
+Flush tables: 1  Open tables: 6 Queries per second avg: 0.001
+--------------------
+```
+```
+
+The status information tells you about the version of the MySQL server (11.18) and the distribution (3.23.58). The output also reminds you of the current database (`mysql`) and your user name (`root@localhost`). You can see how long the server has been up (Uptime). You can also see how many threads are currently active and how many commands have been run to query this server (Questions).
+
+# ## Creating a database with mysql
+
+Within an interactive `mysql` session, you can create and modify databases and tables. If you are not already connected to a `mysql` session, type the following command (assuming the `mysql` user name of root):
+
+```
+```
+$ mysql -u root -p
+Enter password: ********
+mysql>
+```
+```
+
+The general steps for creating a MySQL database include creating the database name, identifying the new database as the current database, creating tables, and adding data to the

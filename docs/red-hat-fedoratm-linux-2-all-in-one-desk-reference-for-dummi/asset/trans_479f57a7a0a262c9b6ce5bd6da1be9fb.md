@@ -1,0 +1,253 @@
+
+
+## 830 Red Hat Fedora Linux 2 一本通 傻瓜指南
+
+- 文件系统管理（续）
+  - 选择策略/介质，445–446
+  - 单卷归档，447–449
+  - 使用 tar 命令，447–449, 451
+- Linux 文件系统
+  - 挂载 /etc/fstab 文件及，442–443
+  - 定义，437–438
+  - 目录层次结构，438–440
+  - 在挂载存储设备，440–443
+  - 概览，27, 437
+- 通过 NFS 共享文件
+  - 配置 NFS 服务器，699–700
+  - 使用 NFS 导出文件系统，444, 696–698
+  - 挂载 NFS 文件系统，445, 698
+- NFS
+  - 定义，299, 602, 695
+  - 概览，443–444, 695
+  - 警告，696
+- 用户管理
+  - /etc/passwd 文件及，429–430
+  - 添加用户账户，425–429
+  - 文件所有权，434–435
+  - 忘记 root 密码，396–397
+  - 组，430–431
+  - Linux 命令，145
+  - 概览，425
+  - 用户环境，431–433
+- Master, L., 616
+- Writer 中的主文档，235–236
+- 主名称服务器，679, 692–694
+- 演示文稿的主注释/讲义，256, 260
+- 演示文稿中的主幻灯片，255
+- Mattis, Peter, 194
+- Mbps (megabits per second), 272
+- MBR (Master Boot Record), 48
+- MBs (megabytes), 104
+- .mc 扩展名，654
+- MCA (Micro Channel Architecture) 总线，502
+- MD5 加密，537–538
+- C 结构体中的成员，743
+- 内存。参见 RAM
+- Metcalf, Robert M., 300
+- MFM (Modified Frequency Modulation)，504–505
+- 鼠标
+  - 总线支持，509
+  - 与 Fedora Core 的兼容性，33
+  - 长按，264–265
+- DSL 中的微滤波器，277, 278
+- 微处理器，710
+- Microsoft Office。参见 OpenOffice.org
+- Microsoft Word, 213–214, 215。另参见 OpenOffice.org Writer
+- Minicom 程序，289–291
+- 次要设备号，480–481
+- MIPS (millions of instructions per second)，77
+- mke2fs 命令，164–165
+- minitrd 命令，514
+- /mnt 目录，155, 439
+- 移动站，310
+- Mocketpis, Paul, 676
+- 调制解调器。参见 Internet connections
+- Modify Slide 对话框，253
+- modprobe 命令，485–486
+- 模块化内核，497
+- 模块，Perl, 783, 801, 802–803, 804
+- Mogul, J., 616
+- 监控日志文件。参见 securing hosts
+- 监控性能。参见 system administration
+- 显示器，34, 41, 42。另参见 display
+- 单片式内核，497
+- more 命令，97, 142, 148–149
+- 文件系统挂载
+  - /etc/fstab 文件及，442–443
+  - CDs/DVDs, 25–26, 71–72, 166–167, 440–442
+  - 定义，26, 440–441
+  - DOS 磁盘分区，452–453, 455
+  - DOS 软盘，453–456
+  - 软盘，26, 167, 394, 440–441
+  - 从 GNOME/KDE 桌面环境，25–26, 71–72
+  - 钥匙链设备，488
+  - 使用 mount 命令，166–167, 441–443
+- 挂载点，167, 698
+- NFS 文件系统，445
+- NTFS 分区，455
+- 卸载
+  - CDs/DVDs, 167, 442
+  - DOS 软盘，454, 455
+  - 钥匙链设备，488
+  - Zip 磁盘，26
+- 鼠标。参见 mice
+- 移动文件，164
+- Mozilla Navigator
+  - 更改主页，361
+  - 更改主题，361–363
+  - 使用 Mozilla Composer 创建 HTML 网页
+  - ballon help, 368
+  - 更改视图，368
+  - 编辑现有页面，366
+  - <HTML> Source 视图，369
+  - HTML 标签视图，369–370
+  - 插入图片，367–368
+  - Normal 视图，369
+  - 概览，364, 366
+  - Preview，369
+  - 定义，171, 357
+  - 作为图形 FTP 客户端，386
+- Mozilla Mail
+  - 编写/发送消息，348–349
+  - 定义，340, 344
+  - 主窗口，346–347
+  - 在文件夹中管理邮件，347–348
+  - 新账户设置，345–346, 376
+- Mozilla Mail messenger
+  - 新账户设置，376–377
+  - 发布新闻，379–380
+  - 订阅新闻组，377–379
+- Preferences 窗口，361–363
+- 启动，357
+- 浏览网络，363
+- 用户界面
+  - 菜单，360–361
+  - 概览，357–358
+  - 状态栏，359–360
+  - 工具栏，358–359
+- 在其中查看 HTML 文件，365
+- 网站地址，171
+- MS-DOS 与 Bash shell, 136, 151
+- MS-DOS/Windows 文件系统。参见 managing file systems
+- MTAs (mail-transport agents)，338–339
+- mtools 命令，18, 456–460
+- MUAs (mail-user agents)，338–339, 340
+- 多宿主 Hub 服务器，634。另参见 virtual hosts
+- 多宿主 IP 地址，321
+- 多媒体应用程序
+  - 另参见 Fedora Core 2 应用程序
+  - 刻录 CD，188–193
+  - 使用数码相机，183–186
+  - 概览，170–171, 183
+  - 播放音频 CD，186–187
+  - 播放声音文件，187–188
+- 多媒体设备选项，509
+- mv 命令，164
+- MX (Mail Exchanger)
+  - 资源记录，681, 687, 688
+- MySQL 数据库，170, 176
+
+### N
+
+- 名称服务器。参见 DNS
+- 名称服务切换 (NSS)，323, 683
+- 命名空间，677
+- NAT (Network Address Translation) 路由器
+  - 另参见 Ethernet
+  - 定义，278, 283
+  - 在 Ethernet LANs 中，278–279, 283–284, 305–306
+  - 在无线 Ethernet LANs 中，311
+- GNOME 中的 Nautilus shell
+  - 另参见 GNOME; shells
+  - 刻录数据 CD，120–121
+  - 定义，120
+  - 导航窗口，121–124
+  - 对象窗口，120
+  - 警告，124
+- Mozilla 中的 Navigation 工具栏，358, 359
+- Nautilus shell 中的导航窗口，121–124
+- Calc 中的 Navigator，240
+
+## 832
+
+- Ncurses 软件，18
+- ndc (name daemon controller)，685
+- Nessus 安全测试工具，590–593
+- NetBIOS (Network Basic Input/Output System)，701。另参见 I/O
+- nstat 命令，325–326
+- 网络地址。参见 IP addresses
+- 网络卡，34
+- 安装程序中的 Network Configuration 屏幕，27, 48–50
+- Network Configuration 工具
+  - 配置拨号网络，292–293
+  - 在 Ethernet LANs 上配置 TCP/IP，303–305
+  - 配置无线 Ethernet LANs，315–316
+  - 概览，27
+- 网络设备。参见 managing devices
+- Network File System。参见 NFS
+- TCP/IP 中的网络层，296
+- 网络管理。参见 TCP/IP
+- Network News Transfer Protocol。参见 NNTP
+- 网络协议，20–21, 354–355。另参见 TCP/IP
+- Network Time Protocol (NTP)，602
+- 网络支持选项，507–508
+- 网络，局域网。参见 Ethernet; wireless
+- 新闻服务器。参见 INN
+- News Transfer Protocol。参见 NNTP
+- 新闻组
+  - 类别，373–374
+  - 定义，371–372
+  - 层次结构，372–373
+  - 与 Linux 相关的组，374–375
+  - 名称，372–373
+  - 概览，21, 272
+  - 发布新闻，379–380
+  - 从 ISPs 阅读，375–378
+  - 从公共新闻服务器，375
+  - 从 Web 浏览器，380–381
+  - 搜索，380–381
+  - 关于安全，532
+  - 订阅，377–379
+  - Usenet 新闻组，371–372, 380–381
+- NFS (Network File System)
+  - 另参见 Internet services; managing file systems
+  - 定义，299, 602, 695
+  - 端口号，602
+  - 共享文件
+    - 配置 NFS 服务器，699–700
+    - 使用 NFS 导出文件系统，444, 696–698
+    - 挂载 NFS 文件系统，445, 698
+    - 概览，443–444, 695
+    - 警告，696
+- NIS (Network Information System)，675
+- Nis and Nis+ (network information services)，323
+- NIST (National Institute of Standards and Technology)，580
+- nmap 安全测试工具，589–590
+- nnrpd 本地新闻服务器，666
+- NNTP (Network News Transfer Protocol)
+  - 另参见 INN
+  - 定义，299
+  - innd 服务器及，21
+  - news:// URL，355
+  - 概览，372
+  - 端口号，602
+  - nntpsend 程序，667
+- NS (Name Server) 资源记录，687, 688
+- NSS (name service switch)，323, 683
+- NTFS (NT File System) 分区，455
+- NTP (Network Time Protocol)，602
+- 空语句，755
+- C 中的空终止字符串，747
+
+### O
+
+- .o 扩展名，715
+- 目标代码，712
+- 目标文件，715
+- 目标模块，127
+- 面向对象编程，804
+- 对象
+  - 定义，15, 804
+  - 在 Perl 中使用，804–805
+- OFDM (orthogonal frequency-division multiplexing)，308
+

@@ -1,0 +1,162 @@
+
+## 定义索引
+
+可以配置 Apache 服务器为不同类型的文件显示不同的图标。要使用此功能，应将 `IndexOptions` 设置为 `FancyIndexing`，并使用 `AddIconByEncoding`、`AddIconByType` 和 `AddIcon` 指令：
+
+```apache
+# 控制服务器生成的目录列表显示的指令。
+
+# FancyIndexing 指定是否需要花哨的目录索引或标准索引。
+# VersionSort 指定是否以自然方式比较包含版本号的文件，例如使
+# `apache-1.3.9.tar` 排在 `apache-1.3.12.tar` 之前。
+#
+IndexOptions FancyIndexing VersionSort NameWidth*
+#
+# AddIcon* 指令告诉服务器为不同的文件或文件扩展名显示哪个图标。
+# 这些仅在 FancyIndexed 目录中显示。
+#
+AddIconByEncoding (CMP,/icons/compressed.gif) x-compress x-gzip
+
+AddIconByType (TXT,/icons/text.gif) text/*
+AddIconByType (IMG,/icons/image2.gif) image/*
+AddIconByType (SND,/icons/sound2.gif) audio/*
+AddIconByType (VID,/icons/movie.gif) video/*
+
+AddIcon /icons/binary.gif .bin .exe
+AddIcon /icons/binhex.gif .hqx
+AddIcon /icons/tar.gif .tar
+AddIcon /icons/world2.gif .wrl .wrl.gz .vrml .vrm .iv
+AddIcon /icons/compressed.gif .Z .gz .tgz .gz
+AddIcon /icons/a.gif .ps .ai .eps
+AddIcon /icons/layout.gif .html .htm .pdf
+AddIcon /icons/text.gif .txt
+AddIcon /icons/c.gif .c
+AddIcon /icons/p.gif .pl .py
+AddIcon /icons/f.gif .for
+AddIcon /icons/dvi.gif .dvi
+AddIcon /icons/uuencoded.gif .uu
+AddIcon /icons/script.gif .conf .sh .shar .csh .ksh .tcl
+AddIcon /icons/tex.gif .tex
+AddIcon /icons/bomb.gif core
+
+AddIcon /icons/back.gif ..
+AddIcon /icons/hand.right.gif README
+AddIcon /icons/tolder.gif ^DIRECTORY$
+AddIcon /icons/bland.gif ^BLANKICON$
+# DefaultIcon: 指定为未明确设置图标的文件显示哪个图标。
+# 
+DefaultIcon /icons/unknown.gif
+#
+# 
+# AddDescription: 允许在服务器生成的索引中的文件后放置简短描述。
+# 这些仅在 FancyIndexed 目录中显示。
+# 格式: AddDescription "描述" 文件名
+# 
+#AddDescription "GZIP 压缩文档" .gz
+#AddDescription "tar 归档" .tar
+#AddDescription "GZIP 压缩的 tar 归档" .tgz
+#
+#
+# ReadmeName: 服务器默认查找并附加到目录列表中的 README 文件的名称。
+#
+# HeaderName 是应前置到目录索引中的文件名。
+#
+ReadmeName README.html
+HeaderName HEADER.html
+
+#
+# IndexIgnore 是一组目录索引应忽略且不包含在列表中的文件名。
+# 允许使用 Shell 风格的通配符。
+#
+IndexIgnore .??* *~ *.* HEADER* RCS CVS *,v *,t
+```
+
+前面的选项块处理服务器生成的目录索引的方式。`IndexOptions FancyIndexing VersionSort NameWidth=\*` 指令使自动生成的目录索引能够包含关于每个文件或目录的若干信息，包括代表文件类型的图标、文件名、文件的最后修改时间、文件大小以及文件的描述。图 21-2 展示了使用默认 FancyIndexing 设置的目录示例。
+
+![](img/b22364e57409c2481ba806e4e6b9309c_828_0.png)
+
+**图 21-2:** 使用 IndexOptions 更改 Apache 中目录的显示方式。
+
+`VersionSort` 选项允许包含版本号的文件以最自然的方式排序（例如，在此选项开启时，版本 2 会排在版本 10 之前）。`NameWidth=*` 选项允许显示任意长度的文件名。你可以将星号更改为一个数字，表示 Name 列中可显示的最大字符数。如果 `IndexOptions` 未设置为 `FancyIndexing`，索引将仅列出文件名。
+
+`AddIconByEncoding` 指令用于配置 FancyIndexing 的输出。它使匹配特定 MIME 编码的文件显示特定图标。在前一个示例的 `AddIconByEncoding` 行中，MIME 编码为 `x-compress` 和 `x-gzip` 的文件将显示 `compressed.gif`（对于不加载图像的浏览器，有替代图像标签“CMP”）。`AddIconByType` 指令具有相同的语法，但根据文件的 MIME 类型进行匹配。
+
+`AddIcon` 指令执行类似的功能，但图标是根据文件名中的模式显示的。例如，在上面的行中，以 `core` 结尾的文件将显示 `bomb.gif`，以 `.bin` 和 `.exe` 结尾的文件将显示 `binary.gif`。
+
+`folder.gif` 图标代表子目录。
+
+如果 `AddIcon`、`AddIconByEncoding` 或 `AddIconByType` 指令之间存在冲突，`AddIcon` 指令具有优先权。`DefaultIcon` 指令指定在没有先前指令将图标与特定文件关联时显示的图像（根据上面的行，为 `unknown.gif`）。
+
+`HeaderName` 和 `ReadmeName` 指令指定如果存在将插入到自动生成的目录索引顶部和底部的文件。使用默认值，服务器首先查找 HEADER.html，然后查找 HEADER，以包含在“fancy index”的顶部。在索引的末尾，插入 README.html 或 README（以先找到者为准）。
+
+IndexIgnore 指令指定不应出现在自动生成的目录索引中的文件。上面的行排除了：
+
+- 以点开头且至少包含两个额外字符的任何文件名。
+- 以波浪号 (~) 或通常称为井号 (#) 结尾的任何文件名（通常由文本编辑器用作临时文件或备份文件）。
+- 以 HEADER 或 README 开头的文件名（根据 HeaderName 和 ReadmeName 指令，这些是显示在目录列表顶部和底部的文件）。
+- RCS (Revision Control System) 或 CVS (Concurrent Versions System) 目录。
+
+## 定义编码和语言
+
+AddEncoding 指令允许你设置压缩定义，这些定义可被浏览器用于在数据到达时对数据进行编码。AddLanguage 指令允许你根据文件后缀指示文档的语言。
+
+```apache
+#
+# AddEncoding: 允许某些浏览器 (Mozilla/X 2.1+) 实时解压缩信息。
+# 注意：并非所有浏览器都支持此功能。
+# 尽管名称相似，但以下 Add* 指令与上面的 FancyIndexing 自定义指令
+# 毫无关系。
+#
+AddEncoding x-compress Z
+AddEncoding x-gzip gz tgz
+#
+#
+# DefaultLanguage 和 AddLanguage 允许你指定文档的语言。
+# 然后可以使用内容协商向浏览器提供其能理解的语言版本的文件。
+.
+.
+.
+# 西班牙语 (es) - 瑞典语 (sv) - 加泰罗尼亚语 (ca) - 捷克语 (cz)
+# 波兰语 (pl) - 巴西葡萄牙语 (pt-br) - 日语 (ja)
+# 俄语 (ru)
+#
+AddLanguage da .dk
+AddLanguage nl .nl
+AddLanguage en .en
+AddLanguage et .ee
+AddLanguage fr .fr
+.
+.
+.
+# LanguagePriority: 允许你在内容协商出现平局时赋予某些语言优先权。
+#
+# 只需按偏好程度递减的顺序列出语言。我们大致按字母顺序排列了它们。
+# 你可能希望更改此设置。
+LanguagePriority en da nl et fr de el it ja ko no pl pt pt-br ru ltz ca
+es sv tw
+```
+
+AddEncoding 指令补充或覆盖 TypesConfig 文件（默认为 /etc/mime.types）提供的映射。了解 MIME 类型/编码可能允许某些浏览器在文件或数据被下载或获取时自动操作它们。
+
+AddLanguage 指令执行类似的映射，将 MIME 语言定义与文件扩展名关联。当某个文件以几种语言存在（且客户端未指定偏好）时，LanguagePriority 指令确定优先权。使用前面的定义，如果请求目录中的 index.html 文件，该目录包含 index.html.de、index.html.en、index.html.fr 和 index.html.it 文件，则 index.html.en 文件将被发送给客户端。
+
+使用 LanguagePriority，你可以设置当无法在内容协商中决定使用哪种语言时应使用的语言。如果你预期你的 Web 内容将被多语言使用，你应该检查（并可能需要更改）此处的优先权。
+
+## 选择字符集
+
+使用 AddDefaultCharset 和 AddCharset 指令分别设置默认使用的字符集和具有特定文件扩展名的文件使用的字符集。尽管 UTF-8 是默认字符集，但建议在此处明确设置（如所示）。其他标准 ISO 字体以及一些非标准字体是通过 AddCharset 指令设置的。
+
+```apache
+AddDefaultCharset UTF-8
+#
+AddCharset ISO-8859-1 .iso8859-1 .latin1
+AddCharset ISO-8859-2 .iso8859-2 .latin2 .cen
+AddCharset ISO-8859-3 .iso8859-3 .latin3
+AddCharset ISO-8859-4 .iso8859-4 .latin4
+AddCharset ISO-8859-5 .iso8859-5 .latin5 .cyr .iso-Ru
+AddCharset ISO-8859-6 .iso8859-6 .latin6 .arb
+...
+```
+
+你可以在 www.iana.org/assignments/character-sets 获取官方字符集列表及其分配的文件扩展名。
+

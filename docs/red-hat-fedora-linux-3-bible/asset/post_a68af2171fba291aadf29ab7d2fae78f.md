@@ -1,0 +1,147 @@
+
+## Appendix B: Fedora Core 3 RPMs
+
+- isdn4k-utils-vboxgetty: The vboxgetty and vboxputty tools used with ISDN voice box.
+- isicom: Utilities for loading Multitech Intelligent Serial Internal data files.
+- jadetex: The jadetex and ptjadetex commands to work with DSSSL documents.
+- jaf: Files to support JavaBeans Activation Framework (JAF).
+- jaf-devel: Development tools related to JavaBeans Activation Framework (JAF).
+- jcode.pl: A perl library for Japanese character code conversion.
+- jed: The jed text editor, based on the slang screen library.
+- jfsutils: Utilities for managing a JFS file system.
+- jiksup14: 14 dots jis auxiliary kanji font.
+- jiksup16: 16 dots jis auxiliary kanji font.
+- jlex: Lexical Analyzer Generator for Java.
+- jlex-devel: Contains the headers required to develop (CNI) extensions for Jlex.
+- joe: The joe modeless text editor that uses Borland WordStar keybindings.
+- joystick: Utilities for attaching and configuring a joystick.
+- jpackage-utils: Utilities for the JPackage Project.
+- jpilot: A desktop organizer application for the Palm Pilot.
+- junit: Framework for unit testing in Java.
+- junit-devel: Headers needed by CNI extensions to junit.
+- jwhois: Whois client for whois and finger-style queries.
+- k3b: KDE graphical utility for burning CDs and DVDs.
+- kakasi: Japanese character converter that sets Kanji to Hiragana, Katakana, or Romaji.
+- kakasi-devel: The header and library files for developing applications that use Kakasi.
+- kakasi-dict: The base Kakasi dictionary.
+- kappa20: Japanese fonts in 20pt.
+- katanax*: Scripts used to perform tasks for rpm packages with Java libraries and executables.
+- kbd: Utilities for configuring the system console.
+- kcc: A Kanji code converter.
+- kdbg: The KDE graphical front-end for the Gnu debugger (gdb).
+- kdeaddons: K Desktop plug-ins Konqueror, noatun, and Kite.
+- kdeaddons-AtlantikDesigner: Game board designer for Atlantik.
+- kdeaddons-xmms: Contains tools for controlling media players.
+- kdeadmin: Tape backup, user administration, and other system tools for KDE.
+- kdeartwork: Additional artwork (themes, sound themes, and so on) for KDE.
+- kdeartwork-icons: Icon themes (Kdeclassic, slick, and so on) for KDE.
+- kdebase: Basic KDE tools such as kwm, kfm file manager, and konsol.
+- kdebindings: KDE bindings to non-C++ languages.
+- kdebindings-devel: Development files for kdebindings.
+- kdeedu: Eduainment applications for KDE.
+- kdeedu-devel: Development libraries for KDE edutainment applications.
+- kdgames: KDE games such as kasteroids, kblackbox, and ksmiletris.
+- kdgames-devel: Libraries enabling the creation of games for KDE.
+- kdegraphics: Graphical applications for the K Desktop environment.
+- kdegraphics-devel: Development tools for KDE application development.
+- kde-i18n*: A set of packages providing support for various human languages.
+- kdlibs: Libraries needed by the K Desktop Environment.
+- kdlibs-devel: Tools and documentation for developing KDE desktop applications.
+- kdemultimedia: KDE multimedia applications.
+- kdemultimedia-devel: KDE multimedia application development libraries.
+- kdenetwork: Networking applications for the K Desktop environment.
+- kdenetwork-devel: Libraries to develop KDE networking applications.
+- kdenetwork-nowlistening: Xmms plugin for Kopete.
+- kdepim: A set of personal information management (PIM) tools for the KDE desktop.
+- kdepim-devel: Libraries needed to develop applications that use kdepim.
+- kdesdk: KDE software development kit.
+- kdesdk-devel: Development libraries for the KDE software development kit.
+- kdetour: Utilities, such as kmoon (moon phases) and kworldwatch (watch timezones).
+- kdesktop: K desktop utilities.
+- kdeutils-devel: KDE utility development libraries.
+- kdevoxel: Development tools to create applications with consistent KDE interfaces.
+- kernel-2.6.*: The Linux kernel for various types of CPU.
+- kernel-doc: Documentation files that come with parts of the Linux kernel source code.
+- kernel-smp-*: The symmetric multiprocessing Linux kernel version for various CPUs.
+- kernel-source: The source code files that are used to build the Red Hat Linux kernel.
+- kernel-utils: Several utilities to control the Linux kernel or the computer’s hardware.
+- kinput2-canna-wnn6: Server for X programs needing Canna or Wnn6 Japanese-text.
+- knn new: A Kanne-code font.
+- koffice: A set of office productivity applications.
+- koffice-devel: Files needed to develop plug-ins for KOffice.
+- koffice-i18n: Internationalization support for KOffice.
+- kon2: A Kanji emulator for the console.
+- kon2-fonts: Fonts for kon.
+- krb5-auth-dialog: Produces warning when Kerberos tickets are about to expire and provides renewal.
+- krb5*: Packages used to provide support for Kerberos authentication methods.
+- krbafs*: The krbafs library, with support for AFS tokens with Kerberos 5 credentials.
+- kudzu: The kudzu hardware autodetection and configuration utilities.
+- kudzu-devel: Header files used to create kudzu applications.
+- lam: Local Area Management (LAM) tools for managing clusters of network computers.
+- lapack: The Linear Algebra Package (LAPACK) to solve simultaneous linear equations.
+- less: Text browser, similar to more, but better.
+- lesstif: A free version of OSF/Motif, providing a set of widgets to develop applications.
+- lesstif-devel: Library and header files to develop Motif-I.2-based programs for LessTif.
+- lftp: A sophisticated ftp/http file transfer program.
+- lha: An archiving and compression utility for LHarc format archives.
+- libacl: Dynamic library for access control list support.
+- libacl-devel: Static libraries and headers for developing applications that use ACLs.
+- libao: A Linux-native asynchronous I/O-access library.
+- libao-devel: Development files creating applications that support libao.
+- libao: A cross-platform audio output library.
+- libao-devel: Header files and documentation needed to develop applications with libao.
+- libart_lgl: Graphic routine library used by libgnomecanvas.
+- libart_lgl-devel: Libraries and headers needed to compile libart_lgl.
+- libattr: Dynamic library for filesystem extended attributes.
+- libattr-devel: Libraries for developing programs that use extended filesystem attributes.
+- libcap1394: Firewire control library.
+- libcap1394-devel: Libraries required to build applications that use firewire devices.
+- libibtt: Library for the GNOME Bluetooth Subsystem.
+- libbonobo: Corba-based component system for the GNOME desktop.
+- libbonobo-devel: Development libraries and headers for building bonobo applications.
+- libbonoboui: User interface components for bonobo applications.
+- libbonoboui-devel: Header files needed to compile applications that use libbonoboui.
+- libcap: A library for getting and setting POSIX 1e capabilities.
+- libcap-devel: Headers and libraries needed for developig applications that use libcap.
+- libcapplet0: GNOME I control center library compatibility package.
+- libcapplet0-devel: Header files for GNOME I control center library compatibility.
+- libcroco: A CSS2 parsing library.
+- libdbi: The C independent abstraction layer allowing multiple database connections.
+- libdbi-dbd-*: Libdbi support for various databases.
+- libdbi-devel: Development files needed to create applications that use libdbi.
+- libesmtp: A library that manages the posting of e-mail using SMTP.
+- libesmtp-devel: Development tools needed to develop applications using libesmtp.
+- libexif: EXIF image tag library.
+- libexif-devel: The files needed for libexif application development.
+- libf2c: Fortran 77 runtime libraries.
+- libgal-gnome: GAIL accessibility implementation for GTK+ and GNOME.
+- libgal2: A variety of GNOME widget functions and utilities.
+- libgee: GCC version 3.4 exception handling library.
+- libgcj: The Java runtime library for gcc.
+- libgcj-devel: Development tools associated with the Java runtime library for gcc.
+- libgcrypt: General-purpose crypto library based on GPG.
+- libgcrypt-devel: Development tools for libgcrypt.
+- libgda: Simplifies the writing of gnome database programs.
+- libgda-devel: Needed libraries for libgda.
+- libgfortran: Enables Fortran 95 compiled applications with libgda.
+- libhttp: GNOME http client library for making HTTP 1.1 requests.
+- libhttp-devel: Library and header files for libhttp development.
+- libglade: Libraries that can be used to create GLADE user interface applications.
+- libglade-devel: Tools and documentation for developing GLADE applications.
+- libglade2: The libglade library for loading user interfaces from XML descriptions.
+- libglade2-devel: Tiles needed to develop applications that use libglade.
+- libgnat: GNU Ada 95 runtime shared libraries.
+- libgnome: GNU Object Model Environment (GNOME) base libraries.
+- libgnomecanvas: Library for creating custom displays using common widgets.
+- libgnomecanvas-devel: Libraries and headers for libgnomecanvas development.
+- libgnomecups: GNOME library for CUPS integration.
+- libgnomecups-devel: GNOME library for CUPS integration (development files).
+- libgnomedb: Simplifies the writing of gnome database programs.
+- libgnomedb-devel: Needed libraries for writing and compiling libgda programs.
+- libgnome-devel: Libraries and headers for libgnome development.
+- libgnomeprint15: Components needed to support GNOME printing.
+- libgnomeprint22: GNOME printing library.
+- libgnomeprint22-devel: Libraries for developing printing in GNOME applications.
+- libgnomeprintui22: GUI support for libgnome print.
+- libgnomeprintui22-devel: Libraries for compiling libgnomeprintui applications.
+- libgnomeui: GNOME-based GUI library.

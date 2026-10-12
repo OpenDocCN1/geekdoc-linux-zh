@@ -1,0 +1,135 @@
+
+- 汇编编码者的 `hornet.eng.ufl.edu` `http://www.eng.ufl.edu/ftp/`
+
+- `ftp.luth.se` `<ftp.luth.se/pub/msdos/demos/code/`
+
+- `PM FAQ` `http://zfja-gate.fuw.edu.ru/pl/cu/protect.mod`
+
+- `8086 汇编页` `http://www.fys.ru/naber/Amain.html`
+
+- `课程软件` `http://www.cit.ac.nz/smac/courseware.htm`
+
+- `游戏编程` `http://www.ee.ucl.ac.uk/part/gameprog.html`
+
+- `仅使用汇编的 Linux 编程实验` `http://bewoner.dma.be/JanW`
+
+- 当然，请尽管使用你的互联网搜索工具寻找更多信息，并告诉我发现的任何有趣内容！
+
+作者 `.sig`：
+
+> ---
+
+`-- Fare -- rideau@clipper.ens.fr -- Francois-Rideau --`
+
+加入 `TUNES` 项目，构建基于自由的计算系统！`TUNES` 是一个实用的、快捷的系统
+
+网页：
+
+ 1580
+
+# 目录
+
+第一种设置较简单，但仅适用于良好的代码，这些代码不会进行任何形式的段算术或绝对段寻址（特别是对段 `0` 的寻址），除非所有使用的段都可以预先在 `LDT`（本地描述表）中设置好。
+
+后者与原生 `16` 位环境具有更好的“兼容性”，但需要更复杂的处理。
+
+在这两种情况下，在你跳转到 `16` 位代码之前，你必须：
+
+- 从 `/dev/mem` 将 `16` 位代码中使用的任何绝对地址（如 `ROM`、视频缓冲区、`DMA` 目标和内存映射 `I/O`）`mmap` 到你的进程地址空间，
+
+- 设置 `LDT` 和/或 `vn86` 模式监控器。
+
+- 从内核获取适当的 `I/O` 权限（见上节）。
+
+再次，请仔细阅读上述贡献给 `DOSEMU` 仓库的源码，特别是这些用于在 `Linux/i386` 上运行 `ELKS` 和/或简单 `COM` 程序的微型模拟器。
+
+## 5.2 `DOS`
+
+大多数 `DOS` 扩展程序都带有某些指向 `DOS` 服务的接口。阅读关于它们的文档，但通常，它们只是模拟了 `int $0x21` 等，所以你“就像”处于实模式中一样（我怀疑它们没有比存根更多的东西，并扩展了这些内容以处理 `32` 位操作；它们可能只是将中断反射到实模式或 `vn86` 处理程序）。
+
+关于 `DMI` 以及（以及更多）的文档可以在 `<http://xzftp.ololu.fi/pub/mdos/programming/` 处找到。
+
+`DJGPP` 自带了对我们来说是（有限的）`glibc` 派生/子集/替代品。
+
+可以从 `Linux` 交叉编译到 `DOS`，请查看你 `sunsite.unc.edu` 本地 `FTP` 镜像的 `devel /msdos/` 目录。另查看来自 `Utah Flux` 项目的 `MOSS` 扩展。
+
+其他文档和常见问题解答（`FAQs`）更关注 `DOS`。我们不推荐 `DOS` 开发。
+
+## 5.3 `Winblows` 与成功
+
+嘿，这只涵盖免费软件。当 `Winwins` 变得免费时，或者当为它提供了免费的开发工具时，给我打电话！
+
+好了，之后 `Cygnus Solutions` `<http://www.cygnus.com>` 开发了 `cywin32.dll` 库，供 `GNU` 程序在 `MacroSoft` 平台上运行。然后，你可以使用 `GCC`、`GAS`、所有的 `GNU` 工具以及许多其他应用程序。看看他们的首页。（我，`Fare`）并不打算扩展 `Losedose` 编程，我确信你随处都能找到关于它的文档……
+
+## 5.4 真正属于你自己的 `OS`
+
+控制了吸引许多程序员学习汇编的因素，以及 `OS` 开发中哪些部分导致了或源于汇编黑客行为。请注意，任何允许自开发的系统都可以被称为“`OS`”，即使它运行在底层系统的多任务处理或 `I/O` 之上（如运行在 `March` 之上的许多 `Linux` 或运行在 `Unix` 之上的 `OpenGener`），等。为了方便调试，你可能希望先作为一个运行在 `Linux` 上的进程来开发你的“`OS`”（尽管速度很慢），然后使用 `Flux OS` 工具包 `<http://www.edu/projects/flux/`（它允许在你的自己的 `OS` 中使用 `Linux` 和 `BSD` 驱动程序）使其成为独立系统。当你的 `OS` 稳定后，如果你真的喜欢，仍然有时间编写你自己的硬件驱动程序。
+
+本 `HOWTO` 本身不会涵盖诸如引导加载器代码和进入 `32` 位模式等主题。处理中断。关于“保护模式”或“`V86/R86`”的基础知识，定义你的对象格式和调用约定。寻找所有这些内容的可靠信息的主要地方是现有 `OS` 和引导加载器的源代码。许多指针位于以下 `WWW` 页面：`<http://www.elevens.ens.fr:8080/home/rideau/Tunes/Review/Os.html>`
+
+## 6. 待事项与指针
+
+- 填充不完整的章节
+
+- 添加更多指向软件和文档的指针
+
+- 添加现实生活中的简单示例来说明每个建议解决方案的语法、功能和局限性。
+
+- 请求人们帮助本 `HOWTO`
+
+- 找一个有时间接手维护的人
+
+- 也许为其他平台上的汇编写几句话？
+
+- 一些指针（除 `HOWTO` 其他部分已有的外）
+    - `Pent` 手册 `http://www.intel.com/design/pentium/manuals/`
+    - `x86` 家族中的 `CPU` 错误 `http://www.zs4all.in/feldmann`
+    - 汇编编码者的 `hornet.eng.ufl.edu` `http://www.eng.ufl.edu/ftp/`
+    - `ftp.luth.se` `<ftp.luth.se/pub/msdos/demos/code/`
+    - `PM FAQ` `http://zfja-gate.fuw.edu.ru/pl/cu/protect.mod`
+    - `8086` 汇编页 `http://www.fys.ru/naber/Amain.html`
+    - 课程软件 `http://www.cit.ac.nz/smac/courseware.htm`
+    - 游戏编程 `http://www.ee.ucl.ac.uk/part/gameprog.html`
+    - 仅使用汇编的 `Linux` 编程实验 `http://bewoner.dma.be/JanW`
+
+- 当然，请尽管使用你的互联网搜索工具寻找更多信息，并告诉我发现的任何有趣内容！
+
+作者 `.sig`：
+
+> ---
+
+`-- Fare -- rideau@clipper.ens.fr -- Francois-Rideau --`
+
+加入 `TUNES` 项目，构建基于自由的计算系统！`TUNES` 是一个实用的、快捷的系统
+
+网页：
+
+## `libc-5.2.18.tar.gz`
+
+- 上述源码。你还需要用于头文件的 `.bin` 包。如果你正在考虑自己编译 `C` 库或使用二进制文件，在所有情况下，正确的答案都是使用二进制文件。但是，如果你需要 `NYS` 或 `shadow` 密码支持，你就需要自己构建。
+
+## `libc-4.7.5.bin.tar.gz`
+
+针对 `C` 库 `4.75` 版本的 `a.out` 共享库镜像和静态库。它设计用于与上述的 `libc 5` 包共存，但只有在你希望继续使用/开发 `a.out` 格式的程序时，才是真正必要的。
+
+## 2.5 相关工具 (`as`, `ld`, `ar`, 等)
+
+从 `tsx-11` `<http://txs-11.mit.edu/pub/linux/packages/GCC/>` 获取，与目前为止其他内容都一样。当前版本是 `binutils-2.6.0.2.bin.tar.gz`。
+
+注意，`binutils` 仅提供 `ELF` 格式，当前的 `libc` 版本是 `ELF`，目前的 `libc` `C` 库开发正坚定地向 `ELF` 发展，除非你有充分的理由需要 `a.out` 相关内容，否则建议你随之改变。
+
+## 3 `GCC` 安装与设置
+
+### 3.1 `GCC` 版本
+
+你可以通过在 shell 提示符输入 `gcc -v` 来查看你运行的 `GCC` 版本。这也是一种判断你是否已配置好 `ELF` 或 `a.out` 的相当可靠的方法。在我的系统上是这样的：
+
+```
+$ gcc -v
+Reading specs from /usr/lib/gcc-lib/i486-box-linux/2.7.2/specs
+gcc version 2.7.2
+```
+
+这里需要注意的关键点是：
+
+- `i486`。这表明你使用的 `gcc` 是为 `486` 处理器构建的 —— 你可能用的是 `386` 或 `586`。这些芯片都可以运行为其他任一芯片编译的代码；区别在于 `486` 在某些地方添加了一些填充（`padding`），因此在 `486` 上运行得更快。这对 `386` 的性能没有负面影响，但会让二进制文件略变大。

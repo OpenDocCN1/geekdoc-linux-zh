@@ -1,0 +1,332 @@
+
+## G
+
+- gtk-convertors file structures, 658
+- system logging directives, 654-655
+- system notification directives, 650-653
+
+- ftpconversions file, 646, 660
+- ftpcopy command, 667
+- ftpcount command, 662
+- ftpd command, 662
+- ftphosts file, 646
+- ftprestart command, 662, 665
+- ftpshut command, 662
+- FTP server, absorbing downtime, 664
+  - magic replies, 662
+- ftpusers file, 648
+- ftpwho command, 662
+- ftpwho fields, 662
+- full backups, 429
+  - incremental backups, 428, 429
+  - partially true, 428
+  - tar command, 433
+- full newsfeed news servers, 754
+- fully qualified domain names (FQDNs), 709
+- functions. See also specific functions
+  - class methods, 861
+  - defined, 846
+  - Python, 862, 863
+  - shell scripts, 409-410
+- fwrite() function, 835
+
+- video-driver installation, 316-317
+- Wolfenstein: Enemy Territory installation, 321
+- gatekeepers, 238
+- gateways, 468
+- Gatos Project, 277
+- gcc command, 854, 859, 985
+- gdb command, 853-854, 859
+- gdm (GNOME display manager), 180-181
+- gdmtopup client, 180, 190
+- GECOS field (/etc/passwd files), 336
+- gedit (text editor), 150
+- general purpose mouse (gpm), 95, 135-136
+- get command, 626
+- GetCodings, 280
+- getlist file, 755
+- GFTP (Graphical File Transfer Protocol), 633-634, 667
+- Ghostscript, 301, 306-307
+- GIDs (Group IDs), 327
+- .gif graphics file format, 296
+- Gigabit Ethernet, 465
+- GIMP (GNU Image Manipulation Program), 255, 261, 287-288, 299
+  - compared to Photoshop, 288
+  - GTK (Gimp Tool Kit) widget set, 254
+  - local directory, 288
+  - menu navigation, 288
+- Glade, 857-858
+- glade-2 command, 859
+- global-level privileges (MySQL), 580
+- global options (Fetchmail), 681-682
+- [global] section (/etc/samba/smb.conf file), 598-599
+- GMT (Greenwich mean time), 72
+- Gnome-CD, 275
+- GNOME desktop environment, 180-181, 187-188, 254-256
+  - Balsa, 219
+  - C/C++ programming, 847, 857-858
+  - configuring, 188
+  - Epiphany, 214
+  - File Roller, 435-436
+
+- g3 graphics file format, 296
+- GAIM instant messaging client, 237
+- games
+  - America's Army, 316
+  - Caeluga, 316, 322
+  - DOOM, 317-318
+  - informational websites, 322
+  - Maelstrom, 316
+  - Quake installation, 320
+  - types of, 315
+  - Unreal Tournament installation, 319-320
+
+- GAIM, 237
+- Glade, 857-858
+- Gnome Meeting, 237, 290
+- mailing lists, 998
+- menu editing, enabling, 276
+- Nautilus, 635
+- optimizing, 881
+- Pan, 228-230
+- **gnome-lookit command**, 504, 874
+- **gnome-mouse-properties command**, 92, 94
+- **gnome-nettool tool**, 420
+- **gnome-panel-screenshot utility**, 298
+- **gnome-system-monitor tool**, 420
+- Gnome Meeting, 237, 290
+- GNU C++ compiler, 854
+- Gnumeric, 255, 261
+- gocr client, 294
+- Google, 36, 984, 991
+- Gotmail, 686
+- **gpasswd command**, 330-331
+- **gphoto2 client**, 22
+- **gpm (General Purpose Mouse)**, 95, 135-136
+- **gromit-annotation command**, 136
+- **gprof command**, 853, 859
+- **gview command**, 299
+- grabbers, 280
+- grabbing mode (webcams), 289
+- Gracenote CDD Music Recognition Service, 269
+- Grand Unified Boot Loader. See GRUB
+- GRANT statement, 580, 585
+- grant tables (MySQL), 578
+- granting privileges
+  - MySQL, 580
+  - PostgreSQL, 585
+  - system administrator privileges, 341
+  - restricted shells, 346
+  - root privileges, granting on occasion, 343-345
+  - UIDs (user IDs), temporarily changing, 341-343
+
+- **graphic interface configuration**, 561
+  - peak performance configuration, 564
+  - server configuration, 563
+  - virtual host properties, 562
+- **graphical database clients (MySQL)**, 591
+- **graphical File Transfer Protocol (gFTP)**, 633-634
+- **graphical installers**, 63
+- **graphics**
+  - digital cameras, 289
+  - F-Spot photo-management application, 292
+  - gThumb, 291
+  - handheld digital cameras, 290-291
+  - webcams, 289-290
+- file formats, 295-298
+- GIMP (GNU Image Manipulation Program), 255, 261, 287-288, 299
+  - compared to Photoshop, 288
+  - GTK (Gimp Tool Kit) widget set, 254
+  - local directory, 288
+  - menu navigation, 288
+  - related commands, 299
+  - scanners, 294-295
+  - screen images, capturing, 298-299
+  - unknown image files, identifying, 297
+  - websites, 299-300
+- greater than (>) operator, 397
+- greater than or equal (>=) operator, 397
+- Green, Andy, 508
+- Greenwich mean time (GMT), 72
+- greeting command, 651
+- **grep command**, 148, 374, 899-900
+  - chkconfig command output, 360
+  - serial-port modem configurations, 100
+- **grep history file**, 755
+- **grep shell script**, 385-386
+- **grip command**, 284
+- **grolp command**, 305
+- **Group directive (httpd.conf file)**, 537
+- group file, 329-330
+- group IDs (GIDs), 327
+
+- groupadd command, 330, 331
+- groupdel command, 330
+- groupmod command, 330
+- groups
+  - lid5 group ID, 347
+  - management, 12
+  - command-line tool, 330-331
+  - permissions, 126, 181
+- groups command, 349
+- groupware, 256
+- growisofs command, 268
+- grep command, 331
+- GRUB (Grand Unified Boot Loader), 56, 353
+  - default Fedora configurations, 46
+  - password, 358
+  - system boot, 480
+  - system services, booting to non-default run-level, 555, 369
+- gs client, 301, 305, 307
+- gsi command, 305
+- gsid command, 305
+- gThumb, 291-292
+- GTK (Gimp Tool Kit) widget set, 254
+- gtkams command, 299
+- guest operating systems, 518-519
+- GUI Network Configuration tool, 707
+- GUI-based printers, configuring, 304
+- gunzip command, 148
+- gv command, 306
+- gzip command, 148, 453, 972
+
+## H
+
+- hackers, 864
+- halt command, 82
+- Hancom Office, 260
+- handheld digital cameras, 290-291
+- hard disks, 936
+  - BIOS detection, 949
+  - components of, 936
+  - cylinder limitations, 950
+  - drive geometry, 936
+- Fedora installation, 44
+- installation, 948-950
+- LBA, 949-950
+- logical volume management, 66
+- master/slave jumpers, 949-950
+- MBR, 936
+- optimizing
+  - benchmarks, 875
+  - BIOS adjustments, 876
+  - file system adjustments, 878-880
+  - hdparm command, 876-877
+- partitions, 940-942
+- backups, 46
+- choosing partitioning schemes, 46-47
+- creating, 66-68
+- dual-boot configurations, 46
+- Fedora installation, 43-45
+- hosting on separate partitions, 47
+- planning, 55
+- hard links, 902-903
+- hardware compatibility database website, 36
+- hardware inventories, 40-42
+- hardware specifications, researching, 53-54
+- Hardware tab (system-config-display client), 176-178
+- hash command, 626
+- hashes, 772-773
+- hdparm command, 876-877
+- hdxide-scsi command, 876
+- header files, 846
+- hfs modules, 926
+- hidden processes, viewing, 420
+- hiding FTP version information, 651
+- high-level formatting, 940
+- history file (INN), 763-764
+- HMAC-MD5 algorithm, 718
+- /home directory, 47, 131
+- HOME environment variable, 147
+- HOME line (/etc/crontab file), 370
+- home user backup strategies, 427
+- [homes] section (/etc/samba/smb.conf file), 598-600
+- host command, 712, 741
+- hostname command, 608
+
+- hosts
+  - adding to /etc/hosts file, 476-477
+  - network settings, 478-479
+- **hosts file**, 456, 476-478, 705-707
+- **Hotwayd**, 686
+- **HOWTO** documents
+  - chroot-BIND, 736
+  - compressed files, reading, 24
+  - description of, 141
+  - disk quotas, 349
+  - DVD-RW+RW/R-R(W), 267
+  - ext2fs undeletion process, 446
+  - HTML format, reading in, 24
+  - LILO configuration, 984
+  - JFS, 952
+  - Network Boot and Exotic Root, 867
+  - quitting, 24
+  - Xinerama, 178
+- **.htaccess file**, 539
+  - AllowOverrides directive, 540-541
+  - Options directive, 540
+- **HTML (Hypertext Markup Language)**
+  - browsing, 142
+  - HOWTO documents, reading, 24
+  - in PHP, 839-840
+- **htpasswd command**, 543
+- **HTTP (Hypertext Transfer Protocol)**, 43, 59
+- **httpd script**, 531-532
+- **httpd.conf file**, 535
+  - DirectoryIndex directive, 538
+  - DocumentRoot directive, 538
+  - Group directive, 537
+  - Listen directive, 536
+  - ServerAdmin directive, 537
+  - ServerName directive, 537
+  - ServerRoot directive, 536
+  - User directive, 537
+  - UserDir directive, 538
+- **hubs**, 467
+- **hwclock command**, 72, 107-108
+- **hwconf file**, 87
+- **Hypertext Transfer Protocol (HTTP)**, 43, 59
+
+## I
+
+- IBN jFS, 19
+- **IBM Linux website**, 992
+- IBM website, 32
+- **Iccast**, 277
+- .icp graphics file format, 296
+- **iDE disks**
+  - bootloaders, 936
+  - partitions, 937
+  - as SCSI drive emulators, 265
+- **ide.txt files**, 965
+- **idebugs command**, 876
+- identifiers in C/C++, 847
+- **identify command**, 297
+- **ide-x command**, 876
+- if statements, 405-406
+- if/else conditional statements, 777
+- if= values (d command), 437
+- **ifconfig command**, 456-457, 472-474, 504, 608
+- **ftp command**, 631-632, 667
+- **IM (instant messaging)**, 236
+  - GAIM, 237
+  - Jabber protocol, 237
+- **ImageMagick**, 297-299
+- images. See graphics
+- **IMAP (Internet Mail Access Protocol)**, 216
+- immutable files, 927
+- immutable sequences, strings as, 794
+- **IMP/Horde**, 689
+- import utility, 298
+- **Impress**, 244
+- include directive, 560, 828
+- **include files**, 846
+- **incoming.conf file**, 756, 759
+- **incremental backups**
+  - full backup strategies with, 428-429
+  - tar command, 433
+- **indexing**
+  - dictionaries, 799
+  - strings, 795
+- infinite loops, 801
+- info command, 141

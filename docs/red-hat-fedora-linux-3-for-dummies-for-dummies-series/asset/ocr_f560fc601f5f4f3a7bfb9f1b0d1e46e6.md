@@ -1,0 +1,16 @@
++   **Computer:** This icon links to your local file system and network shares. Double-clicking the Computer icon opens a window showing four icons: Floppy, CD-ROM, Filesystem, and Network (you won't see the Floppy or CD-ROM icons if you don't have those devices). Double-clicking the Filesystem icon opens a window showing all your root-level directories (see Chapter 4) such as /usr and /home. Opening the Network icon allows you to browse the network file shares on your network. This network provides the same function as Windows Network Neighborhood.
+
++   **Home directory:** This icon, which looks like a folder, represents your home directory. For example, if you create a user account named `lidia`, a directory named `/home/lidia` is created; the icon is labeled `lidia`'s Home. When you log in as `lidia`, the home directory icon is linked to that directory. Double-click the home directory (or right-click and choose Open) and a Nautilus window opens, displaying the contents of the home directory.
++   Double-click an icon to open the Nautilus window associated with the icon. For example, double-clicking your home directory opens a Nautilus file manager window linked to your home directory. You can also open an icon by right-clicking it and choosing the Open option.
+
++   **ideisk1:** This icon is similar to your Home directory icon, except it shows the root-level view of your hard drive. Instead of showing the contents of `/home/lidia`, it shows `/` by default.
++   Your hard drive icon name will most likely be ideisk1 because most PCs use IDE (Integrated Drive Electronics) hard disks. However, if your computer uses SCSI (Small Computer System Interface) disks, then the icon will be called scsidsk1.
+
++   **Trash icon:** GNOME provides a method you can use to dispose of files and directories via the Trash directory. Click any icon on your desktop, or directory and drag it to the Trash icon. Although Jesse James' *Monster Garage* converted minivan trash truck doesn't come for your file, it's placed in the Trash directory. Like the trashcan in your home, the Trash directory sits in your home directory.
++   Trashed items aren't really deleted until you right-click the Trash icon and choose Empty trash. You can undelete items by opening the Trash (double-clicking the icon) and then clicking the item and dragging it out onto the desktop or to an open Preferences window.
+
+![](bbox=[0.08, 0.38, 0.15, 0.44])
+
+![](bbox=[0.08, 0.81, 0.15, 0.88])
+
+GNOME provides two methods for running programs from a text-based CLI. You can start a GNOME Terminal emulator window or use the GNOME Run Program function. The former opens a bash shell in a Terminal emulator window, from which you can launch applications. The latter opens a window in which you can enter the name of a program to execute. The primary difference between the two systems is that you can interact with an application more when you're using the terminal emulator. The Run Program system allows you to interact with an application only if it creates a GUI.

@@ -1,0 +1,336 @@
+
+- checking
+  - du command, 395
+  - find command, 395-396
+- du command, 437
+- quota package, 432-433
+  - /etc/fstab file, 433
+  - aquota.group file, 433-434
+  - aquota.user file, 433-434
+  - checking quotas, 436
+  - edquota command, 435-436
+  - quota files, 433-434
+  - quota rules, 435-436
+  - startup scripts, 434-435
+  - update settings, 436
+- temp files, removing automatically, 437
+- disklst file, Amanda, 507
+- Display Settings window, 125
+- Display window, administration and, 364
+- DiVu Plug-in, Mozilla and, 323
+- DNS (Domain Name System), 631, 909-910
+  - acl (access control list), 912
+  - authoritative zones, 911
+  - BIND (Berkley Internet Name Domain)
+    - software, 911-912
+    - configuration files, BIND, 912
+    - delegation, 910
+    - LAN setup, 592
+    - name server example, 913-914
+    - primary (master) name server, 910
+    - secondary (slave) name server, 910
+    - server information, configuration and, 906
+    - zones, 915-918
+  - files, 918-921
+- DNS lookup tools (BIND), 912
+- DNS server, 1027
+  - configuration file, 914-921
+  - daemon process, 914
+  - debugging, 914
+- dial-up info and, 636
+- DNSSEC secured zones, 914
+- domain name reservation, 905
+- /etc/named.conf file, 916-918
+- identification, 915
+- logging, 912
+- named daemon, 921
+- remote server options, 912
+- status, checking, 922-923
+- zone directory, 914
+- DNS server daemon, 911
+- DNSSEC secured zones, DNS server and, 914
+- DocBooks
+  - document conversion, 244
+  - document creation, 241-243
+  - SGML and, 241-244
+  - XML and, 241-244
+- document file formats, 185
+- documentation for kernel, 952
+- documents
+  - conversion
+    - DocBooks, 244
+    - between formats, 239-240
+  - creating, DocBooks, 242-243
+  - playing, 247-249
+  - TeX/LaTeX, 237
+- DOM inspector
+  - Navigator (Mozilla) and, 321, 327
+- domain master, Samba browse options, 721
+- domain name system. See DNS
+- Domain Name System window, Server Settings, 364
+- domain names, 630
+  - availability checking, 904
+  - Fedora as NIS client, 854
+  - hierarchy, 633
+  - registering, 903-906
+  - reserving, 905-906
+  - TLD, 903
+  - whois command, 904
+- domains, 631-633
+  - DNS (domain name system), 631-632
+  - ISO, 632
+- TLDs (top-level domains), 631-632
+- DOS (Denial of Service) attacks, 514
+  - mailbombing, 515
+    - Procmail, 515
+    - sendmail, 516-517
+  - smurfing, 517-518
+  - spam relaying, 517
+- DOS applications, running, 206-208
+- dosemu emulator, 209-210
+  - environment setup, 210
+  - mttools, 208-209
+- dosdebug command, dosemu emulator, 210
+- dosemu command, dosemu emulator, 210
+- dot () files, shell, 132
+- downloading
+  - applications, 175, 177
+  - archive formats, 184-185
+  - document formats, 185
+  - formats, 182-184
+  - FTP sites for, 176
+  - Mozilla, 180-181
+  - ncFTP, 181-182
+  - package names, 182-184
+  - Web sites for, 176
+  - yum (Yellow Dog Updater, Modified software, 177-180
+    - LogSentry, 546
+    - Navigator (Mozilla), 320
+    - PortSentry, 572
+    - RPMs, yum and, 178-179
+    - vsFTPd access, 768
+- drag-and-drop, Nautilus, 99
+- drawers, GNOME desktop, 96
+- drawing
+  - OpenOffice.org Draw, 220
+  - StarOffice Draw, 223
+- DRI (Direct Rendering Infrastructure)
+  - gaming and, 257
+  - xorg.conf file, 127
+- drive letters in Windows, WINE and, 212
+- drivers
+  - audio programs, 280
+  - CUPS, 672
+  - fape, magnetic tape backups, 485-486
+  - kernel and, 951
+  - resident, 376
+  - wireless LANs, 601-603
+  - wireless network cards, 598
+- drives
+  - CD
+    - backups and, 487-490
+    - cdrecord package, writable CDs, 487
+    - random access, 487
+    - writing to, 487-490
+  - DVD, 491
+- DSL (Digital Subscriber Line), connection speed and, 903
+- DSO (Dynamic Shared Object) modules, httpd.conf file, 787
+- du command, 395, 437
+- dumb terminal, definition, 149
+- dump command
+  - backups, 494-497
+    - dump levels, 496-497
+    - schedule, 496
+    - options, 494
+    - dump package, programs, 494
+- DVD, installation from, 25
+- DVD drives
+  - Installation, hardware and, 27
+  - writable, 491
+- DVD with book, 971
+- dvdrecord command, 491
+- DVDs, Konqueror, 114
+- Dynamic DNS, host names, 902
+- dynamic IP addresses, 611
+- E
+- echo command, 131
+- echo statement, loops, 442
+- edquota command, 435-436
+- edu top-level domain, 632
+- elogin, xined and, 468
+- emacs, command-line editing and, 138
+- e-mail
+  - addresses, httpd.conf (Apache Web server), configuration, 790
+  - all users, 438-439
+  - attachments, 332
+  - configuration, desktop panel, 89
+  - Evolution. See Evolution e-mail (KDE)
+  - HTML, 332
+  - Kmail, 314
+  - mail readers, 339
+    - mail command, 340
+    - mutt, 340
+    - pine, 340
+  - Mozilla and, 314, 318, 335-337
+  - overview, 331-332
+  - reader software, 314
+  - software alternatives, 401-402
+  - spam relaying DOS attack, 517
+  - Sylpheed, 314
+  - text-based programs, 339
+  - Thunderbird, 338-339
+- e-mail servers, 1023
+- embedded systems, 2.6 kernel and, 958
+- emulators
+  - DOS applications, 206
+  - dosemu, 209-210
+  - Macintosh applications, 206
+  - Windows applications, 206
+- encoding, httpd.conf (Apache Web server)
+  - configuration, 806-807
+- encrypt passwords option, Samba, 718
+- encryption
+  - cryptography
+    - private-key, 559
+    - public-key, 559
+    - symmetric, 559
+  - passwords
+    - breaking encryption, 557
+    - OpenLDAP, 831
+    - Samba, 711, 712
+  - SSH (Secure Shell) package, 569
+    - scp command, 569-571
+    - sftp command, 569-571
+    - ssh command, 569-571
+    - starting, 569
+  - technology exportation, 568
+  - tunneling and, 653
+  - VPNs, 653
+- environment variables
+  - command line completion, 141
+  - /etc/profile, 424
+  - expanding, 146
+  - setting, 148-149
+  - shell, 135, 146-149, 153-154
+    - BASH, 146
+    - BASH_EUID, 146
+    - BASH_VERSION, 146
+    - FCEDIT, 147
+    - HISTCMD, 147
+    - HISTFILE, 147
+    - HISTFILESIZE, 147
+    - HOME, 147
+    - HOSTTYPE, 147
+    - MAIL, 147
+    - OLDPWD, 147
+    - OSTYPE, 147
+    - PATH, 147
+    - PPID, 147
+    - PROMPT_COMMAND, 147
+    - PSI, 147
+    - PWD, 147
+    - RANDOM, 147
+    - SECONDS, 148
+    - SHLVL, 148
+    - TMOUT, 148
+    - UID, 148
+- environments, desktop switching, 104
+- Epiphany browser, 314
+- eplan macro, TeX/LaTeX, 236
+- Equalizer, XMMS, 290
+- equations, Groff, 233-236
+- equipment, LANs. See LANs (local area networks); equipment
+- error log, Apache Web server, 821-822
+- Error Log directive, http.conf file, 798, 821
+- errors
+  - httpd.conf (Apache Web server)
+    - configuration, 808-810
+  - HTTP response codes, 809
+- Esc command, vi text editor, 166
+- /etc directory, 155
+  - adjtime configuration file, 367
+- administration and, 367-371
+  - aliases configuration file, 367
+  - bashrc configuration file, 367
+  - cdrecord.conf configuration file, 367
+  - crontab configuration file, 367
+  - csh.cshrc configuration file, 367
+  - exports configuration file, 367
+  - fdprm configuration file, 367
+  - fedora-release configuration file, 367
+  - fstab configuration file, 368
+  - group configuration file, 368
+  - gshadow configuration file, 368
+  - host.conf configuration file, 368
+  - hosts configuration file, 368
+  - hosts.allow configuration file, 368
+  - hosts.deny configuration file, 368
+  - initab configuration file, 368
+  - issue configuration file, 368
+  - issue.net configuration file, 368
+  - lilo.conf configuration file, 368
+  - mail.rc configuration file, 368
+  - man.config configuration file, 368
+  - modules.conf configuration file, 368
+  - mtab configuration file, 368
+  - mtools.conf configuration file, 368
+  - named.conf configuration file, 368
+  - ntp.conf configuration file, 369
+  - passwd configuration file, 369
+  - printcap configuration file, 369
+  - profile configuration file, 369
+  - protocols configuration file, 369
+  - redhat-release configuration file, 369
+  - resolv.conf configuration file, 369
+  - rpc configuration file, 369
+  - services configuration file, 369
+  - shadow configuration file, 369
+  - shells configuration file, 369
+  - sudoers configuration file, 369
+  - syslog.conf configuration file, 369
+  - termcap configuration file, 369
+  - xinetd.conf configuration file, 369
+  - /etc/alternatives directory, administration and, 370
+  - /etc/amanda directory, administration and, 370
+  - /etc/bashrc file, 423, shell configuration, 151
+  - /etc/cp* directory, administration and, 370
+  - /etc/core* directory, administration and, 370
+  - /etc/crontab, field values, 474
+  - /etc/cups directory, administration and, 370
+  - /etc/default directory, administration and, 370
+  - /etc/exports file
+    - file system sharing and, 696
+    - NFS sharing and, 698-701
+      - access options, 700
+      - hosts, 699
+      - IP network, 700
+      - mapping options, 700
+      - NIS groups, 700
+      - TCP/IP domain, 700
+  - /etc/fstab file, disk quotas, 433
+  - /etc/group file, 414
+  - /etc/httpd directory, administration and, 370
+  - /etc/init.d directory, administration and, 370
+  - /etc/initab file, 455
+    - format, 456-457
+    - line breakdown, 457-459
+  - /etc/login.defs file, 418
+  - /etc/mail.directory, administration and, 370
+  - /etc/named.conf file, DNS server, 916-918
+  - /etc/passwd file, 414
+  - /etc/pemica directory, administration and, 370
+  - /etc/postfix directory, administration and, 370
+  - /etc/ppp directory, administration and, 370
+  - /etc/profile file, 423-424
+    - shell configuration, 151
+  - /etc/rc.d directory, administration and, 370
+  - /etc/samba/smb.conf file, 709
+  - /etc/security directory, administration and, 371
+  - /etc/skel directory, administration and, 371
+  - /etc/squid directory, administration and, 371
+  - /etc/squid/squid.conf file, 658-660
+    - debugging and, 664
+    - modifying, 660-664
+  - /etc/sysconf directory, administration and, 371
+  - /etc/ucp directory, administration and, 371
+  - /etc/vsftpd directory, administration and, 371

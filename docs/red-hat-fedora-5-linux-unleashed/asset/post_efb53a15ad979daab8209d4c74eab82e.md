@@ -1,0 +1,128 @@
+
+The pass directive is an empty statement—it means our class contains nothing new. However, because the ford and nissan classes inherit from the car class, they get color, speed, accelerateTo(), and setColor() provided by their parent class. Note that we do not need object after the class names for ford and nissan because they are inherited from an existing class: car.
+
+By default, Python gives you all the methods the parent class has, but you can override that by providing new implementations for the classes that need them. For example:
+
+```python
+class modelt(car):
+    def setColor(self, color):
+        print "Sorry, Model Ts only come in black!"
+
+myford = ford()
+ford.setColor("green")
+mycar = modelt()
+mycar.setColor("green")
+```
+
+The first car is created as a Ford, so setColor() will work fine because it uses the method from the car class. However, the second car is created as a Model T, which has its own setColor() method, so the call will fail.
+
+This provides an interesting scenario: What do you do if you have overridden a method and yet want to call the parent’s method also? If, for example, changing the color of a Model T was allowed but just cost extra, we would want to print a message saying, “You owe $50 more,” but then change the color. To do this, we need to use the class object from which our current class is inherited—car, in this example. Here’s an example:
+
+```python
+class modelt(car):
+    def setColor(self, color):
+        print "You owe $50 more"
+        car.setColor(self, color)
+
+mycar = modelt()
+mycar.setColor("green")
+print mycar.color
+```
+
+That prints the message and then changes the color of the car.
+
+## Multiple Inheritance
+
+You can inherit as many classes as you need, building up functionality as you go. For example, you could have a class anomaia, a subclass chordata, a sub-subclass mammalia, and a sub-sub-subclass homospapiens. Each one is more specific than its parent. However, an interesting addition in Python is the capability to have multiple inheritance—to take functionality from two classes simultaneously.
+
+Again, this is best shown in code:
+
+```python
+class car(object):
+    def drive(self):
+        print "We're driving..."
+
+class timemachine(object):
+    def timeTravel(self):
+        print "Traveling through time..."
+
+class delorian(car, timemachine): pass
+mydelorian = delorian()
+mydelorian.drive()
+mydelorian.timeTravel()
+```
+
+In that example, we have a class `car` and a class `timemachine`. Both work by themselves, so you can have a `car` and drive around in it or a `timemachine` and travel through time with it. However, we also have a `delorian` class that inherits from `car` and `timemachine`. As you can see, it is able to call both `drive()` (inherited from `car`) and `timeTravel()` (inherited from `timemachine`).
+
+This introduces another interesting problem: What happens if both `car` and `timemachine` have a `refuel()` function? The answer is that Python picks the correct function to use based on the order in which you listed the parent classes. In the previous code, we use `class delorian(car, timemachine)`, which means "inherit from `car` and then from `timemachine`". As a result, if both classes had a `refuel()` function, Python would pick `car.refuel()`.
+
+This situation becomes more complex when further inheritance is involved. That is, if `car` inherits its `refuel()` method from `vehicle`, Python still chooses it. What happens behind the scenes is that Python picks the first class you inherited from and searches it and all its parent classes for a matching method call. If it finds none, it goes to the next class and checks it and its parents. This process repeats until it finds a class that has the required method.
+
+## The Standard Library and the Vaults of Parnassus
+
+A default Python install includes many modules (blocks of code) that allow you to interact with the operating system, open and manipulate files, parse command-line options, perform data hashing and encryption, and much more. This is one of the reasons most commonly cited when people are asked why they like Python so much—it comes stocked to the gills with functionality you can take advantage of immediately. In fact, the number of modules included in the Standard Library is so high that entire books have been written about them—try *Python Standard Library* (O'Reilly, ISBN: 0-596-00096-0) for a comprehensive, if slightly dated, list of them.
+
+For unofficial scripts and add-ons for Python, the recommended starting place is called the Vaults of Parnassus: http://py.vaults.ca/. There you can find about 20,000 public scripts and code examples for everything from mathematics to games.
+
+## Reference
+
+The Python website (http://www.python.org/) is packed with information and updated regularly. This should be your first stop, if only to read the latest Python news.
+
+- http://www.zope.org/—The home page of the Zope Content Management System (CMS), it's one of the most popular CMSes around and, more importantly, written entirely in Python.
+- http://www.jython.org/—Python also has an excellent Java-based interpreter to allow it to run on other platforms. If you prefer Microsoft's .NET, try http://www.ironpython.com/.
+- http://www.pythonline.com/—Guido van Rossum borrowed the name for his language from Monty Python's Flying Circus, and as a result, many Python code examples use oblique Monty Python references. A visit to the official Monty Python site to hone your Python knowledge is highly recommended!
+
+There are few truly great books about Python; however, you can find a list of what's on offer at http://www.python.org/moin/PythonBooks. If you are desperate to pick up a book immediately, you could do much worse than to choose Learning Python (O'Reilly, ISBN: 0-596-00281-5).
+
+# CHAPTER 32
+
+## Writing PHP Scripts
+
+This chapter introduces you to the world of PHP programming, from the point of view of using it as a web scripting language and as a command-line tool. PHP originally stood for *personal home page* because it was a collection of Perl scripts designed to ease the creation of guest books, message boards, and other interactive scripts commonly found on home pages. However, since those early days, it has received two major updates (PHP 3 and PHP 4), plus a substantial revision in PHP 5, which is the version bundled with Fedora.
+
+Part of the success of PHP has been its powerful integration with databases—its earliest uses nearly always took advantage of a database back end. In PHP 5, however, two big new data storage mechanisms were introduced: SQLite, which is a powerful and local database system, and SimpleXML, which is an API designed to make XML parsing and querying easy. As you will see over time, the PHP developers did a great job because both SQLite and SimpleXML are easy to learn and use.
+
+> **NOTE**
+> PHP’s installation packages are under the *Servers, Web Server* category in *Add/Remove Software*. The basic package is just called *php*, but you might also want to add extensions such as *php_idap*, *php_mysql*, or *php_pgsql*. Choose only the extensions you plan to use; otherwise, you will waste system resources.
+
+## IN THIS CHAPTER
+
+- Introduction to PHP
+- Basic Functions
+- Handling HTML Forms
+- Databases
+- Reference
+
+## Introduction to PHP
+
+In terms of the way it looks, PHP is a cross between Java and Perl, having taken the best aspects of both and merged them successfully into one language. The Java parts include a powerful object-orientation system, the capability to throw program exceptions, and the general style of writing that both languages borrowed from C. Borrowed from Perl is the “it should just work” mentality where ease of use is favored over strictness. As a result, you will find a lot of “there is more than one way to do it” in PHP.
+
+## Entering and Exiting PHP Mode
+
+Unlike PHP’s predecessors, you embed your PHP code inside your HTML as opposed to the other way around. Before PHP, many websites had standard HTML pages for most of their content, linking to Perl CGI pages to do back-end processing when needed. With PHP, all your pages are capable of processing and containing HTML.
+
+Each .php file is processed by PHP that looks for code to execute. PHP considers all the text it finds to be HTML until it finds one of four things:
+
+- `<?php`
+- `<?`
+- `<%`
+- `<script language="php">`
+
+The first option is the preferred method of entering PHP mode because it is guaranteed to work.
+
+After you are in PHP mode, you can exit it by using `?>` (for `<?php` and `<?`) and `%>` (for `<%`), or `</script>` (for `<script language="php">`). This code example demonstrates entering and exiting PHP mode:
+
+```text
+In HTML mode
+<?php
+  echo "In PHP mode";
+?>
+In HTML mode
+In <?php echo "PHP"; ?> mode
+```
+
+## Variables
+
+All variables in PHP start with a dollar sign ($). Unlike many other languages, PHP does not have different types of variable for integers, floating-point numbers, arrays, or Booleans. They all start with a $, and are all interchangeable. As a result, PHP is a weakly typed language, which means you do not declare a variable as containing a specific type of data; you just use it however you want to.
+
+Save the code in Listing 32.1 into the script `fedoral.php`.

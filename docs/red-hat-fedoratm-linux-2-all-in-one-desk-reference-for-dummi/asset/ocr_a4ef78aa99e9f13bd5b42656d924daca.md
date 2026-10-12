@@ -1,0 +1,28 @@
+as well as all necessary data structures and preprocessor constants, are defined in a set of standard header files. Table 2-4 lists the standard header files, including a summary of their contents.
+
+# REMEMBER
+
+If you're going to write applications in C, you have to become familiar with many of the standard libraries because that's where much of C's programming process lies. If you are writing graphical applications, you also must be familiar with other libraries such as the GIMP toolkit.
+
+# Table 2-4 Standard Header Files in C
+
+| **Header File** | **Purpose** |
+| :--- | :--- |
+| `<assert.h>` | Defines the `assert` macro. Used for program diagnostics. |
+| `<ctype.h>` | Declares functions for classifying and converting characters. |
+| `<errno.h>` | Defines macros for error conditions, `EDOM` and `ERANGE`, and the integer variable `errno` where library functions return an error code. |
+| `<float.h>` | Defines a range of values that can be stored in floating-point types. |
+| `<iso646.h>` | Defines a number of macros that are helpful when writing C programs in non-English languages that may use character combinations such as `&` and `--` for other purposes. |
+| `<limits.h>` | Defines the limiting values of all integer data types. |
+| `<locale.h>` | Declares the `lconv` structure and the functions necessary for customizing a C program to a particular locale. |
+| `<math.h>` | Declares common mathematical functions and the `HUGE_VAL` macro. |
+| `<setjmp.h>` | Defines the `setjmp` and `longjmp` functions that can transfer control from one function to another without relying on normal function calls and returns. Also defines the `jmp_buf` data type used by `setjmp` and `longjmp`. |
+| `<signal.h>` | Defines symbols and routines necessary for handling exceptional conditions. |
+| `<stdarg.h>` | Provides macros that provide access to the unnamed arguments in a function that accepts a varying number of arguments. |
+| `<stddef.h>` | Defines the standard data types `ptrdiff_t`, `size_t`, `wchar_t`; the symbol `NULL`; and the macro `offsetof`. |
+| `<stdio.h>` | Declares the functions and data types necessary for input and output operations. Defines macros such as `BUFSIZ`, `EOF`, `SEEK_CUR`, `SEEK_END`, and `SEEK_SET`. |
+| `<stdlib.h>` | Declares many utility functions, such as the string conversion routines, random number generator, memory allocation routines, and process control routines (such as `abort`, `exit`, and `system`). |
+
+(continued)
+
+Book IX Chapter 2 Programming in C

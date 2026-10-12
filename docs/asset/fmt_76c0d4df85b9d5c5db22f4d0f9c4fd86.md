@@ -1,0 +1,89 @@
+
+既然你已经部署了渗透测试机器，下一步将是准备你的易受攻击服务器。该服务器将由所有使用其 Kali VDI 的用户共享。Web Security Dojo（参见资源）是 web 渗透测试的良好起点。下载 OVA 文件，将其存储在计算机上的某个位置，并提取 VMX 文件：`tar xvf Dojo-3.0.ova`。由于 RAVADA VDI 使用 QCOW2 格式，你必须先将 VMX 文件转换为 QCOW2：`qemu-img convert -f vmmd -O qcow2 Dojo-3.0-disk001.vmdk Dojo-3.0-disk001.qcow2`。现在将此文件复制到 RAVADA VDI 服务器上的 `/var/lib/libvirt/images`。连接到 web GUI 并以管理员用户身份登录，然后创建一个尽可能类似于 Web Security Dojo 的新 VM。因为它是基于
+
+> 你必须确保所有 VDI 都得到良好的隔离。
+>
+> 使用 libvirt 网络过滤器，你可以轻松实现这一点。
+
+Ubuntu Xenial，因此你可以选择 Ubuntu Xenial 64-bit 作为模板。创建 VM 后，并在 RAVADA VDI 服务器上的安全 Shell 连接内部，编辑 VM 设置以设置 Web Security Dojo QCOW2 磁盘映像的位置，使用 libvirt 来实现：`virds edit YOUR_VM_NAME`。尝试在 XML 代码中找到 `file` 属性，并将其替换为你之前生成的转换后的磁盘映像：
+
+```xml
+<source file='/var/lib/libvirt/images/Dojo-3.0-disk001.qcow2'>
+```
+
+最后，删除 CD-ROM，交换条目并保存文件。现在你可以启动 VM 以确保一切正常。因为这将作为你的易受攻击服务器，你需要为其虚拟网络适配器设置一个静态 IP。这样，每次启动 VM 时，IP 地址都将保持不变。默认情况下，所有 VM 都可以通过桥接设备 `virbr0` 相互通信，该设备没有附加任何物理设备。此桥接通过 NAT 和转发为每个新域提供互联网连接。默认情况下，它们都将位于网络地址空间 `192.168.122/24` 中。使用 libvirt，首先为 Web Security Dojo VM 设置 MAC 地址：`virsh edit YOUR_VM_NAME`。现在找到 `<interface type="network">` XML 片段，并按如下方式添加 MAC 地址：
+
+```xml
+<interface type='network'>
+    <mac address='52:54:00:a7:49:04'/>
+```
+
+最后一步是为该 MAC 地址分配一个静态 IP 地址；你需要再次使用 `virsh` 来实现这一点。假设你想将 IP 地址 `192.168.122.250` 分配给 Web Security Dojo，请照此操作：
+
+```bash
+virsh net-update default add ip=dhcp-host \
+    '<host mac='52:54:00:a7:49:04' \
+        name='WebSecurityDojo' ip='192.168.122.250' \
+    />' \
+    --live --config
+```
+
+完成！现在确保 VM 在启动时自动启动 – 在 RAVADA VDI 服务器的 CLI 中运行：`virsh autostart YOUR_VM_NAME`。最后，你可以通过点击 RAVADA VDI web GUI 中的“Start”按钮来启动此 VM。以 `lud01` 或 `lud2` 身份登录并连接到你的 Kali 虚拟桌面。打开一个新的终端，并向 Web Security Dojo 域发送一些 ping 以测试连接性。
+
+你可以随时访问 Web Security Dojo，并启动你希望学员利用的任何易受攻击服务。想象一下你想让他们利用 H4CME CASINO web 应用程序：打开 RAVADA VDI web GUI，以管理员用户身份登录，然后点击“View”以打开到该域的 SPICE 连接。从菜单“Targets > H4CME Casino Start”中启动 H4CME CASINO。现在你可以回到任何 Kali 虚拟桌面，开始对此 web 应用程序进行渗透测试；你只需要提供正确的 URL：`http://192.168.122.250:3000`。
+
+## 隔离渗透测试人员
+
+到目前为止还算顺利，但你不希望你的学员开始互相进行渗透测试，对吧？你必须确保所有 VDI 都得到良好的隔离，并且不能从 Web Security Dojo 或彼此之间访问。使用 libvirt 网络过滤器，你可以轻松实现这一点。渗透测试桌面应能够向任何主机发送 ICMP echo-request 并接收其对应的 ICMP echo-reply，与其他任何主机建立新的 TCP 连接，并发送 DNS 查询。大致就这些。你可以创建自己的过滤器来实现此目的；打开你喜欢的 ASCII 编辑器并输入以下内容：
+
+```xml
+<filter name='isolated_vm' chain='ipv4'
+    priority='700'>
+    <rule action='accept' direction='out'
+        priority='500'>
+        <icmp type='8'/>
+      </rule>
+      <rule action='accept' direction='in'
+          priority='500'>
+        <icmp type='0'/>
+      </rule>
+      <rule action='accept' direction='out'
+          priority='500'>
+        <udp dportstart='53'/>
+      </rule>
+      <rule action='accept' direction='out'
+          priority='500'>
+        <tcp/>
+      </rule>
+      <rule action='drop' direction='inout'
+          priority='500'>
+        <all/>
+      </rule>
+    </filter>
+```
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_42_0.png)
+
+将此文件保存为 `isolated_vm.xml`，位于 RAVADA VDI 服务器上的 `/etc/libvirt/nwfilter` 下。使其可用。`virsh nwfilter-define isolated_vm`。接下来，使用此新过滤器配置所有 KALI 域的网络接口：`virsh edit YOUR_VM_NAME`。在 `<interface>` 描述中添加对此过滤器的引用，如下所示：
+
+```xml
+<filterref filter='isolated_vm'/>
+```
+
+保存它，搞定！从这一刻起，任何学员都能连接到互联网和 Web Security Dojo 域上的任何开放端口，但他们之间将无法通信。请随意尝试 nwfilter 规则（再次参见资源）。
+
+在你的 RAVADA VDI 服务器内部，你可以通过其虚拟串行控制台轻松访问任何 VM。如果 SPICE 连接停止工作，这将帮助你恢复对 VM 的访问。这在文档中有所描述（参见资源）。但是，不要忘记相应地设置 VM，通过在 `grub.conf`（在基于 Debian 的系统上是 `/etc/default/grub`）中添加 `"console=ttyS0"`，以确保系统在每次启动时都会在 `/dev/ttyS0` 上生成串行控制台。
+
+## 通过虚拟串行控制台连接
+
+## 前路多坎坷……
+
+这是一个很棒的 VDI 入门项目。它易于安装和设置，并且可以快速部署。然而，它仍然存在一些重要缺陷（截至本文撰写时），我们希望这些缺陷将在未来的版本中得到修复。数据库认证机制缺乏伪随机每用户盐值生成；SPICE 协议默认不使用 TLS 通道加密（尽管，使用 TLS 可能会降低 VDI 性能）。还会生成一个伪随机的四字符临时密码来保护到桌面的远程 SPICE 连接，这使得 RAVADA VDI 容易遭受暴力破解攻击。但对于我们的测试目的而言它是完美的：你可以开始使用它来部署一个完整的渗透测试多用户环境。而对于我们刚才提到的所有缺陷，嗯，始终有提交 git 拉取请求（pull request）的可能性！所以，你还在等什么？是时候参与进来并开始训练了！
+
+> 使用 RAVADA VDI，你可以在几分钟内部署上述夺旗（Capture-the-flag）场景；无论是 web 渗透测试还是二进制利用，天空才是极限！
+
+# 分形几何与混沌理论的乐趣
+
+加入我们，开启一段发现之旅，探索分形与混沌那个奇异、美丽且无穷的世界。
+
+![](img/fb76008333fb7aef815b136f9f1afe5f_43_0.png)

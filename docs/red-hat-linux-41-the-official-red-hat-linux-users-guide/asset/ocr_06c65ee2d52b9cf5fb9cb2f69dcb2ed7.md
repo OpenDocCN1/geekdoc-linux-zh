@@ -1,0 +1,35 @@
+- **Enter** to page down line by line
+- **Space** to page down page by page
+- b to page back up by one page
+- / followed by a string and **Enter** to search for a string
+- n to find the next occurrence of the previous search
+
+Sometimes viewing man pages isn’t too friendly on line. Providing you have a working printer, you can print man pages as well. If you don’t have postscript printing capability and just want to print ASCII, you can print man pages with:
+
+```
+man COMMAND | lpr
+```
+
+If you do have a postscript printer, you will probably want to print with:
+
+```
+man -t COMMAND | lpr
+```
+
+In both of those commands substitute “COMMAND” for the command you are trying to get help for.
+
+Also, sometimes things have more than one man page. Here is a table of what is located where:
+
+| Section | Contents |
+| :--- | :--- |
+| 1 | user commands |
+| 2 | system calls |
+| 3 | library calls |
+| 4 | devices |
+| 5 | file formats |
+| 6 | games |
+| 7 | miscellaneous |
+| 8 | system commands |
+| 9 | kernel internals |
+
+So, let’s say that you want to see the man page for **swap on**. You do **man swap on**. You will actually get the man page for the system call **swap on(2)**,

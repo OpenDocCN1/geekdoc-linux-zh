@@ -1,0 +1,20 @@
+workstations that could use Linux as a file server, a mail server, a print server, or a boot server. (Those features are described later in this book.)
+
+Creating and configuring a LAN consists of these steps:
+
++   1. **Setting up LAN hardware** — This entails choosing a network topology, purchasing the equipment you need, and installing it (adding cards and connecting wires or using wireless antennas).
++   2. **Configuring TCP/IP** — To use most of the networking applications and tools that come with Linux, you must have TCP/IP configured. TCP/IP lets you communicate not only with computers on your LAN, but with any computers that you can reach on your LAN, modem, or other network connection (particularly via the Internet).
+
+# ### Setting up LAN hardware
+
+Even with a simple LAN, you must make some decisions about network topology (that is, how computers are connected). You must also make some decisions about network equipment (network interface cards, wires, hubs, and so on).
+
+# ### LAN topologies
+
+Most small office and home LANs connect computers together in one of the following topologies:
+
++   - **Star topology** — The star topology is by far the most popular LAN topology. In this arrangement, each computer contains a Network Interface Card (NIC) that connects with a cable to a central hub. The cabling is typically Category 5 (unshielded twisted pair) wiring with RJ-45 connectors. Other equipment, such as printers and fax machines, can also be connected to the hub in a star topology. Figure 15-1 is an example of a star topology.
+
+![](bbox=[0.25, 0.64, 0.72, 0.81])
+
++   - **Bus topology** — Instead of using hubs, the bus topology connects computers in a chain from one to the next. The cabling usually used is referred to as coaxial, or Thin Ethernet cable. A “T” connector attaches to each computer’s NIC, then to two adjacent computers

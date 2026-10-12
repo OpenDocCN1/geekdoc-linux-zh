@@ -1,0 +1,23 @@
+For a client wanting to use your proxy to access the Web, the HTTP port is the needed number. Here are the tags that you use to set port values in Squid for different services, along with their default values:
+
++   - **http_port 3128** — The **http_port** is set to 3128 by default. Client workstations need to know this number (or the number you change this value to) to access your proxy server for HTTP services (that is, Web browsing).
++   - **icp_port 3130** — ICP requests are sent to and from neighboring caches through port 3130 by default.
++   - **http_port 4827** — ICP sends HTTPC requests to and from neighboring caches on port 4827 by default.
+
+# Debugging Squid
+
+If Squid isn’t working properly when you set it up, or if you just want to monitor Squid activities, there are several tools and log files to help you.
+
+# Checking the squid.conf file
+
+By running the squid daemon with the -x option (described earlier), you can check what is being set from the **squid.conf** file. You can add an -X option to the **SQUID_OPTS** line in the /etc/init.d/squid file. Then run /etc/init.d/squid restart. A whole lot of information is output, which details what is being set from **squid.conf**. If there are syntax errors in the file, they appear here.
+
+# Checking Squid log files
+
+Squid log files (in Fedora) are stored in the /var/log/squid directory by default. The following are the log files created there, descriptions of what they contain, and descriptions of how they might help you debug potential problems:
+
++   - **access.log** — Contains entries that describe each time the cache has been hit or missed when a client requests HTTP content. Along with that information is the identity of the host making the request (IP address) and the content they are requesting. Use this information to find out when content is being used from cache and when the remote server must be accessed to obtain the content. Here is what some of the access result codes mean:
++       - **TCP_DENIED** — Squid denied access for the request.
++       - **TCP_HIT** — Cache contained a valid copy of the object.
++       - **TCP_IMS_HIT** — A fresh version of the requested object was still in cache when the client asked if the content had changed.
++       - **TCP_IMS_MISS** — An If-Modified-Since request was issued by the client for a stale object.

@@ -1,0 +1,28 @@
+# CHAPTER 24
+
+# Remote File Serv-ing with FTP
+
+*File Transfer Protocol (FTP)* was once considered the primary method used to transfer files over a network from computer to computer. FTP is still heavily used today, although many graphical FTP clients now supplement the original text-based interface command. As computers have evolved, so has FTP, and Fedora includes many ways with which to use a graphical interface to transfer files over FTP.
+
+This chapter contains an overview of the available FTP software included with Fedora, along with some details concerning initial set up, configuration, and use of FTP-specific clients. Fedora also includes an FTP server software package named vsftpd, the Very Secure FTP Daemon, and a number of associated programs you can use to serve and transfer files with the FTP protocol.
+
+# ## Using FTP Clients
+
+The FTP protocol allows users to connect to a server, read directories and filenames, and download and upload data. If the correct access rights are set, users can also create new folders and set access permissions on them.
+
+However, using FTP poses a security risk: Usernames and passwords are transmitted unencrypted across a LAN or the Internet. To stop users from taking the risk of giving their authentication details to anyone listening on the wire, many sites enable only anonymous FTP login and file retrieval. Many Linux users have turned to more secure alternatives, such as ssh and sftp or scp, included with the OpenSSH suite. The following sections discuss the different types of newer and traditional interfaces to FTP and their usage. Because they are part of the larger
+
+# IN THIS CHAPTER
+
++   - Using FTP Clients
++   - FTP Servers
++   - Installing FTP Software
++   - The FTP User
++   - xinetd Configuration for wu-ftpd
++   - Configuring the Very Secure FTP Server
++   - Configuring the wu-ftpd Server
++   - Using Commands in the ftppasswd File to Configure wu-ftpd
++   - Configure FTP Server File-Conversion Actions
++   - Using Commands in the ftphosts File to Allow or Deny FTP Server Connection
++   - Server Administration
++   - Reference

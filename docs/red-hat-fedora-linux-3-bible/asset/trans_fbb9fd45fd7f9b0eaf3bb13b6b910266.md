@@ -1,0 +1,107 @@
+
+## 无线网卡模块
+
+| 无线网卡 | 模块 |
+|---|---|
+| AT&T WaveLAN 适配器 | wavelan_cs.ko |
+| Atnel AT76C50X 无线网卡 | atmel_cs.ko |
+| Cabletron RoamAbout 802.11 DS | wlan_cs.ko |
+| Compaq WL100 11 Mbps 无线适配器 | orinoco_cs.ko |
+| Digital RoamAbout/DS | wavelan_cs.ko |
+| ELSA AirLancer MC-11 | wlan_cs.ko |
+| 朗讯科技 WaveLAN 适配器 | wavelan_cs.ko |
+| InterSil PRISM2 11 Mbps 无线适配器 | wlan_cs.ko |
+| 朗讯科技 WaveLAN/IEEE 适配器 | orinoco_cs.ko |
+| MELCO WLI-PCM-L11 | orinoco_cs.ko |
+| MELCO WLI-PCM-L11G | orinoco_cs.ko |
+| NCR WaveLAN 适配器 | wavelan_cs.ko |
+| Orinoco PC 卡 | orinoco_cs.ko |
+| PLANEX GeoWave/GW-CF110 | orinoco_cs.ko |
+| Planet WL3501 | wl3501_cs.ko |
+| Xircom CrediCard Netwave | netwave_cs.ko |
+| ZCOMAX AirRunner/XI-300 | orinoco_cs.ko |
+
+## 选择天线
+
+如果您在彼此邻近的多台计算机之间设置无线局域网，可能不需要额外的天线。然而，为了应对障碍物和更长的距离，您可以为无线硬件添加室内或室外天线。
+
+此外，由于我一直在讨论 Orinoco 无线 PC 卡，因此我展示了与这些卡兼容的室内和室外天线的不同类型。
+
+## 使用室内天线
+
+内置于无线网卡中的天线通常足以实现在开放区域中计算机之间的通信。如果无线网卡之间的直接视线被阻挡，额外的室内天线会很有用。计算机可能锁在储物柜里或卡在桌子下面。一堆文件可能会阻碍传输，或者一块金属可能会完全阻断传输。一个将传输信号从卡上引导开的小天线可能是解决这些问题的答案。
+
+虽然大多数无线网卡不需要完全无遮挡的视线，但障碍物确实会减慢接收速度。为了解决这个问题，像 Orinoco IEEE 范围扩展器这样的天线可以直接插入 Orinoco Gold 或 Silver 无线网卡。一根 1.5 米的延长线可以将信号从关闭的门后或桌面上方引出来。设置天线时，建议其位置：
+
+- 位于中心位置。
+- 垂直安装。
+- 远离障碍物（特别是金属表面，以及在较小程度上的混凝土墙或纸堆等实心物体）。
+
+请参照天线附带的说明，了解有关放置和安装天线的具体指南。
+
+## 使用室外天线
+
+为您的无线局域网选择和设置室外天线，在难度和成本上可能比室内设置更为复杂和昂贵。然而，一旦室外天线就位，您可以节省费用，因为您不再需要多个互联网接入账户（月租费、DSL/电缆调制解调器等）。
+
+虽然本章的范围不包括室外天线在无线局域网中使用情况的完整描述，但以下提示将有助于您为无线局域网选择最佳天线。
+
+- **点对点与多点对多点** — 如果您在两个室外位置之间创建点对点链接（例如，在两栋建筑之间共享互联网连接），定向天线可以帮助您实现更远的距离和传输速度。但是，如果您的天线为其他几个室外天线或无线客户端（例如在校园草坪上使用笔记本电脑学习的学生）提供多点对多点访问，全向天线可能更合适。
+- **净空度** — 每个室外天线之间的视线越清晰，您可以实现的距离和传输速度就越大。将天线放置在尽可能高的点可以防止因树木、汽车、建筑物和其他物体造成的性能下降。障碍物与无线传输覆盖区域之间的距离称为*净空系数*（参见图 15-9）。
+
+![](img/b22364e57409c2481ba806e4e6b9309c_624_0.png)
+
+**图 15-9：** 障碍物与无线信号之间的距离称为*净空度*。
+
+- **距离** — 尽管天线能够发送和接收数据的实际距离因不同因素而异，但使用室外天线可以实现数英里的距离。例如，两个 Orinoco 24 dBi 定向抛物面栅格天线在 11 Mbps 传输速度和 180 米净空度的条件下，理论上可以实现高达 52 英里的距离。将传输速率降低到 1 Mbps，并且在 1200 米净空度的条件下，可以实现高达 149 英里的距离。使用较便宜的设备，例如 Orinoco 14 dBi 定向天线，在 11 Mbps 和 13 米净空度的条件下，可以实现较短的距离，高达 5.3 英里。
+- **电缆系数** — 无线网卡与天线之间电缆上传输信号传输的距离是选择正确天线的因素之一。电缆越短，您将在天线上获得更远的距离和速度。
+
+天线的功率以*增益*为单位进行评级。增益以分贝为单位测量，基于*理论各向同性辐射器*（或 *dBi*）。较高的增益提供了以更高速度实现更远距离的机会。然而，天线聚焦该功率的能力（定向与全向），极大地影响了可以实现的速度和距离。
+
+## 获取无线驱动程序
+
+如果您使用的是包含*Fedora 支持驱动程序*的无线卡，它很可能会被自动检测，并且您将能够按照本节后面的说明进行配置。然而，使用 Windows 驱动程序和 *ndiswrapper* 驱动程序需要额外的配置。以下步骤包含使用 Linksys 802.11g 无线 PCI 适配卡配置 *ndiswrapper* 的示例。
+
+> **注意：** 此步骤的大部分内容来自 *ndiswrapper* 软件包中的 *INSTALL* 文件。您应该检查该文件，以确保在新版本的 *ndiswrapper* 发布时步骤没有变化。
+
+1. 确定您使用的无线卡类型。如果您有 PCI 卡，输入：
+   ```bash
+   # lspci -v | less
+   ```
+   ```
+   00:0a.0 Network controller: Broadcom Corporation BCM4306 802.11b/g Wireless LAN Controller (rev 03)
+   Subsystem: Linksys: Unknown device 0014
+   Flags: bus master, fast devsel, latency 32, IRQ 5
+   Memory at ee000000 (32-bit, non-prefetchable) [size=8K]
+   ```
+   在此示例中，PCI 卡是来自 Broadcom Corporation 的 BCM4306 802.11b/g 无线控制器。
+
+2. 检查以下已知可在 ndiswrapper 下运行的无线卡驱动程序列表：
+   `http://ndiswrapper.sourceforge.net/wiki/index.php/List`
+
+3. 如果您的卡在该列表中，请下载该页面上推荐的驱动程序。我使用了 Linksys WMP54GS Wireless-G PCI 适配器（由上述 lspci 输出中显示的芯片组 BCM4306 802.11g, rev 03 反映）。因此，我如下下载了驱动程序：
+   ```bash
+   # mkdir wireless
+   # cd wireless
+   # wget ftp://ftp.linuxys.com/pub/network/wpc54g_v2_driver_utility_v2.0.zip
+   ```
+
+4. 文件下载完成后，解压驱动程序文件。对于示例，我输入：
+   `# unzip wpc54g_v2_driver_utility_v2.0.zip`
+
+5. 接下来，从以下站点下载 ndiswrapper 软件（目前仅提供源代码）到您的 Fedora Core 系统：
+   `http://sourceforge.net/projects/ndiswrapper`
+
+6. 在当前目录下，按照以下方式解压缩并解压 ndiswrapper 源代码软件包：
+   `# tar xvfz ndiswrapper-*tar.gz`
+
+7. 转到 ndiswrapper 目录并按照以下方式运行 `make` 命令：
+   ```bash
+   # cd ndiswrapper*
+   # make install
+   ```
+
+8. 从解压的驱动程序包中获取 INF 文件。在我们的示例中，我们需要的是 `1sbcmds.inf` 文件。然后运行 `ndiswrapper -i` 命令来安装驱动程序。例如，在当前目录下有 `1sbcmds.inf` 文件时，我运行：
+   `# ndiswrapper -i 1sbcmds.inf`
+
+9. 检查驱动程序现在是否可用以及硬件是否可用：
+
