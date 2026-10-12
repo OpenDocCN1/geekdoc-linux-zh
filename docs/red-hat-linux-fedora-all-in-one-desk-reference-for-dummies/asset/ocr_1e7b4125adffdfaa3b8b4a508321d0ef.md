@@ -1,0 +1,26 @@
+![](bbox=[0.12, 0.13, 0.22, 0.28])
+
+Don't use a pointer until it contains the address of a valid object.
+
+The example shows p_i being initialized to the address of the integer variable count using the & operator, which provides the address of a variable. After p_i is initialized, you can refer to the value of count with the expression *p_i, which is read as "the contents of the object with its address in p_i."
+
+Pointers are useful in many situations; an important one is the dynamic allocation of memory. The standard C libraries include functions such as malloc and calloc, which you can call to allocate storage for arrays of objects. After allocating memory, these functions return the starting address of the block of memory. Because this address is the only way to reach that memory, you must store it in a variable capable of holding an address — a pointer.
+
+Suppose you allocated memory for an array of 50 integers and saved the returned address in p_i. Now you can treat this block of memory as an array of 50 integers with the name p_i. Thus, you can refer to the last element in the array as p_i[49], which is equivalent to *(p_i + 49). Similarly, C treats the name of an array as a pointer to the first element of the array. The difference between the name of an array and a pointer variable is that the name of the array is a constant without any explicit storage necessary to hold the address of the array's first element. The pointer, on the other hand, is an actual storage location capable of holding the address of any data.
+
+In addition to storing the address of dynamically allocated memory, pointers are also commonly used as arguments to functions. When a C function is called, all of its arguments are passed by value — that is, the function gets a copy of each argument, not the original variables appearing in the argument list of the function call. Thus, a C function cannot alter the value of its arguments. Pointers provide a way out. To change the value of a variable in a function, you can pass it a pointer to the variable; the function can alter the value through the pointer.
+
+# Type definitions
+
+Through the typedef keyword, C provides you with a convenient way of assigning a new name to an existing data type. You can use the typedef facility to give meaningful names to data types used in a particular application. For example, a graphics application might declare a data type named Point as follows:
+
+```
+```c
+/* Declare a Point data type */
+typedef struct Point
+{
+    short x;
+    short y;
+}
+```
+```

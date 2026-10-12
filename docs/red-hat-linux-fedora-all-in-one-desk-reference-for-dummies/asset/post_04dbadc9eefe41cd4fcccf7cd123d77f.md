@@ -1,0 +1,384 @@
+
+- make xconfig command, 497
+- makefiles
+- creating, 725–727
+- example, 724–725
+- names, 721
+- overview, 721–722
+- man command, 19
+- man pages, 19–21
+- managed mode, 322
+- master handouts, 268
+- master notes, 268
+- master slides, 268
+- Mattis, Peter, 205
+- MaxClients directive, 622
+- MaxSparesServers directive, 621
+- MD5 encryption, 533–536
+- memory, definition, 712
+- menus, GNOME
+- desktop pop-up menus, 100–102
+- icon pop-up menus, 102–103
+- Main Menu, 81–82, 105–108
+- menus, KDE
+- desktop pop-up menus, 122–124
+- icon pop-up menus, 124–125
+- Main Menu, 126–129
+- menus, Mozilla, 369
+- methods, Perl, 807
+- MFM support, 503–504
+- mformat utility, 460–461
+- microprocessors, definition, 712
+- Microsoft Office, running on Linux.
+- See CrossOver Office
+- minor device numbers, 480–481
+- MinSpareServers directive, 621
+- mitigation of risk, 524
+- mkbootdisk command, 494
+- mkdir command, 172–173
+- mobile stations, 324
+- modems
+- cable, 293–298
+- connecting, 299–300
+- installing Red Hat Linux, 31
+- testing, 302–304
+- winmodems, 301
+- modprobe command, 483–484
+- modular kernels, 495–496
+- modules, Perl, 804–806
+- monitor, installing Red Hat Linux, 31
+- monitoring performance, See
+- performance monitoring
+- monolithic kernels, 495–496
+- more command, 95, 156
+- mount command, 174, 442–445
+- mounting
+- DOS floppy disks, 455–457
+- DOS partitions, 454–455
+- file systems See file systems,
+- mounting
+- NFS, 700
+- mouse, 31, 39–42, 508
+- moving files, 114, 135
+- Mozilla
+- e-mail, 353–357
+- reading newsgroups, 383–387
+- Mozilla, Web browser
+- customizing, 370–372
+- home page, changing, 369–370
+- menus, 369
+- starting, 365
+- status bar, 368–369
+- surfing the net, 372
+- themes, 370–372
+- toolbars, 366–368
+- user interface, 365–369
+- Mozilla Composer
+- help balloons, 376
+- <HTML> Source view, 378
+- HTML Tags view, 377
+- inserting images, 375–376
+- Normal view, 377
+- Preview view, 378
+- sample editing session, 375–376
+- views, 377–378
+- MTA (mail-transport agent), 346–347
+- mtools package, 457–460
+- MUA (mail-user agent), 346–347
+- multimedia
+- digital cameras, 190–193
+- playing audio CDs, 193–194
+- playing sound files, 194–196
+- multimedia, burning CDs
+- audio CDs, 199–202
+- DAO method, 201
+- data CDs, 202–203
+- hardware requirements, 196
+- identifying CD drives, 197–198
+- ISO images, 203–204
+- pause between tracks, 201
+- Preferences dialog box, 198–199
+- TAO method, 201
+- multimedia devices, 508–509
+- mv command, 172
+- MySQL
+- building databases, 185–186
+- creating databases, 187
+- defining tables, 188
+- description, 185
+- designing databases, 186
+- inserting records, 188–189
+- MySQL monitor, 187
+- querying databases, 189–190
+- MySQL AB, 185
+- MySQL monitor, 187
+## N
+- name daemon controller (ndc), 679
+- name service switch (NSS) file, 337
+- named daemon, 673–674
+- NAT (Natural Address Translation)
+- routers
+- cable modem, 297–298
+- DSL, 292–293
+- Natural Address Translation (NAT)
+- routers
+- cable modem, 297–298
+- DSL, 292–293
+- Nautilus shell
+- copying files, 114
+- creating folders, 115
+- deleting files and folders, 114–115
+- moving files, 114
+- renaming files and folders, 115
+- sorting the list view, 114
+- viewing files and folders, 111–114
+- ndc (name daemon controller), 679
+- Nessus Security Scanner, 585–588
+- netstat command, 339–341
+- network card, 31
+- network device support, 507
+- network devices, 481
+- Network File System (NFS). See NFS (Network File System)
+- Network Information Service (NIS)
+- server. See NIS (Network Information Service)
+- network layer, 310
+- network mapper (nmap), 584–585
+- Network News Transfer Protocol
+- (NNTP), 313, 598
+- network protocols, 17
+- Network Time Protocol (NTP), 598
+- networking options, 503
+- networks. See also LANs; security, network; TCP/IP
+- network;
+- configuring during installation, 47–49
+- interfaces, checking, 332, 337–338
+- overview, 17, 24
+- status, checking, 339–341
+- system administration, 400
+- news feeds, 658
+- news server. See INN (InterNetNews)
+- newsfeeds file, 661–663
+- newsgroups. See also online resources
+- adding, 667
+- configuring, 665–666
+- hierarchy, defining, 665–666
+- hierarchy, description, 380–382
+- Linux related, 382–383
+- overview, 379–380
+- posting to, 386–387
+- searching, 388
+- subscribing to, 386
+- testing, 667
+- top-level categories, 381–382
+- newsgroups, reading
+- with Mozilla, 383–387
+- newsreaders, 383
+- at Web sites, 388
+- from your ISP, 383–387
+- newsreaders, 383
+- NFS (Network File System)
+- configuring, 701–702
+- definition, 313
+- on the DVD, 812
+- exporting file systems, 446, 698–700
+- mounting, 447, 700
+- port number, 598
+- sharing files, 697–702
+- NFS Server Configuration tool, 701–702
+- NIS (Network Information Service)
+- server
+- client, setting up, 689–692
+- client-daemon setup, 691–692
+- configuration-file setup, 691
+- domain-name setup, 690–691
+- information types, 688
+- map creation, 692–693
+- master server configuration, 693–695
+- overview, 688–689
+- setting up, 692–695
+- slave server configuration, 694
+- testing, 695–696
+- nmap (network mapper), 584–585
+- nnrpd program, 659
+- NNTP (Network News Transfer Protocol), 313, 598
+- ntpsend program, 659
+- nonrepudiation, 528
+- nopriv_user option, 637
+- noprobe command, 56–57
+- Normal view, 377
+- NSS (name service switch) file, 337
+- NTP (Network Time Protocol), 598
+- null C statement, 757
+## O
+- object code, 714
+- objects, Perl, 806–808
+- online documentation, 19–21
+- Adobe Reader, 226
+- Anyware Office, 182
+- Anywhere Desktop for Linux, 17
+- Apache Web server, 616
+- Applixware, 182
+- Applixware Office, 16
+- Arkeia, 449
+- backup utilities, 449
+- BrightStor ARCserve Backup, 449
+- BRU, 449
+- CodeWeavers, 183
+- Computer Associates, 449
+- CrossOver Office, 17
+- CTAR, 449
+- CVE, 574
+- digital cameras, 190
+- Ethernet, 322
+- GNOME, 79
+- Google Groups, 59
+- gPhoto, 190
+- host security, 588
+- ICAT Metabase, 574
+- INN, 659
+- IPv6 FAQ, 312
+- KDE, 86
+- kernel version, 12
+- Knox Software, 449
+- Linux Online, 25
+- Lone Star Software Corporation, 449
+- LONE-TAR, 449
+- MySQL AB, 185
+- OpenOffice.org, 182
+- OpenSSH, 555
+- PartitionMagic, 35
+- public news servers, 383
+- SAINT, 588
+- SANS Institute, 574
+- security monitoring, 549
+- security news and updates, 530
+- security vulnerabilities, 574
+- StarOffice, 17, 182
+- Tolis Group, Inc, 449
+- Tripwire program, 549
+- UniTrends Software Corporation, 449
+- VistaSource, 182
+- Open Secure Shell (OpenSSH), 555–557
+- OpenOffice.org
+- on the DVD, 812
+- Web site, 182
+- OpenOffice.org Calc
+- calculating data, 256–259
+- cell use, tracking, 258
+- charting data, 256–259
+- entering data, 253–256
+- features, 250
+- formatting data, 253–256
+- functions, automating, 258
+- main window, 251–252
+- scenarios, 256–259
+- setup, 252–253
+- OpenOffice.org Draw
+- drawing, 280–282
+- features, 275–276
+- flyout toolbars, 279–280
+- main window, 276–278
+- tooltips, 280
+- OpenOffice.org Impress
+- features, 261–262
+- graphics, 270–273
+- inserting slides, 266
+- layers, 268
+- main window, 262–265
+- master handouts, 268
+- master notes, 268
+- master slides, 268
+- rearranging slides, 267–268
+- setup, 265
+- slide layout, selecting, 266
+- slide-sorter view, 267–268
+- special effects, 270–273
+- OpenOffice.org Impress, presentations
+- delivering, 273–274
+- preparing, 267–270
+- printing to PDF, 273
+- saving, 266–267
+- type, selecting, 266
+- from Writer outlines, 267
+- OpenOffice.org Writer
+- bookmarks, 246
+- documents, editing, 233–235
+- documents, getting from others, 224–225
+- documents, large, 247–248
+- documents, reviewing, 233–235
+- features, 225–226
+- fields, 245–247
+- formatting pages, 235–239
+- frames, 241
+## P
+- OpenOffice.org Writer (continued)
+  - getting started, 226–227
+  - graphics, 243–245
+  - main window, 227–229
+  - page layout, 239–243
+  - PDF format, 226
+  - references, 246
+  - setup, 229–232
+  - styles, 235–239
+  - templates, 235–239
+  - tooltips, 229
+- OpenSSH (Open Secure Shell), 555–557
+- operating systems, 9–11
+- operators
+  - C language, 751–753
+  - Perl, 789–790
+- option dependencies, 499
+- Options directive, 628
+- order directive, 629
+- ownership
+  - changing, 170–171, 436–437
+  - security issues, 537
+  - viewing, 436
+- package groups, installing, 52–54
+- packages. See also RPM packages
+- building from source files, 470–475
+- Perl, 803–804
+- source files for, downloading and unpacking, 470–472
+- SRPMS, installing, 475
+- upgrading, 476–478
+- packet filtering
+  - definition, 529
+  - enabling, 559–561, 565–569
+- packets
+  - definition, 315
+  - dumping headers, 341–342
+  - security, 529
+  - sniffing, 341–342
+- Pager applet, 80
+- PAMs (Pluggable Authentication Modules), 533–536, 638
+- pam_service_name option, 637
+- PAP (Password Authentication Protocol), 307–308
+- parallel port support, 500–501
+- parentheses (()), null-list operator, 790
+- partitioning a hard disk, 28, 34–38, 42–45
+- PartitionMagic
+  - definition, 34
+  - partitioning a hard disk, 35
+- Password Authentication Protocol (PAP), 307–308
+- passwords
+  - cracking, 532
+  - encryption, 533–536
+  - MD5 encryption, 533–536
+  - NIS, 694
+  - PAMs, 533–536
+  - reviewing, 579
+  - root password, setting, 50–52
+  - security, host issues, 532–536
+  - shadow, 532–533
+  - validity checking, 532
+- pathnames, 162–163
+- PCMCIA character devices, 508
+- PCs
+  - hardware components, 712–713
+  - operating system, 713–714
+- PDFs
+  - Impress presentations, 273
+  - viewing and printing, 207–208
+  - Writer documents, 226
+- penetration testing, 582–583
+- percent sign (%), Perl variables, 786

@@ -1,0 +1,21 @@
+# Chapter 2: Using the Web
+
+# In This Chapter
+
++   ✓ Discovering the World Wide Web
++   ✓ Understanding a URL
++   ✓ Checking out Web servers and Web browsers
++   ✓ Web browsing with Mozilla
++   ✓ Creating Web pages with Mozilla Composer
+
+I suspect you already know about the Web, but did you know that the Web, or more formally the World Wide Web, made the Internet what it is today? The Internet was around for quite a while, but it did not reach the masses until the Web came along in 1993.
+
+Before the Web came along, you had to use arcane UNIX commands to download and use files — it was simply too complicated for most of us. With the Web, however, anyone could enjoy the benefits of the Internet by using a Web browser — a graphical application that downloads and displays Web documents. A click of the mouse is all it takes to go from reading a document from your company Web site to downloading a video clip from across the country.
+
+In this chapter, I briefly describe the Web and introduce Mozilla — the primary Web browser (and, for that matter, a mail and news reader, too) in Red Hat Linux. I also briefly discuss how you can create your own Web pages.
+
+# Discovering the World Wide Web
+
+If you have used a file server at work, you know the convenience of sharing files. You can use the word processor on your desktop to get to any document on the shared server.
+
+Now imagine a word processor that enables you to open and view a document that resides on any computer on the Internet. You can view the document in its full glory, with formatted text and graphics. If the document makes a reference to another document (possibly residing on yet another computer), you can open that linked document by clicking the reference. That kind of easy access to distributed documents is essentially what the World Wide Web provides.

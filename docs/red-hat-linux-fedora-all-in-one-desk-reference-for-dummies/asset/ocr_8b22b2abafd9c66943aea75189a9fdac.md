@@ -1,0 +1,25 @@
+# Chapter 3: Setting Up the FTP Server
+
+# In This Chapter
+
++   - Installing the FTP server
++   - Configuring the FTP server
++   - Setting up anonymous FTP
+
+File Transfer Protocol (FTP) is a popular Internet service for transferring files from one system to another. Anonymous FTP is another popular Internet service for distributing files. The neat thing about anonymous FTP is that if a remote system supports anonymous FTP, anyone can use FTP with the anonymous user ID and can download files from that system. Although anonymous FTP is useful for distributing data, it poses a security risk if it's not set up properly.
+
+Red Hat Linux comes with several FTP clients and the “very secure” FTP daemon (vsftpd), written by Chris Evans. Red Hat Linux also includes an RPM called anonftp that sets up the files you need to support anonymous FTP. In this chapter, I show you how to configure the FTP server through text configuration files and how to control access to the FTP server. I also describe anonymous FTP — how it's set up and how to ensure that it's secure.
+
+# Installing the FTP Server
+
+During Red Hat Linux installation, you have the option to install the FTP Server software. To check whether the FTP server is already installed, type the following command:
+
+```
+rpm -q vsftpd
+```
+
+If the software is indeed installed, you should see an output similar to the following:
+
+```
+vsftpd-1.2.0-2.1
+```

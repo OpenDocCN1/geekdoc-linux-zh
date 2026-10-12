@@ -1,0 +1,14 @@
+| Term | Description |
+|---|---|
+| Packet | A collection of bytes, assembled according to a specific protocol, that serves as the basic unit of communication on a network. On TCP/IP networks, for example, the packet may be referred to as an *IP packet* or a *TCP/IP packet*. |
+| Packet filtering | Selective blocking of packets according to type of packet (as specified by the source and destination IP address or port). |
+| Perimeter network | A network between the Internet and the protected internal network. The perimeter network (also known as DMZ) is where the bastion host resides. |
+| Port scanning | A method of discovering which ports are open (in other words, which Internet services are enabled) on a system. Performed by sending connection requests to the ports, one by one. This procedure is usually a precursor to further attacks. |
+| Proxy server | A server on the bastion host that enables internal clients to access external servers (and enables external clients to access servers inside the protected network). There are proxy servers for various Internet services, such as FTP and HTTP. |
+| Public key cryptography | An encryption method that uses a pair of keys — a private key and a public key — to encrypt and decrypt the information. Anything encrypted with the public key can be decrypted only with the corresponding private key, and vice versa. |
+| Public Key Infrastructure (PKI) | A set of standards and services that enables the use of public key cryptography and certificates in a networked environment. PKI facilitates tasks, such as issuing, renewing, and revoking certificates, and generating and distributing public and private key pairs. |
+| Screening router | An Internet router that filters packets. |
+| Setuid program | A program that runs with the permissions of the owner regardless of who runs the program. For example, if a setuid program is owned by root, that program has root privileges regardless of who has started the program. Crackers often exploit vulnerabilities in setuid programs to gain privileged access to a system. |
+| Symmetric key encryption | An encryption method wherein the same key is used to encrypt and decrypt the information. |
+| Threat | An event or activity, deliberate or unintentional, with the potential for causing harm to a system or network. |
+| Trojan Horse | A program that masquerades as a benign program, but, in fact, is a backdoor used for attacking a system. Attackers often install a collection of Trojan Horse programs that enable the attacker to freely access the system with root privileges, yet hide that fact from the system administrator. Such collections of Trojan Horse programs are called rootkits. |

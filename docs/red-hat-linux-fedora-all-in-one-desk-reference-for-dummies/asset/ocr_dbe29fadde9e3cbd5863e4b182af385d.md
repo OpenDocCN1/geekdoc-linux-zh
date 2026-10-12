@@ -1,0 +1,19 @@
+# Chapter 1: Exchanging Your E-Mail and Instant Messages
+
+# In This Chapter
+
++   ✓ Understanding electronic mail
++   ✓ Taking stock of mail readers and IM (Instant Messaging) clients
++   ✓ Using Ximian Evolution
++   ✓ Using Mozilla Mail
++   ✓ Instant messaging with Gaim
+
+Electronic mail (e-mail) is a mainstay of the Internet. E-mail is great because you can exchange messages and documents with anyone on the Internet. One of the most common ways people use the Internet is to keep in touch with friends, acquaintances, loved ones, and strangers through e-mail. You can send a message to a friend thousands of miles away and get a reply within a couple of minutes. Essentially, you can send messages anywhere in the world from an Internet host, and that message typically makes its way to its destination within minutes — something you can't do with paper mail (also known as snail mail, and appropriately so).
+
+I love e-mail because I can communicate without having to play the game of “phone tag,” in which two people leave telephone messages for each other without successfully making contact. When I send an e-mail message, it waits in the recipient’s mailbox to be read at the recipient’s convenience. I guess I like the converse even better — when people send me e-mail, I can read and reply at my convenience.
+
+Red Hat Linux comes with several mail clients that can download mail from your Internet service provider (ISP). You can also read e-mail and send e-mail using these mail clients. In this chapter, I mention most of the mail clients available in Red Hat Linux and describe a few of them. And when you know one, you can easily use any of the mail readers.
+
+![](bbox=[0.15, 0.86, 0.24, 0.98])
+
+There is yet another type of “keeping in touch” that’s more in line with today’s teenagers. I’m talking about IM — instant messaging. IM is basically one-to-one chat, and Red Hat Linux includes IM clients for AOL Instant Messenger (or AIM). I briefly describe the AIM clients in this chapter.

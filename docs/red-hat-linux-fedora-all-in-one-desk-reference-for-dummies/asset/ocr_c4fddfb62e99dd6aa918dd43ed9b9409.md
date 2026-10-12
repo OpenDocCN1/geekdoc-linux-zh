@@ -1,0 +1,5 @@
+To see the benefit of using a shared library, return to the preceding section and make some changes in the shared library source file — `dynobj.c`. For example, you could print some other message in a function so that you can easily tell that you have made some change. Rebuild the shared library alone. Then run `dltest` again. The resulting output should show the effect of the changes you make in the shared library, which means you can update the shared library independently of the application.
+
+![](bbox=[0.15, 0.35, 0.25, 0.48])
+
+Note that a change in a shared library can affect many applications installed on your system. Therefore, be careful when making changes to any shared library. By the same token, shared libraries can be a security risk if someone manages to replace one with some malicious code.

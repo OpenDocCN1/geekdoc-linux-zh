@@ -1,0 +1,38 @@
+Table 1-4 (continued)
+
+| This Command | Does the Following |
+|---|---|
+| watch VAR | Shows the value of the variable named VAR whenever the value changes. |
+| where | Displays the call sequence. Use this command to locate where your program died. |
+| x/F ADDR | Examines the contents of the memory location at address ADDR in the format specified by the letter F, which can be o (octal); x (hex); d (decimal); u (unsigned decimal); t (binary); f (float); a (address); i (instruction); c (char); or s (string). You can append a letter indicating the size of data type to the format letter. Size letters are b (byte); h (halfword, 2 bytes); w (word, 4 bytes); and g (giant, 8 bytes). Typically, ADDR is the name of a variable or pointer. |
+
+# Finding bugs by using gdb
+
+To understand how you can find bugs by using gdb, you need to see an example. The procedure is easiest to show with a simple example, so I start with a rather contrived program that contains a typical bug.
+
+This is the contrived program, which I store in the file dbgtst.c:
+
+```
+```c
+#include <stdio.h>
+
+static char buf[256];
+void read_input(char *s);
+
+int main(void)
+{
+    char *input = NULL; /* Just a pointer, no storage for string */
+    read_input(input);
+    /* Process command. */
+    printf("You typed: %s\n", input);
+    /* ... */
+    return 0;
+}
+
+void read_input(char *s)
+{
+    printf("Command: ");
+    gets(s);
+}
+```
+```

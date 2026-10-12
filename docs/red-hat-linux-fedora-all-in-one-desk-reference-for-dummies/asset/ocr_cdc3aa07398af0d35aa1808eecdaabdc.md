@@ -1,0 +1,17 @@
+# Understanding digital signatures
+
+The purpose of digital or electronic signatures is the same as pen-and-ink signatures, but how you sign digitally is completely different. Unlike pen-and-ink signatures, your digital signature depends on the message you're signing. The first step in creating a digital signature is to apply a mathematical function on the message and reduce it to a fixed-size message digest (also called hash or a fingerprint). No matter how big your message is, the message digest is always around 128 or 160 bits, depending on the hashing function.
+
+The next step is to apply public key encryption. Simply encrypt the message digest with your private key, and you get the digital signature for the message. Typically, the digital signature is appended to the end of the message, and voila! — you get an electronically signed message.
+
+What good does the digital signature do? Well, anyone who wants to verify that the message is indeed signed by you takes your public key and decrypts the digital signature. What they get is the message digest (the encrypted hash) of the message. Then they apply the same hash function to the message and compare the computed hash with the decrypted value. If the two match, then no one has tampered with the message. Because your public key was used to verify the signature, the message must have been signed with the private key known only to you. So the message must be from you!
+
+In the theoretical scenario of Alice sending private messages to Bob, Alice can digitally sign her message to make sure that Bob can tell that the message is really from her. Figure 2-2 illustrates the use of digital signature along with normal public key encryption.
+
+Here's how Alice sends her private message to Bob with the assurance that Bob can really tell it's from her:
+
++   1. Alice uses software to compute the message digest of the message and then encrypts the digest using her private key. This is her digital signature for the message.
++   2. Alice encrypts the message, (again, using some convenient software and *Bob's public key*.
++   3. She sends both the encrypted message and the digital signature to Bob.
++   4. Bob decrypts the message using his private key.
++   5. Bob decrypts the digital signature using Alice's public key. This gives him the message digest.

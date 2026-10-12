@@ -1,0 +1,33 @@
+You can go to a specific line number at any time. This is where a colon command comes in handy. To go to line 6, for example, type the following and then press Enter:
+
+```
+:6
+```
+
+When you type the colon, vi displays the colon on the last line of the screen. From then on, vi uses any text you type as a command. You have to press Enter to submit the command to vi. In colon-command mode, vi accepts all commands that the ed editor accepts — and then some.
+
+To search for a string, first type a slash (/). The vi editor displays the slash on the last line of the screen. Type the search string and then press Enter. The vi editor locates the string and positions the cursor at the beginning of that string. Thus, to locate the string cdrom in the file /etc/fstab, type
+
+```
+/cdrom
+```
+
+To delete the line that contains the cursor, type dd (two lowercase ds). The vi editor deletes that line of text and makes the next line the current one.
+
+To begin entering text in front of the cursor, type i (a lowercase i all by itself). The vi editor switches to text-input mode. Now you can enter text. When you finish entering text, press Esc to return to visual command mode.
+
+After you finish editing the file, you can save the changes in the file with the :w command. To quit the editor without saving any changes, use the :q! command. If you want to save the changes and exit, you can type :wq to perform both steps at the same time. The vi editor saves the changes in the file and exits. You can also save the changes and exit the editor by pressing Shift+zz (hold the Shift key down and press the Z key twice).
+
+In addition to these commands, vi accepts a large number of commands. Table 6-3 lists some commonly used vi commands, organized by task.
+
+Table 6-3 Commonly Used vi Commands
+
+| Command | Does the Following |
+|---|---|
+| Insert Text | |
+| a | Inserts text after the cursor. |
+| A | Inserts text at the end of the current line. |
+| I | Inserts text at the beginning of the current line. |
+| i | Inserts text before the cursor. |
+
+(continued)

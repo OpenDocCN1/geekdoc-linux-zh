@@ -1,0 +1,14 @@
+# Understanding Electronic Mail
+
+E-mail messages are addressed to a user name at a host (host is just a fancy name for an online computer). That means if John Doe logs in with the user name jdoe, e-mail to him is addressed to jdoe. The only other piece of information needed to identify the recipient uniquely is the fully qualified domain name of the recipient's system. Thus, if John Doe's system is named someplace.com, his complete e-mail address becomes jdoe@someplace.com. Given that address, anyone on the Internet can send e-mail to John Doe.
+
+# How MUA and MTA work
+
+There are two types of mail software:
+
++   - **Mail-user agent (MUA)** is the fancy name for a mail reader — a client that you use to read your mail messages, write replies, and compose new messages. Typically, the mail-user agent retrieves messages from the mail server by using the POP3 or IMAP4 protocol. POP3 is the Post Office Protocol Version 3, and IMAP4 is the Internet Message Access Protocol Version 4. Red Hat Linux comes with mail-user agents such as Balsa, Mozilla Mail, KMail, and Ximian Evolution.
++   - **Mail-transport agent (MTA)** is the fancy name for a mail server that actually sends and receives mail-message text. The exact method used for mail transport depends on the underlying network. In TCP/IP networks, the mail-transport agent delivers mail using the Simple Mail Transfer Protocol (SMTP). Red Hat Linux includes sendmail, a powerful and popular mail-transport agent for TCP/IP networks.
+
+Figure 1-1 shows how the MUAs and MTAs work with one another when Alice sends an e-mail message to Bob. (In case you didn't know, it's customary to use Alice and Bob to explain e-mail and cryptography — just pick up any book on cryptography and you'll see what I mean). And you may already know this, but the Internet is always diagrammed as a cloud — the boundaries of the Internet are so fuzzy that a cloud seems just right to represent it (or is it because no one knows where it starts and where it ends?).
+
+The scenario in Figure 1-1 is typical of most people. Alice and Bob both connect to the Internet through an ISP and get and send their e-mail through their ISPs. When Alice types a message and sends it, her mail-user agent (MUA) sends the message to her ISP's mail-transfer agent (MTA) using the Simple Mail-Transfer Protocol (SMTP). The sending MTA then sends that message to the receiving MTA — Bob's ISP's MTA — using SMTP. When Bob connects to the Internet, his MUA downloads the message from his ISP's MTA using the POP3 (or IMAP4) protocol. That's the way mail moves around the Internet — from sending MUA to sending MTA to receiving MTA to receiving MUA.

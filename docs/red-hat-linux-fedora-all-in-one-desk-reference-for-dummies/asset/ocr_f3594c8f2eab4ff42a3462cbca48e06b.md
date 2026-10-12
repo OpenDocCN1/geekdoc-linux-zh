@@ -1,0 +1,15 @@
++   - **dirmessage_enable=YES** causes `vsftpd` to display messages when FTP users change to certain directories.
++   - **ftp_banner=Welcome to my FTP service.** sets the banner that `vsftpd` displays when a user logs in. You can change the message to anything you want.
++   - **idle_session_timeout=600** is the time (in seconds) after which an idle session (refers to the situation where someone connects and does not do anything) times out and `vsftpd` logs the user out.
++   - **listen=YES** causes `vsftpd` to listen for connection requests and, consequently, run in standalone mode. Set this to NO if you want to run `vsftpd` under `xinetd`.
++   - **local_enable=YES** causes `vsftpd` to grant local users access to FTP.
++   - **local_umask=022** means whatever files FTP writes will have a permission of 644 (read access for everyone, but write access for owner only). You can set it to any file permission mask setting you want. For example, if you want no permissions for anyone but the owner, change this to 077.
++   - **ls_recurse_enable=YES** enables FTP users to recursively traverse directories by using the `ls -R` command.
++   - **nopriv_user=ftp** identifies an unprivileged user account that the FTP server can use.
++   - **pam_service_name=vsftpd** is the name of the Pluggable Authentication Module (PAM) configuration file that is used when `vsftpd` must authenticate a user. By default the PAM configuration files are in `/etc/pam.d` directory. That means the `vsftpd` PAM configuration file is `/etc/pam.d/vsftpd`.
++   - **tcp_wrappers=YES** enables support for access control through TCP wrapper that consults the files `/etc/hosts.allow` and `/etc/hosts.deny` (for more information about TCP wrapper, see Book VII, Chapter 3).
++   - **userlist_deny=YES** causes `vsftpd` to deny access to the users listed in the `/etc/vsftpd.user_list` file. These users are not even prompted for a password.
++   - **write_enable=YES** causes `vsftpd` to allow file uploads to the host.
++   - **xferlog_enable=YES** turns on the logging of file downloads and uploads (always a good idea, but takes disk space).
++   - **xferlog_file=/var/log/vsftpd.log** specifies the full pathname of the `vsftpd` log file. The default is `/var/log/vsftpd.log`.
++   - **xferlog_std_format=YES** causes `vsftpd` to generate log files in a standard format used by other FTP daemons.
