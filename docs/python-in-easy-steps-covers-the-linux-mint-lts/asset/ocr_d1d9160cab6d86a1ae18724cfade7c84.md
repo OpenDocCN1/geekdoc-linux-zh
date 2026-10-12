@@ -1,0 +1,1 @@
++   - Python is a duck-typed language that supports polymorphism for like-named methods of multiple classes.

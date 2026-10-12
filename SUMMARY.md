@@ -1681,6 +1681,7 @@
 +   [Python 必备参考 (第四版) (开发者库)](docs/python-essential-reference-4th-edition-developers-library/README.md)
 +   [Unix 和 Linux 系统管理的 Python](docs/python-for-unix-and-linux-system-administration/README.md)
 +   [Python 入门指南：涵盖 Python 3.7](docs/python-in-easy-steps-covers-python-37/README.md)
++   [Python 入门指南：涵盖 Linux Mint LTS](docs/python-in-easy-steps-covers-the-linux-mint-lts/README.md)
 +   [Python 编程与 Linux 初学者指南：二合一：通过这本易于学的学者指南学习 Linux 系统并开始用于数据科学与机器学习的 Python 编程](docs/python-programming-and-linux-for-beginners-2-books-in-1-lear/README.md)
 +   [Python 编程初学者指南：Python 基础入门指南。通过实用示例快速掌握编程的技巧与方法](docs/python-programming-for-beginners-the-beginners-guide-to-lear/README.md)
 +   [Python：完全手册 - Python 用户必备指南 - 立即精通 Python！第一版](docs/python-the-complete-manual---the-essential-handbook-for-pyth/README.md)

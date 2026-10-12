@@ -1,0 +1,216 @@
+
+| %M | 分钟数 0-59 |
+| %p | 本地化环境下的 AM 或 PM 等效值 |
+| %S | 秒数 0-59 |
+| %w | 星期几数字 0(星期日)-6 |
+| %W | 一年中的第几周 0-53 |
+| %X | 适合本地化环境的当前时间格式 (适合当前日期格式为 %x) |
+| %Y | 年份 0001-9999 (00-99 年份格式为 %y) |
+| %z | 时区偏移量，相对于 UTC，格式为 +HHMM 或 -HHMM |
+| %Z | 时区名称 |
+
+![](img/d06b1f1cf83677f6647237f0c7827141_136_0.png)
+
+由于 datetime 对象位于同名的模块中，简单地导入该模块意味着它将作为 **datetime.datetime** 被引用。使用 **from datetime import \*** 以便可以直接作为 **datetime** 引用。
+
+![](img/d06b1f1cf83677f6647237f0c7827141_136_1.png)
+
+由于 **strftime()** 方法需要一个字符串参数，指令必须包含在引号之间。
+
+1.  通过导入“datetime”模块开始一个新的 Python 脚本，使其功能可用
+    `from datetime import *`
+
+![](img/d06b1f1cf83677f6647237f0c7827141_136_2.png)
+
+2.  接下来，创建一个 datetime 对象，将属性赋给当前日期和时间值，然后显示其内容
+
+```python
+today = datetime.today()
+print( 'Today Is:', today )
+```
+
+3.  添加一个循环，分别显示每个属性的值
+
+```python
+for attr in \
+['year','month','day','hour','minute','second','microsecond'] :
+    print( attr ,':', getattr( today , attr ) )
+```
+
+4.  现在，添加一条语句，使用点符号显示时间
+
+```python
+print( 'Time:', today.hour ,':', today.minute , sep = " ")
+```
+
+5.  然后，将格式化的星期和月份名称赋值给变量
+
+```python
+day = today.strftime( '%A' )
+month = today.strftime( '%B' )
+```
+
+6.  最后，添加一条语句以显示格式化后的日期
+
+```python
+print( 'Date:', day , month , today.day )
+```
+
+7.  将文件保存在你的 scripts 目录中，然后在那里打开一个命令提示符窗口并运行此程序 – 以查看日期和时间值的显示
+
+![](img/d06b1f1cf83677f6647237f0c7827141_137_0.png)
+
+注意此循环中如何使用 \ 反斜杠字符，以便语句可以在下一行继续而不会导致错误。
+
+![](img/d06b1f1cf83677f6647237f0c7827141_137_1.png)
+
+![](img/d06b1f1cf83677f6647237f0c7827141_138_0.png)
+
+你可以使用 `replace()` 方法为 datetime 对象的属性分配新值，例如 `today = today.replace(year=2020)`。
+
+## 运行计时器
+
+获取事件前后的当前时间意味着可以通过它们的差值来计算事件的持续时间。可以导入 Python 的“time”模块到程序中，以提供各种与时间相关的函数。
+
+当前系统时间通常计算为自 1970 年 1 月 1 日 00:00:00 GMT 的纪元（Epoch）以来经过的秒数。调用 time 模块的 time() 方法时，它会以浮点数形式返回自纪元以来的当前时间（以秒为单位）。
+
+time() 方法返回的数字可以使用 gmtime() 或 localtime() 方法转换为“struct_time”对象。该对象具有 tm_year、tm_mon、tm_mday、tm_hour、tm_min、tm_sec、tm_wday、tm_yday、tm_yday 和 tm_isdst 属性，可以使用点符号进行引用。例如，struct.tm_wday。
+
+struct_time 对象中的所有值都存储为数值，但可以使用 strftime() 方法转换为文本等效值。这需要提供一个参数，该参数是一个由格式“指令”后跟 struct_time 对象名称组成的字符串。可能的指令包括针对 *datetime* 对象在*此处*列出的那些。例如，*strftime* (*'%A'*, *struct*) 用于星期几。
+
+实用的是，time 模块还提供了一个 sleep() 方法，可用于暂停程序的执行。其参数指定延迟执行的秒数。
+
+1.  通过导入“time”模块开始一个新的 Python 脚本，使其功能可用
+    `from time import *`
+
+![](img/d06b1f1cf83677f6647237f0c7827141_139_0.png)
+
+2.  接下来，用一个浮点数初始化一个变量，该值为自纪元以来的当前经过时间
+
+```python
+start_timer = time()
+```
+
+3.  现在，添加一条语句，从经过时间值创建 struct_time 对象
+
+```python
+struct = localtime( start_timer )
+```
+
+4.  然后，宣布倒计时即将从当前时间起点开始
+
+```python
+print( ‘\nStarting Countdown At:’ , strftime( ‘%X’ , struct ) )
+```
+
+![](img/d06b1f1cf83677f6647237f0c7827141_140_0.png)
+
+**gmtime**() 方法将自纪元以来的经过时间转换为 UTC 时区的 **struct_time** 对象，其夏令时始终设置为零；而 **localtime**() 则转换为本地系统时间的 **struct_time** 对象。
+
+5.  添加一个循环，初始化和打印计数器变量的值，然后在每次迭代中将计数器减一并暂停一秒
+
+```python
+i = 10
+while i > -1:
+    print( i )
+    i -= 1
+    sleep( 1 )
+```
+
+6.  接下来，用一个浮点数初始化一个变量，该值为自纪元以来当前的经过时间
+
+```python
+end_timer = time()
+```
+
+7.  现在，用一个变量初始化两个时间点之间时间差的四舍五入秒数值
+
+```python
+difference = round( end_timer - start_timer )
+```
+
+8.  最后，添加一条语句以显示执行倒计时循环所花费的时间
+
+```python
+print( ‘\nRuntime:’ , difference , ‘Seconds’ )
+```
+
+9.  将文件保存在你的 scripts 目录中，然后在那里打开一个命令提示符窗口并运行此程序 – 以查看循环在每次迭代中的暂停和经过的时间
+
+```
+Command Prompt
+C:\MyScripts>python timer.py
+Starting Countdown At : 14:34:16
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Runtime: 11 Seconds
+C:\MyScripts>
+```
+
+![](img/d06b1f1cf83677f6647237f0c7827141_141_0.png)
+
+`sleep()` 方法的参数可以是浮点数，以指示更精确的睡眠暂停时间。
+
+![](img/d06b1f1cf83677f6647237f0c7827141_141_1.png)
+
+不要混淆本例中使用的 `time.strftime()` 方法和上一例中使用的 `datetime.strftime()` 方法。
+
+## 匹配模式
+
+可以导入 Python 的“re”模块到程序中，以利用描述特定字符序列的正则表达式模式。正则表达式对于文本验证以及通过将其指定模式与文本的某个部分匹配来进行文本中的查找和替换操作非常有用。
+
+正则表达式模式可能完全由描述要匹配的字符串的“字面字符”组成。例如，正则表达式“wind”在“*windows*”中找到匹配 – 该模式按字面匹配文本中的字符串。更典型地，正则表达式模式由字面字符和这些“元字符”的组合组成：
+
+| 元字符 | 匹配 | 示例 |
+|---|---|---|
+| . | 任意字符 | py..on |
+| ^ | 开头字符 | ^py |
+| $ | 结尾字符 | ...on$ |
+| * | 零次或多次重复 | py* |
+| + | 一次或多次重复 | py+ |
+| ? | 零次或一次重复 | py? |
+| { } | 多次重复 | a{ 3 } |
+| [ ] | 字符类 | [ a-z ] |
+| \ | 特殊序列 | \s |
+| \| | 任选可选字符 | a\|b |
+| ( ) | 表达式组 | ( ... ) |
+
+将定义要匹配的模式的字面字符和元字符的组合指定给 *re.compile()* 方法，可以返回一个模式对象。该对象具有一个 *match()* 方法，在其括号中指定一个字符串来与模式进行比较。
+
+当 *match()* 比较成功时，返回一个包含匹配信息的 match 对象；否则，当比较失败时返回 `None` 值。
+
+match 对象具有 `start()` 和 `end()` 方法，返回匹配的位置，以及一个 `group()` 方法，返回比较匹配的字符串。
+
+![](img/d06b1f1cf83677f6647237f0c7827141_143_0.png)
+
+正则表达式的话题很广泛，超出了本书的范围 – 但这里提供了一个简要的介绍以求完整。
+
+![](img/d06b1f1cf83677f6647237f0c7827141_143_1.png)
+
+字符类 `[a-z]` 仅匹配小写字符，但 `[a-z0-9]` 也匹配数字。
+
+1.  通过导入“re”模块开始一个新的 Python 脚本，使正则表达式方法可用
+    `from re import *`
+
+![](img/d06b1f1cf83677f6647237f0c7827141_143_2.png)
+
+2.  接下来，用一个正则表达式对象初始化一个变量
+    `pattern = compile( '^[\\s]([-a-z0-9_]+@([-a-z0-9]+)(\\.)+[a-z]{2,6}$')`
+
+3.  现在，通过请求用户输入并开始函数定义，尝试将其与模式匹配
+
+```python
+def get_address( ) :
+    address = input( 'Enter Your Email Address: ' )
+    is_valid = pattern.match( address )
+```
+

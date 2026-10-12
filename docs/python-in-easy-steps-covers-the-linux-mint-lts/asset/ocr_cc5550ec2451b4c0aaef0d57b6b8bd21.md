@@ -1,0 +1,1 @@
++   - Images can be added to Button and Label objects, embedded in Text objects, and painted on Canvas objects.
