@@ -1,0 +1,173 @@
+
+你可以使用 `chkconfig` 命令在启动时启动 `SSH`。使用 `chkconfig` 命令的语法如下：
+
+```
+[root@netmon tmp]# chkconfig -level 35 sshd on
+```
+
+你还可以通过运行 `sshd` 初始化脚本在启动后启动、停止和重启 `SSH`。在启动后启动、停止和重启 `SSH` 的语法如下：
+
+```
+[root@netmon tmp]# service sshd start
+[root@netmon tmp]# service sshd stop
+[root@netmon tmp]# service sshd restart
+```
+
+重要的是要注意，每次对配置文件进行更改后，你都应该重启 `SSH` 进程，以便更改对正在运行的进程生效。
+
+### `SSH` 状态
+
+你可以使用以下语法测试 `SSH` 进程是否正在运行：
+
+```
+root@netmon tmp]# pgrep sshd
+```
+
+你应该会得到普通的进程 ID 数字响应。
+
+### `/etc/ssh/sshd_config` 文件
+
+`SSH` 配置文件存储在 `/etc/ssh` 目录中的 `sshd_config` 文件中。默认情况下，`SSH` 监听所有网卡（`NIC`）并使用 `TCP` 端口 22。使用 `vi` 编辑器打开 `ssh` 配置文件，它显示以下输出：
+
+```
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented. Uncommented options change a
+# default value.
+
+#Port 22
+#Protocol 2,1
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+```
+
+### `SSH` 版本 1 和 2
+
+`SSH` 的原始加密方案是足够的，但最终被发现存在许多局限性。因此，推出了版本 2。建议通过将 `/etc/ssh/sshd_config` 文件中的协议语句设置为 2 来运行你的系统。你应该重启 `SSH` 以使更改生效。
+
+```
+#
+# File: /etc/ssh/sshd_config
+#
+Protocol 2
+```
+
+在上一节中，你学习了 `SSH` 版本 1 和 2；现在让我们学习如何使用 `SSH` 更改 `TCP` 端口。
+
+### 更改 `SSH` 监听的 `TCP` 端口
+
+你可以使用 `SSH` 更改 `TCP` 端口，以确保你的 `TCP/IP` 网络的安全。你可以将端口 22 更改为一个不会干扰系统上其他应用程序的位置，例如端口 435。
+
+让我们执行以下步骤来实现：
+
+1. 使用 `netstat` 命令确保你的系统没有监听端口 435。使用 `grep` 过滤掉所有不包含字符串“435”的内容：
+
+   ```
+   [root@netmon root]# netstat -an | grep 435
+   [root@netmon root]#
+   ```
+
+   这样，你就学会了更改 `TCP` 端口。
+
+2. 没有响应意味着我们可以继续进行。将 `/etc/ssh/sshd_config` 中的 `Port` 行更改为提及 435，并删除行首的 `#` 符号。如果 `TCP` 端口 435 已被使用，你可以使用另一个端口。
+
+3. 现在让我们学习重启 `SSH`。使用以下命令重启 `SSH`：
+
+   ```
+   [root@netmon tmp]# service sshd restart
+   ```
+
+4. 使用以下命令确保 `SSH` 是否在新端口上运行：
+
+   ```
+   [root@netmon root]# netstat -an | grep 435
+   tcp 0 0 172.16.1.100:435 0.0.0.0:* LISTEN
+   [root@netmon root]#
+   ```
+
+### 允许连接
+
+默认情况下，`OpenSSH` 服务器监听端口 22 和用于 `X11` 转发的端口 6010。如果使用自定义的 `IPTables` 规则来阻止 `SSH`，则需要配置防火墙（参见附录 A）以允许 `SSH` 端口。
+
+你可以如[图 3](img/f3b9cff79e19317416c12eaf5ded7245_138_0.png)所示，通过图形终端允许 `SSH`。转到系统 → 安全管理员 → 安全级别和防火墙。
+
+![](img/f3b9cff79e19317416c12eaf5ded7245_138_0.png)
+
+▲ 图 3
+
+在防火墙选项选项卡中，确保可信服务部分中的 `SSH` 服务旁边有一个勾选标记。如果没有，点击 `SSH` 旁边的复选框，然后点击确定以启用更改。
+
+### 连接到远程机器
+
+使用 `SSH` 类似于 `TELNET`。要从另一台机器登录，请使用 `ssh` 命令，并使用 `-l` 指定你想以哪个用户名登录。如果你省略 `-l`，你的用户名将不会改变。以下是你的 `/etc/hosts` 文件中名为 `Netx` 的服务器的一些示例。你也可以使用 `user-name@remote_server` 格式作为替代。
+
+如果你是用户 `root`，并且想以自己身份登录到 `netx`，请使用以下命令：
+
+```
+[root@netmon tmp]# ssh netx
+or
+[root@netmon tmp]# ssh 172.16.1.100
+```
+
+用户 `root` 也可以通过默认端口 22 以用户 `adaya` 的身份登录到 `netx`：
+
+```
+[root@netmon tmp]# ssh -l adaya netx
+```
+
+或者通过端口 435 使用 `username@remote_server` 替代登录格式：
+
+```
+[root@netmon tmp]# ssh -p 435 adaya@netx
+```
+
+### 首次登录：生成主机密钥
+
+第一次登录时，你会收到一条警告消息，说明远程主机不知道你的机器，并提示你将远程主机的 `SSH` 标识密钥的副本存储在你的本地机器上。这将显示以下输出：它看起来像这样：
+
+```
+[root@netmon tmp]# ssh netx
+The authenticity of host 'netx (netx)' can't be established.
+RSA key fingerprint is
+5d:d2:f5:21:fa:07:64:0d:63:1b:3b:ee:a6:58:58:bb.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'netx' (RSA) to the list of known
+hosts. root@netx's password:
+Last login: Thu Nov 14 10:18:45 2002 from 172.16.1.98
+No mail.
+[root@netx tmp]#
+```
+
+密钥存储在你的 `~/.ssh/known_hosts` 文件中，你不应再被提示此操作。
+
+### `PuTTY`：`Windows SSH` 客户端
+
+这是 `PuTTY` 配置对话框，它被用作 `Windows` 操作系统访问远程 `SSH` 服务器的 `SSH` 客户端。
+
+![](img/f3b9cff79e19317416c12eaf5ded7245_140_0.png)
+
+▲ 图 4
+
+### 安装 `SSH` 后禁用 `Telnet`
+
+现在让我们学习在安装 `SSH` 后禁用 `Telnet`。你应该始终考虑使用 `SSH` 而不是 `TELNET` 来保护网络，因为 `SSH` 固有的数据加密功能，以及 `SSH` 客户端在 `Linux` 和 `Windows` 上的广泛可用性（`PuTTY SSH` 客户端）。默认情况下，`Fedora Linux` 中未安装 `TELNET` 服务器。如果你决定停用 `Fedora` 上的活动 `TELNET` 服务器，则使用 `chkconfig` 命令，如 `LAB7` 中所述。
+
+```
+[root@netmon tmp]# chkconfig –level 345 telnet off
+```
+
+让我们总结实验室的主要要点。
+
+### 摘要
+
+在这个 `Linux` 实验中，你学习了如何安装和配置 `Telnet` 服务器，并学习如何设置 `SSH` 服务器以进行远程登录服务。
+
+### 笔记
+
+......................................................................
+
+......................................................................
+
+......................................................................
+
+......................................................................
