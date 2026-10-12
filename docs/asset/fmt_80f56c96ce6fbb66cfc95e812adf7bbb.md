@@ -1,0 +1,130 @@
+
+- 交叉广告板工具 (`Cross Billboard tool`), 262–263, 263, 267
+- 交叉截工具 (`Cross Section tool`), 307–309, 370–310
+- 交叉选择方法 (`Crossing Selection method`), 32, 200
+- 交叉窗口 (`cross windows`), 31
+- 交叉截方法 (`Crosssection method`), 891, 892
+- 选择中的 `Ctrl` 键, 32
+- 当前相机错误消息, 789
+- 汽车曲率, 761–768, 762–768
+- 曲线阶梯选项 (`Curve Steps option`), 830
+- 曲线和曲线编辑器 (`curves and Curve Editor`)
+    - 添加帧, 658
+    - 背景图像, 465–466
+    - 相机运动, 639, 641
+    - 相机轨迹, 648–652, 649
+    - 绘制, 109–111, 110
+    - 灯光, 663
+    - `NURBS`, 916–919, 916–918
+    - 锥度 (`tapers`), 74
+    - 时间, 643–648, 645–647
+- 自定义映射文件夹, 383
+- 相机运动的自定义选项, 633, 633
+- 自定义区域类型部分 (`Custom Section Types section`), 324
+- 自定义切线选项, 651, 551
+- 自定义 `UI`, 52–55, 52–55
+- 自定义 `UI` 和默认值切换对话框, 52–55, 352
+- 自定义用户界面对话框, 54–55, 54
+- 遮罩通道 (`Cutout channel`), 441
+- `CV` 曲线选项 (`CV Curve option`), 916–917, 917
+- 圆柱 `Gizmo` (`cylGizmo`), 925
+- 圆柱区域光, 596
+- 圆柱, 92
+- 混凝土景观长椅, 746–749, 746–749
+- 创建, 66, 66
+- 圆柱映射
+    - 背景图像, 462–463
+    - 目的, 403, 404
+
+## D
+
+- 丹麦照明实验室 (`LTLI`), 552
+- 对象的的数据流, 78–80
+- 日期设置, 515–516, 516
+- 日照环境 (`Daylight Environment`), 334
+    - 日照参数卷轴 (`Daylight Parameters rollout`)
+        - 光度灯光, 544
+        - 太阳, 683
+- 日照系统 (`Daylight System`), 513–517, 514–518
+- 日照系统工具, 681
+- 默认可扩展渲染 (`Default Scalable Render`)
+    - 环境光, 341
+    - 伪造放射性, 342
+- 默认值 (`defaults`)
+    - 相机焦距, 449
+    - `EASYnat`, 232
+    - 灯光, 352
+    - 阴影设置, 352
+- 默认切换器 (`Defaults Switcher`), 52–55
+- 变形 (`deformations`)
+    - 骨骼架 (`armatures`), 310–314, 311–334
+    - `NURBS`, 919
+    - 退化，自适应, 659–660
+- 删除 `XRef` 实体选项, 485
+- 删除区域选项 (`Delete Zone option`), 804
+- `DeleteMesh`, 892
+- `DELETEPATCH` 修改器 • 绘制
+    - 删除补丁修改器 (`DeletePatch modifier`), 893
+    - 删除样条修改器 (`DeleteSpline modifier`), 893
+- 凹陷映射 (`Dent maps`), 908
+- 深度 (`depth`)
+    - 置换映射, 749
+    - 墙, 230, 250
+- 影响范围事实 (`Field of Effect fact`), 230, 934
+- 参数字段卷轴 (`Field of Parameters rollout`), 17–18
+- 由选项导出 `AutoCAD` 原始几何 (`Derive AutoCAD Primitives by option`), 831
+- 低电去饱和设置 (`Desaturate Low Levels setting`), 558
+- `DesignVIZ` 设置, 52–53
+    - 拆分对话框, 206, 230
+- 钻石，折射率 (`Index of Refraction of`), 400
+- 漫反射颜色通道 (`Diffuse Color channel`), 494
+- 漫反射颜色映射选项 (`Diffuse Color Map option`), 470
+- 漫反射颜色设置, 522
+- 漫反射控制 (`Diffuse Map control`), 439
+- 漫反射映射 (`diffuse maps`), 265
+    - 建筑材质, 439
+- 漫反射颜色映射 (`Diffuse Color maps`), 378–382, 378–382, 421–422
+- 直接照明 (`direct illumination`), 588
+- `Direct3D` 驱动技术, 659
+- 方向 (`direction`)
+    - 弯曲, 73, 73
+    - 灯光, 337, 551–554
+    - 置移参数卷轴 (`Displacement Parameters rollout`), 337
+    - 拆散组, 101–102
+    - 近似修改器 (`Disp Approx`), 893
+    - 置移修改器 (`Displace modifier`), 742–745, 742, 893
+    - 置移网格 (`Displace Mesh (WSM)`), 750–751, 887
+    - 置移 `NURBS` 修改器 (`Displace NURBS modifier`), 887
+    - 置移修改器 (`Displacement modifier`), 747
+    - 置移近似卷轴 (`Displacement Approx. rollout`), 750
+    - 置移通道 (`Displacement channels`), 441
+    - 置移映射 (`displacement maps`), 382, 742
+    - 用于置移修改器 (`Displace modifier for`), 742–745, 743–745, 893
+    - 可编辑网格 (`editable meshes from`), 749–752, 750–752
+    - 用于地形的材质编辑器 (`Material Editor for terrains`), 745–749, 746–749
+    - 用于地形 (`for terrains`), 796
+    - 显示背景 (`Display Background option`), 185, 461
+    - 显示颜色卷轴 (`Display Color rollout`), 811
+    - 显示浮动命令 (`Display Floater command`), 171
+    - 地形显示组 (`Display group for Terrain`), 803
+    - 显示选项 (`Display Options`), 499
+    - 显示属性卷轴 (`Display Properties rollout`), 624
+    - 视口显示光照 (`Display Radiosity in Viewport`), 519–520
+    - 显示子树选项 (`Display Subtree option`), 570
+    - 命令面板中的显示 (`Display in Command Panel`), 15
+    - 显示缩放 (`Display Unit Scale`), 518
+    - 显示/更新卷轴 (`Display/Update rollout`), 176–178
+    - 畸变形状 (`distortion shape for`), 427, 427
+    - 光光分布 (`distribution of photometric lights`), 551–554, 552–553
+    - 分割工具 (`Divide tool`), 307–308
+    - 停工具栏 (`docked toolbars`), 6–8, 7
+    - 匀移相机工具 (`Dolly Camera tool`), 452–453
+    - 匀移目标工具 (`Dolly Target tool`), 453
+    - 圆顶 (`domes`), 469–472, 469–472
+    - 墙中的门 (`door in walls`), 248–251, 249–251
+    - 甜甜圈 (`Donut splits`), 114, 157
+    - `Dope Sheets` 添加帧 (`Dope Sheets adding frames`), 656–657
+        - 相机运动 (`camera motion`), 639–642, 639–643
+        - 帧数 (`frame numbers`), 655
+        - 灯光, 662, 664–665
+        - 时间, 643
