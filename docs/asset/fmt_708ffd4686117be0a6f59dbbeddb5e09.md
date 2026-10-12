@@ -1,0 +1,155 @@
+
+最后，我们需要维护一个树中行的索引列表。列表 13.20 展示了如何实现。
+
+## 列表 13.20 在树数据层次结构中创建根节点
+
+```javascript
+calcViewMap : function () {
+  this._viewMap = [];
+
+  calcViewMapTreeWalker(this._openTree, 
+  : function (kids, level) {
+    for (var i = 0; i < kids.length; i++) {
+      this._viewMap.push(kids[i]);
+      if (kids[i].container == true && kids[i].open == true) {
+        this.calcViewMapTreeWalker(kids[i].container, level + 1);
+      }
+    }
+  });
+}
+```
+
+`calcViewMap()` 方法是构建此列表的起点。它将树形层次结构的根传递给 `calcTreeWalker()`，这是一个递归函数。该函数从左到右遍历树的各个部分，这与从上到下相同。
+
+## 13.5 动手实践：NoteTaker：关键字面板
+
+```
+r[treaded[i][i]][treaded[i][0]] = true;
+i++;
+}
+```
+
+```javascript
+calcToOffTree : function () {
+var i;
+this._openTree = {};
+
+for (i=0; i < listdata.length; i++) {
+this._openTree[i] = { container : false,
+open : false,
+keyword : listdata[i],
+kids : null,
+level : 0
+};
+
+if ( listdata[i] in this._relatedMatrix) {
+this._openTree[i].container = true;
+}
+}
+}
+}
+```
+
+```javascript
+calcMapView : function () {
+this._viewMap = {};
+this.calcMapViewTreeWalker(this._openTree, 0);
+}
+```
+
+```javascript
+calcMapViewTreeWalker : function(kids, level) {
+for (var i=0; i < kids.length; i++) {
+this._viewMap[i].container = true && kids[i].open == true;
+this.calcMapViewTreeWalker(kids[i].kids, level + 1);
+}
+}
+```
+
+这些代码很多，但逻辑很直观。首先，有三个属性以下划线开头，表示对象用户不应该触碰它们。它们将存储视图的内部数据结构。然后是 `calculate()` 方法，它在每种情况下使用特定方法来构建这些数据结构。剩下的就是那三个特定方法。
+
+`calcRelatedMatrix(matrix)` 为原始数据创建了一个组织更有条的副本。对于列表 13.13 中的原始数据，它生成了列表 13.18 中的数据结构。
+
+### 列表 13.18 示例关键字与关键字之间的关系矩阵
+
+```javascript
+_relatedMatrix = {
+  "breakdown" : {
+    "first draft" : true,
+    "final" : true,
+  },
+  "reviewed" : {
+    "guru" : true,
+}
+"rubbish" : true ),
+{ "cool" : true },
+"guru" : 
+{ "cool" : true },
+{ "reviewer" : true },
+"breakdown" : 
+{ "checkpointed" : true },
+"first draft" : 
+{ "checkpointed" : true },
+"final" : 
+{ "checkpointed" : true },
+"rubbish" : 
+{ "guru" : true },
+"cool" : 
+{ "cool" : true }
+;
+```
+
+原始配对列表中的每个关键字都是 `relatedMatrix` 对象的属性，而与它相关的每个关键字在主题对象上都有一个对应的属性。通过这种安排，正向和反向相关的情况都被涵盖了，而且测试任何关键字是否与另一个相关变得非常容易。这种结构是我们在视图中的官方关键字引用。
+
+下一步是创建这些相关数据的分级版本。每个树节点可以有零或多个子节点，且任何此类子节点都是有序的。这意味着树的每个节点（数据结构节点，而不是 DOM 节点）都是子节点列表（桶）。我们将为每个节点使用数组。`calcToOffTree` 启动了这一数据结构。它出现在列表 13.19 中。
+
+## 列表 13.19 在树形层次结构中创建根节点
+
+```javascript
+calcToOffTree : function () {
+var i;
+this._openTree = [];
+
+for (i=0; i < listdata.length; i++) {
+this._openTree[i] = { container : false,
+open : false,
+keyword : listdata[i],
+kids : null,
+level : 0
+};
+
+if (listdata[i] in this._relatedMatrix) {
+this._openTree[i].container = true;
+}
+}
+}
+}
+```
+
+该方法创建一个关键字记录数组作为顶层节点，并将其放入出现在 `listbox-data` 数组中的关键字中。`listbox` 关键字都位于所显示树的顶层。每个关键字记录都是一个对象，持有关键字字符串、指向该节点直接子节点的引用以及一些管理信息。这些管理信息是：该项是否为容器（XUL 中的 `container="true"`）、此容器在树中是否打开（XUL 中的 `open("true")`）以及该节点在树中的深度。当需要时，视图的其他部分将向此树添加内容。
+
+最后，我们需要维护一个树中行的索引列表。列表 13.20 展示了如何实现。
+
+## 列表 13.20 在树数据层次结构中创建根节点
+
+```javascript
+calcViewMap : function () {
+  this._viewMap = [];
+
+  calcViewMapTreeWalker(this._openTree, 
+  : function (kids, level) {
+    for (var i = 0; i < kids.length; i++) {
+      this._viewMap.push(kids[i]);
+      if (kids[i].container == true && kids[i].open == true) {
+        this.calcViewMapTreeWalker(kids[i].container, level + 1);
+      }
+    }
+  });
+}
+```
+
+`calcViewMap()` 方法是构建此列表的起点。它将树形层次结构的根传递给 `calcTreeWalker()`，这是一个递归函数。该函数从左到右遍历树的各个部分，这与从上到下相同。
+
+## 列表框与树控件 第 13 章
+
+最后一步是告诉树刷新它的显示。为了做到这一点，我们需要与特殊的框对象进行交互。通常情况下，我们只使用该框对象进行滚动，但它的 `rowCountChanged()` 方法（来自 `nsTreeBoxObject` 接口）正是我们需要的。它接受一个索引和从该索引开始的行数，用于描述需要重绘的树形部分。
