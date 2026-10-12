@@ -1,0 +1,16 @@
+We're only really interested in NetBIOS running on TCP/IP networks. On Windows-NT this is called *NetBT* or *NBT* (*NetBIOS over TCP/IP* ).
+
+Several features flow naturally from Windows Networking's origins and design:
+
++   - because it was designed for single-LAN "workgroups," it relies heavily on broadcast packets. Since broadcasts don't work across routers and therefore don't work over the Internet, this causes difficulties where we have large LANs or multi-site networks using Windows Networking (Modules 19.3 and 22.2).
+
++   - because Windows Networking can be used over many different network systems, it can't rely on TCP/IP components even when it's running over TCP/IP. For example, to resolve names, Windows Networking can't rely on DNS - it has to use some mechanism that works on non-TCP/IP networks too. (If the rest of your network uses the Internet protocols, some of Windows Networking looks like re-inventing the wheel.)
+
++   - NT uses *bindings* to control which components in one layer connect with components in other layers. This lets you choose which lower-level protocols and which network cards an upper-layer service or protocol can use (Module 18.5). Bindings are applied in a specific order, so two systems with the same network components but a different binding order can behave differently
+
++   - because the different network systems do things in different ways, it's recommended that you use only one lower-layer protocol on your network where possible. Otherwise:
++       - different sets of machines can behave inconsistently, e.g. when you look at the set of network resources from one machine using Windows Explorer you could get only a subset of the resources visible from another machine. This could happen because one machine uses NetBIOS over TCP/IP when it's accumulating the list of resources on the network, whereas a machine with NetBEUI would only see other NetBEUI machines.
++       - you might use a different binding order for the protocols on different machines, e.g. if a name *alice* is to be resolved, one machine might resolve it using DNS, giving one result, and a different machine might resolve it on Novell, giving a different result.
++       - performance suffers because many different alternatives have to be tried, e.g. if you have many name resolution systems running, and you look up the name of a non-existent machine, each resolution system has to be tried in turn, and any timeouts involved in each system have to expire before your machine can really know that the name is invalid. This may take three or four times as long as necessary, and involves a lot of extra traffic on the network as well. (This is sometimes why Windows users complain about slow performance.)
++       - extra protocols can be a security hole, e.g. if you run NetBEUI on your systems it can provide a "back door" around your TCP/IP-based firewall and other security systems.
++       - troubleshooting becomes very difficult - there are many more components and configuration settings that you have to check.

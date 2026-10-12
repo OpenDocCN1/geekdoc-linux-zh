@@ -1,0 +1,17 @@
+In addition, some of the topics are complex, and involve a lot of network traffic, so working through them using a sniffer isn't easy. For all these reasons we have found it hard (coming from a TCP/IP background) to get to grips with Windows Networking. It does things very differently, and your knowledge of the Internet protocols isn't as applicable and doesn't help you understand Windows Networking as much as you'd like. To make things easier for you we've tried to make these chapters "as simple as possible but no simpler" (as Einstein suggested).
+
+# What we cover
+
+We cover Windows Networking only over TCP/IP, mostly because this book is about TCP/IP networks, but also because the other networking systems that Windows Networking can run over are dying out.
+
+Our emphasis is on how Windows Networking fits into a TCP/IP network, and explains it from the point of someone who's either new to networking, or has come from a TCP/IP and/or UNIX background. Windows Networking is a huge subject in itself, and we don't cover how to plan, implement, and manage global Microsoft-based networks. But we do aim to give you a firm grounding in how these networks work. We show the similarities and differences between Windows Networking and TCP/IP and use the same approach to understand what's happening on the wire, and to troubleshoot problems.
+
+We've concentrated on the Windows-NT 4.0's Windows Networking because:
+
++   - Windows-NT is by far the most commonly deployed system for Windows networks. While most desktop machines are still running Windows-98 or Windows-95, the overall network architecture used is Windows-NT
++   - NT is the foundation for Windows-2000 ("Win-2K") and XP. Although we don't cover Win-2K and XP explicitly, everything we describe here works almost identically on those systems (apart from Active Directory, which is new in Win-2K)
++   - networks using only Windows-9x are now relatively uncommon. Apart from that, we and our customers have found Windows-9x very much less reliable than NT, especially in the networking area. Even small sites often prefer to use NT or Win-2K servers to obtain greater reliability, in spite of the higher initial cost (the reduced cost of support often makes up for that)
++   - Win-2K and XP are now being rolled out, but very few sites have switched over completely and most still have a large number of older systems
++   - Win-2K and XP support the NT style of networking for compatibility.
+
+What we cover is relevant to networks of all sizes, from small, single-segment LANs, to multi-segment LANs (i.e. LANs with local routers) and to WANs where there are several sites connected via the Internet, perhaps using VPN (virtual private networks, Chapter 27). We give an overview of Windows Networking's implementation and architecture, NetBIOS name resolution (Windows' equivalent of the DNS), authentication and NT "domains" (logging on to the network), browsing the network – to find other machines and resources, and finally practical advice on using Windows Networking. We've covered the topics in this order because that's how they are used: logging on to a domain uses name resolution, and browsing the network only happens after you've logged on (and it too uses name resolution).

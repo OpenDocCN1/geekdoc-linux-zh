@@ -1,0 +1,146 @@
+
+## 添加路由（模块 5.3）
+
+`network.opts` 拥有与 interfaces 文件中 up 和 down 行类似的机制，用于在接口启用或禁用时运行命令。不过，其语法更为复杂。当 PCMCIA 接口被启用时，PCMCIA 子系统会执行 `start_fn` 函数；在它被禁用之前，子系统会执行 `stop_fn`。你在 `network.opts` 中定义这些函数，以包含你希望运行的任何命令。图 A6.8 展示了一个示例：当单个接口启用时创建路由，并在禁用之前将其移除。
+
+![](img/a2132b646d336d5f9a21102d6320e537_801_0.png)
+
+如果你不动态插入或删除卡，可以省略 `stop_fn`，因为接口被禁用的唯一时机是你关机的时候。
+
+## 在一张网卡上配置多个 IP 地址（模块 6.4）
+
+要在 PCMCIA 卡上配置多个地址，你再次使用 `start_fn`。当 PCMCIA 子系统调用 `start_fn` 时，它会在变量 `$DEVICE` 中传递正在配置的接口名称，例如 `eth0` 或 `eth1`。你可以利用这一点在 `start_fn` 中自动派生如 `eth1:2` 和 `eth0:3` 这样的名称。图 A6.9 展示了一张带有两个额外 IP 地址的单张 PCMCIA 卡的 `network.opts` 配置；我们保留了上一个示例中的 route 命令，以表明 `start_fn` 可以包含许多相对独立的命令。因为我们只使用一张卡，所以知道 `$DEVICE` 将是 `eth0`，因此我们可以将设备名称硬编码为 `eth0:1` 和 `eth0:2`，但使用 `$DEVICE` 更安全，以防将来使用多张卡。（请注意，这与上一页第 3 项中提到的“设备实例”无关。）
+
+![](img/a2132b646d336d5f9a21102d6320e537_801_1.png)
+
+> **警告**：`network.opts` 中的语法错误会导致 PCMCIA 启动/关闭时的程序错误，因为 `network.opts` 是一个可执行脚本。PCMCIA 错误消息和其他输出会被记录到 syslog 服务（模块 17.12）中，通常可以在文件 `/var/log/syslog` 中看到，具体取决于你的 syslog 配置。典型的错误信息如下所示：  
+> `... /network: ./network.opts: line 12: syntax error near unexpected token ‘;’`  
+> 并且你的网络将不会正确初始化。
+
+## DNS 设置（第 7 章和第 8 章）
+
+PCMCIA 子系统会根据在 `/etc/pcmcia/network.opts` 中找到的设置动态修改 `/etc/resolv.conf` 文件，因此你可以采取两种不同的方法：
+
+- 从 `network.opts` 中省略所有 DNS 设置，并像往常一样编辑 `resolv.conf`
+- 在 `network.opts` 中指定你的 DNS 设置，以便它们随 PCMCIA 卡的其他配置选项一起动态设置
+
+由于方法 2 是“官方”做法，最好使用该方法，至少是为了那些可能需要在你机器上工作的其他管理员考虑。然而，如果你的笔记本电脑不常移动，并且你将其用作普通的桌面工作站，使用方法 1 不太可能给你带来问题。
+
+要在 `network.opts` 中配置 DNS 解析器设置，请设置以下变量：
+
+- **DOMAIN**：此机器所属的 DNS 域名，将用作 `resolv.conf` 中的 **domain** 设置
+- **SEARCH**：DNS 搜索列表，将用作 `resolv.conf` 中的 **search** 设置
+- **DNS_1**、**DNS_2**、**DNS_3**：你定义的其中任何一个都会被包含为 `resolv.conf`（模块 7.3）中的 **nameserver** 设置。
+
+## 设置主机名（模块 8.14）
+
+与普通网卡相同，见上文。
+
+## 名称服务切换（模块 9.4）
+
+与普通网卡相同，见上文。
+
+## DHCP 配置 – PCMCIA（模块 16.5）
+
+配置接口使用 DHCP 有两种略有不同的方法，具体取决于你的 Linux 版本中包含了哪个版本的 PCMCIA 软件。对于这两种情况，通常都在你正在配置的接口部分中，将配置细节输入 `/etc/pcmcia/network.opts` 文件。在较新的版本中（2000 年初及以后），你只需设置
+
+```
+DHCP="y"
+```
+
+然后 PCMCIA 子系统会按顺序查找 **dhcpd**，接着是 **dhclient**，最后是 **pump**，并使用它找到的第一个。
+
+在较旧的版本中，按照以下配置使用不同的 DHCP 客户端：
+
+| 客户端 | 设置这些变量 |
+|---|---|
+| **pump** | PUMP="y" (其他无关) |
+| **dhclient** | DHCP="y" DHCPCLIENT="y" PUMP="n" |
+| **dhepcd** | DHCP="y" DHCPCLIENT="n" PUMP="n" |
+
+要了解你拥有的是哪个版本，请查看未修改过的、已安装的 **network.opts**。只有较旧版本使用特定的 **DHCLIENT** 和 **PUMP** 变量。（如果你丢失了原始文件，可以运行 /usr/sbin/pcnetconfig 来重新创建它。如果你能看懂 shell 脚本，查看该文件就能告诉你拥有的是旧版还是新版 PCMCIA。）
+
+当然，你现在应该从 **network.opts** 中省略任何将由 DHCP 处理的设置。（如果你保留已定义的 **IPADDR** 变量，它将覆盖通过 DHCP 获取的任何设置，这几乎肯定不是你想要的。）
+
+如果你的 ISP 要求，你可能需要设置变量 **DHCP_HOSTNAME**。
+
+我们发现旧版本的 **dhclient** 与旧版本的 PCMCIA 软件配合使用时存在一些问题。我们通过从 ISC 网站下载最新的 **dhclient** 源码并自行构建来解决了这些问题，而不是使用预编译的软件包。我们还发现使用 Debian 网站上最新的 PCMCIA 软件包也很有帮助。
+
+## 笔记与延伸阅读
+
+旧版本的 Debian（2.2 版之前）对配置文件和启动脚本使用了不同的约定。它们不使用 **interfaces** 文件和 *ifup* 及 *ifdown* 程序，而是运行 shell 脚本 /etc/init.d/network 来配置接口和路由。
+
+关于 Linux 的 PCMCIA 信息，参见：
+
+- http://pcmcia-cs.sourceforge.net/ *Linux PCMCIA 信息页*
+- http://pcmcia-cs.sourceforge.net/ftp/doc/ 下载或查看最新的 PCMCIA "howto"
+- http://tldp.org/HOWTO/PCMCIA-HOWTO.html 同上，但可能并非最新
+
+在测试你的 PCMCIA 配置时，你可以使用命令 “*cardctl eject*” 和 “*cardctl insert*” 代替物理弹出和插入你的卡，以查看新配置的工作情况。但是，如果你正在使用 PCMCIA 配合 DHCP，我们建议你也执行一次完整的重启，以确保你确实拥有想要的配置。
+
+- http://www.isc.org/products/DHCP/ 下载 **dhclient** 客户端软件
+
+当你使用 Linux 客户端配合 Microsoft DHCP 服务器时，可能会遇到一个问题，即字符串 “`\u0000`” 会被追加到 **resolv.conf** 文件中 **domain** 或 **search** 的值末尾，这会破坏 DHCP 客户端上的名称解析。解决方案是：
+
+- 使用不同的 DHCP 服务器，或者
+- 修改你的 DHCP 客户端配置，以便手动覆盖 DNS 值。例如，在 **dhclient.conf** 中使用 **supersede** 语句来指定正确的值，如下所示
+
+```
+supersede  domain-name  "tech.example.com"
+```
+
+在 **pump.conf** 中指定 **nodns**，并手动在 **resolv.conf** 中插入你需要的值。
+
+# 附录 7 UTP 和 null-modem 接线
+
+## RJ45 插头引脚编号
+
+当你从正面看插头，卡片夹在上方，电缆在后方时，引脚从左到右编号为 1 到 8：
+
+![](img/a2132b646d336d5f9a21102d6320e537_805_0.png)
+
+## 普通（“直通”）UTP 电缆（RJ45 插头）
+
+两端接线相同。
+
+| 引脚编号 | 线色 |
+|---|---|
+| 1 | 白底橙条纹 |
+| 2 | 橙底白条纹 |
+| 3 | 白底绿条纹 |
+| 4 | 蓝底白条纹 |
+| 5 | 白底蓝条纹 |
+| 6 | 绿底白条纹 |
+| 7 | 白底棕条纹 |
+| 8 | 棕底白条纹 |
+
+## 交叉 UTP 电缆（RJ45 插头）
+
+端 1 的接线如上述，但端 2 的接线不同。
+
+**端 1**
+
+| 引脚编号 | 线色 |
+|---|---|
+| 1 | 白底橙条纹 |
+| 2 | 橙底白条纹 |
+| 3 | 白底绿条纹 |
+| 4 | 蓝底白条纹 |
+| 5 | 白底蓝条纹 |
+| 6 | 绿底白条纹 |
+| 7 | 白底棕条纹 |
+| 8 | 棕底白条纹 |
+
+**端 2**
+
+| 引脚编号 | 线色 |
+|---|---|
+| 1 | 白底绿条纹 |
+| 2 | 绿底白条纹 |
+| 3 | 白底橙条纹 |
+| 4 | 蓝底白条纹 |
+| 5 | 白底蓝条纹 |
+| 6 | 橙底白条纹 |
+| 7 | 白底棕条纹 |
+| 8 | 棕底白条纹 |
+

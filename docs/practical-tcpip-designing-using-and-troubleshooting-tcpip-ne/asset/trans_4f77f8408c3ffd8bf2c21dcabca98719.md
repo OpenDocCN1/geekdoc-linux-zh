@@ -1,0 +1,159 @@
+
+
+# 第 17 章 其他应用程序及其协议
+
+- 17.1 **daytime**、**echo**、**discard** 和 **chargen** 服务
+- 17.2 FTP – 文件传输协议
+- 17.3 FTP 连接是如何建立的
+- 17.4 **netcat**（或 **nc**） – TCP/IP 的瑞士军刀
+- 17.5 实验 – 使用 **telnet** 作为客户端的两个 FTP 会话
+- 17.6 X 窗口系统
+- 17.7 LDAP – 轻量级目录访问协议；概述
+- 17.8 LDAP – 目录和数据库的考量
+- 17.9 实验 – 使用 LDAP 查找电子邮件地址
+- 17.10 SNMP – 简单网络管理协议
+- 17.11 实验 – 使用 SNMP
+- 17.12 其他有用服务 – Syslog；LPR 打印
+- 17.13 NTP – 网络时间协议
+- 17.14 NFS – 网络文件系统
+- 17.15 NFS – 实现细节
+- 17.16 实验 – 嗅探 NFS 会话
+- 摘要
+
+### 引言
+
+本章概述了许多网络应用程序和协议。一个共同的主题是，这些应用程序提供某种网络服务（而不是仅作为本地机器上的功能，或内置于最终用户应用程序中）。对于其中更重要的应用，我们简要解释其工作原理，并给出使用示例。目的是向你展示这些设施中的一些可以多么有用，并如果你需要进一步探索，提供给你一些指引。
+
+## 17.1 daytime、echo、discard 和 chargen 服务
+
+我们从本章开始介绍四个小型网络服务，它们对于测试很有用（对于其他用途几乎没什么用），我们稍后在章节中会用到它们。这些都是客户端/服务器协议，并且都可以通过 UDP 和 TCP 访问。它们的知名端口是：
+
+| 服务 | 端口 |
+| :--- | :--- |
+| daytime | 13 |
+| echo | 7 |
+| chargen | 19 |
+| discard | 9 |
+
+**daytime** 服务器会忽略客户端发送的任何输入，并返回服务器机器的时间和日期，作为文本字符串（以下经过编辑以节省空间，并将服务器返回的行进行缩进显示）：
+
+```
+bob# telnet 192.0.2.17 daytime
+    Mon Jul 30 10:43:17 2001
+```
+
+**echo** 服务器原样返回客户端发送的内容（如下所示）。要终止，请在 Linux **telnet** 中按 Ctrl-C，或在 Windows **telnet** 中使用菜单 **File > Exit**。
+
+```
+bob# telnet 192.0.2.17 echo
+Connected to 192.0.2.17.
+Escape character is '^]'.
+abc
+  abc
+def
+  def
+^C
+bob#
+```
+
+**chargen** 字符生成器 – 它完全忽略你的输入；相反，它生成连续不断的一行行数据并发送给你，从而产生从远程主机到你的单向流量（如下所示）。要退出，你必须如上所述终止你的 telnet 客户端。
+
+```
+lindeb# telnet 192.0.2.17 chargen
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefgh
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefgh
+"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefghij
+#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefghijk
+$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefghijkl
+%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXY[Z]^`_abcdefghijklm
+```
+
+**discard** 与 **chargen** 相反 – 服务器默默地吞掉所有输入。（因此，如果你足够聪明，将连接的一端连接到 **chargen** 服务器，另一端连接到 **discard** 服务器，你可以生成任意时长的网络单向流量。）
+
+这些小型服务非常适合测试；它们利用了你所有的 IP 路由、DNS 名称解析以及 TCP 和/或 UDP，但对你的服务器机器几乎不造成负载，并且几乎不需要软件。我们在安装新机器时经常使用这些服务。我们只需连接到例如 daytime 服务，就可以检查大量网络基础设施是否正常工作。这些服务在局域网中尚未安装任何服务器机器之前安装防火墙时也特别有用（模块 24.8）。
+
+要在 Windows-NT 上启用这些服务，请在 控制面板 > 网络 > 服务 中安装 Simple TCP/IP Services 网络服务（图 17.1）。你可以从 控制面板 > 服务 中控制它们。
+
+![](img/a2132b646d336d5f9a21102d6320e537_456_0.png)
+
+**图 17.1** 在 Windows-NT 上安装 Simple TCP/IP Services
+
+要在 Linux 上启用这些服务，请确保其名称和端口号在 /etc/services 文件中（图 17.2），并且文件 /etc/inetd.conf（图 17.3）包含你想要的条目的内容，且未被注释掉。（正如我们在附录 20 中解释的，如果你修改了 inetd.conf，你必须使用 HUP 信号来通知 inetd 进程重新读取文件。）
+
+```
+echo            7/tcp
+echo            7/udp
+discard         9/tcp sink_null
+discard         9/udp sink_null
+daytime        13/tcp
+daytime        13/udp
+qotd           17/tcp quote
+chargen        19/tcp ttytst source
+chargen        19/udp ttytst source
+```
+
+**图 17.2** 服务名称和端口号（Linux）
+
+```
+we don't want           echo    stream  tcp  nowait  root internal
+UDP echo and          #echo   dgram   udp  wait    root internal
+we don't use          #chargen stream tcp  nowait  root internal
+chargen at all        #chargen dgram  udp  wait    root internal
+                      discard stream  tcp  nowait  root internal
+                      discard dgram   udp  wait    root internal
+```
+
+**图 17.3** 注释掉不需要的服务以禁用它们
+
+在 Linux 上，这些服务是在 inetd 本身中实现的，而不是作为独立的程序，因为它们非常小。
+
+你也可以通过 UDP 而不是 TCP 使用这些服务（模块 17.4）。章末的注释提供了一些其他服务的信息。
+
+## 17.2 FTP – 文件传输协议
+
+在万维网变得流行之前，*FTP（文件传输协议）* 是人们从远程站点检索数据的方式。它是三大主要应用程序之一。（另外两个是电子邮件和 *telnet* – 用于访问远程应用程序和信息服务。）越来越多的情况下，HTTP 被用于替代 FTP 进行单个文件的交互式传输，但 FTP 仍用于非交互式传输，用于多个文件或整个目录的批量传输。即使在浏览器中，*ftp://* URL 仍然很常见 – 因此了解 FTP 的工作原理是值得的。
+
+下面展示了一个非常简单的 FTP 会话。Bob 上的客户端连接到 Alice 上的服务器，并将文件 */tmp/x* 从服务器传输到客户端的当前目录：
+
+```
+bob$ ftp alice
+Connected to alice.
+220 ProFTPD 1.2.0pre10 Server (Debian) [alice]
+Name (alice:mall): fred
+331 Password required for fred.
+Password: xxx
+230 User fred logged in.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> get /tmp/x
+ local : /tmp/x remote : /tmp/x
+200 PORT command successful.
+150 Opening BINARY mode data connection for /tmp/x (29 bytes).
+226 Transfer complete.
+29 bytes received in 0.00 secs (45.0 kB/s)
+ftp> quit
+221 Goodbye.
+bob%
+```
+
+FTP 客户端程序通常很大，因为 FTP 支持许多功能，以满足互联网早期用户的特定需求。下面展示了 Linux 命令行客户端中的一些用户命令：
+
+```
+bob# ftp
+ftp> help
+Commands may be abbreviated.  Commands are:
+!      cd       debug      mdir       sendport   site
+$      dir      mget       pwd        size
+account disconnect mdir      pwd        status
+append  exit      mls       quit       struct
+...
+```
+
+具有图形用户界面的客户端现在广泛可用，特别是在 Windows 上，并且大多数 Web 浏览器允许你使用 FTP 检索文件。然而，我们不会花太多时间在如何使用 FTP 上；我们专注于其网络特性。
+
+FTP 使用 TCP 作为传输协议。它有两个知名端口：
+
+| FTP 数据端口 | 20 |
+| FTP 控制端口 | 21 |
+
+命令和状态信息通过*控制端口*发送；请求的文件等通过单独的*数据端口*传输。FTP 的标准 RFC-959 说明了典型的 FTP 设置，如图 17.4 所示。用户输入诸如“get /tmp/x”这样的命令至

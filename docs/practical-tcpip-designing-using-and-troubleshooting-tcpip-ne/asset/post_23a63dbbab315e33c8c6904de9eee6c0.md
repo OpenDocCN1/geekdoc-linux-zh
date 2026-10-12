@@ -1,0 +1,355 @@
+
+## Index
+
+### M
+
+- MS-KB-Q121005 519
+- MS-KB-Q122422 550
+- MS-KB-Q126409 594
+- MS-KB-Q137565 820
+- MS-KB-Q139270 519, 821
+- MS-KB-Q140064 519
+- MS-KB-Q140064 817
+- MS-KB-I42309 821
+- MS-KB-Q147706 550
+- MS-KB-Q149664 550
+- MS-KB-Q150518 550
+- MS-KB-Q150737 519
+- MS-KB-Q150820 817
+- MS-KB-Q151795 82
+- MS-KB-Q158148 550
+- MS-KB-Q160177 519
+- MS-KB-Q160177 519
+- MS-KB-Q160699 424
+- MS-KB-Q161431 820
+- MS-KB-Q163409 519
+- MS-KB-Q163409 817
+- MS-KB-Q163949 519
+- MS-KB-Q164765 519
+- MS-KB-Q167248 550
+- MS-KB-Q167640 519
+- MS-KB-Q168076 519
+- MS-KB-Q168821 580
+- MS-KB-Q171564 146
+- MS-KB-Q171567 519
+- MS-KB-Q172218 519
+- MS-KB-Q172218 820
+- MS-KB-Q172227 823
+- MS-KB-Q172931 549
+- MS-KB-Q173199 552
+- MS-KB-Q173525 519
+- MS-KB-Q173882 550
+- MS-KB-Q173941 519
+- MS-KB-Q175024 550
+- MS-KB-Q180094 550
+- MS-KB-Q181171 519
+- MS-KB-Q181171 550
+- MS-KB-Q183859 550
+- MS-KB-Q185786 519
+- MS-KB-Q187709 519
+- MS-KB-Q187742 423
+- MS-KB-Q188305 582
+- MS-KB-Q193819 424
+- MS-KB-Q195611 242
+- MS-KB-Q195686 147
+- MS-KB-Q198550 242, 821
+- MS-KB-Q198550 519
+- MS-KB-Q201535 394
+- MS-KB-Q214467 242
+- MS-KB-Q220874 110
+- MS-KB-Q227410 241
+- MS-KB-Q230744 242
+- MS-KB-Q230744 519, 821
+- MS-KB-Q234815 624
+- MS-KB-Q236901 519
+- MS-KB-Q259240 645
+- MS-KB-Q262655 550
+- MS-KB-Q263070 394
+- MS-KB-Q266729 550
+- MS-KB-Q314104 519
+- MS-KB-Q314108 549
+- MS-Outlook 389
+- MSBROWSE 573, 591, 816
+- MSV1_0 528, 530, 544, 549
+- MTAs, message transfer agent 317
+- MUAs, message user agent 317
+- multi-boot 780
+- multicasting 106, 111, 474
+- multiple DMZ ports 638
+- multiple networks
+  - configuration of 771
+  - on one wire 154–7
+- multiple routers 150–3
+- multiplexed NetBIOS sessions 475
+- Multipurpose Internet Mail Extension see MIME
+- Muuss, Mike 57
+- MX records 195, 288–93, 652
+  - for subdomains 293
+- name claim see name registration
+- name discovery (WN) 518
+- name query (WN) 499
+- name registration (WN) 498–9
+- name resolution (WN) 494–5, 507, 519, 588
+  - order of (WN) 513, 521
+  - systems, DNS and other 252
+  - troubleshooting (WN) 516–17
+- name service switch 769
+- name table (WN) 495
+- name= parameter (MIME) 323
+- named process 240
+- nameserver keyword, DNS resolver 188
+- Napster 490
+- NAT (Network Address Translation) 600–11, 623, 638, 693, 696, 699
+  - benefits of 600
+  - configuring 612
+  - default gateways 601
+  - dynamic IP addresses 605
+  - need for 608
+  - NetBIOS 602
+  - one-to-one 605, 779
+  - problems with 602
+  - public servers 605
+  - renumbering a network 603
+  - security 602
+  - static 605
+  - and VPN 602
+  - working of 601
+
+### N
+
+- nbstat 475, 512, 519, 591, 817
+  - options 497, 510–11
+- NBT see NetBT 471
+- NdisWan adapters 688
+- NDS (Novell Directory Services) 439
+- Nemeth, Evi xix
+- Nessus 659
+- net help 475
+- net helpmsg 475
+- net share 584
+- net time 464
+- net use 454, 513, 543, 583, 681
+- Net view 496, 517, 556, 563–4, 574, 578
+- NetBEUI 470, 490, 517, 579, 589, 640
+- NetBIOS 404, 470, 472–3, 490, 538, 557, 588, 640
+  - caching 507–10, 521
+  - default node type 513
+  - name resolution 252, 499, 682, 818–21
+  - name server 500–1
+  - names 494–7, 815–17
+  - and NAT 602
+  - node types 512–13, 521
+  - over TCP/IP 471
+  - and VPN 709
+  - see also name registration; Windows Networking
+- NetBIOS Datagram Distribution (NBDD) 489
+- NetBIOS Extended User Interface 490
+- NetBIOS Interface service 490
+- NetBIOS Protocol 519
+- NetBIOS Session Service (NBSS) 475, 531, 562
+  - multiplexed over TCP 475
+- NetBIOS suffix 496, 503, 506, 511, 815
+- NetBT 471
+  - Destination Name in packet 558
+  - messages 23
+  - see also NetBIOS
+- netcat 282, 432–3, 641
+  - manage 805–7
+  - for troubleshooting UDP 407
+  - as TCP client or server 432–3, 435
+  - -u option 448
+  - as UDP client or server 433
+- netdom 537, 542, 545
+- Netlogon 526, 530–1, 534, 539, 623
+- Netlogon channel, secure 536
+- netmasks 28, 109
+  - 255.0.0.0 94
+  - 255.255.255.0 and 255.255.0.0 30, 92–3
+  - and address classes 90–1
+  - calculations 100–1, 108–9
+  - checking of 44
+  - and CIDR 91
+  - compared with sub-net masks 87, 109
+  - for directly-connected networks 30–1
+  - examples of use of 98–9
+  - and IP address ranges 94–5, 164
+  - Lone Ranger type 92
+  - multiple 98
+  - reasons for use of 86–7
+  - semiconductor mask analogy 92
+  - specific to interfaces 99
+  - specifying ranges of IP addresses 92–3
+  - stored on machines 31
+  - table of 96–7
+  - troubleshooting 140–1
+- NetMeeting 602
+- Netmon see Network Monitor
+- Netmon Agent Service 486
+- Netscape 287, 301, 306, 382–3, 439, 442
+- NetServerEnum2 562, 564, 566–7
+- netstat 268–9, 278, 402, 407, 430
+- netstat service 458
+- network access layer 725
+- network address and port translation (NAPT) 604
+- Network Address Translation see NAT
+- network addresses 102, 110
+- network card, broken 684
+- network cards, configuring of 72–3
+- network diagrams 779
+- network-directed broadcast address 104, 111
+- Network-disabled hardware profile 683
+- network drive mapping 583
+- network elements (SNMP) 444
+- Network File System see NFS network IDs 180
+- network interface card (NIC) 16
+- Network Intrusion Detection systems (IDSystems) 651
+- network layer 404, 723
+- network logon 530
+- Network Monitor 475, 478–87
+  - compared with etherernet and tcpdump 487
+  - tips 486
+  - tutorial 491
+- Network Monitor Agent 478
+- Network Neighborhood 496, 556, 574, 587
+- network port translation (NPT) 604
+- network range, different sizes of 94–5
+- network reference models 722–5
+- network services, control of 808–14
+- network size and IP address classes 88
+- Network Time Protocol see NTP
+- "network unreachable" error 64, 69, 81
+- networks.opts 773
+- networks file see /etc/networks
+- networks compared with stand-alone machines 6–7
+- NFS (Network File System) 401, 452–3, 464, 830
+  - compared with Windows Networking 470
+  - implementation 454–5
+  - lock manager 464
+  - mounting 454
+  - sniffer 456–7
+  - Version 4 407
+- ngrep 346–50
+- NIC see network interface card
+- NIM da worms 627, 645
+- NIS (Network Information Service) 253
+- NIS+ 253
+
+### N
+
+- nltest 545
+- nltest.exe/SC-QUERY 537
+- nltest.exe/SC-RESET 537
+- Nmap 659
+- nmblookup 517, 591, 815
+- NO CARRIER reply 679
+- "no route to host" error message 81, 143
+- node numbers (SNMP) 461
+- node types, choice of 514–15; see also NetBIOS
+- nodns 775
+- non-browsers (WN) 566
+- nonce 538
+- non-routable IP numbers 102
+- Non-standards track RFCs 726
+- normal group (NetBIOS) 497, 815
+- notation xx
+  - for routing 151
+- Novell 404, 470
+- Novell Directory Services (NDS) 461
+- NS (name server) records (DNS) 195
+- nslookup 192–5, 198–9, 202–3, 248
+  - manage 781–7
+  - TTL 227
+  - -v output 219
+  - -vc option 245
+- NT – domains 524–5, 552
+  - naming 549, 589
+- NT FAQ 489
+- NT Service Browser 574
+- NT Services 476
+- NTFS file systems 545
+- NTLM
+  - challenge/response 538
+  - hash 529
+  - v2 538
+- NTP (Network Time Protocol) 450–1, 463–4
+- null-modem 685, 777
+
+### O
+
+- Oakley groups 703
+- object ID (OID, SNMP) 445
+- <object> tag (HTML) 394
+- /oclet-stream (MIME) 322
+- octets 273
+- OH indicator 678
+- on-site toolkit 780
+- open relays 313
+- OpenLook 437
+- operating systems, hardening of 639
+- "operation not supported by device" error message 69
+- option numbers (DHCP) 413
+- OR operator (Netmon) 481
+- ORBS (Open Relay Behavior-modification System) 657
+- origin servers (HTTP) 376–8
+- Orwell, George 727
+- OSI
+  - e-mail system 329
+  - network reference model 8
+  - seven-layer model 725
+- OSPF (Open Shortest Path First) 135
+- OTHERDOMAIN (Browse) 824
+- Outlook Express 287, 301, 307, 442, 794
+
+### P
+
+- p-node (NetBIOS) 512, 514, 819
+- P (push) flag (TCP) 275
+- packet.dll 350
+- packet filtering 144
+- packet sniffers 4–5, 16, 25–6, 343
+- packet-switching 10
+- packets 10–11
+  - dropped 23
+  - flow in DNS 216–17
+  - forwarding of 61–3
+  - selection of 20–1
+  - tracing of 4–5, 74–5, 214–15
+  - see also frames
+- parameter request lists (DHCP) 413
+- parameters for networking 31
+  - setting of 48–9, 72
+- pass-through authentication (WN) 540
+- passwords 528–9, 674
+- PASV command (FTP) 434–5
+- patch cables, UTP 731
+- pattern-recognition engines 652
+- PCMCIA card 58, 666, 683, 770–3
+- PDC (primary domain controller) 525, 546, 550, 566
+- peer-to-peer networking 468, 490, 594
+- penetration testing 651, 659
+- perfect forward secrecy see PFS
+- Perlman, Radia xviii
+- Permissions 582
+- "permit/deny" rules 629
+- /persistent:yes drive mapping. 585
+- persistent connections 360, 370–1
+- personal firewalls 707, 715
+- PFS (perfect forward secrecy, VPN) 702
+- PGP 694
+- Phase 1 and Phase 2 exchanges (VPN) 703
+- phonebook entries (DUN) 670, 673
+- phonebook wizard (DUN) 671
+- physical layer 722
+- ping 4
+  - -a option 57
+  - applications 470
+  - broadcast storms 105
+  - command options 39
+  - disabled 39, 766
+  - firewall blocks 39
+  - and NetBIOS 507
+  - options 182
+  - origin of name 38–9
+  - story of 57
+- pipeline requests (HTTP) 370
+- plain-text commands see ASCII

@@ -1,0 +1,16 @@
+# 7.9 Lab – interrogating the DNS – nslookup command debug options
+
+**nslookup** has an option, “-d” (debug), to print extra information on how it’s resolving an address. We use it to find out why a query is unexpectedly failing or not doing what we expect, or combined with **tcpdump** just to get a useful insight into the detailed workings of the DNS. Bear in mind that in this module we’re not covering anything new about the DNS itself – we’re just showing how a particular tool displays the DNS information. (As we explain in the Notes, there are much better tools than **nslookup**, but as **nslookup** may be the only tool available on some of your machines, we are covering it in detail.)
+Figure 7.8 shows an annotated example of **nslookup**, reformatted to save space. The output shows clearly:
+
++   - the four sections (questions, answers, authority/nameserver records, additional records) that we explained in Module 7.7. In a section each resource record is shown prefixed with “->”. (The **TTL** information against each record shows how long it will remain valid – its “time to live.” This is used by the DNS when caching replies, as we explain in Module 8.10.)
++   - the header of the DNS packet, which contains an opcode indicating the type of query this is (this will almost always be a normal question, shown as **QUERY**), the identifier, the status (“response code, **rcode**”) of the query, and how many records are in each of the four sections of the packet.
+
+What the output shows less clearly is that there are four separate packets involved in this particular example. Remember that unlike **tcpdump**, **nslookup** isn’t tracing a query initiated by someone else: it’s doing the query itself and showing all the details as it does so. If you run **tcpdump** at the same time as **nslookup**, it’s much easier to see the actual packet flow (Figure 7.9). As usual, run **tcpdump** with option **-n** to show addresses as numbers, to prevent it generating DNS queries of its own, which would only confuse. The packets involved are:
+
++   1. **nslookup** itself sends a query to get details about the DNS server that it’s going to use (queries are shown on lines beginning with ; **res_mkquery**)
++   2. the reply containing details of the nameserver, introduced with **Got answer**: If we were using **tcpdump** to trace a query originated by another program such as **ping**, packets 1 and 2 would not occur at all
++   3. the query for what we’re really interested in – **gilligan.nccd.com** in this case
++   4. the reply containing the answer and the other three sections of information relating to **gilligan.nccd.com**.
+
+We’ve found that people often have difficulty when first interpreting **nslookup** output. One reason is that you are dealing with the “hidden part of the iceberg” – DNS contains a lot of detail, and it takes a while to get used to it. However, another reason is that the output isn’t clearly presented – it’s more like a debug trace printed for the benefit of the tool’s developers than a detailed listing of information for the benefit of the user. Don’t be put off by this – it’s their fault for not making it clear, not your fault for not understanding it immediately. And as we said above, there are better tools than **nslookup** that present the information much more clearly.
