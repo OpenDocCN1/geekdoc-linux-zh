@@ -1,0 +1,168 @@
+
+```text
+Example 10-7 Message example in VM console - kernel image is destroyed
+z/VM V5.2.0   2007-01-16 13:12
+Ready; T=0.01/0.01 23:37:21
+IPL 3301 CLEAR
+00: Booting default (ipl)...
+00: HCPGIR453W CP entered; program interrupt loop
+```
+
+### 10.5.3 自 init 阶段以来失败
+
+文件系统无法挂载（根文件系统除外）。
+
+Init 无法跳过相关进程，当存在涉及 DISK 的问题时（例如，当存在分区问题时），在处理过程中停止。
+
+- **问题描述:** `fsck` 失败
+
+  - **需要回答的问题:**
+
+    - `/etc/fstab` 描述是否正确？
+
+    - 设备是否正确识别？
+
+- 文件系统是否损坏？
+
+**问题描述：挂载文件系统失败**
+
+需要回答的问题：
+
+- `/etc/fstab` 中的描述是否正确？
+
+- 设备是否被正确识别？
+
+- 文件系统是否未损坏？
+
+可能的解决方案如下：
+
+- **修改 fstab 条目。**
+
+    - 如果存在配置错误，请进行修改。
+
+    - 如果发生文件系统问题，请暂时注释掉该条目，或将 `fsck` 标志设置为关闭（设为 0）。
+
+- **重新制作 initrd。**
+
+    - 设备可能无法通过 coldplug 识别，但重新制作 `initrd` 后可能会被识别。
+
+*示例 10-8 消息示例 - fsck 失败*
+
+```
+Checking file systems ...
+fsck 1.38 (30-Jun-2005)
+Checking all file systems.
+?/sbin/fsck.ext3 (1) -- /opt? fsck.ext3 -a /dev/dasdd2
+fsck.ext3: No such device or address while trying to open /dev/dasdd2
+Possibly non-existent or swap device?
+fsck.ext3 /dev/dasdd2 failed (status 0x8). Run manually!
+?IA..failedblogd: no message logging because /var file system is not
+accessible
+fsck failed for at least one filesystem (not /).
+Please repair manually and reboot.
+The root file system is is already mounted read-write.
+
+Attention: Only CONTROL-D will reboot the system in this
+maintenancemode. shutdown or reboot will not work.
+Give root password for login: ____________________
+```
+
+### 10.5.4 服务启动失败
+
+以下两种情况被认为是导致服务启动失败的原因。
+
+**问题描述：自动启动设置存在问题。**
+
+需要回答的问题：
+
+- 名称以 `Sxx` 开头的符号链接文件是否已部署在 `/etc/init.d/boot.d` 中？
+
+- 该符号链接是否指向正确的启动脚本？
+
+- 符号链接文件（也称为 `symlink` 或 `soft lnk`）是否已部署在 `/etc/init.d/rcx.d` 中？
+
+- 该符号链接是否指向正确的启动脚本？
+
+**问题描述：自动设置有效，但服务未启动。**
+
+需要回答的问题：
+
+- 所需的服务是否已启动？
+
+- 启动脚本是否存在问题？
+
+一个可能的解决方案是对服务执行自动启动设置。使用 `chkconfig` 命令或 `insserv` 命令进行设置，以便在系统启动时启动该服务。
+
+![Image](img/f332344337ca8bf6846cb313a66ee0b3_328_0.png)
+
+## 案例研究：响应缓慢的网站
+
+在本章中，我们将展示如何在一个典型的三层 Web 服务环境中确定响应时间长和事务率低的背后问题，这也是生产管理员通常报告的一个通用问题。尽管我们的实验室环境在重现该问题方面受到限制，但我们已努力使其反映真实的 Web 应用程序生产环境。本案例研究的范围是以结合的方式提供有关使用各种基于 Linux 和 z/VM 的工具以及其他问题排查经验的信息。
+
+### 11.1 三层 Web 应用程序环境
+
+在该场景中，我们为运行在 System z 上的 Linux 镜像的基于 Web 的应用程序实施了高可用性解决方案。
+
+WebSphere 应用程序服务器 (`WAS`) 是在 System z 上的 Linux 中运行的最通用的中间件产品之一。WebSphere 也是世界上最广泛使用的基于 Java 的应用服务器之一，许多组织使用托管在 WAS 上的 Web 应用程序连接到驻留在同一大型机上的数据。
+
+为了使环境更简单，我们使用 Trade 6 应用程序来重现 Web 服务环境。应用程序数据驻留在 System z 上的 Linux 版 DB2 中。
+
+> **重要提示：** 我们将本案例研究仅限于对硬件资源利用率的问题排查。我们还假设应用程序（IBM HTTP 服务器、`WAS` 和 DB2）已进行最佳调优，以提供最大性能。
+
+#### 11.1.1 Trade 6 Web 服务应用程序
+
+IBM Trade 性能基准测试示例，也称为 Trade 6 应用程序，是一个 WebSphere 端到端基准测试和性能示例应用程序。该 Trade 6 基准测试旨在覆盖 WebSphere 的编程模型。
+
+该应用程序提供真实的工作负载，驱动 WebSphere 对 J2EE™ 1.4 和 Web 服务的实现，包括关键的 WebSphere 性能组件和功能。Trade 6 应用程序模拟了一个股票交易应用程序，允许您买卖股票、查看投资组合、注册新用户等。
+
+在本书中，我们使用 Trade 6 来生成会影响系统性能的工作负载。IBM Trade 应用程序（用于 WebSphere Application Server）可供免费下载，地址为：
+
+```
+https://www4.software.ibm.com/webapp/iwm/web/preLogin.do?source=trade6
+```
+
+Trade 6 的三个主要组件如下所示，并在图 11-1 中展示：
+
+- **IBM HTTP 服务器**
+
+    - HTTP 服务器接受客户端请求并传递静态内容（HTML 页面、图像和样式表）。动态请求通过服务器插件转发到 WebSphere 应用程序服务器。
+
+- **IBM WebSphere 应用程序服务器**
+
+    - WebSphere 应用程序服务器使用 JavaServer™ 页面 (`JSP`) 和 Java Servlet 创建动态内容。页面是从 DB2 数据库中提取的数据生成的。所有 Trade 版本都依赖于 WebSphere 版本，因此 Trade 6 仅适用于 WebSphere 应用程序服务器 V6。
+
+- **DB2 数据库**
+
+    - DB2 数据库包含关于模拟客户账户和股票交易的关系表。我们使用了 DB2 LUW v8.2。
+
+![Image](img/f332344337ca8bf6846cb313a66ee0b3_330_0.png)
+
+#### 11.1.2 我们的 Web 服务配置
+
+在 System z 上的 Linux 中部署 Trade 6 时有几种选择：
+
+- 所有组件都可以在单个 Linux 客户机中运行。这被称为单层部署。
+
+- 每个组件都可以在专用的 Linux 客户机中运行。我们将此称为三层部署。
+
+我们为本书选择了三层部署，其中我们在各自的 Linux 客户机中运行 IBM HTTP 服务器、WebSphere 应用程序服务器和 DB2（参见第 317 页的表 11-1）。我们的部署选择如图 11-2 所示。使用三层部署使我们能够根据特定客户机执行的任务，更准确地调整每个 Linux 客户机的虚拟机大小。
+
+![Image](img/f332344337ca8bf6846cb313a66ee0b3_331_0.png)
+
+图 11-2 三层部署
+
+此外，在测量利用率时，三层部署选项允许我们将特定的资源使用归因于特定的任务。参见表 11-1。
+
+**表 11-1 *Linux 服务器及其配置***
+
+| 服务器 | 应用程序 | 处理器 | 内存 |
+
+| :----- | :---------- | :-------- | :----- |
+
+| LNXIHS | HTTP 服务器 | 1 | 512 MB |
+
+| LNXWAS | WebSphere 应用服务器 | 1 | 3 GB |
+
+| LNXDB2 | DB2 服务器 | 1 | 2 GB |
+
+#### 11.1.3 WebSphere Studio 工作负载模拟器
