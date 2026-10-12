@@ -1,0 +1,127 @@
+
+此时，你可以通过调用 `mysql_stmt_fetch()` 立即开始获取行数据。我们的程序演示了一个可选步骤，你可以在开始获取前执行该步骤：它调用了 `mysql_stmt_store_result()`，该函数获取整个结果集并将其缓冲在客户端内存中。这样做的优点是你可以通过调用 `mysql_stmt_num_rows()` 来了解结果集中有多少行。缺点是它在客户端使用更多内存。
+
+获取行的循环涉及调用 `mysql_stmt_fetch()`，直到它返回非零值。每次获取后，与参数结构关联的变量将包含当前行的列值。
+
+当所有行都获取完毕后，调用 `mysql_stmt_free_result()` 会释放与结果集相关的内存。
+
+此时，`select_rows()` 返回给调用者，调用者随后调用 `mysql_stmt_close()` 以销毁预编译语句句柄。
+
+上述讨论提供了预编译语句接口及其关键函数的大致概览。客户端库还包括其他一些相关函数；有关更多信息，请参阅附录 G（在线）。
+
+## 8 使用 Perl DBI 编写 MySQL 程序
+
+本章描述如何使用 Perl DBI 接口处理 MySQL。它不讨论 DBI 的理念或架构。关于 DBI 的这些方面（特别是与 C 和 PHP API 的比较）的信息，请参见第 6 章 “MySQL 编程入门”。
+
+此处讨论的示例基于我们的示例数据库 `sampdb`，使用了第 1 章 “MySQL 入门” 中为成绩管理项目和历史联盟创建的表。为了充分利用本章内容，最好你对 Perl 有所了解。如果你不了解，你可能可以通过直接复制此处看到的示例代码来编写自己的脚本，但你会发现一本好的 Perl 书是一项值得的投资。其中一本书是 Wall、Christiansen 和 Orwant 著的《Programming Perl》第三版（O’Reilly，2000）。
+
+DBI 当前版本为 1.601，尽管此处的讨论也适用于较早的版本。DBI 至少需要 Perl 5.6.0（推荐 5.6.1 而非 5.6.0）。你还需要安装 `DBD::mysql` Perl 模块，以及 MySQL C 客户端库和头文件。如果你计划按照此处讨论的方式编写基于 Web 的 DBI 脚本，还应该获取 `CGL.pm` 模块。在本章中，`CGL.pm` 与 Apache Web 服务器一起使用。如果你需要获取这些软件包中的任何一个，请参阅附录 A “获取和安装软件”。该附录还提供了获取本章开发的示例脚本的说明。这些脚本是 `sampdb` 发行版的一部分，你可以下载该发行版以避免自己重新输入脚本。本章使用的脚本位于该发行版的 `perlapi` 目录下。
+
+本章主要仅描述此处讨论所需的 Perl DBI 方法和变量。有关方法和变量的更全面列表，请参阅附录 H “Perl DBI API 参考”（在线）。你可以将该附录作为参考，以获取你正在使用的 DBI 任何部分的更多背景信息。通过运行以下命令可获得在线文档：
+
+```
+perldoc DBI
+```
+
+```
+% perldoc DBI::FAQ
+% perldoc DBD::mysql
+```
+
+在数据库驱动（DBD）级别，MySQL 的驱动建立在 MySQL C 客户端库之上，因此共享该库的某些特性。有关客户端库的更多信息，请参见第 7 章 “使用 C 编写 MySQL 程序”。
+
+### 8.1 Perl 脚本特性
+
+Perl 脚本是文本文件，因此你可以使用任何文本编辑器创建它们。本章中的所有 Perl 脚本都遵循 Unix 惯例，即以 `#!`（shebang）行开头，该行指定用于执行脚本的程序路径。我使用的行如下：
+
+```
+#!/usr/bin/perl
+```
+
+在 Unix 上，如果系统中 Perl 的路径不同（例如 `/usr/local/bin/perl5` 或 `/opt/bin/perl`），你需要修改 `#!` 行。否则，Perl 脚本在你的系统上无法正常运行。
+
+你可以在任何系统上按以下方式调用 Perl 脚本 `myscript.pl` 来运行它：
+
+```
+% perl myscript.pl
+```
+
+然而，你可能也可以在不显式指定 `perl` 程序的情况下执行脚本。在 Unix 上，通过更改文件模式使脚本可执行来实现这一点：
+
+```
+% chmod +x myscript.pl
+```
+
+然后你只需输入其名称即可运行脚本：
+
+```
+% ./myscript.pl
+```
+
+这是本章中示例所使用的脚本调用风格。如果脚本位于当前目录（“.”），并且你的 shell 搜索路径中不包含当前目录，则应使用开头的 “./”。否则，你可以从命令名称中省略 “./”：
+
+### 8.2 Perl DBI 概览
+
+本节提供了编写自己的脚本和理解他人编写的脚本所需的 DBI 背景信息。如果你已经熟悉 DBI，可能希望直接跳到 8.3 节 “让 DBI 发挥作用”。
+
+#### 8.2.1 DBI 数据类型
+
+在某些方面，使用 Perl DBI API 类似于使用第 7 章中描述的 C 客户端库。使用 C 客户端库时，你主要通过指向结构或数组的指针来调用函数并访问与 MySQL 相关的数据。使用 DBI API 时，你也调用函数并使用指向结构的指针，只不过函数被称为 “方法”，指针被称为 “引用”，指针变量被称为 “句柄”，而句柄所指向的结构被称为 “对象”。
+
+DBI 使用几种类型的句柄。这些句柄在 DBI 文档中通常被称为表 8.1 所示的约定名称。随着内容的推进，这些句柄的用途将会变得清晰。同样也使用了一些非句柄变量的约定名称（见表 8.2）。本章实际上并没有使用所有这些变量名称，但在阅读其他人编写的 DBI 脚本时了解它们是有用的。
+
+| 名称 | 含义 |
+| :--- | :--- |
+| `$dbh` | 数据库对象的句柄 |
+| `$sth` | 语句（查询）对象的句柄 |
+| `$fh` | 打开文件的句柄 |
+| `$h` | “通用” 句柄；含义取决于上下文 |
+
+*表 8.1 Perl DBI 句柄变量的约定名称*
+
+| 名称 | 含义 |
+| :--- | :--- |
+| `$rc` | 返回 true 或 false 的操作的返回代码 |
+| `$rv` | 返回整数的操作的返回值 |
+| `$rows` | 返回行数计数值的操作的返回值 |
+| `@ary` | 表示查询返回的一行值的数组（列表） |
+
+*表 8.2 Perl DBI 非句柄变量的约定名称*
+
+#### 8.2.2 一个简单的 DBI 脚本
+
+让我们从一个简单的脚本 `dump_members.pl` 开始，它说明了 DBI 编程中的几个标准概念，例如连接到 MySQL 服务器和断开连接、发出 SQL 语句以及检索数据。该脚本产生的输出由以下部分组成
+
+历史联盟（Historical League）的会员列表采用制表符分隔（tab-delimited）格式。该格式本身并不特别有趣。在此阶段，比生成美观的输出更重要的是了解如何使用 DBI。`dump_members.pl` 脚本看起来是这样的：
+
+```perl
+#!/usr/bin/perl
+# dump_members.pl - dump Historical League's membership list
+
+use strict;
+use warnings;
+use DBI;
+
+# data source name, username, password, connection attributes
+my $dsn = "DBI:mysql:sampdb:localhost";
+my $user_name = "sampdm";
+my $password = "secret";
+my %conn_attrs = (RaiseError => 1, PrintError => 0, AutoCommit => 1);
+
+# connect to database
+my $dbh = DBI->connect ($dsn, $user_name, $password, \%conn_attrs);
+
+# issue query
+my $sth = $dbh->prepare ("SELECT last_name, first_name, suffix, email,"
+. " street, city, state, zip, phone FROM member ORDER BY last_name");
+$sth->execute ();
+
+# read and display query result
+while (my @ary = $sth->fetchrow_array ())
+{
+print join ("\t", @ary), "\n";
+}
+$sth->finish ();
+
+$dbh->disconnect ();
+```
