@@ -1,0 +1,116 @@
+
+让我们分别查看每个部分。
+
+### Pam_listfile 项 (Items)
+
+虽然用户名许可或阻止访问的最直观方式，但 `pam_listfile` 还允许其他选项。
+
+你可能想根据用户是否在控制台前来允许或拒绝访问。虽然有一个 `pam_console` 模块，但它是为控制台用户配置环境的。在大多数组织中，你唯一登录控制台的时候是在发生灾难时。假设你希望管理员能够在控制台前运行 `su(1)`，但在远程登录时他们必须使用 `sudo(1)`。在 `/etc/pam.d/su` 中添加如下所示条目。
+
+```
+auth required pam_listfile.so item=tty sense=allow \
+file=/etc/ttylist onerr=succeed
+```
+
+有了这样的语句，`pam_listfile` 会将用户的终端（tty）与文件 `/etc/ttylist` 进行比较。如果找到匹配项，它将返回 `sense` 设置提供的访问权限——在这种情况下，是 `allow`（允许）。
+
+`/etc/ttylist` 文件需要包含这样的列表：
+
+- tty1
+- tty2
+- tty3
+- tty4
+
+基于虚拟终端的拦截要困难得多。Linux 会根据需要创建虚拟终端。你无法在 `pam_listfile` 文件中使用通配符或正则表达式，因此你需要列出比你实际拥有的得多的虚拟终端。
+
+基于远程主机的允许或阻止访问可以通过 `host` 项来实现。由于 `pam_listfile` 不支持任何类型的通配符或子网掩码，它永远不是执行检查的正确位置。如果你必须在 PAM 中使用远程主机匹配，请准备一个包含单独地址的文件，并准备好面对低级的烦扰。
+
+你可以根据 `/etc/passwd` 中提供的用户 shell 允许或拒绝身份验证。在这里，我拒绝了所有使用 `/etc/shell` 中列出的 shell 的用户的身份验证。
+
+```
+auth required pam_listfile.so item=shell sense=deny \
+file=/etc/shell onerr=succeed
+```
+
+然而，没有什么能阻止用户更改他们的 shell、通过身份验证，然后恢复他们偏好的 shell。你不会经常看到基于 shell 的拦截或许可列表。
+
+组组成是 `pam_listfile` 可以处理的另一个标准。正如下文讨论，它的工作方式并不像你想的那样，但这是一个例子。
+
+```
+auth required pam_listfile.so item=group sense=allow \
+file=/etc/grouplist onerr=succeed
+```
+
+如果一个用户是 `/etc/grouplist` 中列出的组的成员，她就能获得访问。如果不是，她就。将 `pam_listfile` 与组组成结合是说明 PAM 如何毁掉你一天的极佳方法。你可能会使用 `wheel` 语句只允许 `wheel` 组的成员使用某服务，并添加类似上面的 `pam_listfile` 语句来封禁 `/etc/grouplist` 中列出的组的任何人。
+
+### Pam_listfile 的感应 (Sense) 与文件 (File)
+
+虽然用户名是许可或阻止访问最明显的方式，但 `pam_listfile` 允许其他选项。
+
+你可能想根据用户是否在控制台前来允许或拒绝访问。虽然有一个 `pam_console` 模块，但它是为控制台用户配置环境的。在大多数组织中，你唯一登录控制台的时候是在发生灾难时。假设你希望管理员能够在控制台前运行 `su(1)`，但在远程登录时他们必须使用 `sudo(1)`。在 `/etc/pam.d/su` 中添加如下所示条目。
+
+```
+auth required pam_listfile.so item=tty sense=allow \
+file=/etc/ttylist onerr=succeed
+```
+
+有了这样的语句，`pam_listfile` 会将用户的终端（tty）与文件 `/etc/ttylist` 进行比较。如果找到匹配项，它将返回 `sense` 设置提供的访问权限——在这种情况下，是 `allow`。
+
+`/etc/ttylist` 文件需要包含这样的列表：
+
+- tty1
+- tty2
+- tty3
+- tty4
+
+基于虚拟终端的拦截要困难得多。Linux 会根据需要创建虚拟终端。你无法在 `pam_listfile` 文件中使用通配符或正则表达式，因此你需要列出比你实际拥有的得多的虚拟终端。
+
+基于远程主机的允许或阻止访问可以通过 `host` 项来实现。由于 `pam_listfile` 不支持任何类型的通配符或子网掩码，它永远不是执行检查的正确位置。如果你必须在 PAM 中使用远程主机匹配，请准备一个包含单独地址的文件，并准备好面对低级的烦扰。
+
+你可以根据 `/etc/passwd` 中提供的用户 shell 允许或拒绝身份验证。在这里，我拒绝了所有使用 `/etc/shell` 中列出的 shell 的用户的身份验证。
+
+然而，没有什么能阻止用户更改他们的 shell、通过身份验证，然后恢复他们偏好的 shell。你不会经常看到基于 shell 的拦截或许可列表。
+
+组组成是 `pam_listfile` 可以处理的另一个标准。正如下文讨论，它的工作方式并不像你想的那样，但这是一个例子。
+
+```
+auth required pam_listfile.so item=group sense=allow \
+file=/etc/grouplist onerr=succeed
+```
+
+如果一个用户是 `/etc/grouplist` 中列出的组的成员，她就能获得访问。如果不是，她就。将 `pam_listfile` 与组组成结合是说明 PAM 如何毁掉你一天的极佳方法。你可能会使用 `wheel` 语句只允许 `wheel` 组的成员使用某服务，并添加类似上面的 `pam_listfile` 语句来封禁 `/etc/grouplist` 中列出的组的任何人。
+
+### Pam_listfile 的错误处理 (Onerr)
+
+`pam_listfile` 需要知道要检查哪个文件。
+
+最后，我们通过 `onerr` 设置说明如果 `pam_listfile` 遇到意外错误时应该如何表现。这不是像“用户不在文件中”这样的错误，而是“文件不可读”或“内核告诉它滚蛋？”之类的。在这里，我们告诉 `pam_listfile`，如果发生错误则返回成功。
+
+此示例实现了传统的 `/etc/ftpusers` 功能。文件中的用户名列表可能无法通过该服务的身份验证。
+
+让我们分别查看每个部分。
+
+### Pam_listfile 项 (Items)
+
+虽然用户名是许可或阻止访问的最直观方式，但 `pam_listfile` 还允许其他选项。你可能想根据用户是否在控制台前来允许或拒绝访问。虽然有一个 `pam_console` 模块，但它是为控制台用户配置环境的。在大多数组织中，你唯一登录控制台的时候是在发生灾难时。假设你希望管理员能够在控制台前运行 `su(1)`，但在远程登录时他们必须使用 `sudo(1)`。在 `/etc/pam.d/su` 中添加如下所示条目。
+
+```
+auth required pam_listfile.so item=tty sense=allow \
+file=/etc/ttylist onerr=succeed
+```
+
+有了这样的语句，`pam_listfile` 会将用户的终端（tty）与文件 `/etc/ttylist` 进行比较。如果找到匹配项，它将返回 `sense` 设置提供的访问权限——在这种情况下，是 `allow`。`/etc/ttylist` 文件需要包含这样的列表：
+
+- tty1
+- tty2
+- tty3
+- tty4
+
+基于虚拟终端的拦截要困难得多。Linux 会根据需要创建虚拟终端。你无法在 `pam_listfile` 文件中使用通配符或正则表达式，因此你需要列出比你实际拥有的得多的虚拟终端。基于远程主机的允许或阻止访问可以通过 `host` 项来实现。由于 `pam_listfile` 不支持任何类型的通配符或子网掩码，它永远不是执行检查的正确位置。如果你必须在 PAM 中使用远程主机匹配，请准备一个包含单独地址的文件，并准备好面对低级的烦扰。
+
+你可以根据 `/etc/passwd` 中提供的用户 shell 允许或拒绝身份验证。在这里，我拒绝了所有使用 `/etc/shell` 中列出的 shell 的用户的身份验证。然而，没有什么能阻止用户更改他们的 shell、通过身份验证，然后恢复他们偏好的 shell。你不会经常看到基于 shell 的拦截或许可列表。组组成是 `pam_listfile` 可以处理的另一个标准。正如下文讨论，它的工作方式并不像你想的那样，但这是一个例子。
+
+```
+auth required pam_listfile.so item=group sense=allow \
+file=/etc/grouplist onerr=succeed
+```
