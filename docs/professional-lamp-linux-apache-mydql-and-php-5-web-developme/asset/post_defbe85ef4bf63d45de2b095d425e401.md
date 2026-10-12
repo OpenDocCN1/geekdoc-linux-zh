@@ -1,0 +1,182 @@
+
+Once you get past the problems caused by poor object-oriented design, you will find that creating a system using a custom set of PHP objects, or even a full-blown APL, can yield benefits that most every developer will appreciate. With that, you can now begin to take a look at how PHP5 implements object-oriented programming.
+
+## Basic Class Definitions
+
+The basic unit of code in object-oriented PHP is the *class*. Simply put, a class is a way to encapsulate related functionality and data in one entity. This encapsulation can be used to hide internal operations from external code, and helps simplify the external interaction with the data. A class is a *formal description* of a grouping of code, a programmatic recipe if you will. A class by itself, like a recipe, is merely a cluster of instructions, and not something that can directly be used — you don’t eat the actual recipe, do you? To use classes, you will create an instance of the class, called an *object*—similar to using the recipe to prepare a dish you can actually eat. Classes define the properties and actions of a group of code, and objects are individual instances of that set of commands.
+
+An easy way to understand classes is to relate class code to physical objects. Many times, classes would represent these real-world objects. You might have a class named CAR that has a property called occupants, which might keep track of the number of people in the car. It might even contain a method called brake(), which would perform its similarly-named task. Like many real-world items, classes have a combination of attributes that describe the individual object, called *properties* in OOP, and a set of actions that they can perform, which are called *methods* in the object-oriented world.
+
+## Defining the Class
+
+Defining a class in PHP5 is a relatively straightforward process—very similar to defining a function, albeit with a different keyword:
+
+```php
+class Circle { // Class code goes here }
+```
+
+This code defines a simple class by using the `class` keyword, followed by the name of the class, and a set of curly braces.
+
+In standard PHP5 classes, there are two main parts to a class definition—properties and methods. Properties represent the data held in the object, while the methods perform actions with that data.
+
+## Properties
+
+When creating your classes in PHP5, properties are where you will store the various bits of data the object will represent.
+
+To define a property in PHP5 is as simple as the following:
+
+```php
+visibility $property_name;
+```
+
+In this definition, `visibility` represents the code visibility of the property, which is one of three values: `public`, `private`, or `protected`. The meaning of these three keywords is discussed later in this chapter.
+
+The second part of the property definition, `property_name` is simply the name that you want the property to have.
+
+For example, say you wanted to create a class named `Circle`. You might want to have a public property to hold the radius, like so:
+
+```php
+class Circle
+{
+    public $radius;
+}
+```
+
+Optionally, you can specify an initial value for the property in its definition. Suppose you wanted to have the initial radius of your `Circle` set to 10; you might do the following:
+
+```php
+class Circle
+{
+    public $radius = 10;
+}
+```
+
+Then, each time a `Circle` object is created, it will start out with an initial radius of 10.
+
+## Methods
+
+You’ve created properties to hold your data inside objects, now you need to create a way to act on that data. To perform these actions, you’ll create functions inside the class, called *methods*.
+
+Defining a method in PHP5 is very similar to creating a standard function elsewhere in your code:
+
+```php
+visibility function function_name (parameters)
+{
+    // method implementation here
+}
+```
+
+Similar to the property definition, method definitions require a visibility component. Aside from the visibility prefix, methods are defined identically to standard PHP functions—simply use the function keyword, followed by the name of the function, then the optional parameter list inside parentheses.
+
+Using the `Circle` example again, you’ll add a method to calculate the area of the circle:
+
+```php
+class Circle
+{
+    public $radius;
+
+    public function calcArea($radius)
+    {
+        return pi() * pow($radius, 2);
+    }
+}
+```
+
+You’ve simply created a method named `calcArea()` that takes a parameter `$radius`, and returns the area of a circle with the given radius.
+
+Now that you’ve created these properties and methods, you’re going to need a way to actually use your properties and methods. Enter *instantiation*.
+
+## Using Classes: Instances
+
+In order to access the properties and use the methods of a class, you first need to instantiate, or create an instance, of the class. When a class is instantiated, it returns an *individual object* of that class type that you can use. In PHP5, object instances are created using the **new** keyword, like so:
+
+```php
+$c = new Circle();
+```
+
+Once an object is created, the individual properties and methods are accessed by using an “arrow” operator (a hyphen immediately followed by a greater-than sign), as shown in the following code:
+
+```php
+<?php
+
+class Circle
+{
+    public $radius;
+
+    public function calcArea($radius)
+    {
+        return pi() * pow($radius, 2);
+    }
+}
+
+// Create a new instance of Circle
+$c = new Circle();
+
+// Change a property
+$c->radius = 5;
+
+// Use a method
+echo 'The area of the circle is ' . $c->calcArea(5);
+?>
+```
+
+If you run the code, you will see something similar to:
+
+```
+The area of the circle is 78.539816339745
+```
+
+Looking at the code, you’ll see that you start out by defining the class Circle. Then, you added the code that instantiates the object:
+
+```php
+// Create a new instance of Circle
+$c = new Circle();
+```
+
+Finally, you changed the `$radius` property to a value of 5, and calculated the area of a circle given a radius of 5:
+
+```php
+// Change a property
+$c->radius = 5;
+
+// Use a method
+echo 'The area of the circle is ' . $c->calcArea($c->radius);
+```
+
+Looking carefully at the previous bit of code, you may have noticed something a bit awkward in the way you used the radius property. You’ve explicitly set the radius property, but then you reuse that property as an explicit value for the parameter of the calcArea method. Since the object knows about the radius property internally, there’s no reason it needs to be explicitly provided to the calcArea() method. To remove the requirement to provide a radius parameter and use the object’s own internal radius property, you’re going to need a method to access it. PHP provides us with a reference named $this to achieve such a goal. Using the specially named variable $this is just like referencing an instantiated object, but $this references the object in which it is contained.
+
+Change the Circle class, as shown here:
+
+```php
+<?php
+
+class Circle
+{
+    public $radius;
+
+    public function calcArea()
+    {
+        return pi() * pow($this->radius,  2);
+    }
+}
+
+// Create a new instance of Circle
+$c = new Circle();
+
+// Change a property
+$c->radius = 5;
+
+// Use a method
+echo 'The area of the circle is ' . $c->calcArea();
+?>
+```
+
+Running the code will produce exactly the same results as the previous example—the only changes occur in the way you use the calcArea() method. Since you are referencing the Circle object’s radius property inside the method, you no longer need the parameter in the function definition, and in the method call.
+
+## Visibility
+
+One of the new features of the PHP5 OOP model is the ability to specify a level of visibility for all class properties and methods. Using these new visibility keywords, you can hide certain parts of your class from external code, and expose other functionality that you want accessible to all. PHP5 provides three visibility levels to use in classes: public, private, and protected.
+
+A visibility of public means that a property or method is available to all other code that wishes to access it. If no visibility is specified for a method, it defaults to public visibility.
+
+Specifying a class member as private makes the property or method visible only within the class definition to which it belongs. All other methods in the same class can access the private member, but anything outside that specific class cannot.

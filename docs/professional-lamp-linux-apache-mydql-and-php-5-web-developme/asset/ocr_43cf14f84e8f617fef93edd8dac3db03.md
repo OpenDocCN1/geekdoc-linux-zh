@@ -1,0 +1,11 @@
+# # 10
+
+# # PHP Extensions
+
+Although the core of the PHP language provides functions that accomplish many commonly needed tasks, there are numerous extensions that can be added to bring a PHP configuration to a whole new level. This chapter explores some of the more useful extensions, but it only touches on the tip of the iceberg. The extensions in this chapter deal with manipulating images, creating PDF files (without the use of Adobe Acrobat), creating flash files (without the use of any commercial software), and interfacing with XML documents. Some of these extensions are already bundled and enabled for you with the default configuration, so what are you waiting for?
+
+# ## PDFlib
+
+Whether your content is academic or commercial in nature, no professionally developed website would be complete without the ability to deliver content as a PDF (Portable Document Format). While there are several Open Source libraries available to PHP developers, notably FPDF (http://www.fpdf.org/), and pdf-php (http://sourceforge.net/projects/pdf-php), PHP’s built-in PDFlib functions are arguably the most efficient means of doing so. The PDFlib functions, moved to the PHP Extension Community Library (PECL) since PHP 4.3.9, are a wrapper for the commercial PDFlib (http://www.pdflib.com/) PDF processing library. The advantage offered by PDFlib over the purely PHP-based solutions is that of speed. Compiled C code, such as PDFlib, is magnitudes of order faster than PHP code interpreted by Apache. The disadvantage is the licensing cost for commercial use.
+
+> *The observant reader will note that this text refers to two distinct capitalizations of the subject matter: “PDFlib” and “PDFLib.” This is to differentiate the C library, named “PDFlib” by its owners, from the PHP wrapper library “PDFlib.” It is also noteworthy that the C library documentation does not rigidly adhere to this convention.*

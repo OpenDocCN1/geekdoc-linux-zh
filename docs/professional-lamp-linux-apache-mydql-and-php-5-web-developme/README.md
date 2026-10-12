@@ -1,0 +1,7 @@
+# LAMP 高级指南
+
+> 原文：[Professional LAMP ： Linux, Apache, MyDQL and PHP 5 web development]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)

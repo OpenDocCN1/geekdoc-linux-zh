@@ -1,0 +1,43 @@
+# Apache Tricks
+
+# or next| OR
+
+The default chaining method for multiple RewriteCond directives is to use a logical AND. If the or next flag is used, the two connected RewriteConds are compared with a logical OR.
+
+While the RewriteRule and RewriteCond directives deliver a majority of the power in mod_rewrite, there are a handful of other key directives that can help you control your rewriting and solve problems.
+
+# RewriteBase
+
+In most situations, your website URLs will not match your physical file system layout. The root of your website is almost never located at the root (/) of the local file system. In normal operation of Apache server, this is not usually a problem; when using RewriteRule, it can be very problematic. RewriteBase allows you to specify the base or prefix path for a set of URL rewrites.
+
+To fully understand the reasoning for RewriteBase, take a look at the following example ruleset used to rewrite a simple set of files:
+
+```
+RewriteEngine On
+
+RewriteRule ^foo\\.html$ bar.html [R]
+```
+
+Suppose your web root is being served out of the /www folder of the local file system (that is, your DocumentRoot is set to /www). If you tried to use the preceding rule in a per-directory access file (.htaccess), it would actually result in the request being rewritten incorrectly — instead of your expected http://www.domain.com/bar.html file being returned, you get http://www.domain.com/www/ bar.html. Why is this? Here is a simplified version of what is happening internally to Apache:
+
+Request: /www/foo.html (local physical path)
+
+Rewriting:
+/www/foo.html -> foo.html (directory prefix stripped)
+foo.html -> bar.html (RewriteRule applied)
+bar.html -> /www/bar.html (directory prefix re-applied)
+/www/bar.html -> http://www.domain.com/www/bar.html
+(domain prefix applied to URL, sent to browser)
+
+To solve this, you simply add a RewriteBase statement to your ruleset:
+
+```
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^foo\\.html$ bar.html [R]
+```
+
+# RewriteLog
+
+In order to get a first-hand glimpse of what is actually going on with mod_rewrite, try out the RewriteLog directive. You can use RewriteLog to specify a log file where a running record of the internal rewrite processing will be sent.

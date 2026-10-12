@@ -1646,6 +1646,7 @@
 +   [认知无线电原理](docs/principles-of-cognitive-radio/README.md)
 +   [System z 上 Linux 的问题确定 从标题屏幕 - "SG24-7599-00."](docs/problem-determination-for-linux-on-system-z-title-from-title/README.md)
 +   [高性能计算中的问题解决：基于 Linux 的情境感知方法](docs/problem-solving-in-high-performance-computing-a-situational-/README.md)
++   [LAMP 高级指南](docs/professional-lamp-linux-apache-mydql-and-php-5-web-developme/README.md)
 +   [LAMP 高级指南：Linux, Apache, MySQL 和 PHP5 Web 开发](docs/professional-lamp-linux-apache-mysql-and-php5-web-developmen/README.md)
 +   [Linux 部署 高级指南](docs/professional-linux-deployment-professional/README.md)
 +   [Linux 内核架构高级指南 (程序员到程序员)](docs/professional-linux-kernel-architecture-wrox-programmer-to-pr/README.md)

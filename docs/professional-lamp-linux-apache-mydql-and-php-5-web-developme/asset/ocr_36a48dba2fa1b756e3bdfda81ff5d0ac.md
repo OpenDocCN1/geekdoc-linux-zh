@@ -1,0 +1,48 @@
+# Chapter 9
+
+# Unintuitive Results
+
+Unlike C, which is converted into machine code that really isn't too different from what you actually write (the language has been described as “Assembler with delusions of grandeur”), your PHP program is being run by a virtual machine simulated by the PHP engine. When it comes to performance tuning, this can make for difficulties because it becomes that much harder to predict what will work well and what will not. For this will be examined later, but for now you may wish to meditate on the results of the following test code:
+
+```
+```php
+<?php
+$J=0;
+$start_test_1 = microtime(true);
+for($i=0; $i<1000000; $i++) $j++;
+$end_test_1 = microtime(true);
+
+$J=0;
+$start_test_2 = microtime(true);
+for($i=0; $i<1000000; $i++) ++$j;
+$end_test_2 = microtime(true);
+
+$J=0;
+$start_test_3 = microtime(true);
+for($i=0; $i<1000000; ++$i) $j++;
+$end_test_3 = microtime(true);
+
+$J=0;
+$start_test_4 = microtime(true);
+for($i=0; $i<1000000; ++$i) ++$j;
+$end_test_4 = microtime(true);
+
+$test_1 = $end_test_1 - $start_test_1;
+$test_2 = $end_test_2 - $start_test_2;
+$test_3 = $end_test_3 - $start_test_3;
+$test_4 = $end_test_4 - $start_test_4;
+
+echo "Postincrementing I and J one million times: ",
+     $test_1, " seconds.\n";
+echo "Postincrementing I and preincrementing J one million times: ",
+     $test_2, " seconds.\n";
+echo "Preincrementing I and postincrementing J one million times: ",
+     $test_3, " seconds.\n";
+echo "Preincrementing I and J one million times: ",
+     $test_4, " seconds.\n";
+?>```
+```
+
+# Benchmarking and Profiling
+
+There are many techniques and utilities for estimating the speed of a program, and they should be used before, during, and after embarking on any mission to speed up your site, so that you don’t waste time making changes without any appreciable difference or, worse, slowing your site down. Broadly speaking, they can be divided into two main categories: benchmarking is what you do when you conduct

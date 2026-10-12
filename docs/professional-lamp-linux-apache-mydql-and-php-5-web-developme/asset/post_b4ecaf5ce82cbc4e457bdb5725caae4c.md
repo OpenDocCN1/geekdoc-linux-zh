@@ -1,0 +1,244 @@
+
+## Index
+
+- maintaining databases (MySQL), 103–104
+- Mambo CMS, 321
+- MediaWiki Micro CMS, 325–326
+- memcached caching engine
+  - daemon, 300
+  - installing, 300–301
+  - Memcache object methods, 301–303
+  - other caching engines with, 305
+  - overview, 300
+  - PECL module for, 301
+  - removing, 304
+  - using, 301–304
+  - websites, 300, 301
+- **memory (RAM)**
+  - performance and, 200, 210–211
+  - series of array functions and, 59–60
+- **methods (MySQL)**
+  - calling procedurally, 13
+  - mysqli class, 13–14
+  - mysqli_result class, 16
+  - mysqli_stmt class, 15
+- **methods of AJAX interfaces, 277–278**
+- **methods (PHP). See also functions (PHP); magic methods (PHP); specific methods and functions**
+  - abstract, 8
+  - defining, 21
+  - described, 20, 21
+  - final keyword with, 6
+  - language translation, 336, 338–339, 340, 341
+  - naming conventions, 221–222
+  - redefining in subclasses, 32–33
+  - static keyword with, 7, 27–28
+  - stream wrapper methods, 62–63
+- **Micro CMSs**
+  - blog packages, 322–324
+  - DocuWiki, 326
+  - MediaWiki, 325–326
+  - other packages, 327
+  - Serendipity, 324
+  - wiki packages, 324–326
+  - WordPress, 323
+- **Ming extension (PHP)**
+  - Macromedia Flash versus, 263
+  - Content-Type header for, 268
+  - coordinate system, 264
+  - creating a Flash display, 265–269
+  - frames, 264
+  - installing, 263
+  - objects, 263, 264–265
+  - outputting directly to browser, 268–269
+  - overview, 263–264
+  - simple example, 263–264
+  - slide show example, 266–269
+  - websites for further information, 263
+- **mod_alias (Apache), 226**
+- **mod_auth_mysql (Apache)**
+  - advantages, 166
+  - AuthMySQLAuthitative directive, 154
+  - AuthMySQLDB directive, 151, 152
+  - AuthMySQLDBEnable directive, 151, 152
+  - AuthMySQLGroupCondition directive, 154
+  - AuthMySQLGroupField directive, 154
+  - AuthMySQLGroupTable directive, 154
+  - AuthMySQLHost directive, 152
+  - AuthMySQLNameField directive, 153
+  - AuthMySQLPasswordField directive, 151, 152
+  - AuthMySQLPasswordField directive, 153
+  - AuthMySQLPort directive, 152
+  - AuthMySQLPwEncryption directive, 151, 153
+  - AuthMySQLSaltField directive, 153
+  - AuthMySQLSocket directive, 152
+  - AuthMySQLUser directive, 151, 152
+  - AuthMySQLUserCondition directive, 153
+  - AuthMySQLUserTable directive, 153
+  - AuthName directive, 151
+  - AuthType directive, 151
+  - database setup for, 149–150
+  - described, 129
+  - .htaccess file for, 151–152
+  - http.conf file for, 151–152
+  - installing, 150–151
+  - minimum directives for security, 151
+- **mod_dav (Apache), 129, 158**
+
+- **mod_deflate (Apache)**
+  - building and enabling, 146
+  - content compression using, 146–148
+  - DeflateCompressionLevel directive, 147
+  - DeflateFilterNote directive, 148
+  - DeflateWindowSize directive, 148
+  - described, 129
+  - effectiveness of, 148
+  - httpd.conf file for, 146–147
+- **mod_rewrite (Apache). See also URL rewriting (Apache)**
+  - capabilities of, 129
+  - decoupling site document tree from server filesystem, 226
+  - described, 129
+  - enabling, 130–131, 133
+  - RewriteBase directive, 143
+  - RewriteCond directive, 139–143
+  - RewriteLog directive, 143–144
+  - RewriteLogLevel directive, 144
+  - RewriteRule directive, 131–138
+- **mod_speling (Apache), 129, 144–145**
+- **mod_ssl (Apache), 129, 154–155. See also SSL (Secure Sockets Layer) with Apache**
+- Moodle CMS, 327
+- multiplication operators, performance and, 200–201
+- MyBench MySQL tool, 350
+- my.cnf configuration file (MySQL), 88, 100
+- MyISAM tables (MySQL)
+  - converting InnoDB to, 93
+  - converting to InnoDB, 90
+  - as default storage engine, 88
+- MySQL. See also SELECT statement (MySQL)
+  - access control, 93–100
+  - aliases for tables, 78–79
+  - ALTER TABLE statement, 87, 90–91, 92
+  - alternative tools, 347–350
+  - analyzing databases, 100–102
+  - Apache authentication with, 129, 149–154, 166
+  - basics, 73–77
+  - columns_priv table, 99, 100
+  - creating backups, 103
+  - creating databases, 74–75
+  - creating tables, 75, 86–87
+  - cross joins, 81
+  - db table, 98–99, 100
+  - deleting database information, 77, 92
+  - example database tables, 73–74
+  - foreign key constraints, 88–89, 90–93
+  - full-text searching, 86–88
+  - /G terminator for queries, 86
+  - GRANT command, 94–96
+  - inner joins, 78–81, 92
+  - InnoDB tables, 88–93
+  - inserting data in tables, 75–76
+  - maintaining databases, 103–104
+  - monitor, 74
+  - MyBench tool, 350
+  - my.cnf configuration file, 88
+  - MyISAM tables, 88, 90, 93
+  - MySQL Administrator tool, 347–348
+  - MySQL Query Browser tool, 349–350
+  - MySQL Super Smack tool, 350
+  - outer joins, 81–82
+  - querying multiple tables, 77–86
+  - reloading privilege tables, 100
+  - restoring from backups, 103–104
+  - retrieving database information, 76–77
+  - REVOKE command, 96–97
+  - server restriction, 100
+  - setting the active database, 75
+  - SHOW COLUMNS command, 101
+  - SHOW CREATE TABLE command, 101–102
+  - SHOW DATABASES command, 102
+  - SHOW GRANTS command, 102
+  - starting the command-line client, 74
+  - tables_priv table, 99, 100
+  - unions, 82–86
+  - updating database information, 77, 91–92
+  - USE statement, 75
+  - user administration, 93–100
+  - user table, 97–98, 99–100
+  - updating statement, 79
+  - WHERE clause, 79, 80, 81
+- mysqli class, 13–15
+- MySQLi (MySQL improved), 12–16
+- mysqli_connect( ) function, performance and, 231
+- mysqli_result class, 16
+- mysqli_stmt class, 15
+
+### N
+
+- namespaces
+  - collision prevented by create_function( ) function, 57–58
+  - language translation, 337
+- naming conventions, 220–222
+  - nesting, reducing levels of, 217–220
+  - network connection, performance and, 210
+- NEW keyword (PHP), 22–23
+- NO ACTION option (MySQL), 92
+- NULL values
+  - callback for array_map( ) function (PHP), 50–51
+  - InnoDB foreign key constraints and (MySQL), 89
+  - for missing columns in unions (MySQL), 84–86
+- NULS in create_function( ) function names, 58
+
+### O
+
+- object-oriented programming. See OOP; PHP5 OOP
+- objects (PHP)
+  - creating by instantiating classes, 20, 22–23
+  - described, 20
+  - language translation, 340
+  - real-world compared to OOP 20
+  - $this reference variable for, 23
+- ob_start('ob_gzhandler') function, 231
+- onreadystatechange property (AJAX), 278, 279
+- OOP (object-oriented programming). See also PHP5 OOP
+  - changes in PHP5, 1–9
+  - procedural programming versus, 19–20
+- open( ) method (AJAX), 277
+- open source movement, 183
+- opening
+  - MySQL command-line client, 74
+  - streams (PHP), 62, 63
+- OpenSourceCMS website, 327
+- osCommerce CMS, 327
+- outer joins (MySQL)
+  - generic form, 81
+  - inner joins combined with, 82
+  - left versus right, 81
+  - unions combined with, 84
+- output buffering, performance and, 227–228, 231
+- overload( ) function versus magic methods (PHP), 8
+- overrideMimeType( ) method (AJAX), 278
+
+### P
+
+- Pachev, Sasha (MySQL Super Smack creator), 350
+- parent keyword (PHP), 33–34
+- passing variables, PHP5 changes for, 1
+- PDF (Portable Document Format)
+  - Open Source libraries, 233
+  - PDFLib extension for, 233–241
+  - PDFlib functions for, 233
+  - PDF resume generator application, 238–241
+  - pdf_close( ) function (PDFLib), 234
+  - pdf_closepath( ) function (PDFLib), 236
+  - pdf_fill( ) function (PDFLib), 236
+  - pdf_findfont( ) function (PDFLib), 236
+  - pdf_get_buffer( ) function (PDFLib), 237
+  - pdf_get_value( ) function (PDFLib), 236, 237
+- PDFLib extension (PHP)
+  - completing the PDF file, 237
+  - configuration, 234
+  - coordinate system, 237
+  - drawHR( ) function, 236
+  - font functions, 236–237
+  - getting started, 234
+  - helper functions, 235–237
+  - path functions, 236
