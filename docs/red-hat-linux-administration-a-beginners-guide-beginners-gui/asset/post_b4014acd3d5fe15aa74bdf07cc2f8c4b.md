@@ -1,0 +1,257 @@
+
+## 602
+
+Red Hat Linux Administration: A Beginner’s Guide
+
+- CUPS server setup
+- command-line utilities available to, 535–537
+- overview of, 533–537
+- and web-based administration, 534–535
+- curly braces ({}), using with -exec parameter of find command, 163–164
+- Custom installation, performing, 30
+
+- define instruction in M4 macro language, using with Sendmail, 388
+- DES algorithm, overview of, 113–114
+- desktop environments
+  - accessing with KDE Control Center, 77–78
+  - changing for KDE, 75
+- /dev/hda3 file, examining swap entry for, 198
+- /dev/pts file, examining none entry for, 198
+- devices
+  - displaying information about using Disk Druid, 33–34
+  - mounting and unmounting, 197
+- df program, displaying free space with, 162–172
+- Dfs (Distributed File System), purpose of, 11
+- DHClient, overview of, 554–557
+- DHCP client configurations, common settings used in, 556–557
+- DHCP (Dynamic Host Configuration Protocol) mechanics of, 545
+  - overview of, 544
+- DHCP servers
+  - configuring, 546–552
+  - declarations for, 547–548
+  - default runtime behavior of, 554
+  - installing, 546
+  - parameters for, 548–552
+  - setting up, 553–554
+- dig (domain information gopher) tool in DNS tool box, overview of, 334
+- directories
+  - adding to paths when running packages, 103
+  - creating with mkdir command, 166
+  - displaying, 167
+  - listing in source trees, 99
+  - removing with rmdir command, 167
+- directory path:name; BIND configuration option, description of, 312
+- directory space, displaying usage of, 170
+- dirmessage, enable configuration option for vsftpd servers, explanation of, 349
+- Disable variable in mixed process, 237
+- DISCARD action in access_db used with Sendmail, description of, 402
+- Disk Druid partitioning tool, using, 33–36
+- disk quotas. See quotas
+- disk repartition, performing with fips tool, 21
+- disks
+  - adding and partitioning, 201–209
+  - cross-mounting with NFS, 472
+
+## D
+
+- -D option
+  - for description parameter of ipadm tool, 535
+  - for directory parameter of smbclient, 514
+- -d option
+  - for density dump parameter, 567
+  - for gzip command, 165
+  - of option for useradd command-line tool, 122
+  - for syslog daemon, 240
+- daemon log message facility string, role in /etc/syslog.conf file, 241
+- daemons, explanation of, 234–235
+- dashes (–), using with packages, 100
+- data command in SMTP, purpose of, 380–381
+- data encryption, performing with public key cryptography, 439–441
+- data, evaluating backup needs for, 560
+- databases, creating for DNS servers, 327–330
+- datavise dataize; BIND configuration option, description of, 316
+- dd command
+  - converting and copying files with, 164
+  - creating boot images with, 24
+- ddallocate-on-exit yes/no; BIND configuration option, description of, 313
+- Debian apt package manager, overview of, 94–95
+- debug log message priority string, role in /etc/syslog.conf file, 242
+- debug PAM argument, description of, 137
+- default GRUB configuration command, description of, 226
+- default-lease-time parameter, using with DHCP servers, 549
+- default option declaration setting in DHCP client configurations, description of, 556
+- default search domain, role in configuring client-side DNS, 305
+- default_p0072ivs option of Postfix main.cf file, explanation of, 409
+- deferred queue, role in Postfix, 406
+
+## E
+
+- - format for, 202
+- - location of, 202
+- - preparing for quotas, 216–217
+- - synchronizing with sync command, 172
+
+- distributions
+  - explanation of, 4
+  - investigation project, 5
+- divert command in M4 macro language, using with Sendmail, 388
+- dmesg command, locating new disks with, 202
+- dnl instruction in M4 macro language, using with Sendmail, 388
+- DNS clients, configuring, 304–308
+- DNS (Domain Name System)
+  - exploring, 295–300
+  - forward and reverse resolution in, 298–299
+  - in-addr.arpa domain in, 298–300
+  - PTR (Pointer), 325
+    - starting at boot time, 302–303
+    - subdomains in, 297–298
+    - types of servers in, 300
+- DNS entries, describing with SOA record type, 322
+- DNS hierarchy, diagram of, 296
+- DNS record types
+  - A (Address), 324
+  - CNAME (Canonical Name), 326
+  - documentation entries, 326–327
+  - MX (Mail Exchanger), 325
+  - NS (Name Server), 324
+  - RP and TXT, 326–327
+  - SOA (Start of Authority), 322–324
+- DNS references, 336–337
+- DNS request, following path of, 297–298
+- DNS servers
+  - configuring, 318–327
+  - creating databases for, 327–330
+  - gathering information about, 334
+  - installing, 301–304
+  - options for, 552
+- DNS toolbox contents
+  - dig (domain information gopher) tool, 334
+  - host tool, 333–334
+  - rndc (Remote Name Daemon Controller) tool, 333
+  - whois command, 335–336
+- documentation
+  - location of, 152
+  - searching, 99
+- domain-name option for DHCP servers, description of, 552
+- domain-name-servers option for DHCP servers, description of, 552
+- domain names
+  - setting, 13
+  - setting for NIS servers, 481
+  - setting up for secondary NIS servers, 491–492
+- domain ownership, determining with whois command, 335–336
+- DOMAIN Sendmail macro, overview of, 390
+- domains
+  - in DNS, 295–297
+  - overview of, 13–14
+  - in primary NIS servers, 480
+- domaintable Sendmail feature, description of, 393
+- “DON’T DELETE THIS MESSAGE,”
+  - displaying in IMAP, 433
+- dosutils directory, contents of, 25
+- dsz key type, using with SSH, 452
+- du (disk usage) utility
+  - purpose of, 97
+  - using, 170
+- dump tool, performing backups with, 566–568
+- dumpye parameter in Amanda, explanation of, 573
+- dynamic-bootp-lease-cutoff parameter, using with DHCP servers, 549
+- dynamic-bootp-lease-length parameter, using with DHCP servers, 549–550
+
+- –E option for ldapmin tool, description of, 536
+- –e expire-date option for useradd command-line tool, description of, 122
+- e2fsck, parameters available for, 200–201
+- eqquota command
+  - advisory about, 218
+  - command-line options of, 217–218
+  - configuring quota settings with, 217–219
+  - examples of, 218–219
+- EFF (Electronic Frontier Foundation), purpose of, 441
+- eject parameter for mt command, description of, 565
+- emacs text editor, overview of, 184–185
+- Emerg log message priority string, role in /etc/syslog.conf file, 242
+- -empty n option for find command, description of, 163
+- encrypted passwords, using with SMB, 503
+
+- encryption
+  - number of keys involved in, 441
+  - performing with public key cryptography, 439–441
+- environment variables
+  - controlling with BASH, 147–148
+  - as parameters in BASH, 150
+- erase parameter for mt command, description of, 565
+- Err log message priority string, role in /etc/syslog.conf file, 242
+- error log file, locating for use with Apache, 373
+- Error log message priority string, role in /etc/syslog.conf file, 242
+- error log file, contents of, 374
+- /etc/auto.master file
+  - configuring, 214–215
+  - role in autofs service, 213
+- /etc/cron.* directories, overview of, 248–249
+- /etc/exports file
+  - common problems with, 469–470
+  - contents of, 465–467
+  - creating for configuration of NFS servers, 464
+  - example of, 467
+  - graphical alternative for, 467–468
+  - informing NFS server process about, 468–469
+- /etc/fstab file
+  - overview of, 197–199
+  - writing, 208–209
+- /etc/group file
+  - contents of, 120–121
+  - displaying, 169
+- /etc/hosts file, understanding, 293–294
+- /etc/inetd.conf file, fixing for use with vsftp servers, 344–346
+- /etc/initab file
+  - entries in, 233–234
+  - overview of, 232–234
+  - runlevels found in, 231
+- /etc/lpd.perms file
+  - defaults for, 528
+  - permission keywords used with, 528–529
+  - understanding, 527–529
+- /etc/nsswitch.conf file
+  - editing for use with NIS clients, 489–490
+  - overview of, 306–307
+- /etc/pam.d configuration file location, description of, 135
+- /etc/pam.d.other file, purpose of, 138
+- /etc/passwd file
+  - contents of, 45, 117–119, 121
+  - displaying, 169
+  - feeding into grep program, 150
+- /etc/principcfg file, configuring, 522–525
+- /etc/rc.drc script, purpose of, 252
+- /etc/resolv.conf file, overview of, 305–306
+- /etc/security configuration file location, description of, 135
+- /etc/shadow file, contents of, 119–121
+- /etc/sudoers file, contents of, 132–133
+- /etc/syslog.conf file
+  - overview of, 241–245
+  - format of, 243–244
+- /etc/xinetd.conf file, overview of, 235–239
+- /etc/xp.conf file, editing, 487–488
+- exclamation mark (!) before ACL addressees, meaning of, 311
+- -exec cmd option for find command, description of, 163
+- Exec option for mount -o command, description of, 196
+- -exec parameter of find command, using, 163–164
+- executable directory, adding to path when running packages, 103
+- executables, linking new running packages, 103
+- expert command, avoiding automatic probing of hardware with, 25
+- export area, creating, 161–162
+- export command, finalizing environment variables with, 148
+- exports command, rereading NFS configuration information with, 468–469
+- EXPOSED USER Sendmail macro, overview of, 391
+- ext2 file systems
+  - converting to ext3 file systems, 209
+- ext3 file systems
+  - converting to ext2 file system, 210
+  - overview of, 191–192
+- extended partitions, creating, 207. See also partitions
+
+## F
+
+- -f config parameter for syslog daemon, 240
+- -f filename dump parameter, 567
+- -f option
+  - for filename restore, 569
+  - for grouppad command-line tool, 125

@@ -1,0 +1,15 @@
+Stallman's policy was obviously a wild departure from the early eighties mentality of selling prepackaged software, but his concept of free software was in line with the initial distributions of UNIX from Bell Labs. Early UNIX systems did contain full source code. Yet by the late 1970s, source code was typically removed from UNIX distributions and could be acquired only by paying large sums of money to AT&T. The Berkeley Software Distribution (BSD) maintained a free version but had to deal with many lawsuits from AT&T until it could be proved that nothing in the BSD was from AT&T.
+
+The idea of giving away source code is a simple one: A user of the software should never be forced to deal with a developer who might or might not support that user's intentions for the software. The user should never have to wait for bug fixes to be published. More important, code developed under the scrutiny of other programmers is typically of higher quality than code written behind locked doors. The greatest benefit of free software, however, comes from the users themselves: Should they need a new feature, they can add it to the program and then contribute it back to the source, so that everyone else can benefit from it.
+
+From this line of thinking has sprung a desire to release a complete UNIX-like system to the public, free of license restrictions. Of course, before you can build any operating system, you need to build tools. And this is how the GNU project was born.
+
+![](bbox=[0.15, 0.48, 0.25, 0.56])
+
+> GNU stands for GNU's Not UNIX—recursive acronyms are part of hacker humor. If you don't think it's funny, don't worry. You're still in the majority.
+
+# # What Is the GNU Public License?
+
+The most important thing to emerge from the GNU project has been the GNU General Public License (GPL). This license explicitly states that the software being released is free, and that no one can ever take away these freedoms. It is acceptable to take the software and resell it, even for a profit; however, in this resale, the seller must release the full source code, including any changes. Because the resold package remains under the GPL, the package can be distributed free and resold yet again by anyone else for a profit. Of primary importance is the liability clause: The programmers are not liable for any damages caused by their software. More about GNU and the GPL can be found at http://www.gnu.org.
+
+It should be noted that the GPL is not the only license used by free software developers (although it is arguably the most popular). Other licenses, such as BSD and Apache, have similar liability clauses but differ in terms of their redistribution. For instance, the BSD license allows people to make changes to the code and ship those changes without having to disclose the added code. (The GPL would require that the added code be shipped.) For more information about other open-source licenses, check out http://www.opensource.org.

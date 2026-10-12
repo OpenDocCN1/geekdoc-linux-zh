@@ -1,0 +1,9 @@
+same function, except that one of them takes advantage of GNOME to bring up a GUI dialog box, and the other is purely text based. Launching either of these will allow you to choose which MTA you would like to have active on your system, Sendmail or Postfix. You can bring this tool up from the main menu by selecting System Settings followed by Mail Transport Agent Switcher. From the command line you can launch either redhat-switchmail or redhat-switchmail-nox. The redhat-switchmail program will bring up the GNOME-based dialog box shown in the following illustration, if it’s installed, or the text variant otherwise, while redhat-switchmail-nox will always bring up the non-GUI “no X” version. This utility will take care of any symlinks that need to be moved, including making sure that the correct startup script is used.
+
+![](bbox=[0.29, 0.34, 0.73, 0.59])
+
+You will now want to bring up the Service Configuration tool (or examine the symlinks yourself). Even though the switchmail programs will make sure the correct option appears in the Service Configuration tool, it doesn’t synchronize the startup runlevels with what you had set for the previous MTA, so you will want to make sure that your new selection starts and stops where you expect it to.
+
+# The Structure of Postfix
+
+We touched briefly on the fact that Postfix is comprised of a multitude of small, specific-purpose programs. Postfix also uses multiple queues to store messages that are in various stages of being processed. This may look complex at first glance, but the steps are roughly the same as what Sendmail performs internally, except that in Postfix the process has been separated into its component pieces. In this section we’ll discuss the overall structure of Postfix, as well as its components and queues, in a little more detail.

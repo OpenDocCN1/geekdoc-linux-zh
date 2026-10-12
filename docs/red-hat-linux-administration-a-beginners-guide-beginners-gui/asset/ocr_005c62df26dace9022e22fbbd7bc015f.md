@@ -1,0 +1,12 @@
+| Option | Description |
+| :------- | :----------- |
+| transfers-in number; | Maximum number of inbound zone transfers that can be running concurrently. Default is 10. Increasing this value may speed up the process of updates at the expense of increasing system load. |
+| transfers-out number | Maximum number of outbound zone transfers that can be running concurrently. Default is 10. As of this writing, this option is parsed by BIND but is not yet in use. |
+| transfers-per-ns number; | Maximum number of inbound zone transfers that can be running concurrently from a single remote name server. Default is 2. Can be increased at the expense of more load on the remote name server. |
+| coresize size; | If *named* crashes, Linux will generate a *coredump*, an image of the memory used by the program at the instant it crashed. Data can be used for “post mortem” analysis by programmers. Be aware: This image may be quite large; if you’re short on disk space for the DNS system, consider limiting the core file size. Default under Linux is unlimited. The *size* parameter can be specified in bytes (no suffix), K, MB, or GB. For example, all of the following are the same value, 1 gigabyte: *coresize 1073741824*; *coresize 1048576K*; *coresize 1024M*; and *coresize 1G*;. |
+| datasize datasize; | Specifies memory allocated for *named*. Default under Linux = as much memory as you have. The *datasize* value follows the same conventions as the *size* value for *coresize*. Thus *1073741824* is the same as *1048576K* is the same as *1024M* is the same as *1G*. |
+| files number; | Maximum number of files *named* can open at once. Be aware: The more files BIND has open at once, the more its performance is affected by having to deal with all those file handles. (C programmers are familiar with this issue because of the *select* system call.) |
+| stacksize number; | Maximum amount of memory *named* can take off the system stack (used to track temporary variables in a program). Default under Linux is no limit. For *number*, follow the same conventions as for *coresize* and *datasize*. |
+| cleaning-interval number; | Specifies interval between server’s removals of expired records from the cache. Default is every 60 minutes. If set to 0, no periodic cleaning will occur. |
+
+Table 10-1 BIND Configuration Options (continued)

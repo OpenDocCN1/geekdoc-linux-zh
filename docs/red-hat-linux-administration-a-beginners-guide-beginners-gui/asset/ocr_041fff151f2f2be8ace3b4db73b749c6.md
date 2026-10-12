@@ -1,0 +1,15 @@
+You don't have to look hard to find that someone has discovered yet another new and exciting way to break into your systems. Sites such as http://www.securityfocus.com and mailing lists such as BugTraq regularly announce such new exploits. And making the situation even more troublesome for system administrators is the proliferation of “script kiddies.” These individuals do not themselves possess the technical knowledge to break into other sites; they use prebuilt scripts instead, motivated by the adolescent thrill of impressing friends and being a nuisance. The positive result of this behavior is that the Linux community has become very responsive to security issues that come up. In several cases, security patches have been made available within 24 hours of the announcement of a vulnerability.
+
+In this module, you'll learn about basic techniques for securing your server. If you follow these tips, you'll be more likely to keep out the script kiddies. But be advised: No system is perfect. New holes are discovered daily, and new tools to launch attacks come out more often than we'd like to imagine. Securing your systems is much like fighting off disease—as long as you maintain basic hygiene, you're likely to be okay, but you'll never be invulnerable.
+
+Nearly all system administration texts today have to cover these topics, explaining which of the neat, network-friendly features you have to turn off so that crackers can't abuse them. No matter what operating system you manage, if you have users, you may encounter misuse. In this module, I'll help you make it more difficult for the abusers to make headway on your systems.
+
+# CRITICAL SKILL 9.1 Keeping Your System up2date
+
+It's swell that programmers are slaving away like busy worker bees to close security holes as they surface. That's also useless to you if you never update your system to reflect the changes they're making. Red Hat is kind enough to package up security fixes for the software it distributes, and it makes those packages available to you in a couple of ways.
+
+Making use of these updates is an excellent way of ensuring that known exploits for the software you need to use can't be made into open doors for those who attack your systems. Whether you pay for support via the Red Hat Network and configure your systems to install the security fixes automatically, or you simply download security updates as they become available, installing these upgrades is mandatory for ensuring that your systems are as secure as they can be.
+
+# Using the Red Hat Network
+
+The easiest way to manage Red Hat package updates, for security fixes or anything else, is to use the Red Hat Network (RHN). You can sign up for this service at http://rhn.redhat.com; there is an annual fee required to enable more than one system to updates (boxed software releases come with varying periods of additional free RHN access). When you installed Red

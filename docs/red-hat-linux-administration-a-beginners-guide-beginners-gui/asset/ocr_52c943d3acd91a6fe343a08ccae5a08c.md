@@ -1,0 +1,15 @@
+# Superblocks
+
+The very first piece of information read from a disk is its superblock. This small data structure reveals several key pieces of information, including the disk's geometry, the amount of available space, and, most important, the location of the first i-node. Without a superblock, a file system is useless.
+
+Something as important as the superblock is not left to chance. Multiple copies of this data structure are scattered all over the disk to provide backup in case the first one is damaged. Under Linux's ext2 file system, a superblock is placed after every group of blocks, which contains i-nodes and data. One group consists of 8,192 blocks; thus the first redundant superblock is at 8193, the second at 16385, and so on.
+
+# ext3
+
+The ext2 file system is a well-tested subsystem of Linux and has had the time to be very well optimized. However, other file systems that were considered experimental when ext2 was created have matured and become available to Linux.
+
+There are four file systems one might consider to replace the aging ext2: ext3, ReiserFS, XFS, and JFS. All four of these file systems offer features that might be tempting in various circumstances, but the most important enhancement offered by all four is called journaling. Traditional file systems (such as ext2) must search through the directory structure, find the right place on disk to lay out the data, and then lay out the data. (Linux can also cache the whole process, including the directory updates, thereby making the process appear faster to the user.)
+
+The problem with this method of doing things is that in the event of an unexpected crash, the fsck program has to go in and follow up on all of the files that are on the disk in order to make sure that they don't contain any dangling references (for example, i-nodes that point to other, invalid i-nodes or data blocks). As disks expand in size and shrink in price, the availability of these large capacity disks means more of us will have to deal with the aftermath of having to fsck a large disk. And as anyone who has had to do that before can tell you, it isn't fun. The process can take a long time to complete, and that means downtime for user, users.
+
+With journaling file systems, the new way of getting data out to disk, instead of finding the right place, the file system simply writes the data out in any order it can, as fast as it can. Each time, it logs the location of these data blocks. You can think of it as being like using the same spiral notebook for multiple classes without prepartitioning the notebook. It would be wiser to simply take notes for each class in chronological order instead of grouping all of one class together. A journaled file system is like such a notebook, with the beginning of the notebook containing an index telling you which pages contain all the notes for a single class. Once the data is written, the file system can go move things around to make them optimal for reading without risking the integrity of the file.
