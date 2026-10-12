@@ -1,0 +1,127 @@
+
+```c
+90      /* main --- set up child-related information and signals, create child */
+91      int main(int argc, char *argv[])
+92      {
+93          pid_t kid;
+94          struct sigaction sa;
+95          sigset_t childset, emptyset;
+96          sigemptyset(& emptyset);
+97          sa.sa_flags = SA_SIGINFO;
+98          sa.sa_sigaction = childhandler;
+99          sigfillset(& sa.sa_mask);      /* block everything when handler runs */
+100         sigaction(SIGCHLD, & sa, NULL);
+101         sigemptyset(& childset);
+102         sigaddset(& childset, SIGCHLD);
+103         sigprocmask(SIG_SETMASK, & childset, NULL);   /* block it in main code */
+104         if ((kid = fork()) == 0)
+105             child();
+106         /* parent executes here */
+107         for (;;) {
+108             printf("waiting for signals\n");
+109             sigsuspend(& emptyset);
+110         }
+111         return 0;
+112     }
+```
+
+`main()` 程序设置了所有内容。第 100–103 行放置了处理程序。第 100 行设置 `SA_SIGINFO` 标志，以便使用三参数处理程序。第 105–108 行阻塞了 `SIGCHLD`。
+
+第 110 行创建子进程。第 113–117 行在父进程中继续执行，使用 `sigsuspend()` 等待信号到来。
+
+```c
+123     /* manage --- deal with different things that could happen to child */
+124     void manage(siginfo_t *si)
+125     {
+126         char buf[100];
+127         switch (si->si_code) {
+128             case CLD_STOPPED:
+129                 write(1, "tchild stopped, restarting\n", 27);
+130                 kill(si->si_pid, SIGCONT);
+131                 break;
+132
+133             case CLD_CONTINUED: /* not sent on Linux */
+134                 write(1, "\tchild continued\n", 17);
+135                 break;
+136
+137             case CLD_EXITED:
+138                 strcpy(buf, "\tchild exited with status ");
+139                 strcat(buf, format_num(si->si_status));
+140                 strcat(buf, "\n");
+141                 write(1, buf, strlen(buf));
+142                 exit(0); /* we're done */
+143                 break;
+144
+145             case CLD_DUMPED:
+146                 write(1, "\tchild dumped\n", 14);
+147                 break;
+148
+149             case CLD_KILLED:
+150                 write(1, "\tchild killed\n", 14);
+151                 break;
+152
+153             case CLD_TRAPPED:
+154                 write(1, "\tchild trapped\n", 15);
+155                 break;
+156         }
+157     }
+```
+
+通过 `manage()` 函数，父进程处理子进程的状态变化。当状态改变或子进程退出时，会调用 `manage()`。
+
+第 130–133 行处理子进程停止的情况；父进程通过发送 `SIGCONT` 重新启动子进程。
+
+第 135–137 行打印子进程继续执行的通知。在 GNU/Linux 系统中不会发生此事件，且 POSIX 标准对此使用的语言含糊其辞，仅表示该事件可能发生，而并未表示它一定会发生。
+
+第 139–145 行处理子进程退出的情况，并打印退出状态。对于这个程序，父进程也已完成，因此代码退出；尽管在更大的程序中，这样做并不恰当。
+
+其他情况更具特定性。在 `CLD_KILLED` 事件中，`waitpid()` 填充的状态值将有助于确定更多细节。
+
+运行时的情况如下：
+
+```
+$ ch10-status
+waiting for signals
+Entered childhandler
+pid 24279 changed status
+child stopped, restarting
+Exited childhandler
+waiting for signals
+---> child restarted <---
+Entered childhandler
+reaped process 24279
+child exited with status 42
+```
+
+| 输出 | 描述 |
+| :--- | :--- |
+| 运行程序 | |
+| 信号处理程序进入 | |
+| 处理程序采取行动 | |
+| 来自子进程 | |
+| 父进程的处理程序回收子进程 | |
+
+不幸的是，由于无法保证每个进程只交付一次 `SIGCHLD`，你的程序必须准备好一次性回收多个子进程。
+
+### 10.9 跨越 `fork()` 和 `exec()` 的信号
+
+当程序调用 `fork()` 时，子进程中的信号状态与父进程几乎相同。已安装的处理程序保持不变，被阻塞的信号保持阻塞状态，等等。然而，为父进程挂起的信号会在子进程中清除，包括由 `alarm()` 设置的剩余时间。这是直截了当的，也是合理的。
+
+当进程调用 `exec()` 函数之一时，新程序中的信号处置情况如下：
+
+- 设置为默认操作的信号保持默认状态。
+- 任何捕获的信号被重置为默认操作。
+- 被忽略的信号保持被忽略。`SIGCHLD` 是一个特例。如果在 `exec()` 之前忽略了 `SIGCHLD`，它在之后可能会保持被忽略的状态。或者，它可能会被重置为默认操作。实际发生的情况是 POSIX 故意未指定的。（GNU/Linux 手册页并未说明 Linux 的行为，且由于 POSIX 将其留作未指定，你编写的任何使用 `SIGCHLD` 的代码都应准备好处理这两种情况。）
+- 在 `exec()` 之前被阻塞的信号在之后保持阻塞。换句话说，新程序继承进程现有的进程信号掩码。
+- 任何挂起的信号（即已到达但被阻塞的信号）被清除。新程序不会收到它们。
+- `alarm()` 的剩余时间保持不变。（也就是说，如果进程设置了一个闹钟然后直接调用 `exec()`，新映像最终会收到 `SIGALRM`。如果先执行 `fork()`，父进程保留闹钟设置，而执行 `exec()` 的子进程则不保留。）
+
+注意：许多，如果不成大多数程序都假设信号操作初始化为其默认值，且没有信号被阻塞。因此，特别是如果你没有编写由 `exec()` 运行的程序，在执行 `exec()` 之前解除所有信号的阻塞是个好主意。
+
+## 10.10 总结
+
+> “我们的故事到目前为止，第三集。”
+>
+> ——阿诺德·罗宾斯——
+
+- 信号处理接口已从简单但容易受竞态条件影响演变为复杂但可靠。不幸的是，多种接口的存在使得它们比许多其他 Linux/Unix API 更难学习。
