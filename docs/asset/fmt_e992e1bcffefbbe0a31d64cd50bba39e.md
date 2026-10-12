@@ -1,0 +1,172 @@
+
+##### 章节前测试
+
+1. 
+   - A. `kill -SIGHUP 446`
+   - B. `kill -1 446`
+   - C. `kill -SIGTERM 446`
+   - D. 答案 A 和 D
+   - E. 答案 B 和 C
+   - F. 以上皆非
+
+2. 选择所有在 `/etc/syslog.conf` 中使用的正确设施名称。
+   - A. `auth`
+   - B. `access`
+   - C. `authpriv`
+   - D. `kern`
+   - E. `panic`
+   - F. `notice`
+
+3. 在基于 Red Hat 的系统上，系统启动脚本存储在哪里？
+   - A. `/etc`
+   - B. `/etc/rc.d/rc3.d`
+   - C. `/etc/init.d`
+   - D. `/etc/rc.d/init.d`
+
+4. 哪个参数允许 `syslog` 接收网络消息？
+   - A. `-n`
+   - B. `-r`
+   - C. `-m`
+   - D. `-s`
+
+5. 用户 `crontab` 文件存储在哪里？
+   - A. `/etc/crontab`
+   - B. `/var/spool`
+   - C. `/var/spool/cron`
+   - D. `~/.cron`
+
+6. 哪些命令将解压名为 `file.gz` 的文件？
+   - A. `uncompress file.gz`
+   - B. `gunzip file.gz`
+   - C. `tar xzvf file.gz`
+   - D. `gzip -d file.gz`
+
+7. 不压缩 `tar` 文件的正确方法是：
+   - A. `tar -cvf backup.tar /home/Jason`
+   - B. `tar -cvzf backup.tar /home/Jason`
+   - C. `tar -zvf backup.gz /home/Jason`
+
+8. 要限制核心转储可能占用的空间量，使用：
+   - A. `climit`
+   - B. `ulimit`
+   - C. `quota`
+   - D. `~/.ulimit`
+
+9. 系统日志的位置可以在文件 `/var/log/syslog.conf` 中指定。
+   - A. 真
+   - B. 假
+
+10. `batch` 用于在系统负载较低时自动运行任务。
+
+11. 哪种类型的备份仅用于备份自上次完整备份以来发生变化的文件？
+    - A. 完整
+    - B. 部分
+    - C. 增量
+    - D. 差异
+
+12. `cpio` 的哪种模式用于从归档文件中复制文件？
+    - A. `Copy-out`
+    - B. `Copy-in`
+    - C. `Copy-pass`
+
+13. `tar` 实用程序能够在使用归档时使用 `gzip` 实用程序来压缩文件。
+    - A. 真
+    - B. 假
+
+14. 包含用户登录时间的系统日志的默认位置是：
+    - A. `/var/log/utmp`
+    - B. `/var/log/users`
+    - C. `/var/log/lastlog`
+    - D. `/var/log/login`
+
+15. `logrotate` 命令用于轮换系统日志。
+
+16. `gunzip` 实用程序能够解压使用 `gzip` 和 `compress` 实用程序压缩的文件。
+    - A. 真
+    - B. 假
+
+17. `crontab` 命令的哪个选项用于显示当前 `crontab` 中的条目？
+    - A. `-e`
+    - B. `-r`
+    - C. `-l`
+    - D. `-s`
+
+18. 在 `/etc/syslog.conf` 文件中，哪个字符用于增加系统日志记录的速度？
+    - A. `*`
+    - B. `=`
+    - C. `!`
+    - D. `-`
+
+19. 哪个文件用于指定使用 `dmesg` 命令显示的消息级别？
+    - A. `dmesg.conf`
+    - B. `kernel.h`
+    - C. `kernel.conf`
+    - D. `dmesg.h`
+
+20. 核心文件使用以下哪个进行查看？
+    - A. `coreview`
+    - B. `debug`
+    - C. `gdb`
+    - D. `dumpview`
+
+##### 场景题
+
+1. 你在工作站上安装了新的 CD-ROM 驱动器，但启动时似乎无法正常工作。你可能会在哪里查找更多信息？
+2. 你需要每晚自动备份服务器上的用户目录。完成此任务的有效方法是什么？
+3. 你公司的最后一位网络管理员没有很好地完成删除不再需要的账户的工作。现在轮到你来清理用户数据库了。你可以使用什么来使这项工作更轻松？
+
+##### 实验练习
+
+###### 实验 12-1 设置 cron 任务
+
+此实验设置一个 `cron` 任务，在凌晨 3 点更新 `locate` 数据库。
+
+1. 以 `root` 身份登录到系统。
+2. 运行命令 `crontab -e`。
+3. 按 `a` 添加以下行以创建 `cron` 条目：`00 3 * * * updatedb`
+4. 按 `Esc`，然后按 `:wq` 退出。
+
+###### 实验 12-2 创建备份
+
+在此实验中，你将创建你的主目录的备份。
+
+1. 以想要备份其主目录的用户身份登录到系统。
+2. 使用以下命令创建备份：`tar cvf filename.tar /home/username`
+3. 对主目录中的一个或多个文件进行修改。
+4. 使用以下命令显示哪些文件发生了变化：`tar dvf filename.tar`
+5. 使用以下命令更新已更改的文件：`tar uvf filename.tar /home/username`
+6. 要使备份更小，使用以下命令：`gzip filename.tar`
+
+![](img/96d9ccd181675a8ae8b6a1146c919d2b_472_0.png)
+
+> `tar` 命令提供了许多参数来帮助备份。结合一些脚本和重定向使用它们，你可以创建一些强大的备份脚本来处理差异备份等事项。
+
+#### 章节问题答案
+
+##### 章节前测试
+
+1. `cron` 实用程序允许你自动运行重复任务。
+2. `sigkill` 和 `-9` 信号用于杀死进程。
+3. `batch` 命令允许在系统负载较低时自动运行任务。
+4. `/etc/syslog.conf` 文件中的第二个字段用于指定记录消息的优先级。
+5. `dmesg` 命令用于显示系统消息。
+6. 部分备份可用于备份位于 `/home` 中的所有文件。
+7. `ulimit -c` 命令用于限制 `.core` 文件的大小。
+8. 创建 `cron` 任务的人将收到结果邮件。
+9. 使用命令 `tar czf backup.tar.gz /home` 可以创建归档文件并自动压缩。
+10. `/etc/rc.d/init.d/crond restart` 命令将重启 `cron` 守护进程。
+
+##### 评估问题
+
+1. F. `kill` 命令可以使用信号名称和数字来停止、启动和重启进程。更多信息请参阅“使用 `kill` 命令”部分。
+2. A, C, 和 D. `auth`、`authpriv` 和 `kern` 都是 `/etc/syslog.conf` 中使用的设施名称。更多信息请参阅“配置系统日志记录”部分。
+3. D. 在基于 Red Hat 的系统上，系统脚本存储在 `/etc/rc.d/init.d`。更多信息请参阅“/etc/rc.d 脚本”部分。
+4. B. `syslog -r` 命令用于允许 `syslog` 接收网络消息。更多信息请参阅“系统日志记录”部分。
+5. C. 用户 `crontab` 文件存储在 `/var/spool/cron`。更多信息请参阅“使用 `cron` 守护进程”部分。
+6. B 和 D. 可以使用命令 `gunzip` 和 `gzip -d` 解压文件。更多信息请参阅“使用 `gzip` 实用程序”和“使用 `gunzip` 实用程序”部分。
+7. A. 命令 `tar -cvf backup.tar /home/Jason` 将创建一个名为 `backup.tar` 的新文件，并在创建期间列出文件。`-z` 选项会压缩文件。更多信息请参阅“使用 `tar` 实用程序”部分。
+8. B. 可以使用 `ulimit` 限制 `.core` 文件的大小。更多信息请参阅“限制核心转储文件”部分。
+9. B. 系统日志文件的位置可以在 `/etc/syslog.conf` 文件中指定。更多信息请参阅“配置系统日志记录”部分。
+10. `batch`. `batch` 实用程序允许在系统负载较低时自动运行任务。更多信息请参阅“使用 `batch` 实用程序”部分。
+
+##### 使用场景
