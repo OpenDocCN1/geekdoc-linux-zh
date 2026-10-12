@@ -1,0 +1,172 @@
+
+此外，还有一些 PEAR 配置变量可供你控制。这些变量主要涉及目录信息和用户偏好设置，大多数情况下默认值即可接受。你可以访问 `http://pear.php.net/manual/en/installation.cli.php` 查看完整列表。不过，下表列出了其中一些更常见的变量：
+
+| 变量名 | 代表含义 | 默认值 |
+| :--- | :--- | :--- |
+| `bin_dir` | 存放可执行文件的目录 | `/usr/bin` |
+| `ext_dir` | 存放加载扩展的目录 | `./` |
+| `php_dir` | 存放 PHP 安装程序的目录 | `/usr/lib/php` |
+| `preferred_state` | 要下载的首选包状态（stable、beta、alpha、devel 或 snapshot） | `stable` |
+
+若要查看当前设置，请使用 `config-show` 命令（或仅查看单个变量值时使用 `config-get`），例如：
+
+```bash
+pear config-show
+```
+
+这将显示每个配置变量的描述、变量名以及当前设置。若要更改设置，请使用 `config-set` 命令，例如：
+
+```bash
+pear config-set preferred_state devel
+```
+
+`config-help` 命令会显示关于特定配置变量的更多信息。
+
+## 安装包
+
+PHP 5 预装了其他几个 PEAR 包，你可以通过运行以下命令（需 root 登录）查找完整列表：
+
+```bash
+pear list
+```
+
+这将列出已安装的包、已安装的版本以及发布状态（stable、beta 等）。如果你想安装其他包，以下各节将简要概述安装流程。
+
+### CLI 安装
+
+如果你有 root 权限，只需输入以下命令即可安装任何新包：
+
+```bash
+pear install [包名]
+```
+
+此命令会跳转到 PEAR 网站，下载你指定的包（当然不包括方括号），并将其安装到你的机器上。
+
+### FTP 安装
+
+如果你没有命令行访问权限，或者你当前的 Web 主机未提供你所需的 PEAR 包，你还可以通过完成以下两步来安装包：
+
+- 直接从 PEAR 网站下载压缩包，在本地解压，并将文件上传到你的 Web 站点（保存在 `/var/www/www.yourdomain.com/includes` 目录中）。你也可以上传压缩文件并在主机服务器上解压（同样放入 `/var/www/www.yourdomain.com/includes` 目录）。
+- 修改你的 `php.ini` 文件，使其匹配刚才使用的包含路径。
+
+```ini
+include_path = ".:./www/includes*"
+```
+
+你还可以在每个访问该包的脚本中包含一行代码，例如：
+
+```php
+<?php
+ini_set("include_path", "/var/www/www.yourdomain.com/includes/" . PATH_SEPARATOR . ini_get("include_path"));
+
+// PHP 脚本的其余部分。
+?>
+```
+
+此时，你的包已安装完毕，可以使用了。
+
+### 使用已安装的包
+
+一旦包安装完成，使用和访问它就非常简单。只需在脚本开头包含一行引入必要文件的代码，如下所示：
+
+```php
+<?php
+require_once("HTML/QuickForm.php");
+
+// 现在你可以访问并引用 quickform.php 文件中包含的类、方法和属性，从而轻松创建 HTML 表单。
+?>
+```
+
+### 简易快速的 PEAR 包
+
+截至目前，已有 318 个 PEAR 包可用于各种领域，而且每天都在增加。虽然本书不会讨论所有这些包，但以下各节将介绍其中一些更常见的包，并突出显示你很可能需要确保已安装的那些。请记住，这些部分保持简洁，但若你需要更强大的功能，它们也会为你指明方向。
+
+#### Auth_HTTP
+
+此包的目的是提供一个类似于 Apache .htaccess 登录框的身份验证系统。这是一种保护网站特定区域密码的简单且便捷的方法。请注意，此包依赖于更强大的 `PEAR::Auth`，而 `PEAR::Auth` 又依赖于 `PEAR::DB` 包，因此在使用 `Auth_HTTP` 包之前，必须安装这两个包。
+
+`Auth_HTTP` 的简单用法如下：
+
+```php
+<?php
+require_once("Auth/HTTP.php");
+
+$a = new Auth_HTTP("DB", "mysqli://username:password@localhost/databasename");
+$a->start();
+?>
+```
+
+首先，你引入文件 `Auth/HTTP.php`，这使你能够访问正确的包。然后，你使用上述参数实例化一个新的 `Auth_HTTP` 对象。由于你实际上使用的是 `PEAR::DB` 包登录数据库，因此你可以更改使用的数据库类型，并命名其他选项，例如套接字、路径、端口号等。虽然本章稍后将简要讨论此包，但 `PEAR::DB` 包的详细说明可在 `http://pear.php.net/manual/en/package.database.db.php` 找到。接下来，你通过调用 `start()` 函数开始身份验证过程，此时你的页面就受到了密码保护。
+
+当然，这还有很多改进和自定义的空间，你可以更进一步，要求身份验证过程从数据库中的某个表查找用户。你可以通过使用 `$authOptions` 变量来指定登录选项：
+
+```php
+<?php
+require_once("Auth/HTTP.php");
+
+$AuthOptions = array(
+	//使用与前面示例相同的数据源名称（数据库登录信息）
+	'dsn'=>'mysqli://username:password@localhost/databasename',
+
+	//指定包含用户信息的数据库表
+	'table'=>'users',
+
+	//指定存放用户名的列
+	'usernamecol'=>'username',
+
+	//指定存放密码的列
+	'passwordcol'=>'password',
+
+	//指定使用的加密类型
+	'cryptType'=>'md5',
+);
+
+$a = new Auth_HTTP("DB", $AuthOptions);
+
+//指定你的区域名称
+$a->setRealm('仅注册用户');
+
+//指定身份验证失败时用户看到的错误消息
+$a->setCancelText('<h2>访问被拒绝。</h2>');
+
+$a->start();
+
+//检查用户是否经过授权
+if($a->getAuth())
+{
+	//授权后的文本主体在此处。
+	echo "你好，授权用户！";
+}
+?>
+```
+
+由此可见，这提供了一种非常简便的用户身份验证方式。若要检查其他页面的授权状态，只需使用 `getAuth()` 函数即可。
+
+`Auth_HTTP` 包还有其他可以指定的参数，而 `Auth` 包则提供了非常强大的基于 HTML 表单的身份验证系统。你可以在 `http://pear.php.net/manual/en/package.authentication.auth-http.php` 和 `http://pear.php.net/manual/en/package.authentication.auth.php` 分别阅读有关这些包的更多信息。
+
+### Date
+
+尽管 PHP 提供了返回日期和时间信息的内置函数，但此 PEAR 包为你提供了一种便捷的方法，将这些信息转换为常用结果，例如本月剩余天数、当前星期几等。
+
+此包可用函数众多，我们无法为每个函数提供示例。然而，以下各节介绍了 `Date` 类中一些更常用的方法。请访问 `http://pear.php.net/package/Date/docs/latest/Date/Date.html` 查看方法综合列表。
+
+#### Date 类
+
+此类位于主文件 `date.php` 中，并为你提供以下方法：
+
+- `Date`：构造函数方法，创建一个新的日期对象。
+- `addSeconds`：向日期添加特定数量的秒数。
+- `addSpan`：向日期添加时间跨度。
+- `after`：确定一个日期是否晚于另一个日期。
+- `before`：确定一个日期是否早于另一个日期。
+- `convertTZ`：将日期转换为另一个时区。
+- `equals`：确定两个日期和/或时间是否完全相等。
+- `format`：根据用户规范格式化日期。
+- `getDate`：以特定格式返回日期。
+- `getDay`：返回日期对象的月份中的日。
+- `getDayName`：以字符串格式返回日期对象在一周中的星期几。
+- `getDayOfWeek`：以整数格式返回日期对象在一周中的星期几。
+- `getDaysInMonth`：返回日期对象所在月份的天数。
+- `getHour`：返回日期对象的小时。
+- `getMinute`：返回日期对象的分钟。
+- `getMonth`：以整数格式返回日期对象的月份。
