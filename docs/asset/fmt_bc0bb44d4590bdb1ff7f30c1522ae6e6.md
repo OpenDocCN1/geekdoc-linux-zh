@@ -1,0 +1,82 @@
+
+这段代码再次与 `DropLineEdit` 相似，只是现在我们需要图标和文本。要向 `QListWidget` 添加一个项，我们必须创建一个新的 `QListWidgetItem` 并将列表部件（`self`）作为该项目的父级传入。
+
+```python
+def startDrag(self, dropActions):
+    item = self.currentItem()
+    icon = item.icon()
+    data = QByteArray()
+    stream = QDataStream(data, QIODevice.WriteOnly)
+    stream << item.text() << icon
+    mimeData = QMimeData()
+    mimeData.setData("application/x-icon-and-text", data)
+    drag = QDrag(self)
+    drag.setMimeData(mimeData)
+    pixmap = icon.pixmap(24, 24)
+    drag.setHotSpot(QPoint(12, 12))
+    drag.setPixmap(pixmap)
+    if drag.start(Qt.MoveAction) == Qt.MoveAction:
+        self.takeItem(self.row(item))
+```
+
+这是 `DropLineEdit` 中唯一没有的方法，也是它使得能够拖动 `DrDListWidgets` 的原因。我们无需检查 `currentItem()` 的返回值，因为只有项可以被拖动，所以我们知道如果调用了 `startDrag()`，就会有要拖动的项。`startDrag()` 方法在需要时由 PyQt 自动调用，因为我们在初始化器中设置了启用拖动。
+
+我们创建一个新的空字节数组，并使用 `QDataStream` 用 `QListWidgetItem` 的图标和文本填充它。当我们将 `QDataStream` 纯粹用于处理仅存在于应用程序运行期间的内存数据，且不与其他应用程序交换时，无需调用 `setVersion()`。一旦我们填充了字节数组，我们就将其封装在一个 `QMimeData` 对象中。然后我们创建一个 `QDrag` 对象，并给它提供 MIME 数据。我们选择使用数据的图标作为用于拖动的图标。如果我们没有这样做，PyQt 将提供默认图标。我们还设置拖动的“热区”为图标的中心。鼠标的热区将始终与图标的热区重合。
+
+调用 `QDrag.start()` 启动拖动；我们作为参数传入我们将接受的动作。如果拖动成功，即如果数据被成功放下，`start()` 方法将返回发生的动作——例如，复制或移动。如果动作是移动，我们从该列表部件中移除被拖动的 `QListWidgetItem`。从 Qt 4.3 开始，应使用 `QDrag.exec_()` 代替 `QDrag.start()`。
+
+![](img/9bfe0a027fcc8793bb087287001100dd_330_1.png)
+
+`setAcceptDrops()` 方法继承自 `QWidget`，但 `setDragEnabled()` 不是，因此默认情况下它仅在特定部件中可用。如果我们想创建一个支持放入（drops）的自定义部件，只需调用 `setAcceptDrops(True)` 并重新实现 `dragEnterEvent()`、`dragMoveEvent()` 和 `dropEvent()`，正如我们在前面的示例中所做的那样。如果我们也希望自定义部件支持拖动（drags），并且该部件继承自 `QWidget` 或某个没有 `setDragEnabled()` 的 `QWidget` 子类，我们必须做两件事使部件支持拖动。一是提供一个 `startDrag()` 方法，以便可以创建 `QDrag` 对象；二是确保在适当的时间调用 `startDrag()` 方法。确保调用 `startDrag()` 的最简单方法是实现 `mouseMoveEvent()`：
+
+```python
+def mouseMoveEvent(self, event):
+    self.startDrag()
+    QWidget.mouseMoveEvent(self, event)
+```
+
+示例应用程序左下角的部件是 `QWidget` 的直接子类，并使用此技术。其 `startDrag()` 方法与我们刚才看到的非常相似，但只简单一点，因为它发起的是复制拖动而非移动拖动，因此无论拖动是否成功放下，我们都不必做任何事。
+
+## 总结
+
+当使用现有部件时，PyQt 的信号和槽机制通常就足以获得我们想要的行为。但当我们创建自定义部件时——例如，为了对部件的外观和行为进行精细控制——我们必须实现低级事件处理器。
+
+对于外观，重新实现 `paintEvent()` 通常就足够了，尽管在某些情况下我们可能还需要重新实现 `resizeEvent()`。对于这些事件，我们通常不调用基类实现。对于行为，重新实现 `keyPressEvent()` 和部分鼠标事件（如 `mousePressEvent()` 或 `mouseMoveEvent()`）是很常见的。对于鼠标事件，我们通常也不调用基类实现，尽管这样做通常无害。如果通过重新实现 `QWidget.event()` 来行使更低级的控制，我们必须为我们自己处理的事件返回 true，并且必须为我们不处理的事件返回调用基类实现的结果。
+
+我们通常不需要在自己的代码中处理剪贴板，因为 PyQt 的大多数文本编辑部件都会以我们预期的方式自动与剪贴板交互。但如果我们确实想在代码中处理剪贴板，设置和获取文本及图像数据很简单，使用由 `QApplication.clipboard()` 返回的 `QClipboard` 对象即可。设置 HTML 数据稍微复杂一些，因为我们需要将 HTML 封装在 `QMimeData` 对象中，尽管获取 HTML 很容易。当我们使用剪贴板处理 MIME 数据时，我们不限于 HTML；我们可以使用处理拖动和放置数据相同的技术来存储和获取任何类型的数据。
+
+标准 PyQt 部件提供的内置拖动和放置支持非常容易设置和使用。但在某些情况下，我们需要拖动和放置自己的自定义数据类型。实现此所需的代码并不难写，并且使用 `QByteArray` 确保我们可以拖动和放置任意数量的任何 C++ 或 PyQt 数据类型的数据。然而，如果数据量非常大，传递一个代表数据的令牌（例如数据结构中的索引位置），而不是数据本身，并仅在必要时实际复制数据，可能会更快且更节省内存。
+
+也有可能完全绕过 PyQt 的拖动和放置功能，通过重新实现鼠标事件处理器来实现我们自己的拖动和放置系统。这听起来没那么困难，但显然不如使用 PyQt 已经提供的功能方便。
+
+PyQt 的事件处理系统非常强大，而且相当易于使用。在大多数情况下，使用更高级的信号和槽机制要简单得多，也更合适。但当我们需要进行精细控制和自定义时，重新实现事件处理器将让我们获得所需的确切外观和行为——我们将在下一章实施一些自定义部件时看到这一点。
+
+## 练习
+
+修改 `DnDListWidget` 类，使得当用户放下时，在鼠标位置弹出一个具有两个选项的弹出菜单：`复制` 和 `移动`。修改 `dragMoveEvent()`，使其放置动作为 `移动` 而非 `复制`。菜单需要位于 `dropEvent()` 中，在创建新的列表项之前。
+
+`QMenu.exec_()` 方法接受一个 `QPoint` 参数，告诉它在哪里弹出；`Cursor.pos()` 方法提供当前的鼠标位置。放置事件的放置动作必须根据用户选择设置为 `复制` 或 `移动`。
+
+`startDrag()` 方法需要稍作修改：`start()` 调用必须将 `移动` 和 `复制` 动作都作为可接受动作给出，并且仅当用户选择移动时才移除该项。
+
+最棘手的部分是决定如何响应菜单动作。例如，你可以使用 `functools.partial()` 或 lambda 函数。在模型解决方案中，我们简单地使用一个持有放置动作的实例变量，并有两个方法，一个将放置动作设置为 `移动`，另一个设置为 `复制`，然后仅将菜单动作连接到这些方法。
+
+也可以采用更微妙的方法。不使用弹出菜单，而是在拖动移动事件中检查键盘修饰键，默认将放置动作设置为 `移动`，或者如果按下了 `Ctrl` 键则设置为 `复制`。同样，在放置事件中根据 `Ctrl` 键的状态设置放置动作。这比弹出菜单侵入性更小，但对于随意或新手用户来说也不那么明显。
+
+在解决方案中，我们创建了两个 `QListWidget` 子类，`DnDMultiListWidget` 和 `DnDCtrListWidget`，以展示这两种方法。只需添加或修改大约 25 行代码（在你复制/粘贴了 `DnDListWidget` 之后）
+
+并对这两个版本的名称进行了重命名）以实现本文档中描述的两种方法。
+
+模型解答文件位于 `chap10/customdraganddrop_ans.pyw`。
+
+*此页故意留白*
+
+# 自定义控件
+
+- 使用控件样式表
+
+- 创建复合控件
+
+- 对内置控件进行子类化
+
+- 对 `QWidget` 进行子类化
