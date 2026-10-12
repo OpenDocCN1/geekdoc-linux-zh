@@ -1,0 +1,27 @@
+# Set up your Pi Zero
+
+# Getting started
+
+![](bbox=[0.18, 0.05, 0.95, 0.46])
+
+Fig 1: Once you've soldered the header into place, your Pi Zero should resemble any other Raspberry Pi
+
+# GPIO header
+
++   02 Soldering your brand new Raspberry Pi Zero might seem like a scary prospect, at first, but it's not that difficult! What is difficult, however, is snapping off the correct number of GPIO header pins (40), as the kit supplies more than 40. It's also well worth noting at this point that it doesn't matter too much if you mess up and end up missing a couple of the bottom pins.
+
+the kit we used with a soldering iron, stand, solder, sucker and some lead-free solder was £8 on Amazon. We managed to solder the GPIO pins using this kit no problem.
+
+# Soldering kits
+
++   03 Soldering irons are very cheap these days. If you are going to do a lot of soldering then it's probably worth getting a temperature-controlled one where you can change the tip. However,
+
++   04 Before you can solder the GPIO headers, you need to be able to hold them in place. We recommend putting some blu-tack on either side of the pins for this. This also has the advantage that you can flip the Pi over and then use the blu-tack to keep it in place on a table while you are soldering. The blu-tack should just easily peel off once you are done.
+
+# Holding the GPIO headers in place
+
+# Solder the GPIO headers
+
++   05 Here comes the bit you might have been dreading, but, don't worry! Make sure you have wet the sponge in the soldering iron holder, as you will need to wipe the iron on the sponge to keep the tip clean. If this is the first time your iron has been used, the heating element will probably give off a lot of smoke for
+
+the first few minutes, so don't worry if that happens. Still, be mindful of your safety and make sure you're not in a poorly-ventilated area - try not to breathe in any fumes. Once the iron is hot, apply some solder to the tip and wipe any excess solder on the sponge. Then start to solder the pins. For each pin, touch the tip of the iron on the bottom of the GPIO header and the metal contact on the Pi, then apply a very small amount of solder. Once the solder has flowed onto the pin and the metal contact, then you can remove the iron. If there is too much solder then you can reheat the solder and use the solder sucker to remove it. Take breaks when soldering the GPIO headers for a couple of reasons: 1) you don't want to overheat any components on the Pi, and 2) you can melt the plastic of the GPIO headers and that will allow the pin to fall through. Keep wiping the tip of the iron on the sponge to keep it clean throughout the soldering process. Make sure you unplug the iron and put it somewhere safe to cool down when you are finished.

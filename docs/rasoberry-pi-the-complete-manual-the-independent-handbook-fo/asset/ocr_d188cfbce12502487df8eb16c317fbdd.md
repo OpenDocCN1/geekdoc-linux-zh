@@ -1,0 +1,24 @@
+# Monitor your local network with NagiosPi
+
+![](bbox=[0.34, 0.07, 0.96, 0.46])
+
+# What you'll need...
+
++   * NagiosPi
++     * pimylpihu...com/project/nagiospi
++   * Win32 Disk Imager
++     * bit.ly/1DM7Tj
++   * Disk Utility
++     * bit.ly/1c055
++   * Internet connection
++   * 4 GB (or larger) SD card
+
+# Monitor your local network with NagiosPi
+
+Embrace the power of Nagios to keep an eye on servers, switches and applications on your network
+
+Is your PC offline? Has your Linux box stopped serving Minecraft or Counter-Strike? If you're out of the house, or even the country, there is no real way of knowing without trying to log in - something you probably won't be able to do without being on the premises (unless you're using remote desktop software).
+
+A far better way would be to simply receive notifications when your network devices are knocked offline, and this is why we turn to NagiosPi, a Raspberry Pi-built version of the popular open source network monitoring tool.
+
+NagiosPi is available as a full image ready to be written to SD card, with the real configuration taking place once it's up and running. Let's get started.
