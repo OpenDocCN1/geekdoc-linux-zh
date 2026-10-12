@@ -1,0 +1,161 @@
+
+# Contributors
+
+- Huzenaga, Dr. John R. Nuclear Structure Research Laboratory, University of Rochester.
+- Hulbary, Dr. Robert L. Department of Botany, University of Iowa.
+- Hultsch, Dr. Roland A. Department of Physics, University of Missouri.
+- Humes, Dr. Arthur G. Department of Biology, Boston University.
+- Hummon, Dr. William D. Department of Zoological and Biomedical Sciences, Ohio University.
+- Hundhausen, Dr. Arthur J. High Altitude Observatory, National Center for Atmospheric Research, Boulder, Colorado.
+- Hunger, Prof. Robert E. Department of Biotechnology, University of California, Davis.
+- Hunter, Dr. Lloyd P. Department of Electrical Engineering, University of Rochester.
+- Hunter, Dr. R. H. School of Agriculture, University of Edinburgh, Scotland.
+- Huntington, Prof. H. B. Department of Physics, Rensselaer Polytechnic Institute.
+- Hurbult, Prof. Cornelius S., Jr. Professor of Mineralogy, Department of Geological Sciences, Harvard University.
+- Hurley, Joseph. D. Westinghouse Electric Corporation, Orlando, Florida.
+- Huill, John. Measurements Standards Laboratory, Marconi Instruments Ltd., Stevenage, Hertfordshire, England.
+- Hurst, Dr. G. S. Department of Physics, Oak Ridge National Laboratory, Oak Ridge, Tennessee.
+- Hurst, Prof. James K. Department of Biochemistry and Biophysics, Washington State University, Pullman.
+- Hutchen, Dr. Ian D. Isotope Sciences Division, Lawrence Livermore National Laboratory, University of California, Livermore.
+- Hutchinson, Prof. Ian H. Massachusetts Institute of Technology, Plasma Science and Fusion Center, Cambridge, Massachusetts.
+- Hutcheson, Dr. Keith. Department of Biology, Brandeis University.
+- Hwang, Dr. Patrick. Rockwell International, Cedar Rapids, Iowa.
+- Hwang, Dr. Richard N. Moh and Associates, Inc., Taipei, Taiwan.
+- Hyde, Dr. Earl K. Lawrence Berkeley Laboratory, University of California, Berkeley.
+- Hyde, Dr. Geoffrey. Retired; formerly, COMSAT Laboratories, Clarksburg, Maryland.
+- Hynack, Dr. J. Allen. Deceased; formerly, Department of Astronomy, Northwestern University.
+
+I
+
+- Iachello, Dr. Franco. Department of Physics, Yale University.
+- Ibrahim, Dr. Aly M. Agricultural Research Service, Western Region, S. Department of Agriculture, Salinas, California.
+- Illis, Alexander. Director, Process Technology, International Nickel Company of Canada, Ltd., Toronto, Ontario.
+- Imai, Noriyoshi. Tokyo Ink Manufacturing Company, Tokyo, Japan.
+- Inbar, Prof. Anthony L. Chairperson, Department of Surgery, University of Maryland Hospital, Baltimore.
+- Ingles, Chuck A. University of California Cooperative Extension, Sacramento.
+- Ingersoll, Dr. Raymond V. University of California at Los Angeles, Department of Earth and Space Science.
+- Ingeson, Dr. Earl. Department of Geology, University of Texas, Austin.
+- Ingram, Dr. B. Lynn. Department of Geology and Geophysics, University of California, Berkeley.
+- Inman, Dr. Douglas A. Professor of Oceanography, Scripps Institution of Oceanography, La Jolla, California.
+- Irene, Dr. Eugene A. Department of Chemistry, University of North Carolina.
+- Ishida, Dr. Nakao. Department of Bacteriology, Tohoku University School of Medicine, Sendai, Japan.
+- Ishikawa, Prof. Taro. Department of Mechanical and Aerospace Engineering, Rose Polytechnic Institute.
+- Isley, Dr. Duane. Department of Botany, Iowa State University.
+- Israel, Dr. Yedy. Department of Pharmacology, University of Toronto, Ontario, Canada.
+- Issel, Dr. Charles J. College of Agriculture, Veterinary Science, Gluck Equine Research Center, University of Kentucky, Lexington.
+- Ibano, Dr. Wayne M. U.S. Department of Commerce, Time and Frequency Division, National Institute of Standards and Technology, Boulder, Colorado.
+- Iverson, Dr. Brent L. Department of Chemistry and Biochemistry, University of Texas, Austin.
+- Ives, Dr. Anthony R. Department of Zoology, University of Wisconsin, Madison.
+- Izadiyan, Dr. Jamal S. AntennaDM Communication, LLC, San Jose, California.
+
+J
+
+- Jackiw, Prof. Roman. Department of Physics, Massachusetts Institute of Technology.
+- Jackson, Donald C. Division of Biology and Medicine, Brown University.
+- Jackson, G. A. Deputy Division Manager, ERA Technology Ltd., Surrey, England.
+- Jackson, Dr. Kenya A. ART&T Bell Telephone Laboratories, Murray Hill, New Jersey.
+- Jackson, Dr. M. P. A. Senior Research Scientist, Bureau of Economic Geology, University of Texas, Austin.
+- Jackson, Dr. William D. President, HMJ Corporation, Chevy Chase, Maryland.
+- Jacob, Prof. Stephen F. Optical Sciences Center, University of Arizona.
+- Jacobson, Prof. Nathan. Department of Mathematics, Yale University.
+- Jacobson, Dr. Robert. Chief of the Clinical Branch, Department of Health and Human Services, Willis W. Long Hansen's Disease Center, Catville, Louisiana.
+- Jaep, William F. Central Research Department, Experimental Station, E. I. du Pont de Nemours and Company, Wilmington, Delaware.
+- Jalarey, Prof. S. Behlen Laboratory of Physics, University of Nebraska.
+- Jaffe, Prof. Robert L. Department of Physics, Massachusetts Institute of Technology, Cambridge.
+- Jahn, Dr. Richard H. Department of Earth Sciences, Stanford University.
+- Jain, Dr. P. C. Central Electronics Engineering Research Institute, Piani, India.
+- Jain, Dr. Subodh K. Department of Agronomy and Range Science, University of California, Davis.
+- Jakobi, Prof. Hans. Professor of Animal Physiology, University of Zoology, University of Parma, Brazil.
+- James, Prof. Arthur M. Department of Chemistry, Bedford College, London, England.
+- James, Dr. Gideon T. Department of Earth Sciences, East Texas State University.
+- James, John W. Vice President, Research, McDonnell and Miller, Inc., Chicago, Illinois.
+- James, Dr. Mark A. Corbebrach House, Perthshire, United Kingdom.
+- James, Dr. Richard W. Head, Forecasting Branch, Oceanographic Prediction Division, U.S. Naval Oceanographic Office.
+- Jamilshi, Dr. Mohamed. Director, CAD Laboratory for Systems and Robotics, Department of Electrical and Computer Engineering, University of New Mexico.
+- Janick, Prof. Jules. Department of Horticulture, Purdue University.
+- Janis, Dr. Christine. Department of Ecology and Evolutionary Biology, Brown University, Providence, Rhode Island.
+- Janna, Prof. William S. Department of Mechanical Engineering, Memphis State University, Tennessee.
+- Jannasch, Dr. Holger W. Senior Scientist, Woods Hole Oceanographic Institution, Woods Hole, Massachusetts.
+- Japische, Dr. David. President, Concepts ETT, Inc., Norwich, Vermont.
+- Japuntich, Daniel A. Occupational Health and Safety Products Division, 3M Company, St. Paul, Minnesota.
+- Jarvis, J. Gordon. Corporate Communications, Eastman Kodak Company, Rochester, New York.
+- Jastir, Dr. John F. Robotics Systems Research Department, Bell Laboratories, Holmdel, New Jersey.
+- Jefferis, Dr. R. P. S. Department of Paleontology, British Museum of Natural History, London, England.
+- Jeglwa, Dr. Dorothy E. Department of Biology, Kenyon College, Gambier, Ohio.
+- Jen, Dr. C. K. Supervisor, Microwave Physics Group, Applied Physics Laboratory, Johns Hopkins University, Baltimore, Maryland.
+- Jenike, Andrew H. Jenike & Johanson, Inc., North Billerica, Massachusetts.
+- Jenike, Dr. Michael A. Research Psychiatric Hospital, Massachusetts General Hospital, Harvard Medical School.
+- Jenkins, Prof. Francis A. Deceased; formerly, Department of Physics, University of California, Berkeley.
+- Jenkins, Dr. Julian L. Director of Research, Bell Helicopter Company, Fort Worth, Texas.
+- Jennings, Dr. Donald A. Time and Frequency Division, National Institute of Standards and Technology, Boulder, Colorado.
+- Jennings, Dr. J. B. Department of Pure and Applied Zoology, University of Leeds, England.
+- Jensen, Prof. Arthur R. School of Education, University of California, Berkeley.
+- Jensen, Dr. Howard B. Research Supervisor, Laramie Energy Research Center, Energy Research and Development Administration, Wyoming.
+- Jensen, Richard L. Sirius Satellite Radio, New York.
+- Jespersen, Dr. Neil D. Department of Chemistry, St. John's University, New York.
+- Joel, Amos E., Jr. AT&T Bell Telephone Laboratories, Holmdel, New Jersey.
+- Johanson, Dr. Kjell. Department of Zoophysiology, University of Aarhus, Denmark.
+- Johanson, Prof. Carl R. Department of Chemistry, Wayne State University.
+- Johnson, Dr. Donald Lee. Department of Geography, University of Illinois, Urbana.
+- Johnson, Dr. Edward. Department of Cell Biology, Rockefeller University, New York.
+- Johnson, Dr. Ellis L. Thomas J. Watson Research Center, IBM Corporation, Yorktown Heights, New York.
+- Johnson, Dr. Francis S. Acting President, University of Texas, Dallas.
+- Johnson, Dr. Giles. School of Biological Sciences, University of Manchester, United Kingdom.
+- Johnson, Dr. James E. Department of Chemistry, Texas Woman's University, Denton.
+- Johnson, Dr. James G. Department of Geology, Oregon State University.
+- Johnson, Dr. Jon D. Department of Forestry, University of Florida, Gainesville.
+- Johnson, K. W. President, Vibia-Grip Corporation, Jamestown, Ohio.
+- Johnson, Phillip C. Research and Development Department, Chemicals and Plastics Operations Division, Union Carbide Corporation, South Charleston, West Virginia.
+- Johnson, Dr. W. Hilton. Department of Geology, University of Illinois, Urbana-Champaign.
+- Johnson, Prof. Walter C. Department of Electrical Engineering, Princeton University.
+- Johnston, Dr. James D. Senior Research Advisor, Pioneer Engineering, Ethyl corporation, Baton Rouge, Louisiana.
+- Johnston, Prof. Keith. Department of Chemical Engineering, University of Texas, Austin.
+- Johlik, Dr. W. K. Department of Microbiology and Immunology, Duke University Medical Center.
+- Jones, Prof. B. Frank, Jr. Department of Mathematics, West School of Natural Sciences, Rice University.
+- Jones, Dr. Clive G. Institute of Ecosystem Studies, New York Botanical Garden, Millbrook, New York.
+- Jones, Dr. Daniel J. Professor and Chairman, Department of Earth Sciences, California State College, Bakersfield.
+- Jones, Dr. David R. Department of Zoology, University of British Columbia, Canada.
+- Jones, Dr. E. Ruffin. Department of Zoology, University of Florida.
+- Jones, Dr. Edwin C., Jr. Department of Electrical and Computer Engineering, Iowa State University.
+- Jones, Dr. Hugh D. School of Biological Sciences, University of Manchester, United Kingdom.
+- Jones, Dr. Jeremy B. Department of Biological Sciences, University of Nevada, Las Vegas.
+- Jones, Prof. Lawrence W. Harrison M. Randall Laboratory of Physics, University of Michigan.
+- Jones, Dr. Meredith L. National Museum of Natural History, Smithsonian Institution, Washington, D. C.
+- Jones, Dr. Morton E. Director, Physical Sciences Research Laboratory, Texas Instruments, Inc., Dallas.
+- Jones, Dr. Norman S. Senior Lecturer, Marine Biological Station, University of Liverpool, England.
+- Jones, Dr. Owen C. Superintendent, Division of Electrical Sciences, National Physical Laboratory, Teddington, England.
+- Jones, Dr. Patricia M. Department of Mechanical and Industrial Engineering, University of Illinois, Urbana-Champaign.
+- Jones, Prof. R. Alan. School of Chemical Sciences, University of East Anglia, England.
+- Jones, Dr. R. Gareth. Division of Electrical Science, National Physical Laboratory, Teddington, England.
+- Jones, Dr. Richard T. Department of Biochemistry, University of Oregon Medical School.
+- Joppa, Prof. Robert G. Department of Aeronomics, University of Washington.
+- Jorale, Dr. Lloyd. Professor of History, Northwestern University.
+- Jordan, Dr. Elke. Department of Health and Human Services, National Human Genome Research Institute, Bethesda, Maryland.
+- Jory, Howard R. Varian Associates, Palo Alto, California.
+- Joseph, Earl C. President, Planning and Development, Anticipatory Sciences Inc., Minneapolis, Minnesota.
+- Joseph, Leonard M. Lev Zetin Associates, New York, New York.
+- Joseph, Dr. Simpson. Department of Chemistry and Biochemistry, University of California, La Jolla.
+- Juang, Dr. Bijing Huang. Lucent Technologies, Bell Laboratories, Murray Hill, New Jersey.
+- Judd, Dr. Deane B. Deceased; formerly, Office of Oceans, National Bureau of Standards.
+- Judd, Dr. W. John. Department of Pathology, University of Michigan, Ann Arbor.
+- Judd, Dr. William R. School of Civil Engineering, Purdue University, West Lafayette, Indiana.
+- Juracek, Dr. Dennis C. Center for Disease Control, Atlanta, Georgia.
+- Jurisson, Dr. Silvia S. Department of Chemistry, University of Missouri, Columbia.
+- Just, Prof. Evan. Department of Mining and Geology, Stanford University.
+- Juette, Prof. Richard S., Jr. Department of Chemistry, Arizona State University.
+
+K
+
+- Kaesler, Dr. Roger L. Department of Geology, University of Kansas, Lawrence.
+- Kahn, Dr. Bernd. Environmental Resources Center, Georgia Institute of Technology, Atlanta.
+- Kailath, Prof. Thomas. Information Systems Laboratory, Stanford University, Stanford, California.
+- Kaler, Prof. James B. Department of Astronomy, College of Liberal Arts and Sciences, University of Illinois, Urbana-Champaign.
+- Kahmann, Dr. Fritz. Electric Power Research Institute, Palo Alto, California.
+- Kallen, Dr. Bengt. Department of Embryology, University of Lund, Sweden.
+- Kalilo, Dr. R. E. School of Life Sciences, University of Illinois, Urbana.
+- Kalpjia, Prof. Serope. Mechanical and Aerospace Engineering Department, Illinois Institute of Technology.
+- Kaminow, Dr. Ivan P. Bell Telephone Laboratories, Holmdel, New Jersey.
+- Kamrin, Dr. Michael A. Center for Environmental Toxicology, Department of Pathology, Michigan State University.
+- Kana, Dr. Todd M. Horn Point Laboratory, Cambridge, Maryland.
+- Kan-Mitchell, Dr. June. School of Medicine, University of Southern California.
+- Kanurly, Dr. A. Murty. Senior Mechanical Engineer, Stanford Research Center, Menlo Park, California.

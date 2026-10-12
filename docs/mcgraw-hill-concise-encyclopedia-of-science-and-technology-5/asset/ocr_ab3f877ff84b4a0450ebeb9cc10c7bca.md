@@ -1,0 +1,29 @@
+# Nuclear fission
+
+At Hiroshima a dose equal to or greater than 450 rads (4.5 grays) extended to almost 1 mi (1.6 km). About half of the persons exposed to this dose in a short time will die within a few weeks, so that persons in this area who were not protected by heavy building walls experienced severe hazard from radiation. This is about the same distance for severe hazards from blast and thermal effects. The prompt radiation exposure falls off more rapidly with distance than the blast effect which, in turn, falls more rapidly than the intensity of thermal radiation. For an explosion much larger than 1.5 or 20 kt, the hazard range from thermal radiation or blast will be larger than that from prompt radiation, and prompt radiation will be a relatively unimportant effect. For much smaller yields, this order of importance will be reversed.
+
+[J.C.Ma.]
+
+![](bbox=[0.55, 0.05, 0.95, 0.35])
+
+**Fig. 1.** Plot of the potential energy in MeV as a function of deformation for the nucleus \(^{240}\)Pu. (After *M. Boisteil et al., New calculations of fission barriers for heavy and superheavy nuclei, Phys. Rev. C5:1050–1077, 1972*.)
+
+# **Nuclear fission model.** An extremely complex nuclear reaction representing a cataclysmic division of an atomic nucleus into two nuclei of comparable mass.
+
+This rearrangement or division of a heavy nucleus may take place naturally (spontaneous fission) or under bombardment with neutrons, charged particles, gamma rays, or other carriers of energy (induced fission). Although nuclei with mass number A of approximately 100 or greater are energetically unstable against division into two lighter nuclei, the fission process has a small probability of occurring, except with the very heavy elements. Even for these elements, in which the energy release is of the order of 200 megaelectronevolts, the lifetimes against spontaneous fission are reasonably long. See NUCLEAR REACTION.
+
+# **Liquid-drop model.** The stability of a nucleus against fission is most readily interpreted when the nucleus is viewed as being analogous to an incompressible and charged liquid drop with a surface tension. Long-range Coulomb forces between protons act to disrupt the nucleus, whereas short-range nuclear forces, idealized as a surface tension, act to stabilize it. The degree of stability is then the result of a delicate balance between the relatively weak electromagnetic forces and the strong nuclear forces.
+
+Although each of these forces results in potentials of several hundred megaelectronvolts, the height of a typical barrier against fission for a heavy nucleus, because they are of opposite sign but do not quite cancel, is only 5 or 6 MeV. Investigators have used this charged liquid-drop model with great success in describing the general features of nuclear fission and also in reproducing the total nuclear binding energies. See NUCLEAR BINDING ENERGY; NUCLEAR STRUCTURE; SURFACE TENSION.
+
+# **Shell corrections.** The general dependence of the potential energy on the fission coordinate representing nuclear elongation or deformation for a heavy nucleus such as \(^{240}\)Pu is shown in Fig. 1. The expanded scale used in this figure shows the large decrease in energy of about 200 MeV as the fragments separate to infinity. It is known that \(^{240}\)Pu is deformed in its ground state, which is represented by the lowest minimum of 7–1813 MeV near zero deformation.
+
+This energy represents the total nuclear binding energy when zero of potential energy is the energy of the individual nucleons as a separation at infinity. The second minimum to the right of zero deformation illustrates structure introduced in the fission barrier by shell corrections, that is, corrections dependent upon microscopic behavior of the individual nucleons, to the liquid-drop mass. Although shell corrections introduce small wiggles in the potential-energy surface as a function of deformation, the gross features of the surface are reproduced by the liquid-drop model. Since the typical fission barrier is only a few megaelectronvolts, the magnitude of the shell correction need only be small for irregularities to be introduced into the barrier. This structure is schematically illustrated for a heavy nucleus by the double-humped fission barrier in Fig. 2, which represents the region to the right of zero deformation in Fig. 1 on an expanded scale. The fission barrier has two maxima and a rather deep minimum in between. For comparison, the single-humped liquid-drop barrier is also schematically illustrated. The
+
+transition in the shape of the nucleus as a function of deformation is schematically represented in the upper part of the figure.
+
+# **Experimental consequences.** The observable consequences of the double-humped barrier have been reported in numerous experimental studies. In the activide region more than 30 spontaneously fissionable isotopes have been discovered between uranium and berkelium, with half-lives ranging from \(10^{-11}\) to \(10^{-2}\) s. These decay rates are faster by 20 to 30 orders of magnitude than the fission half-lives of the ground states, because of the increased barrier tunneling probability (Fig. 2). Several cases in which excited states in the second minimum decay by fission are also known. Normally these states decay within the well by
+
+![](bbox=[0.55, 0.6, 0.95, 0.89])
+
+**Fig. 2.** Schematic plots of single-humped fission barrier of liquid-drop model and double-humped barrier introduced by shell corrections. Humps at A and B result in minima in potential energy at deformations of \(\beta_1\) and \(\beta_2\). States in these wells are designated class I and class II, respectively. (After *J. R. Hittinger, Nuclear fission revisited, Science, 168:1405–1413, 1970*.)

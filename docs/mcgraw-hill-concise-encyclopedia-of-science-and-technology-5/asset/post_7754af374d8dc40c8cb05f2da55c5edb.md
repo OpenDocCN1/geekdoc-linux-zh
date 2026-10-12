@@ -1,0 +1,157 @@
+
+# 2548 Contributors
+
+- **Mitchell**, Dr. Charles E. Department of Geology, State University of New York at Buffalo
+- **Mitchell**, Dr. Jeffrey C. Spaceport Graduate Center, Florida Institute of Technology, Satellite Beach.
+- **Mitchell**, Dr. Malcolm S. Comprehensive Cancer Center, Kenneth Norris, Jr. Cancer Research Institute; University of Southern California, Los Angeles.
+- **Mitsch**, Prof. William J. Graduate Program Environmental Science, School of Natural Resources, Ohio State University, Columbus.
+- **Mitterer**, Dr. Richard M. Department of Geochemistry, University of Texas, Dallas.
+- **Miyawaki**, Dr. Ritsuko. Department of Geology, National Science Museum, Tokyo, Japan.
+- **Mizell**, Dr. David W. Project Leader, University of Southern California/ Information Sciences Institute, Marina del Rey.
+- **Meder**, Dr. Joseph J. Chairman, Department of Management Science, University of Miami.
+- **Moe**, Dr. Richard L. Department of Botany, University of California, Berkeley.
+- **Moffat**, Dr. Anthony F. Department de Physique, Universite de Montreal.
+- **Moffett**, Dr. Mark B. Naval Underwater Systems Center, New London Laboratory, New London, Connecticut.
+- **Moh**, Dr. Zia-Chipiel. Moh & Associates, Inc., Oriental Technologies Tower, Taipei, Taiwan.
+- **Mekanarum**, Dr. T. Department of Surgery, Washington University School of Medicine, St. Louis, Missouri.
+- **Moor**, Prof. David W. Department of Geology, Texas A & M University.
+- **Mohr**, Prof. Peter. Department of Physics, Yale University.
+- **Moll**, Dr. Gary A. Director, Urban and Community Forestry, American Forestry Association, Washington, D. C.
+- **Mollard**, Prof. Roger R. Department of Neurological Surgery, University of Pittsburgh.
+- **Moment**, Dr. Gardner B. Department of Biological Sciences, Goucher College, Towson, Maryland.
+- **Montville**, Dr. Thomas J. Department of Food Science, Cook College, Rutgers University.
+- **Mood**, Dr. Alexander M. Director, Public Policy Research Organization, University of California, Irvine.
+- **Mood**, Capt. Alton B. Navigation Consultant, La Jolla, California.
+- **Mook**, Dr. Douglas G. Department of Psychology, University of Virginia.
+- **Moore**, Dr. Alice E. Sloan-Kettering Institute of Cancer Research, New York.
+- **Moore**, Prof. Charles A. Department of Civil Engineering, Ohio State University.
+- **Moore**, Prof. Clyde H., Jr. Director, Applied Carbonate Research Program, Department of Geology, Agricultural and Mechanical College, Louisiana State University.
+- **Moore**, Dr. James Alexander. Department of Chemistry, University of Delaware.
+- **Moore**, Dr. Jeffrey S. Department of Chemistry, University of Illinois, Urbana- Champaign.
+- **Moore**, Dr. Paul B. Department of the Geophysical Sciences, University of Chicago.
+- **Moore**, Dr. Raymond G. Deceased; formerly: Department of Geology, University of Kansas.
+- **Moore**, Dr. Richard K. Center for Research in Engineering Science, University of Kansas.
+- **Moore**, Dr. W. J. M. Division of Electrical Engineering, National Research Council of Canada, Ottawa, Ontario.
+- **Moorer**, Daniel F., Jr. Ball Aerospace & Technologies, Boulder, Colorado.
+- **Mordas**, Dr. J. P. Department of Medicine, University of Massachusetts Medical School, Worcester.
+- **Moreau**, Dr. Giuliana. Institute of Cellular Pathology, Paris, France.
+- **Morgan**, Dr. Anne H. Deceased; formerly, Mount Holyoke College.
+- **Morgan**, Prof. John W. Department of Mathematics, Columbia University.
+- **Morgan**, Dr. Karl Z. Neely Professor, School of Nuclear Engineering, Georgia Institute of Technology.
+- **Moritz**, Prof. Helmut. Technische Universität Graz, Abteilung für Physikalische Geodäsie, Graz, Austria.
+- **Morell**, A. M. Manager, Tube Development, Picre Tube Division, RCA Corporation, Lancaster, Pennsylvania.
+- **Morett**, Dr. Jeffrey J. Department of Forest Products, Oregon State University, Corvallis.
+- **Morris**, Prof. J. W., Jr. Department of Materials Sciences and Mineral Engineering, University of California, Berkeley.
+- **Morris**, Prof. Philip J. Department of Aerospace Engineering, Pennsylvania State University, University Park.
+- **Morris**, S. B. Marconi Research Centre Materials Group, Towerster, Northants, England.
+- **Morris**, Dr. William F. Department of Zoology, Duke University, Durham, North Carolina.
+- **Morrison**, Dr. David C. Associate Director, Basic Research Programs, Department of Microbiology, University of Kansas Medical Center, Kansas City.
+- **Morrison**, Dr. George H. Professor of Chemistry and Director, Analytical Facility of Materials Science Center, Cornell University.
+- **Morrison**, Dr. Kenneth J. Cooperative Extension Service, Washington State University.
+- **Morse**, Dr. Robert W. Associate Director and Dean of Oceanographic Studies, Woods Hole Oceanographic Institute, Woods Hole, Massachusetts.
+- **Morse**, Dr. Roger A. Department of Entomology, Cornell University.
+- **Morse**, Dr. Roy Earl. Food Science & Nutrition, Cook College, Rutgers University.
+- **Morse**, Dr. Stephen A. Director, Division of Sexually Transmitted Disease Laboratory Research, Centers for Disease Control and Protection, Atlanta, Georgia.
+- **Mortensen**, Leonard E. Department of Biological Sciences, Purdue University.
+- **Morton**, Dr. Andrew. Department of Geology and Petroleum Geology, University of Aberdeen, Kings College, Aberdeen, United Kingdom.
+- **Moscowitz**, Dr. Albert. Department of Chemistry, University of Minnesota.
+- **Moseley**, Dr. Steve L. Department of Microbiology, University of Washington School of Medicine, Seattle.
+- **Moskell**, Dr. Alan. Director, Skin Diseases Program, National Institute of Arthritis and Musculoskeletal and Skin Diseases, National Institutes of Health, Bethesda, Maryland.
+- **Mosher**, Dr. William. Deceased; formerly, Chairman, Department of Chemistry, University of Delaware.
+- **Mossmann**, Prof. Harland W. Emeritus Professor, Department of Anatomy, University of Wisconsin.
+- **Mosekataki**, Dr. R. J. Department of Chemistry, Texas A&M University.
+- **Mottershead**, Dr. Allen. Physical Science Department, Cypress College, California.
+- **Mottet**, Dr. N. Karle. Professor of Pathology and Director of Hospital Pathology, University Hospital, University of Washington.
+- **Moy**, Dr. Kenneth E. Department of Psychology, Carnegie-Mellon University.
+- **Moyer**, Dr. William W. Applied Research Laboratory, Pennsylvania State University.
+- **Mrak**, Dr. Emil M. Office of Chancellor Emeritus, University of California, Davis.
+- **Multing**, Dr. Patricia K. Formerly: Department of Biochemistry, University of North Carolina.
+- **Mulliken**, Dr. Robert S. Institute of Molecular Biophysics, Florida State University.
+- **Munger**, Prof. H. M. Department of Plant Breeding and Biometry, New York State College of Agriculture and Life Sciences, Cornell University.
+- **Munson**, Dr. Bruce R. Department of Aerospace Engineering and Mechanics, Iowa State University, Ames.
+- **Muntar**, Dr. Bruce R. Department of Aerospace Engineering and Mechanics, Iowa State University, Ames.
+- **Murphatay**, Dr. R. J. Meteorological Office, Bracknell, England.
+- **Murphatay**, Dr. Frederic A. Centers for Disease Control, Department of Health and Human Services, Tucker, Georgia.
+- **Murphy**, Dr. Glenn. Department of Nuclear Engineering, Iowa State University.
+- **Murphy**, Dr. Robert L. Division of Infectious Diseases, Northwestern University Medical School, Chicago, Illinois.
+- **Murphy**, Dr. Terence M. Department of Anesthesiology, School of Medicine, University of Washington.
+
+# 2549 Contributors
+
+- **Murray**, Dr. Hayden H. Executive Vice President, Georgia Kaidlin Company, Elizabeth, New Jersey.
+- **Murry**, Dr. James W. School of Oceanography, University of Washington, Seattle
+- **Murtag**, Prof. M. John. Department of Medicine, University of Minnesota Medical School, Minneapolis
+- **Murray**, Dr. Merritt J. Formerly, A. M. Todd Company, Kalamazoo, Michigan
+- **Murray**, Prof. R. G. E. Department of Microbiology and Immunology, Health Sciences Centre, University of Western Ontario, London, Canada.
+- **Murray**, Dr. Royce W. Department of Chemistry, University of North Carolina, Chapel Hill
+- **Murray**, Stephen S. Center for Astrophysics, Harvard College Observatory, Cambridge, Massachusetts.
+- **Murray**, Dr. Thomas P. Applied Research Laboratory, United States Steel Corporation, Monongahela, Pennsylvania.
+- **Murray**, Dr. William. Tektronix Corporation, Palo Alto, California.
+- **Musccacia**, Dr. X. J. Department of Physiology and Space Sciences Research Center, University of Missouri, St. Louis.
+- **Mushitz**, R. D. Rte Department, American Smelting and Refining Company, New York.
+- **Muhr**, Richard. Executive Director, Richard Muhr & Associates, Inc., Kansas City, Missouri.
+- **Mutter**, Dr. Carolyn Z. Associate Research Scientist, Lamont-Doherty Earth Observatory, Columbia University, Palisades, New York.
+- **Mutter**, Dr. John. Lamont-Doherty Geological Observatory, Columbia University, Multichannel Seismics Group, Palisades, New York.
+- **Muus**, Dr. Bent J. Research Biologist, Danish Institute for Fisheries and Marine Research, Charlottenlund, Denmark.
+- **Myers**, Prof. A. L. Department of Chemical Engineering, University of Pennsylvania, Philadelphia.
+- **Mykielew**, Prof. Arvid. Mechanical Engineering Department, Virginia Polytechnic Institute.
+- **Mykleff**, Dr. Michele. Department of Biology, Marquette University, Milwaukee, Wisconsin.
+
+## N
+
+- **Nacamally**, Laurette. IGEN, Inc., Rockville, Maryland.
+- **Nace**, Dr. Raymond L. Geological Survey, U.S. Department of the Interior, Raleigh, North Carolina.
+- **Nachtrieb**, Prof. Norman H. Chairman, Department of Chemistry, University of Chicago.
+- **Nagel**, David J. Superintendent, Condensed Matter and Radiation, Sciences Division, Naval Research Laboratory, Washington, D.C.
+- **Nagel**, Suzanne N. Engineering Research Center, AT&T Bell Laboratories, Princeton, New Jersey.
+- **Nagel**, Dr. Walter R. NASA Goddard Space Flight Center, Greenbelt, Maryland.
+- **Naisal**, Dr. Samuel S. Department of Chemistry, Stephen F. Austin State College Nacogdoches, Texas.
+- **Namias**, Jerome. Climate Research Group, Scripps Institution of Oceanography, La Jolla, California.
+- **Napp-Zin**, Prof. Klaus. Botanical Institute, Cologne, Germany.
+- **Nash**, Dr. Irwin. School of Medicine, Yale University.
+- **Natchtsheim**, Dr. Philip F. NASA Ames Research Center, Moffet Field, California.
+- **Naidan**, Prof. James H. Rosenstiel School of Marine and Atmospheric Science, University of Miami, Florida.
+- **Naumann**, Dr. Robert J. NASA Marshall Space Flight Center, Huntsville, Alabama.
+- **Navorsky**, Dr. Alexandra. Department of Geological and Geophysical Sciences, Princeton University.
+- **Naylor**, Dr. Arch. Department of Electrical Engineering, University of Michigan, Ann Arbor.
+- **Naylor**, Dr. Ernest. Reader in Zoology, University College of Swansea, Wales.
+- **Nealson**, Dr. Kenneth H. Center for Great Lakes Studies, University of Wisconsin, Madison.
+- **Nedelsky**, Prof. Leo. Department of Physical Sciences, University of Chicago.
+- **Nedungadi**, Dr. Ashok P. Integrated Electronics Facility, Schlumberger Well Services, Houston, Texas.
+- **Nelms**, W. P. Deputy Chief, Aircraft Technology Division, National Aeronautics and Space Administration, Ames Research Center, Moffet Field, California.
+- **Nelson**, Dr. Donna C. Intelligent Transport Society of America, Washington, D.C.
+- **Nelson**, Elton G. Collaborator (WOC), Corps Research Division, U.S. Department of Agriculture, Beltsville, Maryland.
+- **Nelson**, Dr. George E. Department of Mathematics, University of Iowa, Iowa City.
+- **Nelsen**, Dr. Olia E. Department of Biology, University of Pennsylvania.
+- **Nelson**, Prof. Raymond J. Professor of Mathematics and Philosophy, Case Institute of Technology.
+- **Nelson**, Dr. Richard B. Chief Engineer, Variant Associates, Palo Alto, California.
+- **Nergaard**, Dr. Leo S. Director, Microwave Research Laboratory, RCA Laboratories, Princeton, New Jersey.
+- **Nesbitt**, Dr. Herbert H. Dean, Faculty of Science, Carleton University, Ottawa, Ontario, Canada.
+- **Nestle**, Dr. Marion. Chaeronian and Nutrition, Division of Education, New York University.
+- **Netravali**, Dr. Arun. President, Bell Laboratories, Murray Hill, New Jersey.
+- **Neubecker**, T. F. Manager, Engineering, High Intensity and Quartz Lamp Department, General Electric Company, Twinburg, Ohio.
+- **Needock**, Prof. Gerald E. Department of Electrical Engineering, Purdue University.
+- **Neuhausser**, Robert G. Solid State Division, Electro Optics and Devices, RCA, Lancaster, Pennsylvania
+- **Nevins**, Dr. James L. Charles Stark Draper Laboratory, Cambridge, Massachusetts.
+- **New**, Dr. Ronald. NOAA, U.S. Department of Commerce, Rockville, Maryland.
+- **Newcomb**, Prof. Robert W. Microsystems Laboratory, Electrical Engineering Department, University of Maryland, College Park.
+- **Newell**, Dr. Allen. Department of Computer Science, Carnegie-Mellon University.
+- **Newell**, Dr. Homer E. National Aeronautics and Space Administration Headquarters, Washington, D.C.
+- **Newhouse**, Alan N. Retired; formerly, U.S. Department of Energy.
+- **Newton**, Dr. Chester W. National Center for Atmospheric Research, Boulder, Colorado.
+- **Newton**, Dr. R. C. Department of the Geological Sciences, University of Chicago.
+- **Newton**, Dr. Roger G. Department of Physics, Indiana University, Bloomington.
+- **Ng**, Dr. Tai P. New Ground Resources Ltd., Alberta, Canada.
+- **Nicosia**, Dr. Fred E. Deceased; formerly, Physical, Optical Radiation Section, Heat Division, Institute for Basic Standards, National Bureau of Standards, Washington.
+- **Niebel**, Benjamin W. Professor Emeritus of Industrial Engineering, Pennsylvania State University; Industrial Engineering Consultant, State College, Pennsylvania.
+- **Nier**, Prof. Alfred O. School of Physics and Astronomy, University of Minnesota, Minneapolis.
+- **Niesz**, Dr. Dale E. Director, Center for Ceramics Research, College of Engineering, Rutgers University.
+- **Nigrelli**, Dr. Ross F. Osborn Laboratories of Marine Sciences, New York Aquarium, New York.
+- **Nipps**, Prof. Ernest F. Department of Materials Engineering, Rensselaer Polytechnic Institute.
+- **Nix**, Prof. William D. Associate Chairman, Department of Materials Science and Engineering, Stanford University.
+- **Nobel**, Dr. Charles R. Department of Anatomy, Columbia University, New York.
+- **Noble**, Prof. Park S. Department of Biology, University of California, Los Angeles
+- **Noble**, Dr. James A. Geological Sciences, California Institute of Technology.
+- **Nobile**, R. H. Optical Division, Institute National Astrofís, Pachuca, Mexico.
+- **Nogiachi**, Dr. Thomas T. Pasadena, California.
+- **Nolan**, Dr. Robert P. Environmental Sciences Laboratory, Brooklyn College, Brooklyn, New York.

@@ -1,0 +1,41 @@
+# Tissue culture
+
+The branch of biology in which tissues or cells of higher animals and plants are grown artificially in a controlled environment. Tissue culture is possible when cells are attached to a solid substrate, such as glass or cellophane, and if the necessary complete nutrient medium is provided. All cultures are now also grown in liquid suspension. Tissue cultures are used in the study of cell division, multiplication, and differentiation, as well as in cancer research, hereditary mechanisms, radiation biology, all hybridization, and virus studies. See MICROBIOLOGICAL METHODS.
+
+# Tissue typing
+
+A procedure (involving a test or a series of tests) to determine the compatibility of tissues from a prospective donor and a recipient prior to transplantation. The immunological response of a recipient to a transplant from a donor is directed against many cell-surface histocompatibility antigens controlled by genes at many different loci. However, one of these loci, the major histocompatibility complex (MHC), controls antigens that evoke the strongest immunological response. The human MHC is known as the HLA system, which stands for the first (A) human leukocyte blood group system discovered. See CELLULAR IMMUNOLOGY; HISTOCOMPATIBILITY.
+
+The success of transplantation is greatly dependent on the degree of histocompatibility (identity) between the donor and recipient, which is determined by the HLA complex. When the donor and recipient have a low degree of histocompatibility, the organ is said to be mismatched, and the recipient mounts an immune response against the donor antigen. By laboratory testing, the degree of antigenic similarity between the donor and the recipient and the degree of preexisting recipient sensitization to donor antigens (and therefore preexisting antibodies) can be determined. This is known as cross-matching.
+
+Phenotyping of HLA-A, B, and C (ABC-typing) of an individual is determined by reacting that individual's lymphocytes with a large panel of antiserum directed against specific HLA antigens. The procedure is known as complement-mediated cytotoxicity assay. The person's lymphocytes are incubated with the different antiserums and complement is added. Killing of the cells being tested indicates that they express the HLA antigens recognized by the particular antiserum being used. Killing of potential donor lymphocytes in the complement-mediated cytotoxicity assay is a contraindication to transplantation of tissue from that donor. See COMPLEMENT; HYPERSENSITIVITY; IMMUNOGASSAY.
+
+In addition to its important role in organ transplantation, determination of the HLA phenotype is useful in paternity testing, forensic medicine, and the investigation of HLA-disease associations. See TRANSPLANTATION BIOLOGY.
+
+# Titanite
+
+A calcium titanium silicate, CaTiSiO₅, of high titanium content. Titanite is also known as sphene. Titanite is an orthosilicate (nesosilicate) with a hardness of 5–5½ on the Mohs scale, a distinct cleavage, a specific gravity of 3.4–3.55, and a adamantine to resinous luster. It commonly occurs as distinct wedge-shaped crystals that are usually brown in hand specimens. Titanite may also be gray, green, yellow, or black. See CRYSTAL STRUCTURE; HARDNESS SCALES.
+
+Titanite is a common accessory mineral in many igneous and metamorphic rocks. It may be the principal titanium-bearing silicate mineral. It occurs in abundance in the Magnet Cove, igneous complex in Arkansas and in the intrusive alkaline rocks of the Kola Peninsula, Russia.
+
+The composition of titanite may diverge from pure CaTiSiO₅ because of a variety of chemical substitutions. Calcium ions (Ca²⁺) can be partially replaced by strontium (Sr²⁺) and rare-earth ions such as thorium (Th⁴⁺) and uranium (U⁴⁺). Because titanite commonly contains radioactive elements, it has been used for both uranium-lead and fission track methods of dating. See DATING METHODS; IGENOUS ROCKS; METAMORPHIC ROCKS; SILICATE MINERALS; TITANIUM.
+
+# Titanium
+
+A chemical element, Ti, atomic number 22, and atomic weight 47.90. It occurs in the fourth group of the periodic table, and its chemistry shows many similarities to that of silicon and zirconium. On the other hand, as a first-row transition element, titanium has an aqueous solution chemistry, especially of the lower oxidation states, showing some resemblances to that of vanadium and chromium. See PERIODIC TABLE; TRANSITION ELEMENTS.
+
+The catalytic activity of titanium complexes forms the basis of the well-known Ziegler process for the polymerization of ethylene. This type of polymerization is of great industrial interest since, in its use, high-molecular-weight polymers can be formed. In some cases, desirable special properties can be obtained by forming isotactic polymers, or polymers in which there is a uniform stereochemical relationship along the chain. See POLYMER RESINS.
+
+The dioxide of titanium, TiO₂, occurs most commonly in a black or brown tetragonal form known as rutile. Less prominent naturally occurring forms are anatase and brookite (rhombohedral). Both rutile and anatase are white when pure. The dioxide may be fused with other metal oxides to yield titanates, for example, K₂Ti₂O₅, ZnTiO₂, PbTiO₃, and BaTiO₃. The black basic oxide, FeTiO₃, occurs naturally as the mineral ilmenite; this is a principal commercial source of titanium.
+
+Titanium dioxide is widely used as a white pigment for exterior paints because of its chemical inertness, superior covering power, opacity to damaging ultraviolet light, and self-cleaning ability. The dioxide has also been used as a whitening or opacifying agent in numerous situations, for example as a filler in paper, a coloring agent for rubber and leather goods, a pigment in inks, and a component of ceramics. It has found successful use as an opacifying agent in porcelain enamels, giving a finish coat of great brilliance, hardness, and acid resistance. Rutile has also been found as brilliant, diamondlike crystals, and some artificial production of it in this form has been achieved. Because of its high dielectric constant, it has found some use in dielectrics.
+
+The alkaline-earth titanates show some remarkable properties. The dielectric constants range from 13 for MgTiO₃ to several thousand for solid solutions of SrTiO₃ in BaTiO₃. Barium titanate itself has a dielectric constant of 10,000 near 120 °C (248 °F), its Curie point; it has a low dielectric hysteresis. These properties are associated with a stable polarized state of the material analogous to the magnetic condition of a permanent magnet, and such substances are known as ferroelectrics. In addition, due to the ability to retain a charged condition, barium titanate is piezoelectric and may be used as a transducer for the interconversion of sound and electrical energy. Ceramic transducers containing barium titanate compare favorably with Rochelle salt and quartz, with respect to thermal stability in the first case, and with respect to the strength of the effect and the ability to form the ceramic in various shapes, in the second case. The compound has been used both as a generator for ultrasonic vibrations and as a sound detector. See PIEZOELECTRICITY.
+
+In addition to important uses in applications such as structural materials, pigments, and industrial catalysts, titanium has a rich coordination chemistry. The formal oxidation of titanium in molecules and ions ranges from –II to +IV. The lower oxidation states of –II and –I occur only in a few complexes containing strongly electron-ion-donating carbon monoxide ligands.
+
+The lower oxidation states of titanium are all strongly reducing. Thus, unless special precautions are taken, titanium complexes are typically oxidized rapidly to the +IV state. Moreover, many titanium complexes are extremely susceptible to hydrolysis. Consequently, the handling of titanium complexes normally requires oxygen- and water-free conditions. See COORDINATION CHEMISTRY.
+
+# Titanium metallurgy
+
+The winning of metallic titanium (Ti) from its ores followed by alloying and processing into forms and shapes that can be used for structural purposes.

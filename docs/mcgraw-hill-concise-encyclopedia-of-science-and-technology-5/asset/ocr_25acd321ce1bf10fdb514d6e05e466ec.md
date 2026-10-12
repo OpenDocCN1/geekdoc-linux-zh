@@ -1,0 +1,125 @@
+# Appendix 2479
+
+geometry, and algaeic topology; Fields Medal, 1962
+
+Milstein, César (1927–2002), British immunologist. With George J. F. Köhler, discovered a laboratory technique for producing monoclonal antibodies, highly uniform immune bodies that are selective in responding to target substances; Nobel Prize, 1984
+
+Minkowski, Hermann (1864–1909), Russian-born German mathematician. Studied the mathematical basis of relativity, notably the concept of the space-time continuum
+
+Minot, George Richards (1885–1950), American physician. With W. P. Murphy, first to recognize the value of liver therapy for pernicious anemia; studied arthritis, rickets, and vitamin B12 deficiency; Nobel Prize, 1934
+
+Mitchell, Peter (1920–1992), British chemist. Explained how plant and animal cells store and transfer energy by creating protonic gradients in the oxidative and photosynthetic mitochondrial processes; Nobel Prize, 1978
+
+Möbius, August Ferdinand (1790–1868), German mathematician and astronomer. Founder of topology; developed the Möbius strip
+
+Mohr, Hugo von (1805–1872), German botanist. Worked on the anathomy and physiology of higher plant forms; discovered protoplasm
+
+Mlahovrich, Andrija (1857–1936), Yugoslav meteorologist and seismologist. Discovered the Morovic seismic instrument
+
+Mohr, Carl Friedrich (1806–1879), German chemist. Developed titration procedures, including use of Mohr's salt
+
+Mohr, Christian Otto (1835–1918), German civil engineer. Studied stress and strains of bodies, and failure of materials; introduced Mohr's stress circle
+
+Mohs, Friedrich (1773–1839), German mineralogist. Developed Mohs's scale of mineral hardness
+
+Moissan, Henri Théodore Élézir (1852–1907), French chemist. First to isolate fluorine; invented an electric furnace and used it to produce synthetic metal compounds and samples of less common metals; Nobel Prize, 1906
+
+Molina, Mario J. (1943– ), American chemist. Demonstrated that chemically inert chlorofluorocarbon (CFC) could be transported up to the ozone layer and could react with ultraviolet light and deplete the ozone layer; Nobel Prize, 1995
+
+Möller, Richard (1863–1935), German physicist and engineer. Presented properties of thermodynamic media in form of charts and diagrams; introduced concept of enthalpy and Möller diagram
+
+Mouiz, Antonio Egas (1874–1952), Portuguese neurosurgeon. Developed cerebral palsy and introduced the prefontal lobotomy
+
+Mond, Jacques (1910–1976), French biologist. With F. Jacob, proposed the concepts of messenger ribonucleic acid and of the operon; Nobel Prize, 1965
+
+Moody, Lewis Ferry (1880–1953), American hydraulic engineer. Made improvements in hydraulic turbines, pumps, and accessories
+
+Moore, Stanford (W. 19.–1920– ), American biochemist. With W. H. Stein, developed technique for determining amino acid sequence in proteins, and applied it to ribonuclease; Nobel Prize, 1972
+
+Mordell, Louis Joel (1888–1972), American-born British mathematician. Worked in number theory; proved the finite basis theorem concerning the finite generation of the group of rational points on an elliptic curve; conjectured that there are only finitely many rational points on a curve of genus greater than 1 (the Mordell conjecture)
+
+Morgagni, Giovanni Battista (1682–1771), Italian anatomist. Founded pathological anatomy; first to describe liver cirrhosis
+
+Morgan, Thomas Hunt (1866–1945), American geneticist, embryologist, and zoologist. Showed that the chromosome theory of heredity; Nobel Prize, 1933
+
+Morgan, William Wilson (1906–1994), American astronomer. Developed methods for investigating more precisely the structure of the Milky Way Galaxy and of other galaxies; collaborated
+
+in developing the Johnson–Morgan system of stellar classification; Fields Medal, 1990
+
+Moran, S. H. (–), American mathematician. With H. L. Johnathan and R. A. Bauti, with H. L. Johnathan and R. A. Bauti, with H. L. Johnathan and R. A. Bauti
+
+Most, Shigefumi (1951– ), Japanese mathematician. Worked in algebraic geometry, particularly on the classification of algebraic varieties of dimension three; Fields Medal, 1990
+
+Morley, Edward Williams (1838–1922), American chemist and physicist. Associated with A. A. Michelson in an experiment on ether drift; researched on variations of atmospheric oxygen content
+
+Morse, Samuel Finley Breese (1791–1872), American inventor. Invented the receiving and sending instruments for the telegraph, and a code for sending message
+
+Mosely, Henry Gwyn Jeffreys (1887–1915), English physicist. Discovered a method for determining X-ray spectra, based on frequency of x-ray spectral lines
+
+Mössbauer, Rudolf Ludwig (1929– ), German physicist. Discovered the properties of recoilless resonance absorption, the ability of some nuclei to emit and absorb gamma rays without energy loss; Nobel Prize, 1961
+
+Mosotti, Ottaviano Fabrizio (1791–1863), Italian physicist. Developed theory of dielectrics, from which he derived the Clausius–Mossotti equation
+
+Mott, Nevill Francis (1905–1996), British physicist. Applied quantum mechanics to study of the particle wave scattering by X. W. Gurney, developed Gurney–Mott theory of photoemission; introduced fundamental concepts elucidating electronic properties of disordered materials; Nobel Prize, 1977
+
+Mottonen, Ben Roy (1929– ), American-born Danish physicist. With A. Bohr, developed the Bohr–Mottelson unified shell and liquid-drop models of atomic nucleus, and which explains nonspherical nuclei; Nobel Prize, 1975
+
+Mott, Louis Eugene Fells (1904–2008), American geneticist. Studied genetic mutation rates under natural and artificial conditions; discovered the effect of a-x-ray on mutation rate; Nobel Prize, 1946
+
+Müller, Johannes Peter (1801–1888), German physiologist and anatomist. Proposed the principle of specific nerve energies, concerning stimuli to sense organs; discovered the Mullerian duct, an embryological structure of the sexual system
+
+Muller, Karl Alex (1927– ), Swiss physicist. With J. G. Bednorz, discovered high-temperature superconductivity in copper oxide ceramic materials; Nobel Prize, 1987
+
+Müller, Paul Herman (1899–1995), Swiss chemist. Discovered the insecticidal properties of DDT; devised the G+I formula; Nobel Prize, 1939
+
+Mulliken, Robert Sangerdon (1896–1986), American chemist. Applied principles of quantum mechanics to study of electron bonding with F. Hund, systematized electronic states of molecules in terms of molecular orbitals; Nobel Prize, 1966
+
+Mullis, Kary B. (1944– ), American chemist. Invented the polymerase chain reaction (PCR) method used for studying DNA molecules; Nobel Prize, 1993
+
+Mumford, David Bryant (1937– ), American mathematician. Worked in algebraic geometry, especially the problems of the existence and structure of varieties of moduli and on the theory of algebraic surfaces; Fields Medal, 1974
+
+Mursi, Alfred J. (1838– ), American pharmacologist. Analyzed the action of nitroglycerin and related vasodilating compounds, leading to the discovery that they release nitric oxide, which relaxes smooth muscle cells, their work, along with the research of Robert F. Furchgott and Louis J. Ignaro, led to the discovery that nitric oxide acts as a signal molecule in the cardiovascular system; Nobel Prize, 1998
+
+Murchison, Frederick Impey (1792–1871), British chemist. Studied the structure of rock formations in Great Britain; with A. Sedgwick, differentiated the Silurian and Devonian
+
+Murray, William Parry (1892–1957), American physician. With G. R. Minot, first to suggest liver diet as a treatment for pernicious anemia; Nobel Prize, 1934
+
+Murray, Joseph (1919– ), American physician. Perfomed the first successful organ transplant of a human organ, a kidney; with E. D. Thomas, helped define and overcome the immunological mechanisms behind organ rejection; Nobel Prize, 1990
+
+Napher or Nappo, John, Laird of Merchiston (1150–1617), Scottish mathematician. Invented the theory of logarithms and developed methods to complete them
+
+Nathans, Daniel (1928–1999), American biologist. Pioneered in the use of restriction enzymes to study the structure and functions of deoxyribonucleic acid (DNA) molecules; Nobel Prize, 1978
+
+Natta, Giulio (1903–1979), Italian chemist. Discovered a mechanism for stereo control, making possible the production of new classes of macromolecules from inersperative new materials; Nobel Prize, 1963
+
+Navier, Claude Louis Marie Henri (1785–1836), French physicist and engineer. Studied animal mechanics and its application to strength of materials, machines, and motion of solid and liquid bodies; formulated Navier–Stokes equations
+
+Néel, Louis Eugène (1904–2000), French physicist. Proposed the theory of behavior of anti-ferromagnetic and other ferromagnetic materials in which the crystalline lattice contains one or more magnetic sub-lattices; Nobel Prize, 1970
+
+Neher, Ewin (1994– ), German biophysicist. With B. Sakmann, using the "patch clamp" technique, developed methods for investigating how single ion channels control the passage of charged ions into and out of cells; Nobel Prize, 1991
+
+Nernst, Hermann Waidr (1864–1941), German chemist. Proposed the heat theorem (third law of thermodynamics); determined the specific heat of water at low temperatures; proposed the law of reaction theory in photochemistry; Nobel Prize, 1920
+
+Neumann, Carl Gottfried (1832–1925), German mathematician. Believed to be found of logarithmic potentials; developed the potential theory
+
+Newton, Issac (1642–1727), English mathematician. Proposed a dynamical theory of gravitation; discovered three basic laws of motion which are the foundations of classical mechanics; made discoveries in optics and mathematics
+
+Newman, Jerry (1954–1981), Russian-born American chemist. Studied the synthesis of inorganic and organic molecules based only on results of experiments or observations subject to chance
+
+Nicholson, Seth Robert (1891–1963), American astronomer. Discovered four satellites of Jupiter; with E. Pett, invented a thermocouple to measure surface temperature of planets
+
+Nicol, William (1768–1851), Scottish physicist. Invented the Nicol prism for investigating the polarization of light
+
+Nicolle, Charles Jules Henri (1866–1936), French physician. Discovered the loose to the transmissiom vector of typhus; Nobel Prize, 1928
+
+Nicolaus (361/362–397/398), C.C., Greek mathematician. Discovered the conchoid
+
+Nirenberg, Marshall Warren (1927– ), American biochemist. Pioneered in deciphering genetic code; Nobel Prize, 1968
+
+Nishina, Yoshio (1900–1951), Japanese physicist. In a study of cosmic rays with O. C. Kuhn, originated the Klein–Nishina formula
+
+Nobel, Alfred Bernhard (1833–1896), Swedish chemist, engineer, and industrialist. Developed and patented a blasting gelatin containing nitroglycerin; established the annual Nobel prizes
+
+Nobel, August Wilhelm (1867–1938), Japanese bacteriologist. First to produce pure cultures of xanthospore; discovered the parasite of yellow fever
+
+Norrish, Donald George Wyerford (1897–1978), British physical chemist. With G. Porter and colleagues, developed methods of flash photolysis

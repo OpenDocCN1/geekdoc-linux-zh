@@ -1,0 +1,86 @@
+
+## Filbert
+A nut from any plant of the genus *Corylus* (Betulaceae), also called hazelnut. About 15 species are recognized, distributed widely over the north temperate zone and ranging in size from shrubs to tall trees. Filberts in commerce are derived mostly from the European species *C. avellana* and *C. maxima*. Hybrids of these with the American species, *C. americana*, are grown sparingly in the eastern United States.
+
+Filberts are grown widely in Europe and in the Mediterranean basin, where much of the crop is consumed locally. Imports to the United States come mostly from Turkey. In the United States, filberts are grown in Oregon and Washington. Filberts are sold in shell, or the kernels are roasted and used in confectionery and baked goods.
+
+[L.H.MacD.]
+
+## Film (chemistry)
+A material in which one spatial dimension, thickness, is much smaller than either two. A film can be conveniently classified as those that support themselves and those that exist only as layers on top of a supporting substrate. The latter are known as thin films and have their own specialized science and technology.
+
+Thin films, from one to several hundred molecular layers, are generally defined as those that lie on a substrate, either liquid or solid. Monomolecular films on the surface of water can be made by adding appropriate materials in extremely small quantity to the surface. These materials are inappreciably soluble in water, rendered so by a large hydrocarbon or fluorocarbon functional group on the molecule or by other means; they are, however, able to dissolve in the surface of water by virtue of a hydrogen-bonding group or groups on the molecule.
+
+Thin films can also be deposited directly onto solid substrates by evaporation of material in a vacuum, by sputtering, by chemical reaction (chemical vapor deposition), by ion plating, or by electrodeplating. **SEE DIAMOND; ELECTROPLATING OF METALS; MONOMOLECULAR FILM; SPUTTERING; VACUUM METALLURGY; VAPOR DEPOSITION.**
+
+Thin films play an extensive role in both traditional and emerging technologies. Examples are foams and emulsions, the active layers in semiconductors, the luminiscent and protective layers in electro-luminescent thin-film displays, and imaging and photoelectric devices. **SEE ELECTRONIC DISPLAY; EMULSION; FOAM; SOLAR CELL.**
+
+Self-supported films have a nominal thickness no larger than 250 micrometers. Films of greater thickness are classified as sheets or foils. Self-supported films are commonly composed of organic polymers, either thermoplastic resins or cellulose-based materials. **SEE POLYMER.**
+
+[S.Ro]
+
+## Filosisia
+A subclass of Rhizopodacea characterized by slender filopodia which rarely anastomose. The two orders are Aconthulinida and Gromiida. **SEE ACONTHULINIDA; GROMIIDA; PROTEZA; RHIZOPODA.**
+
+[PhPh]
+
+## Filtration
+The separation of solid particles from a fluid-solid suspension of which they are a part by passage of most of the fluid through a septum or membrane that retains most of the solids on or within itself. The septum is called a filter medium, and the equipment assembly that holds the medium and provides space for the accumulated solids is called a filter. The fluid may be a gas or a liquid. The solid particles may be coarse or very fine, and their concentration in the suspension may be extremely low (a few parts per million) or quite high (~50%).
+
+The object of filtration may be to purify the fluid by clarification or to recover clean, fluid-free particles, or both. In most filtrations the solids-fluid separation is not perfect. In general, the closer the approach to perfection, the more costly the filtration; thus the operator of the process cannot justify a more thorough separation than is required.
+
+Gas filtration involves removal of solids (called dust) from a gas-solids mixture because: (1) the dust is a contaminant rendering the gas unsafe or unfit for its intended use; (2) the dust particles will ultimately separate themselves from the suspension and create a nuisance; or (3) the solids are themselves a valuable product that must be recovered.
+
+The gas-solids mixture is passed through a bed or filter medium, and the suspended solids are captured. Common types of gas filters are bag filters, granular-beds, precipitators, fabric filters, and cyclones.
+
+Liquid filtration is used for liquid-solid separation in the manufacture of chemicals, polymer products, medicinal products, and for sewage disposal. Filter media include filter paper, filter cloth, granular bed, and various types of filter presses.
+
+The filter medium is selected based on the properties of the suspended solids and the filter liquor. Filter medium types include woven cloth, sintered metal, ceramic, and membranes.
+
+The filtration process involves two steps: capture of the solids on the filter medium, and the washing or rinsing of the filter cake to remove soluble impurities.
+
+## Fine structure (spectral lines)
+The closely spaced groups of lines observed in the spectra of the lightest elements, principally hydrogen and helium. In atoms containing several electrons, fine structure can be due to various factors, such as spin-orbit coupling.
+
+In atoms having several electrons, this fine structure becomes the multi-split structure resulting from spin-orbit coupling. This gives rise to the fine-structure of spectral lines that are much broader than the fine structure of lighter elements.
+
+In atoms having several electrons, this fine structure becomes the multi-split structure resulting from spin-orbit coupling. The components of such multiplets are characterized by the term symbol and by the angular momentum quantum number $j$. The angular momentum coupling scheme used is specified by the symbols L-S or j-j coupling.
+
+[FAJ.W]
+
+## Fingerprint
+Distinctive ridges that appear on the balls of the fingers and thumbs of most humans and some apes. Fingerprint patterns and ridge configurations are highly characteristic and can be used for personal identification.
+
+In forensic science, fingerprints are used to identify suspects and victims in criminal investigations. A fingerprint is considered a unique identifier, no two individuals have exactly the same pattern.
+
+Fingerprint patterns are classified into three basic types: arch, loop, and whorl. Arch patterns account for about 5% of all fingerprints, loops for 65%, and whorls for 30%.
+
+The study of fingerprints is called dactyloscopy. Automated Fingerprint Identification Systems (AFIS) are computer programs used to compare and match fingerprints.
+
+Fingerprints are also used for security purposes, such as unlocking smartphones and authenticating transactions.
+
+The ridge patterns on the fingertips are formed during fetal development. The patterns are determined by genetics and do not change throughout a person's lifetime.
+
+To take a fingerprint, a person's fingertip is pressed against a surface, such as ink or a lifting tape, to create a visible impression of the ridge pattern.
+
+Fingerprints can be lifted from surfaces using adhesives or chemical methods. The lifting material is then fixed and analyzed.
+
+The analysis of fingerprints involves the identification of minutiae, which are specific points of interest such as ridge endings, bifurcations, and short ridges.
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_897_0.png)
+
+parallel, diverge, and surround or tend to surround the pattern area.
+
+Within the pattern areas of loops and whorls are the focal points which are used in the detailed classification. These points are called the delta and the core. The delta is that point on a ridge at or in front of and nearest the center of the divergence of the type lines. A core may be defined as that point on a ridge which is located in the approximate center of the finger impression. The distinctive ridges of the palms of the hands and the soles of the feet closely resemble those of the fingerprint and can be identified in the same way. Footprints of persons having no fingers are taken for record purposes. Fingerprint, palm print, and sole print identifications have all been accepted as evidence by the courts. See EPIDERMAL RIDGES.
+
+## Finite element method
+A numerical analysis technique for obtaining approximate solutions to many types of engineering problems. The need for numerical methods arises from the fact that most practical engineering problems analytical solutions do not exist. While the governing equations and boundary conditions can usually be written for these problems, difficulties introduced by either irregular geometry or other discontinuities render the problems intractable analytically. To obtain a solution, the engineer must make simplifying assumptions, reducing the problem to one that can be solved, or a numerical procedure must be used. In an analytic solution, the unknown quantity is given by a mathematical function valid at an infinite number of locations in the region under study, while numerical methods provide approximate values of the unknown quantity only at discrete points in the region. In the finite element method, the region of interest is divided up into numerous connected sub-regions or elements within which approximate functions (usually polynomials) are used to represent the unknown quantity.
+
+The physical concept on which the finite element method is based has its origins in the theory of structures. The idea of building up a truss structure by fitting together a number of structural elements (see illustration) was used in the early truss and framework analysis approaches employed in the design of bridges and buildings in the early 1900s. By knowing the characteristics of individual structural elements and combining them, the governing equations for the entire structure could be obtained. This process produces a set of simultaneous algebraic equations. The limitation on the number of equations that could be solved posed a severe restriction on the analysis. The introduction of the digital computer has made possible the solution of the large-order systems of equations.
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_897_1.png)
+
+The finite element method is one of the most powerful approaches for approximate solutions to a wide range of problems in mathematical physics. The method has achieved acceptance in nearly every branch of engineering and is the preferred approach in structural mechanics and heat transfer. Its application has extended to soil mechanics, heat transfer, fluid flow, magnetic field calculations, and other areas.
+
+## Finite mathematics
+Those parts of mathematics which deal with finite sets. More generally, finite mathematics is taken to include those fields which make no use of the concept of limit; thus linear programming, which finds maxima and minima through the four arithmetic operations, is included, whereas classical optimization, which uses differential calculus, is excluded. Other subjects generally considered in the finite mathematics include finite set theory; logic; the study of finite groups, rings, and

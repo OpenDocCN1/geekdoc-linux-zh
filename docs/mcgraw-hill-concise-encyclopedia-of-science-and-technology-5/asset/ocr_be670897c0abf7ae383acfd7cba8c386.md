@@ -1,0 +1,29 @@
+![](bbox=[0.07, 0.05, 0.45, 0.2])
+
+T and S will always lie on the straight line OTS, triangles OBS and TCS are always similar because lengths OB, BS, CT, and C'S are constant and OB is always parallel to CT. Distance OT always maintains a constant proportion to distance OS because of the similarity of the above triangles. Numerous modifications of the pantograph as a copying device have been made. See FOUR-BAR LINKAGE.
+
+A second use of the pantograph geometry is seen in the collapsible parallel linkage used on electric locomotives and rail cars to keep a current-collector bar or wheel in contact with the overhead wire. Two such congruent linkages in planes parallel to the train's motion are affixed securely on the top of the locomotive with joining horizontal members perpendicular to each other. The upmost member collects the current, and powerful springs thrust the configuration upward with sufficient pressure normally to make low-resistance contact with wire to collector.
+
+# **Pantothenic acid**  A member of the B vitamin group with the structural formula
+
+![](bbox=[0.15, 0.49, 0.4, 0.56])
+
+It is a light-yellow, viscous oil which is readily soluble in H₂O. Pantothenic acid is widely distributed, and liver, kidneys, fresh green vegetables, and egg yolks are among its best sources. Losses of the vitamin during cooking are minimal, as it is present in stable conjugated form in food.
+
+No definite pathologic lesions due to a specific pantothenic acid deficiency have been reported in humans. The factors affecting the requirement for pantothenic acid are probably similar to those altering the needs for the other B vitamins. Pantothenic acid has been reported to improve the reactions of young men to stress. The widespread occurrence of pantothenic acid assures protection against the deficiency state under most conditions. Most Americans eat 10 mg of pantothenic acid per 2500 cal of good diet. The daily requirement is probably about 3–5 mg. See VITAMIN.
+
+# **Papaverales**  An order of flowering plants, division Magnoliophyta (Angiospermae), subclass Magnoliidae of the class Magnoliopsida (dicotyledons). The order consists of only two families: Papaveraceae with some 200 species, and Fumariaceae with about 400 species. Within its subclass, the order is marked by its syncarpos gynoecium, parietal placentation, and only two ( seldom three) stamels. Most of the species are herbaceous, and many of them contain isoquinoline alkaloids similar to those in the order Ranunculales. The Papaveraceae, with regular flowers, numerous stamens, and a well-developed laticifer system, include the poppies (Papaver and related genera; see illustration), blood-root (Sanguinaria), and celadine (Chelidonium). Papaver somniferum is the source of opium. The Fumariaceae, with four to six stamens, irregular flowers that usually have some of the petals
+
+![](bbox=[0.55, 0.04, 0.92, 0.27])
+
+spurred or saccate, and no latex system, include the bleeding heart (*Dicentra spectabilis*) and some other common ornamentals. See MAGNOLIIDAE; MAGNOLIOPHYTA; MAGNOLIOPSIDA; POPPY; RANUNCULEAE.  [A.G.; T.M.Ba.]
+
+# **Paper**  A flexible web or mat of fibers isolated from wood or other plants materials by the operation of pulping. Nonwovens are webs or mats made from synthetic polymers, such as high-strength polyethylene fibers, that substitute for paper in large envelopes and tote bags.
+
+Paper is made with additives to control the process and modify the properties of the final product. The fibers may be whitened by bleaching, and the fibers are prepared for papermaking by the process of refining. Stock preparation involves removal of dirt from the fiber slurry and mixing of various additives to the pulp prior to papermaking. Papermaking is accomplished by applying a dilute slurry of fibers in water to a continuous wire or screen; the rest of the machine removes water from the fiber mat. The steps can be demonstrated by laboratory handsheet making, which is used for process control.
+
+Although paper has numerous specialized uses in products as diverse as cigarettes, capacitors, and counter tops (resin-impregnated laminates), it is principally used in packaging (~50%), printing (~40%), and sanitary (~7%) applications.
+
+Material of basis weight greater than 200 g/m² is classified as paperboard, while lighter material is called paper. Production by weight is about equal for these two classes. Paperboard is used in corrugated boxes; corrugated material consists of top and bottom layers of paperboard called linerboard, separated by fluted corrugating paper. Paperboard also includes chipboard (a solid material used in many cold-cereal boxes, shoe boxes, and the backs of paper tablets) and food containers.
+
+Mechanical pulp is used in newsprint, catalog, and other short-lived papers; they are only moderately white, and yellow quickly with age because the lignin is not removed. A mild bleaching treatment (called brightening) with hydrogen peroxide or sodium dithionite (or both) assists some of the color of the lignin without lignin removal. Paper made with mechanical pulp and coated with clay to improve brightness and gloss is used in 70% of magazines and catalogs, and in some enamel grades. Bleached chemical pulps are used in higher grades of printing papers used for xerography, typing paper, tablets, and envelopes; these papers are termed uncoated wood-free (meaning free of mechanical pulp). Coated wood-free papers are of high to very high grade and are used in applications such as high-quality magazines and annual reports. They are coated with calcium carbonate, clay, or titanium dioxide.

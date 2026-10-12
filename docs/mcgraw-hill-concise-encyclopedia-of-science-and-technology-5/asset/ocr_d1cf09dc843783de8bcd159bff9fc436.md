@@ -1,0 +1,43 @@
+# Pantograph 1605
+
+of the pancreas. Production of altered mucus leads to dilation of the exocrine ducts (cystic), destruction of acinar tissue, and re-placement of the destroyed tissue by fibrosis or connective tissue (fibrosis). The islets are not affected by this disease. Elevation in secretion of sodium and chloride in sweat is also common.
+
+Acute hemorrhagic pancreatitis is a serious disease of unknown etiology which causes sudden liberation of activated pancreatic enzymes that digest the pancreatic parenchyma. The digestive process leads to lysis of fat and production of calcium soaps. In addition, rupture of pancreatic vessels occurs with resultant hemorrhage and shock. This disease is associated with biliary tract disease, especially gallstones (cholelithiasis), al-coholism, hyperlipidemia, and hypercalcemia. See ALCOHOLISM; GALLBLADDER DISORDERS.
+
+Chronic pancreatitis, perhaps better designated chronic re-lapsing pancreatitis, is a condition in which recurrent episodes of pancreatitis occur without the production of symptoms or with the production of mild symptoms. Destruction of the pancreatic tissue, with repair by fibrosis, calcification, and cyst formation, is frequent.
+
+Diabetes mellitus is the principal disease associated with the endocrine portion of the pancreas. Two clinical forms of the disease are recognized—insulin-dependent diabetes mellitus and non-insulin-dependent diabetes mellitus. While many factors are involved in the causation of this disease, basically the disease is a result of the failure of the beta cells of the pancreas to produce appropriate kinds and amounts of insulin to meet metabolic needs. See DIABETES.
+
+Tumors of the pancreas can be either benign or malignant. They affect both the endocrine and exocrine portions of the pan-creas. Benign tumors of the exocrine pancreas are extremely rare. Malignant tumors of the exocrine pancreas arise most frequently from the pancreatic ducts. Acinar carcinomas also exist but are very rare. Exocrine pancreatic carcinomas are very malignant tu-mors. Islet cell lesions are quite rare but may be associated with increased hormone production. The tumors can be single or mul-tiple, benign or malignant, and they can form anywhere in the pancreas. Hyperfunction of the islets of Langerhans can result in three distinct clinical syndromes: hyperinsulinism and hypo-glycemia, the Zollinger-Ellison syndrome (gastrinoma), and mul-tiple endocrine neoplasia. See ONCOLOGY; PANCREAS. [HTH.N]
+
+# Panda
+
+The name for two species of carnivores in the rac-coon family, Procyonidae, both of which are found in Asia. The red panda (*Ailurus fulgens*) inhabits the forested regions of the Himalayas and western China. It has thick fur which gives it a heavy stocky appearance. Actually, it weighs an average of 10–12 lb (4.5–5.5 kg). The fur is black on the lower parts and red on the back. The face is white with a dark stripe from each eye on to the corner of the mouth. The red panda is primarily a vegetarian, feeding on lichens, roots, and bamboo shoots. It is arboreal, nesting in a hollow tree or in the fork of a tree. The giant panda (*Ailuropoda melanoleuca*) superficially resembles a bear and may be a true member of the Ursidae. Little is known about the natural history of this animal; its diet of bamboo restricts it to the bamboo forests located in cold, damp mountainous ar-eas of central China. The adults weigh 200–300 lb (90–135 kg) and are somewhat smaller than the brown bear. See CARNIVORA. [C.B.G]
+
+# Pandanales
+
+An order of monocoyledons, the composi-tion of which only recently has been revealed by deoxyribonu-cleic acid (DNA) sequence studies of four genes. Included are four families: Pandanaceae (800 species; the screwpine fam-ily), Cyclanthaceae (230 species; the Panama hat family), Sten-onaceae (35 species), and Velloziaceae (200 species). Pan-danaeaceae are often lianas or large herbs from the Old World; Cyclanthaceae are herbs or lianas from the New World tropics; Stemonaceae are herbs or lianas of the Old World (but with one species in the southeastern United States); and Velloziaceae are
+
+herbs or small shrubs of Africa and particularly South Amer-ica, with one genus in southeast China. Cyclanthaceae, Pan-danaeaceae, and Stemonaceae have flower parts in twos or fours, which is unusual among monocoyledons, in which threes are most common.
+
+Several species in Pandanales are economically important. The leaves of Pandanaceae are fibrous and used for making rope and roofing, and the fruits are eaten in many areas. Cy-clothanthaceae leaves are fibrous and used for making hats, including the manufacture of Panama hats. See AEECHIDAE; LILIOPSIDA; MAC-ROSLYTHIA; PLANT KINGDOM. [M.W.CJ]
+
+# Panel heating and cooling
+
+A system in which the heat-emitting and heat-absorbing means is the surface of the ceiling, floor, or wall panels of the space which is to be envi-ronmentally conditioned. The heating or cooling medium may be air, water, or other fluid circulated in air spaces, conduits, or pipes within or attached to the panel structure. For heating only, electric current may flow through resistors in or on the panels. See ELECTRIC HEATING.
+
+Heat energy is transmitted from a warmer to a cooler mass by conduction, convection, and radiation. The output from heating surfaces comprises both radiant and convective components in varying proportions. In panel heating systems, especially the ceiling type, the radiation component predominates. See RADi-ANT HEATING.
+
+When a panel system is used for cooling, the dew-point tem-perature of the ambient air must remain below the surface tem-perature of the heat-absorbing panels to avoid condensation of moisture on the panels. Panel cooling is effective for preventing the disagreeable feeling of cold air blown against the body and min-imizes the occurrence of summer colds. See COMFORT HEATING; HOT-WATER HEATING SYSTEM. [E.L.W./R.Ro]
+
+# Pantodonta
+
+An extinct order of relatively large placental mammals represented by Paleocene-Eocene fossils from west-ern Europe, North America, and eastern China. Pantodonts were an early evolutionary experiment in large-bodied herbivory by primitive placental mammals. They first appeared in Asia during the early Paleocene and disappeared during the middle Eocene, leaving no descendants. With the possible exception of the most primitive pantodonts, all were herbivores, and pantodonts were either the largest or among the largest mammals of their time. The adaptive radiation of pantodonts was diverse and encom-passed mammals as different as small [1 kg (2 lb) or less in body mass], arboreal herbivores, and large [650 kg (1430 lb)], ground-slot, terrestrial herbivores. See Eocene; PALEOGENE.
+
+Pantodonts are unique among placental mammals in having upper third and fourth premolar tooth crowns in there were V-shaped crests. All pantodonts were obligate quadrupeds, with four nearly equal-sized limbs. Most pantodonts had large tusks and long, heavy tails. When compared to living mam-mals, many pantodonts would have looked somewhat like bears, pigs, or small hippos. See DENTIION; MAMMALIA.
+
+The most primitive pantodonts are assigned to the family Bemalambulidae. All other pantodonts belong to the subor-der Eupantodontida, which diverged early into the superfamilies Pantolambodontidea and Pantodontobdoida. The pantolam-bodontoids include the Asian family Pantolambodontidae and the North American family Titanoididae, and the South American genus Alacidocorbinia. The pantodontoboids include the North American families Pantolambidae and Barylambidae and the more cosmopolitan (known from North America and Eurasia) family Coryphodontidae. [S.G.L]
+
+# Pantograph
+
+A four-bar parallellinkage, with no links fixed, used as a copying device for generating geometrically similar figures, larger or smaller in size, within the limits of the mechanism. In the illustration the curve traced by point T will be similar to that generated by point S. This similarity results because points

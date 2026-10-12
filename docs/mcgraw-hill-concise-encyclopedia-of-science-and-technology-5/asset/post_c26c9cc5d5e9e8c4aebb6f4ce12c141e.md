@@ -1,0 +1,488 @@
+
+### Protozoa—cont.
+
+- Coelotrichophora, 487*
+- Coxonimatoidea, 589*
+- Diplomericida, 677*
+- Enridia, 725*
+- Entrotrichimorpha, 826, 827*
+- Eucirrina, 852*
+- Euglena, 852*, 852–853*
+- Eugraphomem, 853*
+- Filosa, 877*
+- Foraminiferida, 91, 913*
+- Fucinocimata, 952*
+- Granotrichimorpha, 1016*
+- Gregaria, 1027
+- Gromia, 1029*
+- Gymnosomatida, 1034*
+- Haploporoimca, 1039*
+- Haplomonada, 1045–1046*
+- Haplosporoda, 1046*
+- Halooproidea, 1059*
+- Heliozoa, 1062, 1062*
+- Helealecticida, 1073*
+- Hotochicida, 1085, 1086*
+- Hymenostomatida, 1113, 1114*
+- Hypermastigida, 1117*
+- Hypotrichida, 1121*
+- Kinetozalaga, 1216*
+- Labyneurina, 1221*
+- Lobosa, 1267*
+- Mantinopoda, 1332, 1333*
+- medieval parasitology, 1338
+- Microprora, 1391*
+- morophlogia, 1796
+- Myxozoa, 1461–1462*
+- Naegleriomorpha, 1473
+- Nummulidia, 1524*
+- nutrition, 1797
+- Oraloidia, 1532*
+- Oosomatomonida, 1533*
+- Oligotrichida, 1540*
+- Ovinozoria, 1592*
+- parasite, 1797
+- Peritrichida, 1634*
+- Phaatomastigophorea, 1683*
+- Protozoa, 1793
+- Protozoophora, 1792
+- radionica, 1862"
+- regeneration, 1884
+- reproduction, 1797
+- Ratrimonida, 1909*
+- Riostrophida, 1914*
+- Secenoida, 1945*
+- Sarcodictyida, 1945–1946*
+- Selenidiigala, 2008*
+- Spironycha, 2086–2087*
+- Sporozoa, 2088*
+- Suctoria, 2143*
+- Tektomora, 2207*
+- Tlagamontida, 2233*
+- Trichodinida, 2243*
+- Trichomona, 2254*
+- Tympanomastigida, 2278*
+- Volvocidae, 2357
+- Xenophytomada, 2407–2408*
+- Xenomastigophorea, 2419, 2420*
+- Zooomastigophorea, 1503
+
+### Prussia
+
+- **Prussia**, 1797*
+- Puma, 196
+- Puna, 196
+- Punca, 196
+- Puncatrichia, 196
+- Puncicida, 196
+- Punicida, 196
+
+### Ps
+
+- Psilocybe, 1999, 1999*
+- Psilomastigida, 2006*
+- Pseudolommatophora, 2137*
+- Psilotum, 1707
+- Psyche, 1816, 1817*
+- Pulmonata, 2257
+- Pulsator roraria, 91
+- Pulverizer, 1817
+- Punicea, 1707
+- Punctum, 1707
+- Punica, 1707
+
+### pulse
+
+- pulse, 1817, 1817*
+- Q, 1817, 1817*
+- Qaidiidae, 1817, 1817*
+- Qal, 259
+- Quaquaia, 1817
+- Qubal, 1817
+
+## 2632 Quantum mineroLOGY
+
+### Quantum mechanics—cont.
+
+- gauge theory, 972–973
+- half-life, 938
+- hidden variables, 1076
+- 1-spin, 1123
+- matter, 1530
+- parity, 1512–1513
+- perturbation, 1638–1639
+- photon, 1637
+- Planck’s constant, 1696*, 1828
+- Planck’s radiation law, 936, 1696*
+- probability considerations, 2231
+- quantization, 1829
+- quantum electronic structure, 1821–1822
+- quantum geometry, 1824, 1829*
+- quantum statistics, 1830*
+- vacuum matrixes, 1868
+- relaxation time of electrons, 1891
+- Schrodinger’s wave equation, 1829, 1830, 1869
+- spin (quantum mechanics), 2084*
+- sum rule, 2149
+- supermagnetism, 2160–2161
+- superposition principle, 2162–2163
+- symmetry theory, 2164
+- symmetry laws, 2180
+- uncertainty principle, 1828, 2296–2297
+- variational methods, 2326
+- wave function, 1829
+- wave mechanics, 2271*
+- wave-particle duality, 1828–1829
+
+- Quantum-microscopic, 1839*
+- Quantum numbers, 829, 1830*
+- Quantum solids, 1839*
+- Quantum statistics, 1830*
+  - anyons, 1488*
+  - Fermi-Dirac statistics, 876–877
+- Quantum theory of matter, 1831*, 1831*
+- Quantum theory of measurement, 1831*
+- Quantum well injection transistor-time diodes (QWITT), 1137, 1359, 1378
+- Quark-gl-plasmon, 1831*
+- Quartine, 898, 1825–1826
+- quartz, 721, 1831–1833*
+  - barrels, 2353, 2553*
+  - deep nuclear collisions, 628
+  - elementary particle, 802, 804
+  - flavor, 893
+  - fundamental interactions, 946, 947
+  - gluons, 1007
+  - I-spin, 1123
+  - lepton, 1246
+  - median, 1319
+  - meson, 1319
+  - quantum chromodynamics, 1825–1826
+  - relativistic heavy-ion collisions, 1886–1887
+  - strange particles, 2122
+  - supercritical fluid, 2158
+  - upper particle, 2388
+- Quasirigidity, 1833
+- Query—see BlackBox
+- Quartz, 1125, 1833*
+  - quartz:
+    - agate, 42*
+    - amethyst, 56*
+    - chalcedony, 412*
+    - jasper, 1201*
+    - moss, 1268
+    - onyx, 1544*
+    - pyrite, 1675
+    - pyroxmorph materials, 1686
+    - polymorphum, 1748
+    - sand, 1833*
+    - sand, 1943
+    - sandstone, 1943
+- Quartz clock, 1833*
+- Quartz diorite see Tonalite
+- Quartzite, 1833*
+- Quartz, 197, 1833, 1834*
+  - galeno, external, 956
+  - gravitational lens, 1023
+  - superluminous motion, 2160
+  - variation, 2206
+  - x-ray absorption, 2401
+- Quasar, 1834*, 2157
+- Quasistellar, 1834, 1835*
+- Quasistellar light scattering, 1835*
+- Quedens, 1835
+- Quenness, 1083–1084
+- Quiescence, 1727
+- Quantam monitum compound, 145
+- Quantum ammonium salt, 1835*
+- Quantaureus, 1833, 1835*
+- Quantrobo, 1836*
+- Quasidrandron, 1857
+- Quashings, 1323, 1324
+- Queasy, 7841
+- Query By Example (QBE), 619
+- QUEST see Quantum electronic structure
+- Quasiconductors, 1836
+- Quasine, 1836*
+- Quasine, 457, 984, 1836*
+- Quinone, 1836, 1837
+- Quinine, 1836, 1837
+- QUERTY-logic, 2079, 2291
+
+## R
+
+- R Coronae Borealis stars, 2326
+- Rabbi, 164, 1145
+- Rabbit, pos, see Infectious myomatosis
+- Rabios, 1839*
+- Raccoon, 1839
+- Rad, 96, 97, 1839*
+- Radial, 1839–1840*
+  - as gravitational control, 56–57
+  - aetherspace, 58*
+  - automatic landing system, 225*
+  - continuous power, 483, 547*
+  - Doppler, 636, 697
+  - echo hole, 728*
+  - electrical noise generator, 759
+  - ground-probing, 1028*
+  - matter, 1379
+  - microwaveal, 1377–1378*
+  - microvase, 1393
+  - mixer, 1412
+  - monopole, 1434*
+  - moving target indication, 1444*
+  - passive, 1638*
+  - plotting, 1687
+  - remote sensing, 1734
+  - precision approach, 1766*
+  - surveillance, 2120
+  - radio direction, 92
+  - aetherspace, 2120–2121*
+  - surveillance, 2127*
+  - synthetic aperture radar, 2184, 2185*
+  - thunderstorm, 2236
+  - tuning, 2282*
+  - weather observations, 2380
+- Radar-reflecting materials, 1840–1841*
+- Radar: alternator, 91–92
+- Radar astronomy, 2160
+- Radar meteorology, 1841
+- Radar surveillance, 2120
+- Radial bearing, 139–141
+- Radial diffusion, 122
+- Radial duct, 2243
+- Radial machine, 1841*
+- Radius, 1841–1842
+- Radiant heating, 1842*, 1846
+- Radiation, 1846*
+  - alpha particle, 88*
+  - cosmic background, 2307
+  - dosemeter, 699
+  - electromagnetic see Electro-nuclear
+  - radiation:
+    - annihilation, 813
+    - dose powermeter, 820–821
+    - light curves, 1251
+    - nuclear radiation, 1513
+    - radioactivity and radiation applications, 1858
+- Radiodiode, 1863*
+  - solar, 2041
+  - spheroidrons, 2183–2194
+  - spherions, 2212–2213
+  - tunnel, 2305
+  - units of measurement, 2304–2305
+  - Van Allen radiation, 2212–2322
+- Radiation biology, 1842, 1843
+- Radar, 8309, 1049
+  - ramming radiation, 1842, 1843
+  - nonionizing radiation, 1843
+  - space medicine, 38
+  - stardust, 2213*
+  - ultroviolet radiation (biology), 2296
+- Radiation biophysics, 255
+- Radiation chemistry, 1842–1844
+- Radiation damage, 386
+- Radiation change to materials, 1844
+- Radiation counter, 1961–1962
+- Radiation detector, 1861–1863
+  - correlation counter, 1961, 1965
+  - see also Particle detectors
+- Radiation hardening, 1845
+- Radiation lava, Planck’s, 936, 1696
+- Radiation pressure, 1845
+- Radiation protection, 1816
+- Radiation shielding, 1049, 1845
+- Radiation therapy, 1845, 1863
+- Radiative correction, 214
+- Radiative transfer-model recombinati, 783
+- Radiative transfer, 1845, 1846
+- Radiolar, 937, 1846
+- Radio, 1846*
+  - 853/86, 1872
+  - 884*
+  - acceleration-modulation, 105, 106*
+  - anternta (electromagnetism), 131–133
+  - bandwidth requirements, 218, 250
+  - frequency modulator, 535, 956
+  - mobile, 14112–1413
+  - navigaton aids, 92
+  - stereophonic radio transmission, 2114
+  - radio altimeter, 92
+- Radio astronomy, 175–176, 189
+- radio astronomy, 946, 1847
+  - extraterrestrial intelligence, 864
+  - matter and radio galaxies, 1847
+  - high-energy astrophysics, 181, 196–197
+  - HII regions, 1847
+  - Hygen line, 1847
+  - molecular cloud, 1419–1420
+  - molecular line, 1847
+  - radio star, 1847
+  - radio union, 1846–1847
+  - solar system astronomy, 1847
+  - superconducting devices, 2154
+  - superficial motion, 2160*
+  - superqua remnant, 1847
+- radio band, 1846–1848*
+  - AM medium-frequency band, 1848
+  - digital audio, 1088
+  - FM VHF band, 1848
+  - frequency-division multiplex, 681
+  - frequency modulation, 935
+  - frequency-modulation radio, 935
+  - jamming, 1201
+  - near-space allocations, 1851, 1852
+  - satellite, 1848
+  - shortwave, 1848
+- radio broadcast network, 1848–1849
+- Radio compass, 1849
+- Radio-detection and ranging see Radar
+- Radio-frequency amplifier, 1849
+- radio-frequency impedance measurements, 1849–1850
+- Radio-frequency interference (RFI), 757
+- Radio-frequency measurement, 837
+- Radio-frequency spectrum analyser, 2077
+- Radio-frequency SQUID, 1302
+- Raidi, 414
+- Radio galaxies:
+  - quasars, 1834
+  - radio emission, 1847
+  - radio navigation, 1469
+- Raido popping system, 1850
+- Radio range, 697, 698
+- radio receiver, 1850, 1851
+  - automatic data-control (ADC), 224
+  - automatic gain control (AGC), 224–225
+  - hetrodyne principle, 1072
+  - intermediate-frequency amplifier, 1175
+  - mixer, 1411–1412
+  - selectivity, 1078
+  - spectrum scanner, 2076–2077
+  - spectrum scanner, 2229
+- radio sources (astronomy):
+  - pulsar, 1806, 1807*
+  - superova, 2161
+  - spherionr, 2207
+- Raido star
+  - electrical noise generator, 759
+  - radio emission, 1847
+- Raido telescope, 1846, 1852
+- Raido tower, 1891
+- Raido tower, 2252
+- Raido transmitter, 1852, 1853
+- Raido universe, 1846, 1847
+- Raido wave, 2374–2375
+- Raido wave propagation, 1853, 1854
+  - electromagnetic wave transmission, 773–774*
+  - tropospheric scintill, 2277
+- Radioactive beams, 1857
+- Radioactive decay:
+  - radon, 1864, 1865
+  - line-integral measurement, 2241
+  - see also Radioactivity
+- Radioactive fallout, 1854
+- Radioactive isotope, 1863
+  - radio-chemical, 1859
+  - radiotherapy, 1863
+- Radioactive materials, 627
+- Radioactive minerals, 1854, 1855*
+  - carrinite, 373, 374
+  - thermite, 2224
+  - thorium, 2224
+  - uranine, 2308*
+- Radioactive nuclei, 1861–1862
+- Radioactive constants, 1855
+- radiochemistry, 1859
+- radioactivity, 1859–1860
+- Radioactive waste management, 1869, 1885, 1856*
+- Radioactivity, 1855, 1858
+  - activation analysis, 22
+  - alpha-particle decay, 1854, 1858
+  - angular momentum, 1157
+  - background count, 290
+  - beta-particle decay, 1857
+  - beta-particles, 270–271*
+  - decomposition of radioactive materials, 627
+  - dealey radioactivity, 1858
+  - environment radioactivity, 1858
+  - environmental radioactivity, 831
+  - gamma-ray decay, 1857
+  - heavy water detector, 962
+  - half-life, 1039
+  - heat flow in Earth, 719
+  - heavy cluster decay, 1858, 1858
+  - level-flowing, 274
+  - mass, 1351
+  - matter phase, 1370, 1371
+  - proton radioactivity, 1858
+  - radiation chemistry, 1843, 1844
+  - radioactive series decay, 1856
+  - rock age determination, 1926, 1927
+  - spontaneous fission, 1857
+  - transition rates and decay laws, 1856
+  - radioactivity and radion applications, 1858
+- Radioactivity standards, 1858
+- Radioastronomy, 1860
+- Radiochemistry see Radioactive, 1859
+- Radiochemical dating, 9–10, 1858–1859
+- Radiochemical laboratory, 1859
+- Radiochemistry, 1859*
+- Radium: see Radium, 1863
+  - radioactivity, 2231
+  - computerized tomography, 529
+  - mammography, 1310
+  - microradiography, 1390–1391
+- Radiomimetic, 1860, 1861*
+  - radiotope, 1861
+- Radiosynthesis, 1861, 1097, 1178
+  - isotopic irradiation, 1198–1199*
+  - radiotrace method, 1151
+  - radiotrace tracer, 1855
+- Radiotrace, 1859
+  - radiotrace dating, 1858, 1859
+  - radiotrace method, 1859
+- Radiotherapy, 1859, 1860
+- Radiotoxicology, 1861
+- Radiotoxicology (biology), 1861
+- Radiotoxicology (chemistry), 1861, 1862
+- Radiotoxica assay, 1632
+- Radionuclides, 21, 1860
+- Radioles, 1521
+- Radiolucent, 1575
+- Radioprotective:
+  - biological, 1845
+  - isotopic irradiation, 1198–1199
+  - medical research, 1346, 1348
+  - nuclear medicine, 1511
+  - radial reaction, 1513
+  - oncology, 1549
+- Radiumium:
+  - acustic, 17
+  - medical technological facilities, 1379
+- Radiance, 1841, 1842
+- Radiometer, 1847
+- Radiometry, 312, 863
+- Radiometer, 2380
+- Radiometer dating, 620
+- Radiometion, 312, 863
+- Radiometer, 2380
+- Raidometer, 2380
+- Radiotelecom, 1854, 1855, 1863, 1864
+- Raidometer, 1865
+- Raidon, 1864, 1865
+- Raidon, 1864
+- Raidon, 1864
+- Raidon:
+  - Raidollite, 832
+  - Raidullite, 354
+  - Raidullite, 354
+  - Raidullite:
+    - Raidullite, 354
+    - Raidullite:
+      - subway engineering, 2143
+      - traffic-control systems, 2255–2256
+  - Raidod control systems, 1865, 1866
+  - Raidontic, 2267, 2268
+  - Raidorway engineering, 2142
+    - transport engineering, 2263–2264
+- Railroad terminal, 1865

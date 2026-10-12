@@ -1,0 +1,574 @@
+
+## 氨基酸
+
+- 碎米荠属（Aegopodium） 342, 679
+- 伊俄拉斯（Aeolus）, 721
+- 水母素（Aequorin） 772
+- 气杆菌（Aerobacter） 39
+- 气杆菌 种（Aerobacter sp.） 1182
+- 假单胞菌属（Aeromonas） 14, 39
+- 假单胞菌属（Aeromonas） 9, 14, 39
+- 假单胞菌属（Aeromonas） 5, 7
+- 假单胞菌属（Aeromonas） 14, 39
+- 假单胞菌属（Aeromonas） 5, 7
+- 假单胞菌属（Aeromonas） 14, 39
+- 气生假单胞菌（Aeromonas hydrophila）, 61
+- 盐生假单胞菌（Aeromonas salinicola）, 299
+- 蛾属（Aethes） 221
+- 病因学（Aetiologiae）, 350, 464, 1078
+- 银（Ag） 1, 791
+- 蘑菇属（Agaricus）, 54
+- 双孢蘑菇（Agaricus campestris）, 42
+- 双孢蘑菇（Agaricus bisporus）, 316
+- 蘑菇（Agaricus compernis）, 316
+- 灰盖蘑菇（Agaricus fuligineus）, 316
+- 海岸蘑菇（Agaricus litoralis）, 42, 316
+- 蘑菇属 种（Agaricus sp.）, 316
+- 凸盖蘑菇（Agaricus umbonatus）, 316
+- 蘑菇属（Agaricus） 316
+- 蘑菇属 种（Agaricus sp.） 316
+- 伞菌门（Agaricomycetes）, 211
+- 伞菌纲（Agaricales）, 54, 211
+- 聚集（Aggregation）, 799
+- 聚合体（Aggregate） 1205
+- 聚结（Agglomeration）, 218, 241
+- 激动剂（Agonist）, 1065
+- 激动剂（Agonists）, 1065
+- 灰鼠（Agouti）, 174, 1454
+- 农业企业（Agribusiness） 1650
+- 卵形鱼藤（Agriophryne ovum） 276, 1125
+- 农光互补（Agrivoltaics） 1267
+- 地老虎属（Agrotis）, 335
+- 农业（Agriculture）, 1650
+- 农业的（Agricultural） 1650
+- 工农复合型的（Agroindustrial） 1650
+- 阿瓜多（Aguado）, 65
+- 阿瓜尔（Aguar）, 2113
+- 阿瓜因曼托（Aguaymanto）, 29
+- 阿吉纳尔多（Aguinaldo）, 82
+- 阿吉雷（Aguirre）, 101
+- 鹰（Aguile）, 246
+- 啊（Ah）, 155, 252
+- 唉（Ahh）, 69
+- 阿希（Ahi）, 195
+- 阿尔（Ahl） 61, 65, 76
+
+- 阿尔多（Aldo） 145, 151
+- 阿尔法霍尔（Alfajor） 346
+- 阿尔法霍雷斯（Alfajores） 346
+- 阿尔法（Alfa）, 2113
+- 阿尔法霍尔（Alfajor）, 346
+- 阿丽西亚（Alicia）, 151
+- 阿利费（Alifé）, 101
+- 阿里戈泰（Aligoté）, 126
+- 短吻鳄（Alligator）, 132
+- 阿里戈（Aligot）, 346
+- 阿林（Alim）, 302
+- 阿利莫（Alimo） 364
+- 阿琳娜（Alina）, 123
+- 脂肪族的（Aliphatic）, 456
+- 阿利帕尔（Alipar）, 312
+- 阿利斯泰尔（Alistair）, 441
+- 阿莉森（Alison）, 195
+- 阿利索（Aliso）, 172
+- 阿里克斯（Alix）, 441
+- 阿尔卡（Alka）, 278
+- 阿尔坎纳（Alkanna）, 131
+- 碱性的（Alkaline）, 442
+- 烷烃（Alkane）, 442
+- 阿尔卡特里（Alkatri）, 284
+- 烷烃（Alkane）, 442
+- 阿尔肯纳（Alkenna）, 131
+- 烷基（Alkyl）, 442
+- 艾伦（Allan）, 246
+- 阿尔（Alle）, 2113
+- 艾伦（Allen）, 441
+- 阿尔勒（Aller）, 302
+- 盟友（Allies）, 302
+- 阿琳（Alline）, 123
+- 烯丙基（Allyl）, 442
+- 阿尔（Allé）, 2113
+- 阿莱格罗（Allégro）, 335
+- 阿莱格莱特（Allégret）, 335
+- 阿尔姆（Alm）, 364
+- 阿尔梅（Alme）, 364
+- 杏仁（Almond）, 156
+- 阿尔蒙多（Almondo）, 346
+- 阿尔蒙多（Almondo）, 346
+- 阿尔莫（Almo）, 364
+- 阿尔莫尔扎特（Almorzate）, 346
+- 施舍（Alms）, 364
+- 施舍（Alms）, 364
+- 阿洛（Alo）, 278
+- 阿洛德（Alod）, 346
+- 阿洛德（Alod）, 346
+- 芦荟（Aloe）, 278
+- 阿洛亚（Aloia）, 131
+- 阿隆（Alon）, 364
+
+- 臭椿（Ailanthus） 42
+- 臭椿（Ailanto）, 255
+- 臭椿（Ailanthus） 42
+- 臭椿（Ailanthus） 42
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊尔（Ail）, 255
+- 阿伊拉（Aila）, 255
+
+## 氨基糖
+
+- 多胺酸（polyamine acid）, 1741
+- 蛋白质（protein）, 1790; 1791
+- 可变茴芹（Anison mutabilis）, 1791-1792
+- 转氨基作用（transamination）, 2256
+- 未知词（une）, 2310
+- 氨基糖（Amino sugar）, 98
+- 电致异构（Electromeric）, 98
+- 电流测量（current measurement）, 600
+- 电力测量（Electric power measurement）, 747
+- 电动力的（electrodynamic）, 692
+- 电阻测量（resistance measurement）, 1901-1902
+- 电阻器（resistors）, 1902-1903
+- 分流（shunting）, 2013
+- 视力（sight）, 98
+- 注释（Annotation）, 99
+- 羊膜（Amnion）, 98-99
+- 胺（amine）, 96-99
+- 胺（amine）, 98-99
+- 高压工艺（high-pressure processes）, 1079
+- 氮循环（nitrogen cycle）, 1491-1492
+- 固氮（nitrogen fixation）, 1492
+- 石油化工（petrochemical）, 1640
+- 铵离子（Ammonium ion）, 1183
+- 铵盐（Ammonium salt）, 99, 138-139
+- 氨解（Ammonolysis）, 99
+- 遗忘症（Amnesia）, 99-100
+- 氨（ammonia）, 99
+- 胎膜（fetal membrane）, 102
+- 氨（Amonia）, 100
+- 氨（ammonia）, 99-100
+- 豆蔻属（Amomum）, 112
+- 脉络膜（choroid）, 448
+- 帝王花亚属（Amomphores protea）, 100
+- 变形运动（Amoeboid）, 95, 100, 1267
+- 小行星爱莫（Amor asteroid）, 100
+- 魔芋属（Amorphophallus）, 100
+- 未知词（Gles）, 1002
+- 术语翻译（gloss translation）, 1003
+- 翻译测量（translation measurement）, 1675
+- 转移的（metastatic）, 1366, 1367, 1368, 1369
+- 蛇纹石绿（Amphibolia）, 858, 963
+- 安培拉，A. M.（Ampèra, A. M.）, 101, 627
+- 安佩亚，定义（Ampea, definition of）, 687
+- 安佩斯，A. 低（Ampèrs, A. low）, 101: 599; 1297
+- 库仑滴定（Amperometric titration）, 2245-2246
+- 库仑法（Amperometry）, 1031
+- 角闪岩（Amphibolites）, 1203
+- 角闪岩的（Amphibolitic）, 101-102
+- 蛇纹石绿（Amphibolia）, 67
+- 未知词（Anmia）, 112
+- 醛胺进化（aminal evolution）, 120
+- 地钱（Anthoceros）, 134
+- 听觉的（Aural）, 146
+- 未知词（Apeida）, 151
+- 消化系统（digestive system）, 666
+- 眼睛（eye）, 713, 714
+- 双壳纲/关节亚纲（Labrys/Arthrotina）, 1221
+- 线性链接系统（linear link system）, 1223
+- 未知词（Lepadorydine）, 1245
+- 未知词（Lithostomus）, 1264
+- 未知词（Lissocarpa）, 1283
+- 单板纲（monoplacophora）, 1372
+- 未知词（Microrhynchia）, 1391
+- 未知词（Tectita）, 1470-1472
+- 再生（regeneration）, 1484
+- 未知词（Nematomorphe）, 2208
+- 无肺螈科（Urodela）, 2313-2314
+- 角闪石化作用（Amphibolism）, 943-944
+- 两栖性卡他性炎症（Amphibious catarrh）, 2299
+- 角闪石（Amphibola）, 102, 103
+- 透闪石（anthophylite）, 134
+- 角闪辉石（camarophite）, 234
+- 斜长角闪石（cummingite）, 598
+- 蓝晶石（glaucophane）, 1003
+- 未知词（hombeligite）, 1089
+- 透闪石（tremolite）, 2269
+- 蛇纹石绿（Amphibolia）, 226
+- 角闪石（Amphibola）, 103, 1089
+- 角闪岩（Amphibolites）, 1033
+- 蛇纹石绿（Amphibolia）, 1031, 358
+- 未知词（Ampholoxidic）, 7216
+- 双板纲（Amphitrichidae）, 1560
+- 角闪岩（Amphibolites）, 1033
+- 未知词（Amphibioides reversatilis）, 103
+- 未知词（Amphibolya）, 1549
+- 角闪石参见 Brantochonus
+- 未知词（Amphitrix (urafant)）, 2172
+- 十足目（Amphipoda）, 163
+- 未知词（Capadellace）, 365
+- 未知词（Gammaterria）, 962-963
+- 未知词（Hypermedius）, 1152
+- 双翅目（Amphiptera）, 1674
+- 蛇纹石绿（Amphibolia）, 1104
+- 蛇纹石绿（Amphibolia）, 103-104
+- 音频（Audio）, 195
+- 放大器---续（Amplifier---cont）
+  - 自动增益控制（automatic gain control）, 224-225
+  - 振荡器（oscillator）, 336; 370
+  - 灵敏度（sensitivity）, 436-437
+  - 比较电路（comparator circuit）, 514
+  - 不同（different）, 599, 601
+  - 直接耦合（direct-coupled）, 622, 682
+  - 差分的（differential）, 690
+  - 未知词（frequency-darification）, 629
+  - 未知词（gea）, 955
+  - 助听器（hearing aid）, 1050
+  - 高阻（high-resistance）, 1161
+  - L237
+    - 基底（base）, 1247
+  - 光（light）, 1251
+  - 扬声器（loudspeaker）, 1273-1274
+  - 鼻部的（nasal）, 1328-1329
+  - 未知的（neigative）, 1392
+  - 负阻电路（negative-resistance circuit）, 1471-1472
+  - 运算的（operational）, 1546-1547
+  - 参数（parametric）, 1609
+  - 前置放大器（preamplifier）, 1762
+  - 预混合（premixing）, 1764
+  - 推挽式（push-pull）, 1811-1812
+  - 射频（radio-frequency）, 1849
+  - 共振的（resonant）, 1907
+  - 未知词（seven-enrichiment system）, 2094
+  - 晶体管（transistor） 2260-2261
+  - 语音（voice）, 2313-2354
+  - 电压（voltage）, 2333-2354
+  - 音量控制系统（volume control system）, 2357
+- 放大器分频（Amplifier-division）, 629
+- 幅度调制（Amplitude modulation）, 104
+  - 无线电广播（radio broadcasting）, 1847
+  - 无线电接收机（radio receiver）, 195, 1851
+  - 边带（sideband）, 2004
+- 调幅检波器（Amplitude-modulation detector）, 104-105
+- 幅度分度表（Amplitude-division meter）, 105-106
+  - 1853
+- 调幅（Amplitude modulation）, 106-107, 1415
+- 振幅（波运动）（Amplitude (wave motion)）, 104: 1410-1415, 2371
+- 未知词（Amplitude commutur）, 87
+- α-淀粉酶（Amylase）, 107
+- 淀粉液化（Amylolysis）, 1361
+- 淀粉解的（Amylolytic）, 107
+- 未知词（Amylote）, 338
+- 未知词（Amyloplastic latend sclerosis）, 1453
+- 未知词（Amynode）, 1382
+- 同化作用（Anabolism）, 243
+- 未知词（Anacanthus）参见 Codiferens
+- 未知词（Anarctium octicordae）, 336
+- 未知词（Anachorophaceae）, 433
+- 阿南达（Ananda）, 272
+- 未知词（Anapnoma granica）, 431
+- 未知词（Anaphenomenon）, 477
+- 未知词（eurectic infections）, 107
+- 未知词（Anarcine）, 107
+- 异型增生（Anaplasia）, 116
+- 未知词（Anaphi）, 107-108
+- 未知词（egrin）, 1384
+- 未知词（Anaphalce）, 1465
+- 模拟电路，数字和（Analog circuit, digital and）, 469
+- 模拟计算机（Analog computer）, 108-109, 519
+  - 编程（programming）, 108-109
+  - 类型（types）, 108
+- 模拟电子技术（Analog electronics）, 792-793
+- 模拟状态（Analog state）, 109
+- 模数转换器---续（Analog-to-digital converter---cont）
+  - 电气测试设备（electric test equipment）, 791-792
+  - 脉冲调制器（pulse modulator）, 1807
+- 模数转换器（Analog-to-digital converter）, 109
+  - 数据压缩（data reduction）, 617-618
+  - 数字记录（digital recording）, 412
+  - 电化学相容性（electrochemical compatibility）, 771
+- 模拟伏特表（Analog voltmeter）, 2356
+- 方差分析（analysis of variance）, 1107
+- 类比几何（Analogic geometry）, 110-111, 553
+- 解析几何（Analytic geometry）, 111-112
+- 解析理论（Analytic theory）, 111-112, 1522
+- 分析化学（Analytic chemistry）, 111-112
+  - 未知词（blousepie）, 307
+  - 化学计量学（chemometric）, 432
+  - 电分析（electroanalysis）, 690
+  - 分析化学（analytical chemistry）, 915
+  - 极谱分析（polarographic analysis）, 1738
+  - 定量的参见 定性化学分析
+  - 定量的参见 定量化学分析
+  - 未知词（vanum fusion）, 2318
+- 未知词（Anamnia）, 112
+- 未知词（Anamnia）参见 Aneus, 112
+- 未知词（Anamnesis yast）, 265
+- 阿尼亚（Anania）, 294, 1550
+- 未知词（Anaphe (meiosis)）, 1349
+- 未知词（Anaphyllia）, 112-113
+- 未知词（Anapalline）, 113
+- 未知词（Anaplogism）, 113
+- 盾皮鱼纲（Anaspida）, 333
+- 盾皮鱼目（Anaspides）, 565, 727
+- 盾皮鱼纲（Anaspida）, 113-114
+- 未知词（Anapedia）, 621
+- 鸭科（Anatidae）, 129
+- 鸭属（Anatine）, 129
+- 安纳托利亚（Anatolia）, 1354
+- 解剖学，区域的（Anatomy, regional）, 480
+- 解剖学未知词（Anatomical corum）, 300
+- 未知词（Anor recoil suspension）, 418, 846
+- 未知词（Ancaclia）, 479-480; 948
+- 未知词（Ancysclodes diveodone）, 564, 1347
+- 未知词（And G switchover）, 818; 2175, 2176
+- 安第斯山脉（Andes）, 114
+- 未知词（Andro, see）, 226
+- 未知词（Andean cinde）, 266, 784
+- 安德森，D.（Andersen, D.）, 720
+- 安德恩（Anden）, 114
+- 安德斯（Anders）, 114
+- 未知词（Andreasporus）, 114
+- 未知词（Androedaphus Galioi）, 115, 1267; 2098
+- 未知词（Andromonops）, 1357
+- 狼尾草属（Andropogon）, 272
+- 狼尾草属（Andropogone）, 272
+- 未知词（Androthi cham）, 115; 217
+- 未知词（Anemsa）, 115-116; 408
+- 未知词（ansplasmoa）, 113
+  - 马感染（equine infection）, 757
+  - 镰状细胞病（sickle cel disease）, 2004
+- 未知词（Anemerrine）, 116; 533
+- 银莲花属（Anemone）, 1869
+- 未知词（Anenototus）, 2194
+- 未知词（Aneruptible）, 30
+- 未知词（Anethi）, 30
+- 未知词（Anaphthi）, 30
+- 未知词（Anaphi）, 30
+- 未知词（Androtherm gravena）, 612
+- 未知词（Androgam）, 400-401
+- 未知词（Angerim）, 116
+- ANFO（炸药）（ANFO (explosive)）, 265
+- 未知词（Angora plectro）, 1052
+- 血管学（Angiology）, 1346
+- 血管学（Angiology）, 1316
+- 被子植物（Angiosperm）, 565
+  - 重新评估（revaluation）, 1703
+- 血管成形术（Angioplasty）, 1196
+  - 植物生理学（plant physiology）, 1712
+- 未知词（Psoles）, 1731
+  - 种子（seed）, 1973
+  - 参见 木兰植物亚门
+- 未知词（Anga-closure gymnocins）, 889
+- 未知词（Angiolite）, 116-117
+  - 频率调制（frequency modulation）, 935
+  - 未知词（phose modulation）, 1655
+- 未知词（Angelfl, boia）, 1579
+- 未知词（Angerle）, 1271
+- 钙钒钛矿（Angerite）, 844-845
+- 埃格斯特朗（Ångström）, 2303
+- 未知词（Angiifurmen）, 117, 666
+- 未知词（Angiur, contart bearing）, 139, 141
+- 未知词（Anglur, corrosion）, 117
+- 未知词（Anglur magnification）, 1394
+- 未知词（Anglar momentum）, 117-118
+  - 角动量状态（angular state）, 109
+  - 跨度（量子力学）（span (quantum mechanics)）, 2084
+- 未知词（Anglur unformicity）, 2297
+  - 角速度（angular velocity）, 2329
+- 非简谐振荡器（Anharmonic oscillater）, 118
+- 黑颈鹤属（Anhimus）, 129
+- 鹤科（Anhimidae）, 129
+- 未知词（Anhidryide）, 12
+- 未知词（Anhydrits）, 118; 1034
+- 未知词（Anhydrolithosis）, 522-523
+- 未知词（Arac）, 118
+  - 生物量（biomass）, 736
+  - 扩散，种群（dispersion, population）, 1754-1755
+  - 胚胎学（embryology）, 810
+  - 未知词（mycorophy heteroform）, 1400-1401
+  - 未知词（Nefiolic）, 1474
+  - 生理生态学（physiological ecology）, 1682
+  - 植物-动物相互作用（plant-animal interactions）, 1701-1702
+  - 未知词（polydypid）, 1750
+  - 种群扩散（population dispersal）, 1754
+  - 捕食者-猎物相互作用（predator-prey interactions）, 1767
+  - 再生（regeneration）, 1884
+  - 未知词（tree cistic）, 2254
+- 动物分类参见 动物系统学
+- 动物交流（Animal communication）, 116-119, 1994
+- 动物生态学（Animal ecology）, 735
+- 动物进化（Animal evolution）, 119-120; 1287-1288
+- 未知词（Animal fowl）, 78
+- 未知词（Animal leads）, 950
+- 动物生长（Animal growth）, 120-121
+- 动物界（Animal kingdom）, 121
+- 动物形态（Animal morphology）, 122
+- 动物症状（Animal symptom）, 122; 123; 1370
+- 异配生殖的（Anisogamic）, 109
+  - 未知词（anisogonic nomenclature）, 2419
+- 动物病毒（Animal virus）, 123-125
+  - 白色念珠菌（Albicans hominis）, 41
+  - 未知词（axion leukuria）, 234-235
+  - 蓝舌病（bluetongue）, 272
+  - 牛的参见 腹泻（bovine see diarrhea）, 323-324
+  - 牛腹泻（bovine diarrhea）, 362
+  - 犬细小病毒感染（canine parvourus infection）, 362-363
+  - 未知词（coxsoid B）, 124-125
+  - 未知词（coccygidies）, 575-576
+  - 登革热（dengue fever）, 640
+  - 棘球蚴（echinococcus）, 729
+  - 未知词（embodyon red uche virus）, 811
+  - 地方性流行（enzootic）, 820
+  - 马病毒（Equina virus）, 128, 740; 840
+  - 猫传染性腹膜炎（feline infectious peritonitis）, 875
+  - 猫白血病（feline leukemia）, 875-876
+  - 猫细小病毒（feline parvovirus）, 876
+  - 猪瘟（hog cholera）, 1082
+  - 狼疮（lupus）, 1274
+  - 未知词（mysoblogism）, 123
+  - 副流感病毒（paramyxovirus）, 1607
+  - 细小病毒（parvovirus）, 1609-1610
+  - 未知词（pandallia）, 124
+  - 未知词（passyovirus）, 1684
+  - 多瘤病毒（polyoma virus）, 1750
+  - 呼吸道合胞病毒（respiratory syncytial virus）, 1906-1907
+  - 未知词（rhinocirrus）, 1913
+  - 鼻病毒（rhinovirus）, 1909-1910
+  - 鼻病毒（rhinovirus）, 1913
+  - 未知词（Satillo virus）, 1986
+  - 肿瘤病毒（tumor virus）, 22881
+  - 病毒感染体（viral infection bodies）, 2340
+  - 病毒核酸（viral nucleic acid）, 123-124
+  - 病毒分类（virus classification）, 2344-2345
+- 未知词（Animaia）, 105
+- 万物有灵论，生物区的（Animism, bioregic）, 318
+  - 埃迪卡拉生物群（Ediacalia biota）, 738
+- 社会失范（Anomie）, 529-539
+- 失范的（Anomic）, 69
+- 无氧的（Anoxiac）, 770-771
+  - 未知词（ton）, 1183
+- 未知词（Ansia）, 152
+- 未知词（Anssonia）, 125
+- 未知词（Ansipericae）, 152
+- 各向异性（Anisotropy）, 236; 231
+- 异核现象（Anisokaryosis）, 924
+- 未知词（Anistre）, 125
+- 未知词（Anisolybos）, 1580
+- 各向同性的（Anisotrope）, 1057
+- 未知词（Anokolia）, 125-126
+  - 未知词（antral secretion）, 120
+- 未知词（Archandraea）, 164
+  - 未知词（archidactyl system）, 732, 815
+- 秘传（Arcana）, 844-845
+  - 水蛭纲（Hirudinea）, 1081
+  - 真囊纽门（Myzostomata）, 1482
+- 未知词（Anisophyrea）, 1539
+- 多物理场（Polyphysia）, 1711-1742
+  - 再生（regeneration）, 1884
+- 定居动物（Sedentata）, 1971
+- 未知词（tubivermis）, 2279
+- 环辐射（Armillation radiation）, 1758
+- 未知词（Anuroa）, 1304
+  - 未知词（anuroa species）, 301
+- 阳极涂层（Anodic coatings）, 1366
+- 阳极的（Anodic）, 716
+- 阳极有机反应物（Anodic organic reactants）, 765
+- 阳极的（Anodic）, 716
+- 未知词（Anoda）, 361
+- 阳极的（Anodic）, 1384
+- 阳极电流（Anodic current）, 1436
+- 阳极层（Anodic layer）, 722, 2310
+- 阳极电流（Anodic current）, 1223
+- 阳极特征（Anodic features）, 1322
+- 异常的（Anomales）, 125
+- 未知词（Anomoeus）, 125-127
+- 未知词（Arneplexa）, 621, 1439
+- 未知词（Arpiplea）, 126; 1916
+  - 未知词（Hexamerotaminii）, 1072
+  - 未知词（Pabaeoacneum）, 1596
+- 未知词（Arpiplea）, 126; 127
+- 未知词（Anondia nervosa）, 127, 724
+- 未知词（Anordria）, 128; 1090
+- 未知词（Anordrophice）, 128; 875
+- 无睾丸的（Anorchitic）, 128
+- 无睾丸的（Anorchitic）, 128
+- 无睾丸的（Anorchica）, 128
+- 缺氧（Anoxia）, 991
+- 缺氧区（Anoxia zones）, 128-129; 937
+- 无氧的（Anoxya）, 523
+- ANS 参见 荷兰解剖学卫星（ANs see Anatomischl Netherlands Satellite）
+- 雁属（Anser）, 129
+- 雁形目（Anseriformes）, 129

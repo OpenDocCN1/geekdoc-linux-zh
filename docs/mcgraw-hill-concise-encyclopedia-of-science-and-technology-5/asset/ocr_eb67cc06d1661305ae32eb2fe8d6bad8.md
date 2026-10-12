@@ -1,0 +1,41 @@
+# Conodonta 539
+
+blood plasma, including albumin, globulins, inorganic and organic anions and cations, and water. In addition, the ground substance contains metabolites derived from, or destined for, the blood.
+
+All the manifold varieties of connective tissue may contain all the cells and fibers discussed above in addition to ground substance. They differ from each other in the relative occurrence of one or another cell type, in the relative proportions of cells and fibers, in the preponderance or arrangement of one or another fiber, and in the relative amount and chemical composition of ground substance. They are classified as:
+
++   1. Irregularly arranged connective tissue—which may be loose (subcutaneous connective tissue) or dense (dermis). The dominant fiber type is collagen.
++   2. Regularly arranged connective tissue—primarily collagenous—with the fibers arranged in certain patterns depending on whether they occur in tendons or as membranes (dura mater, capsules, fasciae, aponeuroses, or ligaments).
++   3. Mucous connective tissue=ground substance especially prominent (umbilical cord).
++   4. Elastic connective tissue—predominance of elastic fibers or bands (ligamentum nuchae) or lamellae (aorta).
++   5. Reticular connective tissue—fibers mostly reticular, moderately rich in ground substance, frequently numerous undifferentiated mesenchymal cells.
++   6. Adipose connective tissue—yellow or brown fat cells constituting chief cell type, reticular fibers most numerous.
++   7. Pigment tissue—melanocytes numerous.
++   8. Cartilage—cells exclusively of one type, derived from mesenchymal cells.
++   9. Bone—cells are predominantly osteocytes, but also include fibroblasts, mesenchymal cells, endothelial cells, and osteoclasts.
++   
++   See ADIPOSE TISSUE; BLOOD; BONE; CARTILAGE; COLLAGEN; HISTOLOGY; LIGAMENT; TENDON. [I.G.]
+
+# Connective tissue disease
+
+Any of a group of diseases involving connective tissue; formerly termed collagen vascular disease. These diseases are clinically and pathologically distinct from each other but have overlapping features. The group includes lupus erythematosus, systemic vasculitis, polymyositis, scleroderma (and systemic sclerosis), and Sjögren’s syndrome. Each of the diseases can involve multiple organ systems and is often coupled with various immunologic abnormalities. See CONNECTIVE TISSUE.
+
+The set of diseases known as lupus erythematosus includes limited, primarily cutaneous disorders (discoid lupus and subacute cutaneous lupus) and a diffuse systemic illness (systemic lupus erythematosus), all of which are of unknown cause. Also, a lupuslike reaction known as drug-induced lupus can be caused by certain therapeutic agents.
+
+Systemic vasculitis comprises a series of different clinical illnesses that are all characterized by intense inflammation in the walls of blood vessels, especially arteries (that is, arteritis). These illnesses differ clinically, pathologically, and with respect to therapeutic responses and outcome. Even the age and sex of the typical affected person varies from one to another. The clinical pattern of illness varies with the sites of blood vessel involvement and the character of vascular injury. Tissue death in the vessel wall can lead to narrowing, or even blockage, of the vessel or weakening of the wall with formation of an aneurysm. Impaired circulation and altered blood flow result. Symptoms, therefore, can arise not only from the tissue inflammation itself but also from the lack of adequate blood supply. See ANEURYSM; CIRCULATION DISORDERS.
+
+Polymyositis involves intense inflammation in skeletal muscle that, if untreated, can lead to destruction of muscle fibers. When typical skin lesions are present, the term dermatomyositis is applied. The cause of polymyositis, or dermatomyositis, is not known in most cases. These conditions can occur alone or in association with other connective tissue disorders (that is, systemic lupus, scleroderma, and Sjögren’s syndrome). In older persons, they sometimes accompany malignant tumors, e.g., aggravating early, before loss of muscle fibers and replacement by fibrous scarring is extensive. myositis is reversible; recovery with minimal residual loss of strength is to be expected in almost all patients.
+
+The term scleroderma means “hard skin,” designating a disorder in which increased deposition of collagen fibers in the dermis leads to thickened, leathery, bound-down skin. When organ involvement is associated with such skin changes, the term systemic sclerosis is used. Raynaud’s phenomenon, a hyperreactivity to cold exposure with blanching and discoloration of the fingers and toes, is the common initial manifestation and may precede sclerodematous skin changes by decades. Systematically, the gastrointestinal tract is most commonly involved. Difficulty in swallowing and mild-to-severe discomfort result from loss of peristalsis in the esophagus. Diarrhea, inability to absorb nutrients, abdominal pain, and distention can occur with bowel involvement and lead to weight loss and wasting. Scarring of the lungs and decreased pulmonary function occur frequently. The most serious lesions are those of the heart and kidney, which may result from vascular abnormalities related to Raynaud’s phenomenon. Joint inflammation is mild and uncommon, but advanced skin changes, especially in the hands, may restrict joint mobility.
+
+Sjögren’s syndrome is characterized primarily by dryness of the membranes due to excretory gland failure, especially dryness of the eyes (xerophthalmia) and mouth (xerostomia) from loss of tears and saliva, respectively. This sicca (dryness) syndrome reflects the infiltration of lacrimal and salivary glands by immunologically competent cells (lymphocytes). Sjögren’s syndrome may be primary or secondary; that is, superposed on another disorder like rheumatoid arthritis or systemic lupus.
+
+IMMUNOLOGY; INFLAMMATION. [M.B.S.]
+
+# Conodonta
+
+A group of extinct marine animals that are often abundant in strata of Late Cambrian to Late Triassic age, a time span of about 300 million years. Only the mineralized elements, which are usually 0.2 to 2 mm (0.008 to 0.08 in.) in dimension (the largest known reach 14 mm or 0.6 in.), are normally preserved. They are routinely extracted as isolated discrete specimens by chemical degradation of the rock in which they occur. In the earliest conodonts ("true" conodonts, as opposed to the more primitive, and possibly unrelated, protoconodonts and paraconodonts, the elements consist of an upper crown and a basal body. The basal body occupies a cavity in the base of the crown, but is not present in the majority of post-Devonian species. In advanced conodonts the crown incorporates regular patches of opaque, finely crystalline, white matter.
+
+For many years, conodont taxonomists treated individual element types as separate species. There are three major life categories: coniform, ramiform, and pectiniform (see illustration). Coniform elements were dominant in the Cambrian to Early Ordovician and common until the Devonian. Ramiform (comblike) elements extend into elongate processes with various arrangements of teeth. Pectiniform elements include straight and arched forms, and may be expanded laterally to form a platform.
+
+In the absence of preserved soft parts, the nature of the affinities of conodonts has been the subject of considerable speculation and debate. Since the first discovery of isolated elements in 1856, conodonts have been variously aligned with algae, higher plants, several wormlike phyla, mollusks, echinoderms, lophophorates, chaetognaths, and chordates, and have been assigned to a separate phylum, Conodonta. It was not until 1983 that evidence of the soft parts was described by D. E. G. Briggs, E. N. K. Clarkson, and R. J. Aldridge, on the basis of the first near whole specimens discovered in lower Carboniferous rocks near Edinburgh, Scotland. The evidence of the soft-part morphology indicates that the conodonts belong within the chordates; it is no longer

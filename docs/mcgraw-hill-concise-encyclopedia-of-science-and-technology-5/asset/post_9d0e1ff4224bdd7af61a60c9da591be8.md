@@ -1,0 +1,638 @@
+
+# 2626 Permanent magnet
+
+Parachordates, 921
+Paracol, 1607
+Paracolpus haloderrichloritus, 1044
+Parched, 607
+Parchment, 166
+Paragons, 1181
+Paragonimiasis, 894
+Paragonimus kelii, 1181
+Paragonimus mexicanus, 1181
+Paraguay, 921
+Paraguayana, 1180
+Paraiba, 921
+Paralysis of the vocal cords, 1631
+Paralysis agitans, 1631
+Paralytic, 1631
+Paramagnetism, 1605
+Paramagnetic, 1605
+Paramagnetic, 1605
+Paramagnetic, 1605
+Paramagnetism, 1605
+Paramagnetic, 1605
+Paramagnetic, 1605
+Paramagnetic, 1605
+Paramecium, 385
+Paramecium caudatum, 385
+Paramecium aurelia, 385
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+Parasitic, 985
+
+### Permanent magnet
+
+- Permanent magnet, 98, 1290
+- Permeability
+  - permeability magnet, 396*
+  - permeability of, 1645
+- Permeance, 1634, 1635*
+- Permit, 1655*
+- Permit, 1655*
+- Permissibility of, 1635
+- Petroleum and natural gas
+  - Petroleum exploration, 482
+- Permission, 458, 1635*
+  - permeance, 482
+- Peroxide, 181
+- Peroxidase, 389, 1636*
+- Peroxizymase, 1636
+- Pesqueria
+- Pest control, forest see Forest pest control
+- Pesticide, 1639
+  - spore treatment, 46
+  - application of, 45
+  - fossil pests, 45
+  - fumigation, 944
+  - insecticide, 1158
+  - residual, 1473
+  - steroid, 1950
+- Petroleum processing and refining—cont.
+  - distillation, 1643
+  - hydroprocessing, 1643
+  - refining process, 1881, 1882*
+  - solvent extraction, 2047
+  - thermal, 1643-1644
+- Petroleum products, 1644, 1665*
+- Petroleum reservoir, 1642
+- Petroleum, 1645
+  - and gas field see oil and gas
+- Petroleum reservoir engineering
+  - Petroleum reservoir, 1642
+  - petroleum engineering, 1555-1556
+- Petrolite, 880, 1646
+- Petrography
+  - petroleum, 622
+- Petrology, 1224
+- Petroleum engineering, 1641
+- Petroleum exploration, 482
+- Petroleum, 1643
+- Petroleum processing, 1643, 1643*
+- Petroleum products, 1644, 1665*
+- Petrophysics, 1645
+- Petroseismic, 1645
+- Phase velocity, 1654*
+- Phases, 229, 1579
+- Phasmochara, 259
+- Phasmatoptera, 260
+- Phasmatodea, 1581
+- Phreatant, 229
+- Phlebotomine, 1630
+- Phlebogaster, 222
+- Phlegmatisma, 155
+- Phlebotomus, 1630
+- Pheromone, 1654*
+- Phosphorescence, 1654*
+- Phosphorus, 1654*
+- Phosphorous, 1654*
+- Photobiology, 1656
+- Photic, 1207
+- Photic, 1657
+- Photic, 229
+- Photic, 1630
+- Photic, 156
+- Photic, 1630
+- Photic, 1635
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+- Photic, 1654*
+
+- Photocurrent, 629
+- Photoelectric effect, 1564
+- Photoelectric, 859, 963
+- Photoelectric, 1660-1661*
+- Photosynthesis, 242
+- Photolysis, 1661
+- Photomagnetic, 736, 1323
+- Photomicrography, 2293-2294
+- Photomicroscope, 2292
+- Photopolymer, 1663
+- Photoreceptor, 1661-1662
+- Phospholipid, 1661
+- Phospholipids, 1661
+- Phosphorylation, 1662
+- Phosphorus, 1661
+- Photophysics, 1661
+- Photophysical, 1661
+- Photophore, 1661
+- Photoproduction, 1661
+- Photoprotective, 1661
+- Photosynthetic, 1661
+- Photosynthesis, 1661
+- Photochemistry, 1660-1661
+- Photochromism, 1660
+- Photoconductivity, 1663, 1664
+- Photoconductors, 1663, 1664
+- Photoconduction, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconductivity, 1663, 1664
+- Photoconduction, 1663, 1664
+- Photoconductors, 1663, 1664
+- Photochromism, 1660
+- Photochemistry, 1660-1661
+- Photocells, 1661
+- Photochemical, 1661
+- Photocurrent, 629
+- Photoelectric, 859, 963
+- Photoelectric effect, 1564
+- Photoelectrons, 1661
+- Photofluorescence, 1662
+- Photoforce, 1661
+- Photographic, 1661-1662, 1665
+- Photography, 1665-1667
+- Photoreceptors, 1663
+- Photosensitive, 1661
+- Photosynthesis, 1661
+- Photothermal, 1662
+- Phototube, 1663
+- Photovision, 1661
+- Photon, 504
+- Photonic, 1661
+- Photoproduction, 1661
+- Photoprotective, 1661
+- Photosynthesis, 1661
+- Photoconductivity, 1663, 1664
+- Photoconduction, 1663, 1664
+- Photoconductors, 1663, 1664
+- Photochromism, 1660
+- Photochemistry, 1660-1661
+- Photocells, 1661
+- Photochemical, 1661
+- Photocurrent, 629
+- Photoelectric, 859, 963
+- Photoelectric effect, 1564
+- Photoelectrons, 1661
+- Photofluorescence, 1662
+- Photoforce, 1661
+- Photographic, 1661-1662, 1665
+- Photography, 1665-1667
+- Photoreceptors, 1663
+- Photosensitive, 1661
+- Photosynthesis, 1661
+- Photothermal, 1662
+- Phototube, 1663
+- Photovision, 1661
+- Photon, 504
+- Photonic, 1661
+- Photoproduction, 1661
+- Photoprotective, 1661
+- Photosynthesis, 1661
+- Photoconductivity, 1663, 1664
+- Photoconduction, 1663, 1664
+- Photoconductors, 1663, 1664
+- Photochromism, 1660
+- Photochemistry, 1660-1661
+- Photocells, 1661
+- Photochemical, 1661
+- Photocurrent, 629
+- Photoelectric, 859, 963
+- Photoelectric effect, 1564
+- Photoelectrons, 1661
+- Photofluorescence, 1662
+- Photoforce, 1661
+- Photographic, 1661-1662, 1665
+- Photography, 1665-1667
+- Photoreceptors, 1663
+- Photosensitive, 1661
+- Photosynthesis, 1661
+- Photothermal, 1662
+- Phototube, 1663
+- Photovision, 1661
+- Photon, 504
+- Photonic, 1661
+- Photoproduction, 1661
+- Photoprotective, 1661
+- Photosynthesis, 1661
+
+- Photoanphosphosis, 1668-1669*, 1683
+- Photoanophyllian, 1669*
+- Photoelectric, 1669*
+  - chroming, 494
+- de Broglie wavelength, 622
+- elementary particle, 802
+- gamma ray, 859, 962
+- polarization of waves, 1736
+- quantum, 1823
+
+- Photon correlation spectroscopy (PCS), 1835
+- Photon detector
+  - optical detectors, 1553
+  - radiometry, 1863
+- Photographic movement, 1709
+- Photicone interconnects, 496
+- Photoreceptor, 1669-1670
+  - animal response, 1670
+  - cold handlers (plants), 496
+  - mechanisms, 1670
+  - seasonal responses, 1670
+- Photophore gland, 1670
+- Photophores, 1662, 2293
+- Photopic vision, 2346, 2347
+- Photoxylamin, 521, 522
+- Photozepicton, 1670
+  - eye (invertebrates), 780-781, 864-865*
+  - eye (vertebrate), 865-867
+  - photoepithelium, 1985
+- Photozotrophic effect, 1497-1498
+- Photozotrophics, 1670-1671*
+- Photoreceptor, 1671-1673*
+  - phototropism, 1671*
+  - C3, 1672
+  - C4, 1672
+  - CAM, 1672-1673
+  - chlorophyll, 444*
+  - forest ecosystem, 917
+  - Iches, 1429
+  - marine ecology, 1319-1320
+  - photosynthesis, 1670-1671*
+  - phyllium, 1674
+  - piano pigment, 1712
+  - porphyrin, 1757
+  - radioisotope (biology), 1861
+  - silver, 2149
+  - tree physiology, 2268
+- Photostasis, 2194
+- Photostasis?, 1673*
+- Phototropism, 1709
+- Photovoice, 1669, 1673*
+- Photovoltaic cell, 1673*, 2039
+- Photovoltaic effect, 1673, 1674-1675
+- Photovoltaic exposure time, 777, 862
+- Photovoltaic solar power system, 2038
+- Phratochocidomicea, 898
+- Pyhromgmidaceidae, 983-984
+- Praetozodidae, 1674
+- Pretetozodida, 1674
+- Pretophrynia, 1549, 1674
+- Pretall acid, 12
+- Pretarhizus luteus, 128-127
+- Pretocellin, 1674
+- Pretototachia, 1674-1675*, 2194
+- Pretyide, 1675
+- Prettacalcida, 1286, 1307, 1675
+- Prettodacidide, 1674
+- Prettologism, 1280
+- Prettotopomorphosis, 388
+- Pretotic syntema, 1287
+- Prettotropia, 1675-1676*
+  - animal sterotaxis, 1223
+  - macroevolution, 1287
+- Prettomotaxis, 1676
+- Pretosorption, 94
+- Physical adaptation, 862
+- Physical chemistry, 1676-1677
+  - anthropometry, 135-136*
+  - anthropometry, 136
+  - forensic anthropology, 914
+  - human variation, 1676-1677
+  - molecular, 1676
+  - paleoanropology, 1676
+  - primate behavior and ecology, 1676
+  - primary morphology, 1676
+- Physical chemistry, 46
+  - acid-base chemistry, 729
+  - chemical dynamics, 420-421
+  - chemical kinetics, 422-424
+  - Dalton's law, 613-614
+  - equilibrium properties, 1677
+- Physical chemistry—cont.
+  - physical and chemical change, 1677
+  - structure, 1677
+- Photochemistry, 2224
+- Physical geography, 1336, 1677-1678
+- Physical geology, 880
+- Physical law, 1679
+- Physical metaphor, 1678-1680
+- International System of Units, 1678-1680
+  - metric system, 1678
+- Physical metallurgy, 865, 1370
+- Physical metabolism, 1379-1380
+- Physical optics, 1680
+- Physical organic chemistry, 1680-1681
+  - chemical kinetics, 1681
+  - physical reaction mechanisms, 1680-1681
+  - isomer, 1681
+  - stereochemistry, 1681
+- Physical science, 1681
+- Physical theory, 1681
+- Physical oceanography, 1681-1682
+  - atmosphere, 1379-1380
+  - carbon cycle, 844
+  - conservation laws, 476
+  - duality, 705*
+  - electrolytes, 793
+  - fire tunnel, 883
+  - geophysical fluid dynamics, 994
+  - geophysics, 994-995
+  - high-pressure, 954, 1078
+  - meteorology, 1303
+  - mathematical, 1336
+  - matter, 1367
+  - membrane, 1393
+  - molecular, 1424
+  - nonlinear, 1088*
+  - nuclear, 7512
+  - planetary, 1700-1701
+  - plasma, 1717-1719
+  - quantum, 1823
+  - quantum anisotropy, 1824
+  - statistical mechanics, 2101-2102
+  - surface, 2169-2170
+  - symmetry breaking, 2178-2179
+  - symmetry laws, 2179-2180
+  - theoretical, 2218-2219
+  - variational methods, 2326
+  - water technology, 2327-2328
+  - wave, 2317
+  - work, 2397
+- Physiological ecology, 1682
+- Physiological hypothesis, 205
+- Physiological ecology, 1682, 1682*
+- Physiological ecology (plant), 1682, 1683
+- Physiology see Phylogeny, 1683
+  - Chrysomonadales, 455
+  - Ctenophymatidae, 1684*
+  - Dendrogalella, 674
+  - Ehrlichia, 725
+  - Euphorbia, 852°, 852-853
+  - Salicifolia, 2008
+  - Volvoxia, 2557
+- Physiologies macroscopic, 2328
+- Physiology, 1683
+- Phylogeography see Plant geography
+- Phycoreine, 1686
+- Phycology see Plant geography
+- Phycomyces see Leptitis
+- Phycomycetes see Plant homones
+- Phycomatorrhagea, 455
+- Phycoremain, 1684
+  - deep-sea fauna, 629
+  - ecology, 735
+  - fresh-water ecosystem, 937
+  - invertebrate, 1284
+  - In-mes, 1823
+  - Pie matter (inorganic), 1354
+  - Pieger, Jean, 650-651
+  - Paaz, C., 357
+  - Piezo, 724
+  - Piezo species, 2090-2091
+  - Piezotrope, 847
+  - Piezotrope, 154
+  - Piezometers, 1684
+  - Pichering, Edward C., 2097
+  - Picochromidace, 1684
+    - coccosporoides, 574
+    - echinoids, 676
+    - exoterious, 826
+  - Pictet, 1913
+  - Pictet, 1684
+  - Pinellum drawing, 1684-1685
+  - Pictene tube, 1685°, 2205
+  - Pie chart, 1017
+  - Pleximetia, 944
+  - Plexometric crystal, 879
+  - Plexochroic earphone, 653, 716
+  - Plexochroite reaction, 776
+  - Plexomolecular membrane, 1388
+  - Plexomolecules, 1685-1686*
+    - applications, 1686
+    - molecular theory, 1685
+    - piezoelectric materials, 1686
+    - puzzle crystal, 1833
+    - surface acoustic wave devices, 2157
+  - Plexon, 2244
+  - Pleasure response, 2232
+  - Plext, 168
+  - Plextiron, 410, 447, 565
+  - Pliocene, 197, 1686
+  - Plextium, 1686
+  - Plexotomeric, 374
+    - chlorophyll, 444
+    - phloretin, 450
+  - Piezoelectric, 708
+    - Mallett reaction, 1306
+    - pleochroite, 1683
+  - Pleochroic, 1674
+    - plant, 1712-1713
+    - respiratory pigment (invertebrate), 1966
+    - stibovium, 1917
+    - surface coating, 2168
+  - Pigmentation, 1686
+  - Pigmentocri, 280
+  - Pigmy chimpanzee, 389
+  - Piga, 1222
+  - Pige, 1686°, 1941
+  - Pillaridae, 76
+  - Pie foundation, 1686-1687
+  - Pig harmoni, 479
+  - Pleuxomes see Shrimp
+  - Pil bag, 1543
+  - Pilot, 924
+  - Pilot protection, 1687°, 1795-1796
+  - Pilot, 1687
+  - Pilot, 1687
+  - pup, 343
+  - lighting, 1252
+  - Pilound man, 1687, 1688
+  - Pimento, 1626, 1688
+  - Plants official, 87
+  - Pimpinelium intus, 125
+  - Pin clade, 1396
+  - Pina, 1688
+  - Pin, 1688
+    - eribavea, 157
+    - oak, 385
+  - Pine, 1689
+    - in, 882
+    - beech, 1229*
+    - circa, 1689
+    - redwood, 1879
+    - spruce, 2090-2091
+    - Yee, 2266
+  - Pinch effect, 1688-1689
+  - Pinch distortion, 629
+  - Pine, 1689
+    - emergent, 857
+  - Pinales, 1688
+  - Pine wood, 1879
+    - tree, 2090-2091
+    - tus, 2246
+  - Pine marine, 1328
+  - Pine nut, 1689
+  - Pine oil, 847
+  - Pine terpene, 1689-1690
+  - Pineale gland, 1689-1690
+  - Pineapple, 291, 1688, 1690
+  - Pincasei rat, 299
+  - Pinacate, 1689-1691
+  - Pinopistia, 1691
+  - Pinnopistia, 1691
+  - Pinnoxis see Endogeiosis
+  - Pinion line, 1689
+  - Pinniped, 1065
+    - Cycsalidae, 603
+    - Erithodidae, 835
+    - Girgopalace, 999
+    - Gigalopoda, 999
+  - Pinnalida, 1688
+  - Pinnopistia, 1691
+  - Pinnelakelethica, 2384
+  - Pinto species, 1688
+  - Pin, 1233, 1832
+  - Pinnium, 1691
+  - Pine flow, 1102, 1690
+  - Pipedelie, 970
+  - Pipelines, 1691°, 2256
+  - Piping
+    - digital computer, 670
+    - supersupervision, 2153
+  - Piper species, 281, 284, 531
+  - Piperaceae, 564, 531
+  - Pipeclans, 1017-
+    - cube, 597
+    - Eunogomigdos, 854
+    - Leucones, 1423
+  - Piping systems
+    - valve, 2320-2321
+    - water supply engineering, 2367
+  - Piping gas, 1692, 1692°
+  - Piroma, 1662
+  - Fiscer (correlation), 1692
+  - Picea (wood), 1692°
+  - Pisoodia, 1063
+  - Piscacho, 1692°
+  - Plana, 139
+  - Piston anatured, 195
+  - Piston angle, 90
+  - Piston annulus, 602
+  - Piston saturn, 1578, 1621
+  - Pitch, 1692
+    - musical acoustics, 1454
+    - scale, 1552
+    - spectrum, 1952
+    - tuning, 2337
+  - tune-up fork, 2282-2283
+  - Pitcher plant, 1692
+  - Pitchstone, 1692
+  - Pit, 1692, 1693
+  - Pheasarchromice, 831, 926
+  - Pithecsines, 1771
+  - Pithe tribe, 1693
+  - Pituitary gland, 1693-1694
+    - endocrine system (vertebrate), 816
+    - photon, 56-27
+    - neurophysiology hormone, 1480°
+  - Pituitary gland disorders, 91, 653, 1694
+  - PKE see Radicent-induced x-ray emission
+  - PNK see Pseudokopio
+  - PLKL see Pheyllomycin
+  - Pleasta
+    - extogen, 848
+    - procotenzime, 1781
+  - Pleactinoids
+    - animal evolution, 120
+    - Mammalla, 1309
+    - Musical species, 1677
+  - Pleacretion, 1694-1695
+  - Placine mining, 1695
+  - Placebos, 407°, 1695
+  - Placeodontia, 748, 1695
+  - Placodermi, 245, 825, 1125, 1234
+  - Plagae, 1695-1696
+  - Placo, 805
+  - Place, 1696
+  - Platara, 2270
+  - Plana, Max, 936, 1066, 1828
+  - Platano, 1669
+  - Pleasant species, 1823
+  - Pleascon's constant, 1696
+    - queue theory, 973
+    - quantum mechanics, 1828
+  - Plata-law, 1150
+  - Plata's radiation law, 936, 1696
+  - Plata angle unit, 2302
+  - Plata curve, 1696-1697
+  - Plata function theory, 832
+  - Plata geometry, 1744
+  - Plata polygon, 1744
+  - Plata tree, 1064
+  - Plana waves, 2051
+  - Plana, 1697
+  - Platan, 1697-1699
+    - asteroid, 186
+    - Earth, 716-718
+    - interdisciplinary, 1699, 2306
+    - supercomputer, 1177
+    - Jupiter, 1200-1207
+    - Mangutiae, 1304
+    - Mars, 1336-1338°
+    - Mercury, 1356-1357°
+    - Neptune, 1475-1476
+    - orbital motion, 1560-1566
+    - physics see Plana species
+    - Pluta, 1729
+    - Sarum, 1590-1591°
+    - of solar system, 1697-1698

@@ -1,0 +1,74 @@
+
+on demand. The same control permits the direction of dc power to be reversed and equally quickly. This ability to ride through disturbances and to permit precise power scheduling and modulation responsive to dynamic needs has become of increasing value in the operation of power systems. The power flow in an individual ac line cannot be independently controlled to the degree offered by dc transmission.
+
+A typical dc converter station contains conventional ac equipment in its ac switchyard, supplemented by equipment specialized for the ac-dc conversion. Solid-state converters are connected on the dc side with a center neutral point which is usually connected to a remote ground electrode. Balanced dc currents are circulated on each pole at plus and minus dc voltages with respect to ground. See CONVERTER; ELECTRIC POWER SUBSTATION. [J.RE.]
+
+## Direction-finding equipment
+
+Equipment used for determining the direction from which a received signal is being radiated. Direction finders serve a variety of applications. In navigation, a direction finder on a moving vehicle, such as an aircraft or a ship can be used to provide either a transmitter's bearing to yield relative positioning information if the transmitter's location and range are known, or the vehicle's heading for guidance along a desired route toward a given destination. A direction finder may also be a ground station used to obtain bearing information on a moving source. This information, when passed on, can be useful for the moving source in navigating. Surveillance uses of direction finders include uncovering covert transmitters in espionage, locating the emitter in search-and-rescue missions, and tracking crewless objects in scientific experiments. [J.RE.]
+
+Most direction-finding systems are based on two principles, one exploiting antenna gain characteristics and the other using phase-frequency relationships observed by a moving or a multiple-element antenna.
+
+Direction-finding systems based on antenna gain sometimes take advantage of variations where the received signal amplitude is either a maximum or a minimum. Signal-minimum systems exploit the distinct null found in an antenna's gain pattern. Some of the earliest direction-finding equipment using loop antennas was conceived on this principle. The advent of higher-frequency systems and highly directive antennas, such as phased arrays and parabolic dishes, provided the basis for signal-maximum systems, which can pinpoint the direction in which the signal is strongest. See ANTENNA TECHNIQUES.
+
+The principle of induced Doppler frequency modulation requires movement of the antenna to cause additional Doppler shift to the original signal. The frequency of the signal received by the moving antenna will vary in relation to that received by a fixed antenna. The antenna motion most suited for omnidirectional purposes is circular. For this, the induced Doppler is zero at the instant when the antenna motion is perpendicular to the bearing of the received signal. See DOPPLER EFFECT.
+
+Airborne automatic direction finders (ADFs) are constrained by size and weight. They simply. Signal-minimum systems with loop antennas are widely used. See AIR NAVIGATION; ELECTRONIC NAVIGATION SYSTEMS. [P.H.W.]
+
+## Directional coupler
+
+A four-port waveguide device (see illustration) in which an incoming wave at any one port (for example, A) appears at two others (C and D) but not at the fourth (B). This device finds numerous applications in waveguide networks such as microwave waveguides, integrated optics, and optical fibers. It is the equivalent of the hybrid induction coil balance. See TEE JUNCTION.
+
+Directional couplers are usually made by introducing some form of lumped or continuous coupling among several guides so that the coupled waves interfere constructively in some directions while canceling one another in other directions. A simple two-hole coupler consists of two identical microwave waveguides running adjacent to each other with two small holes of the same size and shape coupling between them. It is limited by a narrow-frequency band over which the directivity is high, and a small coupling factor which is on the order of 10-30 dB. To alleviate these problems, multihole couplers are used, where the backward cancellation is obtained through destructive interference among waves excited by three or more coupling elements (such as holes), usually spaced a quarter-wavelength apart. The coupling holes are not necessarily equal. A natural extension to the multihole coupler is the slot coupler, where the coupling element is a continuous slot that is several wavelengths long and often tapered, and the coupling is continuously distributed along the length of the interaction.
+
+Holes and slots are appropriate coupling elements for closed metallic waveguides, where the guiding field is completely enclosed within the walls of the guide. Other design alternatives exist for open waveguides such as microwave striplines, diffused dielectric optical guides used in integrated optics, and optical fibers. In these guides, the propagating field extends beyond the physical dimensions of the guiding structure (for example, the metallic plates of the stripline or the core of the fiber), and proximity coupling becomes possible. For example, the electromagnetic field of a single-mode optical fiber has an exponentially decreasing, evanescent, nonradiating tail in the first few micrometers of the cladding. Fusion, etching, and mechanical polishing techniques may be used to bring two fiber cores close enough to each other to make possible the transfer of power from one core to the other through the interaction of the corresponding evanescent fields.
+
+Weak directional couplers can selectively monitor either the forward or backward power flow in waveguides, and medium-to-strong couplers serve as amplitude combinings and splitters in various resonators and sensors. All of these applications require high directivity, low insertion loss, and negligible back reflections. Many other useful junctions are also based on the same physical principles. See INTEGRATED OPTICS; MICROWAVE MEASUREMENTS; MICROWAVE POWER MEASUREMENT; OPTICAL COMMUNICATIONS; OPTICAL FIBERS; WAVEGUIDE. [M.T.L.]
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_693_0.png)
+
+## Directivity
+
+The general property of directional discrimination displayed by systems that receive or emit waves. Thus, loudspeakers, microphones, radio antennas, underwater sound projectors, hydrophones, and even telescopes all have the common property that their effectiveness depends upon the direction from which the wave is either emitted or received. The manner in which a sender or receiver is directional depends largely upon its geometrical shape and, in particular, upon its dimensions compared to those of the wavelength involved.
+
+Directivity is a desirable property of a receiver which it permits the identification of the direction from which a signal comes and because noise from other directions is eliminated. It is desirable in a sensor because the available energy can be concentrated in a given direction. A simple example of directivity is furnished by the megaphone, which effectively increases the size of the emitting area, thus increasing directivity. (W.S.Cr.)
+
+## Disasteroida
+
+A pararyhthetic grouping of extint irregular echinoids, members of which gave rise to the Holoasteroidea and Spatangoida in the Lower Cretaceous. Disasteroids have a split apical disc, the posterior two ocular plates and their associated ambulacra are separated from the remainder of the apical disc (and the anterior three ambulacra) by intercalated interambulacral plates. Disasteroids have a strong bilateral symmetry. Larger pore pairs, arranged in phyllodes around the mouth, suggest that disasteroids were mostly feeders with peniculate feeding tube feet. Most species probably lived infucially, though not burrowing deeply.
+
+Five families are included: Acrosulididae, Collyrithidae, Disasteridae, Polygyrathidae, and Tithoniidae, separated principally on apical disc parting. Approximately 75 species have been named, arranged in 17 genera. The oldest species is late Bajocian (Middle Jurassic) and the youngest Albian (Lower Cretaceous). The group achieved its greatest diversity during the Upper Jurassic. See AFLEOTOSTOMATA; ECHINODERMATA. (A.B.S.)
+
+## Discomycetes
+
+A class in the phylum Ascomycota, commonly known as cup fungi. They form a well-developed mycelium which bears the sexual (ascus) and asexual (conidium) states. The asccarp (ascophorium) is generally cup or saucer shaped. In general, the asci are exposed when they mature, except in one group (truffles) that forms the asccarps underground (hypogeous asccarps). The asccarp arises as coiled or intertwined initials that can be distinguished as male (antheridium) and female (asccogonium) in some species. Layers of hyphae develop around these initials to form the tissue of the asccarp. As this development occurs, the initial coil forms a system of asccogenous hyphae that transform into asci. The asci form in a broad layer (hymenium) on the asccarp. They have a single rigid wall (unitunicate), with two basic types of spores, operculate and inoperculate. Operculate asci have a hinged cap (operculun) at the tip that opens to allow discharge of ascospores. In inoperulate asci, the apex has a pore or a small slit through which the spores are discharged. In most species, asccarps are forcibly discharged. Their shape is variable, but they are usually one celled and hyaline.
+
+The Discomycetes occur on soil and on living and dead plants, either as saprobes or as parasites. The operculate disc mycetes includes the largest of all ascomycetes: the edible morels (Morchella), prized for their flavor; those with large, showy red or orange apothecia (Cookeina, Sarcoscypha, Suctellina); and truffles (Tuber). Among the inoperulate discmycetes are numerous plant pathogens, such as Monilinia fructicola (brown rot of peaches), which form small, brown, cup-shaped asccarps with long stalks, and the needle cast fungus (Lophodermium pinstrii), which forms narrow, elongate asccarps that open by a slit on pine needles. See ASCOMYCOTA; ELMYCOTA; FUNGI. (R.T.H.)
+
+## Discriminant
+
+For a polynomial f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ··· + a₁x + a₀, the discriminant is given by the expression
+
+D = a₂ⁿ⁻¹(x₁ − x₂)²(x₁ − x₃)² ··· (x₁ − xₙ)²(x₂ − x₃)² ···
+
+(x₁ − xₙ)²(xₙ₋₁ − xₙ)²
+
+where x₁, x₂, ..., xₙ are the roots of the equation f(x) = 0. The importance of the discriminant D lies in the fact that D vanishes if, and only if, the equation f(x) = 0 has equal roots. Since the value of the discriminant is unchanged if any two letters x₁ and x₂ are interchanged, it is a symmetric function of the roots, and therefore can be expressed in terms of the coefficients of f(x). The discriminant of a quadratic polynomial f(x) = ax² + bx + a₀ is D = b² − 4a₀a. The discriminant of a cubic polynomial f(x) = ax³ + ax² + a₁x + a₀ is
+
+D = 18a₃a₂a₁a₀ − 4a₂³a₀ + a₂²a₁² − 4a₁³a₀ − 27a₃²a₀².
+
+See EQUATIONS, THEORY OF; POLYNOMIAL SYSTEMS OF EQUATIONS. (R.A.B.)
+
+## Disease
+
+A deleterious set of responses which occurs at the subcellular level, stimulated by some injury, and which is often manifested in altered structure or functioning of the affected organism. With advances in understanding and the development of sensitive probes, it has become clear that the fundamental causes of disease are based on biochemical and biophysical responses within the cell. These responses are now being categorized and, slowly, the mechanisms are being understood.
+
+The term homeostasis refers to functional equilibrium in an organism and to the processes that maintain it. There is a range of responses that is considered normal. If cells are pushed to respond beyond these limits, there may be an increase, a decrease, or a loss of normal structure or function. Such changes may be reversible or irreversible. If irreversible, the cells may die. Thus, subcellular changes may be reflected in altered tissue states, organs, and consequently organisms, and result in a condition described as disease. See HOMEOSTASIS.
+
+Lesions are the chemical and structural manifestations of disease. Subjective manifestations of a disease process such as weakness, pain, and fatigue are called symptoms. The objective measurable manifestations such as temperature, blood pressure, and respiratory rate changes are called signs or physical findings. Changes in the chemical or cellular makeup of an organ, tissue, or fluid of the body or its excretory products are called laboratory findings. To make a diagnosis is to determine the nature of the pathologic process by synthesizing information from these sources evaluated in the light of the patient’s history and compared with known patterns of signs and symptoms. In common usage, the term disease indicates a constellation of specific signs and symptoms attributable to altered reactions in the individual which are produced by agents that affect the body or its parts.
+
+Etiology is the study of the cause or causes of a disease process. Although a disease may have one principal etiologic agent, it is becoming increasingly apparent that there are several factors involved in the initiation of a disease process. Susceptibility of the individual is an ever present variable. The etiologic factors can conveniently be divided into two categories (see table). One group consists of endogenous (internal; within the body) factors, and may originate from errors in the genetic material. The other category of etiologic factors is exogenous (environmental). These account for the majority of disease reactions. Exogenous factors include physical, chemical, and biotic agents.
+
+Pathogenesis refers to the mechanisms by which the cell, and consequently the body, responds to an etiologic agent. It involves biochemical and physiological responses which are reflected in ultrastructural, microscopic, or gross anatomic lesions. There are a limited number of ways in which cells respond to injury. The nature of the response is modified by the nature of the agent, dose, portal of entry, and duration of exposure, as well as many host factors such as age, sex, nutritional state, and species and individual susceptibility.
+
+The diseases which are important in causing human death have changed in the last 80 years. In 1900 six of the ten leading causes of death in the United States were infectious (biotic) agents. At present, only one of the ten leading causes of death in the United States, influenza and pneumonia, is due to biotic agents. While most of the biotic causes of disease were being brought under control, continued population growth (in large part, a consequence of the control of infectious disease) and

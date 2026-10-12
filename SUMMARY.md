@@ -1459,6 +1459,7 @@
 +   [Maximum RPM：极致挑战 Red Hat 包管理器](docs/maximum-rpm-taking-the-red-hat-package-manager-to-the-limit/README.md)
 +   [Maximum RPM：RPM 打包技术高级指南](docs/maximum-rpm-the-ultimate-source-for-advanced-rpm-packaging-t/README.md)
 +   [也许人就是时代](docs/maybe-the-people-would-be-the-times/README.md)
++   [McGraw-Hill 科学技术简明百科全书 第5版](docs/mcgraw-hill-concise-encyclopedia-of-science-and-technology-5/README.md)
 +   [麦格罗希科学与技术百科全书（第5版）](docs/mcgraw-hill-concise-encyclopedia-of-science-technology-5th-e/README.md)
 +   [麦格罗手册科学与技术百科全书（第五版）](docs/mcgraw-hill-concise-encyclopedia-of-science-technology-fifth/README.md)
 +   [MCSE Windows 2000 Server 考试冲击 2 (考试 70-215) (考试冲击)](docs/mcse-windows-2000-server-exam-cram-2-exam-cram-70-215-exam-c/README.md)

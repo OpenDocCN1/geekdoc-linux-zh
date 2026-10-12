@@ -1,0 +1,31 @@
+# Photosynthesis 1671
+
+photosynthetic reaction sequence. The remaining 25% of the carbon is released as carbon dioxide. Photosynthesis receives the rate of photosynthesis in plants in three ways: carbon dioxide is released; energy is diverted from photosynthetic reactions to photosynthetic reactions; and competition between oxygen and carbon dioxide reduces the efficiency of the important photosynthetic enzyme ribulose-bisphosphate (RuBP) carboxylase. There is no known function of the oxygenation reaction; most scientists believe it is an unavoidable side reaction of photosynthesis. See PHOTOSYNTHESIS.
+
+The rate of photosynthesis can be stimulated as much as 50% by reducing photorepiration. Since photosynthesis provides the material necessary for plant growth, photorepiration inhibits plant growth by reducing the net rate of carbon dioxide assimilation (photosynthesis). Plants grow faster and larger under nonphotorespiratory conditions, in either low oxygen or high carbon dioxide atmospheres. Most of the beneficial effects on plant growth achieved by increasing CO₂ may result from the reduced rate of photorepiration. See PLANT GROWTH.
+
+There are some plants that avoid photorepiration under certain conditions by actively accumulating carbon dioxide inside the cells that have ribulose-bisphosphate carboxylase/oxygenase. Many cacti do this by taking up carbon dioxide at night and then releasing it during the day to allow normal photosynthesis. These plants are said to have crassulacean acid metabolism (CAM). Another group of plants, including corn (Zea mays), take up carbon dioxide by a special accumulating mechanism in one part of the leaf, then transport it to another part of the leaf for release and fixation by normal photosynthesis. The compound used to transport this carbon dioxide has four carbon atoms, and so these plants are called C₄ plants. Plants that have no mechanism for accumulating carbon dioxide produce the three-carbon compound phosphoglycerate directly and are therefore called C₃ plants. Most species of plants are C₃ plants. See PLANT RESPIRATION.
+
+# **Photosphere** The apparent, visible surface of the Sun.
+
+The photosphere is a gaseous atmospheric layer a few hundred miles deep with a diameter of 864,000 mi (1,391,000 km; usually considered the diameter of the Sun) and an average temperature of approximately 5800 K (10,500 F). Radiation emitted from the photosphere accounts for most of the solar energy flux at the Earth.
+
+Convective cells give the photosphere a granular appearance with bright gass (hot rising gas) surrounded by dark intergranular lanes (cool descending gas). A typical granule is approximately 600 km (1000 km) in diameter. Measurements of horizontal velocity reveal a larger convective pattern, the supergranulation; the horizontal motion of individual granules reveals intermediate-scale convective flows. See SUN. [S.L.K]
+
+# **Photosynthesis** The manufacture in light of organic compounds (primarily certain carbohydrates) from inorganic materials by chlorophyll- or bacteriochlorophyll-containing cells.
+
+This process requires a supply of energy in the form of light. In chlorophyll-containing plant cells and in cyanobacteria, photosynthesis involves oxidation of water (H₂O) to oxygen molecules, which are released into the environment. In contrast, bacterial photosynthesis does not involve O₂ evolution—instead of H₂O, other electron donors, such as H₂S, are used. This article will focus on photosynthesis in plants. See BACTERIAL PHYSIOLOGY AND METABOLISM; CHLOROPHYLL; PLANT RESPIRATION.
+
+In the net overall chemical reaction of plant photosynthesis is shown in the equation below, where (CH₂O) stands for a carbohydrate (sugar).
+
+H₂O + CO₂ + light energy $\xrightarrow{\text{chlorophyll enzymes}}$ (CH₂O) + O₂
+
+The photochemical reaction in photosynthesis belongs to the type known as oxidation-reduction, with CO₂ acting as the oxidant (hydrogen or electron acceptor) and water as the reductant (hydrogen or electron donor). The unique characteristic of this particular oxidation-reduction is that it goes "in the wrong direction" energetically; that is, it converts chemically stable materials into chemically unstable products. Light energy is used to make this "uphill" reaction possible.
+
+Photosynthesis is a complex, multistage process. Its main energy are (1) the primary photochemical process in which light energy absorbed by chlorophyll is converted into chemical energy, in the form of some energy-rich intermediate products; and (2) the enzyme-catalyzed "dark" (that is, not photochemical) reactions by which these intermediates are converted into the final products—carbohydrates and free oxygen.
+
+Experiments suggest that plants contain two pigment systems. One (called photosystem I, or PS I, sensitizing reaction I) contains the major part of chlorophyll *a*; the other (called photosystem II, or PS II, sensitizing reaction II) contains some chlorophyll *a* and the major part of chlorophyll *b* or other auxiliary pigments (for example, the red and blue pigments, called phycobilins, in red and blue-green algae, and the brown pigment fucoxanthin in brown algae and diatoms). It appears that efficient photosynthesis requires the absorption of an equal number of light quanta in PS I and PS II, and that within both systems excitation energy undergoes resonance migration from one pigment to another until it ends in special molecules of chlorophyll *a* called the reaction centers. The latter molecules then enter into a series of chemical reactions that result in the oxidation of water to produce O₂ and the reduction of nicotinamide adenine dinucleotide phosphate (NADP⁺). Chromatophores from photosynthetic bacteria and chloroplasts from green plants, when illuminated in the presence of adenosine diphosphate (ADP) and inorganic phosphate, also use light energy to synthesize adenosine triphosphate (ATP); this photophosphorylation could be associated with some energy-releasing step in photosynthesis. [G. G.Knox]
+
+The light-dependent conversion of radiant energy into chemical energy as ATP and reduced nicotinamide adenine
+
+![](bbox=[0.52, 0.63, 0.94, 0.97])

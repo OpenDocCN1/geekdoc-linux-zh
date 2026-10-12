@@ -1,0 +1,152 @@
+
+## Contributors
+
+- Giallorenzi, Dr. Thomas G. Superintendent, Optical Science Division, Department of the Navy, Naval Research Laboratory, Washington, D.C.
+- Giannasi, Dr. David E. Department of Botany, University of Georgia.
+- Gibbons, Dr. Ian. Kewala Laboratory, University of Hawaii.
+- Gibbs, Dr. Martin. Institute for Photobiology of Cells and Organelles, Brandeis University.
+- Gibson, Robert P. President, George G. Sharp, Inc., New York.
+- Gibson, Dr. John E. Dean of Engineering, Oakland University.
+- Gièsse, Raymond. Department of Mechanical Engineering, University of Minnesota.
+- Gigg, Roy H. Chemistry Division, National Institute for Medical Research, London, England.
+- Giguere, Paul A. Emeritus Professor, St. Petersburg Beach, Florida.
+- Gilardi, Dr. Gerald L. Microbiology Laboratory, North General Hospital, New York.
+- Gilbert, Barrie. Analog Devices, Inc., Northwest Laboratories, Beaverton, Oregon.
+- Gilbert, Dr. Edgar N. Deceased; formerly, AT&T Bell Telephone Laboratories, Murray Hill, New Jersey.
+- Gill, Dr. Michael. Department of Molecular Biology and Microbiology, Tufts University.
+- Gillespie, Dr. Ronald J. Department of Chemistry, McMaster University, Hamilton, Ontario, Canada.
+- Gilloteaux, Dr. Jacques. Professor of Cell Biology and Anatomy, Lake Erie College of Osteopathic Medicine, Erie, Pennsylvania.
+- Gingrich, Prof. NEWELL S. Department of Physics, University of Missouri.
+- Ginsburg, Dr. Robert M. Rosenstiel School of Marine and Atmospheric Science, University of Miami.
+- Girvin, Prof. STEVEN M. Department of Physics, Indiana University, Bloomington.
+- Glanzz, Dr. Michael. National Center for Atmospheric Research, Boulder, Colorado.
+- Glascrof, Prof. GLENN M. Department of Electrical and Computer Engineering, Syracuse University.
+- Glass, Dr. Roger I. Chief, Viral Gastroenteritis Unit, Center for Infectious Diseases, Centers for Disease Control and Prevention, Atlanta, Georgia.
+- Glasscock, Dwight L. Deceased; formerly, Harza Engineering Company, Chicago, Illinois.
+- Gledhill, Dr. S. J. Harpenden Herts, United Kingdom.
+- Glitz, Dr. Benjamin. University of Chicago, Cumminga Life Science Center, Chicago, Illinois.
+- Glowatz, Dr. Michael, Jr. Environmental Health and Safety Department, AT&T Bell Laboratories, Murray Hill, New Jersey.
+- Gnade, Dr. Bruce E. Defense Advanced Research Projects Agency, Arlington, Virginia.
+- Goddu, Dr. Robert F. Manager, Fibers and Film Research Division, Hercules, Inc., Wilmington, Delaware.
+- Goebel, Prof. Charles. Department of Physics, University of Wisconsin.
+- Goff, Dr. Fazier. Los Alamos National Laboratories, Los Alamos, New Mexico.
+- Gobel, Prof. GEORGE W. Department of Molecular Biology & Pharmacology, Washington University School of Medicine, St. Louis, Missouri.
+- Goland, Dr. Leonard. Executive Vice President, Dynacastex Corporation, Los Angeles, California.
+- Gold, Dr. Ronald. Hospital for Sick Children, Toronto, Ontario, Canada.
+- Goldberg, Prof. DAVID E. Department of General Engineering, University of Illinois, Urbana.
+- Goldberg, Dr. Ira J. Department of Medicine, Columbia College of Physicians and Surgeons, Division of Metabolism and Nutrition, New York.
+- Goldenberg, Dr. Victor E. Associate Professor in Pathology, University Hospital, Seattle.
+- Goldfarb, Dr. MARJORIE S. School of Oceanography, University of Washington, Seattle.
+- Goldhaber, Dr. GERSON. Lawrence Berkeley Laboratory, University of California, Berkeley.
+- Goldich, Dr. SAMUEL S. Department of Geology, Colorado School of Mines, Golden.
+- Goldman, Dr. Marvin. Emeritus Professor, Department of Radiological Sciences, University of California, Davis.
+- Goldstein, Dr. D. J. Department of Biomedical Science, University of Sheffield, England.
+- Goldstein, Dr. IRVING S. Department of Wood and Paper Science, North Carolina State University, Raleigh.
+- Golley, Dr. FRANK B. Institute of Ecology, Athens, Georgia.
+- Golub, Dr. Leon. Harvard Smithsonian Center for Astrophysics, Smithsonian Astrophysical Observatory, Cambridge, Massachusetts.
+- Gomer, Prof. ROBERT. James Franck Institute, University of Chicago.
+- Gonser, Dr. BRUCE W. Battelle Memorial Institute, Columbus, Ohio.
+- Good, Dr. IRVING J. Department of Statistics and Statistical Laboratory, College of Arts and Sciences, Virginia Polytechnic Institute.
+- Good, Prof. ROLAND H., Jr. Department of Physics, Pennsylvania State University.
+- Goodbody, Dr. Ivan. Department of Zoology, University of the West Indies, Jamaica.
+- Goodchild, Dr. CHANCEY G. Candler Professor of Biology, Emory University.
+- Goodenough, Prof. JOHN B. Center for Materials Science and Engineering, University of Texas, Austin.
+- Goodglass, Dr. Harold. Director, Psychology Research, Veterans Administration Hospital, Boston, Massachusetts.
+- Goodheart, Prof. CLARENCE F. Department of Electrical Engineering, Union College.
+- Gooding, Dr. James L. Space Scientist, Planetary Materials Branch, NASA Lyndon B. Johnson Space Center, Houston, Texas.
+- Goodison, Dr. MARY E. Superintendent, Hydrometeorological Impact and Development Section, Canadian Climate Centre, Atmospheric Environment Service, Downsview, Ontario.
+- Goodman, Prof. Bernard. Department of Physics, University of Cincinnati.
+- Goodman, Dr. JOSEPH W. Stanford Electronics Laboratories, Stanford University.
+- Goodman, Dr. MATTHEW S. Bell Communications Research, Inc., Morristown, New Jersey.
+- Goodman, Dr. Morris. Department of Anatomy, Wayne State University College of Medicine, Detroit, Michigan.
+- Goodman, Dr. Ralph R. Naval Research Laboratory, Stennis Space Center, Mississippi.
+- Goodman, Dr. RICHARD A. Division of Public Health, Emory University.
+- Goodman, Sidney H. Manager, Materials Products Department, Technology Support Division, Hughes Aircraft Co., Culver City, California; Senior Lecturer, Department of Chemical Engineering, University of Southern California.
+- Goodman, Dr. STEVEN R. Chair, Department of Cell Biology and Neuroscience, University of South Alabama College of Medicine, Mobile, Alabama.
+- Goodstein, David H. Director, Inter/Consult, Cambridge, Massachusetts.
+- Goosby, Dr. Eric P. AIDS Education and Training Centers Program, U.S. Public Health Service, Rockville, Maryland.
+- Gordon, Dr. ARNOLD L. Lamont-Doherty Geological Observatory, Palisades, New York.
+- Gordon, Dr. GARY D. Program Development, Communication Satellite Corporation, Clarksburg, Maryland.
+- Gordon, Prof. Louis. Deceased; formerly, Case Institute of Technology.
+- Gordon, Dr. WILLIAM E. Associate Professor of Physical Chemistry, Pennsylvania State University, and Consultant.
+- Gore, Edward W., Jr. Vice President, International Market Requirements, Office Produce Division, IBM, Franklin Lakes, New Jersey.
+- Gosling, Dr. William. Consultant, Radio Communications, Rode Bath, England.
+- Gossard, Prof. ARTHUR C. Materials Department, University of California, Santa Barbara.
+- Gotteli, Dr. Nick. Department of Biology, University of Vermont, Burlington.
+- Gots, Dr. JOSEPH S. Department of Microbiology, School of Medicine, University of Pennsylvania.
+- Goult, Dr. Richard. U. Department of Anthropology, University of Hawaii.
+- Gould, Dr. Stephen J. Professor of Geology, Museum of Comparative Zoology, Harvard University, Cambridge.
+- Goulding, Dr. Frederick S. Lawrence Berkeley Laboratory, University of California.
+- Goudville, Dr. Department of Botany and Department of Physiology and Biophysics, University of Illinois, Urbana.
+- Govidnee, Dr. Rajni. Retired; formerly, Department of Botany, University of Illinois, Urbana.
+- Grabowski, Dr. Martha R. Center for Industrial Innovation, Department of Decision Sciences and Engineering Systems, Rensselaer Polytechnic Institute, Troy, New York.
+- Grace, Dr. Neville. Biotechnology Division, Department of Scientific and Industrial Research, Palmerston North, New Zealand.
+- Graham, Dr. Jeffrey B. Schipino Institution of Oceanography, La Jolla, California.
+- Grands, Dr. Lance. Field Museum of Natural History, Chicago, Illinois.
+- Granichar, Prof. H. Laboratory of Solid State Physics, Swiss Federal Institute of Technology, Zurich.
+- Gransch, Dr. S. Department of Biochemistry, Rockefeller University.
+- Grashoff, Dr. K. Institut für Meereskunde an der Universität Kiel, Germany.
+- Graue, Dr. Fred V. Consulting Agronomist, College Park, Maryland.
+- Graves, Dr. Arthur H. Retired; formerly, Consultant in Genetics, Connecticut Agricultural Experiment Station.
+- Graves, Prof. Lawrence M. Professor Emeritus of Mathematics, University of Chicago.
+- Graves, Walter L. San Diego, California.
+- Gray, Dr. Ernest. Variety Cub Children's Hospital, Department of Pediatrics, University of Minnesota.
+- Gray, G. Ronald. Director, Syntrude Canada Ltd., Edmonton, Alberta, Canada.
+- Gray, Dr. Gerald J. Vice President, Forest Policy Center, American Forests, Washington, D.C.
+- Gray, Dr. Harry B. Division of Chemistry and Chemical Engineering, California Institute of Technology.
+- Green, Dr. David M. Graduate Research, Department of Zoology, University of Florida.
+- Green, Dr. Louis C. Department of Astronomy, Harvard College.
+- Green, Dr. Richard F. National Optical Astronomy Observatory, Tucson, Arizona.
+- Green, Shelton I. Department of Mechanical Engineering, University of British Columbia, Vancouver, Canada.
+- Greenberg, Prof. David M. Department of Biochemistry, School of Medicine, University of California, San Francisco.
+- Greenberg, Prof. Daniel M. Department of Physics, City College of the City University of New York.
+- Greenfield, Dr. Lazar J. Department of Surgery, University of Michigan Hospitals, Ann Arbor.
+- Greenler, Dr. Robert. Department of Physics, University of Wisconsin.
+- Greensfeld, Dr. Bernard S. Deceased; formerly, Director of Oil Research, Shell Development Company, Emeryville, California.
+- Greenspan, Prof. Ehud. Department of Nuclear Engineering, University of California, Berkeley.
+- Greenspan, Martin. National Bureau of Standards.
+- Greenstein, Prof. Jesse L. Hale Observatories, Pasadena, California.
+- Gregory, Dr. Bob Lee. Sandia National Laboratories, Albuquerque, New Mexico.
+- Gregory, Dr. Joseph T. Professor of Paleontology and Curator of Lower Vertebrates, Museum of Paleontology, University of California, Berkeley.
+- Greiling, Dr. Paul T. Hughes Research Laboratories, Malibu, California.
+- Greiner, Dr. Dale L. Professor of Medicine, School of Massachusetts Medical School, Worcester.
+- Greiner, Dr. Walter. Institut für Theoretische Physik, University Frankfurt, Germany.
+- Greist, Dr. Gary S. Exxon Research and Engineering Company, Annandale, New Jersey.
+- Greif, Perry. President, Greycorp Corporation, Princeton, New Jersey.
+- Grierson, Dr. William. Institute of Food and Agricultural Sciences, University of Florida.
+- Griffin, Dr. Dana T. Department of Geology, Brigham Young University, Provo, Utah.
+- Griffin, Dr. James. Graduate School of Oceanography, University of Rhode Island, Kingston, Rhode Island.
+- Griffiths, Dr. A. J. F. Department of Botany, University of British Columbia, Vancouver, Canada.
+- Griffiths, Prof. Peter R. Chairman, College of Letters and Science, Department of Chemistry, University of Idaho.
+- Griga, Prof. Neil S. Head, Department of Civil Engineering, Colorado State University, Fort Collins.
+- Grilo, Dr. Carlos M. Director of Psychology, Yale Psychiatric Institute, New Haven, Connecticut.
+- Grim, Dr. Ralph E. Department of Geology, University of Illinois, Urbana.
+- Grimm, Robert A. AC Spark Plug Division, General Motors Corporation, Flint, Michigan.
+- Grindlay, Dr. Jonathan E. Center for Astrophysics, Harvard University.
+- Grine, Dr. Frederick E. Department of Anthropology, State University of New York, Stony Brook.
+- Grissino-Mayer, Dr. Henri D. Department of Physics, Astronomy, and Geosciences, Valdosta State University, Valdosta, Georgia.
+- Grivell, Dr. Les. A. Aidingen Moleculaire Biologie, Laboratory for Biochemie, Universiteit van Amsterdam, Netherlands.
+- Grodznis, Dr. Lee. Physics Department, Massachusetts Institute of Technology.
+- Grogan, Dr. R. G. Department of Plant Pathology, University of California, Davis.
+- Grogans, P. H. Deceased; formerly, Chemical Division, Ford Machinery and Chemical Corporation.
+- Gronstalk, Prof. Halstein. Department of Large Animal Clinical Sciences, Norwegian College of Veterinary Medicine, Oslo, Norway.
+- Grody, Dr. E. Patrick. Integrated Genetics, Framingham, Massachusetts.
+- Gross, Prof. Daniel S. Department of Genetics, North Carolina State University, Raleigh.
+- Gross, Prof. Jonathan L. Department of Mathematics, Columbia University, New York.
+- Gross, Marjorie K. Newport, North Carolina.
+- Gross, William H. Technical Editor, Corporate Communications, Dow Chemical Company, Midland, Michigan.
+- Grossman, Dr. Lawrence. Department of Geophysical Sciences, University of Chicago.
+- Grosswald, Prof. Emil. Deceased; formerly, Department of Mathematics, Temple University.
+- Grotinger, Dr. John. Department of Earth, Atmosphere, and Space Sciences, Massachusetts Institute of Technology.
+- Groves, Dr. Gordon W. Instituto de Geofísica, Torre de Ciencias, Ciudad Universitaria, México.
+- Gruen, Dr. Dieter M. Argonne National Laboratory, Argonne, Illinois.
+- Grunberg, Dr. Emanuel. Director, Department of Chemotherapy, Hoffmann-LaRoche, Inc., Nutley, New Jersey.
+- Gruver, Prof. William A. School of Engineering Science, Simon Fraser University, Burnaby, British Columbia, Canada.
+- Grzymala-Busse, Prof. Jerzy W. Department of Computer Science, University of Kansas.
+- Gschneider, Prof. Karl A., Jr. Ames Laboratory, Iowa State University.
+- Gugenheimer, Prof. Stephen. Department of Geological Sciences, University of Illinois, Chicago.
+- Guindo, Prof. Louis. Associate Professor, Electrical and Computer Engineering, Virginia Tech., Blacksburg.
+- Guidry, Dr. Mark R. Fairchild Camera & Instrument Corp., Mountain View, California.
+- Gunckel, Prof. James E. Department of Botany, Rutgers University.
+- Gunther, Dr. Albert A. Chief Process Engineer, Midland Division, Dow Chemical Company, Midland, Michigan.
+- Gunning, Dr. Brian E. S. Department of Botany, Queen's University, Belfast, Ireland.

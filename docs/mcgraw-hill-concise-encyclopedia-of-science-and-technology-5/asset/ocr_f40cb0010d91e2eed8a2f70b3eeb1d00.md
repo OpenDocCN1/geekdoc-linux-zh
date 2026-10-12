@@ -1,0 +1,15 @@
+# 346  **Buxbaumiiadæ**
+
+the fat crystals. Then, liquid fat is on the outside of the globules to allow rapid aggregation during churning.
+
+Continuous churns produce as much as 15,000 lb (6800 kg) of butter per hour; they convert cream to butter in a few minutes. With the batch churn, about 45 min is needed to produce butter, and then at least 30 min to standardize the composition and get water dispersed in tiny droplets.
+
+In the continuous churn the entering pasteurized and tempered cream is agitated vigorously, by beater bars. This causes stripping of the fat globule membrane and aggregation of the fat globules into chunks 0.2\u20130.4 in. (0.5\u20131 cm) in diameter. At this point the emulsion has been inverted. The slope of the continuous churn allows the buttermilk to drain out the rear of the churn and the butter granules to continue through the churn barrel. The next flow-through position continues the kneading process to produce butter with finely dispersed droplets of moisture. If composition or color adjustment is required, it is done in this step; also, a salt solution is added to give the finished butter 1.2\u20131.5% salt. As the butter continues through the last step, more kneading is done with finer bars to complete the blending process and provide for fat crystallization that will yield optimum spreadability in the finished butter.
+
+Butter in the package has a composition close to 80.0% milk fat, 1.2\u20131.5% salt, 17.5\u201317.8% water, and 1% milk solids. If
+
+butter is salt-free, the moisture and fat contents are adjusted to a slightly higher value to compensate. **[R.Br.a.]**
+
+**Buxbaumiiadæ**  A subclass of the class Bryopsida, the true mosses. It consists of a single family with four genera. The Buxbaumiiadæ is very distinctive in every way and most significantly in the structure of the peristome. The plants are small and occur especially on soil. The gametophyte is greatly reduced (*Buxbaumia*), with no stem and few leaves that are readily disappearing, or better developed with well-formed leaves having a single costa and short cells. The sporophytes are terminal. The capsules are disproportionately large and immersed or elevated on a seta (*Buxbaumia*). They are strongly inclined and asymmetric, tapered to a small mouth from a broad base. The operculum is small and conic. See **BRYOPHYTA**; **BRYOPSIDA**. **[H.Cr.]**
+
+**Bytownite**  A member of the plagioclase feldspar solution series with a composition ranging from $\mathrm{Ab}_{30}\mathrm{An}_{70}$ to $\mathrm{Ab}_{10}\mathrm{An}_{90}$ (Ab = $\mathrm{NaAlSi}_{3}\mathrm{O}_{8}$ and An = $\mathrm{CaAl}_{2}\mathrm{Si}_{2}\mathrm{O}_{8}$). Bytownite is very abundant in basic igneous rocks where it is the first plagioclase to crystallize under plutonic conditions; it forms the cores of zoned plagioclase phenocrysts in basaltic volcanics, and it sometimes occurs in anorthosites. See **FELDSPAR**. **[L.Cr.]**

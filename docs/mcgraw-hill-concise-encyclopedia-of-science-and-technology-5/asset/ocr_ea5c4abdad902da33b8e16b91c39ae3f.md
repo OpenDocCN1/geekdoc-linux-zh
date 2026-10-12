@@ -1,0 +1,39 @@
+to rise. The fully developed louse has intermingled columns of up- and downwonged fluid, with lateral exchange of heat not so fast, carrying advective thermal fluxes of salt and to a lesser extent heat.
+
+Another form of double-diffusive convection occurs when the faster-diffusing component has an unstable distribution. In the ocean, this happens when cold, fresh water sits above warmer, saltier and denser water. Such stratifications are common in polar regions and in local areas above hot springs at the bottom of the deep sea. See OCEAN CIRCULATION; OCEANOGRAPHY; SEAWATER.
+
+The importance of double diffusion lies in its ability to affect water mass structure with its differential transport rates for heat and salt. This is believed to play a significant role in producing certain oceanic water types with well-defined relationships between temperature and salinity. See OCEAN CIRCULATION; SEAWATER.
+
+# **Doulgas-fir** A large coniferous tree, *Pseudotsuga menziesii* (formerly *P. taxifolia*), known also as red fir, belonging to the pine family (Pinaceae). It is one of the most widespread and most valuable tree species of western North America and ranks among the world's most important. In the United States, this species is first in total stand volume, lumber production, and 1,700 species. It is the most common Christmas tree in the West and the state tree of Oregon. See PINALES.
+
+Douglas-fir is a large to very large evergreen tree with narrow pointed crown of slightly drooping branches; at maturity it reaches a height of 80-200 ft (24-60 m) and a trunk diameter of 2-5 ft (0.6-1.5 m). The bark is dark or reddish brown, very thick, deeply furrowed, and often corky. The needlelike leaves are sparsely in two rows; the rows are flat, or flexible, with a very short leafstalk. Buds are distinctive, conical pointed, scaly, and dark red. The cones are ellipsoid and light brown, with many thin rounded cone-scales, each bearing a long, straight or twisted, distinctive pointed bract.
+
+The natural distribution of Douglas-fir extends from southwestern Canada (British Columbia and Alberta) south through the western United States (Washington, Oregon, the Sierra Nevada, and the Rocky Mountains), and south to central Mexico. This species has been introduced into the eastern United States, Europe, and elsewhere.
+
+Two varieties are distinguished: coast Douglas-fir of the Pacific region and Rocky Mountain or inland Douglas-fir. The latter has shorter cones with more widely spaced pointed bracts. Its bark is harder and grows better in the East. See FOREST AND FORESTRY; TREE. [E.L.L.]
+
+# **Down syndrome** A developmental disability due to abnormal chromosome number or structure. It is characterized by physical and behavioral features and has been considered the most common form of genetic abortion. Incidence among the newborn is estimated at 3 in 1000, in the general population approximately 1 in 1000. The difference reflects the early mortality.
+
+The most common type (trisomy 21) is due to a nondisjunction of chromosome 21 during the original cell division, resulting in an extra chromosome 21. These children have a total of 47 chromosomes instead of the usual 46. However, the extra material from chromosome 21 can also be attached to another chromosome through translocation; such children have Down syndrome but only 46 chromosomes. More rarely, the trisomy 21 breaks up, giving some cells with 47 chromosomes and some with 46 (mosaicism).
+
+The characteristic physical features include almond-shaped eyes; a rounded, brachycephalic skull with flattened occipital region; a broad, flattened bridge of the nose; an enlarged fissured tongue; broad hands with stubby fingers; often a single 'simian' palmar crease; hypotonic muscle development; thick, everted, and crinkled lips; dry, rough skin; subnormal height; and infantile genitalia. Not all of these physical features are present in every case, and some may be observed in individuals without Down syndrome. However, Down syndrome is diagnosed when most of the anomalies are present.
+
+The degree of mental defect is not directly related to the number or gravity of the physical signs, but rather to a combination of those anomalies and the specific chromosomal defect. Few children with Down syndrome are classified today as severely retarded. Most are moderately to mildly retarded and are often talkative and highly amiable. They tend to be curious, observant, skilled at mimicry, and usually very affectionate. Aggression and hostility are rare; however, they are often stubborn and impulsive and are not easily frustrated. They are excellent candidates for vocational training.
+
+Pathological research suggests nonspecific, generalized defective brain development. There is a tendency toward thyroid dysfunction and congenital heart defects. The may also be vision problems, but below-average dental carries. Mediavation has little effect on the physical condition or on the mental retardation. See ALZHEIMER'S DISEASE; CONGENITAL ANOMALIES.
+
+Although there are some reports of more than one child with Down syndrome in a single family, it is not a classical hereditary disease. Incidence is increased if the mother is under 16 or over 35 years old or the father is of advanced age. Furthermore, the Down syndrome child may result from a late or prolonged pregnancy or the last of numerous pregnancies. Thyroid deficiency, hipopitaruitarism, and pathology of the ovary have been observed in the mothers, and the probability of upset in their endocrine balance may increase with age. However, the basic etiology is still very much in doubt.
+
+Prenatal identification of Down syndrome in the fetus is possible through amniocentesis. See HUMAN GENETICS; MENTAL RETARDATION. [H.Le.]
+
+# **Drafting** The making of drawings of objects, structures, or systems that have been visualized by engineers, scientists, or others. Such drawings may be executed in the following ways: manually with drawing instruments and other aids such as tem-plates and scales; or, freehand with pencil on paper; or with automated devices.
+
+Engineers often draft their own designs to determine whether they are workable, structurally sound, and economical. However, much routine drafting is done under the supervision of engineers by technicians specifically trained as drafters. See COMPUTER GRAPHICS; DESCRIPTIVE GEOMETRY; ENGINEERING DRAWING.
+
+Graphic symbols have replaced pictorial representations dating to the introduction of typefaces that carry frequently used symbols, from which the draftsman quickly traces the symbols in the required positions on the drawing.
+
+Where the design procedures from which drawings are developed are repetitive, computers can be programmed to perform the design and to produce their outputs as instructions to an automatic drafting equipment. Essentially, automated drafting is a method for creating an engineering drawing or similar document consisting of line delineation either in combination with, or expressed entirely by, alphanumeric characters.
+
+The computer receives as input a comparatively simplified definition of the product design in a form that establishes the mathematical or digital definition of the object to be described graphically. The computer then applies programmed computations, standards, and formatting to direct the graphics-producing device. This method provides for close-tolerance accuracy of delineation and produces at speeds much greater than possible by manual drafting. In addition, the computer can be programmed to check the design information for accuracy, completeness, and continuity during the processing cycle. [T.C.P.]
+
+# **Dragonfly** A member of the suborder Anisoptera of the order Odonata of the class Insecta. The adults are large, attractive insects characterized by four similar-appearing elongate, membranous wings with numerous characteristic veins; very large

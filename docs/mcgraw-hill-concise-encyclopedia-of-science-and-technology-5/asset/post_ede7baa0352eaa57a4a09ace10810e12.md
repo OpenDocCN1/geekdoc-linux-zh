@@ -1,0 +1,436 @@
+
+## Bacterial genetics
+
+- Bacterial diseases--cont.
+- Jahn's disease, 1203
+- Legionelloses, 1240
+- leprosis, 1245–1246
+- leptospirosis, 1246
+- Listeria infection, 1247
+- listeriosis, 1246
+- lyme disease, 1281
+- meningitis, 1354
+- mycobacterial diseases, 1458
+- phage, 1695–1696
+- pneumonia, 1730–1731
+- pseudotheliomycosis, 1790
+- relapsing fever, 1885–1886
+- rickettsioses, 1920
+- rickettsial diseases, 1913
+- salmonellosis, 1941
+- scald fever, 1954
+- sexually transmitted, 1994
+- syphilis, 2180
+- tetanus, 2214
+- toxic shock syndrome, 2253
+- tuberculosis, 2267
+- tuberculosis, 2279
+- tularemia, 2280
+- ulcer, 2291
+- vaccination, 2317
+- water-borne, 2368
+- whooping cough, 2383
+- yersiniosis, 2410
+
+- Bacillus aerogenes, 213, 241, 242
+- Bacillus anthracis, 32, 242
+- Bacillus cereus, 242
+- Bacillus drentensis, 242
+- Bacillus mycoides, 242
+- Bacillus mucilaginosus, 242
+- Bacillus subtilis, 242
+- Bacillus thuringiensis, 242
+
+- Bacilliform (Bacillus), 213, 2257
+- Bacteremia, 214
+- Bacteroides, 242
+- Bacteriolytic, 242
+- Bacitracin, 242
+- Baclofen, 242
+- Bactriophora, 242
+- Badger, 242
+- Baeck, 242
+- Baker, 242
+- Bald, 242
+
+## Borate minerals
+
+2579
+
+- BINARY star--conf.
+- Blue supermassic star, 307,308*
+- catalysticg variable, 254,245, 258*
+- eclipsing variable stars, 731*
+- Mazar, evolution, 243,244
+- Mazar, 1142*
+- differential evolution techniques, 243, x.vii, 244
+- Binural hearing, 930
+- Binural sound system, 274,275*
+- Binding energy
+  - mass deficit, 1330
+  - nuclear, 1505*
+- Binit, Allied, 1169
+- Bingle eating disorder, 724,725
+- Binil, L., 766
+- Binoculars, 275*, 282*
+- Binal nomial theorem, 275*,276*
+- Biochemistry, 276,277*
+- Bioassay, 277*, 278*
+- Bioradiometry, 278*
+- Biochemical engineering, 245*, 277*
+- Biochemical genetics, 1095
+- Biochemistry, 277,278*
+  - biomedical chemical engineering, 289,290*
+  - cytochemistry, 608*
+  - palocibiochemistry, 1596*
+  - xulfur, 2148,2149
+- Biodegradation, 278*
+  - fung, 950
+  - industrial wastewater treatment, 1142
+  - paleoboating, 1597
+- Biodisaster, 279,279*, 645
+- Bioecotransformers, 279*
+- Bioelectronics, 279,280*
+  - hormones, 247
+  - molecular electronics, 247
+  - neural interfaces, 247
+- Bioenergetics see Energy metabolism
+- Biofascia, 783, 869
+- Bifido, 783*
+- Biorice structure see Trace fossils
+- Bioengineering, 280,282
+- Biogeography, 282,283*
+  - animal systematics, 1225*
+  - island, 1193*
+  - zoogeography, 2418,2419*
+- Biohumans, 283*
+- Bioinformatics, 282*, 283,284*
+- Bioischa, 284*
+- Biologic prebiotic system, 1789
+- Biolfing chel, 284,285*, 2919
+- Biologicial control
+  - forest pest control, 920
+  - weeds, 2381
+- Biological oxidation, 285*
+  - oxidoreducrions, 748
+  - respiraton, 1905,1905*
+- Biological polymer, 285
+- Biological production, 285*
+- Biological specificity, 289*
+- Biologics, 282, 285,286*
+- Biology, 286,287*
+  - development, 649*
+  - ecology, 733*
+  - forensic, 914,915*
+  - magnetic rection, 1325*
+  - mathematical, 1325*
+  - microbiology, 1382*
+  - molecular, 1418,1419*
+  - neuobiology, 1489*
+  - nuclear radiation, 1513*
+  - palaeobiology, 1661,1662*, 1662
+  - radiation, 1842,1843*
+  - radioisotope, 1861*
+  - sociobiology, 2028,2029*
+  - space, 2152*
+  - transportation, 2263*, 2395*
+- Biomedical, 242,242*,208*
+- Bioimagnetic, 288*, 2154
+- Bionics, 288*
+  - ecosystem, 736
+  - forest ecosystem, 917
+  - solar energy, 2093
+  - tropic ecology, 2276
+- Biome, 288*
+- Biomechomics, 288,289*
+- Biomedical chemicol engineering, 289,290*
+- Biomedical engineering, 290
+- Biomedical ultrasound, 290,291*
+- Biomass, 735
+- Bioospor, 192, 291,292*
+- Bioorganism chemistry, 292,293*
+- Bioquistics, 1419
+- Bioquptism, 293*
+- Biorioferents and ionic currents, 293,294*
+- Biorotaxis, 294,295*
+- Bioracere, 2945
+- Bioremediation see Microbial degradation
+- Biorology, 294*
+- Biosewer, 247, 295*, 2257
+- Biosphere, 257*, 735
+  - environment, 828,830*
+  - Tormina fauna, 2247*
+- Bistone, 295*
+- Bistonyshis, 97,98, 295,296*
+- Biotic-Sawer law, 296*
+- Biotin, 295,296*
+- Biotic environment, 745, 828,829
+- Biotic, 297*
+- Biotite, 297*, 1125
+  - gasbo, 935
+  - mica, 1181
+- Biotta sucure see Trace fossils
+- Biopolymer, 1742
+- Bipolar affective disorder, 39, 40
+- Bipolar integral currents, 1164
+- Bipolar function transitions (BFTs), 1396,1397
+- Bipolar transits, 2260
+- Biopolimer, 1462
+- Bursal symmetry, 123
+- Biot, 297*, 784,870
+- Bird
+  - Anziminia, 112
+  - digestive system, 666
+  - see 713, 714, 715
+  - eelogs, 849,850
+  - Falconiformes, 870*
+  - feather, 871*
+  - fight, 894,895
+  - Galliformes, 958*
+  - migratory behavior, 1040,1401*
+  - Newcastle disease, 1486*
+  - Oligocene, 1539
+  - Peripodicities, 1731*
+  - stomach, 606, 2119
+  - thermoregulation, 2230
+  - tongue, 2241,2248
+  - uruyopel gland, 2314*
+  - see also Alcae
+- Bird-hipped dinosaurs, 149
+- Bird life, 1307,1308
+- Birdringence, 297*
+- Inedily polarized light, 1736
+- photoeffect, 1664*
+- Birch control, 297,298*
+- Birch dedect see Congenital varicose
+- Birthmark, 153
+- Bismarck Archipelago, 655
+- Bismuth, 298*
+- Bismuth oyles, 261
+- Bismol, 268
+- Bioma, 69, 262
+- Bismos borous, 262
+- Bismorph compounds, 145
+- Bisulfite, optical, 1551*
+- Bit, 299*
+- Bitice line, 1307,1308
+- Biter cucumber, 1579
+- Bitter cord, 1579
+- Bitter melon, 1579
+- Bitter orange, 1565
+- Bitterum, 184,299*
+- Biuminous con, 421,481
+- Bituminous sand see Oil sands
+- Bixabite, 263*, 299,300*
+  - Amsoramina, 125*
+  - boring bivalves, 319*
+  - cockle, 430,431*
+  - Lamellibranchia, 1223*
+  - Plentonia, 1788
+  - Poterobrachia, 1793*
+  - Scaphopoda, 1798,1987*
+  - shipwreck, 2000*
+  - Taxodontm, 2194*
+- BL LLaCene objects, 1834
+- BLaC-baked jackal, 634
+- Black bear, 1253
+- Black brrr, 259
+- Black camon, 309
+- Black coral, 144
+- Black coteardwind, 1754
+- Black cuton, 554, 599
+- Black death, 1409
+- Black eury, 656, 725
+- Black fly, 1156
+- Black-footed ferrit, 790
+- Black grante see Oriente
+- Black hole, 197, 300,301*
+  - galaxay, external, 956,957*
+  - gravitational collage, 1022,1023
+  - quantum gravitation, 1827,1818, 1827,1828
+  - supersymmetric star, 2160
+  - x-ray astronomy, 2401
+- Black locch, 1568
+- Black mixes see Bletta
+- Black pepper, 301*, 1691, 1692
+- Black pole, 305, 1617
+- Black Sea, 301*
+- Black shole, 301, 302*
+- Black spring, 2190
+- Black-tiled parasite dog, 1764
+- Black walnut, 2362
+- Black wood, 256
+- Blackberry, 302*
+- Blackydo, 302*
+  - emmouy, 813*
+  - incarcidence, 1135*
+  - pyramid, 1814*
+- Buceche corpens, 229*
+- Blacke peas, 509
+- Blackie, 302*
+- Blackina kangaroo, 1029
+- Bladder
+  - urinary, 2311*
+  - urinary tract disorders, 2313*
+- Black water, greenwashed, 1770*
+- Blastoflodies, 402
+- Blastodite, 302*
+- Blastomyces dermatitis, 566*
+- Blastomycines, 302,303*
+- Blastomina, 303*
+  - cleavage (embryology), 471*
+  - differentiation, 728
+  - Radiata, 431
+- Blasces, 956
+- Bloehig, 303*
+- Bloering agents (food), 818
+- Blood see Sahfarse
+- Bloodmora, 977
+- Birnp, 66,67, 303,304*
+- Birnp, 66, 66
+- Biondes
+  - carotacal, 380*
+  - glucorac, 1003, 1003*
+  - visuat pigmnet, 2348*
+- Bloch theorem, 304*
+- Block and tackle, 384*
+- Block cipher, 524
+- Block diagram, 304*
+- Block nodes, 305
+  - coaguination, 269
+  - disorders see Hematologic
+  - formed elements, 267,268
+  - hematopoiesis, 1062*
+  - hemoglobin, 1066*
+  - immunoglobulin, 1130
+  - plasma, 568
+  - pism, 1720,1721*
+  - slerobig, 2089*
+  - arum, 1889*
+  - splenc, 2088
+  - transation, 42, 2259,2260*
+- Blood bank see Immunobiology
+- Blood clotting, 1720,1721*
+- Blood groups, 304,305*, 305,305*
+  - antibiotics, 306
+  - antiacens, 306,307
+  - genoc, 306,307
+  - significane, 370
+  - system, 569,570, 306,307
+  - transplantation biology, 2263
+- Blood poisoning see Saprocmia
+- Blood pressure, 1118
+- Blood vessels, 307*, 1477
+- Blood cockie, 431
+- Blood moving, 1723
+- Blood cell, 307*
+- Bloutin dura, 642
+- Bloeufi, 307*
+- Blue curral, 433
+- Blue-green algae, 1784
+- blue see Cyanobacteria, Cyanophyceae 1337
+- Blue jet, 1253
+- Blue spruce, 2090,2091
+- Blue starigrat see, 307,308*
+- Blueberry, 308*
+- Buefish, 308*
+- Bluegrass, 308*
+- Bluscbetn, 308*, 1003
+- Blueflash fans, 783
+- Blueshops, 309
+- Bluetongue, 309*
+- Bluet, 309*
+- Boat propulsion, 309*, 1320
+- Bohal apid, 438
+- Bohodiale, 560
+- Bodiean, 1216
+- Body lines, 75, 127
+- Body rhythm, 733
+- Bog, 309,510*
+  - muscle, 1456*
+  - peat moss, 1294
+  - see also Soup, marsh and bog
+- Bognor-on, 234
+- Bog-mouse, 29,6
+- Bogyhead coal see Torbante
+- Bohm, 0119, 928
+- Bohm, D., 47, 953
+- Bohr, N., 191, 498, 75, 78*
+  - atomic structure and spectra, 211,212
+  - deturnismm, 648
+  - energy level, 829
+- Bohr magneton, 1302,1303
+- Bohr-Sommerfeld quantisation, 568
+- Bohrmm, H., 786, 1251
+- Bohrt spquarium theory, 498
+- Bohte, 272
+- Boiter, 310*
+  - fabe-bube, 897
+  - fluid oil, 942
+  - manit, 942
+  - marine, 1317,1138*
+  - steam engine, 2100*
+  - steam hammer, 5106,2107*
+  - steam escapenent, 2107*
+  - water tub, 2368*
+- Boler economizer, 274
+- Boler feedwater, 310,311*
+- Boler fitter and fitter, 311*
+- Bolering, 311*
+- Boller ing stirl, 110, 311,312*
+- Bok, B. f., 1106
+- Bok chok, 1578
+- Bokonism, 111, 1112
+- Bolopsichadia, 1266
+- Bolometer, 312*, 747
+  - barberett, 253*
+  - infrared astomony, 1150
+- Bommie, 1395
+- Boli, 312*, 1963,1964*
+  - structural system, 2133,2134*
+- Bolod joint, 312*
+- Bolarman contracta, 95,96
+- Bollarman states, 312,313*
+- Bollzmannt transporat equation, 276, 314
+- Boday, J., 1494
+- Boliac
+  - ar armanent, 48
+  - atomic, 189,208,209*
+  - hydrigen, 977, 1105,1106*
+  - nuclear armament, 1467,1468
+  - nuclear explosion, 1506,1507*
+- Bonbonchake, 315*
+- Bombes (nacrail), 1401
+- Bonbedile, 231
+- Borneo umbebia, 260
+- Bond eage and distace, 314,315*
+- Bonding
+  - adhesive, 29*
+  - chemical and chemical bonding see 2292*
+  - paraffinzing, 1611
+  - siectal system, 2015,2017*
+- Bone, 315,316*
+  - see 2392*
+- Bone construction audolograms, 196
+- Bone marrow transplantation, 417
+- Bonelish, 808
+- Bonfide, 659,728
+- Bonobos, 305, 3923
+- Bondhop campagins, 1772
+- Bonso, 317*
+- Bony fish see Ostomispiche
+- Bonstapine, 1186
+- Bonbies, 1623
+- Bonk lice, 1799
+- Bonk mantlune, 316,317*
+- Boor, Georgo, 278,1269, 1337
+- Bookan algoba, 317*, 1233
+- Bookun rra, 728
+- Books, 317*
+- Bopprdick, 751
+- Bopyrume, 751, 836
+- Boracta, 317*
+- Boraine, 317,318*, 331,1102
+- Boration minerals, 318*
+  - celeramide, 497*
+  - kermito, 1212*

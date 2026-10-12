@@ -1,0 +1,99 @@
+
+此命令将生成一个名为`sshd_keys.srm`的模块文件，你可以将其传输到正在进行重制的计算机上。该文件可以放置在解压后镜像的`sysresccd`目录下。请记住，该文件的内容是敏感的；任何访问这些文件的恶意实体都可以对你的 SSH 会话进行中间人攻击（MITM）。
+
+要实现此设置，你需要使用标准的 Linux 系统下载 SystemRescue 的副本：
+
+```bash
+curl -L https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/10.00/systemrescue-10.00-amd64.iso/download > systemrescue-10.00-amd64.iso
+```
+
+SystemRescue 创建者提供的一个实用脚本可以让你解压刚刚下载的 ISO 镜像。你可以使用该脚本提取 ISO 文件的内容并在重新打包之前对其修改。你可以按照以下方式下载脚本：
+
+```bash
+curl -L https://gitlab.com/systemrescue/systemrescue-sources/-/raw/main/airootfs/usr/share/sysrescue/bin/sysrescue-customize?inline=false > sysrescue-customize
+```
+
+一旦下载了`sysrescue-customize`脚本，使用以下命令解压镜像内容：
+
+```bash
+./sysrescue-customize --unpack --source=systemrescue-10.00-amd64.iso --dest=custom
+```
+
+## 包含自定义配置文件
+
+解压 ISO 镜像将为你获得图 1 所示的内容。
+
+与 Live CD 类似，SystemRescue 的行为可以通过使用*作弊代码*（cheat codes）在启动时进行修改，这些代码是在系统启动前通过启动提示符传递的关键字和标志（图 2）。请访问 SystemRescue 网站查看支持的作弊代码 [3]。
+
+传递`rootcryptpass`和`nofirewall`作弊代码可以在启动时启用 SSH 访问（请参见“配置文件中的根密码”框）。你还需要传递`loadsrm=y`以加载自定义模块（我稍后会描述它们）。SystemRescue 支持通过 YAML 文件应用这些选项（参见列表 1 示例），这比通过修改引导程序来将其硬编码进去要优雅得多。将列表 1 保存到你刚刚解压的镜像`sysrescue.d`文件夹中。注意，YAML 格式对缩进非常不灵活：不要使用 Tab 键缩进；请改用空格键。
+
+仅通过作弊代码修改是不够的。SystemRescue 默认每次启动时都会创建一组 SSH 密钥，且这些密钥在重启后不会保留。如果你希望 SystemRescue 每次都使用同一组 SSH 密钥，以便在远程连接时验证 SystemRescue 的指纹，你需要预生成这些密钥并预加载它们。
+
+**列表 1：通过 YAML 文件应用选项**
+
+```yaml
+global:
+  loadsrm: y
+  nofirewall: true
+  rootcryptpass: "$6$W9Lhg.3mr54J0mxe$4rudPwTGXLc9xgQotiE9HINide7NjO4lRzhZmsLOSwrrwXhSDr6BT2mhgfml0XvUfz6my8fULs.gm3u9THXVb0"
+```
+
+**图 3：** 为了在 DVD 上安全存储，你需要为密码生成哈希值。请确保在`安全环境中执行此操作，其他人无法检查你的 shell 历史记录或运行进程列表。`
+
+SystemRescue 允许你通过`rootpass`作弊代码设置根密码。我不建议在使用 YAML 配置文件时设置此代码（如本文所示），因为`rootpass`要求密码存储在明文 YAML 文件中，这使得任何访问自定义 DVD 的人都能读取密码。
+
+本文使用的`rootcryptpass`代码更安全，因为密码是以哈希形式存储的，就像普通 Linux 系统中的密码存储在`/etc/shadow`中一样。要生成合适的密码哈希（图 3），使用以下命令：
+
+```bash
+python3 -c 'import crypt; print(crypt.crypt("$password", crypt.SHA512))'
+```
+
+并将`$password`替换为你选择的字符串。上述命令的输出可以直接像示例所示与`rootpass`作弊代码一起使用。注意，如果没有禁用，该命令将保存到你的 shell 历史记录中，并且在系统的运行进程列表中可见，如果你与其他用户共享系统，可能会泄露你的密码。
+
+## 配置文件中的根密码
+
+![](img/8db7a58bef2f490a3db3c4fd35de2457_42_0.png)
+
+你也可以使用 SRM 包含程序。存在从 Arch 软件包创建模块的实用程序。你可以通过启动干净的 SystemRescue DVD，使用`pacman`安装所需的应用程序，然后使用以下命令创建一个包含你所需程序的模块：
+
+```bash
+pacman2
+```
+
+#### 使用 SRM 包含程序
+
+你可以使用 SRM 包含程序。存在从 Arch 软件包创建模块的实用程序。你可以通过启动干净的 SystemRescue DVD，使用`pacman`安装所需的应用程序，然后使用以下命令创建一个包含你所需程序的模块：
+
+```bash
+mksquashfs /etc/ssh sshd_keys.srm --no-strip
+```
+
+此命令将生成一个名为`sshd_keys.srm`的模块文件，你可以将其传输到正在进行重制的计算机上。该文件可以放置在解压后镜像的`sysresccd`目录下。请记住，该文件的内容是敏感的；任何访问这些文件的恶意实体都可以对你的 SSH 会话进行中间人攻击（MITM）。
+
+要实现此设置，你需要使用标准的 Linux 系统下载 SystemRescue 的副本：
+
+```bash
+curl -L https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/10.00/systemrescue-10.00-amd64.iso/download > systemrescue-10.00-amd64.iso
+```
+
+SystemRescue 创建者提供的一个实用脚本可以让你解压刚刚下载的 ISO 镜像。你可以使用该脚本提取 ISO 文件的内容并在重新打包之前对其修改。你可以按照以下方式下载脚本：
+
+```bash
+curl -L https://gitlab.com/systemrescue/systemrescue-sources/-/raw/main/airootfs/usr/share/sysrescue/bin/sysrescue-customize?inline=false > sysrescue-customize
+```
+
+一旦下载了`sysrescue-customize`脚本，使用以下命令解压镜像内容：
+
+```bash
+./sysrescue-customize --unpack --source=systemrescue-10.00-amd64.iso --dest=custom
+```
+
+## 整合所有内容
+
+一旦你将 YAML 文件放置在`sysrescue.d`目录下，就可以重新打包镜像。
+
+```bash
+sysrescue-customize --pack source=custom
+```
+
+**列表 2：简单服务器**

@@ -1,0 +1,341 @@
+
+## V.W.
+
+- Virginia Walbot
+- Vincent W. Uhl
+
+# W
+
+- W.A. William Allan
+- W.An. Warren Andrew
+- W.Ar. Walter Aaron
+- W.A.B. William A. Brodsky
+- W.A.Be. William A. Beresford
+- W.A.Ber. W. A. Berggren
+- W.A.C. William A. Clemens
+- W.A.DiM. William A. DiMichele
+- W.A.G. William A. Guiver
+- W.A.H. Walter A. Harrison
+- W.A.Ho. William A. Horton
+- W.A.L. William A. Lanford
+- W.A.Li. Werner A. Lindenmaier
+- W.A.Ly. Walter A. Lyons
+- W.A.P. William A. Poyor
+- W.A.S. William A. Steele
+- W.A.Se. William A. Setheres
+- W.A.Si. William A. Sirignano
+- W.A.V. Wesley A. Volk
+- W.A.W. W. A. Wakeham
+- W.A.Wi. William A. Wildhack
+- W.A.Y. W. A. Yost
+- W.B. William Bradford
+- W.Be. William Bemis
+- W.Bu. Wily Burgdorfer
+- W.B.A. Walter B. Ayers
+- W.B.B. Warren B. Blumenthal
+- W.B.Bo. Warren B. Boast
+- W.B.C. William B. Campbell
+- W.B.F. W. Beall Fowler
+- W.B.Fr. William B. Frester
+- W.B.Fra. William B. Frakes
+- W.B.N.B. William B. N. Berry
+- W.B.P. Wayne B. Powell
+- W.B.S. William B. Storey
+- W.Ca. William Cain
+- W.Ch. Wallace Chintz
+- W.C.Co. W. Charles Cooper
+- W.C.H. William C. Hayes
+- W.C.Jo. Walter C. Johnson
+- W.C.L. W. C. Lineberger
+- W.C.Li. William C. Livingston
+- W.C.P. Walter C. Firman, III
+- W.C.Pe. William C. Peters
+- W.C.Sh. William C. Shoemaker
+- W.C.Wo. William C. Wonders
+- W.D. William Dent
+- W.D.Bo. Walter D. Bonner, Jr.
+- W.D.C. William D. Callister
+- W.D.H. Willard D. Hartman
+- W.D.Hu. William D. Hummon
+- W.D.J. William D. Jackson
+- W.D.K. Walter D. Keller
+- W.D.L. W. David Lambert
+- W.D.Mo. Walter D. Money
+- W.D.N. William D. Nix
+- W.D.P. William D. Phillips
+- W.D.R.H. W. D. Russell-Hunter
+- W.D.T. W. Dean Trautman
+- W.D.W. W. Dexter Whitehead
+- W.E.B. William E. Bell
+- W.E.C. William E. Cooley
+- W.E.D. William E. Dossel
+- W.E.De. Walter E. Dean
+- W.E.Go. William E. Gordon
+- W.E.H. William E. Howell
+- W.E.K. William E. Keller
+- W.E.Ku. Wayne E. Kuhn
+- W.E.Kup. Walter E. Kupper
+- W.E.S. W. E. Sterer
+- W.E.Sm. Warren E. Smith
+- W.F. Warren Feller
+- W.F.B. William F. Bradley
+- W.F.D. Walter F. Dabbert
+- W.F.F. W. F. Farter
+- W.F.Ho. William F. Hosford
+- W.F.J. William F. Jaep
+- W.F.M. William F. Meggers
+- W.F.Mo. William F. Meries
+- W.F.S. Warren F. Smith
+- W.F.W. Warren F. Walker, Jr.
+- W.G. William Grierson
+- W.Go. William Gosling
+- W.Gr. Walter Greiner
+- W.G.P. Walter Graves
+- W.G.A. Warren G. Abrahamson
+- W.G.B. Waldo G. Bowman
+- W.G.D. William G. Duncan
+- W.G.L. William G. Lesso
+- W.G.M. William G. Metcalf
+- W.G.MeG. William G. McGinnis
+- W.G.P. William G. Pollard
+- W.G.W. W. Gordon Whaley
+- W.H. Wilbur Hague
+- W.Hai. William Haile
+- W.Han. William Hankley
+- W.Hap. William Happer
+- W.He. William Hershelber
+- W.Ho. William Hodios
+- W.H.B. Wolfgang H. Berger
+- W.H.C. Walis H. Clark, Jr.
+- W.H.Ca. Wallace H. Campbell
+- W.H.Cr. William H. Croyse
+- W.H.D. William H. Day
+- W.H.G. Walter H. Gardner
+- W.H.Ga. William H. Gaesch
+- W.H.Gr. William H. Gross
+- W.H.H. Walter H. Hartung
+- W.H.Ha. William H. Hartwig
+- W.H.J. W. Hilton Johnson
+- W.H.K. William H. Konigsberg
+- W.H.L. Wim H. Laarhoven
+- W.H.Z. Wan-Hwang Lin
+- W.H.M. William H. Miller
+- W.H.P. William H. Phillips
+- W.H.S. Wendell H. Slobaugh
+- W.H.Si. William H. Simmons
+- W.H.W. Winona H. Welch
+- W.H.Wa. Warren H. Wagner, Jr.
+- W.H.Z. Wojciech Hubert Zurek
+- W.I.R. William Ingersoll Rose, Jr.
+- W.I.Th. William I. Thompson, III
+- W.J.A. William J. Adelmann, Jr.
+- W.J.B. Walter J. Bock
+- W.J.Ge. Walter J. Gensler
+- W.J.Ge. Willis J. Gertsch
+- W.J.H. Walter J. Hamer
+- W.J.Ha. William J. Hargis, Jr.
+- W.J.Hag. William J. Hagan, Jr.
+- W.J.J. W. John Judd
+- W.J.K. William J. Kreifel
+- W.J.L. Warren J. Luzzadder
+- W.J.Lc. W. John Lee
+- W.J.Len. William J. Le Noble
+- W.J.M. William J. Mitchel
+- W.J.M.M. W. J. M. Moore
+- W.J.S. W. Joseph Schilt
+- W.J.V.W. Willem J. Vanker Wagterendon
+- W.J.W. William J. Willis
+- W.K. Werner Kurzig
+- W.Ket. Wolfgang Ketteler
+- W.Ku. Wiese Kuic
+- W.K.J. W. K. Joklik
+- W.L. Willy Ley
+- W.Lu. William Luth
+- W.Ly. Waldo Lyon
+- W.Lo. Walter Losen
+- W.L.Bro. William L. Brown, Jr.
+- W.L.C. Wen L. Chow
+- W.L.Ch. William L. Chamedes
+- W.L.F. Wendy L. Friedman
+- W.L.Fi. William L. Fisher
+- W.L.H. W. Lincoln Hawkins
+- W.L.McC. Warren L. McCabe
+- W.L.Ny. William L. Nyban
+- W.L.S. Waldo L. Schmitt
+- W.L.V. Willem L. Vos
+- W.L.Wo. William L. Wolfe
+- W.M. William Markowitz
+- W.Ma. Walter Mannheim
+- W.Man. Warren L. Mangopiezer
+- W.McG. William McGinnis
+- W.Mi. Wesley Mims
+- W.Mil. William Milson
+- W.Mo. William Mosher
+- W.Mu. William Muray
+- W.M.C. William M. Carey
+- W.M.H. Warren M. Haggist
+- W.M.Ha. William M. Hartmann
+- W.M.Hu. W. M. Hubbard
+- W.M.I. Wayne M. Itano
+- W.M.L. W. Marshall Leach, Jr.
+- W.M.S. William M. Sinion
+- W.M.Sa. W. Mark Sallzman
+- W.M.W. Walter M. Walsh
+- W.O.M. W. O. Milligan
+- W.Po. William Porter
+- W.Pb. William P. Banks
+- W.PCu. William P. Cunnane
+- W.P.K. Wilesy P. Kirk
+- W.PN. W. P. Nelms
+- W.R. William R. Rodden
+- W.PS. Walter P. Siegmn
+- W.PW. W. P. Wolf
+- W.R. William Rostoker
+- W.Re. Walter Reid
+- W.Ro. Willard Roth
+- W.R.B. William R. Bogges
+- W.R.Bu. Windsor R. Brugs
+- W.R.Bu. William R. Burg
+- W.R.C.R. W. R. C. Rowley
+- W.R.D. William R. Dickinson
+- W.R.E. William R. Engels
+- W.R.El. Walter R. Ellis, Jr.
+- W.R.F. W. R. Eppery
+- W.R.Fr. Walter R. Fried
+- W.R.F. Walter R. Fried
+- W.R.J. William R. Rudd
+- W.R.L. Werner R. Loewenstein
+- W.R.Lo. Wayne R. Lowell
+- W.R.M. William R. Marshall, Jr.
+- W.R.Ma. William R. Mann
+- W.R.N. Walter R. Nagel
+- W.R.P. William R. Philipson
+- W.R.R. William R. Riedel
+- W.R.Se. W. Rudolf Seitz
+- W.R.Si. W. Rex Sitter
+- W.R.Sm. William R. Smythe
+- W.R.V. Wyman R. Vaughan
+- W.R.V.S. W. Randall Van Schmus
+- W.R.W. William R. Wilcox
+- W.S. Wolfram Saenger
+- W.Scha. William Schaeffner
+- W.Sh. William Shive
+- W.Sp. William Spackman
+- W.Stu. Wilson Sturges
+- W.Sw. William Swieder
+- W.Swe. Will Sweetaragen
+- W.S.Y.W. William S.-Y. Wang
+- W.S.A. Wendall S. Arbuckle
+- W.S.B. William S. Benninghof
+- W.S.Ba. W. Scott Baldrige
+- W.S.Br. Wilard S. Bromley
+- W.S.Gr. William S. Granner
+- W.S.J. William S. Janna
+- W.S.L. W. S. Lyon
+- W.S.P. Wilson S. Prichett
+- W.T. Wallace Tucker
+- W.T.K. William T. Keeton
+- W.T.S. William T. Stuart
+- W.V.R. W. V. Robinson
+- W.W. William West
+- W.W.B. William W. Ballard
+- W.W.Be. Wallace W. Beaver
+- W.W.Br. William W. Bradley
+- W.W.Bro. William W. Bromer
+- W.W.E. W. W. Epstein
+- W.W.Ho. William W. Howells
+- W.W.K. William W. Korith
+- W.W.L.A. Whitlow W. L. Au
+- W.W.M. W. Wayne Meinke
+- W.W.Mi. Ward W. Minkler
+- W.W.Mo. W. W. Moyer
+- W.W.Sn. William W. Snow
+- W.W.Sp. Wesley W. Spink
+- W.W.W. William W. Watson
+- W.Wo. William Wolo
+- W.Y. Wayne Young
+- W.Z. William Zuk
+- W.Z.H. William Z. Hassid
+- W.Z.S. Wieslaw Z. Stepniewski
+- W.Zh. Wei Zhao
+
+# X, Y, Z
+
+- X.J.M. X. J. Musacchia
+- Y.C.F. Y. C. Fung
+- Y.E.M. Youssef El-Mansy
+- Y.H.M. Yi Hua Ma
+- Y.I. Yedy Israel
+- Y.M. Y. M. Gupta
+- Y.M.G. Yoshi Ogasawara
+- Y.O. Yoichi Ogasawara
+- Y.S. Yoshiro Suzuki
+- Y.W. Y. Weisei
+- Y.W.K. Yoke Wah Row
+- Z.C.M. Za-Cheieh Moh
+- Z.L. Zhexi Luo
+- Z.R.W. Zela R. Wasserman
+- Z.S. Zdének Sekera
+
+# 贡献者所属机构
+
+以下列表按姓氏顺序列出了所有百科全书贡献者。为每位作者提供了简要的所属机构信息。此列表可与前一部分 *贡献者姓名首字母* 结合使用，以完全确定每篇文章的贡献者。
+
+## A
+
+- **Aagaard, Knut 教授。** 华盛顿大学海洋学系。
+- **Abbott, Donald P. 博士。** 斯坦福大学太平洋 Grove 霍普金斯海洋站生物学教授。
+- **Able, Kenneth P. 博士。** 纽约州立大学奥尔巴尼分校生物科学系。
+- **Abraham, Bernard M. 博士。** 阿贡国家实验室固态科学部，伊利诺伊州阿贡。
+- **Abrahams, David H.** 德克斯特化学公司，纽约布朗克斯。
+- **Abrahams, Elihu 教授。** 罗格斯大学物理系。
+- **Abrahamson, Warren G., II 教授。** 巴克内尔大学生物学系，宾夕法尼亚州路易斯堡。
+- **Abramovitch, Rudolph A. 博士。** 克莱门特大学化学与地质系。
+- **Abzug, Malcolm J. 博士。** 系统组高级职员工程师，TRW 公司，加利福尼亚州雷德罗海滩。
+- **Achee, Phillip M. 教授。** 佛罗里达大学食品与农业科学研究所。
+- **Ackerman, Edward A. 博士。** 已故；前华盛顿卡内基学会成员。
+- **Adair, Robert K. 博士。** 耶鲁大学物理系。
+- **Adams, Chris 博士。** 英国马雷西德尤尼维尔研究所。
+- **Adams, Douglas P. 教授。** 麻省理工学院机械工程系。
+- **Adams, E. Dwight 博士。** 佛罗里达大学物理系。
+- **Adams, Elijah 博士。** 马里兰大学医学院生物化学系教授及系主任。
+- **Adams, M. W. 教授。** 密歇根州立大学作物与土壤科学系。
+- **Adams, Raymond D. 博士。** 麻省总医院神经病理学荣休 Bullard 教授。
+- **Adamson, Arthur W. 教授。** 南加州大学化学系。
+- **Addicott, Frederick T. 教授。** 加利福尼亚大学戴维斯分校植物学系。
+- **Addison, Cyril C.** 英国诺丁汉大学无机化学教授。
+- **Adelberg, Edward A. 博士。** 耶鲁大学微生物学系。
+- **Adelman, William Jr., Jr. 博士。** 马里兰州贝塞斯达国立卫生研究院。
+- **Ader, Robert 教授。** 纽约州罗切斯特大学精神病学系。
+- **Adewunmi, Michael A. 教授。** 宾夕法尼亚州立大学石油与天然气工程系。
+- **Adkins, George G.** 退休；前联邦电力委员会流域电力局首席官员。
+- **Adler, David 博士。** 麻省理工学院电气工程系。
+- **Adler, Ronald J. 博士。** 洛锁·帕洛阿托研究所，加利福尼亚州帕洛阿托。
+- **Adrain, Jonathan 博士。** 爱荷华大学地球科学系，爱荷华市。
+- **Agarwal, Gyan C. 博士。** 伊利诺伊大学电气工程系。
+- **Agrios, George N. 博士。** 马萨诸塞大学植物病理学系。
+- **Aguiar, Jose L.** 印度里弗赛德县加利福尼亚大学合作推广站农业顾问。
+- **Ahaern, Gregory A. 教授。** 夏威夷大学茂宜分校动物学系。
+- **Ahlestrom, Elbert H. 博士。** 已故；前美国商务部渔业局渔业海洋学中心，加利福尼亚州拉霍亚。
+- **Ahmadian, Vernon 博士。** 马萨诸塞州伍斯特克拉克大学生物学系。
+- **Ahuja, Narendra 教授。** 伊利诺伊大学厄巴纳-香槟分校贝克曼研究所及协调科学实验室电气与计算机工程系。
+- **Ajmone-Marsan, Cosimo 博士。** 美国国立卫生研究院国立神经疾病与卒中研究所电生理学与临床神经生理学分支负责人，马里兰州贝塞斯达。
+- **Ajesberg-Selove, Fay 教授。** 宾夕法尼亚大学物理系。
+- **Akasofu, S.-I.** 阿拉斯加大学费尔班克斯分校国际北极研究中心主任。
+- **Akers, Donald L. 博士。** 杜兰大学医学院。
+- **Alexon, Norman G. 博士。** 加利福尼亚大学戴维斯分校农业工程系。
+- **Albert, Henry J. 博士。** 英格兰矿产与化学品公司研究与开发部物理与冶金实验室经理，新泽西州纽瓦克。
+- **Albright, Louis D. 博士。** 康奈尔大学农业与生物工程系，纽约州伊萨卡。
+- **Albright, Lyie F. 博士。** 普渡大学化学工程系。
+- **Alcorta, Stanley M. 教授。** 亚利桑那大学农业学院植物病理学系。
+- **Aldridge, R. J. 博士。** 英国诺丁汉大学地质系。
+- **Aldwinkle, H. S. 教授。** 康奈尔大学植物病理学系。
+- **Alexander, Grant 博士。** 马里兰州贝塞斯达美国国立老龄研究所神经科学实验室。
+- **Alexander, R. McNeill 教授。** 英国利兹大学生物学系。
+- **Alexander, Vera 博士。** 阿拉斯加大学海洋科学研究所。
+- **Alexeff, Igor 教授。** 田纳西大学诺克斯维尔分校电气与计算机工程系。
+- **Alger, Phillip L. 教授。** 已故；前伦斯勒理工学院电气工程学咨询教授。
+- **Allinnesius, S. T. 博士。** 科罗拉多州奥罗拉。
+- **Allan, Roger.** 《*电子设计杂志*》执行编辑，新泽西州罗谢尔公园。
+- **Allan, William.** 纽约城市大学城市学院工程学院院长（退休）。
+

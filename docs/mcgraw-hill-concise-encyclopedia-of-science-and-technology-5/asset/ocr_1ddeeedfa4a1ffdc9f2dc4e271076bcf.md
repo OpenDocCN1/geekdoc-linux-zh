@@ -1,0 +1,41 @@
+Production seismology is the application of seismic techniques to problems related to the production and exploitation of petroleum reservoirs. Since production geophysics is the only effective method available that can image the reservoirs under in-place conditions, it has become an active field of applied research aimed at improving descriptions and understanding of reservoirs and their fluid flow behaviors. See GEO PHYSICAL EXPLORATION; PETROLEUM ENHANCED RECOVERY; PETROLEUM GEOLOGY; PETROLEUM RESERVOIR ENGINEERING; SEISMOLOGY. [TPM]
+
+# Seismic risk
+
+The probability that social or economic consequences of earthquakes will equal or exceed specified values at a site, at several sites, or in an area, during a specified exposure time.
+
+Although the term seismic risk is occasionally used in a general sense to mean the potential for both the occurrence of natural phenomena and the economic and life loss associated with earthquakes, it is useful to differentiate between the concepts of seismic hazard and seismic risk. Seismic hazard may be defined as any physical phenomena that result either from surface faulting during shallow earthquakes or from the ground shaking resulting from an earthquake and that may produce adverse effects on human activities.
+
+The exposure time is the time period of interest for seismic hazard or risk calculations. In practical applications, the exposure time may be considered to be the design lifetime of a building or the length of time over which the numbers of casualties will be estimated. [ST.A]
+
+# Seismic stratigraphy
+
+Determination of the nature of sedimentary rocks and their fluid content from analysis of seismic data. Seismic stratigraphy is divided into seismic-sequence (faces) analysis and reflection-character analysis.
+
+In seismic-sequence analysis the first step is to separate seismic-sequence units, also called seismic-facies units. This is usually done by mapping unconformities where they are shown by angularity. Angularity below an unconformity may be produced by erosion at an angle across the former bedding surfaces or by top up (offlap), and angularity above an unconformity may be produced by onlap or downlap, the latter distinction being based on geometry. The unconformities are then followed along reflections from the points where they cannot be so identified, advantage being taken of the fact that the unconformity reflection is often relatively strong. The following often followed is to mark angularities in reflections by small arrows before drawing in the boundaries. See NON-CONFORMITY.
+
+Seismic-facies units are three-dimensional, and many of the conclusions from them are based on their three-dimensional shape. The appearance on seismic lines in the dip and strike directions is often very different. For example, a fan-shaped unit might show a progradational pattern in the dip direction and discontinuous, overlapping arcuate reflections in the strike direction. See FACIES (GEOLOGY).
+
+Reflection-character analysis may be based on information from boreholes which suggests that a particular interval may change nearby in a manner which increases its likelihood to contain hydrocarbon accumulations. Lateral changes in the wave shape of individual reflection events may suggest where the stratigraphic changes or hydrocarbon accumulations may be located. See DRILLING AND BORING, GEOTECHNICAL; SEISMIC EXPLORATION FOR OIL AND GAS.
+
+Where sufficient information is available to develop a reliable model, expected changes are postulated and their effects are calculated and compared to observed seismic data. The procedure is called synthetic seismogram manufacturing; it usually involves calculating seismic data based on sonic and density logs from boreholes, sometimes based on a model derived in some other way. The sonic and density data are then changed in the manner expected for a postulated stratigraphic change, and if the synthetic seismogram matches the actual seismic data sufficiently well, it implies that the changes in earth layering are similar to those in the model. See GEOPHYSICAL EXPLORATION; SEISMOGRAPHIC INSTRUMENTATION; SEISMOLOGY; STRATIGRAPHY. [RE.S.]
+
+# Seismographic instrument
+
+Various devices or systems of devices for measuring movement in the Earth. Ground motion is generally the result of passing seismic waves, gravitational tides, atmospheric pressure changes, and tectonic processes. Seismographic instrumentation typically consists of a sensing element (seismometer), a signal-conditioning element or elements (galvanometer, mechanical or electronic amplifier, filters, analog-to-digital conversion circuitry, telemetry, and so on), and a recording element (analog visible or direct, frequency modulation, or digital magnetic tape or disk). Seismographs are used for earthquake studies, investigations of the Earth’s gravity field, nuclear explosion monitoring, petroleum exploration, and industrial vibration measurement.
+
+Seismographic instruments may be required to measure ground motions accurately over a range approaching 12 orders of magnitude, from as small as 10 -11 m to as large as several meters (a very large earthquake). Instruments may be required to measure frequencies as low as ~10-5 Hz (seasonal gravitational tides) to as high as ~103 Hz (as observed from acoustic emissions from rock failures in mines). Seismic waves from earthquakes are observed in the bandwidth of ~3 × 10-4 Hz (the gravest free oscillations of the Earth) to ~200 Hz (a local earthquake). In exploration seismology the frequency range of interest is typically 10-1000 Hz.
+
+The seismometer is the basic sensing element in seismographic instruments, and there are two fundamentally different types: inertial and strain. The inertial seismometer generates an output signal that is proportional to the relative motion between its frame (usually attached to the ground or a point of interest) and an internal inertial reference mass. The strain seismometer (or linear extensometer) generates an output that is proportional to the distance between two points.
+
+A seismoscope is a device that indicates only the occurrence of relatively strong ground shaking and not its time of occurrence or duration. A typical seismoscope inscribes a holograph of horizontal strong ground motion on a smoked watch glass.
+
+A dilatometer continuously and precisely measures volumetric strain. The quantity measured is the change ∆V in the reference volume V, and the dilometer AV/V measures the volumetric strain. Dilatometers are typically installed in a borehole in competent rock (preferably granite) at a depth of 100-300 m (330-1000 ft).
+
+A tiltometer monitors the relative change in the elevation between two points, usually with respect to a liquid-level surface. The horizontal distance between the reference points may be as little as a few millimeters or as large as several hundred meters.
+
+The gravity meter is just a vertical-component accelerometer, that is, a pendulum sensing ground motion and equipped with a displacement transducer, analogous to the inertial tiltometer. Gravimeters are widely used in geophysical exploration, in the study of earth tides, and in the recording of very low frequency (0.0003-0.01 Hz) seismic waves from earthquakes.
+
+# Seismometer
+
+The complete seismographic produces a record of the properly conditioned signal from the seismometer, along with appropriate timing information. The recording system may be as simple as a mechanical stylus scratching a line on a smoke-covered drum in a portable microearthquake seismograph, or as complex as a multichannel computer-controlled system handling 25,000/24-bit digital words per second in a modern three-dimension reflection survey for petroleum exploration. The range between these extremes includes many special-purpose seismographs, all designed to record ground motion in a particular application. See EARTH TIDES; EARTHQUAKE; GEOPHYSICAL EXPLORATION; SEISMIC EXPLORATION FOR OIL AND GAS; SEISMOLOGY. [T.V.Mc.; R.A.U]

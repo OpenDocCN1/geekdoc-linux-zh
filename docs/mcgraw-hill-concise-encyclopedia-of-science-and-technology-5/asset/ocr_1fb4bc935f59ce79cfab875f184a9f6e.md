@@ -1,0 +1,385 @@
+# 2604 Halocprida
+
++   Halocprida, 1042*  
++   haloperidone, 1042-1043*  
++   - astable, 185*  
++   - bormea, 335*  
++   - chiorine, 442-443*  
++   - fluorine, 903-904*  
++   - intraligament corporeum, 1172-1173*  
++   - iodine, 1183*  
++   Halogeni minerals, 1043*  
++   Halogenidated hydrogen, 1043*  
++   halomine compounds, 399-399*  
++   Halochlor, 904*  
++   Halobacter halobium, 160*  
++   Halophilum micrococcus, 160*  
++   Halospiraca, 924  
++   Halocryllus, 1044*  
++   Hallerich, 183  
++   Halifera, 1540  
++   Hal io radio sea Asteroida nudular  
++   Halomeridae, 924  
++   Haloperidone, 1044*  
++   Casemacinales, 377*  
++   Diphenylmethyl, 615*  
++   Dichyomide, 657*  
++   Eucommiales, 852*  
++   Harmalaminides, 1044*  
++   Juglanelles, 1205*  
++   Letrasetoides, 1240*  
++   Mycoides, 1460*  
++   Trochodendroides, 2275*  
++   Harmaldenol, 1044*  
++   Harmaldalide, 1044*  
++   swertignin, 217*  
++   Harmalazole, 924, 1044  
++   Harmal, A., 1370  
++   Harmolin, W.R., 1835  
++   Harmolus sequestrata of insects, 1044*  
++   Harrington, 4, Prince C., 22, 326-326*  
++   Harrington, B., 822*  
++   Harnett action study, 2152-2153  
++   Harrington, 954*  
++   Harney Brown, R., 436  
++   Harp gang, 1044  
++   Hartens disease sea Lepadus  
++   Haplorrhines, 772  
++   Haplodonta, 1045*  
++   Haplolites, 1771  
++   Haplomastida, 1045*  
++   Haploglossa, 1046*  
++   Haplorhina, 1045-1046*  
++   Haplorn, A., 1046*  
++   Happia, W.R., 91  
++   Happus, 339  
++   Hapsis see Pterygospermophyta  
++   Hapsismorpha see Thymatropium  
++   Hapsors and ports, 1046*  
++   Hard hat doing, 692  
++   Hard maple, 1316  
++   Hard water, 2367*  
++   Hards, 456  
++   Hardness, scales, 1046*  
++   Hardness testing, 1384  
++   Hardwood, 808, 2395-2394*  
++   Hardy, G.W., 99  
++   Hardy-Wainberg formula, 969, 1046*  
++   Hare, H., 1222  
++   Haremites note, 1047*  
++   Lisuqueois figures, 1263-1264*  
++   Harmacine, 1343*  
++   Harmone oscillator, 1047*  
++   Harmonic (period of phenomena, 1046, 1047*  
++   Harmonic speed change, 1047*  
++   Haro, G., 947  
++   Haronic, 105, 303  
++   Haropacoides, 491, 1047*  
++   Harrier, (bird), 76  
++   Harrley, 263  
++   Harries, D., 214  
++   Hartley-Deck equation, 1824  
++   Hartle-Fox method, 1025*  
++   Haretin, 79, 562  
++   Harvesting, 919  
++   Harvestmen, 155, 1549  
++   Hashimoto's disease, 223  
++   Hashimoto's thyroiditis, 1129  
++   Hassium, 1047-1048*  
++   Hatchetfish, 1048*  
++   Hatting equipment, 479  
++   Hausdorff topological space, 1312-1313*  
++   Haustrum, 1048*  
++   Hausmann-Emporer connection chain, 966
+
++   Hazardous waste, 1048*  
++   medical, 936*  
++   nuclear fuels reprocessing, 1509*  
++   soil microbiology, 2037  
++   Heazlet see Fibret  
++   Hearn, 1048*  
++   Head lettuce, 1246  
++   Head lice, 162-167  
++   Head shell, 1796  
++   Headache, 1048, 1049*  
++   Hearing, 666*  
++   Headphones effect, 669  
++   Health physical, 1049*  
++   HEASO see Flat-Energy Astronomical  
++   HECAT, 1050*  
++   Hearing [human], 1049-1050*  
++   acoustic, signal processing, 1005*  
++   audiometry, 217*  
++   auditory nervous system, 1050  
++   hearing aid, 1050  
++   natural hearing, 930  
++   noise, 713, 715*  
++   for protection, 715*  
++   earing impairment, 1051*  
++   pouches, 1273*  
++   masking of sound, 1328*  
++   pipe, 1692, 1692*  
++   response of auditory system, 930-931  
++   role of ear, 1249-1250  
++   sensory system regeneration, 1086  
++   sound, 2051-2052*  
++   sound transduction, 930-931  
++   sound-discrimination system, 2054  
++   speech perception, 2079, 2079*  
++   Hearing [vertebrate], 1050*  
++   Hearing aid, 716, 1050-1051*  
++   Hearing impairment, 1051-2079  
++   Heart  
++   electrocardiogram, 768  
++   invertebrate, 1052*  
++   transplantation biology, 2363  
++   ventricles, 1052*  
++   Heart attack, 1053  
++   Heart disease, 1278  
++   Heart disease, 1052-1053*  
++   cardiomyopathies, 1053  
++   congenital heart disease, 932-933, 1053  
++   coronary artery disease, 1052-1053  
++   congestive heart disease, 932  
++   echocardiography, 728-729*  
++   heart failure, 1053  
++   hypertensive heart disease, 1053  
++   Infections, 932  
++   ventricular heart, 932, 1676*  
++   sudden cardiac death, 1053  
++   valvular heart disease, 1053  
++   sea also Cardiovascular disease  
++   Heart failure, 1053  
++   Heartwater disease, 1053*  
++   Hervateria, 2393  
++   Hervatolens, 10553*  
++   Heart, 1053*  
++   specific, 2073-2074*  
++   stress, 720  
++   temperature, 2238*  
++   thromboembolism, 2231*  
++   see also Thermal extremes  
++   Heart balance, 1054*  
++   Heart cancer, 1054  
++   Heart nance, thermal atmosphere, 1054*  
++   Heart capacity, 1054-1055*  
++   chemical thermodynamics, 377-379  
++   superconductivity, 2156  
++   Heat exchange, 2230  
++   Heat exchange, 1055*  
++   Heat flow [on Earth], 719*  
++   Heat insulation, 1055*  
++   Heat leakage, 1011  
++   Heat (physiological) see Extras  
++   Heat pipe, 1055-1056*  
++   Heat pump, 673, 1056*  
++   Heat radiation, 1056*  
++   blodbiplex, 332*  
++   graybody, 1056*  
++   incandescence, 1135*  
++   Plankir's radiation law, 1056*  
++   pyrometer, 1818*  
++   radiator, 1846*  
++   heat radiator, 2115  
++   heat radiator, 1057*  
++   condensation (heat), 533*  
++   convection, 486  
++   conservation transfer operations, 573*  
++   cooling engineering, 908  
++   heat engineering, 1055*  
++   heat radiation, 1056*  
++   heat treatment (metallurgy), 1057*  
++   electric furnace, 743*, 744*  
++   embrittlement, 809*
+
++   Heat treatment [metallurgy]—cont.  
++   ferrous metals, 936  
++   nonferrous metals, 936-937  
++   tempering, 825*  
++   Hector, M., 59  
++   Heckle, 759, 1733  
++   Heeling, 759  
++   Heating system, 1057-1058*  
++   astronautic, 228  
++   central heating and cooling, 401*  
++   comfort, 409  
++   ducts, 595-596  
++   district, 631  
++   electric, 673, 734*  
++   hot water, 1073*  
++   induction, 1138*  
++   panel heating and cooling, 1005*  
++   radiant, 1842*  
++   resistance, 1901*  
++   solar heating and cooling, 2039-2040*  
++   steam, 2106-2107*  
++   warm air, 2362*  
++   Hecimide, O., 2188  
++   Heavy cluster decays, 857-1858  
++   Heavy ison, E., 2823  
++   Heavy ions in accelerator, 699  
++   Heavy ison, 628  
++   Heavy metal poisoning, 1732-1733*  
++   Heavy minerals, 937, 1058*  
++   Heavy water, 1058*  
++   deuterium, 648*  
++   isotope separation, 1198  
++   Hecibon, 2352  
++   Hechiride, 944  
++   Hechirdichia, 197  
++   Hedderida, 937  
++   Hedgerigh, 1058-1059*  
++   Hedingfujon, 1112  
++   Hedysipum, 1224  
++   Hed see High-energy electron diffraction  
++   Head spud, 822  
++   Heinrich layers, 1597  
++   Hieinrich, W., 457, 1251, 1596  
++   determinism, 648  
++   quantum electrodyamics, 1896*  
++   scattering matrix, 1955  
++   uncertainty principle, 2296-2297  
++   Hieisenberg uncertainty principle, 1201  
++   Hieinricia malus, 230  
++   Hieinaruhinun, 1309  
++   Hefarichia anamnes, 2151-2152  
++   Hefarichidiae, 824  
++   Hefricity (quantum mechanics), 1059*  
++   Heldsticker, 1059*  
++   Helicocarpide, 659, 728, 1059*  
++   Helicopoda, 44, 1059*  
++   amanitos, 171  
++   autopsic, 222*  
++   military anem, 1401  
++   naval ship, 1468  
++   vertical takeoff and landing, 2333-2334*  
++   Helicoperia, 1059*, 1462  
++   Helicoporus parasitcum, 939  
++   Helicogram, 1059-1060*, 1305-1306  
++   Helicogona, 433  
++   Heliomatomology, 1060*  
++   Helioxas, 21, 1062*  
++   Centrolebis, 403*  
++   Denmothobolis, 646*  
++   Hilum, 1060-1061*, 1263  
++   Hilum-costritum lice, 1229  
++   Hilum-nee lice, 1229  
++   Hile, 1061*  
++   Hille's syndrome, 221  
++   Hillebrandt, M., 1454, 2231  
++   Hellebolloie, 1061*  
++   Helleboida fire engine, 835  
++   sea also Work function (thermodynamics)  
++   Hellelites, 17  
++   Hillmorte theorem see Thorelli's theorem  
++   Hillmites, 2363  
++   Hilsdale, 77  
++   Hilobiolates, 77  
++   Excudora horstalim, 806, 2092  
++   Hilordoma superatum, 805, 2092  
++   Hilodiatidae, 806, 2092  
++   Hillipathia, 944  
++   Himmatate, 1061*, 1162  
++   Himmatology, 2001  
++   hematological disease, 1061-1062*  
++   anaemia, 115-116*  
++   Himpholite, 1056*  
++   Himatology, 475  
++   Himatoma, 1067  
++   Himaphosis, 1062*  
++   Himachyium, 196  
++   Himerascomycetes, 1062*  
++   Himimberides, 865  
++   Himilocholite, 1062*  
++   Himodose, 2394  
++   wood chemicals, 2394  
++   woody degeneration, 2394  
++   Himorichides, 1063*  
++   Himoplasmas, 1185*  
++   Pirobacteria, 1085*  
++   Himodica, 942  
++   Himodimicids, 1065*  
++   Himophospholies, 717  
++   Himodisomides, 1065, 1065*  
++   Himoproteins, 1065*  
++   Himoprocess, process, 628  
++   Himoproteins, 1065  
++   Himorphs, 1065-1065*  
++   Himus, 942-944*  
++   Himophyte, localiry, 1065-1066*  
++   Himlock  
++   Pinales, 1688  
++   tree, 2266  
++   Himorsy, 1066  
++   Himoracium, 1066*  
++   Himorphium, 1066*  
++   Himora, 115-116*  
++   blublon, 273*  
++   arthrospatosis, 267*  
++   oroverbities, 1906  
++   Himoritus, 1591*  
++   sickle cell disease, 2004*  
++   Himoglobin metabolism, 1191  
++   Himoglobulin, 116, 270  
++   Himolitic anemia, 953*  
++   Himophilia, 1066*  
++   Himosphus, 134  
++   emostasis disorders, 1062  
++   Himophilia deficiency, 269*  
++   Himophylli, 1067*  
++   Himostasis, 408, 1066-1067*  
++   Himothalidic fever disease, 725*  
++   Himothialid, 770, 1066*  
++   Himothalid fever, meninges, 2259  
++   Himpu, 1067*, 1317*  
++   anemia, 115, 116*  
++   Hemangitis, 957*  
++   Henpy, A., 685  
++   Henry, definition of, 687, 761  
++   Hemare, 689, 1067*  
++   Hemparis, 725  
++   Hemparichida, 1206*  
++   Himopodium, 1317*  
++   Himorrhoida, 1317*  
++   Hemuptic, 1067*  
++   auditorymixty, 223  
++   liver disorders, 1065  
++   Hemobio, 1361  
++   Hemopatic B., 1768  
++   Hemopic C., 1067  
++   Hemahide, 1245  
++   Hemaphidics, 1245  
++   Hembarium, 1067-1068*  
++   Hemibate, 231, 1068*  
++   Hemibio, G., 947  
++   Hemiole's hard objects, 1068*  
++   Hermes:  
++   algorithm, sperm, 666  
++   discovery, 675*  
++   Hernitorum, 1068*  
++   plant animal interactions, 1702  
++   predator-prey interactions, 1767  
++   Hemiancy disease  
++   human genetics, 1094, 1095*  
++   Huntington's disease, 1099*  
++   dion, 2018  
++   Hemidy:  
++   gene, 979  
++   mariendil, 1353-1354*  
++   sex-inflenced inheritance, 1933*  
++   Herman, B., 820  
++   Hermadition, 560, 1069*  
++   Hermismen, 656  
++   Hermi cards  
++   Decacoda, 622-625*  
++   Herosidae, 852*  
++   Hermia, 1069*  
++   Hersol, P.L., 2106  
++   Herron, 1049*  
++   Hermes simple virus 1, 1069  
++   Herspurpura, 747, 940  
++   Hersgossain, 475  
++   Heringue, 479-489, 1069-1070*  
++   Herschel, W., 2039  
++   Hersh, W., 1152  
++   Herzt, H., 696, 707, 934

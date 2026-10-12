@@ -1,0 +1,27 @@
+# Micropygoda
+
+the high-speed network switches that constitute the Web’s in-  frastructure. More modest-powered microprocessors are at the heart of notebook computers and electronic games. Lower-power microprocessors provide the control and flow logic of hand-held devices, digital cameras, cellular and cordless phones, pagers, and the diagnostic and pollution control of automobile engines.  **SEE INTERNET; VIDEO GAMES; WIDE-AREA NETWORKS; WORLD WIDE WEB.**
+
+# Micropygoida
+
+An order of regular echinoids belonging to the Diadematacea, established for the two recognized species of *Micropyga*. They have an aulotoid lantern with grooved teeth. Test plating is imbricate, and ambulacra are composed of trigenerate compound plates in which upper and lower elements are reduced to demiplates. Pore pairs are biseriately arranged in am- bulacral columns, and there are unique umbellicabae aboral tube feet. *Micropyga* is a deep-water echinoid, found between 480 and 4290 ft (150 and 1340 m) depth in the Indo-West Pacific. There are no fossils that can be placed in this taxon with certainty, but it is possible that the Upper Jurassic *Pedinolituria* may belong here. **SEE DIADEMATACEA; ECHINODERMATA.**
+
+# Micro-radiography
+
+The process of producing enlarged images of the interior of thin, usually small specimens by pen- etration of low-energy (0.1–10 keV) x-rays. The magnification can be obtained geometrically during the exposure by subse- quent enlargement of the initial image by optical or electronic means, or by a combination of both processes. As with radiog- raphy on other size scales, micro-radiographs show the spatial distribution of mass and elemental composition of the sample. If a pulsed (flash) source or time-gated detector is employed, radio- graphs also provide stop-motion details of fast-changing objects. Micro-radiography has numerous applications in biology, mate- rial science, the characterization of fabricated microstructures, and assessment of plasma-driven compression of thermonuclear fuel.
+
+Micro-radiography is largely synonymous with *x-ray* mi- croscopy, both techniques being concerned with producing en- larged images of opaque objects by using x-rays. However, *x-ray* microscopy of defects in crystals can be performed by using diffraction, rather than simple absorption, in a technique termed *x-ray* topography. Micro-radiography by *x-ray* absorption is complementary, or related to a variety of other techniques for characterization of microstructures. **SEE *X-RAY DIFFRACTION; X-RAY MICROSCOPE.**
+
+There are three classes of sources employed for micro- radiography: electron-impact devices, storage ring sources of synchotron radiation, and multimillion-degree plasmas. The first micro-radiography measurements, and most studies since then, have been done with electron-impact sources. These con- tain an electron-emitting cathode and an anode in a high vacuum, between which a high voltage is applied. See X-RAY TUBE.
+
+High-energy (of the order of gigaelectronvolts) electrons or- biting within an evacuated toroid, called a storage ring, produce intense continuum radiation which is tightly collimated and pol- arized. Such synchrotron radiation is emitted in nanosecond pulses at MHz rates, and can be 1000 or more times as intense as the x-rays from electron-impact sources. The use of synchrotron radiation for micro-radiography began in 1977 and has rapidly expanded. **SEE SYNCHROTRON RADIATION.**
+
+Very high-temperature plasmas can be heated by high-power lasers or electrical discharges. They are typically 10 µm to 1 mm in size. Multimillion-degree plasmas emit uncollimated line and continuum spectra predominantly in the soft *x-ray* re- gion, below a few kiloelectronvolts, with pulse lengths of 0.1– 100 ns. Stop-motion micro-radiographs were first made with plasma *x-radiation* in 1980. **SEE PLASMA (PHYSICS).***
+
+X-ray micrographs may be obtained by four geometrically dif- ferent techniques (see illustration). Two of them, the contact and
+
+![](bbox=[0.52, 0.05, 0.93, 0.63])
+
+the projection methods, have been in use for decades. How- ever, they have undergone significant development because of the availability of bright synchrotron radiation and plasma radi- ation sources. The other two techniques, the true imaging and the scanning methods, require the bright sources.
+
+Micro-radiography was developed in order to observe fine de- tails in the interior of opaque natural (for example, biological) and manufactured (for example, metallurgical) samples. Optical microscopy has long been available to observe the surfaces of opaque specimens, or the interior of clear samples, with spatial resolutions approaching 200 nm. Early interest in micro-radiog- raphy waned for two reasons: weak sources required long ex- posure times, and electron beam techniques which provide sub- micrometer details were developed. The availability of bright soft x-ray sources, especially synchrotron radiation, has led to a resurgence of interest in micro-radiography, especially for cellu- lar samples. Sub-100-nm resolution of *live specimens* is needed to understand biological structures with sizes between those ob- servable with light microscopes (down to about 200 nm) and the molecular level (about 1 nm) probed by diffraction from ordered

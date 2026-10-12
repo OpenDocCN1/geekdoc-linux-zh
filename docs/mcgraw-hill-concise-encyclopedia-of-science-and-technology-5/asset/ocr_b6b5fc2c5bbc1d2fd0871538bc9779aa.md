@@ -1,0 +1,13 @@
+![](bbox=[0.38, 0.12, 0.62, 0.31])
+
+# McGRAW-HILL
+
+# CONCISE
+
+# ENCYCLOPEDIA of
+
+# SCIENCE AND
+
+# TECHNOLOGY
+
+FIFTH EDITION

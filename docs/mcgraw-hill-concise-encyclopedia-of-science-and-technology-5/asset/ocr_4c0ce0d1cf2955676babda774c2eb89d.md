@@ -1,0 +1,7 @@
+# 1220 Kyianite
+
+(Cr$^{3+}$), and titanium (Ti$^{4+}$) may substitute for aluminum (Al). The structure of kyianite is based on cubic close-packed oxy- gens (O). Ten percent of the tetrahedral (fourfold) interstices are filled with silicon (Si), and 40 percent of the octahedral (sixfold) interstices are filled with Al. The Al, with O at the corners, occurs in zigzag edge-sharing chains of Al-O octahedra. Si-O tetrahedra share corners with Al-O octahedra along the sides. This structure is about 10 percent denser than that of the other two Al$_{2}$SiO$_{5}$ polymorphs, sillimanite and andalusite, making kyianite the high-pressure polymorph.
+
+Kyianite occurs in well-formed bladed crystals and aggregates. Luster is vitreous to pearly. It is usually light blue because of minor Fe and Ti, and, rarely, light green because of Fe only. Kyianite may also be white or gray. Hardness is 5 (Mohs scale) along the length of crystals and 7 at right angles to the length. Kyianite has a single perfect cleavage parallel to the bladed face of crystals. See HARDNESS SCALES.
+
+Kyianite is a source of material for the manufacture of highly refractory porcelain such as those used for spark plugs. See ANDALUSITE; MINERALOGY; SILICATE MINERALS; SILLIMANITE. [M.J.H.]

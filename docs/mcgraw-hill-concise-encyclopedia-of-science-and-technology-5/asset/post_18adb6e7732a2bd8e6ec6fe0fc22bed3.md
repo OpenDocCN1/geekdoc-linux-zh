@@ -1,0 +1,753 @@
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_2618_0.png)
+
+## I
+- ISEN see Integrated service digital network
+- Isentropic displacement, 1953
+- Isentropic flow, 1197, 1760
+- Isentropic process, 1192
+- Isentropic surface, 1192
+- Iseret see Icelandic submarine range
+- Isfahan see Ispahan
+- Ishar, 775
+- Ishimura crystal structure, 858
+- Ising model, 1192, 1193
+
+### Island
+- art-ric and subartic islands, 166
+- Australi, 219
+- barrier islands, 252
+- Earth, 775
+- East Indies, 723, 724
+- invasion ecology, 1197
+- marine geology, 1322
+- mid-ocean ridge, 1821
+- New Zealand, 1485, 1486
+- oceanic islands, 1331
+- ophiolite, 1549
+- Pacific islands, 1493
+- Island arc, 729
+- Island biogeography, 1193
+- Island of Langeland, see Langeland Islets, 1193
+- Isobar (meteorology), 1193
+- Isobar (nuclear physics), 1193
+- Isobar process, 1193
+- Isobars, 1193
+- Isocoria, 161
+- Isoenantiomer, 1192, 1193
+- Isocyanic acid, 1195
+- Isocyclic compound, 794
+- Isocyclic ring, 1194
+- Isocyanic sequence, 1194, 1195
+- Isoelectric, 1195
+- Isohedral, 1195
+- Isoldebrandi, 1195
+- Isozyme, 274
+
+### Isomer
+- molecular isomerism, 1420, 1421
+- nuclear isomerism, 1510
+- Isomers, 788, 833
+- Isomerization, 1195
+- Isomorphic process, 1195
+- Isopod, 1195
+- Aridiidae, 136
+- Asellus, 180
+- Euplectidae, 835, 836
+- Tribolliina, 891
+- Granidaria, 1008, 1009
+- Onciscida, 1543
+- Phreatoiscida, 1674
+- Vaividria, 2321
+- Isoprene, 2210
+- terpene, 2276
+- triterpene, 2274
+- Isopropyl alcohol, 130
+- Isoprene, 1195, 1196
+- Lippopodae, 1262, 1245
+- Mollipodia, 1307, 1308
+- Micropotus, 1435
+- memophyta, 1372
+- monotrops, 1438
+- Neotropura, 1481
+- Pteropus, 1726
+- Nipura, 1797
+- Phycocephus, 1799
+- Pheropis, 1867
+- Scleropatra, 2013, 2014
+- social insects, 2027, 2028
+- Thysanopora, 2238
+- Troxipora, 2238
+- Trochopora, 2279
+- Zoraptera, 2420
+- Isoprotac, 1196
+- Isopropyl, 1348
+- Isostasy, 1196
+- Isotopic, 1196
+- Isotonic polymer, 1747
+- Isothermal chart, 1196
+- Isothermal process, 1197
+- Isothermal stress, 1198, 1806, 245
+- Isotopes, 1197
+
+### Isotope
+- chemistry, 431
+- dating methods, 620
+- heat-producing, 719
+- lead isotope, 1256
+- oogenic geochemistry, 1571
+- radiopactum, 1861
+- solar photon diffusion techniques, 1197, 1198
+- Isotope separation, 1198
+- Isotope separation on (BSEIS), 154
+- Isotope shift, 1198
+- Isotope studies in solids, 2285
+- Isotopic studies, 1198, 1199
+- Isotopes, 1197, 1199
+- Isotropic syn, 109
+- Isothermal geophysics, 985
+- Isotermal hypersensitivity, 987
+- Israel see Isfahan
+- Italian carpet, 583
+- Israelian crystal, 543
+- RJE see Information (Universal) Explorer
+- ivory, vegetable, 2328
+- Ivory, 1281
+- ixodidee, 1199
+
+## J
+- J particle, 721
+- J-particle, 1201
+- Jacaranda, 364
+- Jabarovica, 364
+- Jack-in-the-pull, 138
+- Jackel, 634, 694
+- Jacquei, Goupeei, 6782
+- Jaculean crucis, 1202
+- Jade, 1201
+- Jaducl, 1201
+- Jahn, H. A., 1201
+- Jahn-Teller effect, 1201
+- Jahanning, 1191
+- Jahromin, 113, 114
+- Jalajarse chemical, 383, 436
+- Jalajarge discharge, 634
+- Jalajarge marten, 1328
+- Jalajargne 618
+- Jalaf, 92
+- Jasmine, 847
+- Jasper, 1201
+- Jaws, 1201, 1202
+- Jaze, 524, 783, 2030
+- Jawless vertebrates, 1202
+- Jellyfish, 1111
+- Jelmer, Edward, 1202, 2317
+- Jennings, 1202
+- Jersey type sweet potato, 1760
+- Jesse's Crystal Pond, 2092
+- Jet (poreology), 1202
+- Jet composed, 456, 518
+
+### Jet engine
+- pulse jet, 1807
+- rocket, 1807, 1868
+- turbojet, 2296
+- jet flow, 1202, 1203
+- jet fuel, 1101, 1203
+- jet propulsion, 968, 1203
+- jet stream, 1203
+  - effect on airship, 35
+- jet tropics, 1203
+- jet vehicle, 1203
+- Jevitt, 427
+- Jewell bearing, 1203
+- Jewell, David, 1217
+- JFT see Janc-gas gauge field-effect transistor
+- Jicacama, 1579
+
+### Joint
+- army and defense, 2038
+- John, C., 785
+- Johnson's disease, 1203
+- Joines, 959
+- Joint (anatomy), 1203, 1204
+  - ligament, 1249, 1250
+  - tendon, 2210
+- Joint (structure), 1204
+  - boiled joint, 312
+  - mechanism, 2344, 1143
+  - structural connections, 2133, 2134
+  - universal joint, 2305
+  - welded joint, 2382
+- Joint disorders
+  - arthritis, 1210
+  - foo disorders, 911, 912
+  - rheumatism, 1313
+  - joint replacement, 1798
+- Jojoba, 1204
+- Jojoba, P, 965, 1251
+- Josephson, Brian D., 1204, 2283
+- Josephson arrays, 775
+- Josephson effect, 761, 1204
+- SCQID, 2093, 2094
+- superconducting devices, 2154
+- Josephson junction, 1519
+- Josephson function, 1204
+- Jouk, 671
+- Joule, J, P, 477, 685, 743, 1204
+- Joule cycle see Brayton cycle
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_2618_1.png)
+
+- Joule heat, 759
+- Joule's law, 1204
+- Jugate, 1245
+- Juglandaceae, 1205
+- Juglanside, 1205
+- Juglandinae, 1044
+- juhul, 2367
+- Jujubaceae, 1205
+- Jumping bean see MeX
+- Jumantese, 1205
+- Juncion, 449, 1205
+- Juncation detector, 527, 1205
+- Juncfionl dioxide, 1205
+  - semiconductor resistor, 1983
+  - jurrel diode, 2283
+  - varistor, 2324
+- Junior diode, 2414
+- Junction transistor, 1205
+- Jung, Carl, 1803
+- Jugengrammaticus, 1206
+- Jungemaramidae, 1206
+  - Calcogritae, 357, 358
+- Jungemaramice, 1381
+  - Tokoelides, 2191
+- Juniper
+  - evergreen, 857
+  - Pinules, 1688
+- Juniparus virginiana, 344
+- Jupiter, 1206, 1207
+  - atmosphere, 1207
+  - infrared astronomy, 1151
+  - ionized composition and structure, 1207
+  - magnetosphere, 1207
+  - planet, 1698
+  - planetary physics, 1700, 1701
+  - ring system, 1847
+  - life ring, 1208, 1209
+  - rigi, 1207
+  - sotellites, 1207, 1208
+- Jupiterian apparition, 1206
+- trande, 2261
+- Jutense, 1208
+- animal evolution, 120
+- Juno, 675
+- Juno, 1209
+- Juvenile hormone, 732
+- Juvenile-onset diabetes, 591, 1129
+- Juye, 912
+
+## K
+- Kanomine, 370
+- Kanomine, 1952
+- Kale, 1209
+- Kaliphelie, 1209
+- Kallemal's syndrome:
+  - disease, 1538
+  - pituitary gland disorders, 1694
+- Kaleostomata, 1195
+- Kallima, 1209
+- Kanina, 948
+- Kame, 1209
+- Kame Kite, 1579
+- Kangaroo, 1209
+- Kaeligoto, 1209
+  - commercial day, 469
+  - clay minerals, 470
+  - day, 413, 641
+  - halloysite, 1041, 1042
+- Koptiik P., 1209
+- Koptiik assistence, 1209, 1210
+- Koprek tree, 1210
+- Kopios a scenario, 19, 2018
+- Koptiik vortex mist, 1210
+- Kartmak, K. N., 1257
+- Kartik tetrapro, 704
+- Kater's reversible pendulum, 1024
+- Kauri, 1688
+- Keating, R. E., 418
+- Keamie, P. C., 2073
+- Keane, R. J., 1904
+- Kechle, F., 273
+- Keck, W., 1510
+- Kepler, 1667
+- Kepler, William Thomson, Lord, 719, 2208, 2234
+- Keldon temperature scale, 2208
+- Kelvin bridge, 1210
+- Kelvin core, 1259
+- Kelvin's circulation theorem, 1210
+- Kelvin's minimum-energy theorem, 1211
+- Kelvin's theorem, 2359
+- Kramer, H. 2609
+- Kensel, 1211
+- Kennel, Cough, 1211
+- Kennelly, A. E., 1188
+- Kennelly-Ramondau layer, 1188
+- Kernichuylua, 5829, 271, 308
+- Kernog, 42, 29, 160, 245, 1211
+- Kerguelen, 1199
+- Kern, 1211
+- Kerpl, 1212
+- Kerr's law, 1211, 1212
+- Kerr effect, 715, 1212, 1665
+  - see also Magnetical Kerr effect
+- Kerns, 1212
+- Kerton, 1212, 1213
+  - nucleic, 1
+  - campbell, 360, 361
+- Key cleck, 567
+- Key seeverse see (USSUS), 1213
+- Key telephone system, 1213
+- Keysword instruments, 1455
+- Kehlclia, 194
+- King, 633
+- Kibble, T. W. B., 720
+- Kidney, 1213, 1212
+  - continuous exchange (biology), 597, 598
+  - porography, 1611
+  - nephron, 1311
+- Kidney disease, 1355, 1213, 1214
+  - kidney cell, 546
+- Kidnail, 182, 183
+- Kiln, 1214
+- Kilmahile, 654, 2143, 1655
+- Kinematic analysis, 2135
+- Kinetic energies, 1214, 1344, 1345
+- Knitting, 534, 595
+
+### Kinetic energy
+- diffusion, 665
+- viral theory, 2341
+- Kinetic theories of analysis, 1214, 1215
+- Kinetic theory, 1215
+  - Avogadro's law, 2335
+  - Beckle's law, 324
+  - Brownian movement, 336
+  - diffusion, 665
+  - mean free path, 1341
+  - thermal conduction in solids, 2239
+  - viscosity, 2345, 2346
+
+### Kinetics
+- chemical, 425, 426
+- classical mechanics, 1215, 1216
+- organic reaction mechanism, 1573
+- Kinetic theory, 1215
+- King, Edda, 984, 1132
+- King crab, 429, 2092
+- King cobra, 1110
+- King cobra, 500
+- Kingfisher, 494
+- Kirichofi, 1216, 1217
+- Kirchoff's law of heat radiation, 935
+- Kirchoff's law of electric circuit, 935
+- Kirchoff's voltage law, 776
+- Kite, 260, 1216, 1217
+- Kit, 1217
+- Kivik, 1217, 1218
+- Kiwifruits, 1266
+- Kichelo, 1217
+- Kichalok, 741
+- Klein, F., 1338
+- Klostein, 1217
+  - electronic tubes, 785
+  - noise generator, 685
+- Krypton amplifier, 1192
+- Knottt, J., 651
+- Kurfisch, 673
+- Knowledges see, B66, 961
+- Krautenmumner, 966, 1217
+- Kuala, 1217, 1218
+- Kovache, R., 1521
+- Kithar, W., 1432
+- Kohl, M., 1218
+- Kohle reaction, 765
+- Komodo dragon, 1193, 1431
+- Korow, J., 585
+- Kondo effect, 1218
+- Konsoff, Sydney, 233
+- Korone, D. I., 2045
+- Kowaltick, Roeder, A, 1783
+- Kochel disease, 2083
+- Kramers, H., E, 627, 2384
+- Kramer, H., 980
+
+## 2610 Krill
+- Krill, 855
+- Kron, G, 591
+- Kroning, 697
+- Kronberg-Perray-moellel, 1218*
+- Kruppø, 1218*
+- Kuddy, 1218; 1219*
+- Kudphavre-Møller-disease, 1453
+- Kuffel, G., 177; 1219; 1476
+- Kupfer, Bel., 186; 1219*
+  - interplanetary matter, 1177
+  - satellite extraorinary, 1466
+  - sol system, 2041
+- Rulán, 655
+- Kumar, S. S., 335
+- Kumashiro, 1219; 1529
+- Kurtho, 500
+- Kurogińska, 161; 1219*
+- Kuschnak, 1361
+- Kyyiine, 1219;1220*
+
+## L
+- Laboratory, radiochemical, 1859*
+- Laboulbeniae, 848
+- Lacaze-Duthiers, 1221*
+- Labyrinthodontia, 1221; 2208
+- Labrinthis, 1221*; 1914
+- Labrynhula, 1221
+- Lac, 1998
+- Lac bug, 994
+- Lacolla, 1227*
+- Lacquer tree 1944
+  - be also Varshik tree
+- Laccari, 1791
+- Laclal gland, 1221*
+- Lacis, 1221
+- Lactase, 1221
+- Lacteal, 1221; 1222*
+- Lacteus, 209; 1222*
+  - mammary gland, 1150*
+  - mastitis, 1338*
+- Lactic acid, 1221; 1222*
+- Lactic, 1222*; 2145
+- Lactone saliva, 1246
+- Lacrymodesia, 760
+- Laevicavata, 1222*
+- Lagaminodes, 539
+- Lagomorph, 1222*
+- Lagopus species, 260
+- Lagrange, J. L., 412
+- Lagrange-density functions, 2326
+- Lagrange's equations, 1223*
+  - see also Cohn
+- Lagrange, 1223*
+  - biogeoclimatic, 282
+  - eutrophication, 856
+  - fresh-water ecosystem, 937, 938
+  - limnology, 1226*
+  - methane-lake, 1358*
+  - tersiver, 1901*
+- Lake Tictice, 924; 926
+- Loma grana, 1266
+- Loma grana, 1266
+- Loma pecos, 87
+- Loma críque, 1266
+- Lambert, Isaac, 5
+- Lambri, 1619
+- Lambellibacteria, 1223; 1223*; 2194
+- Lambellibafllae, 2218
+- Laminaria, 1223, 2072
+- Laminaria, 173; 1223*
+  - basal, 256; 2572*
+  - sage, 1940*
+  - schematic, 2072*
+- Laminar flow, 285; 1223; 1224*
+- Laminaria algae, 1224
+- Laminariae, 1224
+- Laminariaceae, 516*
+- Laminaria, 2220
+- Lamm, 1220*
+  - fluorescent gas lamps, 933
+  - incandescent lamp, 1135*
+  - intralamp, 1153; 1153*;1164
+  - mercury-vapor, 1327*
+  - metal halide, 1467
+  - neon glow, 1470; 1474*
+  - polarized light, 1736; 1737*
+  - sodium-vapor, 2029; 2030*
+- Lamp-coord., 2192* 2225*
+  - ultraviolet, 2295*
+  - uv, 2324*
+  - xenon, 2407
+- Lamp oil see Kerosine
+- Lamprey, 246
+  - jawless vertebrates, 1022
+- Lampyramida, 1464*
+- Lampmorium, 1224*
+- LMPIS, 654
+- Lamprophage, 1224*
+- LAN see Local-area network
+- Lancelot, 406;405
+- Land drainage (agriculture), 1224*
+- Land, 566
+- Land management, 2364
+- Land plant, 1702;1703
+- Land reclamation, 1224;1225*; 1695
+- Land-use planning, 1225*
+  - forest management, 919
+  - urban forestry, 921
+- Land-use practice, 645
+- Landfills, 1142
+- Landforms, volcanic, 2352
+- Landing craft, air-cushioned (L.CAC), 1468
+- Landing gear, 1225
+- Landslide, 1225*
+  - geological-ecology, 1225; 1226*
+- Landslide, 1225*
+  - earthquake, 723
+  - mass-wastes, 1332
+- Landmine function, 1227*
+- Langerhans, cell, 1226;1227*
+- Langerin procain, 1719
+- Langerin, 2077
+  - see also Programing languages
+- Langer, 1227*
+- LANS see Local-area networks
+- Langerian fly, 962
+- Langerhans, cell, 1227
+- Langerhans gland, 1227*
+- Lagard, 2372; 2382
+- Lapiz [Laz], 1225
+- Lapice, P., 9; 45; 744; 1227
+- Lapis, Pierre Simone de, 648
+- Laplacé equation, 1760
+- Laplacé transform, 1227*; 2413
+- Laplace's differential equation, 1227
+- Laplace's rotational motion, 1227;1228
+- Laplace's law see Ampère's law
+- Laplacean, 1228*
+- Lapwing, 364
+- Larch, 1228*
+- Larch tree, 1688; 2286
+- Larch control system, 2286
+- Large Electron Position Storage Ring (LEP), 1076
+- Large Hadron Collider (LHC), 1077
+- Large intestine, 666
+- Large Magellanic Cloud, 1267; 1288; 2160
+- Large signal model, 758
+- Laser systems control theory, 1228*
+- Largi, 365
+- Larial ephers, 1286
+- Larval stage, 382
+- Larval species, 1228
+- Larva, 1869
+- Larmer precision, 1228*
+- Larmer theorem, 1228*
+- Larmer, 1228*
+- Lartet, E., 516
+- Laryngitis, 1229
+- Larynx, 1228*
+  - speech, 2077; 2078
+  - vocal cords, 2550*
+- Larynx disorders, 1229*
+
+### Laser
+- 1229;1229*
+- atomic, 2039*
+- chemiluminescence, 373
+- open optics, 2038*
+- chemical/dynamic, 421
+- cobalt-dyana, 494
+- continuous-wave gas lasers, 1229
+- electroliths, 794
+- free-electron, 834; 1230
+- gas-discharge, 862
+- gas-dynamic, 862
+- high-power, 450; 953
+- monochromatic pulse, 1230
+- optical fiber, 1354
+- optical guided waves, 1544; 1565*
+- optical isotope, 1555;1556
+- optical pulse, 1559*
+- optical pumping, 1560*
+- quantum electronics, 1826; 1826*
+
+Laser--cont.
+- schlieren photography, 1958; 1959
+- semiconductor (diode) laser, 1229;1230
+- solid-pulsed gas lasers, 1229
+- solid-state laser, 1229
+- speed, 2074
+- thermoluminescent, 2331
+- time-interval measurement, 2241
+- turntable, 1230
+- laser alving, 1230*
+- Laser coaching, 1231; 1231*
+- Laser cooling, 1231; 1231*
+- Laser photocopying, 1231*
+- Laser radar see Lunar laser ranging
+- Laser scanner fluorescence microscopy, 962;993
+- Laser-sideb intefrations, 2361
+- Laserspectroscopy, 1232*; 2076
+- Laser Tracking Network, 2068;2069
+- Laser trap, 1617
+- Laser-video disk see Video Disk recording
+- Laser welding, 1232*
+- Lazier flax, 129
+- Lazer, 126
+- Laxmill, W., 1476
+- Lateral image, 1232*
+- Lateral bud, 300
+- Lateral live system, 1232; 1231*
+- Lateral testism, 150; 1232*; 1714
+- Lattice, 1232*
+- Lizerim, 120
+- Littmer's chlumme, 488;489
+- Latitude and longitude, 1232;1233*
+  - Antarctic Circle, 129;130*
+  - Arctic Circle, 164*
+  - Meridians, 1357*
+  - terrestrial coordinate system, 2211
+  - Tropic of Cancer, 2276; 2243*
+  - Tropic of Capricorn, 2277
+- Latice (materials), 1233*
+- Lattice metric, 1826
+- Lattice vibrations, 1233*; 1340
+- Lauch method (v-ray diffraction), 961, 2402
+- Launch complex, (1233)
+- Laurichens, 218; 352; 405, 1233
+- Lauricula, 85; 1233
+- Lauriea, 85; 1233
+- Laurine, 1235
+  - Permitsia, 1235; 209*
+  - supercontinent, 2157
+- Launimatemidiate, 741
+- Laval, 857
+- Lav, 1233; 1234*
+  - hot spots (geology), 1091*
+  - magma, 1289*
+  - obsidian, 1529*
+  - pumice, 1810*
+  - sprite, 2084*
+  - volcanic glass, 2351*
+  - vulcanolite, 2253
+- Law, 1233
+- Lawrence, 1233
+- Lave, 1233*
+  - additive pressure see Dallon's law
+  - of conservation of matter and energy, 230; 380
+  - of definite composition see Definite composition, law
+  - of gravitation (Newton), 905
+- Laws of motion (Newton), 824; 1486, 1486*
+- Multiple propotions, 380; 1446, 1446*
+- Nomograph, 1493
+- of refraction, 1396
+- of segregation (genetics), 1353
+- Lawrencium, 1234*
+- Lawson, J. D., 1234
+- Lawson criterion, 1234*
+- Lawson cyclones, 344; 543
+- Lawsonic, 1234*
+- Layed inustation, 1234*
+- layment drawing, 1234*
+- Launtra, 1235*
+- Laxing, 1235*; 2047
+- Laws, 1235*
+  - galena, 957*
+  - pynromorphic, 1816;1817*
+- Lead alloys, 1235*
+  - copper, 492
+  - poor, 1846*
+- Lead bronze, 295
+- Lead isotopes (geochemistry), 1236*
+- Lead metafugue, 1236*
+- Leaching edge coast, 429*
+- Lead, 1236; 1236; 429*
+  - absorption, 4*
+  - anomoly, 1236
+  - deciduous plants, 625*
+  - mesophyll, 1237;1238
+- Lead bud, 300
+- Leatherhog, 962
+- Lecithin, 1237
+- Lecture, 96, 1238
+- Lecti, F. S. B., 831; 926
+- Leopd, 207; 220
+- Leaking theory, 1237
+  - conditioned reflex, 512*
+  - restricted conditioning, 1161*
+- Lead-action principle, 1238*; 2282
+- Lead-square method, 640; 661, 7238*
+- Leather, 708
+- Leather, Hecton, 406
+- Lecithogala, H. 1., 1168
+- Lecithophoribothyn, 1238; 1239*
+- Lecanoceras, 1239*
+- Le Chátelier's principle, 1239*
+- Lection, 1628
+- Leñate cell, 640
+- Lecithophoribothyn, 1239*
+- Lecithine, 643
+- Lecidolobine, 1239*
+- LED see Light emitting diode
+- Ledereper, J., 241
+- Lederepecque, 996
+- Leech, 422
+  - Aneida, 125
+  - *Hirudo*, 1081
+- Lesa see Low-energy electron diffraction
+- Leak, 1243
+- Legends literature, 1239;1240*
+- Legionelle pneumophila, 1240
+- Legas's disease, 176
+- Lepirale, 1240*
+  - allied, 71*
+  - boar, 260;261*
+  - coven, 479*
+  - drummers, 568
+  - fabulas, 869*
+  - fenige-corps, 912*
+  - Fodula, 1218;1219*
+  - kernel, 1241
+  - lesperegion, 1246*
+  - Inpide, 1280*
+  - pearna, 1621*
+  - saybloom, 2057*
+- Legume leguom, 1240
+  - magma, 1289*
+  - demis, 643*
+- Legumineae, 1239*
+- Lection, 895
+- Legichor, R., 2159
+- Legionelaria, 285; 481
+- Legthrum, Parison, 248; 2278
+- Legtrinae, 1240; 1240
+- Lelitenia, 240
+- Legitinae, 1240
+- Lemiscate, 1238
+- Lemiscum, 1240
+- Lemmismes terms, 1240
+- Lemnos, 1240*
+- Lemmon of Bernello, 1241*
+- Lemon, 1241*
+- Lemonade, 1772
+- Lench, 1241*; 1679;1680; 2203
+- Leno [sp], 781
+
+### Lens (optic)
+- 1241*
+- diepper, 677*
+- electronic, 796;797*
+- eyesice, 888*
+- focal length, 906*
+- graviational, 1023*
+- funshits, 1053*
+- magnetics, 1092*
+- refraction, 1209
+- microscope, 1351*
+- optical surfaces, 1561; 1562*
+- types, 1241
+- ray telescope, 2405
+- zoom lens, 2419*
+- Lena acid, 1241
+- Lentichius edules, 981; 1112
+- Lentil, 524; 1242
+- Lento, 1242*
+- Lentoid stream, 1274
+- Lepidomorphone, 1242*; 2236

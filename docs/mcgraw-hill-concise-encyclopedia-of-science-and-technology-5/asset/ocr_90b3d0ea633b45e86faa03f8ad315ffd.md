@@ -1,0 +1,19 @@
+![](bbox=[0.1, 0.04, 0.44, 0.46])
+
+paralle, diverge, and surround or tend to surround the pattern area.
+
+Within the pattern areas of loops and whorls are the focal points which are used in the detailed classification. These points are called the delta and the core. The delta is that point on a ridge at or in front of and nearest the center of the divergence of the type lines. A core may be defined as that point on a ridge which is located in the approximate center of the finger impression. The distinctive ridges of the palms of the hands and the soles of the feet closely resemble those of the fingerprint and can be identified in the same way. Footprints of persons having no fin- gers are taken for record purposes. Fingerprint, palm print, and sole print identifications have all been accepted as evidence by the courts. See EPIDERMAL RIDGES.
+
+# Finite element method
+
+A numerical analysis tech- nique for obtaining approximate solutions to many types of engi- neering problems. The need for numerical methods arises from the fact that most practical engineering problems analyti- cal solutions do not exist. While the governing equations and boundary conditions can usually be written for these problems, difficulties introduced by either irregular geometry or other dis- continuities render the problems intractable analytically. To ob- tain a solution, the engineer must make simplifying assumptions, reducing the problem to one that can be solved, or a numerical procedure must be used. In an analytic solution, the unknown quantity is given by a mathematical function valid at an infinite number of locations in the region under study, while numerical methods provide approximate values of the unknown quantity only at discrete points in the region. In the finite element method, the region of interest is divided up into numerous connected sub- regions or elements within which approximate functions (usually polynomials) are used to represent the unknown quantity.
+
+The physical concept on which the finite element method is based has its origins in the theory of structures. The idea of building up a truss structure by fitting together a number of structural elements (see illustration) was used in the early truss and frame- work analysis approaches employed in the design of bridges and buildings in the early 1900s. By knowing the characteristics of in- dividual structural elements and combining them, the governing equations for the entire structure could be obtained. This process produces a set of simultaneous algebraic equations. The limita- tion on the number of equations that could be solved posed a severe restriction on the analysis. The introduction of the digi- tal computer has made possible the solution of the large-order systems of equations.
+
+![](bbox=[0.5, 0.37, 0.92, 0.7])
+
+The finite element method is one of the most powerful ap- proaches for approximate solutions to a wide range of problems in mathematical physics. The method has achieved acceptance in nearly every branch of engineering and is the preferred ap- proach in structural mechanics and heat transfer. Its application has extended to soil mechanics, heat transfer, fluid flow, mag- netic field calculations, and other areas.
+
+# Finite mathematics
+
+Those parts of mathematics which deal with finite sets. More generally, finite mathematics is taken to include those fields which make no use of the concept of limit; thus linear programming, which finds maxima and minima through the four arithmetic operations, is included, whereas clas- sical optimization, which uses differential calculus, is excluded. Other subjects generally considered in the finite mathematics in- clude finite set theory; logic; the study of finite groups, rings, and

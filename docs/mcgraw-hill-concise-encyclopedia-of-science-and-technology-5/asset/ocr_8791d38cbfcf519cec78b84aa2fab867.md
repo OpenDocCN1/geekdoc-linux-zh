@@ -1,0 +1,41 @@
+mass and its acceleration, the negative of the frictional force, and the negative of the force exerted by the spring. Here a negative of the frictional force is the product of the coefficient of friction and the body's velocity, and the negative of the force exerted by the spring is the product of the spring constant and the body's displacement. Moreover, the body's velocity is the first derivative of its displacement with respect to time, and its acceleration is the second derivative of its displacement with respect to time. Analogous to the RLC circuit, the application of a sinusoidal force $f(t)$ results eventually in a forced oscillation of the displacement $f(t)$ that is also a sinusoidal potential. The magnitude and the phase of the displacement $\psi(t)$ depends on the complex mechanical impedance that is a function of the mass ($M$), the spring constant ($k$), and the friction coefficient ($r$). The exact evaluation is similar to the RLC circuit case. SEE MECHANICAL IMPEDANCE; MECHANICAL VIBRATION; OSCILLATION; VIBRATION. [E.W.Ba.]
+
+# Forcipulata
+
+An order of Asteroida characterized by straight or crossed pedicellarbe or both. They may be carried on stalks, and in some cases are arranged in rosettes around the bases of the spines. The spines usually occur singly, and are ungrouped. The body is stellate in outline, but is not necessarily restricted to five arms or radial arms. The order contains four families, whose genera are numerous and widely distributed. The Brisingidae and Zorozeriidae are characteristically deep-water families, and the former includes species with as many as 44 arms. The Asteridae is the largest family, and includes many well-known predatory starfishes, some of which are economically significant because of the damage they inflict upon oyster and clam beds. SEE Oyster FISH, FAMILIES: list. SEE ASTEROIDEA; ECHINODERMATA. [A.C.E.] 
+
+# Forensic anthropology
+
+The application of physical anthropology theory and techniques to answering questions on the law. Medical evidence and biological techniques used for the living can be applied to intact remains, as can extensive internal examinations and histological preparations. However, burned, decomposed, mutilated, or fragmented bodies contain less soft tissue evidence and are therefore more difficult for the medical examiner or forensic pathologist to analyze. In these cases, the information provided by the skeleton becomes more important, and may in fact be the only information available about the identity of the individual and the circumstances surrounding death. Age, sex, ancestry, stature, regularities, handicaps, habits, occupational activities, disease, and injuries can be ascertained from elements of the skeleton, and in such cases the services of a forensic anthropologist may be a valuable adjunct to the work of the forensic pathologist or coroner.
+
+Training is required in such areas as skeletal variation in current populations or injuries from modern weapons. Many physical anthropologists, however, are increasingly involved in the forensic applications of their expertise, a few on a full-time basis. Recently, archaeologists have been asked to aid in the excavation of human remains from clandestine graves, and so the field of forensic archaeology has arisen, but the term "forensic anthropologist" usually refers to the biological aspect. SEE ANTHROPOLOGY; ARCHEOLOGY; PHYSICAL ANTHROPOLOGY. [D.L.E]
+
+# Forensic biology
+
+The study of biological evidence such as DNA (deoxyribonucleic acid) which may link a suspect or victim to a crime, disprove an alibi, or develop leads in a criminal investigation. Biological evidence may also exonerate the innocent. SEE DEOXYRIBONUCLEIC ACID (DNA).
+
+Biological evidence has been associated with many types of crime but is typically seen with violent crimes such as homicide, assault, sexual assault, child abuse, and hit-and-run accidents. Common sources submitted to forensic laboratories are blood and bloodstains; semen and seminal stains; tissues and organs; bones and teeth; hairs and nails; and saliva, urine, and other biological fluids.
+
+# Evidence transfer and collection.
+
+Biological specimens can be used to make linkages (for example, person-person, person-other physical evidence, and person-crime scene). In general, biological evidence can be transferred by direct deposit or by secondary transfer.
+
+Blood, semen, body tissue, bone, hair, urine, and saliva can be transferred to an individual's body or clothing, to an object, or to a crime scene by direct deposit. Once liquid biological materials are deposited, they adhere to the surface or the substrate and become stains. Nonfluid biological evidence, such as tissue or hair, can also be transferred by direct contact.
+
+Blood, semen, tissue, hair, saliva, or urine also can be transferred to a person, object, or location through an intermediary (a person or an object). With secondary transfer, there is no direct contact between the original source (donor of the biological evidence) and the target surface. Secondary transfer may, but does not necessarily, establish a direct link between an individual and a crime.
+
+The ability to analyze biological evidence is impacted by many factors regarding its collection. Unless the evidence is properly recognized, documented, collected, packaged, and preserved, it will not meet the legal or scientific requirements for admissibility into a court of law.
+
+# Laboratory analysis.
+
+The identification of individuals by analyzing their biological material such as blood, semen, hair, and bone has been used since 1904. Historically, testing has been based on serological markers, including red blood cell antigen systems, isoenzymes, red cell and serum protein variants, and human leukocyte antigens (HLAs). Since the mid-1980s, DNA analysis has been increasingly important in forensic science, forensic medicine, and paternity testing. Genetic variation can be detected by many DNA tests, including restriction fragment length polymorphism (RFLP) analysis, polymerase chain reaction (PCR), and DNA sequencing. Developments in the 1990s, such as more sensitive and discriminating PCR typing methods, the forensics DNA database, and increased governmental funding, have greatly enhanced the use of DNA in criminal investigations. SEE FORENSIC CHEMISTRY; FORENSIC MEDICINE.
+
+# Serological methods.
+
+Prior to the advent of DNA typing, serological tests were employed to identify the source of the biological evidence, to determine if the sample was of human origin, and to individualize the specimen. Today, serological analysis is generally limited to identifying the type of biological evidence collected. Subsequently, the evidence is submitted for DNA analysis. The process of examining items for the presence of biological material begins with recognizing and identifying likely candidates for testing. First, various screening tests determine if a stain could be blood, saliva, or semen. Second, confirmatory tests identify the source of the body fluid (for example, human blood). Third, the body fluid is individualized.
+
+DNA typing. The ability to differentiate between individuals using genetic markers can be pivotal to the successful investigation of many crimes. Evidence that is suitable for DNA typing with the exception of mitochondrial DNA) is limited to samples containing nucleated cells. Conventional DNA typing is possible only on hairs with roots. The hair shaft does not contain nuclei and can be typed only by mitochondrial DNA analysis. Other types of biological material such as tears, perspiration, semen, and other body fluids without nucleated cells are not amenable to standard DNA analysis.
+
+Several factors affect the ability to obtain DNA typing results. The first issue is sample quantity. The second factor is sample degradation. The third consideration is sample purity.
+
+Two general types of genetic variation are exploited by DNA typing: RFLP typing methods, length differences produced by variable number of tandem repeats (VNTRs) and sequence variation (single base changes). Most forensic DNA tests detect length variation. Numerous loci have been identified which contain multiple copies of a core element arranged head to tail. The number of these repeated units can differ from person to person. Following

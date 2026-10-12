@@ -1,0 +1,121 @@
+# Appendix 2475
+
+Housay, Bernardo Alberto (1887–1971), Argentine physiologist. Researc on the functions, and effects of the hypothophysis, including its relationship to ca hbohydrate metabolism; Nobel Prize, 1947.
+
+Howell, William Henry (1860–1945), American physiologist. Discovered hepator; isolated thormbin and thromboplastin; discovered Howell–Jelly bodies; proved that blood platelets are formed in lings.
+
+Hubble, Edwin Powell (1889–1955), American astronomer. Studied nebulae; formulated Hubble’s law of extragalactic nebulae.
+
+Hubel, David Hitter (1926– ), American neurobiologist. Contributed to the study of the processes of visual information in the brain; Nobel Prize, 1981.
+
+Hutber, Robert (1937– ), German chemist. With J. Deisenhofer and M. Hartmurt, elucidated the structure of a bacterial protein that performs photosynthesis; Nobel Prize, 1988.
+
+Huckel, Erich (1896–1980), German chemist. With P. J. W. Davies, formulated Delybe–Huckel theory of strong electrostatics; devised theoretical explanation of electron properties of aromatic hy drocarbons.
+
+Higgins, Charles Brenton (1901–1979), Canadian–born American surgeon and cancer researcher. Devised treatment of cancer using endoscopic methods; Nobel Prize, 1966.
+
+Huges, David Edward (1831–1900), English chemist. Invented the Hughes telegraph, a printing telegraph, microphone, and induction balance.
+
+Hugoont, Pierre Henry (1853–1887), French physiologist. Developed theory of shocks waves.
+
+Hulme, Russell A. (1955– ), American astronomer and physicist. With J. H. Taylor, discovered the binary pulsar and studied it to observe planetary predictions by general relativity; worked in pulsar physics; Nobel Prize, 1993.
+
+Humboldt, Friedrich Heinrich Alexander, Baron von (1769–1859), German naturalist. Founder of physical geography; made scientific explorations of South and Central Asia.
+
+Hume-Rothery, William (1899–1968), English metallurgist and chemist. Discovered Hume-Rothery rule concerning electron compounds.
+
+Hunt, Franklin Livingston (1885–1978), American physiologist. Research on x-ray spectroscopy, with W. Duane, discovered and applied Duane-Hunt law.
+
+Hunt, R. Timothy (1943– ), British biologist who discovered ccdins, proteins that regulate cellinduced kinase activity, and found that their inactivated degradation in an important regulator of the cell cycle; Nobel Prize, 2001.
+
+Hurwitz, Adolf (1895–1979), German-born Swiss mathematician. Worked on modular functions, number theory, Riemann surfaces, complex function theory, and analytic number theory; formulated conditions satisfied by Hurwitz periods.
+
+Huxley, Andrew Fielding (1917– ), British physiologist. With A. L. Hoding, discovered the ionic mechanism involved in excitation in the cell membrane of peripheral nerves; Nobel Prize, 1963.
+
+Huygens, Christiaan (1629–1695), Dutch mathematician, physicist, and astronomer. Discovered Saturn’s rings; contributed to dynamics and optics; proposed the wave theory of light.
+
+Hylleraas, Egl Anders (1898–1955), Norwegian physicist. Applied quantum theory to helium atom, negative hydrogen ion, and other atoms, molecules, and crystals; developed variational method and other methods for mathematical solution of quantum-mechanical problems.
+
+Ignaro, Louis J. (1941– ), American pharmacologist. Working independently and with Robert Firchgot, he concluded that endothelin-derived relaxing factor was identical to nitric oxide; Nobel Prize, 1998.
+
+Ingenhous, Jan (1730–1797), Dutch physician and naturalist. Demonstrated the cycle of photosynthesis in plants.
+
+Ising, Ernst (1900–1998), German-born American physicist. Introduced Ising model of ferromagnetism.
+
+Ito, Kiyoshi (1915– ), Japanese mathematician. Studied stochastic processes; introduced Ito’s integral and Ito’s formula.
+
+Jacob, François (1920– ), French biologist. Discovered operators and control of genetic elements with J. Monod; proposed the concept of messenger ribonucleic acid and the operator; Nobel Prize, 1965.
+
+Jacobi, Carl Gustav Jacob (1804–1851), German mathematician. Worked on elliptic functions and differential equations; developed the theory of determinants.
+
+Jacquard, Joseph Marie (1752–1834), French inventor. Devised and built the Jacquard loom for figured weaving.
+
+Jager, Hans Mauritz (1877–1945), Dutch crystallographer and physical chemist. Measured physical properties of solid salts and silicates at extremely high temperatures.
+
+James, William (1842–1910), American psychologist and writer. Coformulator of James-Lange theory that emotions are the perception of physiological changes.
+
+Janel, Pierre Marie Felix (1859–1947), French physiologist. Studied hysteria, obsession, and neurosis; wrote a textbook on the theory of hysteria.
+
+Jeans, James Hopwood (1877–1946), English physicist and astronomer. Worked in stellar dynamics; proposed the tidal theory of the origin of planets.
+
+Jenner, Edward (1749–1823), English physician. Discovered vaccination.
+
+Jensen, Mogens D. (1906–1973), Danish physicist. With M. G. Mayer, formulated the nuclear shell model; Nobel Prize, 1963.
+
+Jennings, John KJ (1911–1994), Swiss immunologist. Formulated three important theories involving the immune system: how the body produces specific antibodies, how the immune system develops and matures, and how the various interrelated aspects of the immune response are coordinated by the body; Nobel Prize, 1984.
+
+Johnson, Harold Lester (1921–1980), American chemist. Research in astrophysics, astromics, astrometry; invented an ultraviolet spectrograph of electronics to astromics; and Fourier transform spectroscopy; collaborated with W. W. Morgan in developing Johnson-Morgan system of stellar magnitudes.
+
+Joliot-Curie, Irene (1897–1956), French physicist. With M. Curie, discovered projection of cathode rays, the Curie-Joliot effect; and with J. F. Joliot-Curie, discovered artificial radioactivity; Nobel Prize, 1935.
+
+Joliot-Curie, Jean Frederic (1900–1958), French physicist. With I. Joliot-Curie, produced an artificial radioactive substance by bombarding boron with fast particles; Nobel Prize, 1935.
+
+Jones, Vaughan Frederic Randal (1952– ), New Zealand-born mathematician. Proved an index theorem for vector bundles on Riemannian algebras, discovered a relationship between these algebras and geometric topology, and discovered a new polynomial invariant for knots; this work produced a connecting link to algebraic geometry, areas of mathematics and physics; Fields Medal, 1993.
+
+Jordan, Camille (1838–1921), French mathematician. Discovered many fundamental results in group theory; gave a proof of the Jordan curve theorem; studied Jordan algebras.
+
+Jordan, Pascal (1902–1980), German mathematician. Contributed to formulation of quantum mechanics.
+
+Josephson, Brian David (1940– ), British physicist. Predicted the Josephson effect concerning electron pairs; Nobel Prize, 1973.
+
+Joukovski, Nikolai Georgovich (1847–1921), Russian applied mathematician and aerodynamicist. Helped to introduce concept of Kutta–Joukovski airfoil and to prove Kutta–Joukovski theorem.
+
+Joule, James Prescott (1818–1889), English physicist. Formulated a mechanical theory of heat; demonstrated Joule-Thomson effect relating to the fall in temperature of a gas–first to estimate the velocity of a gas molecule.
+
+Jung, Carl Gustav (1875–1961), Swiss psychologist; founded the analytical school of psychoanalysis and psychotherapy.
+
+Jussieu, Antoine Laurent de (1748–1836), French botanist. Wore General Plantarium, the basis of modern natural botanical classification.
+
+Kahn, Robert E. (1938– ), American electrical engineer. Co-invented (with Vinton G. Cerf) Transmission Control Protocol-Internet Protocol (TCP/IP).
+
+Kalman, Rudolf Em (1930– ), Hungarian-born American mathematician and electrical engineer. Worked on mathematical theory of control systems; formulated the Kalman filter and associated concepts of controllability and observability.
+
+Kalza, Theodor Franz Sieveig (1885–1954), German mathematician. Developed theory that attempted to unify gravitation and electromagnetism.
+
+Kamerlingh Onnes, Heike (1853–1926), Dutch physicist. Research on cryogenics, critical phenomena, and low temperatures; discovered the phenomenon of superconductivity; Nobel Prize, 1913.
+
+Kandel, Erle R. (1929– ), Austrian-born American neurobiologist. Discovered that protein phosphorylation plays an important role in the molecular mechanisms underlying learning and memory formation; his work contributed to elucidating the molecular mechanisms underlying the study of synaptic transmission in the nervous system; Nobel Prize, 2000.
+
+Kapitza, Peter Leonidovich (1894–1984), Russian physicist. Studied magnetism and low-temperature physics; designed hydrogen and helium liquefaction plants; Nobel Prize, 1978.
+
+Kapteyn, Jacobus Cornelius (1851–1922), Dutch astronomer. Studied the proper motion of the stars; with F. J. van Rhijn, evolved a theory of the universe.
+
+Karle, Jerome (1918– ), American crystallographer. With A. V. Hughes, developed computational-mathematical techniques for use in x-ray crystallography to determine threedimensional structures of molecules; Nobel Prize, 1985.
+
+Karrier, Paul (1889–1971), Swiss physicist. Pioneered research on vitamins A and B$_{1}$ and on thiamine; with P. Willeke, developed a method for measuring the temperature of stars.
+
+Kastler, Alfred (1902–1984), French physicist. Developed a double-resonance method to study energy levels of atoms in excited states.
+
+Kater, Henry (1777–1835), English geodesist. Developed methods of determining the British national network of coordinates of gravity.
+
+Katz, Bernard (1911–2003), German-born British physicist. Discovered biochemical mechanism for release of transmitter substances at nervesmus junction; Nobel Prize, 1970.
+
+Keesom, Willem Hendrik (1876–1956), Dutch physicist. With E. E. van der Pol, applied the method to solidify helium; studied molecular structure of liquids and compressed gases.
+
+Kekul, von Stradbrunn, Friedrich August (1829–1896), German chemist. A founder of structural organic chemistry; made theoretical proposals of the steric model of chemical structure.
+
+Klein, William Chomsky, Iste Baron (1824–1907), British mathematician and physicist. Invented the Kelvin harmonic; formulated Clausius’s law concerning electric cables; contributed to thermodynamics.
+
+Kendall, Edward Calvin (1886–1972), American biochemist. Chemical investigation of the adrenal cortex, leading to the isolation of crystalline cortical hormones, especially cortisol; Nobel Prize, 1950.
+
+Kendall, Henry Way (1926–1990), American chemist. Collaborated in experiments that

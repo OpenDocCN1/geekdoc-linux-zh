@@ -1,0 +1,39 @@
+of oxygen in bogs, the peat moisture, and to the low fertility of the peat. Mogs, in contrast to other peatlands, can accumulate organic matter far above the groundwater table.
+
+Bogs show large geographic differences in floristic composition, surface morphology, and development. Blanket bogs, plateau bogs, domed bogs, and flat bogs represent a series of bogs types with decreasing climatic humidity. Concentric patterns of pools and string (peat dams) become more common and better developed northwest. Continental bogs are left. Other covered, whereas occupied bogs are dominated by dwarf shrub heaths and sedges lawns, with forests restricted to the bog slope if the climate is not too severe.
+
+Bogs have long been used as a source of fuel. In Ireland and other parts of western Europe, the harvesting of peat for domestic fuel and reclamation for agriculture and forestry have affected most of the peatlands, and few undisturbed bogs are left. Other uses are for horticultural peat, air layering in greenhouses, litter for poultry and livestock, and various chemical and pharmaceutical purposes. Mechanical extraction of peat for horticultural purposes has affected large bog areas worldwide. See BIOMASS; SWAMP, MARSH, AND BOG. [A.W.H.D.]
+
+# B Bohrium
+
+A chemical element, symbol Bh, atomic number 107. Bohrium was synthesized and identified in 1981 by the Unilab Linear Accelerator (UNILAC) of the Gessellschaft fur Schwerionenforschung (GSI) at Darmstadt, West Germany, by a team led by P. Armbruster and G. Münzenberg. The reaction used to produce the element was proposed and applied in 1976 by Y. Tsōbanesan and colleagues at Dubna Laboratories in Russia. A 209Bi target was bombarded by a beam of 26Cr projectiles.
+
+The best technique to identify a new isotope is its genetic correlation to known isotopes through a radioactive decay chain. These decay chains are generally interrupted by spontaneous fission. In order to apply decay chain analysis, those isotopes that are most stable against spontaneous fission should be produced. That is, isotopes with odd numbers of protons and neutrons. Not only does the fission barrier govern the spontaneous fission of specific produced, but also, in the deexcitation of the virgin nucleus, fission competes with neutron emission determines the final production probability. To keep the fission losses small, a nucleus should be produced with the minimum excitation energy possible. In this regard, reactions using relatively symmetric collision partners and strongly bound closed-shell nuclei, such as 209Bi and 208Pb as targets and 48Ca and 50Ti as projectiles, are advantageous.
+
+Six decay chains were found in the Darmstadt experiment. All the decays can be attributed to 262Bh, an odd nucleus produced in a one-neutron reaction. The isotope 262Bh undergoes alpha-particle decay (10.38 MeV) with a half-life of about 5 ms. Experiments at Dubna, performed in 1983 using the 157-in. (400-cm) cyclotron, established the production of 261Bh in the reaction 208Pb(54Cr, 2n)Cr. See NUCLEAR FISSION; NUCLEAR REACTION; PERIODIC TABLE; RADIOTIVITY; TRANSURANIUM ELEMENTS. [PAJ]
+
+# Boiler
+
+A pressurized system in which water is vaporized to steam, the desired end product, by heat transferred from a source of high temperature, usually the products of combustion from burning fuels. Steam thus generated may be used directly as a heating medium, or as the working fluid in a prime mover to convert thermal energy to mechanical work, which in turn may be converted to electrical energy. Although other fluids are sometimes used for these purposes, water is by far the most common because of its economy and suitable thermodynamic characteristics.
+
+The physical sizes of boilers range from small portable or shop-assembled units to installations comparable to a multi- story 200-ft-high (60-m) building equipped, typically, with a furnace
+
+which can burn coal at a rate of 6 tons/min (90 kg/s). Boilers operate at positive pressures and offer the hazardous potential of explosions. Pressure parts must be strong enough to withstand the generated steam pressure and must be maintained at acceptable temperatures, by transfer of heat to the fluid, to prevent loss of strength from overheating or destructive oxidation of the construction materials.
+
+The overall functioning of steam-generating equipment is governed by thermodynamic properties of the working fluid. By the simple addition of heat to water in a closed vessel, vapor is formed which has greater specific volume than the liquid, and can develop an increase of pressure to the critical value of 3208 psia (22.1 megapascals absolute pressure). If the generated steam is discharged at a controlled rate, commensurate with the rate of heat addition, the pressure in the vessel can be maintained at any desired value, and thus be held within the limits of safety of the construction. See STEAM.
+
+Addition of heat to steam, after its generation, is accompanied by increase of temperature above the saturation value. The higher heat content, or enthalpy, of superheated steam permits it to develop a higher percentage of useful work by expansion through the prime mover, with a resultant gain in efficiency of the power-generating cycle. See STEAM-GENERATOR.
+
+If the steam-generating system is maintained at pressures above the critical, by means of a high-pressure feedwater pump, water is converted to a vapor phase of high density equal to that of the water, without the formation of bubbles. Further heat addition causes superheating, with corresponding increase in temperature and enthalpy. The most advanced developments in steam- generating equipment have led to units operating above critical pressure, for example, 3600-5000 ps (25-4 MPa). Superheated steam temperature has advanced from 500 °F (260 °C) to the present practical limits of 1050-1100 °F (566-593 °C). See MARINE ENGINEERING; NUCLEAR POWER; STEAM-GENERATING UNIT.
+
+# Boiler economizer
+
+A component of a steam-generating boiler that absorbs heat from the products of combustion after they have passed through the steam-generating and super-heating sections. The name, accepted through common usage, is indicative of savings in the fuel required to generate steam.
+
+An economizer is a forced-flow, once-through, convection heat-transfer device to which feedwater is supplied at a pressure above that in the steam-generating section and flows corresponding to the steam output of the unit. The economizer is in effect a feedwater heater, recovering water from the boiler feed pump and delivering it at a high temperature to the steam generator or boiler. Economizers are used instead of additional steam-generating surface because the feedwater, and consequently the heat-receiving surface, is at a temperature below that corresponding to the saturated steam temperature; thus, the economizer further lowers the flue gas temperature for additional heat recovery. See BOILER FEEDWATER; THERMODYNAMIC CYCLE.
+
+Generally, steel tubes, or steel tubes fitted with externally extended surface, are used for the heat-absorbing section of the economizer; usually, the economizer is coordinated with the steam-generating section and placed within the setting of the unit. See AIR HEATER; BOILER; STEAM-GENERATING UNIT. [G.W.K.]
+
+# Boiler feedwater
+
+Water supplied to a boiler unit for the generation of steam. Feedwater should be virtually free of impurities that are harmful to the boiler and its associated system. Generally, natural waters are unsuitable for direct use as feed- water because of their contamination by contact with the earth, the atmosphere, or other sources of pollution. These contaminants can be removed or altered by chemical treatment and other means to provide satisfactory feedwater. See RAW WATER; WATER TREATMENT. [G.W.K.]

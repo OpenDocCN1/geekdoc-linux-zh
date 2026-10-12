@@ -1,0 +1,29 @@
+# Fluid coupling
+
+# 899
+
+part of the means of attracting pollinators, for the papillae are light reflectors.
+
+**Stamen.** As a stamen develops, periclinal divisions in the second cell layer of each of its four lobes start a sequence that will end with the shedding of pollen. The first division makes two cell layers. The outer daughter cells give rise to the wall of the pollen sac, and the inner ones are destined to become pollen after further divisions. When mature, a pollen sac typically has a prominent cell layer just below a less distinctive epidermis. The inner wall and the side walls of an endothecium cell carry marked thickenings, but the outer wall does not. Splitting of the ripe anther is due partly to the way in which these differentially thickened walls react to drying and shrinking and partly to the smaller size of the cells along the line of splitting. See POLLEN.
+
+**Carpel.** Like other floral parts, a carpel is made up of epidermis, parenchyma, and vascular tissue. In addition, a carpel commonly has a special tissue system on which pollen germinates and through which, or along which, pollen tubes are transmitted to the ovules. Most angiosperms have solid styles, and the transmitting tissue is a column of elongate cells whose softened walls are the medium for tube growth. The epidermis at the stigmatic end of a carpel usually changes to a dense covering of papillae or hairs; the hairs can be unicellular or multicellular, branched or unbranched. In taxa with hollow styles, the transmitting tissue is a modified epidermis running down the stylar canal. There are two kinds of receptive surfaces, and they are distributed among the monocotyledons and the dicotyledons with taxonomic regularity. One kind has a fluid medium for germinating the pollen, and the other has a dry protective layer over the cuticle. The proteins of the dry stigma have a role in the incompatibility reactions that encourage outbreeding.
+
+**Ovule.** Ovule development usually takes place at the gynoecium forms, but it may be retarded when there is a long interval between pollination and fertilization (oaks, orchids). A typical ovule has a stalk (funiculus), a central bulbous body (nucellus), and one or two integuments (precursors of seed coats), which cover the nucellus except for a terminal pore (micropyle). Orientation of the ovule varies from group to group. It can be erect on its stalk or bent one way or another to differing degrees. There are also taxonomic differences in the extent to which the ovule is vascularized by branches from the gynoecial vascular system. See FRUIT; REPRODUCTION (PLANT).
+
+![](bbox=[0.14, 0.07, 0.42, 0.32])
+
+Fig. 2. Placentation: (a) parietal, (b) axile, and (c) free central. (After P. H. Raven, R. E. Evert, and H. Curtis, Biology of Plants, Worth Publishers, 1976)
+
+larkspur. It can be a cushionlike outgrowth at the base of a superior ovary (orange blossom) or atop an inferior ovary (parsley family). Gladiolus and a number of other monocotyledons have septal nectaries, deep secretory crevices where the carpels come together. Substances that give off floral odors—essential oils for the most part—ordinarily originate close to the nectar-producing region but are not coincident with it. Production by the epidermis of petanth parts is most common, but in some species the odor emanates from a more restricted region and may even come from a special flap or brush. Most insect-pollinated plants have visual cues, some of them outside the human spectral range, as well as odor to bring the pollinators to the flowers and guide them to the nectar. See SECRETORY STRUCTURES (PLANT).
+
+**Inflorescence.** Inflorescence structure, the way the flowers are clustered or arranged on a flowering branch, is almost as diverse as floral structure. To appreciate this, one need only contrast the drooping inflorescences (catkins) of a birch tree with the coiled flowers of a forget-me-not or with the solitary flower of a tulip. In some cases one kind of inflorescence characterizes a whole plant family. Queen Anne's lace and other members of the parsley family (Umbelliferae) have umbrella-like inflorescences with the flower stalks radiating from almost the same point in a cluster. The stalkless flowers (florets) of the grass family are grouped into clusters called spikelets, and these in turn are variously arranged in different grasses.
+
+Flowers of the arum family (calla lily, jack-in-the-pulpit), also stalkless, are crowded on a thick, fleshy, elongate axis. In the composite family, florets are joined in a tight head at the end of the axis; the heads of some composites contain two kinds, centrally placed florets with small tubular corollas and peripheral ray florets with showy, strap-shaped corollas (the "petals" one plucks from a daisy). See INFLORESCENCE.
+
+**Anatomy.** Some of the general anatomical features of leaves can be found in the floral appendages. A cuticle-covered epidermis overlies a core of parenchyma cells in which there are branching vascular bundles (solitary bundles in most stamens). Sepal parenchyma and petal parenchyma are often spongy, but palisade parenchyma occurs only rarely in flowers and then only in sepals. As in other parts of the plant, color comes mostly from plastids in the cytoplasm and from flavonoids in the cell sap. Cells of the petal epidermis may have folded side walls that interlock so as to strengthen the tissue. In some species the outer walls of the epidermis are raised as papillae; apparently, this is
+
+# Fluid coupling
+
+A device for transmitting rotation between shafts by means of the acceleration and deceleration of a
+
+![](bbox=[0.5, 0.67, 0.95, 0.95])

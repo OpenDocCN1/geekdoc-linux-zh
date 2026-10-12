@@ -1,0 +1,39 @@
+# 750  Electric protective devices
+
+conductor’s surface. Oil-impregnated paper-insulated distribution cables are used for high-voltages and in older installations (illus. b).
+
+Cable temperatures vary with load changes, and cyclic thermal expansion and contraction may produce voids in the filler. High voltage initiates corona in the voids, gradually destroying cable insulation. Low-pressure oil-filled cable construction reduces void formation. A single-phase concentric cable has a hollow conductor with a continuous oil channel. Three-phase cables have three oil channels located in the filler.
+
+**Submarine cables.** High-voltage cables are frequently used for crossing large bodies of water. Water provides natural cooling, and pressure reduces the possibility of void formation. A typical submarine cable has cross-linked polyethylene insulation, and corrosion-resistant aluminum alloy wire armorwork that provides tension strength and permits installation in deep water. (SEE ELECTRIC POWER SYSTEMS.)  (GJK)
+
+# Electric protective devices
+
+Equipment applied to electric power systems to detect abnormal and intolerable conditions and to initiate appropriate corrective actions. These devices include lightning arresters, surge protectors, fuses, and relays with associated circuit breakers, reloders, and so forth.
+
+From time to time, disturbances in the normal operation of a power system occur. These may be caused by natural phenomena, such as lightning, wind, or snow; by falling objects such as trees; by animal contacts or chewing; by accidental means traceable to reckless drivers, inadvertent acts by plant maintenance personnel, or other acts of humans; or by conditions produced in the system itself, such as switching surges, load swings, or equipment failures. Protective devices must therefore be installed on power systems to ensure continuity of electrical service, to limit injury to people, and to limit damage to equipment when problem situations develop. Protective devices are applied communally with the degree of protection desired or felt necessary for the particular system.
+
+**Protective relays.** These are compact analog or digital networks, connected to various points of an electrical system, to detect abnormal conditions occurring within their assigned areas. They initiate disconnection of the trouble area by circuit breakers. These relays range from the simple overload unit on house circuit breakers to complex systems used to protect extra-high-voltage power transmission lines. They operate on voltage, current, current direction, power factor, power, impedance, temperature. In all cases there must be a measurable difference between the normal or tolerable operation and the intolerable or unwanted condition. System faults for which the relays respond are generally short circuits between the phase conductors, or between the phases and ground. Some relays operate on unbalances between the phases, such as an open or reversed phase. A fault in one part of the system affects all other parts. Therefore relays and fuses throughout the power system must be coordinated to ensure the best quality of service to the loads and to avoid operation in the unafflicted areas unless the trouble is not adequately cleared in a specified time. SEE FUSE (ELECTRICITY); RELAY.
+
+**Zone protection.** For the purpose of applying protection, the electric power system is divided into five major protection zones: generators; transformers; buses; transmission and distribution lines; and motors (see illustration). Each block represents a set of protective relays and associated equipment selected to initiate correction or isolation of that area for all anticipated intolerable conditions or trouble. The detection is done by protective relays with a circuit breaker used to physically disconnect the equipment. For other areas of protection see GROUNDING; UNINTERRUPTIBLE POWER SYSTEM.
+
+**Fault detection.** Fault detection is accomplished by a number of techniques, including the detection of changes in electric current or voltage levels, power direction, ratio of voltage to current, temperature, and comparison of the electrical quantities
+
+![](bbox=[0.5, 0.05, 0.96, 0.14])
+
+Zones of protection on simple power system.
+
+flowing into a protected area with the quantities flowing out, also known as differential protection.
+
+**Differential protection.** This is the most fundamental and widely used protection technique. The system compares currents to detect faults in a protection zone. Current transformers on either side of the protection zone reduce the primary currents to small secondary values, which are the inputs to the relay. For load through the equipment or for faults outside of the protection zone, the secondary currents from the two transformers are essentially the same, and they are directed so that the current through the relay sums to essentially zero. However, for internal trouble, the secondary currents add up to flow through the relay.
+
+**Overcurrent protection.** This must be provided on all systems to prevent abnormal high currents from overheating and causing mechanical stress on equipment. Overcurrent in a power system usually indicates that current is being diverted from its normal path by a short circuit. In low-voltage, distribution-type circuits, such as those found in homes, adequate overcurrent protection can be provided by fuses that melt when current exceeds a predetermined value.
+
+Small thermal-type circuit breakers also provide overcurrent protection for this class of circuit. As the size of circuits and system currents, the problems associated with interruption of large fault currents dictate the use of power circuit breakers. Normally these breakers are not equipped with elements to sense fault conditions, and therefore overcurrent relays are applied to measure the current continuously. When the current has reached a predetermined value, the relay contacts close. This activates the trip circuit of a particular breaker, causing it to open and thus isolate the fault. SEE CIRCUIT BREAKER.
+
+**Distance protection.** Distance-type relays operate on the combination of reduced voltage and increased current occasioned by faults. They are widely applied for the protection of higher voltage lines. A major advantage is that the operating zone is determined by the line impedance and is almost completely independent of current magnitudes.
+
+**Overvoltage protection.** Lightning in the area near the power lines can cause very short-time overvoltages in the system and possible breakdown of the insulation. Protection for these surges consists of lightning arresters connected between the lines and ground. Normally the insulation through these arresters prevents current flow, but they momentarily pass current during the high-voltage transient to limit overvoltage. Overvoltage protection is seldom applied elsewhere except at the generators, where it is part of the voltage regulator and control system. In the distribution system, overvoltage relays are used to control taps of tap-changing transformers or to switch shunt capacitors on and off the circuit. SEE LIGHTNING AND SURGE PROTECTION.
+
+**Undervoltage protection.** This must be provided on circuits supplying power to motor loads. Low-voltage conditions cause motors to draw excessive currents, which can damage the motors. If a low-voltage condition develops while the motor is running, the relay senses this condition and removes the motor from service.
+
+**Underfrequency protection.** A loss or deficiency in the generation supply, the transmission lines, or other components of the system, resulting primarily from faults, can leave the system with an excess of load. Solid-state and digital-type underfrequency relays are connected at various points in the system to detect

@@ -1,0 +1,41 @@
+lapse rate, in the troposphere. However, above the troposphere, temperature increases with height through the stratosphere, decreases in the mesosphere, and increases again in the thermosphere. This inversion conditions prevail throughout much of the atmosphere much or all of the time, and are not unusual or abnormal. See **AIR TEMPERATURE**; **ATMOSPHERE**.
+
+Inversions are created by radiative cooling of a lower layer, by subsidence heating of an upper layer, or by advection of warm air over cooler air or of cool air over warmer air. Outgoing radiation, especially at night, cools the Earth’s surface, which in turn cools the lowest layers of air, creating a nocturnal surface inversion a few inches to several hundred feet thick.
+
+Inversions effectively suppress vertical air movement, so that smokes and other atmospheric contaminants cannot rise out of the lower layer of the air. California smog is trapped under an extensive subsidence inversion; smoke from a prairie fire, intensified by warm air advection aloft, can create serious pollution problems in valleys throughout the world; radiation and subsidence inversions, when horizontal air motion is sluggish, create widespread pollution potential, especially in autumn over North America and Europe. See **AIR POLLUTION**; **SMOG**. **[A.Cou.]**
+
+# Temperature measurement
+
+Measurement of the hotness of a body relative to a standard scale. The fundamental scale of temperature is the thermodynamic scale, which can be derived from any equation expressing the second law of thermodynamics. Efforts to approximate the thermodynamic scale as closely as possible depend on relating measurements of temperature-dependent physical properties of systems to thermodynamic relations between ideal-gas thermodynamic equations, thus in general linking temperature to the average kinetic energy of the measured system. Temperature-measuring devices, thermometers, are systems with properties that change with temperature in a simple, predictable, reproducible manner. See **TEMPERATURE**; **THERMODYNAMIC PRINCIPLES**.
+
+In the establishment of a useful standard scale, assigned temperature values of thermodynamic equilibrium fixed points are agreed upon by an international body (General Conference of Weights and Measures), which updates the scale about once every 20 years. Thermometers for interpolating between fixed points and methods for realizing the fixed points are prescribed, providing a scheme for calibrating thermometers used in science and industry.
+
+The scale now in use is the International Temperature Scale of 1990 (ITS-90). In its unit is the kelvin, K, arbitrarily defined as 1/273.16 of the thermodynamic temperature T of the triple point of water (where liquid, solid, and vapor coexist). For temperatures above 273.15 K, it is common to use International Celsius Temperatures, t60 (rather than International Kelvin Temperatures, TK0, having the unit degree Celsius, with symbol °C, the degree Celsius has the same magnitude as the kelvin. Temperatures, t60, are defined as t60/°C = T/K − 273.15, that is, as differences from the ice-point temperature at 273.15 K. The ice point is the state in which liquid and solid phases of water coexist at a pressure of 1 atm (101.325 psia). [The Fahrenheit scale, with symbol °F, still common use in the United States, is given by t60/°F = (t60/°C × 1.8) + 32, or t60/°F = (T/K − 273.15) × 1.8) − 459.67.] The ITS-90 is defined by 17 fixed points. See **TRIPLE POINT**.
+
+Primary thermometers are devices that relate the thermodynamic temperature to statistical mechanical formulation. The fixed points of ITS-90 are all based on one or more types of gas thermometry or on spectral radiation photometry referenced to gas thermometry. Secondary thermometers are used as reference standards in the laboratory because primary thermometers are often too cumbersome. It is necessary to establish standard secondary thermometers referenced to one or more fixed points for interpolation between fixed points. Lower-order thermometers are used for most practical purposes and, when high accuracy is required, can usually be calibrated against refer-
+
+# Tendon, 2209
+
+ence standards maintained at laboratories, such as the U.S. National Institute of Standards and Technology, or against primary reference devices (sealed boiling or melting point cells, etc. See **GAS THERMOMETRY**; **LOW-TEMPERATURE THERMOMETRY**; **PYROMETER**; **THERMISTOR**; **THERMOCOUPLE**; **THERMOMETER**. **[B.W.M.]**
+
+# Tempering
+
+The reheating of previously quenched alloy to a predetermined temperature below the critical range, holding the alloy for a specified time at that temperature, and cooling it at a controlled rate, usually by immediate rapid quenching, to room temperature. The term is broadly applied to any process that toughens a material.
+
+In alloys, if the composition is such that cooling produces a supersaturated solid solution, the resulting material is brittle. Heating the alloy to a temperature only high enough to allow the excess solute to precipitate out and then rapidly cooling the saturated solution fast enough to prevent further precipitation or grain growth results in a microstructure combining hardness and toughness.
+
+With steel, the tempering must be carried out by slow heating to avoid steep temperature gradients; stress relief being one of the objectives. Properties produced by tempering depend on the temperature to which the steel is raised and on its alloy composition. For example, if hardness is to be retained, molybdenum or tungsten is used in the alloy. See **HEAT TREATMENT** (**METALLURGY**). **[F.H.R.]**
+
+# Temporary structure (engineering)
+
+A structure erected to aid in the construction of a permanent project. Temporary structures are used to facilitate the construction of buildings, bridges, tunnels, and other above- and below-ground facilities by providing access, support, and protection for the facility under construction, as well as assuring the safety of the workers and the public. Temporary structures either are dismantled and removed when the permanent works become self-supporting or complete, or are incorporated into the finished work. Temporary structures are also used in inspection, repair, and maintenance work.
+
+The many types of temporary structures include cofferdams; earth-retaining structures; tunneling supports; underpinning; diaphragm/silvery walls; road deck; construction ramps, runways, and platforms; scaffolding; shoring; falsework; concrete formwork; bracing and guying; site protection structures such as idler bridges, booms, and nets to protect against falling objects; barricades and fences, and signs; and unique structures that are specially conceived, designed, and erected to aid in a specific construction operation.
+
+These temporary works have a primary influence on the quality, safety, speed, and profitability of an construction project. More failures occur during construction than during the lifetimes of structures, and most of these construction failures involve temporary structures. However, codes and standards do not provide the same scrutiny as they do for permanent structures. Typical design and construction techniques and some industry practices are well established, but responsibilities and liabilities remain complex and present many contractual and legal pitfalls. **[R.T.R.]**
+
+# Tendon
+
+A cord connecting a muscle to another structure, often a bone. A tendon is a passive material, lengthening when the tension increases and shortening when it decreases. This characteristic contrasts with the active behavior of muscle. Away from its muscle, a tendon is a compact cord. At the muscle, it spreads into thin sheets called aponeuroses, which lie over and sometimes within the muscle belly. The large surface area of the aponeuroses allows the attachment of muscle fibers with a total cross-sectional area that is typically 50 times that of the tendon. See **MUSCLE**.
+
+Tendons are living tissues that contain cells. In adult tendons, the cells occupy only a very small proportion of the volume and have a negligible effect on the mechanical properties. Like

@@ -1,0 +1,42 @@
+
+## Polyfluororethylene resins 1743
+
+The allyls are commonly used as coatings. Combinations of conventional vegetable drying oils and alloy resins represent the basis of most of the oil-soluble paints. The drying oil-allyl may be further modified by the inclusion of a vinyl monomer, such as styrene. Some of the styrene polymersizes, probably as a graft polymer, and the remaining polymerizes and copolymerizes in the final drying and curing of the pain. See DRYING OIL; PAINT; POLYMERIZATION.
+
+The unsaturated polyesteres, in combination with glass fiber, have found applications as panels, roofing, radar domes, boat hulls, and protective armor for soldiers. The compositions are distinguished by ease of fabrication and high impact resistance. See POLYMERIC COMPOSITE.
+
+Saturated aliphatic polyesteres have long been frequently used as intermediates in the preparation of prepolymers for making segmented polyurethanes. Lactone rings can also be opened to yield linear polyesteres.
+
+The aromatic polyesteres which have achieved general importance are the polyethylene terephthalates, which yield very strong and chemically resistant fibers and films. Polyester terephthalate is the principal ingredient of polyester fibers. Polyethylene terephthalate may be molded or extruded to yield materials that can replace metals or thermoset resins in some automotive, electrical, and specialty applications, especially when reinforced with glass fibers or mineral fillers.
+
+Aromatic polyesters carbonate are a strong, tough group of thermoplastic polymers formed most frequently from bisphenol A and phosgene. The products, polycarbonates, are noted for high softening temperatures, and high impact resistance, clarity, and resistance to creep. Polycarbonate is usually available as a molding compound. Because of its high strength, toughness, and softening point, the resin, both by itself and as a glass-reinforced material, has found many electrical domestic and engineering applications. It is often used to replace glass and metals. Examples include bottles, unrebreakable windows, appliance parts, electrical housings, marine propellers, and shotgun shells. Flame-retardant grades are of interest because of low toxicity and smoke emission on burning.
+
+Polydiallyl esters are polymers of diallyl esters. Thermo-setting molding compounds may be produced by careful limitation of the initial polymerization to yield a product which is fusible. Major applications are in electronic compounds, sealants, coatings, and glass-fiber composites. See PLASTICS PROCESSING. [J.A.M.]
+
+## Polyether resins
+
+Thermoset or thermosetting materials which contain ether-oxygen linkages, —C—O—C—, in the polymer chain. Depending upon the nature of the reactants and reaction conditions, a large number of polyethers with a wide range of properties may be prepared. The main groups of polyethers in use are epoxy resins, phenoxey resins, polyethylene oxide and polypropylene oxide resins, polyoxyethylene oxide, and polyethylene oxides.
+
+The epoxy resins form an important and versatile class of cross-linked polyethers characterized by excellent chemical resistance, adhesion to glass and metals, electrical insulating properties, and ease to precision of fabrication. Various fillers such as calcium carbonate, metal fibers and powders, and glass fibers are commonly used in epoxy formulations in order to improve such properties as the strength and resistance to abrasion and high temperatures. Some reactive plasticizers act as curing agents, become permanently bound to the epoxy groups, and are usually called flexibilizers. Rubbery polymers are added to improve toughness and impact strength. Epoxies are commonly used in protective coatings. They are used as potting or encapsulating compositions for the protection of delicate electronic assemblies from the thermal and mechanical shock of rocket flight, and as dies for stamping metal forms.
+
+Polyethylene oxide and polypropylene oxide are thermoplastic products whose properties are greatly influenced by molecular weight. Low-to-moderate-molecular-weight polyethylene oxides vary in form from oils to waxy solids. They are relatively nonreactive, are soluble in a variety of solvents, and have found many uses as thickening agents, plasticizers, lubricants for textile fibers, and components of various sizing, coating, and cosmetic preparations. The polypropylene oxides of similar molecular weight have somewhat similar properties, but tend to be more oil-soluble (hydrophobic) and less water-soluble (hydrophilic). While polyethylene oxides are not of interest as such in structural materials, polypropylene oxides are used extensively in the preparation of polyethylene foams.
+
+Phenoxey resins are transparent, strong, ductile, and resistant to creep, and, in general, resemble styrolcarbonates in their behavior. The main application is as a component in protective coatings, especially in metal primers. See POLYESTER RESINS.
+
+Polyphenylene oxide (PPO) is the basis for an engineering plastic characterized by chemical, thermal, and dimensional stability. Polyphenylene oxide is outstanding in its resistance to water. Uses include medical instruments, pump parts, and insulation. [J.A.M.]
+
+Polyoxymethylene, or polyacetal, resins are polymers of formaldehyde. Having high molecular weights and high degrees of crystallinity, they are strong and tough and are established as the general class of the engineering thermoplastics. Polycetals are typically resistant to fatigue, creep, organic chemicals (but not strong acids or bases), and have low coefficients of friction. Electrical properties are also good. The combination of properties has led to many uses such as plumbing fittings, pump and valve components, bearings and gears, computer hardware, automotive body parts, and appliance housings. See PLASTICS PROCESSING; POLYMERIZATION.
+
+## Polyfluorolefin resins
+
+Resins distinguished by their resistance to heat and chemicals and by the ability to crystallize to a high degree. Several main products are based on tetrafluoroethylene, F₂C=CF₂ (TFE), hexafluoropropylene, F₂C=CFCl₂ (HFP), and monochlorotrifluoroethylene, CFCl=CF₂ (CTFE).
+
+Poly(tetrafluoroethylene) is the polymer of tetrafluoroethylene and is commonly known by the trade name Teflon®. It is insoluble, resistant to heat (up to 275 C or 527 F), and chemical attack, and has the lowest coefficient of friction of any solid. However, special surface treatments are necessary to enable adhesion because poly(tetrafluoroethylene) does not adhere well to anything. Poly(tetrafluoroethylene) (TFE resin) is used for bearings, valve seats, packings, gaskets, coatings, and tubing, and can withstand relatively severe conditions. Because of its excellent electrical properties, poly(tetrafluoroethylene) is useful when a dielectric material is required for service at a high temperature.
+
+The nonadhesive quality is often used to coat articles such as rolls and cookie to which materials might otherwise adhere.
+
+The properties of poly(chlorotrifluoroethylene) (CTFE) resin are generally similar to those of poly(tetrafluoroethylene); however, the presence of the chlorine atoms in the former causes the polymer to be a little less resistant to heat and to chemicals.
+
+The applications of poly(chlorotrifluoroethylene) are in general similar to those for poly(tetrafluoroethylene). Because of its stability and inertness, the polymer is useful in the manufacture of gaskets, linings, and valve seats much with stand hot and corrosive conditions. It is also used as a dielectric material, and as a vapor and liquid barrier, and for microporous filters.
+
+Poly(vinylidene fluoride) properties have generally similar to those of the other fluorolinated resins: relative inertness, low dielectric constant, and thermal stability (usable to about 150 or 300 F). The resins (PVF resins) are, however, stronger and less susceptible to creep and abrasion than TFE and CTFE resins. Applications of poly(vinylidene fluoride) are mainly as electrical insulator, piping, process equipment, and as a protective coating in the form of a liquid dispersion.

@@ -1,0 +1,39 @@
+# # Hoplocrarida
+
+A subclans of Crustacea, with a single extant order, Stomatopoda, commonly known as mantis shrimps. The Hoplocaridara was formally included as a taxon within the Eu-malacostrara, and disagreement regarding its independent orig-in still persists. The controversy is centered on the question of whether those elements of the eumalacostracan carinoid fa-cies observed in hoplacrarids represent examples of homology or convergence. Investigations of fossil (Haplocramidopoda) and Recent Stomatopoda suggest that a distinct set of morphological features, sometimes referred to as a holopoid morphotype, clearly delineate the Hoplocaridara from the Eumalacostraca. Morpho-logical aspects of feeding observed in modern-day species, as well as features of the digestive system and abdominal muscu-lature, tend to support the hypothesis of a distinct origin. See CRUSTACEA; STOMATOPODA.
+
+# # Hoplonemertini
+
+An order of the class Enopla of the phy-lum Rhyncochoela, characterized by possession of an elaborate armed proboscis consisting of an anterior thick-walled tube, a median portion armed with styles, and a posterior blind tube. In some species the foregut (stomach) can be everted into the prey to achieve extracorporeal digestion prior to ingestion. There are two suborders, the Monostyliiera and Polystyliera, separated on the number of styleris in the proboscis. Monostylitfera include fresh-water, terrestrial, and symbiotic species, as well as the more common marine littoral forms. See ANOPLIA; BELLONEMERTINI; ENOPLA; RHYNCHOCOELA.
+
+# # Horizon
+
+The visible horizon is the apparent boundary line between sky and earth or sea. The real horizon does not exist on the great circle of the celestial sphere 90° from the zenith and the nadir. See ASTRONOMICAL COORDINATE SYSTEMS.
+
+# # Hormone
+
+One of the chemical messengers produced by endocrine glands, whose secretions are liberated directly into the bloodstream and transported to a distant part or parts of the body, where they exert a specific effect for the benefit of the body as a whole. The endocrine glands involved in the maintenance of normal body conditions are pituitary, thyroid, parathyroid, adrenal, pancreas, ovary, and testis. However, these organs are not the only tissues concerned in the hormonal regulation of body processes. For example, the duodenal mucosa, which is not organized as an endocrine gland, elaborates a substance called secretin which stimulates the pancreas to produce its digestive juices. The placenta is also a very important hormone-producing tissue. See SEPARATE ARTICLES ON THE INDIVIDUAL GLANDS.
+
+The hormones obtained from extracts of the endocrine glands may be classified into four groups according to their chemical constitution: (1) phenol derivatives, such as epinephrine, nore-pinephrine, thyroxine, and triiodothyronine; (2) proteins, such as the anterior pituitary hormones, with the exception of adeno-corticotrophic hormone (ACTH), human chorionic gonadotropin, pregnant-mare serum gonadotropin, and thyroglobulin; (3) pep-tides, such as insulin, glucagon, ACTH, vasopressin, oxytocin, and secretin; and (4) steroids, such as estrogens, androgens, pro-gesterone, and corticoids. Hormones, with a few exceptions like pituitary growth hormone and insulin, may also be classified as either tropic hormones or target-organ hormones. The former group indirectly through the organs or glands which they stimu-late, whereas the latter exert a direct effect on peripheral tissues.
+
+See ENDOCRINE SYSTEM (VERTEBRATE).
+
+# # Hornbeam
+
+The genus *Carpinus* of the beech family, rep-resented in the United States by *C. caroliniana*, the American hornbeam or box beech. Hornbeam is a small tree, and it has a smooth, steel-gray, fluted bark. It grows throughout the eastern half of the United States, especially in most soil along banks of streams; it is sometimes called water beech. When mature, it is easily recognized by its peculiar bark, by the doubly ser-rate leaves resembling those of sweet birch, and by the small
+
+pointed, angular winter buds with scales in four rows. The fruit is a small nutlet subtended by a three-lobed serrate bract. The wood is very hard, giving rise to the name iron-wood.
+
+The European hornbeam (*C. betulus*) is often cultivated in parks and estates. It can be distinguished by its larger size, larger winter buds, and larger three-lobed, almost entire fruiting bracts. See FAGACEAE.
+
+# # Hornblende
+
+The name that has traditionally been as-signed to common calcic amphiboles of metamorphic and igneous rocks. However, a nomenclature scheme for amphiboles was in-duced in 1997 in which the names now carry strict composi-tional restrictions. Magnesium-hornblende (contains magnesium) and ferromagnesium (contains iron) are monominonic amphiboles with end-member compositions Ca₂(MgAl)(SiAlO₂)(OH)₂ and Ca₂Mg³Al(Al₂Si₂Al)(OH)₂. Hornblende, Ca₂MgAl(SiAl)O₂-OH₂, has the end-member composition Ca₂MgAl(SiAl)O₂-OH₂, F is the end-member composition Ca₂MgAl(SiAl)O₂-F₂, which all of the OH in hornblende have been replaced by F when used to denote an amphibole of known chemical composition, the term hornblende is never used without a prefix or adjectival modifier. The unmodified term hornblende genically refers to a calcic amphibole identified by physical or optical properties with characterization of the chemical composition. Hornblende is a common rock-forming mineral in medium- and high-grade metamorphic rocks, particularly those of mafic and ultramafic composition. In mafic rocks, it first appears in the upper part of the low grade by a chemical reaction involving the disappearance of actinolite, a nonaluminous calcic ampli-bole. This change is extremely noticeable in thin sections, very pale-green actinolite grading way to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende. With a green actinolite grading to blue-green hornblende.
+
+Hornblende is commonly found as a minor phase in a wide va-riety of igneous rocks. Magnesium-rich hornblendes do occur as primary phases in basic and ultrabasic rocks, but this is not com-mon. In igneous amphiboles are most abundant in calcic-alkaline dioxides, granodiorites, and granites, becoming more iron-rich with increasing acidity of the host rocks. This compositional trend is also characterized by a progressive increase in the alkali con-tent of the amphibole, and hornblende grades into hastingsite, riebeckite, andarfvoasite in granitic rocks. See GRANITE; GRA-NOBURITE; IGRNOUS ROCKS.
+
+Due to its complex structure and chemistry, hornblende con-tains much information on its formation. Its behavior is used reasonably well, and hornblende is of considerable use in interpreting the geological history of the rocks in which it occurs. See AMPHIBOLITE; METAMORPHISM.
+
+# # Hornfels
+
+A metamorphic rock that has been subjected to heating during contact metamorphism around intrusive igneous rocks. Hornfels is typically fine-grained, although where it is sub-jected to high temperatures, large crystals called porphyroblasts can form. Mineral grains in hornfels are randomly oriented, and no preferred alignment of crystals to form foliation or cleavage planes. This texture indicates that the hornfels was not subjected to significant stresses during contact metamorphism.

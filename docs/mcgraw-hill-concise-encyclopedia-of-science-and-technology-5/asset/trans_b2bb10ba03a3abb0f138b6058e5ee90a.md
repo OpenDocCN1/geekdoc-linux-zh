@@ -1,0 +1,157 @@
+
+
+## 贡献者
+
+2539
+
+-   **Kanzig, Werner 教授**。马萨诸塞州理工学院，物理系。
+-   **Kaplan, Louis 博士**。阿贡国家实验室，高级化学家，伊利诺伊州阿贡。
+-   **Kaplan, Robert A.** 工程副总裁，自动横幅公司（Automatic Banner Corporation），伊利诺伊州芝加哥。
+-   **Kaplan, Thomas A. 教授**。密歇根州立大学，物理与天文学系，东兰辛。
+-   **Kapner, Robert S.** 库珀联盟学院（Cooper Union），化学工程系，纽约。
+-   **Kaprelian, Edward K.** 副总裁兼技术总监，Veefield and Esser 公司，新泽西州莫里斯敦。
+-   **Kapur, Mallash C. 教授**。华盛顿大学，工业工程系主任，西雅图。
+-   **Karaky, George G. 博士**。亚利桑那州立大学，电气工程系。
+-   **Karasik, Joseph I.** 制造工程师（退休），Reliance 电气公司（Reliance Electric Company），俄亥俄州威克利夫。
+-   **Kareiva, Peter 教授**。华盛顿大学，动物学系，西雅图。
+-   **Karlson, Peter 博士**。Marburg，德国，Philipps 大学物理化学研究所。
+-   **Karnor, Garry D. 博士**。Lamont-Doherity 地球观测站，纽约州帕利塞兹。
+-   **Karni, Shlomo 教授**。新墨西哥大学，电气与计算机工程系。
+-   **Karkovska, Margarita 博士**。哈佛-史密森天体物理中心，马萨诸塞州剑桥。
+-   **Karp, Alan H. 博士**。IBM 科学中心，加利福尼亚州帕洛阿尔托。
+-   **Katz, Jack L. 博士**。Montefiore 医院和医疗中心，精神科，纽约市布朗克斯区。
+-   **Katz, Joseph J. 博士**。阿贡国家实验室，化学部，伊利诺伊州阿贡。
+-   **Katz, Leonard A. 博士**。Health Care Plan 医疗中心，纽约州布法罗。
+-   **Kaufmann, R. H.** 已故；曾任顾问，纽约州施耐威茨达（Schenectady）。
+-   **Kavan, Carl E. 教授**。已故；曾任哥伦比亚大学工程学院机械工程系教授。
+-   **Kawden, Herbert J. 博士**。纽约大学医学院，内科，纽约。
+-   **Kays, John M. 教授**。康涅狄格大学，动物产业系。
+-   **Keating, Richard E.** 美国海军天文台，时讯服务处，华盛顿特区。
+-   **Keady, Rex J. 教授**。德班大学沃尔洪顿分校，校舍核科学研究中心，南非约翰内斯堡。
+-   **Keefe, Richard S. E. 博士**。杜克大学医疗中心，精神科，北卡罗来纳州达勒姆。
+-   **Keeton, William T. 博士**。已故；曾任康奈尔大学生物学系兰格尔实验室神经生物学与行为学部分教授及系主任。
+-   **Keller, Frederic 教授**。匹兹堡大学，物理系。
+-   **Keil, Stephen L. 博士**。国家光学天文台，国家太阳观测台，空军地球物理实验室，首席太阳研究组负责人，新墨西哥州圣波特。
+-   **Keiser, Bernhard E.** Keiser Engineering, Inc. 总裁，弗吉尼亚州维也纳。
+-   **Kellar, George W.** 科罗拉多矿业学院，地球物理系。
+-   **Keller, Harold V.** 赖特州立大学，微生物学与免疫学系副教授。
+-   **Keller, Joseph M. 博士**。艾奥瓦州立大学，物理系。
+-   **Keller, Walter D. 教授**。密苏里大学，地质系。
+-   **Keller, William E. 博士**。洛斯阿拉莫斯科学实验室，新墨西哥州洛斯阿拉莫斯。
+-   **Kelley, Michael C. 教授**。康奈尔大学，工程与理论中心。
+-   **Kellogg, Douglas S. 博士**。美国疾病控制中心，佐治亚州亚特兰大。
+-   **Kello, Lysan M. 教授**。已故；曾任美国海军学院荣休教授。
+-   **Kelman, Arthur 博士**。威斯康星大学，植物病理学系。
+-   **Kempers, Roger D. 博士**。梅奥基金会，梅奥医学院研究生院，妇产科，明尼苏达州罗切斯特。
+-   **Kempenaars, Robert J. 教授**。奥本大学兽医学院，解剖学、生理学及药理学系，阿拉巴马州奥本。
+-   **Kendeligh, S. Charles 博士**。伊利诺伊大学，动物学系，厄巴纳。
+-   **Kennington, David B. 博士**。牛津工程科学系，英国。
+-   **Kensler, Charles J. 博士**。Arthur D. Little, Inc. 生命科学部高级副总裁，马萨诸塞州剑桥。
+-   **Kent, George C., Jr. 博士**。路易斯安那州立大学荣休教授；Authors' Services, Inc. 负责人，路易斯安那州巴吞鲁日。
+-   **Keor, Robert F. 博士**。利兹大学，纯应用生物学系，英国。
+-   **Kerr, Marilyn S. 博士**。锡拉丘兹大学，生物系。
+-   **Kerst, Donald W. 教授**。威斯康星大学，物理系。
+-   **Kerstlin, Morris D. 教授**。海纳曼大学，外科系，研究生与后学医学教育计划主任，宾夕法尼亚州费城。
+-   **Kessler, Edwin 教授**。国家强风暴实验室主任，俄克拉荷马州诺曼。
+-   **Kessler, George W.**  Babcock and Wilcox 公司发电事业部工程与技术副总裁，俄亥俄州波士顿。
+-   **Kestler, Dale E. 博士**。加利福尼亚大学戴维斯分校，农学院果树学系。
+-   **Ketteler, Wolfgang 教授**。马萨诸塞州理工学院，物理系，剑桥。
+-   **Ketterman, J. B. 博士**。西北大学，物理系。
+-   **Khan, Taweep N. 博士**。西澳大利亚州农业部门，植物产业司高级育种家。
+-   **Kharasch, Norman 教授**。南加利福尼亚大学，生物医学化学系。
+-   **Kibble, Bryan P. 博士**。英国国家物理实验室，电气科学部，米德尔塞克斯郡特丁顿。
+-   **Kilbey, Brian J. 博士**。爱丁堡大学，动物遗传学研究所遗传系，苏格兰。
+-   **Kilgore, Lee A. 博士**。已退休；曾任西屋电气公司（Westinghouse Electric Corporation）员工，宾夕法尼亚州东匹兹堡。
+-   **Kim, Chung W. 教授**。约翰霍普金斯大学，物理系。
+-   **Kimber, Edward W. 博士**。已故；曾任邦纳维尔电力管理局（Bonneville Power Administration）系统分析组主管，俄勒冈州波特兰。
+-   **Kirda, Joseph R.** 顾问，马里兰州达纳敦（Darnestown）。
+-   **Kindstedt, Paul S. 博士**。佛蒙特大学，农业与生命科学学院动物科学系，农业实验站，伯灵顿。
+-   **King, Bryan H. 博士**。达特茅斯希策克医疗中心（Dartmouth Hitchcock Medical Center），精神病学及儿科教授，精神科，新罕布什尔州黎巴嫩。
+-   **King, C. Judson 博士**。加利福尼亚大学伯克利分校，化学工程系。
+-   **King, Donald W., Jr. 博士**。芝加哥大学，病理系，理查德·T·克莱恩（Richard T Crane）生理学教授。
+-   **King, Elbert A. 博士**。休斯顿大学，地质系。
+-   **Kinney, Isaac F. 博士**。已故；曾任通用电气公司（General Electric Company）仪器部工程经理，马萨诸塞州林恩。
+-   **Kinoisha, Toichiro 教授**。康奈尔大学，核研究实验室。
+-   **Kinsler, Lawrence E. 教授**。美国海军研究生院，物理学教授，加利福尼亚州蒙特雷。
+-   **Kinsman, Blair 教授**。特拉华大学，海洋研究学院。
+-   **Kiry, H. W. 博士**。孟山都研究公司（Monsanto Research Corporation），芒德设施，俄亥俄州密西西比。
+-   **Kirby, Robert S.** 美国商务部国家海洋和大气管理局（NOAA）研究实验室，科罗拉多州博尔德。
+-   **Kirby, Seth 博士**。Dixon Spice Farms（迪克森香料农场），加利福尼亚州迪克森。
+-   **Kirk, Wiley P. 教授**。得克萨斯农工大学（Texas A & M University），物理系。
+-   **Kischner, Stanley 教授**。韦恩州立大学，化学系，底特律。
+-   **Kissel, David E. 博士**。堪萨斯州立大学，农学系。
+-   **Kit, Saul 博士**。Novagen Inc.，德克萨斯州休斯顿。
+-   **Klein, Barbara P. 博士**。伊利诺伊大学，食品与营养系。
+-   **Klein, Cornelius**. 新墨西哥大学，地质系。
+-   **Klein, David H. 博士**。Hope 学院，化学系。
+-   **Klein, Jan. 博士**。Tübingen，德国，马克斯·普朗克生物研究所。
+-   **Klein, Richard G. 教授**。芝加哥大学，人类学系。
+-   **Klein, Richard M. 教授**。佛蒙特大学，植物学系。
+-   **Kline, Mendel 博士**。哥德堡，瑞典，查尔姆斯理工大学应用声学系。
+-   **Kleinsmith, Lewis J. 教授**。密歇根大学，生物科学系。
+-   **Klemens, Paul G. 博士**。康涅狄格大学，物理系。
+-   **Klesper, David Lloyd 博士**。Klesper Marshall King Associates, Inc.，纽约州怀特普莱恩斯。
+-   **Kleppner, Daniel 教授**。马萨诸塞州理工学院，物理系，剑桥。
+-   **Klick, Maren 博士**。美国农业部-农业研究服务局，食品和饲料安全研究员，微生物学家，路易斯安那州新奥尔良。
+-   **Klick, Clifford C. 博士**。美国海军研究实验室，固态部主管。
+-   **Klewer, K. L. 教授**。艾奥瓦州立大学，物理系。
+-   **Klingher, Terry 博士**。Washington州星期五港实验室，星期五港。
+-   **Klincas, Dean S.** Rockwell International，加利福尼亚州埃卢塞戈（El Segundo）。
+-   **Klock, Harold F. 博士**。俄亥俄大学，电气工程系。
+-   **Klutke, Georgia-Ann 博士**。得克萨斯农工大学（Texas A & M University），工业工程系，制造系统研究所副教授及主任，College Station。
+-   **Knapp, Anthony W. 教授**。康奈尔大学，数学系。
+-   **Kleebmann, Morris S. 教授**。Bucknell 大学，数学教授。
+-   **Knight, R. B. D. 博士**。已退休；曾任英国国家物理实验室电气科学部职员，米德尔塞克斯郡特丁顿。
+-   **KNOTEC, M. L. 博士**。Sandia 国家实验室，新墨西哥州阿尔伯克基。
+-   **Knoules, Paulen F. 教授**。加利福尼亚大学戴维斯分校，农学与草地科学系。
+-   **Kobayashi, George 博士**。华盛顿大学医学院，密苏里州圣路易斯。
+-   **Kocan, Katherine M. 教授**。俄克拉荷马州立大学，兽医学病理学系，斯蒂尔沃特。
+-   **Koch, Arthur L. 教授**。印第安纳大学，生物系。
+-   **Koch, Peter M. 博士**。纽约州立大学石溪分校，物理系。
+-   **Koester, Frederick W.** 退休技术专家，Dow 化学公司，密歇根州米德兰。
+-   **Kogel, Jessica Elzba 博士**。Thiels Kaolin Company，佐治亚州桑德斯维尔。
+-   **Kogelnik, Herwig 博士**。Bell 实验室，Crawford Hill 实验室，新泽西州霍姆斯德尔。
+-   **Kohi, Arthur L.** 高级发展项目工程师，北美罗克韦尔（North American Rockwell）原子国际部门，加利福尼亚州伍德兰 hills。
+-   **Kohlmeier, Martin 博士**。北卡罗来纳大学教堂山分校，营养系。
+-   **Kohls, Glen M. 博士**。退休，Santarim 主任，美国公共卫生局，落基山实验室，蒙大拿州汉密尔顿。
+-   **Kohnohoul, Lloyd L.** 已退休；曾任 Rockwell International 高级研究专家，俄亥俄州哥伦布。
+-   **Kolter, Noreite 博士**。Rutgers 大学，物理系。
+-   **Kolvoord, Robert A. 博士**。詹姆斯·麦迪逊大学，综合科学与技术学院，弗吉尼亚州哈里森堡。
+-   **Komai, Taku 博士**。日本京都大学荣休教授。
+-   **Komorniz, Michelle**. Lamont-Doerity 地质观测站，纽约州帕利塞兹。
+-   **Koneman, Elmer W. 博士**。丹佛退伍军人事务医院，科罗拉多大学医学院，病理系，丹佛。
+-   **Königsegg, William H. 博士**。耶鲁大学，分子生物物理系。
+-   **Konopka, Allan E. 博士**。普渡大学，生物科学系。
+-   **Kone, Stephan A. 博士**。堪萨斯州立大学，工业工程系。
+-   **Kongo, Seichi 教授**。伊利诺伊大学，机械工程系。
+-   **Koopman, Karl F. 博士**。纽约自然历史博物馆，哺乳动物学系。
+-   **Korai, Richard L. 博士**。Pratt 建筑学院客座副教授；纽约市社区学院公寓大楼研究所协调员。
+-   **Korih, Henry F. 博士**。数据库粒子组主管，新泽西州默里山（Murray Hill）。
+-   **Korit, William W. 博士**。罗切斯特脊椎古生物学研究所，纽约州佩菲尔德（Penfield）。
+-   **Korus, Roger A. 博士**。伊利诺伊大学工程学院布坎南工程实验室，化学工程系系主任。
+-   **Kosikowski, Frank V. 教授**。康奈尔大学，食品科学系。
+-   **Kosow, Irving L. 博士**。John Wiley & Sons，电气工程与技术系列编辑，佐治亚州玛丽埃塔。
+-   **Koter, F. Ralph 博士**。国家标准局（National Bureau of Standards）。
+-   **Kovar, Dennis 博士**。柏林，德国，Hahn-Meitner 核研究所。
+-   **Kou, Yoke Wah 博士**。威斯康星大学，生物化学系。
+-   **Kowal, Charles T. 博士**。加州理工学院，天体物理系。
+-   **Kraehenbusch, John O. 教授**。伊利诺伊大学厄巴纳-香槟分校荣休电气工程教授。
+-   **Kramar, Ernst 博士**。已故；曾任标准电气洛伦茨股份公司（Standard Elektrik Lorenz Aktien-gesellschaft），德国斯图加特。
+-   **Kraus, Graham P. 博士**。密歇根大学医学院，儿科与传染病学讲师。
+-   **Krauss, George 教授**。科罗拉多矿业学院，戈尔登（Golden）。
+-   **Krausk, Lawrence M. 博士**。耶鲁大学，理论物理中心。
+-   **Kruez, Mary Jeanne 博士**。洛克菲勒大学。
+-   **Krefeld, William J. 教授**。已故；曾任哥伦比亚大学土木工程教授。
+-   **Kreflik, Robert 博士**。罗切斯特大学，化学系。
+-   **Krstschmann, David E. 博士**。美国农业部森林服务局，森林产品实验室，威斯康星州麦迪逊。
+-   **Kretel, Randall W. 博士**。亚特兰大仪器分部机械工程经理，佐治亚州亚特兰大。
+-   **Krieder, E. Phillip 教授**。亚利桑那大学，大气物理研究所主任。
+-   **Krishnamurti, T. N. 博士**。佛罗里达州立大学，气象系。
+-   **Krissener, Reinhardt Mabeerg 博士**。哥本哈根大学，动物博物馆，丹麦。
+-   **Kristoferson, Karl**. 约翰·F·肯尼迪航天中心，公共关系部，佛罗里达州卡纳维拉尔角。
+-   **Krol, Edward 博士**。伊利诺伊大学厄巴纳-香槟分校，计算机科学系。
+-   **Krombein, Karl V. 博士**。史密森尼学会，国家自然历史博物馆，昆虫学系主任。
+-   **Kroto, Harold W.** 英国苏塞克斯大学，化学与分子物理学院。
+-   **Kruse, Paul W. 博士**。红外技术顾问，明尼苏达州艾迪纳（Edina）。
+-   **Krusius, Matti 教授**。芬兰，赫尔辛基工业大学低温实验室。
+

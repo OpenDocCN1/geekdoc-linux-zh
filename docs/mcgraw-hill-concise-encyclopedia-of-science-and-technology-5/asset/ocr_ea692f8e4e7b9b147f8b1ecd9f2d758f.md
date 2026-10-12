@@ -1,0 +1,139 @@
+# Appendix
+
+groups and factors M and N with A. S. Wiener, discovered the RF factor. Nobel Prize, 1931.
+
++   *   **Langmuir, Irving** [1881-1957], American chemist and physicalist. With W. B. Lewis, discovered the Langmuir-Lewis theory of adsorption, proposed the Langmuir-Lewis theory of adsorption, and discovered the Langmuir theory of adsorption. Studied the Langmuir-Lewis theory of adsorption, proposed the Langmuir-Lewis theory of adsorption, and discovered the Langmuir theory of adsorption. Studied the Langmuir-Lewis theory of adsorption, proposed the Langmuir-Lewis theory of adsorption, and discovered the Langmuir theory of adsorption. Studied the Langmuir-Lewis theory of adsorption.
+
++   *   **Laplace, Pierre Simon, Marquis de** [1749-1827], French astronomer and mathematician. Contributed to celestial mechanics, especially to the theory of the Moon, Saturn, and Jupiter; formulated the theory of probability; discovered the Laplace differential equation.
+
++   *   **Larmor, Joseph** [1857-1942], British physicist. Developed electron theory which used electromagnetic and optical concepts; introduced the Larmor radiation and derived the Larmor formula.
+
++   *   **Lashin, Louis Howard** [1898-1928], American inventor. A collaborator of Alexander Graham Bell and T. A. Edison, this self-educated son of an escaped slave as a best known for key inventions in the field of electric lighting.
+
++   *   **Laser**, John **Beard T.**, [1957-] American physicist. Proposed the theory of X-ray diffraction by crystals; developed the laser method of investigating crystal structure; Nobel Prize, 1974.
+
++   *   **LaSalle, Robert** [1950-], American physicist. Developed a theoretical explanation for the fractional quantum Hall effect by showing how electrons act together in a strong magnetic field to form new types of quasiparticles that have fractions of an electron charge; Nobel Prize, 1998.
+
++   *   **Laurent, Pierre Alphonse** [1813-1854], French mathematician and physicist. Introduced Laurent series; research on wave theory of light.
+
++   *   **Laue, Max von** [1879-1960], German physicist. Developed the theory of X-ray diffraction by crystals; developed the laser method of investigating crystal structure; Nobel Prize, 1974.
+
++   *   **Lavaise, Charles Louis** [1845-1922], French chemist. Discovered the malaria parasite; described the sleeping sickness series.
+
++   *   **Lawrence, Ernest Orlando** [1901-1958], American physicist. Discovery, development, and use of the cyclotron; Nobel Prize, 1939.
+
++   *   **LaPlace, Pierre Simon, Marquis de** [1749-1827], French astronomer and mathematician. Contributed to celestial mechanics, especially to the theory of the Moon, Saturn, and Jupiter; formulated the theory of probability; discovered the Laplace differential equation.
+
++   *   **LaCrosse, Georges** [1839-1882], French chemist and electrician. Invented the LaCrosse cell.
+
+states the existence of two types of neutrinos: led an experiment that discovered the neutron particle; Nobel Prize, 1988.
+
++   *   **Lee, David Morris** [1931-], American physicist. With D. T. Chao and R. C. Richardson, discovered parity violation in weak interactions; discovered the existence of two types of neutrinos; Nobel Prize, 1996.
+
++   *   **Lee, T. David** [1936-], American physicist. Developed electron density theory; Nobel Prize, 1996.
+
++   *   **Legendre, Adrien** [1772-1833], French mathematician. Worked on elliptic functions, the theory of numbers, and the method of least squares.
+
++   *   **Leggett, Anthony** [1938-], British physicist. Developed a theory explaining the complex behavior of superfluid helium-3; Nobel Prize, 2003.
+
++   *   **Lehmann, Jean-Mie** [1939-], French physicist. Studied electron diffraction; developed the structure of related crystals known as cations; Nobel Prize, 1987.
+
++   *   **Leibniz, Gottfried Wilhelm, Baron von** [1646-1716], German mathematician. Contributed to the development of differential calculus.
+
++   *   **Leitner, Luisi Frederic** [1906-1987], French-born Argentinian biochemist. Discovered such nucleotides and their role in carbohydrate biosynthesis; Nobel Prize, 1970.
+
++   *   **Lendahl, Philipp Eduard** [1862-1947], Hungarian-born German physicist. Studied cat's-eye outside the discharge tubes. Worked on photoelectricity; Nobel Prize, 1905.
+
++   *   **L'Enfant, Pierre Charles** [1754-1825], French soldier and architect. Washington, D.C.
+
++   *   **Lenard, Johannes**, John **E. Leonard** [1894-1954], English physicist and chemist. Proposed Lenard-Jones potential for intermolecular forces; contributed to quantum theory of molecular structure and statistical mechanics of liquids, gases, and surfaces; Nobel Prize, 1954.
+
++   *   **Levitt, Heinrich** [1804-1862], German physicist. Formulated Lenard-Jones law governing induced current.
+
++   *   **Levitt, John** [1841-1877], German engineer. Discovered gas thermometers and electric batteries; credited with J. C. Adams in England as a discoverer of Neptune.
+
++   *   **Lewin, Umberto** [1941-], Italian mathematician and mathematical physicist. With G. Ricci-Curbasov, developed tensor analysis; introduced the concept of parallelism in curved spaces.
+
++   *   **Lewi-Monticelli, Rita** [1909-], Italian biol- ogist. With S. Cohen, made landmark studies of growth factors and their functions; Nobel Prize, 1986.
+
++   *   **Lewis, Edward** [1918-2004], American geneticist. Stained chromosomes to show the genetic involvement of early embryonic development; Nobel Prize, 1986.
+
++   *   **Lewis, Gilbert Newton** [1875-1946], American chemist. Collaborated in developing the Lewis-LaMer atomic theory; worked on the electrode, vanadium, and chemical thermodynamics.
+
++   *   **Leydig, Franz** [1821-1908], German histologist and anatomist. Founder of comparative histology; proposed use of microscope in anatomical study; described cells in testes relative to sex organs.
+
++   *   **Liebau, Joseph** [1848], Guillaume François Antoine de **Marquis de Sainte-Fé** [1761-1836], French physicist. Wrote texts on different compounds, which give the Liebau rule.
+
++   *   **Libby, William Frank** [1908-1980], American chemist. Developed the method of radio-carbon dating; Nobel Prize, 1960.
+
++   *   **Lie, Martin Sophus** [1842-1899], Norwegian mathematician. Originated the theory of tensor-ial transformations.
+
++   *   **Liebig, Justus, Baron von** [1803-1873], German chemist. Discovered chloroform and chloral; founded agricultural chemistry; invented the Liebig condenser.
+
++   *   **Linnaeus, Carolus, real name Carl von Linné** [1707-1778], Swedish botanist. Developed the binomial nomenclature; founded a classification system; wrote *Species Plantarum*.
+
++   *   **Liosun, Pierre Louis** [1856-], French mathematician. Made important contributions to the theory of linear partial differential equations. Fick's law.
+
++   *   **Liouville, Joseph** [1809-1882], French mathematician. Proved existence of transcendental functions; developed a theory of functions; generalized the theory of doubly periodic functions.
+
++   *   **Lipmann, Fritz Albert** [1839-1896], German-born American mathematician. Formulated the rules for the biochemistry of energy transfer; discovered coenzyme A. Nobel Prize, 1953.
+
++   *   **Lippscomb, William Numn, Jr.** [1919-], American physical chemist. Studied structure and bonding of boranes, providing insight into the nature of chemical bonding; Nobel Prize, 1976.
+
++   *   **Lisagou, Jules Antoine** [1822-1880], French physicist. Invented the vibration microscope, in which the vibration microscope. Nobel Prize, 1891.
+
++   *   **Litter, Joseph** [1827-1912], English mathematician. Introduced antispacings to surgery; proposed the Litter reaction.
+
++   *   **Littlerood, John Anderson** [1885-1977], British chemist. Developed a theory explaining the associated-function theory, the zero-point approximation, and Lippert reagent theory.
+
++   *   **Lister, Joseph** [1885-1977], British chemist. Developed a theory explaining the associated-function theory, the zero-point approximation, and Lippert reagent theory.
+
++   *   **Lissauer, John von** [1781-1840], Austrian astronomer. Studied light refracting; worked on telescope construction.
+
++   *   **Lloyd, Thomas Young** [1840], Irish physicist. Discovered Lloyd's mirror interference; verified W. Hamilton's prediction of conical refraction.
+
++   *   **Lochass, Nicolas** [1801-1856], Russian mathematician. Originated the first comprehensive system of numerical geometry; discovered a first principle of numerical geometry. Nobel Prize, 1906.
+
++   *   **Loewi, Otto** [1873-1961], German pharmacologist. Investigated nerve impulses; proved the role of acetylcholine in nerve impulse transmission; Nobel Prize, 1936.
+
++   *   **Lofter, Friedrich August** [1852-1915], German bacteriologist. Isolated the diptheria bacillus; developed protective measures against infection; Nobel Prize, 1908.
+
++   *   **Londos, Fritz** [1910-1954], German-American physicist. With F. Hoff, theoried about cavitation; wrote on London dispersion. Nobel Prize, 1967.
+
++   *   **Londos, Heinz** [1927-1970], German-born English physicist. Research on electrodynamics and the properties of superconductors; Nobel Prize, 1973.
+
++   *   **Lorentz, Hendrik Antoon** [1853-1928], Dutch physicist. Proposed the theory of electron electromagnetic properties of materials; proposed the Lorentz-Fiedz model of the electromagnetic transformation, contributing to the theory of relativity; studied Zeeman effect; Nobel Prize, 1902.
+
++   *   **Lorens, Konrad Zacharias** [1893-1959], Austrian zoologist. Pioneered study in animal behavior; discovered learning; Nobel Prize, 1973.
+
++   *   **Loubin, Joseph** [1821-1895], Austrian physicist and chemist. Born in Boemia. Worked on graphical and structural molecular formulas; summarized a statistical size of molecules and number of gas molecules per unit volume.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.
+
++   *   **Louis, Marie Augustin** [1845-1889], French chemist. Studied and established a statistical system for defined adiabatic heat in terms of motion, temperature, and motion; Nobel Prize, 1873.

@@ -1,0 +1,41 @@
+bias and begin to restrict the flow of electrons between the source and drain. At a large enough negative gate voltage (symbolized $V_g$), the channel pinches off.
+
+The MESFET is quite similar to the JFET in its mode of operation. A conduction channel is reduced and finally pinched off by a metal Schottky barrier placed directly on the semiconductor. Metal on gallium arsenide is extensively used for high-frequency communications because of the large mobility of electrons, good noise, and low noise characteristics. Its cross section is similar to that of the JFET (Fig. 3), with a metal used as the gate. See SCHOTTKY BARRIER DIODE. [G.W.N.]
+
+# Transit (astronomy)
+
+The apparent passage of a celestial body across the apparent disk of a large body, such as a planet; also, the apparent passage of a satellite across its parent planet; also, the apparent passage of a celestial object or reference point across an adopted line of reference in a celestial coordinate system. Classically, the observed data were instants of internal and external tangency of the disks (contacts) at ingress and egress of the smaller body. In the modern era, data may also include the differential brightness of the two disks and the duration of any change of brightness.
+
+Mercury and Venus are the only planets whose orbits lie between the Earth and the Sun and thus can be seen from Earth to cross the disk of the Sun. The conditions that the planet is in inferior conjunction at the same time that it passes one of the two nodes of its orbit, thus putting it essentially in a straight line between the Earth and the Sun. Historically, transits of Mercury were observed for the purpose of getting precise positions of the planet to improve knowledge of its orbit, and transits of Venus to determine the solar parallax. In a century, there are 13 or 14 transits of Mercury. The size, shape, and orientation of the orbit of Venus causes transits to be very rare. Transits usually occur in pairs separated by 8 years, with 105.5 or 121.5 years between pairs. A pair occurs on June 8, 2004, and June 6, 2012. See MERCURY (PLANET); PLANET; VENUS.
+
+Transits of the galilean satellites of Jupiter are used mainly to estimate the albedo (reflectivity) of the satellites relative to that of Jupiter. As each satellite passes in front of the planet, it casts its shadow on the planet's disk and causes the phenomenon of shadow-transit. See JUPITER; SATELLITE (ASTRONOMY).
+
+Until the close of the twentieth century, passages of stars and other celestial bodies across the local meridian were observed extensively for determining positions of the stars, planets, comets, etc., the position of the observer. The instrument commonly used is often called a transit instrument. This type of observation has been most completely superseded by interferometric methods from Earth's surface and orbiting satellites, and by other astrometric observations from spacecraft. See ASTROMOMICAL COORDINATE SYSTEMS; ASTROMONICAL TRANSIT INSTRUMENT.
+
+The search for planets around solarlike stars other than the Sun yielded the first positive results in 1995. The most recently developed of several techniques is to detect photometrically the minute decrease in brightness of a star as an orbiting planet crosses its face. This can occur only if the planet's orbital plane lies edge-on to the Earth. The first planetary companion detected this way was reported in 1999, orbiting the star HD 209458 in Pegasus. Even though the companion was larger than Jupiter, the technique is considered the most mature for detecting Earth-class extrasolar planets, that is, the ones with mass 0.5--10 times the size of Earth. [A.D.F]
+
+# Transition elements
+
+In broad definition, the elements of atomic numbers 21--31, 39--49, and 71--81, inclusive. A more restricted classification of the transition elements, preferred by many chemists, is limited to elements with atomic numbers 22--28, 40--46, and 72--82, inclusive. All of the elements in this classification have one or more electrons present in an unfilled *d* subshell in at least one well-known oxidation state.
+
+All the transition elements are metals and, in general, are characterized by high densities, high melting point, and low vapor pressures. Within a given subgroup, these properties tend to increase with increasing atomic weight. Facility in the formation of metallic bonds is demonstrated also by the existence of a wide variety of alloys between different transition metals.
+
+The transition elements include most metals of major economic importance, such as the relatively abundant iron, nickel, and zinc; on one hand, and the rarer platinum metals, copper, silver, and gold, on the other. Also included are the rare and relatively unfamiliar element, rhenium, and technetium, which is not found naturally in the terrestrial environment, but is available in small amounts as a product of nuclear fission.
+
+In their compounds, the transition elements tend to exhibit multiple valency, the maximum valency increasing from +3 at the beginning of a series (Sc, Y, Lu) to +8 at the fifth member (Mn, Re). One of the most characteristic features of the transition elements is the ease with which most of them form stable complex ions. Features that contribute to this ability are favorably high charge-to-radius ratios and the availability of unfilled *d* orbitals which may be used in bonding.
+
+Most of the ions and compounds of the transition metals are colored, and many of them are paramagnetic. Both color and paramagnetism are related to the presence of unpaired electrons in the *d* subshell. Because of their ability to accept electrons in unoccupied *d* orbitals, transition elements and their compounds frequently exhibit catalytic properties.
+
+Broadly speaking, the properties of the transition elements are intermediate between those of the so-called representative elements, in which the subshells are completely occupied by electrons (alkali metals, halogen elements), and those of the inner or *f* transition elements, in which the subshell orbitals play a much less significant role in influencing chemical properties (rare-earth elements, actinide elements). See ACTINIDE ELEMENTS; ATOMIC STRUCTURE AND SPECTRA; RARE-EARTH ELEMENTS. [E.B.C.L.]
+
+# Transition point
+
+The point at which a substance changes from one state of aggregation to another. This general definition would include the melting point (transition from solid to liquid), boiling point (liquid to gas), or sublimation point (solid to gas); but in practice the term transition point is usually restricted to the transition from one solid phase to another, that is, to the temperature (for a fixed pressure, usually 1 atm or 10$^{5}$ pascals) at which a substance changes from one solid state to another. Another kind of transition point is the culmination of a gradual change (for example, the loss of ferromagnetism in iron or nickel at the lambda point, or Curie point). This behavior is typical of second-order transitions. See BOILING POINT; MELTING POINT; PHASE EQUILIBRIUM; SUBLIMATION; TRIPLE POINT. [R.L.S.]
+
+# Transition radiation detectors
+
+Detectors of energetic charged particles that make use of radiation emitted as the particle crosses boundaries between regions with different indices of refraction. An energetic charged particle moving through matter momentarily polarizes the material nearby. If the particle crosses a boundary where the index of refraction changes, the change in polarization gives rise to the emission of electromagnetic transition radiation. About one photon is emitted for every 100 boundaries crossed, for transitions between air and matter of ordinary density. Transition radiation is emitted even if the velocity of the particle is less than the light velocity of a given wavelength, in contrast to Cherenkov radiation. Consequently, this radiation can take place in the x-ray region of the spectrum where there is no Cherenkov radiation, because the index of refraction is less than one. See CHENERKOV RADIATION; PARTICLE DETECTOR; REFRACTION OF WAVES. [W.J.W.]
+
+# Translucent medium
+
+A medium which transmits rays of light so diffused that objects cannot be seen distinctly; that is, the medium is only partially transparent. Familiar examples are

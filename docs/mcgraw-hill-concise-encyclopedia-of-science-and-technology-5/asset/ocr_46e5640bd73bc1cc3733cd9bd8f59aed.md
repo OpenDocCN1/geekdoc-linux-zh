@@ -1,0 +1,41 @@
+and long, twist tails of material. Not all starbursts can be due to interactions, however, since some display no evidence for any recent disturbance. Other mechanisms that are thought responsible for high star-formation rates in galaxies are very strong spiral density waves and central bar instabilities. See GALAXY, EXTERNAL. [C.J.L.]
+
+# **Starch**
+
+A carbohydrate that occurs as discrete, partially crystalline granules in the seeds, roots (tubers), stems (pith), leaves, fruits, and pollen grains of higher plants. Starch functions as the main storage or reserve form of carbohydrate; it is second in abundance only to cellulose, a major structural component of plants. Cereal grains, tuber and root crops, and legumes (seeds) have long been used as major sources of carbohydrate in human diets. See **CELLULOSE**.
+
+Starch is isolated commercially from the following sources: cereal grain seeds (maize [corn], wheat, rice, sorghum), roots and tubers (potato, sweet potato, tapioca [cassava], arrowroot), and stems and pith (sago). Cereal grains are often steeped first to loosen the starch granules in the endosperm matrix, followed by wet grinding or milling. Roots and tubers are ground to give a suspension containing starch granules. Then follows screening or sieving, washing, centrifuging, decanting, and drying.
+
+Starch, a polymer of glucose, is an alpha-glucan, predominantly containing alpha-1,4-glucosidic linkages with a relatively small amount of alpha-1,6-glucosidic linkages forming branch points. Two major polymeric components are present: amylose and amylopectin. Normally a white powder of 98–99.5% purity, starch is insoluble in cold water, ethanol, and most common solvents. See **GLUCOSE**.
+
+Starches are involved in important roles in foods, either naturally occurring in an ingredient or added to achieve a desired functional characteristic. Often the desired functional characteristic (thickening; gelling; adhesive; binding; improving acid, heat, and shear stability) cannot be achieved by using a native starch. Starches may be altered physically, chemically, or enzymatically to produce modified starches with improved functional properties.
+
+The paper, textile, adhesive, chemical, pharmaceutical, and polymer industries use starch and starch derivatives. Organic acids and organic solvents for use as chemical intermediates, enzymes, hormones, antibiotics, and vaccines are industrially produced from starch. See **CARBOHYDRATE**. [D.R.L.]
+
+# **Starck effect**
+
+The effect of an electric field on spectrum lines. The electric field may be externally applied; but in many cases it is an internal field caused by the presence of neighboring ions or atoms in a gas, liquid, or solid. Discovered in 1913 by J. Stark, the effect is most easily studied in the spectra of hydrogen and helium, by observing the light from the cathode dark space of an electric discharge. Because of the large potential drop across this region, the lines are split into several components. For observation perpendicular to the field, the light of these components is linearly polarized.
+
+The linear Stark effect exhibits large, nearly symmetrical patterns. The interpretation of the linear Stark effect was one of the first successes of the quantum theory. According to this theory, the effect of the electric field on the electron orbit is to split each energy level of the principal quantum number *n* into 2*n* – 1 equidistant levels, of separation proportional to the field strength. See **ATOMIC STRUCTURE AND SPECTRA**.
+
+The quadratic Stark effect occurs in lines resulting from the lower energy states of many-electron atoms. The quadratic Stark effect is basic to the explanation of the formation of molecules from atoms, of dielectric constants, and of the broadening of spectral lines.
+
+The intermolecular Stark effect is produced by the action of the electric field from surrounding atoms or ions on the emitting atom. The intermolecular Stark effect causes a shifting and broadening of spectrum lines. The molecules being in motion, these fields are inhomogeneous in space and also in time. Hence the line is not split into resolved components but is merely widened.
+
+The quantum-confined Stark effect is the Stark effect observed in structures in which the hydrogenic system is confined in a layer of thickness much less than its normal diameter. This is not practical with atoms, but the effect is observed with excitons in semiconductor quantum-well heterostructures. It is important that quantum-confined Stark shifts can be much larger than the binding energy of the hydrogenic system. The resultant shifts of the exciton optical absorption lines can be used to make optical beam modulators and self-electrooptic-effect optical switching devices. See **ARTIFICIALLY LAYERED STRUCTURES**; **ELECTROPTICS**; **EXCITON**; **OPTICAL MODULATORS**; **SEMICONDUCTOR HETEROSTRUCTURES**. [D.A.B.M.]
+
+# **Static**
+
+A hissing, crackling, or other sputtering sharp noise that tends to interfere with the reception, utilization, or enjoyment of desired signals or sounds. Perhaps the commonest form of static is that heard in ordinary broadcast receivers during electrical storms. Interference in radio receivers caused by improperly operating electric devices in the vicinity is sometimes also called static. See **FERRICS**.
+
+The crackling sounds heard when long-playing phonograph records are played are also called static. These sounds are produced by sudden deflection of the phonograph needle by dust particles, which are attracted by the grooves of the record by surface electric charges caused by friction on dry days. Static appears as momentary white specks in a television picture. See **ELECTRICAL INTERFERENCE**; **ELECTRICAL NOISE**. [J.Mar.]
+
+# **Static electricity**
+
+Electric charge at rest, generally produced by friction or electrostatic induction. Triboelectrication is the process whereby charge transfer between dissimilar materials, at least one of which must have a high electrical resistivity, occurs due to rubbing or more contact. See **ELECTRIC CHARGE**; **ELECTRICAL RESISTIVITY**.
+
+In modern industry, highly insulating synthetic materials, such as plastic powders and insulating liquids, are used in large quantities in an ever-increasing number of applications. Such materials charge up readily, and large quantities of electrical energy may develop with an attendant risk of incendiary discharges. When, for example, powder is pneumatically transported, charge levels of up to about 100 microcoulombs per kilogram can develop and potentials of thousands of volts are generated within powder layers and the powder cloud. Energetic sparking from charged powder may initiate an explosion of the powder cloud. Similar problems occur when insulating liquids, such as certain fuels, are pumped along pipes, and it is essential that strict grounding procedures are followed during the refueling of aircraft, ships, and other large vehicles.
+
+The capability of a person for retaining charge depends upon stature, but is typically about 150 picofarads. Even the simple operations of removing items of clothing or sliding off a chair can lead to body discharges to ground of about 0.1 µC, which are energetic enough to ignite a mixture of natural gas and air. Human body capacitance is sufficiently high that, if poorly conducting shoes are worn, body potential may rise to 15,000 V or so above ground during industrial operations such as emptying bags of powder. Sparking may then occur with energy exceeding the minimum ignition energy of powder or fumes, so initiating a fire or explosion. Conducting footwear should be used to prevent charge accumulation on personnel in industrial situations where triboelectrication may occur. See **CAPACITANCE**.
+
+In the microelectronics industry, extremely low-energy discharges, arising from body potentials of only a few tens of volts, can damage microelectronic systems or corrupt computer data. During the handling of some sensitive semiconductor devices, it is imperative that operators work on semistatic grounded

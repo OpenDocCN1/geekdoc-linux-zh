@@ -1,0 +1,375 @@
+
+## Frequency modulator
+- Frequency modulator, 936*, 1415
+- Frequency multiplier, 957*
+- Fresh water
+  - water conservation, 2364
+  - water desalination, 2365
+- Fresh-water ecosystem, 937, 938*
+- fresa, 937, 938
+  - chemical environment, 937
+  - interactions, 938
+  - limnology, 1256*
+  - physical environment, 937
+- Fresnel diffraction, 602
+- Friedrich C. S. Bacon, 499
+- Freud, Sigmund, 707, 730
+  - developmental psychology, 450
+  - neurotic disorders, 1481
+  - psychoanalysis, 1379
+  - psychotherapy, 1803
+- Friction, 938*
+  - electrification, 730*
+  - lubricant, 1276*
+  - lubrication, 1277
+  - tribology, 2270
+  - viscosity, 2345, 2346*
+  - wood, 2377*
+- Friction brake, 287
+- Friction clutch, 423
+- Friedrich Carl von, 938*
+- fried egg, 1442
+- Friday (Nova ship), 1468
+- Fringe (city), 938*
+- fringing reef, 1879
+- Frömmiche, 1224
+- Frog, 146
+- frogeye frog, 962
+- Frogmouth, 526
+- Front, 108
+- Frontis, 518
+- Front 214, 938*
+- Front 597
+- Frontolus, 1121
+- Froude number, 939*
+- Froude number, 939*
+- Fruit, 939*
+  - anatomy, 842
+  - blueberry, 302*
+  - blueberry, 308
+  - carob, 576*
+  - coffee, 597*
+  - currant, 599
+  - date, 619, 620*
+  - fig, 886*
+  - fossil seeds and fruits, 928-929*
+  - gooseberry, 1013*
+  - grape, 1016
+  - guava, 1031
+  - kiwifruit, 1217*
+  - lychee, 1219
+  - lychée, 1280*
+  - mango, 1580
+  - marang, 1312
+  - medlar, 1470*
+  - olive, 1540*
+  - orange, 1565*
+  - peach, 1621
+  - pear, 1622*
+  - pericarp, 1666*
+  - persimmon, 1672
+  - plum, 1729
+  - pomelo/grape, 1753*
+  - puna, 1836*
+  - tangerine, 2191*
+- Fu luo (Balaam pearl), 1579
+- Fucaceae, 843
+- Fucus, 940*
+- Fucus, 843
+- Fucus, 1633
+- Fuel
+  - aircraft, 60
+  - chemical, 372-373
+  - diesel, 598, 606*
+  - distillate, 628
+  - energy sources, 821*
+  - energy storage, 821-822
+  - fossil sea fuel, 942
+  - fuel cell, 941
+  - fuel gas, 941*
+  - fuel oil, 942*
+  - gasoline, 969-970
+  - jet, 1220*
+  - kerosene, 1212*
+  - meta fuel, 1534*
+  - natural gas, 1466*
+  - nuclear, 1508-1509
+  - nuclear fuels reprocessing, 1509*
+  - nuclear reactor, 1515
+  - octane number, 1532
+  - propellant, 1785*
+  - specific fuel consumption, 2073*
+- Fuel oil, 940-941
+  - space shuttle, 2064
+  - space technology, 2067
+- Fuel gas, 943
+  - liquefied natural gas, 1261
+  - liquefied petroleum gas, 1261
+- Fuel injection, 941, 942
+- Fuel oil, 942*
+- Fuel pump, 942, 942*
+- Fuel system, 942, 943*
+- Fuelpack, 943*
+- Fulgorello, 962
+- Ful-wave rectifier, 1876
+- Full R. B. Buhrmeister, 878
+- Fulmarus, 943*
+- Fulmars, 943*, 1464
+- Fulmar's eagle, 944*
+- Fulmars, 944*
+- Full marine cat, 944*
+- Fumarales, 2252
+- Fumarata, 945, 1158
+- Fumaric acid, 944*
+- Functional genomics, 944*
+- Functional analysis and modeling (engineering), 944, 945*
+- Functional isomer, 1465
+- Fundamental constants, 945*
+- Fundamental interactions, 946-947
+  - electroweak interaction, 799-800*
+  - gauge theory, 972-973*
+  - grand unification theories, 1015*
+  - nuclear theory, 1481-1482*
+  - parity, 1632
+  - strong nuclear reaction, 2129-2130*
+  - supergravity, 2139-2160*
+  - superstring theory, 2164, 2165*
+  - superstring/mystery, 2165
+  - weak nuclear interactions, 2376*
+- Fuel technology, 947*
+- Fungal disease
+  - Deuteromycota, 648
+  - Deuteromycota fungi, 950*
+  - medicinal mycology, 1347
+  - skin disorders, 2018
+- Fungal ecology, 947-948*
+- Fungal genetics, 948*
+- Fungal infections, 948-949
+- Fungal medicine, 1354*
+- Fungal virus, 949*
+- Fungi, 624, 949-950*
+  - Agaricomycetes, 36*, 43, 585
+  - Ascomycota, 179, 180*
+  - Basidiomycetes, 256*
+  - Blastomycota, 302*
+  - Chytridiomycota, 455*
+  - classification, biological, 468
+  - Chytridiomycota, 400
+  - Deuteromycota, 43, 648-649
+  - Zygomycota, 885
+  - ergot, 783, 843
+  - Eurycetes, 854-855
+  - ergot ecosystem, 916-918
+  - fungal ecology, 947-948*
+  - fungal genetics, 948-949*
+  - fungal pathology, 948-949*
+  - fungal diseases, 950
+  - Hymenomycetes, 1062
+  - Hymenomycetes, 1112*
+  - Hymenomycetes, 1119
+  - Hymenomycetes, 1119
+  - lichens, 1209
+  - Mycology/mycologist, 1336*
+  - medicinal mycology, 1347
+  - microscopic fungi, 1382*
+  - multicellular fungus, 1633
+  - mycology, 1458*
+- Fungi, 949
+  - Mycophallus, 1459*
+- mycotoxin, 1459, 1460*
+- Myxomycota, 1461*
+- Oomycetes, 1545*
+- plant mycology, 1719
+- Penicillium, 1905*
+- Pteridophytes, 1720*
+- poisonous plant, 1723, 1734
+- Pyrenomycetes, 1812*
+- Rhizoctonia, 1935, 1936
+- rust, 2024*
+- tree diseases, 2256-2267
+- Uredinales, 2330*
+- viscine, 2317
+- wood degradation, 2394
+- yeast, 219, 2430*
+- Zygomycota, 2421*
+- Young Amoeba, 648
+- Fungi Infections, 2080, 2081*
+- yeast, 2419*
+- Inflammable gases, 950
+- forrest pest control, 950
+- Gabbro, 957
+- pectite, 1639
+- Funeral bow, 897, 898
+- Funnel, 959*
+- Fountain, 388
+- Furan, 959*
+- Furacene
+- fur, 1401, 158
+- electrolyte, 541
+- electro, 675, 743
+- flued-bed coal combustion, 901
+- flud oil, 942*
+- gas, 967
+- kiln, 1214*
+- flue, 1534*
+- F. R. B. Buhrmeister, 1878
+- pressurized flue biomass, 1770
+- resistance heating, 1901
+- steam-generating, 2106
+- flucce, 2318-2319
+- warm-air heating system, 2362
+- Furrier, 961
+- Warm-air heating system, 2362
+- Furanium, 1119
+- Furacene, 1424
+- Fusarium, 1119
+- Fuse (electrical), 950-951, 2003
+- Fuse (dry-cell), 865, 762
+- fused salt-water equilibrant, 951
+- fused-cell sodium, 951, 952*
+- Fusilade, 952
+- Fusile alloy, 83
+- Fusion see Nuclear fusion
+- stellar evolution, 2109, 2110
+- supernova, 2161
+- vacuum fusion, 2318
+- welding, 2383
+- Fusion bomb, 189
+- simple fusion, 834
+- Fusilade, 952
+- Fusilades, 1136
+- gas and systems, 952
+- fuzzy-system acoustics, 953
+- Fuzz
+- G. G. factor (animal), 784
+- Gabor, 955
+- Gabon, Dense, 599, 1084
+- Gadidae, 63
+- Gadiiformes, 488, 955
+- Gadus, 955
+- Gadus morhua, 955
+- Gadus, Muschi, 41
+- Gaff (hull), 41
+- Gaffer, Yan A., 2058
+- Gag (popsi), 1769
+- Gags, 955
+- Gains, 955
+- Gal, 1024
+- Galactic core system
+- core, 192
+- Galactose, 955*
+- Galactose, 1362
+- Galagoes, 1771
+- Galleago Islands, 1193
+- Gallbladder, 1941
+- Galaxy
+- celestial mechanics, 386
+- cluster, 179
+- external, 956-957
+- formation of, 570-571
+- gamma ray sources, 953
+- Huble constant, 1092, 1092
+- interstellar matter, 1177-1178*
+- G. P. Group, 1267*
+- Milky Way, Galaxy, 1402-1403*
+- radio sources, 2098
+- star cluster, 2098
+- star clusters, 2099
+- quasar, 2101
+- Virgo cluster, 2341*
+- x-ray astronomy, 2341
+- Galaxos, external, 956-957
+- Huble constant, 1092
+- Magellanic Clouds, 1258*
+- Milky Way, Galaxy, 1402-1403
+- Galena, 962
+- Galereons, 1202
+- Gallium, 957
+- Galles, transforems, 957
+- Galleic, 142
+- gas (astromium), 1649
+- symmetry law, 2179
+- Gallospore, 2027
+- Gall nuts, 2276
+- Galite, 957
+- Gigante sponge, 666
+- lipid metabolism, 1260
+- Gallbladder, 1293, 958*
+- Gallinodes, 958
+- Galleon, 959
+- Galleo, 300
+- Gallium, 959
+- Gallium arsenide, 1982
+- Gallium circuit, 1166
+- Gallbladder disorders, 957
+- gas-pore reaction, 1605
+- Galia, 958, 958
+- Galibi, E., 1902
+- Galton, 959
+- Galvatic coil, 764
+- Galvanic dep response see Electrodermal response
+- Galvanizing, 959
+- Galvanometer effect, 958
+- Gall field, 1040, 1041
+- magnetic resonance, 1303
+- Galvanometer, 958, 959
+- Galvanic, test equipment, 791
+- Galvanostasis, 1291, 1292
+- Game bird, 259, 260
+- Game theory, 959-960
+- classification of games, 857
+- continuous games, 858
+- decision theory, 826
+- game-playing machines, 858
+- games in exhaustive form, 857
+- games in normalized form, 857
+- nonzero-sum games, 857
+- single player, 858
+- Games, video, 2339
+- Games see Orum, Sheep cell
+- Gas
+- gas-integrator, 3145, 1900
+- Gaia, 960
+- gas-integrator, 1349, 1350
+- geometries, 1544, 1545
+- gas determination, 1392
+- gas-sensing, 2081, 2082*
+- Gamma-ray astronomy, gas field (CRAB), 2182
+- Gamma correction, 2203
+- Gamma function, 960*
+- Gamma-ray astronomy, 960, 962
+- Gamma radiation, 2237
+- Gamma ray sources, 960-962*
+- electromagnetic sources, 961
+- galactic sources, 961
+- Gamma-ray burst, 961, 962
+- instrumentation, 961
+- static astrophysics, 1947-1948
+- stellar sources, 961
+- Gamma-ray bursts, 961, 962
+- Gamma-ray decay, 1857
+- Gamma-ray detector, 962
+- Gamma ray detector, 962
+- Gaume ray, 962
+- gaseous phase
+- molecular field, 1439-1440
+- nuclear medicine, 1511
+- radiation fallout, 1854
+- Gamma rays, 103, 962-962
+- Gamma sulfur see Plaster sulfur
+- Gamma ray sources, 962
+- Gamma ray burst, 962
+- Gamma-ray burst, 1857
+- Gammocyanin, 979, 998
+- Gamoine-Teller decay, 998
+- Gamoine-Teller isomeres, 998
+- Ganglion, 963
+- Gangren, 963
+- Gangrenous erogem, 759
+- Gantry, 963, 963, 964
+- Gantry, 963, 964
+- Ganymede, 1208, 1701
+- Gen Z. 1984
+- Garber, 229
+- Garden bees, 1240
+- Garlean cress, 513

@@ -1,0 +1,83 @@
+
+
+### K
+
+- Kryter，卡尔·D·博士。主任，Stanford Research Institute（斯坦福研究院）无稽科学研究中心，加利福尼亚州门洛帕克。
+- Krzysztofowicz，Roman·博士。系统工程系，弗吉尼亚大学。
+- Kuchner，Marc J·博士。天文学系，加州理工学院，加利福尼亚州帕萨迪纳。
+- Kudo，Albert M·教授。地球与行星科学系，新墨西哥大学，阿尔伯克基。
+- Kuhn，Wayne E·博士。职业工程师，俄勒冈州波特兰。
+- Kuhs，Wietsje。分子与实验医学部，Scripps诊所研究所，加利福尼亚州拉霍亚。
+- Kulkarni，Shrinivas·教授。天文学系，加州理工学院，加利福尼亚州帕萨迪纳。
+- Kulkarni，Sudhir S。企业研发中心，UOP公司，伊利诺伊州德斯普莱恩斯。
+- Kultured，Gunnar·博士。遗传学部，普渡大学。
+- Kulp，J. Laurence。董事长，Teledyne Instruments，新泽西州西伍德。
+- Kurtz，Glenn。区域总监，北美ETO公司，华盛顿特区。
+- Kung，Kaishan S·博士。物理学特聘研究员，新墨西哥州立大学，新墨西哥州拉斯克鲁塞斯。
+- Kuo，Benjamin C·博士。曾任职于电气工程系，伊利诺伊大学香槟分校。
+- Kuo，John T·教授。采矿工程系，哥伦比亚大学，纽约。
+- Kupchan，S. Morris·教授。已故；曾任职于化学系，弗吉尼亚大学。
+- Kupke，Donald W·博士。生物化学系，医学院，弗吉尼亚大学。
+- Kupper，Walter E·博士。经理，技术服务市场，Mettler Instrument Corporation，新泽西州Highstown。
+- Kusch，Polykarp·教授。物理学系，哥伦比亚大学，纽约。
+- Kushner，D. J·博士。微生物学系，多伦多大学，加拿大安大略省。
+- Kusters，N. L·博士。电气工程系，国家研究理事会，加拿大安大略省渥太华。
+- Kutal，Charles·博士。化学系，佐治亚大学。
+- Kutzbach，John E·教授。气象学系，威斯康星大学麦迪逊分校。
+
+### L
+
+- Laahoven，William H·教授。有机化学系，荷兰奈梅亨大学。
+- Labandeira，Conrad C·博士。古生物学部，史密森学会自然历史博物馆，华盛顿特区。
+- LaBerre，Stephen·博士。心理学系，斯坦福大学，加利福尼亚州斯坦福。
+- Labi，Samuel·教授。研究生研究助理，普渡大学，土木工程系，印第安纳州西拉法叶。
+- Labotka，Theodore C·博士。地质科学系，文理学院，田纳西大学克诺克斯维尔分校，田纳西州。
+- LaCis，Andrew A·博士。NASA戈达德太空研究所，纽约。
+- Lackmann，Leslie M·博士。Rockwell International，加利福尼亚州埃尔塞贡多。
+- Ladd，Carl·博士。康涅狄格州州警法医科学实验室，康涅狄格州梅里登。
+- Ladd，Harry S·博士（退休）。史密森学会国家博物馆，华盛顿特区。
+- LaFrey，Raymond R。Lincoln Laboratory（林肯实验室），麻省理工学院，马萨诸塞州列克星敦。
+- Lagler，Karl E·教授。自然资源学院，密歇根大学安阿伯分校，密歇根州。
+- Lagozinski，A. J·博士。化学系，密歇根大学。
+- Lagnoff，David·博士。病理学系，医学院，华盛顿大学。
+- Laidler，James J·博士。主任，化学技术部，阿贡国家实验室，伊利诺伊州阿贡。
+- Laitinen，Herbert A·教授。化学系，佛罗里达大学，佛罗里达州盖恩斯维尔。
+- Lam，Stephen W·博士。文档分析与识别卓越中心，布法罗大学，纽约州安赫斯特。
+- Lamb，Dennis·教授。气象学系，宾夕法尼亚州立大学，宾夕法尼亚州大学公园。
+- Lamb，Richard C·教授。太空辐射实验室，加州理工学院，加利福尼亚州帕萨迪纳。
+- Lambert，Jack L·博士。化学系，堪萨斯州立大学，堪萨斯州曼哈顿。
+- Lambert，Samuel·博士。空军研究实验室，弹药总监办公室，佛罗里达州埃格林空军基地。
+- Lambert，W. David·博士。路易斯安那州数学、科学与艺术学校，路易斯安那州纳奇托奇斯。
+- LaMotte，Clifford E·博士。植物学部，爱荷华州立大学，爱荷华州埃姆斯。
+- LaMotte，Robert·博士。麻醉学系，医学院，耶鲁大学，康涅狄格州纽黑文。
+- Land，Cecil E·博士。Sandia Laboratories（桑迪亚实验室），新墨西哥州阿尔伯克基基尔特兰空军基地东区。
+- Landes，Hugh S·博士。电气工程系，弗吉尼亚大学，弗吉尼亚州查尔斯顿。
+- Landsberg，H. E·博士。已故；曾任职于马里兰大学柯勒治帕克分校，物理科学与技术研究所，马里兰州。
+- Lane，John C·博士。研发部，研究实验室，Ethyl公司，密歇根州费恩代尔。
+- Lane，Meredith A·博士。主任，堪萨斯大学标本馆，堪萨斯州劳伦斯。
+- Lane，N. Gary·博士。印第安纳大学布卢明顿分校，印第安纳州。
+- Lanford，Pamela·博士。国家听力障碍及其他交流障碍研究所，马里兰州贝塞斯达。
+- Lanford，William A·教授。物理学系，纽约州立大学奥尔巴尼分校。
+- Lang，Anton·博士。植物学部，密歇根州立大学-美国能源部植物研究实验室，密歇根州东兰辛。
+- Lang，Karl·博士。主任，无脊椎动物部，瑞典国家自然历史博物馆，瑞典斯德哥尔摩。
+- Langerberg，D. N·教授。物理学系，宾夕法尼亚大学，宾夕法尼亚州费城。
+- Langenheim，Jean H·教授。自然科学系，加州大学圣克鲁兹分校，加利福尼亚州。
+- Langford，George M·教授。生物科学系，达特茅斯大学，新罕布什尔州汉诺威。
+- Lapedes，Daniel N。已故；曾任主编，麦格劳-希尔科学与技术百科全书，纽约。
+- Laport，Edmund A。主任，通信工程，RCA，新泽西州普林斯顿。
+- Lappin-Scott，Hilary。生物学部，卡尔加里大学，加拿大艾伯塔省。
+- Lapille，Charles E。顾问（退休），流体与粒子技术、大气污染与化学工程，加利福尼亚州洛斯阿尔托斯。
+- Larimer，J. L·博士。动物学部，德克萨斯大学奥斯汀分校，德克萨斯州。
+- Larive，Cynthia K·博士。化学系，堪萨斯大学，堪萨斯州劳伦斯。
+- Larsen，David M·博士。物理与应用物理系，洛厄尔大学，马萨诸塞州。
+- Larsen，Edwin M·教授。化学系，威斯康星大学麦迪逊分校，威斯康星州。
+- Larsen，R. Port·博士。主管及园艺师，果树研究中心，华盛顿州立大学，华盛顿州普曼。
+- Larsen，Robert G·博士。副总裁助理，Shell Development Company（壳牌开发公司），加利福尼亚州埃默里维尔。
+- Larson，Roy A·博士。园艺学部，北卡罗来纳州立大学，北卡罗来纳州罗利。
+- Lass，Harry·博士。研究专家，喷气推进实验室，加州理工学院，加利福尼亚州帕萨迪纳。
+- Lassila，Kenneth E·教授。物理学系，爱荷华州立大学，爱荷华州埃姆斯。
+- Last，John M·教授。健康科学学院，医学院/流行病学与社区医学，渥太华大学，加拿大安大略省。
+- Latanisoz，R. M. H. H·教授。Ublag腐蚀实验室，材料科学与工程系，麻省理工学院，马萨诸塞州剑桥。
+- Latham，David W·博士。天体物理中心，马萨诸塞州剑桥。
+- Lathi，B. P·教授。电气与电子工程系，加州州立大学萨克拉门托分校，加利福尼亚州。
+

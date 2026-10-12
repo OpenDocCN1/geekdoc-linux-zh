@@ -1,0 +1,665 @@
+
+## Melseline
+
+### MACHOs, 1023
+- Masin, 1081
+- Mastic, 28
+- Matugramm, 1333
+- Matignon, 1913
+- Matipintoxyxina, 450*, 699, 1332*
+- Matignoplacore, 1332, 1333*, 1340
+- Mastitis, 1333*
+- Matstemidia, 1195
+- Mata foundations, 832
+- Matharicn, 1328*
+- Macheld field processing, 1333*
+- Machin filter, 673
+- Material requirements planning (MRP), 1956
+- Material resuence planning, 1333, 1334*
+- Materials handling, 1314, 1334*
+- Material-handling machines, 1334*
+  - bulk-handling machines, 342, 343*
+  - elevating machines, 805, 806*
+  - loading machines, 1082, 1083*
+  - industrial trucks, 1142*
+  - moveable, 1434*
+- Materials science and engineering, 1334*
+  - composite material, 516-517*
+  - diffusion, 660
+- Materials behavior, 1333*
+- Mathematical biology, 1335*
+  - applications, 616
+  - methods, 1335
+  - metaphor, 1335
+- Mathematical biology, 525-526
+- Mathematical ecology, 132, 1335, 1336*
+- Mathematical epidemiology, 1336
+- Mathematical gazette, 129-130*
+- Antarctic Circle, 1025*
+- caribbean piont, 372*
+- Equator, 941*
+- great circle, terrestrial, 1025*
+- North Pole, 1533*
+- solstice, 2045, 2050*
+- South Pole, 2056
+- Tropic of Cancer, 2270-2277*
+- Tropic of Capricorn, 2277*
+- Mathematical note, 1270-1271
+- Mathematical physics, 1336*
+- Mathematical software, 1336-1337*, 2178
+- Mathematics, 1317, 1338*
+  - algebra, 74, 75*
+  - algebraic geometry, 75-76*
+  - analytic geometry, 110-111*
+  - arithmetic, 169*
+  - calculus, 352-353*
+  - clinical field theory, 467*
+  - conformal mapping, 534*
+  - constructiveness, 1337, 1338*
+  - creation formulas, 1337
+  - decision theory, 626
+  - determinism, 648*
+  - differential equation, 661, 662*
+  - differential geometry, 662*
+  - dipole moment, 679
+  - division, 693
+  - Euler, 707, 708*
+  - $\theta$, 713*
+  - exequations, theory of, 841*
+  - equation, 862
+  - explanation, 863*
+  - finite automata, 900, 901
+  - Fourier series and transforms, 930-931*
+  - geology, 903*
+  - graph theory, 1017*
+  - group theory, 1009*-1030*
+  - infinitv, 1140, 1146*
+  - ineson, 1177
+  - Iogics, 1233
+  - linear algebra, 1257*
+  - linear programming, 1257*
+  - minimalist, 1312, 1313*
+  - numerical logic, 1317
+  - nirmal sources, 1405-1406*
+  - norminism programming, 1498*
+  - nuimil, 1501, 1501*
+  - numbering system, 1522, 1525*
+  - perabation, 1638*
+  - preposition, 1783, 1784*
+  - proving, 1344
+  - quantum mechanics, 1868
+  - relation to science, 1337
+  - root, 1932*
+  - scalar, 1952*
+  - set theory, 1990*
+  - space, 1338
+  - topology, 2239, 2250*
+  - variables, 2324, 2325*
+  - verse, 2327*
+  - wovenl, 2375, 2376*
+  - zero, 2415*
+- Matin icobition, 1338*-1339*
+- Matine mechanisma, 1339*, 1955
+- Matine theory, 1339*-1340*
+- Matutime mushroom, 984, 1112
+- Mauiquino, 1332, 1333*
+- Matine theory, 810, 1330, 1813*
+  - quantum phon plaform, 1831
+  - universe, 2255
+- Mathiessen's law, 1340*
+- Mathipolis, 325
+- Mathiennal solar diameter, 591
+- Mathipods, 1340*
+- Maxwell (unit of capacitance), 2304
+- Maxwell, J. C., 627, 692, 696, 761, 765, 773, 1340, 1353
+- Maxwell's law, 1524*
+  - light, 1250, 1524
+  - magnitodiynamics, 1302
+  - photorefractives of waves, 1756
+  - quantum field theory, 1827
+  - relativistic electrodymanics, 1866
+- Maxwell's demon, 1340*
+  - relativistic-Bohmian distribution, 276
+- Maxwell field equations, 907
+- Maxwell's demon, 1340
+- Maxwell's equations, 1340, 1341*
+- Maxwell's bodies, 1717
+  - relativistic electrodymanics, 1866
+- Maxwell's radiation field, 1867
+  - supergravity, 2159
+  - superposition principle, 2162
+- Maxwell's law, 2180
+- Maxwell's law, 2134
+- Mayb, 815
+- Maynard, J. D., 15
+- McGinnis, C., 516
+- Meade gas, 1341
+- Medan's saffron, 496
+- Meadow splice bug, 962
+- Meat machinery, 610-611
+- Meatbug, 963
+- Mean (statistic), 2103
+- Mean effective pressure, 1341*
+- Mean free path, 1341*
+- Mean solar day, 557, 620, 621
+- Mean solar year, 2240
+- Mean value, 1341
+- Measure, 1341*
+- Measure theory, 1341-1342*, 1405-1406
+- Measure of dayport, 1342*
+- Measurers: educational, 169
+  - physical, 1678-1680
+  - quantum theory of, 1831*
+  - units of, 2302, 2305*
+- Meckanical advantage, 1342
+- Meckanical aibody, 1342
+- Meckanical classification, 1342, 1343*
+- Meckanical effect fiber, 672
+- Meckanical engineering, 1343
+- Meckanical electricity, 1343*
+- Meckanical lift lock, 641
+- Meckanical metamorphism, 1372
+- Meckanical rectifier, 1343
+- Meckanical separation techniques, 1343
+  - confinaturation, 462*
+  - concentration, 467*
+  - classification, 1343
+  - magnetic separation methods, 1295*
+  - on dissing, 1567
+  - sedimentation (liquid), 1971, 1972*
+  - sinking, 2223-2232*
+- Meckanical torque sensor, 2251
+- Meckanical vibration, 1343, 1344*
+  - complex waves, 1344
+  - effect, 1344
+  - effect, 1344
+  - fuzzy-spring automatics, 953*
+  - maas-spring-damper system, 1343, 1344, 1343, 1344*
+  - shaft balancing, 196*
+  - sources, 1344
+  - vibration, 2316
+  - vibration damping, 2337*
+  - vibration isolation, 2233-2238*
+- Meehanics, 1344*
+  - suatomachinics, 2286*(serach)
+  - degree of freedom (mechanics), 564
+  - lomericys, 1214*
+  - matrix mechanics, 1339*
+- Newton's law of motion, 1486*
+- nutation, 1524*
+- quantum, 1818, 1830*
+- rock mhichinels, 1927-1928*
+- statics, 2101
+- statistical, 2101-2102*
+- strength of materials, 2226*
+- units of measurement, 2392, 2394
+- van't theorem, 2341*
+- wave, 2371*
+- Mechanism, 1344, 1345
+  - inorganic, 1259, 1260*
+  - medicine, 1285
+- Medical asepticarum, 1345*, 2338
+- Mechine, 1345*
+- Medical sciences, 173, 174
+- Median (statistic), 2103
+- Medioid (factory), 2088
+- Medioid (factory), 2088
+- Medical bacteriology, 74
+- Medical care, 71
+- Medical control system, 1345, 1346*
+- Medical imaging, 1346-1348
+  - computerized tomography, 929*
+  - mission tomography, 1347
+  - fiber-optic imaging, 796
+  - medical ultrasonic tomography, 1348
+  - mucet-maging resonance, 1346*
+    - 1510-1511
+  - radioactive trace, 1855
+  - scintigraphy, 1958
+  - solute diodiures, 1978
+  - superconducting diodes, 2155
+  - ultrasonid, 1346
+  - x-ray methods, 1180
+- Medical microbiology, 2095
+- Medical mynology, 1347, 2018
+- Medical parasitology, 1347-1348*
+  - costosis, 1348
+  - nectodes, 1348
+  - proctosis, 1348
+  - giardiasis, 1347, 1348
+- Medical ultrasonic tomography, 1348
+- Medical waste, 1348
+- Medi, 1349
+  - biomedical engineering, 292
+  - critical care, 514
+  - drug delivery systems, 702*
+  - engineering, 729*, 812*
+  - femal medic, 915*
+  - microwave applications, 1393
+  - molecular pathology, 1423-1424*
+  - mucins, 1511, 1511
+  - musings, 1524*
+  - neogen, 163-197
+  - pathology, 1619-1620*
+  - pulio hieath, 1805, 1806*
+  - radiology, 1960
+  - radiology, 1963*
+  - space, 2088
+  - surgery, 2172
+  - Ultrasonics, 2295
+  - see also Diseases; Veterinary medicine
+- Mediamerica ssa, 1348*
+  - ean conduction, 1530
+  - seline expositories, 1943
+- Medical cireulation, 527, 1477
+- Meckanicaly (chemistry), 228, 388
+- Megadimetalic, 388
+- Megalomedes, 359
+- Meganthone, 694
+- Meganepos, 260
+- Meganoidis, 260
+- Mellendium gland, 1968
+- Mentinel, 144
+- Messon, 1359, 1350*
+  - details of proposals, 1349, 1350
+  - fission, 1349
+  - fission of, 1350
+  - fragel genes, 948
+  - quantum field, 962
+  - motios in, 1350
+- Meagerianism, 1550
+  - reproduction, 1896
+  - paratemonome, 2081, 2082
+- Meissner, W., 1550, 2155
+- Meissner effect, 1350, 1351*
+- Meissner-Ochsenfeld effect, 2155, 2156
+- Meisterium, 928, 1351*
+- Melnan, 2017
+- Megalostrogates, 364
+- Mehanome, 367
+- Mehanterie, 1351*
+- Melinogon, 1689, 1690
+- Mehelgrind, 259
+- Menscephalon, 287, 1477
+- Mes-oeric compound, 1358*
+- Mesostoma curtata, 925
+- Mesozoa, 812
+- Mesozoostropha, 1358
+- Mesozoothermiston, 1358, 1359*
+- Mesogymnotum, 1462
+- Meson, 1359
+  - meson particle, 863
+  - par ion, 1612, 1614
+  - quar-izium gamma, 1831
+  - quarks, 1832
+  - superquark field, 2158
+  - symmetra laws, 2179
+- Mesopotamies, 1793
+- Massmotta, 1359*
+- Mesophylla, 1359
+- Mesopore (weather), 2378
+- Mesopore, 2378, 1360
+  - imaging effect, 1359, 1360
+  - interference effect, 1359
+  - nanopore, 1464*
+  - quantum size effect, 1359
+- Mesophore, 184, 201, 1360*
+- Mesoplantae, 1360
+- Mesothelma, 179
+- Mesovivalla, 944
+- Mezonzoa, 1360
+  - Dicrydina, 657
+  - Orthophosia, 1581*
+- Mezonoid, 1360, 1361
+  - annel evolution, 1262
+  - amniotes, 675, 676
+  - common root, 694
+  - Dyleoloidei, 704
+  - Jurassic, 1208
+  - Mesospora, 1895
+  - Tassoe, 2269
+- Messange switching, 1594
+- Messenger RNA (mRNA)
+  - gene, 978
+  - gene action, 979
+  - gene code, 981, 982
+  - intron, 1179
+  - ribosomic acid, 1918
+- Meeson, Charles, 1361
+- Mesor crater, 1361
+- Meteorite ge weilding, 1492
+- Metabolic bone disease, 2017
+- Metabolic disorders, 1361, 1362
+  - carbohylysis, 1362
+  - lipids, 1361, 1362
+  - muscle symptoms, 1452, 1453
+  - muscular system disorders, 1451
+  - nudaic acid, 1361
+  - proteins, 1361
+- Metabolism, 1362
+  - adenosine diphosphate (ADP), 27
+  - adenosine triphosphate (ATP), 27
+  - amino acids, 97, 98
+  - bacterial, 242, 243
+  - bicaridial, 352
+  - calcium, 352
+  - carboxylates, 366, 367
+  - carbon, 93, 94
+  - cytobiosynthesis, 587
+  - energy, 821
+  - enzymes, 823, 833
+  - first in metahism, 1191
+  - oxygen, 1528
+  - organellosynthesis compound, 1578
+  - phosphate, 1658
+  - physiological (panel), 1682, 1683
+  - plant, 1797
+  - proteins, 1791, 1792
+  - thermogenosyn, 2230
+  - urine, 2313
+  - side se Carbohydrate metabolism: Lipid metabolism: Protein metabolism
+- Metamorphosis, 161
+- Methyl, 1362
+  - alkalis and water, 78
+  - alloy see Alloy
+  - aluminium, 92, 93
+  - arsenic, 172
+  - baryum, 250, 251
+  - beriyllium, 268, 269
+  - boron, 268
+  - cadmium, 349
+  - calcium, 351, 352
+  - cerium, 408
+  - cesium, 408
+  - chromium, 450, 451
+  - cobalt, 460
+  - concordation (electrical), 523
+  - condensation chemistry, 554
+  - copper, 556
+- Metal--cont
+  - corrosion, 562, 563
+  - common, 599
+  - copper, 599
+  - electrical resistivity in, 760
+  - electromagnetic serios, 763
+  - magnesium, 856
+  - free electron theory of metals, 932
+  - galvanized, 955
+  - gallium, 958
+  - germanium, 997
+  - gold, 1010, 1011
+  - hafnium, 1038
+  - heat treatment, 936, 937
+  - high-temperature materials, 1079
+  - holmium, 1083
+  - hydrogen, 1136, 1137
+  - iron, 1190
+  - zron, 1190, 1191
+  - lanthanum, 1227
+  - lithium, 1246
+  - magnasium, 1289, 1290
+  - manganese, 1331
+  - Mathiesus, m rule, 1340
+  - mercury, 1356
+  - Methionine, 1360, 1370
+  - methylthym, 1370
+  - molybdenum, 1429, 1430
+  - naodynamy, 1473
+  - neptunium, 1476
+  - nickel, 1486, 1487
+  - niobium, 1488
+  - organometallic compound, 1575, 1576
+  - osmium, 1584, 1585
+  - palladium, 1603, 1604
+  - periodic table, 1632
+  - plastic deformation in, 1722
+  - plutonium, 1724, 1735
+  - platinum, 1729, 1730
+  - polynphism, 1748
+  - proofreading, 1789
+  - rare-earth elements, 1869, 1870
+  - radium, 1880, 1881
+  - refractory, 1883
+  - rhodium, 1991
+  - ruthenium, 1914, 1915
+  - ruthenium, 1956
+  - shape memory alloys, 1996
+  - silver, 2010
+  - spin-density wave, 2085
+  - tantalum, 2192
+  - thorium, 2210
+  - thorium, 2234, 2235
+  - thulium, 2230
+  - tungsten, 2282
+  - vanadium, 2322, 2323
+  - zirconium, 2391
+  - work function, 2397, 2398
+  - zirconium, 2398
+  - zinc, 2412
+  - zirconium, 2417
+  - zinc, 2417, 2418
+  - zirconium, 2417, 2418
+  - Zinc, 2428
+- Metal, mechanical properties of, 1362, 1364
+  - compression test, 1363, 1364
+  - creep and stress state, 1364
+  - ductile-to-brittle transition, 1363
+  - elongation, 1363
+  - fatigue, 1364
+  - hardness testing, 1364
+  - notch test, 1363
+  - notched bar impact test, 1364
+  - stress state, 1362, 1363
+  - tension strength, 1363
+  - tension test, 1363
+  - tension strength, 1363
+  - torsion test, 1363
+  - yield point, 1363
+  - yield strength, 1363
+- Metal-base fuel, 1364
+- Metal carbons, 1364, 1365
+- Metal casting, 83, 1365
+- Metal cluster compound, 1365
+- Metal coatings, 716, 1365, 1363
+  - galvanizing, 958
+  - machining, 1285, 1286, 1286
+  - vapor deposition, 2324
+  - zine, 2415, 2416
+- Metal forming, 1366
+  - cleaning, 495
+  - drawing of metal, 701
+  - exploding form, 862
+  - extrusion, 864
+  - forging, 921
+  - metal rolling, 1367
+  - sheet, 1997, 1998
+  - titanium, 2245
+- Metal hard lead, 1366
+- Metal hyphides, 974, 1366
+- Metal matrix composites, 1366, 1367
+- Metal oxide semiconductors (MOS), 978
+  - metal circuit, 972
+  - radiation hardening, 1844
+- Metal oxide semiconductor field-effect transistors (MOSET), 1397
+  - metal rectifier, 1367
+- Metal semiconductor field effect transistors (MESFET), 1397
+- Metal tincture, 486
+- Metallic bonding, 367, 436, 435
+- Metallic glasses, 100, 1362, 1368
+- Metallic materials, 1383
+- Metallic catalyst, 1388
+- Metallies, 1368, 1369
+- Metallite compounds, 1369
+- Metallization, 1369, 1370
+- Metalloid, 1370
+  - boron, 319, 320
+  - silicon, 2008, 2009
+- Metalloprophyle, 1757
+- Metallurgical microscope, 1558
+- Metallurgy, 1370
+  - arc heating, 138
+  - copper, 557
+  - diffusion, 665
+  - electrochemical process, 762
+  - electroratmagnetic, 774
+  - gold, 1011
+  - hydrodeoxiderying, 1109
+  - nickel, 1487
+  - powder metallurgy, 1762
+  - pyrometallurgy, 1815
+  - solid solution, 2043
+  - steel manufacture, 2106
+  - tin, 2243
+  - titanium, 2244, 2245
+  - uranium, 2309
+  - vacuum, 2318
+  - water, 2419
+- Metalliferous, prehistoric, 1788
+- Melanctinus, 1370
+- Melaminiterium, 175
+- Melanoticus, 1370, 1371
+- Metamorphic minerals, 1404
+- Metamorphic rocks, 1371
+  - amphibolite, 102, 103
+  - catastrophic, 1371
+  - eolinite, 731
+  - faces, 869
+  - granule, 1016
+  - hornblende, 1089, 1090
+  - marble, 1315, 1317
+  - mylonite, 1460
+  - phylic, 1675
+  - pyrophyllite, 1571
+  - quartzite, 1353
+  - rhyoliticite, 1351
+  - serpentine, 1989
+  - scam, 2015
+  - slater, 2297
+  - slate, 2019
+- Metamorphism, 271, 272, 308, 1371, 1372
+- Metamorphosis, 1372
+- metata, 1357, 1358
+- Metarobots, 1245
+- Metaphase (mease), 1349
+- Metaphase, 1335
+- Metathallium, 1119
+- Metasoemian, 1372, 1373
+- Metastable state, 1373
+- Metatason dioxide, 1350
+- Metathesia, 1373, 2249
+- Metaxo, 1373
+- Metexor, 1371, 1374, 2049
+- Metzeite, 1374, 1376
+  - chemical composition, 503
+  - component compounds, 567, 568
+  - isotopic, 1375, 1376
+  - iron, 1375
+  - isotopic anomalies, 1375, 1376
+  - isotopic composition, 503, 504
+  - von Marse, 1383
+  - microstructure, 1382, 1386
+  - mineral, 503
+  - Palesocene, 1597
+  - stony, 1374, 1375
+- Meteorological instrumentation, 1376, 1377
+- Meteorological navigation see Ship
+- Meteorological office, 1377, 1378
+- Meteorological radar, 1377, 1378
+- Meteorological rocket, 1378
+- Meteorological satellites, 1378, 1379
+  - active serlos, 1379
+  - imaging microwave radiometer, 1379
+  - optical imaging serios, 1378, 1379
+  - satellite (spacecraft), 1946
+  - tounding seilor, 1379
+  - space detection, 2120, 2121
+- Meteorology, 1379, 1380
+  - meteoric, 137
+  - agricultural, 45
+  - air pressure, 55, 54
+  - arm temperate, 65
+  - atmospheric, 137
+  - biometeorology, 291, 292
+  - climatology, 416, 473
+  - cloud detection, 483
+  - Earth sciences, 722
+  - hydrometeorology, 1109
+  - industrial meteorology, 1141
+  - marine, 1325, 1326
+  - maritime meteorology, 1358, 1359
+  - micro meteorology, 1386
+  - monsoon, 1435
+  - mountain, 1443
+  - pole, 1734
+  - precipitation, 1766
+  - radar, 1841
+  - satellite, 1948
+  - okoronic, 2043
+  - storm, detection, 2120, 2121
+  - tropical, 2277
+  - weather, 2377, 2378
+  - weather forecasting and prediction, 2378, 2379
+- Meihing office, 1380
+- methane, 26
+- Metmole, 110, 1380
+  - air pollution, 52
+  - coastal, 68
+  - halogenerated hydrocarbons, 1043
+  - industrial wastewater treatment, 1142
+  - probiosynthesis (bacteria), 1381
+  - petroleum, 1641
+  - probiotic wastewater, 143, 162
+- Metangetaons, 143, 162
+- Metangetaons (bacteria), 1381
+- Metanoil, 1381
+  - fuel cell, 941
+  - high-pressure process, 1079
+  - method generation, 1381
+- Methyl chlorate, 390
+- Methyl methacrylate, 1741
+- Methylthiazole, 765
+- Methylene chloride, 390
+- Methyl system, 1381, 1348, 2378, 2385
+- Methylenes, 1381
+- Mesian jail, 1201
+- Miccacia, 333, 1383
+- Mica, 1381, 1382
+  - basalt, 108
+  - muscovite, 1431
+  - phlogopite, 1655, 1656
+- Micele, 1383
+- Michael, A. A, 436, 697, 1887
+- Micro-annexments, 1183, 1171, 1172
+- Michelson teller interference, 1372
+- Microlar magnetic ink character recognition
+- Microbial ecology, 735, 1382
+- Microbial sulfur cycle, 1383
+- Microbiology, 1382
+  - clinical, 417
+  - disease pathogeny, 475, 476
+  - probibiotics, 1019
+  - halophilic, 1044
+  - industrial microbiology, 1141, 1142
+  - marine, 1322, 1323
+  - peroximic, 1642, 1643
+  - oil, 2033
+  - textile, 2216, 2217
+  - textile microbiology, 2215, 2217
+- Microbia, (bloom), 1383, 1383
+- Mesophylophora, 227, 229
+  - consumer process, 480
+  - endospore system, 808
+- Microdopa, 1383
+- Microproteas, 1383, 1384
+  - consumer process, 480
+  - endospore system, 808
+  - magnetic tape use, 463, 464
+  - memory strip, 462, 463
+- Microdaisy sampling, 1384
+- Microelectrical chemical system (MEMS), 1384, 1385
+  - applications, 1385
+  - microfabrication technology, 1384, 1385
+  - microfabrication technology, 1384, 1385
+- Microfluid, 1387, 1388
+- Microgna, 1477
+- Micropristine, 1385

@@ -1,0 +1,37 @@
+# Control systems
+
+![](bbox=[0.12, 0.04, 0.5, 0.19])
+
+**Fig. 2.** Closed-loop control system.
+
+n order to compare the actual output with the desired output response (Fig. 2). A standard definition of a feedback control system is a control system which tends to maintain a prescribed relationship of one variable to another by comparing functions of these variables and using the difference as a means of control. In the case of the driver steering an automobile, the driver uses his or her sight to visually measure and compare the actual location of the car with the desired location. The driver then serves as the controller, turning the steering wheel. The process represents the dynamics of the steering mechanism and the automobile response.
+
+A feedback control system often uses a function of a prescribed relationship between the output and reference input to control the process. Often, the difference between the output of the process under control and the reference input is amplified and used to control the process so that the difference is continually reduced. The feedback concept has been the foundation for control system analysis and design.
+
+**Applications for feedback systems.** Familiar control systems have the basic closed-loop configuration. For example, a refrigerator has a temperature setting for desired temperature, a thermostat to measure the actual temperature and the error, and a compressor motor for power amplification. Other examples in the home are the oven, furnace, and water heater. In industry, there are controls for speed, process temperature and pressure, position, thickness, composition, and quality, among many others. Feedback control concepts have also been applied to mass transportation, electric power systems, inventory and shipping and inventory control, automatic control of agricultural systems, biomedical experimentation and biological control systems, and social, economic, and political systems. See BIOMEDICAL ENGINEERING; ELECTRIC POWER SYSTEMS; MATHEMATICAL BIOLOGY; SYSTEMS ANALYSIS; SYSTEMS ENGINEERING.
+
+**Advantages of feedback control.** The addition of feedback to a control system results in several important advantages. A process, whatever its nature, is subject to a changing environment, aging, ignorance of the exact values of the process parameters, and other natural factors which affect a control process. In the open-loop system, all these errors and changes result in a changing and inaccurate output. However, a closed-loop system senses the change in the output due to the process changes and attempts to correct the output. The sensitivity of a control system to parameter variations is of prime importance. A primary advantage of a closed-loop feedback control system is its ability to reduce the system's sensitivity.
+
+One of the most important characteristics of control systems is their transient response, which often must be adjusted until it is satisfactory. If an open-loop control system does not provide a satisfactory response, then the process must be replaced or modified. By contrast, a closed-loop system can often be adjusted to yield the desired response by adjusting the feedback loop parameters.
+
+A second important effect of feedback in a control system is the control and partial elimination of the effect of disturbance sig-
+
+nals. Many control systems are subject to extraneous disturbance signals which cause the system to provide a maximum output. Feedback systems have the beneficial aspect that the effect of distortion, noise, and unwanted disturbances can be effectively reduced.
+
+**Costs of feedback control.** While the addition of feedback to a control system results in the advantages outlined above, it is natural that these advantages have an attendant cost. The cost of feedback is first manifested in the increased number of components and the complexity of the system. The second cost of feedback is the loss of gain. Usually, there is open-loop gain to spare, and one is more than willing to trade it for increased control of the system response. Finally, a cost of feedback is the introduction of the possibility of instability. While the open-loop system is stable, the closed-loop system may not be always stable.
+
+**Stability of closed-loop systems.** The transient response of a feedback control system is of primary interest and must be investigated. A very important characteristic of the transient performance of a system is the stability of the system. A stable system is defined as a system with a bounded system response. That is, if the system is subjected to a bounded input or disturbance and the response is bounded in magnitude, the system is said to be stable.
+
+The concept of stability can be illustrated by considering a right circular cone placed on a plane horizontal surface. If the cone is resting on its base and is tipped slightly, it returns to its original equilibrium position. This position and response is said to be stable. If the cone rests on its side and is displaced slightly, it rolls with no tendency to leave the position on its side. This position is designated as neutral stability. On the other hand, if the cone is placed on its tip and released, it falls onto its side. This position is said to be unstable.
+
+The stability of a dynamic system is defined in a similar manner. The response to a displacement, or initial condition, will result in a decreasing, neutral, or increasing response.
+
+**Design.** A feedback control system that provides an optimum performance without any necessary adjustments is rare indeed. Usually one finds it necessary to compromise among the many conflicting and demanding specifications and to adjust the system parameters to provide a stable and acceptable performance when it is not possible to obtain all the desired optimum specifications.
+
+It is often possible to adjust the system parameters in order to provide the desired system response. However, it is often not possible to simply adjust a system parameter and thus obtain the desired performance. Rather, the scheme or plan of the system must be rearranged, and a new design or plan must be obtained which results in a suitable response. Thus, the design of a control system is concerned with the arrangement, or the plan, of the system structure and the selection of suitable components and parameters. For example, if one desires a set of performance measures to be less than some specified values, one often encounters a conflicting set of requirements. If these two performance requirements cannot be relaxed, the system must be altered in some way. The alteration or adjustment of a control system, in order to make up for deficiencies and inadequacies and provide a suitable performance, is called compensation.
+
+In redesigning a control system in order to alter the system response, an additional component or device is inserted within the structure of the feedback system to equalize or compensate for the performance deficiency. The compensating device may be an electric, mechanical, hydraulic, pneumatic, or other-type device or network, and is often called a compensator.
+
+**Digital computer systems.** The use of a digital computer as a compensator device has grown since 1970 as the price and reliability of digital computers have improved.
+
+Within a computer control system, the digital computer receives and operates on signals in digital (numerical) form, as contrasted to continuous signals. The measurement data are

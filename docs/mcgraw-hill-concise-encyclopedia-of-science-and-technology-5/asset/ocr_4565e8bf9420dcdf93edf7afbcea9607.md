@@ -1,0 +1,36 @@
+![](bbox=[0.09, 0.07, 0.45, 0.26])
+
+**Fig. 2.** Connecting circuit using AND or OR gates.
+
+steady-state dc signal. By means of this electrical condition, the selected circuit is alerted, sized, or controlled.
+
+**Connecting circuits.** A switching system is an aggregate of functional circuit units, some of which must operate be directly coupled to each other to interchange information. Figure 2 shows a simple electronic connecting circuit using AND and OR gates. In this arrangement a communication path is provided over a single link from any one of the three functional circuits A, B, C, to either the X or Y circuit by an external control circuit activating the appropriate pair of AND gates. To provide a multilinked link, or to provide for other simultaneous interconnections, additional AND gates would, of course, be required. The OR gate maintains separation of the inputs at the common junction point.
+
+**Lockout circuits.** In switching systems, situations often arise where several similar circuit units are ready at the same instant to request collaboration with another type of functional circuit. Mutual interference among the requesting circuits is prevented by the lockout circuit (sometimes referred to as hunting or finding circuit). In response to concurrent inputs from a number of external circuits, a lockout circuit provides an output indication corresponding to one, and only one, of these circuits at any time.
+
+**Translating circuits.** Switching systems process information in coded form; the information is generally in the form of numbers. Numerical codes are many and varied, each with its own characteristics and requirements, and the storage for different switching circuit situations. Therefore, one of the common functional circuits in switching systems is the translating circuit, which translates information received in one code into the same information expressed in another code. These translating circuits are combinational circuits; a given input signal combination representing a code to be translated always produces the same output signals, which represent the desired code.
+
+**Register circuits.** Information received by a switching system is not always used immediately. It must be stored in register circuits for future use.
+
+In a register circuit the coded information to be stored is applied as input and retained by memory elements of the circuit, and when needed, the registered information is taken as output in the same code or in a different code. Register circuits are devised with a great variety of memory elements and have capacities to store from a few to millions of information bits. A frequently encountered form of register circuit is the shift register. This type of register has the ability to shift its stored digital information internally to positions representing higher or lower numerical values in the code employed. For example, in decimal code registration a digit may be shifted from the units to the tens position. An obvious use of such registers is in digital computers when, for example, partial multiplication products have to be lined up for addition.
+
+**Counting circuits.** One of the most frequently encountered circuits in switching systems is the counting circuit whose func-
+
+tion, in general, is to detect and count repeated current or voltage pulses that represent incoming information.
+(J.A.Pac.)
+
+# **Switching systems (communications)**
+
+The assemblies of switching and control devices provided so that any station in a communications system may be connected as desired with any other station. A telecommunications network consists of transmission systems, switching systems, and stations. Transmission systems carry messages from an originating station to one or more distant stations. They are engineered and installed in sufficient quantities to provide a quality of service commensurate with the cost and expected benefits. To enable the transmission facilities to be shared, stations are connected to and reached through switching system nodes that are part of most telecommunications networks. Switching systems act under control to direct messages toward their ultimate destination or address.
+
+Most switching systems, known as central or end offices in the public network and as private branch exchanges (PBXs) when applied to business needs, are used to serve stations. These switching systems are at nodes that are strategically and centrally located with respect to the community of interest of the served stations. With improvements in technology, it has become practical to distribute switching nodes closer to stations. In some cases to serve stations within a premise, switching is distributed to take place at the stations themselves. A smaller number of systems serve as tandem (intermediate) switching offices for large urban areas or toll (long-distance) offices for interurban switching. These end and intermediate office functions are sometimes combined in the same switching system. See **PRIVATE BRANCH EXCHANGE.**
+
+**Switching system fundamentals.** Telecommunications switching systems generally perform three basic functions: they transmit signals over the connection or over separate channels to convey the identity of the called (sometimes the calling) address (for example, the telephone number), and alert (ring) the called station; they establish connections through a switching network for conversational use during the entire call; and they process the signal information to control and supervise the establishment and disconnection of the switching network connection.
+
+In some data or message switching when real-time communication is not needed, the switching network is replaced by a temporary memory for the storage of message units. This type of switching is known as store-and-forward switching.
+
+**Signaling and control.** The control of circuit switching systems is accomplished remotely by a specific form of data communications known as signaling. Switching systems are connected with one another by telecommunication channels known as trunks. They are connected with the served stations or terminals by lines.
+
+In some switching systems the signals for a call directly control the switching devices over the same path for which transmission is established. For most modern switching systems the signals for identifying or addressing the called station are received by a central control that processes calls on a time-shared basis. Central controls receive and interpret signals, select and establish communication paths, and prepare signals for transmission. These signals include addresses for use at succeeding nodes or for alerting (ringing) the called station.
+
+Most electronic controls are designed to process calls not only by complex logic but also by logic tables or a program of instructions stored in bulk electronic memory. The popular technique is known as automatic telecommunication control (AT). The electronic memory is now the most accepted technique and is known as stored program control (SPC). Either type of control may be distributed among the switching devices rather than residing centrally. Microprocessors on integrated circuit chips are a popular form of distributed stored program control. See **COMPUTER STORAGE TECHNOLOGY**; **INTEGRATED CIRCUITS**; **MICROPROCESSOR**.

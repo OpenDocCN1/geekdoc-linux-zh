@@ -1,0 +1,31 @@
+# # T Tauri star
+
+A member of a class of very young, optically visible, solar-mass stars with peculiarities such as variability and evidence for mass loss. T Tauri stars were discovered through their unusually strong emission lines. They radiate energy predominantly at infrared and ultraviolet wavelengths. Two subclasses have been defined, the classical T Tauri stars, identified from hydrogen-emission-line surveys, and the weak-line, or naked, T Tauri stars, discovered through their x-ray emission. Most of the apparently anomalous properties of T Tauri stars can be attributed to the fact that many are still surrounded by remnants of their parent clouds of gas and dust. See VARIABLE STAR.
+
+The youth of the T Tauri stars was originally suspected because of their association with star-forming clouds. Their erratic brightness variations also indicated that they had not yet become stable. Ages of 100,000-10,000,000 years are confirmed by their effective temperatures and luminosities.
+
+The unusually strong emission lines observed in the spectra of classical T Tauri stars often have the extended wings characteristic of significant mass outflow. Outflow velocities are high, typically 100 km/s (60 mi/s). In optical images, high-velocity, oppositely directed jets can often be seen emanating from the poles of the stars themselves. Although they are already visible, T Tauri stars are evidently still in the process of shedding the dust and gas from which they formed. From theories about how stars form, the remnant material is expected to be distributed in disks. Such disks are the intrinsic source of the excess infrared radiation. The excess ultraviolet emission, as well as the very strong emission lines, may derive from the boundary layer between the rapidly rotating disk and the more slowly rotating star.
+
+The T Tauri disks are similar to the primitive solar nebula, before the planets formed. If, as seems likely, the Sun experienced a T Tauri phase in its early history, T Tauri stars may be the birth sites of other planetary system. See PROTOTAR; SOLAR SYSTEM; STELLAR EVOLUTION. [AJS]
+
+# # Tabulata
+
+One of two principal orders of extinct Paleozoic corals. Tabulate corals were exclusively colonial. Polyps secreted slender calcitic (calcium carbonate) tubes (corallites, ranging 0.5-20 mm in diameter, but predominantly 1-3 mm in diameter), polynyan in cross section when in compact, or cylindrical when surrounded by colonial skeletal material (coenenchyme) or not in contact (see illustration). The corallites are almost always partitioned by flat or curved, complete or incomplete plates (tabulae). Septal structures, as spines, or less commonly thin plates radially arranged in corallites, often number 12 when well developed. However, these structures are usually weakly developed or completely absent. The Tabulata are divided into suborders-Lichenarinia, Sarcinulina, Favosina, Heliastinia, Heliscolithina, and Aulopora-na -based mainly on the structural arrangement of corallites in the colony and the presence or absence of communication (mural pores or connecting tubes) between adjacent corallites. Tabulate coral colonies could take on a range of external forms. Shape was determined by the interaction of internal controls on colonial growth with prevailing environmental conditions. Tabulate corals were most abundant and diverse in temperate to warm shelf environments, particularly in biostromes and bioherms. Smaller, laminar to domal massive colonies inhabited deeper, cooler waters. They were an important component of true reefs, particularly in back-reef, reef-flat and fore-reef environments, but their limited ability of secure attachment to hard surfaces restricted their contribution to reef framework. See ANTHOZOA; ZOANTHARIA. [Cmj]
+
+![](bbox=[0.1, 0.8, 0.5, 0.95])
+
+# # Tacon
+
+A member of the zoa-theta family of air navigation systems which define an aircraft's position by its distance and bearing to a single beacon. Such systems inherently answer the navigator's questions of "in what direction" and "how far," without additional computation, and are of particular value when the beacon has to be placed with a ship, oil-drilling rig, or small island.
+
+The main weakness of such systems is that bearing errors cause spatial error to increase with distance from the beacon. Major attention is therefore given to the reduction of bearing errors.
+
+Tacon allows the distance-measuring equipment (DME) to provide bearing service also, without the large antennas or site errors characteristic of the civil very high-frequency omniranger (VOR). Range and accuracy are the same as DME (300 mi or 480 km, and 0.1 mi or 0.16 km, respectively), with a bearing accuracy of 1'. As in DME, operation is on 252 channels, spaced 1 MHz apart, 962-1213 MHz.
+
+To provide the added bearing service, the DME transponder is first arranged to operate at constant duty cycle. This means that the number of output pulses is held constant, whether the beacon is being interrogated by one or a hundred aircraft.
+
+The total output of the transponder is amplitude-modulated by the rotating directional antenna system (see illustration). At the center of this system is the central radiator connected to the DME transponder, just as in the conventional DME. However, rotating around this radiator at 15 revolutions per second are two concentric dielectric cylinders. The inside one, about 6 in. (15 cm) in diameter, contains a single parasitic reflector which imparts a 15-Hz amplitude modulation to the DME reply, and the outside one, about 33 in. (84 cm) in diameter, contains nine parasitic elements which impart a 135-Hz amplitude modulation.
+
+On the same rotating shaft are mounted reference pulse generators which additionally modulate the transmitter with coded pulses, once per revolution for the 15-Hz signal (called the north reference burst) and nine times per revolution for the 135-Hz signal (called the auxiliary reference bursts).
+
+In the airborne receiver the 15- and 135-Hz sine waves are detected and filtered and compared with the decoded reference pulses to provide a two-speed or fine-coarse bearing display whose accuracy and site freedom are superior to those of conventional VOR, yet with a ground antenna system which is small

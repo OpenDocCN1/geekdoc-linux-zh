@@ -1,0 +1,41 @@
+common flanges connected to two web plates, forming a closed section.
+
+In general, the depth of plate girders is one-tenth to one-twelfth of the span length, varying slightly for heavier or lighter loads. On occasion, the depth may be controlled by architectural considerations.
+
+Stiffeners, plates or angles, may be attached to the girder web by welding or bolting to increase the buckling resistance of the web. Stiffeners are also required to transfer the concentrated forces of applied loads and reactions to the web without producing local buckling.
+
+Splices are required for webs and flanges when full lengths of plates are not available from the mills or when shorter lengths are more readily fabricated. Splices provide the necessary continuity required in the web and flanges. [J.B.S.]
+
+# Plate tectonics
+
+The theory that provides an explanation for the behavior of the Earth’s crust, particularly the global distribution of mountain building, earthquake activity, and volcanism in a series of linear belts. Numerous other geophysical phenomena such as lateral variations in surface heat flow, the physiography and geology of ocean basins, and various associations of igneous, metamorphic, and sedimentary rocks can also be logically related by plate tectonics theory.
+
+The theory is based on a simple model of the Earth in which a rigid outer shell 30–90 mi (50–150 km) thick, the lithosphere, consisting of both oceanic and continental crust as well as the upper mantle, is considered to lie above a hotter, weaker semia liquid asthenosphere. The asthenosphere, or low-velocity zone, extends from the base of the lithosphere to a depth of about 400 mi (700 km). The brittle lithosphere is broken into a mosaic of internally rigid plates whose horizontally across the Earth’s surface relative to one another. Only a small number of major lithospheric plates exist, which grind and scrape against each other as they move independently like rafts of ice on water. Most dynamic activity such as seismicity, deformation, and the generation of magma occur only along plate boundaries, and it is on the basis of the global distribution of such tectonic phenomena that plates are delineated. See ASTHENOSPHERE; EARTHQUAKE; LITHOSPHERE.
+
+The plate tectonics model for the Earth is consistent with the occurrence of sea-floor spreading and continental drift. Convincing evidence exists that both these processes have been occurring for at least the last 6–10 ¹⁰⁶ years. Evidence includes the magnetic anomaly patterns of the sea floor, the paucity and youthful age of marine sediment in the ocean basins, the topographic features of the sea floor, and the indications of shifts in the position of continental blocks which can be inferred from paleomagnetic data on paleopole positions, paleontological and palaeomictological observations, the match-up of continental margins and geological provinces across present-day oceans, and the structural style and rock types found in ancient mountain belts. See PALEOCOLUMNOLOGY; PALAEOGENICM.
+
+Geological observations, geophysical data, and theoretical considerations support the existence of three fundamentally distinct types of plate boundaries, named and classified on the basis of whether immediately adjacent plates move apart from one another (divergent plate margins), toward one another (convergent plate margins), or slip past one another in a direction parallel to their common boundary (transform plate margins). The boundaries of plates can, but need not, coincide with the contact between continental and oceanic crust. The velocity at which plates move varies from plate to plate and within portions of the same plate, ranging between 0.8 and 8 in. (2 and 20 cm) per year. See CONTINENTS, EVOLUTION OF; MID-OCEANIC RIDGE.
+
+Not only does plate tectonics theory explain the present-day distribution of seismic and volcanic activity around the globe and physiographic features of the ocean basins such as trenches and mid-oceanic rises, but most Mesozoic and Cenozoic mountain belts appear to be related to the convergence of lithospheric
+
+plates. Two different varieties of modern mobile belts have been recognized: cordilleran type and collision type. The Cordilleran range, which forms the western rim of North and South America (the Rocky Mountains, Pacific Coast ranges, and the Andes) (have for the most part been effected by the underthrusting of an oceanic lithospheric plate beneath a continental plate. Underthrusting along the Pacific margin of South America is causing the continued formation of the Andes. The Alpine-Himalayan belt, formed where the collision of continental blocks produces intervening volcanic belts and sedimentary strata into tight folds and faults, is an analog of the present tectonic situation in the Mediterranean region, where the collision of Africa and Europe has begun. See CORDILLERAN BELT; OROGENY.
+
+Plate tectonics is considered to have been operative as far back as 2.5 × 10⁹ years. Prior to that time, evidence suggests that plate tectonics may have occurred, although in a markedly different manner, with higher rates of global heat flow producing smaller convective cells or more densely distributed mantle plumes which fragmented the Earth’s surface into numerous small, rapidly moving plates. See CONTINENTAL DRIFT; GEODYNAMYICS. [W.C.P] 
+
+# Plateau
+
+Any elevated area of relatively smooth land. Usually the term is used more specifically to denote an upland of subdued relief that on at least one side drops off abruptly to adjacent lower lands. In most instances the upland is cut by deep but widely separated valleys or canyons. Small plateaus that stand above their surroundings on all sides are often called tables, tablelands, or mesas. The abrupt edge of a plateau is an escarpment or, especially in the western United States, a rim. [H.H.La] 
+
+# Platinum
+
+A chemical element, Pt, atomic number 78, and atomic weight 195.09. Platinum is a soft, ductile, yet noble metal. The platinum-group metals—platinum, palladium, iridium, rhodium, osmium, and ruthenium—are found widely distributed over the Earth. Their extreme dilution, however, precludes their recovery, except in special circumstances. For example, small amounts of the platinum metals, palladium in particular, are recovered during the electrolytic refining of copper. See IRIDIUM; OSMIUM; PALLADIUM; PERIODIC TABLE; RHODIUM; RUTHENIUM.
+
+The platinum-group metals have wide chemical use because of their catalytic activity and chemical inertness. As a catalyst, platinum is used in hydrogenation, dehydrogenation, isomerization, cyclization, dehydrogenation, dehalogenation, and oxidation reactions. See CATALYSIS; ELECTROCHEMICAL PROCESS.
+
+Platinum is not affected by atmospheric exposure, even in sulfur-bearing industrial atmospheres. Platinum remains bright and does not visually exhibit an oxide film when heated, although a thin, adherent film forms below 450°C (840°F). Platinum may be worked to fine wire and thin sheet, and by special processes, to extremely fine wire. Important physical properties are given in the table.
+
+Platinum can be made into a spongy form by thermally decomposing ammonium chloroplatinate or by reducing it from an aqueous solution. In this form it exhibits a high absorptive power for gases, especially oxygen, hydrogen, and carbon monoxide. The high catalytic activity of platinum is related directly to this property. See CRACKING; HYDROGENATION.
+
+Platinum strongly tends to form coordination compounds. Platinum dioxide, PtO₂, is a dark-brown insoluble crystalline, commonly known as Adams catalyst. Platinum(II) chloride, PtCl₂, is a olive-green water-insoluble solid. Chloroplatinic acid, H₂PtCl₆, is the most important platinum compound. See COORDINATION CHEMISTRY.
+
+In the glass industry, platinum is used at high temperatures to contain, stir, and convey molten glass. In the electrical industry, platinum is used in contacts and resistance wires because of its low contact resistance and high reliability in contaminated

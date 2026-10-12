@@ -1,0 +1,35 @@
+Although bacteria are essential for induction of the disease, predisposing factors are also important, though their elucidation is not complete. Individuals who manifest functionally abnormal neutrophilic granulocytes or monocytes are unusually susceptible to the severe early onset forms of periodontitis. The leukocyte abnormality appears to be genetically transmitted. The early-onset forms have been designated as prepubescent, juvenile, and rapidly progressive periodontitis; adult periodontitis has a later onset and does not seem to be related to leukocyte abnormalities. Some persons with acquired immune deficiency syndrome (AIDS) manifest a highly destructive, unique form of periodontitis. Other predisposing conditions include unusually stressful situations and periods of hormone imbalance occurring at puberty, during pregnancy, and in some women taking birth control drugs.
+
+Good daily oral hygiene practices, including vigorous brushing of the exposed surfaces of the teeth and use of dental floss, interproximal brushes, and other devices to clean between the teeth, constitute the most effective measures to prevent periodontal disease. Basic ingredients of treatment of existing disease include bringing the infection under control and establishing conditions which preclude reinfection. All of the microbial deposits must be removed from the crown and root surfaces. In individuals with severe forms of periodontitis, these procedures may be supplemented by use of antibiotics either systemically or directly into the pocket. These procedures usually lead to reduction of the inflammation and to some shrinkage in the gums, but the periodontal pockets remain. Based on the traditional view that treated pockets may become reinfected and the disease may continue to spread, surgical treatment may be performed with the aim of reducing pocket depth and restoring normal tissue contours. Alternatively, regenerative procedures use various grafting materials, including freeze-dried decalcified bone or bone substitutes and guided tissue regeneration. To perform guided tissue regeneration, flaps are opened in the gingival tissue and the root surfaces are thoroughly cleaned; a porous membrane is placed around the tooth, covering the bone defect with or without tissue grafts, and flaps covering the membranes are sutured into place. The membrane permits the wound site to become populated with cells having the capacity to generate new bone, cementum, and periodontal attachment. See TOOTH DISORDERS.
+
+# Perischoeinoidaea
+
+A subclass of Echinoidea lacking stability in the number of columns of plates that make up the ambulacra and interambulacra. The ambulacral columns vary from 2 to 20, the interambulacra from 1 to 14. Of the four included orders, three are exclusively Paleozoic; the other, Cidarolida, includes both Paleozoic and extant members and is probably ancestral to all other surviving echinoids. See ECHINOIDA.
+
+# Periscope
+
+An optical instrument that permits viewing along a displaced or deflected axis, providing an observer with the view from a position which may be inaccessible or dangerous. Periscopes range in complexity from the simple unipower tank periscope to the complex multielement submarine periscope.
+
+The tank periscope, intended to protect the user from bullets, employs a pair of plane, parallel, reflecting surfaces (either mirrors or prisms), so arranged in a mount that the path of light through the instrument forms a crude letter Z. If powers greater than unity are desired or if the periscope is to be used for sighting, a terrestrial telescope can be added to the periscope. See TELESCOPE.
+
+In the submarine periscope, it is necessary to employ a telescope system having a wide field of view and uniform illumination across a field which can be fitted into a long, narrow tube whose length-to-diameter ratio may be 50 or greater. This is achieved by utilizing a plurality of lenses so spaced along the length of the tube as to cause the incoming principal rays from the edge of the field to be deviated from side to side within the tube (see illustration). In general, the greater the number of lenses, the wider the field of view.
+
+Various modifications of the basic optical systems described here are employed as viewing periscopes in military aircraft and as viewing devices in particle accelerators and nuclear reactors. The cystoscope and endoscope are slender, sometimes mechanically flexible periscopes used for visual examination and photography of body cavities inaccessible to direct observation; an entirely different basis for the design of such instruments is in the use of bundles of optical fibers. See OPTICAL FIBERS.
+
+![](bbox=[0.55, 0.05, 0.92, 0.45])
+
+Periscopic relay train, (a) Showing lenses L, inversions i, and angle of view v. (b) Between a pair of facing telescopes in a submarine periscope.
+
+the edge of the field to be deviated from side to side within the tube (see illustration). In general, the greater the number of lenses, the wider the field of view.
+
+Various modifications of the basic optical systems described here are employed as viewing periscopes in military aircraft and as viewing devices in particle accelerators and nuclear reactors. The cystoscope and endoscope are slender, sometimes mechanically flexible periscopes used for visual examination and photography of body cavities inaccessible to direct observation; an entirely different basis for the design of such instruments is in the use of bundles of optical fibers. See OPTICAL FIBERS.
+
+# Perissodactyla
+
+An order of herbivorous, odd-toed, hoofed mammals, including the living horses, zebras, asses, tapirs, rhinoceros, and their extinct relatives. They are defined by a number of unique specializations, but the most diagnostic feature is their feet. Most perissodactyls have either one or three toes on each foot, and the axis of symmetry of the foot runs through the middle digit.
+
+The perissodactyls are divided into three groups; the Hipsomorph (horses and their extinct relatives); the Titanotheriomorpha (the extinct brontothères); and the Moropomorpha (tapirs, rhinoceros, and their extinct relatives). See RHINOCEROS; TAPIR.
+
+Perissodactyls originated in Asia some time before 57 million years ago (Ma). By 55 Ma, the major groups of perissodactyls had differentiated, and migrated to Europe and North America. Before 34 Ma, the brontothères and the archaic tapirs were the largest and most abundant hoofed mammals in Eurasia and North America. After these groups became extinct, horses and rhinoceros were the most common perissodactyls, with a great diversity of species and body forms. Both groups were decimated during another mass extinction about 5 Ma, and today only five species of rhinoceros, four species of tapir, and a few species of horses, zebras, and asses cling to survival in the wild. The niches of large hoofed herbivores have been taken over by the ruminant artiodactyls, such as cattle, antelopes, deer, and their relatives.
+
+Most extinct horses were browsers and ate soft, leafy vegetation, but all living horses are grazers, using their sharp incisors

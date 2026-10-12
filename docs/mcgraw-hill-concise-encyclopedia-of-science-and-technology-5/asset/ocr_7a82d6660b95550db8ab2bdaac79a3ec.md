@@ -1,0 +1,29 @@
+of a stable or metastable solid phase that is different from either the film or the substrate. See ION IMPLANTATION.
+
+Like ion implantation, ion beam mixing is a solid-state process that permits controlled change in the composition and properties of the near-surface region of solids. Although not yet employed commercially, it is expected to be useful for such applications as the surface modification of metals and semiconductor device processing. In conjunction with thin-film deposition technology, ion beam mixing should make it possible to introduce many impurity elements at concentrations too high for ion implantation to be practical. **[B.V.T]**
+
+# Ion exchange
+
+The reversible exchange of ions of the same charge between a solution and an insoluble solid in contact with it; or between two immiscible solvents, one of which contains a soluble material with immobilized ionic groups. Ions are atoms or molecules containing charge-bearing groups. Their interactions are dominated by the electrostatic forces between charge centers. These interactions are attractive when the ions are of opposite charge, or repulsive when the ions have the same charge. Ions with a net negative charge are called anions, and those with a net positive charge are cations.
+
+A unique property of ions is their capacity to render gases and liquids conducting, and conductivity is a universal method of detecting ions. Ions in solution are in rapid motion and have no distinct partners. Ions in an electric field migrate to the electrode of opposite charge with a velocity roughly proportional to their charge-to-size ratio. This process is known as electrophoresis, and it is one method used to separate and identify ions. See ELECTROPHORESIS.
+
+Ions can also be separated on the basis of their equilibrium with a system containing immobilized ions of opposite charge. Ions can be immobilized by virtue of their location in a rigid matrix. Associated with these fixed ionic sites are mobile counterions of opposite charge. Solution ions with a higher affinity than the counterions for the fixed sites will displace them from the fixed sites and remain localized in the vicinity of the fixed sites. Simultaneously the solution is enriched in the counterions originally localized at the fixed sites. This exchange process for ions of the same charge type is called ion exchange. In a column containing the immobilized ions as part of the stationary phase and the solution of competing ions as the mobile phase, the sample ions can be separated by the repeated equilibrium steps involved as they are transported through the column until they exit it, and are detected. This is an example of ion-exchange chromatography, an important method of separating and identifying ions.
+
+# Ion-exchange materials.
+
+Ion-exchange polymers are based on styrene and divinybenzene and, to a lesser extent, polymers prepared from divinybenzene, or a similar cross-linking agent, and acrylic, methacrylic, or hydroxylalkyl methacrylate acids and esters. These are usually prepared in bead form.
+
+Ion exchangers prepared for the isolation or separation of cations must have negatively charged functional groups incorporated into the polymer backbone. The most common groups are sulfonic and carboxylic acids. Sulfonic acid groups are introduced by reacting the polymer beads with fuming sulfuric acid or a similar reagent. Similarly, carboxylic acid groups can be introduced by a number of common chemical reactions or by hydrolysis of the ester group or oxidation of hydroxylalkyl groups in methyl methacrylate or hydroxylalkyl methacrylate polymers, respectively. Other common functional groups used in cation exchangers include phosphoric acid and phenol and, to a lesser extent, phosphinic, arsonic, and selenonic acids.
+
+A common approach for the preparation of anion exchangers is to react the styrene-divinybenzene polymer with chloromethylmethyl ether in the presence of a catalyst, which adds the side chain, —CH2Cl; then this chloromethylated product is treated with an amine to introduce the charged functional group. A tertiary amine produces a quaternary ammonium group, while primary and secondary amines give products that are charged only in contact with solutions of low pH. As well as simple alkyl and benzyl amines, hydroxylalkylamines are used to introduce functional groups of the type [—CH2N(CH3)2C2H4OH]+. See QUATERNARY AMMONIUM SALTS.
+
+Silica-based materials are used primarily in chromatography because of the favorable mechanical and physical properties of the silica (SiO2) gel support matrix. Ion-exchange groups are introduced by reacting the surface silanol groups of the porous silica particles with stannizing reagents containing the desired functional group [R].
+
+Hydric oxides of elements of groups 14, 15, and 16 of the periodic table can be used as selective ion exchangers. The most important hydric oxides used for the separation of organic and inorganic ions are alumina (Al2O3·nH2O), silica (SiO2·nH2O), and zirconia (ZrO2·nH2O). Silica, by virtue of the presence of surface silanol groups, is used as a cation exchanger at pH > 2. Alumina is amphoteric and can be used as an anion exchanger at low pH and a cation exchanger at high pH. Alumina has the advantage over silica of being chemically stable over a wide pH range. The ion-exchange capacity of silica and alumina is controlled by the pH of the solution in contact with the oxides, since this controls the number of ionized surface functional groups. Alumina is used to isolate nitrogen-containing drugs and biochemically active substances from biological fluids, thus minimizing matrix interferences in their subsequent chromatographic analysis.
+
+# Applications.
+
+Ion exchange has numerous applications for industry and for laboratory research. By the quantity of materials used, water conditioning is the most important. Ion exchange is
+
+![](bbox=[0.071, 0.041, 0.468, 0.54])

@@ -1,0 +1,44 @@
+
+# Nucleation (Nuclear Physics)
+
+different time scales and energies. The nucleus is highly complex, with rotation, vibration, and single-particle degrees of freedom being excited at similar energies and often strongly mixed. See MOLECULAR STRUCTURE AND SPECTRA.
+
+The measurement of static electric and magnetic moments of nuclear states and of dynamic transition moments has provided a great deal of information. Electric moments have revealed a variety of enhanced collective modes of excitation, including elongated, flattened, and pear-shaped nuclear shapes. Magnetic moments have provided detailed information on the differences between excitations involving neutrons (negative moments) and protons (positive moments).
+
+For atoms, the solutions of the Schrödinger equation with a Coulomb potential lead to a reasonable prediction of the energies of quantized atomic states, as well as their spins, parities, and moments. Attempts to make the same progress for nuclei, using a variety of spherically symmetric geometric potentials of nuclear dimensions, failed to reproduce known properties until it was realized by M. G. Mayer and independently by J. H. Jensen in 1949 that the additional spin-orbit potential was required to reproduce the known sequence of nuclear states. A potential of this form binds states having the internal spin of the nucleons parallel to its orbital angular momentum more tightly than when they are antiparallel. The ensuing sequence of quantum shell gaps and subgaps was then correctly reproduced. The shell model was evolved rapidly, and its domain of applicability was widened from the limited regions of sphericity near doubly magic nuclei to encompass most light nuclei with A < 60 as well as deformed regions around shell closures.
+
+As valence particles are added to a closed core of nucleons, the mutual residual interactions can act coherently and polarize the nuclear system away from sphericity. The polarization effects are strongest when both valence protons and neutrons are involved. The deformed nuclear potential can then undergo collective rotation, which generally involves less energy than other degrees of freedom and thus dominates the spectrum of strongly deformed nuclei.
+
+Nuclei undergo collective vibrations about both spherical and deformed shapes. The degree of softness of these vibrations is characterized by the excitation energy required to populate states. The distinguishing feature of vibrational excited states is that they are grouped in nearly degenerate angular momentum multiplets, each group being separated by a characteristic phonon energy.
+
+It has been a goal of nuclear structure studies to develop models that incorporate all of the features described above in order to produce a unified nuclear picture. The development of generalized nuclear models has relevance to other fields of physics.
+
+There are many isotopes that will never be accessible in the laboratory but may exist in stars or may have existed earlier in cosmological time. The evolution of generalized models greatly increases the power to predict nuclear behavior and provides information that is required for cosmological calculations. See COSMOLOGY; NUCLEOSYNTHESIS.
+
+### Nuclei at high excitation energies
+
+As nuclei are excited to ever higher excitation energies, it is anticipated that shell effects will be slowly replaced by statistical, or chaotic, behavior. The number of states per megaelectronvolt of excitation energy within each spin and parity space exponentially with increasing excitation energy until the levels become sufficiently close that they overlap and mix strongly and so become a continuum of states.
+
+Toward the top of this energy regime, new modes of nuclear collectivity become accessible. Giant resonance states can be excited that involve compression and oscillation of the nuclear medium with vibrations of the protons and neutrons in phase (isoscalar) or beating against each other (isovector). The excitation and decay of these giant resonances can provide information about shapes of nuclei at high excitation and about the compressibility of nuclear matter. Results from giant resonance studies indicate that the shell effect persists high into the region previously thought to be statistical. See GIANT NUCLEAR RESONANCE.
+
+The semiclassical statistical and hydrodynamic behavior of hot nuclear matter and its experimental, theoretical, and astrophysical aspects are of great interest at the highest nuclear energies.
+
+The influence of compression and heat on the density of nuclear matter is being investigated in order to measure a nuclear equation of state in analogy with the properties of a classical fluid. It has been suggested that the nuclear matter may undergo phase changes under compression, with high-density condensates possibly providing a new measurable state. At the highest densities and temperatures, the nucleons themselves are forced to overlap and merge, leading to a plasma of quarks and gluons that are the nucleonic constituents. See QUARK-GLUON PLASMA; RELATIVISTIC HEAVY-ION COLLISIONS. [C.J.I.]
+
+# Nucleation
+
+The formation within an unstable, supersaturated solution of the first particles of precipitate capable of spontaneous growth into large crystals of a more stable solid phase. These first viable particles, called nuclei, may either be formed from solid particles already present in the system (heterogeneous nucleation) or be generated spontaneously by the supersaturated solution itself (homogeneous nucleation). See SUPER SATURATED SOLUTION.
+
+Nucleation is significant in analytical chemistry because of its influence on the physical characteristics of precipitates. Processes occurring during the nucleation period establish the rate of precipitation, and the number and size of the final crystalline particles. See COLLOID; PRECIPITATION (CHEMISTRY). [D.H.K., L.M.G.]
+
+# Nucleic acid
+
+An acidic, chainlike biological macromolecule consisting of multiply repeated units of phosphoric acid, sugar, and purine and pyrimidine bases. Nucleic acids as a class are involved in the preservation, replication, and expression of hereditary information in every living cell. There are two types of nucleic acid: deoxyribonucleic acid (DNA) and ribonucleic acid (RNA). See DEOXYRIBONUCLEIC ACID (DNA); RIBONUCLEIC ACID (RNA). [E.J.o]
+
+# Nucleon
+
+The collective name for a proton or a neutron. These subatomic particles are the principal constituents of atomic nuclei and therefore of most matter in the universe. The proton and neutron share many characteristics. They have the same intrinsic spin, nearly the same mass, and similar interaction with other subatomic particles, and they can transform into one another by means of the weak interactions. Hence it is often useful to view them as two different states or configurations of the same particle, the nucleon. Nucleons are small compared to atomic dimensions and relatively heavy. Their characteristic size is of order 1/10,000 the size of a typical atom, and their mass is of order 2000 times the mass of the electron.
+
+The proton and neutron differ chiefly in their electromagnetic properties. The proton has electric charge +1, the opposite of the electron, while the neutron is electrically neutral. They have significantly different intrinsic magnetic moments. Because the neutron is slightly heavier than the proton, roughly 1 part in 1000, the neutron is unstable, decaying into a proton, an electron, and an antineutrino with a characteristic lifetime of approximately 900 s. Although some unified field theories predict that the proton is unstable, no experiment has detected proton decay.
+
+The complex forces between nucleons and the discovery during the 1950s of many similar subatomic particles led physicists to suggest that nucleons might not be fundamental particles. During the late 1960s and 1970s, inelastic electron and neutrino scattering experiments indicated that nucleons are composed of pointlike particles with spin ½ and electric charges that are fractions of the charge on the electron. Particles with similar properties, named quarks, had been hypothesized in the early 1960s to explain other regularities among the properties of hadrons. In the early 1970s, it became clear that nucleons and other hadrons

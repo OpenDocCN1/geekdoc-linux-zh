@@ -1,0 +1,541 @@
+
+# 2592 Douglas-fir
+
+- Douglas-fir, 700*, 2266
+- Dove, 505
+- Down spar, 1832
+- Down syndrome, 700*
+- downwind, 579
+- heart disorders, 1053
+- heart syndrome, 1053
+- hear disorders, 1053
+- Heartwood disease, 1094
+- Drepanocita see Guinea worm infection
+- Drepanocidosis, 165
+- Drepanocilosis see Guinea worm infection
+- Drepanocitosis medialis, 165, 542, 913, 1347
+
+- Drafling, 700*
+- Draliragse, 832
+- Drag (wond), 2389
+- Dranglile, 773
+- Dragoline, 700-701*, 1532-1533
+- Dragon bone, 226, 257
+- Draile, F., 864
+
+- Drawing see Drahting; Engineering drawing; Pictoral drawing; Schematic drawing
+- Drawing of metal, 701*, 2392
+- Dream see Sleep and dreaming
+- Dredger, 543
+- Dredging, 2365
+- Dreissener polymorpha, 1179
+- Drever, J. L., 1, 161
+- Drever, J. L., 177, 191
+- Drew, M., 701*
+- Drill (construction), 479, 543
+- Drill rig, 1466
+- Drilling, geotechnical, 701  
+  see Also Boring and drilling, Core driling
+- Dripping water, 2368
+- Drop ankling, 1192
+- Drop, automatic, 202
+- Dropping paddle, 1621
+- Dromadoida, 364
+- Dronemore, 361
+
+![](img/2cf7974cd6027baa297e5cd95d3d6d43_2601_0.png)
+
+- E (mathematics), 713*
+- E of commerce, 1176-1177
+- E-mail, 788
+
+- Ear:
+  - amphibia, 651
+  - bad and gerbils, 651-652, 714, 715
+  - fishes, 651, 713-714
+  - hearing (human), 1049-1050*
+  - bearing impairment, 1051*
+  - mammals, 652, 715
+  - physical acoustic, 1682*
+  - structure, 651, 713
+  - Teleosts, 651
+  - tetrapods, 714
+
+- Ear (vertebrate), 713-715*
+  - bearing (human), 1049
+  - hearing (vertebrate), 1050
+  - sensory system regeneration, 1986
+
+- Ear profections, 715*
+- Early Bird (communications satellite), 151
+- Early January, 675
+- Early modem systems, 715-716*
+- Earthphone, 716*
+- Earthsee see Abalone
+  - age, 547, 654, 710, 1037
+  - astrophore, 654
+
+Earth—cont.
+- must, 546, 547, 575-577, 719-720, 1549, 1724, 1943
+- geophysics, 987*
+- gravity field of, 718-719*
+- heat flow of, 719*
+- layers of, 717
+- lithosphere, 1264-1265*
+- magnetosphere, 1265*
+- mantle, 1540
+- massif, 1332*
+- motions, 654
+- mountain, 1442*
+- mountain systems, 1443*
+- ocean crust, 720
+- olivine, 1540
+- oblate, 1548, 1549
+- parallels, 1608
+- plate (astronomy), 1609
+- planetary physics, 1700, 1701
+- plate tectonics, 1724*
+- Pelymmian, Reference to Earth Model, 720
+- Proterozoic, 1720-1793
+- radio astronomy, 1947
+- satellite (spacecraft), 1746
+- structure, 654
+- terrestrial coordinate system, 2211-2212*
+- terrain, 2261*
+- Earth interior, 720-721*
+  - composition and state, 721
+  - seismic structure, 720-721
+- Earth resource patterns, 724
+
+Echinodermata, cont.
+- Echinacea, 726-728*
+- Echinacea, 727-728*
+- Echinacea, 805*
+- endocrine system, 732, 813
+- Ecosystems, 834*
+- Euchaetaria, 1028*
+- Gluhotina, 893*
+- Forgolapha, 914*
+- Granobithra, 1099*
+- Hellecolicapsin, 1059*
+- Hemichodus, 1083*
+- Holasteroida, 1083*
+- Holocephala, 1083*
+- Holostoma, 1083*
+- Holograptida, 1159*
+- Neograptola, 1473-
+- Neomicroplata, 1473-1474*
+- Noyomyoida, 1504
+- Oligograda, 1509-1540*
+- Ophiodina, 1549*
+- Ophionas, 1549*
+- Paroblithoda, 1607*
+- Palosoida, 1621*
+- Pedeoida, 1622*
+- Plemiosida, 1624*
+- Pterochordates, 1633*
+- Ptyctogonida, 1679*
+- Ptygmosomatina, 1676*
+- Ptygmosomatina, 1675*
+- Ptygmerodina, 1812*
+- regenerator, 1884
+- Regularia, 1885*
+- Rhemberla, 1915, 1916*
+- Rhabdosoma, 1940*
+- sea urchin, 1966
+- Stipataquod, 2072*
+- Stereostoma, 2113*
+- Temoaleuroidea, 2208*
+- Yahonida, 2320*
+
+# Electrical units and standards 2593
+
+- Ecological communities:–cont.
+  - see also Biome, Plant community
+- Ecological compaction, 732, 733
+- Ecological energetics, 732
+- Ecological interactions, 421, 422
+- Ecological modeling, 753, 754
+- Ecological succession, 726, 734, 755
+- Ecological zoogeography, 2419
+- Ecology, 735
+  - adaptive management, 24
+  - aphied, 664, 735, 736
+  - approaches, 664
+  - behavioral, 223
+  - chemical, 570
+  - conservation of resources, 541, 542
+  - disease, 686, 687
+  - Earth sciences, 722
+  - environment, 826, 830
+  - fisheries, 899, 901
+  - fungal, 947, 948
+  - human, 1093
+  - industrial, 1139, 1140
+  - invasion, 1179, 1180
+  - marine, 1139, 1320
+  - mathematical, 1335, 1436
+  - microbial, 1382
+  - microbial, 1457, 1458
+  - mushroom, 1479
+  - paleoenology, 1598, 1599
+  - physiological, 1681
+  - physiological, [pl.], 1682, 1683
+  - pollution, 1759, 1762
+  - restoration, 1938
+  - soil, 2035, 2036
+  - systems, 2187
+  - theoretical, 2218
+  - thorn, 2221
+  - tropical, 2276
+  - tropical ecology, 2276
+
+- Economic anthropology, 742, 743, 827
+- economy, book, 271
+  - ecosystems, 736
+  - biodiversity, 278, 279
+  - biogeochemical cycles, 736
+  - disease ecology, 687
+  - ecological communities, 731, 732
+  - ecological engines, 733
+  - food web, 736, 911
+  - forest, 825, 826, 916, 918
+  - fire-water, 937, 938
+  - grassland, 1019, 1020
+  - landscape ecology, 1226
+  - mapping, 2328
+  - mare conservation, 1318
+  - mineral, 2216
+  - palaeopology, 1359
+  - terrestrial, 2212
+  - tropical ecology, 2276
+  - weeds, 2384, 2384
+  - see also Agreco system
+- Ecomte, 736
+  - ecosystem, 1682
+- Ectoderm, 812
+- Ectothermic, 1459
+- Ectropis pagoda, 1768, 1769
+- Ectopyosis see Byozoa
+- Ectropis halophila, 1044
+- Edaphogroup, 1068
+- Editha (wind), 2389
+- Edhi current, 237
+- Edels, 463, 737
+- Ederitz, 737
+- anates, 131
+- armadillo, 170
+- oide, 2022
+- Edgewood, K. E., 1219
+- Ecdarian book, 733, 738
+- Ecdarian period, 733, 738
+- Eddiff effect, 2319
+- EDP see Electronic data processing system
+- EDSa see Ethylphenylenediamine oxide
+- Eduardium isotope, 2030
+- EEG see Electoencephalography
+- EEG pattern, 693
+- EEL, 738
+- Effective dose, 738
+- effective dose 50, 738
+- Effect system, 738
+- Efficiency, 738, 2357
+- Efficiency, 738
+- Effluent standard, 1991
+- Egg
+  - food, 738, 739
+  - iverse embrology, 1181
+  - poultry production, 1761, 1762
+  - primitive gut, 172
+
+- Eggplant, 739, 740, 2038
+- Ehrlich, Paul, 382, 435
+- Elaeisioss, 739
+- Elater, 2208
+- Eleanoid, 739, 740
+- Elginf, 739, 740
+- Elgin, 739, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+- Elgin, 740
+
+- Electric field, 743, 744
+  - applications, 672
+  - diode filters, 673
+  - electroacoustic compatibility, 771
+  - integrated circuit filters, 1163, 1164
+  - microwave, 1393, 1394
+  - special filters, 672, 673
+  - suppression, 2165
+- Electric fiji, 673, 674, 745
+- electric furnace, 743
+- electric heating, 744
+  - arc heating, 158
+- electric knife, 743, 744
+- electromagnetic process, 762, 765
+  - induction heating, 1138
+  - Joule's law, 1391
+  - resistance heating, 1904
+- Electric insulation, 683, 748, 745
+  - dielectric materials, 653, 654
+  - varistor band, 2329
+- Electric lamp see Lamp
+- Electric light bug, 942
+- Electric moto see Motor
+- Electric organ, [bioleg], 119, 745
+- Electric power generation, 745, 746
+  - coal gasification, 482
+  - cogeneration, 492
+  - generate, 981
+  - geothermal power, 995, 996
+  - hydroelectric generate, 1103, 1104
+  - magnetic hydroelectric power generate, 1301
+  - micropower, 1512
+  - solar cell, 2038
+  - space power system, 809, 811
+  - three-phase ac system, 809, 809
+  - tital power, 2239
+  - transmission line, 2262
+  - wind power, 2389
+- Electric power measurement, 746, 747
+  - active and ratio frequencies, 747
+  - dc and ac power measurement, 675
+  - electric energy measurement, 745, 1104
+  - micro power measurement, 675
+  - watt-hour meter, 2370
+  - wattmeter, 2370, 2371
+- Electric power substation, 747, 748
+- Electric power system, 748
+  - circuit breaker, 461
+  - distribution systems, 742, 743
+  - electric distribution system, 742, 743
+  - generator, 745, 746
+  - power measurement, 747, 748
+  - substation, 675, 676, 747, 748
+  - transmission, 748, 750
+- Electric power transmission, 748, 750
+  - overhead alternating current transmission, 676, 677, 749
+  - submarine cables, 749, 750, 2139
+  - underground power transmission, 577
+  - 749, 750
+- Electric protective devices, 750, 751
+  - communications systems protection, 413, 417
+  - lightning and surge protection, 1225, 1254
+  - overcurrent, 678
+  - overvoltage, 678, 1588, 1589
+- Electric circuit, 679
+  - current, 678
+  - relay, 678
+  - reverse-phase rotation, 679
+  - surge arrestor, 2171
+  - shunt, 679
+  - underfrequency, 678
+  - undervoltage, 678
+  - uninteruaptible power system, 2301
+- Electric rotating machinery, 751
+  - alternating current see Alternating current
+  - generator, 311
+    - armature reaction, 170
+    - direct-current generator, 682
+    - direct-current motor, 683
+    - electromagnetic tearing, 741, 712
+    - electric drive, 754
+    - generator, 981
+    - hydroelectric generator, 1103, 1104
+    - motor, 1441
+    - slip ring, 2022
+    - winding in electric machinery, 2390
+- Electric spark, 751, 2071
+- Electric susceptibility, 599, 752
+- Electric switch, 752
+- Electric units and standards, 747
+  - glass switch, 1002, 1003
+- Electric transmit, 752
+
+- Electric wind, 752, 753
+- Electric wiring see Wiring
+- Electrical breidling, 753
+- electrical code, 753
+- electrical communications, 753, 754
+  - data communications, 616
+  - electric fiji, 743, 744
+  - electrical fire, 758, 759
+  - electromagnetic wave transmission, 773, 774
+  - electric malt, 758
+  - facsimile, 809, 870
+  - frequency division multiplex, 681
+  - intercarrier frequency, 1199, 1199
+  - information theory, 1143
+  - multiplexing, 1446, 1447
+  - network communications, 681
+  - radio, 1846
+  - signal amplification, 681
+  - telephone, 2198, 2197
+  - television, 2202, 2205
+  - time division multiplex, 681, 682
+  - transmission media, 681
+  - (dielectric)
+- Electrical conduction see Conduction
+- Electrical conduction in gases, 754
+  - arc discharge, 517, 518
+  - corona discharge, 501
+  - dark current, 615
+  - electric gas, 731, 752
+  - glow discharge, 1006
+  - saturation current, 1950
+  - Townsend discharge, 2225
+- electrical connector, 754
+- electrical devices, 754, 755
+- electrical energy measurement, 755, 776
+- electrical engineering, 753, 754, 755
+- electrical power system, 754
+  - immittance, 1127
+  - impedance matching, 1135, 1134
+  - 1935
+  - radio frequency impedance measurement, 1849, 1850
+  - reactor, 1871, 1872
+  - radio frequency resistance, 755, 757
+- electrical insulation, 755, 757
+  - properties, 756, 757
+  - requirements, 756
+- electrical interference, 757
+  - communications systems protection, 512
+- electrical noise, 758, 759
+- electrical performance, 757
+  - 2080, 2090
+  - state, 2101
+  - suppression, 2165, 2166
+- Electrical loading, 757
+- electrical power, 757, 758
+- electrical power measurement, 746, 747
+- electrical noise, 758, 759
+- electrical units and standards, 760, 761
+- electrical wire, 698
+- galvanometer, 856, 857, 958, 959
+- inductance measurement, 1137
+- Ohmeter, 498
+- multicurrent, 1446
+- q meter, 1819
+- Electrical model, 758
+  - large-signal models, 685
+  - small-signal models, 685
+- electrical muscle stimulator, 1455
+- electrical noise, 758, 759
+- electrical interference, 757
+- electrical shielding, 760
+- electric noise measurement, 1395
+  - 1396
+  - noise, 1995
+  - signal noise ratio, 2006
+  - static, 2101
+  - suppression, 2165, 2166
+- electrical noise generator, 759, 1396
+- electrical resistance, 759
+  - insulation resistance, 1162
+  - magnesiumite, 1303
+- Q (electricity), 1595
+  - (electricity), 1902, 1930
+  - slow effect, [electricity], 2018, 2019
+- electrical resistivity, 756, 759, 760, 2223
+- electrical shielding, 760
+- electrocplacemorphology, 771
+- electrical resistivity, 756, 759, 760, 761
+  - suppression, 2165, 2166
+- electrical units and standards, 760, 761, 761
+- electrical magnets and tools, 760, 761
+- electrical standards, 761
