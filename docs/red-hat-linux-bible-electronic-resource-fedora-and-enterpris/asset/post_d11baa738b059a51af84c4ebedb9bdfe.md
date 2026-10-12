@@ -1,0 +1,306 @@
+
+## 1042 Index
+- /etc/ppp file, 350
+- /etc/profile, global defaults and, 398
+- /etc/rc*.d file, 350
+- /etc/security file, 350
+- /etc/services file, 495
+- /etc/skel file, 350
+- /etc/squid file, 351
+- /etc/sudoers, users, adding, 352
+- /etc/sysconfig file, 351
+- /etc/ucp file, 351
+- /etc/X11 file, 349
+- /etc/xinetd.conf file, 496
+- /etc/xinetd.d file, 351
+- /etc/yp.conf file, 881
+- Ethereal, 602-607
+- Ethereal filters, 606
+- Ethernet
+  - cards, locating at boot time, 596
+  - connection checking, 597-598
+  - iMac and, 947
+  - wired, setup, 568-572, 585-586, 592-598
+  - wireless, setup, 574-602
+- EUID environment variable, 142
+- Everything install type, advantages of, 31
+- Evolution (e-mail)
+  - composing messages, 315-316
+  - configuration, 86
+  - filters, 752
+  - panel button, 101
+  - preferences, 314-315
+  - receiving messages, 315-316
+  - sending messages, 315-316
+- Exim MTA mail server, 721
+- exit command, 129
+- exmh, 14
+- expert mode, installation and, 28
+- export command, shell environment variables, 144
+- exports file, 685
+- exporting directories, NFS, 691-692
+- exports, 347
+- exports file, 683
+  - access options, 684
+  - exporting directories, 685-686
+  - host names, 683
+  - IP network, 683
+  - links, 684
+  - TCP/IP domain, 684
+  - user mapping options, 684-685
+- expressions
+  - commands, 141
+  - test expressions, operators, 423
+- ext2 file system, 362
+- ext3 file system, 362
+- ext3 file system, 361
+- extensions, wireless LANs, 590-591
+- F
+- Failsafe session, login and, 77
+- Fallback MX host option, sendmail, 740
+- FancyIndexing directive, Apache server, 816-817
+- FAQs, wu-ftpd, 785
+- fault tolerance, 454
+- fc command, 138
+- FCEEDIT environment variable, 142
+- fdisk, 368
+  - partitioning and, 54
+  - partitioning with, 52-54
+- fdprm file, 347
+- Fedora. See also Red Hat Linux compared to previous Red Hat Linux distributions, 10
+- features, 4, 13
+- Fedora Project, 10-11
+- new features, software packages, 16-17
+- selection considerations, 11
+- file formats
+  - audio, 270
+  - MPEG, 284
+- file management
+  - Konqueror File Manager, 103
+  - Nautilus, 80
+- file permissions, setting, 151
+- file servers
+  - centralized distribution and, 677
+  - NetWare, setup, 714-718
+  - network services reference, 1016-1018
+  - NFS, 677
+    - setup, 678-692
+    - sharing, 680-686
+  - Samba setup, 692-693, 697-712
+  - setup goals, 677-678
+  - transparency and, 677
+- file sharing
+  - Nautilus, 96
+  - Netatalk, Samba and, 962-963
+- file system, 6
+  - commands, 133
+- files
+  - pattern matching
+    - metacharacters, 154-155
+    - redirection metacharacters, 155
+- files and directories, creating, 151-153
+- overview, 150-151
+- permissions, 156-157
+- file systems, 679
+  - corrupt, partitions and, 55
+  - creating, 367
+  - fstab file, 363
+  - Linux compared to Microsoft, 152
+  - management, 354
+  - mkfs command, 471
+  - mount command, 364-366
+  - mounting, 361-363
+  - overview, 358-361
+  - partitioning and, 50
+  - restoring, 470-471
+  - umount command, 366
+  - volume labels, changing, 370
+- file transfers, wu-ftpd, logging, 785
+- file/directory-level security, netatalk, 959-964
+- file-limit parameter, FTP server, 780
+- filename suffixes, browsers and, 305
+- files
+  - AppleTalk, type/creator, 961
+  - configuration, locations, 347-351
+  - copying
+    - FTP, 327-335
+    - netatalk, 961-962
+    - remotely, 335
+  - creating, 151-153
+  - cupsd.conf, 665-667
+  - deleting, 81, 961-962
+  - FTP, retrieval, allowing, 778
+  - GNOME desktop, moving, 81
+  - hidden, MAC, 959-960
+  - host.conf, 570
+  - KDE desktop, moving, 107
+  - Konqueror File Manager, 106-108
+    - creating, 108-110
+    - creating files and directories, 108-110
+    - searching for files, 108
+  - LaTeX output, 222
+  - launchers, 85
+  - log files, /var/log directory, 520
+  - moving
+    - copying, deleting, 157
+    - netatalk, 961-962
+  - nsswitch.conf, 570
+  - pattern matching metacharacters, 154-155
+  - permissions, 764
+    - AppleTalk, 960-961
+  - quota files (disk usage), 410
+  - fstab file, 410
+
+## Index 1043
+- startup script creation, 411-412
+- redirection metacharacters, 155
+- renaming, 81
+- resolv.conf, 570
+- restoring, 471-473
+- saving, specifying location, 127
+- sharing, NIS, 879
+- size, reporting, 374
+- temp, removing automatically, 414
+- uploading
+  - anonymous users, 765-766
+  - local users, 765
+- user files, find command and, 408
+- voting, 963
+- filtering firewalls, 500
+- filters
+  - e-mail, 316, 487
+  - Etheral, 606
+  - Evolution Email, 752
+- find command, 374, 408
+- finger server, 1024
+- finger service, 444
+- FIPS utility, partitions, 58-60
+- firewalls
+  - activating, 502
+  - configuration, 22
+    - DHCP, 868
+  - installation and, 33-34
+  - disabling, 502
+  - examples, 512-520
+  - filtering, 500
+  - FTP connection tracking, 517
+  - ICMP messages, 515
+  - interfaces and, 512
+  - Internet, 611
+  - ipchains, 500-509
+  - iptables, 500
+    - allowing TCP and IRC, 517-518
+    - configuration, 509-516
+    - enhancing, 519-520
+    - IP and NAT masquerading, 518
+    - logging, 519
+    - overview, 516-517
+    - port forwarding, 519
+    - transparent proxies, 518
+  - viewing current firewall, 502
+  - IRC connections, 510
+  - logging, iptables and, 519
+  - Lokkit, 501
+  - NAT and, 509
+  - network services checklist, 1011
+  - opening, Samba, 713
+  - overview, 500
+  - packets and, 514
+  - passive FTP, 510
+  - public servers, 929-931
+  - punch holes, 509
+  - TCP and, 515
+  - UDP services and, 515
+- floppy disks
+  - install disks, 60-62
+  - mounting, 365
+  - system requirements, drives, 25
+- FM, interface device, 262
+- folders
+  - AppleTalk, type/creator, 961
+  - creating, 81
+  - deleting, 81
+  - GNOME desktop, moving, 81
+  - Home folder, 80-81
+  - Network Trash folder (MAC), 960
+  - subfolders, 81
+  - Temporary items (MAC), 960
+- fonts, configuring (KDE desktop), 116
+- for...do loop, shell scripts, 425-426
+- foreground mount, NFS, 690
+- ForkEachJob option, sendmail, 741
+- format conversion, audio files, 274-276
+- formatting
+  - Groff document publishing, 213-214
+  - LaTeX documents, conversion, 225-226
+- FORWARD chain rules, 515
+- forward file, sendmail, 747
+- ForwardPath option, sendmail, 735
+- frame relay, DNS server, 925
+- FreeBSD kernel Mac OS/X, 946
+- free distribution, software and, 17
+- free software, 17
+- Freeciv game, 246-251
+- freeradios package, 16
+- Freshmeat Web site, 168
+- freshmeat.net, 168
+- freshrmps.net, 168
+- fstab file, 363, 347, 410, 688-689
+- tape utilities, 456-457
+- formatting tape, 458
+- mt command, 457
+- ftformat command, 458
+- FTP (File Transfer Protocol), 759
+  - background transfers, 331-332
+  - copying files, 327-335
+  - directories, commands, 328-329
+  - enabling, 1016
+  - exiting, 330
+  - firewalls, passive, 510
+  - GFTP window, 332-333
+  - ncftp command, 330-332
+  - secure shell, 550
+  - wget and, 333-335
+- ftp command, 328
+- FTP daemon, wu-ftpd, 768
+- FTP servers
+  - access
+    - control, 776
+  - host computers, 781
+  - UID/GID, 782
+  - anonymous users, 770-771
+    - limiting, 782
+  - byte-limit parameter, 781
+  - chmod, 779
+  - data limits, 781
+  - delete parameter, 779
+  - directories, setup, 773
+  - downloading, limiting, 780-781
+  - FAQs, 785
+  - file-limit parameter, 780
+  - host name
+    - changing, 775
+  - installation and, 24
+  - limit-time parameter, 781
+  - login
+    - greetings, 775
+  - message files, 774
+  - overview, 760-761
+  - overwrite parameter, 779
+  - permissions, 778
+  - public servers and, 929
+  - README file, 774
+  - rename parameter, 779
+  - retrieval, allowing, 778
+  - RFCs, 785
+  - uploading to, 777-778
+  - umask parameter, 779
+  - uploading, limiting, 780-781
+  - users, 770-785
+    - classes, 776
+    - limiting concurrent, 780
+  - types, 770-785
+- full backup, 454
+- functions
+  - command line automatic completion feature, 136
+  - shell and, 133

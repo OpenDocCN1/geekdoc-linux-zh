@@ -1,0 +1,112 @@
+
+-   **GConf2**: 用于存储用户偏好的配置数据库 API。
+-   **GConf-devel**: 用于使用 GConf 进行开发的库文件。
+-   **GConf2-devel**: 用于使用 GConf2 进行开发的库文件。
+-   **gconf-editor**: GConf 配置源的编辑器和管理员工具。
+-   **gd**: 用于创建 JPEG 和 PNG 图像文件的图形库。
+-   **gdb**: 命令行驱动的调试器。
+-   **gdbm**: Gdbm 数据库索引库。
+-   **gdbm-devel**: 用于开发使用 GNU 数据库系统的应用程序的组件。
+-   **gd-devel**: 用于开发使用 gd 图形库的应用程序的组件。
+-   **gdk-pixbuf**: GDK Pixbuf 图像加载库。
+-   **gdk-pixbuf-devel**: 与 GDK Pixbuf 相关的开发工具。
+-   **gdk-pixbuf-gnome**: 用于显示图像的 GNOME Canvas 支持。
+-   **gdm**: GNOME 显示管理器，维护基于 X 的图形登录。
+-   **gd-progs**: 与 gd 图形库相关的实用程序。
+-   **gedit**: 紧凑的、基于 GNOME 的文本编辑器
+-   **genromfs**: 用于构建初始 RAM 磁盘的 romfs 文件系统的实用工具。
+-   **gettext**: 用于创建多语言消息的工具和实用程序。
+-   **gftp**: 多线程图形 FTP 程序。
+-   **ggv**: Ghostscript 的前端，为 Ghostscript 添加平移和持久用户设置。
+-   **ghostscript**: 显示和打印 PostScript 文件。
+-   **ghostscript-devel**: 用于开发 Ghostscript 启用应用程序的头文件。
+-   **ghostscript-fonts**: 与 Ghostscript 程序一起使用的字体集。
+-   **giftrans**: 将 GIF87 文件转换为 GIF89 格式。
+-   **gimp**: GNU 图像处理程序
+-   **gimp-data-extras**: 与 GIMP 一起使用的图案、渐变和其他图形元素。
+-   **gimp-devel**: 开发 GIMP 插件和扩展所需的库。
+-   **gimp-perl**: 用于 GIMP 与 GIMP Perl 扩展之间通信的库。
+-   **gimp-print**: 在要求苛刻的任务期间提供增强打印的驱动程序。
+-   **gimp-print-cups**: Canon、Epson 和兼容打印机的原生驱动程序。
+-   **gimp-print-devel**: GIMP 打印接口的库和文档。
+-   **gimp-print-plugin**: gimp-print 的 GIMP 插件。
+-   **gimp-print-utils**: 来自 gimp-print 的实用程序。
+-   **gkrellm**: 监控软件，可绘制 CPU 使用率、磁盘活动和网络流量。
+-   **gkrellm-daemon**: gkrellm 的服务器端。
+-   **glade**: 用于 GTK+ 工具包快速开发用户界面的软件。
+-   **glade2**: 适用于 GTK+ 2.0 的 glade 版本。
+-   **glib**: 用于提高可移植性的 Glib 1.2 版通用函数库。
+-   **glib2**: 用于提高可移植性的 Glib 2 版通用函数库。
+-   **glib2-devel**: 与 glib2 开发包一起使用的静态库和头文件。
+-   **glibc**: 众多程序使用的标准库。
+-   **glibc-common**: 通用二进制文件、区域设置支持和时区数据库。
+-   **glibc-debug**: 用于更深入调试的各种库。
+-   **glibc-devel**: 用于开发大多数 C 语言程序的标准头文件和对象文件。
+-   **glibc-kernheaders**: 供 glibc 使用的 Linux 内核头文件。
+-   **glibc-profile**: 使用 `gprof` 分析的程序所需的库。
+-   **glibc-utils**: 程序调试期间有用的各种工具。
+-   **glib-devel**: 用于支持 GIMP Xlibrary 的静态库和头文件。
+-   **Glide3**: 3DFxVoodoo 图形卡的编程接口。
+-   **Glide3-devel**: 用于在 3Dfx Interactive Voodoo 卡中使用 3D 加速器的接口。
+-   **gmp**: 用于处理算术和浮点数函数的 MP 库。
+-   **gmp-devel**: 用于开发 GNU MP 任意精度应用程序的组件。
+-   **gnome-applets**: 用于 GNOME 桌面的小程序。
+-   **gnome-audio**: 可与 GNOME 环境一起使用的声音集。
+-   **gnome-audio-extra**: 可与 GNOME 桌面一起使用的声音文件。
+-   **gnome-bluetooth**: 控制蓝牙设备的简单 GUI。
+-   **gnome-desktop**: GNOME 组件之间共享的代码。
+-   **gnome-desktop-devel**: 用于编译 GNOME 桌面组件的库。
+-   **gnome-games**: GNOME 游戏，如 *纸牌接龙*、*奥赛罗* 和 *俄罗斯方块*。
+-   **gnome-icon-theme**: 基础 GNOME 桌面环境图标。
+-   **gnome-kerberos**: 用于管理 Kerberos 5 票证的 krb5 工具。
+-   **gnome-libs**: GNOME 桌面环境和应用程序所需的库。
+-   **gnome-libs-devel**: 用于创建可在 GNOME 桌面上运行的应用程序所需的库。
+-   **gnome-mag**: 用于 AT-SPI 应用程序的 GNOME 放大库。
+-   **gnome-mag-devel**: GNOME AT-SPI 放大库的开发工具。
+-   **gnome-media**: GNOME CD 播放器和其他多媒体工具。
+-   **gnomemeeting**: 与 Microsoft NetMeeting 兼容的 H323 电信会议工具。
+-   **gnome-mime-data**: GNOME-VFS 的文件类型识别数据文件。
+-   **gnome-panel**: 提供桌面管理实用程序。
+-   **gnome-pilot**: 集成 GNOME 和 PalmOS 设备（如 Palm Pilot）所需的文件。
+-   **gnome-pilot-conduits**: gnome-pilot 的额外 conduit。
+-   **gnome-pilot-devel**: 使应用程序能够使用 gnome-pilot 所需的库。
+-   **gnome-print**: GNOME 应用程序从 GNOME 打印所需的字体和工具。
+-   **gnome-print-devel**: 与 GNOME 中打印相关的软件开发工具。
+-   **gnome-python2-***: 允许 GNOME 组件用 Python 编写的包装器。
+-   **gnome-session**: 处理核心 GNOME 组件的启动和关闭。
+-   **gnome-speech**: GNOME 文字转语音工具。
+-   **gnome-speech-devel**: GNOME 文字转语音功能的开发工具。
+-   **gnome-spell**: 用于拼写检查的 bonobo 组件。
+-   **gnome-system-monitor**: 简单的进程和系统监视器。
+-   **gnome-terminal**: GNOME 终端模拟器。
+-   **gnome-themes**: GNOME 主题集合。
+-   **gnome-user-docs**: GNOME 的词汇表、介绍和其他文档。
+-   **gnome-utils**: 多个有用的 GNOME 实用程序，例如计算器和日历。
+-   **gnome-vfs**: GNOME 虚拟文件系统库。
+-   **gnome-vfs-devel**: 用于开发 GNOME-VFS2 应用程序的库和头文件。
+-   **gnome-vfs-extras**: 包括 Samba smb 网络浏览器的 GNOME-VFS 模块。
+-   **gnome-vfs2**: GNOME 虚拟文件系统库的 2.0 版。
+-   **gnome-vfs2-devel**: 用于开发 GNOME-VFS2 应用程序的库和头文件。
+-   **gnome-vfs2-extras**: 包括 Samba smb 网络浏览器的 GNOME-VFS2 模块。
+-   **gnucash**: 个人财务跟踪器。
+-   **gnucash-backend-postgres**: 用于在 PostgreSQL 中存储 GnuCash 数据的后端。
+-   **gnuchess**: GNU 国际象棋程序及相关实用程序。
+-   **gnumeric**: 基于 GNOME 的 gnumeric 电子表格程序
+-   **gnumeric-devel**: gnumeric 电子表格应用程序的开发工具。
+-   **gnupg**: GNU Privacy Guard，用于安全通信和数据存储。
+-   **gnuplot**: 用于绘制科学和其他类型数据的实用程序。
+-   **gob2**: 用于创建 GObject 对象的预处理器。
+-   **gok**: GNOME 屏幕键盘。
+-   **gperf**: C++ 哈希函数生成器。
+-   **gphoto2**: 管理和访问数码相机的图像。
+-   **gphoto2-devel**: 创建使用 gphoto2 的应用程序所需的头文件。
+-   **gpm**: 基于控制台的鼠标服务器。
+-   **gpm-devel**: 用于开发具有鼠标功能的文本模式程序的库。
+-   **gqview**: 功能丰富的图像查看器。
+-   **grep**: 用于在文件中查找字符串模式的实用程序。
+-   **grip**: 各种光盘抓轨器和 MP3 编码器的图形前端。
+-   **groff**: 基于控制台的文本格式化实用程序。
+-   **groff-gxditview**: 基于 GUI 的 groff 文本输出查看器。
+-   **groff-perl**: 用于处理需要 Perl 的 groff 文档的实用程序。
+-   **grub**: Grand Unified Boot Loader，用于启动 Linux 等操作系统。
+-   **gsl**: 用于数值分析和高级数学的 GNU 科学库。

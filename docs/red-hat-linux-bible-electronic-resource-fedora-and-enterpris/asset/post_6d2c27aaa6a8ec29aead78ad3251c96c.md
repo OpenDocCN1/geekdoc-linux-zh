@@ -1,0 +1,112 @@
+
+- **libIDL**: Library for parsing Interface Definition Language.
+- **libIDL-devel**: Development libraries and headers for libIDL.
+- **libjpeg**: The libjpeg library for manipulating JPEG images.
+- **libjpeg-devel**: Header files and libraries for creating programs that use JPEG images.
+- **libmng**: Library for working with images in MNG and JNG formats.
+- **libmng-devel**: Header files related to the libmng library.
+- **libmng-static**: Statically linked versions of the libmng library.
+- **libmrproject**: Libraries for accessing Mr. Project data.
+- **libmrproject-devel**: Development files for libmrproject.
+- **libobjc**: Objective C runtime libraries.
+- **libogg**: Ogg bitstream format libraries.
+- **libogg-devel**: Documentation and header files for developing ogg applications.
+- **libole2**: Structured storage OLE2 (Object Linking and Embedding) library.
+- **libole2-devel**: Header files to develop applications for OLE2 structured storage files.
+- **libpcap**: User level hooks for monitoring low-level network traffic.
+- **libpng10**: An old version of the libpng library for working with PNG image files.
+- **libpng10-devel**: Libraries and headers for developing programs that use PNG images.
+- **libpng**: The libpng library for working with PNG image files.
+- **libpng-devel**: Libraries and headers needed to develop programs that use PNG images.
+- **libraw1394**: Library providing low-level firewire access.
+- **libraw1394-devel**: Development libraries for using libraw1394 functionality.
+- **librep**: Tools and documentation associated with the librep Lisp dialect.
+- **librep-devel**: Header files and tools associated with the librep Lisp dialect.
+- **libsvg**: An SVG library based on libart.
+- **libsvg-devel**: Development files required to develop applications using libsvg.
+- **libsvg2**: An SVG library based on libart.
+- **libsvg2-devel**: Development files required to develop applications using libsvg2.
+- **libsane-hpijs**: SANE scanner drivers for HP's multi-function devices.
+- **libsoup**: Library for enabling GNOME libraries to access HTTP servers.
+- **libsoup-devel**: Development tools for libsoup.
+- **libstdc++**: The EGCS libraries needed to run C++ applications.
+- **libstdc++-devel**: Standard C++ development libraries.
+- **libtabe**: Chinese lexicon libraries for xcin input method.
+- **libtabe-devel**: Header files and libraries required to develop applications to use libtabe.
+- **libtermcap**: Libraries to access the termcap database to manage character displays.
+- **libtermcap-devel**: Components to develop programs that access the termcap database.
+- **libtiff**: Libraries for using and saving TIFF image files.
+- **libtiff-devel**: Development tools used to work with TIFF image files in applications.
+- **libtool**: The libtool shell scripts, used to build generic shared libraries.
+- **libtool-libs**: Runtime libraries for libtool utilities (to build generic shared libraries).
+- **libtool-libs13**: Compatibility libraries for the shared libraries in libtool-libs1.3.
+- **libungif**: Library functions needed to use and save GIF image files.
+- **libungif-devel**: Development tools to create applications to load and save GIF images.
+- **libungif-progs**: Several utilities for working with GIF images.
+- **libunicode**: Unicode manipulation library.
+- **libunicode-devel**: Development tools for manipulating unicode strings.
+- **libusb**: A library that facilitates access to USB devices.
+- **libusb-devel**: Development files needed to create applications that use libusb.
+- **libuser**: A standardized interface for administration of user accounts.
+- **libuser-devel**: Header files and static libraries to develop applications that use libuser.
+- **libvorbis**: The Ogg Vorbis open audio compression codec and runtime libraries.
+- **libvorbis-devel**: Header files and documentation to develop applications using libvorbis.
+- **libwnck**: Library for implementing pagers and tasklists.
+- **libwnck-devel**: Development files for applications that use libwnck.
+- **libwpd**: Library for handling WordPerfect documents.
+- **libwpd-devel**: Development tools for handling WordPerfect documents.
+- **libwpd-tools**: Tools for transforming WordPerfect documents.
+- **libwxstreams**: A network programming library written in C++.
+- **libwxstreams-devel**: Development files for applications that use libwxstreams.
+- **libxml**: A library of functions for working with XML files.
+- **libxml-devel**: Contains tools for developing applications that use the libxml library.
+- **libxml2**: A library to work with XML and HTML files, including DTD support.
+- **libxml2-devel**: Development files for applications using libxml2.
+- **libxml2-python**: Python bindings for the libxml2 library.
+- **libxslt**: Tools to translate XML to structures using the XSLT transformation mechanism.
+- **libxslt-devel**: Libraries and include files required to develop applications using libxslt.
+- **libxslt-python**: Python bindings for the libxslt library.
+- **licq**: The licq ICQ chat utility.
+- **licq-gnome**: A GNOME front-end for licq.
+- **licq-kde**: A KDE front-end for licq.
+- **licq-qt**: A QT front-end for licq.
+- **licq-text**: A text mode front-end for licq.
+- **line**: A library for simplified writing of network programs.
+- **line-devel**: Development files for applications that use line functionality.
+- linuxdoc-tools: A text-formatting package based on SGML.
+- lm_sensors: Modules for interfacing with sensors that monitor computer hardware.
+- lm_sensors-devel: Software tools for interfacing with hardware monitors.
+- lockdev: The liblockdev library for locking devices.
+- lockdev-devel: Static library versions and headers for the liblockdev library.
+- logrotate: Rotate growing log files.
+- logwatch: A customizable log file analysis program.
+- losetup: Linux loop device tools for mapping regular files to virtual block devices.
+- lrzsz: The lrz and lsz utilities, which are used to provide Zmodem functions in Linux.
+- lskl: A utility for listing lock files.
+- lsof: A utility for listing information about open files.
+- ltrace: A tool for running and tracing the activities of a running command.
+- lv: The lv multilingual file viewer and related utilities.
+- lvm: Logical Volume Manager tools to manage physical hard disk volumes.
+- lynx: A text-based Internet Web browser.
+- m2crypto: Support for OpenSSL in Python scripts.
+- m4: An implementation of the UNIX m4 macro processor.
+- macutils: Utilities for working with files that are often used with Macintosh computers.
+- Maelstrom: The Maelstrom (shoot-the-asteroids) game.
+- magicdev: The magicdev daemon for detecting and playing audio CDs.
+- MagicPoint: An X11-based presentation tool.
+- mailcap: A configuration file for defining how special data types are handled.
+- mailman: A Web-oriented mailing list manager.
+- mailx: A small utility for easily sending plain text e-mail messages.
+- make: A utility for building and installing software from source code.
+- MAKEDEV: A program to create and maintain files in the `/dev` directory.
+- man: A facility for displaying system manual pages.
+- man-pages*: A set of packages containing manual pages in different languages.
+- mars-nwc: NetWare file and print server emulation components.
+- mc: The Midnight Commander visual shell for managing a variety of file interfaces.
+- mdam: Software RAID array control utility.
+- memprof: A tool for memory profiling and leak detection.
+- metacity: The metacity window manager.
+- mfw: Messaging functions for Emacs.
+- mfw-common: Functions used in mfw and mfw-xemacs.
+- mfw-xemacs: Messaging functions for XEmacs.
+- mgetty: The mgetty implementation of getty for allowing logins over serial lines.

@@ -1,0 +1,33 @@
+S85gpm. This is because the “ASCII collating sequence orders the files,” which simply means that one positional character is compared to another. Therefore, a script beginning with the characters $110 is executed between $10network and $15netfs in run level 3.
+
+All of the programs within the /etc/rcX.d directories (where X is replaced by a run-level number) are symbolic links, usually to a file in /etc/init.d. The /etc/rcX.d directories include the following:
+
++   *   /etc/rc0.d: Run level 0 directory
++   *   /etc/rc1.d: Run level 1 directory
++   *   /etc/rc2.d: Run level 2 directory
++   *   /etc/rc3.d: Run level 3 directory
++   *   /etc/rc4.d: Run level 4 directory
++   *   /etc/rc5.d: Run level 5 directory
++   *   /etc/rc6.d: Run level 6 directory
+
+In this manner, /etc/rc0.d/K05atd, /etc/rc1.d/K05atd, /etc/rc2.d/K05atd, /etc/rc3.d/S95atd, /etc/rc4.d/S95atd, /etc/rc5.d/S95atd, and /etc/rc6.d/K05atd are all symbolic links to /etc/init.d/atd. Using this simple, consistent mechanism, you can customize which programs are started at boot time.
+
+# # Understanding what startup scripts do
+
+Despite all the complicated rcXs, Ss, and Ks, the form of each start-up script is really quite simple. Because they are in plain text, you can just open one with a text editor to take a look at what it does. For the most part, a run-level script can be run with a start option, a stop option, and possibly a restart option. For example, the following lines are part of the contents of the smb script that defines what happens when the script is run with different options to start or stop the Samba file and print service:
+
+```
+#!/bin/sh
+# # chkconfig: - 91 35
+# description: Starts and stops the Samba smbd and nmbd daemons \
+# used to provide SMB network services.
+# .
+.
+start() {
+KIND="SMB"
+echo -n $"Starting $KIND services: "
+daemon smbd $SMBDOPTIONS
+RETVAL=$?
+echo
+KIND="NMB"
+```

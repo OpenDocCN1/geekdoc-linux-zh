@@ -1,0 +1,15 @@
+The following is a list of different installation modes you can use to start the Red Hat Linux install process. You would typically only try these modes if the default mode failed (that is, if the screen was garbled or hardware wasn't detected). For a list of other supported modes, refer to the `/usr/doc/anacoda*/command-line.txt` file or press F2 to see short descriptions of some of these types.
+
++   - **linux text**: Type `linux text` to run installation in a text-based mode. Do this if installation doesn't seem to recognize your graphics card. The installation screens aren't as pretty, but they work just as well.
++   - **linux lowres**: Type `linux lowres` to run installation in 640x480 screen resolution for graphics cards that can't support the higher resolution.
++   - **linux nofb**: Type `linux nofb` to turn off frame buffer.
++   - **linux noprobe**: Normally, the installation process will try to determine what hardware you have on your computer. In `noprobe` mode, installation will not probe to determine your hardware; you will be asked to load any special drivers that might be needed to install it.
++   - **linux mediacheck**: Type `linux mediacheck` to check your CDs before installing. Because media checking is done next in the normal installation process, you should do this only to test the media on a computer you are not installing on.
++   - **linux rescue**: The `linux rescue` mode is not really an installation mode. This mode boots from CD, mounts your hard disk, and lets you access useful utilities to correct problems preventing your Linux system from operating properly.
++   - **linux vnc vncpassword=\*\*\*\*\*\***: Run your computer as a vnc server to allow other computers to install Red Hat Linux from your computer. The password (represented by asterisks) must be at least six characters. The client must connect to display `:1` and supply the password to be able to install.
++   - **linux dd**: Type `linux dd` if you have a driver disk you want to use to install.
++   - **linux expert**: Type `linux expert` if you believe that the installation process is not properly auto-probing your hardware. This mode bypasses probing so you can choose your mouse, video memory, and other values that would otherwise be chosen for you.
++   - **linux askmethod**: Type `linux askmethod` to have the installation process ask where to install from (local CD, NFS image, FTP, HTTP, or hard disk).
++   - **linux updates**: Type `linux updates` to install from an update disk.
+
+You can add other options to the Linux boot command to identify particular hardware that is not being detected properly. For example, to specify the number of cylinders, heads, and sectors for your hard disk (if you believe the boot process is not detecting these values properly), you could pass the information to the kernel as follows: `linux hd=720,32,64`. In this example, the kernel is told that the hard disk has 720

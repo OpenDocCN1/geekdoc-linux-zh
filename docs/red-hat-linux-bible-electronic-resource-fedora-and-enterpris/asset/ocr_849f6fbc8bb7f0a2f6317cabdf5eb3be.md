@@ -1,0 +1,6 @@
+# Part 1
+
+# # Getting Started in Red Hat Linux
+
++   - Chapter 1: An Overview of Red Hat Linux
++   - Chapter 2: Installing Red Hat Linux

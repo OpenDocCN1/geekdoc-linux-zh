@@ -1,0 +1,9 @@
+# **Table 24-2: Numeric Data Types for Columns**
+
+| Data Type | Description | Space Needed |
+| :--- | :--- | :--- |
+| `BIGINT[(M)] [UNSIGNED] [ZEROFILL]` | Can contain large integers with the following allowable values: -9223372036854775808 to 9223372036854775807 (unsigned) 0 to 18446744073709551615 (signed) | Uses 8 bytes |
+| `DECIMAL[(M,D)] [ZEROFILL]` | Contains an unpacked floating-point number (signed only). Each digit is stored as a single character. When you choose the display value (M), decimal points and minus signs are not counted in that value. The value of (M) is 10 by default. Setting D to zero (which is the default) causes only whole numbers to be used. | Uses M+2 bytes if D is greater than 0<br>Uses M+1 bytes if D is equal to 0 |
+| `DOUBLE[(M,D)] [ZEROFILL]` | Contains a double-precision, floating-point number of an average size. Values that are allowed include: -1.7976931348623157E+308 to -2.2250738585072014E-308 0 2.2250738585072014E-308 to 1.7976931348623157E+308. | Uses 8 bytes |
+| `DOUBLE PRECISION` | Same as `DOUBLE`. | Same as `DOUBLE`. |
+| `FLOAT(X) [ZEROFILL]` | Contains a floating-point number. For a single-precision floating-point number X can be less than or equal to 24. For a double-precision floating-point number, X can be between 25 and 53. The display size and number of decimals are undefined. | Uses 4 bytes |

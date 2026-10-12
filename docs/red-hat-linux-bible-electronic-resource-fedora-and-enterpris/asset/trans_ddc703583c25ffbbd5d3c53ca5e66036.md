@@ -1,0 +1,149 @@
+
+- tcl: TCL 扩展，旨在使 Linux 编程任务更易实现。
+- tcp_wrappers: 用于监控不安全服务器进程的小守护进程程序。
+- tcpdump: 用于监控网络流量的命令行实用工具。
+- tcsh: 类 csh 的命令 shell 解释器。
+- telnet: telnet 远程登录协议的客户端程序。
+- telnet-server: telnet 远程登录协议的服务器端。
+- termcap: 面向文本终端应用程序的信息。
+- tex: 用于创建 TeX 文档的工具。
+- tex-afm: 用于转换 PostScript 字体度量文件的 afm2tfm 实用工具。
+- tex-doc: 描述如何生成 TeX 格式文档的文档。
+- tex-dvips: 用于将 TeX 文件转换为 PostScript 格式的 dvips 实用工具。
+- tex-fonts: 用于 TeX 文档的字体。
+- tex-latex: 用于生成 TeX 文档的 LaTeX 前端实用工具。
+- tex-xdvi: 在 X Window System 中预览 TeX 输出文件的 xdvi 程序。
+- texinfo: 用于开发在线和印刷文档的 texinfo 系统
+- tftp: Trivial File Transfer Protocol。用于启动无盘工作站。
+- tftp-server: tftp 协议的服务器端。
+- time: 用于监控所选程序处理时间的实用工具。
+- timidity++: Timidity++ MIDI 播放器和转换器。
+- tix: Tk 小部件集的 Tix（Tk 接口扩展）插件。
+- tk: 与 Tcl 脚本配合设计的 Tk X Window System 小部件集。
+- tk-devel: Tcl 的 Tk 图形工具包。
+- tinter: Python 脚本语言的 Tinter 图形界面。
+- tmake: 创建和维护项目 makefile。
+- tmpwatch: 删除未在设定时间间隔内使用过的临时文件。
+- tps: 基于 GUI 的数据库开发工具。
+- traceoute: 追踪 IP 数据包在网络中的路由。
+- transfig: 将 FIG 或 PIC 图像转换为其他格式。
+- tree: 以树形格式显示目录内容。
+- tsciclient: VNC 和 Windows 终端服务器的客户端。
+- ttcp: 用于测试 TCP 连接吞吐量的工具。
+- tfonts-ja: 日文 True Type 字体。
+- tfonts-ko: Baekmuk 韩文 True Type 字体。
+- tfonts-zh_CN: 中文 True Type 字体。
+- tfonts-zh_TW: 中文 True Type 字体。
+- ttfprint: 将中文文本文件转换为 PostScript 的实用工具。
+- ttmkfdir: 用于创建 fonts.scale 文件的实用工具。
+- tux: 基于内核的线程 HTTP 服务器。
+- tuxracer: 以 Linux 吉祥物 Tux 为特色的 3D 赛车游戏。
+- umb-scheme: Scheme 编程语言的一种实现。
+- unarj: 用于解压缩 .arj 压缩归档的实用工具。
+- units: 将单位从一种测量类型转换为另一种。
+- unix2dos: 将 Linux/UNIX 文件转换为 DOS 文件。
+- unixODBC*: 此软件包集包含 ODBC 驱动程序管理器的工具。
+- unzip: 用于测试、列出和提取 .zip 归档中文件的实用工具。
+- up2date: Red Hat Linux 更新代理。
+- up2date-gnome: up2date 命令的 GNOME 接口。
+- urw-fonts: 35 种标准 PostScript 字体的免费版本。
+- usbbutils: 用于检查 USB 设备的实用工具。
+- usbview: 用于查看 USB 设备的 usbview 实用工具。
+- usermode: 用于管理用户数据的实用工具，如 userinfo 和 userpasswd。
+- usermode-gtk: 用于各种用户账户管理任务的图形工具。
+- utempter: libutempter 共享库和 utempter 命令。
+- util-linux: 用户和系统管理员使用的许多基本 Linux 实用工具。
+- uucp: 用于在远程主机计算机之间传输文件的经典 uucp 实用工具。
+- vconfig: 配置和调整 802.1q VLAN 参数。
+- Vf**: 此软件包集包含将矢量字体转换为位图的工具。
+- vim-common: vim 编辑器的支持文件。
+- vim-enhanced: vim 编辑器的增强功能，包括 Python 和 Perl 解释器。
+- vim-minimal: vim 编辑器的精简版本。
+- vim-X11: 基于 X Window 的 vim 编辑器实现。
+- vixie-cron: Vixie 实现的 cron 实用工具，增加了一些安全功能。
+- vlock: 用于锁定控制台会话的 vlock 实用工具。
+- vnc: 用于通过网络从远程计算机查看桌面的强大应用程序。
+- vnc-doc: 与 vnc 服务器和 vncviewer 应用程序相关的文档。
+- vnc-server: vnc 桌面查看器的服务器守护进程。
+- vorbis-tools: 与 Vorbis 音频格式相关的运行时库和实用工具。
+- vsftpd: 非常安全的 FTP 守护进程。
+- vte: 用于 GTK+ 2.0 的实验性终端模拟器部件。
+- vte-devel: 使用 vte 开发应用程序所需的文件。
+- w3c-libwww: libwww Web API，是 Linux、UNIX 和 Windows 的 C 接口。
+- w3c-libwww-apps: w3c 和 webtot 命令。
+- w3c-libwww-devel: 创建 w3c-libwww 应用程序所需的库和头文件。
+- w3m: 可作为文本模式 Web 浏览器的文本文件查看器。
+- w3m-el: emacs 的 w3m 接口。
+- w3m-el-common: w3m-el 和 w3m-el-xemacs 使用的公共文件。
+- w3m-el-xemacs: XEmacs 的 w3m 接口。
+- webalizer: 灵活的 Web 服务器日志文件分析程序。
+- wget: 简单的 HTTP 或 FTP 文件检索实用工具。
+- which: 显示所选程序的完整路径。
+- wireless-tools: 用于配置与无线以太网设备通信的工具。
+- wl: GNU emacs 的 Wanderlust IMAP4、POP 和 NNTP 客户端。
+- wl-common: wl 和 wl-xemacs 的公共文件。
+- wl-xemacs: XEmacs 的 Wanderlust IMAP4、POP 和 NNTP 客户端。
+- Wnn6-SDK: Wnn6 客户端运行时库。
+- Wnn6-SDK-devel: Wnn6 客户端开发的库和头文件。
+- words: 位于 /usr/dict 目录中的英语单词词典。
+- wordtrans*: 多语言词翻译器及 Qt、KDE 和 WWW 的前端。
+- wvdial: 用于 PPP 的 wvdial 智能拨号器。
+- x3270: 用于模拟 IBM 3270 终端的软件。
+- x3270-text: 文本模式 IBM 3270 终端模拟器。
+- x3270-x11: X Window IBM 3270 终端模拟器。
+- Xaw3d: 运行使用 MIT Athena 小部件的程序所需的 Xaw3d 库。
+- Xaw3d-devel: Xaw3d 开发工具（X 的增强 MIT Athena 小部件）。
+- xawtv: 用于 video4linux 兼容设备的简单 TV 应用程序。
+- xawtv-tv-fonts: xawtv 的位图字体。
+- Xbae: Motif 矩阵和标题部件。
+- Xbae-devel: Xbae 开发的静态库和头文件。
+- xboard: GNU chess 的图形化 X 接口。
+- xcdroast: 用于刻录自己的音乐和数据 CD-ROM 的实用工具。
+- xchat: 功能丰富的基于 X Window 的 IRC 聊天实用工具。
+- xcin: 中文字符的 X 输入法服务器。
+- xcpustate: 基于 X Window 的 CPU 使用率监视器。
+- xdelta: 二进制文件增量生成器和 RCS 替代库。
+- xdelta-devel: Xdelta 环境的静态库和头文件。
+- xemacs: 运行 emacs 文本编辑器所需的库。
+- xemacs-el: 用于 emacs 文本编辑器的各种 elisp 程序。
+- xemacs-info: emacs 文本编辑器的 info 文档。
+- xemacs-sumo*: Xemacs Lisp sumo 软件包。
+- xferstats: 从日志文件编译文件传输信息。
+- xfig: 用于创建可保存为多种格式的矢量图形的实用工具。
+- XFree86: 运行 X Window System 所需的基本软件。
+- XFree86-100dpi-fonts: 用于 X Window System 显示器的 100-dpi 高分辨率字体。
+- XFree86-75dpi-fonts: 可用于 X Window System 显示器的 75-dpi 字体。
+- XFree86-base-fonts: XFree86 核心字体。
+- XFree86-cyrillic-fonts: 与 X Window System 一起使用的西里尔字符集字体。
+- XFree86-devel: 开发基于 X 的客户端程序所需的组件。
+- XFree86-doc: 与 XFree86 相关的文档。
+- XFree86-font-utils: 安装 XFree86 字体所需的实用工具。
+- XFree86-ISO8859-*: 与中欧 Linux 版本一起使用的 X Window 字体。
+- XFree86-libs: 大多数基于 X 的程序所需的共享库。
+- XFree86-libs-data: XFree86-libs 所需的通用架构无关数据。
+- XFree86-Mesa-libGL: 使用类似 OpenGL API 的 3D 图形库。
+- XFree86-Mesa-libGLU: 常用的 GL 实用库。
+- XFree86-syriac-fonts: XFree86 的叙利亚 TrueType 字体。
+- XFree86-tools: 各种 X 实用工具。
+- XFree86-truetype-fonts: TrueType 字体集合。
+- XFree86-twm: 简单的 twm 窗口管理器。
+- XFree86-xauth: 用于编辑和显示 X 授权的实用程序。
+- XFree86-xdm: xdm X 显示管理器。
+- XFree86-xfs: XFree86 字体服务器。
+- XFree86-Xnest: 在 X 服务器内运行的 Xnest 嵌套窗口服务器。
+- XFree86-Xvfb: 无显示硬件的机器的 xvfb X 服务器。
+- xhtml-dtds: XHTML 1.0 的 XML 文档类型定义。
+- xinetd: inetd 超级服务器的安全替代品。
+- xinitrc: 用于配置 X Window System 启动的实用工具。
+- xisdnload: 用于显示 ISDN 网络连接负载活动的图形工具。
+- xloadimage: 图像显示和处理实用工具。
+- Xlt: 用于 Motif API 的 Xlt 小部件集。
+- Xlt-devel: Xlt 开发的静态库和头文件。
+- xml-common: XML 实体和 DTD 的集合。
+- xmltex: 用 TeX 编写的命名空间感知 XML 解析器。
+- xmlto: 使用 XSL 将 XML 转换为各种格式的工具。
+- xmms: 多功能的媒体播放器。
+- xmms-devel: Xmms 多媒体播放器所需的头文件。
+- xmms-skins: Xmms 媒体播放器的皮肤。
+- xojpanel: 用于在 HP 打印机上显示 LCD 内容的图形工具。
+- xosview: 用于图形化显示系统负载和 CPU 使用率的实用工具。

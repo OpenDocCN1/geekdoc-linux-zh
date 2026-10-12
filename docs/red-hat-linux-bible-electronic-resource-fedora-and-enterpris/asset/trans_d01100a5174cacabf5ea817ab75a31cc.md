@@ -1,0 +1,114 @@
+
+## 附录
+
+-   **bluez-bluefw**: 蓝牙固件加载器。
+-   **bluez-hcidump**: 一个蓝牙协议分析器。
+-   **bluez-libs**: 用于蓝牙应用程序的库。
+-   **bluez-libs-devel**: 用于蓝牙应用程序的开发库。
+-   **bluez-pan**: 蓝牙个人局域网工具。
+-   **bluez-pin**: 用于询问用户 PIN 以配对蓝牙设备的蓝牙软件。
+-   **bluez-sdp**: 蓝牙服务发现协议库。
+-   **bluez-sdp-devel**: 蓝牙服务发现协议库工具。
+-   **bluez-utils**: 蓝牙实用工具。
+-   **bogl**: 用于 Linux 帧缓冲的小型图形库。
+-   **bogl-bterm**: 显示到帧缓冲区的终端模拟器。
+-   **bogl-devel**: Ben 自有图形库的开发库。
+-   **bonobo**: GNOME 桌面环境使用的基于 CORBA 的系统。
+-   **bonobo-conf**: 用于配置选项的基于 bonobo 的系统。
+-   **bonobo-conf-devel**: 开发使用 bonobo-conf 的程序所需的库和文件。
+-   **bonobo-devel**: 用于开发 bonobo 文档模型应用程序的库。
+-   **boost**: Boost 同行评审的 C++ 库。
+-   **boost-devel**: Boost C++ 库开发工具。
+-   **boost-doc**: Boost C++ 库文档。
+-   **boost-jam**: Boost C++ 库构建工具。
+-   **boost-python**: Boost C++ 库 Python 绑定。
+-   **boost-python-devel**: Boost C++ 库 Python 开发工具。
+-   **bootparamd**: 用于启动无盘工作站的 bootparamd 启动参数服务器。
+-   **booty**: 用于 anaconda 和 up2date 启动加载程序配置的 Python 库。
+-   **bridge-utils**: 用于桥接多个以太网局域网的实用工具。
+-   **bridge-utils-devel**: Linux 以太网桥的编程接口。
+-   **brltty**: 盲文显示器驱动程序。
+-   **bug-buddy**: 一个图形化错误报告工具。
+-   **busybox**: 一个提供常见 Linux 命令简化版本的单一二进制文件。
+-   **busybox-anaconda**: 用于与 anaconda 配合使用的 busybox 版本。
+-   **byacc**: Berkeley yacc 解析器生成器。
+-   **bzip2**: 用于压缩和解压缩文件的 `bzip2` 和 `bunzip2` 实用工具。
+-   **bzip2-devel**: 与 bzip2 和 bunzip2 实用工具相关的编程工具。
+-   **bzip2-libs**: 用于使用 bzip2 的应用程序的库。
+-   **caching-nameserver**: 用于仅缓存名称服务器的配置文件。
+-   **cadaver**: 一个命令行 WebDAV 客户端。
+-   **Canna**: 一个统一的日语字符输入系统。
+-   **Canna-devel**: 与 Canna 相关的开发工具。
+-   **Canna-libs**: Canna 日语输入系统的运行时库。
+-   **cdca2wav**: 将 CD 音频文件转换为 WAV 音频文件。
+-   **ecdecl**: 从英语或反之组成 C 和 C++ 类型声明。
+-   **ediconfig**: Canna 词典的维护工具。
+-   **cdlabelgen**: 为光盘盒生成正面卡和托盘卡。
+-   **cdp**: 用于播放音乐 CD 的文本模式实用工具。
+-   **cdparanoia**: 光盘数字音频提取工具。
+-   **cdparanoia-devel**: 数字音频提取的开发工具。
+-   **cdparanoia-libs**: cdparanoia 的库。
+-   **cdrdao**: 用于以一次写盘模式写入音频 CD-ROM 的工具。
+-   **cdrecord**: 用于向可写 CD-ROM 写入数据的软件。
+-   **cdrecord-devel**: 用于向可写 CD-ROM 写入数据的开发工具。
+-   **chkconfig**: 修改系统服务运行级别信息。
+-   **chkfontpath**: 用于管理 X 服务器字体路径的命令行界面。
+-   **chromium**: 一个街机风格的射击游戏。
+-   **cipe**: VPN 守护进程和用于 Crypto IP Encapsulation (CIPE) 的内核模块。
+-   **ckermit**: 跨平台串行和网络通信软件。
+-   **cleanfeed**: 过滤传入 USENET 新闻源中的垃圾邮件。
+-   **compat-db**: Berkeley 数据库的旧版本。
+-   **compat-gcc**: 用于为 Red Hat 7.3 及更早版本构建二进制文件的兼容编译器。
+-   **compat-gcc-c++**: 为旧版 Red Hat Linux 系统生成 C++ 二进制文件。
+-   **compat-gcc-g77**: 为旧版 Red Hat Linux 系统生成 Fortran 77 二进制文件。
+-   **compat-gcc-java**: 为旧版 Red Hat Linux 系统生成 Java 二进制文件。
+-   **compat-gcc-objc**: 为旧版 Red Hat Linux 系统生成 Objective-C 二进制文件。
+-   **compat-libgcj**: Red Hat Linux 7.3 Java 编译器 (gcc) 的 Java™ 运行时库。
+-   **compat-libgcj-devel**: 用于使用 gcc java 编译器编译的库。
+-   **compat-libstdc++**: GCC 标准 C++ 库的快照实现。
+-   **compat-libstdc++-devel**: Red Hat C++ 兼容编译器的库。
+-   **compat-pwdb**: 用于管理 Linux PAM 用户认证接口的库。
+-   **compat-slang**: S-Lang 扩展语言的编程库。
+-   **comps**: Red Hat Linux 的 Comps 文件和头文件列表。
+-   **comps-extras**: 用于处理 comps 文件的工具和图像。
+-   **cosat**: 异步邮件通知客户端和服务器。
+-   **control-center**: GNOME 桌面配置工具。
+-   **coreutils**: 一组在 shell 脚本中常用的 GNU 工具。
+-   **cpio**: 将文件复制到或从多种归档格式复制到文件、磁盘或磁带。
+-   **cpp**: cpp（C 预处理器）宏处理实用工具，用于预处理 C 代码。
+-   **cproto**: 从 C 源代码创建函数原型和变量声明。
+-   **cracklib**: 用于需要测试密码“强度”的应用程序的库。
+-   **cracklib-dicts**: CrackLib 在测试密码安全性时使用的词典。
+-   **crontabs**: root crontabs 文件，由 cron 守护进程用于安排任务。
+-   **ctags**: 用于从 C 源代码生成对象标签文件的 ctags 工具。
+-   **cups**: 通用 Unix 打印系统。
+-   **cups-devel**: CUPS 的开发环境。
+-   **cups-libs**: 允许应用程序原生使用 CUPS 的库。
+-   **curl**: 用于使用各种 Internet 协议检索文件的功能丰富的实用工具。
+-   **curl-devel**: 构建使用 curl 功能的应用程序所需的文件。
+-   **cvs**: 维护文件更改的历史记录。
+-   **cyrus-sasl**: 简单认证和安全层 (SASL) 的 Cyrus 版本。
+-   **cyrus-sasl-devel**: 开发使用 cyrus-sasl 的应用程序所需的文件。
+-   **cyrus-sasl-gssapi**: 支持 GSSAPI 身份验证的 cyrus-sasl 插件。
+-   **cyrus-sasl-md5**: 用于 CRAM-MD5 和 DIGEST-MD5 身份验证的 Cyrus-sasl 插件。
+-   **cyrus-sasl-plain**: 用于 PLAIN 和 LOGIN 身份验证方案的 Cyrus-sasl 插件。
+-   **db4**: Berkeley 数据库修订版 4 的 C 库。
+-   **db4-devel**: db4 开发的头文件和库。
+-   **db4-java**: Java 开发的 db4 库。
+-   **db4-utils**: 用于管理修订版 4 Berkeley 数据库的命令行工具。
+-   **dskk-cdb**: SKK 日语输入法的一个词典服务器。
+-   **dbus**: 系统范围的消息总线服务。
+-   **dbus-devel**: 系统范围消息总线服务的开发工具。
+-   **dbus-glib**: 用于使用 D-BUS 的 GLIB 库。
+-   **dbus-qt**: 用于使用 D-BUS 的 qt 库。
+-   **dbus-x11**: DBUS 所需的 Xlib 工具，因此无需安装 X。
+-   **ddd**: Data Display Debugger，一个与命令行调试器交互的 GUI。
+-   **ddskk**: 用于 emacs 的简单平假名到汉字转换工具。
+-   **ddskk-xemacs**: 用于 XEmacs 的简单平假名到汉字转换工具。
+-   **dejagnu**: 用于测试程序的 Expect/Tcl 框架。
+-   **desktop-backgrounds-basic**: 一组用作屏幕背景的图像。
+-   **desktop-backgrounds-extra**: 补充 desktop-backgrounds-basic。
+-   **desktop-file-utils**: 创建和验证 .desktop 文件。
+-   **desktop-printing**: 用于支持拖放打印的桌面图标和代码。
+-   **dev**: 常用 Linux 设备文件。
+-   **dev86**: 一个 x86 汇编器和链接器。

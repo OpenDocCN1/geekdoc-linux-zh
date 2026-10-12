@@ -1,0 +1,37 @@
+| Dump Options | Description |
+|---|---|
+| -t date | Specify a date and time on which to base incremental backups. Any files modified or added after that time will be backed up. This option causes dump to ignore the /etc/dumpdates file. It takes a single argument, a date in the format specified by the ctime man page. |
+| -W | This option causes dump to list the file systems that need to be backed up. It does this by looking at the /etc/dumpdates file and the /etc/fstab file. |
+| -w | This works like the W option but lists the individual files that should be backed up. |
+
+Thus, a typical dump command may look similar to the following:
+
+```
+# dump 0uBf 500000 /dev/qft0 /dev/hda6
+```
+
+This command results in dump performing a level zero (full) backup of the /dev/hda6 file system, storing the backup on the tape drive /dev/qft0, and recording the results in /etc/dumpdates. The B option is used to increase the expected tape block count to 500000; otherwise, dump would prompt for a new tape far earlier than required. The dump command prints status messages to the screen, letting you know how far along the backup has progressed and estimating how much time it will take to complete. The output looks similar to this:
+
+```
+DUMP: Date of this level 0 dump: Sat Aug 23 23:33:37 2003
+DUMP: Dumping /dev/hda6 (/home) to /dev/qft0
+DUMP: Exclude ext3 journal inode 8
+DUMP: Label: /home
+DUMP: mapping (Pass I) [regular files]
+DUMP: mapping (Pass II) [directories]
+DUMP: estimated 93303 tape blocks on 0.19 tape(s).
+DUMP: Volume 1 started with block 1 at: Sat Aug 23 23:33:47
+DUMP: dumping (Pass III) [directories]
+DUMP: dumping (Pass IV) [regular files]
+DUMP: Closing /dev/qft0
+DUMP: Volume 1 completed at: Sat Aug 23 23:35:35 2003
+DUMP: Volume 1 94360 tape blocks (92.15MB)
+DUMP: Volume 1 took 0:01:48
+DUMP: Volume 1 transfer rate: 873 kB/s
+DUMP: 94360 tape blocks (92.15MB) on 1 volume(s)
+DUMP: finished in 108 seconds, throughput 873 KBytes/sec
+DUMP: Date of this level 0 dump: Sat Aug 23 23:33:37 2003
+DUMP: Date this dump completed: Sat Aug 23 23:35:35 2003
+DUMP: Average transfer rate: 873 kB/s
+DUMP: DUMP IS DONE
+```

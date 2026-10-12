@@ -1,0 +1,29 @@
+The output from this who command shows that the user name is `chris`. Here, `chris` is logged in on `tty1` (which is the monitor connected to the computer), and his login session began at 20:57 on January 13. The `IDLE` time shows how long the shell has been open without any command being typed (the dot indicates that it is currently active). `COMMENT` would show the name of the remote computer the user had logged in from, if that user had logged in from another computer on the network, or the name of the local `X` display if you were using a Terminal window (such as `:0.0`).
+
+# # Checking directories and permissions
+
+Associated with each shell is a location in the Linux file system known as the *current or working directory*. As previously mentioned, each user has a directory that is identified as the user's home directory. When you first log in to Linux, you begin with your home directory as the current directory.
+
+When you request to open or save a file, your shell uses the current directory as the point of reference. Simply give a filename when you save a file, and it will be placed in the current directory. Alternatively, you can identify a file by its relation to the current directory (relative path). Or you can ignore the current directory and identify a file by the full directory hierarchy that locates it (absolute path). The structure and use of the file system is described in detail later in this chapter.
+
+To find out what your current directory is, type the `pwd` command:
+
+```
+$ pwd
+/usr/bin
+```
+
+In this example, the current/working directory is `/usr/bin`. To find out the name of your home directory, type the `echo` command, followed by the `\$HOME` variable:
+
+```
+$ echo $HOME
+/home/chris
+```
+
+In the preceding example, the home directory is `/home/chris`. To get back to your home directory, you can simply type the `change directory` (`cd`) command. Although `cd`, followed by a directory name, changes the current directory to the directory that you choose, simply typing `cd` takes you to your home directory:
+
+```
+$ cd
+```
+
+At this point, list the contents of your home directory, using the `ls` command. Either you can type the full path to your home directory to list its contents, or you can use the `ls` command without a directory name to list the contents of the current directory. Using the `-a` option to `ls` enables you to view the hidden files (dot files) as well as all other files. With the `-l` option, you can see a long, detailed list of information on each file. (You can put multiple single-letter options together after a single dash, for example, `-la`.)

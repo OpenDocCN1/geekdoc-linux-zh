@@ -1,0 +1,21 @@
+| Module | Description |
+| :--- | :--- |
+| mod_disk_cache | Enables a disk-based storage manager to use with mod_proxy. | | | | | | | | | | | | |
+| mod_env | Controls environment variables passed to CGI scripts. | | | | | | | | | | | |
+| mod_expires | Implements time limits on cached documents by using the Expires HTTP header. | | | | | | | | | | | |
+| mod_file_cache | Allows caching of frequently requested static files. | | | | | | | | | | | |
+| mod_headers | Enables the creation and generation of custom HTTP headers. | | | | | | | | | | | |
+| mod_imap | Controls inline image map files, which have a MIME type of x-httpd-imap or that are parsed by the imap handler. | | | | | | | | | | | |
+| mod_include | Implements Server-Side Includes (SSI), which are HTML documents that include conditional statements parsed by the server prior to being sent to a client. | | | | | | | | | | | |
+| mod_info | Provides a detailed summary of the server’s configuration, including a list of actively loaded modules and the current settings of every directive defined within each module. | | | | | | | | | | | |
+| mod_ldap | Used to speed performance of Web sites using LDAP servers. | | | | | | | | | | | |
+| mod_log_config | Enables a customized format for information contained within the log files. | | | | | | | | | | | |
+| mod_mem_cache | Used with mod_cache to provide memory-based storage. | | | | | | | | | | | |
+| mod_mime | Alters the handling of documents based on predefined values or the MIME type of the file. | | | | | | | | | | | |
+| mod_mime_magic | Similar to the UNIX file command, this module attempts to determine the MIME type of a file based on a few bytes of the file’s contents. | | | | | | | | | | | |
+| mod_negotiation | Provides for the conditional display of documents based upon the Content-Encoding, Content-Language, Content-Length, and Content-Type HTTP header fields. | | | | | | | | | | | |
+| mod_proxy | Implements an HTTP 1.1 proxy/gateway server. | | | | | | | | | | | |
+| mod_proxy_connect | Extension to mod_proxy to handle CONNECT requests. | | | | | | | | | | | |
+| mod_proxy_ftp | Extension to mod_proxy to handle FTP requests. | | | | | | | | | | | |
+| mod_proxy_http | Extension to mod_proxy to handle HTTP requests. | | | | | | | | | | | |
+| mod_rewrite | Provides a flexible and extensible method for redirecting client requests and mapping incoming URLs to other locations in the file system. | | | | | | | | | | | |

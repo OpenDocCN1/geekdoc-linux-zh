@@ -1,0 +1,112 @@
+
+- **libIDL**: 用于解析接口定义语言的库。
+- **libIDL-devel**: libIDL 的开发库和头文件。
+- **libjpeg**: 用于处理 JPEG 图像的 libjpeg 库。
+- **libjpeg-devel**: 用于创建使用 JPEG 图像的程序的头文件和库。
+- **libmng**: 用于处理 MNG 和 JNG 格式图像的库。
+- **libmng-devel**: 与 libmng 库相关的头文件。
+- **libmng-static**: libmng 库的静态链接版本。
+- **libmrproject**: 用于访问 Mr. Project 数据的库。
+- **libmrproject-devel**: libmrproject 的开发文件。
+- **libobjc**: Objective C 运行时库。
+- **libogg**: Ogg 位流格式库。
+- **libogg-devel**: 用于开发 ogg 应用的文档和头文件。
+- **libole2**: 结构化存储 OLE2（对象链接与嵌入）库。
+- **libole2-devel**: 用于开发 OLE2 结构化存储文件应用的头文件。
+- **libpcap**: 用于监控低层网络流量的用户级钩子。
+- **libpng10**: 用于处理 PNG 图像文件的 libpng 库的旧版本。
+- **libpng10-devel**: 用于开发使用 PNG 图像的程序的库和头文件。
+- **libpng**: 用于处理 PNG 图像文件的 libpng 库。
+- **libpng-devel**: 开发使用 PNG 图像的程序所需的库和头文件。
+- **libraw1394**: 提供低层 FireWire 访问的库。
+- **libraw1394-devel**: 用于使用 libraw1394 功能的开发库。
+- **librep**: 与 librep Lisp 方言相关的工具和文档。
+- **librep-devel**: 与 librep Lisp 方言相关的头文件和工具。
+- **libsvg**: 基于 libart 的 SVG 库。
+- **libsvg-devel**: 开发使用 libsvg 的应用程序所需的开发文件。
+- **libsvg2**: 基于 libart 的 SVG 库。
+- **libsvg2-devel**: 开发使用 libsvg2 的应用程序所需的开发文件。
+- **libsane-hpijs**: 用于 HP 多功能设备的 SANE 扫描仪驱动。
+- **libsoup**: 使 GNOME 库能够访问 HTTP 服务器的库。
+- **libsoup-devel**: libsoup 的开发工具。
+- **libstdc++**: 运行 C++ 应用程序所需的 EGCS 库。
+- **libstdc++-devel**: 标准 C++ 开发库。
+- **libtabe**: 用于 xcin 输入法的中文词库库。
+- **libtabe-devel**: 开发使用 libtabe 的应用程序所需的头文件和库。
+- **libtermcap**: 用于访问 termcap 数据库以管理字符显示的库。
+- **libtermcap-devel**: 开发访问 termcap 数据库的程序的组件。
+- **libtiff**: 用于使用和保存 TIFF 图像文件的库。
+- **libtiff-devel**: 用于在应用程序中处理 TIFF 图像文件的开发工具。
+- **libtool**: libtool shell 脚本，用于构建通用共享库。
+- **libtool-libs**: libtool 工具的运行时库（用于构建通用共享库）。
+- **libtool-libs13**: libtool-libs1.3 中共享库的兼容性库。
+- **libungif**: 使用和保存 GIF 图像文件所需的库函数。
+- **libungif-devel**: 创建用于加载和保存 GIF 图像的应用程序的开发工具。
+- **libungif-progs**: 用于处理 GIF 图像的多个实用程序。
+- **libunicode**: Unicode 操作库。
+- **libunicode-devel**: 操作 unicode 字符串的开发工具。
+- **libusb**: 方便访问 USB 设备的库。
+- **libusb-devel**: 创建使用 libusb 的应用程序所需的开发文件。
+- **libuser**: 用户账户管理的标准化接口。
+- **libuser-devel**: 开发使用 libuser 的应用程序的头文件和静态库。
+- **libvorbis**: Ogg Vorbis 开源音频压缩编解码器及运行时库。
+- **libvorbis-devel**: 开发使用 libvorbis 的应用程序的头文件和文档。
+- **libwnck**: 用于实现分页器和任务列表的库。
+- **libwnck-devel**: 使用 libwnck 的应用程序的开发文件。
+- **libwpd**: 处理 WordPerfect 文档的库。
+- **libwpd-devel**: 处理 WordPerfect 文档的开发工具。
+- **libwpd-tools**: 用于转换 WordPerfect 文档的工具。
+- **libwxstreams**: 用 C++ 编写的网络编程库。
+- **libwxstreams-devel**: 使用 libwxstreams 的应用程序的开发文件。
+- **libxml**: 用于处理 XML 文件的函数库。
+- **libxml-devel**: 包含用于开发使用 libxml 库的应用程序的工具。
+- **libxml2**: 用于处理 XML 和 HTML 文件的库，包括 DTD 支持。
+- **libxml2-devel**: 使用 libxml2 的应用程序的开发文件。
+- **libxml2-python**: libxml2 库的 Python 绑定。
+- **libxslt**: 使用 XSLT 转换机制将 XML 转换为结构的工具。
+- **libxslt-devel**: 开发使用 libxslt 的应用程序所需的库和包含文件。
+- **libxslt-python**: libxslt 库的 Python 绑定。
+- **licq**: licq ICQ 聊天工具。
+- **licq-gnome**: licq 的 GNOME 前端。
+- **licq-kde**: licq 的 KDE 前端。
+- **licq-qt**: licq 的 QT 前端。
+- **licq-text**: licq 的文本模式前端。
+- **line**: 用于简化网络程序编写的库。
+- **line-devel**: 使用 line 功能的应用程序的开发文件。
+- linuxdoc-tools: 基于 SGML 的文本格式化包。
+- lm_sensors: 用于与监控计算机硬件的传感器接口的模块。
+- lm_sensors-devel: 用于与硬件监控器接口的软件工具。
+- lockdev: 用于锁定设备的 liblockdev 库。
+- lockdev-devel: liblockdev 库的静态库版本和头文件。
+- logrotate: 轮转增长的日志文件。
+- logwatch: 可定制的日志文件分析程序。
+- losetup: 用于将普通文件映射到虚拟块设备的 Linux 循环设备工具。
+- lrzsz: lrz 和 lsz 实用程序，用于在 Linux 中提供 Zmodem 功能。
+- lskl: 用于列出锁文件的实用程序。
+- lsof: 用于列出打开文件信息的实用程序。
+- ltrace: 用于运行并跟踪正在运行命令活动的工具。
+- lv: lv 多语言文件查看器及相关实用程序。
+- lvm: 用于管理物理硬盘卷的逻辑卷管理器工具。
+- lynx: 基于文本的互联网网页浏览器。
+- m2crypto: Python 脚本中对 OpenSSL 的支持。
+- m4: UNIX m4 宏处理器的实现。
+- macutils: 用于处理常与 Macintosh 计算机一起使用的文件的实用程序。
+- Maelstrom: Maelstrom（打小行星）游戏。
+- magicdev: 用于检测和播放音频 CD 的 magicdev 守护进程。
+- MagicPoint: 基于 X11 的演示工具。
+- mailcap: 用于定义特殊数据类型如何处理的配置文件。
+- mailman: 面向 Web 的邮件列表管理器。
+- mailx: 用于轻松发送纯文本电子邮件的小型实用程序。
+- make: 从源代码构建和安装软件的实用程序。
+- MAKEDEV: 用于在 `/dev` 目录中创建和维护文件的程序。
+- man: 显示系统手册页的设施。
+- man-pages*: 一组包含不同语言手册页的软件包。
+- mars-nwc: NetWare 文件和打印服务器仿真组件。
+- mc: 用于管理各种文件接口的 Midnight Commander 可视化 shell。
+- mdam: 软件 RAID 阵列控制实用程序。
+- memprof: 用于内存分析与泄漏检测的工具。
+- metacity: metacity 窗口管理器。
+- mfw: Emacs 的消息传递函数。
+- mfw-common: mfw 和 mfw-xemacs 中使用的函数。
+- mfw-xemacs: XEmacs 的消息传递函数。
+- mgetty: mgetty 对 getty 的实现，用于允许通过串行线路登录。

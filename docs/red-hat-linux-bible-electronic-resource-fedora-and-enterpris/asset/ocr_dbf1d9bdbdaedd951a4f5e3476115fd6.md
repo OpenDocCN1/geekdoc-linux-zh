@@ -1,0 +1,3 @@
+You can replace Sendmail with Postfix as your mail-transfer agent in Red Hat Linux. To make the transition a bit easier, Red Hat provides the `alternatives` feature. `Alternatives` let you to switch one MTA for another by linking essential files to the package you choose.
+
+Sooner or later, an alias definition in `/etc/aliases` will become unmanageable. At this point, mailing list software, such as **majordomo**, can provide the flexibility necessary to manage a large distribution list, with the added benefits of archiving, moderation, digesting, and automated administration.

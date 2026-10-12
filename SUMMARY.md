@@ -1790,6 +1790,7 @@
 +   [Red Hat Linux 管理员手册 (Professional Mindware)](docs/red-hat-linux-administrators-handbook-professional-mindware/README.md)
 +   [Red Hat Linux 与 Fedora 战指南](docs/red-hat-linux-and-fedora-unleashed/README.md)
 +   [Red Hat Linux 圣经](docs/red-hat-linux-bible/README.md)
++   [Red Hat Linux 圣经 [电子资源]：Fedora 和企业版](docs/red-hat-linux-bible-electronic-resource-fedora-and-enterpris/README.md)
 +   [Red Hat Linux Enterprise 6 管理指南](docs/red-hat-linux-enterprise-6-administration/README.md)
 +   [Red Hat Linux Fedora 3 发布指南](docs/red-hat-linux-fedora-3-unleashed/README.md)
 +   [红帽 Linux Fedora 一站式桌面参考傻瓜书](docs/red-hat-linux-fedora-all-in-one-desk-reference-for-dummies/README.md)

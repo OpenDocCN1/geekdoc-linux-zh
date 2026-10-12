@@ -1,0 +1,24 @@
+password you would have to use an unimaginable amount of computing power to try to guess the password. This is also known as the *brute force* method of decryption.
+
+As personal computing power has increased nearly exponentially, the DES algorithm has had to be retired. In its place, after a very long and interesting search, the United States government has accepted the Rijndael algorithm as what it calls the AES (Advanced Encryption Standard). Although the AES algorithm is also subject to brute force attacks, it requires significantly more computing power to crack than the DES algorithm does.
+
+For more information on AES, including a command line implementation of the algorithm, you can visit `http://aescrypt.sourceforge.net/`.
+
+# ## Public-key cryptography
+
+Public-key cryptography does not suffer from key distribution problems, and that is why it is the preferred encryption method for secure Internet communication. This method uses two keys, one to encrypt the message and another to decrypt the message. The key used to encrypt the message is called the public key because it is made available for all to see. The key used to decrypt the message is the private key and is kept hidden. The entire process works like this:
+
+Imagine that you want to send me a secure message using public-key encryption. Here is what we need:
+
++   1.  I must have a public and private key pair. Depending on the circumstances, I may generate the keys myself (using special software) or obtain the keys from a key authority.
++   2.  You wish to send me a message, so you first look up my public key (or more accurately, the software you are using looks it up).
++   3.  You encrypt the message with the public key. At this point, the message can only be decrypted with the private key (the public key cannot be used to decrypt the message).
++   4.  I receive the message and use my private key to decrypt it.
+
+# ## Secure Socket Layer
+
+A classic implementation of public-key cryptography is with SSL (secure socket layer) communication. This is the technology that enables you to securely submit your credit card information to an online merchant. The elements of an SSL encrypted session are as follows:
+
++   *   SSL Enabled Web Browser (Mozilla, Internet Explorer, Opera, Konquerer, etc.)
++   *   SSL Enabled Web Server (Apache)
++   *   SSL Certificate

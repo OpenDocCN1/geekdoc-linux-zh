@@ -1,0 +1,11 @@
++   2. Right-click the Battery Charge monitor applet, then select Preferences. Figure 10-7 shows the Battery Charge Monitor Preferences window and the applet in the panel.
+
+![](bbox=[0.23, 0.13, 0.78, 0.45])
+
++   3. Change any of the following values related to your battery monitor:
++   	- **Battery color levels** — You can change the levels at which the battery icon changes from green, yellow, orange, and red.
++   	- **Warnings** — Select whether or not you want to be notified (with a pop-up) when the battery charge is low or fully charged. You can also select to have the laptop beep if either case is true.
++   	- **Suspend command** — Add a command to put the laptop in suspend mode. (Try the `apm -s` command as described in the next section.) With a Suspend command set, you can right-click the icon and choose Suspend Computer to suspend your laptop.
++   	- **Appearance** — Select the Appearance tab. From there, you can choose which icons appear on the applet (battery, power cord, and/or percent charged). You can also change whether the progress bar on the battery moves up or down as power empties.
+
+> **NOTE:** If, when you try to add the Battery Charge Monitor icon to the panel, a pop-up window tells you that the operation fails, it may be that the apmd daemon isn't running. You can try starting the apmd service (as root user; type `service apmd start`). If, however, APM is shown as not supported in your dmesg file, you can try turning on APM support in your laptop’s BIOS.
