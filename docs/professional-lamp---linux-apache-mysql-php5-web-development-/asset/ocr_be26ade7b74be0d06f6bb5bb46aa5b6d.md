@@ -1,0 +1,52 @@
+# Code Efficiency
+
+them all together and output the resulting string. With echo you can do that, but you don't have to, simply by using a comma (, ) to separate the strings instead of a period (.).
+
+When concatenating, PHP has to allocate memory for the string being built, and reallocate it for each concatenation operation. That introduces a delay. Also, none of the string can be output before the entire string has been built, so if one of the items being concatenated is a function, everything has to wait for the function. Compare the results of running these statements:
+
+```
+```
+print "This string takes ".sleep(15)."too long to display.";
+echo "This string takes ".sleep(15),"too long to display.";
+echo "This string takes ", sleep(15),"too long to display.";
+```
+```
+
+This works for output, but something similar can be done for strings that are to be concatenated into a variable: start an output buffer, echo all the bits of the string, read the buffer contents into the variable, and finish up by ending and cleaning the buffer. For example:
+
+```
+```
+ob_start();
+for($i=0; $i<100; $i++ ) echo $i; ";
+$zero_to_ninetynine = ob_end_clean();
+```
+```
+
+# **for($i=0; $i<count($array); $i++)**
+
+Don't do this. Doing this means that PHP has to look at the size of the array after each iteration. Sure, the size of the array is maintained along with its contents, so its elements don't actually need to be *counted*, but the size still needs to be looked up — in case the size of the array changed in the course of the loop. If you know it won't, then use this:
+
+```
+```for($i=0, $count_array=count($array); $i<$count_array; $i++)```
+```
+
+This is just as effective and saves the extra lookup. If the order in which the array elements are traversed is unimportant, the intermediate variable can be avoided:
+
+```
+```for($i=count($array)-1; $i>=0; $i++)```
+```
+
+Remember the -1 and >= if you do this.
+
+# Scratch Variables
+
+Especially when you're using an associative array, if you're going to be looking at the same array element multiple times, putting its value in a local variable (by reference, if you're thinking of changing it) will save the work involved in identifying which array element `$array['foo']` actually refers to. The same goes for array properties. Consider this:
+
+```
+```
+$this->p_consts->Delta[$i][$k] = $this->p_consts->Delta[$i][$this->p_consts->s($i)-1];
+$this->n[][$i][$k] = $this->n[][$i][$this->p_consts->s($i)-1];
+```
+```
+
+`$this->p_consts` is used a fair bit; in particular, its Delta and s properties. You could create scratch variables to store the values of those two properties (assigning Delta by reference because you modify its value) and save you from having to look them up via `$this->p_consts` every time:

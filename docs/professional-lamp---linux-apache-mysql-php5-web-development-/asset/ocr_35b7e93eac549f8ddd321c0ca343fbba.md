@@ -1,0 +1,57 @@
+# PHP Configuration
+
+Once you've retrieved all the current runtime settings, you'll need to collect a list of all the `<setting />
+` tag values from the XML configuration file. To do that, you use `SimpleXML::xpath()` function again:
+
+```
+```
+// Cycle through setting elements
+$settings = $this->xml->xpath('/environment/setting');
+```
+```
+
+After you get an array of all the `setting` elements, you need to cycle through them, and check the runtime configuration to see if they match. Before you directly compare the two values, you need to convert each value in the XML configuration file to match expected results from `ini_get_all()`. Normally when setting values in `php.ini`, you can use several different values to mean “true” or “false.” For true, you can use `on`, `true`, `yes`, or `1`; `false` is represented by `off`, `false`, `no`, or `0`. As mentioned earlier, when returning settings using `ini_get()` or `ini_get_all()`, values representing on or true are returned `as`, but values of `off` or `false` will be returned as an empty string, `
+
+```
+```
+foreach ($settings as $setting)
+{
+    $value = $setting['value'];
+    // Convert boolean $value to ini_get() values
+    switch (strtolower($value))
+    {
+        case 'off':
+        case '0':
+        case 'false':
+        case 'no':
+            $value = '';
+            break;
+        case 'on':
+        case 'true':
+        case 'yes':
+            $value = '1';
+            break;
+    }
+}
+```
+```
+
+Next, you retrieve the name of the configuration variable. Because accessing the attribute like an array returns a `SimpleXML` element object, you need to cast it explicitly as a `string` to compare it against the string value later on:
+
+```
+```
+// Flatten string
+$name = (string) $setting['name'];
+```
+```
+
+Now that you have both the name and value of the setting called for in the XML configuration file, you can compare it against the runtime setting. First, you check to see if the configuration setting even exists in the runtime configuration array, and then you compare it against the value in the XML file. Taking it one step further, if the setting is present but doesn't match, attempt to change the current runtime configuration variable using `ini_set()`. If the setting doesn't match **and** you cannot change the setting at runtime, an error message will be generated and the function will return `false`:
+
+```
+```
+// Check config value, set if needed
+if (tarray_key_exists($name, $cfg) or
+    $value !=
+        $cfg[$name]['local_value'] and
+```
+```

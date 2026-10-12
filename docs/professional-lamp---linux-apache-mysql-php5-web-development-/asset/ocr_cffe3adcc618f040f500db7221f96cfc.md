@@ -1,0 +1,22 @@
+whether to use AJAX and ask yourself whether AJAX will be *benefical* for the application you are developing. If you are running into serious usability problems that require elaborate workarounds, chances are that AJAX was not the appropriate development model.
+
+In addition to the usability problems, there are the problems of support. Having an application that relies on AJAX without any fallback for support for older browsers can block out a very large portion of your potential user base. Even for current browsers, some corporations require *JavaScript* to be partially or fully disabled for security reasons. Such users would also be blocked out of your application, if it does not degrade well and offer traditional web application functionality as a safety net. Whether this is acceptable will depend on the nature of your application, because with some applications it is not practical to offer a traditional version. Its acceptability will also depend on our expected audience and their likely choice of browser.
+
+# ## Further Information
+
+Further information about the topics discussed in this chapter can be found in the following resources:
+
++   * Dynamic HTML and XML: The XMLHttpRequest Object. Apple, Inc.  
++     <http://developer.apple.com/internet/webcontent/xmlhttpreq.html>  
++   * XMLHttpRequest: Wikipedia, the free encyclopedia.  
++     <http://en.wikipedia.org/wiki/XMLHttpRequest>  
++   * AJAX: Wikipedia, the free encyclopedia. <http://en.wikipedia.org/wiki/AJAX>  
++   * XMLHttpRequest: XULPlanet.com.  
++     <http://xulplanet.com/references/objref/XMLHttpRequest.html>  
++   * XML Extras: The Mozilla Foundation. <http://www.mozilla.org/xmlextras/>  
++   * AJAX Patterns: <http://www.ajaxpatterns.org/>  
++   * AJAX Matters: <http://www.ajaxmatters.com/>
+
+# ## Summary
+
+In this chapter, you learned how to use AJAX to push much of the processing of web applications onto the client. You also learned that AJAX isn’t some new trend, but is in fact the outgrowth of several older techniques, each of which has some drawbacks that make them less than ideal. This chapter showed you how to use the AJAX interfaces, and how to handle the responses from the client. It also touched on some of the AJAX libraries you can use, and even discussed the situations where you shouldn’t use it.

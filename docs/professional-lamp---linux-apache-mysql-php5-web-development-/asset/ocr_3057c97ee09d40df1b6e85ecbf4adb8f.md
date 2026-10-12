@@ -1,0 +1,31 @@
+# # Chapter 13
+
+# ## Strengths and Weaknesses
+
+The strengths for this package are:
+
++   - Changing the layout and placement of the modules proves to be an easy task and WYSIWYG in nature. In addition, you are able to break the traditional two- or three-column layout and add subcolumns to all three traditional columns.
+
++   - Text modules keep track of revisions, and allow you to immediately view or restore old versions with one click. It would be nice if it showed *who* made the revision, but perhaps that feature will be available in future releases.
+
++   - The Preview feature lets you see what effect your changes have on the look of the site, without having to log out as an admin.
+
++   - Themes are a bit more esoteric and design-driven, as opposed to being function-driven as in some other CMSs.
+
+One weakness is in user administration — the admin can’t see all the permissions or module responsibil-ities an individual user has. For example, if Bob is going to be on vacation, and you wanted to assign Bob’s modules to someone else, there is no easy way to see what Bob has the ability to do and what modules he can modify.
+
+There is a reasom CMS is on Sourceforge’s Top 10 “Most Active” download list. ExponentCMS is by *far* the easiest to administer open source CMS out there. Its strengths are more behind-the-scenes, however, as its focus is not necessarily on interactivity with the masses visiting the site, but on a core group of contributors over which the admin has control. If you’re in search of a good-looking “out of the box” site, ExponentCMS should be on your list to evaluate.
+
+# ## XOOPS
+
+XOOPS (eXtensible Object Oriented Portal System) is another popular comprehensive CMS available at Sourceforge, or at <http://www.xoops.org>. The most recent version is 2.1.1, and that is the version being discussing here (this is actually a pre-release to version 2.2, so keep that in mind).
+
+# ### Installation Notes
+
+The XOOPS team has written a very comprehensive installation guide that not only walks you through the installation and setup process, but that also gives you the developer detailed information about what files are going where, and why. You should read this document—it can be found at <http://docs.xoops.org/modules/xdocman/index.php?doc=xu-002&lang=en>.
+
+A few things to point out before you install:
+
++   - After unzipping the tar file, you will need to copy the html folder to the website root directory (such as htdocs or public_html). The XOOPS team recommends you rename this folder to xoops, but that is really up to you.
+
++   - If you are installing on a remote server, you will need to create the database, user, and password prior to installation. If you are installing locally, the installation wizard will complete this task for you.

@@ -1,0 +1,52 @@
+First, create the following image-rotating class, in a file called class.ImageRotate.php :
+
+```
+<?php
+class ImageRotate
+{
+    public $rotation = 0;
+
+    // Rotate the image
+    public function process($gd_img)
+    {
+        if ($this->rotation)
+        {
+            // Get "filler" background color
+            $color = imagecolorallocate($gd_img, 255, 255, 255);
+
+            // Rotate the image
+            $gd_img = imagerotate($gd_img, $this->rotation, $color);
+        }
+
+        return $gd_img;
+    }
+}
+?>
+```
+
+Then, add the following method to the WebImage class definition:
+
+```
+// Rotate the image
+public function rotate($degrees)
+{
+    require_once 'class.ImageRotate.php';
+
+    $ir = new ImageRotate();
+
+    // Set rotate parameters
+    $ir->rotation = $degrees;
+
+    // Perform the rotation
+    $this->gdresource = $ir->process($this->gdresource);
+}
+```
+
+This one is a bit simpler than the resize method, but very similar. The rotate() method of WebImage takes one parameter: the degrees you want to rotate the image. Like resize() , rotate() includes the requisite class file, sets the rotation parameter, and then performs the rotation.
+
+Inside ImageRotate , it’s pretty straightforward. The process() method checks to see if a rotation value is provided, and then grabs a color to be used as a background color. If you’re rotating 90, 180, or 270 degrees, you won’t see the color, but if you’re using any other value, the image will grow to enclose the new skewed original, and the background color will fill any areas not covered by the rotated source. After the color is set, the image is rotated using the imagerotate() function:
+
+```
+// Rotate the image
+public function process($gd_img)
+```

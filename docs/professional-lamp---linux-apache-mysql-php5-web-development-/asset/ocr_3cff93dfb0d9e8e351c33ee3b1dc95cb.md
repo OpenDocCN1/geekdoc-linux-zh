@@ -1,0 +1,33 @@
+# ## Chapter 13
+
+# ### Serendipity
+
+Another fabulous and well-structured blog is Serendipity, available for download http://www.s9y.org. It boasts some heavy PHP hitters on its development team, including Sterling Hughes, George Schlossnagle, Wex Furlong, and Sebastian Bergmann, among others. It is also the blog package of choice for many core PHP developers.
+
+# #### Installation Notes
+
+Like Wordpress, installation is a quick and easy job. You should be running PHP 4 or greater and MySQL, PostgreSQL, or SQLite for your database. The only other thing to keep in mind is to remember to restrict the file permissions after installation, as outlined in their extensive installation documentation found at http://www.s9y.org/index.php?node=36.
+
+# #### General Overview of Features
+
+Serendipity offers similar functionality to Wordpress, such as allowing the admin to set permissions for users so that not all users can publish blog entries, and moderating comments or enabling CAPTCHAs for spam prevention. With Serendipity, you can add images to your blog posts, change themes for your site, import and export data, and offer trackback and pingback for others to reference your posts. Also akin to Wordpress is the standards compliant code and RSS feeds that can be offered for others.
+
+Some additional functionality not readily seen in Wordpress includes:
+
++   * Optional Wysiwyg editors: HTM LE Area, FCKeditor, xinha, TinyMCE
++   * MySQL, PostgreSQL and SQLite support
++   * Multuser blogs: One installation of serendipity can serve independent weblogs.
+
+# #### Summing It Up
+
+Serendipity is simple, clean, and solid. If you’re looking for a blog that simply does what it’s supposed to do and is very reliable, Serendipity is an excellent choice.
+
+# ### Wiki
+
+Just as programmers, coders, and web developers alike use software to manage development and deployment of software packages, they are turning to wiki to collaborate and create comprehensive documentation to complement those packages.
+
+# #### The Origin of Wiki
+
+According to Wikipedia, the word wiki is based on a Hawaiian term, wiki wiki, meaning “quick or informal,” specifically when referring to the buses at the Honolulu airport. The phrase was coined by Howard ("Ward") Cunningham back in 1995 as a reference to the Portland Pattern Repository, a collaboration of software development ideas.
+
+As the Internet has grown to reach the masses, the popularity of the wiki concept has grown substantially, particularly in the open source community where many people assume a community responsibility to

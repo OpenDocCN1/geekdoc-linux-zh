@@ -1,0 +1,27 @@
+# Advanced MySQL
+
+![](bbox=[0.19, 0.09, 0.53, 0.25])
+
+Notice that the query specifies exactly what columns you want to return from each table and the number of columns in the list must match across tables. What would happen if you selected a different number of columns for each table? Take a look at this query, in which you will select all records from each table (the Used_Vehicle  table having more columns than the New_Vehicles  table).
+
+```
+(SELECT * FROM New_Vehicles) UNION (SELECT * FROM Used_Vehicles);
+```
+
+Try to run this query against the database, and it will return the following:
+
+```
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+```
+
+MySQL quickly returns an error letting you know that your column lists are different lengths. Any combination of columns in the list will be valid, as long as there is the same number of columns in each list. If there are differently named columns in each corresponding location in the column lists, MySQL will use the name of the column from the first list when returning rows. Take a look at the following query:
+
+```
+(SELECT color FROM New_Vehicles) UNION (SELECT modelyear FROM Used_Vehicles);
+```
+
+When the database is queried, it will show the following:
+
+![](bbox=[0.19, 0.65, 0.4, 0.81])
+
+As expected, MySQL used the color  name for the column, from the first column list. This example, however, illustrates one possible future point of confusion. The column type for color  in the tables was set as a varchar , but the column type for modelyear is an int . When performing a union of the two tables, MySQL disregards the column type and happily combines the tables. This might not necessarily be a problem in most situations, but if you’re enforcing referential integrity outside of MySQL (in PHP perhaps), there might be conflicts if the external code is expecting a specific type of return data, and MySQL sends a mixed result such as this.

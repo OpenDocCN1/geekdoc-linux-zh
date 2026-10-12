@@ -1,0 +1,48 @@
+# Chapter 10
+
+```
+else if ($this->ratio)
+{
+  $new_width = ceil($this->ratio * $old_width);
+  $new_height = ceil($this->ratio * $old_height);
+}
+```
+
+The rest of the method is where the actual resizing is performed, if needed. When resizing in GD, you don’t actually just resize an existing resource, but instead you create a new image with the new dimensions and copy the original image to the destination — GD takes care of the resizing internally. In this method, you’re using the imagecopyresampled()  function; when resizing images using GD, you can use either the imagecopyresized()  function or the imagecopyresampled()  function. Both are means to the same end, but the latter does a little better job keeping the end result “smooth” as opposed to the off-pixeled results from the former. Take a look:
+
+```
+// Resize only if dimensions changed
+if ($new_width and $new_height)
+{
+  // Create resize target
+  $temp = imagecreatetruecolor($new_width, $new_height);
+
+  // Set alpha parameters
+  imagesavealpha($temp, true);
+  imagealphablending($temp, false);
+
+  // Resize the image
+  imagecopyresampled($temp,
+                     $gd_img,
+                     0,
+                     0,
+                     0,
+                     0,
+                     $new_width,
+                     $new_height,
+                     $old_width,
+                     $old_height);
+
+  $gd_img = $temp;
+}
+
+return $gd_img;
+```
+
+Note the use of the alpha-saving functions, imagesavealpha()  and imagealphablending() . These are used to inform GD to retain and use the alpha transparency information from the source image when performing the resizing. If you ignore the alpha, any transparency you might have in a transparent GIF or PNG could be destroyed.
+
+Finally, at the end of the method, the GD image resource is returned.
+
+# Rotating Images
+
+In addition to resizing your images on the server, a common image-editing requirement is the ability to rotate images after they’ve been uploaded. To implement this operation, you’re going to create another image-action class file like before, and add another method to call the function to WebImage

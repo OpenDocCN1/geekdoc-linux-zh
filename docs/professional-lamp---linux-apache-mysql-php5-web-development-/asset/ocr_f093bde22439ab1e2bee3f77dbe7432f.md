@@ -1,0 +1,46 @@
+```
+{
+ // Circle->calculateArea() implementation
+ }
+```
+
+In this small example, you could have easily created a method inside the base Shape class and simply extended it to the subclass Circle . Such an approach, while possible, is limiting, due to the fact that classes in PHP can extend only one base class.
+
+PHP5 classes can, however, implement multiple interfaces, separated by commas:
+
+```
+interface GeometricOperations
+{
+ public getOrigin();
+}
+```
+
+```
+interface TwoDimensionalOperations
+{
+ public calculateArea();
+}
+```
+
+```
+class Circle implements TwoDimensionalOperations, GeometricOperations
+{
+ // Implement the required methods
+ public getOrigin()
+ {
+ // Circle->getOrigin() implementation
+ }
+ public calculateArea()
+ {
+ // Circle->calculateArea() implementation
+ }
+}
+```
+
+Using both inheritance and multiple interfaces, in conjunction with inherited interfaces, you can build some seriously complex and powerful applications using simple building blocks.
+
+# Magic Methods
+
+To help make things easier when using object-oriented programming, PHP5 has provided a handful of so-called “magic methods.” These magic methods are specially named methods for all classes, which are called automatically in certain scenarios.
+
+You’ve already seen two magic methods in this chapter so far, __construct and __destruct. They are called when an object is instantiated or destroyed, correspondingly. PHP5 includes a handful of magic methods that you can implement to provide special functionality for your classes. The three magic methods — __call, __get, and __set — all allow you to access methods and properties of an object that haven’t been explicitly defined. A sixth, __toString(), defines what happens when an object is directly used as a string.

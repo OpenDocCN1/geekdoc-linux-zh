@@ -1,0 +1,60 @@
+# ## Chapter 2
+
+In PHP5, an interface is defined using theinterface   keyword, and implemented using theimplements   keyword, like the following:
+
+```
+```
+interface TwoDimensionalOperations
+{
+    public calculateArea();
+}
+
+class Circle implements TwoDimensionalOperations
+{
+    public calculateArea();
+    {
+        // Implementation of calculateArea, specific to this Circle class
+    }
+}
+```
+```
+
+By creating the interface TwoDimensionalOperations   , you can then create classes for different shapes — Circle, Square, Triangle, Pentagon, etc. — all implementing the interface. This way, you can be assured that by implementing TwoDimensionalOperations   , all of your shape classes will have a calculateArea   method.
+
+When using interfaces, it is important to keep a couple of things in mind. First, if a class implements an interface but does not define the methods from that interface, a fatal error will occur. Second, all methods defined in an interface must have public visibility.
+
+With PHP5, a class can both extend a base class and implement an interface at the same time:
+
+```
+```
+class Circle extends Shape implements TwoDimensionalOperations
+{
+    // Circle implementation
+}
+```
+```
+
+In another neat trick, an interface can use the extends   keyword to inherit from other interfaces:
+
+```
+```
+interface GeometricOperations
+{
+    public getOrigin();
+}
+
+interface TwoDimensionalOperations extends GeometricOperations
+{
+    public calculateArea();
+}
+
+class Circle extends Shape implements TwoDimensionalOperations
+{
+    // Implement the required methods
+    public getOrigin()
+    {
+        // Circle->getOrigin() implementation
+    }
+    public calculateArea()
+```
+```

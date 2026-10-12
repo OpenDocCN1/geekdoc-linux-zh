@@ -1,0 +1,304 @@
+
+## 第 10 章
+
+```php
+        }
+
+        return $gd_img;
+    }
+```
+
+## 添加标志
+
+你将在 `WebImage` 类中添加的最后一个功能是能够在图像上放置标志或水印。
+
+首先创建 `class.ImageLogo.php` 文件：
+
+```php
+<?php
+
+class ImageLogo
+{
+    public $logoFile;
+    public $ratio = 1;
+    public $location = array('x'=> '', 'y' => '');
+    public $padding = 0;
+
+    public function process($gd_img)
+    {
+        if ($this->logoFile)
+        {
+            require_once 'class.WebImage.php';
+
+            // Load the logo
+            $logo = new WebImage();
+            $logo->load($this->logoFile);
+
+            // Resize logo if needed
+            if ($this->ratio and $this->ratio != 1)
+            {
+                $logo->resize($this->ratio);
+            }
+
+            // Determine logo placement (x)
+            switch ($this->location['x'])
+            {
+                case 'l':
+                    $logo_x = $this->padding;
+                    break;
+                case 'r':
+                    $logo_x = imagesx($gd_img) -
+                               $this->padding -
+                               imagesx($logo->gdresource);
+                    break;
+                default:
+                    $logo_x = round((imagesx($gd_img) / 2) -
+                                     (imagesx($logo->gdresource) / 2));
+            }
+
+            // Determine logo placement (y)
+            switch ($this->location['y'])
+            {
+                case 't':
+                    $logo_y = $this->padding;
+                    break;
+                case 'b':
+                    $logo_y = imagesy($gd_img) -
+                        $this->padding -
+                        imagesy($logo->gdresource);
+                    break;
+                default:
+                    $logo_y = round((imagesy($gd_img) / 2 -
+                        (imagesy($logo->gdresource) / 2)));
+            }
+
+            // Copy the logo onto the main image
+            imagecopy($gd_img,
+                    $logo->gdresource,
+                    $logo_x,
+                    $logo_y,
+                    0,
+                    0,
+                    imagesx($logo->gdresource),
+                    imagesy($logo->gdresource));
+        }
+        return $gd_img;
+    }
+}
+?>
+```
+
+接下来，将 `logo()` 方法添加到 `WebImage` 类定义的末尾：
+
+```php
+public function logo($logoFile,
+    $loc_x = null,
+    $loc_y = null,
+    $padding = null,
+    $ratio = null)
+{
+    require_once 'class.ImageLogo.php';
+    
+    $il = new ImageLogo();
+    
+    // Set logo file
+    $il->logoFile = $logoFile;
+    
+    // Set location, padding, and ratio if needed
+    if ($loc_x !== null)
+    {
+        $il->location['x'] = $loc_x;
+    }
+    if ($loc_y !== null)
+    {
+        $il->location['y'] = $loc_y;
+    }
+    if ($padding !== null)
+    {
+        $il->padding = $padding;
+    }
+    if ($ratio !== null)
+    {
+        $il->ratio = $ratio;
+    }
+
+    // Perform the logo placement
+    $this->gdresource = $il->process($this->gdresource);
+}
+```
+
+与添加到 `WebImage` 的其他动作处理方法一样，`logo()` 简单接收提供的参数——标志文件名、x 位置、y 位置、以像素为单位的内边距以及标志的缩放比例——在 `ImageLogo` 中设置所需的属性，并处理标志的放置。
+
+在 `ImageLogo` 的 `process()` 函数中，你可以确切看到标志放置过程中发生了什么。`process()` 方法首先创建自己的内部 `WebImage` 对象，用于加载标志文件，并在需要时进行缩放。在 `WebImage` 创建并加载后，如果指定了比例，则会缩放标志图像：
+
+```php
+public function process($gd_img)
+{
+    if ($this->logoFile)
+    {
+        require_once 'class.WebImage.php';
+
+        // Load the logo
+        $logo = new WebImage();
+        $logo->load($this->logoFile);
+
+        // Resize logo if needed
+        if ($this->ratio and $this->ratio != 1)
+        {
+            $logo->resize($this->ratio);
+        }
+```
+
+接下来，确定标志的位置。标志可以放置在九个位置之一——三种水平位置和三种垂直位置的任意组合。对于水平方向，可以使用值 `l`、`r` 和 `m` 来指定左对齐、右对齐或居中。垂直方向的值类似——`t` 表示顶部，`b` 表示底部，`m` 表示居中：
+
+```php
+// Determine logo placement (x)
+switch ($this->location['x'])
+{
+    case 'l':
+        $logo_x = $this->padding;
+        break;
+    case 'r':
+        $logo_x = imagesx($gd_img) -
+        $this->padding -
+        imagesx($logo->gdresource);
+        break;
+    default:
+        $logo_x = round((imagesx($gd_img) / 2) -
+                (imagesx($logo->gdresource) / 2));
+}
+
+// Determine logo placement (y)
+switch ($this->location['y'])
+{
+    case 't':
+        $logo_y = $this->padding;
+        break;
+    case 'b':
+        $logo_y = imagesy($gd_img) -
+                $this->padding -
+                imagesy($logo->gdresource);
+        break;
+    default:
+        $logo_y = round((imagesy($gd_img) / 2) -
+                (imagesy($logo->gdresource) / 2));
+}
+```
+
+最后，标志图像被合并到主图像上，并返回生成的图像资源：
+
+```php
+// Copy the logo onto the main image
+imagecopy($gd_img,
+          $logo->gdresource,
+          $logo_x,
+          $logo_y,
+          0,
+          0,
+          imagesx($logo->gdresource),
+          imagesy($logo->gdresource));
+
+return $gd_img;
+```
+
+请注意，这里使用的是 `imagecopy()` 而不是 `imagecopymerge()`。`imagecopymerge()` 函数似乎更适合此任务，甚至提供了合并标志并设置其透明度的功能——这对于某些水印效果很有用。不幸的是，`imagecopymerge()` 有一个坏习惯，会破坏源标志图像中大部分透明度信息，因此如果你想为图像制作一个淡淡的半透明水印，最好直接在标志图像中添加透明度，并使用 `imagecopy()`，而不是使用不透明图像和 `imagecopymerge()`。
+
+## 测试一下
+
+为了彻底测试这组图像操作代码，你需要准备几样东西：一张要处理的主图像、一张用作标志叠加层的图像，以及一个 TrueType 字体文件。准备好这三样东西后，创建一个 PHP 脚本，使用你创建的类来处理图像。首先，只需加载你的图像，并在浏览器中显示：
+
+```php
+<?php
+
+    require_once 'class.WebImage.php';
+
+    $img = new WebImage();
+    $img->load('base.png');
+    $img->display();
+?>
+```
+
+在浏览器中加载此文件，它应该显示你的图像，如图 10.1 所示。
+
+![](img/cacdd24f2926f10ee3219256ad732604_283_0.png)
+
+图 10.1
+
+如果你想在保存或显示图像之前更改图像类型，只需在 **WebImage** 对象中设置图像类型即可：
+
+```php
+<?php
+
+    require_once 'class.WebImage.php';
+
+    $img = new WebImage();
+    $img->load('base.png');
+    $img->type = 'image/gif';
+    $img->display();
+
+?>
+```
+
+要调整图像大小，请调用 `WebImage` 的 `resize()` 函数。以下代码使用 0.75 的比例：
+
+```php
+<?php
+
+require_once 'class.WebImage.php';
+
+$img = new WebImage();
+$img->load('base.png');
+$img->resize(0.75);
+$img->display();
+
+?>
+```
+
+输出示例如图 10.2 所示。
+
+![](img/cacdd24f2926f10ee3219256ad732604_284_0.png)
+
+图 10.2
+
+接下来，旋转你的图像。以下使用 180 度进行旋转：
+
+```php
+<?php
+    require_once 'class.WebImage.php';
+
+    $img = new WebImage();
+    $img->load('base.png');
+    $img->rotate(180);
+    $img->display();
+?>
+```
+
+在浏览器中加载脚本后的效果如图 10.3 所示。
+
+![](img/cacdd24f2926f10ee3219256ad732604_285_0.png)
+
+图 10.3
+
+现在，为图像添加说明文字。此示例使用“Fuji Wide Normal”字体，但你也可以使用你拥有的任何字体，只要它是 TrueType 字体文件（.ttf）即可：
+
+```php
+<?php
+require_once 'class.WebImage.php';
+
+$img = new WebImage();
+$img->load('base.png');
+$img->caption('An example of plantlife found on Maui.',
+	'FUJIWIDR.TTF',
+	15,
+	5,
+	true);
+$img->display();
+?>
+```
+
+如果一切顺利，你应该看到与图 10.4 类似的内容。
+
+![](img/cacdd24f2926f10ee3219256ad732604_286_0.png)
+
+图 10.4
+

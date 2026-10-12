@@ -1,0 +1,44 @@
+Running this code gives you:
+
+> A circle object is being created.
+> A circle object is being destroyed.
+
+Notice how you see the message placed inside the destructor, without having to do anything. This is because PHP automatically cleans up all references to objects when a script finishes executing, which automatically calls the destructors for objects.
+
+One last thing to keep in mind is that unlike constructors, which can have parameters, destructors can have no parameters.
+
+# # Static Keyword
+
+Sometimes when using object-oriented programming, you might need to access a method of a class, but without the need to create a full-blown object. To fill that need, PHP5 has provided the `static` keyword. New to PHP5, the `static` keyword allows class properties and methods to be available without instantiating the class. To make a class member static, just add the `static` keyword between the visibility and property or method definition, like so:
+
+```
+```php
+<?php
+
+class Circle
+{
+    public static function calcArea($r)
+    {
+        return pi() * pow($r, 2);
+    }
+}
+```
+```
+
+To use the newly created static property, you simply use the class name, followed by two colons, then the property name or method call:
+
+```
+```
+$r = 5;
+echo "Given a radius of " . $r .
+     ", a circle has the area " . Circle::calcArea($r);
+```
+```
+
+Running this code in your browser would produce results similar to the following:
+
+> Given a radius of 5, a circle has the area 78.539816339745
+
+There are, however, some limitations to using static methods. Static methods cannot change or access object variables or methods using `$this>` ; they can directly access only other static properties and methods in the class.
+
+In order to access other static variables within the same class, you can use `self` keyword, in conjunction with a double-colon. Using `self::` is similar to `$this>` , but it is for static members only. If you wanted to modify the Circle class to use static methods and properties, you might do something similar to the following:

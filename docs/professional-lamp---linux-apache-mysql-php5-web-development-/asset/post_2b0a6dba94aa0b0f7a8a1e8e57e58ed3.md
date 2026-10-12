@@ -1,0 +1,187 @@
+
+## Advanced MySQL
+
+Using the MySQL command-line client is a great way to become familiar with most of the commands and functionality of MySQL, which often times might be automated in a GUI client.
+
+Enter the following commands to create the database, and call it “VehicleInventory”:
+
+```
+mysql> CREATE DATABASE VehicleInventory;
+```
+
+Now that you've created the database, you need to set it as the active database for the remainder of your queries:
+
+```
+mysql> USE VehicleInventory;
+```
+
+Next, create the tables for your database. The basic SQL statement to create a table in MySQL is:
+
+```
+CREATE TABLE tablename (column_definitions);
+```
+
+To create the four vehicle information tables, you can use the following:
+
+```
+mysql> CREATE TABLE Makes (make_id int PRIMARY KEY AUTO_INCREMENT, make_name varchar(100) );
+mysql> CREATE TABLE Models (model_id int PRIMARY KEY AUTO_INCREMENT, model_name varchar(200), make_id int );
+mysql> CREATE TABLE New Vehicles (vehicle_id int PRIMARY KEY AUTO_INCREMENT, model_id int, modelyear int, price decimal(10,2), color varchar(200), description text );
+mysql> CREATE TABLE Used_Vehicles (vehicle_id int PRIMARY KEY AUTO_INCREMENT, model_id int, modelyear int, mileage int, price decimal(10,2), color varchar(200), certified tinyint, warranty tinyint, description text );
+```
+
+In a nutshell, you simply use the MySQL CREATE TABLE command, followed by the name of the table, and then list the column names and types in parentheses. You'll also note that an auto-incrementing primary key is added to each table, to help you uniquely identify rows after they are added.
+
+## Adding Information
+
+Now that you've got your tables created, you need to add some data to them. For that, you're going to use the INSERT statement. The MySQL INSERT command typically follows this format:
+
+```
+INSERT INTO tablename (column_list) VALUES (new_values);
+```
+
+Start by adding some initial data to the Makes table:
+
+```
+INSERT INTO Makes (make_id, make_name) VALUES (1, 'Ford'), (2, 'Honda'), (3, 'Volkswagen'), (4, 'Toyota'), (5, 'Chevrolet');
+```
+
+Here, the basic SQL INSERT syntax is used, but with an added twist. In MySQL, you can specify a comma-delimited set of column values, instead of just one set, to populate multiple rows at once. Normally, you might leave out the make_id column when inserting into the Makes table — the auto-incremented ID would automatically assign them a number. In this case, you specify the ID so the rows you'll soon add to other tables will have valid foreign keys.
+
+## Chapter 4
+
+Use the following to add data to the rest of the tables (remember you can download this code at www.wrox.com and save yourself some typing if you'd like):
+
+```
+INSERT INTO Models (model_id, model_name, make_id) VALUES (1, 'Explorer', 1), (2, 'Accord', 2), (3, 'Golf', 3), (4, 'Tacoma', 4), (5, 'Corvette', 5);
+INSERT INTO New_Vehicles (model_id, modelyear, color, description) VALUES
+(1, 2005, 'Dark Blue', 'Popular SUV; great for moving people or cargo across town, or wherever your adventures may take you.'),
+(NULL, 2004, 'Graphite Pearl', 'Last of the 2004 stock! Must sell! Loaded, all options!'),
+(4, 2005, 'Radiant Red', 'Come drive this terrific truck! 4WD, extended cab, many options.'),
+(5, 2005, 'Daytona Sunset Orange Metallic', 'All the new C6 Corvette, the next generation of classic American sportscars. 400HP V8; very fast!'),
+(1, 2005, 'Dark Blue', 'Popular SUV; great for moving people or cargo across town, or wherever your adventures may take you.');
+INSERT INTO Used_Vehicles (model_id, modelyear, color, mileage, certified, warranty, description) VALUES
+(1, 2000, 'White', 64800, 0, 0, 'Good condition; One owner; 4WD; V6'),
+(2, 2003, 'Deep Green Pearl', 27300, 0, 1, 'Excellent condition, off-lease vehicle; Must see!'),
+(3, 2004, 'Reflex Silver', 3800, 1, 1, 'R32 Limited edition; Low miles; Understated and surprisingly functional; Loaded.'),
+(4, 1993, 'Red', 152000, 0, 0, 'Runs decent; 4WD; Tinted windows, aftermarket stereo; Needs a little TLC.');
+```
+
+Note that there is a NULL value for the model_id of the second vehicle you added to the New_Vehicles table. You'll find out why later on.
+
+## Retrieving Information
+
+You've spent all that time creating your database tables and populating them with data; now it's time to get some of that data back out. For this, you will use the SELECT statement. A simplified form of SELECT looks something like this:
+
+```
+SELECT [column_names] FROM [table] WHERE [criteria]
+```
+
+If you wanted to retrieve a list of the colors of your used cars, for example, you would use something similar to the following:
+
+```
+SELECT color FROM Used_Vehicles;
+```
+
+which would return the following:
+
+![](img/cacdd24f2926f10ee3219256ad732604_101_0.png)
+
+Or perhaps, you want a listing of all the mileages for cars older than the 2001 model year:
+
+```
+SELECT mileage, modelyear FROM Used_Vehicles WHERE modelyear < 2001;
+```
+
+Running this query shows the following:
+
+| mileage | modelyear |
+|---------|-----------|
+| 64800   | 2000      |
+| 152000  | 1993      |
+
+Simple enough, but what if you spotted an error, and wanted to change an existing record?
+
+## Updating Information
+
+To update information you use the UPDATE statement. The generic form of an UPDATE statement looks like this:
+
+```
+UPDATE [table] SET [column] = [value] WHERE [criteria]
+```
+
+Returning to the vehicle inventory example, say that one day the manager of the car lot was out looking through the inventory, and noticed the mileage was incorrectly recorded for one of the vehicles. To change it to the proper value, you might use the following query:
+
+```
+UPDATE Used_Vehicles SET mileage = 66000 WHERE vehicle_id = 1;
+```
+
+In this case, the vehicle ID of 1 corresponds to the automatically incremented ID assigned to the used Ford Explorer you added in a previous INSERT statement.
+
+## Removing Information
+
+Sales are starting to increase at the hypothetical car lot, and some recent sales require the removal of some vehicles from your database. In this situation, you will use the DELETE statement:
+
+```
+DELETE FROM [table] WHERE [criteria];
+```
+
+That used Ford Explorer that had its incorrect mileage fixed in the previous example sold today. To remove it from the Used_Vehicles table, you would simply do the following:
+
+```
+DELETE FROM Used_Vehicles WHERE vehicle_id = 1;
+```
+
+That should cover the basics of MySQL usage, so it's time to move on to more powerful queries.
+
+## Querying Multiple Tables
+
+You've got your vehicle inventory set up, and you can use the basics to perform simple queries against one table at a time. But you'd like to see a little more -- maybe even a query that links the make and model of each car to its individual record. For this, you'd use *joins*.
+
+In SQL, joins are a way of linking two or more tables on a specified column or columns. In MySQL, there are two types of joins that are most commonly used: inner joins and outer joins.
+
+### Inner Joins
+
+Inner joins are a way of taking two tables and combining their rows based on a commonly shared value for each row. When you perform an inner join in a *SELECT* query, you simply specify the tables to be joined in the *FROM* clause, and provide a hint on what columns they have in common. A generic abstraction of the MySQL INNER JOIN syntax looks like the following:
+
+```
+SELECT [column names] FROM [table1] INNER JOIN [table2] ON [table1.column] =
+[table2.column]
+```
+
+Using the hypothetical car lot inventory, you want the model of each vehicle to return in the results alongside each vehicle’s specific information. To accomplish this, your query would look something like this:
+
+```
+SELECT Models.model_name, New_Vehicles.color, New_Vehicles.modelyear FROM Models
+INNER JOIN New_Vehicles ON Models.model_id = New_Vehicles.model_id;
+```
+
+Running this query against your database yields the following results:
+
+| model_name | color                            | modelyear |
+|------------|----------------------------------|-----------|
+| Explorer   | Dark Blue                        | 2005      |
+| Tacoma     | Radiant Red                      | 2005      |
+| Corvette   | Daytona Sunset Orange Metallic   | 2005      |
+
+You’ll notice in the *SELECT* query, each of the columns in the select list is prefixed with the name of the table they belong to. While this is not technically required, it is usually a good idea to help avoid conflicts between identically named columns. What would happen if you had such a conflict and neglected the table prefix? Take a look at this example:
+
+```
+SELECT model_id, model_name, color, modelyear FROM Models INNER JOIN New_Vehicles
+ON Models.model_id = New_Vehicles.model_id;
+```
+
+As you can see, the table prefixes have been removed, but the model_id column has also been added to the list (because it exists in both tables). Now try to run that query. You’ll get the following error:
+
+```
+ERROR 1052 (23000): Column 'model_id' in field list is ambiguous
+```
+
+Trying to use a column name that exists in both tables, without using a table prefix, will throw such an error whenever the query is executed.
+
+If you happen to like brevity in your SQL queries, have no fear — there’s a simple way you can shorten all of those table prefixes. In the *FROM* clause, you can specify a *table alias* for each table called, like so:
+
+```
+SELECT [column names] FROM [table1] alias1 INNER JOIN [table2] alias2 ON
+[alias1.column] = [alias2.column]
+```

@@ -1,0 +1,31 @@
+# Caching Engines
+
+First, download the package appropriate for your system from http://zend.com/store/products/zend-optimizer.php .
+
+Then, decompress the archive, and go into the newly created directory:
+
+```
+tar -xvzf ZendOptimizer-2.5.10a-linux-glibc21-i386.tar.gz
+ cd ZendOptimizer-2.5.10a-linux-glibc21-i386
+```
+
+As root, run the install wizard:
+
+```
+./install.sh
+```
+
+Run through the wizard, specifying the necessary paths when prompted. The defaults provided usually suffice. Make sure you choose the proper version of Apache when asked (this book was written around Apache 2).
+
+The wizard will make a backup copy of your php.ini file, and create a new symbolic link pointing to the Zend-modified php.ini file.
+
+At the end of the wizard, you can choose to have Apache automatically restarted, or if you so choose, exit the wizard and restart Apache manually.
+
+# Configuring Zend Optimizer
+
+Like APC and eAccelerator, you have a couple of directives at your disposal for tweaking the operation of the Zend Optimizer:
+
+| Directive | Default | Set in | Description |
+|---|---|---|---|
+| zend_optimizer .optimization_level | 15 (all optimizations) | php.ini and httpd.conf | Determines the level of optimization performed by Zend Optimizer. The optimizer can perform four distinct passes on each script, controlled by combining the following values: 0 : No passes 1 : Pass 1 2 : Pass 2 4 : Pass 3 8 : Pass 4 You simply add the numbers for each pass together to get your optimization pass settings. For example, a value of 11 will perform Pass 1, Pass 2, and Pass 4 (1+2+8). | 
+| zend_optimizer .enable_loader | 1 (enabled) | php.ini and httpd.conf | You can use this directive to enable or disable the Zend Optimizer without uninstalling it. A value of 0 disables the Optimizer; 1 enables it. |

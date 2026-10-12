@@ -1,0 +1,48 @@
+# Chapter 2
+
+```
+<!php
+class Circle
+{
+    public $radius;
+
+    public function __construct($r)
+    {
+        // Perform actions when object is created
+        echo "A circle object is being created.\n";
+
+        $this->radius = $r;
+    }
+}
+
+$c = new Circle(10);
+?>
+```
+
+In this example, you’ve simply provided a radius parameter when creating the object — 10 in this case — which is automatically interpreted by the constructor, which in turn sets the radius of the circle when instantiated.
+
+Now that you have a way to perform actions when an object is created, you’ll look at a way to perform additional actions when an object is destroyed. PHP5 now includes a special method that is called when an object is destroyed, referred to as, logically enough, a destructor. An object’s destructor is called when all references to an object are removed, or it is manually destroyed in your code. Destructors are often used for various clean-up tasks, such as closing database connections and releasing file handles. To create a destructor, add a method to your class, and call it \_\_destruct :
+
+```
+<!php
+class Circle
+{
+    public function __construct()
+    {
+        // Perform actions when object is created
+        echo "A circle object is being created.\n";
+    }
+
+    public function __destruct()
+    {
+        // Perform actions when object is destroyed
+        echo "A circle object is being destroyed.\n";
+    }
+}
+
+$c = new Circle();
+
+// Destroy the circle object
+unset($c);
+?>
+```

@@ -1,0 +1,233 @@
+
+## 第 2 章
+
+```php
+<?php
+
+class Circle
+    {
+       private static $radius;
+
+       public static function setRadius($r)
+       {
+          self::$radius = $r;
+       }
+
+       public static function getRadius()
+       {
+          return self::$radius;
+       }
+    }
+
+Circle::setRadius(5);
+echo "Our statically accessed circle has a radius of " .
+       Circle::getRadius() . "\n";
+?>
+```
+
+快速运行 PHP5 引擎将产生以下结果：
+
+    我们静态访问的圆的半径为 5。
+
+### 类常量
+
+随着 PHP5 中改进的对象模型，PHP 引入了类常量的概念。类常量类似于普通的 PHP 常量，但只能在类的定义内部使用。与标准 PHP 常量一样，它们的值只能设置一次，且必须是一个标量值——一个简单的数字或字符串——任何试图将常量设置为函数结果的尝试都会导致错误。
+
+在使用类常量时，请记住它们的访问方式类似于静态成员——要访问类常量，必须使用双冒号（::）语法。要定义类常量，请在常量名称前使用 `const` 关键字，如下所示：
+
+```php
+<?php
+
+class Circle
+{
+   const pi = 3.14159265359;
+
+   public function getPi()
+   {
+      return self::pi;
+   }
+}
+
+echo "The value of Pi in our Circle class is " . Circle::pi . "\n";
+$c = new Circle();
+echo "To recap, the value of Pi in our Circle class is " . $c->getPi();
+?>
+```
+
+运行此代码将产生以下结果：
+
+```
+The value of Pi in our Circle class is 3.14159265359
+To recap, the value of Pi in our Circle class is 3.14159265359
+```
+
+在这个例子中，你创建了类常量 `pi`，它保存的值恰好令人惊讶地是数学常数 Pi。然后你在 `getPi` 方法中使用 `self::` 引用来返回类常量的值。需要注意的是，在访问 `self::pi` 时，名称 `pi` 前面没有美元符号。类常量不使用美元符号前缀，而标准类变量则使用。
+
+> *你创建 Pi 常量仅作为示例。PHP 已经有一个内置的 `pi()` 函数，它返回 Pi 的值。*
+
+### 赋值与克隆
+
+如你可能已经了解，在标准 PHP 中，将数据赋值给变量有两种方式：按值赋值和按引用赋值。第一种，按值赋值，通常用于为变量设置简单值或复制其他变量：
+
+```php
+$a = 5;
+$b = $a;
+```
+
+这里你使用的是按值赋值。当 $a 的值改变时，$b 保持不变；当你赋值 $b = $a 时，你只是创建了 $a 的值的一个副本，并将该值赋给 $b。
+
+然而，按引用赋值有所不同。请看以下示例：
+
+```php
+$a = 5;
+$b =& $a;
+```
+
+在这个例子中，你使用 =& 运算符进行按引用赋值。在这种情况下，当 $a 的值改变时，$b 也会改变——因为 $b 是通过引用被赋值为 $a 的值，两个变量指向内存中的同一位置，当该内存位置的值改变时，两个变量都会随之改变。
+
+在 PHP5 中，所有对象默认都是按引用赋值的。这种行为不同于 PHP4，PHP4 默认按值赋值，除非使用引用运算符 (&)。在 PHP5 中，如果你想创建一个对象的副本，而不是使用引用，你必须使用 `clone` 语句，如下所示：
+
+```php
+<?php
+class Circle
+{
+    public $radius = 10;
+}
+
+// Create the original object and set its parameters
+$original = new Circle();
+
+// Create a cloned and assigned (by reference) object
+$cloned = clone $original;
+$assigned = $original;
+
+// Now, change the original radius value:
+$original->radius = 5;
+
+// Show the state of all three objects
+echo "\nOriginal:\n";  
+print_r($original);
+
+echo "\nAssigned:\n";
+print_r($assigned);
+
+echo "\nCloned:\n";
+print_r($cloned);
+?>
+```
+
+此代码将产生以下输出：
+
+```
+Original:
+Circle Object
+(
+   [radius] => 5
+)
+
+Assigned:
+Circle Object
+(
+   [radius] => 5
+)
+
+Cloned:
+Circle Object
+(
+   [radius] => 10
+)
+```
+
+正如你所见，$assigned 引用了 $original 对象，但因为你克隆了 $cloned，从而制作了 $original 的一个分离副本，所以当你修改 $original 时，它的值不会改变。
+
+## 继承与接口
+
+使用 OOP 搭配 PHP5 的一个好处是，它允许你将代码分解为逻辑块，以便于重用。这些块如果编写得当，可以在许多不同的项目中反复重用，使程序员能够自由编写针对他们试图解决的特定问题的代码。
+
+在 OOP 中，有几种方式可以指定一组方法和属性以在多个类中使用。第一种，**继承**，允许你定义属于基类的一组基本属性和方法，并将其用作更具体类的构建块。第二种，**接口**，允许你规定类必须实现的方法列表。
+
+### 继承
+
+假设你正在创建一个代码库，用于操作不同的几何形状。本章中一直在使用的 **Circle** 类可以是该库的一部分。在创建代表不同形状（如正方形、圆形、三角形等）的不同类时，你可能会发现自己在所有形状中重复了相似或相同的方法。这是一个使用继承的好机会。
+
+#### extends 关键字
+
+假设所有几何形状类都将在网格上绘制。因此，它们都需要某种原点 (x,y)。你可以在每个不同的类中包含一个 **origin** 属性，或者使用 **extends** 关键字，通过继承在一个共享位置定义该属性。为此，你将创建一个名为 **Shape** 的类，它将作为你可能创建的所有几何类的父类。每个具体的几何形状类——无论是 **Circle**、**Square**、**Ellipse** 还是 **Star**——都具有 **Shape** 提供的一组基本功能。理解这种父子关系的一个简单方法是使用短语“*是*”。在这个例子中，**Circle** *是* **Shape**，就像 **Square** *是* **Shape**，**Triangle** *是* **Shape** 一样。
+
+要使用你的父类 **Shape**，你可以做类似以下操作：
+
+```php
+<?php
+class Shape
+{
+    public $origin = array('x'=>0, 'y'=>0);
+}
+
+class Circle extends Shape
+{
+    public $radius;
+}
+
+$c = new Circle();
+print_r($c->origin);
+?>
+```
+
+运行此代码将产生以下结果：
+
+```
+Array
+(
+    [x] => 0
+    [y] => 0
+)
+```
+
+正如你所见，你创建了一个名为 `Shape` 的基类，它定义了一个通用的 `origin` 属性。通过在 `Circle` 的类定义中使用 `extends` 关键字，`Shape` 的所有属性和方法都成为 `Circle` 对象的一部分。因为 `Circle` 是 `Shape` 的子类，你可以获取 `$origin` 的值，尽管它在 `Circle` 中未显式定义——它是从 `Shape` 继承来的。
+
+在扩展基类时，可以重新定义父类（基类）中存在的属性和方法。例如：
+
+```php
+<?php
+class Shape
+{
+    public $origin = array('x'=>0, 'y'=>0);
+}
+
+class Circle extends Shape
+{
+    public $origin = 'New origin';
+}
+
+$c = new Circle();
+print_r($c);
+?>
+```
+
+此代码将输出以下内容：
+
+```
+Circle Object
+(
+    [origin] => New origin
+)
+```
+
+通过在子类中重新定义基属性 `$origin`，新定义隐藏了父类的值。方法的行为方式相同——在子类中重新定义它们会覆盖父类方法的功能。例如，看以下代码：
+
+```php
+<?php
+class Shape
+{
+    public $origin = array('x'=>0, 'y'=>0);
+    public function getOrigin()
+    {
+        return $this->origin;
+    }
+}
+
+class Circle extends Shape
+{
+    public function getOrigin()
+    {
+```

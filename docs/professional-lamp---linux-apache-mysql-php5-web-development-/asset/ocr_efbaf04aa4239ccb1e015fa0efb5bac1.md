@@ -1,0 +1,38 @@
+ASP/VBScript
+FunctionName = value
+
+ASP.NET/C#
+return value;
+
+JSP/Java
+return value;
+
+# Grouping Classes with Namespaces
+
+PHP
+Not supported
+
+ASP/VBScript
+Not supported
+
+ASP.NET/C#
+namespace Name {
+...
+}
+
+JSP/Java
+package name;
+
+# Class Visibility Keywords
+
+PHP
+public, private, protected
+
+ASP/VBScript
+public, private
+
+ASP.NET/C#
+public, private, protected, internal
+
+JSP/Java
+public, private, protected, package

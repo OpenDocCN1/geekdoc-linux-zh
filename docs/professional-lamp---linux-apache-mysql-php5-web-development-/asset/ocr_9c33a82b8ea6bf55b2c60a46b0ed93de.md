@@ -1,0 +1,55 @@
+loops to contain additional variables carrying information about whether loops should be terminated or not from within nested loops, or using goto to jump to a label following the outer loop (except in Java, which doesn't have a goto construct). You can write this:
+
+```
+```java
+$position = null;
+for($i=0; $i<100; $i++)
+{
+    for($j=0; $j<100; $j++)
+    {
+        if($array[$i][$j]==$what_we_wanted)
+        {
+            $position = array($i,$j);
+            break 2;
+        }
+    }
+}
+if(null!==$position) // $what_we_wanted was not found.
+```
+```
+
+instead of this:
+
+```
+```php
+$position = null;
+$found_what_we_wanted = false;
+for($i=0; $i<100; $i++)
+{
+    for($j=0; $j<100; $j++)
+    {
+        if($array[$i][$j]==$what_we_wanted)
+        {
+            $position = array($i,$j);
+            $found_wahat_we_wanted = true;
+            break;
+        }
+    }
+}
+if($found_what_we_wanted)
+break;
+}
+if(null!==$position) // $what_we_wanted was not found.
+```
+```
+
+As a final observation on **continue** and **break**, it is a common practice to write those statements on the same line as the test that governs whether they are executed, especially if those tests are short and simple. Hence, you may want to consider adopting or allowing the practice of writing like this:
+
+```
+```java
+if($a!=$i &&$ b!=$i) continue;
+if($c===$i &&$ d===$i) continue;
+```
+```
+
+> *An aside on using the equality operator ==is the fact that a common typo is to use = when ==is intended. You can protect yourself from the bugs that can result from using assignment instead of comparison in certain cases. When comparing a variable to the result of a function or to a literal value, if you write the variable on the right-hand side of the equality operator, accidentally writing instead of ==for the operator itself will result in a parse error: “null== $position ” is invalid syntax. These are a lot easier to debug than the sometimes subtle errors resulting from an assignment that should not have been assigned and a comparison that didn't properly compare.*
