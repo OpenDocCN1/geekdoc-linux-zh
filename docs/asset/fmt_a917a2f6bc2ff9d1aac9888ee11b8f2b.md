@@ -1,0 +1,109 @@
+
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8  9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12 
+- 2nd 3  4th 5th 6th 7th 8  9  10th 11th 12 
+- 2  3rd 4th  th 6  7th 8   th 1    1th  2        rd     th     
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12 
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9  10th 11th 12 
+- 2nd 3rd 4th 5  6th 7th 8  9  10th 11th 12 
+- 2nd 3rd 4th 5th 6th 7  8  9  10th 11th 12 
+- 2nd 3rd 4th 5  6  7  8  9  10th 11 
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th
+- trace 工具
+- slabtop 工具
+- 采样模式，vmstat II 工具
+- 内存性能
+- 采样模式，vmstat 工具 2nd
+- sar (II) 工具
+- 内存性能
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- sar 工具
+  - CPU 相关选项 2nd 3rd 4th
+  - CPU 相关统计 2nd
+  - 磁盘 I/O 子系统使用
+    - 示例 2nd
+    - 选项 2nd
+    - 统计 2nd
+    - 示例 2nd 3rd 4th S
+- 网络 I/O
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- script 命令
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- script 工具
+  - 源位置
+- 秒选项
+  - trace 工具
+  - 安全外壳 (SSH) 服务
+- 序列线路接口协议 (SLIP)
+- Shared 选项
+  - free 工具
+  - procinfo II 工具
+- 短选项，(top, v. 2nd 和 3.x) 工具
+- si 选项
+  - vmstat II
+- SIZE 统计
+  - lofs (打开文件数) 工具

@@ -1,0 +1,148 @@
+
+# 索引
+
+[SYMBOL] [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N] [O] [P] [R] [S] [T] [U] [V] [W] [X]
+
+- 相比动态语言 2nd
+- `trace` 工具
+  - 磁盘 I/O 子系统使用
+    - 示例 2nd
+    - 选项 2nd
+    - 源位置
+    - 统计 2nd
+- 系统级/配置/安装工具
+  - 运行中的应用程序/工具 2nd 3rd 4th
+  - 模拟解决方案 2nd 3rd 4th S
+- SUSE 9 (S9.1) 发行版
+- 安装
+- 工具
+# 索引
+- T 选项
+- `top` (v. 2.0.x) 工具
+- 系统性能目标 2nd
+- TCP (传输控制协议)
+- 网络 I/O
+- `tpsckstatistic` 统计
+- `sar` 工具
+- 网络 I/O
+- `tee` 工具
+  - 示例 2nd
+  - 选项 2nd
+  - `tee` 工具
+  - 源位置
+- 内存抖动 (thrashing)
+  - `time` 命令
+  - 示例 2nd 3rd 4th
+  - 选项 2nd 3rd
+  - 统计 2nd
+- `time` 选项
+- `ps` 命令
+- `time` 工具
+- 应用程序时间使用
+- 时间使用
+- 应用程序
+- `oprofill` 命令 2nd 3rd 4th 5th 6th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 相比 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9  10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8  9th 10th 11th 122
+- 22 33 4 6 8 11 11 12
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12
+- 2nd 3rd 4th 5th 6th 7th 8th 9  10th 11th 12
+- 2nd 3rd 4th 5th 6th 7th 8  9  10th 11th 12
+- 2  3  4  5
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th
+- 2nd 3rd 4th 5
+- `trace` 工具
+- `slabtop` 工具
+- 采样模式，`vmstat` II 工具
+- 内存性能
+- 采样模式，`vmstat` 工具 2nd
+- `sar` (II) 工具
+- 内存性能
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- `sar` 工具
+  - CPU 相关选项 2nd 3rd 4th
+  - CPU 相关统计 2nd
+  - 磁盘 I/O 子系统使用
+    - 示例 2nd
+    - 选项 2nd
+    - 统计 2nd
+    - 示例 2nd 3rd 4th S
+- 网络 I/O
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- `script` 命令
+  - 示例 2nd
+  - 选项 2nd
+  - 统计 2nd
+- `script` 工具
+  - 源位置
+- 秒选项
+  - `trace` 工具
+  - 安全外壳 (SSH) 服务
+- 序列线路接口协议 (SLIP)
+- Shared 选项
+  - `free` 工具
+  - `procinfo` II 工具
+- 短选项，(`top`, v. 2nd 和 3.x) 工具
+- `si` 选项
+  - `vmstat` II
+- SIZE 统计
+  - `lofs` (打开文件数) 工具
+  - 磁盘 I/O 子系统使用
+- Slab 选项
+  - `/proc/meminfo` 文件
+- slabs, 内存 2nd 3rd 4th S
+- `slabtop` 工具
+  - 内存性能
+    - 示例 2nd
+    - 选项 2nd
+    - 源位置
+- SLIP (序列线路接口协议)
+- `so` 选项
+  - `vmstat` II 工具
+- 软件
+  - 性能调查
+  - SSH (Secure Shell) 服务
+- 应用程序启动时间
+- 静态语言
+  - 相比动态语言 2nd
+- `trace` 工具
+  - 磁盘 I/O 子系统使用
+    - 示例 2nd
+    - 选项 2nd
+    - 源位置
+    - 统计 2nd
+- 系统级/配置/安装工具
+  - 运行中的应用程序/工具 2nd 3rd 4th
