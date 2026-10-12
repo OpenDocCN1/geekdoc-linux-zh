@@ -1,0 +1,163 @@
+
+~/dig +dnssec whitehouse.gov
+; <<>> DiG 9.9.3-r1.13207.22-P2-RedHat-9.9.3-4.P2.el7 <<>> +dnssec whitehouse.gov
+;; global options: +cmd
+; 获取到答案：
+; ->HEADER<= 操作码: QUERY, 状态: NOERROR, 标识符: 21388
+; 标志: qr rd ra ad; 查询: 1, 回答: 2, 权限: 0, 附加: 1
+; OPT 伪部分:
+; EDNS: 版本: 0, 标志: do; udp: 4096
+; 问题部分:
+;whitehouse.gov. IN A
+; 回答部分:
+whitehouse.gov. 20 IN A 72.246.36.110
+whitehouse.gov. 20 IN RRSIG A 7 2 20 20130825124016 20130822114016 8399 whitehouse.gov. BB8vHXEiAkPaLpr t3hq16kJDR0vkxjYTBxiGhuki/Bj n3PoIgYrftxR HH037TliOLsybj/uZv5hL4Uwwd/lw6n8GP1kqhz tAkm xddMQ2IARP6p wbM0kbSUv6N6GUT1Ww pbi+Le lFMqQCqA3se661yH0Je m7hTgPEUE1Zc 3oI=
+; 查询时间: 227 毫秒
+; 服务器: 127.0.0.1#53(127.0.0.1)
+; 时间: 2013年8月22日 星期四 22:01:52 美国东部夏令时
+; 接收消息大小: 233
+
+除了 A 记录外，还返回了一个 RRSIG 记录，其中包含 DNSSEC 签名，以及该签名的生效时间和过期时间。**unbound** 服务器通过在顶部的 **flags:** 部分返回 **ad** 位，表明数据已通过 DNSSEC 认证。
+
+如果 DNSSEC 验证失败，**dig** 命令将返回 SERVFAIL 错误：
+
+```
+~/dig badsign-a.test.dnssec-tools.org
+; <<>> DiG 9.9.3-r1.156.01-P1-RedHat-9.9.3-3.P1.el7 <<>> badsign-a.test.dnssec-tools.org
+; global options: +cmd
+; 获取到答案：
+; ->HEADER<= 操作码: QUERY, 状态: SERVFAIL, 标识符: 1010
+; 标志: qr rd ra; 查询: 1, 回答: 0, 权限: 0, 附加: 1
+; OPT 伪部分:
+; EDNS: 版本: 0, 标志:; udp: 4096
+; 问题部分:
+;badsign-a.test.dnssec-tools.org. IN A
+; 查询时间: 1284 毫秒
+; 服务器: 127.0.0.1#53(127.0.0.1)
+; 时间: 2013年8月22日 星期四 22:04:52 美国东部夏令时
+; 接收消息大小: 60
+```
+
+为了请求有关失败的更多信息，可以通过向 **dig** 命令指定 **+cd** 选项来禁用 DNSSEC 检查：
+
+```
+~/dig +cd +dnssec badsign-a.test.dnssec-tools.org
+; <<>> DiG 9.9.3-r1.156.01-P1-RedHat-9.9.3-3.P1.el7 <<>> +cd +dnssec badsign-a.test.dnssec-tools.org
+;; global options: +cmd
+;; 获取到答案：
+;; ->HEADER<= 操作码: QUERY, 状态: NOERROR, 标识符: 26065
+;; 标志: qr rd ra cd; 查询: 1, 回答: 2, 权限: 0, 附加: 1
+;; OPT 伪部分:
+; EDNS: 版本: 0, 标志: do; udp: 4096
+;; 问题部分:
+;badsign-a.test.dnssec-tools.org. IN A
+;; 回答部分:
+badsign-a.test.dnssec-tools.org. 49 IN A 75.119.216.33
+badsign-a.test.dnssec-tools.org. 49 IN RRSIG A 5 4 86400 20130919183720 20130820173720 19442 test.dnssec-tools.org.
+E572dLkMVYB4cgtTRYAHlKKEv0P7tockQb7hXFNZKVbFxBZJOlDREJrr
+ZCgAfJ2hYkfOYjJHALnQVWOs6xonNBScv2x2LIybJdFTan6KsR0yFdYZ
+n2NpPctn2kUBn5UR1BJRin3Gqv20LZlZx2KD7czBtieMsU/InyhCSG0 kYw=
+;; 查询时间: 1 毫秒
+;; 服务器: 127.0.0.1#53(127.0.0.1)
+;; 时间: 2013年8月22日 星期四 22:06:31 美国东部夏令时
+;; 接收消息大小: 257
+```
+
+通常，DNSSEC 错误会表现为错误的生效时间或过期时间。虽然在这个例子中，www.dnssec-tools.org 的人员故意破坏了该 RRSIG 签名，但我们无法通过手动查看此输出来检测到这一点。错误将显示在 `systemctl status unbound` 的输出中，并且 unbound 守护进程会以如下方式将这些错误记录到 syslog 中：
+
+```
+Aug 22 22:04:52 laptop unbound: [3065:0] 信息: 验证失败 badsign-a.test.dnssec-tools.org. A IN
+```
+
+使用 unbound-host 的一个示例：
+
+```
+$ unbound-host -C /etc/unbound/unbound.conf -v whitehouse.gov
+whitehouse.gov 地址为 184.25.196.110 (安全)
+whitehouse.gov IPv6 地址为 2600:1417:11:2:8000::fc4 (安全)
+whitehouse.gov IPv6 地址为 2600:1417:11:2:8000::fc4 (安全)
+whitehouse.gov 邮件由 105 mail1.eop.gov. 处理 (安全)
+whitehouse.gov 邮件由 110 mail5.eop.gov. 处理 (安全)
+whitehouse.gov 邮件由 110 mail4.eop.gov. 处理 (安全)
+whitehouse.gov 邮件由 110 mail6.eop.gov. 处理 (安全)
+whitehouse.gov 邮件由 105 mail2.eop.gov. 处理 (安全)
+whitehouse.gov 邮件由 105 mail3.eop.gov. 处理 (安全)
+```
+
+## 4.5.10. 为 Dnssec-trigger 设置热点检测基础设施
+
+当连接到网络时，dnssec-trigger 会尝试检测热点（Hotspot）。热点通常是指一种设备，它强制用户在与网络资源交互前必须先与一个网页进行交互。检测是通过尝试下载一个具有已知内容的特定固定网页来完成的。如果存在热点，那么接收到的内容将与预期不符。
+
+要设置一个具有已知内容的固定网页，以便 dnssec-trigger 可以使用它来检测热点，请按照以下步骤操作：
+
+- 1. 在某台互联网上公开可访问的机器上设置一个 Web 服务器。请参见《Red Hat Enterprise Linux 7 系统管理员指南》中的 Web 服务器章节。
+- 2. 服务器运行后，在其上发布一个具有已知内容的静态页面。该页面无需是有效的 HTML 页面。例如，您可以使用一个名为 hotspot.txt 的纯文本文件，其中仅包含字符串 OK。假设您的服务器位于 example.com，并且您在 web 服务器的 document_root/static/ 子目录中发布了 hotspot.txt 文件，那么您的静态网页地址将是 example.com/static/hotspot.txt。请参见《Red Hat Enterprise Linux 7 系统管理员指南》中 Web 服务器章节里的 DocumentRoot 指令。
+- 3. 将以下行添加到 /etc/dnssec-trigger/dnssec-trigger.conf 文件中：
+
+  ```
+  url: "http://example.com/static/hotspot.txt OK"
+  ```
+
+此命令添加了一个使用 HTTP（端口 80）进行探测的 URL。命令的第一部分是将被解析并将被下载的页面的 URL。命令的第二部分是下载网页预期包含的文本字符串。
+
+有关配置选项的更多信息，请参阅 man 页面 dnssec-trigger.conf(8)。
+
+## 4.5.11. 为连接提供的域配置 DNSSEC 验证
+
+默认情况下，对于每个连接提供的域（Wi-Fi 连接除外，这些是通过 NetworkManager 提供的），dnssec-trigger 会自动将具有适当名称服务器的正向区域添加到 unbound 中。默认情况下，所有添加到 unbound 的正向区域均会进行 DNSSEC 验证。
+
+可以更改验证正向区域的默认行为，使得默认情况下不对所有正向区域进行 DNSSEC 验证。为此，请修改 dnssec-trigger 配置文件 /etc/dnssec-trigger.conf 中的 validate_connection_provided_zones 变量。作为 root 用户，打开并编辑该行如下：
+
+```
+validate_connection_provided_zones=no
+```
+
+此更改不适用于任何现有的正向区域，仅适用于未来的正向区域。因此，如果您想禁用当前提供域的 DNSSEC，您需要重新连接。
+
+### 4.5.11.1. 为 Wi-Fi 提供的域配置 DNSSEC 验证
+
+可以启用为 Wi-Fi 提供的区域添加正向区域。为此，请修改 dnssec-trigger 配置文件 /etc/dnssec-trigger.conf 中的 add_wifi_provided_zones 变量。作为 root 用户，打开并编辑该行如下：
+
+```
+add_wifi_provided_zones=yes
+```
+
+此更改不适用于任何现有的正向区域，仅适用于未来的正向区域。因此，如果您想为当前 Wi-Fi 提供的域启用 DNSSEC，您需要重新连接（重启）Wi-Fi 连接。
+
+**警告**
+
+将 Wi-Fi 提供的域作为正向区域添加到 `unbound` 可能会带来安全影响，例如：
+
+- 1. Wi-Fi 接入点可能会故意通过 **DHCP** 为您提供一个它没有权限的域，并将您的所有 **DNS** 查询路由到它的 **DNS** 服务器。
+- 2. 如果您已关闭正向区域的 **DNSSEC** 验证，Wi-Fi 提供的 **DNS** 服务器可以在您不知情的情况下，伪造所提供域中域名的 **IP** 地址。
+
+## 4.5.12. 其他资源
+
+以下是关于 DNSSEC 的更多解释性资源。
+
+### 4.5.12.1. 已安装文档
+
+- `dnstsec-trigger(8)` man 页面 – 描述 `dnstsec-triggerd`、`dnstsec-trigger-control` 和 `dnstsec-trigger-panel` 的命令选项。
+- `dnstsec-trigger.conf(8)` man 页面 – 描述 `dnstsec-triggerd` 的配置选项。
+- `unbound(8)` man 页面 – 描述 DNS 验证解析器 `unbound` 的命令选项。
+- `unbound.conf(5)` man 页面 – 包含有关如何配置 `unbound` 的信息。
+- `resolv.conf(5)` man 页面 – 包含由解析例程读取的信息。
+
+### 4.5.12.2. 在线文档
+
+[http://tools.ietf.org/html/rfc4033](http://tools.ietf.org/html/rfc4033)
+
+RFC 4033 DNS 安全简介和要求。
+
+[http://www.dnscach.net/](http://www.dnscach.net/)
+
+一个包含许多 DNSSEC 资源链接的网站。
+
+[http://www.dnsssec-deployment.org/](http://www.dnsssec-deployment.org/)
+
+由国土安全部资助的 DNSSEC 部署倡议，包含大量 DNSSEC 信息，并设有一个邮件列表来讨论 DNSSEC 部署问题。
+
+[http://www.internetsociety.org/deploy360/dnsssec/community/](http://www.internetsociety.org/deploy360/dnsssec/community/)
+
+互联网协会的“Deploy 360”倡议旨在刺激和协调全球 DNSSEC 部署，是寻找社区和 DNSSEC 活动的良好资源。
+

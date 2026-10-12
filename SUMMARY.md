@@ -1725,6 +1725,7 @@
 +   [Red Hat Enterprise Linux 6 安全指南指南](docs/red-hat-enterprise-linux-6-security-guide/README.md)
 +   [Red Hat Enterprise Linux 7：桌面与管理指南](docs/red-hat-enterprise-linux-7-desktops-and-administration/README.md)
 +   [Red Hat Enterprise Linux 7 网络指南](docs/red-hat-enterprise-linux-7-networking-guide/README.md)
++   [Red Hat Enterprise Linux 7 安全指南](docs/red-hat-enterprise-linux-7-security-guide/README.md)
 +   [Red Hat Enterprise Linux 8：使用 RHEL 系统角色的管理与配置任务](docs/red-hat-enterprise-linux-8-administration-and-configuration-/README.md)
 +   [Red Hat Enterprise Linux 8 安全加固指南](docs/red-hat-enterprise-linux-8-security-hardening/README.md)
 +   [Red Hat Enterprise Linux 8.0 (RH124) - 红 Hat 系统管理入门 1](docs/red-hat-enterprise-linux-80-rh124---red-hat-system-administr/README.md)

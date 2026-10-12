@@ -1,0 +1,194 @@
+
+
+### 5.12.2. 为 IP 集合配置自定义服务
+
+您可以将 IP 集合添加为区域的来源，以使用区域控制来自 IP 集合中列出的任何地址的所有传入流量。例如，要将 `test` IP 集合添加为 `drop` 区域的来源，以丢弃所有来自 `test` IP 集合中列出的所有条目的数据包，请以 `root` 身份使用以下命令：
+
+```bash
+[~]# firewall-cmd --permanent --zone=drop --add-source=ipset:test
+success
+```
+
+来源中的 `ipset:` 前缀向 `firewalld` 表明该来源是一个 IP 集合，而不是 IP 地址或地址范围。
+
+仅 IP 集合的创建和删除限制在永久环境中，所有其他 IP 集合选项也可以在运行时环境中使用，且无需使用 `--permanent` 选项。
+
+若要配置一个自定义服务，以便在 `firewalld` 启动之前创建并加载 IP 集合结构：
+
+1. 使用以 `root` 身份运行的编辑器，创建如下文件：
+
+```bash
+[~]# vi /etc/systemd/system/ipset_name.service
+[Unit]
+Description=ipset_name
+Before=firewalld.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/ipset_name.sh start
+ExecStop=/usr/local/bin/ipset_name.sh stop
+
+[Install]
+WantedBy=basic.target
+```
+
+2. 在 `firewalld` 中永久使用 IP 集合：
+
+```bash
+[~]# vi /etc/firewalld/direct.xml
+<?xml version="1.0" encoding="utf-8"?>
+<direct>
+  <rule ipv="ipv4" table="filter" chain="INPUT" priority="0">-m set \
+-match-set ipset_name src -j DROP</rule>
+</direct>
+```
+
+3. 需要重新加载 `firewalld` 才能激活这些更改：
+
+```bash
+[~]# firewall-cmd --reload
+```
+
+这会在不丢失状态信息（TCP 会话不会被终止）的情况下重新加载防火墙，但在重新加载过程中可能会出现服务中断。
+
+> **警告**
+> Red Hat 不建议使用未通过 firewalld 管理的 IP 集合。若要使用此类 IP 集合，需要一条永久直接规则来引用该集合，并且必须添加一个自定义服务来创建这些 IP 集合。该服务需要在 firewalld 启动之前启动，否则 firewalld 无法使用这些集合适配直接规则。您可以使用 `/etc/firewalld/direct.xml` 文件添加永久直接规则。
+
+## 5.13. 使用 iptables 设置和控制 IP 集合
+
+firewalld 和 iptables（以及 ip6tables）服务之间的主要区别在于：
+
+- iptables 服务将配置存储在 `/etc/sysconfig/iptables` 和 `/etc/sysconfig/ip6tables` 中，而 firewalld 将其存储在 `/usr/lib/firewalld/` 和 `/etc/firewalld/` 中的各种 XML 文件中。请注意，由于 Red Hat Enterprise Linux 默认安装了 firewalld，因此 `/etc/sysconfig/iptables` 文件不存在。
+- 使用 iptables 服务时，每次更改都意味着刷新所有旧规则并从 `/etc/sysconfig/iptables` 读取所有新规则，而使用 firewalld 时则无需重建所有规则。仅应用差异。因此，firewalld 可以在运行时更改设置，而不会丢失现有连接。
+
+两者都使用 iptables 工具与内核包过滤器进行通信。
+
+若要使用 iptables 和 ip6tables 服务而不是 firewalld，请先以 root 身份运行以下命令禁用 firewalld：
+
+```bash
+~]# systemctl disable firewalld
+~]# systemctl stop firewalld
+```
+
+然后以 root 身份输入以下命令安装 iptables-services 软件包：
+
+```bash
+~]# yum install iptables-services
+```
+
+iptables-services 软件包包含 iptables 服务和 ip6tables 服务。
+
+然后，以 root 身份输入以下命令以启动 iptables 和 ip6tables 服务：
+
+```bash
+~]# systemctl start iptables
+~]# systemctl start ip6tables
+```
+
+若要启用服务以便在每次系统启动时启动，请输入以下命令：
+
+```bash
+~]# systemctl enable iptables
+~]# systemctl enable ip6tables
+```
+
+ipset 实用程序用于管理 Linux 内核中的 IP 集合。IP 集合是存储 IP 地址、端口号、IP 和 MAC 地址对或 IP 地址和端口号对的框架。集合的索引方式使得即使集合非常大，也可以对集合进行非常快速的匹配。IP 集合使得配置更简单且更易管理，并且在使用 iptables 时提供性能优势。引用集合的 iptables 匹配和目标创建了对集合的引用，从而保护内核中的给定集合。只要存在指向集合的单个引用，该集合就不能被销毁。
+
+使用 **ipset** 可以用集合替代 **iptables** 命令，例如以下命令：
+
+```bash
+~]# iptables -A INPUT -s 10.0.0.0/8 -j DROP
+~]# iptables -A INPUT -s 172.16.0.0/12 -j DROP
+~]# iptables -A INPUT -s 192.168.0.0/16 -j DROP
+```
+
+集合的创建方式如下：
+
+```bash
+~]# ipset create my-block-set hash:net
+~]# ipset add my-block-set 10.0.0.0/8
+~]# ipset add my-block-set 172.16.0.0/12
+~]# ipset add my-block-set 192.168.0.0/16
+```
+
+然后在 **iptables** 命令中按以下方式引用该集合：
+
+```bash
+~]# iptables -A INPUT -m set --match-set my-block-set src -j DROP
+```
+
+如果集合被使用多次，则配置时间会节省。如果集合包含许多条目，则处理时间会节省。
+
+## 5.14. 使用直接接口
+
+使用 `firewall-cmd` 工具的 `--direct` 选项可以在运行时添加和删除链。这里列出了一些示例。更多信息请参见 `firewall-cmd(1)` 手册页。
+
+如果您不太熟悉 **iptables**，使用直接接口是危险的，因为这可能会无意中导致防火墙出现漏洞。
+
+直接接口模式旨在让服务或应用程序在运行时添加特定的防火墙规则。可以使用 `firewall-cmd --permanent --direct` 命令添加 `--permanent` 选项或修改 `/etc/firewalld/direct.xml` 来使规则永久化。有关 `/etc/firewalld/direct.xml` 文件的信息，请参见手册 `firewalld.direct(5)`。
+
+### 5.14.1. 使用直接接口添加规则
+
+若要向“IN_public_allow”链添加规则，请以 **root** 身份输入以下命令：
+
+```bash
+~]# firewall-cmd --direct --add-rule ipv4 filter IN_public_allow \
+     0 -m tcp -p tcp --dport 666 -j ACCEPT
+```
+
+添加 `--permanent` 选项以使设置持久化。
+
+### 5.14.2. 使用直接接口删除规则
+
+若要移除“IN_public_allow”链中的规则，请以 **root** 身份输入以下命令：
+
+```bash
+~]# firewall-cmd --direct --remove-rule ipv4 filter IN_public_allow \
+    0 -m tcp -p tcp --dport 666 -j ACCEPT
+```
+
+添加 `--permanent` 选项以使设置持久化。
+
+### 5.14.3. 使用直接接口列出规则
+
+若要列出“IN_public_allow”链中的规则，请以 **root** 身份输入以下命令：
+
+```bash
+~]# firewall-cmd --direct --get-rules ipv4 filter IN_public_allow
+```
+
+请注意，此命令（`--get-rules` 选项）仅列出之前使用 `--add-rule` 选项添加的规则。它不列出通过其他方式添加的现有 `iptables` 规则。
+
+## 5.15. 使用“丰富语言”语法配置复杂防火墙规则
+
+使用“丰富语言”语法，可以创建比直接接口方法更容易理解的复杂防火墙规则。此外，配置可以永久化。该语言使用带有值的关键词，是 `iptables` 规则的抽象表示。可以使用此语言配置区域；当前的配置方法仍将得到支持。
+
+### 5.15.1. 丰富语言命令的格式
+
+本节中的所有命令都需要以 **root** 身份运行。添加规则命令的格式如下：
+
+```bash
+firewall-cmd [--zone=zone] --add-rich-rule='rule' [--timeout=timeval]
+```
+
+这将针对区域 *zone* 添加丰富语言规则 *rule*。此选项可以指定多次。如果省略区域，则使用默认区域。如果提供了超时时间，则该规则或这些规则仅在指定的时间段内保持活动状态，之后将自动移除。时间值后可以跟随 s（秒）、m（分钟）或 h（小时）以指定时间单位。默认是秒。
+
+要删除规则：
+
+```bash
+firewall-cmd [--zone=zone] --remove-rich-rule='rule'
+```
+
+这将移除针对区域 *zone* 的丰富语言规则 *rule*。此选项可以指定多次。如果省略区域，则使用默认区域。
+
+要检查规则是否存在：
+
+```bash
+firewall-cmd [--zone=zone] --query-rich-rule='rule'
+```
+
+这将返回针对区域 *zone* 是否已添加丰富语言规则 *rule*。如果启用，命令打印 **yes** 且退出状态为 **0**。否则打印 **no** 且退出状态为 **1**。如果省略区域，则使用默认区域。
+
+有关在区域配置文件中使用的丰富语言表示的信息，请参见 `firewalld.zone(5)` 手册页。
+
