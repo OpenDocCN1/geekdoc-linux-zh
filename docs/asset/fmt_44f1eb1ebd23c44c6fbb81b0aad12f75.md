@@ -1,0 +1,190 @@
+
+# P
+
+- 路径 (paths), 145–146
+- `pdbedit`, 547
+- PDC, 548
+- Perl, 386
+- 权限 (permissions), 158
+    - 基本文件权限, 159
+    - 修改命令, 159–162
+    - 特殊文件权限, 162–164
+- PEs. 参见物理区 (physical extents)
+- PGP, 547
+- PHP, 547
+    - 为网站进行配置, 338
+- 物理区 (physical extents), 133, 547
+- 物理卷 (physical volumes), 133, 134–135, 547
+    - 命令, 136
+- `ping`, 306–307
+- 可插拔认证模块 (Pluggable Authentication Modules)
+- 参见 PAM
+- PolicyKit, 273–274, 547
+    - 命令, 284–286
+    - 概念, 274
+    - 设备访问设置, 280
+    - 显式授权, 283–284
+    - 文件系统存储设置, 278
+    - 标识符, 276–277
+    - 隐式授权, 278–283
+    - 电源管理设置, 279
+    - 恢复默认设置, 286–287
+    - 启动, 275–276
+- POP, 547
+- 端口映射, 315, 410–412
+- 端口 (ports)
+    - 识别开放端口, 309
+    - 安全, 466–471
+- 邮局传输协议 (Post Office Protocol). 参见 POP
+- Postfix, 548
+    - 配置, 433–439
+- Postscript 打印机定义 (Postscript Printer Definition), 548
+- 开机自检 (POST), 88
+- PPD. 参见 Postscript Printer Definition
+- 引导执行环境 (Preboot Execution Environment), 548
+- PXE 启动, 67–68, 527
+- prefork MPM, 397
+- 良好的隐私 (Pretty Good Privacy). 参见 PHP
+- 主域控制器 (Primary Domain Controller). 参见 PDC
+- 打印机管理员，配置, 239
+- 打印管理命令, 240–245
+- 打印机配置工具, 231, 232–233
+
+## 打印机
+- 添加新打印机, 234–236
+- 添加打印类 (Print Class), 236
+- samba 共享打印机, 236–238
+- 公/私钥, 548
+- `pvcreate`, 548
+- `pvdisplay`, 548
+- PVs. 参见物理卷 (physical volumes)
+- `pwd`, 146
+- PXE. 参见 Preboot Execution Environment
+- Python, 386
+- 候选版本 (release candidate), 10, 549
+- 版本 (releases)
+    - 纸质版, 13
+    - , 8
+- `reportub-ng`, 549
+- 软件源 (repositories), 5–6, 7–549
+    - 类别, 195
+    - 目录, 194
+    - 镜像 Ubuntu 仓库, 213
+    - 组织, 194–195
+    - 源管理, 195–198
+- 救援选项 (rescue options)
+
+# Q
+
+- QEMU, 513, 548
+- Qt, 548
+- 快速仿真器 (Quick Emulator). 参见 QEMU
+- `quotacheck`, 266–267
+- 配额 (quotas), 265, 548
+    - 在 `/etc/fstab` 中, 265–266
+    - 周期, 268
+    - 配额管理命令, 266–267
+    - 报告, 269
+    - 按大小和索引节点, 267–268
+    - 配额, 149–150
+- 救援模式 (Rescue Mode), 104–107, 549
+    - GRUB 运行级别, 101–102
+    - 安装 CD, 104–107
+    - LiveCD, 107–108
+    - 恢复模式, 100–101
+    - 使用 GRUB 命令行, 102–104
+    - `resize2fs`, 549
+    - 恢复, 458
+    - 受限软件源, 6, 195, 550
+    - 参见软件源 (repositories)
+    - 反向区域 (inverse) zone, 550
+    - 反向区域文件, 377–378
+    - `rdnic`, 371, 550
+    - root, 94, 550
+    - 路由, 550
+    - 路由表，配置, 292–295
+    - `rpcinfo`, 456–468, 550
+    - 运行级别, 550
+    - GRUB, 101–102
+    - 脚本动作, 181–182
+
+# R
+
+- RAID, 128, 548
+    - 创建 RAID 分区, 129–130
+    - 定义, 128–129
+    - 格式化并配置阵列, 130–131
+    - 维护 RAID 阵列, 132
+    - 在 `/etc/fstab` 中生效, 132–133
+    - 使用激活 RAID 阵列, 131
+    - RAID 0, 129, 549
+    - RAID 1, 129, 549
+    - RAID 5, 129, 549
+    - RAID 5, 129, 549
+    - RAID 6, 129, 549
+    - 恢复模式, 100–101, 549
+- 独立冗余阵列 (Redundant Array of Disks). 参见 RAID
+- 刷新率, 549
+
+# S
+
+- Samba, 415–456, 550
+    - 基础域成员, 424
+    - 命令, 416–418
+    - 配置文件, 418–424
+    - 域控制器, 424–425
+    - 实施更改, 225
+    - 安装, 416
+- 共享文件夹, 225–430
+- 共享打印机, 236–238
+- SATA. 参见 Serial ATA
+- 任务调度，安全, 181
+- SCO Group, Inc., 3
+- 屏幕与图形界面, 344–347
+- 安全 Shell (Secure Shell), 168, 550
+    - 客户端访问, 174–175
+    - 配置 SSH 服务器, 168–172
+    - 创建, 402–403
+    - 安全主机, 550
+    - 警告, 174
+- NIS, 321–322
+- 安全
+    - 端口, 466–471
+- `sed`, 153
+- `sendmail`, 439–445, 551
+- Serial ATA, 551
+- 服务设置工具, 184
+- 服务，管理
+    - 当服务启动和停止时, 182–184
+- ID (Set ID). 参见 GID
+- 用户 ID (Set User ID). 参见 SUID
+- 影子密码套 (Shadow Password Suite), 248, 551
+    - 停用, 248–252
+    - `shadowconf`, 551
+- Shell (shell), 551
+- 共享文件夹工具, 425–430
+- `showmount`, 551
+- Shuttleworth, Mark, 6, 551
+- 邮件传输协议 (Simple Mail Transfer Protocol). SMTP
+- 单用户模式, 168
+- 从属 DNS 服务器, 551
+- SMB, 79
+- `smbclient`, 551
+- `smbpasswd`, 551
+- SMTP, 551
+- 软链接 (soft links), 149, 267–268
+- `sort`, 152
+- SQL, 552
+- SSH. 参见 Secure Shell
+- SSL 证书，创建, 400–402
+- SSL 模块，启用, 400
+- 稳定软件源, 5
+- Stallman, Richard, 3
+- 启动脚本, 181
+- 粘位 (sticky bit), 162, 163–164, 552
+- 无校验位条化 (striping without parity), 129
+- 结构化查询语言 (Structured Query Language). 参见 SQL
+- `su`, 552
+- `sudo`, 262–263, 552
+- `sudo passwd`, 260
+- `sudoedit`, 262, 552
