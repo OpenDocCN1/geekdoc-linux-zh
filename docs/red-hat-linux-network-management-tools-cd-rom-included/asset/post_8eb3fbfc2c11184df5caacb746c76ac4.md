@@ -1,0 +1,189 @@
+
+When scanning networks, it is sometimes helpful to know exactly what **nmap** is doing at all times. For this reason, the -v option has been provided. Bear in mind that a fair amount of output may be generated as a result, so it might be important to use this option with caution. In the previous example, we scanned an entire subnet. If we added the -v option with this command and reduced the number of targets by half using an IP range, the command **nmap -v -p 161 10.0.2.1-127** would display the following:
+
+```
+No scantype specified, assuming vanilla tcp connect() scan.
+Use -sP if you really don't want to portscan (and just want to see what hosts
+are up).
+
+Starting nmap V. 2.12 by Fyodor (fyodor@dhcp.com,
+www.insecure.org/nmap/)
+Host (10.0.2.0) appears to be down, skipping it.
+Host (10.0.2.1) appears to be down, skipping it.
+Host (10.0.2.2) appears to be down, skipping it.
+Host (10.0.2.3) appears to be down, skipping it.
+Host (10.0.2.4) appears to be down, skipping it.
+Host (10.0.2.5) appears to be down, skipping it.
+Host (10.0.2.6) appears to be down, skipping it.
+Host (10.0.2.7) appears to be down, skipping it.
+Host (10.0.2.8) appears to be down, skipping it.
+Host (10.0.2.9) appears to be down, skipping it.
+Host durer.home.com (10.0.2.10) appears to be up ... good.
+Initiating TCP connect() scan against durer.home.com
+(10.0.2.10)
+The TCP connect scan took 0 seconds to scan 1 ports.
+No ports open for host durer.home.com (10.0.2.10)
+Host (10.0.2.11) appears to be down, skipping it.
+Host (10.0.2.12) appears to be down, skipping it.
+Host (10.0.2.13) appears to be down, skipping it.
+Host (10.0.2.14) appears to be down, skipping it.
+Host (10.0.2.15) appears to be down, skipping it.
+Host (10.0.2.16) appears to be down, skipping it.
+Host (10.0.2.17) appears to be down, skipping it.
+Host (10.0.2.18) appears to be down, skipping it.
+Host (10.0.2.19) appears to be down, skipping it.
+Host (10.0.2.20) appears to be down, skipping it.
+Host (10.0.2.21) appears to be down, skipping it.
+Host (10.0.2.22) appears to be down, skipping it.
+Host (10.0.2.23) appears to be down, skipping it.
+Host (10.0.2.24) appears to be down, skipping it.
+Host (10.0.2.25) appears to be down, skipping it.
+Host (10.0.2.26) appears to be down, skipping it.
+Host (10.0.2.27) appears to be down, skipping it.
+Host (10.0.2.28) appears to be down, skipping it.
+Host (10.0.2.29) appears to be down, skipping it.
+Host (10.0.2.30) appears to be down, skipping it.
+Host (10.0.2.31) appears to be down, skipping it.
+Host (10.0.2.32) appears to be down, skipping it.
+Host (10.0.2.33) appears to be down, skipping it.
+Host (10.0.2.34) appears to be down, skipping it.
+Host (10.0.2.35) appears to be down, skipping it.
+Host (10.0.2.36) appears to be down, skipping it.
+Host (10.0.2.37) appears to be down, skipping it.
+Host (10.0.2.38) appears to be down, skipping it.
+Host (10.0.2.39) appears to be down, skipping it.
+Host (10.0.2.40) appears to be down, skipping it.
+Host (10.0.2.41) appears to be down, skipping it.
+Host (10.0.2.42) appears to be down, skipping it.
+Host (10.0.2.43) appears to be down, skipping it.
+Host (10.0.2.44) appears to be down, skipping it.
+Host (10.0.2.45) appears to be down, skipping it.
+Host (10.0.2.46) appears to be down, skipping it.
+Host (10.0.2.47) appears to be down, skipping it.
+Host (10.0.2.48) appears to be down, skipping it.
+Host (10.0.2.49) appears to be down, skipping it.
+Host probe.home.com (10.0.2.50) appears to be up ... good.
+Initiating FIN, NULL, UDP, or Xmas stealth scan against
+probe.home.com (10.0.2.50)
+The UDP or stealth FIN/NULL/XMAS scan took 0 seconds to
+scan 1 ports.
+
+Interesting ports on probe.home.com (10.0.2.50):
+| Port | State | Protocol | Service |
+|------|-------|----------|---------|
+| 161 | open |  | snmp |
+Host (10.0.2.51) appears to be down, skipping it.
+Host (10.0.2.52) appears to be down, skipping it.
+Host (10.0.2.53) appears to be down, skipping it.
+Host (10.0.2.54) appears to be down, skipping it.
+Host (10.0.2.55) appears to be down, skipping it.
+Host (10.0.2.56) appears to be down, skipping it.
+Host (10.0.2.57) appears to be down, skipping it.
+Host (10.0.2.58) appears to be down, skipping it.
+Host (10.0.2.59) appears to be down, skipping it.
+Host switch.home.com (10.0.2.60) appears to be up ... good.
+Initiating FIN, NULL, UDP, or Xmas stealth scan against
+switch.home.com (10.0.2.60)
+The UDP or stealth FIN/NULL/XMAS scan took 0 seconds to
+scan 1 ports.
+
+Interesting ports on switch.home.com (10.0.2.60):
+
+| Port | State | Protocol | Service |
+| :--- | :--- | :--- | :--- |
+| 161 | open | udp | snmp |
+
+Host (10.0.2.61) appears to be down, skipping it.
+Host (10.0.2.62) appears to be down, skipping it.
+Host (10.0.2.63) appears to be down, skipping it.
+Host (10.0.2.64) appears to be down, skipping it.
+Host tux.home.com (10.0.2.65) appears to be up ... good.
+
+Initiating FIN, NULL, UDP, or Xmas stealth scan against
+switch.home.com (10.0.2.65)
+
+The UDP or stealth FIN/NULL/XMAS scan took 0 seconds to
+scan 1 ports.
+
+Interesting ports on tux.home.com (10.0.2.65):
+
+| Port | State | Protocol | Service |
+| :--- | :--- | :--- | :--- |
+| 161 | open | udp | snmp |
+
+No ports open for host switch.home.com (10.0.2.60)
+
+Host (10.0.2.66) appears to be down, skipping it.
+Host (10.0.2.67) appears to be down, skipping it.
+Host (10.0.2.68) appears to be down, skipping it.
+Host (10.0.2.69) appears to be down, skipping it.
+Host (10.0.2.70) appears to be down, skipping it.
+Host (10.0.2.71) appears to be down, skipping it.
+Host (10.0.2.72) appears to be down, skipping it.
+Host (10.0.2.73) appears to be down, skipping it.
+Host (10.0.2.74) appears to be down, skipping it.
+Host (10.0.2.75) appears to be down, skipping it.
+Host (10.0.2.76) appears to be down, skipping it.
+Host (10.0.2.77) appears to be down, skipping it.
+Host (10.0.2.78) appears to be down, skipping it.
+Host (10.0.2.79) appears to be down, skipping it.
+Host (10.0.2.80) appears to be down, skipping it.
+Host (10.0.2.81) appears to be down, skipping it.
+Host (10.0.2.82) appears to be down, skipping it.
+Host (10.0.2.83) appears to be down, skipping it.
+Host (10.0.2.84) appears to be down, skipping it.
+Host (10.0.2.85) appears to be down, skipping it.
+Host (10.0.2.86) appears to be down, skipping it.
+Host (10.0.2.87) appears to be down, skipping it.
+Host (10.0.2.88) appears to be down, skipping it.
+Host (10.0.2.89) appears to be down, skipping it.
+Host (10.0.2.90) appears to be down, skipping it.
+Host (10.0.2.91) appears to be down, skipping it.
+Host (10.0.2.92) appears to be down, skipping it.
+Host (10.0.2.93) appears to be down, skipping it.
+Host (10.0.2.94) appears to be down, skipping it.
+Host (10.0.2.95) appears to be down, skipping it.
+Host (10.0.2.96) appears to be down, skipping it.
+Host (10.0.2.97) appears to be down, skipping it.
+Host (10.0.2.98) appears to be down, skipping it.
+Host (10.0.2.99) appears to be down, skipping it.
+Host (10.0.2.100) appears to be down, skipping it.
+Host (10.0.2.101) appears to be down, skipping it.
+Host (10.0.2.102) appears to be down, skipping it.
+Host (10.0.2.103) appears to be down, skipping it.
+Host (10.0.2.104) appears to be down, skipping it.
+Host (10.0.2.105) appears to be down, skipping it.
+Host (10.0.2.106) appears to be down, skipping it.
+Host (10.0.2.107) appears to be down, skipping it.
+Host (10.0.2.108) appears to be down, skipping it.
+Host (10.0.2.109) appears to be down, skipping it.
+Host (10.0.2.110) appears to be down, skipping it.
+Host (10.0.2.111) appears to be down, skipping it.
+Host (10.0.2.112) appears to be down, skipping it.
+Host (10.0.2.113) appears to be down, skipping it.
+Host (10.0.2.114) appears to be down, skipping it.
+Host (10.0.2.115) appears to be down, skipping it.
+Host (10.0.2.116) appears to be down, skipping it.
+Host (10.0.2.117) appears to be down, skipping it.
+Host (10.0.2.118) appears to be down, skipping it.
+Host (10.0.2.119) appears to be down, skipping it.
+Host (10.0.2.120) appears to be down, skipping it.
+Host (10.0.2.121) appears to be down, skipping it.
+Host (10.0.2.122) appears to be down, skipping it.
+Host (10.0.2.123) appears to be down, skipping it.
+Host (10.0.2.124) appears to be down, skipping it.
+Host (10.0.2.125) appears to be down, skipping it.
+Host (10.0.2.126) appears to be down, skipping it.
+Host dyndns-gw2.home.com (10.0.2.127) appears to be up ... good.
+
+Initiating FIN, NULL, UDP, or Xmas stealth scan against dyndns-gw2.home.com (10.0.2.127)
+The UDP or stealth FIN/NULL/XMAS scan took 0 seconds to scan 1 ports.
+
+Interesting ports on dyndns-gw2.home.com (10.0.2.127):
+| Port | State | Protocol | Service |
+|------|-------|----------|---------|
+| 161 | open | udp | snmp |
+
+Nmap run completed -- 127 IP addresses (5 hosts up) scanned in 1 second
+
+As you can see, a large amount of output was produced despite the fact that only half of the subnet was scanned. Also, nmap identified four devices that support SNMP agents, as noted by the lines

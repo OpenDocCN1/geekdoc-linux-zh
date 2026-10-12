@@ -1,0 +1,7 @@
+![](bbox=[0.18, 0.05, 0.85, 0.48])
+
+# Figure 9.17 First traffic statistics report.
+
+work traffic. However, it is important to examine the percentage very closely. If a large percentage of traffic is either broadcast- or multicast-based but no network applications have been deployed to account for this, then a mystery needs to be solved. This is easy because other `ntop` reports show this information. In general, networks should contain mostly unicast traffic. Unicast traffic is represented by one machine sending information to another. Again, the network and deployment of applications will ultimately determine the traffic profile.
+
+The remaining rows of the table profile the size of packets recorded and shouldn’t be overlooked. Several years ago, a large corporation was deploying a new application that involved using a graphical user interface and back-end database. As the application was being installed at remote sites around the world, the development and support staff noticed serious performance problems when using the new application. The problem: The application was using very small packets between the application interface and database. The problem was further compounded by the fact that

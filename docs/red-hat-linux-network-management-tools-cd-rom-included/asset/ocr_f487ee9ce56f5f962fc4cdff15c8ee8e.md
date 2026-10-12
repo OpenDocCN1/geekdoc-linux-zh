@@ -1,0 +1,5 @@
+You may recall an earlier scenario in which a disabled interface caused a network problem. There are also situations when not disabling an interface can cause additional network problems. For example, during a broadcast storm or when a cracker is attempting to penetrate the network, shutting down a device or interface might be the only way to prevent the problem from spreading to other parts of the network. However, before resorting to turning off interfaces, watch out for the *set of no return* syndrome. Consider the sample network shown in Figure 8.1.
+
+![](bbox=[0.12, 0.33, 0.88, 0.74])
+
+In this sample network, we have two routers, R1 and R2. Our only access to R2 is via router R1, using the serial 1 interface. From device Node A, we issue an snmpset command to disable the serial 0 interface from R2. This stops the broadcast storm but also causes a connectivity loss from the remote office. The problem is now: How do we enable the interface on R2 after the broadcast storm has been fixed? The set of no return means that the only means of access to the device has been cut off. Remote access to the router has been

@@ -1,0 +1,11 @@
+ing to send information to this system but is misconfigured and attempting to send information to a nonexistent port. 
+
+One positive way to track down the cause of this problem is to capture traffic on the same network as this system and attempt to learn which remote device is sending the data. Once you get the identity of the remote system, investigating which application is causing this problem is simply a matter of notifying the owner of the system. It is easy to see why using the **snmpnetstat** command is a good way to determine potential network problems before they get out-of-hand.
+
+# Snmpset Tool
+
+The **snmpset** command is one of the most useful and powerful commands within the UCD package. Many of the tools in this chapter focus on obtaining object values from an SNMP agent. However, this tool is used to alter modifiable MIB agent objects. The ability to alter an MIB object is profound in it implications because doing so changes the configuration or operating state of a managed agent.
+
+This tool represents a power mechanism for controlling agents on a global scale. The ability to change the configuration of a large number of devices provides an important facility that every network manager or system administrator must have. Having the power to control many devices can represent a liability as well. Consider, for example, a router with several interfaces that serve as remote connection points between important distant office networks. A single **snmpset** command (with the appropriate security password) executed against one or more interfaces on this router could disable network connectivity between the local network and the remote office(s). Obviously, this could have disastrous consequence for business, to say nothing of your reputation.
+
+Another liability is related to making a global change to a series of systems when the new configuration is incorrect or causes some service outage due to the nature of the change. Because the **snmpset** command is powerful, exercise caution when using this command on an active network. It can never be said too often that the first rule of thumb in networking is to review the proposed changes in a

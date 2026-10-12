@@ -1,0 +1,349 @@
+
+## MIB-II，ICMP 组（续）
+- icmpInErrors 287
+- icmpInMsgs 287
+- icmpInParmProbs 289
+- icmpInRedirects 289
+- icmpInSrcQuenchs 289
+- icmpInTimeExcds 288
+- icmpInTimestampReps 290
+- icmpOutAddrMaskReps 294
+- icmpOutAddrMasks 294
+- icmpOutDestUnreachs 291
+- icmpOutEchoReps 293
+- icmpOutEchoes 293
+- icmpOutErrors 291
+- icmpOutMsgs 291
+- icmpOutParmProbs 292
+- icmpOutRedirects 292
+- icmpOutSrcQuenchs 292
+- icmpOutTimeExcds 292
+- icmpOutTimestampReps 293
+- icmpOutTimestamps 293
+- icmpTimestamps 290
+- Linux 代理查询输出 294
+- 对象列表 287
+- ICMP 组视图 288
+- 接口组 254
+- ifAdminStatus 259, 262
+- ifAdminStatus 状态 259
+- ifDescr 257, 260, 277
+- ifEntry 260
+- ifIndex 254, 260, 276, 277
+- ifInDiscards 263
+- ifInErrors 264
+- ifInNUcastPkts 263
+- ifInOctets 263
+- ifInUcastPkts 263
+- ifInUnknownProtos 264
+- ifLastChange 262
+- ifMtu 257, 261
+- ifNumber 254, 257, 259
+- ifOperStatus 259, 262
+- ifOutDiscards 265
+- ifOutErrors 265
+- ifOutNUcastPkts 265
+- ifOutOctets 264
+- ifOutLen 266
+- ifOutUcastPkts 264
+- ifPhysAddress 258, 262
+- ipspecific 259, 266
+- ipSpeed 257, 261
+- ipTable 254, 260
+- ipTable 对象列表 254
+- Linux 系统 ipTable 查询输出 255
+- ipType 257, 261
+- 常用接口类型 253
+- RFC1213 257
+- 接口组视图 255
+- 互联网协议组
+- 参见 IP 组 269
+- IP 转发组
+- IP 转发表 286
+- ipForward row 286
+- ipForwardDest 287
+- ipForwardNextHopAs 287
+- ipForwardNextHop 287
+- ipForwardPolicy 287
+- ipForwardProto 287
+- ipForwardTable 287
+- ipRouteTable 287
+- 新对象 287
+- IP 组 269
+- ipAddrTable 275, 276
+- ipAddrTable 输出 277
+- ipAdEntAddr 277
+- ipAdEntBroadcastAddr 277
+- ipAdEntNetMask 277
+- ipDefaultTTL 269
+- ipForwarding 269
+- ipForwardDatagrams 271
+- ipFragOK 274
+- ipFragCreates 275
+- ipFragFails 274
+- ipInAddrErrors 271
+- ipInDelivers 272
+- ipInDiscards 272
+- ipInHdrErrors 271
+- ipInReceives 270
+- ipInUnknownProtos 271
+- ipNetToMediaIfIndex 284
+- ipNetToMediaNetAddress 285
+- ipNetToMediaPhysAddress 285
+- ipNetToMediaTable 275, 276
+- ipNetToMediaTable 输出 286
+- ipNetToMediaTable 视图 284
+- ipNetToMediaType 285
+- ipNetToMediaType 值 286
+- ipOutDiscards 273
+- ipOutNoRoutes 273
+- ipOutRequests 272
+- ipReasmFails 274
+- ipReasmOKs 274
+- ipReasmReqs 273
+- ipReasmTimeout 273
+- ipReasmAge 280, 283
+- ipRouteDest 277, 280, 281
+- ipRouteEntry 281
+- ipRouteIfIndex 277, 281
+- ipRouteInfo 280, 284
+- ipRouteMask 280, 283
+- ipRouteMetric1 278, 281
+- ipRouteMetric2 282
+- ipRouteMetric3 282
+- ipRouteMetric4 282
+- ipRouteMetric5 280, 283
+- ipRouteNextHop 278, 282
+- ipRouteProto 278, 279, 283
+- ipRouteProto 值 279
+- ipRouteTable 275, 276, 277, 278
+- ipRouteTable 对象列表 280
+- ipRouteTable 问题 286
+- ipRouteTable 视图 278
+- ipRouteType 279, 282
+- 值 279
+- ipRoutingDiscards 276
+- IP 组视图 270
+- ipAddrTable 视图 276
+- 对象 248
+- 确定 sysServices 设备值 248
+- sysContact 250, 254
+- sysLocation 251, 254
+- sysName 251, 254
+- sysObject 254
+- sysObjectID 250
+- sysOR 前缀 243
+- sysORDescr 258
+- sysOREntry 252
+- sysORID 252
+- sysORIndex 252
+- sysORLastChange 251
+- sysORTable 252
+- sysORUptime 253
+- sysServices 248, 251, 254
+- sysUpTime 248, 249, 250
+- 概述 246
+- SNMP 组 314
+- 因 SNMPv2 而弃用的对象 315
+- snmp 表对象列表 315
+- snmpEnableAuthenTraps 值 323
+- snmpEnableAuthenTraps 322
+- snmpInASNParseErrs 317
+- snmpBadCommunityNames 316
+- snmpBadCommunityUsers 316
+- snmpBadValues 318
+- snmpInBadVersions 316
+- snmpInGenErrs 318
+- snmpInGetNexts 319
+- snmpInGetRequests 319
+- snmpInGetResponses 320
+- snmpInNoSuchNames 317
+- snmpInPkts 315
+- snmpInReadOnlys 318
+- snmpInSetRequests 319
+- snmpInTooBigs 317
+- snmpInTotalReqVars 318
+- snmpInTotalSetVars 319
+- snmpInTraps 320
+- snmpOutBadValues 321
+- snmpOutGenErrs 321
+- snmpOutGetNexts 321
+- snmpOutGetRequests 321
+
+## MIB-II，SNMP 组（续）
+- snmpOutGetResponses 322
+- snmpOutNoSuchNames 320
+- snmpOutPkts 316
+- snmpOutSetRequests 322
+- snmpOutTooBig 320
+- snmpOutTraps 322
+- SNMP 组视图 315
+
+## 系统组 248
+- 用于确定 sysServices 的功能层 249
+- Linux 查询结果 253
+- sysUpTime 对象 413
+- 系统组视图 248
+
+## TCP 组 295
+- Linux 系统轮询输出 299
+- 对象列表 295
+- tcpActiveOpens 297
+- tcpAttemptFails 297
+- tcpConnEntry 300
+- tcpConnState 300
+- tcpConnState 输出 300
+- tcpConnState 值 300
+- tcpConnTable 299, 300
+- tcpCurrEstab 视图 300
+- tcpCurrEstab 298
+- tcpEstabResets 297
+- tcpInErrs 299
+- tcpInSegs 298
+- tcpMaxConn 296
+- tcpOutRsts 299
+- tcpOutSegs 298
+- tcpPassiveOpens 297
+- tcpRetransSegs 298
+- tcpRtoAlgorithm 295
+- tcpRtoAlgorithm 值 295
+- tcpRtoMax 296
+- tcpRtoMin 296
+- tcp 组视图 296
+
+## UDP 组 301
+- Linux SNMP 代理查询输出 303
+- 对象列表 301
+- udpEntry 303
+- udpInDatagrams 301
+- udpInErrors 302
+- udpLocalAddress 303
+- udpLocalPort 303
+- udpNoPorts 302
+- udpOutDatagrams 302
+- udpTable 301, 302
+- udp 组视图 304
+
+## MIB-II 接口组结构 35
+
+## MIB-II 标准
+- 接口组 33
+- 性能相关信息 33
+
+## mibisa 实用程序
+- 参见 Sun SNMP 代理 391
+- MRTG 工具 466–500
+- AddHead 关键字 482
+- 坐标轴刻度 482
+- 基本配置 471
+- 基本操作视图 468
+- cfgmaker 实用程序 471
+- 示例配置文件 472
+- 语法 471
+- 从其他来源收集信息 492
+- 配置文件构建 471
+- 贡献组件 496
+- 自定义选项 470, 481
+- 每日图表 470
+- 描述 466
+- df2mrg 脚本 494
+  - -f 选项 494
+  - -p 选项 495
+  - -s 选项 494
+- df2mrg 脚本命令行选项 494
+- Directory 命令 483
+- 发现接口 475
+- 磁盘空间监控 492
+- 错误消息
+  - 无法到达目标设备 500
+  - 检测到锁定文件 498
+  - 缺少 target 关键字 499
+  - 缺少 WorkDir 关键字 499
+
+## 索引
+- Rateup 警告 498
+- 语法错误 499
+  - 社区字符串错误 498
+- 全局命令 479
+- 修改图表颜色 470
+- 修改图表显示 484
+- 使用 HTML 报表格式 474
+- IconDir 命令 480
+- ifErrors 对象 490
+- ifInOctets MIB 对象 470
+- ifInOctets 对象 475
+- ifOutOctets MIB 对象 470
+- IfOutOctets 对象 475
+- ifSpeed 对象 469
+- ifType 对象 469
+- indexmaker
+  - 命令行参数 487
+  - 语法 487
+- indexmaker 脚本 486
+- 安装 628
+- 关键字语法 474
+- 关键字列表 474
+- 主索引 486
+- 受监控设备的主索引
+  - 视图 489
+- Max Speed 字段 469
+- Maxbytes 关键字 475
+- 监控额外信息 489
+- 月度报表 470
+- 生成 mrtg 可读数据 493
+- 可选目标命令 481
+- options 关键字 484
+  - absolute 开关 485
+  - Boolean 开关 484
+  - gauge 开关 484
+  - growright 开关 484
+  - noinfo 开关 484
+  - nopercnet 开关 484
+- PageTop 关键字 477, 481
+- 预定义 SNMP MRTG 对象 491
+- Refresh 命令 479
+- 磁盘空间报表 493
+- 按百分比报告磁盘使用情况 495
+- 自定义报表 479
+- 运行计划 478
+- 使用 cron 设施调度 479
+- 特殊目标名称 485
+- `^` 字符 485
+- `$` 字符 485
+- `~` 字符 486
+- Suppress 关键字 483
+- sysContact 对象 468
+- sysLocation 对象 468
+- sysName 对象 468
+- system 字段 468
+- target 命令 489
+- target 条目 473
+- target 关键字 473, 475
+- 重置目标名称 486
+- title 关键字 476
+- 故障排除 MRTG 问题 497
+- Unscaled 关键字 482
+- 用途列表 467
+- 使用 MRTG 477
+- Web 页面概述 468
+- Web 报表 469
+- 每周图表 470
+- 每周、每月和每年的报表
+  - 视图 471
+- WithPeak 命令 483
+- WorkDir 关键字 477
+- WorkDir 示例输出 478
+- WorkDir 语法 477
+- WriteExpires 命令 480
+- 每年图表 470
+- MSL 78
+- MTU 120
+- 多宿主系统 179
+- 多路由器 111
+- 多路由器流量图生成器 (MRTG)
+  - 参见 MRTG 工具
+- 多播组 139
+- 多播路由信息 139
+
+## N
+- 子网掩码 120

@@ -1,0 +1,9 @@
+Generally speaking, you can execute most of the menu functions via a corresponding keyboard equivalent that can be used instead of selecting menu options with the mouse.
+
+The **File** menu contains options used to create and maintain network views. Figure 11.49 shows the **File** menu. The **Clear** option deletes the currently displayed view. The application will prompt for confirmation before the operation is completed. Deleting the existing view automatically creates another empty view. If the user deletes a view that isn't already saved to a file, then the view will be lost forever. The **Open...** menu option restores and displays a pre-existing view from a UNIX file. Displaying an existing view will create a new *tkined* window, and the filename of the view will be placed within the window title.
+
+![](bbox=[0.21, 0.41, 0.41, 0.64])
+
+The **Merge...** item can be used to combine different views into a single one. The **Save...** option saves the currently displayed view to a file. The user is prompted for the filename. The **Save...** option makes a copy of the view and places it in a different file. The **print...** option prints the current active view.
+
+The **Select** menu offers a variety of options that select and highlight a number of objects. Figure 11.50 shows this menu. The first option, **Select All**, selects all the objects contained within the topology view. The **Select Neighbors** option selects an adjacent object that interconnects an existing selected object. The **Select member** option selects all members of a view. The remaining menu options provide the ability to select objects based on the type,

@@ -1,0 +1,11 @@
+Class G: The first three bytes are the network identification, and the remaining byte is the node. The network address range is 192-223.
+
+Two additional (D and E) classes are defined, but they are reserved and can't be used for normal network addresses. Class D addresses are used for multicast support, and Class E addresses are reserved for future use. One way to distinguish the different classes is to use the first byte rule. With this rule, the first byte determines to which class the address belongs. For example, using the IP address of 10.1.3.2, 10 is the first byte of this address. The number 10 falls in the range of 1-127, so this IP address is a Class A type and the network portion is 10, while the node portion is 1.3.2.
+
+IP also defines some reserved addresses that include loop back and broadcast addresses. The loopback network is defined as address 127 and is used as a private network for internal diagnostics and support with an IP device. This network address is reserved and is not supposed to be used as a genuine network address. In fact, the IP protocol specifications don't recommend its use on a live network. The loopback address can be observed by issuing the UNIX ifconfig -a command. The broadcast address defined as 255 is also considered special because it denotes a short-handed way to address all hosts within a given range. For example, given the network of 134.110.0.0, which is a B Class network, the broadcast address of 134.110.255.255 addresses all devices within the entire 134.110 network. Because of the special meaning associated with 255, it should not be used as a node address.
+
+Assignment of IP addresses is accomplished through a central agency known as the Network Information Center (NIC). The NIC is responsible for assigning unique IP network addresses to any organization wishing to connect to the Internet. In many instances, a local Internet Service Provider (ISP) will request an IP address on your behalf or provide one of its own.
+
+# Subnetting
+
+Subnetting is a mechanism used to divide a network into smaller subnets or *subnets*. One major motivation for implementing subnets is to distribute administration control of IP address allocation. Subnets also permit more effective use of existing addresses.

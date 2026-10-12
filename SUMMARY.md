@@ -1801,6 +1801,7 @@
 +   [Red Hat？Linux？初学者指南？](docs/red-hat-linux-for-dummies/README.md)
 +   [Red Hat Linux 安装与配置手册](docs/red-hat-linux-installation-and-configuration-handbook-instal/README.md)
 +   [Red Hat Linux Internet 服务器指南](docs/red-hat-linux-internet-server/README.md)
++   [Red Hat Linux 网络管理工具 (附 CD-ROM)](docs/red-hat-linux-network-management-tools-cd-rom-included/README.md)
 +   [Red Hat Linux 网络工具包 [电子资源]](docs/red-hat-linux-network-toolkit-electronic-resource/README.md)
 +   [Red Hat Linux 网络与系统管理指南](docs/red-hat-linux-networking-and-system-administration/README.md)
 +   [Red Hat Linux 网络与系统管理（第2版）](docs/red-hat-linux-networking-and-system-administration-2nd-editi/README.md)
