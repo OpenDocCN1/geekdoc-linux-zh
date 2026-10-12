@@ -1,0 +1,11 @@
+Therefore, a kernel marked 2.2.17 is Linux kernel version 2, is stable, and has been preceded by 16 previous kernel patch level since that version was deemed stable. A kernel marked 2.3.46 is version 2 as well, but is developmental, and is patch level 46 of the developmental series. This type of identification is used not only in the Linux kernel but in other Linux application releases as well. With most all Linux distributions, whether Red Hat or others, it is usually only the stable kernel that makes its way into the distribution series. Seldom, if ever, has a developmental kernel been released under a commercial distribution. This is not to say that it is rash to use the developmental releases, but a stable kernel is more desirable if you want to provide stability for the servers that it will operate. Again, the developmental versions are geared mostly toward developers who want to debug and test the newer features and gain support for the top-of-the- line hardware.
+
+# ### Properly Compiling a Kernel
+
+There are several different approaches to running a compiler against the Linux source code and creating a new functional kernel. The methods described in this section are taken from my own experiences in creating new kernels under Red Hat and are also based on suggestions and information gleaned from the included source documentation. Your own methods may vary over time, but the method outlined in this section should provide enough of a foundation to create new kernels successfully.
+
+# ### Preparing for the Install
+
+Once you have either downloaded the latest kernel or decided to use the default source already installed, you can begin the process of compiling a new kernel:
+
++   1. If you are installing a *vanilla kernel*—that is, pristine source code from a new release—you should place the tarred and zipped file in the /usr/src directory. You can actually place it anywhere, but you will soon discover that it is easier to maintain tradition and place the file in this directory for the purposes of compiling. You should perform this step only as root. If you performed a full install from the distribution CDs, you will also find the existing kernel source on the CDs. The CDs also include all source headers and libraries needed to create a new kernel.

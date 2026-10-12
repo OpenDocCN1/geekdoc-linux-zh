@@ -1,0 +1,13 @@
+system uses your mail system to pass on his or her e-mail to another external host. Your box acts as a relay between the two points. Linux machines that are open to relaying are subject to abuse by unscrupulous spammers. Spam is unsolicited junk e-mail that is distributed by negligent or naive system administrators. Spammers seek out machines with older sendmail distributions with known problems or security holes. Before you might even realize that your box has been used for spamming purposes, tens of thousands of e-mails may already have passed through. You are then left with the mess of responding to the complaints from the many people who received the e-mail.
+
+Fortunately, the latest version of sendmail denies relaying by default. This stops up a major security hole in some of the older versions. Unless you want others to relay through your mail server, which is highly inadvisable, sendmail will normally configure it so that you must open up specific domains or IP addresses to relaying.
+
+# Improving upon the Access File
+
+A marked improvement over previous releases of sendmail is the incorporation of the access file, normally located in the /etc/mail directory. Here you can place those domains or IP addresses of the machines you wish to allow to relay through you. You can also place in this file the known domains of notorious spammers and deny them access to your box as well. The access database frees a mail administrator to allow access to the mail server by individual domains.
+
+As detailed on the main www.sendmail.org page, each database entry consists of a domain name or IP address as the key and an action as the value. Keys can be a fully or partly qualified host or domain names such as host.subdomain.domain.com, subdomain.domain.com, or domain.com. The last two forms match any host or subdomain under the specified domain. If the value FEATURE(relay_hosts_only) is set in your generic.mf file, only the first form works.
+
+Keys can also be a network address or subnetwork, such as 205.199.2.250, 205.199.2.0, or 205.199. The latter two forms match any host in the indicated subnetwork. Notice that with IP addresses that are specific to a range rather than to just one IP address, you must add a period to the end of the domain address. This blocks or grants access to all users who have an address within that entire class.
+
+Lastly, keys can also be user@host.domain to reject mail from a specific user. The last item is particularly crucial if you are attempting to block a specific user from distributing unwanted material.

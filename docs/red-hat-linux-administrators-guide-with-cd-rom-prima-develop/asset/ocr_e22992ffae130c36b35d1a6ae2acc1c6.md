@@ -1,0 +1,13 @@
+Red Hat, like many of the other Linux releases, runs cron jobs that rotate log files every week or so. These files can quickly become oversized and occupy more hard drive space than they are worth. The cron daemon rotates these files out by renaming them and then creating a new log file. After a certain time period, cron deletes these older logs. Log files will be kept long enough that any pertinent errors or tasks can be tracked. You can specify elsewhere just how long you want to keep certain log files. To find out more about how the system logs certain files, see Chapter 10, “Logging Errors.”
+
+# Customizing Specific crontab Entries
+
+Linux has other system cron entries. These cron jobs are set up by default during the installation process and are best left alone. The location of these files is the */etc/cron.d* directory. Much like the root cron jobs, which are user-defined, the jobs in this directory are system-defined. They deal mostly with the rotation of log files and a runtime cleanup procedure to clear out stale files or crashed programs. If programs need to be run continually or transitionally to monitor files or programs, they might be placed in this directory. However, this directory is normally reserved for programs that install their own series of cron jobs.
+
+Another cause for caution that might be encountered under older versions of Red Hat, but less frequently with later releases, is the use of the default text editor to edit cron entries. The *crontab* command defaults to *vi* as the standard editor for changing the cron files. This text editor is not recommended for newer users, as its learning curve is rather steep. Beginning Linux users prefer a more functional and familiar editor like *joe* or *pico*, which are considered user-friendly to new beginners and can be used like most any word processor. The text editor *joe* is a throwback to the old *WordStar* days, whereas *pico* runs like the *Windows Notepad* text editor and can be considered a simple word processor. Each editor has its own set of commands for saving and editing files, but the commands are simple compared to those of *vi*. Though more difficult to grasp for neophytes, *vi* is extremely versatile and has a myriad of editing commands and can be called upon to perform most any function.
+
+To use another text editor such as *joe* or *pico*, you must export another editor to the terminal variables. You can do so by entering the following command at the command line of the terminal at which you want to edit the crontab file:
+
+```
+export EDITOR=joe
+```

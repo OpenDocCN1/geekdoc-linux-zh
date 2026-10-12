@@ -1,0 +1,13 @@
+Though this makes the new code easily accessible, it also creates a jumbled mess in your home directory. I prefer instead reserving this space for my own text documents and not for program source code. Sometimes a program directory might share the same name as a data directory that you are using in your home location.
+
+To keep things separate and to avoid any confusion, do not compile in your /home location. If you must compile in your home directory, due to permission issues or for convenience, it is a good idea either to create a subdirectory to keep things organized or to delete the raw source code once the program is installed. Usually new users should create a unique directory just for source code. Here you can install and compile to your heart's content. Placing this directory in /usr/local is often a good choice since the data are kept on a distinct partition, away from other data. Most programs that you compile from source usually install the binaries in /usr/local/bin, also on the same directory tree. Some Linux users prefer placing everything in /usr/local/*, but this directory can also get clogged up with miscellaneous files from other installs. If the programs that you are installing are part of the GNU project for free software, you might create your own directory location, such as /usr/local/gnu. Then you will know this directory's locations and can grant yourself the correct permissions to place and compile source code there.
+
+To create your own directory for compiling code, you can follow these steps:
+
++   1. Decide where you want to place a temp directory.  
++   2. Change directories to the default location, by entering cd /usr/local.  
++   3. Make the new directory of your choice, by entering mkdir gnu/.  
++   4. Grant ownership to the correct user and group. Under Red Hat, these will most likely be your own username for both variables. For example, I would enter chown -R kerry gnu/ and chgrp -R kerry gnu/.  
++   5. Change to your new directory and place the tarred and zipped file there.
+
+Once you have decided where to place your source, you are now ready to unzip and untar the code. Most programs are archived by using the tar command; however, there are varying methods of compressing the files. Some might be tarred only or have just the .tar extension. As Chapter 9, “Fixing Mistakes,” explained, most programmers opt to use the GNU zip utility. This gives the file a .gz extension along with the .tar extension.

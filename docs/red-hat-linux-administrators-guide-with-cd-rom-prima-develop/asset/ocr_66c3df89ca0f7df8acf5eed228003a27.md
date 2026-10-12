@@ -1,0 +1,13 @@
+# # Fixing Corrupted File Systems
+
+Be sure you know what you are doing before making any serious changes to the system. Anything you do can have serious consequences once the machine is rebooted. Oftentimes changes you make will not show up until the machine has been rebooted. I had a Linux box with an uptime of over 355 days with no problems. A co-worker accidentally pulled the plug and shut down the machine just a few days short of the one-year mark. It was only then that I discovered some changes made several months earlier prevented a hard drive from booting. If you are still unsure about any changes you make to system files, at least take the precaution of verifying you have some way to gain access to the system again should things go wrong. If you followed the advice outlined in the previous chapter regarding disk partitioning, you can at least reinstall your system with very little loss of data. If not and your system still fails to reboot even after attempting to correct the problems, then your system probably needed to be reinstalled anyway.
+
+One of the most common errors reported by new users of Linux is that the file system had not been cleanly unmounted. This is usually caused by improper shutdown. In cases such as these, Linux uses a utility called *fsck* or file system check (sometimes pronounced “ef es check”) which can at least run a disk system check on the partitions to make sure there are no corrupt systems or to fix bad blocks or inodes. Usually the default fsck option that comes with Linux is enough to repair any bad file systems. But sometimes it may be necessary to run the fsck command manually to clean up or repair damaged file systems.
+
+When running fsck manually, you first need to know the location of either the device or the directory to be checked. As pointed out in the first chapter, it is always good to keep a hard copy of the partitioning scheme and/or the directory layout with the different partitions. This can come in handy when trying to determine where a particular directory may have been placed or which device contains a specific directory. fsck can also check multiple file systems at one time. Running them in parallel mode eliminates the extra time required to input repetitive commands.
+
+The fsck command requires root access. The following is an example command: Here fsck check the root file system on `/dev/hda1`, a common location for the root partition. If doing a dual boot with Windows or some other operating system, your root partition may be located elsewhere. The -r option is not necessary but allows for more interaction between the user and the command.
+
+```
+fsck -V -t ext2 -r /dev/hda1
+```

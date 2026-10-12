@@ -1,0 +1,11 @@
+You can also configure both CD players to dock to the either the Gnome or KDE panel. Both window managers also offer small docklets or applets that feature condensed CD players that can be called up from the respective window manager panel. These docklets make it easy to access and play selections from a CD.
+
+Other window managers such as Window Maker include additional docklets that feature smaller, stripped-down CD players where all the controls fit into a 64 × 64 pixel box or tile. You can dock these tiles under Window Maker and control the CD player via the tiled control panel.
+
+Linux offers a plethora of simple CD players, each having its own strengths and weaknesses. If you are unhappy with the generic CD player that comes with Red Hat, you should have no trouble finding another one that will better suit your tastes.
+
+# ## Choosing MP3 Players
+
+One of the more popular recording formats to appear on the Internet audio scene is the mpg12 layer 3 or MP3 format. This type of audio compression greatly reduces the amount of space required to play a single song. Under the older format used by regular audio CDs, a single song could require anywhere from 50 to 100 megabytes. Now, depending upon the level of compression and the bitrate used to encode the recording, a single song can require as little as 2 to 4 megabytes. This facilitates rapid and easy exchange of audio files throughout the Internet. Though the legality of copyrighted songs and their distribution via tools such as Napster and Gnuttella remains in question, you can still record your own songs for local use. Many people prefer *ripping*, or encoding the regular CDs from purchased labels into MP3 format and then playing them from a hard drive or CD, then burning the songs onto a CD as data files. This allows my wife to listen to her music CDs at home while I can listen to the same songs on my work machine.
+
+Currently, ATAPI CD-ROMs do not play CDs with MP3-formatted audio files. You must place the files on a hard drive or burn them onto a blank CD, mount the media on your Linux machine, and then use some other form of audio player to listen to the music. When these MP3 files are recorded at the standard 128 kilobytes per second, a regular user can fit nearly 150 songs onto a blank 650 megabyte CD. That is an improvement over regular audio CDs that

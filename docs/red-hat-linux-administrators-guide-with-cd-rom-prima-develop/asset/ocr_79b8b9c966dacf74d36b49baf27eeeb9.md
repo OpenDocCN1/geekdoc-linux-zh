@@ -1,0 +1,13 @@
+# SOUNDING OFF ON LINUX
+
+Once sndconfig has determined the sound card type, the program prompts you to confirm Red Hat's decision and then test for sound. Make sure that your speakers are plugged into the correct port and that they are powered. The sound card configuration routine plays a sample sound to verify that you can hear audio files. Red Hat plays a sound byte of Linus Thorvalds introducing himself and pronouncing the word *Linux*. If you wish to play this sound clip later or use it for your own purposes, you can find it in the directory /usr/share/sndconfig/sample.au.
+
+After confirming you hear the sound clip, the sound setup also plays a MIDI sound sequence, if your sound card supports MIDI. If you do not hear any sound. Linux prompts you to set the I/O Port, IRQ, DMA1, DMA2, and MPU I/O card settings manually. Chances are good that Linux will successfully play the sound file, but if you want a more flexible setup, you can configure the settings manually. After successfully configuring the card and confirming that you can hear both sound clips, the setup sequence exits.
+
+> **NOTE**
+> 
+> There is still some dispute over the correct pronunciation of the operating system. Some favor pronouncing Linux as "line-ix," using the long /i/ sound. This is a reflection of Linus Thorvalds' own name, making the two names sound similar as they are pronounced in English. Others prefer making the short / i / sound, or "lin-ix." This pronunciation is similar to that of the word *minix* on which Thorvalds based his initial configuration for Linux. Or you may prefer pronouncing Linux as Thorvalds does, which sounds more like "lee-noo." Any of these pronunciations is acceptable.
+
+Even the most recent sound cards are discovered by the latest Red Hat release. For example, under Red Hat 6.1, my Sound Blaster 512PCI card, newly released by Creative Labs, was not supported, nor could Red Hat configure any drivers for it. After installing Red Hat 6.2, the configuration setup detected this same card and installed the proper drivers. Testing it for sound, I found that it produced a rather garbled audio feed. The configuration was not fully optimized, but you can expect even the most recent card releases to be completely functional with the next Red Hat release, provided development continues its course.
+
+There are two different methods for checking and validating your sound card's settings. The first involves checking a dynamic file and making sure that your

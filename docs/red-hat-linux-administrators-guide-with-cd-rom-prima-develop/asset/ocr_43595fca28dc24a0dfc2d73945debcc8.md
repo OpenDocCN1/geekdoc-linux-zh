@@ -1,0 +1,11 @@
+Several programs available for Linux can parse through the information found within these logs and can generate dynamic HTML content so that you and others can see exactly what pages are being accessed by whom.
+
+One program that I use on nearly all my Web servers is Webalizer. I prefer compiling it from source and editing certain variables, but Red Hat makes an RPM version available with its Professional release. Red Hat recommends Webalizer as well for tracking user Web requests and for monitoring your Web page traffic. Similar to the commercial WebTrends program, which costs thousands of dollars, Webalizer does much the same thing for free.
+
+You can download the latest Webalizer release from its home page at http://www.mrunix.net/webalizer/. Webalizer's developers, like the developers of other open-source projects, are very responsive to questions and provide a FAQ page for answering many of the issues and solving many of the problems that users encounter.
+
+Log files are easily manipulated and can generate raw data sheets, giving administrators a broad overview of their system. Better understanding the purpose of each log file and the information it stores will assist you in upgrading the security and efficiency of your Linux system.
+
+# ## Conclusion
+
+Now that you have learned how Linux logs to static files errors and messages, including problems encountered when testing out new or developmental software, you can begin installing additional programs of software packages not included with the standard Red Hat Linux installation CD. Part III, "Customizing the System," will examine how you can start optimizing the system beyond what is included with a default install. Chapter 11 explains how you can configure, compile, and install programs from source code. It will also explain how you can install RPM packages on Red Hat and what the difference is between using source code and RPMs. Finally, you will examine some other methods by which you can install programs on the system, including simple binary files. You will also learn how to convert .deb packages to .rpm files. The chapter will explore some of the pros and cons of both source code and RPM packages in closer detail.
