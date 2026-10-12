@@ -1787,6 +1787,7 @@
 +   [红帽Linux 9：视觉快速高级指南](docs/red-hat-linux-9-visual-quickpro-guide-visual-quickpro-guide/README.md)
 +   [红帽 Linux 管理：初学者指南](docs/red-hat-linux-administration-a-beginners-guide-beginners-gui/README.md)
 +   [red hat linux 管理员指南（含 cd-rom）](docs/red-hat-linux-administrators-guide-with-cd-rom-prima-develop/README.md)
++   [Red Hat Linux 管理员手册 (Professional Mindware)](docs/red-hat-linux-administrators-handbook-professional-mindware/README.md)
 +   [Red Hat Linux 与 Fedora 战指南](docs/red-hat-linux-and-fedora-unleashed/README.md)
 +   [Red Hat Linux 圣经](docs/red-hat-linux-bible/README.md)
 +   [Red Hat Linux Enterprise 6 管理指南](docs/red-hat-linux-enterprise-6-administration/README.md)

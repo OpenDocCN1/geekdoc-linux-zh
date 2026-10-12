@@ -1,0 +1,11 @@
+# Taking Antispam Measures
+
+In this age of bulk unsolicited e-mail, your sendmail server may be vulnerable to abuse by outsiders. People who send unsolicited e-mail messages to thousands of people often use someone else's mail server to do their dirty work. This is called third-party mail relay vulnerability.
+
+# Confronting third-party mail relay vulnerability
+
+Until recently, sendmail allowed mail relaying for anyone by default. In other words, someone totally unrelated to you or your organization could use your sendmail server as an SMTP mail relay to send mail to someone else you don't know about. In such a case, both the sender and the recipient are unknown and unrelated to you or your organization. This was formerly permissible because it provided mail administrators with debugging capabilities to locate mail connectivity problems. However, the bulk e-mailers, or spammers, are now rampant on the Internet, and they seek out unprotected relays to do their large mailing jobs. This abuses your system resources and may subject you or your organization to legal complications.
+
+Many local jurisdictions are now passing laws against unsolicited e-mail, and the parties involved may be financially responsible for damages under these laws. If your mail server becomes involved in a legal matter related to unsolicited e-mail, handling the matter and proving your innocence may require considerable legal and financial resources. Also, if your server becomes involved in such a mailing, many recipients will simply assume that you are actively involved in this matter, and they are more than likely to send you hundreds of angry e-mail messages and report you to a spammers blacklist. This could damage you or your organization's reputation. It also could also interfere with your mail connectivity operations, because many mail servers check the spammers blacklist before they agree to exchange mail with a domain.
+
+One of the easiest ways to check your mail server for relay vulnerabilities is to visit `http://maps.vix.com/tsi/ar-test.html`, which is provided by the Mail Abuse Prevention System (MAPS) Transport Security Initiative (TSI) Web site. Enter the host name of your mail server in the

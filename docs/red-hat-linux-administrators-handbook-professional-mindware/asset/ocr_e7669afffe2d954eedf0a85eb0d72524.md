@@ -1,0 +1,35 @@
+If you want to use your system as a firewall or want to use the arpd daemon to maintain an internal ARP cache, say yes here.
+
+# Network firewalls (CONFIG_FIREWALL) (N/y/? ) ?
+
+If you would like to use your system as a packet-filtering firewall, set this to yes.
+
+# Network aliasing (CONFIG_NET_ALIAS) (N/y/? ) ?
+
+If you have multiple network interfaces for your system, set this to yes.
+
+# Socket Filtering (CONFIG_FILTER) (N/y/? ) ?
+
+This feature allows programs to attach filters to sockets and to control how data go through the socket. Unless you use such programs, the default answer is fine.
+
+# Unix domain sockets (CONFIG_UNEX) [y/N/m/n/? ]
+
+Sockets are standard Unix mechanisms for establishing and accessing network connections. Therefore, the default answer is fine.
+
+# TCP/IP networking (CONFIG_INET) [Y/n/? ]
+
+This is a no-brainer.
+
+# IP: multicasting (CONFIG_IP_MULTICAST) (N/y/? )
+
+Typically, you use IP multicasting for transferring large amounts of data such as real-time, broadcast-quality video that uses large bandwidth connections. Unless you have such needs, the default is fine.
+
+# IP: advanced router (CONFIG_IP_ADVANCED_ROUTER) (N/y/? ) ?
+
+If you intend to run your Linux box mostly as a router (as a computer that forwards and redistributes network packets), press y.
+
+# IP: kernel level autoconfiguration (CONFIG_IP_PNP) (N/y/? )
+
+This enables automatic configuration of the IP addresses of devices, and of the routing table during kernel boot, based on information supplied either at the kernel command line or by BOOTP or RARP protocols.
+
+# IP: optimize as router not host (CONFIG_IP_ROUTER) (N/y/? ) ?

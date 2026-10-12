@@ -1,0 +1,275 @@
+
+
+## 软件商店
+
+以下网站提供商业 Linux 软件：
+
+- http://www.linuxmall.com/
+- http://www.cheapbytes.com
+- http://www.lsi.com
+
+## 安全资源
+
+以下网站涉及计算机安全：
+
+- http://www.cert.org
+- http://www.rootshell.com/
+- http://www.replay.com/redhat/
+
+## 用户组
+
+当地的 Linux 用户组可能正是您查找 Linux 信息所需的帮助。您可以使用以下 URL 在您所在的地区查找甚至注册一个新的用户组：http://www.linuxresources.com/glug/index.html。
+
+## 索引
+
+### 符号与数字
+
+- /etc/conf.modules 文件, 510
+- /etc/default/useradd 文件, 96–100
+- /etc/exports 文件, 380
+- 更改, 383–384
+- /etc/ftpaccess 文件, 223–235
+- 访问配置规范, 224–228
+- 默认文件, 223–224
+- /etc/ftpconversion 文件, 235
+- /etc/ftpgroups 文件, 235–236
+- /etc/ftphosts 文件, 236
+- /etc/group 文件
+  - 来宾组列表, 245
+  - shadow 格式, 转换为, 424
+- /etc/host.conf 文件或 /etc 目录, 159
+- /etc/hosts 文件, 158
+- /etc/hosts.allow 文件, 438, 440–441
+  - 客户端列表, 438
+  - 守护进程列表, 438
+  - 主机名和域名, 441
+  - 模式, 439
+  - Shell 命令, 443
+  - 测试, 444
+- /etc/hosts.deny 文件, 438
+  - 客户端列表, 438
+  - 创建, 440
+  - 守护进程列表, 438
+  - 模式, 439
+  - 测试, 444
+- /etc/inetd.conf 文件
+  - 检查, 444
+  - 替换其中的 r 命令, 445
+- /etc/inittab 文件, 22–26
+  - 运行级别的动作, 25–26
+  - 目录结构, 26
+  - init 配置行, 24
+  - 运行级别, 24–25
+- /etc/lilo.conf 文件, 483, 485–486
+- /etc/login.defs 文件, 98–100
+- /etc/mail/* 文件, 194–203
+  - 访问限制, 211
+  - 测试, 206–207
+- /etc/mail/access 文件, 195–196
+  - 用于 DBM 邮件, 196
+- /etc/mail/aliases 文件, 196–197
+- /etc/mail/domaintable 文件, 197–198
+- /etc/mail/mailertable 文件, 198–199
+- /etc/mail/relay-domains 文件, 199
+- /etc/mail/sendmail.cw 文件, 200
+- /etc/mail/virtusertable 文件, 200–203
+- /etc/nologin 文件, 96, 423
+- /etc/pam.d/ 目录, 426
+- /etc/pam.d/login 文件, 430
+- /etc/passwd 文件
+  - ftp 用户账户, 238
+  - 重定位密码, 423–424
+  - shadow 格式, 转换为, 424
+  - 传统格式, 424
+- /etc/printcap 文件, 259
+- /etc/rc.d/init.d 文件, 27 其中的命名脚本, 165
+- /etc/rc.d/init.d/httpd 文件, 41–43
+- /etc/rc.d/init.d/network 脚本, 136
+- /etc/rc.d/init.d 脚本, 到 rc0.d 到 rc6.d 目录的符号链接, 32–33
+- /etc/rc.d/init.d/sendmail 脚本, 184–185
+- /etc/rc.d/rc 脚本, 27–32
+- /etc/rc.d/rc0.d 到 rc6.d 目录, 32–33
+- /etc/rc.d/rc.local 脚本, 34 为磁盘配额修改, 104
+- /etc/rc.d/rc.serial 脚本, 34
+- /etc/rc.d/rc.sysinit 脚本, 26–27
+- /etc/resolv.conf 文件, 139–140, 157–158
+  - Domain 指令, 158
+  - Nameserver 指令, 158
+  - Search 指令, 158
+- /etc/samba/smb.conf 文件, 249–258
+  - dns proxy 参数, 263
+  - [global] 参数, 258–263
+  - [homes] 参数, 263
+  - local printers 参数, 259
+  - log file 参数, 260
+  - max log size 参数, 260
+  - printcap name 参数, 259
+  - [printers] 参数, 264
+  - printing 参数, 260
+  - security 参数, 260–263
+  - server string 参数, 259
+  - socket options 参数, 263
+  - 测试配置, 265
+  - workgroup 参数, 259
+- /etc/security/ 文件, 422
+- /etc/security/time.conf 文件, 431–432
+- /etc/sendmail.cf 文件
+  - 地址重写规则, 186–187
+  - C 行, 187–188
+  - 配置版本级别, 194
+  - 配置, 185–194
+  - D 行, 187
+  - F 行, 187–188
+  - 全局选项, 189–194
+  - H 行, 188–189
+  - 头定义, 188–189
+  - K 行, 194
+  - M 行, 188
+  - 宏定义, 187
+  - 邮件程序定义, 188
+  - 映射定义, 194
+  - O 行, 189
+  - P 行, 194
+  - 优先级定义, 194
+  - R 行, 186–187
+  - 中继域定义, 188
+  - S 行, 186–187
+  - V 行, 194
+- /etc/sendmail.cf 文件, 访问限制, 211
+- /etc/services 文件, 216, 222, 292–293
+- /etc/squid.conf 文件, 423–424
+  - 字段, 425
+- /etc/shells 文件, 421
+- /etc/shutdown.allow 文件, 420
+- /etc/skel 目录, 91, 98
+- /etc/squid/squid.conf 文件, 472
+- /etc/sudoers 文件, 86–89, 422
+- /etc/sysconfig/network 文件, 136–137, 153–154
+- /etc/sysconfig/network-scripts/ifcfg 目录, 137–138
+- /etc/syslog.conf 文件, 124
+- /etc/xinetd.conf 文件, 434–435
+  - 禁用和移除服务, 435–436
+- /etc/xinetd.d 目录, 435
+- /etc/xinetd.d/linuxconf-web 文件, 71
+- /etc/xinetd.d/wu-ftpd 文件, 222–223
+- /etc/xdm/xdm 文件, 292
+- /etc/printcap 文件, 237
+- Home 分区, 12
+- /lib/security 目录, 429
+- /tmp/all.packages 文件, 433
+- /usr/doc/pam-X.xx 目录, 430
+- /usr 分区, 11
+- /usr/src 目录, 487
+
+### A
+
+- A 记录, 161, 176, 201
+- ab 实用程序, 285
+- 访问, 安全保护, 419–423
+- 访问配置, 用于 FTP 服务, 224–228
+- 访问控制文件, 目录级, 298
+- 访问控制列表 (ACL)
+  - 定义, 473–474
+  - 效率, 476
+- 访问权限
+  - 更改模式, 51–52
+  - 链接和, 52–54
+  - 策略, 54–58
+  - 设置, 48–51
+- 访问限制, 430–432
+  - 导出目录上, 381
+  - 代理服务器, 339
+  - sendmail 服务器上, 195–196
+- 访问字符串, 50–51
+- access.conf 文件, 291
+- AccessWatch, 359
+- 账户管理器. 另见 root 用户; 超级用户
+  - 特权, 78
+- Ace Director, 179
+- AddHandler 处理程序, 314
+- 管理特权, 分配给用户账户, 75–78
+- 管理任务, 422
+- afterstep, 411
+- 报警关键字, 117
+- alias 关键字, 233
+- 别名
+  - 链接, 197
+  - 创建, 141–143, 196–197
+  - 定义, 87
+  - FTP 目录, 233
+- All 关键字, 87–88
+- Alpha 处理器, 481
+- 业余无线电支持, 501
+- anonftp RPM 包, 238
+  - 创建来宾账户, 242–246
+  - 安装, 243
+- 匿名 FTP 站点
+  - 创建, 237–242
+  - 安全性, 241–242
+- 反垃圾邮件措施, 213–215
+- Apache-SSL, 370
+- Apache Web 服务器
+  - 目录别名, 299–300
+  - 认证支持, 342–351
+  - cgi-bin 访问, 314–317
+  - CGI 脚本, 配置, 312–317
+  - CGI 脚本, 安全保护, 362–363
+  - cgid 服务器进程, 308
+  - 代码优化设置, 282
+  - 编译器标志, 281
+  - 编译, 283–284
+  - 配置文件, 检查, 311
+  - configure 脚本, 278–282
+  - 为 mod_ssl 配置, 373–378
+  - 为新 Web 站点配置, 173–178
+  - 内容类型, 300
+  - 自定义, 278–291
+  - 专用用户和组, 361
+  - 默认访问, 禁用, 361
+  - 默认配置文件, 291
+  - 独立服务器和 inetd 服务器的指令, 295–306
+  - 独立服务器的指令, 306–308
+  - 目录访问控制文件名, 298
+  - 目录索引文件规范, 300
+  - 目录列表, 303
+  - 目录结构, 280, 301–302
+  - DNS 查找, 禁止, 295
+  - 下载, 277–278, 360
+  - 环境变量, 300
+  - 错误日志, 357–359
+  - FastCGI 支持, 287–288
+  - 页脚文件, 303
+  - 图标显示, 299–300
+  - 图标文件名, 299
+  - 包含文件, 281
+  - 索引文件, 300–301
+  - 安装位置, 278–279
+  - 安装, 283–284
+  - Internet 主机名, 297
+  - KeepAlive 特性, 306–307
+  - 语言偏好, 303
+  - 布局, 281
+  - 库, 281
+  - 日志文件, 355–357. 另见服务器日志文件
+  - 日志文件, 保护, 361
+  - makefile 选项, 281–282
+  - MIME 类型配置文件, 303
+  - 镜像站点, 277
+  - 模块配置, 283
+  - 监控状态, 351–352
+  - Perl 解释器, 嵌入式, 288–290
+  - PHP 脚本支持, 290–291
+  - PID 信息, 307–308
+  - 私钥文件路径配置, 377
+  - 作为代理服务器, 332–342
+  - 公共目录, 304–305
+  - 正则表达式包, 283
+  - 请求, 最大数量, 307
+  - 重启, 308, 310
+  - 根目录, 303–304
+  - 根目录, 保护, 361
+  - 根目录规范, 301
+  - Rules 选项, 282–283
+  - 安全性, 294, 298, 301, 306, 308, 360–378
+  - 自引用 URL, 处理, 297
+

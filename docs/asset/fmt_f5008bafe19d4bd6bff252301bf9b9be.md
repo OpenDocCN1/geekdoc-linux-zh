@@ -1,0 +1,169 @@
+
+- Inst. Or. 11.3.69–71, 109
+- Inst. Or. 11.3.72–7, 109
+- Inst. Or. 11.3.73, 109
+- Inst. Or. 11.3.78–9, 109
+- Inst. Or. 11.3.80, 109
+- Inst. Or. 11.3.81, 109
+- Inst. Or. 11.3.82, 109
+- Inst. Or. 11.3.83–4, 109
+- Inst. Or. 11.3.91, 109
+- Inst. Or. 11.3.92ff, 109
+- Inst. Or. 11.3.111, 109
+- Inst. Or. 11.3.112, 236
+- 塞尔维乌 (Servius)
+- 关于《农事》(Georg.) 2.387, 95
+- 梭隆 (Solon)
+- 8, 27
+- 索福克勒 (Sophocles)
+- El. 595–7, 30
+- El. 597–8, 29
+- OT. 316–462, 77
+- OT. 371, 78
+- OT. 513–630, 77
+- OT. 548, 77
+- OT. 707–25, 77
+- OT. 92ff, 136
+- OT. 977–83, 137
+- Phil. 1314–20, 41
+- Trach. 180ff., 81
+- 苏达 (Suda)
+- 8, 219, 87
+- 特勒斯斯 (Teles)
+- fr. 5–7, 106
+- 特伦西 (Terence)
+- Ad. 643, 253
+- And. 47, 265
+- And. 51, 256
+- And. 52, 257
+- And. 53, 258
+- 特伦西 (续.)
+- Eun. 583-91, 21
+- Eun. 584ff, 197
+- Eun. 597, 197
+- Eun. 604-6, 197
+- Eun. 643-4, 197
+- Eun. 646, 197
+- Eun. 683, 197
+- Eun. 686, 194
+- Eun. 687, 194
+- Eun. 693, 194
+- Eun. 696, 194
+- Eun. 709, 194
+- Eun. 773-4, 236
+- Eun. 824, 194
+- Eun. 832, 197
+- Eun. 838, 197
+- Eun. 849, 197
+- Eun. 856, 197
+- Eun. 857, 197
+- Eun. 858, 197
+- Eun. 860, 197
+- Eun. 865, 197
+- Eun. 871-4, 20
+- Eun. 872, 198
+- Eun. 875, 197
+- Eun. 941ff., 198
+- Eun. 957, 197
+- Eun. 987, 194
+- 优美篇(Eim.) 1021, 194
+- Eim. 1025-8, 239
+- Eim. 1046, 197
+- 豪特斯 (Haut.) 62-3, 182
+- 赫卡伯 (Hec.) 99, 258
+- Hec. 152, 258
+- Hec. 157ff., 257
+- Hec. 405-8, 275
+- Hec. 458-6, 258
+- Hec. 504-7, 269
+- Hec. 541-2, 261
+- Hec. 543, 260
+- Hec. 684, 257
+- Hec. 735, 257
+- Hec. 750ff., 257
+- Hec. 841-3, 278
+- 奥克里特 (Theocritus)
+- 1.15-18, 45
+- 狄奥尼斯 (Theognis)
+- 153, 27
+- 修西底德 (Thucydides)
+- 2.49-5, 251
+- 提摩克勒 (Timocles)
+- fr. 6-A., 51, 99
+- 塞诺芬 (Xenophon)
+- An. 5.8.24, 35
+- 犬儒学派(Cyn.) 6.22, 206
+- 希腊史(Hell.) 3.4.19, 192
+- Mem. 2.4.5, 248
+- Mem. 2.9, 226
+- Mem. 3.10, 178
+- 泽诺多罗斯 (Zenodoros)
+- p. 137., 206
+
+## 亚里士多德索引 [Aristotle]
+
+- 《自然学》(Physiomonika), 157–9, 161–2, 198
+- 阿库乌斯 (Accius), 107
+- 阿基琉勒·提提乌斯 (Achilles Tatius)
+- 动作(actio), 109
+- 动作, 5, 90, 95, 103, 110–13, 115–16, 119, 136–8, 141, 160, 166–7, 175, 177–8, 218, 236
+- 阿达曼提斯 (Adamantius), 151
+- 辅助(adjuvant), 225
+- 埃斯基涅 (Eeschines), 206
+- 提马库斯(In Timarchum), 228
+- 埃斯库琉 (Eeschylus), 116
+- 阿伽门农 (Agamemnon), 77
+- 狄提柯(Diktykoi), 135
+- 欧俄(Iobe), 88, 90
+- 波斯人(Persians), 52
+- 阿加同 (Agathon), 111
+- 快乐(aggelos), 22, 157, 216
+- 无知感(agnoshesia), 112
+- 缺乏意志(akrasia), 7, 182–6, 188, 195, 259, 273
+- 某种(alazōn of type), 213, 332, 245
+- 阿利丰斯(Aliphon), 98, 107, 112, 178
+- 特洛伊的亚历山大(Alexander of Troy), 239–42
+- 亚历西亚 (Alexias), 222, 229, 230
+- 阿纳西拉斯 (Anaxilas), 243
+- 拉丁语匿名人乌斯(Anonymus Latinus), 146
+- 安忒洛斯 (Anteros), 210
+- 安托凯斯(Antochais), 84, 90, 92–5, 166, 190
+- 安提法涅斯(Antiphanes), 60, 99, 213, 224, 235
+- 阿庇勒斯 (Apelles), 101
+- 阿芙洛狄忒·阿纳狄墨(Aphrodite Anadyene), 101
+- 选择(aphairesis), 28, 272
+- 卡里斯托斯的阿波罗多洛斯(Apollodoros of Karystos), 喜剧诗人, 255
+- 埃狄卡门 (Epidikamen), 267
+- 阿皮留乌斯 (Apuleius), 61
+- 阿拉罗斯 (Araros), 喜剧诗人, 222
+- 阿里斯托芬德 (Aristophanes), 3, 11, 47, 116
+- 阿卡尼亚人(Acharnians), 233
+- 通用混合性(generic hybridity), 62–3
+- 互文本性(intertextuality), 61, 64
+- 可能世界理论(possible worlds theory), 41–3, 46–7
+- 《鸟类》(Birds), 48
+- 《云》(Clouds), 48, 62
+- 结局(denouais), 18
+- 现代接受(modern reception of), 12
+- 俄斯波福涅(Theosphorinae), 134
+- 空间的使用(use of space in), 117
+- 拜占庭的阿里斯托芬(Aristophanes of Byzantium), 10, 15–16, 44, 58, 83
+- 欧丰(oophon), 喜剧诗人, 235
+- 亚里士多德 (Aristotle), ix, 7, 14, 17, 22, 44, 90–1, 98, 102–3, 107, 110, 143, 146, 157, 161, 171, 173, 175, 179, 204, 222, 251, 259, 261
+- 《物理学》(Analytica Priora), 143
+- 放纵(akolasia), 185
+- 缺乏意志(akrasia), 7, 182–6, 188, 195, 259, 273
+- 性格(character)。 见亚里士多德中的性格
+- 性格(character)。 见亚里士多德中的品格
+- 狄亚(dianus), 174
+- 动力(dynam), 172, 176–7
+- 情感(emotion), 177
+- 品格(ethos)。 见亚里士多德中的品格
+- 冲突(endagonia), 172
+- 德性(herteis), 171, 174, 176–7, 253
+- 和谐(homolés), 187
+- 理性(logismos), 174, 184, 254
+- 中节(metriotēs), 259
+- 道德冲突(moral conflict), 181
+- 叙事(mythos), 173–4
+- 形象(opis), 102–5
