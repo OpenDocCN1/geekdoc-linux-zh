@@ -1,0 +1,103 @@
+
+除了打印出列表外，在这种情况下，另一种方式是让`Bill`将秘密密码交给`Mary`。这样，`Mary`就可以在自己的系统上生成本地列表。
+
+> **警告！**
+>
+> 每当您使用`key`程序生成一次性密码（OTP）列表时，如果您无意中输入了错误的秘密密码，列表仍会生成。但是，列表中任何密码都无法使用。
+
+将`/etc/passwd`中`mary`的默认`shell`更改为`/usr/local/bin/keysh`。接下来，`Bill`需要通过指定`/usr/local/bin/keysh`作为用户`mary`的默认`shell`来更新`/etc/passwd`。这可以通过使用`chsh`或直接编辑`/etc/passwd`文件来完成。无论如何，最终的条目将类似于
+
+```
+mary:x:103:103:Mary Smith:/home:/usr/local/bin/keysh
+```
+
+### 顺便提一下...
+
+> `keysh`程序旨在调用`c-shell`。如果您不喜欢这样，您可以修改`keysh`以调用其他`shell`，例如`/bin/bash`。要完成此操作，只需将
+>
+> `char *shell = "/bin/csh";`
+>
+> 改为
+>
+> `char *shell = "/bin/bash";`
+>
+> 并重新编译。如果您拥有大量用户，其中一些人有不同的`shell`偏好，您可以简单地为每种`shell`创建多个可执行文件，每个文件调用所需的`shell`。请确保您为可执行文件赋予适当的名称，例如`c-shell`为`keycsh`，`bourne-again shell`为`keybash`，等等。对于不受信任的用户，您甚至可以为第 4 章第 64 页“受限账户”中描述的受限`shell`创建一个可执行文件。
+
+## 验证 mary 能否成功登录
+
+现在，我们可以将`Mary`的`OTP`列表交给她，让她尝试该系统。示例 6-10 显示了`Mary`登录时发生的一系列事件。您可能想知道为什么`Mary`首先会看到密码提示。这是`PAM`的结果！我们并没有修改`PAM`，因此它仍然期望输入标准的`Linux`密码；因此，为了让`Mary`能够登录，她现在必须同时提供她的`Linux`密码和指定的`S/Key`密码，在本例中，这是第 126 页示例 6-8 中所示列表中的第 98 号密码。
+
+### 示例 6-10 需要 S/Key OTP 的登录
+
+```
+Red Hat Linux release 5.2 (Apollo)
+Kernel 2.0.36 on an i686
+topcat login: mary
+Password: I need a #+$* raise
+[s/key 98 to25055]
+Response: WACK DOLF CAKE ROWS BLED ROD
+[mary@topcat]$
+```
+
+此时`Mary`可能对`Bill`不太满意。由于`PAM`要求（参见第 93 页的`PAM`和登录），必须输入一个 20 字符的密码和一个长`OTP`，这有点太多了。在此时，您可以通过在适当的`/etc/pam.d`文件中使用`pam_permit`来禁用`PAM`身份验证（参见第 108 页的`PAM`和其他配置文件），但正如我们将在第 143 页的`OPIE`和`PAM`中看到的，这并不是最佳方法。
+
+## 允许用户拥有更多自由
+
+哈！绝不！这是一个严苛的环境，而我说了算！（抱歉，`root`的权力有时让我这样。）
+
+在第 125 页“使用`keyinit`初始化`mary`”和第 126 页“为`Mary`提供一次性密码的打印列表”部分中涵盖的一系列示例无需由`root`执行。`Mary`可以自己执行这些步骤。她可以在服务器`topcat`上这样做，因为`keyinit`程序对`root`是`SUID`的。为了更高的安全性，您可能希望通过移除`keyinit`上的`SUID`权限来禁用此功能。这样做意味着只有`root`才能最初初始化用户并随后生成新列表。
+
+### 警告！
+
+虽然`keyinit`可以由非`root`用户执行是真的，但`keyinit`程序会在允许非`root`用户初始化或生成新列表之前，要求他们输入其`Linux`密码。由于`keyinit`不支持`PAM`，如果您使用`MD5`或`bigcrypt`而不是标准`UNIX`哈希机制来处理您的`Linux`密码，`keyinit`将永远无法成功解析用户提供的`Linux`密码。简而言之，非`root`用户将无法生成自己的`S/Key`列表。然而，请不要绝望，我们将在第 143 页的`OPIE`和`PAM`中讨论`OPIE`在`PAM`中的集成。
+
+`Mary`还可以执行第 127 页“将`/etc/passwd`中`mary`的默认`shell`更改为`/usr/local/bin/keysh`”这一步骤，使用`chsh`命令，前提是`/usr/local/bin/keysh`位于`/etc/shells`中。
+
+### 注意
+
+> `root`用户可以替任何用户执行`chsh`，并指定任何可执行文件作为新的默认`shell`。其他所有用户只能成功地将默认`shell`更改为`/etc/shells`中列出的`shell`之一。
+
+### 本地运行 key
+
+您可能不打算仅使用`OTP`列表的纸质副本。当用户在旅途中，需要通过各种网络访问各种系统以登录他们的办公系统时，这样做可能很有意义。但通常不建议这样做，因为这样的列表很容易被窃取或丢失。解决此问题的方法是`key`程序。
+
+`key`程序足够小，可以放在软盘上，并且您只需为环境中的每个操作系统/硬件平台编译一个版本。每当用户登录`S/Key`系统时，他们将以类似于第 128 页示例 6-10 的方式被提示输入`OTP`密码。`S/Key`系统将提供`key`程序所需的序列号和种子。用户必须知道秘密密码。因此，如果系统管理员`Bill`之前已分配了它，那么`Bill`必须将秘密密码透露给用户，例如`Paul`。一旦`Paul`拥有了用于生成列表的秘密密码，他就可以使用一个窗口登录，如示例 6-11 所示。并在另一个窗口中，`Paul`使用`key`计算`OTP`，如示例 6-12 所示。`Paul`可以从示例 6-12 中剪切结果并粘贴到示例 6-11 中，以满足`S/Key`挑战。
+
+### 示例 6-11 登录到支持 S/Key 的系统
+
+```
+[paul@minnie]$ telnet topcat
+Trying 172.19.31.104...
+Connected to topcat.
+Escape character is '^]'.
+
+Red Hat Linux release 5.2 (Apollo)
+Kernel 2.0.36 on an i686
+login: paul
+[s/Key 97 to54065]
+Response: AYE ROAR HAST KAY HIKE OMAR
+[paul@topcat]$
+```
+
+### 示例 6-12 运行 key
+
+```
+[paul@minnie]$ /usr/local/bin/key 97 to54065
+Enter secret password:
+AYE ROAR HAST KAY HIKE OMAR
+[paul@minnie]$
+```
+
+事实证明，有许多`OTP`生成程序可以使用`MD4`或`MD5`（`S/Key`版本 2.2 和`OPIE`均支持使用`MD5`代替`MD4`）来生成`S/Key`和`OPIE` `OTP`列表。一些可用程序来自
+
+`http://www.jumbo.com/pages/business/linux/`
+
+它们在各种`UNIX`和`Microsoft`操作系统上运行。
+
+## 生成新的 OTP 列表
+
+随着用户使用其一次性密码，需要生成新列表。这是通过`keyinit`程序完成的。它可以由用户执行（除非使用带有`MD5`或`bigcrypt`的`PAM`；参见第 128 页的警告），或由管理员以`root`身份代表用户执行。事实证明，当`keyinit`程序与`-s`标志一起调用时，如果用户可以本地运行`key`或等效程序，则可以安全地通过网络使用。其工作原理如下。
+
+用户`mary`需要生成新的`S/Key`密码列表。登录到服务器`topcat`后，她运行`keyinit -s`，如示例 6-13 所示。在她本地系统的另一个窗口中——`roadrunner`，如示例 6-14 所示——她运行`key`以生成第 99 个`OTP`，以便她可以将其提供给`topcat`上的`keyinit`程序，如示例 6-13 所示。再次，服务器需要记录`OTP`编号 99，以便随后验证`OTP`编号 98。它通过将最后一个`OTP`以十六进制形式以及序列号和种子存储在`/etc/skeykeys`中来实现这一点。此程序提供了所需的信息。
+
+### 示例 6-13 使用 keyinit -s 远程更新 S/Key OTP 列表
