@@ -1,0 +1,60 @@
+
+
+## 使用更改构建 glibc-2.2.5
+
+这将将每个进程的 `Posix` 线程限制从 `1024` 增加到 `8192`。
+
+1. 保存并关闭文件。
+
+### 替换源码包
+
+现在你已经编辑了该文件，你需要将现有的 `tar` 文件替换为包含你所调整的新版本。
+
+a. 使用 `cd /usr/src/packages/SOURCES` 返回 `SOURCES` 目录。
+
+b. 输入 `rm -f glibc-linuxthreads-2.2.5.tar` 删除该文件。`-f` 选项仅用于抑制确认删除的文本提示——如果你希望看到提示，可以使用不带 `-f` 的命令。
+
+c. 输入 `tar -cvf glibc-linuxthreads-2.2.5.tar linuxthreadsthreads_db` 将位于两个指定目录的文件打包。
+
+> **注意**：此命令应在一行中输入，如图 4-24 所示。
+
+![](img/f4a88d4bf9ae965be31d8ef5c6d98f93_236_0.png)
+
+图 4-24 用于 `glibc-linuxthreads` 的 `tar` 命令
+
+d. 输入 `bzip2 -z glibc-linuxthreads-2.2.5.tar` 压缩 `tar` 文件。
+
+2. 使用 `cd ../../SPECS` 或指定 `/usr/src/packages/SPECS` 的完整路径进入 `SPECS` 目录。要构建所需的新的 `linuxthread` 文件，输入以下命令：
+
+```
+rpm -ba glibc.spec
+```
+
+> **提示**：在我们实验室的测试服务器上，此操作大约花费了一个小时。你可以在命令前加上 `time` 来测量所需的耗的时间。
+
+图 4-25 构建 `glibc-2.2.5`
+
+3. 新的共享对象文件（Linux 等于 Windows 的 `dll` 文件）将位于 `/usr/src/packages/BUILD/glibc-2.2.5` 目录下的以下子目录：
+
+- `cc/linuxthreads/libthread`
+- `cc/rt/librt`
+
+## 加载新的线程库
+
+1. 切换到你的 `Domino` 数据目录。默认是 `cd /local/userdata`。
+
+2. 使用命令 `mkdir` 为新文件创建一个目录，并使用 `cd` 进入新创建的目录。
+
+3. 从 `BUILD` 目录复制新的 `libthread.so` 和 `librt.so`。
+
+```
+cp /usr/src/packages/BUILD/glibc-2.2.5/cc/linuxthreads/libthread.so .
+cp /usr/src/packages/BUILD/glibc-2.2.5/cc/rt/librt.so .
+```
+
+4. 在你刚刚注释掉的行下方，输入：
+
+```
+#define PTHREAD_THREADS_MAX 8192
+```
+
