@@ -1,0 +1,73 @@
+
+`02 0 * * run-parts /etc/cron.daily`
+
+`22 4 * * run-parts /etc/cron.weekly`
+
+`42 4 1 * * run-parts /etc/cron.monthly`
+
+```
+[root@server1]# _
+```
+
+cron 表的初始部分指定执行命令时的环境。文件的其余部分与用户 cron 表类似。前五个字段指定运行时间，第六个字段指定运行执行者（在前面的输出中为 `root` 用户）。其余字段代表要运行的命令；`run-parts` 命令用于执行作为参数列出的特定目录中的所有文件。因此，
+
+```
+01 * * * root run-parts /etc/cron.hourly
+```
+
+在之前的 `/etc/crontab` 文件中的 `01 * * * root run-parts /etc/cron.hourly` 会以 `root` 用户身份执行 `/cron.hourly` 目录内的所有文件。
+
+```
+02 0 * * run-parts /etc/cron.daily
+```
+
+`02 0 * * run-parts /etc/cron.daily` 会以 `root` 用户身份在每天凌晨 0 点执行。
+
+```
+22 4 * * run-parts /etc/cron.weekly
+42 4 1 * * run-parts /etc/cron.monthly
+```
+
+`22 4 * * run-parts /etc/cron.weekly` 会以 `root` 用户身份在每周凌晨 4 点执行。
+
+```
+42 4 1 * * run-parts /etc/cron.monthly
+```
+
+`42 4 1 * * run-parts /etc/cron.monthly` 会以 `root` 用户身份在每月第一天凌晨 4 点执行。
+
+## 调度命令
+
+## 用户 cron 表
+
+在新安装的 Red Hat Fedora Linux 系统上，所有用户都有使用 cron 守护进程调度任务的能力。然而，您可以创建一个 `/etc/cron.allow` 文件来列出有权使用 cron 守护进程调度任务的用户。所有其他用户都被拒绝。相反，您可以创建一个 `/etc/cron.deny` 文件来列出那些被拒绝调度任务权限的用户。因此，未列在此文件中的用户仅被允许调度任务。如果两个文件都存在，则只处理 `/etc/cron.allow` 文件。
+
+要创建或编辑 cron 表，您可以使用 `crontab` 命令的 `-e` 选项，这会打开 `vi` 编辑器。然后您可以输入相应的 cron 表项。例如，假设 `root` 用户执行了 `crontab -e` 命令。为了调度在每个周五的凌晨 4:30 运行 `/bin/command1`，以及在每月的第一天下午 2:00 运行 `/bin/command2`，您可以在 `vi` 编辑器中添加以下行：
+
+```
+30 4 * * 5 /bin/command1
+0 14 1 * * /bin/command2
+```
+
+当用户保存更改并退出 `vi` 编辑器时，信息将存储在文件 `/var/spool/cron/username` 中，其中 `username` 是执行 `crontab -e` 命令的用户名。在前面的示例中，文件将命名为 `/var/spool/cron`。
+
+要列出您的 cron 表，您可以使用 `crontab` 命令的 `-l` 选项。以下输出列出了之前创建的 cron 表：
+
+```
+[root@server1 root]# crontab -l
+# 不要编辑此文件 - 编辑主文件并重新安装。
+# (/tmp/crontab.4101 installed on Mon Jun  26 20:31:56 2004)
+# (Cron version - $Id: crontab.c,v 2.13 1994/01/17 03:20:37 vvie Exp)
+30 4 * * 5 /bin/command1
+0 14 1 * * /bin/command2
+[root@server1 root]#
+```
+
+此外，若要删除 cron 表和所有调度作业，您可以使用 `crontab` 命令的 `-r` 选项，如下所示：
+
+```
+[root@server1]# crontab -r
+[root@server1]# crontab -l
+no cronab for root
+[root@server1]# _
+```
