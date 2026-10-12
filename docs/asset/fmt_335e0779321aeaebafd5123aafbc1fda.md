@@ -1,0 +1,113 @@
+
+# 索引
+
+- 双面材质 (Double Sided material), 905
+- 草稿模式（无预计算） (Draft Mode (No Precalculations), 601–602, 609
+- 抽取 (drawer pulls), 76
+- 绘制轮廓 (drawing contours), 797–798, 797–798
+- 用于形 (Terrain for), 801–804, 801–804
+- 更新 (updating), 800–801
+- 曲线 (curves), 109–111, 110
+- 带有样条 (with splines), 106–107
+- 直线段 (straight-line segments), 107–108, 107–108
+
+## 绘制网页格式 (DWF) 文件 • 启用颜色映射 949
+
+- 绘制网页格式 (DWF) 文件, 508–510, 509–511
+- 双屏系统 (dual-screen systems), 6
+- 虚拟辅助工具 (Dummy helpers), 922–923
+- 重命名材质名称对话框 (Duplicate Material Name dialog box), 491, 491, 494
+- 用于动画的 DVD (DVDs for animations), 695
+- DWF (Drawing Web Format) 文件, 508–510, 509–511
+- DWF 发布选项对话框 (DWF Publish Options dialog box), 508, 509
+- DWG 文件, 797, 822
+- DWG 文件框, 822
+- 光照中的动态范围 (dynamic range in radiosity), 556–560, 556–559
+- 编辑样条修改器 (Edit Spline modifier), 893–894
+- 来自置移映射的可编辑网格 (editable meshes from displacement maps), 749–752, 750–752
+- 子材质 (sub-materials for), 433
+- 可编辑补丁，转换为平面 (editable patches, converting planes into), 913–914, 913–914
+- 转换为原始几何 (primitives into), 914–915, 914–916
+- 可编辑多边 (editable polys), 195, 226, 470
+- 可编辑样条修改器 (Editable Spline modifier), 815
+- 可编辑样条 (editable splines), 306–307
+- 编辑关键帧 (editing keyframes), 634–636, 634–636
+- 灯光, 334–336, 334–336
+- 网格曲率 (meshes curvature), 761–768, 762–768
+- 用于形状的 (forms for), 756–758, 756–758
+- 带有照片 (with photographs), 755
+- 平滑 (smoothing), 769–770
+- 用于顶点的 (vertices for), 759, 759–761
+- 命名选择集 (named selection sets), 35–37, 36–37
+- 选择集 (selection sets), 303–306, 303–306
+- 样条 (splines), 35–37, 36–37
+- 样条 (splines), 159–160, 159–160
+- 植物和树 (plants and trees), 264–265, 264–265
+- 效果 (effects), 926
+- 大气的 (atospheric), 926–930, 926–929
+- 渲染 (rendering), 930–935
+- 用于合成的 (for compositing), 474–477, 474–477
+- 用于光照网格 (for radiosity mesh), 525
+- (elevations)
+  - AutoCAD, 821
+  - 用于相机的 (for cameras), 676–681, 676–689
+  - 用于楼梯的 (stairs for), 251–255, 251–252
+  - 电梯 (elevators), 252
+- 椭圆方法 (Ellipse method), 157
+- 邮件通知 (Email Notifications), 681
+- 启用 气喷刷工具 (Enable Airbrush tool), 736
+- 启用颜色映射 (Enable Color Map), 463
+- Ease 曲线帧数 (Ease Curve frame numbers), 655–656
+- 时间 (time), 644–648, 644–647
+- Ease From 设置 (Ease From setting), 653–554
+- Ease To 设置 (Ease To setting), 653–554
+- Ease 参数卷轴 (Ease Parameters rollout), 262
+- Ease 插件用于植物 (Ease plug-in for trees), 259–261, 259–265
+- 修改 (modifying), 261–265, 264–265
+- 边缘面 (Edged Faces), 70
+- 门 (door), 251
+- 视口 (viewports), 47
+- 网格 (mesh), 199–201, 199–201
+- 屋顶 (roof), 286–291, 286–291
+- 阴影 (shadows), 354–355, 360–361
+- 化 (softening), 710–713, 710–712
+- 编辑元素卷轴 (Edit Elements rollout), 470
+- 编辑几何体卷轴 (Edit Geometry rollout), 207, 228–229
+- 编辑网格修改器 (Edit Mesh modifier), 893
+- 编辑补丁修改器 (Edit Patch modifier), 893
+- 编辑多边修改器 (Edit Poly modifier), 209, 228, 758, 893
+- 编辑段卷轴 (Edit Segment rollout), 248
+- 渲染器启用 (Enable in Renderer), 833
+- 视口启用选项 (Enable in Viewport option), 834
+- 启用光线选项 (Enable ray option), 582
+- 通知选项 (Enable Notifications option), 681
+- 已启用选项 (Enabled option)
+- XRef 场景 (XRef Scenes), 499
+- 封装 PostScript 文件类型 (Encapsulated PostScript file type), 500, 692
+- 端点绑定 (end effector binding), 570, 570
+- 添加段帧 (ends of segments, adding frames to), 636–638, 636–638
+- 能量倍数 (Energy multipliers), 597
+- 环境材质和对象 (entourage material and objects), 245, 420
+- 形状调整 (shape adjustments for), 427, 427
+- 叶片 (foliage), 259–261, 259–261
+- 练习 (exercises), 271–272, 854–856, 855–856
+- 剪太辑中的 (in montages), 722, 723
+- 不透明度映射 (Opacity maps for), 420–426, 420–426
+- 人 (people), 268–271, 269
+- 植物和树 (plants and trees)
+  - 创建, 261–265, 262–265
+  - 修改, 264–265, 264–265
+- 用于静态图像 (for still images), 681
+- 环境与效果对话框 (Environment and Effects dialog box)
+  - 环境光, 341, 341
+  - 动画背景, 467, 467
+  - 公寓楼, 785
+  - 背景图像, 459–460, 459, 792, 792
+  - 日照, 517, 517
+  - 动态范围, 556–558, 557
+  - 火灾效果 (Fire effect), 927
+  - 雾效果 (Fog effect), 928–929
+  - 辐射照 (radiosity), 519–520
+  - 照网格, 528
+  - 反射率, 523
+  - 渲染, 930–931, 930
