@@ -1813,6 +1813,7 @@
 +   [Red Hat Linux 秘籍（Secrets 系列）](docs/red-hat-linux-secrets-the-secrets-series/README.md)
 +   [Red Hat Linux 安全与优化指南](docs/red-hat-linux-security-and-optimization-hungry-minds-red-hat/README.md)
 +   [Red Hat Linux 安全与优化 [CD-ROM 安全工具]](docs/red-hat-linux-security-and-optimization-security-tools-on-cd/README.md)
++   [Red Hat Linux 生存指南](docs/red-hat-linux-survival-guide/README.md)
 +   [Red Hat Linux 系统管理手册](docs/red-hat-linux-system-administration-handbook/README.md)
 +   [Red Hat Linux：第三版](docs/red-hat-linux-third-edition/README.md)
 +   [Red Hat Linux 释放指南](docs/red-hat-linux-unleashed/README.md)
