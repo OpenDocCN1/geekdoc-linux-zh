@@ -1663,6 +1663,7 @@
 +   [初学者编程指南（2合1）：Linux 入门指南与 SQL 入门指南](docs/programming-for-beginners-2-books-in-1-linux-for-beginners-s/README.md)
 +   [初学者编程指南：本书包含初学者 SQL 计算机编程、Python、Kali Linux、基于 Kali Linux 的黑客攻击。2020 编程语言学习。](docs/programming-for-beginners-this-book-includes-sql-computer-pr/README.md)
 +   [从底层开始编程 [x86 汇编,Linux,GFDL]](docs/programming-from-the-ground-up-x86-assemblylinuxgfdl/README.md)
++   [Objective-C 编程](docs/programming-in-objective-c-6th-edition-developers-library/README.md)
 +   [Linux 编程：反逆向工程技术](docs/programming-linux-anti-reversing-techniques/README.md)
 +   [Linux 游戏编程](docs/programming-linux-games/README.md)
 +   [Linux 游戏编程：使用 SDL、OpenAL 及其他 API 构建多媒体应用](docs/programming-linux-games-building-multimedia-applications-wit/README.md)

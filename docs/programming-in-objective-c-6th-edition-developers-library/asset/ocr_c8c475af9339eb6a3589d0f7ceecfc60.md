@@ -1,0 +1,3 @@
+```
+theAmountOfMoneyWeMadeThisYear = theAmountOfMoneyLeftAtTheEndOfTheYear - theAmountOfMoneyAtTheStartOfTheYear;
+```

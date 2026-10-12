@@ -1,0 +1,169 @@
+
+
+删除指定的文件。如果失败，则返回非零值。
+
+将文件 *fileName1* 重命名为 *fileName2*，如果失败则返回非零结果。
+
+将指定的文件重置到开头位置。
+
+根据字符串 *format* 指定的格式从 *s* 中读取项目（参见[第 15 章](#15)）。跟在 *format* 后面的所有参数都必须是指针。函数返回成功读取并分配的项目数量（不包括 % 分配）。如果在任何项目被转换之前遇到文件末尾，则返回值为 *E*。
+
+以写更新模式（"w+b"）创建并打开一个临时二进制文件；如果发生错误，则返回 *N*。临时文件会在程序终止时自动删除。（还有一个名为 *t* 的函数也可用于创建唯一的临时文件名。）
+
+有效地将字符“放回”到指定的文件中。该字符实际上并未写入文件，而是放置在与此文件关联的缓冲区中。下一次调用 *g* 时，将返回此字符。*u* 函数一次只能向文件“放回”一个字符；也就是说，在进行另一次调用 *u* 之前，必须对该文件执行读取操作。如果字符成功“放回”，函数返回 *c*；否则，返回 *E* 的值。
+
+## 内存中的格式转换函数
+
+函数 *s* 和 *s* 用于在内存中执行数据转换。这些函数类似于 *f* 和 *f* 函数，区别在于第一个参数是字符串而不是 *F* 指针。使用这些例程时，应在程序中包含头文件 `<stdio.h>`。
+
+指定的参数根据字符串 *format* 指定的格式进行转换（参见[第 15 章](#15)），并放入由 *buffer* 指向的字符数组中。字符串末尾会自动放置一个空字符（null character）。返回放入 *buffer* 中的字符数，不包括结尾的空字符。例如，代码
+
+结果是字符串 "100" 被存储在 *f* 中。
+
+```
+i buffer, format, arg1, arg2, ..., argn)
+```
+
+根据字符串 format 指定的值从 buffer 中读取，并存储在 format 后面相应的指针参数中（参见第 15 章）。此函数返回成功转换的项目数量。例如，代码
+
+将字符串 "55" 存储在 *m* 中，将整数值 1 存储在 *d* 中，将整数值 2 存储在 *y* 中。代码
+
+将第一个命令行参数（由 *a* 指向）转换为浮点数，并检查 *s* 返回的值，以确定是否成功从 *a* 中读取了数字。（有关将字符串转换为数字的其他方法，请参阅下一节中描述的例程。）
+
+### 字符串转数字
+
+以下例程将字符字符串转换为数字。使用这里描述的任何例程时，请在程序中包含头文件 `<stdlib.h>`。
+
+在以下说明中，*s* 是指向以 null 结尾的字符串的指针，*end* 是指向字符指针的指针，*base* 是 *int* 类型。
+
+所有例程都会跳过字符串中的前导空白字符，并在遇到对于正在转换的值类型无效的字符时停止扫描。
+
+```
+double strtod(const char *s, char **end)
+```
+将 *s* 指向的字符串转换为浮点数，并返回结果。
+
+```
+int strtoimax(const char *s, char **end, int base)
+```
+将 *s* 指向的字符串转换为 *intmax_t*，并返回结果。
+
+```
+long strtol(const char *s, char **end, int base)
+```
+将 *s* 指向的字符串转换为 *long*，并返回结果。
+
+```
+long long strtoll(const char *s, char **end, int base)
+```
+将 *s* 指向的字符串转换为 *long long*，并返回结果。
+
+```
+double strtod(const char *s, char **end)
+```
+将 *s* 转换为 *double*，并返回结果。终止扫描的字符的指针被存储在 *end* 指向的字符指针中，前提是 *end* 不是 null 指针。例如，代码
+
+的效果是将值 12.5 存储在 *v* 中。字符指针变量 *p* 由 *strtod* 设置，指向 *buffer* 中终止扫描的字符。在这种情况下，它被设置指向字符 `'.'`。
+
+```
+float strtof(const char *s, char **end)
+```
+类似于 *strtod*，但将其参数转换为 *float*。
+
+```
+int strtol(const char *s, char **end, int base)
+```
+将 *s* 转换为 *long*，并返回结果。*base* 是介于 2 和 36 之间（含）的整数基数。整数根据指定的基数进行解释。如果 *base* 为 0，则整数可以用十进制（base 10）、八进制（前导 0）或十六进制（前导 0x 或 0X）表示。如果 *base* 为 16，则值可以选择性地由前导 0x 或 0X 开头。终止扫描的字符的指针被存储在 *end* 指向的字符指针中，前提是 *end* 不是 null 指针。
+
+```
+long long strtoll(const char *s, char **end, int base)
+```
+类似于 *strtol*，但将其参数转换为 *long long*。
+
+```
+unsigned int strtoul(const char *s, char **end, int base)
+```
+类似于 *strtol*，但返回 *unsigned int*。
+
+```
+unsigned long strtoul(const char *s, char **end, int base)
+```
+将 *s* 转换为 *unsigned long*，并返回结果。其余参数的解释方式与 *strtol* 相同。
+
+```
+unsigned long long strtoull(const char *s, char **end, int base)
+```
+将 *s* 转换为 *unsigned long long*，并返回结果。其余参数的解释方式与 *strtol* 相同。
+
+## 动态内存分配函数
+
+以下函数可用于动态分配和释放内存。对于这些函数，*n* 和 *size* 表示类型为 *size_t* 的整数，而 *pointer* 表示 *void* 指针。要使用这些函数，请在程序中包含以下行：
+
+```
+#include <stdlib.h>
+```
+
+```
+void *malloc(size_t n, size_t size)
+```
+为 *n* 个数据项分配连续的空间，其中每个项的长度为 *size* 字节。分配的空间最初设置为全零。成功时，返回指向分配空间的指针；失败时，返回 null 指针。
+
+```
+void free(void *pointer)
+```
+释放由 *pointer* 指向的、之前由 *calloc*、*malloc* 或 *realloc* 调用分配的内存块。
+
+```
+void *calloc(size_t n, size_t size)
+```
+分配 *n* 个 *size* 字节的连续空间，成功时返回指向分配块开头的指针，否则返回 null 指针。
+
+```
+void *realloc(void *pointer, size_t size)
+```
+将之前分配的块大小更改为 *size* 字节，返回指向新块（可能已移动）的指针，或者在发生错误时返回 null 指针。
+
+## 数学函数
+
+以下列表列出了数学函数。要使用这些例程，请在程序中包含以下语句：
+
+```
+#include <math.h>
+```
+
+标准头文件 `<tgmath.h>` 定义了类型通用宏，可用于调用数学或复数数学库中的函数，而无需担心参数类型。例如，您可以使用六种不同的平方根函数，具体取决于参数类型和返回类型：
+
+- `double sqrt(double)`
+- `float sqrtf(float)`
+- `long double sqrtl(long double)`
+- `double complex csqrt(double complex)`
+- `float complex csqrtf(float complex)`
+- `long double complex csqrtl(long double complex)`
+
+您不必担心所有这六个函数，可以包含 `<tgmath.h>` 来替代 `<math.h>` 和 `<complex.h>`，并直接使用名为 *sqrt* 的函数“通用”版本。`<tgmath.h>` 中定义的相应宏确保调用了正确的函数。
+
+回到 `<tgmath.h>`，以下宏可用于测试作为参数给出的浮点值的特定属性：
+
+- 将 $x$ 分类为 NaN、无穷大、正规数、次正规数、零，或某些其他实现定义的类别；每个值在 `<math.h>` 中定义
+- $x$ 是否表示有限值？
+- $x$ 是否表示无穷大值？
+- 是否 $x > y$？
+- 是否 $x \geq y$？
+- 是否 $x \leq y$？
+- 是否 $x < y$ 或 $x > y$？
+- $x$ 是否为 NaN（即非数字）？
+- $x$ 是否为正规值？
+- $x$ 和 $y$ 是否无序（例如，其中一个或两者可能是 NaN）？
+- $x$ 的符号是否为负？
+
+在以下函数列表中，$x$、$y$ 和 $z$ 的类型为 *double*，$r$ 是以弧度表示的角度，类型为 *double*，$n$ 为 *int*。
+
+有关这些函数如何报告错误的更多信息，请参阅您的文档。
+
+1. 数学库包含接收并返回 *float*、*double* 和 *long double* 值的数学函数的 *float*、*double* 和 *long double* 版本。此处总结了 *double* 版本。*float* 版本具有相同的名称，但在末尾有一个 f（例如 *acosf*）。*long double* 版本在末尾有一个 l（例如 *acosl*）。
+
+```
+double acos(double x)
+```
+返回 $x$ 的反余弦值，作为一个以弧度表示的角度，范围在 $[0, \pi]$ 之间。$x$ 的范围是 $[-1, 1]$。
+

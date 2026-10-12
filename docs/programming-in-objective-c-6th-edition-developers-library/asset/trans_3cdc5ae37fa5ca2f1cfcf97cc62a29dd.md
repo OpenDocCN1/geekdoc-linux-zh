@@ -1,0 +1,291 @@
+
+## 索引
+
+### C
+
+- 条件运算符，90–92, 449–450
+  - const 关键字，442
+  - 指针，251–252
+- const 变量，111–113
+- 常量表达式，445–446
+- 常量，21–28
+  - 字符，217–218, 430–431
+  - 字符串，431–432
+  - 指针，266–267
+  - 定义名，#define 语句，297–311
+  - 枚举，432
+  - 浮点数，430
+  - 整数，22, 429–430
+  - 宽字符，431
+- continue 语句，62–63, 460
+- 转换字符
+  - printf() 函数，348
+  - scanf() 函数，353
+- 转换修饰符，scanf() 函数，353
+- 转换
+  - 数据类型，319, 325–328
+  - 浮点数，36–38
+  - 整数-点，36–38
+- convertNumber() 函数，152–154
+- 复制文件，365–366
+- copyString() 函数，264–266, 269–270
+- 计数器，数组，使用元素作为，100–103
+- countWords() 函数，210–211
+- Cox, Brad，417
+- cvs 实用程序，343
+- CygWin，506
+
+### D
+
+- 数据，格式化
+  - printf() 函数，346–353
+  - scanf() 函数，353–358
+- 数据类型，21–28, 433–434
+  - _Bool，24–26, 433
+  - char，24, 433
+  - _Complex，40
+  - 转换，319, 325-328, 455-456
+  - 派生，435-440
+  - double，23, 433
+  - double_Complex，433
+  - 枚举，319, 441
+  - 扩展数据类型，319-323
+    - 扩展，319
+    - 数据类型转换，325-328
+    - 枚举数据类型，322
+    - typedef 语句，323-325
+  - float，23, 433
+  - float_Complex，433
+  - _Imaginary，40
+  - int，433
+  - long double，433
+  - long double_Complex，433
+  - long int，433
+  - short int，433
+  - 说明符，26-28
+  - 类型定义，319
+  - unsigned char，433
+  - unsigned int，433
+  - void，433
+- 日期，存储，结构体，164-169
+- 调试代码，编译中，393-394
+- DEBUG 宏，395-396
+- 程序调试，391
+  - gdb (GNU 调试器)，397-411
+  - 预处理器，391-397
+- 声明，432-435
+  - 函数调用，459
+  - 变量，for 循环，56
+- 递减运算符，267-270, 448-449
+- 定义名，常量，#define 语句，297-311
+- 定义
+  - 数组，96-106
+  - 函数，119-122, 458
+  - 头文件，471-473
+  - 指针变量，234-237
+- 派生数据类型，435-440
+  - 多维数组，436-437
+  - 指针，440
+  - 单维数组，435
+  - 结构体，437-439
+  - 联合体，439-440
+  - 变长数组，436
+- 二字母序列，427
+- 指令，预处理器，465-470
+  - #error，467
+  - #if，467-468
+  - #ifdef，468
+  - #ifndef，468
+  - #include，468-469
+  - #line，469
+  - #pragma，469
+  - #undef，469-470
+- displayConvertedNumber() 函数，152
+- 显示
+  - 字符串，199-202
+  - 变量值，15-17
+- do 语句，60-63, 461
+
+### 函数
+
+- double acos (x) 函数，486
+- double acosh (x) 函数，487
+- double asin (x) 函数，487
+- double asinh (x) 函数，487
+- double atan (x) 函数，487
+- double atan2 (y, x) 函数，487
+- double atanh (x) 函数，487
+- double atof (s) 函数，483
+- double carg (z) 函数，491
+- double cceil (x) 函数，487
+- double cimag (z) 函数，492
+- double complex cabs (z) 函数，491
+- double complex cacos (z) 函数，491
+- double complex cacosh (z) 函数，491
+- double complex casin (z) 函数，491
+- double complex casinh (z) 函数，491
+- double complex catan (z) 函数，491
+- double complex catanh (z) 函数，492
+- double complex cos (z) 函数，492
+- double complex cosh (z) 函数，492
+- double complex cexp (z) 函数，492
+- double complex clog (z) 函数，492
+- double complex conj (z) 函数，492
+- double complex cpow (y, z) 函数，492
+- double complex cproj (z) 函数，492
+- double complex creal (z) 函数，492
+- double complex csin (z) 函数，492
+- double complex csinh (z) 函数，492
+- double complex csqrt (z) 函数，492
+- double complex ctan (z) 函数，492
+- double complex ctanh (z) 函数，492
+- double copysign (x, y) 函数，487
+- double cos (r) 函数，487
+- double cosh (x) 函数，487
+- double erf (x) 函数，487
+- double erfc (x) 函数，487
+- double exp (x) 函数，487
+- double expm1 (x) 函数，487
+- double fabs (x) 函数，488
+- double fdim (x, y) 函数，488
+- double floor (x) 函数，488
+- double fma (x, y, z) 函数，488
+- double fmax (x, y) 函数，488
+- double fmin (x, y) 函数，488
+- double fmod (x, y) 函数，488
+- double frexp (x, exp) 函数，488
+- double ldexp (x, n) 函数，488
+- double lgamma (x) 函数，488
+- double log (x) 函数，488
+- double log1p (x) 函数，489
+- double log2 (x) 函数，489
+- double log10 (x) 函数，489
+- double logb (x) 函数，489
+- double modf (x, ipart) 函数，489
+- double nan (s) 函数，490
+- double nearbyint (x) 函数，490
+- double nextafter (x, y) 函数，490
+- double nexttoword (x, y) 函数，490
+- double pow (x, y) 函数，490
+- double remainder (x, y) 函数，490
+- double remquo (x, y, quo) 函数，490
+- double rint (x) 函数，490
+- double round (x) 函数，490
+- double scalbn (x, n) 函数，490
+- double sin (r) 函数，490
+- double sinh (x) 函数，490
+- double sqrt (x) 函数，490
+- double strotod (s, end) 函数，483-484
+- double tan (r) 函数，490
+- double tanh (x) 函数，490
+- double tgamma (x) 函数，490
+- double trunc (x) 函数，490
+
+### E
+
+- double_Complex 数据类型，433
+- 动态内存分配，384-389
+  - free() 函数，387-389
+- 动态内存分配函数，484-485
+
+### E
+
+- else-if 语句，76-83
+- 枚举数据类型，319, 441
+- 扩展数据类型，319-323
+- 枚举常量，432
+- 相等性，字符串，测试，202-204
+- equalStrings() 函数，202-204, 219
+- 错误，代码，8-9
+- 转义字符，字符串，215-217
+- exchange() 函数，254-255
+- 异或运算符，282-283
+- 执行，程序，9-10
+- exit() 函数，369-370
+- 表达式，442
+  - 算术，21, 30-39
+  - 数组，基本操作，451
+  - 复合字面量，454-455
+  - 常量，445-446
+  - 数据类型，转换，455-456
+  - for 循环，多个，55
+  - 运算符，443-445
+    - 算术，446-447
+    - 赋值，449
+    - 位，448
+    - 逗号，451
+    - 条件，449-450
+    - 递减，448-449
+    - 递增，448-449
+    - 逻辑，447
+    - 关系，447-448
+    - sizeof，450-451
+    - 类型转换，450
+  - 指针，237-238
+    - 基本操作，452-454
+  - 结构体
+    - 基本操作，452
+    - 使用中，166-169
+- 可扩展性，程序，#define 语句，301-302
+- 扩展数据类型，319
+  - 数据类型转换，325-328
+  - 枚举数据类型，319-323
+- 外部变量，334-337, 456
+  - 与 static 对比，337-339
+
+### F
+
+- factorial() 函数，158-159
+- 阶乘，递归计算，158-159
+- fclose() 函数，365-367
+- fgets() 函数，367-368
+- 斐波那契数，生成，103-104
+- 字段
+  - 位，291-295
+- for 循环，省略，55
+- FILE *fopen (fileName, accessMode) 函数，478
+- FILE *freopen (fileName, accessMode, filePtr) 函数，479
+- FILE *tmpfile (void) 函数，482
+- FILE 指针，I/O（输入/输出），368-369
+
+### F
+
+- 文件
+  - 关闭，fclose() 函数，365-367
+  - 复制，365-366
+  - 头文件，471-473
+    - 有效使用，339-340
+  - Makefile，341-342
+  - 命名，7
+  - 打开，362-364
+  - 程序，分为多个，331-334
+  - 从...读取和写入整行数据，367-368
+  - 从...读取单个字符，364
+  - 重定向 I/O（输入/输出）到...，358-362
+  - 移除，370-371
+  - 重命名，370
+  - 指定列表和依赖项，341-342
+  - 系统包含，313-314
+- findEntry() 函数，257
+- 标志，printf()，347
+- float 数据类型，21-23, 28, 433
+- float _Complex 数据类型，433
+- 浮点常量，430
+- 浮点转换，36-38
+- fopen() 函数，362-364
+- for 循环
+  - 嵌套，53-55
+  - 变体，55-56
+- for 语句，44-51, 461
+- 格式化 I/O（输入/输出），346-358
+  - printf() 函数，346-353
+- 格式化数据
+  - printf() 函数，346-353
+  - scanf() 函数，353-358
+- FORTRAN (FORmula TRANslation) 语言，6
+- fprintf() 函数，367, 392, 482
+- fputs() 函数，367-368
+- free() 函数，387-389
+- fscanf() 函数，367, 482
+- 函数，119
+  - absoluteValue()，128-134

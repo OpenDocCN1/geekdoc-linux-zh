@@ -1,0 +1,11 @@
+**Step 2:** Set $i$ to 2.
+
+**Step 3:** If $i > n$, the algorithm terminates.
+
+**Step 4:** If $P_i$ is 0, then $i$ is prime.
+
+**Step 5:** For all positive integer values of $j$, such that $i \times j \leq n$, set $P_{ixj}$ to 1.
+
+**Step 6:** Add 1 to $i$ and go to step 3.
+
+**8.** Find out if your compiler supports variable-length arrays. If it does, write a small program to test the feature out.

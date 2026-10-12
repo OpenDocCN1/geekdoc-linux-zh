@@ -1,0 +1,9 @@
+It’s worthwhile to take some time to explain the output in detail. The first set of output deals with the display of integers: `s`, `l`, `u`, and “normal” `i`s. The first line displays `i` in decimal (`%`), octal (`%`), hexadecimal (`%`), and unsigned (`%`) formats. Notice that octal numbers are not preceded by a leading `0` when they are displayed.
+
+The next line of output displays the value of `i` again. First, `i` is displayed in hexadecimal notation using `%`. The use of a capital `X` (`%`) causes `p` to use uppercase letters `A–F` instead of lowercase letters when displaying numbers in hexadecimal. The `#` modifier (`%`) causes a leading `0` to appear before the number and causes a leading `0` to appear when the capital `X` is used as the conversion character (`%`).
+
+The fourth `p` call first uses the `+` flag to force a sign to appear, even if the value is positive (normally, no sign is displayed). Then, the space modifier is used to force a leading space in front of a positive value. (Sometimes this is useful for aligning data that might be positive or negative; the positive values have a leading space; the negative ones have a minus sign.) Next, `%` is used to display the value of `i` right-justified within a field width of seven characters. The `0` flag specifies zero fill. Therefore, four leading zeroes are placed in front of the value of `i`, which is `4`. The final conversion in this call, `%` is used to display the value of `i` using a minimum of seven digits. The net effect is the same as specifying `%` : Four leading zeroes are displayed, followed by the three-digit number `4`.
+
+The fifth `p` call displays the value of the `s` variable `j` in various formats. Any integer format can be specified to display the value of a `s`.
+
+The next `p` call shows what happens when `%` is used to display the value of an

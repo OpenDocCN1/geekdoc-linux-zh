@@ -1,0 +1,3 @@
+```
+triangularNumber = triangularNumber + n;
+```

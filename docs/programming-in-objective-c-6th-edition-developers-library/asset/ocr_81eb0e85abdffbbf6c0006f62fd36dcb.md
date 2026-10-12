@@ -1,0 +1,1 @@
+foo.c:16: error: assignment of read-only variable 'pi'

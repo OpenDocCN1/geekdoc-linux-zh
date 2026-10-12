@@ -1,0 +1,17 @@
+| s | The value to be read is a sequence of characters; the sequence begins with the first nonwhitespace character and is terminated by the first whitespace character. The corresponding argument is a pointer to a character array, which must contain enough characters to contain the characters that are read plus the null character that is automatically added to the end. If a number precedes the s, the specified number of characters is read, unless a whitespace character is encountered first. | | |
+
+| [ ... ] | Characters enclosed within brackets indicate that a character string is to be read, as in %s; the characters within the brackets indicate the permissible characters in the string. If any character other than that specified in the brackets is encountered, the string is terminated; the sense of how these characters are treated can be “inverted” by placing a ^ as the first character inside the brackets. In such a case, the subsequent characters are taken to be the ones that will terminate the string; that is, if any of the subsequent characters are found on the input, the string is terminated. | | |
+
+| n | Nothing gets read. The number of characters read so far by this call is written into the int pointed to by the corresponding argument. | | |
+
+| p | The value to be read is a pointer expressed in the same format as is displayed by printf() with the %p conversion characters. The corresponding argument is a pointer to a pointer to void. | | |
+
+| % | The next nonwhitespace character on input must be a %. | | |
+
+# Table 15.6 % Conversion Characters
+
+When the % function searches the input stream for a value to be read, it always bypasses any leading so-called whitespace characters, where whitespace refers to either a blank space, horizontal tab (' '), vertical tab ('  '), carriage return (' '), newline (' '), or form-feed character (' '). The exceptions are in the case of the % format characters—in which case the next character from the input, no matter what it is, is read—and in the case of the bracketed character string read—in which case, the characters contained in the brackets (or not contained in the brackets) specify the permissible characters of the string.
+
+When % reads in a particular value, reading of the value terminates as soon as the number of characters specified by the field width is reached (if supplied) or until a character that is not valid for the value being read is encountered. In the case of integers, valid characters are an optionally signed sequence of digits that are valid for the base of the integer that is being read (decimal: 0–9, octal: 0–7, hexadecimal: 0–9, a–f, or A–F). For f s, permissible characters are an optionally signed sequence of decimal digits, followed by an optional decimal point and another sequence of decimal digits, all of which can be followed by the letter e (or E) and an optionally signed exponent. In the case of %, a hexadecimal floating value can be supplied in the format of a leading 0 x followed by a sequence of hexadecimal digits with an optional decimal point, followed by an optional exponent preceded by the letter p (or P).
+
+For character strings read with the % format, any nonwhitespace character is valid. In the case of % format, all characters are valid. Finally, in the case of the bracketed string read, valid characters are only those enclosed within the brackets (or not enclosed within the brackets if the ^ character is used after the open bracket).

@@ -1,0 +1,7 @@
+```
+Enter a number between 1 and 100:
+Your number is 4.00
+Half of it is 2.00
+Square it to get 16.00
+Cube it to get 64.00
+```

@@ -1,0 +1,8 @@
+```
+$ make
+gcc    -c -o mod1.o mod1.c
+gcc    -c -o mod2.o mod2.c
+gcc    -c -o main.o main.c
+gcc mod1.o mod2.o main.o -o dbtest
+$
+```

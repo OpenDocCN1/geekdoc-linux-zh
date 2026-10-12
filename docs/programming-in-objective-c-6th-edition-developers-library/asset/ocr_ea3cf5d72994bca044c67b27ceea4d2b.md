@@ -1,0 +1,3 @@
+![](bbox=[0.14, 0.0, 0.85, 0.86])
+
+As you can see in Figure 8.3, the notation $\mathfrak{m}$ refers to the *entire* $\mathfrak{m}$ structure contained in the first location of the $\mathfrak{m}$ array. The type of this expression is $\mathfrak{S}$. Therefore, when passing $\mathfrak{m}$ to a function as an argument, the corresponding formal parameter inside the function must be declared to be of type

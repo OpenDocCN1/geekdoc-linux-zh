@@ -1,0 +1,414 @@
+
+
+```c
+// 演示按位与（AND）运算符的程序
+
+#include <stdio.h>
+
+int main (void)
+{
+unsigned int word1 = 077u, word2 = 0150u, word3 = 0210u;
+
+printf ("%o ", word1 & word2);
+printf ("%o ", word1 & word1);
+printf ("%o ", word1 & word2 & word3);
+printf ("%o\n", word1 & 1);
+
+return 0;
+}
+```
+
+word1  ... 000 111 111      077
+word2  ... 001 101 000 & 0150
+-------------------------------
+... 000 101 000      050
+
+| b1 | b2 | b1 & b2 |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+w1    ... 100   011    001          0431
+w2    ... 001   101    010      |    0152
+----------------------------------------------------
+      ... 100   111    011          0473
+
+b1 b2 b1 ^ b2
+0 0 0
+0 1 1
+1 0 1
+1 1 0
+
+w1    ... 101 011 110    0536
+w2    ... 010 110 110 ^   0266
+--------------------------
+        ... 111 101 000    0750
+
+w1   1   010   010   100   101   111   0122457
+~w1  0   101   101   011   010   000   0055320
+
+```c
+/* 演示按位运算符的程序 */
+
+#include <stdio.h>
+
+int main (void)
+{
+    unsigned int w1 = 0525u, w2 = 0707u, w3 = 0122u;
+
+    printf ("%o  %o  %o\n", w1 & w2, w1 | w2, w1 ^ w2);
+    printf ("%o  %o  %o\n", ~w1, ~w2, ~w3);
+    printf ("%o  %o  %o\n", w1 ^ w1, w1 & ~w2, w1 | w2 | w3);
+    printf ("%o  %o\n", w1 | w2 & w3, w1 | w2 & ~w3);
+    printf ("%o  %o\n", ~(~w1 & ~w2), ~(~w1 | ~w2));
+
+    w1 ^= w2;
+    w2 ^= w1;
+    w1 ^= w2;
+    printf ("w1 = %o, w2 = %o\n", w1, w2);
+
+    return 0;
+}
+```
+
+505 727 222
+37777777252 37777777070 37777777655
+0 20 727
+527 725
+727 505
+w1 = 707, w2 = 525
+
+w1              ... 000 011     03
+w1 << 1         ... 000 110     06
+
+w1   ... 000 110    06
+w1 << 1   ... 001 100    014
+
+w1			1111 0111 0111 0111 1110 1110 0010 0010	F777EE22
+w1 >> 1		0111 1011 1011 1011 1111 0111 0001 0001	7BBBF711
+
+```c
+// 函数：如果计数为正，将无符号整数左移；如果为负，则右移
+
+#include <stdio.h>
+
+unsigned int shift (unsigned int value, int n)
+{
+    if (n > 0)     // 左移
+        value <<= n;
+    else           // 右移
+        value >>= -n;
+
+    return value;
+}
+
+int main (void)
+{
+    unsigned int w1 = 0177777u, w2 = 0444u;
+    unsigned int shift (unsigned int value, int n);
+
+    printf ("%o\t%o\n", shift (w1, 5), w1 << 5);
+    printf ("%o\t%o\n", shift (w1, -6), w1 >> 6);
+    printf ("%o\t%o\n", shift (w2, 0), w2 >> 0);
+    printf ("%o\n", shift (shift (w1, -3), 3));
+
+    return 0;
+}
+```
+
+```c
+// 演示整数旋转的程序
+
+#include <stdio.h>
+
+int main (void)
+{
+    unsigned int  w1 = 0xabcdef00u, w2 = 0xffffff122u;
+    unsigned int  rotate (unsigned int  value, int  n);
+
+    printf ("%x\n", rotate (w1, 8));
+    printf ("%x\n", rotate (w1, -16));
+    printf ("%x\n", rotate (w2, 4));
+    printf ("%x\n", rotate (w2, -2));
+    printf ("%x\n", rotate (w1, 0));
+    printf ("%x\n", rotate (w1, 44));
+
+    return 0;
+}
+
+// 函数：将无符号整数向左或向右旋转
+
+unsigned int  rotate (unsigned int  value, int  n)
+{
+    unsigned int  result, bits;
+
+    // 将移位计数缩减到定义的范围
+
+    if ( n > 0 )
+        n = n % 32;
+    else
+        n = -(-n % 32);
+
+    if ( n == 0 )
+        result = value;
+    else if ( n > 0 ) {    // 左旋转
+        bits = value >> (32 - n);
+        result = value << n  |  bits;
+    }
+    else {                 // 右旋转
+        n = -n;
+        bits = value << (32 - n);
+        result = value >> n  |  bits;
+    }
+
+    return result;
+}
+```
+
+packed_data = (packed_data & ~(0xff << 18)) | ((n & 0xff) << 18);
+
+n = (packed_data >> 10) & 0xff;
+
+```c
+struct packed_struct
+{
+    unsigned int  :3;
+    unsigned int  f1:1;
+    unsigned int  f2:1;
+    unsigned int  f3:1;
+    unsigned int  type:8;
+    unsigned int  index:18;
+};
+```
+
+```c
+struct packed_struct  packed_data;
+```
+
+i = packed_data.index / 5 + 1;
+
+```c
+struct packed_struct
+{
+    unsigned int index:9;
+    unsigned int type:4;
+    unsigned int f3:1;
+    unsigned int f2:1;
+    unsigned int f1:1;
+    unsigned int  :3;
+};
+```
+
+```c
+struct table_entry
+{
+int count;
+char c;
+unsigned int f1:1;
+unsigned int f2:1;
+};
+```
+
+index = bitpat_search(0xel1f4, 0x5, 3);
+
+```c
+#include <stdio.h>
+
+#define YES 1
+#define NO 0
+
+// 判断整数是否为偶数的函数
+
+int isEven (int number)
+{
+int answer;
+
+if (number % 2 == 0)
+answer = YES;
+else
+answer = NO;
+
+return answer;
+}
+
+int main (void)
+{
+int isEven (int number);
+
+if (isEven (17) == YES)
+printf ("yes ");
+else
+printf ("no ");
+
+if (isEven (20) == YES)
+printf ("yes\n");
+else
+printf ("no\n");
+
+return 0;
+}
+```
+
+```c
+/* 计算给定半径的圆的面积和周长，以及球的体积的函数 */
+#include <stdio.h>
+#define    PI       3.141592654
+
+double  area (double r)
+{
+  return PI * r * r;
+}
+
+double  circumference (double r)
+{
+  return 2.0 * PI * r;
+}
+
+double  volume (double r)
+{
+  return 4.0 / 3.0 * PI * r * r * r;
+}
+
+int main (void)
+{
+  double  area (double r), circumference (double r),
+          volume (double r);
+  printf ("radius = 1: %.4f  %.4f  %.4f\n",
+          area(1.0), circumference(1.0), volume(1.0));
+  printf ("radius = 4.98: %.4f  %.4f  %.4f\n",
+          area(4.98), circumference(4.98), volume(4.98));
+
+  return 0;
+}
+```
+
+radius = 1: 3.1416    6.2832    4.1888
+radius = 4.98: 77.9128   31.2903   517.3403
+
+#define MAXIMUM_DATAVALUES 1000
+
+float dataValues[MAXIMUM_DATAVALUES];
+
+```c
+for ( i = 0;  i < MAXIMUM_DATAVALUES;  ++i )
+...
+```
+
+```c
+if ( index > MAXIMUM_DATAVALUES - 1 )
+...
+```
+
+#define MAXIMUM_DATAVALUES  2000
+
+```c
+#include <stdio.h>
+
+#define kIntSize 32  // *** 取决于机器 !!! ***
+
+// 函数：将无符号整数向左或向右旋转
+
+unsigned int rotate (unsigned int value, int n)
+{
+    unsigned int result, bits;
+
+    /* 将移位计数缩减到定义的范围 */
+
+    if (n > 0)
+        n = n % kIntSize;
+    else
+        n = -(n % kIntSize);
+
+    if (n == 0)
+        result = value;
+    else if (n > 0)     /* 左旋转 */
+    {
+        bits = value >> (kIntSize - n);
+        result = value << n | bits;
+    }
+    else                /* 右旋转 */
+    {
+        n = -n;
+        bits = value << (kIntSize - n) ;
+        result = value >> n | bits;
+    }
+
+    return result;
+}
+```
+
+#define TWO_PI 2.0 * 3.141592654
+
+#define PI 3.141592654;
+
+return  2.0 * 3.141592654; * r;
+
+if ( y EQUALS 0 OR y EQUALS value )
+...
+
+```c
+#define PI			3.141592654
+#define TWO_PI		2.0 * PI
+```
+
+```c
+#define TWO_PI    2.0 * PI
+#define PI        3.141592654
+```
+
+if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
+...
+
+```c
+#define  IS_LEAP_YEAR      year % 4 == 0  && year % 100 != 0  \
+                         || year % 400 == 0
+
+...
+if ( IS_LEAP_YEAR )
+...
+```
+
+```c
+#define IS_LEAP_YEAR(y)      y % 4 == 0  &&  y % 100 != 0   \
+                               ||  y % 400 == 0
+```
+
+if ( IS_LEAP_YEAR (next_year) )
+...
+
+```c
+if ( next_year % 4 == 0 && next_year % 100 != 0 \
+    || next_year % 400 == 0 )
+...
+```
+
+```c
+#define SQUARE(x) ((x) * (x))
+```
+
+```c
+#define MAX(a,b) ( ((a) > (b)) ? (a) : (b) )
+```
+
+```c
+#define IS_LOWER_CASE(x)  (( (x) >= 'a') && ((x) <= 'z' ) )
+```
+
+```c
+#define TO_UPPER(x) ( IS_LOWER_CASE (x) ? (x) - 'a' + 'A' : (x) )
+```
+
+```c
+while ( *string != '\0' )
+{
+    *string = TO_UPPER (*string);
+    ++string;
+}
+```
+
+```c
+#define debugPrintf(...)   printf("DEBUG:" __VA_ARGS__);
+```
+

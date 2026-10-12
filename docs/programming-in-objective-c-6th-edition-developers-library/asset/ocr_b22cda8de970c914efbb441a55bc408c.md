@@ -1,0 +1,1 @@
+unsigned long long int strtoull (s, end, base)

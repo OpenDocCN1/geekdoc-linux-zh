@@ -1,0 +1,3 @@
+```
+void *realloc (pointer, size)
+```
