@@ -1,0 +1,114 @@
+
+NIS（网络信息服务）通过将常用管理文件保存在中央数据库中，并由客户端联系数据库服务器从数据库中检索信息，从而简化了这些文件的维护工作。NIS 由 Sun Microsystems 开发，是客户端/服务器范式的典型示例。就像 DNS 解决了保持多个 `/etc/hosts` 文件副本最新的问题一样，NIS 处理的是保持系统独立配置文件（例如 `/etc/passwd`）最新的问题。如今的大多数网络都是*异构*的（第 1085 页）；尽管它们运行着不同版本的 UNIX 或 Linux，但它们具有某些共同属性，例如 `passwd` 文件。
+
+LDAP（轻量级目录访问协议）目录可以存储多种类型的信息，包括姓名和地址、网络服务列表以及身份验证数据。LDAP 是另一种客户端/服务器设置的示例，适用于任何相对静态且结构化的信息，特别是需要快速查找的情况。已配置多种类型的客户端与 LDAP 服务器进行通信，包括电子邮件客户端、浏览器和身份验证服务器。
+
+## NIS 简介
+
+局域网管理员的一个主要目标是使网络对用户保持透明。这种透明度的一个方面是在用户登录不同机器时，向他们提供相似的环境，包括用户名和密码。从管理员的角度来看，支持用户环境的信息不应被复制，而应保存在中央位置，并应要求时进行分发。NIS 简化了这项任务。
+
+与 DNS 一样，用户无需知道 NIS 正在管理系统配置文件。配置和维护 NIS 数据库是系统管理员的任务；单个用户以及单用户 Linux 系统的用户很少需要直接处理 NIS。
+
+* **黄页 (Yellow Pages)**
+
+NIS 曾被称为 *黄页*，有些人至今仍使用这个名称。Sun 将该服务重新命名，因为另一家公司拥有该名称的商标权。然而，NIS 工具和文件的名称仍让人联想到旧名称：`ypcat` 用于显示，`ypmatch` 用于搜索 NIS 文件，服务器守护进程名为 `ypserv`。
+
+## NIS 的工作原理
+
+* **NIS 域**
+
+NIS 向网络上的系统提供一套公共信息。网络被称为 *NIS 域*，其特征是每个系统拥有相同的 *NIS 域名称*（不同于 (DNS) *域名* [第 1080 页]）。从技术上讲，NIS 域是一组 NIS 映射（map）或数据库文件。
+
+* **主服务器和从服务器**
+
+每个 NIS 域必须恰好有一个主服务器；较大的网络可能拥有从服务器。每个从服务器都持有主服务器 NIS 数据库的副本。对从服务器的需求基于 NIS 域的规模以及系统和网络的可靠性。一个系统在同一时间只能属于一个 NIS 域。
+
+当客户端确定服务器宕机或响应速度不够快时，它会选择配置文件指定的另一个服务器。如果它无法连接到服务器，`ypbind` 将终止并报错。
+
+* **nsswitch.conf**
+
+系统使用 NIS、DNS、本地文件或它们的组合作为某些信息源，以及使用顺序，由 `/etc/nsswitch.conf`（第 455 页）决定。当需要从 NIS 数据库获取信息时，客户端向 NIS 服务器请求信息。例如，当用户尝试登录时，客户端系统可能会使用 NIS 服务器提供的名称和密码信息来验证用户。您可以配置 `nsswitch.conf`，使 `/etc/passwd` 覆盖本地系统的 NIS 密码信息。当您不导出 `root` 账户到 NIS 时（您也不应该这样做），此设置允许您为每个系统拥有唯一的 root 密码。
+
+在 Fedora/RHEL 下，NIS 提供的信息——如用户名、密码以及本地系统名称和 IP 地址——源自本地 ASCII 配置文件，例如 `/etc/passwd` 和 `/etc/hosts`。这些文件被称为源文件或主文件。（一些管理员使用不同的文件来区分本地配置和 NIS 源信息，以避免混淆。）NIS 服务器可以根据需要包含以下多个源文件中的信息：
+
+| 源文件 | 描述 |
+| :--- | :--- |
+| `/etc/group` | 定义组及其成员 |
+| `/etc/gshadow` | 提供组的影子密码 |
+| `/etc/hosts` | 映射本地系统和 IP 地址 |
+| `/etc/passwd` | 列出用户信息 |
+| `/etc/printcap` | 列出打印机信息 |
+| `/etc/rpc` | 映射 RPC 程序名称和编号 |
+| `/etc/services` | 映射系统服务名称和端口号 |
+| `/etc/shadow` | 提供用户的影子密码 |
+
+NIS 提供的信息基于不时变更的文件；NIS 负责及时将此类变更信息提供给 NIS 域中的所有系统。
+
+在 NIS 存储源文件中包含的信息之前，必须将其转换为 dbm（第 1078 页）格式的文件，称为映射（map）。每个映射都按一个字段（列）建立索引。可以通过指定索引字段的值来从映射中检索记录（行）。某些文件生成两个映射，每个映射按不同的字段建立索引。例如，`/etc/passwd` 文件生成两个映射：一个按用户名索引，另一个按 UID 索引。这些映射的名称分别为 `passwd.byname` 和 `passwd.byuid`。
+
+NIS 映射对应 C 库函数。在非 NIS 系统上，`getpwnam()` 和 `getpwuid()` 函数从 `/etc/passwd` 获取用户名和 UID 信息。在 NIS 系统上，这些函数向 NIS 服务器发出 RPC 调用，该过程对于调用该函数的应用程序来说是透明的。
+
+NIS 使用的映射名称对应位于主服务器 `/var/yp/nisdomainname` 目录中的文件，其中 `nisdomainname` 是 NIS 域的名称：
+
+```bash
+$ ls /var/yp/ogs
+
+group.bygid        mail.aliases        protocols.byname    services.byname
+group.byname        netid.byname        protocols.bynumber    services.byservicename
+hosts.byaddr        passwd.byname       rpc.byname            ypservers
+hosts.byname        passwd.byuid        rpc.bynumber
+```
+
+### 映射别名
+
+为了方便引用 NIS 映射，您可以为映射分配别名。`/var/yp/nicknames` 文件包含常用别名的列表。查看 `nicknames` 文件或输入命令 `ypcat -x` 可以显示别名列表：
+
+```bash
+$ cat /var/yp/nicknames
+passwd   passwd.byname
+group    group.byname
+networks networks.byaddr
+hosts    hosts.byname
+protocols protocols.bynumber
+services services.byname
+aliases  mail.aliases
+ethers   ethers.byname
+```
+
+`nicknames` 文件中的每一行都包含一个别名，后跟空白字符以及该别名所指映射的名称。您可以通过修改 `nicknames` 文件来添加、删除或修改别名。
+
+### 显示映射
+
+`ypcat` 和 `ypmatch` 实用程序用于显示 NIS 映射中的信息。使用别名 `passwd`，以下命令显示 `passwd.byname` 映射中包含的信息：
+
+```bash
+$ ypcat passwd
+mark:$1$X4jAzD0$.Sc.64fRCLCPQmSNq9qrFVv/:500:500:Mark  Sobe11:/home/mark:/bin/bash
+...
+```
+
+默认情况下，NIS 仅为 UID 小于 500 的用户存储密码（参见第 706 页的 `MINUID`）。因此，`ypcat` 不显示 root、bin 及其他系统条目的行。您可以使用 `ypmatch` 显示单个用户的密码信息：
+
+```bash
+$ ypmatch mark passwd
+mark:$1$X4jAzD0$.Sc.64fRCLCPQmSNq9qrFVv/:500:500:Mark  Sobe11:/home/mark:/bin/bash
+```
+
+您也可以通过将 `ypcat` 的输出通过 `grep` 过滤来获取相同的信息，但 `ypmatch` 效率更高，因为它直接搜索映射，使用单个进程。`ypmatch` 实用程序仅针对映射的键（key）工作。要匹配组的其他成员或映射中不包含的其他字段，例如 `passwd` 中的 GECOS（第 1084 页）字段，您需要使用带有 `grep` 的 `ypcat`：
+
+```bash
+$ ypcat passwd | grep -i sobell
+mark:$1$X4jAzD0$.Sc.64fRCLCPQmSNq9qrFVv/:500:500:Mark  Sobe11:/home/mark:/bin/bash
+```
+
+## 术语
+
+本章使用以下定义：
+
+- NIS 源文件：NIS 从中获取信息的 ASCII 文件
+
+- NIS 映射：由 NIS 源文件创建的 dbm 格式文件
+
+- NIS 数据库：NIS 映射的集合
+
+## 更多信息
