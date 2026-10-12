@@ -1,0 +1,145 @@
+
+- `sleep()`, 335
+- `uniqid()`, 335–336
+- `unsleep()`, 335
+- `dir()` 文件系统函数, 328
+- `mktime()`, 函数, 323–324
+- `mode` 参数, `fopen()` 函数的使用, 64
+- 模块, 对于 CGI 扩展, 155
+- 取模 (%) 运算符, 37
+- mssql 函数
+    - `msql_close()`, 83, 85, 89, 316
+    - `msql_connect()`, 83, 87, 316
+    - `msql_fetch_array()`, 83, 84, 316
+    - `msql_free_result()`, 83, 85, 89, 316
+    - `msql_query()`, 83–84, 316
+    - `msql_select_db()`, 83, 84, 316
+    - `msql_close()` mSQL 函数, 83, 85, 89, 316
+    - `msql_connect()` mSQL 函数, 83, 87, 316
+    - `msql_fetch_array()` mSQL 函数, 83, 84, 316
+    - `msql_free_result()` mSQL 函数, 83, 85, 89, 316
+    - `msql_query()` mSQL 函数, 83–84, 316
+    - `msql_select_db()` mSQL 函数, 83–84, 316
+    - `msql_close()` Microsoft SQL Server 函数, 315
+    - `msql_connect()` Microsoft SQL Server 函数, 315
+    - `mssql_fetch_array()` Microsoft SQL Server 函数, 315
+    - `mssql_free_result()` Microsoft SQL Server 函数, 315
+    - `mssql_query()` Microsoft SQL Server 函数, 315
+    - `mssql_select_db()` Microsoft SQL Server 函数, 315
+- 乘法运算符 (+), 37
+- MySQL
+    - 连接性, 90–93
+    - 数据选择/显示技术, 128–132
+    - 数据库创建, 115–120
+    - 数据库驱动认证, 139–146
+    - 许可信息, 22
+    - 产品目录数据库创建, 167–169
+    - 读取/设置 cookies, 152–154
+    - 数据输入技术, 121–128
+    - UNIX 系统安装, 22–23
+    - `odbc_connect()`, 103–104, 318
+    - `odbc_execute()`, 103–104, 318
+    - `odbc_free_result()`, 103–104
+    - `odbc_prepare()`, 103–104, 318
+    - `odbc_result_all()`, 103–104, 318
+    - `odbc_close()`, 103–104, 318
+    - `odbc_connect()`, 103–104, 318
+    - `odbc_execute()`, 103–104, 318
+    - `odbc_prepare()`, 103–104, 318
+    - `odbc_result_all()`, 103–104, 318
+    - Windows 系统安装/配置, 22
+- MySQL 函数
+    - `mysql_close()`, 90, 92, 317
+    - `mysql_connect()`, 90, 317
+    - `mysql_fetch_array()`, 90, 91, 317
+    - `mysql_free_result()`, 90, 92, 317
+    - `mysql_query()`, 90–91, 317
+    - `mysql_select_db()`, 90, 317
+- 算术, 37–38, 293
+    - 赋值, 27, 293
+    - 比较, 38, 294
+    - 减减, 294
+    - 描述, 293
+    - 增, 294
+    - 逻辑, 29–295
+- Oracle 函数
+    - `OCIExecute()`, 93–94, 319
+    - `OCIFetch()`, 93, 95, 319
+    - `OCIStatement()`, 93, 96, 379
+    - `OCILogoff()`, 93–94, 319
+    - `OCILogon()`, 93–94, 319
+    - `OCIParse()`, 93–94, 319
+    - `OCIResult()`, 93, 319
+- 网络函数
+    - `gethostbyaddr()`, 336
+    - `gethostname()`, 336
+    - 换行符 `\n` 字符, PHP 代码, 355
+    - `lib2str()` 字符串函数, 342
+    - `number_format()` 函数, 333
+- 对象, 会话, 155
+    - `OCIEExecute()`, 93–94, 319
+    - `OCIFetch()`, 93, 95, 319
+    - `OCIStatement()`, 93, 96, 379
+    - `OCILogoff()`, 93–96, 319
+    - `OCILogon()`, 93–94, 319
+    - `OCIColsNum()`, 93, 95
+    - `OCIParse()`, 93–94, 319
+    - `OCIResult()`, 93, 319
+- `octdec()` 数学函数, 332
+- ODBC (开放数据库连接)
+    - 连接函数, 103–105
+    - 描述, 103
+- ODBC 函数
+    - `odbc_connect()`, 103–104, 318
+- `passthru` 程序执行函数, 338
+- 密码字段, HTML 表单输入元素, 31
+- `passwd`, HTTP 认证元素, 134
+- 百分号 (%) 字符, 取模运算符
+- Perl, 脚本语言, 4
+    - `pg_close()` PostgreSQL 函数, 97, 99, 320
+    - `pg_connect()` PostgreSQL 函数, 97, 320
+    - `pg_exec()` PostgreSQL 函数, 97–98, 320
+    - `pg_fetch_array()` PostgreSQL 函数, 97–98, 320
+    - `pg_result()` PostgreSQL 函数, 97, 99, 320
+- PGP (优密隐私)
+    - 数据加密, 222–228
+    - 开发历史, 221
+    - 公钥添加, 222–223
+- PHP 函数
+    - `phpinfo()`, 337
+    - `phpversion()`, 337
+- PHP 语法, 288–290
+- PHP3 (个人首页工具)
+    - Apache 服务器/Unix 系统配置, 19
+    - Apache 服务器/Windows 系统配置, 16–17
+    - 常见用法, 3
+    - 数据库支持, 21
+    - 开发历史, 2–3
+    - 未来预期, 3–4
+    - HTML 代码, 34
+    - 图像用法, 285
+    - 安装测试, 20–21
+    - Microsoft IIS 配置, 17–18
+    - 模块对于 CGI 扩展, 15
+    - 开源软件, 4–5
+    - UNIX 系统安装过程, 18–19
+    - 如何使用, 4
+    - Windows 系统安装过程, 15–18
+    - Apache 服务器/Unix 系统配置, 20
+    - Apache 服务器/Windows 系统配置, 17
+    - 管理菜单, 169–217
+    - 数据库创建, 167–169
+    - 从删除记录, 208–217
+    - 显示技术, 236–255
+    - 字段, 167–168
+    - 信息类型, 166–217
+    - 修改记录, 186–208
+    - 产品模板，购物系统, 249–255
+    - 程序执行函数
+        - `exec()`, 337
+        - `pasru()`, 338
+        - `system()`, 338
+    - 公钥加密
+        - 添加到 PHP 用户公钥
+        - 对于 GPG, 222
+        - 添加到 PHP 用户公钥
