@@ -1,0 +1,169 @@
+
+### 4.3.1 错误值
+
+`EMFILE` | 打开的文件过多。
+`EMLINK` | 链接过多。
+`EMSGSIZE` | 消息过大。
+`EMLINK` | 链接过多。
+`EMULTIHIP` | 保留。
+`ENAMETOOLONG` | 文件名过长。
+`ENETDOWN` | 网络故障。
+`ENETRESET` | 连接被网络中止。
+`ENETUNREACH` | 网络不可达。
+`ENFILE` | 系统中打开的文件过多。
+`ENOBUFS` | 没有可用的缓冲区空间。
+`ENODEV` | 无此设备。
+`ENOENT` | 没有该文件或目录。
+`ENOEXEC` | 可执行文件格式错误。
+`ENOLCK` | 没有可用的锁。
+`ENOLINK` | 保留。
+`ENOMEM` | 空间不足。
+`ENOMSG` | 没有所需类型的消息。
+`ENOPROTOOPT` | 协议不可用。
+`ENOSPC` | 设备上无剩余空间。
+`ENOSYS` | 不支持该函数。
+`ENOTCONN` | 套接字未连接。
+`ENOTDIR` | 不是目录。
+`ENOTEMPTY` | 目录非空。
+`ENOTSOCK` | 不是套接字。
+`ENOTSUP` | 不支持。
+`ENOTTY` | 不适当的 `I/O` 控制操作。
+`ENXIO` | 无此设备或地址。
+`EOPNOTSUPP` | 套接字不支持该操作。
+`EOVERFLOW` | 值过大，无法存储在该数据类型中。
+`EPERM` | 操作不被允许。
+`EPIPE` | 管道破裂。
+`EPROTO` | 协议错误。
+`EPROTONOSUPPORT` | 不支持该协议。
+`EPROTOTYPE` | 协议类型与套接字不匹配。
+`ERANGE` | 结果过大。
+`ERDOS` | 只读文件系统。
+`ESPIPE` | 无效的定位操作。
+`ESRCH` | 无此进程。
+`ESTALE` | 保留。
+`ETIMEDOUT` | 连接超时。
+`ETXTBSY` | 文本文件忙。
+`EWOULDBLOCK` | 操作会被阻塞（可能与 `EAGAIN` 值相同）。
+`EXDEV` | 跨设备链接。
+
+许多系统还提供其他错误值，而旧系统可能不具备上述列出的所有错误。您应查阅本地的 `intro(2)` 和 `errno(2)` 手册页以获取完整说明。
+
+> 注意 `errno` 只能在错误发生后且在执行更多系统调用之前进行检查。其初始值为 `0`。但是，错误之间没有任何操作会改变 `errno`，这意味着成功的系统调用*不会*将其重置为 `0`。当然，您可以手动将其初始设为 `0`，或在任何时候随时设置，但这种情况很少见。
+
+最初，我们仅使用 `errno` 进行错误报告。有两个函数对于错误报告很有用。第一个是 `perror()`：
+
+```c
+#include <stdio.h>                    ISO C
+
+void perror(const char *s);
+```
+
+`perror()` 函数会打印一个由程序提供的字符串，随后是一个冒号，然后是描述 `errno` 值的字符串：
+
+```c
+if (some_system_call(param1, param2) < 0) {
+    perror("system call failed");
+    return 1;
+}
+```
+
+我们更倾向于使用 `strerror()` 函数，它接收一个错误值参数并返回一个指向描述该错误的字符串的指针：
+
+```c
+#include <string.h>                  ISO C
+
+char *strerror(int errnum);
+```
+
+`strerror()` 在错误报告中提供了最大的灵活性，因为通过 `fprintf()`，我们可以以任何喜欢的方式打印错误：
+
+```c
+if (some_system_call(param1, param2) < 0) {
+    fprintf(stderr, "%s: %d, %d: some_system_call failed: %s\n",
+            argv[0], param1, param2, strerror(errno));
+    return 1;
+}
+```
+
+你会在书中看到这两个函数的许多示例。
+
+#### 4.3.2 错误消息风格
+
+C 语言提供了几个用于错误报告的专用宏。最常用的是 `__FILE__` 和 `__LINE__`，它们分别扩展为源文件名和该文件中的当前行号。这些宏从 C 语言诞生之初就可使用。C99 定义了另一个预定义标识符 `__func__`，它代表当前函数的名称，表现为一个字符字符串。这些宏的使用方式如下：
+
+```c
+if (some_system_call(param1, param2) < 0) {
+    fprintf (stderr, "%s: %s %s %d: some_system_call(%d, %d) failed: %s\n",
+        argv[0], __func__, __FILE__, __LINE__,
+        param1, param2, strerror(errno));
+    return 1;
+}
+```
+
+在此处，错误消息不仅包含程序名称，还包含函数名、源文件名和行号。表 4.2 提供了用于诊断的标识符完整列表。
+
+**表 4.2**
+
+**C99 诊断标识符**
+
+| 标识符 | C 版本 | 含义 |
+| :--- | :--- | :--- |
+| `__DATE__` | C89 | 编译日期，形式为 `"Mmm dd yyyy"`。 |
+| `__FILE__` | 原始版本 | 源文件名，形式为 `"program.c"`。 |
+| `__LINE__` | 原始版本 | 源文件行号，形式为 `42`。 |
+| `__TIME__` | C89 | 编译时间，形式为 `"hh:mm:ss"`。 |
+| `__func__` | C99 | 当前函数名称，如同声明为 `const char __func__[] = "name"`。 |
+
+在 Unix 早期，`__FILE__` 和 `__LINE__` 的使用非常普及，那时大多数人拥有源代码并能找到并修复错误。随着 Unix 系统逐渐商业化，由于仅拥有二进制可执行文件的人从源代码位置获得的信息帮助有限，这些标识符的使用逐渐减少。
+
+如今，虽然 GNU/Linux 系统附带源代码，但这些源代码通常默认不会安装。因此，在错误消息中使用这些标识符似乎并未提供太多额外价值。GNU 编码标准甚至没有提及它们。
+
+### 4.4 执行输入和输出
+
+Linux 中所有的 `I/O` 都是通过对文件描述符来完成的。本节介绍文件描述符，描述如何获取和释放它们，并解释如何对它们进行 `I/O` 操作。
+
+#### 4.4.1 理解文件描述符
+
+`文件描述符` 是一个整数值。有效的文件描述符从 `0` 开始，一直延伸到某个系统定义的极限。这些整数实际上是每个进程打开文件表中的简单索引。（该表由操作系统内部维护，运行中的程序无法直接访问。）在大多数现代系统中，该表的大小非常大。命令 `ulimit -n` 会打印该值：
+
+```
+$ ulimit -n
+1024
+```
+
+在 C 语言中，最大打开文件数由 `getdtablesize()`（获取描述符表大小）函数返回：
+
+```c
+#include <unistd.h>
+int getdtablesize(void);
+```
+
+这个小程序打印该函数的结果：
+
+```c
+/* ch04-maxfds.c -- 演示 getdtablesize()。 */
+
+#include <stdio.h> /* 用于 printf(), stderr, BUFSIZ */
+#include <unistd.h> /* 用于 ssize_t */
+
+int main(int argc, char *argv)
+{
+    printf("max fds: %d\n", getdtablesize());
+    exit(0);
+}
+```
+
+编译并运行时，不出所料，程序打印的值与 `ulimit` 打印的值相同：
+
+```
+$ ch04-maxfds
+max fds: 1024
+```
+
+文件描述符存储在普通的 `int` 变量中；通常会看到诸如 `int fd` 这样的声明，用于配合 `I/O` 系统调用使用。没有为文件描述符预定义的类型。
+
+通常情况下，每个程序启动运行时，都已经为其打开了三个文件描述符。它们分别是标准输入、标准输出和标准错误，分别对应文件描述符 `0`、`1` 和 `2`。（如果没有其他重定向，每一个都连接到你的键盘和屏幕。）
+
+### 4.4 执行输入和输出
+
+### 显而易见的显式常量。一个矛盾修辞？
