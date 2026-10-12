@@ -1,0 +1,185 @@
+
+- IPv4 到 IPv6 转换器，314–316
+
+### J
+
+- `ipchains` 中的 `-j` 选项，254–255
+- `john.ini` 文件，90
+- `john.por` 文件，91
+- John the Ripper 工具，88
+    - 配置，90
+    - 安装，88–89
+    - 运行，91
+- 随意使用者，17
+
+### K
+
+- `-k` 选项
+    - 在 `ftp` 中，411
+    - 在 `login`、`rsh` 和 `rcp` 中，413
+    - 在 `sslproxy` 中，240
+    - 在 `telnet` 中，409
+- `telnet` 中的 `-K` 选项，409
+- `k` 模式，304
+- `.k5login` 文件，409
+- `kadmin5.acl` 文件，396–398
+- `kadmin` 实用工具，400
+- `kadmin.local` 实用工具，398–400
+- `kadmind` 守护进程，398
+- `kdb5_util` 实用工具，395–396
+- KDC（Kerberos 域控制器）
+    - 配置，391–394
+    - 数据库填充，400
+    - `kadm5.acl`，396–398
+    - `kadmin.local`，398–399
+    - `kdb5_util`，395–396
+    - `kdc.conf`，394–395
+    - Kerberos 支持的服务器，400–406
+- KDC（密钥分发中心），388–389
+- `kdc.conf` 文件，394–395
+- `kdc` 变量，392–393
+- `[kdcdefaults]` 部分，394
+- `kdestroy` 命令，407–408
+- Kerberos 身份验证，388–391, 388, 390
+    - 其中的凭证，406–409
+    - 其中的 KDC 配置。另见 KDC（Kerberos 域控制器）配置
+    - Kerberos 支持的应用程序，389, 402, 409–415
+        - 用于 SOCKS 的，295
+    - Kerberos 支持的服务器，400–406
+- `KerberosAuthentication` 选项
+    - 在 `ssh_config` 中，379
+    - 在 `sld_config` 中，376
+- 基于内核的过滤，250
+- `kernel-headers` 软件包，38
+- 内核安全选项，38–41
+- `kernel-source` 软件包，38
+- 密钥分发中心（KDC），388–389
+- 密钥指纹，179
+- `keyingtries` 参数，364
+- 密钥环，178
+- 密钥。另见加密
+    - 在 GnuPG 中，178–180
+    - 在 Kerberos 中，388–389
+    - 在 RSA 中，360–362, 364, 366, 383
+- `keytabs`，398
+- 关键字，69
+- `KILL_HOSTS_DENY` 变量，150–151
+- `-KILL` 选项，309
+- `KILL_ROUTE` 变量，150
+- `KILL_RUN_CMD` 变量，150
+- Kim, Gene，79
+- `kinit` 命令，407, 411
+- `klipsdebug` 选项，364
+- `klis` 命令，406–408
+- `klogind` 守护进程，406
+- Koblas, David，283
+- `kpasswd` 命令，400, 407–408
+- `krb5.conf` 文件，392–394, 402
+- `krb5.keytab` 文件，401
+- `krb5kdc` 目录，396
+- `kshd` 守护进程，405
+- `ktadd` 命令，398–399, 401
+
+### L
+
+- `kremove` 命令，398
+- `-l` 选项
+    - 在 `kadm5.acl` 中，397
+    - 在 `ssh` 中，383
+    - 在 `sslproxy` 中，239
+    - 在 `sudo` 中，49
+- `-L` 选项
+    - 在 `ipchains` 中，253
+    - 在 `iptables` 中，262
+    - 在 `kadm5.acl` 中，397
+    - 在 `sslproxy` 中，239
+- `l` 属性掩码字符，84
+- `LAN-Manager-password` 字段，229
+- 最后一次成功的代理登录字段，339
+- `LATEPROMPTING` 变量，82
+- Latham, Allan，58
+- Laurie, Ben，215
+- 分层方法，25
+    - 应用安全，27
+    - 人类安全，28
+    - 网络安全，27
+    - 外围安全，27-28
+    - 物理安全，26
+    - 远程访问和认证，28
+    - 系统安全，27
+- Lee, Ying-Da，283
+- 密码长度，44, 45
+- `/lib/security` 目录，421
+- `libsocks5.conf` 文件，310-311
+- FWTk 的许可协议，319-320
+- `lifo` 命令，40, 358
+- `lifo.conf` 文件，358
+- `--limit-burst` 参数，267
+- `limit` 模块，266
+- `limit external` 匹配模块，276
+- `Limit` 选项，200
+- `--limit` 参数，267
+- `--line-numbers` 选项，263
+- Linux 信息网站，432
+- Linux Weekly News（Linux 周刊），432
+- `linxconf` 实用工具
+    - 用于账户过期，41, 42
+    - 用于密码长度，44, 45
+- `list` 命令，342
+- `--list-keys` 选项，180
+- `--list-secret-keys` 选项，180
+- `--listen` 选项，133
+- `lisprins` 命令，398
+- Nmap 中的存活主机，141
+- Load-Sharing Network Address Translation (LSNAT)（负载共享网络地址转换），278-279
+- `LOCAL` 模式，115
+- `localip` 值，370
+- `LOG` 链动作，260
+- `log_on_failure` 关键字，102-103
+- `log_on_success` 关键字，102
+- `log_on_type` 关键字，102
+- `logcheck.hacking` 文件，73-74, 77
+- `logcheck.sh` 程序，73
+- `logcheck` 工具，73
+    - 配置，73-77
+    - 安装，73
+    - 运行，77-78
+    - 与 `swatch` 的比较，78
+- `logcheck.violations` 文件，75-77
+- `logfile` 变量，132
+- `[logging]` 部分，392-393
+- `login` 文件，421
+- `login` 程序，416–417
+- `login` 服务，99
+- 登录脚本，243
+- 日志
+    - 在 Apache 服务器中，204–205
+    - 审查，26
+    - 在 `sudo` 中，49–50
+    - 系统日志，63–64
+    - 使用 `logcheck`，73–78
+    - 使用 `swatch`，68–72
+    - 使用 `syslog`，64–68
+    - 在 TCP Wrappers 中，119
+- `logtail` 程序，73
+- `LOOSEDIRECTORYCHECKING` 变量，82
+- LSNAT (Load-Sharing Network Address Translation)（负载共享网络地址转换），278–279
+
+### M
+
+- `-m` 选项
+    - 用于 `iptables` 规则，265, 267
+    - 在 `kadm5.acl` 中，397
+- `-M` 选项
+    - 在 `ipchains` 中，253
+    - 在 `kadm5.acl` 中，397
+    - 在 `logind` 中，406
+    - 在 `kshd` 中，405
+- `m` 属性掩码字符，85
+- MacGuffin 加密算法，56
+- 杂志，433
+- 磁卡读卡器，26
+- mail. 参见电子邮件
+- `mail` 动作，70
+- mail transport agents (MTAs)（邮件传输代理），337
+- mailing lists（邮件列表），433–434
