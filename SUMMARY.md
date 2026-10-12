@@ -1702,6 +1702,7 @@
 +   [树莓派传感器指南](docs/raspberry-pi-sensors/README.md)
 +   [树莓派设置指南：如何从零开始使用树莓派和 Python 编程](docs/raspberry-pi-setup-guide-how-to-use-your-raspberry-pi-and-py/README.md)
 +   [树莓派完全手册 (第6版)](docs/raspberry-pi-the-complete-manual-6th-edition/README.md)
++   [树莓派：完整手册：关键技术独立指南](docs/raspberry-pi-the-complete-manual-independent-guides-to-essen/README.md)
 +   [树莓派：完整手册：所有树莓派用户的独立指南](docs/raspberry-pi-the-complete-manual-the-independent-handbook-fo/README.md)
 +   [树莓派：终极分步树莓派用户指南（更新版）](docs/raspberry-pi-the-ultimate-step-by-step-raspberry-pi-user-gui/README.md)
 +   [RxJS 响应式编程：理清你的异步 JavaScript 代码](docs/reactive-programming-with-rxjs-untangle-your-asynchronous-ja/README.md)
