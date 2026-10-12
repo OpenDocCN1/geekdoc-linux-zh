@@ -1,0 +1,40 @@
+# ## Identifying Directories
+
+When you need to identify your home directory on a shell command line, you can use the following:
+
++   *   `$HOME` — This environment variable stores your home directory name.
++   *   `~` — The tilde (~) represents your home directory on the command line.
+
+You can also use the tilde to identify someone else's home directory. For example, `~chris` would be expanded to the chris home directory (probably `/home/chris`).
+
+Other special ways of identifying directories in the shell include the following:
+
++   *   `.` — A single dot (.) refers to the current directory.
++   *   `..` — Two dots (..) refers to a directory directly above the current directory.
++   *   `$OLDPWD` — This environment variable refers to the previous working directory before you changed to the current one.
+
+# ## Using file-matching metacharacters
+
+To save you some keystrokes and to be able to refer easily to a group of files, the bash shell lets you use metacharacters. Anytime you need to refer to a file or directory, such as to list it, open it, or remove it, you can use metacharacters to match the files you want. Here are some useful metacharacters for matching filenames:
+
++   *   `*` — This matches any number of characters.
++   *   `?` — This matches any one character.
++   *   `[...]` — This matches any one of the characters between the brackets, which can include a dash-separated range of letters or numbers.
+
+To try out some of these file-matching metacharacters, go to an empty directory (such as the test directory described in the previous section) and create some files. Here's an example of how to create some empty files:
+
+```
+```
+$ touch apple banana grape grapefruit watermelon
+```
+```
+
+The next few commands show you how to use shell metacharacters to match filenames so they can be used as arguments to the `ls` command. Using metacharacters shown below, you can match the filenames you just created with the `touch` command. Type the following commands and see if you get the same responses:
+
+```
+```
+$ ls a*
+apple
+$ ls g*
+```
+```

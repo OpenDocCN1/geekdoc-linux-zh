@@ -1,0 +1,38 @@
+Note that the first line of this example identifies the service as ftp. This exactly matches the service name listed in the `/etc/services` file. You can see that the service is off by default (disable = yes). To enable FTP services change the line to read disable = no instead. Thus, the preceding example with shell services disabled would look like this:
+
+```
+```
+ service ftp
+ (
+	socket_type		= stream
+	wait		= no
+	user		= root
+	server		= /usr/sbin/in.rshd
+	server_args		= -l -a
+	log_on_success	+= DURATION USERID
+	log_on_failure	+= USERID
+	nice		= 10
+	disable		= no
+ )
+```
+```
+
+By default most services are disabled, so your computer is only as insecure as you make it. You can double-check that insecure services, such as rlogin and rsh, are also disabled by making sure that disabled = yes is set in the `/etc/xinetd.d/rlogin` and rshd files.
+
+> TIP: It is possible to make the remote login service active but disable the use of the `/etc/host .equiv` and `.rhosts` files, requiring rlogin to always prompt for a password. Rather than disabling the service, locate the server line in the rsh file (server = `/usr/sbin/in.rshd`) and add a space followed by -L at the end of it.
+
+You now need to send a signal to the xinetd process to tell it to reload its configuration file. The quickest way to do that is to restart the xinetd service. As the root user, type the following from a shell:
+
+```
+```bash
+# /etc/init.d/xinetd restart
+Stopping xinetd:		[ OK ]
+Starting xinetd:		[ OK ]
+```
+```
+
+That’s it — you have enabled ftp service. Provided that you have properly configured your FTP server (see Chapter 20), FTP services should now be available from your computer.
+
+# # Using TCP wrappers
+
+Completely disabling an unused service is fine, but what about the services that you really need? How can you selectively grant and deny access to these services? In previous versions of Red Hat Linux, the TCP wrapper daemon (tcpd) was used to facilitate this sort of selective access. In the current version of Red Hat Linux, TCP wrapper support has been integrated into xinetd. Xinetd will look at the files `/etc/hosts.allow` and `/etc/hosts.deny` to determine when a particular connection should be granted or refused. It scans through the

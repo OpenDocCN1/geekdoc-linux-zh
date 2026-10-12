@@ -1772,6 +1772,7 @@
 +   [Red Hat Linux 7.2：完全参考（第二版）](docs/red-hat-linux-72-the-complete-reference-second-edition/README.md)
 +   [Red Hat Linux 7.2 释放指南](docs/red-hat-linux-72-unleashed/README.md)
 +   [Red Hat Linux 7.2 周末快速教程](docs/red-hat-linux-72-weekend-crash-course-with-cd-rom/README.md)
++   [Red Hat Linux 7.3 圣经](docs/red-hat-linux-73-bible-electronic-resource/README.md)
 +   [Red Hat Linux 7.3 初学者指南](docs/red-hat-linux-73-for-dummies/README.md)
 +   [Red Hat Linux 7.3 秘籍](docs/red-hat-linux-73-secrets/README.md)
 +   [Red Hat Linux 8 圣经](docs/red-hat-linux-8-bible/README.md)

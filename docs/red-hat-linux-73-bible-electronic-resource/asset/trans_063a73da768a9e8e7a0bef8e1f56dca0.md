@@ -1,0 +1,107 @@
+
+
+-   **wmapm**：高级电源管理可停靠小工具。
+-   **wmclock**：Window Maker 的可停靠时钟小工具。
+-   **wmmix**：Window Maker 的可停靠音量调节器。
+-   **Wnn6-SDK**：运行 Wnn6 客户端所需的运行时 Wnn6 客户端库。
+-   **Wnn6-SDK-devel**：用于 Wnn6 客户端开发的库和头文件。
+-   **words**：放置在 /usr/dict 目录中的英语单词字典。
+-   **wordtrans\***：Qt、KDE 和 WWW 的多语言单词翻译器及前端。
+-   **wu-ftpd**：华盛顿大学 FTP 服务器软件，用于配置 FTP 服务器。
+-   **wvodial**：wv 拨号命令，这是一种用于 PPP 的智能拨号器。
+-   **x3270**：用于在 X 窗口系统显示上模拟 IBM 3270 终端的软件。
+-   **x3270-text**：文本模式下的 IBM 3270 终端模拟器。
+-   **x3270-x11**：用于 X Windows 系统的 IBM 3270 终端模拟器。
+-   **xalf**：在启动 X11 应用程序时提供反馈的工具。
+-   **Xaw3d**：运行包含 MIT Athena 小部件的程序所需的 Xaw3d 库。
+-   **Xaw3d-devel**：Xaw3d 开发工具（用于 X 的增强版 MIT Athena 小部件）。
+-   **xawtv**：适用于符合 video4linux 标准的设备的简单电视应用程序。
+-   **xbill**：一款基于 X 的游戏，在其中你可以摧毁 Bill 并帮助新的操作系统获胜。
+-   **xboard**：GNU 国际象棋的图形化、基于 X 的界面。
+-   **xcdroast**：用于自行烧录音乐和数据 CD-ROM 的工具。
+-   **xchat**：X-Chat 工具，一种运行在 X 窗口系统上的 IRC 聊天工具。
+-   **xcin**：用于汉字输入的 X 输入法服务器。
+-   **Xconfigurator**：用于配置 X 服务器和视频卡的 Xconfigurator 工具。
+-   **xcupstate**：基于 X 的 xcupstate 程序，用于显示 CPU 使用率信息。
+-   **xdaliclock**：xdal 时钟程序，显示数字时钟。
+-   **xdelta**：Xdelta 工具，可用于比较二进制文件的内容。
+-   **xdelta-devel**：Xdelta 开发工具。
+-   **Xdialog**：将基于终端的程序转换为具有 X 界面的程序的工具。
+-   **xemacs**：运行 emacs 文本编辑器所需的库。
+-   **xemacs-el**：可用于 emacs 文本编辑器的各种 elisp 程序。
+-   **xemacs-info**：emacs 文本编辑器的 info 文档。
+-   **xfig**：用于创建可保存为多种格式的矢量图形的 xfig 工具。
+-   **XFree86**：在 Red Hat Linux 中运行 X 窗口系统所需的基本软件。
+-   **XFree86-3DLabs**：适用于包含 Permedia 和 Glint 芯片的视频卡的 X 服务器。
+-   **XFree86-75dpi-fonts**：可用于 X 窗口系统显示的 75-dpi 字体。
+-   **XFree86-100dpi-fonts**：用于 X 窗口系统显示的 100-dpi 高分辨率字体。
+-   **XFree86-8514**：适用于采用 IBM 8514 芯片构建的视频卡的 XFree86 X 服务器。
+-   **XFree86-base-fonts**：XFree86 所需的基本字体。
+-   **XFree86-compat-modules**：3.3.6 版本 XFree86 服务器所需的兼容性模块。
+-   **XFree86-cyrillic-fonts**：用于 X 窗口系统的西里尔字符集字体。
+-   **XFree86-devel**：开发基于 X 的客户端程序所需的组件。
+-   **XFree86-doc**：与 XFree86 相关的文档， mostly 为压缩的 PostScript 格式。
+-   **XFree86-FBDev**：适用于帧缓冲设备（如 Macintosh 和 Atari）的 X 服务器。
+-   **XFree86-ISO8859**：用于中欧 Linux 版本的 X Windows 字体。
+-   **XFree86-ISO8859-2-75dpi-fonts**：用于中欧 Linux 版本的 75 dpi X 字体。
+-   **XFree86-ISO8859-2-100dpi-fonts**：中欧 Linux 版本中的 100 dpi X 字体。
+-   **XFree86-ISO8859-2-Type1-fonts**：用于中欧 Linux 版本的 Type 1 X 字体。
+-   **XFree86-ISO8859-9-75dpi-fonts**：用于土耳其语版本 Linux 的 75-dpi X 字体。
+-   **XFree86-ISO8859-9-100dpi-fonts**：用于土耳其语 Linux 版本的 100-dpi X 字体。
+-   **XFree86-libs**：大多数基于 X 的程序在 Linux 中运行所需的共享库。
+-   **XFree86-Mach8**：适用于采用 ATI Mach8 芯片构建的视频卡的 XFree86 X 服务器。
+-   **XFree86-Mach32**：适用于具有 ATI Mach32 芯片的视频卡的 XFree86 X 服务器。
+-   **XFree86-Mach64**：适用于具有 ATI Mach64 芯片的视频卡的 XFree86 X 服务器。
+-   **XFree86-Mono**：用于通用单色视频卡的 XFree86 X 服务器。
+-   **XFree86-P9000**：用于具有 Weitek P9000 芯片的视频卡的 XFree86 X 服务器。
+-   **XFree86-S3**：用于基于 S3 芯片的视频卡的 XFree86 X 服务器。
+-   **XFree86-S3V**：适用于基于 S3 VIRGE 芯片组的视频卡的 XFree86 X 服务器。
+-   **XFree86-SVGA**：适用于大多数简单 SVGA 视频卡的 XFree86 X 服务器。
+-   **XFree86-tools**：各种 X 工具。
+-   **XFree86-truetype-fonts**：TrueType 字体集合。
+-   **XFree86-twm**：简单的 twm 窗口管理器。
+-   **XFree86-V4L**：为 XFree86 添加 Video for Linux 支持的组件。
+-   **XFree86-VGA16**：用于通用 16 位视频卡的 XFree86 X 服务器。
+-   **XFree86-W32**：适用于基于 ET4000/W32 芯片组构建的视频卡的 XFree86 X 服务器。
+-   **XFree86-xdm**：xdm X 显示管理器。
+-   **XFree86-xfsbcfg**：用于更改 X 配置的 xf86cfg 工具。
+-   **XFree86-xfs**：XFree86 字体服务器。
+-   **XFree86-Xnest**：运行在 X 服务器内部的 Xnest 嵌套窗口服务器。
+-   **XFree86-xtrap-clients**：用于配合 XTrap 服务器扩展使用的示例客户端。
+-   **XFree86-Xvfb**：xvfb X 服务器，可在没有显示硬件的计算机上运行。
+-   **xine**：免费的 mpeg 视频播放器。
+-   **xine-devel**：来自 Xine 视频播放器的库和头文件。
+-   **xinetc**：xinetd 守护进程，监听端口以处理多种网络服务。
+-   **xinitrc**：xinitrc 脚本，用于配置 X 窗口系统的启动方式。
+-   **xisdnload**：用于显示 ISDN 网络连接负载活动的图形工具。
+-   **xloadimage**：用于显示和处理图像的 xloadimage 工具。
+-   **xlockmore**：允许用户锁定 X 会话显示的 xlockmore 工具。
+-   **xml-common**：用于处理 XML 的实体和 DTD 集合。
+-   **xmllint**：用 TeX 编写的命名空间感知 XML 解析器。
+-   **xmlto**：使用 XSL 将 XML 转换为各种格式的工具。
+-   **xmms**：Xmms 多媒体播放器，支持 MPEG、WAV 和 AU 格式。
+-   **xmms-devel**：Xmms 多媒体播放器所需的头文件。
+-   **xmms-gnome**：用于将 Xmms 播放器集成到 GNOME 的组件。
+-   **xmms-skins**：Xmms 媒体播放器的皮肤。
+-   **xosview**：显示系统负载、CPU 使用率和其他信息的 xosview 工具。
+-   **xpdf**：用于显示 Adobe Acrobat PDF 文件的 xpdf 工具。
+-   **xpdf-\***：xpdf 对多种语言的支持。
+-   **xpilot**：基于 X 的 Xpilot 游戏，用于进行多人空中战斗。
+-   **xsane**：Sane 扫描仪和数码相机功能的 X 界面。
+-   **xsane-gimp**：访问 xsane 扫描仪和数码相机接口的 Gimp 库界面。
+-   **xcreensaver**：大量的屏幕保护程序集。
+-   **xsnow**：基于 X Windows 系统的圣诞气息。
+-   **xsri**：用于在 X 显示背景上显示图像的 xsri 命令。
+-   **xtoolwait**：用于自动启动 X 客户端程序的 `xtoolwait` 工具。
+-   **xtraceroute**：基于 X 和 GTK+ 的 traceroute 输出图形显示。
+-   **ypbind**：用于将 NIS 客户端绑定到 NIS 域的 `ypbind` 守护进程。
+-   **ypserv**：在 Linux 中设置 NIS 服务器所需的 ypserv 组件。
+-   **yp-tools**：基于 FreeBSD 版本 YP 的 NIS 版本的工具。
+-   **ytalk**：用于在多个连接上与多个用户聊天的 `ytalk` 程序。
+-   **zebra**：一种基于 TCP/IP 的路由协议，既是路由服务器也是路由反射器。
+-   **zip**：用于压缩和打包文件的 `zip` 工具。
+-   **zisof-tools**：创建压缩 CD-ROM 文件系统的工具。
+-   **zlib**：支持 deflation 压缩方法的 zlib 压缩库版本。
+-   **zlib-devel**：开发使用 zlib 压缩的应用程序所需的头文件和库。
+-   **zsh**：类似于增强版 ksh 的 `zsh` shell 命令行解释器。
+

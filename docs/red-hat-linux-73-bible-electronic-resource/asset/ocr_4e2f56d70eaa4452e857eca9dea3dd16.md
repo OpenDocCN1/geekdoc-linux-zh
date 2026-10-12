@@ -1,0 +1,15 @@
+In this example, you attempt to log in from Netscape to the FTP server named `ftp.whatever.com`. You log in as the user mike with a password of 99pQ15. If the user name and password are correct, you will see that user's initial directory in your Netscape window. (Of course, this can expose your password to onlookers, which is not a good thing.)
+
+Another graphical tool for accessing FTP sites from Red Hat Linux is the gFTP window. To start it, type gftp& from a Terminal window. To connect to an FTP site, choose Remote \u2192 Connect, and then enter information about the site that you want to connect to (host name, port, directory, user name, and password). Then click Connect. Assuming you typed everything correctly, a window will appear.
+
+Remote and local windows appear side by side in the gFTP window. Double-click on folder icons to move down the directory structure. Double-click on the double dots (..) to move up a directory level. To download a file from the remote FTP server, click on the file you want from the right pane, then select the arrow pointing to the left. To upload a file from the local host (if uploading is permitted), click on the file in the left window, then select the arrow pointing to the right.
+
+The ftp command that comes with Red Hat Linux provides an even less complex interface to an FTP server. To open a connection to an FTP server, simply type ftp servername, where servername is replaced by the host name or IP address of the FTP server you want to connect to. Type the user name and password as prompted. Then you can use many standard Linux commands to move up and down the FTP server directory structure. When you find a file that you want to download, type get file (where file is the name of the file to download). When you find a file that you want to upload, type put file (where file is the name of the file to upload).
+
+# ## Summary
+
+The FTP service is the primary method of offering archives of document and software files to users over the Internet and other TCP/IP networks. FTP server packages delivered with Red Hat Linux include the Washington University FTP (WU-FTPD) and Very Secure FTP (vsFTpd) servers.
+
+The WU-FTPD server has been around for a while and contains many features for configuring your FTP server. The vsFTpd server was designed to offer fewer features, but implement them more efficiently, to support FTP servers that required hundreds or thousands of concurrent FTP users, with a focus on preventing security breaches.
+
+To check out your FTP server once it is set up, you can use several different tools. The ftp command is available with Linux and with any other UNIX system. For a more graphical interface, there is the gFTP window. To access your FTP site as most others will access it, you can type the URL of your FTP site in the location box of your browser window. (You can even add FTP user and password information to the location of the FTP site.)

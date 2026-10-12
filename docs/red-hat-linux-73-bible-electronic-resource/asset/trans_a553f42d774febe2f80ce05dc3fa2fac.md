@@ -1,0 +1,126 @@
+
+- **hwdata：** 用于识别和配置计算机中硬件的数据。
+- **ical：** 基于 ical X 的日历程序，用于跟踪您的日程安排。
+- **ImageMagick：** 用于显示和编辑图像的 ImageMagick 图形程序。
+- **ImageMagick-c++：** 用于显示和编辑图像的 ImageMagick C++ 工具。
+- **ImageMagick-c++-devel：** 与 ImageMagick 图形库配合使用的 C++ 库。
+- **ImageMagick-devel：** 实现 ImageMagick API 所需的库。
+- **ImageMagick-perl：** ImageMagick 的绑定，使 Perl 脚本可以使用 ImageMagick。
+- **imap：** 用于处理从服务器到客户端邮件传输的 IMAP 和 POP 协议。
+- **imap-devel：** 用于与 IMAP 邮件服务器交互的 IMAP 电力工具。
+- **imlib：** 与 X 窗口系统配合使用的 imlib 图像加载和渲染库。
+- **imlib-cfgeditor：** imlib_conf 程序，用于控制 imlib 如何渲染图像。
+- **imlib-devel：** 用于开发使用 Imlib 图像和渲染库的程序组件。
+- **im-sdk：** 互联网/内联网输入方法框架。
+- **indent：** 用于美化 C 编程代码的 indent 程序。
+- **indexhtml：** indexhtml 软件包，包含 Red Hat Linux 欢迎页。
+- **inews：** 用于将 Usenet 新闻文章发布到本地新闻服务器的 inews 程序。
+- **info：** 用于显示 texinfo 文件的基于文本的 info 浏览器。
+- **initscripts：** 许多基本的 Linux 系统初始化脚本，在不同运行级别下启动。
+- **inn：** InterNetNews 服务器，用于在 Linux 中创建和维护新闻服务器。
+- **inn-devel：** 用于开发使用 InterNetNews 系统的应用程序的组件。
+- **intltool：** 用于国际化各种数据文件的实用工具。
+- **ipchains：** 用于在 IP 网络上实现防火墙和 IP 伪装功能的组件。
+- **iproute：** 用于路由 IP 流量的 ip 命令及相关实用工具。
+- **iptables：** 用于创建 IP 网络防火墙的工具。
+- **iptables-ipv6：** 用于创建 IP 版本 6 网络防火墙的工具。
+- **iptraf：** 基于控制台的网络监控工具。
+- **iputils：** 各种网络监控实用工具，包括 ping、rdisc 和 tracpath。
+- **ipxutils：** 用于配置和连接 Novell IPX 网络的一组实用工具。
+- **irb：** 交互式 Ruby，可从终端评估 Ruby 表达式。
+- **irda-utils：** IrDA 实用工具，用于与无线设备通信。
+- **iscsi：** iSCSI 守护程序和实用程序，用于 IP 网络上的分布式磁盘访问。
+- **isdn4k-utils：** 用于配置 ISDN 拨号连接的工具。
+- **isdn4k-utils-devel：** 开发 capi 应用程序所需的库和头文件。
+- **isdn4k-utils-vboxgetty：** 用于 ISDN 语音盒的 vboxgetty 和 vboxputty 工具。
+- **isicom：** 用于加载 Multitech 智能串行内部数据文件的实用工具。
+- **itcl：** Tcl 语言的面向对象扩展。
+- **jadetex：** 用于处理 DSSSL 文档的 `jadetex` 和 `pdfjadetex` 命令。
+- **jed：** 基于 `slang` 屏幕库的 `jed` 文本编辑器。
+- **jed-common：** `jed` 文本编辑器运行所需的文件。
+- **jed-xjed：** 在 X 窗口系统上运行的 `jed` 文本编辑器版本。
+- **jikes：** `jikes` Java 源到字节码编译器。
+- **joe：** 使用 `WordStar` 键位结合的 `joe` 无模式文本编辑器。
+- **joystick：** 用于连接和测试摇杆的命令。
+- **jpilot：** Palm Pilot 的桌面组织器应用程序。
+- **junkbuster：** 阻止 Web 浏览器在网页中显示广告的应用程序。
+- **kaboodle：** 可以播放各种格式文件的 KDE 媒体播放器。
+- **kakasi：** 将汉字设置为平假名、片假名或罗马字的日文字符转换器。
+- **kakasi-devel：** 用于开发使用 Kakasi 的应用程序的库和头文件。
+- **kakasi-dict：** 基础 Kakasi 词典。
+- **kamera：** 为 KDE 添加数码相机支持的程序。
+- **kappa20：** 20 点日文字体。
+- **karm：** 跟踪用户在不同任务上花费时间的工具；适用于计费目的。
+- **kbdconfig：** 用于配置键盘映射的 `kbdconfig` 命令。
+- **kcalc：** KDE 袖珍计算器。
+- **kcc：** 汉字代码转换器。
+- **kcharselect：** 允许输入键盘上未找到的字符的工具。
+- **kcoloredit：** 调色板编辑器和颜色选择器。
+- **kdbg：** GNU 调试器（`gdb`）的 KDE 图形前端。
+- **kde1-compat：** 提供与 KDE 1.1.x 桌面兼容性的库。
+- **kde1-compat-devel：** 为 KDE 1.1.x 桌面编译应用程序的工具。
+- **kde2-compat：** 用于 KDE 桌面的各种兼容库。
+- **kdeaddons-kate：** Kate 文本编辑器的插件。
+- **kdeaddons-kicker：** KDE 面板的插件和额外小工具。
+- **kdeaddons-knewsticker：** 扩展 KNewsTicker 功能性的脚本。
+- **kdeaddons-konqueror：** 扩展 Konqueror 功能性的插件。
+- **kdeaddons-noatun：** 扩展 Noatun 媒体播放器功能性的插件。
+- **kdeadmin：** KDE 的磁带备份、用户管理和其他系统工具。
+- **kdeartwork：** KDE 的附加图形作品（主题、声音主题等）。
+- **kdeartwork-kworldclock：** KWorldClock 的主题。
+- **kdeartwork-locolor：** KDE 的低色彩图标（256 色或更少）。
+- **kdeartwork-screensavers：** KDE 的附加屏保。
+- **kdebase：** 基本 KDE 工具，如 kwm 窗口管理器、kfm 文件管理器和 kconsole。
+- **kdebase-devel：** 用于开发使用 kdebase 的应用程序的头文件。
+- **kdebindings\*：** 包含非 C++ 语言 KDE/DCOP 绑定的一组软件包。
+- **kdegames：** KDE 游戏，如 kasteroids、kblackbox 和 ksmiletris。
+- **kdegames-devel：** 用于创建 KDE 游戏的库。
+- **kde-i18n\*：** 提供对多种人类语言支持的一组软件包。
+- **kdelsb：** K 桌面环境所需的库。
+- **kdelsb-devel：** 用于开发 KDE 桌面应用程序的工具和文档。
+- **kdemultimedia-arts：** aRts 声音系统的附加功能。
+- **kdemultimedia-devel：** 用于开发 kdemultimedia 应用程序的工具。
+- **kdemultimedia-kfile：** 用于让 KFile 应用程序操作音频文件格式的库。
+- **kdemultimedia-libs：** KDE 多媒体应用程序使用的库。
+- **kdenetwork-devel：** 用于开发 KDE 网络应用程序的库。
+- **kdenetwork-libs：** 用于执行网络功能和 MIME 编码/解码的库。
+- **kdepasswd：** 用于更改密码和其他用户数据的 KDE 前端程序。
+- **kdepim：** KDE 桌面的一套个人信息管理（PIM）工具。
+- **kdepim-cellphone：** KDE 支持与手机同步数据。
+- **kdepim-devel：** 开发使用 kdepim 的应用程序所需的头文件和库。
+- **kdepim-pilot：** KDE 支持与 Palm Pilot 或兼容 PDA 同步数据。
+- **kdesdk-gimp：** 用于使用 GIMP 创建低色彩 KDE 图标的标准 KDE 调色板。
+- **kdesdk-kapp-template：** 用于创建骨架 KDE 应用程序的工具。
+- **kdesdk-kbabel：** 辅助翻译的工具。
+- **kdesdk-kbugbuster：** KDE 调试工具。
+- **kdesdk-kmtrace：** KDE 的 malloc（内存分配）调试器。
+- **kdesdk-kompare：** KDE 的文件比较工具。
+- **kdesdk-kspy：** Qt/KDE 应用程序状态检查工具。
+- **kdessh：** `ssh` 安全 shell 应用程序的 KDE 前端。
+- **kdetoys：** 实用工具，如 kmoon（月相）和 kworldwatch（世界时钟）。
+- **kdeutils-laptop：** 用于管理笔记本电脑的各种程序。
+- **kdeveloP：** 用于在 KDE 中创建具有一致界面的应用程序的开发工具。
+- **kdf：** 用于监控可用磁盘空间的应用程序。
+- **kdict：** KDE 的 DICT（网络词典）客户端。
+- **kdoc：** 用于交叉引用 C++ 头文件中格式化注释的 `kdoc2` 程序。
+- **kdvi：** TeX 输出文件查看器。
+- **kedit：** 易于使用的文本编辑器。
+- **kernel-2.4.\***：适用于各种 CPU 类型的 Linux 内核。
+- **kernel-bigmem：** 针对具有 4 GB 或更多内存的机器配置的 Linux 内核。
+- **kernel-BOOT：** Linux 内核的裁剪版本，用于放置在启动磁盘上。
+- **kernel-doc：** 随 Linux 内核源代码部分提供的文档文件。
+- **kernel-pcmcia-cs：** 支持 PCMCIA 设备（通常用于笔记本电脑）的软件。
+- **kernel-smp-\***：适用于各种 CPU 的对称多处理 Linux 内核版本。
+- **kernel-source：** 用于构建 Red Hat Linux 内核的源代码文件。
+- **kernel-utils：** 控制 Linux 内核或计算机硬件的几个实用工具。
+- **kfax：** KDE 传真查看器。
+- **kfile-pdf：** 允许 KFile 应用程序读取 PDF 文件信息的实用工具。
+- **kfile-png：** 允许 KFile 应用程序读取 PNG 文件信息的实用工具。
+- **kfloppy：** 以 ext2 或 DOS 格式格式化软盘的实用工具。
+- **kfract：** KDE 的分形生成器。
+- **kgghostview：** PostScript 和 PDF 文件查看器。
+- **khexedit：** 允许编辑二进制文件的十六进制编辑器。
+- **kiconedit：** KDE 的图标编辑器。
+- **kinput2-canna-wnn6：** 用于需要 Can na 或 Wnn6 日文文本的 X 程序的服务器。
+- **kIM：** KDE 的 AOL 即时消息器（AIM）客户端。
+- **Kjots：** 允许在桌面上放置笔记的虚拟笔记本。

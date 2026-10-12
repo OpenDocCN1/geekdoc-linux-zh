@@ -1,0 +1,127 @@
+
+
+## 软件包说明
+
+-   **kljettool：** 用于 HP LaserJet 及兼容打印机的配置工具。
+-   **klpq：** 一个用于管理打印队列的 KDE 工具。
+-   **klprfax：** PDE 的传真传输支持，允许能够打印的应用程序发送传真。
+-   **kmail：** KDE 的电子邮件客户端。
+-   **kmidi：** 一个 MIDI 音频文件播放器。
+-   **kmix：** 一个 MIDI 音频文件播放器，在播放前将声音转换为数字音频。
+-   **knewsticker：** 一个显示选定网站新闻的程序。
+-   **knm_new：** 一种 Kaname-cho 字体。
+-   **knode：** 一个用于 KDE 的新闻组（NNTP）阅读器。
+-   **knotes：** 一个允许在桌面上放置便签的应用程序。
+-   **koffice：** 一组办公生产力应用程序。
+-   **koffice-devel：** 开发 KOffice 插件所需的文件。
+-   **kon2：** 控制台汉字模拟器。
+-   **kon2-fonts：** 供 kon2 使用的字体。
+-   **koncd：** 一个用于制作和刻录 CD-ROM 的程序。
+-   **kontrol-panel：** 一个启动已安装系统配置工具的控制面板。
+-   **kooka：** 一个控制图像扫描仪的 KDE 应用程序。
+-   **korn：** 一个多文件夹的 KDE 邮件监视器，显示新消息数量。
+-   **kpaint：** KDE 的简单绘图程序。
+-   **kpf：** KDE 的公共文件服务器。
+-   **kppp：** KDE 的 PPP 网络应用程序。
+-   **kpppload：** 用于直观监视 PPP 连接负载的 `kpppload` 实用工具。
+-   **krb5\*：** 一组用于提供 Kerberos 认证方法支持的软件包。
+-   **krbafs\*：** krbafs 库，用于支持具有 Kerberos 5 凭证的 AFS 令牌。
+-   **kregexpeditor：** 一个正则表达式编辑器。
+-   **kregexpeditor-devel：** kregexpeditor 的开发文件。
+-   **kruler：** 屏幕直尺和颜色测量工具。
+-   **kscd：** KDE 的音频 CD 播放器。
+-   **ksconfig：** 用于创建无人值守安装的 Kickstart 文件的 `ksconfig` 图形工具。
+-   **ksirc：** KDE 的 IRC 客户端。
+-   **ksnapshtos：** 一个捕获桌面或单个窗口图像的 KDE 小部件。
+-   **ksymoops：** 将内核错误消息转换为有用的符号和偏移量的实用工具。
+-   **ktalkd：** 支持 KDE Talk 协议的程序。
+-   **kterm：** kterm 汉字终端模拟器。
+-   **ktimer：** 计时器程序。
+-   **kudzu：** 用于检测和配置计算机硬件的 `kudzu` 实用工具。
+-   **kudzu-devel：** 用于创建 kudzu 应用程序的头文件。
+-   **quickshow：** KDE 的图片缩略图查看器。
+-   **kview：** 支持广泛图形格式的 KDE 图像查看器。
+-   **kviewshell：** 允许将 `kview` 嵌入到其他 KDE 程序中的组件。
+-   **kviewshell-devel：** 允许应用程序使用 `kviewshell` 的库。
+-   **kwnn：** 一种韩文字符集输入系统。
+-   **kwnn-devel：** 开发使用 kwnn 的应用程序所需的头文件和库。
+-   **kxmlrpcd：** 远程脚本化 KDE 库，用于通过 XmlRpc 进行 DCOP 调用。
+-   **lam：** 局域网管理（LAM）工具，用于管理网络计算机集群。
+-   **lapack：** 用于求解线性方程组的线性代数包（LAPACK）。
+-   **lapack-man：** lapack 软件包的文档。
+-   **less：** 用于浏览和搜索文本文档的 `less` 实用工具。
+-   **lesstif：** OSF/Motif 的免费版本，提供一组用于开发应用程序的小部件。
+-   **lesstif-devel：** 用于开发基于 LessTif 的 Motif-1.2 程序的库和头文件。
+-   **lftp：** 一个先进的 ftp/http 文件传输程序。
+-   **lha：** 用于 LHarc 格式归档的归档和压缩实用工具。
+-   **libaio：** 一个 Linux 原生的异步 I/O 访问库。
+-   **libaio-devel：** 允许应用程序使用 libaio 的开发文件。
+-   **libao：** 一个跨平台的音频输出库。
+-   **libao-devel：** 开发使用 libao 的应用程序所需的头文件和文档。
+-   **libcap：** 用于获取和设置 POSIX.1e 能力的库。
+-   **libcap-devel：** 开发使用 libcap 的应用程序所需的头文件和库。
+-   **libdbi：** 一个 C 语言独立抽象层，允许多个数据库连接。
+-   **libdbi-dbd-\***： 对各种数据库的 libdbi 支持。
+-   **libdbi-dbd-devel：** 创建使用 libdbi 的应用程序所需的开发文件。
+-   **libelf：** 让应用程序能够访问 ELF 目标文件内部结构的库。
+-   **libesmtp：** 一个使用 SMTP 管理电子邮件发送的库。
+-   **libesmtp-devel：** 开发使用 libesmtp 的应用程序所需的头文件和库。
+-   **libgal19：** 各种 GNOME 功能和实用工具。
+-   **libgal7：** 各种 GNOME 功能和实用工具。
+-   **libgcj：** gcc 的 Java 运行时库。
+-   **libgcj-devel：** 与 gcc 的 Java 运行时库相关的开发工具。
+-   **libglade：** 可用于创建 GLADE 用户界面应用程序的库。
+-   **libglade2：** 用于从 XML 描述中加载用户界面的 libglade 库。
+-   **libglade2-devel：** 开发使用 libglade 的应用程序所需的组件。
+-   **libglade-devel：** 开发 GLADE 应用程序的工具和文档。
+-   **libgnomeprint15：** 支持 GNOME 打印所需的组件。
+-   **libgtkhtml：** GtkHTML，用于渲染、打印和编辑 HTML。
+-   **libgtop：** 获取系统使用信息的库。
+-   **libgtop-devel：** 开发监控系统使用率的应用程序所需的组件。
+-   **libgtop-examples：** libgtop 使用的获取系统信息的示例。
+-   **libjpeg-6b：** 用于处理 JPEG 图像的 libjpeg 库。
+-   **libjpeg-devel-6b：** 用于创建使用 JPEG 图像的程序的头文件和库。
+-   **libkscan：** 用于扫描仪支持的 KDE 库。
+-   **libkscan-devel：** 创建使用 libkscan 的应用程序所需的开发文件。
+-   **libmad：** 一个 MPEG 音频解码库。
+-   **libmng：** 用于处理 MNG 和 JNG 格式图像的 libmng 库。
+-   **libmng-devel：** 与 libmng 库相关的头文件。
+-   **libmng-static：** libmng 库的静态版本。
+-   **libogg：** 用于处理 ogg 比特流的 libogg 库。
+-   **libogg-devel：** 开发 ogg 应用程序所需的文档和头文件。
+-   **libole2：** 用于处理 OLE 结构化存储文件的 libole2 库。
+-   **libole2-devel：** 开发 OLE 结构化存储文件应用程序所需的头文件。
+-   **libpcap：** 创建可以监控底层网络流量的应用程序所需的组件。
+-   **libpng：** 用于处理 PNG 图像文件的 libpng 库。
+-   **libpng-devel：** 开发使用 PNG 图像的程序所需的库和头文件。
+-   **librep：** 与 librep Lisp 方言相关的工具和文档。
+-   **librep-devel：** 与 librep Lisp 方言相关的头文件和工具。
+-   **librsvg：** 基于 libart 的 SVG 库。
+-   **librsvg-devel：** 开发使用 librsvg 的应用程序所需的库和包含文件。
+-   **libsbc++：** 一种在小部件库中使用的回调系统实现库。
+-   **libsbc++-devel：** 用于开发 libsbcc++ 应用程序的静态库和头文件。
+-   **libstdc++：** 运行 C++ 应用程序所需的 EGCS 库。
+-   **libstdc++-devel：** 标准 C++ 开发库。
+-   **libtable：** 用于 xcin 输入方法的中文词典库。
+-   **libtable-devel：** 开发使用 libtable 的应用程序所需的头文件和库。
+-   **libtermcap：** 访问 termcap 数据库以管理字符显示的库。
+-   **libtermcap-devel：** 开发访问 termcap 数据库的程序所需的组件。
+-   **libtiff：** 用于使用和保存 TIFF 图像文件的库。
+-   **libtiff-devel：** 用于在应用程序中处理 TIFF 图像文件的开发工具。
+-   **libtool：** 用于配置 Linux 以构建通用共享库的 libtool shell 脚本。
+-   **libtool-libs：** libtool 实用工具的运行时库（用于构建通用共享库）。
+-   **libungif：** 用于使用和保存 GIF 图像文件的库函数。
+-   **libungif-devel：** 用于创建加载和保存 GIF 图像的应用程序的ound开发工具。
+-   **libungif-progs：** 用于处理 GIF 图像的若干实用工具。
+-   **libusb：** 允许应用程序访问 USB 设备的库。
+-   **libusb-devel：** 创建使用 libusb 的应用程序所需的开发文件。
+-   **libuser：** 用于管理用户账户的标准化接口。
+-   **libuser-devel：** 用于开发使用 libuser 的应用程序的头文件和静态库。
+-   **libvorbis：** Ogg Vorbis 开放音频编解码器和运行时库。
+-   **libvorbis-devel：** 用于开发使用 libvorbis 的应用程序的头文件和文档。
+-   **libxml：** 用于处理 XML 文件的函数库。
+-   **libxml2：** 用于处理 XML 和 HTML 文件的库，包括 DTD 支持。
+-   **libxml2-devel：** 用于开发使用 libxml2 的应用程序的库和包含文件。
+-   **libxml2-python：** libxml2 库的 Python 绑定。
+-   **libxml10：** 用于 GNOME 的向后兼容的 libxml10 XML 解析器。
+

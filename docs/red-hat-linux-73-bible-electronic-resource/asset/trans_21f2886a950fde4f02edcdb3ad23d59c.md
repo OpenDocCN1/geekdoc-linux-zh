@@ -1,0 +1,127 @@
+
+
+- **gdk-pixbuf**：GDK Pixbuf 图像加载库。
+- **gdk-pixbuf-devel**：与 GDK Pixbuf 相关的开发工具。
+- **gdk-pixbuf-gnome**：用于显示图像的 GNOME Canvas 支持。
+- **gdm**：GNOME 显示管理器，提供基于 X 的图形登录。
+- **gd-progs**：与 JPEG 图形库相关的实用程序。
+- **gedit**：紧凑的 gEdit 文本编辑器，兼容 GNOME 图形界面。
+- **genromfs**：用于构建 Linux 内核使用的 romfs 文件系统的工具。
+- **gettext**：*gettext* 实用程序，用于创建具有多种语言消息的程序。
+- **gftp**：多线程的 *gftp* 程序，用于同时上传和下载 FTP 文件。
+- **ggv**：Ghostscript 前端，为 Ghostscript 增加了平移和持久用户设置功能。
+- **ghostscript**：Ghostscript (*gs*) 程序，用于显示和打印 PostScript 文件。
+- **ghostscript-fonts**：与 Ghostscript 程序一起使用的一组字体。
+- **giftrans**：*giftrans* 实用程序，用于将 GIF87 文件转换为 GIF89 格式。
+- **gimp**：GIMP 图像编辑程序，用于修饰照片和创建图像。
+- **gimp-data-extras**：用于与 GIMP 一起使用的图案、渐变和其他图形元素。
+- **gimp-devel**：开发 GIMP 插件和扩展所需的库和头文件。
+- **gimp-perl**：用于 GIMP 和 GIMP Perl 扩展之间通信的库。
+- **gimp-print-cups**：适用于佳能、爱普生及兼容打印机的原生驱动程序。
+- **gkermit**：使用 Kermit 协议传输文件的 *gkermit* 实用程序。
+- **gkrellm**：监控软件，用于绘制 CPU 使用率、磁盘活动和网络流量图表。
+- **glade**：用于为 GTK+ 工具包开发快速用户界面的软件。
+- **glib**：Glib 1.2 版通用函数库，用于提高可移植性。
+- **glib2**：Glib 2 版通用函数库，用于提高可移植性。
+- **glib2-devel**：与 glib2 开发包一起使用的静态库和头文件。
+- **glib10**：许多 Red Hat Linux 应用程序使用的通用实用函数。
+- **glibc**：许多 Red Hat Linux 程序使用的标准库。
+- **glibc-common**：用于 C 语言开发的通用二进制程序。
+- **glibc-debug-\***：包含调试信息的各种库。
+- **glibc-devel**：用于开发大多数 C 语言程序的标准头文件和目标文件。
+- **glibc-kernheaders**：glibc 使用的 Linux 内核头文件。
+- **glibc-profile**：创建使用 *gprof* 进行剖析的程序所需的库。
+- **glibc-utils**：在程序调试期间有用的各种工具。
+- **glib-devel**：用于支持 GIMP X 库的静态库和头文件。
+- **Glide3**：3Dfx Voodoo 显卡的编程接口。
+- **Glide3-devel**：让程序可以使用 3Dfx Interactive Voodoo 中 3D 加速器的接口。
+- **glms**：用于监控风扇速度、处理器温度和其他硬件传感器的工具。
+- **glut**：使用 OpenGL API 的 3D 图形库。
+- **glut-devel**：开发使用 glut 的应用程序所需的库和头文件。
+- **gmp**：处理算术和浮点数函数的 MP 库。
+- **gmp-devel**：创建使用 GNU MP 任意精度库的程序的组件。
+- **gnome-applets**：用于在 GNOME 桌面上使用的小程序（微型图形应用程序）。
+- **gnome-audio**：可用于 GNOME 环境的一组声音。
+- **gnome-audio-extra**：可与 GNOME 桌面一起使用的声音文件。
+- **gnome-core**：运行 GNOME 桌面环境所需的核心组件。
+- **gnome-core-devel**：创建 GNOME 面板所需的库和头文件。
+- **gnome-games**：GNOME 游戏，如纸牌、gnothello 和俄罗斯方块。
+- **gnome-games-devel**：用于开发某些 GNOME 游戏的组件。
+- **gnomeicu**：在 GNOME 中运行的 ICQ 客户端（基于互联网的聊天程序）。
+- **gnome-kerberos**：用于管理 Kerberos 5 票据的 krb5 工具。
+- **gnome-libs**：GNOME 桌面环境和应用程序所需的库。
+- **gnome-libs-devel**：创建在 GNOME 桌面上运行的应用程序所需的库。
+- **gnome-lokkit**：用于配置简单网络防火墙的 GNOME lokkit 工具。
+- **gnome-media**：GNOME CD 播放器和其他多媒体工具。
+- **gnomemeeting**：与 Microsoft NetMeeting 兼容的 H323 视频会议工具。
+- **gnome-mime-data**：gnome-vfs 的文件类型识别数据文件。
+- **gnome-pilot**：集成 GNOME 和 PalmOS 设备（如 Palm Pilot）所需的文件。
+- **gnome-pilot-devel**：使应用程序能够使用 gnome-pilot 所需的库。
+- **gnome-print**：GNOME 应用程序从 GNOME 打印所需的字体和工具。
+- **gnome-print-devel**：与 GNOME 中打印相关的软件开发工具。
+- **gnome-spell**：用于拼写检查的 Bonobo 组件。
+- **gnome-user-docs**：术语表、介绍和其他文档。
+- **gnome-utils**：多个有用的 GNOME 实用工具，如计算器、日历等。
+- **gnome-vfs**：Nautilus 文件管理器所需的 GNOME 虚拟文件系统。
+- **gnome-vfs-devel**：开发 GNOME-VFS 应用程序的库和头文件。
+- **gnome-vfs-extras**：包括 Samba smb 网络浏览器的 GNOME-VFS 模块。
+- **gnorpm**：用于管理软件包（RPM）的 GNOME 前端。
+- **gncash**：一个追踪个人财务数据的应用程序。
+- **gnchess**：GNU 国际象棋程序及相关实用工具。
+- **gnumeric**：在 GNOME 中运行的 gnumeric 电子表格程序。
+- **gnumeric-devel**：与 gnumeric 电子表格相关的开发工具。
+- **gnupg**：用于数字签名和数据加密的 GNU 隐私卫士（gnupg）。
+- **gnuplot**：gnuplot 实用工具，用于绘制科学及其他类型的数据。
+- **gperf**：gperf C++ 哈希函数生成器。
+- **gphoto**：用于管理数码相机图像的应用程序 gphoto。
+- **gphoto2**：gphoto 的较新版本。
+- **gphoto2-devel**：创建使用 gphoto2 的应用程序所需的头文件。
+- **gpm**：支持基于文本的应用程序使用鼠标所需的 gpm 组件。
+- **gpm-devel**：开发使用鼠标的文本模式程序所需的库和头文件。
+- **gq**：gq 图形 LDAP 浏览器。
+- **gqview**：用于浏览和显示图形文件的 gqview 实用工具。
+- **grep**：用于在文本文件中查找匹配模式的 grep 实用工具。
+- **grip**：各种光盘抓取器和 MP3 编码器的前端。
+- **groff**：用于从纯文本和标记格式化文档的 groff 文档实用工具。
+- **groff-gxditview**：在图形用户界面中显示 groff 输出的 gxditview 实用工具。
+- **groff-perl**：用于处理 groff 文档的 a2mtodit 和 rog 实用工具。
+- **grub**：Grand Unified Boot Loader（统一引导加载程序），默认用于引导 Red Hat Linux。
+- **gsl**：用于数值分析和高级数学的 GNU 科学库。
+- **gsl-devel**：创建使用 gsl 的应用程序所需的头文件和库。
+- **gtk+**：用于构建图形 X 应用程序的 GIMP 图形工具包。
+- **gtk+-devel**：用于创建需要 GIMP 的应用程序的 gtk+ 开发工具。
+- **gtk+10**：使用 gtk+ 和 glib 1.0 的应用程序所需的兼容性库。
+- **gtk2**：用于创建图形用户界面（GUI）的工具包。
+- **gtk2-devel**：GTK+ 工具包的头文件和开发者文档。
+- **gtkam**：基于 GTK 的 gphoto2 接口。
+- **gtkam-gimp**：允许通过 gphoto2 访问数码相机的 GIMP 插件。
+- **gtk-doc**：为 GTK+、GNOME 和 Glib 组件生成文档的工具。
+- **gtk-engines**：多个 GTK+ 工具包主题（包括 Notif、Redmond95 和 Metal）。
+- **gtkglarea**：用于 GTK+ 图形用户界面库的 OpenGL 小部件。
+- **gtkhtml**：轻量级 HTML 渲染/打印/编辑引擎。
+- **gtkhtml-devel**：开发使用 gtkhtml 的应用程序所需的库。
+- **Gtk-Perl**：gtk+ 的 Perl 扩展，允许为 X 编写图形界面。
+- **gtoaster**：支持音频和数据文件的光盘刻录软件包。
+- **gtop**：GNOME 版本的 `gtop` 系统管理器，用于显示内存图表。
+- **guile**：用于实现 Scheme 编程语言的 GUILE 库。
+- **guile-devel**：与 GUILE 库链接的程序所需的库和头文件。
+- **guppi**：基于 GNOME 的数据分析和可视化系统。
+- **guppi-devel**：开发使用 Guppi 的应用程序所需的头文件和库。
+- **gv**：用于在 X Window 系统中显示 PostScript 或 PDF 文档的 `gv` 实用工具。
+- **g-wrap**：用于创建 C 库 Scheme 接口的工具。
+- **g-wrap-devel**：gwrap 开发所需的 Giles 和库。
+- **gzip**：用于压缩数据的 `gzip` 实用工具。
+- **h2ps**：将韩文 Hangul 转换为 postscript 的工具。
+- **hanterm-xf**：基于 XFree86 xterm 的 X Windows 系统韩文终端。
+- **hdparm**：用于设置硬盘参数的 `hdparm` 实用工具。
+- **hesiod**：用于查询 Hesiod 数据库的 `hesinfo` 命令。
+- **hesiod-devel**：使用 hesiod 的应用程序的库和头文件。
+- **hexedit**：十六进制文件查看器和编辑器。
+- **hotplug**：热插拔实用工具，在连接 USB 设备时加载所需的模块。
+- **hotplug-gtk**：hotplug 的 gtk 控制接口。
+- **hpjs**：一组优化的 HP 打印机驱动程序。
+- **htdig**：`htdig` Web 索引和搜索系统。
+- **htdig-web**：htdig Web 索引和搜索工具使用的 CGI 脚本和 HTML 代码。
+- **htmlview**：`htmlview` 命令，用于应用程序显示其帮助页面。
+- **hwbrowser**：用于查看系统当前硬件配置的浏览器。
+

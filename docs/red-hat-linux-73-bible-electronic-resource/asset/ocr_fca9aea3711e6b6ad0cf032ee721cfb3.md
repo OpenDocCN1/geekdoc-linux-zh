@@ -1,0 +1,20 @@
+Some third-party applications will add administrative commands to directories that are not in your PATH. For example, an application may put commands in /usr/local/bin, /opt/bin, or /usr/local/sbin. In those cases, you may want to add those directories to your PATH.
+
+# Administrative configuration files
+
+Configuration files are another mainstay of Linux administration. Almost everything you set up for your particular computer — user accounts, network addresses, or GUI preferences — is stored in plain-text files. This has some advantages and some disadvantages.
+
+The advantage of plain-text files is that it is easy to read and change them. Any text editor will do. On the downside, however, is that as you edit configuration files, no error checking is going on. You have to run the program that reads these files (such as a network daemon or the X desktop) to find out if you set up the files correctly. A comma or a quote in the wrong place can sometimes cause a whole interface to fail.
+
+Throughout this book, I describe the configuration files you need to set up the different features that make up Red Hat Linux. In terms of a general perspective on configuration files, however, there are several locations in the Red Hat Linux file system where configuration files are stored. Here are some of the major locations:
+
++   *   `$HOME` — All users store information in their home directories that directs how their login accounts behave. Most configuration files begin with a dot (.), so they don't appear as a user's directory when you use a standard `ls` command (you need to type `ls -a` to see them). There are dot files that define how each user's shell behaves, the look and feel of the desktop, and what options are used with your text editor. There are even files (such as `.rhosts`) that configure network permissions for each user.
++   *   `/etc` — Contains most of the basic Linux system-configuration files. The following `/etc` configuration files are of interest:
+
++       *   aliases — Can contain distribution lists used by the Linux mail service.
++       *   bashrc — Sets system-wide defaults for bash shell users. (By default, it sets the shell prompt to include the current user name, host name, and current directory, as well as a few other values.)
++       *   cdrrecord.conf — Contains defaults used for recording CDs.
++       *   crontab — Sets cron environment and times for running automated tasks.
++       *   csh.cshrc (or cshrc) — Sets system-wide defaults for csh (C shell) users.
++       *   exports — Contains a list of local directories that are available to be shared by remote computers using the Network File System (NFS).
++       *   fdprm — Sets parameters for common floppy disk formats.

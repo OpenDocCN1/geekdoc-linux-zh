@@ -1,0 +1,36 @@
+```
+# route add default gw 10.0.0.1 eth0
+```
+
+To make the default route permanent on the client Red Hat Linux system, do the following:
+
++   1. Set the default route to point to the router. This entails setting the GATEWAY or GATEWAYDEV value in the `/etc/sysconfig/network` file as described in the previous procedure. (This time, the address will point to the LAN interface of the router.)
++   2. Restart your network interfaces by typing the following as root user:
+
+```
+# /etc/init.d/network restart
+```
+
++   3. When the computer comes back up, type the following:
+
+```
+# netstat -r
+```
+
+| Destination | Gateway | Genmask | Flags | MSS | Window | irtt | Iface |
+|---|---|---|---|---|---|---|---|
+| 10.0.0.0 | * | 255.0.0.0 | U | 0 | 0 | 0 | eth0 |
+| 127.0.0.0 | * | 255.0.0.0 | U | 0 | 0 | 0 | lo |
+| default | 10.0.0.1 | 0.0.0.0 | UG | 0 | 0 | 0 | eth0 |
+
+You can see that the default gateway was set to the host at the IP address 10.0.0.1 on the eth0 Ethernet interface. Assuming that router is ready to route your packets to the Internet, your Red Hat Linux client is now ready to use that router to find all IP addresses that you request that you do not already know where to find. (The netstat -r command provides the same output as the /sbin/route command.)
+
+# Configuring Windows network clients
+
+If you have some Microsoft systems on your LAN, you need to configure them so that they can connect to the Internet through your router. To set up the Windows operating system computers on your private network to access the Internet through your routing computer, you have to add only a few pieces of information to each Windows system. Here’s how to do this from Windows ME and most other Windows systems:
+
++   1. Choose Start \(\rightarrow\) Settings \(\rightarrow\) Control Panel.
++   2. Open the Network icon in the Control Panel.
++   3. Double-click the interface shown that supports connecting to the Linux router. (For a LAN, it may look like this: TCP/IP \(\rightarrow\) 3Com EtherLink III.)
++   4. Click the IP address tab, and then either leave the “Obtain an IP address automatically” button selected (if you are using DHCP to get the IP address, as described in Chapter 23) or select the “Specify an IP address” button (if you intend to add a static IP address). In the second case, you then need to type in the IP address and subnet mask for the host computer.
++   5. Click the Gateway tab, type the IP address of your Linux router, and then click Add.

@@ -1,0 +1,24 @@
+computer doesn’t need to query the DNS server to get the address (which may not be there anyway if you are on a private network).
+
++   *   **Check specified domains.** You can specify that if the host name requested doesn’t include a fully qualified domain name and the host name is not in your /etc/hosts file, then your computer should check certain specified domain names.
+
+On your Red Hat Linux system, when you make a request to resolve a host name into an IP address, the contents of the /etc/resolv.conf file will most likely determine where your computer searches for that information. That file can specify your local domain, an alternative list of domains, and the location of one or more DNS servers. Here is an example of an /etc/resolv.conf file:
+
+```
+```
+domain crafts.hansonhistory.com
+search crafts.hansonhistory.com hansonhistory.com
+nameserver 10.0.0.10
+nameserver 10.0.0.12
+```
+```
+
+In this example, the local domain is crafts.hansonhistory.com. If you try to contact a host by giving only its host name (with no domain name), your computer can check in both crafts.hansonhistory.com and hansonhistory.com domains to find the host. If you give the fully qualified domain name, it can contact the name servers (first 10.0.0.10 and then 10.0.0.12) to resolve the address. (You can specify up to six name servers; your computer will query in order until the address is resolved. The total search line is limited to 256 characters, however.)
+
+> **TIP:** Your resolver knows to check your /etc/hosts file first because of the contents of the /etc/host.conf and /etc/nsswitch.conf files. By default, the nsswitch.conf file has your resolver check local files first, followed by NIS plus files (if present), and then DNS to resolve addresses. The host.conf file indicates that local files (hosts) be checked first for the address, followed the DNS system (bind). You can change that behavior by modifying those files. See the resolv.conf man page for further information.
+
+# Routing
+
+Knowing the IP address of the computer you want to reach is one thing; being able to reach that IP address is another. Even if you connect your computers on a LAN, to have full connectivity to the Internet there must be at least one node (that is, a computer or dedicated device) through which you can route messages that are destined for locations outside your LAN. That is the job of a router.
+
+A router is a device that has interfaces to at least two networks and is able to route network traffic between the two networks. In our example of a small business that has a LAN that it wants to connect to the Internet, the router would have a connection and IP address on the LAN, as well as a connection and IP address to a network that provides access to the Internet.

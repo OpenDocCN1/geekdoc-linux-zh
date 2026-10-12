@@ -1,0 +1,127 @@
+
+- pyqt-examples: Sample code demonstrating how to use the Python bindings for Qt.
+- python*: The Python interpreter, an interactive object-oriented programming language.
+- python-devel: Header files and libraries to add dynamically loaded Python extensions.
+- python-docs: Documentation for the Python programming language (in text and LaTeX).
+- python-tools: Tools to provide a Tkinter-based IDE for Python.
+- python-xmlrpc: A library of Python functions that implement Userland XML RPC.
+- pyxml: Xml libraries for Python.
+- qt: The Qt software toolkit for creating X Window System applications.
+- qt1x: A version of the Qt toolkit that is compatible with version 1.x.
+- qt1x-devel: A version of the Qt development library that is compatible with version 1.x.
+- qt1x-GL: A version of OpenGL add-on for the Qt toolkit, compatible with version 1.x.
+- qt3*: Newer versions of Qt.
+- qtcups: A CUPS front-end and library for qt that provides a GUI for printer settings.
+- qtcups-devel: Development files that enable Qt applications to configure printers.
+- qt-designer: User interface development tools for the Qt toolkit.
+- qt-devel: Components needed to develop Qt applications.
+- qt-MySQL: MySQL drivers for Qt's SQL classes.
+- qt-ODBC: ODBC drivers for Qt's SQL classes.
+- qt-Postgres: Postgres drivers for Qt's SQL classes.
+- qt-static: Static libraries for the Qt toolkit.
+- qt-Xt: The Xt compatibility add-on for Qt.
+- quanta: An HTML editor for the KDE environment.
+- quota: The quota, quotacheck, and quotaon tools for managing disk space.
+- radvd: The router advertisement daemon for IPv6.
+- raidtools: Several raid utilities for configuring raid file system devices.
+- rarpd: The rarpd daemon that provides Reverse Address Resolution Protocol for TCP/IP.
+- rcs: The Revision Control System for managing multiple versions of files.
+- rdate: The rdate utility for retrieving date and time from a computer on the network.
+- rdist: The rdist program for maintaining exact copies of files on multiple computers.
+- readline: The readline library for allowing programs to edit text lines with emacs keys.
+- readline2.2.1: A version of readline library that is compatible with Red Hat Linux 6.2.
+- readline-devel: Components needed to develop applications to use the readline library.
+- recode: Converts between character sets.
+- recode-devel: Development files that allow applications to use recode.
+- redhat-config-network: The network administration tool for Red Hat Linux.
+- redhat-config-users: A graphical interface for administering users and groups.
+- redhat-logos: The Red Hat Shadow Man and RPM trademarked logos.
+- redhat-lsb: Linux Standards Base (LSB) support for Red Hat Linux.
+- redhat-release: The Red Hat Linux release file.
+- redhat-switchmail: The Red Hat Mail Transport Agent (MTA) switcher.
+- redhat-switchmail-gnome: The GNOME interface to redhat-switchmail.
+- redhat-switchprinter: A tool to switch between the CUPS and LPng print services.
+- redhat-switchprinter-gnome: The GNOME interface to redhat-switchprinter.
+- reiserfs-utils: Utilities for checking and repairing ReiserFS file systems.
+- rep-gtk: The rep-gtk binding of GTK+ for the rep Lisp interpreter.
+- rep-gtk-gnome: Bindings to different GNOME libraries for the Lisp interpreter.
+- rep-gtk-libglade: LibreP binding for the libglade library, for loading libglade interfaces.
+- rhmask: The rhmask utility, which creates mask files from original and updated files.
+- rhn-applet: A panel applet that indicates that newer Red Hat packages are available.
+- rhn_register: Components that let you register your system with Red Hat Network.
+- rhn_register-gnome: Red Hat Network registration software that runs in X.
+- rmt: The rmt command for accessing remote tape devices.
+- rootfiles: The default user configuration files provided to the root user.
+- routed: The routed daemon, which handles routing traffic and maintains routing tables.
+- rpm: The rpm command for installing and managing RPM (.rpm) software packages.
+- rpm2html: Tools for converting RPM data to HTML output.
+- rpm-build: Development tools for creating RPM packages.
+- rpmdb-redhat: The database for the entire Red Hat Linux distribution.
+- rpm-devel: Components to create applications that manipulate RPM packages.
+- rpmfind: The rpmfind tool for locating RPM packages on the Web.
+- rpmlint: Tools for checking that RPM packages work properly.
+- rpm-perl: Native bindings to the RPM API for Perl.
+- rpm-python: Native bindings to the RPM API for Python.
+- rp-pppo: PPP over Ethernet software for connecting to an ISP over ADSL modems.
+- rsh: The rsh, rcp, rlogin, and other commands that run commands over a network.
+- rsh-server: The in.rshd daemon for providing the rsh service to network clients.
+- rsync: The rsync utility for synchronizing files between a remote and local host.
+- ruby*: This set of packages contains an object-oriented scripting language called Ruby.
+- rusers: The rusers utility, to let users see who is logged on machines on the network.
+- rusers-server: The in.rusersd daemon to provide rusers service to network clients.
+- rwall: The rwall command, to send messages to users currently logged on a computer.
+- rwall-server: The in.rwalld daemon to provide the rwall service to network clients.
+- rwho: The rwho command shows information about users on other network computers.
+- rxvt: The rxvt color VT102 terminal emulator that runs in the X Window System.
+- samba: The Samba server software for sharing Windows files, folders, and printers.
+- samba-client: Samba utilities needed to provide file and print sharing with Windows.
+- samba-common: Samba configuration files and utilities for configuring a Samba server.
+- samba-swat: SWAT Web-based interface for configuring Samba from a Web browser.
+- sane-backends: SANE utilities for using and managing scanners.
+- sane-backends-devel: Programming libraries for interfacing to scanners.
+- sane-frontends: Graphical front-end to SANE.
+- sash: The sash shell, which includes several simplified shell built-in commands.
+- sawfish: The sawfish window manager for X11.
+- sawfish-themer: A graphical tool for creating sawfish window manager themes.
+- screen: The screen utility, to allow you to have multiple logins on a single terminal.
+- scrollkeeper: A cataloging system for documentation on open systems.
+- SDL: Simple DirectMedia Layer tools to build audio, keyboard, mouse, and display apps.
+- SDL_image: The showimage utility for displaying image files.
+- SDL_image-devel: A library for loading images for SDL applications.
+- SDL_mixer: Simple DirectMedia Layer (SDL) sound mixing tools.
+- SDL_mixer-devel: SDL sound mixing application development tools.
+- SDL_net: A portable network library for use with SDL.
+- SDL_net-devel: Libraries and include files to develop SDL networked applications.
+- SDL-devel: Simple DirectMedia Layer application programming interface.
+- sed: Contains the sed utility for repeated search and edit functions on groups of files.
+- semi: Libraries that provide MIME and other functions to emacs.
+- semi-xemacs: Libraries that provide MIME and other functions to xemacs.
+- sendmail: The sendmail mail transport agent, which sends mail among e-mail servers.
+- sendmail-cf: The files for generating a sendmail.cf file, the sendmail configuration file.
+- sendmail-devel: Development files allowing applications to use sendmail.
+- sendmail-doc: Documents for the sendmail mail transport agent (PostScript and troff).
+- serviceconf: A utility that configures enabled services on the system.
+- setserial: The setserial utility for configuring and showing serial port information.
+- setup: Default versions of many basic system configuration files in /etc.
+- setuptool: The setuptool utility for accessing text mode configuration tools.
+- sgml-common: Catalog and DTD files used with SGML.
+- shadow-utils: Utilities for using shadow passwords and related user/group information.
+- shapecfg: The shapecfg command for shaping network traffic transmissions.
+- sharutils: Utilities for encoding and decoding packages of files.
+- sh-utils: GNU shell utilities such as date, echo, logname, and others.
+- sip: A tool that generates bindings for C++ classes, to let Python classes access them.
+- sip-devel: Files needed to generate Python bindings for any C++ class library.
+- skkdic: A dictionary for a simple Kana-Kanji conversion program.
+- skkinput: A Kana to Kanji converter with multiple input protocols.
+- slang: The S-Lang language extension libraries and related components.
+- slang-devel: Components needed to develop S-Lang based applications.
+- sliplogin: The sliplogin command for creating SLIP links on terminal lines.
+- slocate: The slocate utility for search databases for selected patterns.
+- slrn: The slrn threaded Internet news reader.
+- slrn-pull: The slrnpull utility for spooling news for offline news reading.
+- smpeg: The gtv and plaympeg utilities for playing MPEG video content.
+- smpeg-devel: Static libraries and header files for MPEG software development.
+- smpeg-gtv: A simple MPEG video and audio player that uses smpeg.
+- smpeg-xmms: An MPEG video plug-in that works with the XMMS player.
+- snavigator: Integrated development environment for several programming languages.
+- sndconfig: The sndconfig command, a utility for setting up your sound card.

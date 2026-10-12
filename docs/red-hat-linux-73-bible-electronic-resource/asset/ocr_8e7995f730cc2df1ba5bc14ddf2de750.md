@@ -1,0 +1,33 @@
+The two preceding entries indicate that all ports from 1 to 1023 are monitored. Monitoring higher port numbers can result in many more false alarms, so this practice is not recommended. If you find that PortSentry is being tripped accidentally, you may want to exclude the ports being tripped by using the `ADVANCED_EXCLUDE_TCP` and `ADVANCED_EXCLUDE_UDP` options. The following example shows how these two values are set by default:
+
+```
+```
+ADVANCED_EXCLUDE_TCP="111,113,139"
+ADVANCED_EXCLUDE_UDP="520,138,137,67"
+```
+```
+
+By default, `ident` and NetBIOS services for TCP (ports 111, 113, and 139) and route, NetBIOS, and Bootp broadcasts for UDP (ports 520, 138, 127, and 67) are excluded from the advanced scan. (The exclusion is because a remote computer may hit these ports without representing any misuse.) If you are running in stealth mode, you should likewise exclude any services that you are running on your system by adding their port numbers to this list.
+
+# ## Identifying configuration files
+
+Besides the `portsentry.conf` file, there are several other configuration files used by PortSentry. You can identify the locations of these other files within the `portsentry.conf` file. Here are how those files are defined:
+
+```
+```text
+# Hosts to ignore
+IGNORE_FILE="/etc/portsentry/portsentry.ignore"
+# Hosts that have been denied (running history)
+HISTORY_FILE="/var/portsentry/portsentry.history"
+# Hosts that have been denied this session only (temporary until next restart)
+BLOCKED_FILE="/var/portsentry/portsentry.blocked"
+```
+```
+
+Chances are that you will not want to move the location of these configuration files. Here are some descriptions of what these files are used for:
+
++   - The `portsentry.ignore` file contains a list of all IP addresses that you do not want blocked (even if they improperly try to access ports on your computer). By default, all IP addresses assigned to the local computer are added to this file. You can add IP addresses of trusted computers, if you like.
+
++   - The `portsentry.history` file contains a list of IP addresses for computers that have been blocked from accessing your computer.
+
++   - The `portsentry.blocked.*` files contain a list of computers that have been blocked from accessing your computer during the current session. The `portsentry.blocked.tcp` file contains IP addresses of computers that have improperly scanned TCP ports on your computer. Addresses of computers that have been blocked after scanning UDP ports are contained in the `portsentry.blocked.udp` file.

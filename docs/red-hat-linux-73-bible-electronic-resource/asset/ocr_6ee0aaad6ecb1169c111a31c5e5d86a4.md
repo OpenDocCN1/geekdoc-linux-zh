@@ -1,0 +1,11 @@
+# # Acknowledgments
+
+Anyone writing a book on Linux should first and foremost thank the Linux development community. To everyone who created a piece of code, contributed a binary, wrote a HOW-TO, or just helped answer a question in a Linux newsgroup, thank you for helping create this phenomenon known as Linux.
+
+Thanks to everyone at Red Hat for putting together a great Linux distribution. Special thanks to the members of the Red Hat Linux 7.3 beta team for answering my questions and providing insight into the product during beta testing. Thanks to Debra Williams Cauley, S. B. Kleinman, Neil Romanosky, and the others at Wiley Publishing for your support through the entire writing and editing process. Thanks to technical editor Jason Luster for his excellent work. Thanks to Margot Maley Hutchison and the others at Waterside Productions for bringing me this project. Thanks to Forrest Cavalier for helping with questions regarding Internet News servers.
+
+On the writing side, I'd especially like to thank Thad Phetteplace for his updates of security information, as well as his help for bringing this book in on schedule. Thanks to Deanne Clark and Brian Smith for their speedy turnaround, sifting through all the packages in the Red Hat Linux distribution and updating Appendix B. I'd also like to thank Thad and Andy Wagliardo for their contributions of several chapters to the first edition of this book.
+
+Special thanks to my local Linux Users Group (LUG). In particular, I'd like to thank Chuck Wolber, Francois Caen, and Scott Hunter who were there to answer questions I had about setting up and securing a DNS server.
+
+Thanks to my family for helping me through this project. Sheree managed to keep our family going as we settled into our home in the Pacific Northwest. Seth has grown up enough to take over one of my computers, which transitioned from a Windows to a Linux machine once I was able to get Shockwave games running in my Linux Web browser. Caleb contributed his “System Down” image to the multimedia chapter.
