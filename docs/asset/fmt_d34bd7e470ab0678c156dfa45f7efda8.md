@@ -1,0 +1,146 @@
+
+```
+$ diff -u colors.1 colors.2
+--- colors.1 Tue Nov 25 15:45:32 2008
++++ colors.2 Tue Nov 25 15:24:46 2008
+@@ -1,6 +1,5 @@
+ red
++blue
+ green
+ yellow
+-pink
+-purple
+ orange
+```
+
+图 5-8 `diff` 显示统一输出格式
+
+`diff`（差异）实用程序比较两个文件并显示它们之间差异的列表。该实用程序不会更改任何文件，因此当你想要比较信函或报告的两个版本，或某个程序源代码的两个版本时，它非常有用。
+
+带有 `-u`（统一输出格式）选项的 `diff` 实用程序首先显示两行，指示正在比较的文件中哪一个由加号（`+`）表示，哪一个由减号（`-`）表示。在图 5-8 中，减号指示 `colors.1` 文件；加号指示 `colors.2` 文件。
+
+`diff -u` 命令将长的多行文本分解为*块（hunks）*。每个块之前都有一行以两个 at 符号（`@@`）开头和结尾。此块标识符指示该块在两个文件中的起始行号和行数。在图 5-8 中，该块涵盖 `colors.1` 文件（由减号指示）从第 1 行到第 6 行的部分。`+1,5` 随后指示该块涵盖从 `colors.2` 的第 1 行到第 5 行。
+
+在这些标题行之后，`diff -u` 显示每一行文本，前面带有减号、加号或无符号。前面的减号表示该行仅出现在由减号表示的文件中。前面的加号表示该行来自由加号表示的文件。既不以加号也不以减号开头的行出现在两个文件的相同位置。有关更多信息，请参阅 `diff` info 页面。
+
+# file：测试文件的内容
+
+你可以使用 `file` 实用程序来了解 Linux 系统上任何文件的内容，而无需自己打开并检查文件。在以下示例中，`file` 报告 `letter_e.bz2` 包含由 `bzip2` 实用程序（第 162 页）压缩的数据：
+
+```
+$ file letter_e.bz2
+   letter_e.bz2: bzip2 compressed data, block size = 900k
+```
+
+下一个 `file` 报告另外两个文件：
+
+```
+$ file memo zach.jpg
+memo:    ASCII text
+zach.jpg: JPEG image data, ... resolution (DPI), 72 x 72
+```
+
+有关更多信息，请参阅 `file` man 页面。
+
+# |（管道）：进程间通信
+
+由于管道是 Linux 系统运行的关键组成部分，因此在此处介绍它们以用于示例。从第 238 页开始详细介绍管道。
+
+*进程* 是 Linux 执行命令的过程（第 314 页）。进程间的通信是 UNIX 和 Linux 的显著特征之一。*管道*（在命令线上写为垂直线 `|`，在键盘上显示为实心或断开的垂直线）提供了这种通信的最简单形式。简而言之，管道将一个实用程序的输出获取并作为输入发送到另一个实用程序。使用 UNIX/Linux 术语，管道将一个进程的标准输出获取并重定向为另一个进程的标准输入。（有关更多信息，请参阅第 230 页的“标准输入和标准输出”。）进程在屏幕上显示的大部分内容都发送到标准输出。如果你不重定向它，此输出将出现在屏幕上。使用管道，你可以重定向输出，使其成为另一个实用程序的标准输入。例如，诸如 `head` 这样的实用程序可以从你在 `head` 单词后的命令行上指定的文件获取输入，也可以从标准输入获取输入。因此，你可以按照以下方式给出第 155 页图 5–5 中显示的命令：
+
+```
+$ cat months | head
+Jan
+Feb
+Mar
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+```
+
+下一个命令显示目录中的文件数量。带有 `-w` 选项的 `wc`（字数统计）实用程序显示其标准输入或你在命令行上指定的文件中的单词数量：
+
+```
+$ ls | wc -w
+14
+```
+
+你可以使用管道将程序的输出发送到打印机：
+
+```
+$ tail months | lpr
+```
+
+![](img/f28adb66a7398a382f0505e0ba74a872_199_0.png)
+
+**图 5-9** `echo` 将命令行（但不包括单词 `echo`）复制到屏幕上
+
+# 四个其他实用程序
+
+`echo` 和 `date` 实用程序是 Linux 大型实用程序集合中最常用的两个成员。`script` 实用程序将会话的一部分记录到文件中，而 `unix2dos` 创建一个可以在 Windows 或 Macintosh 机器上读取的文本文件副本。
+
+## ECHO：显示文本
+
+`echo` 实用程序将你在 `echo` 之后输入到命令行上的任何内容复制到屏幕上。一些示例显示在图 5-9 中。最后一个示例显示了 shell 如何处理命令行上未加引号的星号 (`*`)：它将星号扩展为目录中文件名的列表。
+
+`echo` 实用程序是了解 shell 和其他 Linux 程序的好工具。第 244 页上的一些示例使用 `echo` 来说明星号等特殊字符是如何工作的。在第 7、9 和 27 章中，`echo` 帮助解释 shell 变量是如何工作的，以及如何从 shell 脚本向屏幕发送消息。有关更多信息，请参阅 `echo` info 页面。
+
+## DATE：显示日期和时间
+
+`date` 实用程序显示当前日期和时间：
+
+![](img/f28adb66a7398a382f0505e0ba74a872_199_1.png)
+
+以下示例显示了如何选择在 `date` 的输出中选择的格式和内容：
+
+![](img/f28adb66a7398a382f0505e0ba74a872_199_2.png)
+
+有关更多信息，请参阅 `date` info 页面。
+
+## script：记录 shell 会话
+
+`script` 实用程序记录登录会话的全部或部分，包括你的输入和系统的响应。此实用程序仅适用于基于字符的设备，如终端或终端模拟器。它确实可以捕获使用 `vim` 的会话；然而，由于 `vim` 使用控制字符来定位光标和显示不同的字体（如粗体），因此输出将难以阅读，可能没有用。当你 `cat` 一个捕获了 `vim` 会话的文件时，会话会迅速从你眼前掠过。
+
+默认情况下，`script` 将会话捕获在名为 `typescript` 的文件中。要使用不同的文件名，请在 `script` 命令后加上空格和新的文件名。要追加到文件，请在 `script` 后、文件名前使用 `-a` 选项；否则 `script` 会覆盖现有文件。以下是由 `script` 记录的会话：
+
+```
+$ script
+  Script started, file is typescript
+$ date
+Sun Jan 20 10:28:56 PST 2008
+$ who am i
+alex    pts/4        Jan  8 22:15
+$ apropos vim
+vim (1)                - Vi I'mproved, a programmers text editor
+vimdiff (1)            - edit two or three versions of a file with ...
+vimtutor (1)           - the vim tutor
+$ exit
+  Script done, file is typescript
+$
+```
+
+使用 `exit` 命令终止 `script` 会话。然后你可以使用 `cat`、`less`、`more` 或编辑器查看你创建的文件。以下是由前述 `script` 命令创建的文件：
+
+```
+$ cat typescript
+  Script started on Sun Jan 20 10:28:44 2008
+$ date
+Sun Jan 20 10:28:56 PST 2008
+$ who am i
+alex    pts/4        Jan  8 22:15
+$ apropos vim
+vim (1)                - Vi I'mproved, a programmers text editor
+vimdiff (1)            - edit two or three versions of a file with ...
+vimtutor (1)           - the vim tutor
+$ exit
+  Script done on Sun Jan 20 10:29:58 2008
+$
+```
+
+如果你将使用 `vim`、`emacs` 或其他编辑器编辑该文件，你可以使用 `dos2unix` 消除 `typescript` 文件行尾的 `^M` 字符。有关更多信息，请参阅 `script` man 页面。
+
+# unix2dos：将 Linux 和 Macintosh 文件转换为 Windows 格式
