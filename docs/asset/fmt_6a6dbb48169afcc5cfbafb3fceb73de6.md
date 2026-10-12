@@ -1,0 +1,190 @@
+
+对其中一个文件的更改同时影响两者的效果也适用于权限、所有者、组组等。硬链接不能跨文件系统存在；它们必须始终是本地的。用户可以创建文件的链接，但不能创建目录的链接；然而，根用户可以使用 `-F` 或 `-d` 创建目录的链接。
+
+## 符号链接
+
+要创建符号链接，你必须在使用 `ln` 时使用 `-s` 选项。符号链接就是你在 Windows 系统中可能称的“快捷方式”：一个指向另一个文件的小文件。符号链接的主要目的是克服硬链接的缺点。因此，符号链接允许用户链接到目录，并提供跨文件系统的链接。
+
+要理解符号链接是如何工作的，请考虑以下示例：
+
+```
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 03:57 Desktop
+
+-rw-r-- 1 root root 81 Sep 23 00:25 friday
+
+-rw-r-- 1 root root 81 Sep 23 00:38 monday
+
+-rw-r-- 2 root root 81 Sep 23 00:38 monday
+
+-rw-r-- 1 root root 152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root 38 Sep 23 00:26 wednesday
+
+$
+```
+
+```
+$ ln -s friday saturday
+
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 23:57 Desktop
+
+-rw-r-- 1 root root 81 Sep 23 00:25 friday
+
+-rw-r-- 2 root root 81 Sep 23 00:38 monday
+
+lrwxrwxrwx 1 root root 6 Sep 24 14:59 saturday -> friday
+
+-rw-r-- 1 root root 152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root 38 Sep 23 00:26 wednesday
+
+$
+```
+
+注意，与新条目（`Thursday`）链接相关的属性与 `monday` 相关的属性保持相同，并且没有采用当前时间——这正是复制操作将会发生的情况。这是因为尽管现在有两种引用它的方式，但实际上只有一组数据。从左数第二列表示文件的链接数：即引用这组相同数据的方式数量。链接数从 1 增加到了 2。
+
+验证数据是否是另一种另一种方法是查看 `inode`（索引节点）。如前所述，每个实体都必须有它自己的 `inode`。
+
+```
+$ ls -i
+
+18471 Desktop 18538 monday 18536 tuesday
+
+18535 friday 18538 thursday 18537 wednesday
+
+$
+```
+
+当你向数据添加链接时，链接数会增加；当你删除链接时，链接数会减少。只要有任何东西指向它，链接所指向的数据就会留在系统中。例如，文件 `thursday` 链接到了 `monday`。如果删除了 `monday`，`thursday` 仍然存在，但链接数会减一：`Linux` 并不关心哪个文件先先创建。只有当链接数降为零时，数据才不再存在系统中。
+
+> 每当你从零开始创建一个文件时，你就创建了一个指向数据的链接（链接数为 1）。当你删除（删除文件）时，计数变为 0，数据就会消失。
+
+当你以图形方式查看文件时，如图 7.4 所示，你看不到它们是相互链接的指示。
+
+然而，为了证明链接存在，对任一文件的任何修改都会同时发生在两个文件上，因为它们引用相同的数据，如下所示：
+
+![](img/f9e5762d07ca45a6f38ffcb92cd56e5e_187_0.png)
+
+图 7.4 在图形化查看时，没有指示显示两个文件是链接的。
+
+## Linux 文件系统 157
+
+```
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 23:57 Desktop
+
+-rw-r-- 1 root root      81 Sep 23 00:25 friday
+
+-rw-r-- 2 root root      81 Sep 23 00:38 monday
+
+-rw-r-- 2 root root      81 Sep 23 00:38 thursday
+
+-rw-r-- 1 root root     152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root      38 Sep 23 00:26 wednesday
+
+$ cat >> monday
+
+成分包括碳酸水、高果糖玉米糖
+
+/或糖、柠檬酸和天然香料。
+
+(按 Ctrl+d)
+```
+
+```
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 23:57 Desktop
+
+-rw-r-- 1 root root      81 Sep 23 00:25 friday
+
+-rw-r-- 2 root root     194 Sep 24 15:09 monday
+
+-rw-r-- 2 root root     194 Sep 24 15:09 thursday
+
+-rw-r-- 1 root root     152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root      38 Sep 23 00:26 wednesday
+
+$
+```
+
+对其中一个文件的更改同时影响两者的效果也适用于权限、所有者、组组等。硬链接不能跨文件系统存在；它们必须始终是本地的。用户可以创建文件的链接，但不能创建目录的链接；然而，根用户可以使用 `-F` 或 `-d` 创建目录的链接。
+
+## 符号链接
+
+要创建符号链接，你必须在使用 `ln` 时使用 `-s` 选项。符号链接就是你在 Windows 系统中可能称的“快捷方式”：一个指向另一个文件的小文件。符号链接的主要目的是克服硬链接的缺点。因此，符号链接允许用户链接到目录，并提供跨文件系统的链接。
+
+要理解符号链接是如何工作的，请考虑以下示例：
+
+```
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 03:57 Desktop
+
+-rw-r-- 1 root root 81 Sep 23 00:25 friday
+
+-rw-r-- 1 root root 81 Sep 23 00:38 monday
+
+-rw-r-- 2 root root 81 Sep 23 00:38 monday
+
+-rw-r-- 1 root root 152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root 38 Sep 23 00:26 wednesday
+
+$
+```
+
+```
+$ ln -s friday saturday
+
+$ ls -l
+
+drwx------ 5 root root 1024 Sep 22 23:57 Desktop
+
+-rw-r-- 1 root root 81 Sep 23 00:25 friday
+
+-rw-r-- 2 root root 81 Sep 23 00:38 monday
+
+lrwxrwxrwx 1 root root 6 Sep 24 14:59 saturday -> friday
+
+-rw-r-- 1 root root 152 Sep 23 00:26 tuesday
+
+-rw-r-- 1 root root 38 Sep 23 00:26 wednesday
+
+$
+```
+
+注意，与新条目（`Thursday`）链接相关的属性与 `monday` 相关的属性保持相同，并且没有采用当前时间——这正是复制操作将会发生的情况。这是因为尽管现在有两种引用它的方式，但实际上只有一组数据。从左数第二列表示文件的链接数：即引用这组相同数据的方式数量。链接数从 1 增加到了 2。
+
+验证数据是否是另一种另一种方法是查看 `inode`（索引节点）。如前所述，每个实体都必须有它自己的 `inode`。
+
+```
+$ ls -i
+
+18471 Desktop 18538 monday 18536 tuesday
+
+18535 friday 18538 thursday 18537 wednesday
+
+$
+```
+
+当你向数据添加链接时，链接数会增加；当你删除链接时，链接数会减少。只要有任何东西指向它，链接所指向的数据就会留在系统中。例如，文件 `thursday` 链接到了 `monday`。如果删除了 `monday`，`thursday` 仍然存在，但链接数会减一：`Linux` 并不关心哪个文件先先创建。只有当链接数降为零时，数据才不再存在系统中。
+
+> 每当你从零开始创建一个文件时，你就创建了一个指向数据的链接（链接数为 1）。当你删除（删除文件）时，计数变为 0，数据就会消失。
+
+当你以图形方式查看文件时，如图 7.4 所示，你看不到它们是相互链接的指示。
+
+然而，为了证明链接存在，对任一文件的任何修改都会同时发生在两个文件上，因为它们引用相同的数据，如下所示：
+
+![](img/f9e5762d07ca45a6f38ffcb92cd56e5e_187_0.png)
+
+图 7.4 在图形化查看时，没有指示显示两个文件是链接的。
+
+## Linux 文件系统 159
