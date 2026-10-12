@@ -1820,6 +1820,7 @@
 +   [Red Hat Linux 释放指南](docs/red-hat-linux-unleashed/README.md)
 +   [Red Hat Linux 解锁指南，第2版](docs/red-hat-linux-unleashed-2nd-edition/README.md)
 +   [Red Hat Linux 释放指南](docs/red-hat-linux-unleashed-none/README.md)
++   [Red Hat Linux 周末速成课程 (CD-ROMs)](docs/red-hat-linux-weekend-crash-course-with-cd-roms/README.md)
 +   [Red Hat RHCE 8 (EX294) 认证指南](docs/red-hat-rhce-8-ex294-cert-guide-certification-guide/README.md)
 +   [Red Hat RHCE/RHHSA 7 认证指南](docs/red-hat-rhcerhcsa-7-cert-guide/README.md)
 +   [Red Hat RHCSA 8 认证指南：EX200，第2版 (认证指南)](docs/red-hat-rhcsa-8-cert-guide-ex200-2nd-edition-certification-g/README.md)
