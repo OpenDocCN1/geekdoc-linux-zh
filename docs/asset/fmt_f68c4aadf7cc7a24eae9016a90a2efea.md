@@ -1,0 +1,143 @@
+
+```
+agonzalez@ubuntu:~$ chmod u+x example1.py 
+agonzalez@ubuntu:~$ ./example1.py 
+What is your name? Alberto Gonzales 
+Your name is: Alberto Gonzales
+```
+
+图 12.8：Python 代码执行
+
+Python 中的变量赋值是一个简单的部分，因为不需要指定其包含的数据类型。变量可以包含以下值：
+
+- `字符串`：包含一个字符串。
+
+- `数字`：包含一个数字，可以是整数、浮点数或复数。
+
+- `列表（数组）`：包含一系列元素，每个元素可以是任何类型。包含一个列表作为元素的列表称为嵌套列表。定义使用方括号 `[]`。
+
+- `字典`：一种键值关系。定义使用花括号 `{}`。
+
+为了简化，本书不涵盖 Python 中的其他数据类型。以下示例展示了变量定义以及定义列表和字典的语法：
+
+```python
+#!/usr/bin/python3
+name = "Alberto Gonzalez"
+age = 38
+mylist = [1,2,3,5,8]
+mydict = {"Name": "Alberto", "Lastname": "Gonzalez"}
+```
+
+要访问列表中的一个元素，需要指定一个索引 `id`。要访问 `mylist` 的第一个元素，需要使用 `mylist[0]`。Python 简化了访问特殊元素（如最后一个元素）的操作，可以使用 `mylist[-1]` 来访问。对于字典，需要指定要查询的键。例如，使用 `mydict["Name"]` 将返回关联的值；在这种情况下，是 Alberto。以下代码展示了如何访问不同的变量，并展示了一些 Python 函数，例如 `len`。
+
+```python
+#!/usr/bin/python3
+age = 38
+mylist = [1,2,3,5,8]
+mydict = {"Name": "Alberto", "Lastname": "Gonzalez"}
+print("The list contains", len(mylist), "elements")
+print("The last element of the list is", mylist[-1])
+print("Name is {} and lastname is {}".format(mydict["Name"], mydict["Lastname"]))
+print("You were born in {}".format(2022-age))
+```
+
+图 12.9 展示了上述脚本的执行以及屏幕上显示的输出。
+
+```
+agonzalez@ubuntu:~$ ./example2.py
+The list contains 5 elements
+The last element of the list is 8
+Name is Alberto and lastname is Gonzalez
+You were born in 1984
+```
+
+图 12.9：打印变量和访问数据
+
+Python 编程语言使用模块来实现不同的功能，例如包含数学函数或执行操作系统任务。导入模块的语法使用 `import` 语句。以下代码展示了如何导入名为 `math` 的模块并访问该模块中定义的变量。
+
+```python
+#!/usr/bin/python3
+import math
+print("PI value is:", math.pi)
+```
+
+为了执行不同的系统操作并访问脚本执行期间的参数，有两个主要的模块：
+
+- `os`：此模块提供用于执行操作系统任务的函数。
+
+- `sys`：此模块提供对解释器和系统的一些变量的访问。
+
+以下代码展示了如何访问已执行应用程序的参数以及如何运行命令，显示与之前展示的 `Shell 脚本` 相同的信息：
+
+```python
+#!/usr/bin/python3
+import os, sys
+print("The name of the script is", sys.argv[0])
+print("The number of the arguments are", len(sys.argv))
+print("The first argument value is", sys.argv[1])
+print("The second argument value is", sys.argv[2])
+print("The value for all arguments are: ", " ".join(sys.argv[1:]))
+print("The current process id is", os.getpid())
+rc = os.system("uptime")
+print("The exit status for the command uptime was", rc)
+rc = os.system("notexisting")
+print("The exit status for the command notexisting was", rc)
+```
+
+图 12.10 展示了执行上述代码的命令输出：
+
+```
+agonzalez@ubuntu:~$ ./example4.py alberto gonzalez rodriguez
+The name of the script is ./example4.py
+The number of the arguments are 4
+The first argument value is alberto
+The second argument value is gonzalez
+The value for all arguments are: alberto gonzalez rodriguez
+The current process id is 19590
+ 18:07:31 up 23:51, 1 user, load average: 0.00, 0.00, 0.00
+The exit status for the command uptime was 0
+sh: 1: notexisting: not found
+The exit status for the command notexisting was 32512
+```
+
+图 12.10：执行 Python 以访问参数并执行命令
+
+`Python` 中的条件比 `Shell 脚本` 稍简单，语法更接近自然英语。在 Python 中，缩进很重要，因为不能混合使用制表符和空格进行缩进。`Python` 中的 `if/elif/else` 语法如下：
+
+```
+if expression:
+ statements
+elif:
+ statements
+else:
+ statements
+```
+
+`表达式` 可以是组合条件；连接词是“`and`”和“`or`”。以下示例展示了 `Python` 中条件的用法：
+
+```python
+#!/usr/bin/python3
+import os, sys
+if len(sys.argv) == 1 or len(sys.argv) > 3:
+    print("Syntax: {} [ show | display ] user".format(sys.argv[0]))
+    sys.exit(0)
+elif sys.argv[1] != "show" and sys.argv[1] != "display":
+    print("Syntax: {} [ show | display ]".format(sys.argv[0]))
+    sys.exit(0)
+if sys.argv[1] == "show" or sys.argv[1] == "display":
+    if len(sys.argv) == 3:
+        print("Show info for user", sys.argv[2])
+        os.system("id {}".format(sys.argv[2]))
+    else:
+        user = os.getenv("USER")
+        print("No user specified, showing info for", user)
+        os.system("id")
+```
+
+图 12.11 展示了调用 Python 脚本时不带参数和带不同参数的情况。
+
+![](img/863afa537de4eed7deb11978bfbfa90e_387_0.png)
+
+图 12.11：使用不同参数执行 Python 脚本
+
+Python 3.10 及更高版本添加了一个称为 `match/case` 的语句，类似于 Shell 脚本中描述的 `case/esac`。以下代码展示了其用法：
