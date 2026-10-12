@@ -1,0 +1,45 @@
+# Projects
+
+# What you'll need...
+
+**TightVNC**
+www.tightvnc.com/release-2.7.php
+
+1. **Gain remote desktop access**
+   Learn how to get access to your Raspberry Pi desktop without it being in front of you...
+
+VNC (Virtual Network Computing) is a graphical desktop access and sharing system that allows a user to remotely control and use the desktop of another computer from their own system.
+
+It’s handy in many ways: to give you control over a remote system; to help out another user elsewhere; to allow a computer to remain powered on, but without the need for a keyboard, mouse or even a monitor.
+
+In our case, we aim to allow access to the Raspberry Pi desktop without it being hooked up to the aforementioned peripherals. This way, you can do everything you would normally do, but with just the power supply and network attached, thereby freeing up space and saving extra expense. In real-world terms, this means you could potentially access the Pi desktop via an Android tablet or phone!
+
+1. **Did you know...**
+   TightVNC server is a free resource for accessing VNC servers, like the one we'll install in this tutorial.
+
+![](bbox=[0.05, 0.34, 0.3, 0.52])
+
+![](bbox=[0.38, 0.48, 0.93, 0.58])
+
+# Static IP address
+
++   1. **01** The first step for us is to make sure that the Raspberry Pi has a static IP address. Basically, an IP address is a group of numbers that your network assigns to devices in order to tell them apart. To set up a static IP address, simply double-click LXTerminal and type the following and then press Enter.
++      ```bash
++      sudo nano /etc/network/\ninterfaces
++      ```
+
+# Static IP part 2
+
++   2. **02** This file controls the IP addressing for the Pi. You need to scroll down to the 'iface eth0' line and remove 'DHCP' and replace it with static. Now, on the line directly below, enter the IP address that you want your Pi to have, along with the subnet mask and the gateway.
++      ```text
++      address  255.255.255.0
++      gateway  192.168.1.254
++      ```
+
+# Static IP part 3
+
++   3. **03** After you entered those details, exit nano by pressing Ctrl+Q, followed by Y? to accept the changes, and then press Enter a couple of times to get back to the command prompt in the terminal. You can now either reboot your Pi, or type the following into the terminal:
++      ```bash
++      sudo /etc/init.d/networking stop
++      sudo /etc/init.d/networking start
++      ```
