@@ -1,0 +1,224 @@
+
+## RAP SESSION INFO *客户端名称*
+提供指定会话中所有打开文件的列表。
+
+## RAP SERVER *域*
+列出指定域或工作组中的所有服务器。默认为本地域。
+
+## RAP DOMAIN
+列出当前网络上可见的所有域和工作组。
+
+## RAP PRINTQ
+
+### RAP PRINTQ LIST *队列名称*
+列出服务器上指定的打印队列和打印作业。如果省略*队列名称*，则列出所有队列。
+
+### RAP PRINTQ DELETE *作业ID*
+删除具有指定ID的作业。
+
+## RAP VALIDATE *用户* [*密码*]
+验证指定用户是否能够登录到远程服务器。如果未在命令行中指定密码，系统将提示输入。
+
+> **注意**
+>
+> （插图：铅笔图标）
+>
+> 当前未实现。
+
+## RAP GROUPMEMBER
+
+### RAP GROUPMEMBER LIST *组*
+列出指定组的所有成员。
+
+### RAP GROUPMEMBER DELETE *组 用户*
+从组中删除成员。
+
+### RAP GROUPMEMBER ADD *组 用户*
+向组中添加成员。
+
+# RAP ADMIN *命令*
+在远程服务器上执行指定的*命令*。仅适用于 OS/2 服务器。
+
+> **注意**
+>
+> ![note icon](image) 当前未实现。
+
+# RAP SERVICE
+
+### RAP SERVICE START *名称* [*参数*...]
+在远程服务器上启动指定服务。尚未实现。
+
+> **注意**
+>
+> ![note icon](image) 当前未实现。
+
+### RAP SERVICE STOP
+停止远程服务器上的指定服务。
+
+> **注意**
+>
+> ![note icon](image) 当前未实现。
+
+## RAP PASSWORD *用户 旧密码 新密码*
+将*用户*的密码从*旧密码*更改为*新密码*。
+
+# LOOKUP
+
+### LOOKUP HOST *主机名 [类型]*
+使用指定类型（netbios 后缀）查找给定主机的 IP 地址。类型默认为 `0x20`（工作站）。
+
+### LOOKUP LDAP *[域]*
+提供指定*域*的 LDAP 服务器的 IP 地址。默认为本地域。
+
+### LOOKUP KDC *[领域]*
+提供指定*领域*的 KDC 的 IP 地址。默认为本地领域。
+
+### LOOKUP DC *[域]*
+提供指定*域*的域控制器的 IP 地址。默认为本地域。
+
+### LOOKUP MASTER DOMAIN
+提供指定*域*或工作组的主浏览器的 IP 地址。默认为本地域。
+
+# CACHE
+Samba 使用一个名为 `'genache'` 的通用缓存接口。可以使用 `'NET CACHE'` 进行控制。
+
+所有超时参数支持以下后缀：
+- `s` - 秒
+- `m` - 分钟
+- `h` - 小时
+- `d` - 天
+- `w` - 周
+
+### CACHE ADD 键 数据 超时
+将指定的键-数据添加到缓存中，并设置给定的超时时间。
+
+### CACHE DEL 键
+从缓存中删除键。
+
+### CACHE SET 键 数据 超时
+更新现有缓存项的数据。
+
+### CACHE SEARCH 模式
+在缓存数据中搜索指定的模式。
+
+### CACHE LIST
+列出缓存中的所有当前项。
+
+### CACHE FLUSH
+从缓存中移除所有当前项。
+
+# GETLOCALSID [域]
+打印指定域的 SID，如果省略参数，则打印本地服务器所在域的 SID。
+
+# SETLOCALSID S-1-5-21-x-y-z
+将本地服务器的域 SID 设置为指定的 SID。
+
+# GROUPMAP
+管理 Windows 组 SID 和 UNIX 组之间的映射。参数采用 "`参数=值`" 的形式。常用选项包括：
+- `unixgroup` - UNIX 组的名称
+- `ntgroup` - Windows NT 组的名称（必须能够解析为 SID）
+- `rid` - 无符号 32 位整数
+- `sid` - 完整 SID，格式为 "`S-1-...`"
+- `type` - 组的类型；可以是 `'domain'`（域）、`'local'`（本地）或 `'built-in'`（内置）
+- `comment` - 组的自由格式文本描述
+
+## GROUPMAP ADD
+添加新的组映射条目：
+```
+net groupmap add {rid=int|sid=string} unixgroup=string \
+                [type={domain|local}] [ntgroup=string] [comment=string]
+```
+
+## GROUPMAP DELETE
+删除组映射条目。如果匹配到多个组名称，则删除找到的第一个条目。
+```
+net groupmap delete {ntgroup=string|sid=SID}
+```
+
+## GROUPMAP MODIFY
+更新现有的组条目
+```
+net groupmap modify {ntgroup=string|sid=SID} [unixgroup=string] \
+                   [comment=string] [type={domain|local}]
+```
+
+## GROUPMAP LIST
+列出现有的组映射条目
+```
+net groupmap list [verbose] [ntgroup=string] [sid=SID]
+```
+
+# MAXRID
+打印本地服务器当前使用的最高 RID（由活动的 `'passdb 后端'`决定）。
+
+# RPC INFO
+打印远程服务器域的信息，例如域名、域 SID 以及用户和组的数量。
+
+# [RPC|ADS] TESTJOIN
+检查参与域是否仍然有效。
+
+# [RPC|ADS] CHANGE TRUSTPW
+强制更改域信任密码。
+
+# RPC TRUSTDOM
+`RPC TRUSTDOM ADD 域` 为远程服务器上的域添加域间信任账户。
+`RPC TRUSTDOM DEL 域` 从远程服务器上移除域的域间信任账户。
+
+> 注意
+>
+> 当前未实现。
+
+`RPC TRUSTDOM ESTABLISH 域` 与受信任域建立信任关系。域间账户必须已在远程 PDC 上创建。
+`RPC TRUSTDOM REVOKE 域` 放弃与受信任域的关系
+`RPC TRUSTDOM LIST` 列出所有当前的域间信任关系。
+
+`RPC RIGHTS` 此子命令用于查看和管理 Samba 的权利分配（也称为权限）。目前有三个可用的选项：`list`（列出）、`grant`（授予）和 `revoke`（撤销）。有关 Samba 权限模型及其使用的更多细节，可在 Samba-HOWTO-Collection 中找到。
+
+# RPC ABORTSHUTDOWN
+中止远程服务器的关机过程。
+
+# SHUTDOWN
+**SHUTDOWN** [**-t 超时**] [**-r**] [**-f**] [**-C 消息**]
+关闭远程服务器。
+- **-r** 关机后重启。
+- **-f** 强制关闭所有应用程序。
+- **-t 超时** 系统关机前的超时时间。系统的交互式用户可以利用这段时间取消关机。
+- **-C 消息** 在屏幕上显示指定消息以通知关机。
+
+# SAMDUMP
+打印远程服务器的 sam 数据库。您需要在一台 BDC 上运行此命令。
+
+# VAMPIRE
+将用户、别名和组从远程服务器导出到本地服务器。只能在一台 BDC 上运行。
+
+# GETSID
+获取域 SID 并将其存储在本地 `secrets.tdb` 中。
+
+# ADS LEAVE
+使远程主机退出其所在的域。
+
+# ADS STATUS
+打印本地机器在 ADS 中的机器账户状态。会打印相当多的调试信息。面向开发人员，普通用户应使用 **NET ADS TESTJOIN**。
+
+# ADS PRINTER
+
+### ADS PRINTER INFO [***打印机***] [***服务器***]
+在***服务器***上查找***打印机***的信息。打印机名称默认为 "*"，服务器名称默认为本地主机。
+
+### ADS PRINTER PUBLISH ***打印机***
+使用 ADS 发布指定打印机。
+
+### ADS PRINTER REMOVE ***打印机***
+从 ADS 目录中移除指定打印机。
+
+## ADS SEARCH 表达式 属性...
+在 ADS 服务器上执行原始 LDAP 搜索并转储结果。表达式是标准的 LDAP 搜索表达式，属性是要在结果中显示的 LDAP 字段列表。
+
+示例：`net ads search '(objectCategory=group)' sAMAccountName`
+
+## ADS DN DN (attributes)
+在 ADS 服务器上执行原始 LDAP 搜索并转储结果。DN 是标准 LDAP DN，属性是要在结果中显示的 LDAP 字段列表。
+
+示例：`net ads dn 'CN=administrator,CN=Users,DC=my,DC=domain' sAMAccountName`
+
+## WORKGROUP

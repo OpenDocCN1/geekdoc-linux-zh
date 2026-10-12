@@ -1,0 +1,110 @@
+
+默认情况下，在安装过程中，某些版本的 Red Hat Linux 会在 `/etc/hosts` 中添加以下条目：
+
+```bash
+127.0.0.1 loopback "hostname"."domainname"
+```
+
+这会导致 Samba 回环到环回接口。结果是 Samba 无法与世界正确通信，因此可能无法正确协商谁是主浏览列表持有者，谁是主浏览器。
+
+纠正措施：删除以 `127.0.0.1` 开头的行中 `loopback` 一词之后的条目。
+
+### 41.5 AIX：顺序预读
+
+使用 `vm tune -r 0` 禁用顺序预读可以显著提高 Samba 的性能。
+
+### 41.6 Solaris
+
+#### 41.6.1 锁定改进
+
+有些人报告在 Solaris 上运行 Samba 时遇到 `F_SETLKW64`/`fcntl` 的问题。内置的文件锁定机制缺乏扩展性。性能会退化到进程陷入尝试锁定文件的循环的程度。它会尝试一个锁，然后失败，然后再次尝试。锁定尝试在授予之前失败了。其可见表现是少数进程占用了所有 CPU，当它们被 `trussed`（跟踪系统调用）时，它们会卡在 `F_SETLKW64` 循环中。
+
+请向 Sun 支持部门咨询修复此 bug 所需的最新补丁。对于版本 2.6，补丁版本号为 `105181-34`；对于版本 8，为 `108528-19`；对于版本 9，为 `112233-04`。安装这些补丁后，建议重新配置并重新构建 Samba。
+
+感谢 Joe Meslovich 报告此问题。
+
+#### 41.6.2 Solaris 9 上的 Winbind
+
+Solaris 9 上的 Nsswitch 拒绝使用 Winbind NSS 模块。Sun 在补丁 `112960-14` 中修复了此行为。
+
+[^1]: <http://sunsolve.sun.com/search/advsearch.do?collection=PATCH&type=collections&max=50&language=en&queryKey=112960;rev=14&toDocument=yes>
+
+## 42 SAMBA 及其他 CIFS 客户端
+
+本章包含客户端特定的信息。
+
+### 42.1 Macintosh 客户端
+
+是的。Thursby 有一款名为 DAVE 的 CIFS 客户端/服务器。他们针对 Windows 95、Windows NT/200x/XP 和 Samba 对其进行测试以检查兼容性问题。在撰写本文时，DAVE 的版本为 5.1。有关该产品的更多信息，请参阅 Thursby 的[网站](https://www.thursby.com/)。
+
+替代品包括针对多种 UNIX 机器的两个免费 AppleTalk 实现，以及另外几种商业实现。这些产品允许你原生地为 Macintosh 用户提供文件服务和打印服务，而无需在 Macintosh 上额外提供支持。这两个免费实现分别是 Netatalk 和 CAP。Samba 为 MS Windows 用户提供的功能，这些包则为 Mac 提供了同等功能。有关这些包、Samba 以及 Linux（和其他基于 UNIX 的系统）的更多信息，请参阅 [http://www.eats.com/linux_mac_win.html](http://www.eats.com/linux_mac_win.html)。
+
+较新版本的 Macintosh（Mac OS X）包含 Samba。
+
+### 42.2 OS/2 客户端
+
+#### 42.2.1 配置 OS/2 Warp Connect 或 OS/2 Warp 4
+
+基本上，你需要三个组件：
+
+- 文件和打印客户端（IBM Peer）
+
+- TCP/IP（Internet 支持）
+
+- “NetBIOS over TCP/IP” 驱动程序（TCPBEUI）
+
+在空白系统上随基础操作系统一起安装前两项在 Warp 手册中有说明。如果已经安装了 Warp，但现在你想安装网络支持，请使用“System Setup”文件夹中的“Selective Install for Networking”对象。
+
+手册中未描述添加“NetBIOS over TCP/IP”驱动程序的过程，在线文档中也仅略有提及。启动 `MIPTS.EXE`，点击 **OK**，点击 **Configure LAPS**，然后点击 **IBM OS/2 NETBIOS OVER TCP/IP in Protocols**。然后将这一行移动到 **Current Configuration** 中。选中该行，点击 **Change number**，并将其从 0 增加到 1。保存此配置。
+
+如果 Samba 服务器不在你的本地子网上，你可以选择将这些服务器的 IP 名称和地址添加到 **Names List** 中，或者指定一个 WINS 服务器（在 IBM 和 RFC 术语中称为 NetBIOS Name server）。对于 Warp Connect，你可能需要下载 **IBM Peer** 的更新版本，使其水平与 Warp 4 保持一致。请参阅 [IBM OS/2 Warp 网页](https://www.ibm.com/systems/os2/)。
+
+#### 42.2.2 配置其他版本的 OS/2
+
+本节讨论配置 OS/2 Warp 3（非 Connect 版）、OS/2 1.2、1.3 或 2.x。
+
+你可以使用免费的 Microsoft LAN Manager 2.2c OS/2 客户端，可从 [ftp://ftp.microsoft.com/BusSys/Clients/LANMAN.OS2/](ftp://ftp.microsoft.com/BusSys/Clients/LANMAN.OS2/) 获取。简而言之，编辑 OS/2 引导分区根目录中的 `OS2VER` 文件，并添加以下行：
+
+```
+20=setup.exe
+20=netwksta.sys
+20=netvdd.sys
+```
+
+在安装客户端之前完成此操作。此外，不要使用附带的 NE2000 驱动程序，因为它存在 bug。请尝试使用 [ftp://ftp.cdrcom.com/pub/os2/network/ndis/](ftp://ftp.cdrcom.com/pub/os2/network/ndis/) 上的 NE2000 或 NS2000 驱动程序。
+
+#### 42.2.3 OS/2 客户端的打印机驱动程序下载
+
+创建一个名为 `/PRINTDRV` 的共享，该共享对所有人可读。将你的 OS/2 驱动程序文件复制到那里。由于 .EA. 文件必须保持独立，因此你需要使用原始安装文件，而不能从已安装驱动的 OS/2 系统复制驱动程序。
+
+首先为该打印机安装 NT 驱动程序。然后，在你的 `smb.conf` 中添加一个参数 `os2 driver map`。接下来，在 `filename` 指定的文件中，按照以下方式将 NT 驱动程序名称映射到 OS/2 驱动程序名称：
+
+```
+nt driver name = os2 driver name, device name, e.g.,
+```
+
+```
+HP LaserJet 5L = LASERJET,HP LaserJet 5L
+```
+
+你可以在此文件中映射多个驱动程序。
+
+如果你只指定了 OS/2 驱动程序名称而未指定设备名称，第一次尝试下载驱动程序时实际上会下载文件，但 OS/2 客户端会提示你驱动程序不可用。在第二次尝试时，它将正常工作。只需在映射中添加设备名称即可修复此问题，之后第一次尝试就会成功。
+
+### 42.3 Windows for Workgroups
+
+#### 42.3.1 Microsoft 最新的 TCP/IP 协议栈
+
+如果你使用 Windows for Workgroups，请使用 Microsoft 最新的 TCP/IP 协议栈。早期的 TCP/IP 协议栈存在大量 bug。
+
+Microsoft 已发布其 TCP/IP 32 位 VxD 驱动的增量升级。最新版本可在 `ftp.microsoft.com` 的 `/Softlib/MSLFILES/TCP32B.EXE` 中找到。那里有一个 `update.txt` 文件，描述了已修复的问题。新文件包括 `WINSOCK.DLL`、`TELNET.EXE`、`WSOCK.386`、`VNBST.386`、`WSTCP.386`、`TRACERT.EXE`、`NETSTAT.EXE` 和 `NBSTAT.EXE`。
+
+有关此补丁的更多信息，请参阅知识库文章 `99891`。
+
+#### 42.3.2 密码更改后删除 .pwl 文件
+
+Windows for Workgroups 在处理密码方面表现很差。当你在 UNIX 机器或 PC 上更改密码时，最安全的做法是删除 Windows 目录中的 `.pwl` 文件。PC 会抱怨找不到文件，但很快就会克服这个问题，允许你输入新密码。
+
+如果你不这样做，你可能会发现 Windows for Workgroups 记住并使用了旧密码，即使你已经告诉了它新密码。
+
+Windows for Workgroups 通常还会完全忽略你在对话框中提供的密码。
