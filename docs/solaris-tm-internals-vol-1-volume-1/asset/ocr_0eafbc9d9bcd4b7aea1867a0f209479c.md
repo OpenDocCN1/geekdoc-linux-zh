@@ -1,0 +1,5 @@
+![](bbox=[0.215, 0.128, 0.831, 0.643])
+
+accessed location. Once the hardware MMU mapping is established, the seg_vn driver can begin handling page faults within that segment.
+
+Having established a valid hardware mapping for our file, we can look at how our mapped file is effectively read into the address space. The hardware MMU can generate traps for memory accesses to the memory within that segment. These traps will be routed to our seg_vn driver through the as_fault() routine. (See “Page Faults in Address Spaces” on page 140.) The first time we access a memory location within our segment, the seg_vn_fault() page fault handling routine is called. This fault handler recognizes our segment as a mapped file (by looking in the segvn_data structure) and simply calls into the vnode’s file system (in this case, with ufs_getpage()) to read in a page-sized chunk from the file system. The subsequent accesses to memory that is now backed by physical memory simply

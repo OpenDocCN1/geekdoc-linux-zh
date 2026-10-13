@@ -1,0 +1,10 @@
+# KERNEL VIRTUAL
+ADDRESS MAPS
+
+In this appendix, we illustrate the allocation- and location-specific information for the segments that constitute the Solaris 7 kernel address space.
+
+The kernel address space is represented by the address space pointed to by the system object, kas. The segment drivers manage the manipulation of the segments within the kernel address space. Figure B.1 illustrates the architecture.
+
+![](bbox=[0.248, 0.592, 0.834, 0.832])
+
+**Figure B.1**  *Kernel Address Space and Segments*

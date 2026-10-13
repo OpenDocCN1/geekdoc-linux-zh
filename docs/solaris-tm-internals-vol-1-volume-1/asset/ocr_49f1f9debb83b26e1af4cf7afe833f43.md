@@ -1,0 +1,13 @@
+# ## 9.5 Kernel Processor Control and Processor Sets
+
+Every operating system requires intimate knowledge of the hardware processors it supports and has low-level kernel code to manage things like processor state, trap and interrupt handling, clock tick processing, thread context switching, memory management, stack management, etc. The Solaris kernel extends the notion of processor control considerably beyond traditional implementations. The current model in the Solaris kernel was driven by several requirements of two goals:
+
++   - **Multiprocessor system efficiency.** Sun leads the industry in building scalable multiprocessor server systems based on the Symmetric Memory Processor (SMP) architecture. This architecture is defined as some number of processors that share a single image of the operating system, the system’s physical address space (physical memory and I/O space), and the kernel’s virtual address space. Building an operating system that manages processor resources effectively and efficiently is key to system scalability and management.
++   - **Resource management and control.** The ability to manage the hardware resources of a system effectively, such that applications or groups of users can be guaranteed some percentage of available processor resources, has become a mainstream requirement in all facets of computing. Other control mechanisms such as dynamically taking processors offline without affecting the entire system, bringing processors online, redirecting interrupts, and even powering processors down are also features that are much in demand.
+
+The Solaris kernel delivers on these requirements with a kernel implementation built around per-processor data structures and kernel code functions for processor management and integration into related areas of the operating system, primarily the kernel threads scheduler, or dispatcher.
+
+Every processor on a Solaris system has a corresponding data structure, the cpu structure, which maintains various bits of information, such as the state of the processor, and links to resources used by the processor, such as its dispatch queues, an idle thread, and interrupt threads. The cpu structure members can be categorized by function.
+
++   - **General information** — The CPU identification number, a sequential ID number, and state flags.
++   - **Kernel thread pointers** — Pointers to the currently executing kernel thread, an idle kernel thread, and a pause kernel thread; a pointer to the current LWP.

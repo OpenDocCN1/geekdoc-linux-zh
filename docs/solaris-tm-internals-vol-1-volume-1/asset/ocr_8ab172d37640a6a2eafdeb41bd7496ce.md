@@ -1,0 +1,11 @@
+and sem_getvalue(3R)—are used for both types of semaphores. The creation and destruction interfaces are different. The Solaris implementation of the POSIX sem_init(3R), sem_destroy(3R), sem_wait(3R), sem_trywait(3R), and sem_post(3R) functions actually invokes the Solaris threads library functions of the same name through a jump-table mechanism in the Solaris POSIX library. The jump table is a data structure that contains function pointers to semaphore routines in the Solaris threads library, libthread.so.1.
+
+POSIX defines two system-imposed limits specific to POSIX semaphores: SEM_SEMNS_MAX, the maximum number of semaphores per process; and SEM_VALUE_MAX, the maximum value of a semaphore. In Solaris 2.6 and Solaris 7, both of these limits are set to 2147483647 (2 billion). This does not mean that applications will work well (or at all) opening 2 billion semaphores (the usual caveats apply with respect to limits on processes). The sem_open(3R) code requires an available file descriptor for a very short period, but the file descriptor is closed once the semaphore is acquired, so file descriptor limits should not be an issue.
+
+The use of POSIX named semaphores begins with a call to sem_open(3R), which returns a pointer to an object defined in the /usr/include/semaphore.h header file, sem_t. The sem_t structure defines what a POSIX semaphore looks like, and subsequent semaphore operations reference the sem_t object. The fields in the sem_t structure include a count (sem_count), a semaphore type (sem_type), and magic number (sem_magic). sem_count reflects the actual semaphore value. sem_type defines the scope or visibility of the semaphore, either USYNC_THREAD, which means the semaphore is only visible to other threads in the same process, or USYNC_PROCESS, which means the semaphore is visible to other processes running on the same system. sem_magic is simply a value that uniquely identifies the synchronization object type as a semaphore rather than a condition variable, mutex lock, or reader/writer lock (see /usr/include/synch.h).
+
+Semaphores within the same process are maintained by the POSIX library code on a linked list of semaddr structures. The structure fields and linkage are illustrated in Figure 10.4.
+
+![](bbox=[0.199, 0.696, 0.866, 0.854])
+
+**Figure 10.4** *POSIX Named Semaphores*

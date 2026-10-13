@@ -1,0 +1,9 @@
+![](bbox=[0.218, 0.133, 0.848, 0.46])
+
+**Figure 3.12** *Solaris 7 Turnstiles*
+
+Each entry in the chain has its own lock, `tc_lock`, so chains can be traversed concurrently. The turnstile itself has a different lock; each chain has an active list (`ts_next`) and a free list (`ts_free`). There are also a count of threads waiting on the sync object (`ts_waiters`), a pointer to the synchronization object (`ts_sobj`), a thread pointer linking to a kernel thread that had a priority boost through priority inheritance, and the sleep queues. Each turnstile has two sleep queues, one for readers and one for writers. (Threads blocking on a read/write lock are maintained on separate sleep queues.) The priority inheritance data is integrated into the turnstile, as opposed to being maintained in a separate data structure (which is what Solaris 2.6 and 2.5.1 do).
+
+In Solaris 7, every kernel thread is born with an attached turnstile. That is, when a kernel thread is created by (the kernel `thread_create()` routine), a turnstile is allocated for the kthread and linked to kthread’s `t_ts` pointer. A kthread can block on only one lock at a time, so one turnstile is sufficient.
+
+We know from the previous sections on mutex and RW locks that a turnstile is required if a thread needs to block on a synchronization object. Solaris 7 calls `turnstile_lookup()` to look up the turnstile for the synchronization object in the `turnstile_table[]`. Since we index the array by hashing on the address of the lock, if a turnstile already exists (there are already waiters), then we get the correct turnstile. If no threads are currently waiting for the lock, `turnstile_lookup()` simply returns a null value. If the blocking code must be called (recall from the previous sections that subsequent tests are made on lock availability before it is determined that the kthread must block), then

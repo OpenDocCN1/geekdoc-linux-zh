@@ -1,0 +1,402 @@
+
+- mknod 17
+- mlock(3C) 353
+- mmap() 148, 150, 510, 558
+- mmap(2) 429, 461
+- MMU 21, 127, 141, 149, 152, 193, 197
+- MMU 生成的陷阱 200
+- MMU 专用页结构 169
+- mod_install 119
+- mod_modinfo 结构 118
+- mod_ops 结构 120
+- modctl 结构 119
+- modinfo 106
+- modload()，内核函数 117
+- modload(1M) 435
+- 模块加载 12
+- 模块文本与数据 209
+- mount 614
+- mpstat 42
+- mpstat(1M) 88
+- mq_maxmsg 466
+- mq_maxsz 466
+- mq_open(3R) 465
+- mq_receive(3R) 465
+- mq_send(3R) 465
+- MS-DOS 文件系统 9
+- msgmap 433, 454
+- msqid_ds 453, 455
+- 多处理器 4
+- 多处理器 60
+- 多处理器 4
+- 多线程 8
+- 多线程应用程序 63
+- 多线程内核 8
+- 互斥锁 65, 71
+- MUTEX_DEFAULT 75
+- mutex_exit() 函数 74
+- mutex_init() 函数 74, 76
+- mutex_sobj_ops 71
+- MUTEX_SPIN 75
+- mutex_vector_enter() 函数 75, 76
+- mutex_vector_exit() 函数 77
+- 互斥锁 68
+
+## N
+
+- ncsize 112, 570, 616
+- ndquot 112
+- 嵌套陷阱 34
+- 网络文件系统 541
+- 网络文件系统 23
+- 网络 11
+- nextofkin 278
+- Nexus 驱动程序 25
+- NFPCHUNK 283
+- NFS 4, 535, 607
+- nfs 24, 525
+- ngroups_max 112
+- nice(1) 376
+- NIS 4
+- NOFILE（资源限制）283
+- non_anon() 186
+- 非阻塞 I/O 496
+- 不可分页 205
+- 非一致内存访问 61
+- Nucleus 199, 209
+
+## O
+
+- O_APPEND 497
+- O_CREAT 496
+- O_DSYNC 498
+- O_EXCL 496, 497
+- O_NDELAY 495, 496
+- O_NONBLOCK 495, 496
+- O_RSYNC 498
+- O_SYNC 498
+- 对象缓存 220
+- off_t 517
+- 磁盘上的 inode 597
+- ONPROC 275
+- open 17
+- Open Boot 208
+- open() 493, 494, 544, 569
+- OpenBoot PROM 107
+- Oracle 203
+
+## P
+
+- p_as 271
+- p_child 276
+- p_cred 273
+- p_cstime 279
+- p_cutime 279
+- p_exec 271
+- p_filesz 301
+- p_holdlwp 279
+- p_lwpblocked 279
+- p_lwpcnt 279
+- p_lwptotal 279
+- p_memsz 301
+- p_mlreal 320
+- p_mstart 297
+- p_next 276
+- p_nextofkin 276
+- p_nextorph 276
+- p_orphan 276
+- p_parent 276
+- p_pglink 276
+- p_pgpid 278
+- p_pidp 278
+- p_pglink 276
+- p_ppid 275
+- p_prev 276
+- p_prof 280
+- p_psibling 276
+- p_sessp 278
+- p_sibling 276
+- p_sig 338
+- p_stat 274
+- p_stime 279
+- p_tlist 279
+- p_utime 279
+- p_zombcnt 279
+- p_zomblist 279, 304
+- 页缓存 602
+- 页着色 172
+- 页着色 176
+- 页着色算法 177
+- 缺页错误 141
+- 缺页错误 152
+- 页哈希链表 168
+- 页链表 170
+- 页管理 167
+- 页保护与建议 152
+- 页回收 172
+- 页扫描程序 178
+- 页扫描程序 21
+- 页扫描程序的实现 187
+- 页扫描程序的操作 179
+- 页扫描程序参数 186
+- 页大小 173
+- 页表项 195
+- 页表 209
+- 页节流 173
+- page_create() 172
+- page_create_va() 172, 176, 213
+- page_exists() 172
+- page_find() 168, 172
+- page_first() 172
+- page_free() 171, 172
+- page_hash 168
+- PAGE_HASH_SEARCH 169
+- page_isfree() 172
+- page_ismod() 172
+- page_isref() 172
+- page_isshared() 172
+- page_lookup() 168, 172, 173
+- page_lookup_nowait() 168, 173
+- page_needfree() 173
+- page_next() 173
+- 可分页的内核内存 210
+- 分页 vnode 548
+- 页调入 126
+- 页调入 606
+- pageio_done() 550
+- pageio_setup() 550
+- 页级接口 172
+- pagelock() 147
+- 页调出 126
+- 页调出进程 114
+- 页 126
+- 页 - 定位 169
+- pages_before_pager 607
+- 页窃取 183
+- 分页计数器 242
+- 分页参数 611
+- 并行架构 62
+- 部分存储顺序（PSO）67
+- 路径名管理 565
+- 路径名遍历 568
+- PC/DOS 541
+- pcfs 24, 525
+- PCMCIA 26
+- PCWATCH 164
+- 性能 176, 189
+- pfiles 284, 488
+- 物理内存 129
+- 物理内存 20, 235
+- 物理内存管理 127
+- 物理页链表 188
+- 物理页号 195
+- 物理交换空间 238
+- pi_willto() 函数 88, 96
+- PID 278
+- pid_assign() 297
+- pid_pgorphaned 278
+- pid_prinactive 278
+- pid_prslot 278
+- PIL 98
+- 固定线程 40
+- 管道 17
+- 管道 22
+- pirect 结构 94
+- 平台
+- pmap 239
+- pmap(1) 272
+- pn_alloc() 568
+- pn_fixslash() 568
+- pn_free() 568
+- pn_get() 568
+- pn_getcomponent() 568
+- pn_getsymlink() 568
+- pn_insert() 568
+- pn_set() 568
+- pn_setlast() 568
+- pn_skipslash() 568
+- po_share 183
+- poll() 494
+- poll(2) 283
+- POSIX IPC 18
+  - 内部函数 460
+  - 内部函数 459
+- post_syscall() 297
+- 电源管理 6
+- pr_read_psinfo() 314
+- pr_size 165
+- pr_tread 165
+- pread 489
+- pread 和 pwrite 501
+- pread() 494
+- 抢占 43
+- 抢占 16
+- 抢占控制 380
+- 抢占式 350
+- prin() 309
+- priocntl(1) 355, 377
+- priocntl(2) 355
+- 优先级继承 94
+- 优先级继承（描述）89
+- 优先级中断级别（PIL）73, 76
+- 优先级反转 352
+- 优先级反转（描述）89
+- 优先级分页 7
+- 优先级分页 179
+- 优先级分页 608
+- 优先级分页算法 183
+- 优先级范围 17
+- priority_paging 183, 186, 609
+- 私有 243
+- 特权执行模式 31
+- 特权指令 32
+- procdir 310
+- 进程 10, 261
+- 进程上下文 29
+- 进程上下文 269
+- 进程控制块 286
+- 进程执行与调度 11
+- 进程执行时间统计 55
+- 进程组 263
+- 进程组 342
+- 进程映像 267
+- 进程模型 262
+- 进程优先级 16
+- 进程状态 274
+- 进程状态 274
+- 进程结构 269
+- 进程表 261, 290
+- 进程 14
+- 进程、线程与调度 14
+- 处理能力 4
+- 处理器绑定 426
+- 处理器控制块 421
+- 处理器中断级别（PIL）33
+- 处理器分区与绑定 9
+- 处理器复位 32
+- 处理器集 7, 372, 426
+- 处理器状态 31
+- 处理器状态 422
+- processor_bind(2) 426
+- Procfs 262
+- procfs 25, 306, 525
+- 程序头表 268
+- PROM 208
+- PROT_EXEC 512
+- PROT_NONE 512
+- PROT_READ 151, 512
+- PROT_WRITE 151, 512
+- 保护错误 141
+- 保护模式 140
+- prtmem 237, 607
+- prtswap 163, 248
+- prwatch 165
+- ps 239
+- ps(1) 261
+- pset_bind(2) 426
+- 伪文件系统 23
+- psrset(1M) 369
+- pthread_create(3T) 264, 265
+- PTHREAD_SCOPE_SYSTEM 265
+- pthread_setconcurrency() 265
+- pu_sysinfo.rw_fdrails 88
+- putpage() 160
+- pvn_getdirty() 549
+- pvn_plist_init() 549
+- pvn_read_done() 549
+- pvn_read_kluster() 549
+- pvn_vplist_dirty() 550
+- pvn_write_done() 549
+- pvn_write_kluster() 550
+- pwrite 489
+- pwrite() 495
+
+## Q
+
+- QFS 528
+- qfs 525
+- 配额 539
+
+## R
+
+- RAM 125, 168
+- read() 495, 544
+- read() 和 write() 系统调用 558
+- readdir() 600
+- 读写（RW）锁 68
+- 读写（RW）锁 65
+- 读-修改-写 63
+- readv 489
+- readv 和 writev 502
+- readv() 495
+- 实时 10
+- 实时 353
+- 实时优先级 351
+- realtime_timeout() 47
+- rechoose_interval 390
+- reclaim() 222
+- 回收 172
+- RED 状态 32
+- 寄存器 26
+- 常规（磁盘）文件系统 525
+- 松弛内存顺序（RMO）67
+- reserved-procs 291
+- 资源映射分配器 214
+- 资源映射 433
+- resume() 404
+- resume_from_intr() 函数 97
+- rlim_cur 282
+- rlim_fd_cur 484
+- rlim_fd_max 484
+- rlim_max 282
+- rlimit 282
+- RLIMIT_VMEM 301
+- 资源限制 113
+- rmalloc() 214, 215
+- rmalloc_locked() 215
+- rmalloc_wait() 215
+- rmallocmap() 214, 215
+- rmallocmap_wait() 215
+- rmfree() 215
+- rmfreemap() 214, 215
+- rmget() 215
+- 根 vnode 573
+- rootvfs 554, 555
+- 轮次 225
+- RPC 4
+- rstchown 112
+- RT 9, 16
+- rt_enterclass() 387
+- rt_globpri 368
+- rt_quantum 368
+- RUN 274
+- 运行时链接器 267
+- rw_enter() 函数 82
+- rw_enter_sleep() 函数 83, 84
+- rw_exit() 函数 82
+- rw_exit_wakeup() 函数 85
+- rw_init() 函数 82
+- rw_rdfails 84
+- rw_sobj_ops 71
+- rw_waiters 86
+- rw_wlock 86
+- rw_wrfails 84
+- rw_wwh 86
+
+## S
+
+- SA_NOCLDWAIT 302
+- SA_ONSTACK 335
+- SA_SIGINFO 333
+- samfs 525
+- sar -g 599
+- sar -k 236
+- sar -v 619
+- sbrk() 135
+- 可扩展性 4
+- 扫描速率 184, 606
+- sched 进程 359
+- schedaging() 187
+- 调度器激活 380
+- 调度器激活 352
+- 调度器操作 415

@@ -1,0 +1,8 @@
+```
+```c
+if ((result->tv_nsec = a->tv_nsec - b->tv_nsec) < 0) {
+        result->tv_nsec += 1000000000;
+        result->tv_sec -= 1;
+}
+```
+```

@@ -1,0 +1,15 @@
+attempts to maintain a pool of turnstiles that keeps pace with the number of kernel threads on the system by looking at the turnstile pool every time the internal `thread_create()` function is called to create a new kernel thread. If the number of kernel threads is greater than the number of turnstiles in the pool when a kernel thread is created, then the code dynamically allocates another chunk of turnstiles. This is somewhat different from the Solaris 7 implementation, where a turnstile is created and linked to every kernel thread when the kernel thread is created. Conceptually, it addresses the same problem of having a sufficient number of turnstiles available at all times.
+
+The turnstile functions called by the mutex and RW lock code to put a thread to sleep work as follows. The mutex and RW locks each contain a reference to a turnstile for the synchronization object, which we’ll refer to generically as waiters in this discussion.
+
++   - If the `waiters` field in the lock is 0 (no waiters), then a turnstile is allocated from the pool by `tstile_alloc()`, which simply allocates a turnstile off the `tsp_list` pointer (the free pool link) after setting the pool lock, `tsp_lock`.
++   - The active counter is incremented, the pool lock is released, and the `pirec` structure associated with the new turnstile is cleared.
++   - The `waiters` field in the lock is set to the turnstile ID of the turnstile just allocated, and the turnstile’s `ts_sobj_priv_data` (turnstile synchronization object private data) field is set to point to the address of the lock structure.
++   - If threads (at least one other) are already waiting for the mutex, then a turnstile already exists, so the address of the turnstile that has already been allocated for the mutex is retrieved with the `tstile_pointer()` function, which uses the turnstile ID in the `waiters` field of the lock to locate the turnstile in the `t_sm_chunk` array.
+
+With a turnstile for the lock now ready, we can proceed with changing the thread state to sleep and setting up the sleep queue associated with the turnstile.
+
++   - The kernel `t_block()` function is called and invokes the `CL_SLEEP` macro.
++   - Scheduling-class-specific functions are invoked by macros that resolve to the proper function, based on the scheduling class of the kernel thread. In the case of a timeshare or interactive class thread, the `ts_sleep()` function is called to set the thread’s priority to a SYS priority (a priority boost for when it wakes up—it will run before other timeshare and interactive class threads) and to set the thread state to `TS_SLEEP`.
++   - The kernel thread’s `t_wchan` field (wait channel) is set to the address of the lock the thread is waiting for, and the thread’s `t_sobj_ops` pointer is set to the lock’s synchronization object operations vector. (See “Synchronization Object Operations Vector” on page 70.)
++   - Finally, the thread’s `t_ts` field is set to the address of the turnstile, and the thread is inserted on the turnstile’s sleep queue.

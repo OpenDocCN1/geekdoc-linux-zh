@@ -1,0 +1,5 @@
+The scheduling-class-specific sleep function is called to set the thread wakeup priority and to change the thread state from ONPROC (running on a processor) to SLEEP. The kernel thread's `t_wchan` (wait channel) pointer is set to the address of the semaphore it is blocking on, and the thread's `t_sobj_ops` pointer is set to reference the `sema_sobj_ops` structure. The thread is now in a sleep state on a sleep queue.
+
+A semaphore is released by the `sema_v()` function, which has the exact opposite effect of `sema_p()` and behaves very much like the lock release functions we've examined up to this point. The semaphore value is incremented, and if any threads are sleeping on the semaphore, the one that has been sitting on the sleep queue longest will be woken up. Semaphore wakeups always involve waking one waiter at a time.
+
+Semaphores are used in relatively few areas of the operating system: the buffer I/O (`bio`) module, the dynamically loadable kernel module code, and a couple of device drivers.

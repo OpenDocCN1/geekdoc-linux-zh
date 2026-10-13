@@ -1,0 +1,9 @@
+# 9.4  Scheduler Activations
+
+We made several references to scheduler activations in the preceding text and highlighted the preemption control feature in the thread priority descriptions. Scheduler activations were added to Solaris 2.6 to address several deficiencies in the two-level threads architecture of Solaris and to provide a facility for short-term preemption control by a process. (This section and any previous references to scheduler activations do not apply to Solaris 2.5.1; they apply only to Solaris 2.6 and Solaris 7).
+
+The two levels in the design refer to user-level threads and the underlying kthread/LWP. We use the term LWP from this point forward when discussing the kernel level, and we use threads to refer to a user thread created from the threads library. User-level threads are scheduled within the framework of the threads library—the user threads actually participate in their own scheduling through preemption points and internal threads library routines. User threads are, by design, not visible to the kernel. The priority of a user thread has no bearing on the scheduling or priority of an LWP linked to the thread for execution.
+
+Prior to Solaris 2.6, there was no facility for communication between the user threads scheduler and the kernel dispatcher (see Figure 9.16), and thus no correlation between the priority of a user thread and the priority of the underlying LWP. This problem could be circumvented to some extent by the use of bound threads, where every user thread was bound to an LWP, and priority control facilities (priocntl(1M)) managed execution priorities at the LWP level.
+
+![](bbox=[0.175, 0.608, 0.891, 0.876])

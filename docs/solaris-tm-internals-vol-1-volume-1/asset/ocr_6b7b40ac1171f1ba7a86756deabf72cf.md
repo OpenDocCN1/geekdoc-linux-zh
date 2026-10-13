@@ -1,0 +1,20 @@
+page_create_va() function is described with the page management functions in Table 5-10 on page 204.
+
+> **Note:** The page_create_va() function deprecates the older page_create() function. We chose to add a new function rather than adding an additional argument the existing page_create() function so that existing third party loadable kernel modules which call page_create() remain functional. However, because page_create() does not know about virtual addresses, it has to pick a color at random - which can cause significant performance degradation. The page_create_va() function should always be used for new code.
+
+No one algorithm suits all applications because different applications have different memory access patterns. Over time, the page coloring algorithms used in the Solaris kernel have been refined as a result of extensive simulation, benchmarks, and customer feedback. The kernel supports a default algorithm and two optional algorithms. The default algorithm was chosen according to the following criteria:
+
++   - Fairly consistent, repeatable results
++   - Good overall performance for the majority of applications
++   - Acceptable performance across a wide range of applications
+
+The default algorithm uses a hashing algorithm to distribute pages as evenly as possible throughout the cache. The default and three other available page coloring algorithms are shown in Table 5-12.
+
+# Table 5-12  *Solaris Page Coloring Algorithms*
+
+| Algorithm |  | Description | Solaris Availability |  |  |
+|---|---|---|---|---|---|
+| No. | Name |  | 2.5.1 | 2.6 | 7 |
+| 0 | Hashed VA | The physical page color bin is chosen on a hashed algorithm to ensure even distribution of virtual addresses across the cache. | Default | Default | Default |
+| 1 | P. Addr = V. Addr | The physical page color is chosen so that physical addresses map directly to the virtual addresses (as in our example). | Yes | Yes | Yes |
+| 2 | Bin Hop-ping | Physical pages are allocated with a round-robin method. | Yes | Yes | Yes |

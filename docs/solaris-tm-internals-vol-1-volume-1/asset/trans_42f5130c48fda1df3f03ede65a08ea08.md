@@ -1,0 +1,104 @@
+
+
+![](img/220ae4af07df2fe8e5be69d27f885d1b_175_0.png)
+
+**图 5.5** *SPARC sun4u 32 位与 64 位进程地址空间*
+
+在所有 SPARC 平台上，虚拟地址空间的底部均未映射。空指针引用将导致段错误（segmentation fault），而不会返回地址空间底部可能存在的虚假内容。
+
+## 5.3.3 Intel 地址空间布局
+
+Intel x86 地址空间与 32 位 SPARC V7 共享的进程/内核地址空间一样，用户和内核共享同一个地址空间。Intel 地址空间的主要区别在于：栈被映射到可执行二进制文件的下方，并向下朝底部增长。Intel 地址空间如图 5.6 所示。
+
+![](img/220ae4af07df2fe8e5be69d27f885d1b_176_0.png)
+
+## 5.3.4 进程内存分配
+
+用于用户数据结构的进程虚拟内存从堆段分配，堆段位于可执行数据段之上。堆一开始很小，随着虚拟内存的分配而增长。堆以页为单位增长，并且只是一个可供读写的大型虚拟内存区域。单个大型虚拟内存区域难以编程，因此由通用内存分配器来管理堆区域；这样，就可以分配和释放任意大小的内存对象。通用内存分配器通过 `malloc()` 及相关库调用来实现。
+
+进程通过 `sbrk()` 系统调用来扩展其堆空间。每次调用 `sbrk()` 系统调用时，都会按请求的数量增加堆段。用户程序无需直接调用 `sbrk()`，因为 `malloc()` 库在需要更多分配空间时会调用 `sbrk()`。`sbrk()` 系统调用如下所示。
+
+```c
+void *sbrk(intptr_t incr);
+```
+
+堆段是虚拟内存，因此使用 `malloc()` 和 `sbrk()` 请求内存并不会分配物理内存；它只是分配虚拟地址空间。只有首次引用所分配虚拟空间内的页面时，才会分配物理内存——一次一页。内存系统透明地实现了这种“按需零填充”分配，因为第一次引用堆中的页面时会发生缺页错误，随后段驱动程序识别到首次内存访问，便在那一刻在该位置创建一页。
+
+内存页通过按需零填充分配给进程堆，然后一直保留在堆段中，直到进程退出或被页扫描程序盗用。调用内存分配器 `free()` 并不会将物理内存返回给空闲内存池；`free()` 只是将堆空间内的区域标记为空闲以备将来使用。因此，通常会看到分配给进程的物理内存量增长，但除非内存短缺，否则即使调用了 `free()`，它也不会缩小。
+
+堆可以一直增长，直到与共享库所占用的内存区域重叠。堆的最大大小取决于平台的虚拟内存布局，并且因平台而异。此外，在 64 位平台上，进程可以以 32 位或 64 位模式执行。如第 134 页上的图 5.5 所示，以 64 位模式执行的进程中，堆的大小可以大得多。表 5-1 列出了最大堆大小以及影响最大大小的操作系统要求。
+
+**表 5-1** *最大堆大小*
+
+| Solaris 版本 | 最大堆大小 | 备注 |
+|---|---|---|
+| Solaris 2.5 | 2 GB | |
+| Solaris 2.5.1 | 2 GB | |
+| Solaris 2.5.1（补丁 103640-08 或更高版本） | 3.75 GB | 需要以 root 身份才能在不使用 `ulimit(1M)` 的情况下将限制提高到 2 GB 以上。 |
+| Solaris 2.5.1（补丁 103640-23 或更高版本） | 3.75 GB | 不需要以 root 身份即可提高限制。 |
+| Solaris 2.6 | 3.75 GB | 需要使用 `ulimit(1M)` 将限制提高到 2 GB 以上。 |
+| Solaris 2.7 32 位模式 | 3.75 GB<br>3.90 GB | （非 sun4u 平台）<br>（sun4u 平台） |
+| Solaris 2.7 64 位模式 | UltraSPARC-I 和 -II 上为 16 TB | 几乎无限。 |
+
+## 5.3.5 栈
+
+进程栈以初始分配的方式映射到地址空间，然后向下增长。栈与堆一样按需增长，但没有库来扩展栈；相反，是由另一种机制触发这种增长。
+
+最初，为栈分配单个页面，随着进程执行并调用函数，它会将程序计数器、参数和局部变量压入栈中。当栈增长超过一页时，进程会触发缺页错误，内核识别出这是栈段的缺页错误，并扩展栈段。
+
+## 5.3.6 地址空间管理
+
+Solaris 内核通过一个中心地址管理子系统实现，内核的其他部分会调用该子系统。地址空间模块是段驱动程序之上的包装器，因此子系统无需知道某个内存范围使用哪个段驱动程序。图 5.7 所示的地址空间对象从进程的地址空间链接而来，并包含指向构成该地址空间的各个段的指针。
+
+![](img/220ae4af07df2fe8e5be69d27f885d1b_178_0.png)
+
+**图 5.7** *地址空间*
+
+地址空间子系统管理以下功能：
+
+- 地址空间的复制，用于 `fork()`
+- 地址空间的销毁，用于 `exit()`
+- 在地址空间内创建新段
+- 从地址空间中移除段
+- 设置和管理地址空间的页保护
+- 地址空间的缺页路由
+- 地址空间的页锁定和建议
+- 地址空间监视点的管理
+
+回顾一下，进程和内核子系统调用地址空间子系统来管理其地址空间。地址空间子系统由一系列函数组成，这些函数分组执行上述功能。尽管该子系统有很多入口点，但其实现相当简单，因为大多数函数只是查找操作需要作用于哪个段，然后将请求路由到相应的段驱动程序。
+
+调用 `as_alloc()` 函数会创建一个地址空间，但 `as_alloc()` 只被调用一次——当系统启动并创建 init 进程时。init 进程创建后，所有地址空间都是通过 `fork()` 复制 init 进程的地址空间来创建的。`fork()` 系统调用在创建新进程时会调用 `as_dup()` 函数来复制当前进程的地址空间，此时整个地址空间配置（包括栈和堆）都会被复制。
+
+`vfork()` 的行为在这里有些不同。`vfork()` 不是调用 `as_dup()` 来复制地址空间，而是通过借用父进程现有的地址空间来创建新进程。如果 fork 之后将要调用 `exec()`，`vfork()` 很有用，因为它省去了复制地址空间的所有工作，否则一旦调用了 `exec()`，这些地址空间也会被丢弃。在子进程使用父进程的地址空间期间，父进程会被挂起，直到调用 `exec()`。一旦进程创建完成，地址空间对象就会被分配和设置。Solaris 7 中地址空间对象的数据结构如下所示。
+
+```c
+struct as {
+        kmutex_t a_contents;    /* protect certain fields in the structure */
+        uchar_t  a_flags;       /* as attributes */
+        uchar_t  a_vbits;       /* used for collecting statistics */
+        kcondvar_t a_cv;        /* used by as_rangelock */
+        struct hat *a_hat;       /* hat structure */
+        struct hrmstat *a_hrmstat; /* ref and mod bit statistics */
+        caddr_t a_userlimit;     /* highest allowable address in this as */
+        union {
+                struct seg *a_seglast; /* last segment in the addr space */
+                ssl_spath *spath;      /* last search path in seg skiplist */
+        } a_cache;
+        krwlock_t a_lock;       /* protects fields below + a_cache */
+        int       a_npages;     /* number of pages */
+        struct watched_page *a_wpage; /* list of watched pages (procs) */
+        seg_next  a_segs;       /* segments in this address space. */
+        size_t    a_size;       /* size of address space */
+        struct seg *a_tail;     /* last element in the segment list. */
+        uint_t    a_nsegs;      /* number of elements in segment list */
+        uchar_t   a_lrep;       /* representation of a_segs; see #defines */
+        uchar_t   a_hilevel;    /* highest level in the a_segs skiplist */
+        uchar_t   a_unused;
+        uchar_t   a_updated;    /* mappings changed, rebuild as_objectdir */
+        vnode_t   a_objectdir;  /* object directory (procfs) */
+        size_t    a_sizedir;    /* size of object directory */
+};
+```
+
+## 头文件 `<vm/as.h>`
+

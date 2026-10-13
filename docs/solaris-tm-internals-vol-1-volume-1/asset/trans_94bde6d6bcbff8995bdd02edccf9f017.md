@@ -1,0 +1,400 @@
+
+- 硬件上下文 266
+- 硬件上下文（进程） 262
+- 硬件地址转换加速 193
+- hash_lookup_depth 231
+- hash_rescale 231
+- hash_size 231
+- HAT（硬件地址转换） 9, 20, 140, 170, 190, 208, 210
+- hat_alloc() 191
+- hat_chgattr() 192
+- hat_free_end() 192
+- hat_free_start() 192
+- hat_get_mapped_size() 192
+- hat_getattr() 192
+- hat_map() 148
+- hat_memload() 192
+- hat_setattr() 192
+- hat_stats_disable() 192
+- hat_stats_enable() 192
+- hat_swapin() 192
+- hat_swapout() 192
+- hat_sync() 192
+- hat_unload() 192
+- 堆 147
+- 堆 135, 185
+- 堆空间 131
+- 高分辨率时钟中断 56
+- 高分辨率定时器 57
+- hires_tick 56, 113
+- hment 196
+- holdcnt 87, 88
+- hsfs 24, 525
+- HSM 539
+
+## I
+
+- I/O 总线和设备管理 11
+- I/O 设备 25
+- I/O 系统 9
+- IA（Intel 架构） 9, 16
+- ia_set_process_group() 386
+- IBM 的 AIX 158
+- ICL 5
+- IDLE 55
+- 内存中（in-memory）inode 597
+- incore() 147
+- 间接块 584, 601
+- Informix 203
+- init 114
+- inode 空闲列表 598
+- inode 编号 579
+- inode 597
+- installboot 582
+- 指令异常 32
+- Intel 地址空间 134
+- Intel Pentium 193
+- Intel x86 8, 174
+- 交互式优先级 351
+- 进程间通信
+  - 标识符 430
+  - 键 430
+  - 对象权限 431
+  - POSIX 459
+  - System V 430
+- 中断 28, 29
+- 中断块 cookie 75
+- 中断上下文 29
+- 中断处理程序 38
+- 中断处理程序 30
+- 中断延迟 8
+- 中断监控 42
+- 中断优先级 351
+- 中断优先级级别 38
+- 中断线程优先级 41
+- 中断 38
+- 中断 9, 26, 27
+- 作为线程的中断 39
+- 紧密共享内存 145
+- 紧密共享内存 440
+- 紧密共享内存 203
+- iowait 55
+- IPC 17
+- IPC_RMID 439
+- ipcaccess() 430
+- ipcget() 430, 432
+- ipcrm() 439
+- ipcs 239
+- ISDN 9
+- ISM 145
+- issig() 340
+- Itanium 5
+- ITOV 598
+- iv_pil 42
+
+## J
+
+- 抖动 54
+- 日志记录 532
+
+## K
+
+- k_anoninfo 162
+- k_anoninfo.ani_free 164
+- k_anoninfo.ani_max 164
+- k_anoninfo.ani_mem_resv 164
+- k_anoninfo.ani_phys_resv 164
+- k_sigset_t 330
+- kaio 504, 507
+- kanon_info 162
+- kas 633
+- 内核地址空间 206, 211
+- 内核地址空间 633
+- 内核异步 I/O 504
+- 内核上下文 29
+- 内核数据段 208
+- 内核设施（时钟、定时器等） 11
+- 内核管理线程 30
+- 内核映射 206
+- 内核内存 205
+- 内核内存 125
+- 内核内存分配 212
+- 内核内存调试 232
+- 内核内存管理 21
+- 内核内存段驱动程序 214
+- 内核模式 27
+- 内核模式优先级 367
+- 内核模块
+  - 目录树 105
+  - 加载 113
+  - 类型 104
+- 内核概述 10
+- 内核抢占队列 369
+- 内核抢占 371, 394
+- 内核服务 27
+- 内核栈 293
+- 内核文本 208
+- 内核文本 202, 206
+- 内核文本和数据段 208
+- 内核线程 264, 287
+- 内核线程 14
+- 内核可调参数 622
+- 内核可调参数
+  - autoup 626
+  - bufhw 627
+  - cachefree 625
+  - consistent_coloring 629
+  - desfree 625
+  - doflush 626
+  - dopageflush 626
+  - fastscan 624
+  - handspreadpages 626
+  - hires_tick 630
+  - kmem_debug_enable 629
+  - kmem_flags 629
+  - kobj_map_space_len 629
+  - lotsfree 624
+  - max_nprocs 630
+  - maxpgio 626
+  - maxphys 627
+  - maxpid 630
+  - maxuprc 630
+  - maxusers 628
+  - min_percent_cpu 625
+  - minfree 625
+  - moddebug 629
+  - msgmap 624
+  - msgmax 624
+  - msgmnb 624
+  - msgmni 624
+  - msgseg 624
+  - msgssz 624
+  - msgtql 624
+  - nautopush 631
+  - ncsiz 627
+  - ndquot 627
+  - ngroups_max 628
+  - noexec_user_stack 630
+  - npty 628
+  - nrmnode 627
+  - nstrpush 631
+  - pageout_reserve 625
+  - pages_before_pager 626
+  - pages_pp_maximum 625
+  - physmem 629
+  - priority_paging 625
+  - pt_cnt 628
+  - rechoose_interval 630
+  - reserved_procs 630
+  - rlim_fd_cur 628
+  - rlim_fd_max 628
+  - rstchown 628
+  - sadcnt 631
+  - segspri_minfree 623
+  - semaem 623
+  - semmap 623
+  - semmni 623
+  - semmns 623
+  - semmnu 623
+  - semmsl 623
+  - semopm 623
+  - semume 623
+  - semvmx 623
+  - shmmax 623
+  - shmmin 623
+  - shmni 623
+  - shmseg 623
+  - slowscan 624
+  - strctlsz 631
+  - strmsgsz 631
+  - swapfs_minfree 628
+  - swapfs_reserve 628
+  - throttlefree 625
+  - timer_max 629
+  - tmpfs_maxmem 627
+  - tmpfs_minfree 627
+  - tune_t_flushr 626
+  - tune_t_minarmem 625
+  - ufs
+    - ufs_HW 627
+    - ufs_LW 627
+    - ufs_WRITES 627
+  - ufs_inode 627
+- 内核虚拟地址映射 633
+- 内核虚拟内存 205
+- 内核虚拟内存布局 205
+- kernel/unix 208
+- Kessler 最佳桶 178
+- kill(2) 325
+- Kirk McKusick 577
+- kluster() 147
+- klustsize 189
+- kmem_cache_alloc() 219, 222
+- kmem_cache_create() 219
+- kmem_cache_create() 220, 222
+- kmem_cache_destroy() 219, 222
+- kmem_cache_free() 222
+- kmem_cache_stat() 222
+- kmem_content_maxsize 233
+- kmem_depot_contention 227
+- kmem_flags 231
+- kmem_freepages() 217
+- kmem_getpages() 216, 217
+- kmem_log_size 233
+- kmem_reap_interval 227
+- kmem_reapahead 228
+- kmem_update_interval 226
+- kpreempt() 398
+- kpreemptpri 389
+- krthd 109, 110
+- ktestxseg 634
+- kvalloc 634
+- kvseg32 634
+
+## L
+
+- L2 缓存 175
+- 大型设备 518
+- 大页 202
+- 大页 200
+- 大文件 519
+- 大文件编译环境 520
+- 大文件峰会 520
+- 大页支持 7
+- 延迟 61
+- lbolt 55
+- ldstub 指令 64, 67, 68
+- libaio 503
+- 库文件 132
+- 轻量级进程 210
+- 轻量级进程 14, 205, 264
+- limit(1) 282
+- 链接 22, 579
+- Linux 602
+- 加载/存储缓冲区（硬件） 66
+- 可加载文件系统模块 543
+- 锁对象操作向量 70
+- 锁原语 63
+- 锁写者位 76
+- 锁唤醒行为 81
+- lock_set() 函数 98
+- lock_set_spl() 函数 98
+- 锁统计信息 7
+- lockop() 147
+- lockstat 76
+- lockstat(1M) 77, 82
+- 日志结构 533
+- 日志记录 533
+- 日志式（Journaling）文件系统 532
+- 日志式 UFS 7
+- lookupn() 566
+- lotsfree 180, 181, 184, 186, 607
+- LP64 8
+- lrusage 318
+- lseek() 494
+- lstat() 494
+- LWP 165, 503
+- LWP 池激活 417
+- lwp_ap 286
+- lwp_asleep 286
+- lwp_create 507
+- lwp_create() 375
+- lwp_curinfo 286
+- lwp_cursig 286
+- lwp_errno 286
+- lwp_error 286
+- lwp_exit 304
+- lwp_kill(2) 325
+- lwp_mstate 321
+- lwp_pcb 286
+- lwp_proc 286
+- lwp_scall_start 286
+- lwp_sigaltstack 286
+- lwp_siginfo 286
+- lwp_sigoldmask 286
+- lwp_stime 286
+- lwp_thread 286
+- lwp_utime 286
+
+## M
+
+- m_owner 78
+- m_owner 字段 75
+- m_spinlock 字段 75
+- 机器状态 286
+- MADV_DONTNEED 513
+- MADV_RANDOM 513
+- MADV_SEQUENTIAL 513
+- MADV_WILLNEED 513
+- 存储仓大小 226
+- magazine_size 231
+- 存储仓 225
+- magic(4) 298
+- main()，内核函数 110
+- 主缺页错误 141
+- malloc(3) 131, 135, 158
+- MAP_FIXED 511
+- MAP_NORESERVE 511
+- MAP_PRIVATE 151, 152, 153, 157, 159, 511
+- MAP_SHARED 151, 511
+- mapelfexec() 301
+- 映射文件 147
+- 映射共享 132
+- 文件映射 512
+- 文件映射 4
+- 映射选项 511
+- 大规模并行处理器 60
+- max_procs 112, 291, 293, 570
+- max_percent_cpu 185
+- maxpgio 187, 190, 611
+- MAXPID 279, 293
+- maxpid 112
+- MAXSIG 325
+- maxslp 190
+- maxuprc 112, 292
+- maxusers 111, 291, 570
+- memcntl() 560
+- memcntl(2) 353
+- 内存屏障（membar）指令 68
+- 内存屏障指令 67
+- 空闲内存 235
+- 内存硬件 125
+- 内存锁定 353
+- 内存管理 11
+- 内存管理异常 32
+- 内存模型 66, 67
+- 内存监控 235
+- 内存监控工具 239
+- 内存页锁定 442
+- 内存调度器 189
+- 内存短缺 237
+- 进程使用的内存 235
+- 文件系统页缓存使用的内存 235
+- 内存利用率 235
+- 内存，文件系统缓存内存 236
+- 内存，空闲内存 236
+- 内存，内核内存 236
+- 内存，物理内存总量 236
+- memory_class 231
+- memps 247
+- memstat 239, 254, 610
+- MemTool 163, 235, 239, 245
+- 消息头 455
+- 消息队列限制
+  - msgmap 452
+  - msgmax 453
+  - msgmnb 453
+  - msgmni 453
+  - msgseg 454
+  - msgssz 454
+  - msgtql 453
+- 元数据 534, 593
+- 元数据日志记录 533
+- MicroSPARC 193
+- microSPARC 174
+- 微状态 321
+- min_percent_cpu 185
+- minfree 187
+- 次缺页错误 150
+- 次缺页错误 141
+

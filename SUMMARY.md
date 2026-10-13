@@ -1976,6 +1976,7 @@
 +   [Solaris 内部机制：核心内核组件](docs/solaris-internals-core-kernel-components/README.md)
 +   [Solaris 安全指南](docs/solaris-security/README.md)
 +   [Solaris 系统管理指南 (New Riders Professional Library)](docs/solaris-system-management-new-riders-professional-library/README.md)
++   [Solaris 内部机制 第1卷](docs/solaris-tm-internals-vol-1-volume-1/README.md)
 +   [Sonar GNU/Linux 快速启动指南：Sonar Gnome 2014.1](docs/sonar-gnulinux-getting-started-guide-sonar-gnome-20141/README.md)
 +   [StarOffice 使用指南](docs/special-edition-u-using-staroffice/README.md)
 +   [Linux 版 Corel Word 8 使用指南特别版](docs/special-edition-using-corel-wordperfect-8-for-linux/README.md)

@@ -1,0 +1,9 @@
+# 14.3.3 In-Core UFS Inodes
+
+Each file system has two forms of an inode: the in-core (in-memory) inode and the on-disk inode. The on-disk inode resides on the physical medium and represents the on-disk format and layout of the file; the in-core inode contains resides in memory and contains the file-system-dependent information, kernel locks, and state.
+
+The vnode is typically contained in an in-core inode, so that when an inode is created, a vnode is automatically created. In that way, simple macros can convert from a file-system-dependent inode to a file-system-independent vnode. The in-core UFS inode contains an embedded vnode, as shown in Figure 14.9.
+
+![](bbox=[0.2, 0.326, 0.711, 0.733])
+
+Embedding the vnode in the inode also allows file systems to easily convert between inode and vnode references. File systems use macros to convert a vnode reference to an inode reference, and vice versa. UFS uses the macro VTOI to con-

@@ -1,0 +1,145 @@
+
+
+```c
+extern struct mod_ops mod_fsops;
+static struct modfs modfs = {
+        &mod_fsops,
+        "vnode_file pseudo file system",
+        &vfw
+};
+
+static struct modlinkage modlinkage = {
+        MODREV_1,
+        &modfs,
+        NULL
+};
+
+int
+_init(void)
+{
+        int     error;
+
+        mutex_init(&vnfslock, NULL, MUTEX_DEFAULT, NULL);
+        rw_init(&vnfsnodes_lock, NULL, RW_DEFAULT, NULL);
+        error = mod_install(&modlinkage);
+        if (error) {
+                mutex_destroy(&vnfslock);
+                rw_destroy(&vnfsnodes_lock);
+        }
+        myfs_init_otherstuff();
+        return (error);
+}
+
+int
+_fini(void)
+{
+        int     error;
+
+        vnfs_vnlist_destroy();
+        error = mod_remove(&modlinkage);
+        if (error) {
+                return (error);
+        }
+        mutex_destroy(&vnfslock);
+        rw_destroy(&vnfsnodes_lock);
+        return (0);
+}
+
+int
+_info(struct modinfo *modinfop)
+{
+        return (mod_info(&modlinkage, modinfop));
+}
+
+static struct vfsw vfw = {
+        "myfs",
+        myfsinit,
+        &myfs_vfsops,
+        0
+};
+
+static int
+myfsinit(struct vfsw *vswp, int fstyp)
+{
+        vswp->vfsw_vfsops = &myfs_vfsops;
+        myfstype = fstyp;
+        (void) myfs_init();
+        return (0);
+}
+```
+
+### 13.6 文件系统刷新守护进程
+
+fsflush 进程定期将已修改的页面写入磁盘。fsflush 进程扫描物理内存以查找脏页。当发现脏页时，它会对该页面发起一次写入（或 putpage）操作。
+
+fsflush 进程默认每 5 秒启动一次，查找超过 30 秒前被修改（页面结构中设置了修改位）的页面。如果页面已被修改，则调度该页面的换出（page-out），但不带释放标志，因此页面仍保留在内存中。默认情况下，fsflush 守护进程同时刷新数据页和 inode。表 13-15 描述了影响 fsflush 行为的参数。
+
+**表 13-15 影响 fsflush 的参数**
+
+| 参数 | 描述 | 最小值 | Solaris 2.7 默认值 |
+| --- | --- | ---: | ---: |
+| `tune_t_fsflushr` | fsflush 扫描之间的秒数。 | 1 | 5 |
+| `autoup` | 超过 autoup 秒的页面将被写入磁盘。 | 1 | 30 |
+| `doiflush` | 默认情况下，fsflush 同时刷新 inode 和数据页。设置为 0 可禁止 inode 更新。 | 0 | 1 |
+| `dopageflush` | 设置为 0 可禁止页面刷新。 | 0 | 1 |
+
+## UNIX 文件系统
+
+Unix 文件系统（UFS）是随 Solaris 提供的通用、基于磁盘的文件系统。自 SunOS 4.x 早期版本以来，它一直是标准的基于磁盘的文件系统。在 Solaris 的发展过程中，UFS 经历了大量变更，以跟上所需的应用程序性能、安全性和可靠性要求。
+
+### 14.1 UFS 发展历史
+
+UFS 的原始版本源自 BSD Unix 中的 Berkeley 快速文件系统（FFS），由 Kirk McKusick 和 Bill Joy 在八十年代末设计。Berkeley FFS 是 Unix 可用的第二个主要文件系统，是对原始 System V 文件系统的一次飞跃。System V 文件系统轻量且简单，但存在显著缺点：性能差、不可靠且功能不足。
+
+在 SunOS 2.0 开发期间，引入了与文件系统无关的接口，以支持在单个操作系统实例中并发存在不同的文件系统。该接口如今称为 vnode/vfs 接口，是所有文件系统与文件相关系统调用进行对接的机制。（vnode/vfs 架构将在第 543 页的“The vnode”中进一步讨论。）当时，UFS 被修改以便在 vnode/vfs 框架内使用。此后，UFS 一直是 Solaris 中大部分文件系统开发工作的焦点。
+
+UFS 的第二次重大革新发生在 SunOS 4.0 时期，当时虚拟内存系统被重新开发，使用 vnode 作为虚拟内存操作的核心。新的 VM 系统实现了虚拟文件缓存的概念——这与传统的物理文件缓存（在早期 Unix 版本中称为“缓冲区缓存”）不同。旧的缓冲区缓存位于文件系统之下，缓存从文件系统到存储设备的物理块。新模型位于文件系统之上，允许 VM 系统充当文件的缓存而非块的缓存。VM 系统缓存文件页大小的片段，即文件和特定偏移量作为内存页被缓存。从此以后，缓冲区缓存仅用于文件系统元数据，而 VM 系统实现了文件系统缓存。新的 VM 系统以多种方式影响了文件系统，并要求对 vnode 接口进行重大更改。当时，UFS 被大幅修改以支持新的 vnode 和 VM 接口。
+
+UFS 的第三次重大变更发生在 1994 年的 Solaris 2.4 中，引入了文件系统元数据日志记录，以在系统崩溃或中断后提供更好的可靠性和更快的重启时间。最早的日志记录版本出现在非捆绑的 Online: DiskSuite 3.0 中，这是 Solstice DiskSuite（SDS）的前身。Solaris 7 将日志记录集成到基础 Solaris UFS 中。
+
+表 14-1 总结了 UFS 的主要发展里程碑。
+
+**表 14-1** *Unix 文件系统演进*
+
+| 年份 | SunOS 版本 | 说明 |
+| --- | --- | --- |
+| 1984 | SunOS 1.0 | 来自 4.2 BSD 的 FFS。 |
+| 1985 | SunOS 2.0 | UFS 重新架构以支持 vnodes/vfs。 |
+| 1988 | SunOS 4.0 | UFS 与新的 VM 虚拟文件缓存集成。 |
+| 1991 | SunOS 4.1 | 增加 I/O 聚类以提供类似 extent 的性能。 |
+| 1992 | SunOS 4.1 | 1TB 文件系统，并可通过 Online: DiskSuite 1.0 扩展 UFS 文件系统。 |
+| 1992 | Solaris 2.0 | 基础 Solaris 中包含 1TB 文件系统支持。 |
+| 1994 | Solaris 2.4 | 通过 Online: DiskSuite 3.0 提供元数据日志记录选项。 |
+| 1995 | Solaris 2.6 | 大文件支持允许 1TB 文件。增加直接 I/O 非缓存访问。 |
+| 1998 | Solaris 7 | 元数据日志记录集成到基础 Solaris UFS 中。 |
+
+### 14.2 UFS 磁盘格式
+
+随着新特性的引入，UFS 文件系统的磁盘格式基本保持不变，在所有版本中保持了前向兼容性。这使得 Solaris 可以升级而无需备份和恢复文件系统。
+
+#### 14.2.1 UFS inode
+
+关于哪些数据块属于每个文件的信息存储在一个特殊的文件索引节点中：inode。inode 包含有关文件的所有信息，但文件名除外，文件名存储在目录中。inode 信息包括：
+
+- 文件类型（普通文件、特殊文件、fifo、链接等）
+- 文件所有者（uid）
+- 文件组（gid）
+- 文件大小
+- 属性（读、执行、修改）
+- 时间戳（最后修改时间等）
+- 对文件的引用数（链接数）
+- 包含文件数据的磁盘块地址数组
+
+#### 14.2.2 UFS 目录
+
+构成 UFS 目录结构的文件名信息和层次信息存储在目录中。每个目录存储一个文件名列表以及每个文件的 inode 编号；这些信息使目录结构能够将文件名与实际的磁盘文件关联起来。
+
+目录本身以一系列块的形式存储在文件中，这些块是目录项的组。块中的每个目录项包含以下信息（参见图 14-1）：
+
+- inode 编号
+- 文件名字条目的长度
+- 目录项的长度
+- 文件名字符串（以 null 结尾）
+
+像 System V 文件系统这样的早期文件系统使用固定的目录记录长度，这意味着如果为长文件名做准备，会浪费大量空间。在 UFS 中，每个目录项可以是可变长度的，因此
+

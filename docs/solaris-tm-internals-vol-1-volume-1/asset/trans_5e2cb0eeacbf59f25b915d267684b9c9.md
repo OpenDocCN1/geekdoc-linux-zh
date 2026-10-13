@@ -1,0 +1,392 @@
+
+- 调度器参数 351
+- 调度器 9
+- 调度 16
+- 调度类 262, 349
+  - admin 357
+  - donice 360
+  - enterclass 357
+  - exitclass 358
+  - fork 358
+  - forkret 358
+  - getclinfo 357
+  - getplri 357
+  - globpri 361
+  - parmsget 358
+  - parmsin 357
+  - parmsout 357
+  - parmset 358
+  - preempt 360
+  - setrun 360
+  - sleep 360
+  - swapin 359
+  - swapout 359
+  - swapri 359
+  - tick 360
+  - trapret 359
+  - wakeup 360
+  - yield 361
+- 调度类 262, 354
+- sclass 结构 355
+- SCSI 26, 504, 524
+- SDLC 9
+- 节头表 268
+- 查找 523
+- seg_kmem 221
+- seg_dev 145
+- seg_drv 146
+- seg_kmem 145, 212
+- seg_kp 145, 212
+- seg_lock 146
+- seg_map 145, 212, 595
+- seg_map 统计信息 564
+- seg_mapdev 146
+- seg_mdi 146
+- seg_nf 146, 212
+- seg_spt 145
+- seg_sx 146
+- seg_vn 145, 560
+- segxmem 208
+- segkmem_checkprot() 216
+- segkmem_create() 216
+- segkmem_getprot() 216
+- segkmem_setprot() 216
+- segkmem32 210
+- segkp 293
+- segmap 206
+- segmap_fault() 593
+- segmap_getmap() 561
+- segmap_getmapfault() 561
+- segmap_pagecreate() 561, 595
+- segmap_pageunlock() 561
+- segmap_release() 561, 595
+- 段 20
+- 段（ELF 文件）268
+- 段驱动程序 143
+- 段驱动程序 9
+- 分段违规 141
+- SEGOP_FAULT() 145
+- segvn_create() 144, 148
+- segvn_fault() 149
+- select() 495
+- select(3C) 485
+- 选择与批准算法 403
+- SEM_NSEMS_MAX 463
+- sem_open(3R) 462, 463
+- SEM_VALUE_MAX 463
+- sema_destroy() 函数 99
+- sema_held() 函数 99
+- sema_init() 函数 99
+- sema_p() 函数 99, 101
+- sema_sobj_ops 71
+- sema_sobj_ops 结构 102
+- sema_v() 函数 99
+- 信号量接口 462
+- 信号量限制
+  - semaem 448
+  - semmap 446
+  - semmni 446
+  - semmns 446
+  - semmnu 447
+  - semmsl 447
+  - semvmx 448
+- 信号量 P 和 V 操作 99
+- 信号量值 445
+- 信号量 68
+- semget(2) 445, 450
+- semid_ds 449
+- semmap 433
+- 顺序一致性模型 66
+- 会话 342
+- 会话首进程 345
+- set_anoninfo() 156
+- setfacl 532
+- setitimer(2) 57
+- setproot() 147
+- 共享 243
+- 共享库 147
+- 共享映射文件 150
+- 共享内存 4
+- 共享内存多处理器 60
+- 共享程序库 4
+- 共享程序二进制文件 126
+- SHM_SHARE_MMU 203
+- shmat() 439
+- shmget() 438
+- shmid_ds 435
+- shmmax 436, 437
+- shmmin 436
+- shmmni 436, 437
+- shmseg 436
+- si_pc 166
+- si_trapafter 166
+- 兄弟进程 275
+- SIDL 275
+- sigaction 308, 333
+- sigaction(2) 334
+- sigaltstack(2) 335
+- SIGCHLD 329
+- SIGCLD 275, 302
+- SIGDANGER 158
+- siginfo 332, 338
+- SIGIO 503
+- SIGKILL 275
+- 信号处理方式 325
+- 信号生成 331
+- 信号 19
+- signotify 334
+- SIGPROF 56
+- SIGSEGV 139, 141, 513
+- sigsend(2) 325
+- sigtoproc() 337
+- SIGTRAP 165
+- SIGTSTP 343
+- SIGTTIN 343
+- SIGTTOU 343
+- SIGVTALRM 56
+- SIGWAITING 416
+- SIGXCPU 56, 329
+- SIGXFSZ 329
+- 单一内核映像 61
+- Slab 分配器 217
+- slab 分配器 21
+- Slab 分配器统计信息 229
+- Slab 分配器跟踪 231
+- Slab 缓存参数 227
+- slab_create 231
+- slab_destroy 231
+- slab_size 231
+- SLEEP 274
+- 睡眠队列 404
+- 因 I/O 而睡眠 17
+- sleepq_insert() 410
+- sleepq_insert() 函数 92, 96
+- slowscan 180, 187
+- SMP 6, 59
+- 快照 539
+- 套接字 22
+- sockfs 25, 483, 525
+- softcall() 50
+- softswap 359
+- 软件上下文（进程）262
+- 软件陷阱 35
+- 软件引发的陷阱 32
+- Solaris 2.0 5, 6
+- Solaris 2.1 6
+- Solaris 2.1-x86 6
+- Solaris 2.2 6
+- Solaris 2.3 6
+- Solaris 7 读写锁 83
+- Solaris 8 128, 185
+- Solaris 内核架构 11
+- Solaris 资源管理器 9
+- Solstice DiskSuite (SDS) 578
+- Solstice DiskSuite (SDS) 504
+- SPARC 寄存器管理 32
+- SPARC V7 132
+- SPARC V9 132
+- SPARCcenter 2000 133, 206
+- 稀疏文件 538
+- specfs 24, 525
+- 自旋锁 72
+- 自旋锁 72
+- 栈 20, 131, 134, 185, 210
+- 栈（资源限制）282
+- 栈 205
+- 标准 I/O 489
+- 标准 I/O 函数
+  - clearerr() 491
+  - fclose() 491
+  - feof() 491
+  - ferror() 491
+  - fflush() 491
+  - fgetc() 491
+  - fgetpos() 491
+  - fgets() 491
+  - fileno() 491
+  - flockfile() 491
+  - fopen() 492
+  - fprintf() 492
+  - fputc() 492
+  - fputs() 492
+  - fread() 492
+  - freopen() 492
+  - fscanf() 492
+  - fseek() 492
+  - fsetpos() 492
+  - ftrylockfile() 492
+  - funlockfile() 492
+  - fwrite() 492
+  - getc() 492
+  - getc_unlocked() 492
+  - getw() 492
+  - pclose() 492
+  - popen() 492
+  - putc() 492
+  - rewind() 492
+  - setbuf() 492
+  - setvbuf() 492
+  - ungetc() 492
+- stat() 495
+- 静态链接 267
+- stderr 263
+- stdin 263
+- stdio(3S) 485
+- stdout 263
+- STOP 274
+- 条带 539
+- struct _sobj_ops 70
+- struct as 138
+- struct FILE 490
+- struct k_anoninfo 162
+- struct machpage 170
+- struct ccache 571
+- struct pathname 568
+- struct seg 143
+- struct segvn_data 148
+- struct ufs 271, 483
+- struct uio 517
+- struct vfs 551
+- struct vnode 545
+- struct vpage 152
+- Sun UNIX 0.7 6
+- sun4u 64位内核地址空间 206
+- SunOS 1.0 4, 6
+- SunOS 2 4
+- SunOS 2.0 6, 541, 577
+- SunOS 4.0 6, 183
+- SunOS 4.1 4, 6
+- SunOS 4.1.3 6
+- SunOS 4.x 二进制兼容性 35
+- SunOS 5.0 5
+- SunOS 5.X 5
+- 超级块 581, 589
+- SuperSPARC 201
+- SVR3 5
+- SVR4 5
+- 交换 168, 239
+- 交换设备 611
+- swap -l 239
+- swap -s 162, 238
+- 交换空间 238
+- 交换空间 158
+- swapctl() 162
+- swapfs 158, 189
+- swapfs 实现 159
+- swapfs 层 156
+- swapfs_getpage() 159
+- swapfs_getvp() 159
+- swapfsminfree 164
+- swapout() 147
+- 被换出 158
+- 换入换出 190
+- 换入换出 128
+- swtch() 400, 401
+- swtch() 函数 388
+- 对称多处理 8
+- 对称多处理器 60
+- sync() 147
+- 同步锁 60
+- SYS 16
+- sysdef 604
+- sysent 表 44
+- SYSTEM 55
+- 系统调用 28
+- 系统调用接口 11
+- 系统调用 22, 44
+- 系统调用 28
+- 系统时钟 54
+- 系统优先级 351
+- System V 文件系统 579
+- System V IPC 18
+- System V 消息队列 18
+- System V 信号量 18
+- System V 共享内存 18
+
+## T
+
+- t_affinitycnt 287
+- t_astflag 304
+- t_bind_cpu 288
+- t_bound_cpu 287
+- t_cid 289
+- t_cldata 289
+- t_cfuncs 289
+- t_cpu 289
+- t_cred 289
+- t_disp_queue 289
+- t_disp_time 289
+- t_epri 289
+- t_epri（内核线程）96
+- t_epri 字段（内核线程字段）92
+- t_hold 289
+- t_kpri_req 83, 87, 289
+- t_lockp 289
+- t_lwp 289
+- t_oldsp1 289
+- t_post_syscall 297
+- t_pre_sys 289
+- t_preempt 288
+- t_pri 289, 375
+- t_proc_flag 288
+- t_procp 289
+- t_release_all() 函数 96
+- t_schedflag 288
+- t_sig 289, 338
+- t_siqueue 289
+- t_stack 287
+- t_state 288
+- t_sysnum 289
+- t_wchan 289
+- 表格
+  - 列表 xxxvii
+- Tcc（陷阱指令）35
+- TCP 套接字 7
+- TCP/IP 11
+- 测试并设置指令 63
+- 内核映射 213
+- THR_BOUND 265
+- thr_create(3T) 264, 265
+- thr_setconcurrency(3T) 265
+- 线程创建 10
+- 线程栈 205
+- thread_create() 375
+- thread_create() 函数 91
+- thread_create() 函数 95
+- thread_reaper 305
+- 线程化 5
+- 节流 187
+- 惊群问题 78
+- TICK 寄存器 320
+- time() 47
+- 日时钟 57
+- timeout(9F) 47
+- 分时优先级 351
+- 分时调度 17
+- TLB 193, 195, 197, 206, 208, 209
+- TLB 有效性 201
+- TLB 缺失 201
+- TLB 性能 200
+- tmpfs 24, 525
+- TNF 跟踪缓冲区 210
+- 全存储排序（TSO）67
+- TP MSA CCT 321
+- TPC-C 203
+- TPC-D 203
+- 转换后备缓冲区 440
+- 转换表项（TTEs）195
+- 陷阱 28, 29, 133
+- 陷阱分析 36
+- 陷阱级别 34
+- 陷阱优先级级别 33
+- 陷阱信号 339
+- 陷阱表 31, 206
+- 陷阱表布局 34
+- 陷阱表布局 35
+- 陷阱类型 32
+- TRAP_XWATCH 166
+- 陷阱 31
+- trapstat 36
+- truss 507
+- TS 9, 16
+

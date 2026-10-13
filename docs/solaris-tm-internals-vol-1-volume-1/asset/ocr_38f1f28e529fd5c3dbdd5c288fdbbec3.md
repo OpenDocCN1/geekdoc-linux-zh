@@ -1,0 +1,11 @@
+tion. The arguments are also copied into the process `uarea`'s `u_pargs[]` array at this time.
+
+![](bbox=[0.172, 0.174, 0.864, 0.422])
+
+# Figure 8.15 *Initial Process Stack Frame*
+
+A quick Solaris 7 implementation note. Before actually setting up the user stack with the `argv[]` and `envp[]` arrays, Solaris 7, if booted as a 64-bit kernel, must first determine if a 32-bit or 64-bit binary is being exec'ed (a 32-bit Solaris 7 system can only run 32-bit binaries). This information is maintained in the ELF header, where the system checks the `e_ident[]` array for either an `ELFCLASS32` or `ELFCLASS64` file identity. With the data model established, the kernel sets the initial size of the exec file sections to 4 Kbytes for the stack, 4 Kbytes for stack growth (stack increment), and 1 Mbyte for the argument list (ELF32) or 2-Mbyte argument list size for an ELF64.
+
+Once the kernel has established the process user stack and argument list, it calls the `mapelfexec()` function to map the various program segments into the process address space. `mapelfexec()` walks through the Program Header Table (PHT), and for each `PT_LOAD` type (a loadable segment), `mapelfexec()` maps the segment into the process address space. `mapelfexec()` bases the mapping on the `p_filesz` and `p_memsz` sections of the header that define the segment, using the lower-level kernel address space support code. Once the program loadable segments have been mapped into the address space, the dynamic linker (for dynamically linked executable), referenced through the PHT, is also mapped into the process’s address space. The `elfexec` code checks the process resource limit `RLIMIT_VMEM` (max virtual memory size) against the size required to map the object file and runtime linker. An `ENOMEM` error is returned in the event of an address space requirement that exceeds the limit.
+
+All that remains for `exec(2)` to complete is some additional housekeeping and structure initialization, which is done when the code returns to `gexec()`. This last part deals with clearing the signal stack and setting the signal disposition to
