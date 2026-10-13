@@ -1,0 +1,53 @@
+
+- 使用简单的 `PartitionMagic` 调整 `Windows NT`、`2000` 和 `XP NTFS` 分区
+- 结束你的首次会话
+- 拼命寻找 `ISP`
+- 在 `Linux` 中定位你的调制调器
+- 启动你的互联网连接
+- 使用 `Evolution` 的革命
+- 使用 `Evolution` 电子邮件
+- 配合 `PDA` 使用 `Evolution`
+- 设置你的音频系统
+- 刻录吧，宝贝：刻录 `CD`
+- 使用 `XMMS` 音频播放器
+- 使用强大的 `MPlayer`
+- 从 `GNOME` 面板启动 `gmplayer`
+
+## 第 13 章：办公
+
+- 打开你的办公软件
+- 了解 `OpenOffice`
+- 启动并使用 `OpenOffice`
+- 使用 `OpenOffice` 打印
+- 介绍 `Wine`
+- 下载 `Wine`
+- 安装 `Wine`
+- 运行记事本和 `Wine` 文件
+- 玩游戏
+- 运行微软 `Word`（现在，这太实用了）
+- 介绍 `CodeWeavers CrossOffice`
+- 下载 `CrossOver` 插件试用版
+- 安装 `CrossOver` 插件
+- 使用 `CrossOver` 插件
+- 配置 `QuickTime`
+- `VMware`：虚拟现实机器
+- 下载 `VMware`
+- 安装 `VMware`
+- 安装 `Linux` 内核头文件
+- 配置 `VMware Workstation`
+- 在虚拟机上安装操作系统
+- 设计与构建你的私有网络
+- 交换机和集线器的基础知识
+- 使用 `ut`、`uh`、线缆为你的网络布线
+- 无线布线
+- 构建互联网网关
+- 理解 `IP` 转发和网络地址转换 (`NAT`)
+- 通过过你的网关转发网络流量
+- 连接你的互联网网关
+- 使用防火墙保护你的局域网
+- 准备网络服务器
+- 构建 `Apache Web` 服务器
+- 安装并启动 `Web` 服务器
+- 通过防火墙访问你的 `Web` 服务器
+- 构建 `Samba` 文件服务器
+- 安装并启动 `Samba`
