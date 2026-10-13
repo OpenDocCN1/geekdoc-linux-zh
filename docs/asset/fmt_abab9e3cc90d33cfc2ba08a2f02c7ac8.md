@@ -1,0 +1,112 @@
+
+## 基本 Shell 控制
+
+Fedora Core Linux 包含一系列功能强大、灵活且强大的 shell。每个 shell 都不同，但都有许多内置命令和可配置的命令提示符，并可能包含诸如命令行历史、调用和使用之前的命令行以及命令行编辑等功能。举个例子，`bash` shell 非常强大，完全可以用 `bash` 语言编写一个 114 行脚本的最小 Web 服务器（参见本章末尾的链接）。
+
+虽然有许多 shell 可供选择，但大多数人仍然坚持使用默认的 `bash`。这是因为 `bash` 可以完成大多数人需要做的任何事情，甚至更多。只有当你确实需要时才更改你的 shell。
+
+表 14.1 列出了每个 shell，以及其在 Fedora 文件系统中的描述和位置。
+
+| 名称 | 描述 | 位置 |
+| :--- | :--- | :--- |
+| ash | 一个小型 shell（类似 sh） | `/bin/ash` |
+| ash.static | 不依赖软件库的 ash 版本 | `/bin/ash.static` |
+| bash | Bourne Again Shell | `/bin/bash` |
+| bsh | 指向 ash 的符号链接 | `/bin/bsh` |
+| csh | C shell，指向 tcsh 的符号链接 | `/bin/csh` |
+| ksh | Korn shell | `/bin/ksh`, `/usr/bin/ksh` |
+| pdksh | 指向 ksh 的符号链接 | `/usr/bin/pdksh` |
+| rsh | 受限 shell（用于网络操作） | `/usr/bin/rsh` |
+| sash | 独立 shell | `/sbin/sash` |
+| sh | 指向 bash 的符号链接 | `/bin/sh` |
+| tcsh | 兼容 csh 的 shell | `/bin/tcsh` |
+| zsh | 兼容 csh、ksh 和 sh 的 shell | `/bin/zsh` |
+
+## 了解你的 Shell
+
+表 14.1 中列出的所有 shell 都有随附的手册页（`man pages`），以及其他位于 `/usr/share/doc` 目录下的文档。有些文档可能相当冗长，但通常拥有过多的文档总比文档过少要好！`bash` shell 的手册包含超过 100 页，而 `zsh` shell 的文档如此详尽，以至于包含了 `zshall` 元手册页（使用 `man zshall` 阅读此概述）！
+
+## Shell 命令行
+
+对 shell 命令行功能的基本理解可以帮助你编写更好的 shell 脚本。你可以使用 shell 命令行执行许多不同的任务，包括：
+
+- 使用模式匹配或表达式通过程序搜索文件或目录；这些命令包括 GNU `gawk`（链接为 `awk`）和 `grep` 命令族，包括 `egrep` 和 `fgrep`。
+- 从文件或命令获取数据以及向文件或命令发送数据，称为输入和输出重定向。
+- 将程序的输出馈送或过滤到另一个命令（称为使用管道）。
+
+Shell 还可以具有内置的任务控制命令，用于将命令行作为后台进程启动、挂起正在运行的程序、有选择地检索或终止正在运行或挂起的程序，以及执行其他类型的进程控制。
+
+可以使用分号分隔命令，在单个命令上运行多个命令：
+
+```
+$ w ; free ; df
+        6:02pm  up  4 days, 24 min,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM                 LOGIN@   IDLE   JCPU   PCPU WHAT
+bball      pts/0  shuttle.home.org     1:14pm   0.00s  0.57s  0.01s  w
+total          used      free     shared    buffers    cached
+Mem:       190684   184420      6264      76      17620    142820
+-/ buffers/cache:     23980   166704
+Swap:       1277156     2516   1274640
+Filesystem           1k-blocks      Used Available Use% Mounted on
+/dev/hda1         11788296   4478228   6711248  41% /
+none                  95340         0     95340   0% /dev/shm
+```
+
+此示例显示了 `w`、`free` 和 `df` 命令的输出。长 shell 命令行可以通过使用反斜杠字符（`\`）在 shell 脚本或命令行中扩展。例如，
+
+```
+$ echo "this is a long \
+> command line and"; echo "shows that multiple commands \
+> may be strung out."
+this is a long command line and
+shows that multiple commands may be strung out.
+```
+
+此示例的前三行是单个命令行。在该单行中，有两个 `echo` 命令的实例。请注意，当你使用反斜杠作为续行字符时，它必须是命令行（或如你稍后在本章中看到的 shell 脚本）上的最后一个字符。
+
+使用 shell 命令行的基本功能很简单，但掌握所有功能的使用可能很困难。整个书籍都致力于使用 shell、编写 shell 脚本和使用模式匹配表达式。以下部分概述了 shell 命令行的一些与编写脚本相关的功能。
+
+## 深入理解 grep
+
+如果你计划开发 shell 脚本以扩展 `grep` 等模式匹配命令的功能，那么深入了解表达式的用法将使你受益匪浅。使用 Unix 和 Linux 命令模式匹配功能的权威指南之一是 Jeffrey E. F. Friedl（O'Reilly 出版）所著的 *Mastering Regular Expressions*，ISBN：0-596-00289-0。
+
+## Shell 模式匹配支持
+
+Shell 命令行允许你使用特别构造的字符模式字符串进行通配符匹配。这与 GNU 实用程序（如 `grep`）支持的功能不同且更简单，后者可以使用更复杂的模式（称为表达式）来搜索文件或目录或过滤传入或传出命令的数据。
+
+Shell 的模式字符串可以是简单的或复杂的，但即使仅使用可用字符的一小部分简单通配符，也可以在命令行上产生建设性的结果。用于 shell 模式匹配的一些常用字符是：
+
+- `*`—匹配任何字符。例如，要查找当前目录中所有以 `.txt` 结尾的文件，你可以使用：
+
+  `ls *.txt`
+- `?`—匹配单个字符。例如，要查找当前目录中所有以扩展名 `.d?c` 结尾的文件（其中 `?` 可以是 0–9、a–z 或 A–Z）：
+
+  `ls *.d?c`
+- `[xx]` 或 `[x-X]`—匹配字符范围。例如，要列出目录中包含数字名称的所有文件：
+
+  `ls *([0-9])`
+- `\x`—匹配或转义字符，如 `?` 或制表符。例如，要创建一个名称中包含问号的文件：
+
+  `touch foo\?`
+
+请注意，shell 可能不会以与 Linux 命令相同的方式解释某些字符或正则表达式，并且在 shell 脚本中混合使用通配符和正则表达式可能会导致问题，除非你非常小心。例如，在文本中查找模式最好留给与 `grep` 等命令一起使用的正则表达式；简单的通配符应用于在命令行上过滤或匹配文件名。虽然 Linux 命令表达式和 shell 脚本都可以识别模式中的反斜杠作为转义字符，但美元符号（`$`）将具有两种截然不同的含义（表达式中的单字符模式匹配和脚本中的变量赋值）。
+
+> **警告**
+>
+> 使用通配符时，请确保仔细阅读你的命令；一种非常常见的错误是键入类似 `rm -rf *.txt` 的内容而没有空格，或者错误地键入 `rm -rf * .txt`，其中 `*` 和 `.txt` 之间有空格。当你想知道为什么命令花费了这么长时间时，Bash 已经删除了你大部分的文件。问题是，它会分别处理 `*` 和 `.txt`。`*` 将匹配所有内容，因此 Bash 将删除你的所有文件。
+
+## 重定向输入和输出
+
+你可以使用称为输入和输出重定向的过程，在命令行上创建、覆盖和追加文件中的数据。Shell 识别此过程中的几个特殊字符，例如 `>`、` <` 或 `>>`。
+
+在此示例中，`ls` 命令的输出被重定向以创建一个名为 `textfiles.listing` 的文件：
+
+```
+$ ls *.txt >textfiles.listing
+```
+
+请谨慎使用输出重定向，因为这可能会覆盖现有文件。例如，指定不同的目录但使用相同的输出文件名将覆盖现有的 `textfiles.listing`：
+
+```
+$ ls /usr/share/doc/mutt-1.4/*/.txt >textfiles.listing
+```
