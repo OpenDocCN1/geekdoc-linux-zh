@@ -1887,6 +1887,7 @@
 +   [Samba 解锁指南](docs/samba-unleashed-unleashed/README.md)
 +   [SAMS Linux 编程 2007 释放指南](docs/sams-linux-programming-2007-unleashed/README.md)
 +   [21 天自学 Linux C 编程：仅需 21 天内掌握 Linux C++ 技能与概念；在现实世界中应用你的知识](docs/sams-teach-yourself-c-programming-for-linux-in-21-days-learn/README.md)
++   [Sams 24小时学会 FreeBSD：含索引](docs/sams-teach-yourself-freebsd-in-24-hours-includes-index/README.md)
 +   [Sams 24 小时学会 GIMP](docs/sams-teach-yourself-gimp-in-24-hours/README.md)
 +   [SAMS 24 小时自学 GIMP [电子资源]](docs/sams-teach-yourself-gimp-in-24-hours-electronic-resource/README.md)
 +   [Sams 24 小时自学 GNOME](docs/sams-teach-yourself-gnome-in-24-hours-sams-teach-yourself-in/README.md)

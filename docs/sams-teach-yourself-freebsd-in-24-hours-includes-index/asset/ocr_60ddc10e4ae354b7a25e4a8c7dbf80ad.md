@@ -1,0 +1,4 @@
+# Exercises
+
++   1. Explore some of the many uses of CVSup. Notice that you can install a CVSup server on your FreeBSD machine; you can use this to create an efficient mirroring system, so that you can back up your machine's contents to another machine nightly. See http://www.cvsup.org for details.
++   2. Create a periodic script (see man periodic) that will synchronize your source tree—either nightly or weekly—to the latest versions of your source branch. This way, theoretically, you will always have the most recent sources immediately available if you want to upgrade your system on a moment's notice.

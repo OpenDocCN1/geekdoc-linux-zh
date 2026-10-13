@@ -1,0 +1,11 @@
+> the documents transferred after the user has been authenticated are not encrypted when sent, thus potentially allowing someone to intercept them. This means that this form of authentication only provides a basic level of security that cannot be trusted to keep sensitive documents secure. For a greater level of protection that is suitable for e-commerce and such, you will want to look into SSL, which is beyond the scope of this book. It, and other more advanced configurations for Apache under FreeBSD, can be found in FreeBSD Unleashed from Sams Publishing, as well as in many other books specifically dedicated to Apache, such as O'Reilly's Apache: The Definitive Guide.
+
+# Summary
+
+In this hour, we looked at how to configure a basic Web server suitable for simple Web hosting. The Apache Web server, however, is highly complex and capable of far more than we were able to cover here. Advanced topics such as virtual hosting and secure sites were not covered. For more information on the advanced capabilities of Apache, please see the online documentation at the project's Web site (www.apache.org), or consult one of the books that is dedicated to Apache.
+
+# Q&A
+
+Q I've used Apache on Linux and other UNIX platforms; the files all seem to be in different places under FreeBSD. What gives?
+
+A It's a common problem with the variation in different UNIX systems: Each one seems to have its own idea about which files go where. Some Linux distributions, for instance, put the Apache installation into a single directory structure under /var/lib/httpd. FreeBSD attempts to adhere to a strict conceptual layout; Web content and executables don't go into /var, which is supposed to contain variable files (such as PID files, databases, and logs). Instead, Apache's binaries go into /usr/local/sbin and /usr/local/bin (depending on whether they alter system behavior or not), logs are kept in /var/log, documentation is at /usr/local/share/doc/apache, Web content goes into /usr/local/www, and configuration files go into /usr/local/etc/apache. This means that the installation sprawls across the whole system, but the files are all organized according to function. The ports keep a packing list so that they can all be cleanly uninstalled.

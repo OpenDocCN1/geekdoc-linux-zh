@@ -1,0 +1,5 @@
+# About the Authors
+
+**MICHAEL URBAN** is a biology student at the University of Minnesota where he plans to major in Ecology, Evolution, and Behavior. He is involved in research projects with African lions and is also the Webmaster for the Lion Research Center. He has worked in numerous IT jobs including Web design and technical analysis. He has experience with various Unix operating systems including FreeBSD, Linux, and Solaris.
+
+**BRIAN TIEMANN** has been a constant user of FreeBSD since his student days at Caltech, where he used it to build a movie fan Web site that has continued to grow and sustain more and more load until the present day. Born in Ukiah, California, He has remained in the state all his life; he currently lives in San Jose, works in the networking appliance field, and writes ceaseless commentary about Apple, Microsoft, and the technology field. Occasionally, but not often enough, he has time to enjoy motorcycling, travel, animation, and other such interests.

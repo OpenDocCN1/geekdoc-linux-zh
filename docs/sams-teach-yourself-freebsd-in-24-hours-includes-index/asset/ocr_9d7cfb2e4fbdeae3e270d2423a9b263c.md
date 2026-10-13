@@ -1,0 +1,13 @@
+This feature is in the default freebsd.mc, but commented out; to enable it, remove the dn1 comment and rebuild the config file.
+
++   - As an absolute last resort, turn off relay checking altogether by enabling the promiscuous_relay feature. This will allow any valid user to send mail through your Sendmail server; however, it will also allow any spammer to do the same. There are independently run databases on the Internet that keep records of all "open" mail servers, and some service providers use these databases as "black hole" lists of their own. You don't want your server to end up in these databases! If it does, some legitimate mail from your users or their correspondents might be blocked because of their ISPs blocking mail to or from your server. It's an incredibly bad idea to run an open mail server. However, if your server is in a secure network environment (for example, inside an enterprise network protected by a NAT firewall), it can eliminate a great deal of unnecessary hassle associated with securing the server.
+
+As a general rule, the best solution to the relaying problem is simply to instruct all your users to use the SMTP servers provided by their own dial-up ISPs. These services will always have their own SMTP servers that are open to their own customers. Because the headers in a mail message (such as the From: address) are all derived from the message body and therefore completely under the control of the email client program, there's no reason for a remote user to want to use your SMTP server if he already has one of his own.
+
+The Sendmail Consortium has an excellent page on relaying rules and your various available configuration options at http://www.sendmail.org/tips/relaying.html.
+
+# Summary
+
+In this hour, you learned the basics of running an SMTP server using Sendmail. You saw how SMTP is structured, how messages travel from one user to another via SMTP and POP/IMAP, and you saw how to tweak Sendmail to behave according to your personal tastes.
+
+Sendmail is one of the largest and most complex beasts in UNIX. A full treatment of Sendmail-based email services would cover the numerous methods for customizing Sendmail in a large ISP or enterprise configuration. It would also discuss how to set up POP3 and IMAP servers for that "last mile" of the connection, as well as discussing MTAs that are designed as better, faster, more scalable, and easier-to-use alternatives to Sendmail. But what you have seen here is the core of what makes Sendmail itself the workhorse of the Internet: an unglamorous job, but one that it does very well nonetheless.

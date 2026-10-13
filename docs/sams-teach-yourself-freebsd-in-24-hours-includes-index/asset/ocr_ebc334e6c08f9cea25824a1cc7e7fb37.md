@@ -1,0 +1,5 @@
+# About the Development Editor
+
+DEE-ANN LEBLANC is an award-winning computer book author, and has been in the field since 1994. She's published 11 computer books and 60 articles, taught and developed courses, and more—mostly involving the Linux operating system and its related programs. Her latest book is Linux for Dummies, Fourth Edition from Wiley Publishing, Inc. She also has a growing wealth of experience on the editorial front, turning part of her time to technical and development editing. This combination of working both sides of the desk allows her to both write better books and become a better editor.
+
+You can follow Dee-Ann's work and share your input through her mailing list at http://www.dee-annleblanc.com/mailman/listinfo/general or find out more in general at http://www.Dee-AnnLeBlanc.com/.
