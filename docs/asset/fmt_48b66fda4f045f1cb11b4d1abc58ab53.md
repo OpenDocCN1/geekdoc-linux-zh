@@ -1,0 +1,177 @@
+
+## `/etc/sysconfig/network`
+
+如果你运行 `ifconfig` 命令且没有看到任何输出，这意味着所有网络设备当前均处于非活动状态。如果你运行 `ifconfig -a` 命令，并且对于任何已配置的网络设备，输出中都没有显示 `UP`，这就确认了非活动状态。在这种情况下，首先要检查的是 `/etc/sysconfig/network` 配置文件的内容。这是一个相当简单的文件。通常，你应该在该文件中看到类似以下内容：
+
+```
+NETWORKING=yes
+HOSTNAME=server1.example.com
+```
+
+如果 `NETWORKING=no`，那么 `/etc/init.d/network` 脚本将不会激活任何网络设备。可能会阻止网络启动的另一个问题是脚本的状态。运行 `chkconfig --list network` 命令。输出应如下所示：
+
+```
+network          0:off   1:off   2:on    3:on    4:on    5:on    6:off
+```
+
+如果运行级别 3 和 5 旁边的设置是 off，那就存在问题。为了确保服务在适当的运行级别中处于活动状态，请运行 `chkconfig network on` 命令。有关 `chkconfig` 的更多信息，请参见第 5 章。
+
+如果系统上激活了 IPv6 网络，你将看到文件中出现以下指令：
+
+```
+NETWORKING_IPV6=yes
+```
+
+该文件中可能出现的其他指令与配置有关，比如 `GATEWAY`（如果它是所有网络设备相同的 IP 地址）。否则，该配置要么由 `dhclient` 命令支持，要么在 `/etc/sysconfig/network-scripts` 目录中特定网络设备的 IP 地址信息中设置。
+
+## `/etc/sysconfig/network-scripts/ifcfg-lo`
+
+说到 `/etc/sysconfig/network-scripts` 目录，网络的基石可能是回环地址。相关信息是在该目录中的 `ifcfg-lo` 文件中配置的。该文件的内容可以帮助你理解该目录中的文件如何用于网络设备。默认情况下，你应该在该文件中看到以下条目，以回环设备的名称开头：
+
+```
+DEVICE=lo
+```
+
+其后是 IP 地址（`IPADDR`）、网络掩码（`NETMASK`）、网络 IP 地址（`NETWORK`）以及相应的广播地址（`BROADCAST`）。
+
+```
+IPADDR=127.0.0.1
+NETMASK=255.0.0.0
+NETWORK=127.0.0.0
+BROADCAST=127.255.255.255
+```
+
+接下来的条目指定设备是否在启动过程中被激活，以及设备的通用名称。
+
+```
+ONBOOT=yes
+NAME=loopback
+```
+
+## `/etc/sysconfig/network-scripts/ifcfg-eth0`
+
+你在 `ifcfg-eth0` 文件中看到的内容取决于第一个以太网适配器是如何配置的。例如，查看仅为了安装目的而配置网络的情况。如果在 GUI 安装过程中配置主机名时没有配置网络，那么系统上就不会配置网络。在这种情况下，`ifcfg-eth0` 文件将包含以下指令，以设备名称开头，并附带硬件地址：
+
+```
+DEVICE="eth0"
+HWADDR="F0:DE:F3:06:C6:DB"
+```
+
+默认情况下，RHEL 6 使用一种称为网络管理器（Network Manager）的服务。如果网卡由该服务控制，以下指令将被设置为 `yes`：
+
+```
+NM_CONTROLLED="yes"
+```
+
+网络管理器是一种服务；为了确保它正在运行，请执行 `/etc/init.d/NetworkManager start` 命令。当然，如果在安装过程中未配置网络，那么它就没有理由在启动过程中被激活：
+
+```
+ONBOOT="no"
+```
+
+网络管理器服务的替代方案是直接配置它。为此，图 3-9 中所示的配置文件提供了一个指南。
+
+### 图 3-9
+
+不由网络管理器控制的静态配置
+
+```
+DEVICE="eth0"
+BOOTPROTO="static"
+DNS1=192.168.122.1
+GATEWAY=192.168.122.1
+HWADDR=52:54:00:5A:97:F6
+IPADDR=192.168.122.50
+NETMASK=255.255.255.0
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+```
+
+当然，如果你更喜欢使用 DHCP 服务器，那么静态网络地址信息将被省略，并且以下指令将更改为：
+
+```
+BOOTPROTO=dhcp
+```
+
+很快，你将看到如何使用网络管理器的网络连接工具来修改网络设备的配置。但首先，从不同的角度，请回顾图 3-10，该图说明了我在 RHEL 6 笔记本电脑系统上无线网卡的配置。
+
+### 图 3-10
+
+无线网络配置
+
+```
+ESSID=wifi1
+MODE=Managed
+KEY_MGMT=WPA-PSK
+TYPE=Wireless
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=yes
+IPV6INIT=no
+NAME=wifi1
+UUID=b44e0567-d13a-4af1-b30a-38745f99ee91
+ONBOOT=yes
+IPADDR=192.168.0.200
+PREFIX=24
+GATEWAY=192.168.0.1
+DNS1=192.168.0.1
+LAST_CONNECT=1290340839
+DEVICE=wlan0
+USERCTL=no
+```
+
+## 其他 `/etc/sysconfig/network-scripts/` 文件
+
+`/etc/sysconfig/network-scripts` 目录中的大多数文件实际上是脚本。换句话说，它们是基于一系列文本命令的可执行文件。大多数这些脚本基于针对网络设备类型定制的 `ifup` 和 `ifdown` 命令。如果有需要配置的特殊路由，配置设置将获得该目录中一个特殊的文件，名称如 `route-eth0`。该特殊路由将指定到远程网络地址/网络掩码对网关。基于第 1 章中描述的系统的一个示例可能包含以下指令：
+
+```
+ADDRESS0=192.168.100.100
+NETMASK0=255.255.255.0
+GATEWAY0=192.168.122.1
+```
+
+## 网络配置工具
+
+Red Hat 包含两种可用于在 RHEL 6 中配置网络设备的工具。第一个是控制台网络配置工具。你可以使用 `system-config-network` 命令从命令行启动它。第二个是网络连接工具，你可以使用 `nm-connection-editor` 命令从图形用户界面（GUI）命令行启动它。
+
+网络管理器还包含另一个用于显示网络设备当前状态的工具。其输出与 `ifconfig` 命令的输出有些相似。
+
+## 控制台网络配置工具
+
+顾名思义，你可以从命令行控制台启动此工具。只需运行 `system-config-network` 命令即可。对于控制台工具，你需要按 TAB 键在选项之间切换，并按空格键或 ENTER 键来选择高亮的选项。由于该工具不是网络管理器，因此你必须停用关联设备，才能使通过该工具定制的配置生效。练习 3-2 说明了这一过程。
+
+按 TAB 键直到 Quit（退出）被高亮显示，然后按 ENTER。暂时，请从 `/etc/sysconfig/network-scripts` 目录中备份 `ifcfg-eth0` 文件。基于 `diff` 命令，图 3-11 比较了一个在安装过程中配置的、使用 DHCP 协议的 eth0 卡与一个通过 `system-config-network` 工具配置静态 IP 地址的卡的内容。
+
+图 3-11 中显示的指令在表 3-6 中进行了描述。
+
+### 图 3-11
+
+静态与动态网络配置之间的差异
+
+```
+[root@Maui ~]# diff ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-eth0
+1,4c1,17
+< DEVICE="eth0"
+< HWADDR="F0:DE:F1:06:C6:DC"
+< NM_CONTROLLED="yes"
+< ONBOOT="no"
+---
+> DEVICE=eth0
+> NM_CONTROLLED=yes
+> ONBOOT=no
+> BOOTPROTO=none
+> NETMASK=255.255.0
+> TYPE=Ethernet
+> IPV6INIT=no
+> USERCTL=no
+> HWADDR=f0:de:f1:06:c6:dc
+> DEFROUTE=yes
+> PEERROUTES=yes
+> IPV4_FAILURE_FATAL=yes
+> NAME="System eth0"
+> UUID=5fb06b0d-0bb0-7ffb-45f1-d6edd5f3e03
+> IPADDR=192.168.122.60
+> GATEWAY=192.168.122.1
+> DNS1=192.168.122.1
+[root@Maui ~]#
+```
