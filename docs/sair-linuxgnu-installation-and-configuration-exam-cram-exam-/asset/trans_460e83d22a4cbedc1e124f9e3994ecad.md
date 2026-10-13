@@ -1,0 +1,126 @@
+
+## 窗口管理器
+
+窗口管理器决定 GUI 在显示器上的外观。有多种不同的窗口管理器可供选择，包括 GNOME、KDE、Afterstep、Window Maker、fvwm、Blackbox 和 Enlightenment。
+
+两个最常见的默认窗口管理器是 GNOME 和 KDE。GNOME 窗口管理器基于 GTK+ 小部件库构建。KDE 窗口管理器基于 Qt 小部件库构建。
+
+## 应用程序
+
+在大多数情况下，GUI 应用程序（如 Netscape Communicator 和 WordPerfect）与 X Window 架构一起工作，但并不属于其一部分。尽管如此，GUI 应用程序也会存储用户特定的配置文件。你的主目录中可能已经存在一些隐藏的应用程序配置文件。
+
+GNOME 和 KDE 软件包包含诸如办公套件之类的应用程序。
+
+## X Window 配置实用程序
+
+编辑 XF86Config 文件对于除最熟练的管理员之外的所有人来说都可能是一个困难的过程。有许多优秀的工具可以帮助你配置此文件。尽管其中一些工具是图形化的，但它们不会像其他 Linux GUI 实用程序那样存在感知缺陷。换句话说，它们是可靠的。在大多数情况下，它们包含了大多数管理员配置系统所需的全部功能。
+
+其中一些实用程序甚至可以帮助你安装或修改键盘和鼠标的设置。
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_210_0.png)
+
+> 在启动这些实用程序之前，请备份你的 X Server 配置文件，通常位于 /etc/X11/XF86Config。
+
+## SuperProbe
+
+SuperProbe 实用程序是一个文本命令，用于检测视频控制器的关键部件，包括卡上的芯片组和数据转换器。最重要的是，它会为你识别合适的 X Server。如果你想尝试使用此实用程序，请先关闭所有正在运行的程序，因为 SuperProbe 可能导致 Linux “挂起”或在你的计算机上停止工作。
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_211_0.png)
+
+> > X Server 基于 XFree86 项目的工作。服务器名称反映了它们的视频控制器。例如，你可以将 XF86_SVGA 服务器分配给 SVGA 卡，将 XF86_P9000 服务器分配给 Orchid P9000 卡，等等。
+
+当你运行 SuperProbe 时，实用程序会警告你它可能导致计算机挂起。在五秒内，随着实用程序探测你的视频硬件，显示器屏幕可能会变黑。如果它检测到你拥有的硬件，你将在屏幕上看到结果，如图 10.1 所示。
+
+如果你在没有使用其他 X Window 配置实用程序的情况下设置配置文件，下一步是将 X Server 链接 (ln) 到 X 命令。
+
+## xf86config
+
+xf86config 实用程序在命令行中使用，用于配置你的视频控制器和显示器以及键盘和鼠标。
+
+xf86config 实用程序代表了图形实用程序不被偏好的罕见情况之一。xf86config 使用的列表很长且乏味。然而，由于它允许你从外部文件设置显示器和视频控制器的设置，因此更容易保持此实用程序的最新状态。
+
+如果你想了解每个步骤中可用选项的更多信息，请查看下一节关于 XF86Setup 实用程序的内容。尽管 XF86Setup 是一个 GUI 实用程序，但选项几乎相同。
+
+```
+laptop:* SuperProbe
+SuperProbe Version 2.20 (17 June 1999)
+(c) Copyright 1993,1994 by David M. Eskelin <dave@xfree86.org>
+(c) Copyright 1994-1998 by The XFree86 Project, Inc.
+
+This work is derived from the "vgasetc.zip" and
+"vga2cfg.zip" documentation packages produced by Finn
+Thogerensen, and released with all appropriate permissions
+having been obtained. Additional information obtained from
+"Programmer's Guide to the EGA and VGA, 2nd ed." by Richard
+Ferraro, and from manufacturer's data books
+
+Bug reports are welcome, and should be sent to XFree86@XFree86.org.
+In particular, reports of chipsets that this program is unable to
+correctly detect are appreciated.
+
+Before submitting a report, please make sure that you have the
+latest version of SuperProbe (see http://www.xfree86.org/FAQ/).
+
+WARNING - THIS SOFTWARE COULD HANG YOUR MACHINE.
+READ THE SuperProbe MANUAL PAGE BEFORE
+RUNNING THIS PROGRAM.
+
+INTERRUPT WITHIN FIVE SECONDS TO ABORT!
+
+First video: Super-VGA
+Chips: Yamaha 2088 VESA VBE 3.0 (Port Probed)
+RAMDAC: Generic 8-bit pseudo-color DAC
+(with 8-bit wide lookup tables (or in 6-bit mode))
+
+laptop:* 
+```
+
+图 10.1 SuperProbe 实用程序的工作情况。
+
+xf86config 的 Cards 数据库文件位于 /usr/X11R6/lib/X11 目录中。Monitor 数据库文件通常位于此目录或其子目录中。如果你找不到其中任何一个文件（位置会有所不同），请使用 locate 或 find 命令。
+
+## XF86Setup
+
+几乎所有视频卡都可以用最小的视频服务器设置。XF86Setup 实用程序使用名为 XF86_VGA16 的 16 色 VGA 服务器来创建 GUI。即使你只有命令行界面，此命令也能工作。如图 10.2 所示，此实用程序共有六个部分：Mouse、Keyboard、Card、Monitor、ModeSelection 和 Other。
+
+如果你的鼠标无法工作，你可以使用 Tab 键在可用选项之间切换。一旦你的选项被高亮，按空格键选择你想要的选项。
+
+完成重新配置后，点击屏幕底部的 Done 按钮。在浏览可用屏幕时，Done 和 Abort 选项可以随时选择。点击 Done 并确认更改后，XF86Setup 会覆盖 /etc/X11/XF86Config 文件。
+
+*注意：本节讨论的 XF86Setup 版本基于 3.3 版本。尽管此实用程序的更新版本可用，但它们是在 Sair Linux 考试最初创建之后发布的。*
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_212_0.png)
+
+图 10.2 XF86Setup 实用程序。
+
+## 鼠标
+
+如图 10.3 所示，你可以以多种方式自定义鼠标。但关键目标是获得一个可用的鼠标。图 10.3 中未在以下列表中描述的所有其他项目都较不重要。要获得一个可用的鼠标，请从以下选项中选择：
+
+- **Protocol**—你选择的协议会选择一个驱动程序，该驱动程序决定你的计算机如何与鼠标通信。
+- **Device**—鼠标设备基于鼠标如何连接到你的计算机。虽然 PS/2 鼠标设置为 /dev/psaux 设备，但串行鼠标通常连接到 COM 端口。如果看不到 COM 端口的选项，你应该能看到类似 /dev/ttyS0 或 /dev/cua0 的内容，对应 COM1（/dev/ttyS1 或 /dev/cua1 对应 COM2，等等）。
+- **3 Buttons**—如果你只有两个按钮的鼠标，你会想要模拟三个按钮。中间按钮用于许多 Linux GUI 弹出菜单，包括复制和粘贴操作。
+
+*注意：你无法使用 XF86Setup 配置特殊设备，例如操纵杆和图形平板。如果你在 Linux GUI 中想使用其中一种设备，你需要直接将它的设置添加到 /etc/X11/XF86Config 文件中。*
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_213_0.png)
+
+图 10.3 XF86Setup 鼠标配置选项。
+
+## 键盘
+
+如果你使用的是美国标准以外的键盘，你可以使用本节中的选项选择更符合你的硬件的键盘型号和语言。这些选项还允许你管理某些键的功能。
+
+## 卡
+
+X Server 位于客户端计算机上。它直接与你的视频控制器通信。如图 10.4 所示，有多种卡可供选择。
+
+即使你的卡在此列表中，XF86Setup 也可能无法识别你的卡的所有功能。如果你点击 Detailed Setup，你将在菜单中看到选项，允许你设置与视频控制器卡关联的 RAM、芯片组、时钟设置和视频服务器。你甚至可以使用本节设置通用卡。
+
+## 显示器
+
+你可以通过 XF86Setup 实用程序的 Monitor 部分从 10 种不同类型的显示器中进行选择。你选择的每个显示器都有不同的水平和垂直频率可用范围。查看显示器的文档。如果你选择超过显示器能力的频率，你可能会使其无法修复地损坏。
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_214_0.png)
+
+图 10.4 XF86Setup 视频控制器卡配置选项。

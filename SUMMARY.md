@@ -1878,6 +1878,7 @@
 +   [Sair Linux and GNU 认证 I级，系统管理 I级：系统管理](docs/sair-linux-and-gnu-certification-level-i-system-administrati/README.md)
 +   [Sair Linux and Gnu 认证：Level II Apache 与 Web 服务器 (Sair Linux)](docs/sair-linux-and-gnu-certification-level-ii-apache-and-web-ser/README.md)
 +   [SAIR Linux 和 GNU 认证二级、Apache 与 Web 服务器](docs/sair-linux-and-gnu-certificationr-level-ii-apache-and-web-se/README.md)
++   [Sair Linux/GNU 安装与配置考试冲刺 (考试：3X0-101)](docs/sair-linuxgnu-installation-and-configuration-exam-cram-exam-/README.md)
 +   [Samba-3 示例：成功部署实践练习](docs/samba-3-by-example-practical-exercises-to-successful-deploym/README.md)
 +   [Samba 黑书：使用 Samba 集成 Linux 和 NT 的实用指南](docs/samba-black-book-a-hands-on-reference-for-integrating-linux-/README.md)
 +   [Samba 入门指南 Plus](docs/samba-primer-plus/README.md)
