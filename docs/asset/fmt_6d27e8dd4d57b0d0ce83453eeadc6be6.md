@@ -1,0 +1,93 @@
+
+- Spearman, Dr. M. Leroy. 弗吉尼亚州汉普顿美国国家航空航天局兰利研究中心。
+- Spector, Dr. David L. 纽约州冷泉港冷泉港实验室高级职员科学家。
+- Speeding, Prof. Frank H. 已故；曾任爱荷华州立大学能源研究与开发管理局艾姆斯实验室。
+- Speer, Dr. J. Alexander. 北卡罗来纳州罗利北卡罗来纳州立大学数理科学学院海洋、地球与大气科学系。
+- Speir, Dr. James G. 怀俄明州拉勒米西部研究所。
+- Spergel, Dr. David N. 普林斯顿大学天体物理系。
+- Spiegel, Dr. Allen M. 马里兰州贝塞斯达美国国立卫生研究院糖尿病与肾脏病研究所。
+- Spiegel, Dr. Carol A. 威斯康星大学医院及诊所麦迪逊病理科与实验医学部临床微生物学主任。
+- Spink, Dr. Wesley W. Regens. 明尼苏达大学医学院医学教授。
+- Spinrad, Dr. Bernard I. I. 俄勒冈州立大学核工程系。
+- Splitstoesser, Dr. Don F. 康奈尔大学食品科学与技术部及纽约州农业实验站。
+- Sposito, Dr. Garrison. 加利福尼亚州伯克利加州大学植物与土壤生物学系。
+- Sprague, Prof. G. F. 伊利诺伊州厄巴纳伊利诺伊大学农学系。
+- Sprague, Dr. Howard B. 华盛顿特区农业顾问。
+- Spratt, Dr. Nelson T., Jr. 明尼苏达大学动物学系。
+- Spreadbury, Dr. Peter J. 英国剑桥大学工程系。
+- Sprinkle, Dr. James. 德克萨斯州奥斯汀德克萨斯大学地球科学系。
+- Sprugin, Robert A. 加利福尼亚州尔湾Sprugin & Associates 公司总裁。
+- Sreenivasan, Prof. K. R. 耶鲁大学工程与应用科学部。
+- Srihari, Dr. Sangur N. 纽约州阿默斯特水牛城大学几何分析与识别卓越中心。
+- St. Gene, Dr. Joseph W. 密苏里州圣路易斯华盛顿大学医学院儿科系儿科与分子微生物学副教授。
+- St. Jean, Dr. Joseph. 北卡罗来纳大学地质系。
+- St. Pierre, Prof. George R. 俄亥俄州立大学冶金工程系。
+- Stadman, Dr. Theresa C. 马里兰州贝塞斯达美国国立卫生研究院心肺血液研究所及卫生与公共服务部。
+- Stage, Dr. Steven A. 路易斯安那州巴吞鲁日。
+- Stahinke, Dr. Herbert L. 亚利桑那州立大学有毒动物研究实验室主任。
+- Stall, Prof. Robert E. 佛罗里达大学食品与农业科学学院植物病理学系。
+- Stamm, Dr. Lola. 北卡罗来纳大学教堂山分校公共卫生学院流行病学系。
+- Standiford, Norris C., Jr. 密歇根州安娜堡W. L. Badge Associates, Inc. 咨询工程师。
+- Standford, Prof. John L. 爱荷华州阿默斯爱荷华州立大学物理与天文学系。
+- Stanley, Dr. Bruce A. 宾夕法尼亚州赫希宾夕法尼亚州立大学医学院细胞与分子生理系。
+- Star, Dr. Eugene C. 俄勒冈州波特兰美国内政部邦纳维尔电力管理局。
+- Stauder, Dr. Randy C. 密歇根州米德兰陶氏化学公司卤素研究实验室。
+- Stebbins, Prof. G. Cedard. 加利福尼亚州戴维斯加州大学农业学院遗传学系。
+- Steels, Dr. William A. 宾夕法尼亚州立大学化学系。
+- Stenrud, Norman E. 普林斯顿大学数学系。
+- Stenovic, Dr. Victor F. 密苏里大学电气工程系。
+- Stein, Prof. Dale F. 已退休；曾任密歇根技术大学霍顿荣休校长。
+- Stein, Dr. Gary S. 佛罗里达大学医学院J. Hills Miller 健康中心生物化学与分子生物学系。
+- Stein, Dr. Janet L. 佛罗里达大学医学院J. Hills Miller 健康中心生物化学与分子生物学系。
+- Stein, Dr. Murray B. 加利福尼亚州拉霍亚加州大学焦虑与创伤应激障碍研究项目。
+- Steinberg, Dr. Aephiram M. 加利福尼亚州伯克利加州大学物理系。
+- Steinberg, Dr. Ellis P. 伊利诺伊州阿贡阿贡国家实验室高级科学家。
+- Steiner, Emil F. (已退休) 西屋电气公司空气焊接部。
+- Steinsein, Alfred. 佐治亚州亚特兰大美国婴儿猝死综合征研究所总裁。
+- Stenason, Dr. R. F. 伍斯特学院物理系。
+- Stepniewski, Wieslaw Z. 宾夕法尼亚州斯普林菲尔德航空咨询工程师。
+- Stepounski, Prof. Peter L. 康奈尔大学农学系。
+- Stern, Prof. David. 爱荷华大学爱荷华城爱荷华水力研究所。
+- Stern, Dr. Robert J. 德克萨斯州理查森德克萨斯大学地球科学系。
+
+## S
+
+- Sternberg，詹姆斯·C·博士。贝克曼仪器公司应用研究部，加利福尼亚州布雷亚。
+- Sternheim，查尔斯·E·博士。马里兰大学帕克分校心理学系本科生研究主任。
+- Sterner，W. E. 博士。百慕大生物站，西印度群岛圣乔治斯。
+- Steward，C. E. 博士。北卡罗来纳州立大学兽医学院，罗利。
+- Stevens，卡尔文·H. 博士。圣何塞州立大学地质系。
+- Stevens，玛丽·贝蒂·博士。约翰斯·霍普金斯大学医学院数学科，马里兰州巴尔的摩。
+- Stevenson，爱德华·C. 博士。已故；生前任职于弗吉尼亚大学工程与应用科学学院电气工程系。
+- Steward，约翰·W. 博士。弗吉尼亚大学物理系。
+- Steward，大卫·B. 博士。美国地质调查局地球化学与矿物学分支，内政部。
+- Steward，德威。美国农业部农业研究服务处部队研究部，马里兰州贝尔茨维尔。
+- Stewart，斯科特·R. 李·R. C. Lee & Associates, Inc.，华盛顿州西雅图。
+- Steyn，朱利安·J. 博士。能源资源国际公司，华盛顿特区。
+- Stiell，本顿·M. 教授。西伊利诺伊大学生物科学系，伊利诺伊州麦考姆。
+- Stiles，马丁·博士。肯塔基大学化学系，列克星敦。
+- Stillman，格雷戈里·E. 博士。伊利诺伊大学电气工程系，厄巴纳。
+- Stirton，罗伯特·I. 博士。罗杰·威廉姆斯技术与经济服务公司（已退休）副总裁，加利福尼亚州伯克利。
+- Stirton，鲁本·A. 教授。加利福尼亚大学伯克利分校古生物博物馆馆长。
+- Stock，大卫·博士。华盛顿州立大学机械与材料工程学院，华盛顿州普尔曼。
+- Stock，约翰·T. 教授。康涅狄格大学化学系，斯托尔斯。
+- Stocum，大卫·L. 博士。伊利诺伊大学遗传学与发育系。
+- Stoller，马歇尔·L. 博士。加利福尼亚大学旧金山分校泌尿科系。
+- Stoloff，诺曼·S. 博士。伦斯勒理工学院材料工程系。
+- Stolper，爱德华·M. 博士。加州理工学院地质与行星科学部。
+- Stone，A. 道格拉斯·教授。耶鲁大学应用物理系。
+- Stone，安东尼·J. 博士。剑桥大学化学系，剑桥大学化学实验室，英国剑桥。
+- Stone，杰弗里·K. 博士。俄勒冈州立大学植物学与植物生理学系，科瓦利斯。
+- Stone，肯尼斯·G. 教授。已故；生前任职于密歇根州立大学化学系。
+- Storch，亨利·H. 博士。已故；生前任职于纽约大学化学助理教授。
+- Storer，特蕾西·I. 博士。已故；生前任职于加利福尼亚大学戴维斯分校动物学系。
+- Stores，威廉·B. 教授。加利福尼亚大学里弗赛德分校植物学与植物科学系。
+- Stott，杰弗里·L. 博士。加利福尼亚大学戴维斯分校兽医学院兽医学微生物学与免疫学系。
+- Stout，加里·J. 美国电话电报公司海底系统公司，新泽西州莫里斯镇。
+- Strandness，D. 尤金·小博士。华盛顿大学医学院外科系，西雅图。
+- Strandmann，罗素·W. 教授。德克萨斯理工大学生物科学系。
+- Stransk，唐纳德·R. 教授。澳大利亚阿德莱德大学物理与非无机化学系。
+- Straus，鲁本·博士。普罗维登斯医疗中心，俄勒冈州波特兰。
+- Strausbaugh，卡尔·A. 教授。爱达荷大学Kinnery研究与推广中心，金伯利。
+- Streeter，维克多·L. 教授。普罗维登斯医疗中心，金伯利。
+- Strohl，罗伯特·J. C. 顾问，佛罗里达州萨拉索塔。
