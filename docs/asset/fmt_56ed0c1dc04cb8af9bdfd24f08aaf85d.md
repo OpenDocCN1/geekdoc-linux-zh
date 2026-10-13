@@ -1,0 +1,152 @@
+
+# 索引
+
+- `POSTROUTING` chain, 494, 504, 524
+- power management system, kernel, 28
+- `PREROUTING` chain, mangle table, 494, 523
+- print commands, 652–653
+- printiny command, 379
+- Mode directive, `OpenSSL`, 288
+- private key, 264, 273–274, 294, 406, 413
+- private network, using redirection to access, 344
+- attached to an open file, 582–583
+- disabling raw access, 171
+- filehandle limit, 36
+- hiding from every, 171
+- monitoring on ps, 4
+- protecting daemons from being killed by root, 170–121
+- vulnerability to hackers, 155
+- Physical Address Extension (`PAE`) mode, 19
+- kernel configuration for, 17
+- procmail tool, 429–435
+- proc_tncfg file, 535
+- ProTPFD, 455–471
+- access restriction by IP address, 463
+- restriction to single directory, 466
+- benefits of, 455
+- chroot jail, 464–465
+- command buffer size, controlling, 468
+- command privileges, limiting, 465–467
+- compiling, 456
+- configuring, 456–461
+- connections, counting, 462
+- directory browsing, restricting, 467
+- directory creation/deletion, disabling, 465–466
+- file transfer-simplifying, 466–467
+- hiding files, 468
+- installing, 456
+- Linux Capabilities with use, 469–471
+- monitoring, 462
+- PAM use with, 463–464
+- securing, 462–463
+- standalone service, 459–460
+- who is connected, 462
+- as xinetd service, 460–461
+- Promisc command, 88
+- protocol, xinetd attribute, 331
+- proxy-arp firewall, 512–514
+- ProxyPass directive, 113
+- `ps aux | grep command`, 583
+- `ps aux | grep pnta command`, 138
+- `ps aux | grep dibanding command`, 439
+- `ps aux | grep ssh command`, 293
+- ps utility, 4
+- pseudo terminal (`TTY`) support, 内核, 30
+- pree command, 5–6
+- PTR records, 400, 403
+- pub extension, 287
+- private key, 264, 273–274, 294, 406, 413
+- publish guidelines, 392–394
+- `pwck command`, 283
+- `pwd command`, 611
+
+# 索引
+
+- 独立冗余阵列 (`RAID`), 30, 66-67
+- 引用监视器安全模型, 156
+- Refuse 命令, 131
+- 正则表达式, 440, 595
+- ReiserFS, 49-53
+- REJECT 命令, 423, 424
+- REJECT 目标, netfilter, 495
+- RELATED, 数据包状态, 523
+- RELATED+REPLY, 数据包状态, 523
+- RELAY 命令, 423, 424
+- RELAY_ENTIRE_DOMAIN 特性, 424
+- RELAY_HOSTS_ONLY 特性, 424
+- 在浏览器中重新加载或刷新, 387
+- 通过 TCP/IP 指纹识别识别远程操作系统, 551
+- 远程过程调用 (`RPC`), 323
+- 使用 pico 命令删除文件/目录, 611
+- replay.com 网站, 660
+- require 指令, 338
+- require, PAM 控制标志, 244
+- RequireValidShell 指令, 469
+- requisite, PAM 控制标志, 244
+- `/etc/shadow` 文件中的预留字段, 280
+- 恢复工具, 239
+- RetryFactor 命令, 130
+- REUSE 标志, 329
+- 反向缩进扫描, 551
+- RFC 错误代码, 223
+- rhosts, 模块, 252
+- RhostsAuthentication 指令, `OpenSSL`, 288
+- RhostsSAAuthentication 指令, `OpenSSL`, 289
+- right , 533
+- rightsasikey 选项, 533
+- RLimitCPU 指令, 100
+- RLimitMEM 指令, 101
+- RLimitPCPU 指令, 101
+- `login 命令`, 637-638
+- `ro 命令`, 13, 611-612
+- `rm -rf 命令`, 298
+- NFS 服务器上的 ro 选项, 483
+- 机器人执行协议 (`REP`), 390-391
+- root 权限
+  - 指南, 298-299
+  - LIDS 减少, 155-156
+  - 限制, 299-300
+  - 密码, 299, 61
+  - set-UID 程序和, 205
+  - root 数组压缩, 426
+  - 使用 sudo 命令创建 root, 300-302
+  - 使用 sudo 命令删除 root, 302-307
+- NFS 服务器上的 root_squash 选项, 484, 486
+- 轮询域名服务 (round-robin DNS), 85
+- `route 命令`, 643-644
+- RPC 扫描, 551
+- rpceinfo 程序, 485-486
+- rpm 增长, 620-622
+- RSAAuthentication 指令, `OpenSSL`, 289
+- RSAREF 库, 270
+- Tripwire 中的 truneline 属性, 220
+- run level 命令, 328
+
+# S
+
+- SAINT. 安全管理员集成网络工具 (`SAINT`)
+- Samba 服务器性能, 141-145
+  - 机会性锁 (`opclocks`), 142-143
+  - 原始读取，控制, 144
+  - 读取大小参数, 142-144
+  - 严格锁定参数, 144
+  - 严格同步参数, 144
+  - TCP socket 选项,
+  - 自动创建用户, 144-145
+  - 写入大小，控制, 143
+- Samba 服务器安全, 473-483
+  - 通过 IP 地址或主机名进行访问控制, 478
+  - 通过网络接口进行访问控制, 477-478
+  - 域级, 475
+  - OpenSSL, 481-483
+  - 用于应用程序的 pam_sm 模块, 479-481
+  - 密码和, 474-476
+  - 安全级别，选择合适的, 473
+  - 服务器级, 475
+  - 共享级, 474
+  - 信任域，允许来自这些域的用户, 477
+  - 用户级, 474
+- 邮件清理器, 429-434
+- SATAN 工具, 541
+- satisfy 指令, 389-390
+- `/sbin/lsadd` 命令, 163
