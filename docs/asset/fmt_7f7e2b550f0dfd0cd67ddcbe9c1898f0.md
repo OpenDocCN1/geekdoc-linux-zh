@@ -1,0 +1,117 @@
+
+在 `/etc/syslog.conf` 中添加此行，重新启动 `syslogd`（`killall -HUP syslogd`），Apache 将使您能够将所有 Apache 调试消息存储到 `/var/log/debug` 文件。还请注意，您可以将 `LogLevel` 设置为以下任何设置：
+
+- `emerg.` 紧急消息
+- `alert.` 警告消息
+- `crit.` 严重消息
+- `error.` 错误消息
+- `warn.` 警告
+- `notice.` 通知消息
+- `info.` 信息消息
+- `调试。` 在调试级别记录的消息还将包含生成该消息的源文件和行号，以帮助调试和代码开发
+
+**提示**
+如果你想在日志发生时实时查看 syslog 或其他日志文件的更新，请使用带有 `-f /path/to/log` 选项的 `tail` 工具。
+
+## 分析服务器日志文件
+
+许多第三方 Web 服务器日志分析工具可用。大多数这些工具期望日志文件采用 CLF 格式，因此请确保你的日志中有 CLF 格式。以下是其中一些工具及其查找位置：
+
+- **WebTrends:** http://www.webtrends.com/
+- **Wusage:** http://www.boutell.com/wusage/
+- **wwwstat:** http://www.ics.uci.edu/pub/websoft/wwwstat/
+- **http-analyze:** http://www.netstore.de/Supply/http-analyze/
+- **pwebstats:** http://www.unimelb.edu.au/pwebstats.html
+- **WebStat Explorer:** http://www.webstat.com/
+- **AccessWatch:** http://netpresence.com/accesswatch/
+
+找到最适合你的方法就是试用它们，或者至少访问它们的网站进行功能比较。我发现 `Wusage` 和 `wwwstat` 两个实用程序非常有用。`Wusage` 是我最喜欢的商业日志分析应用程序。它高度可配置，并使用公司著名的 GD 图形库生成出色的图形报告。我也喜欢免费的 `wwwstat` 程序。它是用 Perl 编写的，因此你需要在想要运行它的系统上安装 Perl。
+
+## 维护服务器日志文件
+
+在访问率高或虚拟主机众多的 Apache 站点上，日志文件可能在很短时间内变得巨大，这很容易导致磁盘危机。当日志文件变得非常大时，你应该轮转它们。你有两种轮转日志的选择：使用 Apache 附带的名为 `rotatelog` 的实用程序，或使用 `logrotate`。
+
+### 使用 rotatelog
+
+Apache 附带一个名为 `rotatelog` 的支持工具。你可以按如下方式使用此程序：
+
+```
+TransferLog "| /path/to/rotatelogs logfile rotation time in seconds"
+```
+
+例如，如果你想每 86,400 秒（24 小时）轮转一次访问日志，请使用以下行：
+
+```
+TransferLog "| /path/to/rotatelogs /var/logs/httpd 86400"
+```
+
+你将每天的访问日志信息存储在名为 `/var/logs/httpd.nnnn` 的文件中，其中 `nnnn` 代表一个长数字。
+
+### 使用 logrotate
+
+`logrotate` 实用程序会轮转、压缩和邮件发送日志文件。它旨在简化日志文件的系统管理。它能够按日、周、月或按大小基准自动轮转、压缩、删除和邮件发送日志文件。通常，`logrotate` 作为每日 cron 作业运行。你可以按如下方式创建一个名为 `/etc/logrotate.d/apache` 的文件：
+
+```
+/path/to/apache/access_log {
+compress
+rotate 5
+mail webmaster@yourdomain.com
+errors root@yourdomain.com
+size=1024K
+postrotate
+kill -HUP `cat /path/to/httpd.pid`
+endscript
+}
+```
+
+此配置指定当 `/path/to/apache/access_log` 文件增长超过 1MB（1,024K）大小时进行轮转，并且旧日志文件在经过五次轮转后会被压缩并邮件发送给 `webmaster@yourdomain.com`，而不是被删除。处理日志文件期间发生的任何错误都会被邮件发送给 `root@yourdomain.com`。
+
+## 增强 Web 服务器安全性
+
+为了降低安全风险，你必须时刻保持警惕。使 Web 服务器达到百分之百安全可以做的事情数量是无限的。保持高度安全是一个持续的过程；你必须及时了解计算机安全领域发生的情况，并在需要时采取预防措施。本节讨论一些特定于 Web 服务器的安全问题。
+
+### 安装 Apache 而不是特洛伊木马
+
+Apache 是免费软件，因此请确保从可靠来源获取。切勿从任何 Web 或 FTP 站点下载 Apache 二进制文件或源代码。务必先检查官方网站 `www.apache.org`。将来，Apache 源代码将由 PGP（Pretty Good Privacy）签名。
+
+### 为 Apache 使用专用用户和组
+
+如果将 Apache 作为独立服务器运行，请为 Apache 创建专用用户和组。不要使用 `nobody` 用户或 `nogroup` 组，特别是如果你的系统已经定义了这些。很可能你的系统正将它们用于其他服务或其他地方。这可能导致管理问题和安全问题。相反，为 Apache 创建一个全新的用户和组，并使用 `User` 和 `Group` 指令使用它们。
+
+### 保护 ServerRoot 和日志目录
+
+确保 `ServerRoot` 目录（尤其是日志目录和文件）只能由 `root` 用户写入。你无需向 Apache 用户/组授予日志目录的读取或写入权限。允许 `root` 用户以外的人在日志目录中写入文件可能导致严重的安全漏洞。
+
+### 禁用默认访问
+
+严格的安全模型规定不存在默认访问，因此养成先不允许访问的习惯。仅对特定位置允许特定访问。要实现无默认访问，请在 Apache 配置文件之一中使用以下配置段：
+
+```
+<Directory />
+    Order deny,allow
+    Deny from all
+</Directory>
+```
+
+这首先禁用所有访问。现在，如果你需要启用对特定目录的访问，请再次使用 `<Directory ...>` 容器打开该目录。例如，如果你想允许访问 `/www/mysite/public/htdocs`，请添加以下配置：
+
+```
+<Directory "/www/mysite/public/htdocs">
+    Order deny,allow
+    Allow from all
+</Directory>
+```
+
+这种方法——只打开你需要的——是一种预防性安全措施，强烈推荐。
+
+### 禁用用户覆盖
+
+如果你不希望用户使用目录中的按目录配置的配置文件（`.htaccess`）覆盖服务器配置设置，请按如下方式禁用此功能：
+
+```
+<Directory />
+    AllowOverride None
+    Options None
+    allow from all
+</Directory>
+```
