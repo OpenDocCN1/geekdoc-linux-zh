@@ -1,0 +1,167 @@
+
+# Geany 在 Raspbian 上的安装
+
+Geany 在 Raspbian 上默认应该已经安装。如果没有，安装也非常简单。打开 LX 终端，然后输入：
+
+```bash
+$ sudo apt-get install geany
+```
+
+这将开始安装过程；之后，它将出现在“编程”子菜单中。
+
+> **你知道吗**
+>
+> Geany 只是众多优秀的开发环境之一。搜索“Linux IDE”以获取更多想法。
+
+## 新建文件
+
+开始新建文件很容易，只需按下 `File` 然后选择 `New`，就像在文字处理器或文本编辑器中一样。这将创建一个空白文件，你可以立即开始在其中输入内容。将其保存为适当的文件类型，例如 `.py`，Geany 就会识别出代码是 Python，并开始进行标记。
+
+## 标记
+
+如果你无法将其保存为相关的文件类型，你还可以强制 Geany 使用特定的标记显示代码。转到 `Documents > Set Filetype`，然后从其中的可用选项中选择一个。它至少支持 50 种不同的语言。
+
+## 打开文件
+
+在 Geany 中打开现有文件很容易——只需单击 `File` 然后选择 `Open`。目前，我们将通过打开 `pi` 目录下 `python_games` 文件夹中的一个预装 Python 文件来测试 Geany 的一些功能。
+
+![](img/59caadfa348382a5c408c25137901e27_40_0.png)
+
+## 导航代码
+
+IDE 的左列列出了代码重要部分的行号。对于 Python，这包括构成程序的函数和变量。你也可以单独点击它们，跳转到它们在代码中首次出现或定义的位置。
+
+![](img/59caadfa348382a5c408c25137901e27_40_1.png)
+
+## 高级导航
+
+当你有多个分散各处的函数和导入时，你的代码可能会开始看起来有点混乱。Geany 足够智能，能够识别这些内容，并允许你在检查代码时最小化循环、函数和导入块，如果这些部分并非必要的话。
+
+![](img/59caadfa348382a5c408c25137901e27_40_2.png)
+
+## 自动补全
+
+在编写程序时，你可能会注意到 Geany 会尝试猜测你试图使用的函数或变量。如果你忘记了变量的确切名称，这可能很有用，因为你可以使用箭头键在你刚才输入的内容相关的命令列表中向下移动。
+
+## 测试代码
+
+你可以通过点击顶部的齿轮图标来测试代码——这些允许你运行代码。任何错误都会显示在下一个窗口中，但如果一切按计划进行，它应该能毫无问题地运行。退出窗口，再次点击 `Run` 按钮以停止测试。
+
+![](img/59caadfa348382a5c408c25137901e27_40_3.png)
+
+## 编译
+
+完成代码后，你可以使用内置工具进行编译和构建。过程中发生的任何错误都会记录下来，允许你逐一查看，直到一切正常运行。
+
+# 获取远程桌面访问
+
+学习如何在树莓派不在你面前时访问其桌面。
+
+VNC（虚拟网络计算）是一种图形桌面访问和共享系统，允许用户从自己的系统远程控制和操作另一台电脑的桌面。
+
+它在很多方面都很方便：让你控制远程系统；帮助远处的另一位用户；允许电脑保持开机状态，但无需键盘、鼠标甚至显示器。
+
+在我们的情况下，我们旨在允许访问树莓派桌面，而无需连接上述外围设备。这样，你可以做通常所做的一切，只需连接电源和即可，从而释放空间并节省额外费用。在实际应用中，这意味着你 potentially 可以通过 Android 平板电脑或手机访问树莓派桌面！
+
+## 你需要什么
+
+- `TightVNC`
+- `www.tightvnc.com/en/relas2.7.php`
+
+> **你知道吗**
+>
+> TightVNC/Viewer 是一个用于访问 VNC 服务器的免费资源，比如我们将在本教程中安装的那个
+
+![](img/59caadfa348382a5c408c25137901e27_41_0.png)
+
+## 静态 IP 地址
+
+我们的第一步是确保树莓派拥有静态 IP 地址。基本上，IP 地址是网络分配给设备的一组数字，用于区分它们。要设置静态 IP 地址，只需双击 LX 终端，输入以下内容，然后按 Enter：
+
+```bash
+sudo nano /etc/network/interfaces
+```
+
+### 静态 IP 第二部分
+
+此文件控制树莓派的 IP 寻址。你需要向下滚动到 `iface eth0` 行，删除 DHCP 并将其替换为 `static`。现在，在下一行输入你希望树莓派拥有的 IP 地址，以及子网掩码和网关：
+
+```bash
+address 192.168.1.93
+netmask 255.255.255.0
+gateway 192.168.1.254
+```
+
+![](img/59caadfa348382a5c408c25137901e27_41_1.png)
+
+### 静态 IP 第三部分
+
+输入这些详细信息后，按 `Ctrl+O` 退出 `nano`，或通过菜单保存并退出，然后按 `Y` 接受更改，再按几次 Enter 返回终端的命令提示符。现在你可以重启树莓派，或在终端中输入以下内容：
+
+```bash
+sudo /etc/init.d/networking restart
+```
+
+## 安装 VNC 第一部分
+
+现在我们将安装 VNC，并确保在树莓派启动时自动启动它。在旧版本的 Raspbian 中，这曾经有点麻烦，因为配置服务经常有破坏系统的坏毛病。但现在不再了。输入以下命令，每输入一条后按 Enter。
+
+```bash
+sudo apt-get update
+sudo apt-get install tightvncserver
+tightvncserver
+```
+
+![](img/59caadfa348382a5c408c25137901e27_42_0.png)
+
+## 安装 VNC 第二部分
+
+当包下载并安装完成后，按照屏幕上的说明设置密码并确认。但对于“仅查看”选项请回答 `n`。这真的只是一个安全功能，既然你只在家访问树莓派，它并不是绝对必要的——尽管这仍然是一个好习惯。
+
+```text
+You will require a password to access your desktops
+Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n
+New 'X desktop' is raspberryi:1
+```
+
+## 配置 VNC 服务器
+
+VNC 服务器已安装并运行起来。现在我们需确保每次树莓派重启时它都作为一个服务加载，这样即使树莓派经历断电重启，你也可以访问它。要配置树莓派以此方式工作，请在终端中输入以下内容并按 Enter。
+
+```bash
+sudo nano /etc/init.d/tightvncserver
+```
+
+## 配置启动服务
+
+我们将回到 `nano`，并且需要输入几行命令，以便让树莓派在启动时激活 VNC 服务器。在编辑器中，输入：
+
+```bash
+#!/bin/sh
+# /etc/init.d/tightvncserver
+# Set the $VNCUSER variable to the name of the user to start tightvncserver under
+VNCUSER='pi'
+case "$1" in
+start)
+        su $VNCUSER -c '/usr/bin/tightvncserver :1'
+        echo "Starting TightVNC server for $VNCUSER" ;;
+stop)
+        pkill Xtightvnc
+        echo "tightvncserver stopped" ;;
+*)
+        echo "Usage: /etc/init.d/tightvncserver {start|stop}" ;;
+esac
+exit 0
+```
+
+## 重启并准备就绪
+
+现在按 `Ctrl+X`，然后按 `Y` 保存，接着按几次 Enter 回到终端。我们现在需要做的就是添加我们刚创建的脚本的权限，使其可执行且有效。通过向终端输入以下命令来实现这一点，确保每条命令后都按 Enter，否则不会被注册。
+
+```bash
+sudo chmod 755 /etc/init.d/tightvncserver
+sudo update-rc.d tightvncserver defaults
+sudo reboot
+```
