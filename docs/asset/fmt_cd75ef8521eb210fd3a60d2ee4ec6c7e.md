@@ -1,0 +1,73 @@
+
+`accept_timeout=60` 和 `connect_timeout=60` 值分别决定了客户端在连接超时之前建立 PASV 或 PORT 样式连接的时间。两者都设置为 60 秒。（注意，这些内容没有自动包含在配置文件中；如果你想更改值，可以添加它们。）`idle_session_timeout=600` 会导致用户在无活动超过 10 分钟（600 秒）后，FTP 会话被断开。`data_connection_timeout` 值设置了服务器在断开连接之前等待无进展的时间（此处默认为 10 秒）。
+
+# 导航 vsFTPD 站点
+
+大多数用户可能期望使用的 shell 字符（如问号和括号）都被 vsFTPD 支持。有一个特别有用的通配符可以在 `ls` 命令中使用，还有一个可以开启的选项。星号 (`*`) 通配符可以与 `ls` 命令配合。支持同一行中使用多个星号。你可以为 `ls` 的 `-R` 选项添加支持，使用户递归列出当前目录及所有子目录的内容。要开启此默认关闭的功能，你可以在 `vsftpd.conf` 文件中添加以下行：
+
+```
+ls_recurse_enable=YES
+```
+
+# 获取更多关于 FTP 服务器的信息
+
+有很多资源可以获取关于 FTP 服务器的信息。以下是一些选项：
+
+- FAQ — 要查看 vsFTPD FAQ，请访问 `/usr/share/doc/vsFTPpd*/FAQ`。
+- RFCs — 意见请求（RFC）是定义互联网上标准协议的文档。FTP 的主要 RFC 是 RFC959。你可以从互联网上的多个位置获取 RFC，包括互联网 RFC/FYI/STD/BCP 存档 (`www.fags.org/rfcs`)。
+- CERT — 该组织为设置 FTP 服务器提供了有用文档。《匿名 FTP滥用》描述了如何应对 FTP 服务器滥用并从中恢复。它还告诉了如何处理软件盗版问题。《匿名 FTP 配置指南》提供了设置 FTP 区域的通用指导，以及设置可写 FTP 区域的特定挑战。这两个文档都可以从 CERT Tech Tips 页面 (`www.cert.org/tech_tips`) 获取。
+
+> 提示：我强烈建议阅读 CERT 的 FTP 文档。这些文档中的提示将确保你的 FTP 服务器安全，同时让你能够提供想要分享的服务。
+
+### 总结
+
+如果你也想允许匿名用户创建自己的目录，请添加以下内容：
+`mkdir write_enable=YES`
+
+默认情况下，ftp 用户拥有匿名用户上传文件的所有权。如果你想指定匿名上传的文件属于另一个用户（由你选择），可以使用 `chown_uploads` 和 `chown_username` 选项。例如，如果你有一个名为 `newuser` 的用户账户，可以将这些选项设置为：
+
+- `chown_uploads=YES`
+- `chown_username=mynewuser`
+
+当然，你可以创建并使用任何喜欢的用户名。然而，出于安全考虑，你不应为此目的使用 root 登录或任何其他管理登录。
+
+# 添加消息文件
+
+尽管 vsFTPd 不支持像 WU-FTP 那样对 README 和欢迎文件的安排，但你可以向 vsFTPd 服务器上的任何可访问目录添加 `.message` 文件。如果你按照如下所示使用默认的 `dismiss_enable` 选项，当用户进入目录时，将显示你的 `.message` 文件中的文本：
+
+`dmessage_enable=YES`
+
+你可能想为匿名用户在 FTP 服务器的根目录添加一个 `.message` 文件。如果你想使用 `.message` 文件以外的文件，可以设置 `message_file` 选项。例如，你可以通过以下行在进入目录时显示你的 `.message` 文件中的文本：
+
+`message_file=.mymessage`
+
+你还可以设置一条在登录提示符之前显示的单行消息。你可以通过输入以下行来实现，并将文本替换为任何你想说的内容：
+
+`ftpd_banner=Welcome to My FTP service.`
+
+# 记录 vsFTPd 活动
+
+默认启用日志记录，你的 vsFTPd 站点活动将被写入 `/var/log/xferlog.log`。以下选项可以启用日志并将日志文件更改为 `/var/log/vsftpd.log`：
+
+- `xferlog_enable=YES`
+- `xferlog_file=/var/log/vsftpd.log`
+
+如果你喜欢，可以通过将 `YES` 改为 `NO` 来关闭日志。（但是，请注意，开启日志允许你监控潜在的入侵行为，因此不建议关闭它。）或者你可以通过更改 `xferlog_file` 选项的值来更改日志文件的位置。
+
+# 第 20 章：设置 FTP 服务器
+
+如果你希望能够使用生成传输统计数据的工具，可以让 vsFTPD 将数据写入标准的 `xferlog` 格式，该格式被 WU-FTPD 和其他 FTP 服务器使用。要以 `xferlog` 格式存储你的传输，请设置以下选项：
+`xferlog_std_format=YES`
+
+## 设置超时
+
+vsFTPD 默认设置了以下超时（这些值是内置的，因此你不需要对 `/etc/vsftpd/vsftpd.conf` 文件进行任何更改即可生效）：
+
+```
+accept_timeout=60
+connect_timeout=60
+idle_session_timeout=600
+data_connection_timeout=120
+```
+
+`accept_timeout=60` 和 `connect_timeout=60` 值分别决定了客户端在连接超时之前建立 PASV 或 PORT 样式连接的时间。两者都设置为 60 秒。（注意，这些内容没有自动包含在配置文件中；如果你想更改值，可以添加它们。）`idle_session_timeout=600` 会导致用户在无活动超过 10 分钟（600 秒）后，FTP 会话被断开。`data_connection_timeout` 值设置了服务器在断开连接之前等待无进展的时间（此处默认为 10 秒）。
