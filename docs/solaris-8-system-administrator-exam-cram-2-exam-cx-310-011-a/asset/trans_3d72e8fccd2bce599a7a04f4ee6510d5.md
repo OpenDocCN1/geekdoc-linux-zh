@@ -1,0 +1,307 @@
+
+
+## A
+
+- 使用 JumpStart 自动安装，421-422
+  - 引导 JumpStart 客户端，425
+  - 配置目录，422
+  - 配置文件，424-425
+  - 规则文件，423-424
+  - 验证，425
+- automount 命令，364, 367
+- automountd 守护进程，364
+
+## B
+
+- 备份文件系统，198
+  - cpio 命令，202-203
+  - find 命令，204-205
+  - mt 命令，199
+  - 恢复根文件系统或 /usr 文件系统，205
+  - tar 命令，201-202
+  - ufsdump 命令，200-201
+  - ufsrestore 命令，201
+- batch 命令，156
+- begin 脚本，423
+- 块访问（逻辑设备名），163
+- boot 命令，70, 80
+- 引导过程。*另请参阅* OpenBoot
+  - 所需的文件系统，187
+  - init 程序，76-77
+  - Intel x86，75
+  - JumpStart 客户端，425
+  - 内核模块，75-76
+  - SPARC，74-75
+- boot PROM 固件。*参见* OpenBoot
+- 引导协议（BOOTP），418
+  - 守护进程，420-421
+- 引导服务器（网络安装），46, 418
+- BOOTP（引导协议），418
+  - 守护进程，420-421
+- Bourne shell，18
+
+## C
+
+- C shell，18
+- Cache 文件系统。*参见* CacheFS
+- CacheFS（Cache 文件系统），327-328, 367
+  - 缓存日志，370-371
+  - 缓存统计，369-370
+  - 检查缓存状态，368-369
+  - 配置缓存，367-368
+  - 一致性检查，370
+- cachefslog 命令，370-371
+- cachefsstat 命令，367-370
+- cachefswssize 命令，370-371
+- catman 命令，28
+- cd 命令，215
+- 挂载和卸载 CD-ROM，192-193
+- 认证考试。*参见* 考试
+- cfgadm 命令，168-171
+- cfsadmin 命令，367-370
+- chgrp 命令，104-105
+- chmod 命令，98-100
+- chown 命令，103-104
+- class 文件（JumpStart），422-425
+- 客户端故障转移（NFS），362
+- 客户端（NFS），356
+  - 客户端（UNIX），388
+    - 配置，390
+- 软件集群，36, 415
+- 命令模式（vi 文本编辑器），222
+  - 光标定位，222-223
+  - 删除文本，223-224
+- 命令行参数
+  - add_install_client 命令，419-420
+  - cpio 命令，203
+  - find 命令，204
+  - logger 命令，301
+  - ls 命令，106-107
+  - man 命令，23
+  - mount 命令，190, 360
+  - netstat 命令，285
+  - passwd 命令，127
+  - pgrep 命令，150-151
+  - ping 命令，283
+  - pkill 命令，150-151
+  - prstat 命令，148-149
+  - ps 命令，146-147
+  - reload 命令，348
+  - spray 命令，284
+  - ufsdump 命令，200
+  - useradd 命令，120
+- 命令行界面（Solstice DiskSuite），315
+- 命令行实用程序（Sun StorEdge Volume Manager），317
+- 命令
+  - add_install_client，418-421
+  - add_to_install_server，417
+  - admintool，46, 116, 119, 124, 401
+    - 更改密码，126-127
+    - 创建组帐户，122-123
+    - 创建用户帐户，116-118
+    - 删除组帐户，123
+    - 删除软件包，52-53
+    - 删除用户帐户，119
+    - 显示软件包信息，51
+    - 安装软件包，48-50
+    - 锁定用户帐户，128
+    - 修改组帐户，123
+    - 修改用户帐户，119
+  - at，156
+  - auths，346-347
+  - automount，364, 367
+  - batch，156
+  - boot，70, 80
+  - cachefslog，370-371
+  - cachefsstat，367-370
+  - cachefswssize，370-371
+  - catman，28
+  - cd，215
+  - cfgadm，168-171
+  - cfsadmin，367-370
+  - 更改系统运行级别，79-80
+  - chgrp，104-105
+  - chmod，98-100
+  - chown，103-104
+  - compress，196-197
+  - cp，219-220
+  - cpio，202-203
+  - cron，153
+    - 访问控制，155-156
+    - crontab 文件，153-154
+    - 默认设置，153
+    - 编辑 crontab 文件，154-155
+  - crontab，154-155
+    - 访问控制，155-156
+  - devalias，71
+  - devfsadm，165
+  - devfsadmd，165
+  - df，165-166, 193
+  - dfmounts，363
+  - dfshares，359
+  - dmesg，166
+  - domainname，388
+  - du，193-194
+  - eeprom，72-73
+  - eject，193
+  - eject cdrom，192
+  - exit，134
+  - fdisk，310
+  - find，204-205
+  - finger，134-135
+  - fmthard，172, 310
+  - format，166, 172-176, 310
+    - 分区子菜单，176-178
+  - fsck，188-189, 310, 313
+  - ftp，229-231
+  - getfacl，102-103
+  - groupadd，124
+  - groupdel，124
+  - groupmod，124
+  - gunzip，197
+  - gzcat，197
+  - gzip，54, 197
+  - halt，79
+  - id，134
+  - ifconfig，284-286
+  - init，76-80
+  - kbd，74
+  - kill，149-150, 288
+  - last，135-136, 303
+  - link，196
+  - ln，196
+  - logger，300-301
+  - login，133-134, 301
+  - logout，134
+  - ls，96-97, 105-108, 195
+  - make，391
+  - makedbm，391
+  - man，22-29
+  - metatool，315
+  - mkdir，216-217
+  - mkfile，329
+  - mkfs，187-188, 310
+  - mkfs_ufs，187-188
+  - modify_install_server，417
+  - more，24
+  - mount，166-167, 189-192, 310, 359-361
+  - mountall，191, 310, 359, 362
+  - mt，199
+  - mv，217-221
+  - netstat，284-286
+  - newfs，187-188, 310
+  - nisbladm，414
+  - nroff，27
+  - nvalias，71
+  - nvunalias，72
+  - OpenBoot，69-70
+    - 紧急命令（SPARC），73-74
+  - passwd，24-25, 127-128, 349
+  - patchadd，54-58
+  - patchrm，58-59
+  - pgrep，150-152
+  - ping，282-283
+  - pkgadd，46-48
+  - pkgchk，46
+  - pkginfo，46, 50-51
+  - pkgparam，46, 58
+  - pkgrm，46, 52
+  - pkill，150-152
+  - poweroff，80
+  - printenv，69
+  - profiles，346-347
+  - prstat，148-149
+  - prtconf，167
+  - prtvtoc，172-174, 310
+  - ps，146-148
+  - pwd，215
+  - quot，194
+  - quota，129
+  - rcp，231
+  - re-preinstall，422
+  - reboot，80
+  - remsh，231
+  - rlogin，228-229
+  - rm，196, 218-221
+  - rmdir，196, 218-219
+  - roleadd，347-349
+  - roledel，347-349
+  - rolemod，347-349
+  - roles，347
+  - rpcinfo，287
+  - rsh，231-232
+  - set-defaults，72
+  - setenv，69
+  - setfacl，101-102
+  - setup_install_server，416-418
+  - share，356-358, 363
+  - shareall，356, 359
+  - showrev，57-58
+  - shutdown，80
+  - spray，283-284
+  - su，91-92, 338
+  - swap，329-330
+  - sync，74
+  - sysdef，167-168
+  - sysidtool，412
+  - syslogd，296
+  - tar，201-202
+  - telinit，79
+  - telnet，227-228
+  - uadmin，80
+  - ufsdump，200-201
+  - ufsrestore，201
+  - umask，97, 129
+  - umount，191-192, 359-361
+  - unmountall，192, 359, 363
+  - uncompress，196-197
+  - unlink，196
+  - unshare，356-358
+  - unshareall，356, 359
+  - unzip，54, 197-198
+  - useradd，119-121
+  - userdel，122
+  - usermod，121-122
+  - vi。参见 vi 文本编辑器
+  - volcheck，193
+  - vxdiskadm，317
+  - vxva，317
+  - w，303
+  - who，80, 136, 302
+  - whodo，136-137, 302-303
+  - ypbind，390
+  - ypcat，391
+  - ypinit，389-390
+  - ypmatch，391
+  - yppush，391
+  - ypstart，389
+  - ypwhich，392
+  - ypxfr，391
+  - zcat，197
+  - zip，54, 197-198
+- compress 命令，196-197
+- 压缩目录和文件，196
+  - compress 和 uncompress 命令，196-197
+  - gzip 和 gunzip 命令，197
+  - zip 和 unzip 命令，197-198
+- 拼接条带虚拟设备，312
+- 拼接虚拟设备，311-312
+- 配置目录（JumpStart），422
+  - 配置文件，424-425
+  - 规则文件，423-424
+- 配置文件（TCP/IP 网络模型），281
+  - /etc/hostname.interface，282
+  - /etc/inet/hosts，281
+  - /etc/nodename，281
+- 配置阶段（Web Start 安装），40-41
+- 配置
+  - 缓存（CacheFS），367-368
+  - 客户端（NIS），390
+  - 主服务器（NIS），388-389
+  - 从服务器（NIS），389-390
+- 一致性检查（CacheFS），370
+- 将主机名转换为 IP 地址，281
+- 复制文件，219-220
+  - 远程复制过程，229-231
+- cp 命令，219-220
+

@@ -1,0 +1,13 @@
+As experiences go, test-taking is not something most people anticipate eagerly, no matter how well they’re prepared. In most cases, familiarity helps ameliorate test anxiety. In plain English, this means you probably won’t be as nervous when you take your fourth or fifth certification exam as when you take your first one.
+
+Whether it’s your first test or your tenth, understanding the exam-taking particulars (how much time to spend on questions, the setting you’ll be in, and so on) and the testing software will help you concentrate on the material rather than on the environment. Likewise, mastering a few basic test-taking skills should help you recognize—and perhaps even outfox—some of the tricks and gotchas you’re bound to find in some of the test questions.
+
+In this chapter, I’ll explain the testing environment and software and describe some proven test-taking strategies that you should be able to use to your advantage.
+
+# Assessing Exam-Readiness
+
+Before you take any Solaris exam, I strongly recommend that you read through and take the Self-Assessment included with this book (it appears in the Introduction). It will help you compare your knowledge base to the requirements for obtaining the Solaris 8 System Administrator certification and help you identify parts of your background or experience that might need improvement, enhancement, or further learning. If you get the right set of basics under your belt, obtaining Solaris certification is that much easier.
+
+After you’ve gone through the Self-Assessment, you can remedy those topical areas where your background or experience might not measure up to that of an ideal certification candidate. You can also tackle subject matter for individual tests at the same time, so you can continue making progress while you’re catching up in some areas.
+
+After you’ve worked through this *Exam Cram*, have read the supplementary materials, and have taken the practice tests in Chapters 11 and 22, you’ll have a pretty clear idea of when you should be ready to take the real exam. Although I strongly recommend that you keep practicing until your scores top the 66% mark on Part I and the 70% mark on Part II, a goal of 71% on Part I and 75% on Part II would give you some margin for error in a real exam situation (where stress plays more of a role than in practice situations). When you hit that point, you should be ready to go. If you get through the practice exam in this book without attaining that score, however, you should keep taking practice tests and studying the materials until you get there.

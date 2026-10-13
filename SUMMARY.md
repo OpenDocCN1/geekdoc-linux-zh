@@ -1966,6 +1966,7 @@
 +   [Solaris 7 参考指南](docs/solaris-7-reference-guide/README.md)
 +   [Solaris 8 入门指南](docs/solaris-8-a02/README.md)
 +   [Solaris 8 高级系统管理员指南（第3版）](docs/solaris-8-advanced-system-administrators-guide-3rd-edition/README.md)
++   [Solaris 8 系统管理员考试速成 2（考试 CX-310-011 和 CX-310-012）](docs/solaris-8-system-administrator-exam-cram-2-exam-cx-310-011-a/README.md)
 +   [Solaris 8 培训指南 (310-011 和 310-012)：系统管理员认证，第一部分 & 第二部分](docs/solaris-8-training-guide-310-011-and-310-012-system-administ/README.md)
 +   [Solaris 8 培训指南 (310-043)：网络管理员认证 (考试攻略)](docs/solaris-8-training-guide-310-043-network-administrator-certi/README.md)
 +   [Solaris 9 网络管理考试冲刺 2 (Exam Cram CX-310-044)](docs/solaris-9-network-administration-exam-cram-2-exam-cram-cx-31/README.md)
