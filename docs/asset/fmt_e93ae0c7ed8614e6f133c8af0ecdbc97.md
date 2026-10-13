@@ -1,0 +1,140 @@
+
+```
+$ chown games testfile
+chown: changing ownership of 'testfile': Operation not permitted
+```
+
+这个错误实际上是个好消息。这意味着 Red Hat Linux 7.2 是可用的 Unix 系统之一，它阻止用户更改自己的文件所有权。为什么？因为否则用户就有一种非常狡猾的方式可以规避配额。他们可以将一个非常大的文件（例如 MP3 归档）的所有权更改为 `a+rwx`（给予所有人读、写和执行权限），然后再将所有权更改为另一个用户 ID。当配额系统按 UID 分析磁盘使用情况时，这个巨大的文件会显示为由其他人拥有。当用户想要恢复自己的所有权时，他们将其复制到一个新文件名（默认情况下他们拥有该文件），并删除被记录为由其他用户拥有的版本。够狡猾吧？
+
+![](img/5ced0c78d748bd190e9027e5549a3622_88_0.png)
+
+> Solaris 和 Darwin 对普通用户使用 `chown` 也有类似的限制，所以这种偷偷的技巧一定比我想象的更流行！
+
+好消息与否，这意味着是时候成为 root 以便更改所有权了。这可以通过多种不同的方式完成，但我通常使用 `su`，在没有任何参数的情况下，它会在提示输入 root 账户密码后以 `UID=0` 启动一个子 shell。
+
+```
+$ su
+Password:
+bash-2.05# chown games testfile
+bash-2.05# ls -lAF
+total 176
+drwxr-x--- 4 taylor coders 4096 Jan 7 21:47 ./
+drwxr-x--- 13 taylor coders 4096 Jan 7 22:27 ../
+-rw-rw---- 1 taylor coders 263 Dec 5 05:12 snapshot.sh
+-rw-rw---- 1 taylor coders 153600 Dec 5 05:12 sourcefiles.cpio
+drwxr-xr-x 2 taylor coders 4096 Dec 5 05:12 Src/
+drwxrwxr-x 2 taylor coders 4096 Jan 7 21:47 testdir/
+-rw-rw-r-- 1 games coders 0 Jan 7 21:47 testfile
+```
+
+如你所见，作为 root 我可以毫无抱怨或警告地更改文件的所有权。
+
+### 一个有趣的观察
+
+虽然 Unix 系统通过账户名显示 UID，但它实际上只按账户 ID 存储。这意味着，如果用户 `medella` 向我这个系统管理员请求将他的登录账户名更改为 `marcos`，我所要做的就是更改 `/etc/passwd` 中账户信息行的第一个单词，所有文件列表也会神奇地随之更改。
+
+例如，如果我在密码文件中将 `taylor` 改为 `davet`：
+
+```
+davet:x:502:502:Dave Taylor:/home/taylor:/bin/bash
+```
+
+那么完全相同的 `ls` 命令会有不同的结果：
+
+```
+# ls -lAF
+total 176
+drwxr-x--- 4 davet coders 4096 Jan 7 21:47 ./
+drwxr-x--- 13 davet coders 4096 Jan 7 22:27 ../
+-rw-rw---- 1 davet coders 263 Dec 5 05:12 snapshot.sh
+-rw-rw---- 1 davet coders 153600 Dec 5 05:12 sourcefiles.cpio
+drwxr-xr-x 2 davet coders 4096 Dec 5 05:12 Src/
+drwxrwxr-x 2 davet coders 4096 Jan 7 21:47 testdir/
+-rw-rw-r-- 1 games coders 0 Jan 7 21:47 testfile
+```
+
+在 Unix 中使用账户 ID 相当直接，如果你已经在 Unix 系统上工作，这无疑是一个简单的复习。Unix 处理组的方式非常有帮助，但理解得较少。这就是我们接下来要探索的内容。
+
+## 理解 Unix 组和 /etc/group
+
+要完全理解 Unix 组，花些时间谈谈 Unix 操作系统的历史根源是有帮助的。Unix 在 AT&T Bell Telephone Labs（也称为 Bell Labs，现为 Lucent Corporation 的核心部分）开发，当时所有计算机都由多个用户共享。用当时的行话来说，Unix 是一个多用户、多任务操作系统。
+
+多用户系统的挑战之一是文件权限，当时在 Bell Telephone Labs（BTL）获得相当多关注的一个流行研究操作系统是 Multics。最初由 BTL、麻省理工学院和通用电气（BTL 后来退出该项目）开发，Multics 是一个惊人复杂的 multiuser 系统，具有高度复杂的基于文件、外设和应用程序访问同心圆的安全模型。
+
+Brian Kernighan 和 Ken Thompson，Unix 系统的发明者，在 BTL 退出之前曾参与 Multics，虽然他们喜欢其许多功能，但不喜欢其复杂性。因此，Unix 安全模型因此具有大致相似的访问圆圈概念，但方式要简单得多。
+
+> 值得一提的是，Unix 这个名字有点嘲讽 Multics。UN-IX，MULTI-ICS。贝尔实验室的说法曾经是“Unix 是 Multics 所拥有的众多东西中的一个”。如果你好奇，可以在 http://www.multicians.org/ 了解更多。
+
+乍一看，Unix 安全模型似乎有三个访问级别：所有者、组和其他人。当我使用 `id` 命令并了解到我属于两个组而不是一个时，就暗示了它可以更复杂。因此，虽然文件、程序或目录只能有一个所有者和一个组，但用户可以是多个组的成员，从而获得代表所有单个权限并集的访问权限。
+
+> 并非完全正确地说文件只能有一个所有者和一个组。对文件创建硬链接可以使新名称被分配不同的所有者和/或组。然而系统中仍然只有一个文件，因此没有消耗额外的磁盘空间。这对于想要在系统上开发更复杂的访问控制方法的系统管理员来说是一个非常重要的概念。
+
+就我们的目的而言，让我们先从探索标准 Unix 组开始，然后再继续。
+
+### 任务 4.3：组和 /etc/group 文件
+
+每个用户账户都被分配一个所谓的默认组。在许多现代 Unix 系统上，组的使用变得如此不常见，以至于默认情况下每个用户都有自己的组，从而有效地否定了 Unix 操作系统本身的一个强大特性。
+
+1. 稍作停留，查看 `/etc/passwd` 文件的最后十行，通过本小时前面展示的 `awk` 过滤器运行它：
+
+```
+$ awk -F ':' '{print $1" has UID="$3" and GID="$4}' < /etc/passwd | tail
+```
+
+`radvd` 的 `UID=75` 且 `GID=75`
+
+`postgres` 的 `UID=26` 且 `GID=26`
+
+`apache` 的 `UID=48` 且 `GID=48`
+
+`squid` 的 `UID=23` 且 `GID=23`
+
+`named` 的 `UID=25` 且 `GID=25`
+
+`pcap` 的 `UID=77` 且 `GID=77`
+
+`mthorne` 的 `UID=500` 且 `GID=500`
+
+`mdella` 的 `UID=501` 且 `GID=501`
+
+`taylor` 的 `UID=502` 且 `GID=502`
+
+请注意每个 UID 都有一个对应的 GID，并且没有两个账户共享默认组。
+
+我认为这有点傻。这就像买了一辆法拉利却从不挂高档，或买了一台多功能音响却只听 AM 广播。（好吧，也许这有点夸张！）
+
+由于 `mthorne` 和 `taylor` 都是管理员，在此系统上让他们属于同一个管理组会更合理。相比之下，`mdella` 是普通用户，不应包含在 `sysadmin` 组中。
+
+2. 要更改谁在哪个组中，是时候深入 `/etc/group` 文件了。让我们先检查该文件（该文件的格式因发行版而异，如果你的与此不完全相同）：
+
+```
+$ head /etc/group
+```
+
+`root:x:0:`
+
+`bin:x:1:root,bin,daemon`
+
+`daemon:x:2:root,bin,daemon`
+
+`sys:x:3:root,bin,adm`
+
+`adm:x:4:root,adm,daemon,taylor`
+
+`tty:x:5`
+
+`disk:x:6:root`
+
+`lp:x:7:daemon,lp`
+
+`mem:x:8:`
+
+`kmem:x:9:`
+
+正如你所见，文件格式与前面检查的 `/etc/passwd` 文件非常相似。在这种情况下，每行的格式为
+
+`账户名 : 加密密码 : 组 ID : 成员列表`
+
+首先要注意的是，加密密码值为 `x` 表示实际的加密密码字符串存储在系统其他地方的 shadow 密码文件中——出于安全原因——下一小时将探讨密码的 `/etc/shadow` 文件，但对于组而言，相关的组文件是
+
+![](img/5ced0c78d748bd190e9027e5549a3622_91_0.png)
