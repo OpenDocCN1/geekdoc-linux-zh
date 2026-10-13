@@ -1,0 +1,208 @@
+
+
+对 $k \ge 0$。由 (3.5)、(1.8) 和 (3.6) 可得
+
+$$\begin{aligned}
+w^T(k+1)Cw(k+1) &= \sum_{i=1}^{n}\lambda_i z_i^2(k+1)\\
+&= \sum_{i=1}^{p}\lambda_i z_i^2(k+1)\\
+&= \sum_{i=1}^{p}\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2\lambda_i z_i^2(k)\\
+&\ge \left[1+\xi\left(\frac{\lambda_p}{w^T(k)Cw(k)}-1\right)\right]^2 w^T(k)Cw(k)\\
+&\ge \min_{s>0}\left\{\left[1+\xi\left(\frac{\lambda_p}{s}-1\right)\right]^2\cdot s\right\}.
+\end{aligned}$$
+
+对 $k \ge 0$。由引理 3.1，有
+
+$$w^T(k+1)Cw(k+1)\ge 4(1-\xi)\xi\lambda_p,$$
+
+对 $k \ge 0$。证明完毕。上述定理表明，如果 $w(0)\ne 0$，且从 $w(0)$ 出发的轨迹有下界，则该轨迹永远不会收敛到零。显然，零向量必为 (3.5) 的不稳定平衡点。
+
+**定理 3.2.** *存在常数 $H>0$，使得对所有 $k\ge 0$ 有 $w^T(k)Cw(k)\le H$。*
+
+*证明.* 若 $w^T(0)Cw(0)=0$，则对所有 $k\ge 0$ 有 $w^T(k)Cw(k)=0$。显然，$w^T(k)Cw(k)\le H$。接下来，假设 $w^T(0)Cw(0)\ne 0$。定义
+
+$$\bar H=\max\left\{\sigma,\left[1+\xi\left(\frac{\sigma}{\lambda_p}-1\right)\right]^2\lambda_p,\left[1+\xi\left(\frac{\sigma}{w^T(0)Cw(0)}-1\right)\right]^2w^T(0)Cw(0)\right\}.$$
+
+给定任意正数 $H$ 满足 $H\ge \bar H$，我们将证明：对任意 $k\ge 0$，有
+
+$$0\le w^T(k)Cw(k)\le H$$
+
+蕴含
+
+$$0\le w^T(k+1)Cw(k+1)\le H.$$
+
+证明分两步完成。
+
+**情形 1.** $\sigma\le w^T(k)Cw(k)\le H$。此时，
+
+$$\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2\le 1,\quad (i=1,\ldots,p).$$
+
+因此
+
+$$\begin{aligned} w^T(k+1)Cw(k+1) &= \sum_{i=1}^{n}\lambda_i z_i^2(k+1) \\ &= \sum_{i=1}^{p}\lambda_i z_i^2(k+1) \\ &= \sum_{i=1}^{p}\lambda_i\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2z_i^2(k) \\ &\leq \sum_{i=1}^{p}\lambda_i z_i^2(k) \\ &= w^T(k)Cw(k) \\ &\leq H. \end{aligned}$$
+
+**情形 2.** $0\leq w^T(k)Cw(k)\leq\sigma$。可以验证
+
+$$\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2\leq\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2,$$
+
+对 $i=1,\ldots,n$。因此
+
+$$\begin{aligned} w^T(k+1)Cw(k+1) &= \sum_{i=1}^{p}\lambda_i\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2z_i^2(k) \\ &\leq \sum_{i=1}^{p}\lambda_i\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2z_i^2(k) \\ &= \left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2w^T(k)Cw(k) \\ &\leq \max_{0\leq s\leq\sigma}\left\{\left[1+\xi\left(\frac{\sigma}{s}-1\right)\right]^2s\right\}. \end{aligned}$$
+
+如果
+
+$$\lambda_p>s^*=\frac{\xi\sigma}{1-\xi},$$
+
+由引理 3.1 和引理 3.2，可得
+
+$$w^T(k+1)Cw(k+1)\leq\begin{cases}\sigma, & \text{if }s^*<s<\sigma,\\ \left[1+\xi\left(\frac{\sigma}{w^T(0)Cw(0)}-1\right)\right]^2w^T(0)Cw(0), & \text{if }0<s<s^* .\end{cases}$$
+
+如果 $\lambda_p < s^*$，由引理 3.1 和引理 3.2，
+
+$$w^T(k+1)Cw(k+1) \le \begin{cases} \sigma, & \text{if } s^* < s < \sigma, \\ \left[1+\xi\left(\dfrac{\sigma}{\lambda_p}-1\right)\right]^2\lambda_p, & \text{if } \lambda_p < s < s^*, \\ \left[1+\xi\left(\dfrac{\sigma}{w^T(0)Cw(0)}-1\right)\right]^2w^T(0)Cw(0), & \text{if } 0<s<\lambda_p. \end{cases}$$
+
+于是，
+
+$$w^T(k+1)Cw(k+1) \le H.$$
+
+证明完毕。
+
+## 3.4.2 全局收敛
+
+考虑第 2 节中相同的、采用我们的非零逼近学习率的一维方程示例。我们有
+
+$$w(k+1)=w(k)\left(1+\frac{\xi}{w^2(k)}(1-w(k)^2)\right), \tag{3.7}$$
+
+对 $k>0$，其中 $0<\xi<0.8$。显然，集合 $\{0,-1,1\}$ 是系统 (3.7) 的平衡点集。若 $|w(k)|<1$，则 $|w(k+1)|$ 增大；若 $|w(k)|>1$，则 $|w(k+1)|$ 减小。显然，在整个区间内，权重收敛到 $-1$ 或 $1$，且 $0$ 是不稳定点。接下来，我们将严格证明 (3.5) 的全局收敛性。
+
+给定 $H>0$，我们定义
+
+$$S(H)=\{w\mid w^TCw\le H\}.$$
+
+**引理 3.3.** 对任意 $H\ge\bar H$，若 $w(0)\in S(H)$ 且 $w(0)\notin V_\sigma^\perp$，则存在常数 $\theta_1>0$ 和 $\Pi_1>0$，使得
+
+$$\sum_{j=m+1}^{n}z_j^2(k)\le \Pi_1\cdot e^{-\theta_1 k},$$
+
+对所有 $k\ge 0$ 成立，其中
+
+$$\theta_1=\ln\left(\frac{\xi\sigma+(1-\xi)H}{\xi\lambda_{m+1}+(1-\xi)H}\right)^2>0.$$
+
+*证明.* 因为 $w(0)\notin V_\sigma^\perp$，所以必存在某个 $i$（$1\le i\le m$）使得 $z_i(0)\ne 0$。不失一般性，假设 $z_1(0)\ne 0$。
+
+由 (3.6)，可得
+
+$$z_i(k+1)=\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]z_i(k),\quad 1\le i\le m, \tag{3.8}$$
+
+以及
+
+$$z_j(k+1)=\left[1+\xi\left(\frac{\lambda_j}{w^T(k)Cw(k)}-1\right)\right]z_j(k),\quad m+1\le j\le n,\tag{3.9}$$
+
+对 $k\ge 0$。
+
+由定理 3.2 可知，对所有 $k\ge 0$ 有 $w(k)\in S(H)$。对任意 $i(1\le i\le n)$，有
+
+$$1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)=1-\xi+\xi\frac{\lambda_i}{w^T(k)Cw(k)}\ge (1-\xi)>0,$$
+
+对 $k\ge 1$。然后，由 (3.8) 和 (3.9)，对每个 $j(m+1\le j\le n)$，可得
+
+$$\begin{aligned}
+\left[\frac{z_j(k+1)}{z_1(k+1)}\right]^2
+&=\left[\frac{1+\xi\left(\frac{\lambda_j}{w^T(k)Cw(k)}-1\right)}{1+\xi\left(\frac{\lambda_1}{w^T(k)Cw(k)}-1\right)}\right]^2\left[\frac{z_j(k)}{z_1(k)}\right]^2\\
+&=\left[\frac{w^T(k)Cw(k)+\xi(\lambda_j-w^T(k)Cw(k))}{w^T(k)Cw(k)+\xi(\sigma-w^T(k)Cw(k))}\right]^2\left[\frac{z_j(k)}{z_1(k)}\right]^2\\
+&\le\left[\frac{\xi\lambda_j+(1-\xi)H}{\xi\sigma+(1-\xi)H}\right]^2\left[\frac{z_j(k)}{z_1(k)}\right]^2\\
+&\le\left[\frac{\xi\lambda_{m+1}+(1-\xi)H}{\xi\sigma+(1-\xi)H}\right]^2\left[\frac{z_j(k)}{z_1(k)}\right]^2\\
+&=\left[\frac{z_j(0)}{z_1(0)}\right]^2\cdot e^{-\theta_1(k+1)},
+\end{aligned}$$
+
+对所有 $k\ge 1$。
+
+由于 $w(k)\in S(H)$，$z_1(k)$ 必有界，即存在常数 $d>0$，使得对所有 $k\ge 0$ 有 $z_1^2(k)\le d$。
+
+$$\sum_{j=m+1}^{n}z_j^2(k)=\sum_{j=m+1}^{n}\left[\frac{z_j(k)}{z_1(k)}\right]^2z_1^2(k)\le \Pi_1e^{-\theta_1k},$$
+
+对 $k\ge 0$，其中
+
+$$\Pi_1=d\sum_{j=m+1}^{n}\left[\frac{z_j(0)}{z_1(0)}\right]^2\ge 0.$$
+
+证明完毕。
+
+接下来，为方便起见，记
+
+$$P(k)=\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2w^T(k)Cw(k),\tag{3.10}$$
+
+以及
+
+$$Q(k)=\sum_{i=m+1}^{n}\lambda_i\left[2(1-\xi)+\frac{\xi(\lambda_i+\sigma)}{w^T(k)Cw(k)}\right]\left[\frac{\xi(\sigma-\lambda_i)}{w^T(k)Cw(k)}\right]z_i^2(k),\qquad (3.11)$$
+
+对所有 $k\ge 0$。显然，对所有 $k\ge 0$，有 $P(k)\ge 0$ 和 $Q(k)\ge 0$。
+
+**引理 3.4.** 对 $k\ge 0$，有
+
+$$w^T(k+1)Cw(k+1)=P(k)-Q(k)$$
+
+*证明.* 由 (1.8) 和 (3.6)，可得
+
+$$\begin{aligned}
+w^T(k+1)Cw(k+1)
+&=\sum_{i=1}^{n}\lambda_i\left[1+\xi\left(\frac{\lambda_i}{w^T(k)Cw(k)}-1\right)\right]^2z_i^2(k)\\
+&=\sum_{i=1}^{n}\lambda_i\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2z_i^2(k)\\
+&=\sum_{i=m+1}^{n}\lambda_i\left[2(1-\xi)+\frac{\xi(\lambda_i+\sigma)}{w^T(k)Cw(k)}\right]\left[\frac{\xi(\sigma-\lambda_i)}{w^T(k)Cw(k)}\right]z_i^2(k)\\
+&=\left[1+\xi\left(\frac{\sigma}{w^T(k)Cw(k)}-1\right)\right]^2w^T(k)Cw(k)\\
+&\quad-\sum_{i=m+1}^{n}\lambda_i\left[2(1-\xi)+\frac{\xi(\lambda_i+\sigma)}{w^T(k)Cw(k)}\right]\left[\frac{\xi(\sigma-\lambda_i)}{w^T(k)Cw(k)}\right]z_i^2(k)\\
+&=P(k)-Q(k).
+\end{aligned}$$
+
+证明完毕。
+
+**引理 3.5.** 若 $w(0)\notin V_\sigma^+$，则对 $k\ge 1$，有
+
+$$P(k-1)\ge 4(1-\xi)\xi\sigma,$$
+
+*证明.* 由 (3.10)，可得
+
+$$\begin{aligned}
+P(k-1)&=\left[1+\xi\left(\frac{\sigma}{w^T(k-1)Cw(k-1)}-1\right)\right]^2w^T(k-1)Cw(k-1)\\
+&\ge \min_{s>0}\left\{\left[1+\xi\left(\frac{\sigma}{s}-1\right)\right]^2s\right\}.
+\end{aligned}$$
+
+对 $k\ge 1$。由引理 3.1，有
+
+$$P(k-1)\ge 4(1-\xi)\xi\sigma,\qquad k\ge 1.$$
+
+证明完毕。
+
+**引理 3.6.** 存在正常数 $\Pi_2>0$，使得对 $k\geq 0$ 有
+
+$$Q(k)\leq \Pi_2\cdot e^{-\theta_1 k},$$
+
+*证明.* 由 (3.11)，
+
+$$Q(k)=\sum_{i=m+1}^{n}\lambda_i\left[2(1-\xi)+\frac{\xi(\lambda_i+\sigma)}{w^T(k)Cw(k)}\right]\left[\frac{\xi(\sigma-\lambda_i)}{w^T(k)Cw(k)}\right]z_i^2(k)$$
+
+$$\leq \sum_{i=m+1}^{n}\lambda_i\left[2+\frac{2\xi\sigma}{w^T(k)Cw(k)}\right]\left[\frac{2\xi\sigma}{w^T(k)Cw(k)}\right]z_i^2(k)$$
+
+$$\leq 2\left[1+\frac{\xi\sigma}{w^T(k)Cw(k)}\right]\left[\frac{\xi\sigma}{w^T(k)Cw(k)}\right]\cdot\sum_{i=m+1}^{n}\lambda_i z_i^2(k)$$
+
+对 $k\geq 0$。由定理 3.1 和引理 3.3，
+
+$$Q(k)\leq 2\left[1+\frac{\xi\sigma}{4(1-\xi)\xi\lambda_p}\right]\left[\frac{\xi\sigma}{4(1-\xi)\xi\lambda_p}\right]\sum_{i=m+1}^{n}\lambda_i z_i^2(k)$$
+
+$$\leq 2\Pi_1\cdot\left[1+\frac{\sigma}{4(1-\xi)\lambda_p}\right]\left[\frac{\sigma}{4(1-\xi)\lambda_p}\right]e^{-\theta_1 k}$$
+
+$$\leq \Pi_2e^{-\theta_1 k}$$
+
+对 $k\geq 0$，其中
+
+$$\Pi_2=2\Pi_1\cdot\left[1+\frac{\sigma}{4(1-\xi)\lambda_p}\right]\left[\frac{\sigma}{4(1-\xi)\lambda_p}\right].$$
+
+证明完毕。
+
+**引理 3.7.** 对任意 $H\ge \bar H$，若 $w(0)\in S(H)$ 且 $w(0)\notin V_\sigma^\perp$，则存在常数 $\theta_2>0$ 和 $\Pi_5>0$，使得
+
+$$\left|\sigma-w^T(k+1)Cw(k+1)\right|\leq k\cdot\Pi_5\cdot\left[e^{-\theta_2(k+1)}+\max\left\{e^{-\theta_2 k},e^{-\theta_1 k}\right\}\right],$$
+
+对所有 $k\geq 1$ 成立，其中
+
+$$\left\{\begin{aligned}\theta_2&=-\ln\delta,\\ \delta&=\max\left\{(1-\xi)^2,\frac{\xi}{4(1-\xi)}\right\},\end{aligned}\right.$$
+
+且 $0<\xi<0.8$，$0<\delta<1$。
+

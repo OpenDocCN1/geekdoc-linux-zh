@@ -1,0 +1,13 @@
+dimensional subspace with the precision α = 0.98. When α = 0.95, the original data set can also be compacted to a three-dimensional subspace. Figure 8.4 shows the compacted result of the original image. In Figure 8.4 (left), each of the small rectangles (1 × 3 pixels) in the compacted image represents a compacted three-dimensional vector from the 64-dimensional vector. The compacted image in Figure 8.4 (left) is represented by a three-dimensional vector set with 4096 vectors, that is, $Y = \{y(k) \in R^3, k = 1, 2, \ldots, 4096\}$. In Figure 8.4 (right), each of the small rectangles (2 × 4 pixels) in the compacted image represents a compacted eight-dimensional vector from the 64-dimensional vector. The compacted image in Figure 8.4 (right) is represented by an eight-dimensional vector set with 4096 vectors, that is, $Y = \{y(k) \in R^8, k = 1, 2, \ldots, 4096\}$. Clearly, the original image was represented by a 64-dimensional vector set with 4096 vectors. This shows the great advantage of the improved GHA method.
+
+The reconstructed images can be simply obtained by using the reconstructing equation [77]:
+
+$\tilde{X} = \tilde{W}^{T}Y,$
+
+where $\tilde{W}^{T}$ is the trained weight matrix of the improved GHA, $Y$ is the vector set of the compressed image, and $\tilde{X}$ represents the reconstructed 64-dimensional vector set. Figure 8.5 shows the reconstructed image with α = 0.95 (left) and α = 0.98 (right).
+
+Next, the 512 × 512 gray images for *Boat, Aerial, Plasticbubbles* from USC SIPI Image Database, will be used to further illustrate the proposed algorithm (8.3). The original images are shown in the upper pictures in Figure 8.6, 8.7, and 8.8. The middle pictures show that the number of principal directions converges to the intrinsic dimensionality of the given data set with the precision α = 0.98. The reconstructed images are shown in the bottom pictures.
+
+# 8.5  Conclusion
+
+In this chapter, a PCA model with improved GHA algorithm is proposed. In this model, an appropriate number of extracted principal directions can be determined to adaptively approximate the intrinsic dimensionality of the input data set. The model is suitable for online applications to reduce the dimensionality of a given data set to the intrinsic dimensionality of the data set with precision α. Since an appropriate number of principal directions will strike a balance between the quality of the results and complexity of computation of PCA neural networks, the algorithm is especially useful for online applications. Simulations have been conducted to verify the theoretical results.

@@ -1,0 +1,58 @@
+
+- [133] K. Nishino, S. K. Nayar, and T. Jebara. Clustered blockwise PCA for representing visual data. *IEEE Trans. Pattern Analysis and Machine Intelligence*, 27:1675–1679, 2005.
+- [134] E. Oja. A simplified neuron model as a principal component analyzer. *J. Math. Biol.*, 15:267–273, 1982.
+- [135] E. Oja. Principal components, minor components, and linear neural networks. *Neural Networks*, 5:927–935, 1992.
+- [136] E. Oja and J. Karhunen. On stochastic approximation of the eigenvectors and eigenvalues of the expectation of a random matrix. *J. Math. Anal. Appl.*, 106(1):69–84, Feb. 1985.
+- [137] E. Oja and L. Wang. Robust fitting by nonlinear neural units. *Neural Networks*, 9(3):435–444, 1996.
+- [138] E. Oja and Z. Yuan. The FastICA algorithm revisited: convergence analysis. *IEEE Trans. Neural Networks*, 17(6):1370–1381, 2006.
+- [139] S. Ouyang, Z. Bao, and G. S. Liao. Robust recursive least squares learning algorithm for principal component analysis. *IEEE Trans. Neural Networks*, 11(1):215–221, Jan. 2000.
+- [140] N. K. Pareek, V. Patidar, and K. K. Sud. Image encryption using chaotic logistic map. *Image and Vision Computing*, 24:926–934, 2006.
+- [141] K. Pearson. On lines and planes of closest fit to systems of points in space. *Philosophical Magazine*, 2(6):559–572, 1901.
+- [142] D. Peng and Z. Yi. Convergence analysis of the OJA’n MCA learning algorithm by the deterministic discrete time method. *Theoretical Computer Science*, 378(1):87–100, 2007.
+- [143] D. Peng and Z. Yi. Dynamics of generalized PCA and MCA learning algorithms. *IEEE Trans. Neural Networks*, 18(6):1777–1784, 2007.
+- [144] D. Peng and Z. Yi. A modified Oja-Xu MCA learning algorithm and its convergence analysis. *IEEE Trans. Circuits and Systems II*, 54(4):348–352, 2007.
+- [145] D. Peng, Z. Yi, and J. C. Lv. A stable MCA learning algorithm. *Computers & Mathematics with Applications*, 56(4):847–860, 2008.
+- [146] D. Piraino, P. Kotsas, and M. Recht. Three dimensional image registration using artificial neural networks. In *Proceedings of IEEE International Conference on Neural Networks*, pages 4017–4021, 2003.
+- [147] M. D. Plumbley and E. Oja. A “Nonnegative PCA” algorithm for independent component analysis. *IEEE Trans. Neural Networks*, 15(1):66–76, 2004.
+- [148] A. Pujol, J. Vitrià, F. Llumbreras, and J. J. Villanueva. Topological principal component analysis for face encoding and recognition. *Pattern Recognition Letters*, 22(6-7):769–776, May 2001.
+- [149] P. A. Regalia and E. Kofidis. Monotonic convergence of fixed-point algorithms for ICA. *IEEE Trans. Neural Networks*, 14(4):943–949, July 2003.
+- [150] S. T. Roweis and L. K. Saul. Nonlinear dimensionality reduction by locally linear embedding. *Science*, 290:2323–2326, 2000.
+- [151] E. L. Rubio, O. L. Lobato, J. M. Pérez, and J. A. G. Ruiz. Principal component analysis competitive learning. *Neural Computation*, 16:2459–2481, 2004.
+- [152] B. G. Ruessink, I. M. J. van Enckevort, and Y. Kuriyama. Non-linear principal component analysis of nearshore bathymetry. *Marine Geology*, 203:185–197, 2004.
+- [153] I. Sadinezhad and M. Joorabian. A novel frequency tracking method based on complex adaptive linear neural network state vector in power systems. *Electric Power Systems Research*, 79:1216–1225, 2009.
+- [154] H. Sakai and K. Shimizu. A new adaptive algorithm for minor component analysis. *Signal Processing*, 71:301–308, 1998.
+- [155] T. H. Sander, M. Burghoff, G. Curio, and L. Trahms. Single evoked somatosensory MEG responses extracted by time delayed decorrelation. *IEEE Trans. Signal Processing*, 53(9):3384–3392, Sep. 2005.
+- [156] T. D. Sanger. Optimal unsupervised learning in a single-layer linear feedforward neural network. *Neural Networks*, 2:459–473, 1989.
+- [157] R. Schmidt. Multiple emitter location and signal parameter estimation. *IEEE Trans. Antennas Propagation*, 34:276–280, 1986.
+- [158] A. Selamat and S. Omatu. Web page feature selection and classification using neural networks. *Information Sciences*, 158:69–88, 2004.
+- [159] O. Shalvi and E. Weinstein. New criteria for blind deconvolution of non-minimum phase systems (channels). *IEEE Trans. Information Theory*, 36:312–321, 1990.
+- [160] L. Shang, J. C. Lv, and Z. Yi. Rigid medical image registration using PCA neural networks. *Neurocomputing*, 69:1717–1722, 2006.
+- [161] J. E. Skinner, M. Molnar, T. Vybíral, and M. Mitra. Application of chaos theory to biology and medicine. *Integrative Physiological and Behavioral Science*, 27(1):39–53, Jan. 1992.
+- [162] V. Solo and X. Kong. Performance analysis of adaptive eigenanalysis algorithms. *IEEE Trans. Signal Processing*, 46:636–646, Mar. 1998.
+- [163] P. Stavroulakis. *Chaos Applications in Telecommunications*. CRC Press, Inc., Boca Raton, 2005.
+- [164] J. V. Stone. *Independent Component Analysis: A Tutorial Introduction*. The MIT Press, 2004.
+- [165] J. A. K. Suykens, T. Van Gestel, J. Vandewalle, and B. De Moor. A support vector machine formulation to PCA analysis and its kernel version. *IEEE Trans. Neural Networks*, 14(2):447–450, 2003.
+- [166] K. Tan and S. Chen. Adaptively weighted sub-pattern PCA face recognition. *Neurocomputing*, 64:505–511, 2005.
+- [167] Q. Tao, X. Liu, and X. Cui. A linear optimization neural network for associative memory. *Applied Mathematics and Computation*, 171:1119–1128, 2005.
+- [168] J. Thomas, Y. Deville, and S. Hosseini. Differential fast fixed-point algorithms for underdetermined instantaneous and convolutive partial blind source separation. *IEEE Trans. Signal Processing*, 55(7):3717–3729, Jul. 2007.
+- [169] P. Tichavský, Z. Koldovský, and E. Oja. Performance analysis of the FastICA algorithm and Cramér-Rao bounds for linear independent component analysis. *IEEE Trans. Signal Processing*, 54(4):1189–1203, Apr. 2006.
+- [170] M. Tipping and C. Bishop. Mixtures of probabilistic principal component analyzers. *Neural Computation*, 11(2):443–482, 1999.
+- [171] M. Tipping and C. Bishop. Probabilistic principal component analysis. *J. Royal Statistical Soc.*, 61(3):611–622, 1999.
+- [172] J. M. Vegas and P. J. Zufiria. Generalized neural networks for spectral analysis: dynamics and Liapunov functions. *Neural Networks*, 17:233–245, 2004.
+- [173] R. Vidal, Y. Ma, and S. Sastry. Generalized principal component analysis (GPCA). *IEEE Trans. Pattern Analysis and Machine Intelligence*, 27(12):1945–1959, Dec. 2005.
+- [174] V. Vigneron, A. Paraschiv-Ionescu, A. Azancot, C. Jutten, and O. Sibony. Fetal electrocardiogram extraction based on non-stationary ICA and wavelet denoising. In *Seventh International Symposium on Signal Processing and Its Applications, Paris, France*, pages 69–72, 2003.
+- [175] T. Voegtlin. Recursive principal component analysis. *Neural Networks*, 18:1051–1063, 2005.
+- [176] V. Šmídl and A. Quinn. On Bayesian principal component analysis. *Computational Statistics & Data Analysis*, 51:4101–4123, 2007.
+- [177] R. Wan and M. Li. An overview of medical image registration. In *Proceedings of the Fifth International Conference on Computational Intelligence and Multimedia Applications (ICCIMA 2003)*, pages 385–390, 2003.
+- [178] X. Wang and L. Tian. Bifurcation analysis and linear control of the Newton-Leipnik system. *Chaos, Solitons & Fractals*, 27:31–38, 2006.
+- [179] A. Weingessel and K. Hornik. Local PCA algorithms. *IEEE Trans. Neural Networks*, 11(6):1242–1250, Nov. 2000.
+- [180] C. Wen and X. Ma. A max-piecewise-linear neural network for function approximation. *Neurocomputing*, 71:843–852, 2008.
+- [181] B. Widrow and M. E. Hoff. Adaptive switching circuits. *IRE WESCON Convention Record, New York: IRE Part 4*, pages 96–104, 1960.
+- [182] F. Wu and Z. C. Qian. Principal axes algorithm based on image contour applied to medical image registration. *J. Fourth Mil. Med. U.*, 22:567–569, 2001.
+- [183] F. Xiao, G. Liu, and B. Zheng. A chaotic encryption system using PCA neural networks. In *Proceedings of IEEE Conference on Cybernetics and Intelligent Systems*, pages 465–469, 2008.
+- [184] L. Xu. Least mean square error reconstruction principle for self-organizing neuro-nets. *Neural Networks*, 6:627–648, 1993.
+- [185] L. Xu, E. Oja, and C. Y. Suen. Modified Hebbian learning for curve and surface fitting. *Neural Networks*, 5:441–457, 1992.
+- [186] M. Ye. Global convergence analysis of a self-stabilized MCA learning algorithm. *Neurocomputing*, 67:321–327, July 2005.
+- [187] M. Ye. Global convergence analysis of a discrete time nonnegative ICA algorithm. *IEEE Trans. Neural Networks*, 17(1):253–256, Jan. 2006.
+- [188] M. Ye, X. Q. Fan, and X. Li. A class of self-stabilizing MCA learning algorithms. *IEEE Trans. Neural Networks*, 17(5):1634–1636, 2006.
+- [189] M. Ye, Z. Yi, and J. C. Lv. A globally convergent learning for PCA neural networks. *Neural Computing & Applications*, 14:18–24, 2005.

@@ -1996,6 +1996,7 @@
 +   [IBM iSeries 和 AS／400 入门指南包](docs/starter-kit-for-the-ibm-iseries-and-as400/README.md)
 +   [窃取网络：如何掌控目标主机](docs/stealing-the-network-how-to-own-the-box/README.md)
 +   [vSphere 6 存储设计与实现：技术深度解析 (VMware Press 技术)](docs/storage-design-and-implementation-in-vsphere-6-a-technology-/README.md)
++   [神经网络的子空间学习](docs/subspace-learning-of-neural-networks/README.md)
 +   [J2EE 技术企业架构 Sun 认证学习指南](docs/sun-certified-enterprise-architecture-for-j2ee-technology-st/README.md)
 +   [Sun Certified Solaris(tm) 9 系统与网络管理员全方位考试指南](docs/sun-certified-solaristm-9-system-and-network-administrator-a/README.md)
 +   [Solaris 10 Sun 系统管理员认证考试指南：Cx-310-200 与 Cx-310-202 Scsa](docs/sun-certified-system-administrator-for-solaris-10-study-guid/README.md)
