@@ -1,0 +1,92 @@
+
+`-n` 开关表示我希望 Perl 代码对输出的每一行运行。`-a` 开关自动将输出分割到 `@F` 数组中。`-e` 开关表示 Perl 代码将跟随在命令行上。
+
+## 相关的 Perl 和 Linux 命令
+
+在使用 Perl 结合 Linux 时，你会用到这些命令和工具：
+
+- `a2p`——一种用于将 awk 脚本转换为 Perl 的过滤器
+- `c1inc2part2`——一种使用 `find` 命令从命令行创建 Perl 代码的工具
+- `preg`——一种使用与 Perl 兼容的正则表达式搜索数据的工具
+- `perlcc`——一种用于 Perl 程序的编译器
+- `perldoc`——一种用于阅读 Perl 文档的 Perl 工具
+- `s2p`——一种用于将 sed 脚本转换为 Perl 的过滤器
+- `vi`（或 `busybox`）文本编辑器
+
+## 参考资料
+
+首先应查阅 Perl 文档和 Linux 手册页。
+
+Perl、其所有文档以及数百万行 Perl 程序都可以在互联网上免费获得。一些 Usenet 新闻组也专门致力于 Perl，此外还有堆满书架的书本和季刊杂志。
+
+### 书籍
+
+虽然你当地的书店可能有几十本关于 Perl 的书籍，但以下是其中一些备受推荐的书籍。你也可以查看 `Camel Critiques`（Tom Christiansen，`http://language.perl.com/critiques/index.html`）以获取其他可用 Perl 书籍的书评。
+
+- *Advanced Perl Programming*，作者 Shriram Srinivasan，O'Reilly & Associates
+- *Sams Teach Yourself Perl in 24 Days, Second Edition*，作者 Laura Lemay，Sams Publishing
+- *Sams Teach Yourself Perl in 24 Hours, Second Edition*，作者 Clinton Pierce，Sams Publishing
+- *Learning Perl, Third Edition*，作者 Randal L. Schwartz, Tom Phoenix，O'Reilly & Associates
+- *Programming Perl, Third Edition*，作者 Larry Wall, Tom Christiansen, and Jon Orwant，O'Reilly & Associates
+- *Effective Perl Programming: Writing Better Programs with Perl*，作者 Joseph Hall，Addison-Wesley Publishing Company
+- *CGI Programming with Perl, Second Edition*，作者 Gunther Bizniewski, Scott Guelich, Shishir Gundavaram，O'Reilly & Associates
+- *Mastering Regular Expressions*，作者 Jeffrey Friedl，O'Reilly & Associates
+
+### Usenet
+
+查看 Usenet 上的以下内容：
+
+- `comp.lang.perl.misc`——讨论 Perl 编程语言的各个方面。请确保你的问题是特定的 Perl 问题，而不是一般性的 CGI 编程问题。常客们往往会对那些不知道区别的人发火。
+- `comp.infosystems.www.authoring.cgi`——讨论 CGI 程序的编写，因此大部分讨论都与 Perl 有关。请确保你的问题与 CGI 编程相关，而不仅仅是 Perl。常客们非常注重保持主题相关性。
+
+### WWW
+
+在互联网上查看这些网站：
+
+- `http://www.perl.com/`——Tom Christiansen 维护 Perl 语言主页。这是查找关于 Perl 各种信息的地方，从历史和文化到有用的技巧。这也是为你系统下载 Perl 解释器的地方。
+- `http://www.perl.com/CPAN`——这是上述网站的一部分，但它值得单独提及。CPAN（Comprehensive Perl Archive Network，综合 Perl 存档网络）是查找 Perl 模块和程序的地方。如果你在 Perl 中编写了一些你认为特别有用的内容，你可以让它在这里向 Perl 社区提供。
+- `http://www.perl.com/pub/q/faqs`——常见 Perl 查询的常见问题索引；该网站提供了一种快速搜索 Perl 相关答案的便捷方式。
+- `http://learn.perl.org/`——这是在线学习 Perl 的最佳起点之一。如果你掌握了 Perl，请前往 `http://jobs.perl.org`。
+- `http://www.hwg.org/`——HTML 作者公会（HTML Writers Guild）是一个致力于协助 Web 开发者的非营利组织。其服务之一是大量的邮件列表。`hww-servers` 邮件列表和 `hww-languages` 邮件列表是询问 Perl 相关问题的绝佳场所。
+- `http://www.pm.org/`——Perl Mongers 是本地 Perl 用户组。你的地区可能也有一个。Perl 倡导网站是 `http://www.perl.org/`。
+- `http://www.tpj.com/`——*The Perl Journal* 是一本“由读者支持的月度电子杂志”，专门介绍 Perl 编程语言。*TPJ* 总是充满了精彩、有趣和信息丰富的文章，对于新晋和经验丰富的 Perl 程序员来说都是无价之宝。
+- `http://www-106.ibm.com/developerworks/linux/library/l-p101`——关于单行 Perl 脚本和代码的简短教程。
+
+### 其他
+
+不属于上述任何类别的其他宝贵资源是 Perl 相关的互联网中继聊天（IRC）频道。你通常可以在 IRC 服务器上找到几个可用的频道。然而，类似命名的频道的问题、讨论和重点会在不同的服务器之间有所不同。
+
+例如，`#perlhelp` 频道通常用于关于安装、使用和学习 Perl 的一般性问题。`#perl` 频道通常用于更高级的问题，但在某些服务器上，可能会欢迎新手问题。你可能还能够在 `#cgi` 和 `#nntp` 频道上找到一些有用的答案。浏览 `http://perl-begin.berlios.de/irc/` 查看服务器列表。
+
+# 第 31 章：使用 Python
+
+## 本章内容
+
+- Linux 上的 Python
+- Python 基础
+- 函数
+- 面向对象
+- 标准库和帕纳索斯宝库
+- 参考资料
+
+随着 PHP 主导了 Web 脚本的世界，Python 在命令行脚本领域的影响日益增强。Python 精确且简洁的语法使其成为最容易学习的语言之一，并允许程序员更快地编码，减少维护代码的时间。虽然 PHP 从根本上与 Java 和 Perl 相似，但 Python 更接近 C 和 Modula-3，因此乍一看可能显得不熟悉。
+
+其他大多数语言的核心都有一群开发者，但 Python 的核心人物是 Guido van Rossum——创建者、父亲以及终身仁慈独裁者（BDFL）。虽然 Guido 现在花在 Python 开发上的时间减少了，但他仍然实质上拥有否决语言变更的权利，这使得 Python 在多年的发展过程中保持了一致性。最终结果是，用 Guido 自己的话说：“即使你实际上对语言设计一无所知，你也能看出 Python 是一种非常简单语言。”
+
+以下页面构成了 Python 的“快速入门”教程，旨在为你提供编写基本脚本所需的所有信息，并指引你找到能带你走得更远的资源。
+
+## Linux 上的 Python
+
+Fedora 默认安装了 Python，许多其他版本的 Linux 和 UNIX 也是如此——甚至 Mac OS X 也预装了 Python。部分原因是为了方便：由于 Python 是一种非常流行的脚本语言，预装它可以在用户想要运行脚本时避免后续安装的麻烦。然而，就 Fedora 而言，预装的部分原因是核心系统程序中有几个是用 Python 编写的，包括 `yum` 本身。
+
+Python 二进制文件安装于 `/usr/bin/python`；如果你运行它，将进入 Python 交互式解释器，你可以在其中输入命令并立即执行。虽然 PHP 也有交互式模式（使用 `php -a` 来激活），但它既不如 Python 强大，也不如 Python 灵活。
+
+与 Perl、PHP 和其他脚本语言一样，你还可以通过在脚本开头添加指向 `/usr/bin/python` 的 *shebang* 行，并将文件设置为可执行，来运行 Python 脚本。
+
+运行 Python 脚本的第三种也是最后一种方式是通过 `mod_python`，当你从“添加/删除软件”对话框中选择 Web 服务器应用程序组时，它会默认安装。
+
+为了进行本引言，我们将使用交互式 Python 解释器，因为它能在你输入命令时提供即时反馈。
+
+### 进入交互模式
+
+本章将使用交互式解释器，因此熟练使用它至关重要。要开始使用，请打开终端并运行命令 `python`。你应该会看到以下内容：
