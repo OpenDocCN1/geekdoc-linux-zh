@@ -1,0 +1,251 @@
+
+```
+<one line to give the program's name and
+a brief idea of what it does.>
+Copyright (C) 19yy <name of author>
+
+This program is free software; you can
+redistribute it and/or modify it under the
+terms of the GNU General Public License as
+published by the Free Software Foundation;
+either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that
+it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE. See the GNU General Public License
+for more details.
+```
+
+您应该已随此程序收到一份 GNU 通用公共许可证的副本；如果没有，请写信至 Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+同时添加有关如何通过电子邮件和纸质邮件联系您的信息。
+
+如果程序是交互式的，请使其在交互模式启动时输出如下简短声明：
+
+```
+Gnomovision version 69, Copyright (C) 19yy
+name of author Gnomovision comes with
+ABSOLUTELY NO WARRANTY; for details type
+'show w'. This is free software, and you are
+welcome to redistribute it under certain
+conditions; type 'show c' for details.
+```
+
+假设的命令 `show w` 和 `show c` 应显示通用公共许可证的相应部分。当然，您使用的命令可能不叫 `show w` 和 `show c`；它们甚至可以是鼠标点击或菜单项——无论什么适合您的程序。
+
+您还应让您的雇主（如果您从事编程工作）或您的学校（如有）签署该程序的“版权免责声明”（如有必要）。以下是示例；请更改名称：
+
+```
+Yoyodyne, Inc., hereby disclaims all copyright
+interest in the program 'Gnomovision'
+(which makes passes at compilers) written
+by James Hacker.
+
+<signature of Ty Coon>, 1 April 1989
+Ty Coon, President of Vice
+```
+
+本通用公共许可证不允许将您的程序纳入专有程序中。如果您的程序是一个子程序库，您可能认为允许专有应用程序与该库链接更有用。如果您想这样做，请使用 GNU 库通用公共许可证而不是本许可证。
+
+## 术语表
+
+`*`
+
+一个通配符，表示零个或多个字母数字字符。例如，如果您运行 `ls a*` 命令，您将看到所有以字母 a 开头的文件。如果您有一个名为 a 的文件，您也会在列表中看到该文件。
+
+`.`
+
+也称为点，表示当前目录。
+
+`..`
+
+双点表示当前目录的父目录。
+
+`<`
+
+重定向。箭头右侧的术语内容被重定向为标准输入（stdin）到箭头左侧的文件。常用于将多个术语或文件中的数据输入到程序中。
+
+`>`
+
+重定向。箭头左侧术语的标准输出（stdout）被重定向到箭头右侧的文件。如果文件已存在，则会被覆盖。
+
+`>>`
+
+重定向并追加。箭头左侧术语的标准输出（stdout）被重定向到箭头右侧列出文件的末尾。不覆盖箭头右侧的文件。
+
+`&`
+
+当在程序名称后使用时，`&` 会指示您的 shell 在后台运行该程序。
+
+`?`
+
+一个通配符，表示一个字母数字字符。例如，如果您运行 `ls a?` 命令，您将看到所有以字母 a 开头的两个字符的文件，例如 a1、ab、a6、ax 等。
+
+`[]`
+
+方括号。用于定义搜索词的范围。
+
+`|`
+
+管道。管道左侧的术语或命令的标准输出（stdout）被重定向为管道右侧的术语或命令的标准输入。
+
+`2>`
+
+重定向标准错误。箭头左侧术语的标准错误（stderr）被重定向到箭头右侧的文件。如果文件已存在，则会被覆盖。
+
+`/`
+
+根目录。这是任何 Linux 系统中的顶级目录。
+
+`/bin`
+
+包含基本命令行实用程序的 Linux 目录。
+
+`/boot`
+
+包含启动实用程序的 Linux 目录，通常包括 Linux 内核。
+
+`/dev`
+
+包含设备驱动程序的 Linux 目录。
+
+`/dev/null`
+
+一个忽略实用程序或脚本输出的输出文件。它防止不需要或不必要的输出影响其他系统。
+
+`/etc`
+
+包含大多数基本配置文件的 Linux 目录。
+
+`/etc/bashrc`
+
+包含所有用户的 bash shell 变量的配置文件。
+
+`/etc/environment`
+
+包含适用于所有用户的环境变量的配置文件。
+
+`/etc/exports`
+
+包含您通过网络文件系统（NFS）提供的 Linux 目录列表的配置文件。
+
+`/etc/fstab`
+
+列出在 Linux 启动期间要挂载的卷以及启动后可以挂载的卷的配置文件。
+
+`/etc/hosts`
+
+可在其中关联本地网络上计算机名称和 IP 地址的配置文件。此文件是小型网络上 DNS 的替代方案。
+
+`/etc/inittab`
+
+指定运行级别以及本地和远程虚拟控制台的配置文件。
+
+`/etc/login`
+
+可能包含环境或 shell 变量的配置文件，具体取决于您的发行版。
+
+`/etc/mtab`
+
+列出当前已挂载或可挂载卷的文件。
+
+`/etc/passwd`
+
+列出在 Linux 计算机上设置的所有用户的文件。密码要么在此文件中加密，要么标记为 x。在后一种情况下，密码在 `/etc/shadow` 配置文件中加密。
+
+`/etc/printcap`
+
+打印机配置文件。
+
+`/etc/profile`
+
+包含所有用户的变量的配置文件。变量是环境范围还是特定于某个 shell 取决于您的 Linux 发行版。
+
+`/etc/resolv.conf`
+
+包含 DNS 服务器的完全限定域名或 IP 地址的配置文件。
+
+`/etc/skel`
+
+存放个人用户默认配置文件的目录。如果您想创建新用户，可以将此目录中的文件复制到新用户的主目录。
+
+`/etc/syslog.conf`
+
+指定各种日志文件位置的配置文件。
+
+`/etc/X11/XF86Config`
+
+Linux X Window 的主要配置文件。
+
+`/home`
+
+包含普通个人用户主目录的 Linux 目录。
+
+`/lib`
+
+包含由 Linux 内核和命令行实用程序引用的程序库的 Linux 目录。
+
+`/mnt`
+
+包含可移动媒体（如软盘或 CD-ROM 驱动器）的挂载点或目录的 Linux 目录。
+
+`/opt`
+
+通常用于第三方应用程序（如 WordPerfect 或 Applixware）的 Linux 目录。
+
+`/proc`
+
+包含当前正在运行的与内核相关的进程的虚拟 Linux 目录。
+
+`/root`
+
+本地系统的 root 用户的主目录。
+
+`/sbin`
+
+包含许多系统管理命令的 Linux 目录。
+
+`/sbin/lilo`
+
+将 `/etc/lilo.conf` 文件中的信息纳入主引导记录的命令。
+
+`/tmp`
+
+通常用于临时文件（如从互联网下载的文件）的 Linux 目录。
+
+`/usr`
+
+包含许多小型程序和应用程序的 Linux 目录。
+
+`/var`
+
+用于可变数据（如打印队列和日志文件）的 Linux 目录。
+
+`absolute path`
+
+Linux 中从根目录开始的文件或目录的完整定义路径。
+
+`access.conf`
+
+用于设置供 Web 服务器使用的目录的 Apache 配置文件。
+
+### 地址类
+
+与 IP 地址的五个主要组相关联的术语。按惯例，有五个地址类：A、B、C、D 和 E。
+
+### adduser
+
+部分自动化在 Linux 中添加用户的过程的命令。
+
+### af
+
+记账过滤器。与 `/etc/printcap` 打印机配置文件相关联。一种收集打印相关成本的方式。
+
+### AfterStep
+
+基于 FVWM 代码的窗口管理器，其设计外观类似于 NeXTStep 操作系统相关的窗口管理器。
+
+### alias
