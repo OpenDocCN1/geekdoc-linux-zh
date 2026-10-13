@@ -1,0 +1,117 @@
+
+```
+#!/bin/sh
+
+# CHECKPW - Check the status of all accounts on the system, checking
+#           to ensure that any account without a password has a shell that
+#           prevents interactive use. Any others will be flagged in output.
+```
+
+```
+# This only runs on Linux systems with the '-S' flag to 'passwd'
+temp="/tmp/tocheck.$$"
+
+trap "/bin/rm -f $temp" 0  # remove the file upon exit
+
+for name in `cut -d: -f1 /etc/passwd`
+do
+  echo "$name" | passwd -S $name | tail -1 | \
+  egrep -v "(Locked|encryption)" | awk '{print $1}' >> $temp
+done
+
+for account in `cat $temp`
+do
+  shell=`egrep "^${account}:" /etc/passwd | cut -d: -f7`
+  if [ "$shell" != "/sbin/nologin" ] ; then
+    echo "*** WARNING: Account $account has no password and login shell $shell"
+  fi
+done
+exit 0
+```
+
+这个脚本没什么花哨的，但请注意我们不得不使用临时文件来保存中间输出。结果相当有帮助，很容易成为日常系统状态报告的一部分：
+
+```
+# checkpw.sh
+*** WARNING: Account sync has no password and login shell /bin/sync
+*** WARNING: Account shutdown has no password and login shell /sbin/shutdown
+*** WARNING: Account halt has no password and login shell /sbin/halt
+*** WARNING: Account news has no password and login shell /bin/sync
+*** WARNING: Account testdud has no password and login shell /bin/bash
+```
+
+`shell` `sync`、`shutdown` 和 `halt` 表明在登录提示符下可用的快捷方式。输入 `shutdown` 作为账户名——记住没有密码——系统很可能会被关机。如果你认为永远不需要它们，最好禁用这些账户。
+
+> 在从事 Unix 系统工作的 20 多年里，其中大多数都有这三个管理登录，我从未以这种方式使用过它们。我在安装新系统时总是关闭这些账户。
+
+当没有列出 `shell` 时，这意味着系统将默认（通常）使用 `/bin/sh` 作为 `shell`，因此 `news` 与 `testdude` 一样具有安全风险。两者都需要关闭，并且
+
+```
+passwd -l testdude
+```
+
+对 `testdude` 而言就足够了，但锁定其他账户需要先设置初始密码。这可以通过 `passwd news` 来完成。然后使用 `passwd -l news` 将其锁定。
+
+3. 值得查看的最后一个命令是 `userdel` 命令，这是内置的 Linux 命令，用于删除用户。查看手册页你会发现它很直接且可用，不过如果用户已登录，它不会注销用户（相反，命令会失败），并且它会让你——系统管理员——自己去弄清楚如何识别用户可能拥有的其他文件。
+
+```
+# man userdel
+USERDEL(8)                              USERDEL(8)
+
+NAME
+    userdel - Delete a user account and related files
+
+SYNOPSIS
+    userdel [-r] login
+
+DESCRIPTION
+    The userdel command modifies the system account files,
+    deleting all entries that refer to login. The named user
+    must exist.
+
+    -r      Files in the user's home directory will be removed
+            along with the home directory itself and the user's
+            mail spool. Files located in other file systems
+            will have to be searched for and deleted manually.
+
+FILES
+    /etc/passwd  - user account information
+    /etc/shadow  - secure user account information
+    /etc/group   - group information
+```
+
+这是一个合理的解决方案，但如果你在 Darwin/BSD 世界中寻找等效命令，你会感到困惑——Darwin 中没有等效命令。因此我们在此小时之前创建的脚本。
+
+在 Unix 25 多年的发展和成长过程中，有很多聪明的人做出了贡献。其中许多人是系统管理员，他们通过开发复杂的工具来简化自己的生活。不幸的是，由于众多不同 Unix 版本的反复无常和混乱发展，没有任何账户管理工具最终成为所有系统上的标准和通用工具。
+
+事实上，作为 Unix 系统管理员最大的挑战不是如何在特定系统上完成系统管理任务，而是如何在你负责维护的任何系统上完成这些任务。这是对所有管理员的困扰，但也是一个不愉快的事实：安装更可能是异构的而不是同构的。也就是说，你更可能发现你的数据中心有一台老旧的 IBM AIX 系统、三台 Solaris 服务器、十几台 Linux 服务器，其中除一台外都运行着 Red Hat Linux，还有一台基于 Darwin 的文件和打印服务器，同时也是部门秘书的工作站。在这种环境下，知道 `userdel` 在 Red Hat Linux 7.2 上可用并不会让你的生活轻松多少，唉。
+
+事实上，本小时中没有名为“Darwin 账户管理工具”的章节，因为坦白说，除了相当原始的 `niutils` 或图形化 NetInfo 应用程序之外，根本没有。
+
+#### Solaris 账户管理工具
+
+Solaris 与 Linux 相当相似，幸运的是。让我重新表述以更好地反映 Unix 的演变：Linux 受到了许多 Solaris 实用程序的启发。这意味着 Solaris 中的 `passwd` 命令包含摘要选项和锁定账户的能力，并且 Linux 部分介绍的大多数脚本都适用于 Solaris。
+
+然而，它并不完全相同，这有点麻烦。例如，在 Linux 中 `passwd -S taylor` 会显示账户 `taylor` 的密码状态摘要，但 Solaris 不认识 `-S` 标志，而是使用 `-s` 来实现此功能。而且我是否提到过输出是不同的？
+
+##### 任务 6.4：Solaris 账户管理工具
+
+Solaris 和 Linux 之间的差异更多是命令行账户管理工具的细微差别，而非戏剧性的变化。因此不足为奇的是，已讨论的脚本只需做少量调整即可在 Solaris 环境中工作。
+
+- 1. 添加用户可以使用 `useradd` 命令，不过语法与同名的 Linux 命令略有不同：
+
+```
+# man useradd | head -18
+Maintenance Commands                                      useradd(1M)
+
+NAME
+    useradd - administer a new user login on the system
+
+SYNOPSIS
+    useradd [ -c comment ] [ -d dir ] [ -e expire ] [
+```
+
+```
+-f inactive ] [ -g group ] [ -G group [ , group ... ] ] [ -m [ -k skel_dir ] ] [ -u uid [ ,o ] ] [ -s shell ] [ -A authorization[ ,authorization... ] ] [ -P profile [ ,profile... ] ] [ -R role [ ,role... ] ] login
+useradd -D [ -b base_dir ] [ -e expire ] [ -f inactive ] [ -g group ]
+```
