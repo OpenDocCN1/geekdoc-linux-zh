@@ -1,0 +1,167 @@
+
+`typelist` 是 `anonymous`、`guest` 和 `real` 的逗号分隔列表。如果未提供 `typelist`，则所有用户的命令都会记录日志。某些 `wu-ftpd` RPM 将所有文件传输的日志记录设置为 `/var/log/xferlog`（见下一节）。但是，您可以使用 `commands` 关键字将 `log` 命令添加到 `ftpaccess` 中以捕获用户操作。然后日志记录将开启，用户操作将被记录在 `/var/log/messages` 中。以下是一个示例日志文件：
+
+Oct 6 12:21:42 shuttle2 ftpd[5229]: USER anonymous
+
+Oct 6 12:21:51 shuttle2 ftpd[5229]: PASS phdson@widget.com
+
+Oct 6 12:21:51 shuttle2 ftpd[5229]: ANONYMOUS FTP LOGIN FROM 192.168.2.31
+
+[192.168.2.31], phdson@widget.com
+
+Oct 6 12:21:51 shuttle2 ftpd[5229]: SYST
+
+Oct 6 12:21:54 shuttle2 ftpd[5229]: CWD pub
+
+Oct 6 12:21:57 shuttle2 ftpd[5229]: PASV
+
+Oct 6 12:21:57 shuttle2 ftpd[5229]: LIST
+
+Oct 6 12:21:59 shuttle2 ftpd[5229]: QUIT
+
+Oct 6 12:21:59 shuttle2 ftpd[5229]: FTP session closed
+
+示例日志显示了匿名用户登录的用户名和密码条目。`CWD` 条目显示使用 `cd` 命令导航到 `pub` 目录。请注意，显示的命令不一定反映用户输入的命令语法，而是列出 FTP 服务器接收到的相应系统调用。例如，`LIST` 条目实际上是 `ls` 命令。
+
+## 记录安全违规和文件传输
+
+`/etc/ftpaccess` 配置文件中的另外两个日志记录命令很有用。此行启用安全违规的日志记录：
+
+```
+log security [<typelist>]
+```
+
+根据 `typelist` 指定的匿名、来宾和实际用户记录违规日志——与其他日志命令相同。如果您未指定 `typelist`，所有用户的安全违规日志都会被记录。
+
+此行记录传输到和从服务器传输的所有文件日志：
+
+```
+log transfers [<typelist> ["<directions>"]]
+```
+
+`typelist` 与 `log commands` 和 `log security` 行中看到的相同。`directions` 是关键字 `inbound`（用于上传文件）和 `outbound`（用于下载文件）的逗号分隔列表。如果未给出方向，则上传和下载的文件都会记录日志。默认情况下，入站和出站日志记录都是开启的。
+
+## 配置权限控制
+
+控制用户活动是保护系统服务器的重要组成部分。`ftpaccess` 文件包含许多命令，使您可以确定用户在 FTP 会话期间可以执行和不能执行哪些操作。您可以使用这些权限控制允许用户更改文件权限、删除或覆盖文件、重命名文件，以及创建具有默认权限的新文件。您在以下章节中了解如何使用所有这些 `ftpaccess` 文件命令行。
+
+> **注意**
+>
+> 默认情况下，所有 `ftpaccess` 文件命令行禁止匿名用户执行操作，并启用授权用户执行操作。
+
+### 允许用户更改文件权限
+
+`chmod` 行确定用户是否具有更改文件权限的能力。以下是命令行：
+
+```
+chmod <yes|no> <typelist>
+```
+
+此命令的作用与标准 `chmod` 命令相同。
+
+`yes|no` 参数指定该命令是否可以执行。`typelist` 是关键字 `anonymous`、`guest` 和 `real` 的逗号分隔字符串。如果您未指定 `typelist` 字符串，该命令将应用于所有用户。其目的和参数的详细描述可以在手册页中找到。
+
+### 授予用户文件删除权限
+
+`delete` 行确定用户是否可以使用 `rm` 命令删除文件。以下是命令行：
+
+```
+delete <yes|no> <typelist>
+```
+
+`yes|no` 参数用于开启或关闭此权限，`typelist` 与 `chmod` 命令相同。
+
+### 授予用户文件覆盖权限
+
+`ftpaccess` 文件的此命令行允许或拒绝用户覆盖现有文件的能力。以下是命令行：
+
+```
+overwrite <yes|no> <typelist>
+```
+
+FTP 客户端确定用户是否可以在其本地机器上覆盖文件；此行专门控制上传到服务器的文件的覆盖权限。`yes|no` 参数切换权限的开启或关闭，`typelist` 与 `chmod` 行中看到的相同。
+
+### 允许用户重命名文件
+
+您可以使用此命令行启用或禁止用户重命名文件：
+
+```
+rename <yes|no> <typelist>
+```
+
+`yes|no` 参数切换权限的开启或关闭，`typelist` 与 `chmod` 中看到的相同逗号分隔字符串。
+
+### 允许用户压缩文件
+
+此行确定用户是否可以使用 `compress` 命令处理文件：
+
+```
+compress <yes|no> [ <classGlob> ]
+```
+
+`yes|no` 参数切换权限的开启或关闭，`classGlob` 是指定一个或多个已定义用户类的正则表达式字符串。此命令使用所产生的转换在 `ftpconversions` 文件中指定，该文件包含关于对具有特定扩展名的文件使用何种压缩或解压命令的指导，例如用于 `compress` 命令的 `.Z`，用于 `gunzip` 命令的 `.gz`，等等。参见本章后面“配置 FTP 服务器文件转换操作”部分。
+
+### 授予或拒绝使用 tar 的权限
+
+此行确定用户是否可以使用 `tar`（磁带归档）命令处理文件：
+
+```
+tar <yes|no> [<classglob> ...]
+```
+
+`yes|no` 参数切换权限的开启或关闭，`classglob` 是指定一个或多个已定义用户类的正则表达式字符串。同样，此命令使用所产生的转换在 `ftpconversions` 文件中指定。
+
+### 确定可以应用于用户创建上传文件的权限
+
+此行与权限控制部分中的其他命令略有不同。`umask` 命令确定用户可以创建新文件的权限；如下所示。
+
+```
+umask <yes|no> <typelist>
+```
+
+`yes|no` 参数根据用户是否允许在上传文件时创建具有其默认权限的文件来切换。就像您在本节前面读到的 `overwrite` 命令一样，此命令行特定于上传的文件，因为客户端机器决定如何从下载创建新文件。
+
+## 配置针对 cdpath 的命令
+
+此 `alias` 命令允许管理员为目录提供标准名称之外的另一个名称：
+
+```
+alias <string> <dir>
+```
+
+`alias` 行仅适用于 `cd` 命令。如果一个流行目录深埋在匿名 FTP 用户的目录树中，此行特别有用。一个示例条目如下：
+
+```
+alias linux-386 /pub/redhat/7.3/en/i386/
+```
+
+此行允许用户输入 `cd linux-386` 并自动前往 `/pub/redhat/7.3/en/i386` 目录。
+
+`cdpath <dir>` 行指定 `cd` 命令查找用户输入给定字符串的顺序。搜索路径按 `ftpaccess` 文件中 `cdpath` 行输入的顺序进行。
+
+例如，如果 `ftpaccess` 文件中有以下 `cdpath` 条目，
+
+```
+cdpath /pub/redhat/
+cdpath /pub/linux/
+```
+
+如果用户输入 `cd 1386`，服务器将首先在 `/pub/redhat` 目录中搜索该条目的别名，然后在 `/pub/linux` 目录中进行搜索。如果定义了数量众多的别名，建议创建指向这些目录的符号链接，而不是使用别名。这将减少 FTP 服务器的工作负载，并缩短用户的等待时间。
+
+## shutdown 文件的结构
+
+`shutdown` 命令用于告知服务器在哪里查找由 `ftpshut` 命令或用户生成的关闭消息。`shutdown` 命令需配合指向关闭文件的路径名使用，例如：
+
+```
+shutdown /etc/rh8ftpshudown
+```
+
+如果该文件存在，服务器将检查文件以确定应何时关闭服务器。该文件的语法如下：
+
+```
+<year> <month> <day> <hour> <minute> <deny_offset> <disc_offset> <text>
+```
+
+年份可以是 1970 年（即纪元 epoch）之后的任何年份，月份范围为 0–11，小时范围为 0–23，分钟范围为 0–59。`deny_offset` 是关闭前禁用新连接的分钟数，`disc_offset` 是断开已连接用户前的分钟数，而 `text` 是登录时显示给用户的消息。除了消息部分中定义的有效魔法饼干（magic cookies）外，表 22.2 中列出的饼干也可使用。
+
+**表 22.2** 关闭文件的魔法饼干
