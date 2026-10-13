@@ -1,0 +1,67 @@
+
+你可以从 `devices.txt` 中获取 `NAME`、`TYPE`、`MAJOR` 和 `MINOR` 的值，如果你愿意进行实验，其中甚至包含一组实验性数字。
+
+## 设备文件系统——devfs
+
+一种被称为设备文件系统（Device File System, devfs）的替代设备文件系统即将在 Linux 中普遍使用。它仅包含已附加到系统上的设备条目，并且其命名约定与传统系统不同。虽然 Fedora Core 的内核源代码支持 devfs，但由于 Red Hat 认为它尚未稳定到足以用于企业级用途，因此默认情况下并未启用。
+
+devfs 的命名约定有所不同。例如，`/dev/hda1` 被命名为 `/dev/ide/hd/c0b0t0u0p1`，并且它是 `/dev/ide/host0/bus0/target0/lun0/part1` 的一个符号链接。
+
+设备文件系统类似于 `/proc` 文件系统，它是一个虚拟文件系统；设备存在于内存中，而不是磁盘上的实际文件。
+
+为什么要使用 devfs？主要和次要设备号的使用存在一些限制（最多可用 128 个），这就是 H. Peter Anvin 维护 `devices.txt` 的原因，而且获取新的设备号也是受限的。虽然地址空间可以扩大，但这会带来一些性能问题。它还绕过了 `/dev` 目录必须位于根文件系统的要求，这使得只读根文件系统难以使用。你不能通过 NFS 共享根文件系统，也不能将其嵌入到 ROM 文件系统中。变通方法需要创建一个 ramdisk 并将 `/dev` 的内容复制过去。
+
+非 Unix 文件系统不能作为根文件系统挂载，因为它们不支持 Unix 文件系统的特殊特性。devfs 可以解决这些问题，并为 Linux 提供更大的灵活性。FreeBSD、BeOS、Plan9 和 QNX 都使用 devfs；因此这不是一个新概念，只是对 Linux 来说是新的。
+
+更多细节，请阅读位于 http://www.atnf.csiro.au/~rgooch/linux/docs/devfs.html 的 Linux DEVFS FAQ。
+
+## 相关的 Fedora Core 和 Linux 命令
+
+在管理 Fedora Core Linux 中的文件系统时，你会使用这些命令：
+
+- `df`—显示空闲磁盘空间
+- `du`—显示磁盘使用情况
+- `dump`—ext2 文件系统备份实用程序
+- `dumpe2fs`—显示有关 ext2 文件系统的信息
+- `e2fsadm`—管理 LVM/ext2 文件系统
+- `e2image`—创建 ext2 文件系统数据的映像文件
+- `fdisk`—标准的 Linux 分区表编辑器
+- `fsck`—检查或修复文件系统
+- `lsraid`—显示有关 Linux RAID 设备的信息
+- `mformat`—格式化 DOS 软盘；Mtools 工具套件的一部分
+- `mkrfs`—创建各种文件系统，并作为实际执行工作的程序的包装器
+- `mkisofs`—创建 iso960 格式的 CD-ROM 文件系统
+- `mkreiserfs`—创建 Linux reiserfs 文件系统
+- `mkswap`—准备 Linux 交换设备
+- `mount`—挂载受支持的文件系统
+- `parted`—GNU 分区编辑器和调整大小实用程序
+- `reiserfsck`—检查 Linux reiserfs 文件系统
+- `resize_reiserfs`—调整 Linux reiserfs 文件系统的大小
+- `smbmount`—挂载 smbfs 文件系统
+- `stat`—显示文件或文件系统状态
+- `swapon`—显示交换使用量或开始使用系统交换设备
+- `swapoff`—停止使用交换
+- `sync`—刷新文件系统缓冲区
+- `tune2fs`—更改 ext2 文件系统上的文件系统参数
+- `umount`—卸载文件系统
+- `usermount`—Fedora Core 图形化文件系统挂载和格式化工具
+
+## 参考
+
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/File-Systems-HOWTO.html—在文件系统 HOWTO 中，你会发现关于原生 Linux 文件系统的大量信息，以及更多特殊的文件系统。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Partition.html—Linux 分区 HOWTO 包含了关于分区及其要求的许多详细信息。
+- http://batleth.sapienti-sat.org/projects/FAQs/ext3-faq.html—Linux ext3 FAQ 是一个非官方 FAQ，包含一些有用的信息，特别是关于将 ext3 分区转换回 ext2 的内容。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Ext2fs-Undeletion.html—你在 ext2/3 分区上删除了一个文件吗？Linux Ext2fs 文件恢复 mini HOWTO 会帮助你解决问题。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Ext2fs-Undeletion-Dir-Struct.html—你在 ext2/3 分区上删除了一个目录吗？阅读 Ext2fs 目录结构文件恢复 HOWTO 了解如何恢复你的数据。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Loopback-Root-FS.html—这里的概念是：我们不仅可以有传统的文件系统，还可以有一个位于另一个文件系统上的大文件内部的文件系统。回环根文件系统 HOWTO 探讨了这是如何实现的。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Loopback-Encrypted-File-System-HOWTO.html—出于安全原因，你可以使用回环设备挂载加密文件系统，例如 `/home`。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/LVM-HOWTO.html—抛开那些将物理磁盘与固定大小文件系统绑定在一起的概念；逻辑卷管理器 HOWTO 解释了如何克服这种限制性的思维。
+- http://linux.org.mt/article/lvm—逻辑卷管理器的好概述和讨论。
+- http://www.coda.cs.cmu.edu—Coda 网络文件系统主页。
+- http://www.inter-mezzo.org/—InterMezzo 网络文件系统主页。
+- http://www.math.ualberta.ca/imaging/snf/—通过 SSH 隧道实现的安全 NFS 是一个解决公共网络上 NFS 安全缺陷的有趣尝试。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/UMSDOS-HOWTO.html—如果你感兴趣使用将物理磁盘与固定大小文件系统绑定在一起，MSDOS HOWTO 提供了充分的信息。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/NFS-Root.html—NFS-Root mini HOWTO。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/NFS-Root-Client-mini-HOWTO.html—详细解释如何设置和使用 NFS 来导出根文件系统。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Multi-Disk-HOWTO.html—多磁盘系统调优 HOWTO 包含了对驱动器、控制器硬件的解释，这些很有用，还有关于文件系统的讨论。它提供了一个关于优化多磁盘配置的有趣章节。
+- http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Software-RAID-HOWTO.html—软件 RAID HOWTO 是软件 RAID 的一部杰作。
