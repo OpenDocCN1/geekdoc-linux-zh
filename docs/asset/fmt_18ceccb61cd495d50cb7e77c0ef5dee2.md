@@ -1,0 +1,93 @@
+
+## 贡献者名单
+
+- Selsner, Dr. Jane. 哈佛大学哈夫曼实验室地球与行星科学系。
+- Sepkoski, Dr. J. John, Jr. 芝加哥大学亨利·亨茨实验室地球物理科学系。
+- Seshadi, Sridhar. 纽约大学斯特恩商学院运营管理部门，纽约。
+- Sessions, Dr. John. 俄勒冈州立大学森林工程系，科瓦利斯。
+- Sessler, Dr. Gerhard M. 德国达姆施塔特工业大学超声技术电极声学研究所。
+- Sethares, Dr. William A. 威斯康星大学麦迪逊分校电气与计算机工程系。
+- Setlow, Dr. Richard B. 布鲁克海文国家实验室，纽约州阿普顿。
+- Shack, Prof. Roland V. 亚利桑那大学光学科学中心。
+- Shaffer, Dr. Albert L. 波士顿布莱格姆妇女医院临床医学教授，马萨诸塞州。
+- Shammugam, Dr. G. 莫比尔研究与开发公司研究部达拉斯研究实验室，德克萨斯州达拉斯。
+- Shannon, L. R. “纽约时报”，纽约。
+- Shannon, Prof. Robert R. 亚利桑那大学光学科学中心。
+- Sharpers, Prof. Dudley. 温斯顿-塞勒姆威克森林大学，北卡罗来纳州。
+- Shapiro, Hymyn. 乙基公司研究开发部，路易斯安那州巴吞鲁日。
+- Sharkey, Dr. Thomas D. 威斯康星大学植物学系。
+- Sharman, Prof. Nathan. 以色列雷霍沃特魏茨曼科学院膜研究与生物物理系。
+- Sharpe, Dr. Ralph H. 佛罗里达州盖恩斯维尔。
+- Shaw, Brian R. 必和必拓石油（美洲）有限公司，德克萨斯州休斯顿。
+- Shaw, Dr. Cheng-Mei. 华盛顿大学医学院病理学系神经病理学实验室。
+- Shaw, Jeffry S. 3M 公司工业胶带与特种部门，明尼苏达州圣保罗。
+- Shaw, Prof. Peter. 宾夕法尼亚州立大学物理系。
+- Shaw, Dr. Robert A. 英国伦敦大学化学系。
+- Shearer, Dr. Charles K. 新墨西哥大学阿尔伯克基分校地球与行星科学系陨石研究所。
+- Shedlock, Dr. Kaye M. 美国地质调查局行政官员，科罗拉多州丹佛。
+- Sheeley, Dr. Neil R., Jr. 美国海军研究实验室，华盛顿特区。
+- Sheffield, Dr. Harley G. 美国国立卫生研究院寄生虫病实验室，马里兰州贝塞斯达。
+- Shelf, Dr. Irving. 阿贡国家实验室化学部，伊利诺伊州阿贡。
+- Shen, Dr. Gopal. 阿贡国家实验室先进光子源高级科学总监，伊利诺伊州。
+- Shephard, Dr. Bruce D. 美国妇产科医师学会外交官，坦帕妇产科协会，佛罗里达州坦帕。
+- Shephard, Dr. Gordon M. 耶鲁大学医学院。
+- Shepparad, Dr. Edith M. 南威尔士和莫纳口郡大学动物学高级讲师（退休）。
+- Shergold, Dr. John H. 寒武纪地层国际分委员会主席，法国马萨。
+- Sheridan, Dr. Thomas B. 麻省理工学院机械工程系。
+- Sheriff, Dr. Robert E. 休斯敦大学地质系。
+- Sherwood, Robert S. （已故；生前为沃辛顿公司蒸汽轮机部门工程经理，纽约州哈里斯）。
+- Shewill, Prof. Richard S. 斯坦福大学航空系。
+- Sheviak, Dr. Charles J. 纽约州博物馆植物学高级科学家兼馆长，奥尔巴尼。
+- Shino, Dr. Suelo M. 日本三重县立大学水产学部。
+- Shimik, Dr. Ronald L. 瑞尔赛奇企业有限公司，蒙大拿州威拉德。
+- Shimpion, Dr. Harry L. 特拉华大学物理系。
+- Shires, Dr. G. Tom. 德克萨斯技术大学卢博克分校外科系。
+- Shirley, Prof. David A. 已故；生前为田纳西大学化学系教授。
+- Shivaram, Dr. Bellave S. 弗吉尼亚大学 J. R. 比姆实验室物理系。
+- Shive, Prof. William. 德克萨斯大学奥斯汀分校化学系及克莱顿基金会生物化学研究所。
+- Shively, R. R. 贝尔实验室处理器技术研究组主管，新泽西州默里山。
+- Shoemaker, Dr. William C. 马丁·路德·金 Jr./查尔斯·M. 德鲁医疗中心，加利福尼亚州洛杉矶。
+- Shortman, Dr. Ken. 墨尔本沃尔特和伊丽莎霍尔医学研究所淋巴细胞分化部门主任，澳大利亚。
+- Shortreed, Dr. John. 加拿大安大略省滑铁卢风险研究所主任。
+- Shrinstein, Dr. Robert J. 阿尔伯特·爱因斯坦医学院蒙特菲奥医学中心临床疾病研究中心主任，纽约州纽约。
+- Shreve, Prof. R. Morris. 普渡大学化学工程荣休教授。
+- Shuman, E. C. 区域职业工程师，宾夕法尼亚州州立学院。
+- Shuman, Dr. Frederick B. 国家海洋和大气管理局国家气象中心主任，华盛顿特区。
+- Shuster, Dr. Carl N., Jr. 美国公共卫生局水卫生局生态学家（退休），俄亥俄州辛辛那提。
+- Sieben, Dr. Gary W. 佛罗里达大学盖恩斯维尔分校建筑系。
+- Siegbahn, Prof. Kai. 瑞典乌普萨拉大学物理研究所。
+- Siegel, Prof. Benjamin M. 康奈尔大学应用物理系。
+- Siegel, Dr. Richard W. 阿贡国家实验室材料科学部，伊利诺伊州阿贡。
+- Siegmant, Dr. A. E. 加利福尼亚州斯坦福。
+- Siegmund, C. W. 埃克顿研究与工程公司，新泽西州林登。
+- Siegmund, Dr. Walter R. 苏格兰光纤有限公司研究与开发总监，马萨诸塞州南布里奇。
+- Sich, Prof. Kerry. 加州理工学院帕萨迪纳地震学实验室。
+- Siekietz, Dr. Philip. 洛克菲勒大学细胞生物学系，纽约。
+- Siensko, Dr. Michell J. （已故；生前为康奈尔大学化学系）。
+- Siever, Dr. Raymond. 哈佛大学地质科学系。
+- Sigga, Prof. Sidney. 马萨诸塞大学化学系。
+- Signorini, Dr. Sergio R. 美国国家科学基金会海洋科学部，弗吉尼亚州阿灵顿。
+- Silberschatz, Dr. Abraham. 信息科学研究发展中心，新泽西州默里山。
+- Sijjak, Prof. Dragoșlav D. 加利福尼亚州圣克拉拉大学工程学院。
+- Silk, Dr. Joseph. 加利福尼亚大学伯克利分校天文学系。
+- Silman, Robert. 罗伯特·西尔曼协会，纽约。
+- Silva, Dr. Paul C. 加利福尼亚大学伯克利分校植物学系。
+- Silverman, Dr. Joseph. 马里兰大学化学工程系。
+- Simberloff, Prof. Daniel. 佛罗里达州立大学生物学系。
+- Simmons, Dr. James A. 布朗大学沃尔特·S. 亨特心理学实验室。
+- Simmons, Dr. Nancy. 纽约美国自然历史博物馆哺乳动物学系。
+- Simmons, Dr. William H. 洛约拉大学医疗中心生物化学与生物物理系，伊利诺伊州梅伍德。
+- Simon, Dr. Barry. 普林斯顿大学数学系。
+- Simon, Dr. George W. 新墨西哥州菲利普斯实验室（空军系统司令部）空间物理部，国家太阳观测台。
+- Simon, D. C. Steven. 芝加哥大学伊利诺伊州地球物理系。
+- Simonson, Dr. Roy W. 美国...（原文此处截断，根据上下文推测为土壤分类与关联部门主任（退休））
+
+## 2560 名贡献者
+
+- Simpson, Dr. Carol. 约翰霍普金斯大学地球与行星科学系。
+- Simpson, Dr. Joanne. 国家航空航天局戈达德航天飞行中心强风暴分支主任，马里兰州格林贝尔特。
+- Simpson, Prof. Robert H. 已退休；曾任美国国家气象局迈阿密佛罗里达州实验气象实验室主任。
+- Simpson, Mrs. Stephen G. 麻省理工学院化学系。
+- Sims, Dr. Chester T. 纽约理工学院材料工程系研究员。
+- Sims, Dr. G. K. 美国农业部农业研究服务局，伊利诺伊州厄巴纳。
+- Sinclair, Prof. Glenn T. 亚利桑那大学图森光数据存储中心光学科学中心。
