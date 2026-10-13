@@ -1913,6 +1913,7 @@
 +   [Sams 24 小时教你 Linux 版 Staroffice 5](docs/sams-teach-yourself-staroffice-5-for-linux-in-24-hours/README.md)
 +   [Sams Teach Yourself SuSE Linux 24 小时入门套件](docs/sams-teach-yourself-suse-linux-in-24-hours-starter-kit/README.md)
 +   [Sams 10 分钟学会 Unix（第 2 版）](docs/sams-teach-yourself-unix-in-10-minutes-2nd-edition-sams-teac/README.md)
++   [Sams 10分钟学会 UNIX](docs/sams-teach-yourself-unix-in-10-minutes-sams-teach-yourself-u/README.md)
 +   [24小时学会 UNIX（第3版）](docs/sams-teach-yourself-unix-in-24-hours-3rd-edition-sams-teach-/README.md)
 +   [Unix 24 小时快速学会 [电子资源]](docs/sams-teach-yourself-unix-in-24-hours-electronic-resource/README.md)
 +   [Sams 21 天学会 UNIX 系统管理 [电子资源]](docs/sams-teach-yourself-unix-system-administration-in-21-days-el/README.md)
