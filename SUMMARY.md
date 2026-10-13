@@ -1947,6 +1947,7 @@
 +   [七大最致命的无线技术攻击（七大最致命攻击）](docs/seven-deadliest-wireless-technologies-attacks-seven-deadlies/README.md)
 +   [Shell 编程范例](docs/shell-prog-ex/README.md)
 +   [Unix, Linux 和 OS X 中的 Shell 编程](docs/shell-programming-in-unix-linux-and-os-x/README.md)
++   [Unix、Linux和OS X中的Shell编程（第4版）（开发者文库）](docs/shell-programming-in-unix-linux-and-os-x-the-fourth-edition-/README.md)
 +   [shell 十三问](docs/shell-ques13/README.md)
 +   [Shell 脚本：Linux、Bash 及更多高级秘籍](docs/shell-scripting-expert-recipes-for-linux-bash-and-more/README.md)
 +   [Shell 脚本：如何使用 Bash 脚本和 Shell 编程自动化命令行任务](docs/shell-scripting-how-to-automate-command-line-tasks-using-bas/README.md)

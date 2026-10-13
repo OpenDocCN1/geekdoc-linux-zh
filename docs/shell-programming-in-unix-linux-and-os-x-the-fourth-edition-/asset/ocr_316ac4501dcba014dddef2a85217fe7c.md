@@ -1,0 +1,57 @@
+# The `fg` Command
+
+*General Format:* `fg job_id`
+
+If job control is enabled, the job specified by `job_id` is brought to the foreground. If no argument is given, the most recently suspended job or the job last sent to the background is brought to the foreground.
+
+*Example*
+
+```
+fg %2
+```
+
+# The `for` Command
+
+*General Format:*
+
+```
+for var in word₁ word₂ ... wordₙ
+do
+
+    command
+    command
+        ...
+
+done
+```
+
+Execution of this command causes the commands enclosed between the do and done to be executed as many times as there are words listed after the in.
+
+The first time through the loop, the first word—`word₁`—is assigned to the variable `var` and the commands between the do and done executed. The second time through the loop, the second word listed—`word₂`—is assigned to `var` and the commands in the loop executed again.
+
+This process continues until the last variable in the list—`wordₙ`—is assigned to `var` and the commands between the do and done executed. At that point, execution of the for loop is terminated. Execution then continues with the command that immediately follows the done.
+
+The special format
+
+```
+for var
+do
+    ...
+done
+```
+
+indicates that the positional parameters “$1”, “$2”, ... are to be used in the list and is equivalent to
+
+```
+for var in "$@"
+do
+    ...
+done
+```
+
+*Example*
+
+```
+# nroff all of the files in the current directory
+for file in *
+```

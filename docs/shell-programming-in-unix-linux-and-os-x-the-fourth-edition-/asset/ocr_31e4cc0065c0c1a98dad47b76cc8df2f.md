@@ -1,0 +1,52 @@
+```
+```sh
+else
+        mailopt=FALSE
+fi
+
+if [ "$#" -eq 0 -o "$#" -gt 1 ]
+then
+        echo "Usage: waitfor [-m] user"
+        echo "    -m means to be informed by mail"
+        exit 1
+
+fi
+
+user="$1"
+
+#
+# Check every minute for user logging on
+#
+
+until who | grep "^$user " > /dev/null
+do
+        sleep 60
+done
+
+#
+# When we reach this point, the user has logged on
+#
+
+if [ "$mailopt" = FALSE ]
+then
+        echo "$user has logged on"
+else
+        echo "$user has logged on" | mail steve
+fi
+$
+```
+```
+
+The first test checks to see whether the -m option was specified. If it was, mailopt is assigned the value TRUE, and shift is executed to “shift out” the first argument (moving the name of the user to be monitored to $1 and decrementing $#). If the -m option wasn’t specified, mailopt is set to FALSE.
+
+Execution then proceeds as in the previous version, except this time when the main block of code completes, the mailopt variable is tested to determine whether to output the notification via email or as an echo statement.
+
+```
+```sh
+$ waitfor sandy -m
+Usage: waitfor [-m] user
+             -m means to be informed by mail
+$ waitfor -m sandy &
+[1] 5435
+```
+```

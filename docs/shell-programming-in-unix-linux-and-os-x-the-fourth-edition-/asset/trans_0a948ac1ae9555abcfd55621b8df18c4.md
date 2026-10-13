@@ -1,0 +1,177 @@
+
+printf不会像echo那样在输出末尾自动添加换行符，但它确实能理解同样的转义序列（参见本章前面的表9.1），所以在格式字符串末尾加上`\n`，也会打印出换行符序列，命令提示符也会如预期出现在下一行。
+
+尽管上面的简单示例也可以用echo处理，但它有助于说明printf如何解释转换规范（`%d`）：printf会扫描格式字符串，并逐个输出其中的字符，直到遇到百分号。然后它读取`d`，并尝试用传给printf的下一个参数来替换`%d`，该参数必须是整数。在该参数（10）被发送到标准输出后，printf继续扫描格式字符串，看到`\n`，然后输出一个换行符。
+
+表9.2总结了不同的格式规范字符。
+
+表9.2  `printf` **格式规范字符**
+
+| 字符 | 用途 |
+|---|---|
+| %d | 整数 |
+| %u | 无符号整数 |
+| %o | 八进制整数 |
+| %x | 十六进制整数，使用a-f |
+| %X | 十六进制整数，使用A-F |
+| %c | 单个字符 |
+| %s | 字面量字符串 |
+| %b | 包含反斜杠转义字符的字符串 |
+| %% | 百分号 |
+
+前五个转换规范字符都用于显示整数。`%d`显示有符号整数，`%u`显示无符号整数；`%u`也可用来显示负数的正数表示形式。默认情况下，以八进制或十六进制显示的整数不会有前导`0`或`0x`，但如有必要，你可以修正这一点，稍后在本节中我们会演示。
+
+字符串使用`%s`或`%b`打印。`%s`用于按字面打印字符串，不处理任何反斜杠转义字符；`%b`用于强制解释字符串参数中的反斜杠转义字符。
+
+下面是一些printf示例，以便说明：
+
+```
+$ printf "The octal value for %d is %o\n" 20 20
+The octal value for 20 is 24
+$ printf "The hexadecimal value for %d is %x\n" 30 30
+The hexadecimal value for 30 is 1e
+$ printf "The unsigned value for %d is %u\n" -1000 -1000
+The unsigned value for -1000 is 4294966296
+$ printf "This string contains a backslash escape: %s\n" "test\nstring"
+This string contains a backslash escape: test\nstring
+$ printf "This string contains an interpreted backslash escape: %b\n" "test\nstring"
+This string contains an interpreted backslash escape: test
+string
+$ printf "A string: %s and a character: %c\n" hello A
+A string: hello and a character: A
+$
+```
+
+在最后一个printf示例中，`%c`用于显示单个字符。如果对应参数长度超过一个字符，则只显示第一个字符：
+
+```
+$ printf "Just the first character: %c\n" abc
+a
+$
+```
+
+转换规范的一般格式为
+
+`%[flags][width][.precision]type`
+
+*type*是表9.2中的转换规范字符。可以看到，只有百分号和*type*是必需的；其他参数称为*修饰符*，是可选的。有效的*标志*是`-`、`+`、`#`和空格字符。
+
+-   `-` 将打印的值左对齐；当我们讨论*width*修饰符时，这会更有意义。
+-   `+` 会让`printf`在整数前面加上+或−符号（默认情况下，只有负整数打印时带符号）。
+-   `#` 会让`printf`在八进制整数前加上`0`，在十六进制整数前加上`0x`或`0X`（分别通过`%x`或`%X`指定）。
+-   空格字符会让`printf`在正整数前加一个空格，在负整数前加一个−，以便对齐。
+
+再看几个示例。请密切注意格式字符串！
+
+```
+$ printf "%+d\n%d\n%+d\n" 10 -10 20
++10
+-10
++20
+$
+```
+
+```
+$ printf "% d\n% d\n% d\n" 10 -10 20
+ 10
+-10
+ 20
+$
+```
+
+```
+$ printf "%#o %#x\n" 100 200
+0144 0xc8
+$
+```
+
+如你所见，使用`+`或空格作为标志，可以让正数和负数的一列整齐对齐。
+
+`width`修饰符是一个正数，用于指定打印参数的最小*字段宽度*。除非使用`-`标志，否则参数在该字段内右对齐：
+
+```
+$ printf "%20s%20s\n" string1 string2
+                    string1                    string2
+$ printf "%-20s%-20s\n" string1 string2
+string1                 string2
+$ printf "%5d%5d%5d\n" 1 10 100
+    1    10    100
+$ printf "%5d%5d%5d\n" -1 -10 -100
+   -1   -10   -100
+$ printf "%-5d%-5d%-5d\n" 1 10 100
+1     10   100
+$
+```
+
+`width`修饰符可用于对齐文本列或数字列（提示：数字的符号以及前导的`0`、`0x`或`0X`字符都会计入参数宽度）。`width`指定的是字段的*最小*尺寸，但如果参数的宽度超过*width*，它可能会溢出，甚至根本无法输出。一个简单的测试方法是：
+
+```
+    printf "%-15.15s\n" "this is more than 15 chars long"
+```
+
+当你在自己的系统上尝试该命令时会发生什么？
+
+`.precision`修饰符是一个正数，用于指定`%d`、`%u`、`%o`、`%x`和`%X`所显示数字的最少位数。这会导致在值的左侧补零：
+
+```
+$ printf "%.5d %.4X\n" 10 27
+00010 001B
+$
+```
+
+对于字符串，`.precision`修饰符指定要从字符串打印的最大字符数。如果字符串长度超过*precision*个字符，则在右侧截断。认识到这一点很重要，因为它可以让你在多行之间对齐文本；但如果某个值的宽度超过指定字段，就会丢失一些数据。
+
+```
+$ printf "%.6s\n" "Ann Smith"
+Ann Sm
+$
+```
+
+*width*可以与`.precision`结合使用，同时指定字段宽度和零填充（针对数字）或截断（针对字符串）：
+
+```
+$ printf "%#10.5x:%5.4x:%5.4x\n" 1 10 100
+    0x00001: 000a: 0100
+$ printf "%-9.5s:\n" abcdefg
+    abcde:
+$ printf "%-9.5s:\n" abcdefg
+abcde    :
+$
+```
+
+最后，如果以上这些还不够让人困惑的话：若用`*`代替数字作为**width**或**precision**，则待打印值前面的参数必须是数字，并分别用作宽度或精度。若两个位置都用`*`代替，则待打印值前面必须提供两个整数参数，分别用作宽度和精度：
+
+```
+$ printf "%*s%*.*s\n" 12 "test one" 10 2 "test two"
+        test one        te
+
+$ printf "%12s%10.2s\n" "test one" "test two"
+        test one        te
+```
+
+如你所见，本例中的两条printf命令产生相同的结果。在第一条printf中，12用作第一个字符串的宽度，10用作第二个字符串的宽度，2用作第二个字符串的精度。在第二条printf中，这些数字被直接写在格式规范中。
+
+尽管printf的格式规范无疑很复杂，但它能把echo相对非结构化的输出，转换成你在自己的shell程序中想要的确切内容，这种能力和灵活性实在太有帮助了。这个命令非常值得更仔细地研究，以便你在开发更复杂的程序时知道如何使用它。
+
+表9.3总结了各种格式规范修饰符。
+
+表9.3 — *printf* 格式规范修饰符
+
+| 修饰符 | 含义 |
+|---|---|
+| *标志* |  |
+| `-` | 左对齐值。 |
+| `+` | 在整数前添加 + 或 -。 |
+| `(space)` | 在正整数前添加空格字符。 |
+| `#` | 在八进制整数前添加0，在十六进制整数前添加0x或0X。 |
+| *width* | 字段的最小宽度；`*`表示使用下一个参数作为宽度。 |
+| *precision* | 整数显示的最少位数；字符串显示的最大字符数；`*`表示使用下一个参数作为精度。 |
+
+让我们继续探索printf。下面是一个使用printf对齐文件中两列数字的简单示例：
+
+```
+$ cat align
+#
+# Align two columns of numbers
+# (works for numbers up to 12 digits long, including sign)
+```

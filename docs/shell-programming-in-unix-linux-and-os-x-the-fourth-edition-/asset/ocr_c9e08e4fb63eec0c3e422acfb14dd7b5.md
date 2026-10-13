@@ -1,0 +1,40 @@
+# # More on Parameters
+
+In this chapter, you’ll learn more about variables and parameters. Technically, parameters include the arguments passed to a program (the *positional parameters*), the special shell variables such as `$#` and `$?`, and ordinary variables, also known as *keyword parameters*.
+
+Positional parameters cannot be assigned values directly but they can be reassigned values with the `set` command. As you know, variables are assigned values simply by writing
+
+```
+variable=value
+```
+
+The format is a bit more general than that shown, actually, because you can assign several variables at once using the format
+
+```
+variable=value variable=value . . .
+```
+
+The following example illustrates:
+
+```
+$ x=100 y=200 z=50
+$ echo $x $y $z
+100 200 50
+$
+```
+
+# ## Parameter Substitution
+
+In the simplest form, to have the value of a parameter substituted, precede the parameter with a dollar sign, as in `$1` or `$9`.
+
+```
+${parameter}
+```
+
+If there’s a potential conflict caused by the characters that follow the parameter name, you can enclose the name inside curly braces, as in
+
+```
+mv $file ${file}x
+```
+
+This command would add an x to the end of the filename specified by `$file`. It could not be written as
