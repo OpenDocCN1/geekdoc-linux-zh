@@ -1,0 +1,123 @@
+
+这是一个有趣的情况，因为 Web 浏览器会证明这个 URL 确实有一个站点存在，所以至少有一台机器在回答来自 Web 的查询。但它却不回答 `ping`。这是怎么回事？
+
+事实证明，某些所谓的拒绝服务攻击本质上就像一大股 `ping` 回显请求（`ECHO_REQUEST`）数据包洪流。因此，许多可能遭遇反对者/黑客的站点会屏蔽所有 `ECHO_REQUEST` 数据包，从而产生奇怪的结果，比如 `ping` 时 100% 的数据包丢失。
+
+```
+# ping -qc5 www.news.co.kr
+
+PING www.news.co.kr (203.248.249.170): 56 data bytes
+
+...
+
+www.news.co.kr ping statistics ...
+
+5 packets transmitted, 5 packets received, 0% packet loss
+
+round-trip min/avg/max = 160.874/172.319/201.883 ms
+```
+
+这是另一个韩国站点，但这个站点会回应 `ECHO_REQUEST` 数据包，平均 `ping` 时间为 172 毫秒。虽然不算快如闪电，但如果你想想小小的以太网数据包在每个方向至少传输了 5,600 英里，那这个速度就不算差*。
+
+关于网络连接和分析还有很多内容可以讨论，本书其余部分将重点讨论这个关键且相当有趣的主题。
+
+> *如果我们假设单程为 5,600 英里，那么在 0.172 秒内就是 11,200 英里，相当于每小时 2.344 亿英里！
+
+![](img/5ced0c78d748bd190e9027e5549a3622_365_0.png)
+
+#### 总结
+
+本课时涵盖了 Unix 网络配置的要点，以 Red Hat Linux 作为典型的发行版，然后探讨了 Solaris 和 Mac OS X 上的变化。它们确实变化很大！最后，我们介绍了一些测试和验证工具，并简要讨论了如何将网络配置复制到多台系统。
+
+#### 问答
+
+**问** 我快应付不过来了！除了 Mac OS X，配置 Unix 系统肯定还有其他非命令行的方法吧？如果有，为什么你在这里不讨论它们呢？
+
+**答** 好消息是，有的，在你见过的几乎每一种 Unix 中，都有用于配置网络的 GUI 工具——前提是你能够运行 GUI 界面。这正是问题的一部分；如果你的 Unix 系统是大型托管设施中的服务器，或者你的 MIS 部门有架式系统，或者你要维护 150 台工作站，你可能无法启动 X 应用程序，更不用说完整的 X Window System 环境了。尽管如此，理性的系统管理员会寻求最快最简单的解决方案，像 `linuxconf` 这样的工具可以救命。只是要当心异构环境，你可能负责很多不同的操作系统；为了把新客户端接入网络，你想学习多少种不同的工具？这是一个难题。
+
+**问** 你推荐 DHCP 还是固定 IP？
+
+**答** 终于，本书问答部分出现了一个简单问题！如果可以的话，请使用 DHCP，即使是小型家庭网络也是如此。它简化了一切。
+
+#### 练习
+
+##### 测验
+
+1. 哪一类地址块拥有更多 IP 地址，`Class B` 还是 `Class C`？
+2. 如果你知道 IP 地址，有什么简便技巧可以算出广播地址和网络地址？
+3. DHCP 租约的重要性是什么？
+4. `/etc/resolv.conf` 中存储了什么？
+5. 在 Solaris 9 中，`/etc/hosts`（实际上就是 `/etc/inet/hosts`）将被哪个配置文件取代？
+6. 完成句子：如果你是一位精通 Unix 的聪明的 Mac OS X 系统管理员，那么你配置新客户端使其接入网络的最佳选择是 ________。
+
+##### 答案
+
+1. 一个 `Class B` 地址块包含 256 个 `Class C` 地址块，而一个 `Class C` 地址块有 254 个可用 IP 地址。
+2. 将 IP 地址中的最后一个八位组去掉，将其替换为 255 作为广播地址，替换为 0 作为网络地址。因此，192.37.18.33 对应的广播地址是 192.37.18.255，网络地址是 192.37.18.0。
+3. DHCP 服务器会在指定时间内向 DHCP 客户端分配 IP 地址，这个时长就是租约。在租约结束时，客户端必须续租其信息或请求新的 IP 地址。
+4. 系统的 DNS 服务器的名称和 IP 地址存储在 `/etc/resolv.conf` 中。
+5. `/etc/hosts` 将变为 `/etc/inet/ypnodes`。
+6. 如果你是一位精通 Unix 的聪明的 Mac OS X 系统管理员，那么配置新客户端使其接入网络的最佳选择是使用图形化的“网络”控制面板。
+
+Unix 管理员的一项常见任务是设置 DNS 或名称服务器。这涉及使用 BIND、`named`，正确设置 `/etc/resolv.conf` 文件，以及配置和测试 DNS 服务器，所有这些我们将在下一课时中介绍。我们还将讨论 `traceroute`、`dig` 和 `host`，这些都是重要的 Unix 系统管理员命令。
+
+![](img/5ced0c78d748bd190e9027e5549a3622_367_0.png)
+
+![](img/5ced0c78d748bd190e9027e5549a3622_369_0.png)
+
+### 第 18 课时
+
+### 运行你自己的名称服务器
+
+Unix 系统管理员的一项常见任务是设置和运行域名系统（DNS）服务器。尽管我们习惯于将网站、电子邮件接收系统和其他网络信息看作是具体的名称，但互联网实际上使用唯一的数字。DNS 服务器系统将名称映射为数字。
+
+例如，当你在 Web 浏览器中输入 URL 时，它首先会联系你的本地 DNS 服务器，请求你所请求的 Web 主机的 IP 地址。如果本地 DNS 服务器不知道 IP 地址，它会将请求转发给另一个 DNS 服务器，通常是某个根 DNS 服务器¹。根服务器通常不会直接回答查询，而是会指引你继续前进，报告你所请求域名的权威 DNS 服务器的 IP 地址。然后，你的本地 DNS 服务器联系这个 DNS 服务器，最终获得正确的 IP 地址。
+
+¹全球共有 13 个根服务器，分布在世界各地。它们都包含注册了特定域名的名称服务器的 IP 地址。
+
+在本课时中，我们将对 DNS 系统进行一次概览，特别强调如何在你的 Unix 系统上维护 DNS 服务器。
+
+在本课时中，你将学习以下内容：
+
+- 使用 BIND 和区域文件
+- 配置 `named`（名称服务器守护进程）
+- 使用 `rndc`（最好的 DNS 管理工具）
+- 测试 DNS 安装
+
+#### Berkeley Internet Name Domain 软件包
+
+要管理 DNS 数据库，作为 DNS 服务器运行的系统通常会运行 Berkeley Internet Name Domain（BIND）系统，这是一个强大而灵活的 DNS 服务器。Red Hat Linux 7.2 随附 BIND 9 版本。事实上，早期版本的 BIND 因安全问题而臭名昭著，所以如果你要开始运行 DNS 服务器，升级到最新版本是一个明智的想法。当然，与任何与外部网络交互的软件一样，始终让 BIND 保持最新的安全补丁和错误修复是一个好主意。
+
+> BIND 的官方发行版来自 Internet Software Consortium（www.isc.org），包括 DNS 服务器 `named`、解析器库，以及一些非常有用的分析工具。
+
+##### 任务 18.1：探索 BIND 和区域文件
+
+需要注意的是，只有当你要为一个或多个域提供权威名称服务时，才需要运行 `named`。什么是权威名称？它是在互联网上由域名记录授权回答 DNS 查询的官方主机。
+
+1. 若要查看哪些 DNS 服务器是给定域的权威名称服务器，请使用 `whois` 命令：
+
+```
+$ whois intuitive.com
+
+Whois Server Version 1.3
+
+Domain names in the .com, .net, and .org domains can now be registered with many different competing registrars. Go to http://www.internic.net for detailed information.
+```
+
+```
+Domain Name: INTUITIVE.COM
+
+Registrar: NETWORK SOLUTIONS, INC.
+
+Whois Server: whois.networksolutions.com
+
+Referral URL: http://www.networksolutions.com
+
+Name Server: NS11A.VERIO-WEB.COM
+
+Name Server: NS11B.VERIO-WEB.COM
+
+Updated Date: 05-nov-2001
+
+>>> Last update of whois database: Fri, 19 Apr 2002 05:03:06 EDT <<<
+```
