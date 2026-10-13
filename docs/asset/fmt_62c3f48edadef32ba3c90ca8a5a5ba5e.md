@@ -1,0 +1,94 @@
+
+如果在55分钟过去时你还没有完成，就用最后5分钟来猜测剩余问题的答案。记住，猜测可能比不作答更有价值，因为空白答案总是错误的，但猜测可能恰好正确。如果你对剩余的任何问题都毫无头绪，就随机挑选答案，或者全部选a、b等等。重要的是要提交一份包含每个问题的答案的试卷以供评分。
+
+## Mastering the Inner Game
+
+在最终分析中，知识培养信心，信心带来成功。如果你仔细学习本书的材料并复习每章末尾的所有练习题，你应该会意识到需要额外学习和研究的领域。
+
+接下来，通过阅读每章末尾“Need to Know More?”部分推荐的部分或全部材料来跟进。其目的是让你对示例问题中出现的概念和情况足够熟悉，以便在真实考试中能够推理出类似情况。如果你掌握了材料，你完全有理由相信自己能通过考试。
+
+在你读完本书后，做第15章的练习考试。这将提供一次现实检验并帮助你确定需要进一步学习的领域。务必在安排真实考试之前跟进并复习练习考试中答错问题的相关材料。只有当你已经覆盖了所有内容并对练习考试的全部范围感到舒适时，才应参加真实考试。
+
+携带本书中的信息以及增强知识的决心，你应该能够通过认证考试。然而，你需要为此努力，否则在最终通过之前你可能会多次支付考试费用。如果你认真准备，你应该表现良好。祝好运！
+
+## Additional Resources
+
+关于Sair认证考试的良好信息来源来自Sair本身，而获取考试相关信息的最佳地点是网上。如果你还没有访问过Sair网站，现在就去 www.linuxxcertification.com。
+
+主页上的菜单选项指向网页中最重要的信息来源。以下是按重要性顺序应查看的内容：
+
+- **Knowledge Matrix**—在此区域回顾考试中将测试的技能和知识。
+- **Online Quizzes**—此区域包含四个Sair Linux认证管理员考试的示例问题。这些问题主要用于熟悉问题格式。它们不会出现在实际考试中。
+- **Exams**—此页面全面解释认证流程，并包含指向目标、示例问题和认证结构的链接。
+- **FAQ**—此页面列出有关考试的常见问题及答案。
+- **Our Team**—此页面包含行业领导者和Sair考试团队人员的链接。
+
+这些只是Linux认证页面中提供的重点内容。当你浏览它们时——我强烈建议你这样做——你可能会发现其他同样有趣的信息片段。
+
+## Coping with Change on the Web
+
+迟早，所有我与你分享的关于Linux认证页面以及本书其余部分提及的其他基于网络资源的 information 都会过时或被更新的信息取代。
+
+如果你愿意投入时间和精力，在网上总能找到你想要的东西。大多数大型或复杂的网站都提供搜索引擎。请随意使用通用搜索工具——例如 www.google.com、www.lycos.com 和 www.excite.com ——来搜索相关信息。虽然Sair在线提供有关其认证考试的最佳信息，但大量第三方来源也提供该领域的信息、培训和帮助。底线是：如果你找不到书中所述位置的东西，就开始到处寻找。最坏的情况下，你也可以随时给Coriolis发邮件。我们也许会有线索。
+
+## A Short History of Linux
+
+### Terms you'll need to understand:
+- Open source
+- Free software
+- Free Software Foundation (FSF)
+- GNU's Not Unix (GNU)
+- General Public License (GPL)
+- Copyleft
+- Halloween Documents
+
+### Techniques you'll need to master:
+- Understanding the background behind Linux
+- Explaining different styles of software licensing and documentation
+- Describing the use and development of "free software"
+- Getting Linux documentation over the Internet
+- Finding documentation inside Linux
+
+在Sair Linux/GNU Level 1 安装和配置考试中，历史感很重要。作为Linux管理员，你需要向非技术用户解释使用开源软件的好处和义务。在本章中，你将学习Linux开发、许可和文档背后的一些基本前提。
+
+尽管你可能不同意本章中的某些假设或分析，但它们仍然是Linux软件开发背后的更重要前提，也是你需要了解的内容。
+
+## Unix and Open Source Development
+
+Linux被开发为Unix的克隆。换句话说，Linux的开发者在不使用构建Unix的编程指令，也称为源代码的情况下构建了他们的系统。因为Linux是Unix克隆，你可以在任一操作系统上使用大部分相同的命令和应用程序。
+
+虽然将Unix改编用于个人电脑会更容易，但Linux开发背后有重要的历史原因。而且Linux的开发方式决定了今天Linux开发者、公司和用户的工作方式。
+
+## AT&T and Unix Development
+
+当Unix于1969年开发时，美国电话电报公司AT&T是美国的受监管垄断公司。虽然Unix是在AT&T的贝尔实验室开发的，但各种法院和监管裁决使AT&T无法进入计算机业务。因此AT&T保留了Unix的许可证，并以名义费用向大学分发操作系统及其源代码。因为AT&T没有从Unix获利，其律师坚持许可证明确说明Unix不提供任何担保。这种发布技术后来被称为开源。
+
+时机很好。各个大学将Unix源代码改编为当时可用的三种不同计算机：大型机、小型机和微型机。这种改编的关键之一是C编程语言。
+
+大约在同一时间，美国国防部的先进研究项目署ARPA希望建立一个能在核战争中幸存的全國通信网络。ARPA网络上的大多数大学使用Unix。TCP/IP建立在Unix之上，并最终成为ARPANET的通信协议。ARPANET最终发展成为你今天所知的互联网。Unix及其衍生克隆，如Linux，是互联网的关键工具。
+
+在20世纪70年代中期流行的最后一种自由分发的Unix系统被称为第6版。所有Unix变体和克隆，包括Linux、Minix、Xinu、Solaris和伯克利标准发行版BSD，都是从Unix第6版克隆或开发而来的。
+
+## Not Quite Free Software
+
+AT&T在20世纪80年代保留了Unix的许可证。当美国政府于1982年解决AT&T反垄断诉讼时，其中一个条件允许AT&T进入计算机业务。此时，AT&T能够在与版权相关的所有保护下出售Unix操作系统和源代码。
+
+使用Unix的程序员希望保留开源操作系统的优势。Unix程序员希望能够定制软件。作为学者，他们希望分享成果。当时的Unix用户拥有使开源软件物有所值的高度知识。
+
+![](img/7a908c965299f9cdfda2a4ea3cd98bf4_42_0.png)
+
+> 开源软件是一把双刃剑。如果你想使用开源软件，你通常需要支付与维护开源代码相关的成本。并非每个人都具有修改Unix或Linux源代码所需的高度知识。拥有知识的人可以获得丰厚回报。
+
+为此，Douglas Comer于1983年开发了Xinu，以在课堂环境中说明操作系统结构。1986年，Andrew Tannenbaum开发了Minix作为Unix克隆和替代品。与Linux一样，Minix不使用Unix的源代码，因此不侵犯AT&T的Unix版权。
+
+## The Free Software Foundation
+
+Richard Stallman于1984年开始GNU（GNU's Not Unix）项目的工作。Stallman在其介绍性Usenet消息中使用的一个声明可能有助于概括该计划的重点：'我认为黄金法则要求如果我喜欢一个程序，我必须与喜欢它的人分享。'Stallman的目的在于建立一个团体，在那里强烈鼓励软件的自由共享。虽然他希望GNU能够运行Unix程序，但他也希望改进Unix。然而，在他能够做到这一点之前，他需要用包括内核在内的Unix操作系统的所有组件创建GNU。
+
+注意：一些Stallman思想的信徒在征得或未征得他人许可的情况下共享他人的软件。他们在20世纪70年代中期共享的一项物品（未经许可）是由两位哈佛学生Bill Gates和Paul Allen制作的操作系统。如你所知，这些学生最终创立了Microsoft。
+
+这些努力围绕着一个名为自由软件基金会（FSF）（www.fsf.org）的团体展开。他们制定了通用公共许可证（GPL），以建立一个受保护的自由软件体系，防止他人将其用于创建专有闭源系统。到1990年，他们已克隆了Unix的大多数主要组件，除了内核。
+
+## 开放源代码计划
+
+与FSF关系密切的一个团体是开放源代码计划（OSI）。该组织由Eric Raymond于1998年创立，用以定义和捍卫自由软件。
