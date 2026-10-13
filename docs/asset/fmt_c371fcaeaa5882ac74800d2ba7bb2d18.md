@@ -1,0 +1,1343 @@
+
+## 安装新内核
+
+在第 2 章的 GRUB 和 LILO 部分描述了在 GRUB 或 LILO 启动加载程序中设置启动映像的不同方法。我建议使用这些程序以这样的方式添加新的启动映像，即它不会替换旧的映像。这样，您可以在不冒被困在可能无法启动的系统中的风险的情况下对其进行测试。
+
+## 附录 B
+### Red Hat Linux RPM 包
+
+超过 1,450 个 Red Hat Package Manager (`RPM`) 软件包构成了被称为 Fedora Core 的 Red Hat Linux 发行版。本附录包含这些 Red Hat Linux 软件包的字母顺序列表和描述。
+
+软件包分布在随本书附带的三个 CD 上。本附录中的描述可帮助您确定这些软件包的内容。您通常在安装 Red Hat Linux 时（第 2 章所述）安装其中大部分软件包。稍后，您可以使用 Red Hat 添加和删除软件窗口（第 2 章）或 `rpm` 命令（第 5 章）添加其他软件包。
+
+### 比较 Fedora 和企业版软件包
+
+Fedora 项目被设立为开发可供 Red Hat, Inc. 用于包含在其 Red Hat Enterprise Linux 产品中的技术的“试验场”。由于 Red Hat Linux 分离为 Fedora 项目和 Enterprise Linux 仍相当新，两者包含的软件包之间存在大量重叠。
+
+以下要点旨在让您了解随本书附带的 Fedora Core 软件与可从 Red Hat, Inc. 购买的 Red Hat Enterprise Linux 软件之间的差异。
+
+- Fedora 中的许多个人使用软件包未包含在企业版发行版中。例如，企业版包含的用于播放和抓取音乐的软件包较少（无 `cdp`、`cdda2wav`、`cdrdao` 或 `grip` 软件包），游戏较少（无 `freech`、`Maelstrom` 或 `tuxracer`）以及个人生产力工具较少（无 `gnumeric`、`abicom` 或 `koffice`）。
+- 企业版中不在 Fedora 中的大多数软件包是那些特别需要用于高需求、高可用性服务器的软件包。企业版中不在 Fedora 中的软件包包括可利用大量 RAM 的内核软件（`kernel-hugemem`）、用于配置无盘工作站的工具（`redhat-config-netboot`）以及监控工具（`crash`）。
+
+尽管 Fedora Core 和 Red Hat Enterprise Linux 版本 3 的发布时间可能导致某些版本号不同，但在两个发行版中相同的软件包实际上有数百个。
+
+### 已移除的软件包
+
+如果您在 Fedora Core 中似乎找不到在 Red Hat Linux 9 中依赖的软件包，您可能对这个列表感兴趣。它显示了 Red Hat Linux 9 中不存在于 Fedora Core 中的软件包：
+
+- `aumix-X11`: aumix 程序的基于 gtk 的版本。
+- `emh`: MH/nmh 邮件处理系统的 X 接口。
+- `galcon`: 基于 Gecko（Mozilla 渲染引擎）的 GNOME 浏览器。
+- `jdkgcj`: Sun Java SDK 的免费实现。
+- `kde2-compat`: KDE 桌面的各种兼容性库。
+- `kernel-bigmem`: 为内存 4 GB 或更大的机器配置的 Linux 内核。
+- `libelf-devel`: 开发使用 libelf 的应用程序所需的开发头文件和文档。
+- `libtop-examples`: libtop 使用的检索系统信息的示例。
+- `lilo`: 用于启动 Linux 或其他操作系统的 LILO（Linux Loader）程序。
+- `LPRng`: LPRng 打印软件，用于使用和管理打印机。
+- `pine`: `pine` 邮件用户代理，包括 `pico` 文本编辑器。
+- `qt2`: Qt 2.x GUI 工具包的共享库。
+- `qt2-designer`: Qt 工具包的界面设计器。
+- `qt2-devel`: Qt GUI 工具包的开发文件和文档。
+- `qt2-static`: 用于静态链接的 Qt GUI 工具包。
+- `qt2-Xt`: Qt GUI 工具包的 X Toolkit 附加组件。
+- `qtcups`: 用于 qt 的 CUPS 前端和库，提供打印机设置的 GUI。
+- `qtcups-devel`: 使 Qt 应用程序能够配置打印机的开发文件。
+- `qt-Xt`: Qt 的 Xt 兼容性附加组件。
+- `serviceconf`: 配置系统上已启用服务的实用程序。
+- `soup`: C 语言中的 SOAP 实现。
+- `soup-devel`: SOUP SOAP 工具的开发库。
+- `tripwire`: 系统完整性评估工具。
+- `watanabe-vf`: 日本 watanabe 字体。
+- `XFree86-xtrap-clients`: 用于 XTrap 服务器扩展的示例客户端。
+- `xmmms-gnome`: 用于将 Xmms 播放器集成到 GNOME 中的组件。
+- `xpdf_*`: xpdf 中各种语言的支持。
+
+### CD 上的 Red Hat Linux 软件包
+
+安装 CD-ROM 上包含的软件包如下：
+
+- `4Suite`: 用于操作 XML 内容和对象数据库的 Python 编程工具。
+- `a2ps`: 用于将文本和其他类型文件转换为 PostScript 以便打印的工具。
+- `abiword`: AbiWord 文字处理应用程序。
+- `ac-archive`: 为 autoconf 工具提供宏的 Autoconf Macro Archive。
+- `acl`: 操作访问控制列表所需的实用程序。
+- `acpid`: 将 ACPI 事件分派给用户空间程序。
+- `adjtimex`: 用于调节系统时钟的 adjtimex 命令。
+- `alchemist`: 后端基于 XML 的应用程序配置架构。
+- `alchemist-devel`: 开发使用 alchemist 的程序所需的文件。
+- `amanda`: amanda 网络功能机器备份应用程序。
+- `amanda-client`: amanda 网络备份的客户端组件。
+- `amanda-devel`: 开发 amanda 应用程序所需的库和文档。
+- `amanda-server`: 运行 amanda 网络备份的服务器组件。
+- `ami`: 基于韩国 gtk+ 的输入法系统。
+- `am-utils`: 用于自动挂载文件系统的实用程序。包括 amd 守护进程。
+- `anaconda`: Red Hat Linux 安装程序。
+- `anaconda-help`: anaconda 安装程序中使用的帮助信息。
+- `anaconda-images`: anaconda 安装程序中使用的图形图像。
+- `anaconda-runtime`: 用于构建 Red Hat 媒体集。
+- `anacron`: 用于不 24 小时运行的机器的周期性命令调度程序。
+- `apel`: 用于自定义 emacs 的可移植 emacs 库。
+- `apel-xemacs`: 可移植 emacs 库。
+- `apmd`: 用于监控电池电量的高级电源管理软件。
+- `apr`: Apache 可移植运行时库。
+- `apr-devel`: APR 库开发工具。
+- `apr-util`: APR 实用程序库。
+- `apr-util-devel`: APR 实用程序库开发工具。
+- `arpwatch`: 用于跟踪以太网/IP 地址配对的 arpwatch 实用程序。
+- `arts`: 与 KDE 3 音响系统一起使用的模拟实时合成器软件。
+- `arts-devel`: 开发使用 arts 的程序所需的库和文档。
+- `ash`: 轻量级 shell，类似于 UNIX System V sh（Bourne）shell。
+- `asp2php`: 用于将活动服务器页面转换为 PHP 格式的工具。
+- `asp2php-gtk`: asp2php 应用程序的 gtk+ 前端界面。
+- `aspell*`: 用于多种语言拼写检查的软件包集。
+- `aspell-devel`: 开发使用 aspell 的应用程序所需的库和文档。
+- `at`: at 和 batch 命令便于一次性、时间导向的作业控制。
+- `atk`: 用于为应用程序添加辅助功能支持的一组接口。
+- `atk-devel`: atk 的库、头文件和文档。
+- `at-spi`: 允许屏幕阅读器、放大镜或脚本与 GUI 控件交互。
+- `at-spi-devel`: 编译 `at-spi` 的库和头文件。
+- `attr`: 操作扩展文件系统属性的工具。
+- `audiofile`: 实现 SGI Audio File 库以处理音频文件的实用程序。
+- `audiofile-devel`: 与音频软件开发相关的开发工具。
+- `aumix`: 用于调整音频混音设备（`/dev/mixer`）设置的 aumix 程序。
+- `authconfig`: 配置系统授权资源的工具。
+- `authconfig-gtk`: 配置系统授权资源图形工具。
+- `autoconf`: 创建脚本以便制作可移植、可配置源代码包的工具。
+- `autoconf213`: autoconf 的旧版本。
+- `autoconvert`: 用于转换中文 HZ/GB/BIG5 编码的 Autoconverter 工具。
+- `autoconvert-xchat`: Autoconvert-xchat 插件。
+- `autofs`: 通过 automount 守护进程自动挂载和卸载文件系统。
+- `automake`: automake makefile 生成器。
+- `automake14`: 包含在未更新为与更新 automake 兼容的项目中。
+- `automake15`: 包含在未更新为与更新 automake 兼容的项目中。
+- `automake16`: 包含在未更新为与更新 automake 兼容的项目中。
+- `autorun`: 自动检测并挂载 CD-ROM 的软件。
+- `awesfx`: 控制 AWE32 声音驱动程序的实用程序。
+- `balsa`: balsa 电子邮件阅读器（GNOME 桌面的一部分）。
+- `basesystem`: Red Hat Linux 基础系统的一部分。
+- `bash`: GNU Bash shell（Bourne Again Shell）版本 2.05b。
+- `bash-doc`: GNU Bash shell 的文档。
+- `bc`: bc 精度计算器命令行实用程序和语言。
+- `beecrypt`: 通用加密库。
+- `beecrypt-devel`: 使用 beecrypt 开发应用程序所需的文件。
+- `beecrypt-python`: 使用 beecrypt 开发应用程序的 Python 绑定。
+- `bg5ps`: 将 BIG5 编码中文转换为可打印 PostScript 的工具。
+- `bind`: Berkeley Internet Name Domain DNS 协议实现。
+- `bind-chroot`: BIND 名称服务器的 chroot 实现。
+- `bind-devel`: BIND 9.x.x DNS 软件开发所需的头文件。
+- `bind-utils`: dig、dnsquery、nslookup、nsupdate 和其他 DNS 实用程序。
+- `binutils`: GNU 命令行工具，如 ar、as、ld、nm、size 等。
+- `bison`: GNU bison 解析器生成器（yacc 的替代品）。
+- `bitmap-fonts`: 来自 Xfree86 包的位图字体，设计用于终端使用。
+- `bitmap-fonts-cjk`: 从 Xfree86 中选出的位图字体，供 anaconda 使用。
+- `bitstream-vera-fonts`: Vera 捐赠的高质量拉丁字体。
+- `blas`: 基础线性代数子程序（BLAS）库，用于基础线性代数。
+
+### 附录
+
+- `bluez-bluefw`: 蓝牙固件加载器。
+- `bluez-hcidump`: 一个蓝牙协议分析器。
+- `bluez-libs`: 用于蓝牙应用程序的库。
+- `bluez-libs-devel`: 用于蓝牙应用程序的开发库。
+- `bluez-pan`: 蓝牙个人局域网工具。
+- `bluez-pin`: 用于询问用户 PIN 以配对蓝牙设备的蓝牙软件。
+- `bluez-sdp`: 蓝牙服务发现协议库。
+- `bluez-sdp-devel`: 蓝牙服务发现协议库工具。
+- `bluez-utils`: 蓝牙实用工具。
+- `bogl`: 用于 Linux 帧缓冲的小型图形库。
+- `bogl-bterm`: 显示到帧缓冲区的终端模拟器。
+- `bogl-devel`: Ben 自有图形库的开发库。
+- `bonobo`: GNOME 桌面环境使用的基于 CORBA 的系统。
+- `bonobo-conf`: 用于配置选项的基于 bonobo 的系统。
+- `bonobo-conf-devel`: 开发使用 bonobo-conf 的程序所需的库和文件。
+- `bonobo-devel`: 用于开发 bonobo 文档模型应用程序的库。
+- `boost`: Boost 同行评审的 C++ 库。
+- `boost-devel`: Boost C++ 库开发工具。
+- `boost-doc`: Boost C++ 库文档。
+- `boost-jam`: Boost C++ 库构建工具。
+- `boost-python`: Boost C++ 库 Python 绑定。
+- `boost-python-devel`: Boost C++ 库 Python 开发工具。
+- `bootparamd`: 用于启动无盘工作站的 bootparamd 启动参数服务器。
+- `booty`: 用于 anaconda 和 up2date 启动加载程序配置的 Python 库。
+- `bridge-utils`: 用于桥接多个以太网局域网的实用工具。
+- `bridge-utils-devel`: Linux 以太网桥的编程接口。
+- `brltty`: 盲文显示器驱动程序。
+- `bug-buddy`: 一个图形化错误报告工具。
+- `busybox`: 一个提供常见 Linux 命令简化版本的单一二进制文件。
+- `busybox-anaconda`: 用于与 anaconda 配合使用的 busybox 版本。
+- `byacc`: Berkeley yacc 解析器生成器。
+- `bzip2`: 用于压缩和解压缩文件的 `bzip2` 和 `bunzip2` 实用工具。
+- `bzip2-devel`: 与 bzip2 和 bunzip2 实用工具相关的编程工具。
+- `bzip2-libs`: 用于使用 bzip2 的应用程序的库。
+- `caching-nameserver`: 用于仅缓存名称服务器的配置文件。
+- `cadaver`: 一个命令行 WebDAV 客户端。
+- `Canna`: 一个统一的日语字符输入系统。
+- `Canna-devel`: 与 Canna 相关的开发工具。
+- `Canna-libs`: Canna 日语输入系统的运行时库。
+- `cdca2wav`: 将 CD 音频文件转换为 WAV 音频文件。
+- `ecdecl`: 从英语或反之组成 C 和 C++ 类型声明。
+- `ediconfig`: Canna 词典的维护工具。
+- `cdlabelgen`: 为光盘盒生成正面卡和托盘卡。
+- `cdp`: 用于播放音乐 CD 的文本模式实用工具。
+- `cdparanoia`: 光盘数字音频提取工具。
+- `cdparanoia-devel`: 数字音频提取的开发工具。
+- `cdparanoia-libs`: cdparanoia 的库。
+- `cdrdao`: 用于以一次写盘模式写入音频 CD-ROM 的工具。
+- `cdrecord`: 用于向可写 CD-ROM 写入数据的软件。
+- `cdrecord-devel`: 用于向可写 CD-ROM 写入数据的开发工具。
+- `chkconfig`: 修改系统服务运行级别信息。
+- `chkfontpath`: 用于管理 X 服务器字体路径的命令行界面。
+- `chromium`: 一个街机风格的射击游戏。
+- `cipe`: VPN 守护进程和用于 Crypto IP Encapsulation (CIPE) 的内核模块。
+- `ckermit`: 跨平台串行和网络通信软件。
+- `cleanfeed`: 过滤传入 USENET 新闻源中的垃圾邮件。
+- `compat-db`: Berkeley 数据库的旧版本。
+- `compat-gcc`: 用于为 Red Hat 7.3 及更早版本构建二进制文件的兼容编译器。
+- `compat-gcc-c++`: 为旧版 Red Hat Linux 系统生成 C++ 二进制文件。
+- `compat-gcc-g77`: 为旧版 Red Hat Linux 系统生成 Fortran 77 二进制文件。
+- `compat-gcc-java`: 为旧版 Red Hat Linux 系统生成 Java 二进制文件。
+- `compat-gcc-objc`: 为旧版 Red Hat Linux 系统生成 Objective-C 二进制文件。
+- `compat-libgcj`: Red Hat Linux 7.3 Java 编译器 (gcc) 的 Java™ 运行时库。
+- `compat-libgcj-devel`: 用于使用 gcc java 编译器编译的库。
+- `compat-libstdc++`: GCC 标准 C++ 库的快照实现。
+- `compat-libstdc++-devel`: Red Hat C++ 兼容编译器的库。
+- `compat-pwdb`: 用于管理 Linux PAM 用户认证接口的库。
+- `compat-slang`: S-Lang 扩展语言的编程库。
+- `comps`: Red Hat Linux 的 Comps 文件和头文件列表。
+- `comps-extras`: 用于处理 comps 文件的工具和图像。
+- `cosat`: 异步邮件通知客户端和服务器。
+- `control-center`: GNOME 桌面配置工具。
+- `coreutils`: 一组在 shell 脚本中常用的 GNU 工具。
+- `cpio`: 将文件复制到或从多种归档格式复制到文件、磁盘或磁带。
+- `cpp`: cpp（C 预处理器）宏处理实用工具，用于预处理 C 代码。
+- `cproto`: 从 C 源代码创建函数原型和变量声明。
+- `cracklib`: 用于需要测试密码“强度”的应用程序的库。
+- `cracklib-dicts`: CrackLib 在测试密码安全性时使用的词典。
+- `crontabs`: root crontabs 文件，由 cron 守护进程用于安排任务。
+- `ctags`: 用于从 C 源代码生成对象标签文件的 ctags 工具。
+- `cups`: 通用 Unix 打印系统。
+- `cups-devel`: CUPS 的开发环境。
+- `cups-libs`: 允许应用程序原生使用 CUPS 的库。
+- `curl`: 用于使用各种 Internet 协议检索文件的功能丰富的实用工具。
+- `curl-devel`: 构建使用 curl 功能的应用程序所需的文件。
+- `cvs`: 维护文件更改的历史记录。
+- `cyrus-sasl`: 简单认证和安全层 (SASL) 的 Cyrus 版本。
+- `cyrus-sasl-devel`: 开发使用 cyrus-sasl 的应用程序所需的文件。
+- `cyrus-sasl-gssapi`: 支持 GSSAPI 身份验证的 cyrus-sasl 插件。
+- `cyrus-sasl-md5`: 用于 CRAM-MD5 和 DIGEST-MD5 身份验证的 Cyrus-sasl 插件。
+- `cyrus-sasl-plain`: 用于 PLAIN 和 LOGIN 身份验证方案的 Cyrus-sasl 插件。
+- `db4`: Berkeley 数据库修订版 4 的 C 库。
+- `db4-devel`: db4 开发的头文件和库。
+- `db4-java`: Java 开发的 db4 库。
+- `db4-utils`: 用于管理修订版 4 Berkeley 数据库的命令行工具。
+- `dskk-cdb`: SKK 日语输入法的一个词典服务器。
+- `dbus`: 系统范围的消息总线服务。
+- `dbus-devel`: 系统范围消息总线服务的开发工具。
+- `dbus-glib`: 用于使用 D-BUS 的 GLIB 库。
+- `dbus-qt`: 用于使用 D-BUS 的 qt 库。
+- `dbus-x11`: DBUS 所需的 Xlib 工具，因此无需安装 X。
+- `ddd`: Data Display Debugger，一个与命令行调试器交互的 GUI。
+- `ddskk`: 用于 emacs 的简单平假名到汉字转换工具。
+- `ddskk-xemacs`: 用于 XEmacs 的简单平假名到汉字转换工具。
+- `dejagnu`: 用于测试程序的 Expect/Tcl 框架。
+- `desktop-backgrounds-basic`: 一组用作屏幕背景的图像。
+- `desktop-backgrounds-extra`: 补充 desktop-backgrounds-basic。
+- `desktop-file-utils`: 创建和验证 .desktop 文件。
+- `desktop-printing`: 用于支持拖放打印的桌面图标和代码。
+- `dev`: 常用 Linux 设备文件。
+- `dev86`: 一个 x86 汇编器和链接器。
+- `devhelp`: GNOME 2 的 API 文档浏览器。
+- `devlabel`: 通过符号链接实现的统一存储设备访问。
+- `dhclient`: DHCP 客户端应用程序。
+- `dhcp`: 动态主机配置协议（DHCP）服务器和中继代理。
+- `dhcp-devel`: 用于与 ISC DHCP 服务器交互的库。
+- `dia`: 类似 Visio 的绘图和制图程序。
+- `dialog`: 用于在文本模式界面中显示对话框的 dialog 工具。
+- `dictd`: dict 客户端，用于从 DICT 服务器访问词典定义。
+- `dietlibc`: libc 的小型实现。
+- `diffstat`: 根据 diff 命令的输出生成统计信息。
+- `diffutils`: 包含用于比较文件的 diff、cmp、diff3 和 sdiff 工具。
+- `diskcheck`: 用于监控硬盘剩余可用空间的工具。
+- `dmalloc`: 内存管理例程的可直接替换品。
+- `docbook`: 包含 DocBook SGML DTD 和样式表的软件包集合。
+- `dos2unix`: 将文本文件从 DOS 格式转换为 UNIX 格式。
+- `dosfstools`: 用于创建和操作 DOS 文件系统的工具。
+- `dovecot`: Dovecot 安全 IMAP 服务器。
+- `doxygen`: 从 C 或 C++ 源代码创建文档。
+- `doxygen-doxywizard`: 用于创建和编辑 doxygen 配置文件的图形界面前端。
+- `dtach`: 一个模拟 screen 分离功能的简单程序。
+- `dump`: 用于备份和恢复 ext2/3 文件系统的工具。
+- `dvdrecorder`: 命令行 CD/DVD 刻录程序。
+- `dvd+rw-tools`: 用于刻录 DVD+RW/+R 介质的工具。
+- `dvgrab`: 从 FireWire 连接的设备捕获数字视频。
+- `e2fsprogs`: 用于查找和修复 ext2 文件系统不一致的程序。
+- `e2fsprogs-devel`: 用于开发 ext2 文件系统程序的库和头文件。
+- `ed`: 行式文本编辑器（曾是原始的 UNIX 文本编辑器）。
+- `eel2`: Eazel 扩展库，为 GNOME 提供的一组控件和函数。
+- `eel2-devel`: 用于 eel 开发的库和包含文件。
+- `efax`: 使用任何 Class 1、2 或 2.0 传真调制解调器发送和接收传真。
+- `eject`: 弹出 CD、软盘、Jazz 磁盘或其他介质。
+- `ElectricFence`: 检测内存分配违规。
+- `elfutils`: 处理编译后对象的工具集合。
+- `elfutils-devel`: 处理编译后对象的开发工具。
+- `elfutils-libelf`: 提供一个便于读写 ELF 文件的 DSO。
+- `elinks`: 支持框架的文本模式 Web 浏览器。
+- `emacs`: 运行 emacs 编辑器所需的库。
+- `emacs-el`: 与 emacs 文本编辑器一起使用的 elisp 程序的 emacs-elisp 源代码。
+- `emacs-leim`: 与国际字符脚本一起使用的 Emacs Lisp 代码。
+- `emacsspeak`: 允许视障用户使用计算机的语音界面。
+- `enscript`: 用于将 ASCII 文本格式化为 PostScript 输出的打印过滤器。
+- `eog`: GNOME 的图像查看器 Eye of GNOME。
+- `epic`: 增强的 ircii 聊天客户端。
+- `epiphany`: 基于 Mozilla 的 GNOME Web 浏览器。
+- `eruby`: 用于文本文件中嵌入的 Ruby 代码的 Ruby 解释器。
+- `eruby-devel`: 允许应用程序使用 eRuby 的头文件和库。
+- `eruby-libs`: eRuby 所需的库。
+- `esound`: 允许多个程序共享声卡。
+- `esound-devel`: 开发 Esound 应用程序的库和包含文件。
+- `ethereal`: 用于在类 UNIX 操作系统上分析网络流量的工具。
+- `ethereal-gnome`: ethereal 的 GNOME 桌面环境集成。
+- `ethtool`: 显示并更改以太网卡设置。
+- `evolution`: GNOME 的集成信息管理工具组件套件。
+- `expat`: 用于流式 XML 解析的 C 库。
+- `expat-devel`: 使用 expat 开发 XML 应用程序的文档和库。
+- `expect`: 用于自动化 FTP、fsck 和 telnet 等交互式工具的 tcl 扩展。
+- `expect-devel`: Expect 开发库。
+- `expectk`: 程序脚本交互和测试工具。
+- `fam`: 通过守护进程和 API 跟踪文件系统更改。
+- `fam-devel`: fam 的库和头文件。
+- `fbset`: 用于在 fbcon 控制台上更改视频模式。
+- `festival`: 免费的多语言语音合成器。
+- `festival-devel`: 允许应用程序使用 festival 的头文件和库。
+- `fetchmail`: 通过 SLIP 和 PPP 链路检索和转发邮件。
+- `file`: 根据文件内容识别文件类型。
+- `file-roller`: 管理 tar 文件等归档文件。
+- `filesystem`: Red Hat Linux 系统的基本目录层级布局。
+- `findutils`: find 和 xargs 工具的 GNU 版本。
+- `finger`: 用于显示系统用户信息的客户端。
+- `finger-server`: 为网络客户端提供 finger 服务的服务器。
+- `firstboot`: 安装后运行，以便更轻松地配置系统。
+- `flex`: 生成用于识别文本中词法模式的 C 源代码。
+- `flim`: 为 emacs 中的消息编码提供基本功能的库。
+- `flim-xemacs`: 为 XEmacs 中的消息编码提供基本功能的库。
+- `fontconfig`: 根据应用程序设定的需求定位并设置字体。
+- `fontconfig-devel`: 开发 fontconfig 应用程序的头文件和文档。
+- `fontutils`: 用于在 Nautilus 中管理字体的扩展。
+- `font-arabic`: 来自阿卜杜勒阿齐兹国王科技城的阿拉伯字体。
+- `fonts-hebrew`: 来自 Culmus 项目的希伯来字体。
+- `fonts-ISO8859-2*`: 各种中欧和希腊语字体。
+- `fonts-ja`: 日本文本位图字体。
+- `fonts-KOI8-R*`: 各种俄语和乌克兰语字体。
+- `foomatic`: 一个与 spooler 无关的打印机和打印机驱动程序数据库。
+- `freevic`: 文明 II 策略游戏的 freevic 克隆版。
+- `freeglut`: GLUT 库的免费实现。
+- `freeglut-devel`: freeGLUT 的开发工具。
+- `freeradius`: 高度可配置的 RADIUS 服务器。
+- `freeradius-mysql`: freeradius 的 MySQL 绑定。
+- `freeradius-postgresql`: freeradius 的 PostgreSQL 绑定。
+- `freeradius-unixODBC`: freeradius 的 unixODBC 绑定。
+- `freetype`: 用于 TrueType 字体的免费便携式字体渲染引擎。
+- `freetype-demos`: freetype 演示集合。
+- `freetype-devel`: 使用 FreeType 字体渲染引擎的组件。
+- `freetype-utils`: 用于管理字体的多个工具。
+- `FreeWnn`: 将日文假名字符转换为汉字字符，反之亦然。
+- `FreeWnn-common`: Wnn 假名到汉字转换所需的通用文件。
+- `FreeWnn-devel`: 用于开发 FreeWnn 应用程序的工具。
+- `FreeWnn-libs`: 运行 FreeWnn 应用程序的运行时库。
+- `fribidi`: Unicode BiDi 算法的免费实现。
+- `fribidi-devel`: Unicode BiDi 算法的开发工具。
+- `fsh`: 用于创建安全网络隧道的 fsh 命令。
+- `ftp`: 文件传输协议的通用客户端。
+- `ftpcopy`: 用于促进 FTP 站点镜像的工具
+- `gail`: 实现 at-spi 等软件包的 ATK 可访问性接口。
+- `gail-devel`: 编译使用 GAIL 的应用程序所需的文件。
+- `gaim`: 流行的 AOL 即时通讯客户端的开源克隆。
+- `gal`: GNOME 应用程序库（GAL），包括 GNOME 工具和控件。
+- `gal-devel`: 与 GNOME 应用程序库相关的开发工具。
+- `gawk`: gawk（GNU awk）文本处理工具。
+- `gcc*`: 该软件包集合包含 GNU C 语言编译器及相关工具。
+- `GConf`: GNOME 配置数据库系统。
+- `GConf2`: 用于存储用户偏好的配置数据库 API。
+- `GConf-devel`: 用于使用 GConf 进行开发的库文件。
+- `GConf2-devel`: 用于使用 GConf2 进行开发的库文件。
+- `gconf-editor`: GConf 配置源的编辑器和管理员工具。
+- `gd`: 用于创建 JPEG 和 PNG 图像文件的图形库。
+- `gdb`: 命令行驱动的调试器。
+- `gdbm`: Gdbm 数据库索引库。
+- `gdbm-devel`: 用于开发使用 GNU 数据库系统的应用程序的组件。
+- `gd-devel`: 用于开发使用 gd 图形库的应用程序的组件。
+- `gdk-pixbuf`: GDK Pixbuf 图像加载库。
+- `gdk-pixbuf-devel`: 与 GDK Pixbuf 相关的开发工具。
+- `gdk-pixbuf-gnome`: 用于显示图像的 GNOME Canvas 支持。
+- `gdm`: GNOME 显示管理器，维护基于 X 的图形登录。
+- `gd-progs`: 与 gd 图形库相关的实用程序。
+- `gedit`: 紧凑的、基于 GNOME 的文本编辑器
+- `genromfs`: 用于构建初始 RAM 磁盘的 romfs 文件系统的实用工具。
+- `gettext`: 用于创建多语言消息的工具和实用程序。
+- `gftp`: 多线程图形 FTP 程序。
+- `ggv`: Ghostscript 的前端，为 Ghostscript 添加平移和持久用户设置。
+- `ghostscript`: 显示和打印 PostScript 文件。
+- `ghostscript-devel`: 用于开发 Ghostscript 启用应用程序的头文件。
+- `ghostscript-fonts`: 与 Ghostscript 程序一起使用的字体集。
+- `giftrans`: 将 GIF87 文件转换为 GIF89 格式。
+- `gimp`: GNU 图像处理程序
+- `gimp-data-extras`: 与 GIMP 一起使用的图案、渐变和其他图形元素。
+- `gimp-devel`: 开发 GIMP 插件和扩展所需的库。
+- `gimp-perl`: 用于 GIMP 与 GIMP Perl 扩展之间通信的库。
+- `gimp-print`: 在要求苛刻的任务期间提供增强打印的驱动程序。
+- `gimp-print-cups`: Canon、Epson 和兼容打印机的原生驱动程序。
+- `gimp-print-devel`: GIMP 打印接口的库和文档。
+- `gimp-print-plugin`: gimp-print 的 GIMP 插件。
+- `gimp-print-utils`: 来自 gimp-print 的实用程序。
+- `gkrellm`: 监控软件，可绘制 CPU 使用率、磁盘活动和网络流量。
+- `gkrellm-daemon`: gkrellm 的服务器端。
+- `glade`: 用于 GTK+ 工具包快速开发用户界面的软件。
+- `glade2`: 适用于 GTK+ 2.0 的 glade 版本。
+- `glib`: 用于提高可移植性的 Glib 1.2 版通用函数库。
+- `glib2`: 用于提高可移植性的 Glib 2 版通用函数库。
+- `glib2-devel`: 与 glib2 开发包一起使用的静态库和头文件。
+- `glibc`: 众多程序使用的标准库。
+- `glibc-common`: 通用二进制文件、区域设置支持和时区数据库。
+- `glibc-debug`: 用于更深入调试的各种库。
+- `glibc-devel`: 用于开发大多数 C 语言程序的标准头文件和对象文件。
+- `glibc-kernheaders`: 供 glibc 使用的 Linux 内核头文件。
+- `glibc-profile`: 使用 `gprof` 分析的程序所需的库。
+- `glibc-utils`: 程序调试期间有用的各种工具。
+- `glib-devel`: 用于支持 GIMP Xlibrary 的静态库和头文件。
+- `Glide3`: 3DFxVoodoo 图形卡的编程接口。
+- `Glide3-devel`: 用于在 3Dfx Interactive Voodoo 卡中使用 3D 加速器的接口。
+- `gmp`: 用于处理算术和浮点数函数的 MP 库。
+- `gmp-devel`: 用于开发 GNU MP 任意精度应用程序的组件。
+- `gnome-applets`: 用于 GNOME 桌面的小程序。
+- `gnome-audio`: 可与 GNOME 环境一起使用的声音集。
+- `gnome-audio-extra`: 可与 GNOME 桌面一起使用的声音文件。
+- `gnome-bluetooth`: 控制蓝牙设备的简单 GUI。
+- `gnome-desktop`: GNOME 组件之间共享的代码。
+- `gnome-desktop-devel`: 用于编译 GNOME 桌面组件的库。
+- `gnome-games`: GNOME 游戏，如 *纸牌接龙*、*奥赛罗* 和 *俄罗斯方块*。
+- `gnome-icon-theme`: 基础 GNOME 桌面环境图标。
+- `gnome-kerberos`: 用于管理 Kerberos 5 票证的 krb5 工具。
+- `gnome-libs`: GNOME 桌面环境和应用程序所需的库。
+- `gnome-libs-devel`: 用于创建可在 GNOME 桌面上运行的应用程序所需的库。
+- `gnome-mag`: 用于 AT-SPI 应用程序的 GNOME 放大库。
+- `gnome-mag-devel`: GNOME AT-SPI 放大库的开发工具。
+- `gnome-media`: GNOME CD 播放器和其他多媒体工具。
+- `gnomemeeting`: 与 Microsoft NetMeeting 兼容的 H323 电信会议工具。
+- `gnome-mime-data`: GNOME-VFS 的文件类型识别数据文件。
+- `gnome-panel`: 提供桌面管理实用程序。
+- `gnome-pilot`: 集成 GNOME 和 PalmOS 设备（如 Palm Pilot）所需的文件。
+- `gnome-pilot-conduits`: gnome-pilot 的额外 conduit。
+- `gnome-pilot-devel`: 使应用程序能够使用 gnome-pilot 所需的库。
+- `gnome-print`: GNOME 应用程序从 GNOME 打印所需的字体和工具。
+- `gnome-print-devel`: 与 GNOME 中打印相关的软件开发工具。
+- `gnome-python2-*`: 允许 GNOME 组件用 Python 编写的包装器。
+- `gnome-session`: 处理核心 GNOME 组件的启动和关闭。
+- `gnome-speech`: GNOME 文字转语音工具。
+- `gnome-speech-devel`: GNOME 文字转语音功能的开发工具。
+- `gnome-spell`: 用于拼写检查的 bonobo 组件。
+- `gnome-system-monitor`: 简单的进程和系统监视器。
+- `gnome-terminal`: GNOME 终端模拟器。
+- `gnome-themes`: GNOME 主题集合。
+- `gnome-user-docs`: GNOME 的词汇表、介绍和其他文档。
+- `gnome-utils`: 多个有用的 GNOME 实用程序，例如计算器和日历。
+- `gnome-vfs`: GNOME 虚拟文件系统库。
+- `gnome-vfs-devel`: 用于开发 GNOME-VFS2 应用程序的库和头文件。
+- `gnome-vfs-extras`: 包括 Samba smb 网络浏览器的 GNOME-VFS 模块。
+- `gnome-vfs2`: GNOME 虚拟文件系统库的 2.0 版。
+- `gnome-vfs2-devel`: 用于开发 GNOME-VFS2 应用程序的库和头文件。
+- `gnome-vfs2-extras`: 包括 Samba smb 网络浏览器的 GNOME-VFS2 模块。
+- `gnucash`: 个人财务跟踪器。
+- `gnucash-backend-postgres`: 用于在 PostgreSQL 中存储 GnuCash 数据的后端。
+- `gnuchess`: GNU 国际象棋程序及相关实用程序。
+- `gnumeric`: 基于 GNOME 的 gnumeric 电子表格程序
+- `gnumeric-devel`: gnumeric 电子表格应用程序的开发工具。
+- `gnupg`: GNU Privacy Guard，用于安全通信和数据存储。
+- `gnuplot`: 用于绘制科学和其他类型数据的实用程序。
+- `gob2`: 用于创建 GObject 对象的预处理器。
+- `gok`: GNOME 屏幕键盘。
+- `gperf`: C++ 哈希函数生成器。
+- `gphoto2`: 管理和访问数码相机的图像。
+- `gphoto2-devel`: 创建使用 gphoto2 的应用程序所需的头文件。
+- `gpm`: 基于控制台的鼠标服务器。
+- `gpm-devel`: 用于开发具有鼠标功能的文本模式程序的库。
+- `gqview`: 功能丰富的图像查看器。
+- `grep`: 用于在文件中查找字符串模式的实用程序。
+- `grip`: 各种光盘抓轨器和 MP3 编码器的图形前端。
+- `groff`: 基于控制台的文本格式化实用程序。
+- `groff-gxditview`: 基于 GUI 的 groff 文本输出查看器。
+- `groff-perl`: 用于处理需要 Perl 的 groff 文档的实用程序。
+- `grub`: Grand Unified Boot Loader，用于启动 Linux 等操作系统。
+- `gsl`: 用于数值分析和高级数学的 GNU 科学库。
+- `gsl-devel`: 创建使用 gsl 的应用程序所需的头文件和库文件。
+- `gstreamer`: 流媒体框架。
+- `gstreamer-devel`: 流媒体框架的开发库。
+- `gstreamer-plugins`: 流媒体框架的插件。
+- `gstreamer-plugins-devel`: 流媒体框架的开发库。
+- `gstreamer-tools`: 与流媒体框架一起使用的基本命令行工具。
+- `gthumb`: 用于查看、编辑和组织图像集合的应用程序。
+- `gtk+`: 用于构建基于 X 的图形用户界面的 GIMP 图形工具包。
+- `gtk+-devel`: 用于创建需要 GIMP 的应用程序的 gtk+ 开发工具。
+- `gtk2`: 用于创建图形用户界面 (GUIs) 的工具包。
+- `gtk2-devel`: GTK+ 工具包的头文件和开发者文档。
+- `gtk2-engines`: GTK+ 2.0 的主题引擎
+- `gtkam`: 基于 GTK 的 gphoto2 接口。
+- `gtkam-gimp`: 一个 GIMP 插件，通过 gphoto2 允许访问数码相机。
+- `gtk-doc`: 用于生成 GTK+、GNOME 和 Glib 组件文档的工具。
+- `gtk-engines`: GTK+ 工具包主题（包括 Notif、Redmond95 和 Metal）。
+- `gtkglarea`: GTK+ GUI 库的 OpenGL 小部件。
+- `gtkhtml`: 轻量级 HTML 渲染/打印/编辑引擎。
+- `gtkhtml-devel`: 开发使用 gtkhtml 的应用程序所需的库。
+- `gtkhtml2`: GTK+ 2.0 的 HTML 显示小部件
+- `gtkhtml2-devel`: 创建 gtkhtml2 应用程序所需的库。
+- `gtkhtml3`: gtkhtml 库。
+- `gtkhtml3-devel`: 创建 gtkhtml3 应用程序所需的库。
+- `Gtk-Perl`: 用于使用 Perl 创建 GUI 的 gtk+ Perl 扩展。
+- `gtksourceview`: 用于查看源代码文件的库。
+- `gtksourceview-devel`: 使用 gtksourceview 库编译应用程序的工具。
+- `gtkspell`: GtkTextView 小部件的即时拼写检查。
+- `gtkspell-devel`: gtkspell 的开发工具。
+- `gtoaster`: 支持音频和数据文件的光盘刻录软件包。
+- `guile`: Scheme 编程语言的库实现。
+- `guile-devel`: 将程序与 GUILE 库链接所需的库和头文件。
+- `Guppi`: 基于 GNOME 的数据分析和可视化系统。
+- `Guppi-devel`: 开发使用 Guppi 的应用程序所需的头文件和库。
+- `gv`: 在 X 中查看 PostScript 和 PDF 文档的轻量级前端工具。
+- `g-wrap`: 用于创建 C 库 Scheme 接口的工具。
+- `g-wrap-devel`: gwrap 开发所需的文件和库。
+- `gzip`: 数据压缩实用程序。
+- `h2ps`: 将文本中的韩文韩字转换为 PostScript。
+- `hddparm`: 用于设置和查看硬盘参数的实用程序。
+- `hesiod`: 用于查看 hesiod 数据库的实用程序和库。
+- `hesiod-devel`: 使用 hesiod 数据库的应用程序的库和头文件。
+- `hexedit`: 十六进制文件查看器和编辑器。
+- `hotplug`: 连接 USB 设备时加载所需模块的热插拔实用程序。
+- `hpijs`: 优化的 HP 打印机驱动程序集合。
+- `hpoj`: HP OfficeJet 低级驱动程序基础设施。
+- `hpoj-devel`: HP OfficeJet 低级驱动程序基础设施的开发库。
+- `httdig`: httdig Web 索引和搜索系统。
+- `httdig-web`: httdig 使用的 CGI 脚本和 HTML 代码。
+- `htmlview`: 由应用程序用于显示其基于 HTML 的帮助页面。
+- `httpd`: Apache Web 服务器配置文件、文档和守护进程。
+- `httpd-devel`: Apache Web 服务器头文件和用于扩展模块的 apxs 工具。
+- `httpd-manual`: Apache 手册（HTML 格式）。
+- `hwbrowser`: 当前系统硬件配置的浏览器。
+- `hwcrypto`: 在 Linux 下与硬件加密加速器接口的库。
+- `hwdata`: 系统硬件的识别和配置数据。
+- `icon-slicer`: 用于创建图标主题的工具。
+- `ImageMagick`: 功能丰富的图形显示和编辑工具。
+- `ImageMagick-c++`: 使用 ImageMagick 功能的应用程序的 C++ 绑定。
+- `ImageMagick-c++-devel`: 与 ImageMagick 图形库一起使用的 C++ 库。
+- `ImageMagick-devel`: 实现 ImageMagick API 所需的库。
+- `ImageMagick-perl`: ImageMagick 的 Perl 绑定。
+- `imap`: 处理客户端邮件传输的 IMAP 和 POP 协议守护进程。
+- `imap-devel`: 用于与 IMAP 邮件服务器接口的 IMAP 开发工具。
+- `imlib`: 与 X Window System 一起使用的图像加载和渲染库。
+- `imlib-cfgeditor`: imlib_conf 程序，用于控制 imlib 如何渲染图像。
+- `imlib-devel`: 使用 ImLib 图像和渲染库开发程序的组件。
+- `im-sdk`: Internet/Intranet 输入法框架。
+- `indent`: 用于美化 C 编程代码的 indent 实用程序。
+- `indexhtml`: 默认的 Red Hat 欢迎网页。
+- `inews`: 将 Usenet 新闻文章发布到本地新闻服务器。
+- `info`: 用于显示 texinfo（读作“tech-info”）文件的基于文本的浏览器。
+- `init-scripts`: 启动时间和运行级别初始化脚本。
+- `inn`: 用于在 Linux 中创建和维护新闻服务器的 InterNetNews 服务器。
+- `inn-devel`: 开发使用 InterNetNews 系统的应用程序的组件。
+- `intltool`: 用于国际化各种数据文件的实用程序。
+- `ipchains`: 在 IP 网络上实现防火墙和 IP 伪装的组件。
+- `iproute`: 用于路由 IP 流量的 `ip` 命令和相关实用程序。
+- `iptables`: 高级数据包过滤工具。
+- `iptables-ipv6`: IPv6 网络的高级数据包过滤工具。
+- `iptraf`: 基于控制台的网络监控工具。
+- `iputils`: 各种网络监控实用程序，包括 `ping` 和 `rdisc`。
+- `ipxutils`: 用于配置和操作 Novell IPX 网络的一组实用程序。
+- `irb`: Interactive Ruby，一个基于终端的 Ruby 表达式求值器。
+- `irda-utils`: IrDA 实用程序，用于与红外设备通信。
+- `iscsi`: iSCSI 守护进程和实用程序。
+- `isdn4k-utils`: 用于配置 ISDN 子系统的工具。
+- `isdn4k-utils-devel`: 开发 capi 应用程序所需的库和头文件。
+- `isdn4k-utils-vboxgetty`: 与 ISDN 语音盒一起使用的 vboxgetty 和 vboxputty 工具。
+- `isicom`: 用于加载 Multitech Intelligent Serial Internal 数据文件的实用程序。
+- `itcl`: Tcl 语言的对象化扩展。
+- `jadetex`: 用于处理 DSSSL 文档的 `jadetex` 和 `pdflatex` 命令。
+- `jcode.pl`: 用于日文字符代码转换的 perl 库。
+- `jed`: 基于 `slang` 屏幕库的 `jed` 文本编辑器。
+- `jfsutils`: 管理 JFS 文件系统的实用程序。
+- `jisksp14`: 14 点 jis 辅助汉字字体。
+- `jisksp16`: 16 点 jis 辅助汉字字体。
+- `joe`: 使用 Borland WordStar 键绑定的 `joe` 无模式文本编辑器。
+- `joystick`: 用于连接和配置游戏杆的实用程序。
+- `jpilot`: Palm Pilot 的桌面组织应用程序。
+- `jwhois`: 用于 whois 和 finger 风格查询的 Whois 客户端。
+- `kakasi`: 日文字符转换器，可将汉字转换为平假名、片假名或罗马字。
+- `kakasi-devel`: 开发使用 Kakasi 的应用程序的头文件和库文件。
+- `kakasi-dict`: Kakasi 基础词典。
+- `kappa20`: 20pt 日文字体。
+- `kbd`: 用于配置系统控制台的实用程序。
+- `kcc`: 汉字代码转换器。
+- `kdbg`: GNU 调试器 (`gdb`) 的 KDE 图形前端。
+- `kdeaddons`: K Desktop 插件 Konqueror、noatun 和 Kate。
+- `kdeadmin`: KDE 的磁带备份、用户管理和其它系统工具。
+- `kdeartwork`: KDE 的额外美术资源（主题、声音主题等）。
+- `kdebase`: 基本 KDE 工具，如 kwm、kfm 文件管理器和 konsole。
+- `kdbase-devel`: 用于使用 kdbase 开发应用程序的头文件。
+- `kdedu`: KDE 的益智娱乐应用程序。
+- `kdedu-devel`: KDE 益智娱乐应用程序的开发库。
+- `kdegames`: KDE 游戏，如 kasteroids、kblackbox 和 ksmiletris。
+- `kdegames-devel`: 用于创建 KDE 游戏的库。
+- `kdegraphics`: K 桌面环境的图形应用程序。
+- `kdegraphics-devel`: KDE 应用程序开发的开发工具。
+- `kde-i18n*`: 一组提供各种人类语言支持的软件包。
+- `kdelibs`: K 桌面环境所需的库。
+- `kdelibs-devel`: 开发 KDE 桌面应用程序的工具和文档。
+- `kdemultimedia`: KDE 多媒体应用程序。
+- `kdemultimedia-devel`: KDE 多媒体应用程序开发库。
+- `kdenetwork`: K 桌面环境的网络应用程序。
+- `kdenetwork-devel`: 开发 KDE 网络应用程序的库。
+- `kdepim`: KDE 桌面的一套个人信息管理（PIM）工具。
+- `kdepim-devel`: 开发使用 kdepim 的应用程序所需的库。
+- `kdesdk`: KDE 软件开发工具包。
+- `kdesdk-devel`: KDE 软件开发工具包的开发库。
+- `kdtoys`: 实用工具，如 kmoon（月相）和 kworldwatch（时区时间）。
+- `kdeutils`: K 桌面实用工具。
+- `kdeutils-devel`: KDE 实用工具开发库。
+- `kdevelop`: 用于创建具有一致 KDE 界面的应用程序的开发工具。
+- `kdoc`: kdoc2 程序，用于交叉引用 C++ 头文件中的格式化注释。
+- `kernel-2.4-*`: 适用于各种类型 CPU 的 Linux 内核。
+- `kernel-BOOT`: Linux 内核的精简版本，用于放置在启动磁盘上。
+- `kernel-doc`: 随 Linux 内核源代码部分一起提供的文档文件。
+- `kernel-pcmcia-cs`: 支持 PCMCIA 设备（通常用于笔记本电脑）的软件。
+- `kernel-smp-*`: 适用于各种 CPU 的对称多处理 Linux 内核版本。
+- `kernel-source`: 用于构建 Red Hat Linux 内核的源代码文件。
+- `kernel-utils`: 若干用于控制 Linux 内核或计算机硬件的实用工具。
+- `kinput2-canna-wnn6`: 为需要 Canna 或 Wnn6 日文输入的 X 程序提供服务的服务器。
+- `knm_new`: 一种 Kaname-cho 字体。
+- `koffice`: 一套办公生产力应用程序。
+- `koffice-devel`: 开发 KOffice 插件所需的文件。
+- `kon2`: 控制台的汉字模拟器。
+- `kon2-fonts`: kon 的字体。
+- `kpppload`: kpppload 实用工具，用于可视化监控 PPP 连接的负载。
+- `krb5*`: 用于提供 Kerberos 身份验证方法支持的软件包。
+- `krbafs*`: krbafs 库，支持使用 Kerberos 5 凭据的 AFS 令牌。
+- `kterm`: kterm 汉字终端模拟器。
+- `kudzu`: kudzu 硬件自动检测和配置实用工具。
+- `kudzu-devel`: 用于创建 kudzu 应用程序的头文件。
+- `lam`: 用于管理网络计算机集群的本地区域管理（LAM）工具。
+- `lapack`: 用于求解线性方程组的线性代数包（LAPACK）。
+- `less`: 文本浏览器，类似于 more，但更好。
+- `lesstif`: OSF/Motif 的免费版本，提供一组用于开发应用程序的小部件。
+- `lesstif-devel`: 用于为 LessTif 开发基于 Motif-1.2 的程序的库和头文件。
+- `lftp`: 功能强大的 ftp/http 文件传输程序。
+- `lha`: 用于 LHarc 格式归档的归档和压缩实用工具。
+- `libacl`: 用于访问控制列表支持的动态库。
+- `libacl-devel`: 用于开发使用 ACL 的应用程序的静态库和头文件。
+- `libaio`: Linux 原生的异步 I/O 访问库。
+- `libaio-devel`: 创建支持 libaio 的应用程序的开发文件。
+- `libao`: 跨平台音频输出库。
+- `libao-devel`: 使用 libao 开发应用程序所需的头文件和文档。
+- `libart_lgpl`: libgnomecanvas 使用的图形例程库。
+- `libart_lgpl-devel`: 编译 libart_lgpl 所需的库和头文件。
+- `libattr`: 文件系统扩展属性的动态库。
+- `libattr-devel`: 用于开发使用扩展文件系统属性的程序的库。
+- `libavc1394`: Firewire 控制库。
+- `libavc1394-devel`: 构建使用 firewire 设备的应用程序所需的库。
+- `libbonobo`: GNOME 桌面的基于 Corba 的组件系统。
+- `libbonobo-devel`: 构建 bonobo 应用程序的开发库和头文件。
+- `libbonoboui`: bonobo 应用程序的用户界面组件。
+- `libbonoboui-devel`: 编译使用 libbonoboui 的应用程序所需的头文件。
+- `libcap`: 用于获取和设置 POSIX.1e 能力的库。
+- `libcap-devel`: 用于开发使用 libcap 的应用程序所需的头文件和库。
+- `libcapplet0`: GNOME 1 控制中心库兼容性软件包。
+- `libcapplet0-devel`: GNOME 1 控制中心库兼容性的头文件。
+- `libdbi`: 允许多个数据库连接的 C 独立抽象层。
+- `libdbi-dbd-*`: 对各种数据库的 Libdbi 支持。
+- `libdbi-devel`: 创建使用 libdbi 的应用程序所需的开发文件。
+- `libesmtp`: 管理使用 SMTP 发送电子邮件的库。
+- `libesmtp-devel`: 开发使用 libesmtp 的应用程序所需的开发工具。
+- `libf2c`: Fortran 77 运行时库。
+- `libgail-gnome`: GTK+ 和 GNOME 的 GAIL 可访问性实现。
+- `libgal2*`: 各种 GNOME 小部件函数和实用工具。
+- `libgcc`: GCC 版本 3.2 异常处理库。
+- `libgcj`: gcc 的 Java 运行时库。
+- `libgcj-devel`: 与 gcc 的 Java 运行时库相关的开发工具。
+- `libgcrypt`: 基于 GPG 的通用加密库。
+- `libgcrypt-devel`: libgcrypt 的开发工具。
+- `libhttp`: 用于发出 HTTP 1.1 请求的 GNOME http 客户端库。
+- `libhttp-devel`: libhttp 开发的库和头文件。
+- `libglade`: 可用于创建 GLADE 用户界面应用程序的库。
+- `libglade-devel`: 开发 GLADE 应用程序的工具和文档。
+- `libglade2`: 用于从 XML 描述加载用户界面的 libglade 库。
+- `libglade2-devel`: 开发使用 libglade 的应用程序所需的文件。
+- `libgnat`: GNU Ada 95 运行时共享库。
+- `libgnome`: GNU 对象模型环境（GNOME）基础库。
+- `libgnome-devel`: libgnome 开发的库和头文件。
+- `libgnomecanvas`: 用于使用通用小部件创建自定义显示的库。
+- `libgnomecanvas-devel`: libgnomecanvas 开发的库和头文件。
+- `libgnomeprint`: GNOME 打印库。
+- `libgnomeprint-devel`: 用于在 GNOME 应用程序中开发打印的库。
+- `libgnomeprint15`: 支持 GNOME 打印所需的组件。
+- `libgnomeprint22`: GNOME 打印库。
+- `libgnomeprint-devel22`: 用于在 GNOME 应用程序中开发打印的库。
+- `libgnomeprintui`: libgnome 打印的 GUI 支持。
+- `libgnomeprintui-devel`: 编译 libgnomeprintui 应用程序的库。
+- `libgnomeprintui22`: libgnome 打印的 GUI 支持。
+- `libgnomeprintui22-devel`: 编译 libgnomeprintui 应用程序的库。
+- `libgnomeui`: 基于 GNOME 的 GUI 库。
+- `libgnomeui-devel`: 编译 libgnomeui 应用程序的库和头文件。
+- `libgfs`: 用于读写结构化文件的库。
+- `libgfs-devel`: 用于读写结构化文件的开发库。
+- `libgtop`: 获取系统使用信息的库。
+- `libgtop-devel`: 开发用于监控系统使用的应用程序所需的组件。
+- `libgtop2`: 获取系统使用信息的库。
+- `libgtop2-devel`: 开发用于监控系统使用的应用程序所需的组件。
+- `libIDL`: 用于解析接口定义语言的库。
+- `libIDL-devel`: libIDL 的开发库和头文件。
+- `libjpeg`: 用于处理 JPEG 图像的 libjpeg 库。
+- `libjpeg-devel`: 用于创建使用 JPEG 图像的程序的头文件和库。
+- `libmng`: 用于处理 MNG 和 JNG 格式图像的库。
+- `libmng-devel`: 与 libmng 库相关的头文件。
+- `libmng-static`: libmng 库的静态链接版本。
+- `libmrproject`: 用于访问 Mr. Project 数据的库。
+- `libmrproject-devel`: libmrproject 的开发文件。
+- `libobjc`: Objective C 运行时库。
+- `libogg`: Ogg 位流格式库。
+- `libogg-devel`: 用于开发 ogg 应用的文档和头文件。
+- `libole2`: 结构化存储 OLE2（对象链接与嵌入）库。
+- `libole2-devel`: 用于开发 OLE2 结构化存储文件应用的头文件。
+- `libpcap`: 用于监控低层网络流量的用户级钩子。
+- `libpng10`: 用于处理 PNG 图像文件的 libpng 库的旧版本。
+- `libpng10-devel`: 用于开发使用 PNG 图像的程序的库和头文件。
+- `libpng`: 用于处理 PNG 图像文件的 libpng 库。
+- `libpng-devel`: 开发使用 PNG 图像的程序所需的库和头文件。
+- `libraw1394`: 提供低层 FireWire 访问的库。
+- `libraw1394-devel`: 用于使用 libraw1394 功能的开发库。
+- `librep`: 与 librep Lisp 方言相关的工具和文档。
+- `librep-devel`: 与 librep Lisp 方言相关的头文件和工具。
+- `libsvg`: 基于 libart 的 SVG 库。
+- `libsvg-devel`: 开发使用 libsvg 的应用程序所需的开发文件。
+- `libsvg2`: 基于 libart 的 SVG 库。
+- `libsvg2-devel`: 开发使用 libsvg2 的应用程序所需的开发文件。
+- `libsane-hpijs`: 用于 HP 多功能设备的 SANE 扫描仪驱动。
+- `libsoup`: 使 GNOME 库能够访问 HTTP 服务器的库。
+- `libsoup-devel`: libsoup 的开发工具。
+- `libstdc++`: 运行 C++ 应用程序所需的 EGCS 库。
+- `libstdc++-devel`: 标准 C++ 开发库。
+- `libtabe`: 用于 xcin 输入法的中文词库库。
+- `libtabe-devel`: 开发使用 libtabe 的应用程序所需的头文件和库。
+- `libtermcap`: 用于访问 termcap 数据库以管理字符显示的库。
+- `libtermcap-devel`: 开发访问 termcap 数据库的程序的组件。
+- `libtiff`: 用于使用和保存 TIFF 图像文件的库。
+- `libtiff-devel`: 用于在应用程序中处理 TIFF 图像文件的开发工具。
+- `libtool`: libtool shell 脚本，用于构建通用共享库。
+- `libtool-libs`: libtool 工具的运行时库（用于构建通用共享库）。
+- `libtool-libs13`: libtool-libs1.3 中共享库的兼容性库。
+- `libungif`: 使用和保存 GIF 图像文件所需的库函数。
+- `libungif-devel`: 创建用于加载和保存 GIF 图像的应用程序的开发工具。
+- `libungif-progs`: 用于处理 GIF 图像的多个实用程序。
+- `libunicode`: Unicode 操作库。
+- `libunicode-devel`: 操作 unicode 字符串的开发工具。
+- `libusb`: 方便访问 USB 设备的库。
+- `libusb-devel`: 创建使用 libusb 的应用程序所需的开发文件。
+- `libuser`: 用户账户管理的标准化接口。
+- `libuser-devel`: 开发使用 libuser 的应用程序的头文件和静态库。
+- `libvorbis`: Ogg Vorbis 开源音频压缩编解码器及运行时库。
+- `libvorbis-devel`: 开发使用 libvorbis 的应用程序的头文件和文档。
+- `libwnck`: 用于实现分页器和任务列表的库。
+- `libwnck-devel`: 使用 libwnck 的应用程序的开发文件。
+- `libwpd`: 处理 WordPerfect 文档的库。
+- `libwpd-devel`: 处理 WordPerfect 文档的开发工具。
+- `libwpd-tools`: 用于转换 WordPerfect 文档的工具。
+- `libwxstreams`: 用 C++ 编写的网络编程库。
+- `libwxstreams-devel`: 使用 libwxstreams 的应用程序的开发文件。
+- `libxml`: 用于处理 XML 文件的函数库。
+- `libxml-devel`: 包含用于开发使用 libxml 库的应用程序的工具。
+- `libxml2`: 用于处理 XML 和 HTML 文件的库，包括 DTD 支持。
+- `libxml2-devel`: 使用 libxml2 的应用程序的开发文件。
+- `libxml2-python`: libxml2 库的 Python 绑定。
+- `libxslt`: 使用 XSLT 转换机制将 XML 转换为结构的工具。
+- `libxslt-devel`: 开发使用 libxslt 的应用程序所需的库和包含文件。
+- `libxslt-python`: libxslt 库的 Python 绑定。
+- `licq`: licq ICQ 聊天工具。
+- `licq-gnome`: licq 的 GNOME 前端。
+- `licq-kde`: licq 的 KDE 前端。
+- `licq-qt`: licq 的 QT 前端。
+- `licq-text`: licq 的文本模式前端。
+- `line`: 用于简化网络程序编写的库。
+- `line-devel`: 使用 line 功能的应用程序的开发文件。
+- `linuxdoc-tools`: 基于 SGML 的文本格式化包。
+- `lm_sensors`: 用于与监控计算机硬件的传感器接口的模块。
+- `lm_sensors-devel`: 用于与硬件监控器接口的软件工具。
+- `lockdev`: 用于锁定设备的 liblockdev 库。
+- `lockdev-devel`: liblockdev 库的静态库版本和头文件。
+- `logrotate`: 轮转增长的日志文件。
+- `logwatch`: 可定制的日志文件分析程序。
+- `losetup`: 用于将普通文件映射到虚拟块设备的 Linux 循环设备工具。
+- `lrzsz`: lrz 和 lsz 实用程序，用于在 Linux 中提供 Zmodem 功能。
+- `lskl`: 用于列出锁文件的实用程序。
+- `lsof`: 用于列出打开文件信息的实用程序。
+- `ltrace`: 用于运行并跟踪正在运行命令活动的工具。
+- `lv`: lv 多语言文件查看器及相关实用程序。
+- `lvm`: 用于管理物理硬盘卷的逻辑卷管理器工具。
+- `lynx`: 基于文本的互联网网页浏览器。
+- `m2crypto`: Python 脚本中对 OpenSSL 的支持。
+- `m4`: UNIX m4 宏处理器的实现。
+- `macutils`: 用于处理常与 Macintosh 计算机一起使用的文件的实用程序。
+- `Maelstrom`: Maelstrom（打小行星）游戏。
+- `magicdev`: 用于检测和播放音频 CD 的 magicdev 守护进程。
+- `MagicPoint`: 基于 X11 的演示工具。
+- `mailcap`: 用于定义特殊数据类型如何处理的配置文件。
+- `mailman`: 面向 Web 的邮件列表管理器。
+- `mailx`: 用于轻松发送纯文本电子邮件的小型实用程序。
+- `make`: 从源代码构建和安装软件的实用程序。
+- `MAKEDEV`: 用于在 `/dev` 目录中创建和维护文件的程序。
+- `man`: 显示系统手册页的设施。
+- `man-pages*`: 一组包含不同语言手册页的软件包。
+- `mars-nwc`: NetWare 文件和打印服务器仿真组件。
+- `mc`: 用于管理各种文件接口的 Midnight Commander 可视化 shell。
+- `mdam`: 软件 RAID 阵列控制实用程序。
+- `memprof`: 用于内存分析与泄漏检测的工具。
+- `metacity`: metacity 窗口管理器。
+- `mfw`: Emacs 的消息传递函数。
+- `mfw-common`: mfw 和 mfw-xemacs 中使用的函数。
+- `mfw-xemacs`: XEmacs 的消息传递函数。
+- `mgetty`: mgetty 对 getty 的实现，用于允许通过串行线路登录。
+- `mgetty-sendfax`: 用于使用 `mgetty` 程序发送传真的 `sendfax` 程序。
+- `mgetty-viewfax`: 用于显示由 `mgetty` 接收的传真的 `viewfax` 实用工具。
+- `mgetty-voice`: 用于支持与 `mgetty` 进行语音通信的 `vgetty` 实用工具。
+- `mikmod`: 用于播放多种音频格式的 `MikMod` 音乐文件播放器。
+- `mingetty`: 用于终端登录的 `getty` 的小型实现。
+- `miniChinput`: 一个较小的 `Chinput` 版本，`Chinput` 是一个中文 `XIM` 服务器。
+- `minicom`: 用于通过串行线路通信的基于文本的调制解调器控制实用工具。
+- `mkbootdisk`: 可启动软盘创建实用程序。
+- `mkintrd`: 用于创建初始 RAM 磁盘映像的实用工具。
+- `mkisofs`: 用于创建 ISO9660（CD-ROM）文件系统的工具。
+- `mktemp`: 用于安全创建 /tmp 文件的脚本实用工具。
+- `mod_auth_mysql`: 使用 `MySQL` 的 Apache Web 服务器基本身份验证。
+- `mod_auth_pgsql`: 使用 `PostgreSQL` 的 Apache Web 服务器基本身份验证。
+- `mod_dav_svn`: 用于 Subversion 软件源代码仓库的 Apache 服务器模块。
+- `mod_perl`: 与 Apache 一起使用的 Perl 解释器，使其能够解释 Perl 代码。
+- `mod_perl-devel`: 用于构建使用 mod_perl 的 XS 模块的工具。
+- `mod_python`: Apache Web 服务器的嵌入式 Python 解释器。
+- `mod_ssl`: Apache 模块，提供使用 SSL 和 TLS 的安全加密。
+- `modutils`: 用于管理内核模块（加载、卸载等）的实用工具。
+- `modutils-devel`: 内部使用的库，允许程序管理内核模块。
+- `mount`: 用于挂载和卸载文件系统的实用工具（`mount`、`umount` 等）。
+- `mozilla`: Mozilla Web 浏览器及相关实用工具和编程库。
+- `mpage`: 方便将多页 `PostScript` 输出打印到单页上。
+- `mproject`: 基于 GNOME 的项目管理系统。
+- `mrtg`: Multi Router Traffic Grapher 工具创建网络流量图表。
+- `mtools`: 用于管理 MS-DOS 格式磁盘的实用工具。
+- `mtr`: 一种网络诊断工具，结合了 ping 和 traceroute 功能。
+- `mtr-gtk`: `mtr` 网络诊断工具的 `GTK` 接口。
+- `mt-st`: 用于管理磁带驱动器的 `mt`（磁带）和 `st`（SCSI 磁带）程序。
+- `mtx`: 用于操作磁带库和自动装载机的实用工具。
+- `mutt`: 文本模式电子邮件用户代理。
+- `mx-2`: 一组 Python 软件工具。
+- `MyODBC`: 用于 `MySQL` 的 ODBC 驱动程序。
+- `mysql`: 此软件包集包含 `MySQL` 数据库应用程序和工具。
+- `namazu`: 全文搜索引擎。
+- `namazu-cgi`: namazu 的 `CGI` 接口。
+- `namazu-devel`: 允许应用程序使用 namazu 的库。
+- `nano`: 一个小型文本编辑器。
+- `nasm`: nasm Netwide 汇编器。
+- `nasm-doc`: nasm Netwide 汇编器的文档。
+- `nasm-rdoff`: 用于 RDOFF 二进制格式的工具，可与 nasm 一起使用。
+- `nautilus`: 一个网络用户窗口，集成文件、应用程序和 Internet 资源。
+- `nautilus-cd-burner`: GNOME 和 Nautilus 的 CD 烧录前端。
+- `nautilus-media`: GStreamer 的音频查看器。
+- `nc`: 用于在 TCP/IP 连接上读写数据的 Netcat (nc) 实用工具。
+- `ncftp`: 功能丰富的 FTP 客户端程序，包括会话恢复。
+- `ncompress`: 快速压缩和解压缩实用工具。
+- `ncpfs`: 使用 Novell NetWare ncpfs 文件系统所需的组件。
+- `ncurses`: 基于字符的屏幕 GUI 库。
+- `ncurses-devel`: 用于创建使用 ncurses 屏幕处理的应用程序的组件。
+- `ncurses4`: ncurses 库的向后兼容版本。
+- `ncurses-c++-devel`: ncurses 的 C++ 绑定。
+- `nedit`: 用于 XWindows 和 Motif 的 GUI 文本编辑器。
+- `neon`: HTTP 和 WebDAV 客户端库。
+- `neon-devel`: neon 的开发工具。
+- `netatalk`: AppleTalk 传输协议实现。
+- `netatalk-devel`: 允许应用程序使用 netatalk 的开发库。
+- `netconfig`: 用于配置网络接口的基于文本的工具。
+- `netdump`: 将内核消息和崩溃转储写入远程系统的工具。
+- `netdump-server`: 在网络上侦听内核消息的程序。
+- `netpbm`: 用于处理各种图形格式的工具。
+- `netpbm-devel`: netpbm 接口的静态库和头文件。
+- `netpbm-progs`: 用于处理图形图像的脚本。
+- `net-snmp`: 一组 SNMP 工具和库。
+- `net-snmp-devel`: NET-SNMP 项目的开发环境。
+- `net-snmp-utils`: 使用 SNMP 的网络管理实用工具。
+- `net-tools`: 基本网络工具，如 ifconfig、netstat 和 route。
+- `newt`: 用于创建基于颜色、基于文本和基于部件的用户界面的库。
+- `newt-devel`: 用于开发基于 Newt 的文本模式应用程序的头文件和库。
+- `nfs-utils`: 用于在网络上共享文件和目录的网络文件系统 (NFS) 工具。
+- `nhpf`: 用于创建韩文 Hangul 字体 PostScript 文件的实用工具。
+- `njamd`: 用于检测内存分配错误的先进调试器。
+- `nkf`: nkf 网络汉字代码转换过滤器。
+- `nmap`: 网络探测工具和安全扫描器。
+- `nmap-frontend`: nmap 的 Gtk+ 前端。
+- `nmh`: nmh 电子邮件系统，可用作 MH 邮件的替代品。
+- `nptl-devel`: 用于使用 NPTL 库的开发库。
+- `nscd`: 用于缓存来自 NIS 和 DNS 的名称服务请求的 nscd 守护进程。
+- `nss_db`: 允许程序从 BSD 数据库访问基本系统信息的库。
+- `nss_db-compat`: 提供对旧版 BSD 数据库访问的库。
+- `nss_ldap`: 用于支持 LDAP 客户端的 NSS 库和 PAM 模块。
+- `ntp`: Network Time Protocol 守护进程。从 ntp 服务器同步系统时间。
+- `ntsysv`: 用于在不同运行级别配置服务的实用工具。
+- `nut`: 用于监控不间断电源 (UPS) 系统的软件工具。
+- `nut-cgi`: 用于监控 UPS 系统的 CGI 脚本。
+- `nut-client`: 用于通过网络监控 UPS 系统的客户端实用工具。
+- `nvi-m17n`: 用于编码日语、韩语和中文的 Nvi 文本编辑器文件。
+- `nvi-m17n-canna`: 支持 canna 输入的 nvi 多语言文本编辑器。
+- `nvi-m17n-nocanna`: 不支持 canna 输入的 nvi 多语言文本编辑器。
+- `oaf`: GNOME 的对象激活框架。
+- `oaf-devel`: 用于开发使用 oaf 的应用程序的库和包含文件。
+- `octave`: 用于执行数值计算的 GNU octave 工具。
+- `Omni`: 使用 Ghostscript 的打印机驱动程序支持。
+- `Omni-foomatic`: Omni 打印机驱动程序系统的 Foomatic 数据。
+- `open`: 用于使用虚拟控制台运行程序的实用工具。
+- `openh323`: H323 电话会议协议的库实现。
+- `openh323-devel`: 使用 openh323 进行开发所需的库和头文件。
+- `openjade`: 用于解析 DSSSL SGML 内容的实用工具。
+- `openjade-devel`: openjade 的开发工具。
+- `openldap`: 运行 OpenLDAP 程序所需的组件。
+- `openldap-clients`: 用于操作 OpenLDAP 目录的客户端程序。
+- `openldap-devel`: 用于创建 LDAP 客户端程序的工具和文档。
+- `openldap-servers`: 用于使 OpenLDAP 目录可用的服务器程序。
+- `openmotif`: OpenMotif 库和程序。
+- `openmotif21`: OpenMotif 2.1 的兼容性库。
+- `openmotif-devel`: 启用创建 Motif 应用程序的开发库。
+- `openobex`: Open OBEX 共享 C 库。
+- `openobex-devel`: OpenOBEX 的开发工具。
+- `openoffice`: OpenOffice.org 综合办公套件。
+- `openoffice-i18n`: OpenOffice 办公套件的国际化。
+- `openoffice-libs`: OpenOffice 共享库。
+- `openssh*`: OpenSSH 客户端和服务器进程所需的组件。
+- `openssl*`: 提供安全套接层 (SSL) 服务所需的组件。
+- `oprofile`: 用于 x86 处理器的系统范围分析器。
+- `ORBit`: 与 ORBit CORBA（通用对象请求代理体系结构）ORB（对象请求代理）一起使用的组件。
+- `ots`: 文本摘要工具。
+- `ots-devel`: 用于开发 ots 程序的工具。
+- `pam`: 可插拔认证模块库，用于选择认证机制。
+- `pam_krb5`: 用于 Kerberos 5 认证的 PAM 库。
+- `pam_smb`: 用于对外部 SMB 服务器进行认证的 PAM 模块。
+- `pam-devel`: PAM 应用所需的静态库和头文件。
+- `pan`: 图形化 USENET 新闻阅读器。
+- `pango`: 用于渲染国际文本的 Pango 软件。
+- `pango-devel`: 用于渲染国际文本的 Pango 软件的开发工具。
+- `parted`: 用于创建和调整磁盘分区的实用程序。
+- `parted-devel`: 用于操作磁盘分区的 GNU parted 库。
+- `passtex`: 处理 XSL 格式对象的 TeX 宏。
+- `passwd`: 用于添加或更改用户密码的 `passwd` 命令。
+- `patch`: 用于修改和升级文件的 GNU Patch 实用程序。
+- `patchutils`: 操作补丁文件的程序。
+- `pax`: 用于创建和读取归档文件的 `pax` 实用程序。
+- `pcts`: 有助于实现编译器和其他翻译系统的软件工具。
+- `pciutils`: 用于查看和配置连接到 PCI 总线的设备信息的实用程序。
+- `pciutils-devel`: 与 PCI 实用程序相关的头文件。
+- `pcre`: Perl 兼容的正则表达式库。
+- `pcre-devel`: 使用 pcre 开发应用程序所需的头文件和库。
+- `pdksh`: David Korn 的 Korn shell 的 `pdksh` 实现。
+- `perl*`: Perl 高级编程语言及组件。
+- `php*`: PHP 嵌入式脚本语言及组件。
+- `pidentd`: 用于返回身份信息的 `pidentd` 守护进程。
+- `pilot-link`: 用于将 USR Palm Pilot 与 Red Hat Linux 系统同步的工具。
+- `pilot-link095-compat`: pilot-link095 的兼容库。
+- `pilot-link-devel`: 构建 pilot-link 应用程序所需的组件。
+- `pinfo`: 手册和 info 页面查看器。
+- `pkgconfig`: 用于输入包编译选项的 `pkg-config` 实用程序。
+- `plugger`: 用于标准 Linux 程序的通用 Netscape 插件。
+- `pmake`: BSD 4.4 版本的 `make`。
+- `pnm2ppa`: 用于向 HP PNA 打印机打印的驱动程序。
+- `popt`: 用于解析命令行参数的 C 语言库。
+- `portmap`: 用于管理 NFS 和 NIS 的 RPC 连接的实用程序。
+- `postfix`: 邮件传输代理 (MTA)。
+- `postgresql*`: 创建和维护 PostgreSQL 数据库服务器的一组软件包。
+- `ppp`: 用于管理串行线路 TCP/IP 连接的点对点协议守护进程。
+- `prelink`: ELF 预链接实用程序。
+- `printman`: GNOME 打印监控工具。
+- `privacy`: 隐私代理。 在单机工作站上用于增强 Web 隐私很有用。
+- `procinfo`: 用于从 /proc 显示内核信息的实用程序。
+- `procmail`: 本地电子邮件投递管理工具。
+- `procs`: 用于显示系统信息的实用程序，如 ps、free 和 top。
+- `psacct`: 进程记账实用程序，如 ac、lastcomm、accton 和 sa。
+- `psgml`: 允许 GNU Emacs 编辑 SGML 和 XML 文档的 PSGML 软件。
+- `psmisc`: 用于管理进程的实用程序，如 pstree、killall 和 fuser。
+- `pstack`: 启用正在运行进程的堆栈跟踪分析。
+- `pspell`: pspell 拼写检查库。
+- `pspell-devel`: pspell 拼写检查接口的静态库和头文件。
+- `pstack`: 显示正在运行进程堆栈跟踪的程序。
+- `psutils`: 用于操作 PostScript 文档的实用程序。
+- `pump-devel`: 用于与 pump 设施接口的软件开发库。
+- `pvm`: 用于协调多个虚拟机的 pvmd 守护进程及相关实用程序。
+- `pvm-gui`: 用于图形化管理虚拟机的基于 X 的 xvpm 工具。
+- `pwlib`: 用于生成可在 Windows 和 UNIX 上运行的程序的可移植 Windows 库。
+- `pwlib-devel`: 用于创建使用 pwlib 的应用程序的开发库。
+- `pxe`: 用于远程启动和安装 Linux 的 pxe 实用程序及相关库。
+- `pychecker`: Python 源代码检查工具。
+- `pydict`: 用 Python 编写的英汉词典。
+- `pygtk2`: 使 gtk 功能可在 Python 中使用的模块。
+- `pygtk2-devel`: 用于构建包装器以使 GTK+ 库与 pygtk2 互操作的文件。
+- `pygtk2-libglade`: libglade 模块；为 libglade 库提供包装器。
+- `pyOpenSSL`: OpenSSL 库的 Python 包装器。
+- `pyorbit`: 用于访问 ORBit2 CORBA ORB 的 Python 绑定。
+- `pyorbit-devel`: 用于构建 ORBit2 附加库包装器的开发库。
+- `PyQt`: 包含 Qt 的 Python 绑定。
+- `PyQt-devel`: 用于构建基于任何 Qt 类的 C++ 类绑定的所需文件。
+- `PyQt-examples`: 演示如何使用 Qt 的 Python 绑定的示例代码。
+- `python`: Python 解释器，一种面向对象的脚本语言。
+- `python-devel`: 用于添加动态加载的 Python 扩展的头文件和库。
+- `python-docs`: Python 编程语言的文档（文本和 LaTeX）。
+- `python-optik`: Optik 命令行解析库的 Python 绑定。
+- `python-tools`: 提供基于 Tkinter 的 Python IDE 的工具。
+- `pyx86config`: XFree86 配置文件的 Python 包装器。
+- `PyXML`: Python 的 Xml 库。
+- `qmkbootdisk`: 创建启动磁盘的图形前端。
+- `qt`: Qt GUI 工具包的共享库。
+- `qt-designer`: Qt 工具包的用户界面开发工具。
+- `qt-devel`: 开发 Qt 应用程序所需的组件。
+- `qt-MySQL`: Qt SQL 类的 MySQL 驱动程序。
+- `qt-ODBC`: Qt SQL 类的 ODBC 驱动程序。
+- `qt-PostgreSQL`: Qt SQL 类的 Postgres 驱动程序。
+- `quagga`: 用于管理 TCP/IP 路由协议的工具。
+- `quagga-contrib`: 与 quagga 一起使用的第三方工具。
+- `quagga-devel`: 开发 quagga 应用程序的工具。
+- `quanta`: KDE 环境的 HTML 编辑器。
+- `quota`: 用于管理磁盘空间的 quota、quotacheck 和 quotaon 工具。
+- `radvd`: IPv6 路由器通告守护进程。
+- `raidtools`: 用于配置 raid 文件系统设备的多个 raid 实用程序。
+- `rarpd`: 反向地址解析协议守护进程。
+- `rcs`: 修订控制系统。 管理文件的多个版本。
+- `rdate`: 从网络时间服务器检索和设置日期和时间。
+- `rdesktop`: 开源 Windows 终端服务器客户端。 无需服务器扩展。
+- `rdist`: 在多台计算机上维护文件的精确副本。
+- `readline`: 允许程序使用 emacs 键编辑文本行。
+- `readline41`: 用于使用标准 emacs 键编辑输入命令行的库。
+- `readline-devel`: 开发使用 readline 库的应用程序的组件。
+- `recode`: 在字符集之间转换。
+- `recode-devel`: 允许应用程序使用 recode 的开发文件。
+- `redhat-artwork`: 构成 Red Hat 标准外观和感觉的艺术作品。
+- `redhat-config-*`: 用于配置 Linux 系统各方面的 Red Hat 实用程序。
+- `redhat-logos`: Red Hat Shadow Man 和 RPM 商标标志。
+- `redhat-logviewer`: 用于查看和搜索日志文件的图形界面。
+- `redhat-lsb`: Red Hat Linux 的 Linux 标准库 (LSB) 支持。
+- `redhat-menus`: 基于 XML 的桌面菜单配置和数据文件。
+- `redhat-release`: Red Hat Linux 发行版文件。
+- `redhat-rpm-config`: Red Hat 特定的 RPM 配置文件。
+- `redhat-switch-mail`: 邮件传输代理切换器。
+- `redhat-switch-mail-gnome`: 基于 GNOME 的邮件传输代理切换器。
+- `reiserfs-utils`: 用于检查和修复 ReiserFS 文件系统的工具。
+- `rep-gtk`: rep Lisp 解释器的 rep-gtk GTK+ 绑定。
+- `rhgb`: RedHat 图形化启动。
+- `rhn-applet`: 一个面板小程序，用于指示有更新的 Red Hat 软件包可用。
+- `rhnlib`: Red Hat Network 项目的 Python 库。
+- `rhpl`: Red Hat Linux 中程序使用的 Python 代码库。
+- `rhythmbox`: 用于抓取音频 CD、管理音乐和刻录 CD-ROM 的工具。
+- `rmt`: 远程磁带设备访问工具。
+- `rootfiles`: 为 root 用户提供的默认用户配置文件。
+- `routed`: 处理路由流量并维护路由表的守护进程。
+- `rpm`: 用于安装和管理 RPM（.rpm）软件包的工具。
+- `rpm-build`: 创建 RPM 软件包的开发工具。
+- `rpmdb-redhat`: 整个 Red Hat Linux 发行版的数据库。
+- `rpm-devel`: 用于创建操作 RPM 软件包的应用程序的组件。
+- `rpm-python`: RPM API 的原生 Python 绑定。
+- `rp-pppoe`: PPP over Ethernet 软件，用于通过 xDSL 连接到 ISP。
+- `rsh`: rsh、rcp、rlogin 远程访问工具。
+- `rsh-server`: rsh 远程访问工具的服务器端守护进程。
+- `rsync`: 网络文件同步工具。
+- `ruby*`: 此软件包集包含一种名为 Ruby 的面向对象脚本语言。
+- `run`: 在不同上下文中启动应用程序的工具。
+- `run-devel`: 用于开发可由 run 工具管理的应用程序的工具。
+- `rusers`: 显示在本地网络机器上登录的用户。
+- `rusers-server`: rusers 工具的服务器端守护进程。
+- `rwall`: 向当前登录到特定主机的所有用户发送消息的工具。
+- `rwall-server`: rwall 工具的服务器端守护进程。
+- `rwho`: 使用户能够确定谁登录到给定主机。
+- `samba`: 用于共享 Windows 文件、文件夹和打印机的 Samba 服务器软件。
+- `samba-client`: 与 Windows 提供文件和打印共享所需的 Samba 工具。
+- `samba-common`: Samba 服务器的配置文件和配置工具。
+- `samba-swat`: 基于 Web 的 Samba 配置工具。
+- `sane-backends`: 用于使用和管理扫描仪的 Scanner Access Now Easy 工具。
+- `sane-backends-devel`: 用于与扫描仪接口的编程库。
+- `sane-frontends`: SANE 的图形前端。
+- `sash`: 一个静态链接的 shell，包含一些内置命令的简化版本。
+- `sawfish`: sawfish X11 窗口管理器。
+- `schedutils`: 用于处理进程调度器属性的工具。
+- `screen`: 用于在单个终端上管理多个登录的工具。
+- `scrollkeeper`: 开放系统文档的编目系统。
+- `SDL`: 用于快速访问帧缓冲和音频设备的 Simple DirectMedia Layer。
+- `SDL-devel`: Simple DirectMedia Layer 应用程序编程接口。
+- `SDL_image`: SDL 的示例图像加载工具。
+- `SDL_image-devel`: 用于 SDL 应用程序加载图像的库。
+- `SDL_mixer`: Simple DirectMedia Layer (SDL) 声音混音工具。
+- `SDL_mixer-devel`: SDL 声音混音应用程序开发工具。
+- `SDL_net`: 用于 SDL 的可移植网络库。
+- `SDL_net-devel`: 开发 SDL 网络应用程序的库和头文件。
+- `sed`: 文本流编辑器。
+- `sendmail`: sendmail 邮件传输代理。
+- `sendmail-cf`: 用于生成 sendmail 配置文件的工具和文件。
+- `sendmail-devel`: sendmail 插件的开发文件。
+- `sendmail-doc`: Sendmail 文档（PostScript 和 troff 格式）。
+- `setarch`: 告诉内核报告与当前不同的架构。
+- `setserial`: 设置和查看串口信息的工具。
+- `setup`: 位于 /etc 的基本系统配置文件默认版本。
+- `setuptool`: 访问文本模式配置工具的工具。
+- `sgml-common`: 与 SGML 一起使用的目录和 DTD 文件。
+- `shadow-utils`: 用于使用影子密码和相关用户/组信息的工具。
+- `shapecfg`: 配置网络带宽参数。
+- `sharutils`: 用于编码和解码 shell 归档的工具。
+- `sip`: 为 Python 生成 C++ 类的绑定。
+- `sip-devel`: 生成任何 C++ 类库的 Python 绑定的所需文件。
+- `skkdic`: 简单假名-汉字转换程序的词典。
+- `skkinput`: 具有多种输入协议的假名到汉字转换器。
+- `slang`: S-Lang 语言扩展库及相关组件。
+- `slang-devel`: 开发基于 S-Lang 的应用程序所需的组件。
+- `slocate`: 基于夜间更新的集中数据库定位文件的工具。
+- `slrn`: slrn 线程化 Internet 新闻阅读器。
+- `slrn-pull`: 为离线新闻阅读排队新闻。
+- `sndconfig`: 声音配置工具。
+- `sound-juicer`: GStreamer 的 CD 抓取工具。
+- `sox`: 通用声音处理工具。
+- `sox-devel`: 开发 SoX 应用程序所需的库。
+- `spamassassin`: 基于进化遗传算法的电子邮件垃圾邮件过滤器。
+- `specs`: 用于国际化 Red Hat 软件包的对象目录。
+- `splint`: C 程序错误检查器。
+- `squid`: 用于 HTTP、FTP 和 gopher 的代理缓存服务器。
+- `squirrelmail`: SquirrelMail 网页邮件客户端。
+- `star`: 具有 ACL 支持的归档工具。
+- `startdict`: 英汉词典。
+- `startup-notification`: 用于跟踪应用程序启动的库。
+- `startup-notification-devel`: libstartup-notification 的头文件和静态库。
+- `ststateserial`: 显示 9 针和 25 针串口上的信号。
+- `strace`: 跟踪所选程序执行的系统调用。
+- `stunnel`: 为非 SSL 应用程序添加安全的 SSL 服务。
+- `subversion`: 并发版本控制系统。
+- `subversion-devel`: subversion 应用程序的开发库。
+- `sudo`: 在有限范围内启用对特权命令的管理员访问。
+- `swig`: 将 C/C++/Objective C 连接到其他高级语言。
+- `switchdesk`: 用于更改窗口管理器的桌面切换工具。
+- `switchdesk-gnome`: 桌面切换工具的 GNOME 外观版本。
+- `switchdesk-kde`: 桌面切换工具的 KDE 外观版本。
+- `sylpheed`: 基于 GTK+ 的电子邮件和新闻客户端。
+- `symlinks`: 检查并纠正损坏的符号链接。
+- `syslogd`: 用于记录系统消息的 `syslogd` 和 `klogd` 守护进程。
+- `syslinux`: 一个简单的引导加载程序，可以从 DOS（FAT）文件系统启动。
+- `sysreport`: 管理硬件问题的系统检查。
+- `sysstat`: `sar` 和 `iostat` 系统监控工具。
+- `SysVinit`: 基本 Linux 启动和启动程序。
+- `taipeifonts`: 中文 Big5 字体。
+- `talk`: 一对一互联网聊天的 Talk 客户端。
+- `talk-server`: 促进一对一互联网聊天的守护进程。
+- `tar`: 归档和恢复工具。
+- `tcl`: TCL 脚本语言环境。
+- `tcl-devel`: TCL 脚本语言开发工具。
+- `tcl-html`: TCL 的 HTML 手册。
+- `tcllib`: 标准 TCL 库。
+- `tcp_wrappers`: 用于监控不安全服务器进程的小守护进程程序。
+- `tcpdump`: 用于监控网络流量的命令行实用工具。
+- `tcsh`: 类 csh 的命令 shell 解释器。
+- `telnet`: telnet 远程登录协议的客户端程序。
+- `telnet-server`: telnet 远程登录协议的服务器端。
+- `termcap`: 面向文本终端应用程序的信息。
+- `tex`: 用于创建 TeX 文档的工具。
+- `tex-afm`: 用于转换 PostScript 字体度量文件的 afm2tfm 实用工具。
+- `tex-doc`: 描述如何生成 TeX 格式文档的文档。
+- `tex-dvips`: 用于将 TeX 文件转换为 PostScript 格式的 dvips 实用工具。
+- `tex-fonts`: 用于 TeX 文档的字体。
+- `tex-latex`: 用于生成 TeX 文档的 LaTeX 前端实用工具。
+- `tex-xdvi`: 在 X Window System 中预览 TeX 输出文件的 xdvi 程序。
+- `texinfo`: 用于开发在线和印刷文档的 texinfo 系统
+- `tftp`: Trivial File Transfer Protocol。用于启动无盘工作站。
+- `tftp-server`: tftp 协议的服务器端。
+- `time`: 用于监控所选程序处理时间的实用工具。
+- `timidity++`: Timidity++ MIDI 播放器和转换器。
+- `tix`: Tk 小部件集的 Tix（Tk 接口扩展）插件。
+- `tk`: 与 Tcl 脚本配合设计的 Tk X Window System 小部件集。
+- `tk-devel`: Tcl 的 Tk 图形工具包。
+- `tinter`: Python 脚本语言的 Tinter 图形界面。
+- `tmake`: 创建和维护项目 makefile。
+- `tmpwatch`: 删除未在设定时间间隔内使用过的临时文件。
+- `tps`: 基于 GUI 的数据库开发工具。
+- `traceoute`: 追踪 IP 数据包在网络中的路由。
+- `transfig`: 将 FIG 或 PIC 图像转换为其他格式。
+- `tree`: 以树形格式显示目录内容。
+- `tsciclient`: VNC 和 Windows 终端服务器的客户端。
+- `ttcp`: 用于测试 TCP 连接吞吐量的工具。
+- `tfonts-ja`: 日文 True Type 字体。
+- `tfonts-ko`: Baekmuk 韩文 True Type 字体。
+- `tfonts-zh_CN`: 中文 True Type 字体。
+- `tfonts-zh_TW`: 中文 True Type 字体。
+- `ttfprint`: 将中文文本文件转换为 PostScript 的实用工具。
+- `ttmkfdir`: 用于创建 fonts.scale 文件的实用工具。
+- `tux`: 基于内核的线程 HTTP 服务器。
+- `tuxracer`: 以 Linux 吉祥物 Tux 为特色的 3D 赛车游戏。
+- `umb-scheme`: Scheme 编程语言的一种实现。
+- `unarj`: 用于解压缩 .arj 压缩归档的实用工具。
+- `units`: 将单位从一种测量类型转换为另一种。
+- `unix2dos`: 将 Linux/UNIX 文件转换为 DOS 文件。
+- `unixODBC*`: 此软件包集包含 ODBC 驱动程序管理器的工具。
+- `unzip`: 用于测试、列出和提取 .zip 归档中文件的实用工具。
+- `up2date`: Red Hat Linux 更新代理。
+- `up2date-gnome`: up2date 命令的 GNOME 接口。
+- `urw-fonts`: 35 种标准 PostScript 字体的免费版本。
+- `usbbutils`: 用于检查 USB 设备的实用工具。
+- `usbview`: 用于查看 USB 设备的 usbview 实用工具。
+- `usermode`: 用于管理用户数据的实用工具，如 userinfo 和 userpasswd。
+- `usermode-gtk`: 用于各种用户账户管理任务的图形工具。
+- `utempter`: libutempter 共享库和 utempter 命令。
+- `util-linux`: 用户和系统管理员使用的许多基本 Linux 实用工具。
+- `uucp`: 用于在远程主机计算机之间传输文件的经典 uucp 实用工具。
+- `vconfig`: 配置和调整 802.1q VLAN 参数。
+- `Vf**`: 此软件包集包含将矢量字体转换为位图的工具。
+- `vim-common`: vim 编辑器的支持文件。
+- `vim-enhanced`: vim 编辑器的增强功能，包括 Python 和 Perl 解释器。
+- `vim-minimal`: vim 编辑器的精简版本。
+- `vim-X11`: 基于 X Window 的 vim 编辑器实现。
+- `vixie-cron`: Vixie 实现的 cron 实用工具，增加了一些安全功能。
+- `vlock`: 用于锁定控制台会话的 vlock 实用工具。
+- `vnc`: 用于通过网络从远程计算机查看桌面的强大应用程序。
+- `vnc-doc`: 与 vnc 服务器和 vncviewer 应用程序相关的文档。
+- `vnc-server`: vnc 桌面查看器的服务器守护进程。
+- `vorbis-tools`: 与 Vorbis 音频格式相关的运行时库和实用工具。
+- `vsftpd`: 非常安全的 FTP 守护进程。
+- `vte`: 用于 GTK+ 2.0 的实验性终端模拟器部件。
+- `vte-devel`: 使用 vte 开发应用程序所需的文件。
+- `w3c-libwww`: libwww Web API，是 Linux、UNIX 和 Windows 的 C 接口。
+- `w3c-libwww-apps`: w3c 和 webtot 命令。
+- `w3c-libwww-devel`: 创建 w3c-libwww 应用程序所需的库和头文件。
+- `w3m`: 可作为文本模式 Web 浏览器的文本文件查看器。
+- `w3m-el`: emacs 的 w3m 接口。
+- `w3m-el-common`: w3m-el 和 w3m-el-xemacs 使用的公共文件。
+- `w3m-el-xemacs`: XEmacs 的 w3m 接口。
+- `webalizer`: 灵活的 Web 服务器日志文件分析程序。
+- `wget`: 简单的 HTTP 或 FTP 文件检索实用工具。
+- `which`: 显示所选程序的完整路径。
+- `wireless-tools`: 用于配置与无线以太网设备通信的工具。
+- `wl`: GNU emacs 的 Wanderlust IMAP4、POP 和 NNTP 客户端。
+- `wl-common`: wl 和 wl-xemacs 的公共文件。
+- `wl-xemacs`: XEmacs 的 Wanderlust IMAP4、POP 和 NNTP 客户端。
+- `Wnn6-SDK`: Wnn6 客户端运行时库。
+- `Wnn6-SDK-devel`: Wnn6 客户端开发的库和头文件。
+- `words`: 位于 /usr/dict 目录中的英语单词词典。
+- `wordtrans*`: 多语言词翻译器及 Qt、KDE 和 WWW 的前端。
+- `wvdial`: 用于 PPP 的 wvdial 智能拨号器。
+- `x3270`: 用于模拟 IBM 3270 终端的软件。
+- `x3270-text`: 文本模式 IBM 3270 终端模拟器。
+- `x3270-x11`: X Window IBM 3270 终端模拟器。
+- `Xaw3d`: 运行使用 MIT Athena 小部件的程序所需的 Xaw3d 库。
+- `Xaw3d-devel`: Xaw3d 开发工具（X 的增强 MIT Athena 小部件）。
+- `xawtv`: 用于 video4linux 兼容设备的简单 TV 应用程序。
+- `xawtv-tv-fonts`: xawtv 的位图字体。
+- `Xbae`: Motif 矩阵和标题部件。
+- `Xbae-devel`: Xbae 开发的静态库和头文件。
+- `xboard`: GNU chess 的图形化 X 接口。
+- `xcdroast`: 用于刻录自己的音乐和数据 CD-ROM 的实用工具。
+- `xchat`: 功能丰富的基于 X Window 的 IRC 聊天实用工具。
+- `xcin`: 中文字符的 X 输入法服务器。
+- `xcpustate`: 基于 X Window 的 CPU 使用率监视器。
+- `xdelta`: 二进制文件增量生成器和 RCS 替代库。
+- `xdelta-devel`: Xdelta 环境的静态库和头文件。
+- `xemacs`: 运行 emacs 文本编辑器所需的库。
+- `xemacs-el`: 用于 emacs 文本编辑器的各种 elisp 程序。
+- `xemacs-info`: emacs 文本编辑器的 info 文档。
+- `xemacs-sumo*`: Xemacs Lisp sumo 软件包。
+- `xferstats`: 从日志文件编译文件传输信息。
+- `xfig`: 用于创建可保存为多种格式的矢量图形的实用工具。
+- `XFree86`: 运行 X Window System 所需的基本软件。
+- `XFree86-100dpi-fonts`: 用于 X Window System 显示器的 100-dpi 高分辨率字体。
+- `XFree86-75dpi-fonts`: 可用于 X Window System 显示器的 75-dpi 字体。
+- `XFree86-base-fonts`: XFree86 核心字体。
+- `XFree86-cyrillic-fonts`: 与 X Window System 一起使用的西里尔字符集字体。
+- `XFree86-devel`: 开发基于 X 的客户端程序所需的组件。
+- `XFree86-doc`: 与 XFree86 相关的文档。
+- `XFree86-font-utils`: 安装 XFree86 字体所需的实用工具。
+- `XFree86-ISO8859-*`: 与中欧 Linux 版本一起使用的 X Window 字体。
+- `XFree86-libs`: 大多数基于 X 的程序所需的共享库。
+- `XFree86-libs-data`: XFree86-libs 所需的通用架构无关数据。
+- `XFree86-Mesa-libGL`: 使用类似 OpenGL API 的 3D 图形库。
+- `XFree86-Mesa-libGLU`: 常用的 GL 实用库。
+- `XFree86-syriac-fonts`: XFree86 的叙利亚 TrueType 字体。
+- `XFree86-tools`: 各种 X 实用工具。
+- `XFree86-truetype-fonts`: TrueType 字体集合。
+- `XFree86-twm`: 简单的 twm 窗口管理器。
+- `XFree86-xauth`: 用于编辑和显示 X 授权的实用程序。
+- `XFree86-xdm`: xdm X 显示管理器。
+- `XFree86-xfs`: XFree86 字体服务器。
+- `XFree86-Xnest`: 在 X 服务器内运行的 Xnest 嵌套窗口服务器。
+- `XFree86-Xvfb`: 无显示硬件的机器的 xvfb X 服务器。
+- `xhtml-dtds`: XHTML 1.0 的 XML 文档类型定义。
+- `xinetd`: inetd 超级服务器的安全替代品。
+- `xinitrc`: 用于配置 X Window System 启动的实用工具。
+- `xisdnload`: 用于显示 ISDN 网络连接负载活动的图形工具。
+- `xloadimage`: 图像显示和处理实用工具。
+- `Xlt`: 用于 Motif API 的 Xlt 小部件集。
+- `Xlt-devel`: Xlt 开发的静态库和头文件。
+- `xml-common`: XML 实体和 DTD 的集合。
+- `xmltex`: 用 TeX 编写的命名空间感知 XML 解析器。
+- `xmlto`: 使用 XSL 将 XML 转换为各种格式的工具。
+- `xmms`: 多功能的媒体播放器。
+- `xmms-devel`: Xmms 多媒体播放器所需的头文件。
+- `xmms-skins`: Xmms 媒体播放器的皮肤。
+- `xojpanel`: 用于在 HP 打印机上显示 LCD 内容的图形工具。
+- `xosview`: 用于图形化显示系统负载和 CPU 使用率的实用工具。
+- `xpdf`: 一个开源的 PDF 文件查看器。
+- `xsane`: 一个用于 Sane 扫描仪和数码相机框架的 X 接口。
+- `xsane-gimp`: 一个 Gimp 库接口，用于 xsane 扫描仪和数码相机接口。
+- `xscreensaver`: 一套大型屏幕保护程序。
+- `xsnow`: 基于 X Window 系统的圣诞欢乐。
+- `xsri`: 在你的 X 显示器的背景上显示图像。
+- `xterm`: X Window 系统的 xterm 终端仿真器命令。
+- `xtraceroute`: 基于 X 和 GTK+ 的 traceroute 输出图形显示。
+- `yelp`: GNOME 2 的集中式帮助/文档浏览器。
+- `ypbind`: 用于将 NIS 客户端绑定到 NIS 域的 ypbind 守护进程。
+- `ypserv`: 用于设置 Linux NIS 服务器的 ypserv 组件。
+- `yp-tools`: 基于 FreeBSD 版 YP 的 NIS 工具。
+- `ytalk`: 一个多用户聊天程序。
+- `yum`: 用于下载和安装 RPM 格式软件包的工具。
+- `zip`: 一个压缩和解压缩实用工具。
+- `zisof-tools`: 创建压缩 CD-ROM 文件系统的实用程序。
+- `zlib`: 一个通用、无专利、无损数据压缩库。
+- `zlib-devel`: 用于开发需要 zlib 压缩的应用程序的库。
+- `zsh`: 一个类似增强版 ksh 的 shell/命令行解释器。
+
+## 附录 C
+
+## 运行网络服务
+
+因为 Red Hat Linux 可以提供许多不同类型的服务（提供网页、打印机、文件和其他资源），因此很容易失去对它们的跟踪。假设你使用 Red Hat Linux 安装了所有服务器软件包。你如何知道哪些服务器会自动启动，哪些需要特殊配置才能工作？你从哪里开始查找配置文件、启动脚本和守护进程？如何知道防火墙配置是否阻止了对服务的访问？
+
+本附录提供了随 Red Hat Linux 提供的网络服务的快速参考。它概述了在其他章节中详细描述的服务。你可以使用本附录帮助你记住如何使服务正常工作，或作为调试需要修复的服务的指南。
+
+**CAUTION:** 你的计算机通过网络向用户提供的任何服务都可能构成潜在的安全威胁。请参阅第 14 章了解安全信息，以及书中详细描述每个功能配置的部分。
+
+## 运行网络服务检查清单
+
+随着计算机安全问题因黑客和病毒的不断冲击而增加，操作系统（如 Red Hat Linux）正朝着更安全而非更易用性的方向发展。仅仅安装服务器软件不足以使服务运行起来。
+
+如果服务无法工作，请检查下面列出的项目以追踪问题：
+
+- 1. **软件包是否已安装？** 每个网络服务由一个或多个软件包表示。如果你进行了个人桌面或工作站安装，大多数网络服务器软件可能根本未安装在你的计算机上。请查阅表 C-1，查看使服务工作所需的软件包（可能还有其他软件包依赖关系，在你尝试安装软件包时会被提示）。然后使用 `rpm` 命令从安装 CD 之一安装软件。
+- 2. **防火墙是否允许访问该服务？** Red Hat Linux 安装程序允许你配置防火墙。如果你选择默认（中等安全）防火墙，大多数服务将无法在本地计算机之外使用。请参阅第 14 章，了解如何更改防火墙配置以打开提供不同服务的端口。
+- 3. **启动脚本是否设置为自动启动服务？** 大多数网络服务是从启动脚本启动的，这些脚本使守护进程持续监听网络上的服务请求。请参阅“网络服务守护进程”部分，了解如何找到启动脚本并使其自动启动。
+- 4. **服务的配置文件是否已创建？** 即使守护进程正在监听网络服务的请求，在接受请求之前，可能仍需要设置与该服务相关的一个或多个配置文件。表 C-1 列出了每种服务器类型的重要配置文件。
+- 5. **配置文件是否允许对服务的正确访问？** 在服务的配置文件中，可能有用户必须通过的多个权限级别。例如，配置文件可能允许从特定主机计算机访问服务，但拒绝特定用户的访问。
+- 6. **共享服务是否存在其他限制？** 一些标准的 Linux 安全措施可能会阻止本可共享的服务的访问。例如，你可以使用 NFS 或 FTP 服务器共享 Linux 目录，但本地文件权限可能会阻止对目录或共享目录内文件的访问。
+
+本附录的其余部分概述了与随 Red Hat Linux 提供的网络服务相关的守护进程、启动脚本、配置文件和软件包。
+
+## 网络服务守护进程
+
+作为 Red Hat Linux 中如何启动网络服务（以及其他服务）的快速回顾，定义服务如何启动的文件包含在两个主要目录中：
+
+- `/etc/xinetd.d`: 包含由 `xinetd` 守护进程使用的配置文件
+- `/etc/init.d`: 包含链接到 `/etc/rc?.d` 目录的启动脚本，以便它们可以在不同的运行级别启动
+
+处理网络服务的每种方法在以下各节中进行了描述。
+
+> **NOTE:** 一些 Red Hat Linux 配置工具也在 `/etc/sysconfig` 目录中存储配置信息。例如，`/etc/sysconfig` 中有 `ipchains` 和 `sendmail` 的配置文件。如果你搜索 `/etc/init.d` 目录中的脚本查找 `sysconfig` 这个词，你会看到有多少服务在该目录中查找配置信息。
+
+### xinetd 超级服务器
+
+`xinetd` 守护进程被称为 *super-server*。它根据 `/etc/xinetd.d` 目录中单独文件中的信息监听服务的传入请求。当 `xinetd` 守护进程收到对服务的请求（针对特定的网络端口号）时，`xinetd` 通常会启动另一个守护进程来处理该请求。因此，与为每个网络服务运行单独的守护进程相比，只需要运行 `xinetd` 守护进程——再加上每个当前正在使用的服务的额外守护进程。
+
+要查看由 `xinetd` 处理的特定服务是开启还是关闭，请进入 `/etc/xinetd.d` 目录并使用文本编辑器打开代表该服务的 文件。文件顶部的默认行指示服务默认是开启还是关闭。`disable` 行实际上设置服务当前是否被禁用。以下是从 `/etc/xinetd.d/ipop3` 文件中的示例：
