@@ -1,0 +1,3 @@
+# In this part . . .
+
+So what’s this SUSE Linux thing good for? Can you do anything useful with it? This part answers your questions about how to do some productive (and maybe even entertaining) work in SUSE Linux. I cover a number of things that you might want to do with a computer — browse the Web, e-mail, read newsgroups, and do office work (write reports, prepare spreadsheets, and make presentations). I also describe some fun things such as playing music, burning CDs, and using digital cameras. Finally, I introduce you to the shell and the command line. (GUI desktops are great, but in a pinch, you need to know what to do at the command prompt.)

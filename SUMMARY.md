@@ -2009,6 +2009,7 @@
 +   [Linux 系统管理员的超级计算机指南...2025](docs/supercomputers-for-linux-sysadmins2025/README.md)
 +   [SUSE CLA 11 Linux 管理员认证自测复习题：2015 版（包含 90+ 道考试 050-720 习题）](docs/suse-cla-11-linux-administrator-certification-self-practice-/README.md)
 +   [SUSE Linux 10 圣经](docs/suse-linux-10-bible/README.md)
++   [SUSE Linux 10 达人迷](docs/suse-linux-10-for-dummies-for-dummies-computertech/README.md)
 +   [SUSE Linux 10.0 解锁指南](docs/suse-linux-100-unleashed/README.md)
 +   [SuSE Linux 6.2 深度解析](docs/suse-linux-62-unleashed/README.md)
 +   [SuSE Linux 8.1 用户指南](docs/suse-linux-81-user-guide/README.md)
