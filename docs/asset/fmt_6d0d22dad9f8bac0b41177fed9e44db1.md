@@ -1,0 +1,153 @@
+
+## 名录
+
+- `B.Ka.` Bernd Kahn
+- `B.Kal.` Bengt Kallen
+- `B.K.P.` B. K. Persczonek
+- `B.Li.` Bart Lipkens
+- `B.L.A.` Benjamin L. Averbach
+- `B.L.B.` Blaine L. Blad
+- `B.L.D.` Barry L. Doolan
+- `B.L.G.` Bob L. Gregory
+- `B.L.I.` B. Lynn Ingram
+- `B.L.S.` Bernard L. Segal
+- `B.M.` Bryce Margon
+- `B.Ma.` Bahram Masheoon
+- `B.McE.` Bruce McEven
+- `B.Mi.` Barry Miller
+- `B.M.A.` Bernard M. Abraham
+- `B.M.Ch.` Bruce M. Christianien
+- `B.McC.` Barry M. McCoy
+- `B.M.R.` Bruce M. Rothschild
+- `B.M.S.` Bruce M. Sankey
+- `B.M.Si.` Benjamin M. Siegel
+- `B.M.St.` Benton M. Stidol
+- `B.N.B.` Bertram N. Brockhouse
+- `B.O.B.` Berthold O. Bergh
+- `B.P.` Burton Paul
+- `B.Pi.` Benjamin Pinkel
+- `B.Po.` Bogdan Poch
+- `B.Pk.` Bryan P. Kibble
+- `B.PKI.` Barbara P. Klein
+- `B.PL.` B. P. Lathi
+- `B.R.` 美国垦务局
+- `B.Ro.` Barry Rosen
+- `B.Roe.` Bruce Rochi
+- `B.Ru.` Bruce Runnegar
+- `B.Rus.` Brian Rust
+- `B.R.A.` Braden R. Alenby
+- `B.R.L.` Bruce R. Liptin
+- `B.R.M.` Bruce R. Munson
+- `B.R.O.` Ben R. Oppenheimer
+- `B.R.R.` Brian R. Rust
+- `B.R.S.` Brian Robert Shaw
+- `B.R.W.` Bennie R. Ware
+- `B.S.` Bobb Schaeffer
+- `B.Si.` Barry Simon
+- `B.S.G.` Bernard S. Gressfelder
+- `B.S.GI.` Benjamin S. Glick
+- `B.S.M.` Bernard S. Meyer
+- `B.S.N.` Bodil Schmidt-Nielsen
+- `B.S.O.` Bruce S. Old
+- `B.S.S.` Bellave S. Shivaram
+- `B.T.` Barry Tibbets
+- `B.T.B.` Bradley T. Bornann
+- `B.T.L.` Beverly T. Lynds
+- `B.T.S.` Bradley T. Scheer
+- `B.U.H.` Bilal U. Haq
+- `B.V.` Bernard Vonnegut
+- `B.W.` Bonnie Webber
+- `B.Wa.` Ben Waggoner
+- `B.Wi.` Brian Wilkinson
+- `B.W.Ba.` Byron W. Baatile
+- `B.W.C.` Bruce W. Calnek
+- `B.W.Ca.` Bruce W. Carney
+- `B.W.G.` Bruce W. Gonscr
+- `B.W.M.` B. W. Mangum：物理测量等
+- `B.W.M.` Bernard W. Minifie：可可粉和巧克力
+- `B.W.McC.` Barnes W. McCornick, Jr.
+- `B.W.N.` Benjamin W. Nielb
+- `B.Y.H.L.` Benjamin Y. H. Liu
+- `B.Y.T.` Bor-Yau Tsaur
+- `B.Y.Ta.` Bernard Y. Tao
+- `B.Z.B.` Barbara Zakreawska Borowieka
+- `C.A.` Chris Adams
+- `C.An.` Christian Andresen
+- `C.Ar.` Cyril Arney
+- `C.A.A.` Chester A. Arnold
+- `C.A.C.` Carlton A. Chapman
+- `C.A.Co.` Charles A. Cohen
+- `C.A.F.` Charles A. Francis
+- `C.A.H.` Carol A. Hoffman
+- `C.A.L.` Cadence A. Lowell
+- `C.A.L.B.` C. Andrew L. Bassett
+- `C.A.Me.` Charles A. Mebus
+- `C.A.Mi.` Clyde A. Miller
+- `C.A.Mo.` Charles A. Moore
+- `C.A.R.` Charles A. Ross
+- `C.A.Sa.` Charles A. Sandberg
+- `C.A.Sc.` Charles A. Schroeder
+- `C.A.Sp.` Carol A. Spiegel
+- `C.A.St.` Carol A. Strausbaugh
+- `C.A.V.` Chris A. Veale
+- `C.A.Z.` Carl A. Zappfe
+- `C.B.` Charles Bolay
+- `C.Be.` Clyde Berr
+- `C.Bea.` Christine Beall
+- `C.Bi.` Charles Binstitt
+- `C.Bin.` Carroll Bingham
+- `C.Br.` Chris Brod
+- `C.Bu.` Charles Butler
+- `C.B.B.` Charles B. Back
+- `Ch.B.B.` Charles B. Broeg
+- `C.B.C.` Charles B. Curtis
+- `C.B.D.` C. B. Duke
+- `C.B.G.` C. B. Gillies
+- `C.B.McK.` Chris B. McKesson
+- `C.B.O.` Charles B. Ogorn
+- `C.B.P.` Cornelius B. Philip
+- `C.B.S.` C. B. Skoldan
+- `C.B.V.N.` Cornelis B. Van Niol
+- `C.B.W.` Curtis B. Wilson
+- `C.C.` Charles Colison
+- `C.Cr.` Carol Creutz
+- `C.C.A.` Cyril C. Addilon
+- `C.C.G.` Chapin C. G. Cutler
+- `C.C.H.` Chrislos C. Halkias
+- `C.C.Ha.` C. C. Hang
+- `C.C.Ho.` C. Clayton Hoff
+- `C.C.K.` Clifford C. Klick
+- `C.C.K.L.` Clark C. K. Liu
+- `C.C.Li.` Ching Chun Li
+- `C.C.L.` Cordon C. Labandeira
+- `C.C.W.` Carl C. Warner
+- `C.C.Wa.` Carl D. Warner
+- `C.D.` Carl Dover
+- `C.De.` Caster Denniston
+- `C.D.B.` Carl de Boo
+- `C.Dit.` Cynthia D. Tallo
+- `C.D.G.` C. Darbie G. Giddowd
+- `C.E.` Li. S. 美国陆军工程兵团
+- `C.E.A.` Charles E. Applegate
+- `C.E.Ba.` Clinton E. Bello
+- `C.E.Br.` Carlton E. Brett
+- `C.E.C.` Chester E. Cross
+- `C.E.G.W.` Charles E. Garratt, Jr.
+- `C.E.H.` Carl E. Hower
+- `C.E.L.` Cecil E. Land
+- `C.E.La.` Charles E. Lapple
+- `C.E.LaMo.` C. E. LaMotte
+- `C.E.Lu.` Craig E. Lunte
+- `C.E.Ma.` Christoph E. Mahle
+- `C.E.Mi.` Charles E. Mitchell
+- `C.E.S.` Charles E. Sonecker
+- `C.E.St.` C. Edward Stevens
+- `C.E.Ste.` Charles E. Steinrich
+- `C.E.T.` Clar E. Tenn-ill
+- `C.E.Tu.` Charles E. Turner
+- `C.E.V.` Cecil E. Vanderzeey
+- `C.E.W.` Charles E. Wood
+- `C.E.Wa.` Charles Edwin Wade
+- `C.Fo.` Christophor Fox
+- `C.Fr.` Clifford Frondel
+- `C.Fro.` Claus Frohlich
