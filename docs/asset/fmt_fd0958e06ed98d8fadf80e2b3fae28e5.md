@@ -1,0 +1,147 @@
+
+```
+$ ls /
+bin dev home lib media mnt proc sbin srv tftboot usr
+boot etc in1rd lost+found misc opt root selinux sys tmp var
+```
+
+> **注意**
+>
+> 本节提供了 Fedora 文件系统概览。你可能会在自己的系统中发现比这里讨论的更多或更少的目录。安装某些软件包时，它们会创建新目录。更新软件包也可能删除或更改某些目录的名称。有关从 Linux 系统安装、升级和移除软件的更多信息，请参阅第 7 章“管理软件和系统资源”。
+
+为了获得更详细的视图，使用 `tree` 命令显示根目录或基础目录布局及其相关子目录，如下所示（请注意，你系统的 `/usr/src` 目录可能略有不同，具体取决于你安装的 Fedora 版本或你是否通过新内核更新了 Fedora，且并非列出所有子目录）：
+
+```
+$ tree -dx /
+/
+|-- bin
+|-- boot
+`-- dev
+etc
+    4Suite
+    X11
+    srcon.d
+    --- ppp
+    rc.d
+    selinux
+    sysconfig
+home
+    andrew
+lib
+    --- modules
+lost-found
+media
+    |--- cdrrom
+    floppy
+misc
+mnt
+    --- hdfs
+net
+    --- opt
+proc
+root
+    --- sbin
+selinux
+srv
+    --- sys
+tmp
+usr
+    --- X11R6
+    --- bin
+    --- lib
+    --- bin
+    include
+    --- lib
+    --- local
+    --- sbin
+    --- share
+src
+    --- kernels
+    --- redhat
+    --- var
+    --- ftp
+    --- log
+    --- spool
+```
+
+此示例（从超过 30,000 个目录中修剪而来）显示了高级目录，并与表 5.1 中的目录和描述相对应。
+
+表 5.1 基本 Linux 目录
+
+| 名称 | 描述 |
+|---|---|
+| `/` | 根目录 |
+| `/bin` | 基本命令 |
+| `/boot` | 引导加载器文件，Linux 内核 |
+| `/dev` | 设备文件 |
+| `/etc` | 系统配置文件 |
+| `/home` | 用户主目录 |
+| `/initrd` | 初始 RAM 磁盘启动支持（在启动时使用） |
+| `/lib` | 共享库，内核模块 |
+| `/lost+found` | 恢复文件所在的目录（如果在文件系统检查后找到） |
+| `/media` | 可移动介质（如 DVD 和软盘）的挂载点 |
+| `/mnt` | 本地、远程文件系统的常规挂载点 |
+| `/opt` | 附加软件包 |
+| `/proc` | 内核信息，进程控制 |
+| `/root` | 超级用户（root 主目录） |
+| `/sbin` | 系统命令（主要由 root 使用） |
+| `/selinux` | 存放 SELinux（Fedora 的安全组件）的数据 |
+| `/sys` | 内核使用的设备实时信息 |
+| `/tftpboot` | 网络启动支持 |
+| `/tmp` | 临时文件 |
+| `/usr` | 次要软件文件层次结构 |
+| `/var` | 可变数据（如日志）；暂存文件 |
+
+表 5.1 中的一些重要目录，例如包含用户和 root 命令或系统配置文件的目录，将在以下章节中讨论。当你使用 Fedora 时，你会使用并编辑这些目录下的文件。
+
+## 使用 `/bin` 和 `/sbin` 目录中的基本命令
+
+`/bin` 目录（如果你进行完整安装，大约为 5MB）包含在 Linux 运行和启动时系统使用的基本命令。通常，只有 root 操作员使用 `/sbin` 目录中的命令。这些命令中的许多（虽然并非全部）都是静态链接的；此类命令不依赖于位于 `/lib` 或 `/usr/lib` 目录下的软件库。系统中的几乎所有其他应用程序都是动态链接的——这意味着它们需要外部软件库（也称为共享库）才能运行。
+
+## 在 `/boot` 和 `/dev` 目录中存储引导内核并查看存储设备
+
+`/boot` 目录包含压缩版本的 Linux 内核（在启动时加载），以及描述内核或提供 Linux 启动信息的其他文件。当你重建或安装新内核时，内核和相关文件将放置在此目录中（有关重建或安装内核的更多信息，请参阅第 39 章“内核和模块管理”）。
+
+Linux 设备文件包含在 `/dev` 目录之下。请注意，在 Linux 中，你的系统上的几乎所有东西都是文件。这意味着（网络接口除外；请参见随后列表后的注意事项）普通文件；目录；硬盘分区；串口、打印机或 USB 端口；以及视频和声音设备全都是文件！
+
+`/dev` 目录包含超过 7,500 个代表可能正在使用或未在你的系统中使用的设备的文件。此目录中一些最常用的设备包括
+
+- IDE（集成驱动电子设备）硬盘，如 `/dev/hda` 和 `/dev/hdb`
+- CD-ROM 驱动器，其中一些是 IDE，另一些是作为 SCSI（小型计算机系统接口）设备模拟的 CD-RW（CD 读写）驱动器，如 `/dev/sda`
+- 串行端口，如 COM1 为 `/dev/ttyS0`，COM2 为 `/dev/ttyS1`，等等
+- 指点设备，包括 `/dev/input/mice` 和其他
+- 打印机，如 `/dev/lpq`
+
+## 使用和编辑 `/etc` 目录中的文件
+
+如果你安装本书附带的所有软件，`/etc` 目录下将驻留超过 65MB 的系统配置文件和目录。某些主要软件包，如 Apache、OpenSSH 和 xinetd，在 `/etc` 下有配置文件的目录。
+
+`/etc` 中的其他重要系统相关配置文件包括
+
+- `fstab` —— 文件系统表是一个文本文件，列出连接到你的 PC 的每个硬盘、CD-ROM、软盘或其他存储设备。该表索引每个设备的分区信息在 Linux 文件系统（目录布局）中的位置，并列出该设备在 Linux 中使用的其他选项（请参阅第 38 章“管理文件系统”）。`fstab` 中几乎所有条目都可以由 root 使用 `mount` 命令进行操纵。
+- `inittab` —— 系统初始化表定义默认的 *runlevel*（运行级别），也称为 *run-control level*（运行控制级别）或 *system state*（系统状态）。对此文件的更改可以决定你的系统是启动到图形化还是文本登录界面，以及是否启用拨号远程访问。（你将在第 15 章“自动化任务”中的“系统服务和运行级别”部分了解默认运行级别。请参阅第 6 章中的“启动 X”部分，以了解有关更改 `inittab` 以启动到图形界面的更多信息。第 18 章中的“配置拨入 PPP 服务器”部分讨论编辑 `inittab` 以启用拨号远程访问。）
+- `modprobe.conf` —— 此配置文件包含用于加载内核模块以启用各种类型硬件（如声音、USB、网络等）的指令和选项（在第 39 章“管理模块”部分中讨论）。此文件的内容在启动时使用，该文件可以手动编辑或由 Fedora 的 `kudzu` 硬件管理工具自动更新（如果已启用，如本节后面所述）。
+- `passwd` —— 系统用户列表以及用户账户信息。此文件的内容可以由诸如 `useradd` 或 `csh` 等程序进行更改。
+- `printcap` —— 系统的打印机功能数据库（在第 12 章“使用 Fedora 打印”的“Fedora 打印概述”部分中讨论）。
+- `shells` —— 批准的 shell（命令行界面）列表。
+
+Fedora 下 `/etc` 中最重要的目录之一是 `sysconfig`。此目录包含网络激活脚本以及与硬件和软件相关的信息：
+
+```
+$ tree -afx /etc/sysconfig
+/etc/sysconfig
+|-- /etc/sysconfig/apm-scripts
+|   -- /etc/sysconfig/apm-scripts/apmscript
+|-- /etc/sysconfig/apmd
+|-- /etc/sysconfig/auditd
+|-- /etc/sysconfig/authconfig
+|-- /etc/sysconfig/autofs
+|-- /etc/sysconfig/bluetooth
+|-- /etc/sysconfig/clock
+|-- /etc/sysconfig/console
+|-- /etc/sysconfig/crond
+```
+
+# /etc/sysconfig 目录结构
+
+以下列出了 `/etc/sysconfig` 的目录结构。为简洁起见，此处未讨论所有目录和文件。`/etc/sysconfig` 包含许多对 Fedora 系统运行至关重要的硬件和软件设置。如果您需要排查新的硬件配置问题，了解这些文件的位置和内容可能会很有帮助。
