@@ -1,0 +1,156 @@
+
+要使用 TPM 创建受信任的密钥，请以以下语法执行 `keyctl` 命令：
+
+```bash
+keyctl add trusted name "new keyLength [options]" keyring
+```
+
+使用上述语法，可以构建如下示例命令：
+
+```bash
+~]$ keyctl add trusted kmk "new 32" @u
+642500861
+```
+
+上述示例创建一个名为 `kmk` 的受信任密钥，长度为 32 字节（256 位），并将其放置在用户密钥环（`@u`）中。密钥的长度可以是 32 到 128 字节（256 到 1024 位）。使用 `show` 子命令列出当前内核密钥环的结构：
+
+```bash
+~]$ keyctl show
+Session  Keyring
+    -3 --alswrv     500   500  keyring: _ses
+97833714 --alswrv   500    -1 \_ keyring: _uid.1000
+642500861 --alswrv  500   500  \_  trusted: kmk
+```
+
+`print` 子命令将加密密钥输出到标准输出。要将密钥导出到用户空间块，请如下使用 `pipe` 子命令：
+
+```bash
+~]$ keyctl pipe 642500861 > kmk.blob
+```
+
+要从用户空间块加载受信任的密钥，请再次使用 `add` 命令，并将该块作为参数：
+
+```bash
+~]$ keyctl add trusted kmk `load `cat kmk.blob`` @u
+268728824
+```
+
+然后可以使用 TPM 密封的受信任密钥来创建安全的加密密钥。生成加密密钥使用以下命令语法：
+
+```bash
+~]$ keyctl add encrypted name "new [format] key-type:master-key-name keyLength" keyring
+```
+
+基于上述语法，可以使用已创建的受信任密钥来构建生成加密密钥的命令，如下所示：
+
+```sh
+~]$ keyctl add encrypted enckey "new trusted:kmk 32" @u
+159771175
+```
+
+要在没有 TPM 的系统中创建加密密钥，请使用随机数字序列生成用户密钥，然后使用该密钥密封实际的加密密钥。
+
+```sh
+~]$ keyctl add user krmk-user "`dd if=/dev/urandom bs=1 count=32 2>/dev/null`" @u
+427069434
+```
+
+然后使用随机数用户密钥生成加密密钥：
+
+```sh
+~]$ keyctl add encrypted enckey "new user:krmk 32" @u
+1012412758
+```
+
+可以使用 `list` 子命令列出指定内核密钥环中的所有密钥：
+
+```sh
+~]$ keyctl list @u
+2 keys in keyring:
+427069434: --alswrv 1000 1000 user: krmk-user
+1012412758: --alswrv 1000 1000 encrypted: enckey
+```
+
+> **重要**
+>
+> 请记住，未由主受信任密钥密封的加密密钥，其安全性仅与用于加密它们的用户主密钥（随机数密钥）相当。因此，主用户密钥应尽可能安全地加载，并最好在启动过程的早期加载。
+
+#### 4.9.5.2. 附加资源
+
+以下离线和在线资源可用于获取有关使用受信任密钥和加密密钥的更多信息。
+
+### 已安装文档
+
+- `keyctl(1)` – 描述了 `keyctl` 工具及其子命令的使用方法。
+
+### 在线文档
+
+- [Red Hat Enterprise Linux 7 SELinux 用户和管理员指南](#) – Red Hat Enterprise Linux 7 的 *SELinux 用户和管理员指南* 阐述了 SELinux 的基本原理，并详细说明了如何配置和使用 SELinux 以及各种服务（例如 Apache HTTP 服务器）。
+
+- [https://www.kernel.org/doc/Documentation/security/keys-trusted-encrypted.txt](#) – 关于 Linux 内核受信任和加密密钥功能的官方文档。
+
+### 参见
+
+- 第 A.1.1 节，“高级加密标准 – AES”提供了高级加密标准的简洁描述。
+- 第 A.2 节，“公钥加密”描述了公钥加密方法及其使用的各种加密协议。
+
+### 4.9.6. 使用随机数生成器
+
+为了能够生成不易被破解的安全加密密钥，需要随机数的来源。通常，数字的随机性越高，获得唯一密钥的可能性就越大。用于生成随机数的熵通常来自计算环境的“噪声”或使用硬件随机数生成器。
+
+`rngd` 守护进程是 `rng-tools` 包的一部分，它能够使用环境噪声和硬件随机数生成器来提取熵。该守护进程检查随机数源提供的数据是否具有足够的随机性，然后将其存储在内核的随机数熵池中。它生成的随机数通过 `/dev/random` 和 `/dev/urandom` 字符设备提供。
+
+`/dev/random` 和 `/dev/urandom` 之间的区别在于，前者是一个阻塞设备，意味着当它确定熵的量不足以生成适当的随机输出时，它会停止提供数字。相反，`/dev/urandom` 是一个非阻塞源，它重用内核的熵池，因此能够提供无限的伪随机数供应，尽管熵较少。因此，不应使用 `/dev/urandom` 来创建长期加密密钥。
+
+要安装 `rng-tools` 包，请以 root 用户身份发出以下命令：
+
+```sh
+[~]# yum install rng-tools
+```
+
+要启动 `rngd` 守护进程，请以 root 身份执行以下命令：
+
+```sh
+[~]# systemctl start rngd
+```
+
+要查询守护进程的状态，请使用以下命令：
+
+```sh
+[~]# systemctl status rngd
+```
+
+要使用可选参数启动 `rngd` 守护进程，请直接执行它。例如，要指定替代的随机数输入源（除了 `/dev/hwrandom` 之外），请使用以下命令：
+
+```sh
+[~]# rngd --rng-device=/dev/hwrng
+```
+
+上述命令启动 `rngd` 守护进程，将 `/dev/hwrng` 作为读取随机数的设备。类似地，您可以使用 `-o`（或 `--random-device`）选项来选择随机数输出的内核设备（除了默认的 `/dev/random` 之外）。有关所有可用选项的列表，请参阅 `rngd(8)` 手册页。
+
+要检查给定系统中可用的熵源，请以 root 身份执行以下命令：
+
+```sh
+[~]# rngd -vf
+Unable to open file: /dev/tpm0
+```
+
+可用的熵源：
+
+DRNG
+
+### 注意
+
+输入 `rngd -v` 命令后，相应的进程继续在后台运行。默认情况下应用了 `-b, --background` 选项（成为守护进程）。
+
+如果不存在任何 TPM 设备，您只会看到 Intel 数字随机数生成器（DRNG）作为熵源。要检查您的 CPU 是否支持 RDRAND 处理器指令，请输入以下命令：
+
+```sh
+$ cat /proc/cpuinfo | grep rdrand
+```
+
+### 注意
+
+有关更多信息和软件代码示例，请参阅 Intel 数字随机数生成器（DRNG）软件实现指南。
+
+`rng-tools` 包还包含 `rngtest` 工具，可用于检查数据的随机性。要测试 `/dev/random` 输出的随机性级别，请按照以下方式使用 `rngtest` 工具：
