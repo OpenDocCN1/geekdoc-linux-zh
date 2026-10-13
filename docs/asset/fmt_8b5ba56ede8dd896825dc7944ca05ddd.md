@@ -1,0 +1,207 @@
+
+# O
+
+- `Netwinder` 系统, 33
+- 网络接口卡 (`NICs`), 26
+- `-n|-normal` 选项 (`patch` 命令), 99
+- `newterm` 函数, 439
+- `newterm.c` 应用 (`ncurses` 终止), 442
+- `newwin` 函数, 437, 458
+- `-o` 选项 `gcc` 命令, 43, 47
+- `install` 命令, 711
+- `new_gets.c` 应用 (`termios` 接口), 428-430
+- `next` 命令 (`gdb`), 697
+- `nice` 函数, 184
+- `NICs` (网络接口卡), 26
+- 对象. 另见 图形；控件
+- 信号量
+  - 访问, 290
+  - 创建, 288-290
+  - 死锁, 288
+  - 递减值, 291
+  - 删除, 291
+  - 增加值, 291
+  - 打印值, 290
+  - 示例程序, 293-294
+- 共享 X-Y-Z 坐标, 600-601
+- 打开文件
+  - Emacs, 123
+  - `dfopen` 函数, 164
+  - `fdopen` 函数, 163
+  - `open` 函数, 139
+  - 模式, 163
+  - 临时文件, 171
+- 共享内存, 283
+- Nirvis 网站, 33
+- `mm` 命令, 343-344
+- No make 目标, 63
+- `noecho.c` 应用, 418-419
+- `openlog` 函数, 241-242
+- 非阻塞套接字 I/O (输入/输出)
+  - 监听广播, 328-329
+  - 示例输出, 329-330
+  - 套接字创建, 327-328
+- 文件测试, 621-622
+- 匹配操作符, 617-619
+- 字符串操作符, 615
+- Handbook 控件, 527
+- `notebook.c` 实现, 537-539
+- 运行, 542
+- OPTIONS 章节 (`com-pages`), 722
+- `norbits.c` 应用 (`OpenGL`), 597-598
+  - 3D 对象, 599-600
+  - 动画, 603-604
+  - 深度测试, 603
+  - 事件处理, 603
+  - 材质属性, 602-603
+- RN 标志 (`termios`) 接口, 414
+- `-ON` 选项 (`term-mand`), 93
+- ON 标志 (`termios`) 接口, 414
+- ONL 标志 (`termios`) 接口, 414
+- `open` 函数, 139, 283
+- Open Source 定义, 741-743
+- Open Source组织, 741
+- 旋转对象, 601-602
+- 窗口, 598-599
+- X-Y-Z 坐标, 600-601
+- `outb`, `_p` 函数, 371
+- 输出例程 (`ncurses`)
+  - 字符函数, 443-445, 448-449
+  - 绘图函数, 446-447, 451
+  - 清屏函数, 448
+  - 字符串函数, 445-446, 449-450
+- 包管理器. 另见 PAMs (可扩展模块), 680-681
+- Paned Window 控件, 527
+- `PanedWindow` 类, 511-513
+- 并行端口双模式, 367
+- 硬件接口, 368
+- 步进连接, 368-369
+- `-pg` 选项 (`gcc` 命令), 48
+- `pony` 目标 (`makefiles`), 56-57
+- `pipe` 函数, 152, 271
+- 管道: 命名的, 271-272, 无名的, 271
+- Pug and Play, 28
+- `outs` 函数, 371
+- `outsl` 函数, 371
+- 文件所有权, 149-150
+- 参数化字符串,
+- 可扩展模块 (`PAMs`), 680-681
+- `-pNUM-strip-NUM` 选项 (`patch` 命令), 99
+- 悬指针, 250
+- 智能, 755
+- 解析器, Expat, 529-530
+- 密码, 658-699
+- `patch` 命令, 98-100
+- 补丁, -98
+- `popen` 函数, 177
+- 端口, 349
+
+# P
+
+- AGP (加速图形端口), 21
+- 双模式, 349
+- 硬件接口, 350
+- 打印机端口, 158-159
+- 编程接口, 349
+- `-p` 选项 `gcc` 命令, 48
+- `lldconfig` 命令, 346
+- `rscmerge` 命令, 114
+- 包管理
+  - Java 包, 564-566
+  - `install` 命令, 711-713
+  - RPM (Red Hat 包管理器)
+- 模式规则 (`makefiles`), 61
+- 匹配操作符, 619
+- `pci` 文件, 224
+- 串口端口, 158
+- 步进器连接, 350-351
+- 配置, 714-715
+- 最低要求, 713-714
+- 包构建, 719
+- `spec` 文件, 715-719
+- `tar` 文件, 708
+  - 创建, 709-710
+  - 更新, 710
+- PCIA 卡, 28
+- `-pedantic` 选项 (`gcc` 命令), 43
+- `-pedantic` 选项 (`gcc` 命令), 43
+- `%` 标志, 61
+- 外部的, 26
+- 键盘, 23-24
+- 设备, 23-24
+- 鼠标, 24
+- 位置, 34
+- 模式, 39
+- 处理器, 35
+
+# 805
+
+- Linux 配置, 318-319
+- 监听广播, 321-323
+- 发送广播, 320-320
+- `setockopt` 函数, 319-320
+- `thread_cleanup_push` 函数, 189
+- `thread_cond_broadcast` 函数, 190
+- `thread_cond_destroy` 函数, 190
+- `thread_cond_init` 函数, 189-190
+- `thread_cond_init_func` 函数, 190
+- `thread_cond_signal` 函数, 190
+- `thread_cond_wait` 函数, 190
+- `thread_create_function`, 185
+- `thread_equal_function`, 190
+- `thread_exit_function`, 185
+- `thread_getsetchedparam` function, 187
+- `thread_join_function`, 186
+- `thread_mutex_destroy` function, 191
+- `thread_mutex_init_func` function, 191
+- `thread_mutex_lock` function, 191
+- `thread_mutex_trylock` function, 191
+- `thread_mutex_unlock` function, 191
+- `thread_getsetchedparam` function, 187
+- `putwin` function, 458
+- `|p|-show-c-function` (`diff` 命令), 94
+
+## TCP (传输控制协议)
+
+- 套接字 (`sockets`), 296
+- 进阶, 312
+- 绑定, 297-298
+- 客户端/服务器示例, 301-309, 332-340
+- 连接, 299
+- 函数, 296-300
+- `-q`
+  - `ar` 命令, 344
+  - `gdb` 命令, 690
+- `QAApplication` 类, 547
+- QIC (四英寸卡带) 驱动, 155
+- `QPainter` 类, 547
+- `QSize` 类, 546
+- `Qt` 库, 544-545
+- 监听消息, 接收消息, 299-300
+- 安全, 675
+- 发送消息, 312
+- UDP (用户数据协议), 312-316
+
+## QWidget 类
+
+- `DrawWidget` 派生类, 547-550
+- 事件处理方法, 545-547
+- 信号/槽 (`signals/Slots`), 550-557
+- 接收消息, 314-315
+- 安全, 675
+- 发送消息, 313-314
+
+## UpDownWidget 类, 554-556
+
+- `thread`. 参见 `threads` (线程)
+- `thread_atfork` 函数, 188
+- `thread_attr_destroy` 函数, 186
+- `thread_attr_init_func` 函数, 186
+- `thread_cancel_function`, 188-189
+- `thread_cleanup_pop` 函数, 189
+- `qtk_container_border` 宽度函数, 535
+- `qtk_drawing_area_size` 函数, 542
+- `qtk_main_function`, 522
+- `qtk_main_quit` 函数, 535
+- `qtk_signal_connect` 函数, 522-523
+- `qtk_tree_new` 函数, 535
