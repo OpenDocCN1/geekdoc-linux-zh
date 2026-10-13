@@ -1,0 +1,153 @@
+
+`groupdel` 命令是一个简单的 shell 脚本，可从 `/etc/group` 文件中删除指定的组。它不感知 shadow 支持。如果你要在启用 shadow 支持的情况下使用 `groupdel`，请务必在运行 `groupdel` 后运行 `grpconv` 以清理 `/etc/gshadow` 文件。
+
+```
+groupdel <groupname>
+```
+
+`groupdel` 命令会确保该组存在于 `/etc/group` 中，然后简单地删除该行。它会创建名为 `/etc/group-` 的 `/etc/group` 备份，因此如果你意识到操作有误，可以通过将 `/etc/group-` 复制到 `/etc/group` 来“恢复”该组。
+
+### groupmod
+
+此命令用于修改 `/etc/group` 和 `/etc/gshadow` 中的条目。`groupmod` 会分别创建 `/etc/group` 和 `/etc/gshadow` 的备份，命名为 `/etc/group-` 和 `/etc/gshadow-`。其参数如下：
+
+```
+groupmod -g <new_GID> <groupname>
+```
+
+如果在 `/etc/group` 中唯一，则将最后一个参数指定的组的 GID 改为 `new_GID`。
+
+> **Note**
+>
+>
+> 如果你更改组的 GID，则需要手动更改所有原 GID 拥有的文件的组所有权。你可以这样做 with a `find` command：
+>
+>
+> ```
+> find / -gid <old_GID> -exec chgrp <new_GID> {} ;
+> ```
+
+这会覆盖 `-g` 选项的唯一性，因此你可以创建多个具有相同 GID 的组（通常不是好主意）。
+
+```
+groupmod -n <new_group_name> <groupname>
+```
+
+组名将被更改为 `<new_group_name>`。
+
+### grpck
+
+`grpck` 用于对 `/etc/group` 文件进行一致性检查。如果你手动修改 `/etc/group`，最好运行它以确保没有输入错误。`grpck` 对 `/etc/group` 执行以下检查：
+
+- Asks to delete malformed lines in `/etc/group`.
+- Asks to delete malformed lines in `/etc/gshadow`.
+- Asks to delete lines found in `/etc/gshadow` but not `/etc/group`. It does not, however, ask to delete lines found in `/etc/group` but not in `/etc/gshadow`.
+- Asks to delete members of groups who do not exist on the system. It seems to give up if it finds more than two errors on a line, so you may want to run it several times until it finds no errors.
+
+`grpck` 不检查有效的 GID 值，因此 `/etc/group` 或 `/etc/gshadow` 中大于 65535 的任何 GID 值都不会导致错误消息。
+
+### Adding a Group with the GUI Tools
+
+通过 `Linuxconf` 添加组非常容易。按添加用户的方式操作，但在到达用户账户窗口时，选择组定义而不是用户账户。这将打开一个窗口，显示来自 `/etc/group` 的组列表，如图 29.10 所示。
+
+图 29.10
+
+Linuxconf 用户组菜单。
+
+![](img/4886c42c7629f445c7f7f3011ffbf3c3_919_0.png)
+
+如果你在此列表中选择一个条目，将出现该组的组条目窗口，其中包含该组的信息，你可以按需编辑。
+
+要添加新组，请单击组配置菜单底部的添加按钮并填写出现的表单。创建新组只需要组名，但如果你愿意，此时也可以指定 GID 和一些成员。目录选项卡下的信息目前未使用。单击接受，你的新组应出现在列表中。
+
+> Note
+>
+>
+> 在系统上创建组时，请务必跟踪组的用途以及组内成员。你应该清楚每个组的用途以及每个组应该和不应该做什么。创建多个专用组比创建更多通用组更好，因为与组成员身份相关的特定权限可以在不赋予用户过多权限的情况下添加，或在不实质上禁用账户的情况下移除。保留系统上需要的组列表以及每个组有权访问的文件和目录。
+
+现在你知道了如何添加组，让我们看看组的一些用途。有效使用组可以简化你作为系统管理员的工作。
+
+## Using Groups to Grant Permissions
+
+授予权限是组最常见的用途之一。在 UNIX 中，系统几乎每个功能都由一个文件或特殊文件（目录、设备等）控制。通过操作文件或设备的组所有权和组权限，你可以按组授予或移除对该文件或设备的访问权限。例如，你可以创建一个名为 `net` 的组，并使 Netscape、Lynx、irc 以及其他任何网络客户端归 `net` 组所有，然后仅设置组执行位。这样，只有 `net` 组的成员才能运行这些程序。
+
+> **Note**
+>
+>
+> 这不是完美的解决方案。如果你将 `net` 组拥有的二进制文件的世界可读标志保留，`net` 组以外的成员可以简单地将二进制文件复制到自己的主目录，`chown` 文件为自己所有，然后运行它。虽然这对所有程序都无效（有些程序需要支持文件或 `setuid` 位才能正常运行），但对某些程序可能有效，因此必须谨慎。
+
+你还可以使用 `pam_group` 模块配置用户在何时获得对哪些组的访问权限。如果只想在工作时间后或周末允许人们访问 `net` 组或 `games` 组，这很有帮助。
+
+> **Note**
+>
+>
+> 这也不是很安全。如果用户能一次获得对组的访问权限，他可以创建 `setgid` 二进制文件，以便在未来任何时间访问该组拥有的文件，无论他是否仍为该组成员。尽可能使用 `nosuid` 选项挂载用户可写文件系统。
+
+## The newgrp Command
+
+拥有不同组的成员身份是好事，但不断使用 `chgrp` 来更改文件组所有权很繁琐。如果你与其他用户协作并需要使用共同的组所有权共享文件，能够默认创建由共享组拥有的文件而不是不断使用 `chgrp` 会更好。你可以使用 `newgrp` 和 `sg` 命令来实现这一点。
+
+### newgrp
+
+`newgrp` 允许你暂时将默认组更改为你所属的另一个组或拥有密码的组。`newgrp` 在切换组时不会经过登录或更改当前目录。你可以输入 `exit` 返回到之前的组，也可以不带参数运行 `newgrp` 命令来实现相同效果。语法是：
+
+```
+newgrp <new_group_name>
+```
+
+显然，`<new group name>` 是要切换到的组名。如果留空，将使用 `/etc/passwd` 中的用户默认组。
+
+## Other System Commands Related to Users and Groups
+
+### chage
+
+`/etc/shadow` 文件中的所有日期计算可能有些繁琐，因此如果你被迫在没有菜单或 GUI 工具的情况下执行此操作，希望你能使用 `chage` 功能。`chage` 的唯一目的是操作 `/etc/shadow` 中的设置。`chage` 命令有几个选项：
+
+- `-m <min_change>`
+- Modify the `min_change` field.
+- `-M <max_change>`
+- Modify the `max_change` field.
+- `-d change_days`
+- Modify the `change_days` field. Can be specified as `YYYY-MM-DD`.
+- `-I <inactive>`
+Modify the `expire_date` field.
+
+```
+-E <expire_date>
+```
+
+修改 `expire_date` 字段。可以指定为 `YYYY-MM-DD`。
+
+```
+-W <warn_days>
+```
+
+修改 `warn_days` 字段。
+
+## chfn
+
+`chfn` 程序用于更改您的 finger 信息。该程序可让您更改 `/etc/passwd` 中的 GCOS 字段。如果出于安全原因禁用了 finger，这可能对您不太有用。因为 finger 用于显示用户的信息，例如真实姓名、办公地点和办公电话，如果该服务已启用，这些项目应保持最新。像 `chage` 一样，`chfn` 有几个选项：
+
+- `-f <full Name>`
+- `-o <Office Location/Number>`
+- `-p <Office Phone Number>`
+- `-h <home Phone Number>`
+- `<userid>`
+
+如果您是 `root`，可以为其他用户更改此信息。
+
+## chgrp
+
+此命令可让您更改文件的组所有权。`chgrp` 允许您更改文件、特殊文件或目录的组所有权。在部门重组后或通过合并多个较小的项目形成新项目时可能需要此操作。
+
+```
+-c
+```
+
+更改时提供更多输出。
+
+```
+-f
+```
+
+不打印错误信息。
