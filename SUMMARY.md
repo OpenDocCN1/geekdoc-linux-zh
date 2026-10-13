@@ -1942,6 +1942,7 @@
 +   [Linux Internet 服务器设置视觉黑客书：全球网络中使用 Linux 作为互联网服务器的视觉指南](docs/setting-up-a-linux-internet-server-visual-black-book-a-visua/README.md)
 +   [Linux 内网服务器搭建视觉化秘籍：使用 Linux 构建局域网的完整视觉指南](docs/setting-up-a-linux-intranet-server-visual-black-book-a-compl/README.md)
 +   [LAMP 配置指南：让 Linux、Apache、MySQL 和 PHP 协同工作 (Transcend Technique)](docs/setting-up-lamp-getting-linux-apache-mysql-and-php-working-t/README.md)
++   [七大最致命的无线技术攻击（七大最致命攻击）](docs/seven-deadliest-wireless-technologies-attacks-seven-deadlies/README.md)
 +   [Shell 编程范例](docs/shell-prog-ex/README.md)
 +   [Unix, Linux 和 OS X 中的 Shell 编程](docs/shell-programming-in-unix-linux-and-os-x/README.md)
 +   [shell 十三问](docs/shell-ques13/README.md)

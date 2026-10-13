@@ -1,0 +1,15 @@
+get the network key and proceed to use it as before. The owner again figures out why the system has suddenly slowed and starts a regime of changing the key each day. After a while, this gets cumbersome and more trouble than it's worth, which leads the owner to finally disable it for everyone.
+
+This is a classic example of the tragedy of the commons, a game theory^A concept where one person taking more than his or her share of a common resource is not an issue, except that everyone thinks the same way and the group ends up over-consuming that resource, thus destroying it for everyone. The common example is a group of shepherders leading the herd to grazing on public land. If one adds an extra few sheep, the additional grazing won't be that conspicuous. The problem arises from everyone thinking the same way and expanding their flocks. Soon overgrazing means none of their larger flocks get enough food and therefore the shepherders won't profit.
+
+The eventual solution to this in the wireless world was the captive portal and the pay-for-play model. This system is what you will find most often now and has been turned into a fairly sizable industry of providing turnkey solutions to our hapless coffee shop owner and his ilk.
+
+Captive portals typically operate as open networks with one difference. Once connected to these systems, they block all traffic and redirect all Web requests to a local page. That page is usually an authentication page that explains how to access the Internet at large. Some of these only require acceptance of a term of service to give owners some legal recourse against abusers. Others go a step further and require payment for a set amount of timed access. Once payment is made, that particular computer is allowed to communicate with the outside world for the prescribed period of time.
+
+This system grew into companies operating large networks of access points around the world sharing a common authentication and payment scheme where you can purchase a set period of time, say 30 days, and use any of their access points around the world. This is typically the system you would have at an airport or hotel, since on a long journey you might need Internet access at many different points during your travels.
+
+The growth in use of captive portal and pay-for-play configurations is when attackers first started to take notice of these systems (as a target for fraud). Since most payments were made via credit card, the opportunity was present to capture those card numbers and other interesting information.
+
+# ATTACKING PUBLIC HOTSPOTS
+
+Most public hotspots, be they free or for pay, generally are not encrypted. A chicken and egg situation exists in how to give the customer an encryption key from an automated system without also providing it to noncustomers. Employees should be

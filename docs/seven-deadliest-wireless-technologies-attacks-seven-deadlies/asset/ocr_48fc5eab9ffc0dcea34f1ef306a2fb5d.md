@@ -1,0 +1,3 @@
+# CONCLUSION
+
+Wireless devices are here to stay, and anyone involved in IT or just life in general will end up interacting with wireless devices almost everyday. They are highly unlikely to go away and are more than likely to become more pervasive and more complex as time progresses. A firm understanding of the risks involved with deploying and using wireless devices in your life will help you protect against attacks and allow for all the benefits of the wireless world while minimizing the risk.

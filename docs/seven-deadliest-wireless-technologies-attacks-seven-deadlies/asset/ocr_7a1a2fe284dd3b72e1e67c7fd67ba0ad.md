@@ -1,0 +1,15 @@
+At its core, it's a race. If the attacker can beat the remote server, since the response is expected and its SEQNO is in order, it's blindly accepted as being the legitimate content and passed to the browser.
+
+When it made its debut at Defcon, it was viewed as an interesting party trick and there was some interest in what else could be done with it, but like many tools and attacks, it never seemed to go anywhere. Over time, a few updates were made to adjust to new technology and capabilities, but it became an oddity among the hacker community. It was useful to show content replacement and injection, but not beyond a plaything at conferences to screw with attendees' minds by inserting strange or confusing images into the data in the air.
+
+Airpwn also showed an interesting vulnerability not normally seen. Since it was injecting content that was expected, software firewalls on the client system would happily let the rogue data pass without a second thought. Provided the injected data did not conform to a known virus or detectable attack pattern, it would pass silently through the firewall to the browser, opening many possibilities for abuse.
+
+# EPIC FAIL
+
+Airpwn has been a useful tool for driving the point home to users that there are risks in using insecure networks. Explaining the risks only goes so far; injecting alternate images or HTML into the stream and having it show up on their own screen dramatically shows they are at risk. This is effective since it does not do any permanent damage. Those performing these demonstrations need to be careful in choosing the time and the place to perform these demos.
+
+In 2008, at the SecTor (www.sector.ca) conference in Toronto, RenderMan was running a Wi-Fi security clinic, demonstrating various attacks and helping attendees run attacks on demo access points. As part of this, Airpwn was shown injecting data. Unfortunately, it was left running for several hours on the same channel as the conference network. Johnny Long of Hackers for Charity (www.hackersforcharity.org/) came up and asked why the network was misbehaving. Well, it seems Airpwn was injecting extra HTML, preventing Johnny from being able to check in for his flight home. Sheepishly, RenderMan had to terminate Airpwn to let Johnny finish an important task, confirming that there is a time and place for everything, and don't forget what tools you leave running!
+
+# EPIC FAIL
+
+Fast forward to 2009 when Dragorn, the author of Kismet, the wireless sniffing tool, and other researchers began to look at what one could actually do with Airpwn and Transmission Control Protocol stream hijacking (as the attack is properly known). This all started with the desire to replace more than images and to have the ability to replace flash video streams on the fly. With the popularity and prevalence of YouTube and other flash-based video sites, it was only natural that they would be a popular target and the desire would bubble up to want to replace any video watched with the "RickRoll" or other suitable content.

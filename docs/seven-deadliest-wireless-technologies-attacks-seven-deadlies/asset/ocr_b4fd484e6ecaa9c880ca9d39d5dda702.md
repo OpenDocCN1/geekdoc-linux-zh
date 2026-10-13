@@ -1,0 +1,14 @@
+an issue of how long the security of the system would be in place before it could be upgraded, replaced, or phased out. In this case, it ended up lasting less than 10 years before it was first publicly compromised.
+
+The research team exploited this weak key, applying computing power that was previously unavailable when the system first came out. They knew that the 40-bit key provided 1,099,511,627,776 combinations, which may seem like a lot, but its well within the range of a computer to calculate within a reasonable time frame.
+
+> NOTE
+> The term reasonable when talking about cryptography or cryptographers can have a greatly different meaning from that of the general populous. In cryptography, where an exhaustive search is expected to take billions of years, finding a way to drop that to a few hundred is quite a feat and considered a lot more reasonable, especially when advances in computing power may shave that value down even further.
+
+The researchers knew that they could capture sample output from an unknown tag by simply using their own reader to interrogate it with a known challenge. In this way, they know the algorithm, the challenge, and they can observe the response. The only factor left was the secret 40-bit key. The easiest way to recover that key (with the intention of duplicating it later) was to capture a couple of exchanges and then test every possible key to see if it obtained the same output given the same input at the tag being tested.
+
+The team found that a standard 3.8-GHz single-core PC could compute about 200,000 keys per second, which would take a while to accomplish an exhaustive search (about 64 days). To speed this up, they implemented the cracker program in hardware using field-programmable gate arrays (FPGAs) and small-programmable processors that are generally much, much faster than general-purpose CPUs at performing single tasks. Their implementation allowed 16 million keys to be tested per second on a single FPGA, which dropped the timetable down to about 21 h. They were able to use this to recover the key on a previously unknown Speedpass. Spreading the workload across 16 cards, however, allowed them to drop the time to around 1 h (on average).
+
+To verify their work and prove themselves to Texas Instruments, the team had TI provide five tags with keys selected and known by TI. Within 2h, the team recovered the keys to all the provided tags with their parallel cracking setup, thus confirming its abilities.
+
+Taking the research a step further, the team applied the time-space trade-off and built a “rainbow table” that contained precomputed arrays of inputs, outputs, and secret keys. At around 10Gb, the table could be used to simply look up the key of a tag based on the output from a known challenge, reducing the time to recover a key to about a minute, or as fast as a computer could do a search for the right challenge/response.
