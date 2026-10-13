@@ -1869,6 +1869,7 @@
 +   [RHF Linux 3 Multipack 初学者指南：（Fedora Core 3 发行版，含源码共 9 张光盘，适用于无 DVD 驱动器的用户）（初学者指南）](docs/rhf-linux-3-multipack-for-dummies-fedora-core-3-distribution/README.md)
 +   [VMWare 使用指南（第 2 版）](docs/robs-guide-to-using-vmware-covers-workstation-ace-gsx-and-es/README.md)
 +   [Rocky Linux 9 核心教程：学习安装、管理和部署 Rocky Linux 9 系统](docs/rocky-linux-9-essentials-learn-to-install-administer-and-dep/README.md)
++   [皇家水彩学会：水彩大师：过去与现在](docs/royal-watercolor-society-watercolour-masters-then-and-now/README.md)
 +   [使用 Linux & Apache 运行自己的 Web 服务器：安装、管理并加固你的 Web 服务器](docs/run-your-own-web-server-using-linux-apache-install-administe/README.md)
 +   [使用 Linux 运行完美的网站](docs/running-a-perfect-internet-site-with-linux/README.md)
 +   [SAIR Linux and GNU 认证初级：安装与配置](docs/sair-linux-and-gnu-certification-level-i-installation-and-co/README.md)
