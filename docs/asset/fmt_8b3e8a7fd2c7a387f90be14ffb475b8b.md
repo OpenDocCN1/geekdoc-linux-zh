@@ -1,0 +1,81 @@
+
+你可以使用多种网络工具来执行各种任务，如获取网络上其他系统的信息、访问其他系统以及与其他用户直接通信。可以使用 `ping`、`finger`、`traceroute` 和 `host` 等工具获取网络信息。`Talk`、`ICQ` 和 `IRC` 客户端允许你与网络上的其他用户直接通信。`Telnet` 可对你可能在连接到你网络的另一个系统上拥有的账户进行远程登录。某些工具具有相应的 K Desktop 或 GNOME 版本。此外，你的网络可能使用网络远程访问命令。这些命令对于较小的网络非常有用，并允许你直接访问远程系统以复制文件或执行命令。
+
+# 网络信息：ping, finger, traceroute, 和 host
+
+你使用 `ping`、`finger`、`traceroute` 和 `host` 命令来查找网络上系统和用户的状态信息。`ping` 用于检查远程系统是否启动并运行。你使用 `finger` 查找网络上其他用户的信息，查看他们是否登录或是否收到了邮件。`host` 显示网络上系统的地址信息，提供系统的 IP 和主机地址。`traceroute` 可用于跟踪消息在传输到你处经过的计算机网络和系统的序列。表 15-1 列出了各种网络信息工具。
+
+虽然 Red Hat 未包含其中，但 GNOME 桌面面的 GNOME Command Center 工具提供了 GNOME 界面，用于输入 `ping`、`traceroute` 和 `host` 命令等功能。在 K Desktop 上，你可以使用 KDE 网络工具 `kn` 发 `ping`、`finger`、`traceroute` 和 `host` 命令。
+
+## ping
+
+`ping` 检测系统是否启动或运行，`ping` 的参数是你想要检查的系统名称。如果你要检查的系统处于关机，`ping` 将发出超时消息，指示无法建立连接。下一个示例检查 `www.redhat.com` 是否启动并连接到网络：
+
+```
+$ ping www.redhat.com
+PING www.portal.redhat.com (206.132.41.231): 56 data bytes
+```
+64 bytes from 206.132.41.231: icmp_seq=0 ttl=248 time=24.0 ms
+
+64 bytes from 206.132.41.231: icmp_seq=1 ttl=248 time=124.5 ms
+
+64 bytes from 206.132.41.231: icmp_seq=2 ttl=248 time=77.9 ms
+
+64 bytes from 206.132.41.231: icmp_seq=3 ttl=248 time=220.0 ms
+
+64 bytes from 206.132.41.231: icmp_seq=4 ttl=248 time=14.9 ms
+
+---
+
+www.portal.redhat.com ping statistics ---
+
+6 packets transmitted, 5 packets received, 16% packet loss
+
+round-trip min/avg/max = 14.9/92.2/220.1 ms
+
+```
+你也可以使用 IP 地址而不是域名名使用 `ping`。使用 IP 地址时，`ping` 可以检测远程系统，而无需通过域名服务器将域名翻译为 IP 地址。这对于你的网络域名服务器可能临时宕机且你想检查网络上的特定主机是否连接的情况很有帮助。在下一个示例中，用户使用 IP 地址检查 Red Hat 站点：
+
+```
+$ ping 206.132.41.231
+PING 206.132.41.231 (206.132.41.231): 56 data bytes
+64 bytes from 206.132.41.231: icmp_seq=0 ttl=248 time=16.6 ms
+64 bytes from 206.132.41.231: icmp_seq=1 ttl=248 time=65.1 ms
+64 bytes from 206.132.41.231: icmp_seq=2 ttl=248 time=70.1 ms
+64 bytes from 206.132.41.231: icmp_seq=3 ttl=248 time=336.6 ms
+64 bytes from 206.132.41.231: icmp_seq=4 ttl=248 time=53.6 ms
+64 bytes from 206.132.41.231: icmp_seq=5 ttl=248 time=42.1 ms
+---
+206.132.41.231 ping statistics ---
+6 packets transmitted, 6 packets received, 0% packet loss
+round-trip min/avg/max = 16.6/97.3/336.6 ms
+```
+如果 `ping` 访问被网络防火墙拒绝，`ping` 操作也会失败。更多详情请参见第 19 章。
+
+## finger and who
+
+你可以使用 `finger` 命令获取网络上其他用户的信息，使用 `who` 命令查看当前系统上哪些用户在线。`who` 和 `w` 命令列出所有当前连接的用户，以及他们登录的时间和位置。`w` 提供了更详细的信息。`finger` 让你查找网络上其他用户的信息，查看他们是否登录或是否收到了邮件。`host` 显示网络上系统的地址信息，提供系统的 IP 和主机地址。
+
+`traceroute` 可用于跟踪消息在传输到你处经过的计算机网络和系统的序列。表 15-1 列出了各种网络信息工具。
+
+虽然 Red Hat 未包含其中，但 GNOME 桌面面的 GNOME Command Center 工具提供了 GNOME 界面，用于输入 `ping`、`traceroute` 和 `host` 命令。在 K Desktop 上，你可以使用 KDE 网络工具 `kn` 发 `ping`、`finger`、`traceroute` 和 `host` 命令。
+
+## ping
+
+`ping` 检测系统是否启动或运行，`ping` 的参数是你想要检查的系统名称。如果你要检查的系统处于关机，`ping` 将发出超时消息，指示无法建立连接。下一个示例检查 `www.redhat.com` 是否启动并连接到网络：
+
+```
+$ ping www.redhat.com
+PING www.portal.redhat.com (206.132.41.231): 56 data bytes
+```
+64 bytes from 206.132.41.231: icmp_seq=0 ttl=248 time=24.0 ms
+64 bytes from 206.132.41.231: icmp_seq=1 ttl=248 time=124.5 ms
+64 bytes from 206.132.41.231: icmp_seq=2 ttl=248 time=77.9 ms
+64 bytes from 206.132.41.231: icmp_seq=3 ttl=248 time=220.0 ms
+64 bytes from 206.132.41.231: icmp_seq=4 ttl=248 time=14.9 ms
+---
+www.portal.redhat.com ping statistics ---
+6 packets transmitted, 5 packets received, 16% packet loss
+round-trip min/avg/max = 14.9/92.2/220.1 ms
+```
+你也可以使用 IP 地址而不是域名名使用 `ping`。使用 IP 地址时，`ping` 可以检测远程系统，而无需通过域名服务器将域名翻译为 IP 地址。这对于你的网络域名服务器可能临时宕机且你想检查网络上的特定主机是否连接的情况很有帮助。在下一个示例中，用户使用 IP 地址检查 Red Hat 站点：
