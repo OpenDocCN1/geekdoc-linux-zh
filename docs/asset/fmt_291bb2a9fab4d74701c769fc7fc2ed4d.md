@@ -1,0 +1,180 @@
+
+- `comp.in.linux.setup` 新组, 656
+- `comp.in.linux.x` 新组, 656
+- `compress` 命令, 619
+- 受损系统处理, 661–664
+- `comp.security.announcement` 新组, 658
+- `comp.security.misc` 新组, 658
+- `comp.security.ppp` 新组, 658
+- `comp.security.ssh` 新组, 658
+- `comp.security.unix` 新组, 658
+- 条件标志, PAM, 245
+- `conn:default` 选项, 532
+- `ConnectionTimeout` 间隔, 127–128
+- `ConnectionRate` 命令, 130–131
+- 控制台支持, 内核, 26
+- 控制台程序, 260
+- 发布指南, 392–394
+- 使用 `cp` 命令复制文件, 601
+- 版权, 393
+- 核心转储, 177
+- 企业文件, 514–527
+- Apache 服务器访问, 外部, 520
+- DNS 服务器访问, 外部, 520
+- FTP 服务器访问, 外部, 519
+- ident 服务器访问, 外部, 521
+
+# 防火墙
+
+- 内部防火墙, 目的, 515
+- 内部防火墙设置, 516–518
+- 日志包信息, 522
+- 邮件服务器, 外部, 521–522
+- 网络地址转换 (NAT), 524
+- 数据包过滤规则, 524–525
+- 点对点服务，拦截, 524–527
+- 主防火墙, 目的, 516
+- 主防火墙设置, 518
+- 重定向数据包, 522
+- 状态检测, 524
+- 服务类型 (OS) 数值, 523
+- `cp` 命令, 601
+- `xinetd` 属性, 329
+- 控制台, 19–20
+- 崩溃, 279
+- 崩溃恢复，日志文件, 48
+- `cronab -e`, 237
+- `chk_pwd_grp` 脚本, 191–197
+- `chkmod` 命令, 185–188, 599
+- `chown` 命令, 354, 499–600
+- `chroot` 监狱, 448–452, 464–465
+- `chrooters.pl` 脚本, 449–452
+- `sshh` 命令, 202, 632
+- 密码, 密码学, 321–322
+- `clear` 命令, 600
+- `clearModulus` 指令, 103
+- `Cmnd_alias`, 305
+- `cmp` 命令, 600
+- `CNAME` 记录, 404
+- 代码成熟度级别, 15, 50, 158
+- `CommandBufferSize`, 468
+- 命令。另参见特定命令
+- 命令。另参见特定命令
+- DOS 兼容, 628–630
+- 文件和目录, 598–619
+- 文件压缩与存档, 619–624, 多个, 593
+- 网络访问, 634–639
+- 网络管理, 639–646
+- 打印特定, 652–653
+- 进程管理, 646–647
+- 生产力, 647–650
+- 正则表达式, 595–596
+- shell, 650, 593
+- 语法, 593
+- 系统状态接口, 630–632
+- 用户管理, 632–634
+- 通配符, 593–594
+- 漏洞披露 (CVE), 549, 561
+- 比较文件, 600–604
+- 编译内核, 312–313
+- `comp.in.linux.advocacy` 新组, 656
+- `comp.in.linux.alpha` 新组, 656
+- `comp.in.linux.announcement` 新组, 656
+- `comp.in.linux.answers` 新组, 656
+- `comp.in.linux.development` 新组, 656, 新组, 656
+- `comp.in.linux.hardware` 新组, 656
+- `comp.in.linux.M68k` 新组, 656
+- `comp.in.linux.misc` 新组, 656
+- `comp.in.linux.networking` 新组, 656
+- `comp.in.linux.setup` 新组, 656
+- `comp.in.linux.x` 新组, 656
+- `compress` 命令, 619
+- 受损系统处理, 661–664
+- `comp.security.announcement` 新组, 658
+- `comp.security.misc` 新组, 658
+- `comp.security.ppp` 新组, 658
+- `comp.security.ssh` 新组, 658
+- `comp.security.unix` 新组, 658
+- 条件标志, PAM, 245
+- `conn:default` 选项, 532
+- `ConnectionTimeout` 间隔, 127–128
+- `ConnectionRate` 命令, 130–131
+- 控制台支持, 内核, 26
+- 控制台程序, 260
+- 发布指南, 392–394
+- 使用 `cp` 命令复制文件, 601
+- 版权, 393
+- 核心转储, 177
+- 企业文件, 514–527
+- Apache 服务器访问, 外部, 520
+- DNS 服务器访问, 外部, 520
+- FTP 服务器访问, 外部, 519
+- ident 服务器访问, 外部, 521
+
+# D
+
+- Data Analysis, SAINT, 547
+- `de.org.linux.users` 新组, 657
+- `de.alt.linux.patches` 新组, 657
+- `dd` command, 147–148, 624–625
+- `DEBUG`, 334
+- `DEBUG_VERBOSE`, 433
+- `disable-anonymous` command, 445
+- `disable` field, `/etc/shadow` file, 280
+- `disabled` flag, `xinetd`, 330
+- `disabled` attribute, `xinetd`, 334
+- `disable-gtk` option, 559
+- `disable_MACRO_CHECK` variable, 433
+- `disable-overwrite` command, 445
+- `disable-private` command, 445
+- `disable-upload` command, 444
+- `disable-virtual` command, 445
+- `disCARD` command, 423
+- disk-striping, 559
+- disk usage, summary with `du` command, 604–605
+- distribution numbers, Linux, 12
+- `Dint`, 400–405
+- `desg` command, 630
+- `desg | grep` file, 530
+- `dnat` target option, 496, 524
+- `dns` Security Extension (`DNSSEC`), 412
+- `dns` server
+- access from outside, 520–521
+- `bind`, 405-413
+- `chrooting`, 412
+- figuration, checking with `Dlint`, 400-405
+
+# 索引 673
+
+- 防火墙及，506–507
+- `gl` 获取，411
+- 负载均衡，使用 85
+- 查询，限制限制，410–411
+- 轮询域名系统服务 (DNS)，85
+- 安全性，399–414
+- 分散式 DNS 配置，411
+- 欺骗，399–400, 410
+- 区域传输，405–409, 507
+- 拒绝来自电子邮件地址的邮件，423–424
+- 拒绝来自整个域名/主机的邮件，423
+- 使用 IP/主机名拒绝邮件，441
+- 邮件从域名/主机中继，424
+- 邮件向往域名/主机中继，424
+- `root` 权限，在没有该权限的情况下运行，438–439
+- 对入站邮件进行清理，429–435
+- Sendmail，419–430
+- `DNS_SERVERS` 变量，573
+- 在密封 LIOD5 选项之前不要执行未保护的程序，159
+- `DocumentRoot` 指令，116, 353–354
+- `$DOMAIN_CHAR` 变量，364
+- 域级安全，Samba，275
+- 域名，允许来自受信任用户的访问，477
+- `d` 命令，147, 604–605
+- `dump` 工具程序，239
+- 动态变量，Triwire，223
+- 简单认证与安全层 (SASL)，426–429
+- 垃圾邮件，415–417
+- `EMAILREPORT` 级别，Triwire，230
+- `emailto` 属性，Triwire，220, 228
+- `enable-paranoid` 命令，444
+- 加密，219–220, 263
