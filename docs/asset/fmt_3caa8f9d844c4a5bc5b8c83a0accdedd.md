@@ -1,0 +1,147 @@
+
+- `FTP`（File Transfer Protocol，文件传输协议）服务器，321–322
+- `INN`（Internet News，互联网新闻），426–428
+- `ircII`，182
+- 内核，889
+- `Leafnode+`，437
+- `LILO`（Linux Loader，Linux 加载器），56
+  - 文件，58
+  - `lilo` 命令，57
+  - `QuickInst` 脚本，57
+- `cdrom` 光盘，237
+- `NFS`（Network Filesystem，网络文件系统），511–512
+- `NIS`（Network Information Service，网络信息服务），493–494
+- 软件包，50
+- `PPP`（Point-to-Point Protocol，点对点协议），146
+- `Red Hat Linux`。参见 `Red Hat Linux` 安装
+- `RPM`（Red Hat Package Manager，Red Hat 软件包管理器），710–711
+- `Samba`，525
+- `sendmail`，281–285
+- `talkd`，175–176
+- `tin` 新闻阅读器，438
+- `VMware`，909–910
+- `vnc` 软件，918–919
+- `Wine` 模拟器，904
+- `XFree86`，70–72
+- `install/sendmail` 脚本，303–305
+- 即时通讯（IM），197
+  - `AIM`（AOL Instant Messaging，AOL 即时消息），201
+  - `ICQ`，198
+  - `kit`（KDE Instant Messenger，KDE 即时通讯工具），202
+    - 创建用户，202
+    - 发送和接收消息，203–204
+    - 用户状态，204
+  - `licq` 客户端，198
+    - 配置，200
+    - 创建用户，199
+    - 加入聊天群组，201
+    - 发送和接收消息，199–200
+    - 用户状态，201
+- 实例化类（C++），770
+- 互系统，19–21
+- 接口（网络）
+  - 检查状态，668–669
+  - 配置，667–668
+  - 启用和禁用，668
+- `interfaces=` 选项（`Samba`），554
+- 内部脚本，831
+- Internet（互联网）
+  - 聊天。参见 聊天程序
+  - 连接，142
+    - 虚拟接口，142–145
+    - `PPP`（Point-to-Point Protocol，点对点协议），145–161
+    - `PPPOE`（Point-to-Point Protocol over Ethernet，基于以太网的点对点协议），163–165
+    - `SLIP`（Serial Line Interface Protocol，串行线路互联网协议），167–168
+  - 历史，442–444
+  - IM（Instant Messaging，即时通讯），197
+    - `AIM`（AOL Instant Messaging，AOL 即时消息），201
+    - `ICQ`，198
+    - `kit`（KDE Instant Messenger，KDE 即时通讯工具），202–204
+    - `licq` 客户端，198–201
+  - 网站。参见 网站
+- `Internet Control Message Protocol`（`ICMP`，互联网控制报文协议），691
+- `Internet Message Access Protocol`（`IMAP`，互联网消息访问协议），271
+- Internet News。参见 `INN`
+- `Internet Protocol`（`IP`，互联网协议），272
+- Internet Relay Chat。参见 `IRC`
+- 组网，649
+  - 广播地址，650
+  - `CIDR`（Classless Interdomain Routing，无类域间路由），650–651
+  - 子网掩码，649
+  - 网络地址，650
+  - 网络类别，650
+  - 私有网络，653–654
+  - 路由，654–655
+  - 子网划分，651–652
+  - 超网划分，652–653
+- `Interprocess Communications`（`IPC`，进程间通信），855
+- 中断文件，891
+- `Inti` 软件包，996
+- `Inti-devel` 软件包，996
+- `-int` 选项（`mount` 命令），515
+- 无效的 `user=` 选项（`Samba`），550
+- `IO-APIC`（Advanced Programmable Interrupt Controller，高级可编程中断控制器），854
+- `.iP` 指令（`nroff`），732
+- `IP`（Internet Protocol，互联网协议），272，655
+  - 地址，648–649
+  - 别名，869
+  - 子网掩码，649
+  - 网络类别，650
+  - 隧道，670，869
+- `IP Aliasing` 选项（内核配置），869
+- `IP Tunneling` 选项（内核配置），869
+- `IPC`（Interprocess Communications，进程间通信），855
+- `ipchains` 命令，687
+  - 选项，689–691
+  - 示例程序列表，688–689
+  - 系统目标，686–687
+- `ipchains` 软件包，996
+- `ipfilter` 程序，752
+- `ipoff3d` 选项（POP），308–310
+- `iproute` 软件包，997
+- `iptables` 软件包，997
+- `iputils` 软件包，997
+- `IPX`，870
+- `ixutils` 软件包，997
+- `IRC`（Internet Relay Chat，互联网中继聊天），179–181，949
+- `ircII` 客户端，181–182
+  - 命令，183–190
+  - 使用 `ircrc` 文件定制，191–193
+  - 安装，182
+  - 启动，182–183
+- RFC 规范，179–180
+- 服务器，197
+- `ircII` 客户端，181–182
+  - 命令，183
+    - `alias`，184
+    - `away`，185
+    - `bye`，185
+    - `/channel`，185–186
+    - `/lsconnect`，186
+    - `/msg`，186
+    - `/exit`，185
+    - `/help`，186
+    - `/join`，185–186
+    - `/leave`，186
+    - `/list`，186–187
+    - `/msg`，186
+    - `/names`，187–188
+    - `/kick`，188
+    - `/part`，186
+    - `/quit`，185
+    - `/server`，188–189
+    - `/signoff`，185
+    - `/version`，189
+    - `/who`，189–190
+    - `/whois`，190
+    - `/whowas`，190
+  - 使用 `ircrc` 文件定制，191–193
+  - 安装，182
+  - 启动，182–183
+- `ircII` 软件包，997
+- `.ircc` 文件，191–193
+- `IrDA`，246，875
+- `IrDA` 实用工具，642
+- `ISDN` 软件包，997
+- `isdn-apps/soos` 软件包，997
+- `isdn` 脚本，246
