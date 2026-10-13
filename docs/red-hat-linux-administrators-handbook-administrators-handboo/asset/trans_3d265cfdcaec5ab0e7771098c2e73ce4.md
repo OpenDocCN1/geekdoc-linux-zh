@@ -1,0 +1,150 @@
+
+-   **Ident.** 如果 IdentityCheck 指令已启用并且客户端机器运行 identd，则这是客户端报告的身份信息。
+-   **Authuser.** 如果请求的 URL 需要成功的 Basic HTTP 身份验证，则这是用户名。
+-   **Date.** 请求的日期和时间。
+-   **Request.** 来自客户端的请求行，用双引号括起来。
+-   **Status.** 返回给客户端的三位 HTTP 状态码。
+-   **Bytes.** 返回给客户端的对象中的字节数，不包括所有 HTTP 头。
+
+日期字段可以具有以下格式：
+
+```
+date = [day/month:year:hour:minute:second zone]
+```
+
+例如，
+
+```
+[02/Jan/1998:00:22:01 -0800]
+```
+
+mod_log_config 模块中有四个指令可用，其中第一个如下：
+
+```
+TransferLog filename | " | " /path/to/external/program
+```
+
+此指令设置日志信息将被发送到的日志文件或程序的名称。默认情况下，日志信息采用 CLF 格式，可使用 LogFormat 指令进行自定义。
+
+当在虚拟主机容器内找到 TransferLog 指令时，日志信息会使用上下文中 found 的 LogFormat 指令进行格式化。但是，如果在同一上下文中找不到 LogFormat 指令，则使用服务器的日志格式。
+
+TransferLog 指令将日志文件路径或指向外部程序的管道作为参数。 如果未找到前导 / 字符，则假定日志文件名相对于 ServerRoot 设置。 例如，如果 ServerRoot 设置为 /etc/httpd，则以下内容告诉 Apache 将日志信息发送到 /etc/httpd/logs/access.log 文件：
+
+```
+TransferLog logs/access.log
+```
+
+当参数是向外部程序的管道时，日志信息将被发送到外部程序的标准输入（STDIN）。
+
+请注意，如果虚拟主机从主服务器继承 TransferLog 指令，则不会为其启动新程序。 如果使用程序，则它将在启动 httpd 的用户下运行。 如果服务器由 root 启动，则该用户为 root。 请确保该程序是安全的。
+
+## LogFormat 格式 [昵称]
+
+此指令设置由 TransferLog 指令命名的默认日志文件的格式。 默认值为 "%h %l %u %t \"%r\" %>s %b。" 如果在指令行中包含格式的昵称，您可以在其他 LogFormat 和 CustomLog 指令中使用它，而无需重复整个格式字符串。 定义昵称的 LogFormat 指令不会执行其他操作——也就是说，它只定义昵称；它实际上并不应用格式。
+
+## CustomLog 文件管道 格式或昵称
+
+与 TransferLog 指令类似，CustomLog 指令使您能够将日志信息发送到日志文件或外部程序。 然而，与 TransferLog 指令不同，它使您能够使用可作为参数指定的自定义日志格式。
+
+参数格式指定日志文件中每一行的格式。 格式可用的选项与 LogFormat 指令的参数完全相同。 如果格式包含任何空格（在几乎所有情况下都会如此），则应将其用双引号括起来。
+
+除了实际的格式字符串，您还可以使用 LogFormat 指令定义的格式昵称。 （昵称仅在 Apache 1.3 或更高版本中可用。）此外，TransferLog 和 CustomLog 指令可以在每个服务器中使用多次，以使每个请求都被记录到多个文件中。
+
+## CookieLog 文件名
+
+CookieLog 指令设置 cookie 日志记录的文件名。 文件名相对于 ServerRoot。 此指令仅为与 mod_cookies 兼容而包含，并且已弃用；因此，不建议使用此指令。 请改用用户跟踪模块的指令。 用户跟踪模块 mod_usertrack 在本章后面讨论。
+
+## 自定义服务器日志文件
+
+虽然 CLF 满足大多数日志要求，但有时您可能希望能够自定义日志数据。 例如，您可能希望记录访问您站点的浏览器的类型，以便您的 Web 设计团队确定应避免或使用的特定浏览器 HTML 类型。 或者，也许您想知道哪些网站正在向您的网站发送（引用）访问者。 所有这些在 Apache 中都很容易实现。 默认日志模块 mod_log_config 支持自定义日志记录。
+
+自定义格式使用模块的 LogFormat 和 CustomLog 指令设置。 LogFormat 和 CustomLog 的格式参数是一个字符串，可以包含文字字符和特殊的 % 格式说明符。 当在此字符串中使用文字值时，它们会被复制到每个请求的日志文件中。 然而，% 说明符会被相应的值替换。 特殊的 % 说明符描述如下：
+
+| 说明符 | 描述 |
+|---|---|
+| %b | 发送的字节数，不包括 HTTP 头。 |
+| %f | 请求的文件名。 |
+| %{variable}e | 环境变量 VARIABLE 的内容。 |
+| %h | 发出请求的远程主机。 |
+| %{IncomingHeader}i | IncomingHeader 的内容——即发送到服务器的请求中的头部行。 末尾的 i 字符表示这是一个客户端（传入）头部。 |
+| %l | 如果 IdentityCheck 指令已启用并且客户端机器运行 identd，则这是客户端报告的身份信息。 |
+| %{MODULE_NOTE}n | 来自另一个模块的注释 MODULE_NOTE 的内容。 |
+| %{OutgoingHeader}o | OutgoingHeader 的内容——即回复中的头部行。 末尾的 o 字符表示这是一个服务器（传出）头部。 |
+| %p | 提供请求的端口。 |
+| %P | 为请求提供服务的子进程的进程 ID。 |
+| %r | 请求的第一行。 |
+| %s | 服务器响应请求返回的状态。 当请求被重定向时，此格式说明符的值仍为原始请求状态。 如果您想存储重定向请求状态，请改用 %>s。 |
+
+## 继续
+
+| 说明符 | 描述 |
+|---|---|
+| %t | 请求的时间。 时间格式与 CLF 格式相同。 |
+| %{format}t | 时间，以 format 给出的形式。 （请参阅 strftime 手册页。） |
+| %T | 提供请求所需的时间，以秒为单位。 |
+| %u | 如果请求的 URL 需要成功的 Basic HTTP 身份验证，则用户名是此格式说明符的值。 如果服务器在身份验证尝试后返回 401 状态（身份验证 required），则该值可能无效。 |
+| %U | 请求的 URL 路径。 |
+| %v | 请求到达的服务器或虚拟主机的名称。 |
+
+您可以在前面每个说明符中包含条件信息。 条件可以是某些 HTTP 状态码的存在（或不存在）。 例如，假设您想记录所有指向不存在页面的引用 URL。 在这种情况下，服务器会生成 404 状态（未找到）头。 因此，要记录引用 URL，您可以使用格式说明符：
+
+```
+'$404{Referer}i'
+```
+
+同样，要记录导致异常状态的引用 URL，您可以使用以下内容：
+
+```
+'$!200,304,302{Referer}i'
+```
+
+请注意使用 ! 字符来表示服务器状态列表的缺失。
+
+同样，要在 CLF 格式说明符末尾包含附加信息，您可以扩展 CLF 格式，该格式由格式字符串定义：
+
+```
+"%h %l %u %t \"%r\" %>s %b"
+```
+
+例如，以下内容记录 CLF 格式数据，并在每个日志条目中添加客户端提供头部中 found 的 Referer 和 User-agent 信息：
+
+```
+"%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\""
+```
+
+## 使用错误日志
+
+如果您不记录错误，您将无法确定出了什么问题以及错误发生在哪里。 有趣的是，错误日志记录在 Apache 核心中受支持。 ErrorLog 指令使您能够记录 Apache 遇到的所有类型的错误。 您可以指定文件名或使用 syslog 守护进程（syslog）记录所有错误。 例如，
+
+```
+ErrorLog /logs/error_log
+```
+
+会导致 Apache 将错误消息写入 /logs/error_log 文件。 要记录 syslog 设施的使用，请使用以下内容：
+
+```
+ErrorLog syslog
+```
+
+使用 LogLevel 指令，您可以指定 Apache 应向 syslog 发送的消息类型。 例如，以下指令指示 Apache 将调试消息发送到 syslog：
+
+```
+ErrorLog syslog
+LogLevel debug
+```
+
+如果您想通过 syslog 将调试消息存储在不同的文件中，则需要修改 /etc/syslog.conf。 例如，
+
+```
+*.debug    /var/log/debug
+```
+
+在 /etc/syslog.conf 中添加此行，重新启动 syslogd（killall -HUP syslogd），Apache 将使您能够将所有 Apache 调试消息存储到 /var/log/debug 文件。 还请注意，您可以将 LogLevel 设置为以下任何设置：
+
+-   emerg. 紧急消息
+-   alert. 警告消息
+-   crit. 严重消息
+-   error. 错误消息
+-   warn. 警告
+-   notice. 通知消息
+-   info. 信息消息

@@ -1,0 +1,10 @@
++   - **share.** The Samba server expects a password with each request for a service. No usernames are required. Use this setting if your Windows systems and the Linux Samba server do not have the same set of username/password pairs.
++   - **server.** The Samba server tells the client to supply a username/password pair, just like when you set this parameter to user, but the Samba server does not verify the username/password pair itself. It uses another SMB server to authenticate the user. For this reason, when you set security to server, you must also set the password server parameter, which is used to name a SMB server that will be responsible for authentication. If you want to centralize your usernames/passwords for SMB activity on a Windows NT Server, set the password server parameter to point to the Windows NT Server.
+
+> **Caution**
+> 
+> If you use a Windows NT Server as your password server to do all the authentication for Samba, make sure that you do not have the guest account on the Windows NT system enabled. If the guest account is enabled, any time that a username/password pair fails because of an incorrect password, Windows NT will still provide a valid response to the Samba server, because Windows NT will simply assign guest privileges to the failed authentication attempt and return a success response to the Samba server.
+
+The default setting for security is user, which means that a client has to supply a plain-text password along with a username. The Samba server verifies this username/password pair by using the /etc/password file. However, the later versions of Windows 9x and Windows NT OSs don't use plain-text (also known as clear-text) passwords, by default. Microsoft decided to use encrypted passwords as part of upgrades to its OS service packs. Because these Windows clients do not supply plain-text passwords, they can't be verified; therefore, the Samba server refuses to service them. To remedy this problem, you have two options:
+
++   - Enable plain-text passwords on Windows systems. This option is acceptable if any of the following conditions is true:

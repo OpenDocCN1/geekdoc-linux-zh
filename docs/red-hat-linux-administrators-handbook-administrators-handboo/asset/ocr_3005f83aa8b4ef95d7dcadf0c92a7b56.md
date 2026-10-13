@@ -1,0 +1,120 @@
+# 612 Index
+
+Apache Web server (continued)
+- Apache Sockets layer (ASL), 380–398
+- server-side include (SSI) risk, 379
+- TopJaw risk, 370
+- server-side includes (SSI)
+- enabling, 330–334
+- disabling, 327, 328
+- fix: attacks, adding new icon, 329
+- flagging, 373
+- filter: option: commands, 329–338
+- handler, adding new, 329–329
+- parsing for a directory, enabling, 330
+- protecting, 334
+- cgi, 334
+- variables, 335–336
+- statistics: view, 362–365, 313–317
+- support: code, 317–23, 381
+- stopping, 339
+- support: tests, 292–294, 322
+- ab, 293
+- benchmark, 293–294
+- htpasswd, 294
+- ab, 294
+- httpd, 294
+- log: receive, 294
+- logging, 294
+- testing, 293, 320–321
+- virtual: Web site, 277–282, 331–341
+- Web page, 285
+- spamming: accept, 292–293, 366
+- stopping the server, 376
+- starting the server, 311–319
+- stopping the server, 319
+- Apache, SSI, 380
+- APACHE, 286–291
+- Apache Micrositemo filesystem support option, 515
+- stopping a web server, 369
+- args type, 294
+- archiving: family names, 81
+- ARU: lint support option, 510
+- asterisk: paragraph, 81–82
+- asterisk (", 513
+- ascii, 131, 321, 327, 245, 341, 343, 439, 468
+- at, command, 131
+- awk command, 131
+- Authenticator: directive, 356
+- Authentication
+- Apache Web server, 351–360
+- host-based, 355–355
+- FTP/FTP-specified basic authentication, 355
+- mod_auth, 355
+- Pluggable Authentication Module (PAM), 434–440
+- SunRise, 267–270
+- SunTrust/ID directory, 356, 359
+- Auth basic directive, 358
+- Auth type directive, 358
+- AUID key files directive, 355–358
+- Authoritative: and Primary Option, 215
+- autogenous keyword, 280
+- automatic: authentication, credential, option, 193
+- Autorepeat option, XF86Config, 409
+- a
+- backing up, 471
+- BackWords, 482–484
+- banner: keyword, 230
+- BANNER keyword, 230
+- base: file info, filesystem, 105
+- base info as user, account, 76
+- baserel, 55
+- Baur:ate option, XF86Config, 411
+- Berkeley: Internet Name Daemon (BIND), 164
+- binary: numbers, not conversion, 48
+- bit: on/off (ND), 180
+- BIOS
+- booting: from CD-ROM, 6–7
+- processor-power: option, 428
+- booting AND operation, 154–156
+- BlankItems: install: option, 193
+
+Board: base option, XF86Config, 415
+- bounces: install, actions, 27
+- bourne
+- bcheck: data custom, 20
+- creating from Linux, 8
+- creating from Windows, 28
+- Booting: from U4, 28
+- boot: header: program, 20, 23, or see LIAO
+- boot messages: viewing, 22, 23
+- b
+- BASH Web server, 22, 339
+- bash: local: program, 49, 25
+- proc: header, 169
+- in: proc, 139
+- in: proc: program, 24–24
+- in: in: proc: in: 24–28
+- in: in: proc: script, 29
+- in: in: proc: in: 24–28
+- in: script: run: in: proc: run: script, 29
+- in: in: proc: run: in: 24–28
+- in: script: run: in: proc: run: script, 29
+- in: proc: in: 24–28
+- in: proc: in: 24–28
+- in: proc: in: 24–28
+- biff, 147
+- BIFF option, 147
+- bionic, 46
+- BitBlt: API, 46, 183
+- bison
+- blit: in: proc: header, 24
+- bison: in: proc: header, 24
+- Bison: in: proc: header, 24
+- blit: in: proc: header, 24
+- bison: in: proc: header, 24
+- bison: in: proc: header, 24
+- bison: in: proc: header, 24
+- bison: in: proc: header, 24
+- bison: in: proc: header, 24
+- bison: in: proc: header, 24

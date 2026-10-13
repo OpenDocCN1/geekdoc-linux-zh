@@ -1,0 +1,311 @@
+
+## 索引
+- TCP/IP 配置, 18–19
+- 触发器, 426–429
+- 未回答, 9
+- 接口类型, 222–223
+- IPXOS, 403
+- Intel
+- 进程间通信 (IPC), 503
+- interfaces 参数, Samba, 259
+- Interface 选项卡, 网络配置器 (netcfg), 147–148
+- 互联网服务提供商 (ISP) 4
+- irc-cd,
+- SAS,
+- DNS 服务器, 161
+- IP 地址, 147
+- 虚拟邮件服务, 504
+- 互联网协议 (IP), 149
+- IP 地址, 140
+- IP：高级路由器选项, 507
+- IP 修改支持选项, 508
+- IP：Alice 大窗口服务器, 509
+- IP：丢弃服务器路由帧选项, 509
+- IP：丢弃路由小帧选项, 509
+- IP：丢弃本地二级帧选项, 509
+- IP：多播选项, 507
+- IP：按主机更新路由器选项, 507
+- IP：反向 ARP 选项, 507
+- IP：TCP/IP 协议支持选项, 508–509
+- IP 隧道选项, 508
+- IP 地址
+  - A 类网络, 135–136
+  - B 类网络, 137
+  - C 类网络, 137–138, 155–157
+  - 配置 TCP/IP, 18–19
+  - DNS 及, 161–168
+  - FTP 服务器访问及, 226–227
+  - 伪装, 479–476
+  - 拾取过滤器, 477–480
+  - 路由, 137–144, 160
+  - 子网划分, 473–474
+  - 交换机, 150–160
+  - 子网及, 138–141
+  - Windows 及, 161–167
+- IP 转发, 141, 158, 160, 475
+- IP 别名, 147
+- IP：进程间通信, 503
+- ispacel- 命令, 132
+- ipxalias, 478–480
+- Sedarian, 478
+- IPX 协议选项, 509
+- IRIX/SNFS 及, 371
+- IRQ（中断请求）, 149
+- IRQ/设备支持, 512–513
+- ISO 8602 CDRRIM 文件系统支持选项, 515
+- ISP，参见 互联网服务提供商 (ISP)
+- J
+- JoyStick 支持选项, 515
+- K
+- 键盘，运行级别操作, 28
+- Keda & Windows 程序, 420
+- keepalive 指令, 315
+- KeepAlive! 超时指令, 315
+- kernelcfg 工具, 522
+- kernel
+  - 自定义配置
+    - 块设备, 504–506
+    - 字符设备, 513–514
+    - 代码模块, 510–511
+    - cpu 模块, 518
+    - cpu 设备, 518
+    - CPU, 515
+    - cpu 支持选项, 509–510
+    - 文件系统, 520
+    - 文件系统, 521
+    - PCI 和 Sbus 支持, 504
+    - present, 518
+    - SCSI 支持选项, 509–510
+    - 声音, 518
+    - 使用 Make, menuconfig, 519
+  - Kermit
+    - 发送和接收支持, 515
+  - IP 转发，支持, 512
+  - MISC 配置, 475
+  - 多路复用, 140
+  - 分区, 321–322
+  - 升级
+    - 使用新内核启动, 496–497, 520–521
+    - LILO 配置, 495–496
+    - 安装所需软件包, 492
+    - 准备工作, 493–494
+    - 重建，创建 nidos, 492, 521
+    - 版本，确定, 495–496
+- kernel 自动支持选项, 515
+- kernel 支持 a out-faneries 选项, 503
+- Kernel 支持 MIHC-based kernel 选项, 503
+- kernel 程序, 501–502
+- kerneliuser 安装选项, 500
+- kbconfig 命令, K3RC, Config, 498–510
+- Kirkcast 模型安装, 505
+- kill 命令, 117–122, 301–302
+- killd 命令, 100, 122–123
+- KCMYOSI vslided, 441
+- L
+- LAN IP 地址, 473–474
+- LanMan/Server, 打印机 (SMB) 选项, 278
+- language/Printer 指令, 312
+- Lass, ModIFIEDS8SAS 可用, 335
+- Learner, 配置, 66, 301–302
+- LILO
+  - config, 495–496
+  - 安装选项, 20–21
+  - Linux 内核覆盖, 36
+- limit 关键字, 228–229
+- LINUXFS 关键字, 452
+- link, 更改权限/所有权, 54, 55–59
+- 链接, 54–55
+- linuxconf, 63–85
+  - login, 478
+  - 模块, 64–73
+  - 多用户配置文件, 78–81
+  - 系统启动时使用, 81–83
+  - 用户配置文件, 74–78
+  - 基于 Web 的远程访问, 74–75
+  - L1 步骤, 74
+  - initd 文件, 64–67
+  - interfaces
+    - 基于图形的, 69–70
+    - 基于 tar 的, 67–69
+    - Web, 70–71
+  - menu 配置, 67–68, 69–70
+  - 模块
+    - configng, 74–75
+    - 创建, 74
+    - 下载, 74
+    - 安装, 74
+    - 表格, 65–66
+  - Service 支持选项, 68
+  - 打印, 65
+- Linux 配置选项, 41
+- 显示密码, 434
+- L1 步骤, 74
+- tool groups 关键字, 447
+- 本地打印服务器, 502–504
+- Locale 选项, 189
+- local 模块参数, Samba, 259
+- LocalsBackup, 449
+- Lodge 程序, 62
+- log 命令, Samba, 232
+- log 文件系统, Samba, 232, 267
+- log transfer 关键字, 483–485
+- log-format 指令, 306–307, 363–364
+- loginfo
+  - 关键字, 229
+  - 身份验证, 89
+  - 默认 shell, 102
+  - 禁用用户账户, 100
+  - 显示用户, 93
+  - 仅执行文件, 55
+  - 限制同时, 228–229
+  - 消息, 136–272
+  - 尝试次数, 229
+  - 无密码, 17
+  - 时间限制, 438–440
+- LogIn, sendmail 选项, 194
+- Long-Lived 指令, 305, 367
+- Long 路径参数, 346
+- log 前缀参数, Samba, 260
+- log 级别, 394
+- logserverctl, 294
+- logserverctl, 169
+- [17–120]
+- logging log, 362–369
+- mapping log, 369
+- checking, 721
+- carrying log, 365–366
+- directives, 配置服务器, 304–305, 363–364
+- error log, 367–368
+- maintenance log, 368–369
+- FIP-F-221, 251
+- Samba, 227, 261
+- statistical, 214
+- Mini, 128–129
+- tail 实用工具, 129
+- Lookup, dce 支持选项, 506
+- lookupdict 网络, 156, 167, 169
+- http 命令, 279
+- by 命令, 279
+- [2–11304] 45–46
+- list URL, 59, 241, 955
+- hard 参数, 437
+- [21] hard, 437
+- LWP 文本, 297
+- Lyle Web 浏览器, 320
+- 1: measure, 在 sendmail 中定义, 191
+- imagemason.using, 9
+- image server.using, 9
+- mages codes
+  - 用于 Apache/Warning Message, 237
+  - 用于 messages 文件, 231
+- magic 文件, Apache Web 服务器, 299
+- [21] Mavlink, 使用选项, 518
+- mail rfc mta, [21]130 (MARS), 216
+- [21]200, 216
+- Mail Exchange (MX) 记录, 185–186
+- Mailer, Apache, Limitaccess, 66
+- maker 定义, sendmail, 192
+- make bridge 命令, 498, 519
+- make config 命令, 498, 519
+- make mcm 命令, 520
+- make mcmsscript 命令, 519
+- make mcmssold 命令, 520
+- make mcmsscript 命令, 498
+- make scsip 脚本, 519–520
+- makefile 标志, 269–299
+- [21] makefile, 188
+- maketest Perl 脚本, 172–182
+- map, 在 sendmail 中定义, 197
+- mapping
+  - database (在 net/mail/domainname 中使用), 200
+  - MAPPING, IPS 服务器, 334
+  - MAPS (Mail Address Protocol, Domain), 216–217
+- mas, 266
+- masqdaping, PF addresse, 474–476
+- [21]130, [21]130
+- Master/primary DNS [21]n 配置, 194–165
+- master(GTID), sendmail 选项, 194
+- MasVesvessign, [21]130, 519
+- may state 参数, Samba, 37, 267
+- max-lines 指令, 316
+- MacLaren/Client, sendmail 选项, 194
+- Mac[21]Fap/Con, sendmail 选项, 194
+- Max[21]gLen/Buf [21]2, 116
+- Max[21]gLen/Path 指令, 316
+- Max[21]spacers 指令, 316
+- Max shutdown, 特权选项, 77
+- Max vertch 网络缓存, 特权选项, 77
+- Max 使用限制, 特权选项, 77
+- May 使用于 vectors, 632
+- MCTS [21]rressign, configing, 463–664
+- MDI5, [21]n 支持, 250
+- mem, 4
+- memory, 4
+- ansties upong to utilty, 126
+- 内存节省选项, 188
+- Memory Type Range Register (MTRR) [21]n 支持, 499–501
+- Mescoping Design Manager (MDD), 463–664
+- message, 关键字, 320–33
+- messages, [21]n 查看, 22, 23
+- M F row, sendmail 选项, 194
+- MIME [21]x, 372–422, 484–485
+- MIME [21]n, Bock, 扩展选项, 515
+- Mime, Apache Web 服务器及, 308–309, 312, 329
+- MiniRss, [21]Bock, sendmail 选项, 194
+- MiniC[21]p 服务器选项, 515
+- Mini[21]1, [21]n, sendmail 选项, 194
+- Minis[21]p [21]n, 516
+- m [21]n, 128–129
+- mbrn [21]26, 27, 30, 301
+- mbrnsite, 10, 497
+- m [21]2 命令, 314
+- mbr [21]sint 命令, 491, 955
+- mbrn [21]s, [21]m, 324
+- [21]s, 352
+- map, [21]m modie, 352
+- map, [21]g modie, 352
+- ModeL link [21]n, X266Config, 412–414
+- ModeL [21]g, X266Config, 413
+- mod, [21]n, 412–414
+- mod [21]n, m [21]g [21]2, 320
+- mod, m, m [21]n, 320
+- mod, m [21]n, 297
+- mod, [21]n [21]g, 299
+- mod, [21]n progran, 301
+- mod, [21]n [21]g, 341
+- mod [21]n 模块
+  - 编译和安装, 381
+  - 配置, 382–383
+  - 为 Apache 服务器贡献, 383–388
+  - 定义, 381
+  - [21]S [21]n 库, 381–382
+  - M[21]n [21]n, 382
+  - mod_S [21]n, 355
+  - mod_t [21]n, 356
+- monitor, 403, 451, 411–416
+- model 模式, 356
+- module 模式, 356
+- Mouse 支持选项, 316
+- 移动文件和目录, 61
+- [21]n, [21]2
+- m [21]n, 186, 269
+- m [21]n, 186, 269
+- m [21]n [21]n, 412
+- [21]n, 475
+- [21]n, 354
+- [21]n, 412
+- [21]n, 506
+- [21]n, 61
+- [21]n [21]g [21]n, 340–361
+- name, [21]n, 247
+- [21]n [21]n, 247
+- [21]n [21]n [21]n, 247
+- [21]n [21]n, 147, 169
+- [21]n [21]n [21]n, 162–163
+- [21]n [21]n [21]n, 412
+- [21]n [21]n, 147–372
+- [21]n [21]n, 317
+- [21]n [21]n, 215
+- [21]n [21]n, 215
+- [21]n [21]n, 215
+- N[21]n, 218

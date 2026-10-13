@@ -1,0 +1,33 @@
+# su
+
+Syntax:
+
+```
+su [-] [username]
+```
+
+The su command can be used to change into another user. For example,
+
+```
+su john
+```
+
+allows you to be the user john.
+
+The most common use of this command is to become root. For example, if you run this command without any username argument, it assumes that you want to be root and thus prompts you for the root password. If you enter the correct root password, su will run a shell using the root's UID (0) and GID (0). This effectively allows you to become the root user and perform administrative tasks. This command is very useful if you have only Telnet access to the server. You can Telnet into the server as a regular user and use it to become root to perform system administrative tasks. If you supply the -option, the new shell is marked as the login shell. After you become the root user, you can su to other users without entering any password.
+
+# useradd
+
+To create a user account from your command line, you can run the useradd command. For example, to create a user called newuser, you can run this command as follows:
+
+```
+useradd newuser
+```
+
+This adds a new entry in /etc/passwd (and in /etc/shadow if you use shadow passwords) using system defaults. For example, when I run the preceding command on my Red Hat system, /etc/passwd shows a new line such as the following:
+
+```
+newuser::!:506:506::/home/newuser:/bin/bash
+```
+
+If you remember the /etc/passwd fields from the earlier discussion, you will see that the password field (the second field) is set to !. This means
