@@ -1,0 +1,38 @@
+You will also have to make a copy of the System.map file, linking it to the System.map symbolic link.
+
+```
+cp arch/i386/boot/System.map  /boot/System.map-2.4.22-1
+ln -s /boot/System.map /boot/System.map-2.4.22-1
+```
+
+The following commands show a basic compilation and a manual installation. First, all previous binary files are removed with the clean option. Then the kernel is created using the bzImage option. This creates a kernel program called bzImage located in the arch/i386/boot directory. This kernel file is copied to the /boot directory and given the name vmlinuz-2.4.22-1 Then a symbolic link called /boot/vmlinuz is created to the kernel vmlinuz-2.4.22-1 file. Next, create the modules and install them:
+
+```
+make dep
+make clean
+make bzImage
+make modules
+make modules_install
+cp arch/i386/boot/bzImage /boot/vmlinuz-2.4.22-1
+ln -s /boot/vmlinuz-2.4.22-1 /boot/vmlinuz
+cp System.map /boot/System.map-2.4.22-1
+ln -s /boot/System.map-2.4.22-1 /boot/System.map
+```
+
+# Kernel Boot Disks
+
+Instead of installing the kernel on your system, you can simply place it on a boot disk and boot your system from that disk. In that case, you just have to create a boot disk using the bzdisk option. This option installs the kernel on a floppy disk placed in your floppy drive. The kernel resides on the floppy disk, and to use that kernel, you boot your system from the floppy (the kernel is not installed on your root partition as it is with the install option).
+
+```
+make bzdisk
+```
+
+Be sure you have a floppy disk in the floppy drive. The make bzdisk command copies the image directly to the floppy disk. You still have to create and install your modules. Be sure that the bzImage file is small enough to fit on a floppy. If not, you will have to reconfigure your kernel, compiling as many features as possible as modules instead of as part of the kernel.
+
+```
+make clean
+make bzImage
+make bzdisk
+make modules
+make modules_install
+```

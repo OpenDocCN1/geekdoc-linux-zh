@@ -1,0 +1,7 @@
+# User Accounts
+
+You never directly access a Linux system. Instead, Linux sets up an interface called a *shell* through which you can interact with it. Linux is a multi-user system that can support several user shells at once, accommodating several users simultaneously, each connected through their own terminal or from a remote system.
+
+User access to the system is provided through *accounts*. Unix, upon which Linux is based, was first used on large minicomputers and mainframes that could accommodate hundreds of users at the same time. Using one of many terminals connected to the computer, users could log in to the Unix system using their usernames and passwords. To gain access to the system, you needed to have a user account set up for you. A system administrator created the account, assigning a username and password for it. You then used your account to log in and use the system.
+
+You can, in fact, create other new user accounts using special system administration tools. These tools become available to you when you log in as the root user. The *root user* is a special user account reserved for system administration tasks, such as creating users and installing new software. Basic system administration operations are discussed briefly in Chapters 4 and 5, but they are discussed in more detail in Chapters 27-33.

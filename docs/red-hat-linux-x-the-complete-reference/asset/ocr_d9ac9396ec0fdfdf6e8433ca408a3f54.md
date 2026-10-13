@@ -1,0 +1,61 @@
+```
+zone "\[xfec00000000000000/64].IP6.ARPA" in {
+    type master;
+    file "fec.ip6.arpa";
+};
+```
+
+A reverse mapping file then uses the same bit level format for the interface addresses.
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    92050300 ; Serial (yymmddxx format)
+    10800 ; Refresh 3hHours
+    3600 ; Retry 1 hour
+    3600000 ; Expire 1000 hours
+    86400 ) ; Minimum 24 hours
+
+@ IN NS turtle.mytrek.com.
+\[x00080800200C417A/64] IN PTR turtle.mytrek.com.
+\[xfEDCBA9876543210/64] IN PTR rabbit.mytrek.com.
+\[x00E018F73466007D/64] IN PTR lizard.mytrek.com.
+```
+
+# IPv6 IP6.INT Reverse Mapping Format
+
+The older IP6.INT format uses a nibble format for the IPv6 address. The hexadecimal address is segmented into each hex number, separated by a period and written in reverse. This gives you 32 hex numbers in reverse order. The IP6.INT version for the lizard address is shown here.
+
+```
+FEC0:0000:0000:0000:0E00:18F7:3466:007D    lizard IPv6 address
+0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f           lizard network address
+D.7.0.0.6.6.4.3.7.F.8.1.0.E.0.0           lizard interface address
+```
+
+The zone entry for a reverse mapping in the named.conf file with an IP6.INT extension would use the reverse nibble format for the network address.
+
+```
+zone "0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f.IP6.INT" in {
+    type master;
+    file "fec.ip6.int";
+};
+```
+
+The reverse zone file then uses the reverse nibble format for each interface address.
+
+```
+@ IN SOA turtle.mytrek.com. hostmaster.turtle.mytrek.com. (
+    92050300 ; Serial (yymmddxx format)
+    10800 ; Refresh 3hHours
+    3600 ; Retry 1 hour
+    3600000 ; Expire 1000 hours
+    86400 ) ; Minimum 24 hours
+
+$ORIGIN 0.0.0.0.0.0.0.0.0.0.0.0.0.0.c.e.f IN NS turtle.mytrek.com.
+A.7.1.4.C.0.0.2.0.0.8.0.8.0.0.0 IN PTR turtle.mytrek.com.
+0.1.2.3.4.5.6.7.8.9.A.B.C.D.E.F IN PTR rabbit.mytrek.com.
+D.7.0.0.6.6.4.3.7.F.8.1.0.E.0.0 IN PTR lizard.mytrek.com.
+```
+
+# Localhost Reverse Mapping
+
+A localhost reverse mapping file implements reverse mapping for the local loopback interface known as

@@ -1,0 +1,40 @@
+# Fixed Addresses
+
+Instead of using a pool of possible IP addresses for your hosts, you may want to give each one a specific addresses. Using the DHCP server still gives you control over which address will be assigned to a given host. However, to assign an address to a particular host, you need to know the hardware address for that host's network interface card (NIC). In effect, you have to inform the DHCP server that it has to associate a particular network connection device with a specified IP address. To do that, the DHCP server needs to know which network device you are referring to. You can identify a network device by its hardware address, known as its MAC address. To find out a client's hardware address, you log in to the client and use the ifconfig command to find out information about your network devices. To list all network devices, use the -a option. If you know your network device name, you can use that. The next example will list all information about the first Ethernet device, eth0:
+
+```
+ifconfig eth0
+```
+
+This will list information on all the client's network connection devices. The entry (usually the first) with the term HWaddr will display the MAC address. Once you have the MAC address, you can use it on the DHCP server to assign a specific IP address to that device.
+
+In the dhcpd.conf file, you use a host declaration to set up a fixed address for a client. Within the host declaration, you place a hardware option in which you list the type of network connection device and its MAC address. Then you use the fixed-address parameter to specify the IP address to be assigned to that device. In the following example, the client's network device with a MAC address of 08:00:2b:4c:29:32 is given the IP address 192.168.0.2:
+
+```
+host rabbit {
+    option host-name "rabbit.mytrek.com"
+    hardware ethernet 08:00:2b:4c:29:32;
+    fixed-address 192.168.0.2;
+}
+```
+
+You can also have the DHCP server perform a DNS lookup to obtain the host's IP address. This has the advantage of letting you manage IP addresses in only one place, the DNS server. Of course, this requires that the DNS server be operating so that the DHCP server can determine the IP address. For example, a proxy server connection (which can provide direct Web access) needs just an IP address, not a DNS hostname, to operate. If the DNS server were down, the preceding example would still assign an IP address to the host, whereas the following example would not:
+
+```
+host rabbit {
+    option host-name "rabbit.mytrek.com"
+    hardware ethernet 08:00:2b:4c:29:32;
+    fixed-address rabbit.mytrek.com;
+}
+```
+
+You can also use the host declaration to define network information for a diskless workstation or terminal. In this case, you add a filename parameter specifying the boot file to use for that workstation or terminal. Here the terminal called myterm obtains boot information from the server turtle.mytrek.com.
+
+```
+host myterm {
+    option host-name "myterm.mytrek.com"
+    filename "/boot/vmlinuz";
+    hardware ethernet 08:00:2b:4c:29:32;
+    server-name "turtle.mytrek.com";
+}
+```

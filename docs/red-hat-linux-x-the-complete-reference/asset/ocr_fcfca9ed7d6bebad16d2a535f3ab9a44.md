@@ -1,0 +1,17 @@
+no graphics capabilities, but in every other respect are fully functional Web browsers.
+
+To search for files on FTP sites, you can use search engines provided by Web sites, such as Yahoo!, Excite, Google, AltaVista, or Lycos. These usually search for both Web pages and FTP files. To find a particular Web page you want on the Internet, you can use any of these search engines or perform searches from any number of Web portals. Web searches have become a standard service of most Web sites. Searches carried out on documents within a Web site may use local search indexes set up and maintained by indexing programs like ht://Dig. Sites using ht://Dig use a standard Web page search interface.
+
+# Mozilla
+
+Hypertext databases are designed to access any kind of data, whether it is text, graphics, sound, or even video. Whether you can actually access such data depends to a large extent on the type of browser you use. Mozilla is a browser based on the Netscape core source code known as mozilla. In 1998, Netscape made this source code freely available under the Netscape Public License (NPL). The Mozilla Project, based at www.mozilla.org, has developed a commercial-level browser based on mozilla source code. Mozilla is developed on an open source model much like Linux, KDE, and GNOME. Developers can submit modifications and additions over the Internet to the Mozilla Web site. Mozilla releases are referred to as Milestones. Mozilla is currently released under both the NPL license for modifications of mozilla code and the MPL license (Mozilla Public License) for new additions. In current releases, Red Hat will use Mozilla as its primary browser, in place of Netscape.
+
+Mozilla is an X Window System application you operate from your desktop. Red Hat has a Mozilla entry in the desktop's Internet menu. Mozilla displays an area at the top of the screen for entering a URL address and a series of buttons for various Web page operations. Drop-down menus provide access to Mozilla features. To access a Web site, you enter its address in the URL area and press ENTER. The icon bar across the top of the browser holds buttons for moving from one page to another and performing other operations (see Figure 14-1).
+
+![](bbox=[0.18, 0.62, 0.6, 0.89])
+
+Figure 14-1: Mozilla Web browser
+
+Mozilla refers to the URLs of Web pages you want to keep as bookmarks, marking pages you want to access directly. The Bookmarks menu enables you to add your favorite Web pages. You can then view your bookmarks and select one to view. You can also edit your list of bookmarks, adding new ones or removing old ones. History is a list of previous URLs you have accessed. If you want to return to a Web page you did not save as a bookmark, you can find it in the History list. Additionally, you can use Mozilla to receive and send mail, as well as to access Usenet newsgroups. Mozilla also supports advanced features like cookie, form, image, and password management. You can elect to suppress cookies from sites, automatically fill in forms, not display site images, and set up login information such as usernames and passwords for selected sites.
+
+The Preferences menu in Mozilla enables you to set several different kinds of preferences for your browser. You can set preferences for mail and news, the network, and security, as well as general preferences. In general preferences, you can determine your home page and how you want the toolbar displayed. In the Mail/News Account Settings, you can enter the mail and news servers you use on the Internet. Mozilla can

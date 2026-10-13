@@ -1,0 +1,1 @@
+Note When you start slrn for the first time, you will have to create a .jnewsrc file in your home directory. Use the following command: `slrn -f .jnewsrc -c create`. Also, you will have to

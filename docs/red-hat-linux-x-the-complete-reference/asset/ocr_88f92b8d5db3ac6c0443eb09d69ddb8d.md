@@ -1,0 +1,20 @@
+# Java for Linux: Blackdown
+
+To develop Java applications, use Java tools, and run many Java products, you must install the Java 2 Software Development Kit (SDK) and the Java 2 Runtime Environment (JRE) on your system. Together, they make up the Java 2 Platform, Standard Edition (J2SE). Sun currently supports and distributes Linux versions of these products. You can download them from Sun at java.sun.com/j2se and install them on your system. You can even select an RPM package version for easy installation on Red Hat. The current version of the J2SE is known as Java version 1.4. An earlier version, 1.2, will not work on Red Hat 7.0, though 1.3 will work on 7.1 and up.
+
+Though Sun supports Linux versions of Java, more thorough and effective Linux ports of Java can be obtained from the Blackdown project at www.blackdown.org. The Blackdown project has ported the J2SE, including versions 1.4 of the SDK and JRE. They have also ported previous versions of Java, including 1.1, 1.2, and 1.3. More information and documentation is also available at this Blackdown Web site. The SDK and JRE 1.4 are usually available in the form of compressed archives, .tar.bz2. You use the `bunzip2` command to decompress the file and the tar `xvf` command to extract it. Extraction should be done in the `/usr/local` file. Follow the instructions in the `INSTALL` file to install the software.
+
+Numerous additional Java-based products and tools are currently adaptable for Linux. Tools include Java 3D, Java Media Framework (JMF), and Java Advanced Imaging (JAI), all Blackdown projects (see Table 14-3). Many of the products run directly as provided by Sun. These include the HotJava Web browser and the Java Web server. You can download several directly from the Sun Java Web site at java.sun.com.
+
+Table 14-3: Blackdown Java Packages and Java Web Applications
+
+| Application | Description |
+|---|---|
+| Java 2 Software Development Kit (SDK) 1.4 | A Java development environment with a compiler, interpreters, debugger, and more. Part of the Java 2 Platform. Download the Linux port from www.blackdown.org |
+| Java 2 Runtime Environment 1.4 (J2RE) | A Java Runtime Environment used to run Java applets. Part of the Java 2 Platform. Download the Linux port from www.blackdown.org |
+| Java 2 Platform SE (J2SE) for Linux 1.4 | Java 2 Platform, Standard Edition, which includes Java 2 SDK and RE. Download the Linux port from www.blackdown.org |
+| Java 3D for Linux | Sun's 3D Application Program Interface for 3D Java programs. Download the Linux port from www.blackdown.org |
+| Java Media Framework (JMF) for Linux | Enable audio and video to be added to Java. Download the Linux port from www.blackdown.org |
+| Java Advanced Imaging (JAI) for Linux | Java Advanced Imaging API. Download the Linux port from www.blackdown.org |
+| Java 1.1 Development Kit (JDK) and Java 1.1 Runtime Environment (JRE) | The older Java 1.1 development environment with a compiler, interpreters, debugger, and more. Download the Linux port for your distribution's update through www.blackdown.org |
+| HotJava browser | Sun's HTML 3.2- and JDK 1.1-compliant Web browser. Download the Linux version from java.sun.com |

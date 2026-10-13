@@ -1,0 +1,1 @@
+Note The Privacy Web proxy filters Web content to protect user privacy, intercepting unwanted advertising or blocking invasive cookies. Privacy will execute rules listed in its action files, such

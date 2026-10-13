@@ -1,0 +1,48 @@
+```
+$ cat *.c > myprogs &
+[2] 548
+$ jobs
+[1] + Running lpr intro
+[2] - Running cat *.c > myprogs
+$
+```
+
+# Job Notification
+
+After you execute any command in Linux, the system tells you what background jobs, if you have any running, have been completed so far. The system does not interrupt any operation, such as editing, to notify you about a completed job. If you want to be notified immediately when a certain job ends, no matter what you are doing on the system, you can use the notify command to instruct the system to tell you. The notify command takes a job number as its argument. When that job is finished, the system interrupts what you are doing to notify you the job has ended. The next example tells the system to notify the user when job 2 has finished:
+
+```
+$ notify %2
+```
+
+# Bringing Jobs to the Foreground
+
+You can bring a job out of the background with the foreground command, fg. If only one job is in the background, the fg command alone will bring it to the foreground. If more than one job is in the background, you must use the job's number with the command. You place the job number after the fg command, preceded with a percent sign. A bg command also places a job in the background. This command is usually used for interrupted jobs. In the next example, the second job is brought back into the foreground. You may not immediately receive a prompt again because the second command is now in the foreground and executing. When the command is finished executing, the prompt appears and you can execute another command.
+
+```
+$ fg %2
+cat *.c > myprogs
+$
+```
+
+# Stopping and Suspending Jobs
+
+If you want to stop a job running in the background, you can force it to end with the kill command. The kill command takes as its argument either the user job number or the system process number. The user job number must be preceded by a percent sign, %. You can find out the job number from the jobs command. In the next example, the jobs command lists the background jobs; then job 2 is canceled:
+
+```
+$ jobs
+[1] + Running lpr intro
+[2] - Running cat *.c > myprogs
+$ kill %2
+```
+
+You can also cancel a job using the system process number, which you can obtain with the ps command. The ps command displays a great deal more information than the jobs command does. The next example lists the processes a user is running. The PID is the system process number, also known as the process ID. TTY is the terminal identifier. The time is how long the process has taken so far. COMMAND is the name of the process.
+
+```
+$ ps
+```
+
+| PID | TTY | TIME | COMMAND |
+| --- | --- | ---- | ------- |
+| 523 | tty24 | 0:05 | sh |
+| 567 | tty24 | 0:01 | lpr |

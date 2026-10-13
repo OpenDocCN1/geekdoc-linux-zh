@@ -1,0 +1,34 @@
+# Listing, Displaying, and Printing Files: ls, cat, more, less, and lpr
+
+One of the primary functions of an operating system is the management of files. You may need to perform certain basic output operations on your files, such as displaying them on your screen or printing them. The Linux system provides a set of commands that perform basic file-management operations, such as listing, displaying, and printing files, as well as copying, renaming, and erasing files. These commands are usually made up of abbreviated versions of words. For example, the ls command is a shortened form of "list" and lists the files in your directory. The lpr command is an abbreviated form of "line print" and will print a file. The cat, less, and more commands display the contents of a file on the screen. Table 10-2 lists these commands with their different options. When you log in to your Linux system, you may want a list of the files in your home directory. The ls command, which outputs a list of your file and directory names, is useful for this. The ls command has many possible options for displaying filenames according to specific features.
+
+**Table 10-2: Listing, Displaying, and Printing Files**
+
+| Command or Option | Execution |
+|---|---|
+| ls | This command lists file and directory names. |
+| cat filenames | This filter can be used to display a file. It can take filenames for its arguments. It outputs the contents of those files directly to the standard output, which, by default, is directed to the screen. |
+| more filenames | This utility displays a file screen by screen. Press the SPACEBAR to continue to the next screen and q to quit. |
+| less filenames | This utility also displays a file screen by screen. Press the SPACEBAR to continue to the next screen and q to quit. |
+| lpr filenames | Sends a file to the line printer to be printed; a list of files may be used as arguments. Use the -P option to specify a printer. |
+| lpq | Lists the print queue for printing jobs. |
+| lprm | Removes a printing job from the print queue. |
+
+# Displaying Files: cat, less, and more
+
+You may also need to look at the contents of a file. The cat and more commands display the contents of a file on the screen. cat stands for concatenate.
+
+```
+$ cat mydata
+computers
+```
+
+The cat command outputs the entire text of a file to the screen at once. This presents a problem when the file is large because its text quickly speeds past on the screen. The more and less commands are designed to overcome this limitation by displaying one screen of text at a time. You can then move forward or backward in the text at your leisure. You invoke the more or less command by entering the command name followed by the name of the file you want to view (less is a more powerful and configurable display utility).
+
+```
+$ less mydata
+```
+
+When more or less invoke a file, the first screen of text is displayed. To continue to the next screen, you press the F key or the SPACEBAR. To move back in the text, you press the B key. You can quit at any time by pressing the Q key.
+
+# Printing Files: lpr, lpq, and lprm

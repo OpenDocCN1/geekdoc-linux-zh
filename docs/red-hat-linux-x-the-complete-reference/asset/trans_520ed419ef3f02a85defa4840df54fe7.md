@@ -1,0 +1,85 @@
+
+
+## Samba 文档
+
+您可以从位于 [www.samba.org](http://www.samba.org) 和 [ftp.samba.org](http://ftp.samba.org) 的 Samba 网站和 FTP 站点获取广泛的文档和当前版本。Red Hat 的 RPM 软件包可从 Red Hat 及 RPM 存储库（参见第 1 章）获取。大多数 Linux 发行版也包含 Samba。还可以从 SMB 新闻组 comp.protocols.smb 获取其他信息。软件包附带了广泛的文档，并安装在您的系统中，通常位于带有 Samba 版本名称的子目录下，路径为 `/usr/share/doc` 目录。在这里，您可以找到广泛的 HTML 和文本格式文档，以及众多示例和当前的常见问题解答（FAQ）。Samba HOW-TO 文档也可在 [www.tldp.org](http://www.tldp.org) 上获取。示例包括针对不同配置类型的 `smb.conf` 文件示例。SWAT 配置工具的首页还提供基于 Web 页面的 Samba 文档，以及针对不同功能特性的上下文帮助。
+
+## Samba 应用程序
+
+Samba 软件包由两个服务器守护进程和多个实用程序组成（参见表 37-1）。其中一个守护进程 smbd 向支持 SMB 的 SMB 客户端及其他系统（如 Windows）提供文件和打印服务。nmbd 实用程序是一个提供 NetBIOS 名称解析和服务浏览器支持的守护进程。smbclient 实用程序使 Linux 客户端能够以类似 FTP 的方式访问 Samba 服务。smbmount 和 smbumount 允许 Linux 客户端挂载和卸载 Samba 共享目录。smbstatus 实用程序显示 SMB 服务器的当前状态以及谁正在使用它。您使用 testparm 来测试您的 Samba 配置。smbtar 是一个 shell 脚本，直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器。您使用 nmblookup 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址。软件包中还包含 Samba Web 管理工具（SWAT）和 redhat-config-samba。这使您可以使用 Web 页面或 GUI 界面创建和维护 Samba 配置文件 /etc/samba/smb.conf。Samba 配置文件保存在 /etc/samba 目录中。
+
+> **注意**
+> 若要使用 redhat-config-packages 安装 Samba，请选择 Windows File Server 条目。
+
+Samba 提供四种主要服务：文件和打印服务、认证和授权、名称解析以及服务公告。SMB 守护进程 smbd 提供文件和打印服务，以及这些服务的认证和授权。这意味着网络上的用户可以共享文件和打印机。您可以通过要求用户提供密码来控制对这些服务的访问。当用户尝试访问共享目录时，系统会提示输入密码。控制可以以共享模式或用户模式实施。共享模式为共享资源设置一个密码，然后允许拥有该密码的任何用户访问该资源。用户模式为每个用户提供不同的密码。Samba 为此维护自己的密码文件：/etc/samba/smbpasswd。
+
+名称解析和服务公告由 nmbd 服务器处理。名称解析本质上是用 IP 地址解析 NetBIOS 名称。服务公告（也称为浏览）是将网络上可用服务列表通知给已连接的 Windows PC（以及通过 Samba 连接的 Linux PC）的方式。
+
+Samba 还包括 winbind 守护进程，它允许 Samba 服务器使用 Windows 域提供的认证服务。Samba 服务器不再维护自己的用户集来允许访问，而是可以利用 Windows 域认证服务来认证用户。
+
+> **注意**
+> 如果您想从 www.samba.org 下载压缩归档（.tar.gz）中的源代码或二进制文件，该归档将解压到其自己的 samba 子目录中。要使用它，请将归档解压到 /usr/local 等软件目录中。务必在 PATH 中添加 /usr/local/samba/bin。或者，您可以将 samba/bin 文件复制到 /usr/bin，但 nmb 和 smbd 除外，这两个文件应复制到 /usr/sbin。
+
+### 表 37-1：Samba 应用程序
+
+| 应用程序 | 描述 |
+|---|---|
+| smbd | 向 SMB 客户端提供文件和打印服务的 Samba 服务器守护进程 |
+| nmbd | 提供 NetBIOS 名称解析和服务浏览器支持的 Samba 守护进程 |
+| smbclient | 提供 Linux 客户端以类似 FTP 方式访问 Samba 服务 |
+| smbmount | 在 Linux 客户端上挂载 Samba 共享目录 |
+| smbumount | 卸载 Linux 客户端上挂载的 Samba 共享目录 |
+| smbpasswd | 修改 Samba 服务器上的 SMB 加密密码 |
+| smbstatus | 显示 SMB 网络连接的最新状态 |
+| smbrun | smbd 与外部程序之间的接口程序 |
+| testparm | 测试 Samba 配置文件 smb.conf |
+| smbtar | 直接将 SMB/CIFS 共享资源备份到 Unix 磁带驱动器 |
+| nmblookup | 将 Windows PC 的 NetBIOS 名称映射到其 IP 地址 |
+| redhat-config-samba | Samba GUI 配置工具（系统设置：服务器设置：Samba 服务器） |
+| SWAT | 用于通过 Web 浏览器配置 smb.conf 的 Samba Web 管理工具；允许您使用 Web 页面界面创建和维护 Samba 配置文件 smb.conf |
+| winbind | 使用 Windows 域提供的认证服务 |
+
+## 启动 Samba
+
+对于简单的 Samba 设置，您应该可以使用 Linux 发行版软件包中安装的默认 smb.conf 文件。但是，如果您需要做出更改，必须重新启动 Samba 服务器以使更改生效。启动、停止和重新启动 Samba 服务器由 /etc/rc.d/init.d/smb 脚本管理，使用 start、stop 和 restart 选项。在 Red Hat 上，您可以直接运行 smb 脚本，如下所示：
+
+```bash
+service smb restart
+```
+
+在 Red Hat 上，您还可以使用桌面服务配置工具（redhat-config-services）来启动和停止 Samba。
+
+为确保名称解析，您可以将主机的名称及其 IP 地址输入 /etc/hosts 文件。在 Windows 系统中，lmhosts 条目由 IP 地址和系统的 NetBIOS 名称组成，即该名称在 Microsoft 网络中已知的名称。对于您的 Linux 系统，您可以输入 IP 地址和 Linux 系统的主机名。
+
+## 从 Linux 访问 Samba
+
+要测试从 Linux 系统的连接，您可以使用 smbclient 命令查询 Samba 服务器。要访问 Samba 服务器上用户的家目录，请使用 Samba 服务器的 IP 或主机名地址，以及 homes 部分。使用 -U 选项指定要连接到系统的用户，如下所示：
+
+```bash
+smbclient //turtle.mytreek.com/homes -U dylan
+```
+
+然后系统会提示您输入密码。如果客户端密码与服务器密码不同，请使用服务器密码。连接后，您将看到如下所示的 SMB 客户端提示符。然后您可以访问用户家目录中的文件：
+
+```text
+smb: \>
+```
+
+## 从 Windows 访问 Samba
+
+要为 Windows 客户端设置连接，您需要指定 Windows 工作组名称并配置密码。工作组名称是在 Windows 桌面的“网上邻居”中的“整个网络”窗口中显示的该名称（在 Windows 2000、NT 和 XP 中为“我的网络位置”）。在 smb.conf 文件中，您在全局部分的工作组条目中指定工作组名称。工作组名称应为大写，不超过八个字符，且不含空格。
+
+然后您可以重新启动 Samba 服务器。在 Windows 客户端上，您会在“网上邻居”中的“整个网络”文件夹中看到工作组名称。在工作组内部有 Samba 服务器的图标，在该图标内部有用户目录的图标，如 smb.conf 文件中的 homes 部分所指定。
+
+## Samba 配置文件和工具
+
+Samba 配置选项保存在 /etc/samba/smb.conf 文件中。您编辑此文件以对配置进行更改。完成任何更改后，您应该使用 testparm 程序测试您的 smb.conf 文件。testparm 程序检查您的配置条目的有效性。默认情况下，testparm 使用 /etc/samba/smb.conf 文件，尽管您可以将不同的配置文件作为参数提供：
+
+```bash
+testparm
+```
+
+要检查网络连接，请使用 smbstatus 命令。此命令返回所有活动 SMB 连接的列表。
+
+**注意** /etc/samba/smbusers 文件将 Windows 网络用户名与 Linux Samba 服务器上对应的用户关联起来。例如，admin 和 administrator 被等同于 Linux root 用户。
+

@@ -1,0 +1,51 @@
+localhost, whose network address is 127.0.0.1. This file can be any name. On most systems, localhost is given the name named.local. On other systems, localhost may use the network part of the IP address, 127.0.0. This file allows mapping the domain name localhost to the localhost IP address, which is always 127.0.0.1 on every machine. The address 127.0.0.1 is a special address that functions as the local address for your machine. It allows a machine to address itself. In the zone statement for this file, the name of the zone is 0.0.127.IN-ADDR.ARPA. The domain part of the IP address is entered in reverse order, with IN-ADDR.ARPA appended to it, 0.0.127.IN-ADDR.ARPA. The named.conf entry is shown here:
+
+```
+zone "0.0.127.IN-ADDR.ARPA" {
+    type master;
+    file "named.local";
+};
+```
+
+The name of the file used for the localhost reverse mapping file is usually named.local, though it can be any name. The NS record specifies the name server the localhost should use. This file has a PTR record that maps the IP address to the localhost. The 1 used as the name expands to append the zone domain-in this case, giving you 1.0.0.127, a reverse IP address. Notice the trailing periods for localhost:
+
+```
+@ IN SOA localhost. root.localhost. {
+    1997022700 ; Serial
+    28800 ; Refresh
+    14400 ; Retry
+    3600000 ; Expire
+    86400 ) ; Minimum
+
+IN NS turtle.mytrek.com.
+
+1 IN PTR localhost.
+```
+
+In IPv6, local host reverse mapping is specified using the reverse of the IPv6 localhost address. This address consists of 31 zeros and a 1, which can be written in shorthand as ::1, where :: represents the sequence of 31 zeros. With IPv6 IP6.ARPA format, these can be written in a bit level format, where the first 64 bits consist of a network address of all zeros, and the interface address has the value 1.
+
+```
+0000:0000:0000:0000:0000:0000:0000:0001  localhost IPv6 address
+\[x00000000000000000000000000000001/128]  localhost address
+```
+
+In the named.conf file, the IP6.ARPA localhost entry would look like this.
+
+```
+zone "\[x00000000000000000000000000000001/64].IP6.ARPA" in {
+    type master;
+    file "192.168.0";
+};
+```
+
+In the localhost reverse mapping file, the localhost entry would appear like this.
+
+```
+\[x0000000000000001/64]    IN    PTR    localhost.
+```
+
+For the older IP6.INT format, the localhost entry would use the same network address of zeros, but the localhost reverse mapping file would use a nibble format for the address, as shown here.
+
+```
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0  IN    PTR    localhost.
+```

@@ -1,0 +1,1 @@
+Note A selected MPM is usually integrated into Apache when it is compiled. Future Linux distributions of Apache should use the Linux/Unix default MPM, which is named "threaded."

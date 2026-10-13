@@ -1,0 +1,38 @@
+# Precautionary Steps for Modifying a Kernel of the Same Version
+
+If you want to modify your kernel configuration and build a new one, you should retain a copy of your current kernel. In case something goes wrong with your modified version, you can always boot from the copy you kept. You do not have to worry about this happening if you are installing a new version of the kernel. New kernels are given different names, so the older one is not overwritten.
+
+To retain a copy of your current kernel, you can make a backup copy of it, letting the original be overwritten. An installed version of a kernel makes use of several files in the /boot directory. Each file ends with that kernel version's number. These include the vmlinuz file, which is the actual kernel image file, along with several support files, System.map, config, and module-info. This System.map file contains kernel symbols needed by modules to start kernel functions. For example, the kernel image file is called vmlinuz-version, where version is the version number attached, as in vmlinuz-2.4.22-1. The System.map file for this kernel called System.map-2.4.22-1. Here are the kernel files for version 2.4.22-1.
+
+```
+/boot/vmlinuz-2.4.22-1
+/boot/System.map-2.4.22-1
+/boot/module-info-2.4.22-1
+/boot/config-2.4.22-1
+```
+
+The vmlinuz, System.map, and module-info files for a particular kernel also have symbolic links using those names without the version number. For example, vmlinuz is a link to the current kernel image file-in this case, vmlinuz-2.4.22-1 and System.map is a link to the current System.map file, System.map-2.4.22-1. When you install a new kernel, the links are changed to that kernel. So if you installed a new version, such as 2.4.22-10, the /boot/vmlinuz would then link to that kernel's vmlinuz file, /boot/vmlinuz-2.4.22-10.
+
+```
+/boot/vmlinuz          /boot/vmlinuz-2.4.22-1
+/boot/System.map       /boot/System.map-2.4.22-1
+/boot/module-info      /boot/module-info-2.4.22-1
+```
+
+If, on the other hand, you are creating a modified version of the same kernel, the kernel file, here called vmlinuz-2.4.22-1, will be overwritten with the new kernel image file, along with the System.map and module-info files. To keep your current working version, you first have to make a copy of these files. You would make a copy of the /boot/vmlinuz-2.4.22-1 file, giving it another name, as shown here:
+
+```
+cp /boot/vmlinuz-2.4.22-1 /boot/vmlinuz-2.4.22-1.old
+```
+
+You would also make a backup of the System.map and module-info files. The System.map file is a symbolic link to the System.map-2.4.22-1 file. You should also back up your modules located in the /lib/modules/version directory, where version is the version number of the kernel. Otherwise, you will lose the modules already set up to work with the original kernel. For version 2.4.22-1, the libraries are located in /lib/modules/2.4.22-1. If you are compiling a different version, those libraries are placed in a new directory named with the new version number.
+
+# Boot Loader
+
+If you are using a boot loader, you should create a new entry for the old kernel in the boot loader configuration file. You can then make an entry for the new kernel. Leaving the entry for the old kernel is advisable in case something goes wrong with the new kernel. This way, you can always reboot and select the old kernel. For example, in grub.conf, add a new entry, similar to the one for the old kernel, which references the new kernel in its kernel statement. The grub.conf entry would look something like the following code. You could then select the entry with the title "Old Linux (2.4.22-1.old)" at the GRUB menu to launch the old kernel.
+
+```
+title Old Linux (2.4.22-1.old)
+    root (hd0,2)
+    kernel /boot/vmlinuz-2.4.22-1.old root=/dev/hda3
+```

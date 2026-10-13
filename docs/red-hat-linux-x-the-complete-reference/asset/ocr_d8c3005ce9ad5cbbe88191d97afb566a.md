@@ -1,0 +1,51 @@
+address. The instances attribute limits the number of server processes that can be active at once for a particular service. The following examples restrict access to a local network 192.168.1.0 and the localhost, deny access from 192.168.1.15, and use the instances attribute to limit the number of server processes at one time to 60.
+
+```
+only_from = 192.168.1.0
+only_from = localhost
+no_access = 192.168.1.15
+instances = 60
+```
+
+# xinetd Defaults and Internal Services
+
+A sample default block is shown here:
+
+```
+defaults
+{
+    instances = 60
+    log_type = FILE /var/log/servicelog
+    log_on_success = HOST PID
+    log_on_failure = HOST RECORD
+    only_from = 192.168.1.0
+    only_from = localhost
+    no_access = 192.168.1.15
+}
+```
+
+The xinetd program also provides several internal services, including time, services, servers, and xadmin. services provides a list of currently active services, and servers provides information about servers. xadmin provides xinetd administrative support.
+
+# Service Files in xinetd.d Directory
+
+Instead of having one large xinetd.conf file, you can split it into several configuration files, one for each service. You do this by creating an xinetd.conf file with an includedir attribute that specifies a directory to hold the different service configuration files. In the following example, the xinetd.d directory holds xinetd configuration files for services like swat. Red Hat uses just such an implementation. This approach has the advantage of letting you add services by just creating a new configuration file for them. Modifying a service involves editing only its configuration file, not an entire xinetd.conf file.
+
+```
+includedir /etc/xinetd.d
+```
+
+The following example shows the xinetd.conf file used for Red Hat Linux:
+
+```
+#
+# Simple configuration file for xinetd
+# Some defaults, and include /etc/xinetd.d/
+
+defaults
+{
+    instances      = 60
+    log_type       = SYSLOG authpriv
+    log_on_success = HOST PID
+    log_on_failure = HOST
+    cps            = 25 30
+```

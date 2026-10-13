@@ -1,0 +1,1 @@
+Note For Pro FT PD, your anonymous FT Project directory does not require any system files. Before Pro FT PD executes a chroot operation, hiding the rest of the system from the directory, it ac

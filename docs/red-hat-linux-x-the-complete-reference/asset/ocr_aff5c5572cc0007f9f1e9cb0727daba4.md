@@ -1,0 +1,21 @@
+# Chapter 23: Proxy Servers-Squid
+
+# Overview
+
+Proxy servers operate as an intermediary between a local network and services available on a larger one, such as the Internet. Requests from local clients for Web services can be handled by the proxy server, speeding transactions as well as controlling access. Proxy servers maintain current copies of commonly accessed Web pages, speeding Web access times by eliminating the need to access the original site constantly. They also perform security functions, protecting servers from unauthorized access. Squid is a free, Open Source proxy-caching server for Web clients, designed to speed Internet access and provide security controls for Web servers. It implements a proxy-caching service for Web clients that caches Web pages as users make requests. Copies of Web pages accessed by users are kept in the Squid cache, and as requests are made, Squid checks to see if it has a current copy. If Squid does have a current copy, it returns the copy from its cache instead of querying the original site. If it does not have a current copy, it will retrieve one from the original site. In this way, Web browsers can then use the local Squid cache as a proxy HTTP server. Squid currently handles Web pages supporting the HTTP, FTP, and SSL protocols (Squid cannot be used with FTP clients). Replacement algorithms periodically replace old objects in the cache. You can find out more about Squid at squid.squid-cache.org.
+
+As a proxy, Squid does more that just cache Web objects. It operates as an intermediary between the Web browsers (clients) and the servers they access. Instead of connections being made directly to the server, a client connects to the proxy server. The proxy then relays requests to the Web server. This is useful for situations where a Web server is placed behind a firewall server, protecting it from outside access. The proxy is accessible on the firewall, which can then transfer requests and responses back and forth between the client and the Web server. The design is often used to allow Web servers to operate on protected local networks and still be accessible on the Internet. You can also use a Squid proxy to provide Web access to the Internet by local hosts. Instead of using a gateway providing complete access to the Internet, local hosts can use a proxy to allow them just Web access (see Chapter 5). You can also combine the two, allowing gateway access, but using the proxy server to provide more control for Web access. In addition, the caching capabilities of Squid can provide local hosts with faster Web access.
+
+Technically, you could use a proxy server to simply manage traffic between a Web server and the clients that want to communicate with it, without doing caching at all. Squid combines both capabilities as a proxy-caching server.
+
+Squid also provides security capabilities that let you exercise control over hosts accessing your Web server. You can deny access by certain hosts and allow access by others. Squid also supports the use of encrypted protocols such as SSL (see Chapter 22). Encrypted communications are tunneled (passed through without reading) through the Squid server directly to the Web server.
+
+Squid is supported and distributed under a GNU Public License by the National Laboratory for Applied Network Research (NLANR) at the University of California, San Diego. The work is based on the Harvest Project to create a Web indexing system that included a high-performance cache daemon called cached. You can obtain current source code versions and online documentation from the Squid home page at www.squid-cache.org. The Squid software package consists of the Squid server, a domain name lookup program called dnsserver, an FTP client called ftpget, and a cache manager script called cachemgr.cgi. The dnsserver resolves IP addresses from domain names, and the ftpget program is an FTP client Squid uses to retrieve files from FTP servers. cachemgr.cgi lets you view statistics for the Squid server as it runs.
+
+On Red Hat, you can start, stop, and restart the Squid server using the squid script, as shown here:
+
+```
+service squid restart
+```
+
+You can also set the Squid server to start up automatically using the redhat-config-services tool or chkconfig.

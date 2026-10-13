@@ -1,0 +1,30 @@
+# Network Interfaces and Routes: ifconfig and route
+
+Your connection to a network is made by your system through a particular hardware interface, such as an Ethernet card or a modem. Data passing through this interface is then routed to your network. The ifconfig command configures your network interfaces, and the route command sets up network connections accordingly. If you configure an interface with a network configuration tool, such as redhat-config-network, you needn't use ifconfig or route. However, you can directly configure interfaces using ifconfig and route, if you want. Every time you start your system, the network interfaces and their routes must be established. This is done automatically for you when you boot up by ifconfig and route commands executed for each interface by the /etc/rc.d/init.d/network initialization file, which is executed whenever you start your system. If you are manually adding your own interfaces, you must set up the network script to perform the ifconfig and route operations for your new interfaces.
+
+# Network Startup Script: /etc/rc.d/init.d/network
+
+On Red Hat, your network interface is started up using the network script in the /etc/rc.d/init.d directory. This script will activate your network interface cards (NICs) as well as implement configuration information such as gateway, host, and name server identities. You can manually shut down and start your network interface using this script and the restart, start, or stop options. You can run the script on Red Hat with the service command. The following commands shut down and then start up your network interface:
+
+```
+service network stop
+service network start
+```
+
+If you are changing network configuration, you will have to restart your network interface for the changes to take effect:
+
+```
+service network restart
+```
+
+To test if your interface is working, use the ping command with an IP address of a system on your network, such as your gateway machine. The ping command continually repeats until you stop it with a CTRL-C.
+
+```
+ping 192.168.0.1
+```
+
+# Interface Configuration Scripts: /etc/sysconfig/network-scripts
+
+The /etc/rc.d/init.d/network file performs the startup operations by executing several specialized scripts located in the /etc/sysconfig/network-scripts directory. The network script uses a script in that directory called ifup to activate a network connection, and ifdown to shut it down. ifup and ifdown will invoke other scripts tailored to the kind of device being worked on, such as ifup-ppp for modems using the PPP protocol, or ifup-ipv6 for network devices that use IP Protocol version 6 addressing.
+
+Note You can activate and deactivate network interfaces using the Network Device Control tool accessible from the System Tools menu.

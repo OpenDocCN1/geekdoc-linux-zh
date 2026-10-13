@@ -1,0 +1,146 @@
+
+表 37-2：SWAT 配置页面
+
+| 页面 | 描述 |
+|------|-------------|
+| HOME | SWAT 主页，列出文档资源。 |
+| GLOBALS | 配置 Samba 的全局部分。 |
+| SHARES | 选择并配置要共享的目录（shares）。 |
+| PRINTERS | 设置打印机访问。 |
+| STATUS | 检查 Samba 服务器（smbd 和 nmbd）的状态；列出当前活动的客户端及其正在执行的操作。您可以在此页面重启、停止或启动 Samba 服务器。 |
+| VIEW | 显示 smb.conf 配置文件。 |
+| PASSWORD | 设置服务器及有访问权限用户的密码访问。 |
+
+对于各个部分，SWAT 可以显示基本版或高级版。基本版仅显示简单配置所需的条目，而高级版则显示该类型部分的所有可能条目。分别标记为 Advanced View 和 Basic View 的按钮位于部分页面的顶部，用于在高级版或基本版之间切换（参见图 37-3）。打印机和共享的部分页面增加了按钮和菜单，用于选择要配置的特定打印机或共享。此处所用的术语“share”指的是您希望通过 Samba 提供的目录。当您单击 SHARES 按钮时，最初只会在 SHARES 页面的顶部看到几个按钮。您使用这些按钮来创建新部分或编辑已为共享设置的部分。要设置新的 Share 部分，您在 Create Share 按钮旁的框中输入其名称，然后单击该按钮。新的共享名称会出现在 Choose Share 按钮旁的下拉菜单中。最初该按钮为空。单击它以显示当前 Share 部分的列表。选择您想要的，然后单击 Choose Share 按钮。页面随后显示用于配置共享的条目。对于新共享，这些条目为空或为默认值。例如，要选择配置用户主目录默认设置的 Homes 部分，请单击找到 Homes 条目的下拉菜单。选择它，然后单击 Choose Share 按钮。Homes 部分的条目将被显示。Printers 页面采用相同的流程，您可以在其中选择 Printers 部分或为特定打印机创建部分。
+
+## 共享参数
+
+![](img/32a48d8db4c23e6e2eb70d1e5034c976_908_0.png)
+
+图 37-3：SWAT 共享页面显示 Homes 部分
+
+## 注
+
+SWAT 会自动为系统或网络上已配置使用的任何打印机创建条目，它从您的 /etc/printcap 文件中读取这些条目。您需要编辑 pri
+
+在图 37-3 中，注意每个条目旁边的 Help 链接。此类链接会显示一个网页，展示 smb.conf 的 Samba 文档，定位到相应的条目。在此图中，在用户单击 Guest OK 条目旁边的 Help 链接后，显示了文档的 Guest OK 部分。
+
+当您完成对某个部分的工作后，单击其页面上的 Commit Changes 按钮以保存更改。对您处理的每个单独页面都要执行此操作，包括 GLOBALS 页面。单击 Commit Changes 按钮会生成 smb.conf 文件的新版本。为了让 Samba 服务器读取这些更改，您随后必须重启它。您可以通过单击 Status 页面上的 Restart smb 按钮来执行此操作。
+
+## 使用 SWAT 创建新的共享
+
+基本使用 SWAT 创建新共享的步骤如下：
+
+- 1. 选择 Share 页面，并在 Create Share 文本框中输入新共享的名称。
+- 2. 单击 Create Share 按钮以打开新共享的配置页面。新共享的名称将出现在 Choose Share 按钮旁的弹出菜单中。
+- 3. 输入各种选项。对于 Basic Options，您需要在 Path 文本框中指定共享的目录。在 Comment 文本框中，您输入在 Windows 上显示的共享标签。
+- 4. 单击 Commit Changes 按钮将共享条目保存到 Samba 配置文件 smb.conf 中。然后重启 Samba 服务器以使更改生效（单击 Status 页面上的 Restart smb 按钮）。
+
+您可以遵循类似的流程添加新打印机，但请确保打印机也在 Samba 服务器所在的系统上进行了配置。
+
+当然，您可以直接编辑 /etc/samba/smb.conf 文件。这是一个简单的文本文件，您可以用任何文本编辑器编辑。您仍然必须重启 SMB 服务器才能使更改生效，您可以在 Red Hat 上使用以下命令手动执行此操作：
+
+```
+service smb restart
+```
+
+## SWAT 生成的 smb.conf 示例
+
+以下示例显示了 SWAT 为简单配置生成的 smb.conf 文件。这比最初随 Samba 安装的注释密集型版本小得多。在此配置中，实现了共享级安全并启用了密码加密。定义了一个名为 myprojects 的共享，具有访客访问权限且可写。还定义了一个名为 myhp 的打印机共享，支持访客访问。
+
+```
+# Samba config file created using SWAT
+# from localhost.localdomain (127.0.0.1)
+# Date: 2001/09/09 01:09:07
+
+# Global parameters
+[global]
+    server string = Samba Server
+    security = SHARE
+    encrypt passwords = Yes
+    ssl CA certFile = /usr/share/ssl/certs/ca-bundle.crt
+    log file = /var/log/samba/%m.log
+    max log size = 0
+    socket options = TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192
+    dns proxy = No
+    printing = cups
+```
+
+```
+[homes]
+    comment = Home Directories
+    path = /home
+    writeable = Yes
+    guest ok = Yes
+```
+
+```
+[printers]
+    comment = All Printers
+    path = /var/spool/samba
+    guest ok = Yes
+    printable = Yes
+    browseable = No
+```
+
+```
+[myprojects]
+    path = /myprojects
+    writeable = Yes
+    guest ok = Yes
+```
+
+```
+[myhp]
+    path = /var/spool/samba
+    writeable = Yes
+    guest ok = Yes
+    printable = Yes
+    printer = myhp
+    oplocks = No
+    share modes = No
+```
+
+## 全局部分
+
+全局部分确定整个服务器的配置，并指定在主目录和目录段中使用的默认条目。在此部分中，您可以找到工作组名称、密码配置和目录设置的条目。这里讨论了其中几个更重要的条目。图 37-4 显示了 SWAT 上的全局变量页面，您可以使用它来设置全局选项。此页面的基本视图列出了您最可能需要的选项。
+
+![](img/32a48d8db4c23e6e2eb70d1e5034c976_912_0.png)
+
+图 37-4：SWAT 全局变量页面
+
+## 指定工作组和服务器
+
+Workgroup 条目指定您希望赋予网络的工作组名称。这是在 Windows 客户端的网络邻居窗口中显示的工作组名称。smb.conf 文件中默认的 Workgroup 条目如下所示：
+
+```
+[global]
+
+# workgroup = NT-Domain-Name or Workgroup-Name
+workgroup = MYGROUP
+```
+
+工作组名称必须对 Samba 服务器支持的每个 Windows 客户端相同。在 Windows 客户端上，工作组名称通常可以在控制面板窗口中系统工具的网络标识或常规面板中找到。在许多客户端上，这默认为 WORKGROUP。如果您想保留此名称，则必须相应地更改 smb.conf 文件中的 Workgroup 条目。Workgroup 条目和每个 Windows 客户端上的工作组名称必须相同。
+
+```
+workgroup = WORKGROUP
+```
+
+server string 条目保存您希望在客户端系统上为服务器显示的描述性名称。在 Windows 系统上，这是 Samba 服务器图标上显示的名称。默认值为 Samba Server，但您可以将其更改为任意名称。
+
+```
+# server string is the equivalent of the NT Description field
+server string = Samba Server
+```
+
+## 安全级别
+
+Samba 资源通常使用共享级或用户级安全进行访问。在共享级，任何用户都可以无需登录服务器即可访问资源。在用户级，每个用户都必须使用密码登录。此外，Windows 98、ME、NT 和 XP 客户端在登录过程中使用加密密码。您必须为这些客户端启用加密密码。加密密码的默认值为 no，因此您需要将其更改为 yes。在 smb.conf 文件中，security 选项设置为您想要的级别，而 encrypt passwords 选项设置为 yes 以启用加密。
+
+```
+security = user
+
+encrypt passwords = yes
+```
+
+如果您想要共享级安全，请将 security 选项指定为 share：

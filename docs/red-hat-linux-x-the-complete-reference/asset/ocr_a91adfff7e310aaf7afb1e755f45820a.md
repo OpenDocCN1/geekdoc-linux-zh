@@ -1,0 +1,1 @@
+Note Leafnode is an NNTP server designed for small networks that may have slow connection to the Internet. You can obtain the Leafnode software package along with
