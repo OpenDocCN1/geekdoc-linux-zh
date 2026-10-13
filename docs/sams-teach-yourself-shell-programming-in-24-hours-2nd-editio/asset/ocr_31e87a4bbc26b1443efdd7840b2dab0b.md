@@ -1,0 +1,3 @@
+# About the Author
+
+SIRANGA VEERARAGHAVAN is a material scientist by training and a software engineer by trade. He has several years of software development experience in C, Java, Perl, and Bourne Shell and has contributed to several books, including Solaris 8: Complete Reference, UNIX Unleashed and Special Edition Using UNIX. Sitranga graduated from the University of California at Berkeley in 1997 and is presently pursuing further studies. He is currently employed in the Server Appliance group at Sun Microsystems, Inc. Before joining Sun, Sitranga was employed at Cisco Systems, Inc. Among other interests, Sitranga enjoys mountain biking, classical music, and playing Marathon with his brother Srivaths. Sitranga can be reached via e-mail at ranga@soda.berkeley.edu.

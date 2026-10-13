@@ -1,0 +1,298 @@
+
+Next, the function creates two internal variables, _YNPROMPT and _YNDEFANS:
+
+```
+_YNPROMPT="$1 (y/n)? "
+_YNDEFANS=""
+```
+
+The variable _YNPROMPT holds the question, whereas _YNDEFANS holds the default answer. Initially, _YNDEFANS is set to null, and then a case statement is used to set its value:
+
+```
+case "$2" in
+  [yY][yY][aA][eE][sS]) _YNDEFANS="y" ;;
+  [nN][nN][oO]) _YNDEFANS="n" ;;
+esac
+```
+
+This case statement determines whether the second argument is in the form of y, n, yes, or no (regardless of case). If it is, _YNDEFANS is set appropriately and the prompt, _YNPROMPT, is updated to reflect this:
+
+```
+_YNPROMPT="$_YNPROMPT ($_YNDEFANS) "
+```
+
+After updating the prompt, the function enters an infinite while loop that exits when the user provides a valid response to the question stored in _YNPROMPT. The while loop first prints the prompt and then reads the response into the variable YESNO:
+
+```
+printf '$_YNPROMPT'
+read YESNO
+```
+
+Once a response has been read, a case statement evaluates the response:
+
+```
+case "${YESNO: -_YNDEFANS}" in
+  [yY][yY][eE][sS]) YESNO="y"
+    break
+    ;;
+  [nN][nN][oO]) YESNO="n"
+    break
+    ;;
+  *) YESNO="" ;;
+esac
+```
+
+If some form of y, n, yes or no was entered, YESNO is set appropriately and the loop terminates by calling break; otherwise, the value of YESNO is set to null and the loop executes again. This allows the function to keep prompting the user for a response until a valid response is specified.
+
+Finally, the function unsets the variables that store the prompt and the default answer. The function then exports the variable YESNO to the environment in order to ensure that
+this variable is available to commands executed after the function completes. Finally, the function returns 0:
+
+```
+unset _YNPROMPT _YNDEFANS
+export YESNO
+return 0
+```
+
+## 使用 promptYESNO
+
+Now that you know how this function works, take a look at an example of its use:
+
+```
+#!/bin/sh
+. $HOME/lib/sh/libTYP2.sh
+
+promptYESNO "Do you want to play a game"
+if [ "$YESNO" = "y" ] ; then
+/usr/games/tictactoe
+else
+echo "Maybe later."
+fi
+```
+
+This generates the following prompt:
+
+Do you want to play a game (y/n)?
+
+If the response is some form of y or yes, the variable YESNO is set to y and the if statement executes the command /usr/games/tictactoe. If the response is some form of n or no, the variable YESNO is set to n and the if statement prints the message:
+
+Maybe later.
+
+If any other response is specified, the prompt will be repeated.
+
+The following example illustrates the use of a default argument as follows:
+
+```
+#!/bin/sh
+. $HOME/lib/sh/libTYP2.sh
+
+promptYESNO "Do you want to play a game" "y"
+if [ "$YESNO" = "y" ] ; then
+/usr/games/thermonuclearwar
+else
+echo "Maybe later."
+fi
+```
+
+This generates a prompt similar to the following:
+
+Do you want to play a game (y/n)? [y]
+
+When the default answer is specified, the users can simply press Enter or Return or they can manually specify a response. If the users specify y or yes or choose the default answer, the system will execute a game on the user's behalf.
+
+## 提示用户响应
+
+In some shell scripts, you need to gather more information from the users than a simple yes or no response. For example, an installation script might have to ask for the name of a directory or the location of a file. The PROMPTRESPONSE function can elicit this type of information from the user. The function in this example stores the user's response in the global variable RESPONSE. Validation of the response should be handled outside the function.
+
+```bash
+# Name: promptRESPONSE
+# Desc: Asks a question
+# Args: $1 -> The prompt
+# Args: $2 -> The default answer (optional)
+# Globals: RESPONSE -> set to the users response
+
+promptRESPONSE () {
+  RESPONSE=""
+  if [ $# -lt 1 ]; then
+    return 1
+  fi
+  _RDEFANS="${2:-$2}"
+  _RPROMPT="$1 $_RDEFANS: [$_RDEFANS ]"
+  while :
+  do
+    printf '%s' "$_RPROMPT"
+    read RESPONSE
+    RESPONSE="${RESPONSE:-$_RDEFANS}"
+    if [ -n "$RESPONSE" ]; then
+      break
+    fi
+    RESPONSE=""
+  done
+  unset _RDEFANS _RPROMPT
+  export RESPONSE
+  return 0
+}
+```
+
+This function can handle two arguments:
+
+- $1 is treated as the base from which to construct the question. It is required.
+- $2 is the default answer and is optional.
+
+First the function clears the value of RESPONSE. Then the function determines whether at least one argument was supplied, because you need at least one argument. If no arguments are supplied, the function returns 1, indicating improper use:
+
+```
+if [ $# -lt 1 ] ; then
+return 1
+fi
+```
+
+Next, the function creates two internal variables, _RDEFANS and _RPROMPT:
+
+```
+_RDEFANS="${2:-$2}"
+_RPROMPT="?$1 _RDEFANS:{ $_RDEFANS } "
+```
+
+The variable _RDEFANS holds the default answer and is set to the value of $2, but only if a second argument was specified. The variable _RPROMPT holds the question and is based on the value of $1 and _RDEFANS.
+
+Next, the function enters an infinite while loop that exits when the user provides a valid response to the question stored in _RPROMPT. The while loop first prints the prompt and then reads the response into the variable RESPONSE:
+
+```
+printf '%s' "$_RPROMPT"
+read RESPONSE
+```
+
+Variable substitution then ensures that RESPONSE contains a value or a default value:
+
+```
+RESPONSE="${RESPONSE:-$_RDEFANS}"
+```
+
+If RESPONSE contains a value, the loop terminates by issuing break; otherwise the loop sets RESPONSE to null and repeats:
+
+```
+if [ -n "$RESPONSE" ] ; then
+break
+fi
+RESPONSE=""
+```
+
+The function then unsets the variables that store the prompt and the default answer and exports the variable RESPONSE to the environment in order to ensure that this variable is available to commands executed after the function completes. Finally, the function returns 0:
+
+```
+unset _RDEFANS _RPROMPT
+export RESPONSE
+return 0
+```
+
+## 使用 promptRESPONSE
+
+Now that you know how this function works, take a look at an example of its use:
+
+```
+#!/bin/sh
+. $HOME/lib/sh/libTP52.sh
+promptRESPONSE "What is your favorite fruit"
+echo "Your favorite fruit is $RESPONSE."
+```
+
+This generates the following prompt:
+
+```
+What is your favorite fruit?
+```
+
+The echo statement then displays the response:
+
+```
+Your favorite fruit is apple.
+```
+
+## 检查磁盘空间
+
+System administrators often use scripts to keep apprised of the disk usage in certain essential directories. For example, if the incoming mail or news directories were to fill up, users would not be able to obtain new e-mail or news articles. The next two functions in this library ease the process of monitoring disk usage.
+
+## 确定可用空间
+
+The free space in a directory can be determined using the df -k (k as in kilobytes) command. The output of this command is similar to the following:
+
+```
+$ df -k
+Filesystem  1024-blocks  Used Available Capacity Mounted on
+/dev/hda1   1190814    664866  413867   59%    /
+/dev/hda1   4128240   1578837  2235787  48%  /internal
+/dev/hd01   152567   681766  706759   47%  /store
+/dev/hda3   320886    72521   231034  24%  /tmp
+```
+
+When a directory or file is specified as an additional argument, the output just contains information about the partition where that directory or file is located:
+
+```
+$ df -k /home/ranga
+Filesystem  1024-blocks Used Available Capacity Mounted on
+/dev/hda1   1190814    664866  463867   59%    /
+```
+
+As you can see, the output consists of a header followed by information about the partitions on your system. The amount of free space in a given partition is stored in the fourth column. This function uses awk to retrieve this value.
+
+```
+# Name: getSpaceFree
+# Desc: Outputs the space avail for a directory
+# Args: $1 -> The directory to check
+
+getSpaceFree () {
+  if [ $# -ge 1 ]; then
+    df -k $1 2>/dev/null | awk 'NR != 1 { print $4; }'
+    return $?
+  fi
+  return 1
+}
+```
+
+As you can see, the function is quite simple. It first determines whether it was supplied as an argument. If an argument was supplied, the df -k command is executed and its output is modified by awk:
+
+```
+df -k $1 2>/dev/null | awk 'NR != 1 { print $4; }'
+```
+
+You use the awk expression
+
+```
+NR != 1
+```
+
+to skip the header in the first line of the output. For more information on awk, review Chapter 17, “Filtering Text with awk.”
+
+The following example illustrates the use of this function:
+
+```
+getSpaceFree /usr/local
+```
+
+The output of this command is similar to the following (provided the directory /usr/local exists on your system):
+
+```
+2333788
+```
+
+The number returned is in kilobytes, which in this case translates to 2.3GB free in the directory /usr/local.
+
+In some cases, you might need to compare the output of this function to some value. For example, the following example determines whether more than 20,000KB are available in the directory /usr/local:
+
+```
+#!/bin/sh
+. $HOME/lib/sh/libTYP52.sh
+
+if [ "`getSpaceFree /usr/local`" -gt 20000 ]; then
+    echo "Enough space"
+fi
+```
+
+![](img/3def70414996f811615f713b2077a154_367_0.png)
+
+> If you are using HP-UX, the df -k command used in the previous functions will not work properly for you. You will need to use an alternate form of the df command covered in Chapter 23.
+
+## 确定已用空间
+
+Sometimes you need to know how much disk space a directory uses rather than the amount of free space available. For example, a system might have a temporary directory that needs to be cleaned out when it exceeds a certain size.
+

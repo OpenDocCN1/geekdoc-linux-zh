@@ -1909,6 +1909,7 @@
 +   [Sams 24 小时教你 Red Hat® Linux® Fedora™](docs/sams-teach-yourself-red-hatlinuxfedoratm-in-24-hours/README.md)
 +   [24 小时教你 Samba，第二版](docs/sams-teach-yourself-samba-in-24-hours-second-edition/README.md)
 +   [Sams 24 小时自学 Shell 编程](docs/sams-teach-yourself-shell-programming-in-24-hours/README.md)
++   [Sams 24小时自学Shell编程（第2版）](docs/sams-teach-yourself-shell-programming-in-24-hours-2nd-editio/README.md)
 +   [24 小时自学 Shell 编程](docs/sams-teach-yourself-shell-programming-in-24-hours-electronic/README.md)
 +   [Sams 24 小时教你 Linux 版 Staroffice 5](docs/sams-teach-yourself-staroffice-5-for-linux-in-24-hours/README.md)
 +   [Sams Teach Yourself SuSE Linux 24 小时入门套件](docs/sams-teach-yourself-suse-linux-in-24-hours-starter-kit/README.md)

@@ -1,0 +1,195 @@
+
+这里，name 是要被“别名化”的命令的名称，path 是命令的完全限定路径。例如，以下函数等价于前一个示例中给出的别名：
+
+```
+ls () { /bin/ls -a "$*" ; }
+```
+
+## 取消别名
+
+一旦定义了别名，就可以使用 unalias 命令取消设置它：
+
+```
+unalias name
+```
+
+这里，name 是要取消设置的别名的名称。例如，以下命令取消别名 ls1：
+
+```
+unalias ls1
+```
+
+## 取消设置函数
+
+一旦定义了函数，就可以通过 unset 命令将其取消定义：
+
+```
+unset name
+```
+
+这里，name 是你要取消设置的函数的名称。例如，以下命令取消先前定义的函数 ls1()：
+
+```
+unset ls1
+```
+
+取消设置函数后就无法执行它。
+
+## 理解作用域、递归、返回码和数据共享
+
+现在你对 shell 脚本中函数的用法和操作有基本了解，让我们来看一些更高级的话题，如作用域、递归、返回码和数据共享。
+
+## 作用域
+
+术语 scope 指的是程序中可以访问变量值的区域。有两种类型的作用域：
+
+- 全局作用域 如果变量具有全局作用域，其值可以在脚本中的任何位置访问。具有全局作用域的变量称为全局变量。
+- 局部作用域 如果变量具有局部作用域，其值只能在声明它的函数内部访问。具有局部作用域的变量称为局部变量。
+
+默认情况下，除了与函数参数关联的特殊变量之外，所有变量都具有全局作用域。在 ksh、bash 和 zsh 中，局部作用域的变量可以使用 typeset 命令声明。typeset 命令将在本章后面讨论。该命令在 Bourne shell 中不受支持，因此严格依赖 Bourne shell 的脚本中不可能存在程序员定义的局部变量。
+
+## 全局变量
+
+以下脚本说明了全局变量的行为：
+
+```sh
+#!/bin/sh
+
+pearFunc() {
+    pear=2                # set $pear
+    echo "In pearFunc(): pear is $pear"  # print out its value
+}
+pearFunc                # call pearFunc
+echo "Outside of pearFunc(): pear is $pear"  # print out $pear
+```
+
+首先脚本定义了一个函数 pearFunc，它设置全局变量 $pear 的值（默认情况下所有变量都是全局的）并输出该值。然后脚本执行 pearFunc。最后，脚本在函数外部打印 $pear 的值。输出为
+
+```
+In pearFunc(): pear is 2
+Outside of pearFunc(): pear is 2
+```
+
+从输出可以看出，在函数 pearFunc 中分配给变量 $pear 的值在 pearFunc 外部是可访问的。
+
+全局变量的常见用途是从函数向主脚本传递信息，如以下脚本所示：
+
+```sh
+#!/bin/sh
+
+readPass () {
+    PASS=""               # clear password
+    echo -n "Enter Password: "   # print the prompt
+    stty -echo            # turn off terminal echo to prevent peeping!
+    read PASS             # read the password
+    stty echo             # restore terminal echo
+    echo                  # printout a new line to make output nice
+}
+readPass
+echo Password is $PASS
+```
+
+此脚本使用 readPass 函数从用户读取密码。readPass 函数读取密码并将其存储在全局变量 PASS 中。然后脚本使用变量 PASS 访问密码。
+
+readPass 函数相当简单。函数首先取消定义 PASS。然后它发出密码提示并使用 stty -echo 命令停用终端回显。终端回显被停用是因为你不希望除用户之外的人无意中看到密码。接下来，你使用 read 命令读取密码并将其值存储在 PASS 中。最后，你使用 stty echo 命令恢复终端回显并回显一个新行。
+
+## 局部变量
+
+局部变量使用 typeset 命令定义：
+
+`typeset var1=val1 ... varN=valN`
+
+这里，var1 ... varN 是变量名，val1 ... valN 是要分配给变量的值。值是可选的，如以下示例所示：
+
+```
+typeset fruit1 fruit2=banana
+```
+
+此命令声明两个局部变量 fruit1 和 fruit2，并将值 banana 分配给变量 fruit2。
+
+以下脚本说明了局部变量的行为：
+
+```bash
+#!/bin/sh
+
+pearFunc () {
+    typeset pear=2;               # set $pear
+    echo "In pearFunc(): pear is $pear"   # print out its value
+}
+
+pearFunc                        # call pearFunc
+echo 'Outside of pearFunc(): pear is $pear'  # print out $pear
+```
+
+首先，脚本定义了一个函数 pearFunc，它设置局部变量 $pear 的值并输出该值。然后脚本执行 pearFunc。最后，脚本在函数外部打印 $pear 的值。输出为
+
+In pearFunc(): pear is 2
+Outside of pearFunc(): pear is
+
+从输出可以看出，当在 pearFunc 内部访问 $pear 的值时，它的值为 2，但当在函数外部访问 $pear 的值时，它没有值。
+
+## 递归
+
+在上一节中，你了解了函数链的概念，即一个函数调用另一个函数。递归是函数链的一种特殊情况，其中函数调用自身。以下示例说明了递归的使用：
+
+```
+reverse() {
+  if [ $# -gt 0 ]; then
+    typeset arg=$1
+    shift
+    reverse "$@"
+    echo "$arg "
+  fi
+}
+reverse "$@"
+```
+
+此脚本按相反顺序打印其参数。它通过使用 $@ 作为参数调用函数 reverse 来实现。reverse 函数非常简单；它判断是否有参数。如果没有参数，函数不执行任何操作。否则，它保存第一个参数，使用 shift 将其从参数列表中移除并调用自身。一旦此调用返回，函数只需打印它保存的参数。
+
+如果将脚本命名为 reverse.sh 并使用参数 a b c 执行它，如下所示：
+
+```
+#!/bin/sh
+
+readPass () {
+  PASS=''           # clear password
+  echo -n "Enter Password: "  # print the prompt
+  stty -echo        # turn off terminal echo to prevent peeping!
+  read PASS         # read the password
+  stty echo         # restore terminal echo
+  echo              # printout a new line to make output nice
+}
+
+readPass
+echo Password is $PASS
+```
+
+输出为
+c
+b
+a
+
+![](img/3def70414996f811615f713b2077a154_236_0.png)
+
+> 在前一个示例中，你使用 /bin/sh 执行了脚本。这在 Solaris 和 SunOS 系统上不起作用。在这些系统上，你需要使用 /bin/ksh 而不是 /bin/sh 执行脚本，因为 Solaris 上的 /bin/sh 不支持 typeset 命令。
+
+此脚本的执行过程如下：
+
+1. 脚本执行 reverse "$@"（ effectively 它调用 reverse a b c）。
+2. 函数 reverse 判断 $#（参数个数）是否大于 0。在这种情况下，$# 将等于 3（a b c）。
+3. 因为 $# 大于 0，reverse 将第一个参数 $1（在这种情况下为 a）保存在局部变量 $arg 中，然后调用 shift 将其从 $0 中移除。现在，$0 包含两个参数 b c。
+4. 函数 reverse 使用缩短后的 $0 调用自身。
+5. 函数 reverse 判断 $#（参数个数）是否大于 0。在这种情况下，$# 将等于 2（b c）。
+6. 因为 $# 大于 0，reverse 将第一个参数 $1（在这种情况下为 b）保存在局部变量 $arg 中，然后调用 shift 将其从 $0 中移除。现在，$0 只包含一个参数 c。
+7. 函数 reverse 使用缩短后的 $0 调用自身。
+8. 函数 reverse 判断 $#（参数个数）是否大于 0。在这种情况下，$# 将等于 1。
+9. 因为 $# 大于 0，reverse 将第一个参数 $1（在这种情况下为 c）保存在局部变量 $arg 中，然后调用 shift 将其从 $0 中移除。现在，$0 不包含参数。
+10. 函数 reverse 使用缩短后的 $0 调用自身。
+11. 函数 reverse 判断 $#（参数个数）是否大于 0。因为 $0 中没有参数，此检查失败且函数返回。
+12. 在 reverse 调用返回后，你输出局部变量 $arg 的值，在这种情况下为 c，并返回。
+13. 在 reverse 调用返回后，你输出局部变量 $arg 的值，在这种情况下为 b，并返回。
+14. 在 reverse 调用返回后，你输出局部变量 $arg 的值，在这种情况下为 a，并返回。
+
+## 分而治之
+
+递归通常用于使用一种称为分而治之的技术来解决问题。基本上，分而治之意味着问题被分解为越来越小的实例，直到找到一个足够小可以直接求解的实例为止。每个太大而无法直接求解的实例都通过递归求解，并将解决方案组合起来以产生原始问题的解决方案。
