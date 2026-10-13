@@ -1,0 +1,395 @@
+
+- direct, 75
+- hosts, 470
+- indirect, 76
+- restrictions, 476-477
+- scripts, 565
+- xdm servers, 75, 79
+- queues
+  - faxes, deleting, 383
+  - jobs, 625-627
+  - printers, 375, 626
+  - Qfax, scheduling, 382
+- quitting smbclient program, 277
+- quotes, magic, 559
+
+## R
+- radio hardware, amateur, 778
+- RAID (Redundant Array of Inexpensive Disks), 144, 807
+  - arrays, 152
+  - bootup message, 150-151
+  - controllers, 148-149, 197, 746
+  - EATA DMA drivers, 153-155
+  - hardware, 147-150
+  - kernel, 150
+  - levels, 145-146
+  - SCSI hosts, 155-156
+  - shutdown, 156
+  - software, 147-148
+  - striping, 144
+  - troubleshooting, 155
+- raw backups, 184
+- rc.news file, INN, 586
+- reading
+  - files, 626
+  - mail, 664
+- readme directive (WU-FTPD), 603
+- real users (WU-FTPD), 600-601
+- rebooting, 67, 658
+- rebuilding, kernel, 195-196
+- receiving
+  - Efax faxes, 374-375
+  - HylaFAX faxes, 358-359
+  - news feeds, 572-573
+- recode, PHP, 560
+- recompiling, kernel, 195
+- reconfiguration, kernel, 195-196
+- records
+  - adding, 536
+  - DNS, 457-458
+  - editing, 536-538
+- recovery, disaster, 184
+  - boot blocks, installation, 189
+  - hard drives, partitioning, 187-188
+  - operating systems, 184-188
+  - swap space, 188
+- recreational topics newsgroups, 570
+- Red Hat Linux 6.2
+  - configuration, 240-241
+  - crond daemon, 104
+- Redundant Array of Inexpensive Disks. See RAID
+- regenerating, ypservers database, 93
+- relaying denied errors, troubleshooting, 340
+- remote hosts
+  - accessing, 256-257, 307
+  - directories, 283
+  - firewalls, 405
+  - printing, 283, 285
+  - routers, 258-259
+- removing
+  - crontab files, 108
+  - directories, 704-705
+  - drives, 769-770, 803
+  - files, 704-705
+  - NIS, slave servers, 95-96
+  - rules, 407
+  - tasks, from atd queue, 110
+- rename directive (WU-FTPD), 603
+- renaming, mail queues, 338
+- renice command, 132
+- replying, mail, 665
+- requests, Apache, clients, 486
+- resolv.conf file, troubleshooting, 479-480
+- resolvers, 468
+- response time, servers, 217
+- Responsible Person (RP) records, 458
+- restarting Apache, 502
+- restoring
+  - Amanda, 181-184
+  - backups, 164-166
+  - chains, 417-418
+  - file compression, 184
+  - headers, 184
+  - operating systems, 188
+  - raw backups, 184
+  - tar from tape, 164
+- restrictions
+  - at command access, 111
+  - crontab files, accessing, 108-109
+  - queries, 476-477
+  - zone transfers, DNS, 474, 476
+- retiring master servers, 95
+- retrieval time, 217
+- returning NIS server names, 97
+- Reveal video cards, 736
+- reverse name resolution, 457, 470, 479
+- revoking MySQL permissions, 541-542
+- rewriting, sendmail, addresses, 321
+- right-hand-side pattern, 326-328
+- RIP (Routing Information Protocol), 298-300
+- RLL (Run Length Limited), 808
+- rm field (lpd daemon), 286
+- rm command, 704-705
+- romfs, mount command, 686
+- root users
+  - directory, 487, 494
+  - networks, 248
+  - password, 524
+  - statement, 201
+- root.hints file, updating, 480
+- rotating, log files, 437-441, 512
+- round trip time (RTT), packets, 256
+- route utility, 293-294
+- routed daemon, 299, 307
+- routers
+  - active, 298
+  - hop counts, 298
+  - IP spoofed packets, 406
+  - LAN-to-LAN, creating, 296-297
+  - links, 301
+  - networks, 233, 244-245, 247, 250
+  - OSPF, troubleshooting, 308
+  - passive, 298
+  - remote hosts, 258-259
+  - TCP/IP, 239-240
+  - troubleshooting, 308
+- routing
+  - kernel modules, 293
+  - networks, 290-292
+  - sentinel files, 321
+  - TCP/IP, 239
+  - troubleshooting, 306
+  - See also dynamic routing; static routing
+- Routing Information Protocol (RIP), 298-300
+- RP (Responsible Person) records, 458
+- rp field (lpd daemon), 286
+- rpc.bynumber, 87
+- rpc.yppasswd, starting, 89
+- rpc.yppxfrd, starting, 89
+- rpm command, 346
+- RPM packages, 26
+- rules
+  - accounting, 413
+  - adding/removing, 407-409
+  - address-rewriting, 364, 379
+  - firewalls, 418-419, 421-423
+  - procmail, 336
+  - sendmail files, 322
+  - sets, 326, 328
+  - source IP address, 409
+- Run Length Limited (RLL), 808
+- run levels, 60-62
+- runaway processes, 121, 140
+- running
+  - Amanda, crontab, 181
+  - initialization scripts, 62-64
+  - MRTG, 222-225
+  - operating systems, 713-714
+  - processes, 118
+  - tasks, 104-105
+  - vmstat utility, 133-134
+  - ypbind, 90
+  - ypinit, 88
+
+## S
+- S3 video cards, 736, 787-790
+- safe mode, PHP, 559
+- Saint, 395
+- Salz, Rich, 570
+- Samba
+  - downloading, 268
+  - files, 273-278
+  - printers, 275-280
+  - smb.conf file, 270-273
+  - starting, 268-269
+- SANE (Scanner Access Now Easy), 774
+- SATAN, 395
+- saving
+  - chains, 417-418
+  - networks, configuration, 246
+- scanners, 197
+  - alpha, beta drivers, 776-777
+  - handheld, 774
+  - Scanner Access Now Easy (SANE), 774
+  - Web sites, 774-777
+- scheduling, 115
+  - backups, 158
+  - processes, 194
+  - Qfax, queues, 382
+  - scripts, 115
+  - tasks, 104, 109-110
+- scoping, PHP, 555
+- screens, 675-677, 778
+- scripts
+  - add-rm-ypservers, 99-101
+  - apas, 555
+  - chkdaemon, 137-138
+  - chkload, 138
+  - chkswap, 139-140
+  - configure, 553
+  - enabling/disabling, 51-52
+  - failed-su, 441-443
+  - faxlpr, 376
+  - firewalls, 426-428
+  - fschecker, 111-113
+  - h2n, 477
+  - initialization, 62-64
+  - mailfax, 364-365
+  - makezones, 477
+  - named-bootconf, 477
+  - news.daily, 586
+  - PHP, 559
+  - prefdm, 77
+  - query.php, 565
+  - scheduling, 115
+  - smbprint, 278-279
+  - startup, 69
+  - su-report, 441-442
+  - syscheck, 113-115
+  - WU-FTPD, 618-620
+  - Xsession, 74
+- SCSI (Small Computer Systems Interface), 808
+  - ABORT BUSY errors, 156
+  - adapter, 798, 804
+  - controllers, 746-749
+  - hosts, 155
+  - kernel, 198
+  - tape drives, 159, 766
+- sd field (lpd daemon), 284
+- search directive, 468
+- search engines, 218, 220
+- search paths, hostnames, 246
+- second-level domains, 456
+- secondary servers, 467-468
+  - configuration, 458
+  - restrictions, 476
+- security
+  - Apache, 495, 512-514
+  - APIs, 450
+  - breaches, 395-396
+  - CGI, 449
+  - DNS, 474-477
+  - firewalls, 419-421
+  - Internet, 388, 393
+  - log files, 395
+  - monitoring, 395-397
+  - networks, 388, 393, 407
+  - operating systems, 388, 392
+  - permissions, 629-631
+  - physical environment, 388-389
+  - sendmail, 331-332
+  - servers, 389
+  - software, updates, 395-396
+  - subsystem, 433
+  - user accounts, 388-390
+  - utilities, 393-395
+  - Web sites, 396
+  - *See also* permissions
+- SELECT command, 534-535, 540
+- self-referencing links, Apache, 488
+- sendfax component, 367
+- sending
+  - Efax faxes, 373, 376-377
+  - HylaFAX faxes, 357-358
+  - mail, 339, 664
+  - news feeds, 572-574
+  - Qfax faxes, 382-383
+- sendmail
+  - address, 321
+  - aliases file, 320
+  - architecture, 321
+  - commands, 322-323
+  - configuration, 315, 320-322
+  - daemons, 127
+  - default settings, 319
+  - delivery, 324-325
+  - directories, 317-320
+  - files, 317-318, 320
+  - .forward files, 337
+  - hash table files, 317
+  - headers, 322-324
+  - help file, 320
+  - hoststat command, 318, 320
+  - HylaFAX support, 365
+  - keyed databases, 324
+  - left-hand-side pattern, 326-327
+  - location, 321
+  - log files, 332-334
+  - m4 macro processor, 329-331
+  - macros, 322-323
+  - mail queues, 338-339
+  - mailq link, 319
+  - newaliases link, 318
+  - options, 325
+  - parsing, 321
+  - permissions, 340-341
+  - priority, 326
+  - purgestat link, 319
+  - relaying denied errors, 340
+  - right-hand-side pattern, 327-328
+  - routing, 321
+  - rules, 322, 326, 328
+  - security, 331-332
+  - SMTP, 316
+  - statistics, 320, 334-335
+  - troubleshooting, 337, 341
+  - trusted users, 322, 329
+  - versions, 322, 329, 339-340
+  - wildcard mail exchangers, 341
+- sendmail (MTA), 452
+- sendpage component, 367
+- serial numbers
+  - DNS, 478
+  - increasing, 472
+- serial ports, 778, 797
+- server-side includes, Apache, 168, 368-369, 513
+- servers, 2
+  - adding, 91
+  - bandwidth, 216, 221
+  - capacity planning, 214-215
+  - data collection, 220
+  - databases, 217, 219
+  - DNS, 218
+  - domains, 99-101, 249
+  - email, 218-220, 310-311
+  - FTP, 218
+  - INN maintenance, 586
+  - Internet, 221-222, 225
+  - master, 91-93
+  - MRTG, 221-222, 225
+  - name, 243-244, 247, 249
+  - news, 217
+  - NIS, 95-97
+  - performance, 215-216, 221
+  - primary, 459-461, 465-467
+  - response time, 217
+  - secondary, 467-468
+  - security, 389
+  - slave, 95-96
+  - storage, 221
+  - throttling, 588
+  - transactions per minute, 217
+  - Web, 218, 220
+  - workload, 216
+  - X applications, 72-73, 218
+  - ypserv map, 93
+  - zone transfers, restrictions, 474, 476
+  - *See also* database servers; MySQL
+- services.byname, 87
+- Session Layer (OSI model), 231
+- sessions
+  - log files, 369-371
+  - mail, 665
+- set type command, 471
+- sf field (lpd daemon), 284
+- sh field (lpd daemon), 284
+- Shadow Password Suite, passwords, 49-50
+- sharing
+  - directories, 283
+  - files, Samba, 273-278
+  - printers, Samba, 275-276
+- shell, user accounts, 39, 43, 45, 707-708
+- SHELL variable, 107
+- Shift key, booting process, 56
+- shortcut keys, rebooting (Ctrl+Alt+Del), 67
+- SHOW DATABASES command, 530
+- shutdown, 105
+  - command, 705-707
+  - directive, 604
+  - ftp, 609-610
+  - operating systems, 65-67
+- Sierra video cards, 737
+- Sigma video cards, 737
+- signals, 129-131
+- Simple Mail Transfer Protocol. *See* SMTP
+- single-user modes, 64
+- sites, ntpasswd.ctl file, 585-586
+- sizing
+  - directive, 441
+  - kernel, 212
+  - swap partitions, 16
+- slave servers. *See* database servers; servers
+- sleeping, processes, 121
+- slotless, adapters, 756
+- smail, 453
+- Small Computer Systems Interface. *See* SCSI

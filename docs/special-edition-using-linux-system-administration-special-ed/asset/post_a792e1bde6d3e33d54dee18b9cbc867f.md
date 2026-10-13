@@ -1,0 +1,341 @@
+
+- networks, 242
+- queries, 470
+- sendmail, 320
+- virtual, 616-618
+- HostSentry, 394
+- hoststat command, 318, 320
+- host swapping, 152
+- Hour field (crontab files), 105
+- HP video cards, 732
+- hpfs, mount command, 684
+- HTML, PHP, 560
+- HTTP (HyperText Transfer Protocol)
+  - Apache, 482-483, 490-491
+  - APIs, 449-450
+  - CGI, 449
+  - daemons, 127
+  - directives, 484-488
+  - platforms, 448
+  - status codes, 508-510
+  - Web servers, 448-449
+- HylaFAX, 344
+  - addresses, 364
+  - clients, 361-363
+  - configuration, 349-356
+  - crond command, 367
+  - debugging, 369-371
+  - development, 345
+  - downloading, 348
+  - FAX mailers, 364
+  - faxes
+    - automating, 359-360
+    - clients, 360-361
+    - receiving, 358-359
+    - reading, 357-358
+  - faxgetty program, 356
+  - gateway, 364-366
+  - installation, 346-349
+  - log files, 348, 369-371
+  - mailfax script, 364-365
+  - modems, 350
+  - sendmail, 365
+  - testing, 356-357
+  - transfer log files, 366
+  - troubleshooting, 367-369
+  - UNIX, 345
+- Hypertext Transfer Protocol. See HTTP
+- Hyperwave PHP, 558
+
+## I
+- I/O port, networks, 243, 750
+- IBM
+  - databases, 451
+  - DB2, PHP, 557
+  - video cards, 733, 740
+- ICMP
+  - messages, 411
+  - MTU, discovery, 411
+  - packets, 410-411
+  - ping packets, 406
+- icons, Apache, 492-494
+- ICP vortex controllers, RAID, 148
+- IDE (Integrated Drive Electronics)
+  - adapters, 804
+  - disks, 198
+  - drives, 159, 765
+- idle time, CPU, 135
+- IETF, TCP/IP, 238
+- ifconfig utility
+  - troubleshooting, 256, 261-262
+  - virtual IP addresses, 253
+- ifempty directive, 440
+- ignoring, Apache, files, 494
+- istat utility, WU-FTPD, 620
+- IIT video cards, 733
+- image statement, 201
+- ImageMagick, PHP, 556
+- imagemaps, Apache, 500
+- IMAP (Internet Message Access Protocol), 335-336, 555
+- IMSP, PHP, 555
+- include file, directory directive, 440
+- incoming.conf file, editing, 579-580
+- incompatibility, 805-806
+- incrementing operators, 562
+- indexing, Apache, 500
+- indexmaker utility, 224
+- indirect queries, xdm servers, 76
+- Industry System Architecture (ISA), 807
+- inetd daemon, 126, 488-489
+- inetd.conf file, ProFTPD, 614
+- infeed.status log file, 587
+- info logging level, 434
+- Informix database, 451, 558
+- init process, 60, 66, 126
+- initialization
+  - kernel, 56-59
+  - scripts, 62-64
+- INN
+  - access rights, 582-583
+  - active file, 590
+  - configuration, 574, 576
+  - ctlinnd utility, 587-588
+  - cycbuff.conf file, 580
+  - expire.ctl file, 583-584
+  - history file, 589
+  - history.n.* files, 589-590
+  - incoming.conf file, editing, 579-580
+  - inn daemon, 127, 587-588
+  - innwatch process, 589
+  - installation, 571-572
+  - log files, 574, 586-587
+  - news articles, 574-575, 578-579, 584
+  - news feeds, 572-574, 576-579
+  - news history database, 584-585
+  - nntpnd.ctl file, 585-586
+  - overview.ctl file, 582
+  - processes, 589
+  - server, 586, 588
+  - software, 570-571
+  - starting, 586
+  - storage.conf file, 580-582
+- input chains, 407, 425
+- INSERT command, 536, 540
+- installation
+  - Amanda, 168-169
+  - boot blocks, 189
+  - distributions, 8
+  - Efax, 371-372
+  - FrontPage extensions, 566
+  - grants table, 522
+  - hardware requirements, 8-10
+  - HylaFAX, 346-349
+  - INN 2.2.1, 579-580
+  - kernel, 202-203
+  - KickStart, 22
+    - boot floppy disk, 27
+    - configuration file, 22-23
+    - packages installation, 25
+  - post-installation, 26
+  - preinstallation, 23-25
+  - RPM packages, 26
+  - servers, 27-29
+  - starting, 29
+  - modules, 201-202
+  - MRTG, 222
+  - MySQL, 520-524
+  - partitions, 14
+    - fdisk utility, 16-20
+    - mounting, 15-16
+    - swap, 15-16
+  - patches, 204
+  - Perl, 222
+  - PHP, 551-553
+  - ProFTPD, 612-613
+  - Qfax, 377-378, 382
+  - RAID, 148-150
+  - WU-FTPD, 594-596
+
+## J
+- jobs
+  - deleting, 625, 627
+  - executing, 625-626
+  - see tasks, 104
+- John the Ripper, 394
+- joysticks, 778-780
+- JPEG, PHP, 558
+
+## K
+- KeepAlive feature, Apache, 485
+- kern subsystem, 433
+- kernel, 194
+  - application programs, 194
+  - booting, 210
+  - CD-ROM drives, 212
+  - character devices, 199
+  - compiling, 199-200, 210
+  - compressed kernel image file, 211
+  - configuration, 197-199
+  - copying to floppy disks, 200
+  - device drivers, 194-195
+  - downloading, 196
+  - file systems, 198
+  - firewalls, 406
+  - forward chains, 407
+  - hacking, 199
+  - hardware, 194
+  - init process, 60
+  - initialization, 56-59
+  - input chains, 407
+  - installation, 202-203
+  - kmod daemon, 205
+  - math co-processors, 198
+  - memory, allocation, 194
+  - modules, 204-205
+  - networks, 198
+  - operating system, 195
+  - optimization, 407
+  - output chains, 407
+  - parallel ports, 212
+  - parameters, 206-207
+  - patches, 203-204
+  - peripheral devices, 194
+  - /proc file system, 205-206
+  - processes, 194, 198
+  - RAID, 150
+  - rebuilding, 195-196
+  - recompiling, 195
+  - reconfiguration, 195-196
+  - rules, adding/removing, 407
+  - run levels, 60-62
+  - SCSI, 198
+  - size, 212
+  - sound, 199
+  - source trees, 196
+  - speed, 212
+  - storage, 194
+  - symmetric multiprocessing, 207-209
+  - testing, 200-201
+  - troubleshooting, 68
+  - updating, 196
+  - upgrades, 211
+  - user programs, 194
+  - vmlinuz, 194
+- kernel modules, routing, 293
+- key values, NIS map, 97-98
+- keyboard combinations, 67
+- keyed databases, sendmail, files, 324
+- KickStart, 22
+  - boot floppy disk, 27
+  - configuration file, 22-23
+  - DHCP server, 27-28
+  - DNS server, 29
+  - NFS server, 28-29
+  - packages installation, 25
+  - post-installation, 26
+  - preinstallation, 23-25
+  - RPM packages, 26
+  - starting, 29
+  - troubleshooting, 29-30
+- kill command, 127-128, 141, 659-660
+- kmod daemon, 205
+- Koening, Thomas, 627
+- kswapd, daemons, 126
+- kupdate, daemons, 126
+
+## L
+- label statement, 79, 201
+- LAN-to-LAN routers, 296-297
+- languages, 24, 493-494
+- laptop accelerated-X display server, 739-741
+- laptops, 721-722
+- launching. See starting
+- LDAP, PHP, 557
+- Leadtek video cards, 733
+- left-hand-side pattern, 326-327
+- levels, RAID, 145-146
+- lf field (lpd daemon), 284
+- libc, troubleshooting, 102
+- libraries
+  - Amanda, 168
+  - PHP, 555, 566
+- LIDS (Linux Intrusion Detect System), 394
+- LILO, 55-56, 189
+- limit directive (WU-FTPD), 602
+- limitations, access rights, 602-603
+- link-state protocols, 302
+- links, 488, 661
+- Linux
+  - authentication, 84
+  - Intrusion Detect System (LIDS), 394
+  - Router Project, 295
+  - Web site, 451
+- listing
+  - chains, 408, 416
+  - tar contents, 163
+- ln command, 660-661
+- load balancing, 302, 473-474
+- loading Apache, modules, 485
+- local logins, NIS, 98-99
+- local printing, 284-285
+- location, sendmail files, 321
+- log files
+  - Apache, 484, 500
+    - access, 507
+    - error, 510-511
+    - formats, 485
+    - managing, 511-512
+    - monitoring, 507
+    - rotating, 512
+  - error messages, 284
+  - facility types, 433
+  - ftp, 610-611
+  - HylaFAX, 348, 366, 369-371
+  - INN, 574, 586-587
+  - logging levels, 434
+  - monitoring, 395
+  - operating system, 432, 441
+  - packets, 414-415
+  - rotating, 436-441
+  - sendmail, 332-335
+  - syslog daemon, 433-436
+  - targets, 434
+- log transfers directive (WU-FTPD), 604
+- logical operators, 562
+- logical partitions, 17-18, 639
+- login
+  - failed, 441
+  - log files, 441
+  - NIS, 98-99
+  - prompts, 73-74, 78-79
+  - SSH (secure shell), 421
+  - super user, 432
+  - Telnet, 420
+- logrotate utility, 436-437, 439-441
+- lookups, hostnames, 469-470
+- loopback device, network interface, 248
+- loop devices, 687, 713
+- lp field (lpd daemon), 284, 286
+- lpd daemon, 127, 283-286
+- lpr command, 376, 433
+- ls command, 661-663
+
+## M
+- m4, HylaFAX support, 329-331, 365
+- MAC addresses, 262-263
+- macros
+  - sendmail files, 322-323
+  - xdm servers, 76
+- magic quotes, PHP, 559
+- mail
+  - aliases, 86
+  - delivery, sendmail files, 313, 324-325
+  - directive, 440
+  - Exchanger (MX) records, 458
+  - MAIL variable, 107
+  - priority, sendmail files, 326
+  - queues, 338-339
+  - servers, 452-453
+  - subsystem, 433
+  - transport agents, 313, 452
+  - user agents, 312, 452

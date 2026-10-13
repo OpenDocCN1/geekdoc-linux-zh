@@ -1,0 +1,14 @@
+# TABLE 25.3 — CONTINUED
+
+| Parameter | Description |
+|---|---|
+| `--with-sybase-ct=<directory>` | Indicates that PHP should be built with support for Sybase-CT and optionally specifies the location of the Sybase home directory. If no path is specified, the default value is `/home/sybase`. |
+| `--with-mysql=<directory>` | Indicates that PHP should be built with support for the MySQL database and optionally specifies the location of the MySQL installation directory. If no path is specified, PHP attempts to determine the location of the installation directory. |
+| `--with-msql=<directory>` | Indicates that PHP should be built with support for the mSQL database and optionally specifies the location of the mSQL installation directory. If no path is specified, the default value is `/usr/local/Hughes`. |
+| `--with-pgsql=<directory>` | Indicates that PHP should be built with support for the PostgreSQL database and optionally specifies the location of the PostgreSQL base installation directory. If no path is specified, the default value is `/usr/local/pgsql`. |
+| `--with-ibm-db2=<directory>` | Indicates that PHP should be built with support for the IBM DB2 database and optionally specifies the location of the DB2 base installation directory. If no path is specified, the default value is `/home/db2inst1/sqllib`. |
+| `--with-solid=<directory>` | Indicates that PHP should be built with support for the Solid database and optionally specifies the location of the Solid base installation directory. If no path is specified, the default value is `/usr/local/solid`. |
+| `--with-empress=<directory>` | Indicates that PHP should be built with support for the Empress database and optionally specifies the location of the Empress base installation directory. If no path is specified, the default value is the value of the `EMPRESSPATH` environment variable. |
+| `--with-ldap=<directory>` | Indicates that PHP should be built with support for LDAP and optionally specifies the location of the LDAP base installation directory. If no path is specified, the default value is `/usr` and `/usr/local`. |
+| `--with-mck=<directory>` | Indicates that PHP should be built with support for Cybercash MCK and optionally specifies the location of the Cybercash MCK build directory. If no path is specified, the default value is `/usr/src/mck-3.2.0.3-linux`. |
+| `--with-snmp=<directory>` | Indicates that PHP should be built with support for SNMP and optionally specifies the location of the SNMP base installation directory. If no path is specified, PHP attempts to locate the SNMP installation directory. |

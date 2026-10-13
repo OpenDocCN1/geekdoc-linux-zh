@@ -1,0 +1,404 @@
+
+## M
+
+- mail command, 663-664
+  - deleting, 664
+  - distribution lists, 665
+  - networks, 665
+  - options, 670-671
+  - reading, 664
+  - replying, 665
+  - sending, 664
+  - sessions, 665
+  - tilde escapes, 669
+- mailboxes, email, 313
+- mailer definition, Qfax, creating, 379
+- mailfax script, 364-365
+- mailq link, sendmail, 319
+- maintenance, INN, servers, 586
+- make command
+  - bzdisk, 200
+  - clean, 199
+  - config, 197
+  - dep, 199
+  - menuconfig, 197
+  - mrproper, 200
+  - NIS, 94
+  - xconfig, 197
+- makehistory command, 584
+- makezones script, 477
+- managing
+  - DNS, 472-473
+  - log files, 511-512
+  - Qfax, 383
+- man command, 672-674
+- maps, NIS, 86-87
+  - configuration, 88
+  - editing, 96
+  - key values, 97-98
+  - synchronizing, 97
+  - transferring, 94-95
+- mark subscriptions, 433
+- marking, PHP, 560-561
+- masquerading, 406-407, 413
+- master servers
+  - NIS, 91-93
+  - retiring, 95
+  - transferring, 94-95
+  - time stamps, deleting, 94
+  - See also database servers; servers
+- math co-processors, kernel, 198
+- math support, PHP, 559
+- Matrox video cards, 733
+- MaxVision video cards, 734
+- MCA (MicroChannel Architecture), 807
+- MCAL, PHP, 555
+- mcrypt directory, PHP, 560
+- MD5 encryption, 48
+- memory, 723
+  - allocation, 194
+  - buffers, 134
+  - cache, 134
+  - files, 636-637
+  - free, 134
+  - loading during booting, 54-56
+  - PHP, 559
+  - troubleshooting, 543
+  - virtual, 134
+- memory cards, 797
+  - requirements, 219
+  - vmstat utility, 134
+- messages, 411, 603
+- metacycbuffs, 580
+- Metheus video cards, 734
+- MFM (Modified Frequency Modulation), 807
+- mhash directory, PHP, 560
+- MicroChannel Architecture (MCA), 807
+- Micron video cards, 740
+- Micronics video cards, 734
+- MIDI, sound cards, 763
+- MIME encoding, Apache, 492, 495, 500
+- Mini SQL database, 451
+- minix, mount command, 685
+- Minute field (crontab files), 105
+- MIRO video cards, 734
+- misrouting directive, 440
+- mkkickstart utility, 22
+- MMX (Multimedia Extensions), 807
+- Mini Linux static router, 295
+- modems, 197
+  - cards, 797
+  - compatibility, 805-806
+  - external, 771-772
+  - fax, 771
+  - HylaFAX, 350
+  - incompatibility, 805-806
+  - internal, 771-772
+- Modified Frequency Modulation (MFM), 807
+- modules
+  - Apache, 484-485, 499-501
+  - installation, 201-202
+  - kernel, 204-205
+- monitoring
+  - access log files, 507-510
+  - ampdump utility, 191
+  - Apache, 507
+  - error log files, 510-511
+  - log files, 395
+  - packets, 264-266
+  - processes, 118, 121, 124-126, 205
+  - security, 395-397
+  - tasks, 110
+  - user accounts, 390
+- monochrome video cards, 726
+- Month field (crontab files), 105
+- more command, 675-677
+- motherboards, hardware support, 720-721
+- mount command, 283, 677-684
+  - affs, 681
+  - coherent, 682
+  - ext, 682
+  - ext2, 682-683
+  - fat, 683-684
+  - hpfs, 684
+  - ISO9660, 684-685
+  - loopdevice, 687
+  - minix, 685
+  - msdos, 685
+  - ncp, 686
+  - nfs, 686
+  - proc, 686
+  - romfs, 686
+  - smbfs, 686
+  - sysv, 687
+  - ufs, 687
+  - umsdos, 687
+  - vfat, 687
+  - xenix, 687
+  - xiafs, 685, 687
+- mounting
+  - affs, 681
+  - coherent, 682
+  - ext, 682
+  - ext2, 682-683
+  - fat, 683-684
+  - hpfs, 684
+  - ISO9660, 684-685
+  - loopdevice, 687
+  - minix, 685
+  - msdos, 685
+  - ncp, 686
+  - nfs, 686
+  - partitions, 15-16
+  - proc, 686
+  - romfs, 686
+  - smbfs, 686
+  - sysv, 687
+  - ufs, 687
+  - umsdos, 687
+  - vfat, 687
+  - xenix, 687
+  - xiafs, 687
+- mouse, 197
+  - alpha, beta drivers, 770
+  - support, 770
+  - touchpad devices, 770
+- moving
+  - files, 688-689
+  - NIS master servers, 91-92
+- MRTG
+  - configuration, 223
+  - data collection, 221-222, 225
+  - installation, 222
+  - requirements, 222
+  - running, 222-225
+- msdos, mount command, 685
+- mSQL database server, 518, 557
+- MTA (Mail Transport Agents), 411, 452-453
+- MUAs (Mail User Agents), 452
+- multi-head accelerated-X display server, 741
+- multi-homed hosts, 252-253
+- Multi-Router Traffic Grapher (MRTG), 221
+- multifunction boards, 785, 799-800
+- Multimedia Extensions (MMX), 807
+- multiprocessing, symmetric, 207-209
+- multitasking, 2, 104
+- multiuser operating modes, 65
+- mv command, 45, 688-689
+- MX (Mail Exchanger) records, 458, 463-464, 470
+- mx field (lpd daemon), 284
+- Mylex controllers, RAID, 149
+- MySQL database, 451, 518
+  - backups, 538-539
+  - configuration files, editing, 524-528
+  - connections, 528-529
+  - daemon, 522
+  - data types, 530-532
+  - downloading, 520
+  - installation, 520-521, 523-524
+  - permissions, 539-542
+  - PHP, 557
+  - root password, 524
+  - starting/stopping, 528
+  - troubleshooting, 542-544
+  - user accounts, 539-542
+  - See also database servers; servers
+
+## N
+
+- name resolution, 468-469
+  - lookups, 457
+  - nslookup, 469-472
+- name servers
+  - configuration, 458-461
+  - daemons, 126
+  - directives, 468
+  - networks, 243-244, 247, 249
+  - primary, 466-467
+    - configuration, 459
+    - named, 465
+    - zone files, 461-465
+  - Qfax, bypassing, 379
+  - queries, restrictions, 476-477
+  - records, 463-467
+  - secondary, 467-468
+  - switch file, 98-99
+- named-bootconf script, 477
+- named.conf file, 459-461, 478
+- naming devices, 10-14
+- National Science Foundation, 592
+- National Semiconductor, 750
+- NDBM files, PHP, 560
+- ncp, mount command, 686
+- NEC video cards, 734, 741
+- NeoMagic video cards, 741
+- Nessus, 395
+- net devices, networks, 243
+- NetBIOS, usernames, 278
+- netcfg utility, 240-241
+- netgroup, 87
+- netid.byname, 87
+- netmasks, 87, 235, 243
+- netstat utility, troubleshooting, 256, 259-261
+- network adapters. See adapters; cards, adapters
+- Network File System. See NFS
+- Network Layers (OSI model), 231-232
+- networks
+  - adapters, 242
+  - aliases, 242
+  - Amanda backups, 167
+  - BOOTP, 242
+  - configuration, 261-262
+    - automating, 247, 251-252
+    - manually, 242, 247
+    - saving, 246
+  - DHCP, 242
+  - domains, 242
+  - firewalls, architecture, 403-406, 416-417
+  - forwarding, 407
+  - gateways, 244-245
+  - hostnames, 242
+  - hosts file, 247, 249
+  - I/O port, 243
+  - interface, 216, 247-248
+  - intranets, 448
+  - IP addresses, 233-235, 243
+  - IRQ, 243
+  - kernel module, 243
+  - links, 301
+  - mail, 665
+  - name servers, 243-244, 247, 249
+  - net devices, 243
+  - NIS, 85-86
+  - root users, 248
+  - routers, 233, 244-245, 247, 250, 290-292
+  - security, 388, 393, 407
+  - static routes, 294
+  - status, 259-261
+  - subnetworking, 235-237
+- networks.byaddr, 87
+- newaliases link, 318
+- news articles
+  - expiration, 574
+  - feeds, 572-574, 576-579
+  - INN, storage, 575, 578-579
+  - posting, 574
+  - servers, 217
+  - software, 570
+  - spools, 584
+  - subsystem, 433
+- news history database, INN, 584-585
+- news.daily script, INN, 586
+- newsgroups, hierarchies, 570-571
+- NFS (Network File System), 280
+  - configuration, 281-282
+  - directories, accessing, 283
+  - Kickstart installation, 28-29
+  - mount command, 686
+  - permissions, 282
+  - troubleshooting, 286-287
+- nice command, processes, 131
+- NIS (Network Information Service), 84
+  - add-rm-ypservers script, 99-101
+  - aliases, 315
+  - clients, 89-90
+  - domain names, 87, 91
+  - libc, 101
+  - logins, local, 98-99
+  - make command, 94
+  - maps, 86-87
+    - configuration, 87-88, 91
+    - editing, 96
+    - key values, 97-98
+    - synchronizing, 97
+    - transferring, 94-95
+  - master servers, 91-92, 95
+  - networks, 85-86
+  - servers, 97
+  - slave servers, 91, 95-96
+  - troubleshooting, 101
+  - ypinit, running, 91
+  - ypservers, 92-93
+- nnrp.access file, INN, 582-583
+- NNTP, 448, 452
+- nntp news software, 570
+- nntpsend.ctl file, INN, 585-586
+- nntpsend.log file, 587
+- nocrypto directive, 440
+- nocreate directive, 440
+- nodebug command, 472
+- nodelaycompress directive, 440
+- nonimaging directive, 440
+- Non-authoritative answer indicator, 471
+- non-intelligent cards, 751
+- none logging level, 434
+- noolddir directive, 440
+- notice logging level, 434
+- notimepty directive, 440
+- NS (Name Server) records, 458, 463
+- NSFNET (National Science Foundation), 592
+- nslookup utility
+  - name resolution, 469-472
+  - quitting, 472
+  - troubleshooting, 250, 263-264
+- Nth Graphics video cards, 735
+- NULL records, 458
+- Number Nine video cards, 735
+
+## O
+
+- Oak Technology video cards, 735
+- objects, PHP, 561
+- ODBC, PHP, 556, 558-559
+- olddir directive, 440
+- online manual pages, 672-674
+- Open Shortest Path First. See OSPF
+- OSPF
+- OpenLink ODBC, PHP, 556
+- operating systems
+  - booting, 54-56, 187
+  - compiling, 210-211
+  - context switches, 135
+  - disaster recovery, 184
+  - interrupts, 135
+  - kernel, 195
+  - log files, 441
+  - logging, 432
+  - rebooting, 67
+  - recovering, 184-187
+  - restoring, 188
+  - running, 713-714
+  - security, 388, 392
+  - shutting down, 65-67, 705-707
+  - stopping, 658
+  - syscheck script, 113-115
+  - Web sites, 786
+- operators, PHP, 562
+- optimization, kernel, 407
+- options
+  - Apache, 498
+  - at command, 626
+  - chmod command, 630-631
+  - chown command, 632
+  - df command, 636
+  - fdisk command, 640
+  - mail command, 670-671
+  - sendmail, files, 325
+- Oracle, 452, 556
+- Orchid video cards, 736
+- OSI model, 231
+- Osiris, 395
+- OSPF (Open Shortest Path First)
+  - autonomous system (AS), 301
+  - backbone routers, 301
+  - border routers, 301
+  - boundary routers, 301
+  - databases, 300
+  - designating, 301
+  - external routers, 300
+  - external routing, 301
+  - gated daemon, 303-306
+  - load-balancing, 302
+  - network links, 301
+  - routers, 300-301
+  - summary links, 301

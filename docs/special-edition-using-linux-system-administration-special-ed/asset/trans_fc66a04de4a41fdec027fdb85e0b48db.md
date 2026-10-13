@@ -1,0 +1,164 @@
+
+此 Xaccess 文件控制三类终端的 xdm 访问权限：主机名以 fin 开头（财务部门的终端）、以 per 开头（人事部门的终端）以及以 mis 开头（信息系统部门的终端）。
+
+财务部门的终端由 xdm 直接处理。人事部门的终端被重定向到在 X 应用服务器 per-xserver 上运行的 xdm。信息系统终端通过一个选择器（chooser）启用，使用户可以登录到任何运行 xdm 的有效 X 应用服务器。
+
+要使 xdm 在开机时启动，从而让您的 X 应用服务器随时准备响应 XDMCP 查询，您必须将默认运行级别从 3 改为 5。第 4 章“启动与关闭”中会更详细地讨论运行级别。
+
+要更改默认运行级别文件，请编辑 /etc/inittab 文件，并将以下行：
+
+```text
+id:3:initdefault:
+```
+
+改为以下内容：
+
+```text
+id:5:initdefault:
+```
+
+您还必须确保 xdm 将进入运行级别 5。检查 inittab 文件中是否有类似于以下内容的条目：
+
+```text
+x:5:respawn:/usr/bin/X11/xdm -nodaemon
+```
+
+如果缺少此行，请将其添加到文件中。
+
+> **注意：**
+>
+> Red Hat Linux 6.2 使用 `prefdm` 脚本在运行级别 5 中启动 xdm。这意味着相关条目是 `x:5:respawn:/etc/X11/prefdm -nodaemon`。为了确保 xdm 将由 `prefdm` 启动（而不是其他登录管理器，如 kdm 或 gdm），请编辑 `/etc/X11/prefdm` 文件，并将第 6 行的首选变量设置为 `preferred=xdm`。
+
+默认情况下，当 xdm 在您的 X 应用服务器上启动时，它也会在本地系统上启动 X，并在那里显示登录提示。这不必要地消耗了应用服务器的资源，而应用服务器实际上并不需要在控制台上运行 X Windows。`/etc/X11/xdm/Xservers` 或 `/etc/X11R6/xdm/Xservers` 文件包含一个应由 xdm 管理的本地 X 服务器列表。要阻止 xdm 启动本地 X 服务器，请在文件的所有行开头加上井号（#）来注释掉文件中的所有条目。在大多数默认安装中，有一条条目需要您注释掉：
+
+```text
+:0 local /usr/X11R6/bin/X
+```
+
+## 自定义 xdm 登录提示
+
+`/etc/X11/xdm/Xresources` 或 `/etc/X11R6/xdm/Xresources` 文件控制 xdm 登录窗口的外观。该文件包含一系列定义 xdm 外观和行为的 X 资源条目。以下是一个典型的 Xresources 文件：
+
+```text
+! $XConsortium: Xresources /main/8 1996/11/11 09:24:46 swick $
+xlogin*login.translations: #override\
+        Ctrl<Key>R: abort-display()\n\
+        <Key>F1: set-session-argument(failsafe) finish-field()\n\
+        <Key>Return: set-session-argument(failsafe) finish-field()\n\
+        <Key>Return: set-session-argument() finish-field()\n
+xlogin*borderWidth: 3
+xlogin*greeting: CLIENTHOST
+xlogin*namePrompt: login:\040
+xlogin*fail: Login incorrect
+#ifdef COLOR
+xlogin*greetColor: CadetBlue
+xlogin*failColor: red
+*Foreground: black
+*Background: #ffffff
+#else
+xlogin*Foreground: black
+xlogin*Background: white
+#endif
+
+XConsole.text.geometry: 480x130
+XConsole.verbose:       true
+XConsole*iconic:        true
+XConsole*font:          fixed
+
+Chooser*geometry:        700x500+300+200
+Chooser*allowShellResize: false
+Chooser*viewPort.foreBars: true
+Chooser*label.font:      *-new century schoolbook-bold-i-normal--*-240-*
+Chooser*label.label:     XDMCP Host Menu from CLIENTHOST
+Chooser*list.font:       -*-*-medium-r-normal--*-230-*-c-*-iso8859-1
+Chooser*Command.font:    *-new century schoolbook-bold-r-normal--*-180-*
+```
+
+X 资源条目被分组到各个类中，通常一个应用程序或资源有自己的类。例如，在 Xresources 文件中，xlogin 类控制 xdm 登录窗口的外观和行为，而 chooser 类处理选择器的外观和行为。
+
+资源条目采用以下标准形式：
+
+```text
+<class name>*<resource name>: <value>
+```
+
+在上面的 Xresources 示例文件中，有几个关键条目控制 xdm 登录窗口的外观：
+
+- **xlogin*borderWidth:** 指定登录窗口边框的宽度（以像素为单位）。
+- **xlogin*greeting:** 指定在 xdm 登录窗口顶部显示的问候标题。特殊关键字 CLIENTHOST 将被替换为 xdm 系统的主机名。
+- **xlogin*namePrompt:** 指定用于询问用户账户名的提示。
+- **xlogin*fail:** 指定用户身份验证失败时显示的文本。
+- **xlogin*greetColor:** 指定在 xdm 登录窗口顶部显示的问候标题的颜色。
+- **xlogin*failColor:** 指定用户身份验证失败时显示的文本颜色。
+- **xlogin*Foreground:** 指定 xdm 登录窗口的前景色。
+- **xlogin*Background:** 指定 xdm 登录窗口的背景色。
+
+在 Xresources 示例文件中，以下关键条目控制 xdm 选择器的外观：
+
+- **Chooser*geometry:** 指定选择器窗口的位置和尺寸。
+- **Chooser*label.font:** 指定选择器标签的字体。
+- **Chooser*label.label:** 指定在选择器窗口中显示的标签文本。
+- **Chooser*list.font:** 指定用于显示可用 xdm 主机列表的字体。
+
+## 配置 Linux 客户端从远程 XDM 服务器获取其登录提示
+
+如果您想将 Linux 系统用作连接到 X 应用服务器并远程运行应用程序的终端，则必须配置 Linux 终端系统，以便在终端系统上启动 X 时从应用服务器获取 xdm 登录提示。
+
+为此，您有两种选择：
+
+- 让 X 服务器在网络上广播以寻找可用的 xdm 服务器。
+- 让 X 服务器向特定的 xdm 服务器查询登录窗口。
+
+要为 xdm 服务器进行广播，请使用 `startx` 将 `-broadcast` 参数传递给 X 服务器，如下所示：
+
+```text
+# startx -- -broadcast
+```
+
+要查询特定 xdm 服务器以获取登录窗口，请使用 X 服务器的 `-query` 参数：
+
+```text
+# startx -- -query <xdm server host name>
+```
+
+要在终端系统启动时启动 X Windows，请按照以下步骤编辑终端系统上的 `/etc/inittab`：
+
+1. 通过更改以下行，将默认运行级别设置为 5：
+
+   ```text
+   id:3:initdefault:
+   ```
+
+   改为以下内容：
+
+   ```text
+   id:5:initdefault:
+   ```
+
+2. 找到以下命令行之一：
+
+   `x:5:respawn:/etc/X11/xdm -nodaemon`
+
+   `x:5:respawn:/etc/X11/prefdm -nodaemon`
+
+   将其改为以下任一内容：
+
+   `x:5:respawn:/usr/X11R6/bin/startx -- -broadcast`
+
+   `x:5:respawn:/usr/X11R6/bin/startx -- -query <xdm server host name>`
+
+> **注意：**
+>
+> 如果网络中有大量 X 客户端，强烈建议您使用前面所示的 `-query` 选项，将特定的 X 应用服务器分配给特定的 X 客户端。这可确保 X 客户端查询定向到预定义的 X 应用服务器，并避免广播流量。在大型网络中，产生额外的广播流量不是个好主意，因为它会严重影响网络性能。
+
+## 故障排除
+
+如果 X 服务器没有按预期显示登录窗口，请先确保 X 服务器进程正在客户端工作站上运行，方法是移动鼠标并验证光标是否随之移动。
+
+如果客户端配置为登录到 xdm 登录服务器，请确保该客户端已被授予适当的访问权限，以连接到 X 应用服务器上的 xdm 进程。通过在 `/etc/X11/xdm/Xaccess`、`/etc/X11R6/xdm/Xaccess` 或 `/usr/lib/X11/xdm/Xaccess` 文件中添加客户端名称或匹配的通配符模式来提供访问权限。编辑 Xaccess 文件后，不要忘记向 xdm 进程发送 SIGHUP 信号。当 xdm 进程收到 SIGHUP 信号时，它会重新扫描其配置文件。
+
+> **提示：**
+>
+> 切勿在 xdm 登录服务器上终止并重新启动父 xdm 进程。这将导致所有正在为 X 客户端工作站服务的 xdm 子进程终止。请识别父 xdm 进程并向其发送 SIGHUP 信号。在 Red Hat Linux 系统上，父 xdm 进程的 PID 记录在 `/var/run/xdm.pid` 文件中。检查 `/etc/X11/xdm/xdm-config` 文件，了解您的系统上 xdm.pid 文件写入的位置。
+
+在 X 应用服务器上，确保运行了适当数量的 xdm 进程。应该有一个父 xdm 进程和若干个 xdm 子进程。每个需要登录窗口的 X 服务器对应一个 xdm 子进程。如果您使用 ps 命令列出所有 xdm 进程，您将看到各个显示的名称，这些显示正在……

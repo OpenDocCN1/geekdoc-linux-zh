@@ -1,0 +1,396 @@
+
+- Enhanced IDE (EIDE), 807
+- environment variables, 493, 500, 701-702
+- err logging level, 434
+- error log files, monitoring, 510-511
+- error messages
+  - address directives, 440
+  - Apache, 484-485, 515
+  - log files, 284
+  - MySQL, 542-544
+  - SCSI ABORT BUSY errors, 156
+  - troubleshooting, 255
+- /etc/configuration files, copying, 93
+- /etc/gateways file (RIP), 299-300
+- /etc/group file, user accounts, 37-38
+- /etc/passwd file, 34-36, 90
+- /etc/rc.d directory, 62-64
+- /etc/ypservers file, editing, 92-93
+- Ethernet, 803
+  - adapters, 753-754
+  - Alpha, Beta drivers, 757
+  - cards, 791-794
+  - devices, virtual IP addresses, 253
+- ethers.byaddr, 86
+- ethers.byname, 86
+- EUID attribute, processes, 119
+- Everex video card, 732
+- Exabyte tape drives, 160
+- executing jobs, 625-626
+- exit command, 472
+- expiration, news articles, 574
+- expire.cf file, INN, 583-584
+- expire.log file, 587
+- ext, mount command, 682
+- ext-dmz chain, 423
+- ext-if chain, 425
+- ext-priv chain, 424
+- ext2, mount command, 682-683
+- Extended Industry System Architecture (EISA), 807
+- extended partitions, 639
+- extensions, FrontPage, 566
+- Exterior Gateway Protocol (EGP), 298
+- exterior protocols, 297-298
+- external items
+  - models, 771-772
+  - packets, 406
+  - routes (OSPF), 300-301
+- extracting, Qfax, 377
+
+## F
+
+- facility types, syslog.conf file, 433
+- failed-su script, 441-443
+- fancy indexing, Apache, 494
+- Fast Ethernet, cards, 795-796
+- fat, mount command, 683-684
+- .fax file, Qfax, creating, 382
+- FAX mailers, HylaFAX, 364
+- Fax2Send, 344
+- faxes
+  - deleting, 383
+  - modems, 771
+  - print servers, 375
+  - Qfax, sending, 382-383
+  - servers, 384
+  - status, 383
+  - See also Efax; HylaFAX; Qfax
+- faxgetty program, 356
+- Faximum Messaging Server, 345
+- faxlpr script, 376
+- FaxMaster mail alias, Qfax, 378
+- faxrm component, 367
+- faxsetup program, 350-354
+- faxstat command, 357, 367
+- FDDI (Fiber-Distributed Data Interface), 757, 807
+- fdisk utility, 16-20, 638-640
+- fgrep command, 648-652
+- fhttpd source, PHP, 555
+- Fiber-Distributed Data Interface (FDDI), 807
+- file systems
+  - buffers, flushing, 708
+  - crontab files, 105-107
+  - diskspace, 635-636
+  - fschecker, 111-112
+  - kernel, 198
+  - mounting, 677-684
+    - .ufs, 681
+    - coherent, 682
+    - ext2, 682-683
+    - fat, 683-684
+    - bpf, 684
+    - ISO9660, 684-685
+    - loopdevice, 687
+    - minix, 685
+    - msdos, 685
+    - ncp, 686
+    - nfs, 686
+    - proc, 686
+    - romfs, 686
+    - smbfs, 686
+    - sysv, 687
+    - ufs, 687
+    - umsdos, 687
+    - vfat, 687
+    - xenix, 687
+    - xiafs, 682, 687
+  - sendmail, log files, 333
+  - troubleshooting, 68
+  - unmounting, 712-713
+- File Transfer Protocol. See FTP
+- FilePro, PHP, 559
+- files
+  - Apache, 483, 494
+  - at command, 627
+  - compression, 184, 652-656, 658
+  - concatenation, 627-628
+  - copying, 277, 632-634
+  - decompression, 652-656, 658
+  - deleting, 277
+  - directories, 641-647
+  - linking, 660-661
+  - memory, 636-637
+  - moving, 688-689
+  - names, 494-495
+  - ownership, 631-632
+  - permissions, 340-341, 629-631
+  - PHP, 553-554
+  - reading, 626
+  - removing, 704-705
+  - Samba, 273-278
+  - sendmail, 317-320
+    - architecture, 321
+    - class commands, 322-323
+    - commands, 322
+    - configuration, 320-322
+    - headers, 322-324
+    - keyed databases, 324
+    - left-hand-side pattern, 326-327
+    - location, 321
+    - macros, 322-323
+    - mail delivery, 324-326
+    - options, 325
+    - parsing, 321
+    - rewriting addresses, 321
+    - right-hand-side pattern, 327-328
+    - routing, 321
+    - rules, 322, 326, 328
+    - trusted users, 322, 329
+    - versions, 322, 329
+  - temporary, 284
+  - time stamps, editing, 711-712
+  - uploading, 605-608
+- filtering
+  - firewalls, 401-402, 421-423
+  - packets, 412-414
+- find command, 204, 641-647
+- firewalls, 393
+  - chains, 415-416
+  - blocking, 425
+  - creating, 415, 424-425
+  - deleting, 416
+  - dmz-ext, 424
+  - dmz-if, 425
+  - dmz-priv, 424
+  - ext-dmz, 423
+  - ext-if, 425
+  - ext-priv, 424
+  - flushing, 416
+  - listing, 416
+  - policies, 416
+  - priv-dmz, 423
+  - priv-ext, 424
+  - priv-if, 425
+- debugging, 407
+- dial-in access, 405
+- DMZ networks, 420
+- enabling/disabling, 406
+- hits, 406
+- ICMP packets, 410-411
+- interface, 411
+- Internet, 400, 405
+- inversion, 410
+- IP addresses
+  - Masquerade, 403, 406, 416-417
+  - port forwarding, 428-429
+  - source/destination, 409
+  - spoofing, protecting, 421
+- networks, 404-406
+- packets
+  - filtering, 401-402, 412-414
+  - fragmenting, 412
+  - logging, 414-415
+  - port forwarding, 406
+- primary name servers, 466-467
+- protocols, 410
+- proxy servers, 403
+- Remote Access Servers (RAS), 405
+- rules, 418-419
+  - adding/removing, 407-409
+  - configuring, 421-423
+  - scripts, creating, 426-428
+  - security, 419-421
+- SSH (secure shell) login program, 421
+- SYN packets, 412
+- TCP/IP protocols, 406, 410
+- tcpdump utility, 406
+- Telnet, root login, 420
+- timeout values, 417
+- troubleshooting, 429
+- type of service bits (TOS), 415
+- UDP ports, 410
+- flags, 407-408, 410, 696
+- floating point numbers, 561, 722-723
+- floppy disks, 200, 210-211
+- floppy drives, 197
+- floppy static router, 295
+- flushing
+  - chains, 416
+  - filesystems, buffers, 708
+- fonts, xdm servers, 79
+- fopen wrapper, PHP, 559
+- foreground, xdm servers, 79
+- form.html file, 562
+- formats
+  - Apache, log files, 485
+  - floppy disks, 200
+  - PHP, 561
+  - ps command, 698-701
+- forward chains, 407, 425
+- .forward files, troubleshooting, 337
+- 4096 masqueraded connections, 429-430
+- fragmenting packets, 412
+- Frame Relay
+  - adapters, 755
+  - Alpha, Beta drivers, 758
+- free space, Amanda, 189-190
+- FreeType fonts, PHP, 556
+- FrontPage, extensions, installation, 566
+- fschecker script, 111-113
+- FTP (File Transfer Protocol), 592
+  - access rights, limitations, 602-603
+  - anonymous, 592, 596-601
+  - classes, 602
+  - compression, 604-605
+  - configuration, 593-594
+  - daemons, 127, 433
+  - email addresses, 602
+  - files, 593-594, 605-607, 609
+  - guest users, 600-601
+  - hidden directories, 607-608
+  - hosts, access rights, 602
+  - installation, 594-596
+  - messages, displaying, 603
+  - NSFNET, 592
+  - permissions, 598-599
+  - PHP, 555
+  - ProFTP daemon, 611
+    - configuration, 614-616
+    - installation, 613
+    - precompiled binary, 612
+    - standalone mode, 614
+    - troubleshooting, 621
+    - virtual hosting, 616-618
+  - real users, 600-601
+  - servers, 218, 420
+  - testing, 596
+  - WU-FTPd, 608-611, 620-621
+- Fujitsu video cards, 740
+- full backups, 159
+- full names, user accounts, 39, 43-44
+
+## G
+
+- gates, 144
+- gateways
+  - adding, 293
+  - email, 310, 312
+  - HylaFAX, 363, 365-366
+  - networks, 244-245
+  - troubleshooting, 307
+  - video cards, 732
+- GD graphics, PHP, 556
+- GDBM files, PHP, 560
+- Genoa video card, 732
+- gettext, PHP, 556
+- Ghostscript, printers, 772-774
+- GIDs, user accounts, 43-44
+  - attributes, 120
+  - creating, 39
+  - /etc/group file, 37-38
+- global settings
+  - overriding, 514
+  - permissions, 539-540
+  - section, 272
+- glue records, troubleshooting, 479
+- GNU C compiler, 199
+- granting, MySQL, permissions, 541-542
+- grants table, installation, 522
+- graphics
+  - adapters, f205
+  - PHP, 556
+  - video cards, 741-745
+- greetings, xdm servers, 78
+- grep command, 648-652
+- group accounts. See user accounts
+- Group Identification. See GID, 120
+- group ownership, 628-629, 631-632
+- grun command, 382
+- guest users (WU-FTPd), 600-601
+- gunzip command, 652-656, 658
+- gzip command, 652-656, 658
+
+## H
+
+- h2n script, 477
+- hacking, kernel, 199
+- halt command, 66, 658
+- handheld scanners, 774
+- hard drives, 803
+  - compatibility, 765
+  - controllers, 745-746
+  - partitioning, 187-188
+  - partitions, 14
+    - disk utility, 16-20
+    - mounting, 15-16
+    - swap, 15-16
+- hard mount, 283
+- hardware
+  - adding, 195
+  - amateur radio, 778
+  - compatibility, 718, 805
+  - configuration, 56-59
+  - CPUs, 722-723
+  - data acquisition, 785
+  - database servers, 519
+  - digital cameras, 782-784
+  - FPUs, 722-723
+  - incompatibility, 805
+  - INN news software, 571
+  - intranets, 453
+  - joysticks, 778-780
+  - kernel, 194
+  - modems, 805-806
+  - motherboards, 720-721
+  - multifunction boards, 785
+  - printers, 805
+  - RAID, 147-150
+  - requirements, 3, 8-10
+  - support, 718
+  - terminals, 778
+  - touch screens, 778
+  - troubleshooting, 10, 68
+  - TV tuners, 780-782
+  - UPS, 784-785
+  - VESA power savings, 778
+- hash symbol (#), 438
+- hash table files, sendmail, 317
+- headers
+  - Apache, 494, 500
+  - restoring, 184
+  - sendmail files, 322-324
+  - suppressing, 284
+- help file, 320
+- Hercules video card, 732
+- Hewlett-Packard video cards, 740
+- hidden directories, 607-608
+- hierarchies
+  - Apache directories, 504
+  - newsgroups, 570-571
+- HINFO (Host Information) records, 458
+- history file, INN, 589-590
+- Hitachi video cards, 740
+- hits, firewalls, 406
+- holding disks, Amanda, 167, 179
+- home directories, user accounts, 36, 39-40, 43, 45
+- homes section (smb.conf file), 273-274
+- hop counts, 298
+- Host Information (HINFO) records, 458
+- Host is blocked error message, 542-543
+- Host-to-host Transport Layer (TCP/IP Protocol Stack), 233
+- hosts
+  - access rights, 602
+  - addresses, 86
+  - Apache, virtual, 484, 487, 502-507
+  - connections, 308
+  - email, 310-311
+  - files, 247, 249
+  - kernel module, 243
+  - lookups, 469-470
+  - multihomed, 252-253
+  - names, 86, 245-246
+
+## W
+
+- watchdog timer interfaces, 786
+- Web sites, 786

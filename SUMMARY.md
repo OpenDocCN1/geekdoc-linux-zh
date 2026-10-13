@@ -1983,6 +1983,7 @@
 +   [特别版 Linux 使用指南（第6版）](docs/special-edition-using-linux-6th-edition/README.md)
 +   [Linux 使用指南 第四版特版](docs/special-edition-using-linux-fourth-edition/README.md)
 +   [Linux 系统管理使用指南 特别版](docs/special-edition-using-linux-system-administration/README.md)
++   [Linux 系统管理使用指南（特别版）](docs/special-edition-using-linux-system-administration-special-ed/README.md)
 +   [Oracle8／8i 使用指南 特版](docs/special-edition-using-oracle88i/README.md)
 +   [PERL 5 Web编程使用指南 特别版](docs/special-edition-using-perl-5-for-web-programming/README.md)
 +   [特种行动：Microsoft、UNIX 和 Oracle 主机与网络安全](docs/special-ops-host-and-network-security-for-microsoft-unix-and/README.md)
