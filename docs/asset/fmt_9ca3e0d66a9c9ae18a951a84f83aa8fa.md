@@ -1,0 +1,196 @@
+
+- `diffutils`：包含用于比较文件的 `diff`、`cmp`、`diff3` 和 `sdiff` 实用工具。
+
+- `diskcheck`：监控硬盘剩余可用空间的实用工具。
+
+- `diskdump-tools`：用于设置内核以将内存映像保存到指定分区的实用工具。
+
+- `disticache`：分布式 SSL 会话缓存。
+
+- `disticache-devel`：`disticache` 分布式会话缓存的开发工具。
+
+- `dmalloc`：内存管理例程的直接替换方案。
+
+- `docbook-x`：包含 DocBook SGML DTD 和样式表的一组包。
+
+- `dos2unix`：将文本文件从 DOS 格式转换为 UNIX 格式。
+
+- `dosfstools`：用于创建和操作 DOS 文件系统的工具。
+
+- `dovecot`：Dovecot 安全 IMAP 服务器。
+
+- `doxygen`：从 C 或 C++ 源代码创建文档。
+
+- `doxygen-doxywizard`：创建和编辑 doxygen 配置文件的图形用户界面前端。
+
+- `dtach`：一个模拟 screen 的 detach 功能的简单程序。
+
+- `dump`：用于备份和恢复 ext2/3 文件系统的实用工具。
+
+- `dvd+rw-tools`：用于制作 DVD+RW/+R 介质的工具。
+
+- `dvgrab`：从火线连接设备捕获数字视频。
+
+- `e2fsprogs`：用于查找和修复 ext2 文件系统中不一致性的程序。
+
+- `e2fsprogs-devel`：用于开发 ext2 文件系统程序的库和头文件。
+
+- `eej`：Eclipse 项目的 Java 字节码编译器。
+
+- `ed`：一个面向行的文本编辑器（它是最早的 UNIX 文本编辑器）。
+
+- `eel2`：Eazel 扩展库，一组用于 GNOME 的小部件和功能。
+
+- `eel2-devel`：用于使用 eel 进行开发的库和包含文件。
+
+- `efax`：使用任何 1 类、2 类或 2.0 类传真调制解调器发送和接收传真。
+
+- `eject`：弹出 CD、软盘、Jazz 磁盘或其他介质。
+
+- `ElectricFence`：检测内存分配违规。
+
+- `eflutils`：处理编译后对象的实用工具集。
+
+- `eflutils-devel`：处理编译后对象的开发实用工具。
+
+- `eflutils-libelf`：提供一个 DSO，便于读取和写入 ELF 文件。
+
+- `elinks`：支持框架的文本模式 Web 浏览器。
+
+- `emacs`：运行 emacs 编辑器所需的库。
+
+- `emacs-common`：运行 GNU Emacs 文本编辑器所需的库。
+
+- `emacs-elisp`：与 emacs 文本编辑器一起使用的 elisp 程序的 emacs-elisp 源代码。
+
+- `emacs-leim`：用于国际字符脚本的 Emacs Lisp 代码。
+
+- `emacs-nox`：不支持 X 窗口系统的 Emacs 文本编辑器。
+
+- `emacspeak`：一种语音接口，允许视障用户使用计算机。
+
+- `enscript`：将 ASCII 文本格式化为 PostScript 输出的打印过滤器。
+
+- `eog`：Eye of GNOME 图像查看器。
+
+- `epic`：增强型 ircii 聊天客户端。
+
+- `epiphany`：基于 Mozilla 的 GNOME Web 浏览器。
+
+- `eruby`：用于嵌入文本文件中的 Ruby 代码的 Ruby 解释器。
+
+- `eruby-devel`：允许应用程序使用 ERuby 的头文件和库。
+
+- `eruby-libs`：ERuby 所需的库。
+
+- `esound`：允许多个程序共享声卡。
+
+- `esound-devel`：用于开发 ESound 应用程序的库和包含文件。
+
+- `ethereal`：用于分析类 UNIX 操作系统上网络流量的工具。
+
+- `ethereal-gnome`：`ethereal` 的 GNOME 桌面环境集成。
+
+- `ethtool`：显示和更改以太网卡设置。
+
+- `evolution`：GNOME 的综合信息管理工具组工具集。
+
+- `exim`：`exim` 邮件传输代理。
+
+- `exim-doc`：Exim 文档。
+
+- `exim-moo`：`exim` 的 X11 监控应用程序。
+
+- `exim-sa`：Exim SpamAssassin 在 SMTP 时处理 - d/l 插件。
+
+- `expat`：用于流式 XML 解析的 C 库。
+
+- `expat-devel`：用于使用 `expat` 开发 XML 应用程序的文档和库。
+
+- `expect`：用于自动化 FTP、`fsck` 和 telnet 等交互式实用工具的 tcl 扩展。
+
+- `expect-devel`：Expect 开发库。
+
+- `expctk`：程序-脚本交互和测试实用工具。
+
+- `fbset`：用于更改 fbccon 控制台上视频模式。
+
+- `fedora-logos`：与 Red Hat 相关的图标和图片。
+
+- `fedora-release`：Fedora Core 发布文件。
+
+- `festival`：免费的多语言语音合成器。
+
+- `festival-devel`：允许应用程序使用 `festival` 的头文件和库。
+
+- `fetchmail`：通过 SLIP 和 PPP 链接检索和转发邮件。
+
+- `file`：根据文件内容识别文件类型。
+
+- `file-roller`：管理 tar 文件等归档。
+
+- `filesystem`：Red Hat Linux 系统的基本目录级布局。
+
+- `findutils`：GNU 版本的 find 和 xargs 实用工具。
+
+- `finger`：显示系统用户信息的客户端。
+
+- `finger-server`：为网络客户端提供 finger 服务的服务器。
+
+- `firefox`：开源 Web 浏览器。
+
+- `firstboot`：在安装后运行，以便更轻松地配置系统。
+
+- `flac`：Free Lossless Audio Codec 的编码器/解码器。
+
+- `flac-devel`：FLAC 的静态库和头文件。
+
+- `flex`：生成用于识别文本中词法模式的 C 源代码。
+
+- `film`：为 emacs 中的消息编码提供基本功能的库。
+
+- `film-xemacs`：为 XEmacs 中的消息编码提供基本功能的库。
+
+- `fontconfig`：根据应用程序设定的要求定位和设置字体。
+
+- `fontconfig-devel`：用于开发 fontconfig 应用程序的头文件和文档。
+
+- `fonts-arabic`：来自 Abdulaziz 城科学与科技基金会的阿拉伯语字体。
+
+- `fonts-bengali`：孟加拉语字体。
+
+- `fonts-hebrew`：来自 Culmus 项目的希伯来语字体。
+
+- `fonts-ISO8859-2`：各种中欧语言和中东语言字体。
+
+- `fonts-ja`：日语点阵字体。
+
+- `fonts-KOI8-R`：各种俄语和乌克兰语字体。
+
+- `fonts-xorg`：包含已从 X.Org X11 源代码中分离出来的字体。
+
+- `foomatic`：独立于假脱机器的打印机和打印机驱动程序数据库。
+
+- `freeciv`：Civilization II 策略游戏的 freeciv 克隆版。
+
+- `freetglut`：GLUT 库的自由实现。
+
+- `freetglut-devel`：freeGLUT 的开发工具。
+
+- `freeradius`：高度可配置的 RADIUS 服务器。
+
+- `freeradius-mysql`：`freeradius` 的 MySQL 绑定。
+
+- `freeradius-postgresql`：`freeradius` 的 PostgreSQL 绑定。
+
+- `freeradius-unixODBC`：`freeradius` 的 unixODBC 绑定。
+
+- `freetype`：TrueType 字体的免费可移植字体渲染引擎。
+
+- `freetype-demos`：`freetype` 演示的集合。
+
+- `freetype-devel`：用于使用 FreeType 字体渲染引擎的组件。
+
+- `freetype-utils`：用于管理字体的若干实用工具。
+
+- `FreeWnn`：将日语假名字符转换为汉字字符，反之亦然。
