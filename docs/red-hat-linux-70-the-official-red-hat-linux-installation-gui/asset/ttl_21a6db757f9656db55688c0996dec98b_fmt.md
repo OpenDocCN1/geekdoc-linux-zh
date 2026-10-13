@@ -1,0 +1,2 @@
+
+# Red Hat Linux 7.0：官方 Red Hat Linux 安装指南
