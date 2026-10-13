@@ -1,0 +1,81 @@
+
+你使用一个配置文件 `vsftpd.conf` 来配置 `vsftpd`，而不是 `wu-ftpd` 使用的多个文件。配置选项简单且保持最少，这使其比 `ProFTPD` 灵活较低，但速度快得多。`vsftpd.conf` 文件包含一组指令，其中选项被分配一个值（`=` 符号之间没有空格）。
+
+选项可以被 `YES` 或 `NO` 开启或关闭，可以接收一个数值，也可以被分配一个字符串。Red Hat 在 `/etc` 目录下有一个默认的 `vsftpd` 文件。该文件列出了一些常用选项，并对每个选项都提供了详细解释。未使用的选项通过前置 `#` 字符被注释掉。`vsftpd.conf` 的主页列出了所有选项，并对每个选项提供了详细说明。
+
+在以下 `vsftpd.conf` 文件的示例中，通过为 `anonymous_enable` 选项分配 `YES` 值来启用匿名 FTP。`local_enable` 选项允许系统上的本地用户使用该 FTP 服务器。
+
+```
+# Allow anonymous FTP?
+anonymous_enable=YES
+
+#
+# 取消此注释以允许本地用户登录。
+local_enable=YES
+```
+
+选项名称非常易懂。例如，`anon_upload_enable` 允许匿名用户上传文件，`anon_mkdir_write_enable` 让匿名用户创建目录。一组 `xferlog` 选项控制日志，`dirname_enable` 将允许在用户访问该目录时显示目录的 `.message` 文件中持有的消息，`ftpd_banner` 允许你设置自己的 FTP 登录消息。此处显示的是默认值。
+
+```
+ftpd_banner=Welcome to blah FTP service.
+```
+
+某些选项控制对 FTP 站点的访问。如前所述，`anonymous-enable` 选项允许匿名访问，而 `local_enable` 允许本地用户登录其账户。`deny_email` 文件选项允许拒绝匿名用户的访问，而 `banned_email` 文件选项指定了文件（通常为 `vsftpd.banned`），其中保存这些用户的地址。`vsftpd.users` 文件列出了永远无法被访问的用户。这些通常是系统用户，如 `root`、`may` 和 `nobody`。
+
+表 18-2 为 `vsftpd` 文件列表。
+
+`userlist_enable` 选项控制用户访问，拒绝由 `userlist_file` 选项指定的文件（通常为 `vsftpd.user_list`）列出的用户。如果，你只想将访问限制在某些特定用户，你可以更改 `vsftpd.user_list` 文件的含义和用法，指示仅允许这些用户访问，而不是……
+
+# Red Hat Linux 8：完整参考
+
+| 文件 | 描述 |
+| --- | --- |
+| vsftpd.ftpusers | 始终被拒绝访问的用户 |
+| vsftpd.user_list | 指定被拒绝访问的用户（如果 userlist_deny 为 NO 则允许访问） |
+| vsftpd.chroot | 限制在各自目录下的用户 |
+| vsftpd.conf | 主配置文件 |
+
+`userlist_enable` 选项控制用户访问，拒绝由 `userlist_file` 选项指定的文件（通常为 `vsftpd.user_list`）列出的用户。如果，你只想将访问限制在某些特定用户，你可以更改 `vsftpd.user_list` 文件的含义和用法，指示仅允许这些用户访问，而不是……
+
+# 第18 章：服务器
+
+Very Secure FTP 服务器 (vsFTPD) 重量量、快速、易用且安全。它旨在减少 `wu-ftpd` 和 `ProFTPD` 等大型 FTP 程序的开销，同时保持极高的安全性。它还可以处理非常大的工作负载，管理 FTP 站点的高流量水平。它对于匿名用户和访客用户下载文件的站点可能是最好的。
+
+Very Secure FTP 服务器的设计初衷是尽可能提供安全性，充分利用了 Unix 和 Linux 操作系统的特性。服务器被分为特权进程和非特权进程。非特权进程接收所有 FTP 请求，对其进行解释并通过 socket 将其发送给特权进程。即使是特权进程也不会以全 root 权限运行，仅拥有执行其任务必需的权限。此外，Very Secure FTP 服务器使用了它自己版本的目录命令（如 `ls`），而不是系统自带的。
+
+Red Hat 在其发行版中包含了 Very Secure FTP 服务器。Very Secure FTP 服务器的守护进程名为 `vsftpd`。它被设计为由 `xinetd` 按需运行。前一章节描述了如何使用 `xinetd` 用于服务。`xinetd` 将运行 `/etc/xinetd.d` 目录下的名为 `vsftpd` 的文件。
+
+初始情况下，服务器是关闭的。你可以使用 `chkconfig` 命令和相应的参数将其开启，如下所示。使用 `off` 参数禁用服务器。如果你之前启用了 `wuftpd` 或 `ProFTPD`，请确保先禁用它们。
+
+```
+chkconfig vsftpd on
+```
+
+使用 `service` 命令（或 `redhat-config-services`）重启 `xinetd` 以重启 `vsftpd` 服务器，如果你对配置进行了更改。
+
+```
+service xinetd restart
+```
+
+你使用一个配置文件 `vsftpd.conf` 来配置 `vsftpd`，而不是 `wu-ftpd` 使用的多个文件。配置选项简单且保持最少，这使其比 `ProFTPD` 灵活较低，但速度快得多。`vsftpd.conf` 文件包含一组指令，其中选项被分配一个值（`=` 符号之间没有空格）。
+
+选项可以被 `YES` 或 `NO` 开启或关闭，可以接收一个数值，也可以被分配一个字符串。Red Hat 在 `/etc` 目录下有一个默认的 `vsftpd` 文件。该文件列出了一些常用选项，并对每个选项都提供了详细解释。未使用的选项通过前置 `#` 字符被注释掉。
+
+`vsftpd.conf` 的主页列出了所有选项，并对每个选项提供了详细说明。
+
+在以下 `vsftpd.conf` 文件的示例中，通过为 `anonymous_enable` 选项分配 `YES` 值来启用匿名 FTP。`local_enable` 选项允许系统上的本地用户使用该 FTP 服务器。
+
+```
+# Allow anonymous FTP?
+anonymous_enable=YES
+
+#
+# 取消此注释以允许本地用户登录。
+local_enable=YES
+```
+
+选项名称非常易懂。例如，`anon_upload_enable` 允许匿名用户上传文件，`anon_mkdir_write_enable` 让匿名用户创建目录。一组 `xferlog` 选项控制日志，`dirname_enable` 将允许在用户访问该目录时显示目录的 `.message` 文件中持有的消息，`ftpd_banner` 允许你设置自己的 FTP 登录消息。此处显示的是默认值。
+
+```
+ftpd_banner=Welcome to blah FTP service.
+```
