@@ -1,0 +1,104 @@
+
+> 更重要的是，这也使得重新启用服务变得很容易：只需将脚本的首字母重命名为 `S` 而不是 `K`，然后退出并重新进入运行级别，该服务就应该被启动并运行！
+
+从这个列表中，你可以看到在该系统上我们选择不运行 `rhnsd`、`nfs`、`rstatd`、`rusersd`、`rwalld`、`rwhod`、`yppasswdd`、`vncserver`、`radvd` 以及大约另外六个服务。然而，我们确实希望运行 23 个服务，包括 `syslog`、`netfs`、`apmd`、`sshd`、`sendmail`、`crond` 和 `atd`。
+
+### 3. 脚本结构
+在这些脚本中的每一个里——请记住它们都是指向中央脚本的符号链接——内容都相当相似，如下例所示，它初始化随机状态，以便系统拥有更多随机选择的随机数，这在加密领域
+
+很多东西！任何以 `K` 开头的都被杀掉。通常这些是不需要的服务，而且可能根本就没有运行。这只是一种虚拟的保险策略。任何以 `S` 开头的如果尚未运行就会被启动。
+
+![](img/5ced0c78d748bd190e9027e5549a3622_272_0.png)
+
+不要太担心如果其中一些看起来像是完全随机的输入！这里最重要的是要看到 `rc.d` 目录中的每个脚本都必须接受 `start`、`stop`、`status` 和 `restart` 作为命令行命令。这正确地意味着 `/etc/rc` 脚本的主要工作是为名称以 `S` 开头的脚本调用 `script start`，为名称以 `K` 开头的脚本调用 `script stop`。
+
+这也意味着你可以通过指定 `status` 选项来测试这些服务的任何状态，以确保一切正常运行：
+
+```bash
+# ./S20random status
+The random data source exists
+```
+
+在这种情况下并不太令人兴奋，但让我们看看 `sendmail` 是否运行正常：
+
+```bash
+# ./S80sendmail status
+sendmail (pid 11315) is running...
+```
+
+你也可以利用这一知识来验证不应该运行的服务确实已停止：
+
+```bash
+# ./K20nfs status
+rpc.mountd is stopped
+nfsd is stopped
+rpc.rquotad is stopped
+```
+
+![](img/5ced0c78d748bd190e9027e5549a3622_274_0.png)
+
+> 在我的 Web 服务器上，当我更改 Apache 配置文件时，我使用 `/etc/rc.d/init.d` 中的主 `httpd` 脚本的 `restart` 命令轻松重启服务器。我甚至把它做成了一个别名以便更方便：
+>
+> alias `httpd`='`/etc/rc.d/init.d/httpd`'
+>
+> 定义了这个别名后，很容易输入 `httpd status` 来确保服务器正在运行，以及 `httpd restart` 用新配置文件重启它。
+
+### 5. 禁用不需要的服务
+在本小时 earlier，当我们从运行级别 1 切换到运行级别 5 时，我们有一系列服务列出了它们的启动消息。其中一个很突出：
+
+```
+Starting lpd: No Printers Defined      [  OK  ]
+```
+
+这条消息来自 `S61lpd` 脚本内部，很好地猜测由于这个原因守护进程从未启动。现在你知道如何检查了：
+
+```
+# ./S61lpd status
+lpd is stopped
+```
+
+果然，它没有运行。因为我没有连接任何打印机，我将禁用运行级别 5 下的此服务，以便它在启动时不会浪费时间（更准确地说，在进入运行级别 5 时）尝试启动它。事实上，作为一个经验法则，你应该确保只有你明确希望运行的服务在默认运行级别下启用。
+
+由于 `/etc/rc.d` 目录的智能布局，做这件事非常简单：
+
+```
+# mv S61lpd K61lpd
+```
+
+就这样。容易吧？下次系统进入运行级别 5 时，它不会再费心启动行式打印机守护进程 `lpd`。
+
+### 6. 自定义启动脚本
+还记得上小时我们谈到在启动时自动启用 `quota` 系统吗？现在你可以看到等效的非 Linux `rc.local` 文件内容背后的逻辑（以及我们为什么把启动 `quota` 系统的行放在那里）：
+
+```
+# cat rc.local
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+
+echo "Checking quotas. This may take a moment or two..."
+/sbin/quotacheck -aguv
+
+if [ $? -eq 0 ] ; then
+  echo "Turning on disk quotas."
+  /sbin/quotaon -aguv
+else
+  echo "Did *not* turn on disk quotas due to quotacheck errors."
+fi
+```
+
+如果你选择走这条路并启用自己的服务，编写 `rc` 脚本的精确细节有很多东西需要学习，但决定打开和关闭什么的更简单任务可以很容易完成。此外，你现在也可以看到测试给定服务的状态也很简单。
+
+#### 正确关闭系统
+
+在本小时 earlier，我们看到使用 `init` 命令直接将系统切换到不同运行级别的一种棘手方法。此外，我们看到运行级别 0 是完全停止，运行级别 6 是重启状态。
+
+这是否意味着 `init 0` 是关闭系统的好方法，`init 6` 是重启系统的好方法？不。除非你处于紧急情况且别无选择，否则你的最好选择始终是使用 `halt`、`shutdown` 或 `reboot`。
+
+##### 任务 13.3：安全关机和重启
+
+仅使用像 `init 0` 这样的暴力方法关闭系统的根本问题是它不能确保事情优雅地关闭。可能有特定的服务或守护进程需要在死亡时删除临时文件，而且用户当然希望至少有 60 秒的宽限期来保存工作文件并清理自己的工作。
