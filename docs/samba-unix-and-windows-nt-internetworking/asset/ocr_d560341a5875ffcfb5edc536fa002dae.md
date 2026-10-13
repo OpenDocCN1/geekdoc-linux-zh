@@ -1,0 +1,9 @@
+desktop. A user can assign passwords to local resources to limit access under *share-level security* (Figure 3.7). Share-level security regulates access by requiring knowledge of the appropriate password. Access control by user and group is called *user level*. This requires the presence of a Windows NT computer that acts as a security server. The absence of a security server in the workgroup model means that each user must have an account and password stored locally on each of the workgroup computers used. It also means that each user must know all the passwords required to access the various resources available in the local or remote workgroups. Workgroups may seem like an administrative nightmare, but it is possible for a system administrator to exert some level of control over resource sharing through the use of system policies and profiles. Password management will most likely remain problem.
+
+![](bbox=[0.185, 0.285, 0.675, 0.675])
+
+Figure 3.7: Setting share level passwords
+
+# Domains
+
+Centralized management of accounts, passwords, and shares can be more easily realized by implementing a Windows *domain* model for the network. A Windows domain is a logical collection of users and computers that share a common security policy and namespace. In each domain, one or more Windows NT computers, called *domain controllers*, act as a locus for administering and resolving access to all the resources located in the domain. The *Primary Domain Controller (PDC)* maintains a directory of all the account, group, and password information for the domain. This directory is called the *Security Accounts Manager (SAM)*. To log in to a computer or access a resource in the domain, the domain controller is first consulted to validate user credentials before access

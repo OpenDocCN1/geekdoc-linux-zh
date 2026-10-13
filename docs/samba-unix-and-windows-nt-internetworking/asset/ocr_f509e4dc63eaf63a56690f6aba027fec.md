@@ -1,0 +1,17 @@
+# Desktop Issues
+
+Almost everyone has a computer these days. Most of us have access to more than one: palmtop, handheld, laptop, home PC, office workstation, and network server, the list goes on and on. We spend much of our time computer hopping from one network island to the next. The boundaries between the machines, networks, and services we use have blurred to the point where it is difficult to pinpoint where particular resources reside. We find ourselves wondering if we left that memo on the office workstation or on the PC in the den at home?
+
+The challenge then for the system administrator is in providing an environment which assists mobile computer users in maintaining consistent access to documents, mail folders, address books, web certificates, bookmarks, and other application-preference data as they move from machine to machine. The task of synchronizing state is complicated by variations in data formats and network protocols when the set of machines includes both UNIX and Windows operating systems.
+
+A twist on the problem of maintaining individual state between multiple computers is how to manage state on a single computer used by multiple people. Consider the public computers in airports, libraries, university labs, and cyber cafes. What level of environment personalization should be allowed, if any? How will environment state be maintained and reset after each use to ensure both privacy and security? If personal environment profiles are going to be maintained, what are the scaling issues regarding account management and storage?
+
+# Enterprise Computing Issues
+
+The evolution of bringing legacy information services to the Internet community has seen most enterprises move away from proprietary, restricted access, and network computing architectures to more open distributed computing models. This has most often been facilitated by incorporating UNIX servers into the network to mitigate the information flow between data warehouse systems and the Internet. The result is increased operating system heterogeneity in the data center, which must be managed by systems administration and operations staff.
+
+The addition of new operating systems usually includes additional complexity in maintaining a consistent namespace of users, machines and services. For example, differences in supported character sets require the formulation of intricate character mappings between the various systems. Large user populations may require duplicating and managing the user account and password spaces on each platform. Users may also be required to login and logout repeatedly as they access resources that reside on various systems.
+
+# Domains and Realms
+
+In many organizations the authentication, authorization, and trust models built into the computing and networking infrastructure closely match those represented in organizational structure and processes. Trust between machines is as critical as trust between employees. A new operating system can often throw a kink into day-to-day operation when it does not fit within the existing structure. Transitive trust rules that follow organizational administrative roles usually work well between like operating systems as, for example, trust between UNIX Kerberos realms or trust between Windows NT

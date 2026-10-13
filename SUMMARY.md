@@ -1881,6 +1881,7 @@
 +   [Samba 黑书：使用 Samba 集成 Linux 和 NT 的实用指南](docs/samba-black-book-a-hands-on-reference-for-integrating-linux-/README.md)
 +   [Samba 入门指南 Plus](docs/samba-primer-plus/README.md)
 +   [Samba：Unix 与 NT 网络互联](docs/samba-unix-and-nt-internetworking/README.md)
++   [Samba：Unix 与 Windows NT 互联网络](docs/samba-unix-and-windows-nt-internetworking/README.md)
 +   [Samba 解锁指南](docs/samba-unleashed-unleashed/README.md)
 +   [SAMS Linux 编程 2007 释放指南](docs/sams-linux-programming-2007-unleashed/README.md)
 +   [21 天自学 Linux C 编程：仅需 21 天内掌握 Linux C++ 技能与概念；在现实世界中应用你的知识](docs/sams-teach-yourself-c-programming-for-linux-in-21-days-learn/README.md)
