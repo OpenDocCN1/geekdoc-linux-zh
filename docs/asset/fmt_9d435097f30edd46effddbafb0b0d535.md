@@ -1,0 +1,93 @@
+
+- `Maelstrom`：Maelstrom（小行星射击）游戏。
+- `MagicPoint`：基于 X11 的演示工具。
+- `mailcap`：用于定义如何处理特定数据类型的配置文件。
+- `mailman`：面向 Web 的邮件列表管理器。
+- `mailx`：用于轻松发送纯文本电子邮件的小型工具。
+- `make`：用于从源代码构建和安装软件的工具。
+- `MAKEDEV`：用于创建和维护 `/dev` 目录中文件的程序。
+- `man`：用于显示系统手册页的机制。
+- `man-pages`：包含不同语言手册页的一组软件包。
+- `mc`：Midnight Commander（午夜命令），用于管理各种文件接口的可视化 shell。
+- `mdadm`：软件 RAID 阵列控制工具。
+- `memprof`：用于内存分析和泄漏检测的工具。
+- `memtest86`：适用于 x86 架构计算机的彻底独立内存测试工具。
+- `metacity`：Metacity 窗口管理器。
+- `mew`：Emacs 的消息功能。
+- `mew-common`：mew 和 mew-xemacs 中使用的功能。
+- `mew-xemacs`：XEmacs 的消息功能。
+- `mggetty`：mggetty 的 getty 实现，允许通过串行线路登录。
+- `mggetty-sendfax`：用于配合 mggetty 程序发送传真（es）的 sendfax 程序。
+- `mggetty-viewfax`：用于显示由 mggetty 接收到的传真（es）的 viewfax 工具。
+- `mggetty-voice`：用于支持通过 mggetty 进行语音通信的 mggetty 实用工具。
+- `mikmod`：用于播放多种音频格式的 MiKMod 音乐文件播放器。
+- `mingetty`：用于终端登录的小型 getty 实现。
+- `miniChinPut`：ChinPut（一种中文 XIM 服务器）的较小版本。
+- `minicom`：用于通过串行线路通信的基于文本的调制解调器控制工具。
+- `mkbootdisk`：可引导软盘创建工具。
+- `mkininitrd`：用于创建初始 RAM 磁盘映像的工具。
+- `mkisofs`：用于创建 ISO9660（CD-ROM）文件系统的工具。
+- `mktemp`：用于安全创建 `/tmp` 文件的脚本工具。
+- `mod_auth_mysql`：使用 MySQL 为 Apache Web 服务器提供基本身份验证。
+- `mod_auth_pgsql`：使用 PostgreSQL 为 Apache Web 服务器提供基本身份验证。
+- `mod_dav_svn`：用于 Subversion 软件源代码存储库的 Apache 服务器模块。
+- `mod_perl`：与 Apache 配合使用，使其能够解释 Perl 代码的 Perl 解释器。
+- `mod_perl-devel`：用于构建使用 mod_perl 的 XS 模块的工具。
+- `mod_python`：Apache Web 服务器的嵌入式 Python 解释器。
+- `mod_ssl`：提供使用 SSL 和 TLS 进行安全加密的 Apache 模块。
+- `modules`：用于管理内核模块（加载、卸载等）的工具。
+- `mozilla`：Mozilla Web 浏览器及相关工具和编程库。
+- `mpage`：方便将多页 PostScript 输出打印在单页上。
+- `mrtg`：多路由器流量图形工具（Multi Router Traffic Grapher）创建网络流量图表。
+- `mtools`：用于管理 MS-DOS 格式磁盘的工具。
+- `mtr`：结合 ping 和 traceroute 功能的网络诊断工具。
+- `mtr-gtk`：mtr 网络诊断工具的 GTK 界面。
+- `mt-st`：用于管理磁带驱动器的 mt（磁带）和 st（SCSI 磁带）程序。
+- `mtx`：用于操作磁带库和自动装载机的工具。
+- `mutt`：文本模式电子邮件用户代理。
+- `mx`：一组 Python 软件工具。
+- `MyODBC`：MySQL 的 ODBC 驱动程序。
+- `mysql`：此组软件包含 MySQL 数据库应用程序和工具。
+- `MySQL-Python`：支持 MySQL 的 Python 模块。
+- `nabi`：简单的 Hangul（韩文）X 输入法。
+- `namazu`：全文搜索引擎。
+- `namazu-cgi`：namazu 的 CGI 接口。
+- `namazu-devel`：允许应用程序使用 namazu 的库。
+- `nano`：小型文本编辑器。
+- `nasm`：nasm Netwide 汇编器。
+- `nasm-doc`：nasm Netwide 汇编器的文档。
+- `nasm-rdoff`：用于 RDOFF 二进制格式的工具，可 nasm 配合使用。
+- `nautilus`：整合文件、应用程序和互联网资源的网络用户窗口。
+- `nautilus-cd-burner`：GNOME 和 Nautilus 的 CD 刻录前端。
+- `nautilus-cd-burner-devel`：使用 nautilus-cd-burner 的应用程序的开发支持。
+- `nautilus-media`：GStreamer 的音频查看器。
+- `nc`：用于在 TCP/IP 连接上读写数据的 Ncat（nc）工具。
+- `ncftp`：功能齐全的 FTP 客户端程序，包括会话恢复功能。
+- `ncompress`：快速压缩和解压缩工具。
+- `ncfs`：使用 Novell NetWare ncifs 文件系统所需的组件。
+- `ncurses`：基于字符的屏幕 GUI 库。
+- `ncurses-devel`：创建使用 ncurses 屏幕处理的应用程序所需的组件。
+- `nedit`：用于 X Windows 和 Motif 的 GUI 文本编辑器。
+- `neon`：HTTP 和 WebDAV 客户端库。
+- `neon-devel`：neon 的开发工具。
+- `netatalk`：AppleTalk 传输协议实现。
+- `netatalk-devel`：允许应用程序使用 netatalk 的开发库。
+- `netconfig`：用于配置网络接口的基于文本的工具。
+- `netdump`：将内核消息和崩溃转储写入远程系统的工具。
+- `netdump-server`：监听网络上内核消息的程序。
+- `netpbm`：用于处理各种图形格式的工具。
+- `netpbm-devel`：netpbm 接口的静态库和头文件。
+- `netpbm-progs`：用于处理图形图像的脚本。
+- `net-snmp`：一组 SNMP 工具和库。
+- `net-snmp-devel`：NET-SNMP 项目的开发环境。
+- `net-snmp-libs`：支持 SNMP 实现的库。
+- `net-snmp-perl`：perl NET-SNMP 模块和 midbz2 工具。
+- `net-snmp-utils`：使用 SNMP 的网络管理工具。
+- `net-tools`：诸如 ifconfig、netstat 和 route 等基础网络工具。
+- `NetworkManager`：有线和无线网络的保持活动功能。
+- `NetworkManager-gnome`：Gnome 特有的 NetworkManagement 小工具和界面。
+- `newt`：用于创建彩色、基于文本和基于小部件的用户界面的库。
+- `newt-devel`：用于开发基于 Newt 的文本模式应用程序的头文件和库。
+- `newt-perl`：与 Newt 小部件库配合使用的 Perl 绑定。
+- `nfs-utils`：用于在网络上共享文件和目录的网络文件系统（NFS）工具。
+- `nhfp`：使用韩国 Hangul（韩文）字体创建 PostScript 文件的工具。
