@@ -1,0 +1,113 @@
+
+```
+# pr -o 10 <LICENSE
+...
+1. You may make and give away verbatim copies of the source fo
+rm of the
+Standard Version of this Package without restriction, provided
+that you
+duplicate all of the original copyright notices and associated
+disclaimers.
+2. You may apply bug fixes, portability fixes and other modifi
+cations
+Package derived from the Public Domain or from the Copyright Holder. A
+version modified in such a way shall still be considered the Standard V
+ersion.
+...
+```
+
+前面的示例打印出来看起来 certainly 不好看！要修复此问题，请使用 `fmt` 命令在用 `pr` 命令格式化之前先用较小的行宽格式化文本：
+
+```
+# cat LICENSE | fmt -w 60 | pr -o 10
+```
+
++   1. You may make and give away verbatim copies of the source form of the Standard Version of this Package without restriction, provided that you duplicate all of the original copyright notices and associated disclaimers.
+
++   2. You may apply bug fixes, portability fixes and other modifications derived from the Public Domain or from the Copyright Holder. A Package modified in such a way shall still be considered the Standard Version.
+
++   ...
+
+正如您所见，文本现在在打印时很好地适合您的页面。您还可以通过将 `fmt` 的输出与 `pr` 命令的多列选项结合来创建更复杂的
+
+| 选项 | 描述 |
+|---|---|
+| `-e[x[y]]` | 将制表符（或 `x`）转换为空格，使用 `y` 作为制表符宽度 |
+| `-f`, `-F` | 在页面之间输出换页符 |
+| `-h str` | 使用 `str` 作为页眉而不是文件名 |
+| `-l[x[y]]` | 将空格（或 `x`）转换为制表符，使用 `y` 个空格作为制表符 |
+| `-l xx` | 页长度设为 `xx` |
+| `-m` | 在页面上并列打印多个文件 |
+| `-n[x[y]]` | 使用行号（后跟字符 `x`），数字使用 `y` 位 |
+| `-o x` | 将左边界设为 `x` |
+| `-r` | 关闭警告信息 |
+| `-s[x]` | 使用字符 `x` 分隔列 |
+| `-t` | 关闭默认页眉和页脚 |
+| `-v` | 以 8 进制（八进制表示）显示不可打印字符 |
+| `-w xx` | 将页面宽度设为 `xx` 个字符 |
+| `-x` | 将页面格式化为 `x` 列 |
+
+请看以下示例：
+
+```
+# pr +4 -h "Draft Number 1" -o 8 <pilotprimer.txt > output.txt
+```
+
+此命令行格式化文件 `pilotprimer.txt`，从第 4 页开始，页眉包含日期、时间、页码以及文字 Draft Number 1；左边界为 8 个空格。使用 `>` 重定向操作符，格式化的输出随后保存到名为 `output.txt` 的文件中，您可以在稍后时间打印它。
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_360_0.png)
+
+> 在打印前，通过 `less` 分页器预览您的格式。
+
+`pr` 程序还可格式化选定的文本流。一个方便的用途是创建格式化的列。例如，如果您有一段文字，可以通过组合多个过滤器程序，然后使用 `-COLUMN` 命令行选项（连字符，后跟列数；以下示例中的 `-3`）来快速创建文本列：
+
+```
+# cat cities.txt
+Cincinnati, San Francisco, Philadelphia, Chicago, Miami, Norfolk,
+Savannah, Seattle, Pittsburgh, St. Louis, Phoenix, Nashville, Las Vegas,
+Atlantic City, Raleigh
+# cat cities.txt | sed 's/, /#/g' | tr '#' '\n' | sort | pr -l 1 -w 1 -3
+Atlantic City      Chicago            Cincinnati
+Las Vegas          Miami              Nashville
+Norfolk            Philadelphia        Phoenix
+Pittsburgh         Raleigh             San Francisco
+Savannah           Seattle             St. Louis
+```
+
+前面的示例使用逗号分隔的城市列表。通过使用多个过滤器，包括 `pr` 命令，文本被格式化为可读的列表并按字母顺序排序。命令行首先使用 `sed` 流编辑器（在第 14 小时讨论）将每个逗号和空格更改为井号（`#`）符号。井号由 `tr` 命令（也在第 14 小时讨论）转换为回车符。现在文本是一行一个词的词列表，被送入 `sort` 命令。排序后的文本被送入 `pr` 命令以生成三列文本（`-l` 或页长度选项，值为 1，用于抑制页眉）。
+
+您还可以使用 `fmt` 命令与 `pr` 命令结合来更改文本文档的字数换行或宽度。以下示例是公共领域软件许可证的一部分（位于 `/usr/doc/shadow-misc` 目录下）：
+
+```
+# cat LICENSE
+...
+1. You may make and give away verbatim copies of the source form of the Standard Version of this Package without restriction, provided that you duplicate all of the original copyright notices and associated disclaimers.
+
+2. You may apply bug fixes, portability fixes and other modifications derived from the Public Domain or from the Copyright Holder. A Package modified in such a way shall still be considered the Standard Version.
+...
+```
+
+尽管此文本在屏幕上打印或使用 `pr` 命令的默认设置时可能没问题，但如果使用 10 个空格的左边界，文本会超出行。看以下示例：
+
+```
+# pr -o 10 <LICENSE
+...
+1. You may make and give away verbatim copies of the source fo
+rm of the
+Standard Version of this Package without restriction, provided
+that you
+duplicate all of the original copyright notices and associated
+disclaimers.
+2. You may apply bug fixes, portability fixes and other modifi
+cations
+Package derived from the Public Domain or from the Copyright Holder. A
+version modified in such a way shall still be considered the Standard V
+ersion.
+...
+```
+
+前面的示例打印出来看起来 certainly 不好看！要修复此问题，请使用 `fmt` 命令在用 `pr` 命令格式化之前先用较小的行宽格式化文本：
+
+```
+# cat LICENSE | fmt -w 60 | pr -o 10
+```
