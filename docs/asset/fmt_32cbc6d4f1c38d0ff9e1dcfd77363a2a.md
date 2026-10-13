@@ -1,0 +1,203 @@
+
+```sh
+$ name=                Set name null
+$ test $name = julio
+sh: test: argument expected
+$
+```
+
+由于 `name` 为空，shell 在将命令行解析成参数之前已经替换了 `name` 的值，因此只向 `test` 传递了两个参数：`=` 和 `julio`。事实上，在 shell 替换了 `$name` 之后，就好像你键入了以下内容：
+
+```sh
+test = julio
+```
+
+当 `test` 执行时，它只看到两个参数，因而不发出错误消息。
+
+![](img/29b87b4d3daf7eb41fe5066130730f4c_155_0.png)
+
+图 7.1  当 `name` 为空时执行 `test $name = julio`
+
+在变量两侧加上双引号，可以确保 `test` 能看到该参数，因为当参数为空时，引号起到了“占位符”的作用。
+
+```sh
+$ test "$name" = julio
+$ echo $?                Print the exit status
+1
+$
+```
+
+即使 `name` 为空，shell 仍会向 `test` 传递三个参数，其中第一个是一个空值。
+
+![](img/29b87b4d3daf7eb41fe5066130730f4c_155_1.png)
+
+图 7.2  当 `name` 为空时执行 `test "$name" = julio`
+
+还可以使用其他运算符来测试字符串。这类运算符有很多，如表 7.1 所示。
+
+**表 7.1** — `test` 字符串运算符
+
+| Operator | Returns TRUE (exit status of 0) if |
+|---|---|
+| `string₁ = string₂` | `string₁` 与 `string₂` 相同 |
+| `string₁ != string₂` | `string₁` 与 `string₂` 不相同 |
+| `string` | `string` 不为空 |
+| `-n string` | `string` 不为空（且 `string` 必须能被 `test` 看到） |
+| `-z string` | `string` 为空（且 `string` 必须能被 `test` 看到） |
+
+你已经看到了 `=` 运算符的用法。`!=` 运算符与之类似，只是它测试两个字符串是否不相等。也就是说，如果两个字符串不相等，`test` 的退出状态为 0；如果相等，则为非零。
+
+让我们看三个类似的示例。
+
+```sh
+$ day="monday"
+$ test "$day" = monday
+$ echo $?
+0                         True
+$
+```
+
+`test` 命令返回退出状态 0，因为 `day` 的值等于字符 `monday`。现在再看下面的示例：
+
+```sh
+$ day="monday "
+$ test "$day" = monday
+$ echo $?
+1                         False
+$
+```
+
+这里我们将字符 `monday ` 包括紧随其后的空格字符赋给了 `day`。因此，当执行前面的测试时，`test` 返回 FALSE，因为字符 `monday ` 与字符 `monday` 并不相同。
+
+如果你希望这两个值被视为相等，那么省略变量引用两侧的双引号会使 shell “吃掉”尾随的空格字符，`test` 就永远不会看到它：
+
+```sh
+$ day="monday"
+$ test $day = monday
+$ echo $?
+0                         True
+$
+```
+
+虽然这看起来违反了我们对作为 `test` 参数的 shell 变量始终使用引号的规则，但如果你确定变量不为空且不是完全由空白字符组成，省略引号也是可以的。
+
+你可以使用表 7.1 中列出的第三个运算符来测试 shell 变量是否有空值：
+
+```sh
+test "$day"
+```
+
+如果 `day` 不为空，则返回 TRUE；如果为空，则返回 FALSE。这里不需要引号，因为在这种情况下 `test` 不关心是否看到了参数。不过，最好还是在这里也使用引号，因为如果变量完全由空白字符组成，并且参数没有被引号括起来，shell 会将该参数丢弃。
+
+```sh
+$ blanks="     "                 Is it not null?
+$ test $blanks
+$ echo $?
+1                              False—it’s null
+$ test "$blanks"                And now?
+$ echo $?
+0                              True—it’s not null
+$
+```
+
+如果我们在空白字符和引号的问题上显得过于啰嗦，请意识到这是 shell 编程中常见的错误来源。真正理解这里的原理，将来能为你省去许多编程上的麻烦。
+
+还有另一种测试字符串是否为空的方法，即使用前面表 7.1 中列出的最后两个运算符中的任何一个。如果后面跟随的参数不为空，`-n` 运算符返回退出状态 0。你可以把这个运算符理解为用于测试非零长度。
+
+`-z` 运算符测试后面的参数是否为空，如果为空则返回退出状态 0。你可以把这个运算符理解为用于测试后面参数的长度是否为零。
+
+因此，命令
+
+```sh
+test -n "$day"
+```
+
+如果 `day` 至少包含一个字符，则返回退出状态 0。命令
+
+```sh
+test -z "$dataflag"
+```
+
+如果 `dataflag` 不包含任何字符，则返回退出状态 0。也就是说，`-n` 和 `-z` 互为相反，它们的存在只是为了让你更容易写出清晰、可读的条件语句。
+
+需要提醒的是，上述两个运算符都期望后面跟有参数，所以要养成用双引号将参数括起来的习惯。
+
+```sh
+$ nullvar=
+$ nonnullvar=abc
+$ test -n "$nullvar"    Does nullvar have nonzero length?
+$ echo $?
+1    No
+$ test -n "$nonnullvar"  And what about nonnullvar?
+$ echo $?
+0    Yes
+$ test -z "$nullvar"    Does nullvar have zero length?
+$ echo $?
+0    Yes
+$ test -z "$nonnullvar"  And nonnullvar?
+$ echo $?
+1    No
+$
+```
+
+请注意，`test` 对参数也可能很挑剔。例如，如果 shell 变量 `symbol` 包含一个等号，看看当你尝试测试它的长度是否为零时会发生什么：
+
+```sh
+$ echo $symbol
+=
+$ test -z "$symbol"
+sh: test: argument expected
+$
+```
+
+`=` 运算符的优先级高于 `-z` 运算符，因此 `test` 会尝试把该命令作为相等性测试来处理，并期望在 `=` 后面跟一个参数。为了避免这类问题，许多 shell 程序员把测试命令写成
+
+```sh
+test X"$symbol" = X
+```
+
+如果 `symbol` 为空，则该命令为真；如果不为空，则为假。`symbol` 前面的 `X` 可以防止 `test` 把存储在 `symbol` 中的字符解释为运算符。
+
+## test 的另一种格式
+
+`test` 命令在 shell 程序员中使用得非常频繁，因此该命令提供了一种替代格式，可以让你的程序整洁得多：`[`。这种格式提高了整个 shell 脚本中 `if` 语句和其他条件测试的可读性。
+
+你应该还记得，`test` 命令的一般格式为
+
+```sh
+test expression
+```
+
+它也可以用替代格式表示为
+
+```sh
+[ expression ]
+```
+
+`[` 实际上是命令的名称。它仍然会启动同一个 `test` 命令的执行，但是当这样使用时，它还期望在表达式末尾看到一个结束的 `]`。在 `[` 之后和 `]` 之前必须有空格。
+
+你可以使用这种替代格式重写前面示例中的 `test` 命令，如下所示：
+
+```sh
+$ [ -z "$nonnullvar" ]
+$ echo $?
+1
+$
+```
+
+当用于 `if` 命令时，替代格式如下：
+
+```sh
+if [ "$name" = julio ]
+then
+        echo "Would you like to play a game?"
+fi
+```
+
+使用哪种 `if` 命令格式由你自己决定；我们更倾向于 `[...]` 格式，它使 shell 编程的语法更接近其他流行的编程语言，因此本书剩余部分将使用这种格式。
+
+## 整数运算符
+
+`test` 有大量用于执行整数比较的运算符。表 7.2 总结了这些运算符。
+
+**表 7.2** — `test` 整数运算符
