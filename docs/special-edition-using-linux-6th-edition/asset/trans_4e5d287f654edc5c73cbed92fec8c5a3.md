@@ -1,0 +1,118 @@
+
+mkfs 实用程序默认构建 ext2 类型的文件系统。运行 mkfs 的结果如下所示：
+
+```text
+# mkfs /dev/hdb2
+mke2fs 1.10, 24-Apr-97 for EXT2 FS 0.5b, 95/08/09
+Linux ext2 filesystem format
+Filesystem label=
+3024 inodes, 12096 blocks
+604 blocks (4.99%) reserved for the super user
+First data block=1
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+2 block groups
+8192 blocks per group, 8192 fragments per group
+1512 inodes per group
+Superblock backups stored on blocks:
+    8193
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: done
+```
+
+如果你正在安装旧硬盘，我强烈建议你使用 -c 选项检查坏块，如下例所示：
+
+```text
+# mkfs -c /dev/hdb2
+mke2fs 1.10, 24-Apr-97 for EXT2 FS 0.5b, 95/08/09
+Linux ext2 filesystem format
+Filesystem label=
+3024 inodes, 12096 blocks
+604 blocks (4.99%) reserved for the super user
+First data block=1
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+2 block groups
+8192 blocks per group, 8192 fragments per group
+1512 inodes per group
+Superblock backups stored on blocks:
+    8193
+
+Checking for bad blocks (read-only test): done
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: done
+```
+
+创建 ext2 文件系统时，它会在硬盘分区上构建一组区域。这些区域通常称为块组。每个块组又划分为几个更小的部分。图 9.1 描绘了块组布局，表 9.4 描述了块组的每个部分。
+
+| 块组部分 | 描述 |
+| --- | --- |
+| 超级块 | 整个文件系统的信息存储在超级块中。每个块组都包含一个超级块，但它只是第一个块组中超级块的备份副本。 |
+| **组描述符** | 每个块组的信息存储在这里。每个块组都包含一个组描述符，但它们都是第一个块组中组描述符块的副本。指向 inode 表的指针也位于此处。 |
+| **块位图** | 这是一个位图，指示哪些块正在使用中。 |
+| **inode 位图** | 这是一个位图，指示哪些 inode 正在使用中。 |
+| **inode 表** | 这是实际分配给此块组的 inode 表。 |
+| **数据块** | 实际数据存储在这里。 |
+
+![](img/c741b1b6b6eccaba2ad43454c979a7f8_211_0.png)
+
+inode 本质上是一个指向文件的指针；但是，它包含有关文件的相关信息。它存储诸如文件权限、所有权、最后修改日期以及指向实际数据块的指针等信息。inode 不包含任何文件数据。每个文件恰好有一个 inode。ext2 文件系统在创建时构建了一组固定的 inode。默认情况下，每 4096 字节分配一个 inode。这并不是字面意义上的映射——它只是在建立块组时用作一般经验法则。
+
+如果文件足够小，它可以完全放入给定块组的直接可访问块中。如果不是，则使用块间接链接的方法来存储给定文件的所有数据。这种方案允许文件最大达到 2GB。
+
+> **注意：** Linux 系统上的大多数文件都足够小，可以直接访问。
+
+你可以通过向 mkfs 传递 `-i <number>` 选项来更改文件系统上创建的 inode 数量。此数字应为 512 的倍数，通常为 512、1024、2048、4096、8192 等。如果你的文件系统非常小，但有很多非常小的文件，你可能希望将此数字设为 512。如果你的文件系统非常大，且包含非常大的文件（例如数据库块），你可能希望将此数字设得更大。
+
+> **警告：** 选择不适合文件系统大小以及文件系统中文件数量的数字，可能会导致 inode 用完，尽管还有很多可用磁盘空间；或者导致看起来磁盘空间不足（尽管实际上你会有大量仅部分使用的 inode）。
+
+每个 inode 将使用一个块。超级块将根据 inode 数量使用一个或多个块。理想情况下，当你的文件系统已满时，只有一小部分 inode 未使用。如果你不确定，请使用默认值；它最适合普通文件系统。
+
+## 挂载文件系统
+
+要使新创建的文件系统在 Linux 中可访问，必须将其挂载。挂载文件系统的历史可以追溯到文件保存在磁带卷上的时代，当时必须先挂载磁带，文件系统才能访问它们。这种处理分区的方法使文件系统维护更加容易，正如你将在本章后面看到的那样。
+
+尽管挂载文件系统的要求似乎不太友好，但实际上它提供了强大的灵活性。与 DOS 环境（在大多数情况下，驱动器号代表单独的分区）不同，Linux 文件系统可以逻辑地组合在一起，使它们看起来像是位于一个文件系统上，而实际上并非如此。这种多分区文件系统在用户看来是一个目录层次结构。例如，我可以将硬盘分为四个主分区。然后每个分区可以映射到作为整个目录结构一部分的特定挂载点，如表 9.5 所示。
+
+**表 9.5  带独立分区的示例挂载点**
+
+| 目录（挂载点） | 物理分区 |
+| --- | --- |
+| `/` | `/dev/hda1` |
+| `/var` | `/dev/hda2` |
+| `/home` | `/dev/hda3` |
+| `/usr` | `/dev/hda4` |
+
+以 /var 目录为例。这是存放传入邮件的目录。如果将 /var 目录放在独立的分区上，系统管理员就不必过分担心传入邮件目录填满磁盘空间导致系统停机。在这种情况下，/dev/hda2 分区可能完全被传入邮件填满，但系统仍会继续运行，因为 /dev/hda1 文件系统并未满。当然，邮件会开始被退回，但系统不会停机。然而，如果 /var 目录是 /dev/hda1 文件系统的一部分，那么根文件系统可能会被传入邮件填满，并导致系统因磁盘空间不足而停机。
+
+### 手动挂载文件系统
+
+可以使用 mount 命令手动挂载文件系统。mount 命令的语法如下：
+
+```text
+mount -t filesystem [-o option1,option2,...] device-name mount-directory
+```
+
+手动挂载 CD-ROM 的命令如下：
+
+```text
+mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
+```
+
+实际的 CD-ROM 设备由符号链接 /dev/cdrom 引用。
+
+挂载目录在逻辑上类似于 DOS 等操作系统中的驱动器号：它是引用和访问驱动器的地方。然而，在 Linux 中，引用和访问驱动器设备的地方是一个目录，与 Linux 文件系统上的任何其他目录没有什么不同。（换句话说，你可以使用 cd 命令切换目录，进入挂载目录以访问挂载到该目录的驱动器设备。在 DOS 中，你输入驱动器号加冒号来访问驱动器设备。）例如，CD-ROM 驱动器通常挂载到 /mnt/cdrom 目录。
+
+你可以通过不带任何选项执行 mount 命令来查找当前挂载的文件系统列表。你也可以通过对 /proc/mounts 文件运行 cat 命令来生成类似的列表。尽管 df 在正常情况下也会提供已挂载文件系统的列表，但该命令读取的是 /etc/mtab。如果根文件系统以只读方式挂载（例如在文件系统维护和修复期间），则无法创建 mtab 文件，因此它可能会提供误导性信息。
+
+> **注意**
+>
+> 当你将设备挂载到挂载目录时，该目录中的任何内容都将无法访问，直到你使用 umount 命令卸载该驱动器。当你卸载该目录时，以前的内容会再次完整地出现在该目录中。
+
+> **提示**
+>
+> 普通用户只能挂载和卸载 /etc/fstab 中列出的、包含 user 或 users 选项的文件系统，而且只能按照挂载条目所指定的方式进行。否则，只有 root 用户才能挂载和卸载文件系统。请参阅后面的“自动化挂载过程”一节。
+
+### 卸载文件系统
+
+umount 命令用于将先前挂载的文件系统从其挂载目录中分离。其使用的语法与 mount 命令类似，但典型的命令行

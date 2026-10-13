@@ -1,0 +1,289 @@
+
+- LILO
+    - dual booting, 259-260
+    - installing, 258-259
+    - locations, 253
+    - non-device-specific boot prompt arguments, 261
+    - Red Hat configuration, 178
+    - reinstalling, 366-367
+    - RPM files, 248
+    - system areas accessed, 251
+    - troubleshooting, 263, 268
+        - boot loader errors, 262
+        - boot prompt, 263
+        - warning and fatal errors, 262
+    - troubleshooting. See also debugging, 262
+    - uninstalling, 259
+- lilo command, defined, 738
+- lilo.conf file, 211, 248
+    - sample configuration, 255-258
+        - general per-image options, 257-258
+        - global options, 256-257
+        - Linux image options, 256-257
+- limits module (PAM), 310
+- Lin modems Web site, 750
+- line numbered inittab listing, 275-277
+- linger <number of seconds> argument, 675
+- linking windows, konqueror, 59
+- links, install, 204
+- Linsider Web site, 746
+- Linsight Web site, 746
+- Linux
+    - alias IP addresses, 18
+    - certification (LPI), 17
+    - community, 11-12
+    - distributions, 11
+        - Debian, 13-14
+        - DragonLinux, 14
+        - MandrakeSoft, 14
+        - Slackware, 15
+        - SLS, 15
+        - *Stampede*, 16
+        - *TurboLinux*, 14
+        - *Yellow Dog*, 16
+    - forward network packets, 18
+    - games, 18
+    - history of, 10
+    - masquerade network packets, 18
+    - networking, 18
+    - operating systems, 17
+    - pronouncing, 11
+    - TCP/IP networks, 18
+    - Web site, 11
+- Linux Advocacy HOW-TO
+    - Web site, 11
+- Linux at CESDIS Web site, 747
+- Linux distributions, 10
+- Linux FAT32 Support Web site, 747
+- Linux image options, lilo.conf sample configuration file, 256-257
+- Linux in Business Settings Web site, 748
+- Linux International Web site, 743
+- Linux IP Masquerade Resource Web site, 750
+- Linux Journal Web site, 745
+- Linux kernel, 356
+- Linux Kernel Archives Web site, 745
+- Linux Kernel Web site, 747
+- Linux Laptop Page Web site, 744
+- Linux Links Web site, 747
+- Linux Loader. See LILO
+- Linux Magazine Web site, 745
+- Linux news Web site, 746
+- Linux operating systems, 10
+- Linux Parallel Port Web site, 749
+- Linux PCMCIA Information Web site, 749
+- Linux Plugins for Netscape Web site, 750
+- Linux Professional Institute. See LPI
+- Linux Programmer’s BouncePoint Web site, 748
+- Linux resources, 743-746
+    - specific components, 747-751
+- Linux SMP Web site, 747
+- Linux Standard Base Organization Web site, 201
+- Linux Standard Base. See LSB
+- Linux Standard Base project. See LSB
+- Linux USB Web site, 747
+- Linux Weekly News Web site, 745
+- Linux World Web site, 745
+- Linux-Kernel Archive Web site, 747
+- Linux/Microcontroller Web site, 747
+- Linuxberg Web site, 747
+- Linuxconf, accessing via Web, 181
+- Linuxconf servers Web site, 181
+- Linuxconf Web site, 174, 181
+- Linuxconfig, Red Hat, 180
+- list command, ipchains utility, 708
+- Listen directive, Apache Web server address, customizing, 625
+- listfile module (PAM), 310
+- listing packages, typetags, 340
+- listings
+    - Apache Web server, default name space, 630
+    - arp command output, 431
+    - .bashrc file, 293
+    - BIND configuration file sample, 490–492
+    - checkpc program output, 588–589
+    - config.opts file (pcmcia-cs package), 386–387
+    - declare and typeset commands, functions sample output (listing), 299
+    - default `/etc/config.d/shells/bashrc` file, 293–295
+    - dig program lookup of root servers, 499–500
+    - dig program query output, 500
+    - dnsquery program output, 501
+    - `/etc/printcap`, raw queue, 593
+    - `/etc/printcap` file for local printers (sample), 584
+    - `/etc/printcap` file for remote printer sample, 589
+    - `/etc/printcap` utilizing bounce queues sample, 592
+    - **GPG**
+        - decrypting encrypted files, 481
+        - signed file with ASCII armoring (encoded), 480
+    - group statement sample, 436
+    - ifconfig, Ethernet cards, 419
+    - inittab file, 271
+    - inittab file, line numbered, 277
+    - IP-based virtual hosting, complex addressing example, 657
+    - IP-based virtual hosting, default keyword example, 657
+    - ipsec.conf files, 395–396
+    - KDE, format specifiers, 50
+    - key pairs, generating example, 476
+    - lib/modules/2.4.x subdirectories, 373–375
+    - lpc program, status all directive, 598
+    - *lpq -l -Praw* output, 596
+    - *lpq -all* output, 597
+    - *multiple queued print jobs* output, 596
+    - master profile sample, 292–295
+    - **modules**
+        - *scripts, loading*, 717
+        - *scripts, removing*, 718
+    - name resolution, default files, 426
+    - name server update script, 498
+    - name-based virtual hosting example, 658
+    - netstat -avn, 422
+    - Open Sound System, Control Script, 147
+    - **PAM**
+        - `/etc/pam.d` file, 307
+        - default recv file, 313
+        - default login file, 307
+        - default rlogin listing, 312
+        - default rsh file, 313
+    - pcmcia-cs package, make config session sample, 384
+    - PGP, encrypted file with ASCII armoring, 481
+    - print filter file altered for local filtering of remote print jobs sample, 591–592
+    - print filter file for local filtering of remote print jobs sample, 590
+    - print filter file sample, 586–587
+    - route output, 420
+    - rpcinfo program output, 508
+    - sample network
+        - `/etc/ppp/chat-script` file, 572
+        - `/etc/ppp/options` file, 572
+        - `/etc/ppp/pap-secrets` file, 571
+    - `/etc/resolv.conf` file, 570
+    - `/etc/sysconfig/network-scripts/ifcfg-eth0` file, 568
+    - sample network, hosts file, 568
+    - set command
+        - aliases sample output (listing), 298
+        - functions sample output (listing), 298
+    - set command, sample output, 296–297
+    - SPEC file for ed package, 346
+    - syslog.conf, 401–403
+        - facilities, 402
+        - priorities, 402
+    - tcpdump sample output, 676–677
+    - tcpdump utility sample outputs, 677–678
+    - verifying keys in pubring.gpg file, 478
+    - Web server document tree name space, 630
+    - X Windows, resources, 135
+- Live Concerts Web site, 148
+- **LIZARD**, networking options, 171–173
+- ln command, defined, 736
+- load spikes, defined, 627
+- loading
+    - kernel modules
+        - automatically, 379–382
+        - manually, 378
+    - modules, 717–718
+- **LOADLIN**, 263
+- local printers, configuring, 583–589
+    - `/etc/printcap` file, 584–588
+    - queues, creating, 588–589
+- **LOCAL wildcard**, TCP wrappers, 673
+- Locale tab (KDE), 48
+- locating packages, 322
+- location, LILO, 253
+- **lock argument, pppd**, 449
+- **locking arguments, Samba directory sharing**, 554
+- **log files, Apache Web server**, 622
+- **LOG target, ipchains utility**, 712
+- **LogFormat directive, Web server log formats**, 644
+- **logging, Web servers**, 643-648
+    - additional logs, defining, 646
+    - agent logs, 646
+    - client host name lookups, 646
+    - CustomLog directive, 644, 646
+    - error logs, 647
+    - formats, customizing, 644-645
+    - HostNameLookups directive, 646
+    - LogFormat directive, 644
+    - logresolve program, 646
+    - RefererIgnore directive, 647
+    - referer logs, 646
+    - script logs, 648
+    - ScriptLogBuffer directive logs, 649
+    - ScriptLogLength directive logs, 649
+    - transfer logs, 644-646
+    - TransferLog directive, 644
+- **logging arguments**
+    - Samba directory sharing, 553
+    - Samba printer sharing, 557
+- **logging in**, 228
+    - bindery servers (NetWare), 519
+    - NDS (NetWare), 519
+    - NetWare, 518-519
+    - network connection, 230
+    - serial connections, 230
+    - virtual consoles, 229-230
+- **logging off, syslog**, 400
+- **logging out**
+    - applications (KDE), 39
+    - bindery servers (NetWare), 520
+    - GNOME, 77
+    - NDS (NetWare), 520
+    - NetWare, 520
+- **logical block addressing. See LBA**
+- **Logical Unit Number. See LUN**
+- **login prompts**, 288
+- **login shells**, 290
+    - SHLVL variable, 290
+- **logresolve program**, 646
+- **logrotate.d directory**, 209
+- **Look & Feel, System Notifications dialog box**, 46
+- **Look & Feel, Window Behavior, Actions dialog box**, 47
+- **Look & Feel tab (KDE)**, 52
+- **loose binding**, 136
+- **lost+found directory**, 205
+- **lp queues**, 585
+- **lpc program**
+    - disable/enable printing from queues, 599
+    - holding all print jobs, 599
+    - redirecting print jobs, 599
+    - status all directive (listing), 598
+    - system administrator print controls, 598-599
+    - taking down print queues, 599
+- **lpd program**, 581
+- **LPI (Linux Professional Institute)**
+    - Linux certification, 17
+    - Web site, 17
+- **LPI Web site**, 744
+- **lpq program**
+    - lpq -l -Praw output (listing), 596
+    - lpq -all output (listing), 597
+    - multiple queued print jobs output (listing), 596
+    - viewing multiple print queues, 596
+    - viewing print queues, 595-597
+- **lpr command**, 581
+    - -b argument, 582
+    - -P argument, 591
+    - -Pprinter argument, 582
+    - control and data files, 582
+    - filtering output, 581
+    - print jobs
+        - sending, 582
+        - specifying as binary files, 582
+    - printing data not in files, 582
+    - redirecting files, 581
+    - syntax, 581
+- **lpr/lpd based print system, configuring**, 582-583
+- **lprm program**
+    - command-line arguments, 597-598
+    - deleting print jobs, 597-598
+- **LPRng**
+    - checkpc program, 588
+        - output (listing), 588-589
+    - lpc program
+        - disable/enable printing from queues, 599
+        - holding all print jobs, 599
+        - redirecting print jobs, 599
+        - status all directive (listing), 598
+        - system administrator print controls, 598-599
+        - taking down print queues, 599
+    - lpd program, 581
+    - lpq program
+        - lpq -l -Praw output (listing), 596
+        - lpq -all output (listing), 597
+        - multiple queued print jobs output (listing), 596

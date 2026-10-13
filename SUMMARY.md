@@ -1980,6 +1980,7 @@
 +   [Sonar GNU/Linux 快速启动指南：Sonar Gnome 2014.1](docs/sonar-gnulinux-getting-started-guide-sonar-gnome-20141/README.md)
 +   [StarOffice 使用指南](docs/special-edition-u-using-staroffice/README.md)
 +   [Linux 版 Corel Word 8 使用指南特别版](docs/special-edition-using-corel-wordperfect-8-for-linux/README.md)
++   [特别版 Linux 使用指南（第6版）](docs/special-edition-using-linux-6th-edition/README.md)
 +   [Linux 使用指南 第四版特版](docs/special-edition-using-linux-fourth-edition/README.md)
 +   [Linux 系统管理使用指南 特别版](docs/special-edition-using-linux-system-administration/README.md)
 +   [Oracle8／8i 使用指南 特版](docs/special-edition-using-oracle88i/README.md)

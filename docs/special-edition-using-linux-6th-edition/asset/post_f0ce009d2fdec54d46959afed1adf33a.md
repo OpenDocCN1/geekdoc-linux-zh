@@ -1,0 +1,298 @@
+
+- Metalab (formerly Sunsite), 744  
+- mgetty + sendfax  
+- Documentation Centre, 749  
+- Multicast and MBONE on Linux, 748  
+- Netatalk—Essential for Apple connectivity, 750  
+- NSBD (Not-So-Bad Distribution), 749  
+- open source software organization, 744  
+- OpenSSH, 748  
+- OpenSSL package, 722  
+- package indexing, 324  
+- PCMCIA, 384  
+- pcmcia-cs package, 383  
+- RealNetworks, 148  
+- Red Hat, 743  
+- Samba, 750  
+- security, 649-654  
+  - access control, 653  
+  - allow directive, 650  
+  - Apache source code, 663  
+  - AuthGroupFile directive, 653  
+  - authorization realm and type, 653  
+  - AuthType directive, 653  
+  - AuthUserFile directive, 653  
+  - certificate file, 664  
+  - certificate signing request file, 664  
+  - certificates, 661  
+  - deny directive, 650  
+  - host-based authorization, 650-651  
+  - HTTPS (secure HTTP), 662  
+  - legal issues, 666  
+  - mod ssl sources, 663  
+  - OpenSSL sources, 663  
+  - order directive, 650  
+  - public-private key systems, 661  
+  - public/private key file, 664  
+  - require directive, 653  
+- server key file, 664  
+- special directive, 665  
+- SSL, 660-662, 666  
+- user-based authorization, 651  
+- users and groups, defining, 652  
+- Slashdot, 746  
+- software, downloading, 746  
+- Sound Blaster AWE 32/64 HOWTO, 749  
+- Source Forge, 746  
+- Squid, 177  
+- SSC, 745  
+- SSH Products, 748  
+- SSL, 748  
+- SSLCertificateKeyFile directive, 664  
+- SSLCipherSuite directive, 666  
+- SSLLog directive, 666  
+- SSLLogLevel directive, 666  
+- SSLSessionCache directive, 666  
+- TCP tutorial, 416  
+- themes (KDE), 744  
+- Third-Party Quickcam Software, 750  
+- TSX-11, 744  
+- virtual hosting, 654-655  
+  - <VirtualHost> directive, 656-657  
+  - configuration files for each server, 659  
+  - IP-based, 654-655  
+  - name-based, 654, 658  
+  - NameVirtualHost directive, 658  
+  - ServerAlias directive, 658  
+  - VirtualHost directive, 654  
+- WhirlGIF 2.01, 751  
+- wu-ftpd, 604  
+- X Window System, 104  
+- XFree86, 743  
+- XFree86 How-To, 100  
+- XFree86 Servers by SuSE, 750  
+- XVidCap—X Video Capture for Linux, 751  
+- **Webmin**, 726-728  
+  - configuring, 727-728  
+  - overview, 728  
+  - running, 727  
+- **webmin directory**, 210  
+- **wharf**, 133  
+- **wheel module (PAM)**, 312  
+- **WhirlGIF 2.01 Web site**, 751  
+- **whois package**, 496  
+- **whois program, DNS**, 502  
+- **widgets**, 22  
+- **wildcards, TCP wrappers**, 673  
+- **Window Maker window manager**, 130-133  
+- **window manager, configuring (GNOME)**, 81-83  
+- **window manager startup, X Window System startup**, 123  
+- **window managers**, 22-23, 69, 129  
+  - AfterStep, 130-132  
+  - Blackbox, 130-133  
+  - configuring, 134  
+  - Enlightenment, 130-133  
+  - fvwm2, 129-132  
+  - fvwm95, 130  
+  - kwin, 130-133  
+  - resources, 135, 139  
+    - file issues, 137  
+    - font definitions, 137  
+    - font definitions, requests, 138  
+    - font servers, 139  
+  - Sawfish, 130-133  
+  - themes, 134  
+  - twm, 129-130  
+  - Window Maker, 130-133  
+  - xterm, 141  
+- **windows. See also window managers**  
+  - X Window System, 132  
+  - adding, konqueror, 59-60  
+  - geometries, 132  
+  - linking, konqueror, 59  
+- new file manager  
+  - opening folders, 64  
+  - opening with same current directory as current window, 64  
+- sticky, 132  
+- terminal, opening with current directory same as file manager, 64  
+- xnwbtoutes utility, 535  
+- xnwdstrustees utility, 527  
+- Windows 95/98, peer network with, 551-552  
+- Windows networks, 19  
+- workspaces, configuring (GNOME), 83  
+- wrappers  
+  - defined, 670  
+  - TCP, 670  
+  - character expansions, 675  
+  - clients, patterns, and host-names, 673  
+  - compile-time options, 671  
+  - concerns, 676  
+  - daemons and wildcards, 673  
+  - forms and operators, 673  
+  - implementing, 670-675  
+  - PARANOID option, 671  
+  - RFC 931 lookups option, 671  
+  - rules, 674-675  
+  - source routing, 671  
+  - syslog facility, 671  
+- writing  
+  - new partition table (partitioning hard drives), 190  
+  - scripts, 302  
+- wu-ftp Web site, 604  
+
+## X-Y
+
+- X applications, running, 725  
+- -X argument, ipchains utility, 709  
+- -X command, ipchains utility, 708  
+- X Consortium, 101  
+- X Logical Font Description (XLFD), 137-138  
+- x permission, 241  
+- X server, configuring  
+  - with xf86config utility, 114  
+  - with XF86Setup utility, 112-113  
+- X Window System, 100-102  
+  - client/server relationship, 102  
+  - historical overview, 100  
+  - input capabilities, 104  
+  - navigating, 128  
+    - focus, 128  
+    - menus, 129  
+    - virtual terminals, 129  
+  - network transparency, 103  
+  - networking, 125  
+  - output capabilities, 103  
+  - resources, 135, 139  
+    - file sizes, 137  
+    - font definitions, 137  
+    - font definitions, requests, 138  
+    - font servers, 139  
+  - startup, 118  
+    - desktop, 123  
+    - exploring, 119-120  
+    - gdm, 121-122  
+    - kdm, 121  
+    - OpenLinux, 118-119  
+    - startx, 123  
+    - window manager startup, 123  
+    - xdm, 120  
+    - Xsession, 122  
+  - themes, 134  
+  - user interface capabilities, 103  
+  - window managers, 129  
+    - AfterStep, 130-132  
+    - Blackbox, 130-133  
+    - configuring, 134  
+    - Enlightenment, 130-133  
+    - fvwm2, 129-132  
+    - fvwm95, 130  
+    - kwin, 130-133  
+    - Sawfish, 130-133  
+- twm, 129-130  
+- Window Maker, 130-133  
+- XFree86, 100  
+  - configuring, 110-113  
+  - deb packages, 108  
+  - dissecting, 115-117  
+  - hardware support, 104  
+  - historical overview, 101  
+  - HOW-TO document, 100  
+  - installing, 104  
+  - resolutions, 124  
+  - RPMs, 106-107  
+  - tgz packages, 109-110  
+  - troubleshooting, 123  
+- xterm, 141  
+- X Window System Web site, 104  
+- X11 directory, 208  
+- X11R6. See X Windows System  
+- Xconfigurator, 111  
+- xdm, X Window System startup, 120  
+- xemacs package, 341  
+- xf86config, 113  
+- XF86Config file, 115-117, 210  
+- xf86config utility, X server configuration, 114  
+- XF86Setup, 111  
+- XF86Setup utility, X server configuration, 112-113  
+- XFce, 25  
+- XFMail email client, 462  
+- xfontsel, 139  
+  - command-line options, 139  
+- XFree86, 100. See also X Window System  
+  - configuring, 110  
+  - SuperProbe utility, 113  
+  - Xconfigurator, 111  
+  - XF86Setup, 111  
+  - deb packages, 108  
+  - Device section, 117  
+  - dissecting, 115  
+  - Files section, 116  
+  - hardware support, 104  
+  - historical overview, 101  
+  - HOW-TO document, 100  
+  - InputDevice section, 116  
+  - installing, 104  
+  - Modules section, 115  
+  - Monitor section, 116  
+  - resolutions, 124  
+  - RPMs, 106  
+    - *optional RPMs*, 107  
+    - *recommended RPMs*, 106  
+  - Screen section, 117  
+  - ServerFlags section, 116  
+  - ServerLayout section, 117  
+  - tgz packages, 109-110  
+  - troubleshooting, 123  
+- **XFree86 Servers by SuSE Web site**, 750  
+- **XFree86 Web site**, 743  
+- **XLFD (X Logical Font Description)**, 137-138  
+- **xnwboadmin utility**  
+  - bindery-based servers, 533  
+  - changing bindery-based server object property values, 538  
+- **xnwbocreate utility**  
+  - bindery-based servers, 533  
+  - creating bindery-based server objects, 537  
+- **xnwborights utility**  
+  - bindery-based servers, 533  
+  - granting bindery-based server file system rights, 540-541  
+- **xnwborightsDD utility**  
+  - bindery-based servers, 533  
+  - command-line arguments, 540  
+  - granting bindery-based server file system rights, 540-541  
+- **xnwbotrustees utility**  
+  - bindery-based server file system trustee assignments and rights, 534-535  
+  - bindery-based servers, 533  
+  - command-line arguments, 534  
+  - window, 535  
+- **xnwtdstrustees utility**  
+  - command-line arguments, 527  
+  - NDS Tree, 526  
+  - NDS Tree file and directory trustee assignments, 526-527  
+  - NetWare directory trustees, viewing, 528  
+  - window, 527  
+- **xnwmanageq utility**, NetWare, 517  
+- **xnwmanageq utility**  
+  - command-line arguments, 523  
+  - NetWare print job status, 522-523  
+- **xnwprint utility**  
+  - command-line arguments, 521-522  
+  - NetWare, 517  
+  - *printing*, 521  
+- **Xsession, X Window System startup**, 122  
+- **xterm**, 140-141  
+  - auto-shrinking, 140-141  
+  - X Window System, 141  
+- **xterm sessions**, 129  
+- **XVidCap—X Video Capture for Linux Web site**, 751  
+- **Yellow Dog Linux distribution**, 16  
+
+## Z
+
+- -Z command, ipchains utility, 708  
+- zcat command, gunzip, 739. *See also* gzip  
+- zero command, ipchains utility, 708  
+- zip command, defined, 736  
+- zone files, 492  
+  - BIND, 492  
+- **Zoom command (RealPlayer View menu)**, 151  
+- **zsh shell**, 291  

@@ -1,0 +1,298 @@
+
+- /etc/login.defs 文件, 将用户添加到用户账户, 234
+- /etc/mail/sendmail.mc 文件, 472
+- /etc/mta/options/sendmail 文件, 470
+- /etc/pam.conf 文件, 307
+- /etc/pam.d 文件
+  - 示例, 307
+  - 阅读, 307-309
+- /etc/passwd 文件, 231-232, 306
+  - 删除或禁用用户, 236
+  - 字段说明, 231-232
+  - 权限, 239-240
+- /etc/ppp/chat-script 示例文件 (列表), 572
+- /etc/ppp/options 示例文件 (列表), 572
+- /etc/ppp/pap-secrets 示例文件 (列表), 571
+- /etc/printcap 文件, 583
+  - 为本地过滤远程打印作业而修改的过滤器文件示例 (列表), 591-592
+  - 用于本地过滤远程打印作业的过滤器文件示例 (列表), 590
+  - 过滤器文件示例 (列表), 586-587
+  - 过滤器位置和文件名, 586
+  - 本地打印机示例 (列表), 584
+  - 本地打印机, 配置, 584-588
+  - 队列目录, 585
+  - 原始队列 (列表), 593
+  - 远程打印机示例 (列表), 589
+  - 串行端口, 585
+  - 使用退回队列示例 (列表), 592
+  - | (管道字符), 585
+- /etc/rc.d 子目录, 系统初始化脚本, 280-282
+- /etc/rc.d/init.d/mta 文件, 470
+- /etc/rc.d/rc 子目录, 系统初始化脚本, 281
+- /etc/resolv.conf 示例文件 (列表), 570
+- /etc/shadow 文件, 232-233
+- /etc/sysconfig/network-scripts/ifcfg-eth0 示例文件 (列表), 568
+- /etc/sysconfig/sendmail 文件, 472
+- 以太网 MAC 地址, 411
+- 检查现有分区, 187-190
+- 从目录列表中排除文件, 635
+- exec() 函数, 执行命令, 298
+- exit 命令, FTP 客户端, 607
+- 探索 X Window 系统启动, 119
+- 导出文件系统, 507
+- exports 文件, 211
+  - NFS 共享方法, 511
+- ext2 文件系统 (扩展类型 2), 190
+  - 块组, 191-192
+  - 创建, 191
+  - 权限, 244-245
+- 扩展类型 2 文件系统. 参见 ext2 文件系统
+- 外部版本号 (内核模块), 377
+
+## F
+
+- -f 参数
+  - ipchains 工具, 709
+  - typeset 和 declare 命令, 298
+- -F 命令, ipchains 工具, 708
+- -f <FORMNAME> 参数, nvrprint 和 xnw-print 工具, 522
+- -f 子参数 (-q 参数), 322
+- F Virtual 窗口管理器. 参见 fvwm2 窗口管理器
+- 设施, syslog.conf 列表, 402
+  - 指定多个, 402
+- 花式索引, Web 服务器目录索引, 636
+  - 描述, 637
+  - 文件图标, 636
+  - 格式化, 638
+- 致命错误, LILO, 262
+- fdisk 命令, 定义, 738
+- fdisk 工具, 对硬盘驱动器进行分区, 186-190
+  - 现有分区, 检查, 187-190
+  - 起始柱面号, 188
+  - 结束柱面号, 189
+  - 写入新分区表, 190
+  - 分区号, 选择, 188
+  - 分区系统 ID, 189
+  - 分区类型, 选择, 188
+  - 分区, 创建, 188
+  - 运行 fdisk, 187
+- FHS, 201 (文件系统层次结构标准)
+  - 概述, 201-202
+  - 根目录规范, 202
+  - 网站, 201
+- 字段说明
+  - /etc/fstab 文件, 195-196
+  - /etc/group 文件, 237-238
+  - /etc/passwd 文件, 231-232
+- 字段 (单行), spec 文件, 345
+- FIFO (先进先出缓冲区), 596
+- 文件格式, 224
+- file <f> 参数, pppd, 449
+- 文件关联 (桌面), 26
+- file 命令, 225
+  - 定义, 735
+- 文件图标, Web 服务器花式目录索引, 636
+- 文件问题, 137
+- 文件管理器. 参见 konqueror
+- 文件菜单, RealPlayer, 150
+  - 打开文件命令, 150
+  - 打开位置命令, 150
+  - 以前的位置, 150
+- file 程序, 301
+- 文件系统权限, 基于 bindery 的服务器, 540-541
+- 文件受托者分配, NDS 树, 526-527
+  - 查看, 528-529
+- 文件受托者分配和权限, 基于 bindery 的服务器, 534-535
+  - 查看, 535-536
+- 文件名处理, Samba 目录共享, 554
+- 文件名
+  - 二进制包, 317-319
+  - 包, 命名约定, 319
+  - RPM, 其中的架构字符串, 318
+  - 源代码包, 317
+- 文件
+  - access.conf, 节, 641
+  - aliases, 210
+  - 身份验证, 配置, 450-452
+  - .bashrc (列表), 293
+  - 二进制, 打印作业作为, 582
+  - 二进制包, 320
+  - BIND, 489
+    - 配置, 490-492
+    - db 文件, 全部, 494-495
+    - Debian, 490
+    - named.root 数据库, 496
+    - Red Hat, 490
+    - 反向解析数据库, 495-496
+    - SOA (起始授权头), 493-494
+    - 区域, 492
+  - bootptab, 431
+  - cdrom, pcmcia-cs 包, 385
+  - cdrom.opts, pcmcia-cs 包, 385
+  - 证书, 网站安全, 664
+  - 证书签名请求, 网站安全, 664
+  - cis/, pcmcia-cs 包, 385
+  - 命令 (列表), 735-736
+  - conf 文件, 258
+  - config, pcmcia-cs 包, 385
+  - config.opts
+    - 默认列表 (pcmcia-cs 包), 386-387
+    - pcmcia-cs 包, 385
+  - 配置
+    - Apache Web 服务器, 621
+    - Apache Web 服务器, 自定义, 624
+    - /etc 目录, 210-212
+    - m4 工具, 466
+    - 包, 320, 329
+    - pcmcia-cs 包, 385-386
+    - sendmail 程序, 466
+  - 每个服务器的配置 (虚拟主机), 659
+  - 上下文菜单命令
+    - 删除, 62
+    - 移到回收站, 62
+    - 打开, 62
+  - 控制, 打印机队列, 582
+  - 复制, OpenSSH, 724
+  - crontab, 210
+  - 数据, 打印机队列, 582
+  - 默认的 /etc/config.d/shells/.bashrc (列表), 293-295
+  - 删除, 62
+  - devfsd, 210
+  - dhcpd, 433
+    - DHCP 配置, 432
+    - 全局参数, 434
+    - group 语句, 436
+    - shared network 语句, 435-436
+    - subnet 语句, 434-435
+  - dhcpd.leases, 432
+  - 目录索引, 634
+  - 文档, 包, 320
+  - dosemu.conf, 211
+  - 下载, FTP, 610-611
+  - 加密
+    - 解密, 481
+    - GPG, 480-482
+    - 使用 ASCII 装甲, 481
+  - /etc/group
+    - 将用户账户添加到组, 238
+    - 创建组, 237-238
+    - 从组中删除用户账户, 238
+    - 字段说明, 237-238
+    - 管理, 239
+  - /etc/gshadow, 管理, 239
+  - /etc/login.defs, 将用户添加到用户账户, 234
+  - /etc/mail/sendmail.mc 文件, 472
+  - /etc/mta/options/sendmail 文件, 470
+  - /etc/pam.conf, 307
+  - /etc/pam.d
+    - 示例, 307
+    - 阅读, 307-309
+  - /etc/passwd, 231-232, 306
+    - 删除或禁用用户, 236
+    - 字段说明, 231-232
+    - 权限, 239-240
+  - /etc/ppp/chat-script 示例 (列表), 572
+  - /etc/ppp/options 示例 (列表), 572
+  - /etc/ppp/pap-secrets 示例 (列表), 571
+  - /etc/printcap, 583
+  - /etc/printcap, 本地打印机示例 (列表), 584
+  - /etc/printcap 文件, 原始队列, 593
+  - /etc/printcap/远程打印机示例 (列表), 589
+  - /etc/rc.d/init.d/mta 文件, 470
+  - /etc/resolv.conf 示例 (列表), 570
+  - /etc/shadow, 232–233
+  - /etc/sysconfig/network-scripts/ifcfg-eth0 示例 (列表), 568
+  - /etc/sysconfig/sendmail 文件, 472
+  - 从目录列表中排除, 635
+  - exports, 211
+    - *NFS 共享方法*, 511
+  - fstab, 211
+  - ftl, pcmcia-cs 包, 385
+  - ftl.opts, pcmcia-cs 包, 385
+  - ftpaccess, 211, 613
+  - ftpusers, 211, 614
+  - group, 211
+  - grub.conf, 211, 264–266
+  - HOSTNAME, 210
+  - hosts, 211
+    - *配置互联网连接*, 452
+  - hosts.allow, 211, 672
+    - *在当前目录中测试*, 677–678
+    - *NFS*, 510
+    - *查看语法错误*, 676–677
+  - hosts.deny, 211
+  - .htaccess, 642
+  - httpd.conf, Web 服务器配置文件, 621
+  - ide, pcmcia-cs 包, 385
+  - ide.opts, pcmcia-cs 包, 385
+  - inetd.conf, 211
+  - inittab, 211, 271–273
+    - *带行号的列表*, 275–277
+    - *列表*, 271
+    - *运行级别*, 273
+  - ipsec 配置
+    - *连接规范*, 395–396
+  - ipsec.secrets, 392–393
+  - ipsec.secret, 392–393
+  - issue, 211
+  - lilo.conf, 211, 248
+    - *示例配置*, 255–258
+  - Linuxconf, 配置, 180
+  - 日志, Apache Web 服务器, 622
+  - memory, pcmcia-cs 包, 385
+  - motd, 211
+  - 已移动, 重定向客户端到 (Web 服务器), 633
+  - 移到回收站, 62
+  - network, pcmcia-cs 包, 386
+  - network.opts, pcmcia-cs 包, 386–387
+  - NFS 配置, 510–511
+  - Open Sound System 演示, 145
+  - passwd, 211
+  - PDF (便携式文档格式), 157. *另请参阅* Adobe Acrobat Reader
+  - PPP 选项, 配置, 448–450
+  - printcap, 212
+  - 处理, Apache Web 服务器, 632–633
+  - profile, 212
+  - 公钥/私钥, 网站安全, 664
+  - pubring.gpg, 验证密钥, 478
+  - 重定向, lpr 命令, 581
+  - 常规文件, 包, 320
+  - resolv.conf, 212
+  - RPM, LILO, 248
+  - scsi, pcmcia-cs 包, 386
+  - scsi.opts, pcmcia-cs 包, 386
+  - securetty, 212
+  - sendmail.cf, 212
+  - sendmail.cw, 212, 469
+  - serial, pcmcia-cs 包, 386
+  - serial.opts, pcmcia-cs 包, 386
+  - 服务器密钥, 网站安全, 664
+  - services, 212
+  - sh 配置项, 588
+    - *为本地过滤远程打印作业而修改的过滤器文件示例 (列表)*, 591–592
+    - *用于本地过滤远程打印作业的过滤器文件示例 (列表)*, 590
+    - *过滤器文件示例 (列表)*, 586–587
+    - *过滤器位置和文件名*, 586
+    - 本地打印机, 配置, 584–588
+    - | (管道字符), 585
+    - 队列目录, 585
+    - 串行端口, 585
+    - 使用退回队列示例 (列表), 592
+  - shadow, 212
+  - shared, pcmcia-cs 包, 386
+  - shells, 212
+  - 签名
+    - *GPG*, 479
+    - *使用 ASCII 装甲 (编码) 的 GPG 签名文件*, 480
+  - SPEC
+    - *构建包*, 345–346
+    - *ed 包列表*, 346
+  - spec, 字段 (单行), 345
+  - SPEC
+    - *辅助包*, 348
+    - *节*, 347
+  - spec, 节 (多行), 345
+  - sm.conf, Web 服务器配置文件, 621
+  - 交换空间, 格式化, 223
+  - syslog.conf, 212
+  - system.cnf, 212

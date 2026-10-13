@@ -1,0 +1,325 @@
+
+## U
+
+- utilities. *See* programs, 588
+- UUCP (UNIX-to-UNIX copy protocol), 170
+
+## V
+
+- -v argument, ipchains utility, 709
+- -V argument, rpm command, 323
+- -v <VALUE> argument
+  - nwbpad utility, 538
+  - nwsdmodify utility, 531
+- values, 136
+- var directory, 206
+- Variable Length Subnet Masks. *See* VLSM
+- variables
+  - default shell environment, 292, 296-297
+  - *master profile sample (listing)*, 292-295
+  - environment
+  - *NetWare printing*, 521
+  - *NWCLIENT DEFAULT NAME CONTEXT*, 517
+  - *NWCLIENT DEFAULT USER*, 517
+  - *NWCLIENT PREFERRED SERVER*, 517
+  - *NWCLIENT PREFERRED TREE*, 517
+  - *NWCLIENT PREFERRED SERVER*, 521
+  - *NWCLIENT PREFERRED TREE*, 521
+  - NetWare client configuration, 517
+  - PRINTER, 582
+  - Samba, 558-559
+    - %a, 559
+    - %d, 559
+    - %g, 558
+    - %H, 558-559
+    - %I, 559
+    - %L, 559
+    - %m, 559
+    - %N, 559
+    - %P, 558-559
+    - %R, 559
+    - %S, 558
+    - %T, 559
+    - %u, 558
+    - %v, 559
+  - scripts, combining, 302
+  - SHLVL, login shells, 290
+  - vendor use (GNOME), 70
+- verbose command, FTP clients, 609
+- verifying
+  - keys in pubring.gpg, 478
+  - packages, 330
+  - signatures, 330
+- versions
+  - kernel modules, 376-377
+  - shared libraries, 336
+- vga directory, 210
+- vi command, defined, 736
+- video streaming over networks. *See* RealNetworks
+- View menu, RealPlayer, 151-156
+  - Normal command, 151
+  - Zoom command, 151
+- View menu commands, Show Tree, 58
+- viewing
+  - bindery-based server directory size restrictions, 540
+  - bindery-based servers object properties, 536
+  - object property values, 536
+  - file and directory trustee assignments, NDS Tree, 528-529
+  - file system trustee assignments and rights, bindery-based servers, 535-536
+  - kernel labels, 283
+  - multiple print queues, 596
+  - NDS Tree directory size restrictions, 533
+  - NDS Tree object attribute values, 529-530
+  - NDS Tree object attributes, 529
+  - NetWare connections, 519
+  - package files (listing of), 323
+  - print queues, 595-597
+  - syntax errors, hosts.allow file, 676-677
+- viewports (GNOME), 83
+- virtual consoles, 229-230
+- virtual hosting, 625, 654-655
+  - <VirtualHost> directive, IP-based, 656-657
+  - configuration files for each server, 659
+  - IP-based, 654-655
+    - *complex addressing example*, 657
+    - *default keyword example*, 657
+  - name-based, 654, 658
+    - *example*, 658
+  - NameVirtualHost directive, 658
+  - ServerAlias directive, 658
+  - VirtualHost directive, 654
+- virtual memory, XFree86 requirements, 105
+- **Virtual Private Network.** *See* **VPN**
+- **virtual terminals**, 229. *See also* **virtual consoles**
+  - X Window System, 129
+- **VirtualHost directive, virtual hosting**, 654
+- **VLSM (Variable Length Subnet Masks)**, 412
+- **VPN (Virtual Private Network)**, 390
+  - building, 390
+  - configuring ipsec configuration files, 393-396
+- **VTs.** *See* **virtual consoles**
+
+## W
+
+- **-w <NUMBER> argument, nwprint and xwprint utilities**, 522
+- **w permission**, 241
+- **warn module (PAM)**, 312
+- **warning errors, LILO**, 262
+- **Web, Samba administration tool setup program**
+- **Web pages, LSB**, 17
+- Web servers
+  - <VirtualHost> directive, IP-based virtual hosting, 656-657
+  - AccessFileName directive, 642
+  - accounts, customizing, 626
+  - AddDescription directive, 636-637
+  - AddEncoding directive, 633
+  - address, customizing, 624-626
+  - Alias directive, 631
+  - allow directive, 650
+  - **Apache.** *See* **Apache Web server**, 618
+  - AuthGroupFile directive, 653
+  - AuthType directive, 653
+  - AuthUserFile directive, 653
+  - configuration directives, 622-624
+  - configuration files, 621
+  - configuration files, customizing, 624
+  - configuration introduction, 620
+  - **CustomLog directive**, 644
+    - additional logs, defining, 646
+  - default document directory, 622
+  - deny directive, 650
+  - directory indexes, 634-637
+    - descriptions, 637
+    - fancy indexing, 636
+    - file, 634
+    - file icons, 636
+    - formatting, 638
+    - generating, 635
+  - directory listings, 635
+    - excluding files from, 635
+    - preambles and post-ambles, 636
+  - document name space, customizing, 629-630
+  - **DocumentRoot directive**, 631
+  - encodings, 633
+  - error messages, customizing, 638-639
+  - **ErrorDocument directive**, 639
+  - file processing, 632-633
+  - file types, 632
+  - **Group directive**, 626
+  - **HeaderName directive**, 636
+  - high server loads, handling, 627
+  - **HostNameLookups directive**, 646
+  - **IndexIgnore directive**, 635
+  - **IndexOptions directive**, 638
+  - **KeepAlive directive**, 628
+  - **KeepAliveTimeout directive**, 628
+  - languages, 633
+  - **Listen directive**, 625
+  - log files, 622
+  - **LogFormat directive**, 644
+  - logging, 643-648
+    - additional logs, defining, 646
+    - agent logs, 646
+    - client host name lookups, 646
+    - error logs, 647
+    - formats, customizing, 644-645
+    - logresolve program, 646
+    - referer logs, 646
+    - script logs, 648
+    - transfer logs, 644-646
+  - **MaxClients directive**, 627
+  - **MaxKeepAliveRequests directive**, 628
+  - **MaxSpareServers directive**, 627
+  - MIME typing, 623
+  - **MimeMagicFile directive**, 633
+  - **MinSpareServers directive**, 627
+  - name, customizing, 628
+  - **NameVirtualHost directive**, 658
+  - **Options directive**, 635, 641
+  - **order directive**, 650
+  - overview, 618
+  - per directory customizations, 639
+    - current directory options, 642
+    - document tree specific options, 641
+    - section overriding, 643
+  - performance characteristics, customizing, 627-628
+  - persistent client connection support, 628
+  - **Port directive**, 625
+  - **ReadmeName directive**, 636
+  - **Redirect directive**, 634
+  - redirecting clients to moved files, 633
+  - **RedirectMatch directive**, 634
+  - **RefererIgnore directive**, 647
+  - **require directive**, 653
+  - restarting, 623
+  - ScriptAlias directive, 631
+  - ScriptLogBuffer directive
+    - script logs, 649
+  - ScriptLogLength directive
+    - script logs, 649
+  - security, 649, 651, 653-654
+    - access control, 653
+    - Apache source code, 663
+    - authorization realm and type directive, 653
+    - certificate file, 664
+    - certificate signing request file, 664
+    - certificates, 661
+    - host-based authorization, 650-651
+    - HTTPS (secure HTTP), 662
+    - legal issues, 666
+    - mod_ssl sources, 663
+    - OpenSSL sources, 663
+    - public-private key systems, 661
+    - public/private key file, 664
+    - server key file, 664
+    - special directive, 665
+    - SSL, 660-662, 666
+    - user-based authorization, 651
+    - users and groups, defining, 652
+  - ServerAdmin directive, 629
+  - ServerAlias directive, 658
+  - ServerName directive, 628
+  - ServerRoot directive, 624
+  - ServerSignature directive, 629
+  - SSLCertificateKeyFile directive, 664
+  - SSLCipherSuite directive, 666
+  - SSLLog directive, 666
+  - SSLLogLevel directive, 666
+  - SSLSessionCache directive, 666
+  - StartServers directive, 627
+  - TransferLog directive, 644
+  - UseCanonicalName directive, 629
+  - User directive, 626
+  - UserDir directive, 631
+  - virtual hosting, 625, 654-655
+    - configuration files for each server, 659
+    - IP-based, 654-655
+    - name-based, 654, 658
+  - VirtualHost directive, 654
+- Web site
+  - FHS, 201
+- Web sites
+  - 3D games, 744
+  - Akamai, 71
+  - ALSA, 749
+  - Anders, Linux Netatalk-HOWTO, 750
+  - Apache Software Foundation (The), 618
+  - BIND, DHCP, INN (ISC Consortium), 749
+  - BTTV Page Frame Grabber for Linux, 751
+  - Caldera online documentation, 742
+  - Caldera Systems, 742
+  - Caldera technical support services, 742
+  - Caldera Users email list, 742
+  - Consistent Backspace and Delete Configuration, 749
+  - Debian, 742
+  - libasound1 package, 35
+  - desktop themes, 28
+  - DNS tools, 750
+  - Enlightenment, 82
+  - FreeSSH, 748
+  - Freshmeat, 325, 745
+  - Ghostscript, Ghostview, and Gsview, 749
+  - Glide, 743
+  - GNOME, 69
+  - Helix Code, 71
+  - Helix GNOME, 71
+  - ICMP, 417
+  - Internet Assigned Numbers Authority domains, 488
+  - ISDN for Linux, 749
+  - KDE, 33, 744
+  - KDE themes, 744
+  - KDE2, 34
+  - kernels, 745
+  - kinput, 751
+  - Lin modems, 750
+  - Linsider, 746
+  - Linsight, 746
+  - Linux, 11
+  - Linux Advocacy HOW-TO, 11
+  - Linux at CESDIS, 747
+  - Linux Fat32 Support, 747
+  - Linux in Business Settings, 748
+  - Linux International, 743
+  - Linux IP Masquerade Resource, 750
+  - Linux Journal, 745
+  - Linux Kernel, 747
+  - Linux Laptop Page, 744
+  - Linux Links, 747
+  - Linux Magazine, 745
+  - Linux news, 746
+  - Linux Parallel Port, 749
+  - Linux PCMCIA Information, 749
+  - Linux Plugins for Netscape, 750
+  - Linux Programmer's BouncePoint, 748
+  - Linux SMP, 747
+  - Linux Standard Base Organization, 201
+  - Linux USB, 747
+  - Linux Weekly News, 745
+  - Linux World, 745
+  - Linux-Kernel Archive, 747
+  - Linux/Microcontroller, 747
+  - Linuxberg, 746
+  - Linuxconf, 174
+  - Linuxconf servers, 181
+  - Linuxconf Web interface, 181
+  - Live Concerts, 148
+  - LPI, 17, 744
+  - LSB, 743, 745
+  - Mesa 3-D graphics library, 751
+
+## X
+
+- xnwdstrustees
+  - command-line arguments, 527
+  - NDS Tree, 526
+  - NDS Tree file and directory trustee assignments, 526-527
+  - NetWare directory trustees, viewing, 528
+  - window, 527
+- xnwimanageq
+  - command-line arguments, 523
+  - NetWare, 517
+  - NetWare print job status, 522-523
+- xnwprint
+  - command-line arguments, 521-522
+  - NetWare, 517
+  - NetWare printing, 521

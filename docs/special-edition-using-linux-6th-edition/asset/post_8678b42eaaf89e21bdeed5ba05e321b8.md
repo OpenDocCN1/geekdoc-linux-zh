@@ -1,0 +1,355 @@
+
+- make bzip2 compiling method, 364
+- modules, installing, 363
+- parameters, configuring, 358–361
+- precautionary steps, 367
+- source trees, 357–358
+- NAT systems, 690–692
+- packages
+  - ed program, 344
+  - SPEC files, 345–346
+- VPN, 390
+- **buildroot field, SPEC files, 347**
+- **buttons**
+  - Adobe Acrobat Reader, PDF files, 160
+  - Adobe Acrobat Reader plug-in for Netscape, 159
+  - Panel, GNOME, 84
+- **Buttons tab, 84**
+- **Buttons tab (KDE), 53**
+- **bye command, FTP clients, 607**
+- **byte, 410**
+
+## C
+
+- -c argument, nwprint and xnwprint utilities, 522
+- -C command, ipchains utility, 708
+- -c sub-argument (-q argument), 322
+- C shells. See csh shells
+- C permissions (ext2 filesystem), 244
+- CA (Certificate Authority), 664
+  - agencies, 665
+- cable modem, Internet connection, 444
+- cabling
+  - networks, 565–566
+  - twisted pair, 565
+- **Caldera**
+  - NCPS, 19
+  - NetWare, 19
+- **Caldera Network Desktop, 12**
+- **Caldera online documentation Web site, 742**
+- **Caldera Open Administration System. See COAS**
+- **Caldera Systems Web site, 742**
+- **Caldera technical support services Web site, 742**
+- **Caldera Users email list Web site, 742**
+- **capabilities**
+  - GNOME, 77–78
+    - desktop, 68
+  - KDE, 32, 40–41
+    - customizing desktops, 40
+    - internationalization, 41
+    - object orientation, 40
+  - cards, network, 565
+- **case command, FTP clients, 607**
+- **case studies, X Window System networking, 125**
+- **cat command, defined, 735**
+- **cd command**
+  - defined, 735
+  - FTP clients, 607
+- **CD-ROMs, problems with mounting, 197**
+- **CDE (Common Desktop Environment), 23**
+- **cdrom file, pcmcia-cs package, 385**
+- **cdrom.opts file, pcmcia-cs package, 385**
+- **cdtrcts argument, pppd, 449**
+- **cdup command, FTP clients, 607**
+- **Certificate Authority. See CA**
+- **certificate file (Web server security), 664**
+- **certificate signing requests. See CSRs**
+- **certificates (SSL), 661**
+- **CGI scripts, debugging, 648**
+- **chage command, defined, 737**
+- **chains**
+  - defined, 707
+  - packets, iptables, 705–706
+  - user-defined, ipchains utility, 713
+- **changing permissions, 240–243**
+  - user or group ownership, 244
+- **CHAP authentication (PPP), 452**
+- **character devices**
+  - dev directory, 213–214
+  - kernels, booting systems, 362
+- **character expansions, TCP wrappers, 675**
+- **character sets, 49**
+- **character-based email clients, 462**
+- **chat scripts, configuring, 448**
+- **chat utility, 572**
+- **chattr command, defined, 735**
+- **checking filesystems, 221**
+- **checkpc program, 588**
+  - output (listing), 588–589
+- **chgrp command, defined, 737**
+- **chgrp utility, changing group permission indicator, 244**
+- **chmod command, 223**
+  - arguments, 241
+  - changing file mode, 242–243
+  - changing permissions, 240–242
+  - defined, 737
+  - FTP clients, 607
+- **chown command, defined, 737**
+- chown utility, changing owner permission indicator, 244
+- CIDR (Classless Interdomain Routing), 411
+  - VLSM (Variable Length Subnet Masks), 412–414
+- CIFS (Common Internet File System), 20
+- cis file, pcmcia-cs package, 385
+- classes, 136
+- Classless Interdomain Routing. *See* CIDR
+- client FTP, 605–609
+  - commands (listing of), 607–609
+  - files, transferring, 605–606
+- client settings, NetWare, 517–518
+- client tasks, Red Hat configuration, 176
+- client utilities, NetWare, 516
+- client/server systems, 102. *See also* X Window System
+- clients, 128
+  - defined, 102
+  - DHCP, configuring for, 438–439
+  - email
+    - character-based, 462
+    - listing of, 461–462
+  - host name lookups, Web servers, 646
+  - NetWare
+    - message options, 525
+    - nwclientd, 520
+  - new DHCP, 439–440
+  - non-local, testing, 681
+  - redirecting to moved files, Web servers, 633
+  - TCP wrappers, 673
+- close command, FTP clients, 607
+- closing submenus, 54, 88
+- cluster administration, Red Hat configuration, 178–179
+- CMOS (Complementary Metal Oxide Semiconductor), 249
+- CNAME (RR), 494
+- COAS (Caldera Open Administration System), 167
+  - install/remove software packages, 171
+  - modules, 167
+    - kernel, 167
+  - network administration, 168
+    - functions, 168
+    - hostname resolution, 169
+    - information service, 168
+    - MTA configuration, 169
+    - TCP/IP network options, 169
+  - peripherals administration, 168
+  - system administration, 170
+    - account administration, 170
+    - bootloader setup, 171
+    - enable/disable system services, 170
+    - filesystem administration, 170
+    - resource information, 171
+    - system clock, 171
+    - system hostname, 170
+- coastool command, defined, 737
+- color schemes, KDE
+  - adding colors, 44
+  - contrasts, 44
+- Colors dialog box, 44
+- columns, inittab file, 273
+- combining variables, scripts, 302
+- command prompts, 290
+- command-line arguments
+  - lprm program, 597–598
+  - nwbroadcast utility, 534
+  - nwbcreate utility, 537
+- nwbpsetspace utility, 539
+- nwbpshowtrust utility, 535
+- nwbpadd utility, 538
+- nwdelqjob utility, 523–524
+- nwdir utility, 526
+- nwdcreate utility, 530
+- nwdssmodify utility, 531
+- nwdsssetspace utility, 532
+- nwdsshowtrust utility, 528
+- nwdvalues utility, 529
+- nwlogin utility, 518
+- nwlogout utility, 520
+- nwmsg utility, 525
+- nwpasswd utility, 524
+- nwprint utility, 521–522
+- nwqstat utility, 523
+- xnwbroadcast utility, 540
+- xnwdsshowtrust utility, 527, 534
+- xnwmanage utility, 523
+- xnwprint utility, 521–522
+- commands, 734
+  - !, FTP clients, 607
+  - <, FTP clients, 607
+  - -A, ipchains utility, 708
+  - -C, ipchains utility, 708
+  - -D, ipchains utility, 708
+  - -E, ipchains utility, 708
+  - -F, ipchains utility, 708
+  - -h, ipchains utility, 708
+  - -L, ipchains utility, 708
+  - -l, ipchains utility, 708
+  - -N, ipchains utility, 708
+  - -P, ipchains utility, 708
+  - -R, ipchains utility, 708
+  - -X, ipchains utility, 708
+  - -Z, ipchains utility, 708
+  - >, FTP clients, 609
+  - account, FTP clients, 607
+  - append
+    - FTP clients, 607
+    - ipchains utility, 708
+  - Application Starter menu, Restart, 56
+  - arp output (listing), 431
+  - ascii, FTP clients, 607
+  - awk print, host program, 502
+  - bash, inittab file listing, 277
+  - bell, FTP clients, 607
+  - binary, FTP clients, 607
+
+## COMMANDS
+
+- bye, FTP clients, 607
+- case, FTP clients, 607
+- cat, defined, 735
+- cd
+  - *defined*, 735
+  - *FTP clients*, 607
+- cdup, FTP clients, 607
+- chage, defined, 737
+- chattr, defined, 735
+- chgrp, defined, 737
+- chmod, 223
+  - *arguments*, 241
+  - *changing permissions*, 240–242
+  - *changing file mode*, 242–243
+  - *defined*, 737
+  - *FTP clients*, 607
+- chown, defined, 737
+- close, FTP clients, 607
+- coastool, defined, 737
+- cp, defined, 735
+- cr, FTP clients, 607
+- date, defined, 737
+- dd, defined, 735
+- debug, FTP clients, 607
+- declare
+  - *-f argument*, 298
+  - functions sample output (listing), 299
+- delete
+  - *FTP clients*, 607
+  - *ipchains utility*, 708
+- delete a user-defined chain, ipchains utility, 708
+- df, 206
+  - *defined*, 737
+- dig, defined, 736
+- dir
+  - *See also ls command*
+  - *FTP clients*, 607
+- directories, 735
+- disconnect, FTP clients, 607
+- dmesg, 184
+  - *defined*, 737
+- dnsdomainname, defined, 736
+- du, defined, 738
+- e2fsck, defined, 738
+- echo
+  - *defined*, 738
+  - *initial file listing*, 277
+- exit, FTP clients, 607
+- fdisk, defined, 738
+- file, 225
+  - *defined*, 735
+- File menu
+  - *Open Location*, 58
+  - *Open Terminal*, 64
+- File menu (RealPlayer)
+  - *Open File*, 150
+  - *Open Location*, 150
+  - *past locations*, 150
+- files, 735–736
+- files context menu
+  - *Delete*, 62
+  - *Move to Trash*, 62
+  - *Open*, 62
+- flush, ipchains utility, 708
+- form, FTP clients, 607
+- free, defined, 738
+- fsck, 221
+  - *defined*, 738
+- fsck.ext2. See e2fsck, 738
+- FTP clients (listing of), 607–609
+- ftpshut
+  - *defined*, 738
+  - *shutting down FTP servers*, 615
+- get, FTP clients, 607
+- glob, FTP clients, 607
+- grep, defined, 735
+- groupadd, 238
+  - *-g GID argument*, 238
+  - *groups*, 238
+- gunzip, defined, 736
+- gzip, defined, 736
+- hash, FTP clients, 607
+- help
+  - *FTP clients*, 607
+  - *ipchains utility*, 708
+- history, 291
+- host, defined, 736
+- hostname, defined, 736
+- idle, FTP clients, 607
+- ifconfig, defined, 737
+- image, FTP clients, 607
+- info, Texinfo documentation, 734
+- init, 274
+  - *-b argument*, 283
+  - *letter arguments*, 274–275
+- insert, ipchains utility, 708
+- insmod, defined, 738
+- kill, defined, 738
+- killall, defined, 738
+- lcd, FTP clients, 607
+- ldconfig, 337
+- ldd, finding required shared libraries, 338
+- less, defined, 736
+- lilo, defined, 738
+- list, ipchains utility, 708
+- ln, defined, 736
+- lpr, 581
+  - *-b argument*, 582
+  - *-P argument*, 591
+  - *-Pprinter argument*, 582
+  - *control and data files*, 582
+  - *filtering output*, 581
+  - *print jobs, sending*, 582
+  - *print jobs, specifying as binary files*, 582
+  - *printing data not in files*, 581
+  - *redirecting files*, 581
+  - *syntax*, 581
+- ls, 298
+  - *defined*, 735
+  - *FTP clients*, 607
+- lsattr, defined, 736
+- lsmod, defined, 738
+- macdef, FTP clients, 607
+- mdelete, FTP clients, 607
+- mdir, FTP clients, 607
+- mget, FTP clients, 607
+- mkdir
+  - *defined*, 735
+  - *FTP clients*, 607
+- mke2fs, defined, 738
+- mkfs, defined, 738
+- mkfs.ext2. See mke2fs, 738
+- mknod
+  - *defined*, 738
+  - *devices, creating*, 217
+- mls, FTP clients, 608
+- mode, FTP clients, 608
+- modprobe, defined, 738
+- modtime, FTP clients, 608
+- more, defined, 736
+- mount
+  - *defined*, 738
+  - *mounting filesystems manually*, 194
