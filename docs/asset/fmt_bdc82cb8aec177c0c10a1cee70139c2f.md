@@ -1,0 +1,170 @@
+
+- `cache-only/slave`，164–165
+- `configuring for new Web sites`，173–176
+- `load balancing`，179
+- `local`，159
+- `master/primary`，160–161
+- `reconfiguring`，166
+- `reverse`，162–164
+- `setting up`，160–166
+- `slave/secondary`，161–162
+- `stopping`，165–166
+- `testing`，167
+- `viewing statistics on`，166
+- `for virtual domains`，168–178
+- DNS service
+  - `round-robin`，179
+  - SMTP server setup，181–182
+- DNS services
+  - testing configuration of，160
+- `DOCUMENT_NAME` variable，325
+- `DOCUMENT_URI` variable，325
+- domain name resolution. See also DNS service
+  - reducing delays in，159
+- domain names
+  - mapping，197–198
+  - sendmail servicing of，200
+- domains
+  - reverse virtual e-mail map files for，203
+  - SNMP resources for，181
+  - virtual e-mail map files for，201–202
+- DOS partition，installing from，6
+- DRAM modules，4
+- driver rooms，408
+- dual-boot setup，16
+- Dumpfax，246
+- Dynamic Shared Object (DSO) support，282
+
+## E
+
+- e-mail
+  - antispam measures，213–215
+  - forwarding to different accounts，217
+- `echo` command，322–323
+- `edquota` command，104–106
+- electronic commerce，SSL for，370–378
+- else-if conditions，327–328
+- email keyword，228
+- emergencies，restricting access during，423
+- encryption，455
+- Engelschlager，Ralf S.，370
+- environment variables，printing，324–325
+- error logs，296，357–359
+- error messages
+  - for disk quota violations，105
+  - setting，321
+- `EXCLUDE_DIR` variable，389–390
+- `exec` command，323
+  - disabling，369
+- executables，executing，323
+
+## F
+
+- `exportfs` script，383–384
+- ext2 file system，62–63，446–447
+  - immutable flag，446–447
+  - delete feature，447
+- Extended Host Access Control Language keyword，442
+- Farmer，Dan，476
+- FastCGI，Apache Web server support of，287–288
+- `fdisk` program，11–16
+  - changing partition type with，15
+  - creating partitions with，14–15
+  - displaying partitions with，13
+  - help screen，13
+  - removing partitions with，14
+- file integrity checkers，Tripwire，447–454
+- file ownership
+  - changing，46–47
+  - permissions and，46
+  - reassigning，46
+- file permissions
+  - changing mode of，51–52
+  - default mask，55–56
+  - default mask，overriding，62
+  - executable，57
+  - for FTP，57–58
+  - immutable attribute，62–63
+  - problems with，54
+  - setting，48–51
+  - for user home directories，55
+- file size
+  - output format，321
+  - printing，323
+- file system checker programs，21
+- file systems
+  - importing，385–386
+  - kernel configuration options for，503–504
+  - read-only access to，445–446
+  - securing，445–454
+- file utility，59
+- files
+  - access statistics，59–60
+  - backing up，460–461
+  - copying，60
+  - deleting，61
+  - distributing，387–393
+  - finding，61–62
+  - group ownership of，47–48
+  - listing，45，59
+  - modification date，324
+  - moving，60
+  - securing，445–454
+  - signatures for，447，451–452
+  - type of，determining，59
+- `FILES` variable，389–390
+- filters，packet，468–470
+- `find` program，62
+- finger information，changing，95
+- firewalls，466–471
+  - application-level，470–471
+  - packet filter，467–470
+  - security of，467
+- `flamstod` command，324
+- floppy drives，494
+  - minimum requirements for，5
+- floppy seek at boot，disabling，420
+- flow-control commands，326–328
+- foreground processes，121
+- `fsize` command，323
+- `ftp`
+  - PAM awareness，426
+  - shadow password capabilities，426
+- `ftp/bin` directory，241
+- FTP commands，logging，230
+- FTP 目录
+  - 别名，233
+  - 更改，233
+  - 上传目录，232
+- `ftp` 目录，238–239
+  - 其中的传入目录，240
+- `ftp/etc` 目录，241
+- FTP 文件
+  - 显示，228–229
+  - 消息文件，228–229
+  - readme 文件，230
+- FTP 服务器
+  - 商用产品，246
+  - 配置，221–237
+  - 转换数据，235
+  - 默认 umask 设置，57–58
+  - 关闭事件检测，234–235
+  - wu-ftp，219–237
+- FTP 服务
+  - 访问配置，224–228
+  - 允许，224–225
+  - 匿名用户，228, 231–232
+  - 压缩功能，233
+  - 拒绝，225
+  - 文件上传，232
+  - 访客账户，242–246, 421
+  - 访客用户组指定，227–228
+  - 信息配置，228–230
+  - 通过安装，6
+  - 日志配置，230
+  - 日志，246
+  - 登录失败，限制次数，227
+  - 登录权限，236–237
+  - 登录，限制，225–226
+  - 杂项配置，232–235
+  - 命名文件检索，拒绝，226–227
