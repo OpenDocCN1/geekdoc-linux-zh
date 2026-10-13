@@ -1,0 +1,328 @@
+
+- storing
+- boot files (/boot directory), 63
+- device files (/dev directory), 63
+- executable files (/bin directory), 63
+- files, 124, 171
+- CD-R drives, 173
+- floppy disks, 172
+- hard drives, 173
+- HOWTOs, 173
+- Jaz drives, 172
+- Zip drives, 172
+- help files (/usr directory), 64
+- personal files (/home directory), 63
+- programming language libraries (/lib directory), 63
+- superuser files
+- /root directory, 64
+- /sbin directory, 64
+- system configuration files (/etc directory), 63
+- temporary files (/tmp directory), 64
+- virtual files (/proc directory), 64
+- structures (filesystem), 61
+- directories, 61
+- root directory, 61
+- subdirectories, 61
+- su command, 38, 161
+- subdirectories, 115
+- (/forward slash), 62
+- creating, 120, 382
+- directories, relationship between, 62
+- file system structure, 61
+- files, managing, 382
+- superformat command, 129
+- supermounting, 166
+- drives, 156-157
+
+- superusers, 192
+- accounts, 37, 72
+- files
+- /root directory, storing, 64
+- /sbin directory, storing, 64
+- logging in, 38-39
+- system administration, 48-49
+- supporting supermount, 156-157
+- SuSE Linux Web site, 12-13
+- SuSE OpenLinux, 12
+- swap space
+- RAM, 210
+- requirements, 214
+- switchdesk command, 283, 286
+- desktops, switching, 283
+- window managers, switching, 281
+- switching
+- desktop environments (Desktop Switcher), 373-374
+- desktops, 286
+- switchdesk, 283
+- directories (cd command), 123
+- users, 39
+- window managers, 282-284
+- switchdesk, 281
+- syntax
+- commands, 97-98
+- vi, 141
+- syslogd daemon, 256
+- system administrators, 37
+- responsibilities, 56-57
+- superusers, 48-49
+- system calls (kernel), 60
+- system clock, setting, 226-227
+- System Commander Web site, 41
+- system configuration files, 135
+- editing, 135-136
+
+- /etc directory, storing, 63
+- GNU/Linux installation, 35
+- system data files, 67
+- system information (Windows operating systems)
+- printing, 19-20
+- saving, 20-21
+- system log files, 72
+- managing, 257-259
+- rotating, 260-261
+- viewing, 70-71, 256-257
+- systems
+- information, viewing, 161-162
+- monitoring, 54
+- shutting down, 40
+
+## T
+- talk command, 305
+- one-on-one conversations, 299-300
+- talking (users), talk command, 299-300
+- tar command, 180
+- archives, creating, 171
+- home directory, backing up, 176-177
+- tar file format, 241
+- taskbar
+- KDE desktop elements, 362
+- moving, 363
+- tasklist (GNOME), customizing, 377
+- tcsh Web site, 91
+- tcsh shell, 81-82
+- temporary files (/tmp directory), storing, 64
+- terminal emulators
+- command lines, 98
+- eterm, 98
+- xterm, 98
+- terminal screens (clear command), clearing, 110
+
+- text
+- adding (text editor files), 142-145
+- copying (text editor files), 146
+- deleting (text editor files), 145-146
+- editing (readline command line text editor), 92
+- processing, 133
+- replacing (text editor files), 147
+- searching for (text editor files), 147
+- text editing commands, 86-87
+- text editors
+- Code Commander, 137
+- configuration files, editing, 134
+- CoolEdit, 137
+- ed, 138
+- elvis, 138
+- emacs, 137-138
+- files
+- adding text, 142-145
+- copying text, 146
+- creating, 142-143
+- deleting text, 145-146
+- moving cursors, 144-145
+- replacing text, 147
+- searching for text, 147
+- gedit, 137
+- GXedit, 137
+- Information, locating, 138-139
+- jed, 137
+- joe, 137*
+- medit, 137
+- mvi, 138
+- sed, 138
+- vi, 153-154, 158, 159
+- accessing commands, 141
+- Command mode, 140-141
+- configuring, 148-149
+- filename parameter, 141
+- Insert mode, 140
+- linenum parameter, 142
+- pattern parameter, 142
+- starting, 139-140
+- vim, 133, 137-139
+- xemacs, 137-138
+- games, 343-344
+- xjed, 137
+- yudit, 137
+- Themes Web site, 287
+- TIME field, processes, 208
+- Time Machine, locating, 228
+- timeconfig command, 228
+- timetool command, 228
+- title bar (KDE Window menu), 365-367
+- /tmp directory, storing temporary files, 64
+- tools
+- configuration
+- Linuxconf, 385
+- TurboUserCfg, 384
+- graphics, links, 327
+- printing
+- Ljet, 188
+- Printer Queue, 188
+- printtool, 184-186
+- top command, 215
+- viewing processes, 71
+- top utility, 211
+- tracking system resource usage, 211-212
+- topic parameter (man command), 102
+- tracking
+- CD playlists (GNOME CD player), 351
+- resource usage, 211-214
+- Trans-Ameritech LinuxWare Web site, 13
+- troubleshooting printer problems, 186
+- TTY field (processes), 208
+- TurboLinux, 12
+- Web site, 13
+
+- TurboPkg, updating packages, 232
+- TurboPrintCfg configuration tools, 384
+- setting up printers, 184
+- turboxcfg configuration utility, 272
+- turning off messages
+- mesg n, 299
+- mesg y, 299
+
+## U
+- uid. See user identification
+- underscores (_), naming files and directories, 68
+- uninterruptible power supply. See UPS
+- unprivileged user account, 37-38, 42
+- Unshielded Twisted Pair. See UTP
+- unused files, deleting, 222-223
+- updating packages (TurboPkg), 232
+- upgrading kernels, 249-250
+- preparations for, 244-248
+- requirements for, 245-246
+- UPS (uninterruptible power supply), 175
+- computers, adding, 175
+- software Web site, 175
+- USB HOWTOs, 346
+- user identification field (uid), 193
+- user home directory field (homedir), 193
+- usermod command, 200
+- usernames
+- changing, 200
+- field, 193
+- root, 37
+
+- users
+- access, restricting with user-assigned passwords, 50
+- accounts
+- controlling access, 53
+- creating, 78-79
+- deleting, 193
+- fields, 193
+- utilizing, 50
+- activities, monitoring, 54-55
+- data files, 67
+- disk quotas, setting, 223-226
+- disk space, freeing, 223
+- fictitious, 193
+- home directories, deleting, 193
+- individual, 192
+- information, displaying, 296-297
+- limited disk space, notifying, 227
+- messages
+- replying, 298
+- sending, 297
+- sending to multiple, 298-299
+- networks, locating, 295-296
+- passwords, restricting user access, 50
+- superusers, 192
+- switching, 39
+- talking (talk command), 299-300
+- unprivileged accounts, 37-38, 42
+- viewing, 192
+- usr directory, 383-384
+- files
+- accessing, 64-66
+- storing, 64
+- utilities
+- configuration
+- saX, 272
+- turboxcfg, 272
+- Xconfigurator, 272
+- XFDrake, 272
+- DrakConf, 384
+- fdisk, 163
+- fips, partitioning hard drives, 30
+- fsck, 164
+- gFTP, 327
+- GkZip, 172
+- Kmail mail notification, 323
+- Screen Shot (GIMP), 337
+- top, 211-212
+- Xdrakes, 275
+- xfonsel, 286
+- xsysinfo, 214
+- utilizing user accounts, 50
+- UTP (Unshielded Twisted Pair) wiring, 294
+
+## V
+- /var directory, storing log files, 64
+- variables
+- $PATH, 85
+- environment, 86
+- PS1, 85
+- vi syntax, 141
+- vi text editors, 133-139
+- Command mode, 140-141
+- commands, accessing, 141
+- configuring, 148-149
+- filename parameter, 141
+- Insert mode, 140
+- linenumber parameter, 142
+- pattern parameter, 142
+- starting, 139-140
+- viewing
+- command history list, 101-102
+- compressed files, zcat command, 179
+- file information, stat command, 125-126
+- graphics, 353
+- group accounts, 194
+- help files, 71
+- images (GQview), 354
+- installed fonts, 286
+- ls command options, 120
+- man pages, 103-104
+- memory usage, 210
+- mounted files (/mnt directory), 63
+- mounted filesystems, 157
+- packages, 236
+- processes (top command), 71
+- slideshows (Gvview), 355
+- system information, 161-162
+- system log files, 70-71
+- users, 192
+- user information, finger command, 296-297
+- window managers, 287
+- vim
+- text editor, 133, 137-139
+- Web site, 151
+- virtual desktops, 370
+- customizing, 371
+- multiple, 370
+- virtual files (/proc directory), storing, 64
+
+## W
+- wall commands, 305
+- sending messages to multiple users, 298-299
+- Ward, Brian, 244
+- Web sites
+- AfterStep, 285
+- BRU200 backup system, 178
+- Caldera OpenLinux, 13
+- Checkbook Balancer, 24
+- CORBA, 285
+- Core Linux OpenLinux, 13
+- creating, 327
+- Dave Central Linux Software Archive, 150

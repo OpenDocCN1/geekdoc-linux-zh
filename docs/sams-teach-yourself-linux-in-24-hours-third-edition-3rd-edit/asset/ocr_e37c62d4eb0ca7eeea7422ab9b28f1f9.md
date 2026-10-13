@@ -1,0 +1,14 @@
+If you are using one of the graphical desktop environments, such as KDE or GNOME, you can display the shell prompt by opening a terminal emulation program. Browse through the menu system to find a number of these terminal emulation programs. They have various names, such as XTerm, GNOME terminal, Eterm, and Konsole.
+
+The shell prompt is your gateway to the Linux kernel and enables you to work with any program, command, or utility installed on the system. But wait...the shell can do much more for you. The shell keeps track of the work you've performed on the computer. It enables you to use shortcuts to request programs and commands. It also helps you automate routine tasks, such as file backups. You do this by writing scripts that the shell can read at specified times and then pass the instructions to the operating system.
+
+New Term
+A shell program is the user interface to the computer system for the Linux operating system. This interface accepts commands from the user and translates it into a language that the operating system (more specifically, the Linux kernel) can understand. The shell can also be used to write programs, automate job control, and provide a scripting mechanism to customize the way the system works.
+
+You will find that the shell program is one of the most important programs installed on your Linux system. Even if you do use one of the graphical interfaces designed for the X Window System, you might still need to type commands at the shell prompt to start or stop a program. To give you a model for viewing the shell's position in the system and gaining an understanding of why it is so important, you can think of the Linux operating system as a stack:
+
++   - The kernel (the core of the operating system) is on the bottom of the stack, making use of the modules and kernel routines compiled in it to run the computer and manage the peripherals that you have attached.
++   - The shell program sits on top of the kernel: it accepts commands from the user, processes the ones it can, and interprets the rest to pass on to the kernel for execution.
++   - At the top of the stack is the applications layer. The shell manages the launching of applications in this layer and passes information between the applications and the kernel as necessary.
+
+Figure 5.1 illustrates how this process operates. In step 1, the user types a command after the shell prompt and sends it to the shell. The shell first determines whether the command is one of its built-in commands or if it is an application program. If the command is an application program, it must be located in one of the directories listed in the shell's search path. If the command is found, the shell interprets the command (in step 2) and sends it to the kernel. The kernel then tells the shell (in step 3) to launch the application.

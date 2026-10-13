@@ -1895,6 +1895,7 @@
 +   [10 分钟学会 Linux 入门指南](docs/sams-teach-yourself-linux-in-10-minutes/README.md)
 +   [Sams 24小时自学Linux（第2版）](docs/sams-teach-yourself-linux-in-24-hours-2nd-edition/README.md)
 +   [Sams 24 小时学会 LINUX 第一版](docs/sams-teach-yourself-linux-in-24-hours-first-edition/README.md)
++   [Sams 24小时学会 Linux 第三版](docs/sams-teach-yourself-linux-in-24-hours-third-edition-3rd-edit/README.md)
 +   [Sams 24 小时学会 Linux 编程 [电子资源]](docs/sams-teach-yourself-linux-programming-in-24-hours-electronic/README.md)
 +   [Sams 24 小时教你 Linux 安全基础](docs/sams-teach-yourself-linux-security-basics-in-24-hours-sams-t/README.md)
 +   [24小时快速掌握 Mandrake Linux](docs/sams-teach-yourself-mandrake-linux-in-24-hours-teach-yoursel/README.md)
