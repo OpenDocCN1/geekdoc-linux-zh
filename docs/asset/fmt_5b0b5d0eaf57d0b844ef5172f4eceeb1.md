@@ -1,0 +1,94 @@
+
+- Murray，Hayden H. 博士。执行副总裁，乔治亚 Kaidlin 公司，新泽西州伊丽莎白。
+- Murry，James W. 博士。海洋学院，华盛顿大学，西雅图
+- Murtag，M. John 教授。医学院，明尼苏达大学医学院，明尼阿波利斯
+- Murray，Merritt J. 博士。曾任职于：A. M. Todd 公司，密歇根州卡拉马祖
+- Murray，R. G. E. 教授。微生物学与免疫学系，健康科学中心，加拿大安大略省西方大学，伦敦。
+- Murray，Royce W. 博士。化学系，北卡罗来纳大学，教堂山
+- Murray，Stephen S. 天体物理中心，哈佛学院天文台，马萨诸塞州剑桥。
+- Murray，Thomas P. 博士。应用研究实验室，美国钢铁公司，宾夕法尼亚州莫农盖拉。
+- Murray，William 博士。泰克公司，加利福尼亚州帕洛阿尔托。
+- Musccacia，X. J. 博士。生理学与空间科学研究中心，密苏里大学圣路易斯分校。
+- Mushitz，R. D. 运输部，美国冶炼与精炼公司，纽约。
+- Muhr，Richard。执行董事，Richard Muhr & Associates, Inc.，密苏里州堪萨斯城。
+- Mutter，Carolyn Z. 博士。助理研究员，哥伦比亚大学洛蒙特-道蒂地球观测站，纽约州帕利塞兹。
+- Mutter，John 博士。哥伦比亚大学洛蒙特-道蒂地质观测站，多通道地震组，纽约州帕利塞兹。
+- Muus，Bent J. 博士。研究生物学家，丹麦渔业与海洋研究所，丹麦查尔滕伦德。
+- Myers，A. L. 教授。化学工程系，宾夕法尼亚大学，费城。
+- Mykielew，Arvid 教授。机械工程系，弗吉尼亚理工大学。
+- Mykleff，Michele 博士。生物学系，马凯特大学，威斯康星州密尔沃基。
+
+## N
+
+- Nacamally，Laurette。IGEN, Inc.，马里兰州洛克维尔。
+- Nace，Raymond L. 博士。地质调查局，美国内政部，北卡罗来纳州拉雷恩。
+- Nachtrieb，Norman H. 教授。化学系主任，芝加哥大学。
+- Nagel，David J. 主管，凝聚态与辐射科学部，海军研究实验室，华盛顿特区。
+- Nagel，Suzanne N. 工程研究中心，AT&T 贝尔实验室，新泽西州普林斯顿。
+- Nagel，Walter R. 博士。NASA 戈达德太空飞行中心，马里兰州格伦。
+- Naisal，Samuel S. 博士。化学系，斯蒂芬·F·奥斯汀州立学院，德克萨斯州纳科多奇斯。
+- Namias，Jerome。气候研究组，斯克里普斯海洋研究所，加利福尼亚州拉霍亚。
+- Napp-Zin，Klaus 教授。植物学研究所，德国科隆。
+- Nash，Irwin 博士。医学院，耶鲁大学。
+- Natchtsheim，Philip F. 博士。NASA 艾姆斯研究中心，加利福尼亚州莫菲特场。
+- Naidan，James H. 教授。海洋与大气科学罗斯恩蒂尔学院，迈阿密大学，佛罗里达州。
+- Naumann，Robert J. 博士。NASA 马歇尔太空飞行中心，阿拉巴马州亨茨维尔。
+- Navorsky，Alexandra 博士。地质与地球物理科学系，普林斯顿大学。
+- Naylor，Arch 博士。电气工程系，密歇根大学，安阿伯。
+- Naylor，Ernest 博士。动物学讲师，威尔士斯旺西大学学院。
+- Nealson，Kenneth H. 博士。大湖区研究中心，威斯康星大学麦迪逊分校。
+- Nedelsky，Leo 教授。物理科学系，芝加哥大学。
+- Nedungadi，Ashok P. 博士。集成电路设施，斯伦贝谢井服务公司，得克萨斯州休斯顿。
+- Nelms，W. P. 副处长，航空技术部，美国国家航空航天局艾姆斯研究中心，加利福尼亚州莫菲特场。
+- Nelson，Donna C. 博士。智能交通协会，华盛顿特区。
+- Nelson，Elton G. 合作者（WOC）， corps 研究部，美国农业部，马里兰州贝尔茨维勒。
+- Nelson，George E. 博士。数学系，爱荷华大学，爱荷华城。
+- Nelsen，Olia E. 博士。生物学系，宾夕法尼亚大学。
+- Nelson，Raymond J. 教授。数学与哲学教授，凯斯理工学院。
+- Nelson，Richard B. 博士。首席工程师，Variant Associates，加利福尼亚州帕洛阿尔托。
+- Nergaard，Leo S. 博士。微波实验室主任，RCA 实验室，新泽西州普林斯顿。
+- Nesbitt，Herbert H. 博士。科学学院院长，加拿大卡尔顿大学，安大略省渥太华。
+- Nestle，Marion 博士。希腊语与营养学，纽约大学教育学院。
+- Netravali，Arun 博士。贝尔实验室总裁，新泽西州穆雷山。
+- Neubecker，T. F. 经理，工程，高强度与石英灯部门，通用电气公司，俄亥俄州特温堡。
+- Needock，Gerald E. 教授。电气工程系，普渡大学。
+- Neuhausser，Robert G. 固体电子部，RCA 光电与器件部门，宾夕法尼亚州兰开斯特
+- Nevins，James L. 博士。查尔斯·斯塔克·德雷珀实验室，马萨诸塞州剑桥。
+- New，Ronald 博士。NOAA，美国商务部，马里兰州洛克维尔。
+- Newcomb，Robert W. 教授。微系统实验室，电气工程系，马里兰大学，大学公园。
+- Newell，Allen 博士。计算机科学系，卡内基-梅隆大学。
+- Newell，Homer E. 博士。国家航空航天局总部，华盛顿特区。
+- Newhouse，Alan N. 退休；曾任职于：美国能源部。
+- Newton，Chester W. 博士。国家大气研究中心，科罗拉多州博尔德。
+- Newton，R. C. 博士。地质科学系，芝加哥大学。
+- Newton，Roger G. 博士。物理系，印第安纳大学，布卢明顿。
+- Ng，Tai P. 博士。新陆地资源有限公司，加拿大艾伯塔省。
+- Nicosia，Fred E. 博士。已故；曾任职于：基础标准研究所热部门光学辐射部，国家标准局，华盛顿。
+- Niebel，Benjamin W. 荣休工业工程教授，宾夕法尼亚州立大学；工业工程顾问，宾夕法尼亚州大学城。
+- Nier，Alfred O. 教授。物理与天文学学院，明尼苏达大学，明尼阿波利斯。
+- Niesz，Dale E. 博士。陶瓷研究中心主任，工程学院，鲁特格斯大学。
+- Nigrelli，Ross F. 博士。纽约水族馆海洋科学奥斯本实验室，纽约。
+- Nipps，Ernest F. 教授。材料工程系，伦斯勒理工学院。
+- Nix，William D. 教授。材料科学与工程系副主席，斯坦福大学。
+- Nobel，Charles R. 博士。解剖学系，哥伦比亚大学，纽约。
+- Noble，Park S. 教授。生物学系，加利福尼亚大学洛杉矶分校
+- Noble，James A. 博士。地质科学，加利福尼亚理工学院。
+- Nobile，R. H. 光学部，国家天文物理研究所，墨西哥巴霍卡。
+- Nogiachi，Thomas T. 博士。加利福尼亚州帕萨迪纳。
+- Nolan，Robert P. 博士。环境科学实验室，布鲁克林学院，纽约市布鲁克林。
+
+# 贡献者
+
+## N
+
+- NoLL，肯尼斯博士。伊利诺伊大学厄巴纳-香槟分校微生物学系。
+- Nerberg，乌拉·M博士。瑞典哥德堡大学动物学研究所动物地理学部。
+- Norcross，尼尔·L教授。康奈尔大学兽医学院，纽约州伊萨卡。
+- Nordman，詹姆斯·E教授。威斯康星大学麦迪逊分校电气与计算机工程系。
+- Norris，H·托马斯博士。东卡罗来纳大学医学院临床病理学与诊断医学系主任。
+- North，杰拉尔德·R博士。德克萨斯农工大学气象学系气候系统研究项目负责人。
+- Northcutt，R·格伦博士。凯斯西储大学解剖学系。
+- Norton，珍妮特博士。犹他州立大学 Logan 分校植物、土壤与生物气象学系。
+- Novikoff，菲莉丝博士。阿尔伯特·爱因斯坦医学院病理学系，纽约州布朗克斯。
+- Nowiny，唐纳德·W教授。威斯康星大学麦迪逊分校电气与计算机工程系。
+- Noy，诺亚博士。康奈尔大学营养科学系，纽约州伊萨卡。
