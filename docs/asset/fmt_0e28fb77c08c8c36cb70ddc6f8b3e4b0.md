@@ -1,0 +1,97 @@
+
+## 软件包列表
+
+- `awsfs`：用于控制 AWE52 声音驱动的实用工具。
+- `balsa`：balsa 电子邮件阅读器（它是 GNOME 桌面的一部分）。
+- `basesystem`：Red Hat Linux 基础系统的一部分。
+- `bash`：GNU Bash shell (Bourne Again Shell) 的 2.05b 版本。
+- `bc`：bc 高精度计算器命令行实用工具和语言。
+- `bcel`：用于处理 Java 类文件的字节码工程库 (BCEL)。
+- `bcel-devel`：字节码工程库 (BCEL) 开发工具。
+- `beecrypt`：通用密码学库。
+- `beecrypt-devel`：开发使用 beecrypt 的应用程序所需的文件。
+- `beecrypt-python`：用于开发使用 beecrypt 的应用程序的 Python 绑定。
+- `bg5ps`：将 BIG5 编码的中文转换为可打印 PostScript 的工具。
+- `libqc-kde`：liqc 的 KDE 前端。
+- `libqc-qt`：liqc 的 Qt 前端。
+- `libqc-texst`：liqc 的文本模式前端。
+- `lvm`：Linux 的逻辑卷管理器旧版本。
+- `magidev`：用于检测和播放音频 CD 的 magidev 守护进程。
+- `mx4j`：支持 Java 管理扩展 (JMX) 的库。
+- `mx4j-devel`：支持 Java 管理扩展 (JMX) 所需的头文件。
+- `mx4j-tools`：用于 Java 管理扩展 (JMX) 的工具。
+- `mysql`：已移除 Jdbc 和 jdbc-tomcat。
+- `ncurses-c++-devel`：到 ncurses 的 C++ 绑定。
+- `njamd`：用于检测内存分配错误的高级调试器。
+- `pidentd`：用于返回身份信息的 pident 守护进程。
+- `pilot-link095-compat`：pilot-link095 的兼容库。
+- `polecly`：SELinux 示例策略配置。
+- `raidtools`：用于配置 raid 文件系统设备的几个 raid 实用工具。
+- `redhat-java-rpm-scripts`：Java 配置脚本。
+- `rep-gtk`：rep Lisp 解释器的 GTK+ 的 rep-gtk 绑定。
+- `sawfish`：sawfish X11 窗口管理器。
+- `servletapi`：Jakarta Servlet 和 JSP API。
+- `struts`：用于构建 Java Web 应用程序的框架。
+- `struts-webapps`：使用 Struts 的示例 Web 应用程序。
+- `system-config-proc`：这是一个用于配置操作系统可调参数的工具。
+- `tomcat`：构成 Java Servlet 和 JavaServer Pages 参考技术的组件。
+- `tomcat-devel`：与 Java Servlet 和 JavaServer Pages 相关的开发工具。
+- `tomcat-libs`：与 Java Servlet 和 JavaServer Pages 相关的库。
+- `tomcat-test`：Tomcat 技术的测试套件。
+- `unarj`：用于解压缩 .arj 压缩归档文件的实用工具。
+- `Wnn6-SDK`：Wnn6 客户端运行时库。
+- `Wnn6-SDK-devel`：用于 Wnn6 客户端开发的库和头文件。
+- `xorg-x11`：移除了一些字体，libs-data，syriac-fonts 和 truetype-font。
+
+## 附录 B：Fedora Core 3 RPM 软件包
+
+- `bind`：Berkeley Internet Name Domain（伯克利互联网域名）对 DNS 协议的实现。
+- `bind-chroot`：在 chroot 环境中实现的 BIND 名称服务器。
+- `bind-devel`：开发 BIND 9.x.x DNS 软件所需的头文件。
+- `bind-libs`：BIND 软件包所需的运行时库。
+- `bind-utils`：dig、dsquery、nslookup、nsupdate 以及其他 DNS 工具。
+- `binutils`：GNU 命令行工具，例如 ar、as、ld、nm、size 等。
+- `bison`：GNU bison 解析器生成器（yacc 的替代者）。
+- `bitmap-fonts`：来自 XFree86 软件包的点阵字体，专为终端使用而设计。
+- `bitmap-fonts-cjk`：从 XFree86 中精选的供 anaconda 使用的点阵字体。
+- `bistream-vera-fonts`：由 Vera 捐赠的高品质拉丁文点阵字体。
+- `blas`：用于基本线性代数的基本线性代数子程序（BLAS）库。
+- `bluez-bluefw`：蓝牙固件加载器。
+- `bluez-hciutil`：蓝牙协议分析仪。
+- `bluez-libs`：蓝牙应用程序所需的库。
+- `bluez-libs-devel`：蓝牙应用程序的开发库。
+- `bluez-pin`：询问用户输入 PIN 码以配对蓝牙设备的蓝牙软件。
+- `bluez-sdp`：蓝牙服务发现协议库。
+- `bluez-sdp-devel`：蓝牙服务发现协议库工具。
+- `bluez-utils`：蓝牙工具。
+- `bogl`：用于 Linux 帧缓冲的小型图形库。
+- `bogl-iterm`：显示到帧缓冲的终端模拟器。
+- `bogl-devel`：Ben’s Own Graphics Library（Ben 自有图形库）的开发库。
+- `bonobo`：基于 CORBA 的系统，由 GNOME 桌面环境使用。
+- `bonobo-Dev`：用于开发 bonobo 文档模型应用程序的库。
+- `boost`：Boost 经过同行评审的 C++ 库。
+- `boost-devel`：Boost C++ 库开发工具。
+- `bootparamd`：用于启动无盘工作站的 bootparamd 启动参数服务器。
+- `booty`：用于 anaconda 和 up2date 引导加载程序配置的 Python 库。
+- `bridge-utils`：用于桥接多个以太网局域网的工具。
+- `bridge-utils-devel`：用于 Linux 以太网桥的编程接口。
+- `brlty`：盲文显示器驱动程序。
+- `bug-buddy`：图形化错误报告工具。
+- `busybox`：提供常见 Linux 命令简化版本的单一二进制文件。
+- `busybox-anaconda`：供 anaconda 使用的 busybox 版本。
+- `byacc`：Berkeley yacc 解析器生成器。
+- `bzflag`：多人 3D 坦克对战游戏。
+- `bzip2`：用于压缩和解压缩文件的 bzip2 和 bzcat 工具。
+- `bzip2-devel`：与 bzip 和 bczat 工具相关的编程工具。
+- `bzip2-libs`：使用 bzip2 的应用程序所需的库。
+- `caching-nameserver`：仅用于缓存的名称服务器配置文件中。
+- `cadvser`：命令行 WebDAV 客户端。
+- `Canna`：统一的日文字符输入系统。
+- `Canna-devel`：与 Canna 相关的开发工具。
+- `Canna-libs`：Canna 日文输入系统的运行时库。
+- `cdda2wav`：将 CD 音频文件转换为 WAV 声音文件。
+- `cdecl`：从英语生成 C 和 C++ 类型声明，或反之亦然。
+- `cdiconf`：Canna 字典维护工具。
+- `cdlabelgen`：为紧凑光盘盒生成前卡片和托盘卡片。
+- `cdp`：用于播放音乐 CD 的文本模式工具。
+- `cdparanoia`：紧凑光盘数字音频提取工具。

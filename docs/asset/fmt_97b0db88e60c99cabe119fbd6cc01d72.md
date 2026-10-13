@@ -1,0 +1,99 @@
+
+- `gnomemeeting`：与 Microsoft NetMeeting 兼容的 H323 视频会议工具。
+- `gnome-mime-data`：GNOME-VFS 的文件类型识别数据文件。
+- `gnome-netstatus`：GNOME 面板的网络接口监控小部件。
+- `gnome-nettool`：各种命令行网络工具的图形前端。
+- `gnome-panel`：提供桌面管理实用工具。
+- `gnome-pilot`：集成 GNOME 和 PalmOS 设备（如 Palm Pilots）所需的文件。
+- `gnome-pilot-conduits`：gnome-pilot 的额外通道。
+- `gnome-pilot-devel`：使应用程序能够使用 gnome-pilot 所需的库。
+- `gnome-print`：GNOME 应用程序从 GNOME 进行打印所需的字体和工具。
+- `gnome-print-devel`：与 GNOME 中的打印相关的软件开发工具。
+- `gnome-python2*`：允许使用 Python 编写 GNOME 组件的包装器。
+- `gnome-session`：处理核心 GNOME 组件的启动和关闭。
+- `gnome-speech`：GNOME 文本转语音工具。
+- `gnome-speech-devel`：GNOME 文本转语音功能的开发工具。
+- `gnome-spell`：用于拼写检查的 bonobo 组件。
+- `gnome-system-monitor`：一个简单的进程和系统监视器。
+- `gnome-terminal`：GNOME 终端模拟器。
+- `gnome-themes`：GNOME 主题集合。
+- `gnome-user-docs`：GNOME 的名录、简介及其他文档。
+- `gnome-utils`：若干有用的 GNOME 实用工具，如计算器和日历。
+- `gnome-vfs`：GNOME 虚拟文件系统库。
+- `gnome-vfs-devel`：开发 GNOME-VFS2 应用程序所需的库和头文件。
+- `gnome-vfs-extras`：GNOME-VFS 模块，包括 Samba smb 网络浏览器。
+- `gnome-volume-manager`：监控卷相关事件并根据用户指定的策略做出响应。
+- `gnome-vfs2`：GNOME 虚拟文件系统库的 2.0 修订版。
+- `gnome-vfs2-devel`：开发 GNOME-VFS2 应用程序所需的库和头文件。
+- `gnome-vfs2-smb`：gnome-vfs 对 Windows 文件系统的支持。
+- `gnomericus`：gnomericus 屏幕放大镜。
+- `gnucash`：个人财务追踪器。
+- `gnucash-backend-postgres`：将 GnuCash 数据存储在 PostgreSQL 中的后端。
+- `gnuchess`：GNU 国际象棋程序及相关实用工具。
+- `gnumeric`：基于 GNOME 的 gnumeric 电子表格程序。
+- `gnumeric-devel`：gnumeric 电子表格应用程序的开发工具。
+- `gnupg`：GNU 隐私保护工具，用于安全通信和数据存储。
+
+## 附录 B：Fedora Core 3 的 RPM 包
+
+- `gnuplot`：用于绘制科学数据及其他类型数据的实用工具。
+- `gnuplot-emacs`：将 gnuplot 集成到 emacs 中。
+- `gob2`：用于创建 GObject 对象的预处理器。
+- `gok`：GNOME 屏幕键盘。
+- `gok-devel`：支持替代输入设备插件的开发。
+- `gpd`：GNOME 便携文档格式（PDF）文件的查看器。
+- `gperf`：C++ 哈希函数生成器。
+- `gphoto2`：管理和访问数码相机中的图像。
+- `gphoto2-devel`：创建使用 gphoto2 的应用程序所需的头文件。
+- `gpm`：基于控制台的鼠标服务器。
+- `gpm-devel`：用于开发具有鼠标功能的文本模式程序的库。
+- `grep`：用于在文件中查找字符串模式的实用工具。
+- `grip`：各种 CD 抓轨工具和 MP3 编码器的图形前端。
+- `groff`：基于控制台的文本格式化工具。
+- `groff-gxditview`：基于 GUI 的 groff 文本输出查看器。
+- `groff-perl`：处理需要 Perl 的 groff 文档的实用工具。
+- `grub`：GRand Unified Boot Loader（大型统一引导加载程序），用于引导 Linux 等操作系统。
+- `gsl`：用于数值分析和高等数学的 GNU 科学库。
+- `gsl-devel`：创建使用 gsl 的应用程序所需的头文件和库文件。
+- `gstreamer`：流媒体框架。
+- `gstreamer-devel`：流媒体框架的开发库。
+- `gstreamer-plugins`：流媒体框架的插件。
+- `gstreamer-plugins-devel`：流媒体框架的开发库。
+- `gstreamer-tools`：与流媒体框架一起使用的基本命令行工具。
+- `gtihub`：一个用于查看、编辑和组织图像集合的应用程序。
+- `gtk`：用于构建基于 X 的图形用户界面的 GIMP 图形工具包。
+- `gtk+-devel`：创建需要 GIMP 的应用程序的 gtk+ 开发工具。
+- `gtk2`：用于创建图形用户界面（GUI）的工具包。
+- `gtk2-devel`：GTK+ 工具包的 header 文件和相关开发文档。
+- `gtk2-engines`：GTK+ 2.0 的主题引擎
+- `gtkam`：gphoto2 的基于 GTK 的接口。
+- `gtkam-gimp`：允许通过 gphoto2 访问数码相机的 GIMP 插件。
+- `gtk-doc`：为 GTK+、GNOME 和 Glib 组件生成文档的工具。
+- `gtk-engines`：GTK+ 工具包主题（包括 Notif、Redmond95 和 Metal）。
+- `gtkglarea`：GTK+ GUI 库的 OpenGL 小部件。
+- `gkhtml`：轻量级 HTML 渲染/打印/编辑引擎。
+- `gkhtml-devel`：开发使用 gkhtml 的应用程序所需的库。
+- `gtkhtml2`：GTK+ 2.0 的 HTML 显示小部件
+- `gtkhtml2-devel`：创建 gtkhtml2 应用程序所需的库。
+- `gtkhtml3`：gtkhtml 库。
+- `gtkhtml3-devel`：创建 gtkhtml3 应用程序所需的库。
+- `gktsourceview`：用于查看源代码文件的库。
+- `gktsourceview-devel`：使用 gtksourceview 库编译应用程序的工具。
+- `gtkspl`：Gtk TextView 小部件的即时拼写检查。
+- `gtkspl-devel`：gtkspl 的开发工具。
+- `gule`：Scheme 编程语言的一个库实现。
+- `gule-devel`：将程序与 GULE 库链接所需的库和头文件。
+- `Guppi`：基于 GNOME 的数据分析和可视化系统。
+- `Guppi-devel`：开发使用 Guppi 的应用程序所需的头文件和库。
+- `gv`：用于在 X 中查看 PostScript 和 PDF 文档的轻量级前端工具。
+- `gzip`：数据压缩实用工具。
+- `h2ps`：将韩文从文本转换为 PostScript。
+- `hal`：收集系统硬件信息。
+- `hal-cups-utils`：Hal/CUPS 后端。
+- `hal-devel`：HAL 的头文件和库。
+- `hal-gnome`：显示 HAL 信息的 GNOME 工具。
+- `hdparm`：用于设置和查看硬盘参数的实用工具。
+- `HelixPlayer`：开源媒体播放器。
+- `hesiod`：用于查看 hesiod 数据库的实用工具和库。
+- `hesiod-devel`：使用 hesiod 数据库的应用程序的库和头文件。
+- `hxedit`：十六进制文件查看器和编辑器。
