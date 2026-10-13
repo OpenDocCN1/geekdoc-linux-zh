@@ -1,0 +1,100 @@
+
+# 2568 位贡献者
+
+- 威廉姆斯，凯瑟琳·M. 博士。树果研究与推广中心推广植物学家，纽约州日内瓦。
+- Williams, Peter 博士，亚利桑那州立大学化学系。
+- Williams, Roger J. 博士。已故；原就职于德克萨斯大学奥斯汀分校化学系。
+- Williams, S. A. 爱荷华州立大学物理学助理教授。
+- Williams, Todd D. 教授，堪萨斯大学劳伦斯分校化学系。
+- Williamson, K. D. 博士，洛斯阿拉莫斯科学实验室，新墨西哥州洛斯阿拉莫斯。
+- Willingham, Mark C. 博士，美国国立卫生研究院，国家癌症研究所，马里兰州贝塞斯达。
+- Wills, William J. 博士，欧洲核子研究中心（CERN），瑞士日内瓦。
+- Wilson, B. F. 博士，马萨诸塞大学林业与野生动物管理系。
+- Wilson, Curtis B. 博士，斯克里普斯诊所与研究中心免疫病理学系，加利福尼亚州拉霍亚。
+- Wilson, George S. 教授，堪萨斯大学劳伦斯分校化学系。
+- Wilson, Grady W. 密西西比州立大学拉塞特飞行研究实验室副总监兼首席试飞员。
+- Wilson, Irwin R. 博士，科罗拉多大学化学与生物化学系。
+- Wilson, James B. 博士，俄勒冈州立大学科瓦利斯分校森林产品系。
+- Wilson, James L. 博士，密歇根大学地质学与矿物学系。
+- Wilson, Leonard R. 博士，俄克拉荷马大学地质学与地球物理学院地质学与地球物理学乔治·林·克罗斯研究教授。
+- Wilson, Mason P., Jr. 教授，罗德岛大学金斯顿分校机械工程系。
+- Wilson, Therese 博士，哈佛大学生物实验室。
+- Wilt, Fred 博士，加利福尼亚大学伯克利分校动物学系。
+- Winch, Ralph P. 教授，威廉姆斯学院物理学系。
+- Wing, Robert F. 博士，俄亥俄州立大学哥伦布分校天文学系。
+- Winick, Herman 博士，副总监，斯坦福同步辐射实验室，加利福尼亚州斯坦福。
+- Winin, Kevin。美国婴儿猝死综合征研究所，佐治亚州亚特兰大。
+- Winson, Judith E. 博士，副馆长，无脊椎动物部门，纽约自然历史博物馆。
+- Winter, John M., Jr. 博士，约翰霍普金斯大学巴的摩分校材料科学与工程系，马里兰州。
+- Wintor, Rolf G. 教授，威廉与玛丽学院物理学系。
+- Wintor, Thomas C. 博士，美国地质调查局，美国内政部，科罗拉多州丹佛。
+- Wintertor, Edward L. 博士，斯克里普斯海洋研究所地质研究部，加利福尼亚州拉霍亚。
+- Wise, Edmund M. 顾问；原就职于国际镍业公司研究副总裁助理，纽约。
+- Wittmann, H. G. 马普分子遗传学研究所，德国柏林。
+- Wittmers, L. E. 博士，明尼苏达大学医学院。
+- Wick, Gary E. 教授，主任，高分子科学与工程计划，圣克拉拉，伦斯勒理工学院理学院化学系。
+- Wold, Marc 博士，爱荷华大学医学院生物化学系，爱荷华城。
+- Wolf, Peter 博士，IBM 苏黎世研究实验室，瑞士。
+- Wolf, Werner P. 博士，耶鲁大学物理学系。
+- Wolfe, Ralph S. 博士，伍兹霍尔海洋生物实验室，马萨诸塞州。
+- Wolfe, William L. 博士，亚利桑那大学光学科学中心。
+- Wolke, Alfred H. 前主任，测试系统开发，韦斯顿仪器部，戴斯特罗姆公司，新泽西州纽瓦克。
+- Wolford, James C. 博士，内布拉斯加大学机械工程系。
+- Wollerstein, David 教授，密苏里大学机械与航空航天工程系。
+- Wollnik, H. 教授，吉森尤斯图斯·里宾大学物理研究所，德国吉森。
+- Wolowitz, William 博士，布朗大学工程系。
+- Wonders, William C. 博士，阿尔伯塔大学地理系，加拿大。
+- Wones, David R. 博士，弗吉尼亚理工大学与州立大学地质科学系。
+- Wong, George S. K. 博士，国家计量标准研究所偶尔性标准，加拿大渥太华，安大略省。
+- Wood, Albert E. 博士（退休），阿默斯特学院生物学系。
+- Wood, B. J. 博士，芝加哥大学地质科学系。
+- Wood, Chris 博士，电力研究协会，加利福尼亚州帕洛阿尔托。
+- Wood, Earl H. 博士，梅奥基金会，明尼苏达大学医学院研究生院。
+- Wood, Frank B. 博士，佛罗里达大学物理学与天文学系。
+- Wood, H. William 博士，顾问，航空航天领域，北卡罗来纳州咆哮峡谷。
+- Woodall, James E. 西区屋制造部门经理，西屋电气公司，宾夕法尼亚州匹兹堡。
+- Woodall, Jerry M. 教授，耶鲁大学电气工程系，康涅狄格州纽黑文。
+- Woodcock, C. L. F. 马萨诸塞大学动物学教授。
+- Woods, Jon P. 博士，威斯康星大学医学院医疗微生物学与免疫学系助理教授，麦迪逊。
+- Woodward, John B., III. 教授，密歇根大学造船与海洋工程系。
+- Woody, R. W. 博士，科罗拉多州立大学生物化学系。
+- Woolsey, Stan E. 教授，利克天文台，加利福尼亚州圣克鲁斯。
+- Woram, John M. 沃勒姆音频合伙人，纽约。
+- Wray, John L. 博士，马拉松石油公司，科罗拉多州利滕。
+- Wright, Elliott F. 咨询工程师（退休），先进产品部，施耐德-沃辛顿公司，新泽西州哈里森。
+- Wright, James A. 摩托罗拉公司战略营销经理，佛罗里达州博因顿海滩。
+- Wright, Michael E. 国家半导体公司，加利福尼亚州圣克拉拉。
+- Wright, Raymond 教授，罗德岛大学金斯顿分校土木与环境工程系。
+- Wu, Tai Tsun 教授，哈佛大学工程与应用物理系，马萨诸塞州剑桥。
+- Wuesch, Bernhardt J. 博士，麻省理工学院冶金与材料科学系。
+- Wilf, Vermer J. 博士，共济会医学研究实验室研究副总监，纽约州尤蒂卡。
+- Wurtele, Morgan G. 教授，加利福尼亚大学洛杉矶分校大气科学系。
+- Wist, James C. 教授，亚利桑那大学光学科学中心。
+- Wygodzinsky, Pedro W. 博士，纽约自然历史博物馆昆虫学系。
+- Wike, John A. 博士，沃尔夫森分子病理学实验室，比茨昂癌症研究所，苏格兰格拉斯哥。
+- Wyllie, Peter J. 博士，系主任，芝加哥大学地质科学系。
+- Wymen, Richard E. 博士，加拿大猎人勘探有限公司研究总监，阿尔伯塔省卡尔加里。
+- Wyrkl, Klaus 博士，夏威夷大学马诺阿分校海洋学系。
+- Wiest, Alfred Johny 博士，应用水生生态学（APE C），瑞士卡斯滕诺森。
+
+## Y
+
+- Yagi, Takehiko 教授，日本东京大学固体物理研究所。
+- Yalow, Rosaly S. 博士，高级医学研究员，退伍军人事务医院，纽约。
+- Yamaguchi, M. 教授，加利福尼亚大学戴维斯分校蔬菜作物系。
+- Yang, Hongjun。IGEN 公司，马里兰州洛克维尔。
+- Yang, Herbert W. 教授，伍斯特理工学院机械工程系。
+- Yates, S. F. 博士，联合信号研究中心，伊利诺伊州 555 Plaines。
+- Yeatman, Harry C. 博士，南方大学动物学系，田纳西州西瓦尼。
+- Yegupall, Tuncel M. 教授，哥伦比亚大学亨利·克朗矿学院，纽约。
+- Yell, Ralph W. 博士，英国米德塞克斯特丁顿国家物理实验室。
+- Yelles, Marvin。原《麦格劳-希尔科学与技术百科全书》编辑，麦格劳-希尔出版公司，纽约。
+- Yellett, John I. 亚利桑那州立大学建筑学院荣休教授。
+- Yeomans, Donald K. 博士，加利福尼亚理工学院喷气推进实验室。
+- Yin, Frank C.-P. 教授，约翰霍普金斯医学院医学系，马里兰州巴的摩。
+- Yochelson, Ellis L. 博士，美国内政部地质调查局，华盛顿特区。
+- Yokelson, Howard B. 博士，阿莫科化学公司研发部，伊利诺伊州内珀维尔。
+- Yost, Don M. 教授。原加利福尼亚理工学院。
+- Yost, William A. 博士，洛约拉大学帕米听力研究所主任，芝加哥。
+- Young, Anne B. 博士，密歇根大学神经病学系。
+- Young, David A. 博士，北卡罗来纳州立大学昆虫学系。
