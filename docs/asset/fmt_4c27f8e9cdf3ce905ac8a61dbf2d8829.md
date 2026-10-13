@@ -1,0 +1,172 @@
+
+# 索引
+
+- 另见 VA Linux
+- Linuxcare (公司), 246–248, 270
+- Linux 日志, 89, 94, 102
+- Linux 版本, 67
+- Linux 管理员指南, 71, 103
+- Linux News, 35
+- Linux Today, 277
+- 媒体关注, 170
+- 墨西哥, 318–319
+- 微软, 5–64
+- 以及 Mindcraft (公司), 275–284
+- 以及 红帽公司 (公司), 218–219
+- 以及 SMB 协议, 273–274
+- 以及 Transmeta, 162–163
+- 与 Red, 226–228
+- 关于 Linux, 284–286
+- Linux, 221–222
+- 安全, 285
+- 成功, 194–195
+- 宽域网联盟, 200
+- Linux 的使用, 101
+- 模拟器, 286
+- 国家超级计算应用中心 (NCSA), 125, 126–127, 183–184, 245
+- 另见 Mosaic (计算机程序)
+- 自然语言, 134–135
+- Miller, Cliff, 231–233
+- Miller, Dave, 108–110, 172, 179–190, 261, 298, 321–322
+- Mindcraft (公司), 275–284
+- NetBench, 270, 279
+- NetBSD, 84
+- Miner, Alten, 214, 215–223
+- Minix (计算机程序), 32–34, 36–40
+- Linux 版本 0.02, 45–46
+- 以及 Intel 8086 芯片, 64–65
+- 与 Linux 的竞争, 49–50, 53–56
+- Netscape Communications, 125, 127, 130, 219, 202–204
+- 以及 Mindcraft (公司), 276
+- 以及 Perl, 136–137
+- 架构, 113
+- 多处理器, 113
+- Multisoft, 96
+- Murphy, Ian, 89, 92
+- 下一代 Linux (NG), 200
+- No, 77
+- Nord, Haerick, 256, 257
+- Unix 操作系统设计与实现, 50
+- Oracle, 213, 216, 223
+- O'Reilly, 103, 248, 249
+- O'Reilly & Associates, 103
+- Pacific HiTech (公司), 231–233
+- Palm, 51
+- 补丁 (计算机程序), 35–36
+- 补丁, 173–181
+- 路径, 271
+- Pauling, Linus, 35
+- PC 杂志, 281
+- PC 周, 281
+- 企鹅标志, 27
+- 企鹅, 99, 229–231, 232
+- Perens, 215
+- Python (计算机程序), 135–139, 182, 319–320
+- Peterson, Christine, 167
+- Plattner, Hans, 216–217
+- Posix 标准, 40
+- 《波斯之王》(电子游戏), 35–36
+- 编程作为艺术, 156
+- 雇佣, 248–250
+- Eric Raymond, 关于, 144–155, 179, 235–236, 264
+- 哲学, 151–152
+- Linux 的增长, 221–222
+- Unix, 153–154
+- Python (计算机程序), 319–320
+- Qt (计算机程序), 257–260, 264
+- Unix 四个世纪, A, 13
+- Quasar Technologies, 257–258
+- Raymond, Eric, 144–155, 179, 235–236, 264
+- Safford, Dave, 88
+- Salus, Peter, 13, 148
+- Salzenberg, Chip, 137
+- Samba (计算机程序), 270–275, 293
+- 旧金山, 170
+- Santa Cruz 运营 (SCO), 140, 295, 296
+- SAP (公司), 216–218, 223
+- Schneider, Bruce, 285
+- SCO (公司), 295–296
+- 屏幕手机, 298
+- 圣经 (公司), 246
+- 计算机安全, 285
+- Sendmail (计算机程序), 123, 182
+- 以及 私有软件, 241–244
+- 早期开发, 242
+- 营销, 243
+- Sequoia Capital, 235
+- Server Message Block (SMB), 271
+- SGl, 109, 222, 261, 277, 279, 280, 284, 287, 288, 293, 315
+- Shan, Yen-Ping, 207–211
+- Shareware, 44–56
+- Shearer, Dan, 272
+- Shields, Dan, 211–212
+- Sifry, Dave, 246–248
+- Silicon Graphics, Inc., 186, 223, 293
+- 硅谷 Linux 用户, 167, 169–170
+- Simputer, 318
+- Sinclair Q 微型, 9–110
+- Sinclair, Sir Clive
+- Slackware, 93–94, 234
+- Sladkey, Rich, 56–60, 65
+- Slasdot, 001–302, 312
+- Sm@rt Reseller, 269, 274
+- Softbank Comdex, 104
+- Softlanding Linux System (SLS), 88–89
+- Software AG (公司), 100
+- 软件, 专有的和企业对企业 (B2B) 电子商务, 246
+- 以及自由软件, 259–260
+- GNU 网络对象模型环境 (GNOME), 267
+- 以及红帽 (公司), 228–230
+- 以及 Sendmail, Inc., 241–244
+- 以及 GNU 项目, 238–239
+- 以及黑客, 229–240, 243
+- 在日本, 222–233
+- 在西方之外, 317
+- Solaris, 141, 294, 295
+- Sunblaster, 72
+- 源代码, 58, 87, 88
+- 以及 Mozilla 的分发, 202–204
+- 以及 Freshmeat (网站), 251
+- 以及 Mosaic, 187–188, 194–198,
+- 以及 Netscape, 205–206
+- 以及 开源解决方案运营 (OSSO), 221
+- 以及红帽 (公司), 225–228
+- 以及 5AP, 216–218
+- 以及 SourceForge (网站), 251
+- 以及 VA Linux, 250–251
+- 另见开源源代码
+- SourceForge (网站), 251
+- SourceExchange, 249
+- Sparks, 99–100, 119, 230–231, 299, 300
+- Spyglass (公司), 186
+- Stallman, Richard, 14–30, 145, 323
+- 以及 代码分叉, 171–172
+- 以及 Cygnus, 307
+- 以及 开源定义, 168–169
+- 以及自由软件的盈利能力, 237–238
+- 以及 人工智能 (AI)实验室, 15–17
+- 以及 C 编译器, 23–24
+- 以及 Debian 程序, 90–92
+- 以及 免费软件峰会, 166
+- 以及 GNU Emacs 通用许可许可证, 26
+- 以及 GNU 项目, 20–30
+- 以及 Trolltech (公司), 261
+- 以及 Tcl, 245
+- 以及 Unix, 19–20
+- 编码方法, 23–24
+- 另见 马萨诸理工学院 (MIT)
+- Sun Microsystems, 16, 140–141, 239, 249–295
+- 以及 Tcl (计算机程序), 245–246
+- 使用 GNU/Linux 的, 108
+- SunOS (操作系统), 41
+- SunScript (公司), 245–256
+- Sun World, 170
+- SuSE (公司), 234–235, 289
+- 可持续发展网络 (SDNP), 317
+- symbolics, 18–19
+- 对称多处理器 (SMP), 114
+- 系统开发公司 (SDC), 132–133
+- Tanenbaum, David, 22–32
+- 以及 Linux Torvalds, 50–53
+- 关于 Linux 的控制, 78–79
+- 在互联网上, 71
