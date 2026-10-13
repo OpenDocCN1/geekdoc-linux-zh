@@ -1865,6 +1865,7 @@
 +   [RHCSA／RHCE 红帽 Linux 认证学习指南，第七版（考试 EX200 & EX300）（RHCSA／RHCE 红帽企业 Linux 认证学习指南）](docs/rhcsarhce-red-hat-linux-certification-study-guide-seventh-ed/README.md)
 +   [RHCT 红帽认证技术员 Linux 学习指南 (考试 RH202) (Certification Press)](docs/rhct-red-hat-certified-technician-linux-study-guide-exam-rh2/README.md)
 +   [RHF Linux 3 Multipack 初学者指南：（Fedora Core 3 发行版，含源码共 9 张光盘，适用于无 DVD 驱动器的用户）（初学者指南）](docs/rhf-linux-3-multipack-for-dummies-fedora-core-3-distribution/README.md)
++   [VMWare 使用指南（第 2 版）](docs/robs-guide-to-using-vmware-covers-workstation-ace-gsx-and-es/README.md)
 +   [Rocky Linux 9 核心教程：学习安装、管理和部署 Rocky Linux 9 系统](docs/rocky-linux-9-essentials-learn-to-install-administer-and-dep/README.md)
 +   [使用 Linux & Apache 运行自己的 Web 服务器：安装、管理并加固你的 Web 服务器](docs/run-your-own-web-server-using-linux-apache-install-administe/README.md)
 +   [使用 Linux 运行完美的网站](docs/running-a-perfect-internet-site-with-linux/README.md)

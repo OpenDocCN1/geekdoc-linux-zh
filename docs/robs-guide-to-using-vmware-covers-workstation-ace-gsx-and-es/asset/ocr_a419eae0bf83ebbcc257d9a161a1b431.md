@@ -1,0 +1,15 @@
+consideration if you will be running CPU intensive applications inside your guest operating systems. Running a file and print server for 50 users relies more heavily on disk and network access instead of CPU usage, compared to a server running a high end Java2 Enterprise Edition application that is continuously accessed by several hundred users.
+
+Choosing the number of CPUs for the virtual machines that you plan to run can not be done without looking into other factors, such as hard disk and network activity which will impact your server's performance. As an example, let's assume that you have a four processor machine and you are planning on running the suggested sixteen virtual machines. This may sound good on the processor side, but if that server has only one hard disk that all virtual machines need to read from and write to, you will end up with poor performance, even with non-disk intensive applications.
+
+# Memory
+
+The second component of your server that will heavily influence the performance of your virtual machines is the available memory. A general rule with most servers and operating systems is: the more the better. But there are a few things to keep in mind before ordering all your servers with 64 GB by default.
+
+First of all, you need to determine how much memory you really need for your virtual machines and how much memory you need for future installations. The great advantage of VMware's current generation of products is that it does not pre-allocate the memory that you assign to a virtual machine. In other words, if you start four machines with 512 MB each, your GSX Server software does not consume 2 GB of memory from the start. If those guest operating systems are only using 256 MB each, the total memory usage will be around 1 GB or even less.
+
+When you encounter such a situation, you can optimize the memory settings of your GSX Server and virtual machines. Therefore, when calculating the amount of RAM that you really need for your server, you do not have to add up the amount of RAM that you would typically buy for your independent physical servers. Of course, you also benefit from using VMware technology with the capability of removing and adding memory to virtual machines very easily, especially compared to swapping physical memory modules.
+
+> Note: It is important to remember to reserve enough memory for your host operating system. When your host OS starts using virtual memory (for swapping, paging, etc.), the performance of your virtual machines will degrade noticeably.
+
+For configurations of up to 4 GB, there are not too many special configurations that you have to consider. As long as you remember that besides the amount of RAM required to run a given number of virtual machines, you also need to have sufficient processing power and hard disk availability.

@@ -1,0 +1,15 @@
+When installing your Windows server for use with VMware GSX Server do not forget to also install IIS if you want to use the Management Interface for web based management.
+
+For Linux, the list of supported distributions is also available on the previously mentioned URL. That list is quite long, because there are many distributions out there. In general, most GSX Server implementations are done on an Enterprise Server (ES) or Advanced Server (AS) version of Red Hat (version 3 or 4) or SuSE Linux Enterprise Server version 8 or 9.
+
+# 31.3 Hardware Requirements
+
+VMware GSX Server runs on the Intel x86 platform including machines which have an AMD processor. For the most current and detailed listings of supported CPUs, check out the on-line documentation at the following URL: www.vmware.com/support/pubs.
+
+# Processor
+
+GSX Server supports systems with multiple processors up to a maximum of 32. There are two versions of the software available: one that supports two processors in your host system and one that supports an unlimited number of processors (or actually 32 that is, in real life). It makes sense to have multiple CPUs in your host system. As a general guideline, VMware suggests running no more than four virtual machines for every processor. However, what you will choose as a hardware platform depends on many criteria. In the next paragraph, you will read more about these criteria. In any case, keep in mind that the maximum number of virtual machines you can run on a GSX Server is 64.
+
+A very important thing to keep in mind is that GSX Server will not give you the same performance with multiple CPUs that a VMware ESX Server will give you. When looking at the price list, you may be tempted to choose an 8-way CPU machine with a GSX Server unlimited CPU license for only a fraction of the cost of an ESX Server 8 CPU license (about five times as expensive). However, be aware that the way that ESX Server divides the load over multiple CPUs is much more efficient. This is especially true when using the additional virtual SMP product, which is only available for the ESX Server. This product allows you to assign multiple processors to your virtual machines to be used with your Guest Operating system. With the VMware GSX Server, your virtual machines will always have only one CPU, no matter how many processors you have in your host system.
+
+One last thing that should be mentioned about processors is that dual core processors are also supported with VMware GSX Server version 3.2. At the time of writing this book, AMD has a dual core Opteron processor available and Intel is about to release the first Itanium dual core CPU and XEON based dual core CPU by the end of 2005. Simply put, a dual core CPU is a physical processor with two complete execution cores. This allows the processor to run two software threads simultaneously in parallel. With the already existing Hyper Threading technology,
