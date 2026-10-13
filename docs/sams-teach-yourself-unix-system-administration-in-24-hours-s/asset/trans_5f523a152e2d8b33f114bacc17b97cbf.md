@@ -1,0 +1,177 @@
+
+
+在这种情况下，轮转频率是每周一次，轮转数为 4，因此我们有一个覆盖服务器上最近一个月活动的滚动窗口。
+
+```
+# 在轮转旧日志文件后创建新的（空）日志文件
+create
+# 如果你希望日志文件被压缩，请取消以下注释
+# compress
+```
+
+某些守护进程对日志文件非常挑剔，如果日志文件不存在，它们会拒绝创建。如果是这种情况，`create` 命令就非常有用，而且它也是 logrotate 的默认设置。另外，请注意，默认情况下，决定将历史日志文件归档以压缩（gzip）格式存储是多么容易！
+
+```
+# 为“secure”日志保留更长时间的归档，并对其进行压缩
+/var/log/secure {
+    rotate 8
+    compress
+}
+```
+
+在这个例子中，secure 日志文件保留八周而不是默认的四周，并且它们会被压缩以节省空间。
+
+```
+# 当日志文件大小超过 25K 时轮转 Apache 日志文件
+# 保留六周的归档，压缩，并将新的轮转日志
+# 也发送到一个特殊的电子邮件地址：
+/var/log/httpd/access_log {
+    rotate 6
+    size 25k
+    mail web-log-archive@intuitive.com
+    compress
+    postrotate
+        /etc/rc.d/rc3.d/S15httpd restart
+    endscript
+}
+```
+
+这是 logrotate 的一个高级用法，真正展示了它的强大能力。程序不是将轮转绑定到特定的日历日期，而是每当日志文件增长到超过 25K 时就会轮转它。程序会保留六周的压缩归档，并且最旧的日志文件（轮转完成后将被删除）会在处理过程中通过电子邮件发送到特殊地址 web-log-archive@intuitive.com。轮转序列完成后，logrotate 会调用指定的 shell 脚本（init 使用的 httpd 控制脚本）来强制重启，因此每个日志文件都以 Web 服务器启动事件开始。
+
+这种复杂程度远远超过我们本小时稍后在自己的脚本中所创建的内容，它也强有力地证明了为什么 logrotate 命令对聪明的系统管理员来说是一个如此强大的实用工具。
+
+最后一个例子：
+
+```
+# 没有软件包拥有 lastlog 或 wtmp —— 我们在这里对它们进行轮转
+/var/log/wtmp {
+    monthly
+    create 0664 root utmp
+    rotate 1
+}
+```
+
+wtmp 文件记录谁登录了（用户仍在登录时登录记录在 utmp 中，注销后移动到 wtmp），它很有价值，但通常增长得不是很快。在这种情况下，我们每月轮转一次，并且只保留两个月的窗口。请注意，新的空 utmp 文件具有必须指定的非常具体的创建参数——权限是 0644，文件所有者为 root。
+
+使用 logrotate 命令非常简单：注销并让 cron 来做这些工作。每天晚上，cron 都会调用 logrotate，logrotate 读取配置文件并执行指定的操作。
+
+要测试你的配置，请使用 -d（调试）标志：
+
+```
+# logrotate -d /etc/logrotate.conf
+reading config file /etc/logrotate.conf
+reading config info for /var/log/secure
+reading config info for /var/log/httpd/access_log
+reading config info for /var/log/wtmp
+Handling 3 logs
+rotating pattern: /var/log/secure weekly (8 rotations)
+empty log files are rotated old logs are removed
+rotating file /var/log/secure
+log does not need rotating
+rotating pattern: /var/log/httpd/access_log 25600 bytes (6 rotations)
+empty log files are rotated old logs are mailed to web-log-archive@intuitive.com
+rotating file /var/log/httpd/access_log
+log needs rotating
+renaming /var/log/httpd/access_log.6.gz to /var/log/httpd/access_log.7.gz
+renaming /var/log/httpd/access_log.5.gz to /var/log/httpd/access_log.6.gz
+renaming /var/log/httpd/access_log.4.gz to /var/log/httpd/access_log.5.gz
+renaming /var/log/httpd/access_log.3.gz to /var/log/httpd/access_log.4.gz
+renaming /var/log/httpd/access_log.2.gz to /var/log/httpd/access_log.3.gz
+renaming /var/log/httpd/access_log.1.gz to /var/log/httpd/access_log.2.gz
+renaming /var/log/httpd/access_log to /var/log/httpd/access_log.1.gz
+creating new log mode = 0644 uid = 0 gid = 0
+running postrotate script
+running script with arg /var/log/httpd/access_log: .
+/etc/rc.d/rc3.d/S15httpd restart
+...
+compressing new log with: '/bin/gzip -9 '/var/log/httpd/access_log.1''
+executing: "'/bin/mail -s '/var/log/httpd/access_log.7.gz' web-log-archive@intuitive.com < /var/log/httpd/access_log.7.gz"
+removing old log /var/log/httpd/access_log.7.gz
+rotating pattern: /var/log/wtmp monthly (1 rotations)
+empty log files are rotated old logs are removed
+rotating file /var/log/wtmp
+log does not need rotating
+```
+
+输出相当多，但如果你逐步查看，你会看到 logrotate 精确地指示了它将做什么。注意，它调用了重启 httpd 服务所需的命令，并通过电子邮件将最旧的压缩归档文件发送到长期存档。
+
+不幸的是，在撰写本文时，logrotate 仅适用于某些 Linux 和 Unix 发行版（Caldera、Red Hat、Solaris），尽管毫无疑问它最终会广泛普及到一般 Unix 社区。
+
+不过不要担心，因为本小时的最后一节将探讨一个 shell 脚本，它能够进行简单的日志轮转，尽管方式没有那么复杂。
+
+## 构建你自己的日志轮转工具
+
+现在你已经了解了 logrotate 的工作原理，你应该受到启发，编写一个灵活、通用的日志轮转器，以便轻松分发到你维护的所有不同 Unix 系统。幸运的是，这并不太难实现。
+
+### 任务 16.5：轮转你自己的日志
+
+轮转日志文件的基本算法是递归选择 /var/log 目录中所有“普通文件”（例如，不是目录、不是管道、不是套接字、不是设备驱动程序）且名称最后一个字母不是数字的文件。有了这个列表，创建一组带有适当顺序后缀的新文件名，并轮转所有文件。
+
+1. 仅选择所需的文件可能是此脚本中最困难的部分，可以使用 find 完成。需要添加的是 -not 逻辑标志，它反转给定测试的逻辑：
+
+```
+# find /var/log -type f -not -name '*[0-9]' -print
+  ./messages
+  ./lastlog
+  ./secure
+  ./maillog
+  ./spooler
+  ./wtmp
+  ./gdm/:0.log
+  ./xferlog
+  ./pgsql
+  ./httpd/error_log
+  ./httpd/access_log
+  ./httpd/ssl_engine_log
+  ./httpd/ssl_request_log
+  ./httpd/ssl_scache.sem
+  ./dmesg
+  ./cron
+  ./boot.log
+  ./XFree86.0.log
+  ./XFree86.9.log
+  ./rpmpkgs
+```
+
+正如你所看到的，这正确列出了我们想要轮转的所有日志文件（还有一些额外的：ssl_scache.sem 文件和 XFree86 日志）。
+
+2. 为了进一步细化搜索，我们将在 find 循环中添加更多调整，包括一个只匹配大于 1KB 文件的测试，并完全跳过 XFree86 日志：
+
+```
+# cat rotatelogs.sh
+#!/bin/sh
+
+for name in `find /var/log -type f -size +1k -not -name '*[0-9]' -not -name 'XFree*' -not -name ':0*' -print`
+do
+    echo Log file $name is ready to rotate
+done
+```
+
+这个中间循环提供了我们想要的结果：
+
+```
+# rotatelogs.sh
+Log file /var/log/lastlog is ready to rotate
+Log file /var/log/maillog is ready to rotate
+Log file /var/log/wtmp is ready to rotate
+Log file /var/log/gdm/:0.log is ready to rotate
+Log file /var/log/httpd/error_log is ready to rotate
+Log file /var/log/httpd/access_log is ready to rotate
+Log file /var/log/dmesg is ready to rotate
+Log file /var/log/cron is ready to rotate
+Log file /var/log/rpmpkgs is ready to rotate
+```
+
+3. 现在让我们直接跳到完整的脚本，以便你能看到如何实现递增：
+
+```
+#!/bin/sh
+
+cd /var/log
+
+for name in `find . -type f -size +1k -not -name '*[0-9]' -not -name 'XFree*' -not -name ':0*' -print`
+do
+    back1="${name:1:2}"; back2="${name:2}";
+    back3="${name:3}"; back4="${name:4}";
+```
+

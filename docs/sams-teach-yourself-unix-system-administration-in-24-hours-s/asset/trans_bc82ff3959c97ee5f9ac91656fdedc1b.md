@@ -1,0 +1,166 @@
+
+如果忘了磁盘上无法执行程序，这可能会相当令人困惑，因为正如 ls -l 所显示的那样，该文件确实是可执行的。试试复制到一个只读文件系统呢？
+
+```
+# cp /bin/cp /disk2
+cp: cannot create regular file '/disk2/cp': Read-only file system
+```
+
+至少这是一个相当有帮助的错误信息！
+
+这次 mount 在提醒我们可能导致该磁盘出现奇怪行为的原因方面显得更有帮助一些：
+
+```
+# mount
+/dev/hda2 on / type ext3 (rw)
+none on /proc type proc (rw)
+usbdevfs on /proc/bus/usb type usbdevfs (rw)
+/dev/hda1 on /boot type ext3 (rw)
+none on /dev/pts type devpts (rw,gid=5,mode=620)
+none on /dev/shm type tmpfs (rw)
+/dev/hdb on /disk2 type ext2 (ro,noexec)
+```
+
+4. 在离开本节之前，让我们修复磁盘，使其成为标准的挂载格式：
+
+```
+# umount /dev/hdb
+# mount -v -t ext2 /dev/hdb /disk2
+/dev/hdb on /disk2 type ext2 (rw)
+```
+
+在下一节中，我们将探讨如何向 /etc/fstab 添加一个条目，以便磁盘参数能够自动指定。
+
+5. 关于 Mac OS X 环境的一个额外观察是，如果你双启动 Mac OS 9 和 OS X，你会发现旧的 OS 9 磁盘会自动挂载到 /Volumes 目录上：
+
+```
+# /sbin/mount
+/dev/disk1s9 on / (local)
+devfs on /dev (local)
+fdesc on /dev (union)
+<volfs> on /.vol (read-only)
+/dev/disk0s8 on /Volumes/Macintosh HD (local)
+automount -fstab [252] on /Network/Servers (automounted)
+automount -static [252] on /automount (automounted)
+```
+
+然而，你可能决定只想对 OS 9 磁盘进行只读访问，以确保不会发生损坏。为此，只需卸载现有磁盘然后重新以只读方式挂载即可：
+
+```
+# umount /dev/disk0s8
+# mount -r /dev/disk0s8 /Volumes/Macintosh\ HD
+# /sbin/mount
+/dev/disk1s9 on / (local)
+devfs on /dev (local)
+fdesc on /dev (union)
+<volfs> on /vol (read-only)
+/dev/disk0s8 on /Volumes/Macintosh HD (read-only)
+automount -fstab [252] on /Network/Servers (automounted)
+automount -static [252] on /automount (automounted)
+```
+
+当你拥有一个已完全配置文件系统并且在文件系统上有一个可以添加磁盘并利用空间的位置时，使用 mount 将其连接起来是很快的工作
+
+当你开始使用外部媒体，包括“借来的硬盘”和只读设备时，能够使用特定的安全设置（例如 noexec）挂载磁盘可以节省很多麻烦。事实上，一个好的经验法则是你应该始终将设备的逻辑设置与挂载指令相匹配：如果挂载 DVD-ROM 驱动器，使用 ro；如果挂载可能感染病毒的共享软件 CD-ROM，使用 noexec；等等。稍加谨慎就能节省大量
+
+![](img/5ced0c78d748bd190e9027e5549a3622_228_0.png)
+
+麻烦。
+
+如果你运行 Mac OS X 并希望在 Darwin 中挂载磁盘，了解这些安全预防措施会更有益。Unix 的病毒并不多，但确实存在可以感染系统的 Mac 病毒，而从 Darwin 级别挂载磁盘很可能会绕过你安装的任何病毒防护系统。
+
+## 精细调整你的 /etc/fstab 配置文件
+
+虽然使用 mount 命令向系统添加新磁盘很简单，但每次系统重启时都要记住确切的选项并输入所有内容则相当麻烦。
+
+幸运的是，有一个更聪明的解决方案，一个 mount 用来确定在何处、何时以及使用何种权限挂载磁盘的配置文件。该文件是 /etc/fstab，在离开本小时之前，让我们快速看一下里面的内容。
+
+### 任务 10.4：创建完美的 /etc/fstab 文件
+
+有点令人惊讶，但 mount 对于一个 Unix 命令来说相当智能。例如，一旦 /etc/fstab 中的条目将驱动器名称映射到挂载点，你就可以通过指定挂载点（/disk2）或单独的驱动器名称（/dev/hdb）来手动挂载磁盘。更好的是，默认挂载权限也会从文件中读取，确保 DVD-ROM 总是只读挂载，除非明确覆盖。
+
+但 /etc/fstab 最重要的用途是控制哪些磁盘在启动时自动挂载。如果你想将 /dev/hdb 作为文件系统的重要组成部分包含在内，每次系统重启时手动使用 mount 命令是不可接受的！
+
+- 1. 首先，让我们看一下标准的 RHL7.2 文件系统列表：
+
+```
+# more /etc/fstab
+LABEL=/             /               ext3    defaults        1 1
+LABEL=/boot         /boot           ext3    defaults        1 2
+none                /dev/pts        devpts  gid=5,mode=620  0 0
+none                /proc           proc    defaults        0 0
+none                /dev/shm        tmpfs   defaults        0 0
+/dev/hda3           swap            swap    defaults        0 0
+/dev/cdrom          /mnt/cdrom      iso9660 noauto,owner,kudzu,ro 0 0
+/dev/fd0            /mnt/floppy     auto    noauto,owner,kudzu 0 0
+```
+
+该文件中有六列信息，如表 10.4 所述。
+
+### 表 10.4 /etc/fstab 中包含的信息
+
+| 列 | 包含内容 |
+|---|---|
+| 1 | 设备名称或标签。 |
+| 2 | 挂载点。 |
+| 3 | 文件系统类型。常见值有 ext2、ext3、hfs、hfs+、ufs、fat32、fat、proc、tmpfs、swap 和 iso9660。 |
+| 4 | 选项：ro（只读）、rw（读+写）、exec（允许在磁盘上执行程序）、noatime（禁止更新访问时间；这可以提高 atime 值无关紧要的磁盘上的性能）、noauto（使用启动时的 mount -a 命令禁用设备的自动挂载）以及 nosuid（禁止从该磁盘运行任何 SUID 程序）。你的 Unix 版本可能还有其他选项：请查阅手册页 fstab(5) 了解详情。 |
+| 5 | 表示该驱动器应包含在哪个 dump 轮次中（参见手册页 dump(8) 和第 8 小时“Unix 包管理”）。 |
+| 6 | 表示在启动时 fsck 应检查该磁盘的轮次。（轮次 0 = 不要自动检查）。 |
+
+因此，要为新磁盘 /dev/hdb 添加条目，我们将添加以下行：
+
+```
+/dev/hdb            /disk2            ext2    noauto,ro       2 0
+```
+
+这将把 /dev/hdb 驱动器的挂载点定义为 /disk2，表明它是一个标准的 ext2 文件系统，不应在启动时自动挂载（这意味着它必须手动添加），应以只读方式挂载，并且是 dump 组 2 的一部分。
+
+2. 为了检查磁盘不会在启动时自动挂载，我们可以使用以下序列：
+
+```
+# umount /disk2
+# mount -a
+# mount
+/dev/hda2 on / type ext3 (rw)
+none on /proc type proc (rw)
+usbdevfs on /proc/bus/usb type usbdevfs (rw)
+/dev/hda1 on /boot type ext3 (rw)
+none on /dev/pts type devpts (rw,gid=5,mode=620)
+none on /dev/shm type tmpfs (rw)
+```
+
+正如预期的那样，/disk2 挂载点未被列出。
+
+手动包含磁盘现在变得轻而易举：
+
+```
+# mount /disk2
+# mount
+/dev/hda2 on / type ext3 (rw)
+none on /proc type proc (rw)
+usbdevfs on /proc/bus/usb type usbdevfs (rw)
+/dev/hda1 on /boot type ext3 (rw)
+none on /dev/pts type devpts (rw,gid=5,mode=620)
+none on /dev/shm type tmpfs (rw)
+/dev/hdb on /disk2 type ext2 (ro)
+```
+
+特别注意磁盘已在正确的挂载点添加，并且它是只读的。
+
+3. 修改 /etc/fstab 中的选项会显著改变行为。将挂载配置文件中的 noauto,ro 切换为 defaults 会导致以下结果：
+
+```
+# umount /disk2
+# mount -a
+# mount
+/dev/hda2 on / type ext3 (rw)
+none on /proc type proc (rw)
+usbdevfs on /proc/bus/usb type usbdevfs (rw)
+/dev/hda1 on /boot type ext3 (rw)
+none on /dev/pts type devpts (rw,gid=5,mode=620)
+none on /dev/shm type tmpfs (rw)
+/dev/hdb on /disk2 type ext2 (rw)
+```
+
+任何使用 mount 的 -a 标志挂载的磁盘也将在启动时挂载，这正是我们想要的。

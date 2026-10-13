@@ -1,0 +1,11 @@
+You can see that fdisk has recognized the geometry of the disk: it's 507 cylinders, 63 sectors, and 16 heads (and no, I have no idea what this all means either!) Most importantly, it's identified the disk as a FAT32 system with 255,496 blocks (approximately 250MB).
+
+If you have problems identifying the bus address of your disk (the major and minor numbers), you might need to pop open your server and check the settings on the drive (often these are called jumpers by disk manufacturers, and in the SCSI world this is known as the SCSI address).
+
+> > Each hardware platform has a completely different scheme for hooking up disks and addressing schemes for the specific device drivers. Your best bet is to check with the documentation that came with your hardware if you're managing a commercial server.
+
+At this point in the formatting of your disk, you need to decide whether you want to partition the large disk into smaller virtual disks, or have it as a single large disk image for the system to utilize. For smaller disks, there's little value to partitioning, but if you are adding a 30GB disk (or larger), it might be very helpful to split that into two or more smaller virtual disks.
+
+The fdisk program builds the partitions in Unix, too, and you need to figure out how big each partition should be and ensure that they add up to the entire size of the disk. What's important is that once you install a filesystem on the disk, you can't repartition it without destroying all the data on it. This, as you might expect, is a common point of frustration, because sysadmins must therefore proactively anticipate how disks need to be laid out and how to best utilize available resources.
+
+A great example of this is with swap space, special areas of the disk allocated for swapping memory images (pages of memory) to disk so that other applications can utilize physical RAM. You might have enough on your system for the current configuration, but if you upgrade your RAM, will you be able to have sufficient swap space to meet the usual rule of thumb of 2x–3x RAM for swap space? If not, creating a second swap partition on a new disk prior to bringing it online can be a very easy step. Even if you don't think you need it today, you might tomorrow! Indeed, spreading the swap task across devices can improve performance, particularly on a busy system.

@@ -1917,6 +1917,7 @@
 +   [24小时学会 UNIX（第3版）](docs/sams-teach-yourself-unix-in-24-hours-3rd-edition-sams-teach-/README.md)
 +   [Unix 24 小时快速学会 [电子资源]](docs/sams-teach-yourself-unix-in-24-hours-electronic-resource/README.md)
 +   [Sams 21 天学会 UNIX 系统管理 [电子资源]](docs/sams-teach-yourself-unix-system-administration-in-21-days-el/README.md)
++   [Sams 24小时自学Unix系统管理（Sams 24小时自学系列）](docs/sams-teach-yourself-unix-system-administration-in-24-hours-s/README.md)
 +   [SANS 660.4 - 渗透测试人员的Linux利用实战](docs/sans-6604---exploiting-linux-for-penetration-testers/README.md)
 +   [SAP 业务信息仓库报告：使用 SAP BI 7.0 构建更好的 BI](docs/sap-business-information-warehouse-reporting-building-better/README.md)
 +   [SAS 认证备考指南：SAS 9 基础编程，第四版](docs/sas-certification-prep-guide-base-programming-for-sas-9-four/README.md)
