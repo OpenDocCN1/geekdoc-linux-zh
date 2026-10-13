@@ -1,0 +1,154 @@
+
+- W.J.Hag. William J. Hagan, Jr.
+- W.J.J. W. John Judd
+- W.J.K. William J. Kreifel
+- W.J.L. Warren J. Luzzadder
+- W.J.Lc. W. John Lee
+- W.J.Len. William J. Le Noble
+- W.J.M. William J. Mitchel
+- W.J.M.M. W. J. M. Moore
+- W.J.S. W. Joseph Schilt
+- W.J.V.W. Willem J. Vanker Wagterendon
+- W.J.W. William J. Willis
+- W.K. Werner Kurzig
+- W.Ket. Wolfgang Ketteler
+- W.Ku. Wiese Kuic
+- W.K.J. W. K. Joklik
+- W.L. Willy Ley
+- W.Lu. William Luth
+- W.Ly. Waldo Lyon
+- W.Lo. Walter Losen
+- W.L.Bro. William L. Brown, Jr.
+- W.L.C. Wen L. Chow
+- W.L.Ch. William L. Chamedes
+- W.L.F. Wendy L. Friedman
+- W.L.Fi. William L. Fisher
+- W.L.H. W. Lincoln Hawkins
+- W.L.McC. Warren L. McCabe
+- W.L.Ny. William L. Nyban
+- W.L.S. Waldo L. Schmitt
+- W.L.V. Willem L. Vos
+- W.L.Wo. William L. Wolfe
+- W.M. William Markowitz
+- W.Ma. Walter Mannheim
+- W.Man. Warren L. Mangopiezer
+- W.McG. William McGinnis
+- W.Mi. Wesley Mims
+- W.Mil. William Milson
+- W.Mo. William Mosher
+- W.Mu. William Muray
+- W.M.C. William M. Carey
+- W.M.H. Warren M. Haggist
+- W.M.Ha. William M. Hartmann
+- W.M.Hu. W. M. Hubbard
+- W.M.I. Wayne M. Itano
+- W.M.L. W. Marshall Leach, Jr.
+- W.M.S. William M. Sinion
+- W.M.Sa. W. Mark Sallzman
+- W.M.W. Walter M. Walsh
+- W.O.M. W. O. Milligan
+- W.Po. William Porter
+- W.Pb. William P. Banks
+- W.PCu. William P. Cunnane
+- W.P.K. Wilesy P. Kirk
+- W.PN. W. P. Nelms
+- W.R. William R. Rodden
+- W.PS. Walter P. Siegmn
+- W.PW. W. P. Wolf
+- W.R. William Rostoker
+- W.Re. Walter Reid
+- W.Ro. Willard Roth
+- W.R.B. William R. Bogges
+- W.R.Bu. Windsor R. Brugs
+- W.R.Bu. William R. Burg
+- W.R.C.R. W. R. C. Rowley
+- W.R.D. William R. Dickinson
+- W.R.E. William R. Engels
+- W.R.El. Walter R. Ellis, Jr.
+- W.R.F. W. R. Eppery
+- W.R.Fr. Walter R. Fried
+- W.R.F. Walter R. Fried
+- W.R.J. William R. Rudd
+- W.R.L. Werner R. Loewenstein
+- W.R.Lo. Wayne R. Lowell
+- W.R.M. William R. Marshall, Jr.
+- W.R.Ma. William R. Mann
+- W.R.N. Walter R. Nagel
+- W.R.P. William R. Philipson
+- W.R.R. William R. Riedel
+- W.R.Se. W. Rudolf Seitz
+- W.R.Si. W. Rex Sitter
+- W.R.Sm. William R. Smythe
+- W.R.V. Wyman R. Vaughan
+- W.R.V.S. W. Randall Van Schmus
+- W.R.W. William R. Wilcox
+- W.S. Wolfram Saenger
+- W.Scha. William Schaeffner
+- W.Sh. William Shive
+- W.Sp. William Spackman
+- W.Stu. Wilson Sturges
+- W.Sw. William Swieder
+- W.Swe. Will Sweetaragen
+- W.S.Y.W. William S.-Y. Wang
+- W.S.A. Wendall S. Arbuckle
+- W.S.B. William S. Benninghof
+- W.S.Ba. W. Scott Baldrige
+- W.S.Br. Wilard S. Bromley
+- W.S.Gr. William S. Granner
+- W.S.J. William S. Janna
+- W.S.L. W. S. Lyon
+- W.S.P. Wilson S. Prichett
+- W.T. Wallace Tucker
+- W.T.K. William T. Keeton
+- W.T.S. William T. Stuart
+- W.V.R. W. V. Robinson
+- W.W. William West
+- W.W.B. William W. Ballard
+- W.W.Be. Wallace W. Beaver
+- W.W.Br. William W. Bradley
+- W.W.Bro. William W. Bromer
+- W.W.E. W. W. Epstein
+- W.W.Ho. William W. Howells
+- W.W.K. William W. Korith
+- W.W.L.A. Whitlow W. L. Au
+- W.W.M. W. Wayne Meinke
+- W.W.Mi. Ward W. Minkler
+- W.W.Mo. W. W. Moyer
+- W.W.Sn. William W. Snow
+- W.W.Sp. Wesley W. Spink
+- W.W.W. William W. Watson
+- W.Wo. William Wolo
+- W.Y. Wayne Young
+- W.Z. William Zuk
+- W.Z.H. William Z. Hassid
+- W.Z.S. Wieslaw Z. Stepniewski
+- W.Zh. Wei Zhao
+
+# X, Y, Z
+
+- X.J.M. X. J. Musacchia
+- Y.C.F. Y. C. Fung
+- Y.E.M. Youssef El-Mansy
+- Y.H.M. Yi Hua Ma
+- Y.I. Yedy Israel
+- Y.M. Y. M. Gupta
+- Y.M.G. Yoshi Ogasawara
+- Y.O. Yoichi Ogasawara
+- Y.S. Yoshiro Suzuki
+- Y.W. Y. Weisei
+- Y.W.K. Yoke Wah Row
+- Z.C.M. Za-Cheieh Moh
+- Z.L. Zhexi Luo
+- Z.R.W. Zela R. Wasserman
+- Z.S. Zdének Sekera
+
+# 贡献者所属机构
+
+以下列表按姓氏顺序列出了所有百科全书贡献者。为每位作者提供了简要的所属机构信息。此列表可与前一部分 *贡献者姓名首字母* 结合使用，以完全确定每篇文章的贡献者。
+
+## A
+
+- **Aagaard, Knut 教授。** 华盛顿大学海洋学系。
+- **Abbott, Donald P. 博士。** 斯坦福大学太平洋 Grove 霍普金斯海洋站生物学教授。
+- **Able, Kenneth P. 博士。** 纽约州立大学奥尔巴尼分校生物科学系。
+- **Abraham, Bernard M. 博士。** 阿贡国家实验室固态科学部，伊利诺伊州阿贡。
