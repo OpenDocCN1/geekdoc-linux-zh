@@ -1,0 +1,184 @@
+
+这表明你的根分区，在 / 目录上，是一个以读写方式挂载的 Linux ext2 文件系统，而 /mnt/dos 和 /mnt/flash 包含 DOS 分区，也以读写方式挂载。（/proc 文件系统是 Linux 用于进程报告的特殊目录，例如正在运行的应用程序、系统状态等。）最后，mount 报告你的 CD-ROM 以只读 iso9660 文件系统的方式挂载。
+
+你可以利用 mount 的信息，通过使用 df 命令的 -t，或文件系统，选项来获取具体信息：
+
+```
+# df -t ext2
+```
+
+| 文件系统 | 1024-块 | 已用 | 可用 | 容量 | 挂载点 |
+|---|---|---|---|---|---|
+| /dev/hda3 | 497699 | 443873 | 28122 | 94% | / |
+
+这告诉 df 只显示已挂载的 ext2 文件系统的信息。你可以通过查看 mount 手册页来获取可用于 df 命令指定的有效文件系统列表。mount 命令在第 22 小时，“处理文件和你的文件系统。”中有更详细的介绍。你可以看到，通过使用 df 和 mount 命令，你可以报告已挂载设备的类型、设备的挂载方式以及每个设备剩余的空间。
+
+## 使用 du 命令获取文件系统磁盘使用情况
+
+du（disk usage）命令位于 /usr/bin 目录中，方便地通过报告每个目录或指定路径所需的空间量来总结你的磁盘使用情况。虽然 du 命令有超过 20 个命令行选项，本节介绍其中一些常见选项，其余留给你自行尝试。你可以单独使用 du 命令，或指定目录或路径：
+
+```
+# du
+904 ./book
+12080 ./mail
+1 ./tin/.mailidx
+1 ./tin/.index
+10 ./tin
+... 
+589 ./News
+9 ./index
+7 ./procmail
+5 ./ncftp
+418 ./reading
+778 ./documents
+27199 .
+```
+
+此报告（为简洁起见，并非列出所有目录）显示了一个主目录的内容，总计为 27199 个 1KB 块。如果你觉得难以理解，可以让 du 以字节为单位报告大小：
+
+```
+# du -b
+897606 ./book
+12294410 ./mail
+1024 ./tin/.mailidx
+1024 ./tin/.index
+9382 ./tin
+561715 ./News
+4033 ./index
+4139 ./procmail
+2791 ./ncftp
+424037 ./reading
+784216 ./documents
+26785752 .
+```
+
+如果这对你来说信息太多，那么你可以使用 --summarize 选项以千字节（使用 --kilobytes 或 -k 选项）或字节（使用 -b 或 --bytes 选项）获取总计：
+
+```
+# du -b --summarize
+26786903
+```
+
+du 命令还可以帮助你跟踪那些无人看管时有时会失控或使用大量磁盘空间的目录。如果你指定一个路径，du 会报告该路径下各目录的不同大小，这可能有助于你找出包含过多信息的位置：
+
+```
+# du --summarize -b /var/* | sort -nr
+6474535 /var/lib
+2336494 /var/log
+868163 /var/catman
+78362 /var/spool
+14591 /var/dt
+2385 /var/run
+2048 /var/lock
+2048 /var/local
+1024 /var/tmp
+1024 /var/preserve
+1024 /var/nis
+```
+
+这里，我将 du 命令，该命令被指示汇总每个目录的字节数，与 sort 命令结合使用，后者被设置为使用数值逆序排序。这个单行命令使用了管道（在第 6 小时，“使用 Shell”中讨论），会自动将最大的目录打印在输出列表顶部。你可以看到 /var/log 目录变得相当大。/var/lib 目录会很大，因为它包含 rpm 数据库。（rpm 在第 22 小时中有讨论。）
+
+虽然 du 命令不像 df 命令那样有 -t 选项来指定要报告的文件系统，但你可以使用 -x 选项排除其他文件系统。这有助于避免包含其他已挂载的文件系统，如 DOS 或 Windows。你可以通过在挂载点指定使用报告，让 du 报告其他文件系统。例如，du 会愉快地继续并汇总你的 Windows 目录占用了多少空间：
+
+```
+# du -b --summarize /mnt/dos/* | sort -nr
+129486405   /mnt/dos/windows
+23929345    /mnt/dos/msoffice
+20811654    /mnt/dos/photoenf
+7744046  /mnt/dos/tranxit
+6828992 /mnt/dos/org2
+6647520 /mnt/dos/laplink
+5556496 /mnt/dos/acrobat3
+4041127 /mnt/dos/pcdr
+3753962 /mnt/dos/psp
+3603489 /mnt/dos/insync
+3176769 /mnt/dos/antivirus
+2669335 /mnt/dos/airlite
+2408920 /mnt/dos/winfax
+...
+```
+
+此（缩短）报告显示，除了 Windows 操作系统外，某些 Windows 应用程序消耗了最大的空间。这些信息在你需要更多磁盘空间时决定卸载哪些应用程序会有所帮助。
+
+## 使用 symlinks 命令检查符号链接
+
+symlinks 命令检查指定目录中的符号链接。symlinks 命令有几个你可能会觉得有用的命令行选项，包括 -r 或递归选项，可用于检查整个目录。例如，要检查整个文件系统，请使用 -r 选项：
+
+```
+# symlinks -r /
+dangling: /etc/rc.d/rc0.d/K30diald -> ../init.d/diald
+dangling: /etc/rc.d/rc1.d/K30diald -> ../init.d/diald
+dangling: /etc/rc.d/rc2.d/K30diald -> ../init.d/diald
+dangling: /etc/rc.d/rc3.d/S70diald -> ../init.d/diald
+dangling: /etc/rc.d/rc4.d/S70diald -> ../init.d/diald
+dangling: /etc/rc.d/rc5.d/S70diald -> ../init.d/diald
+dangling: /etc/rc.d/rc6.d/K30diald -> ../init.d/diald
+absolute: /etc/mta/sendmail -> /usr/libexec/sendmail/sendmail
+absolute: /etc/mta/rmail -> /usr/libexec/sendmail/rmail
+dangling: /boot/System.map-2.0.35 -> /usr/src/linux-2.0.35/System.map
+absolute: /usr/doc/html/lg -> /usr/doc/lg-doc-1.0
+absolute: /usr/doc/boot-1.1/COPYING -> /usr/doc/Copyrights/GPL
+...
+```
+
+你可以看到，此 symlinks 命令输出显示了针对悬空和绝对符号链接的至少两种诊断类型。（共有六种：absolute、dangling、lengthy、messy、other_fs 和 relative。）悬空链接，或指向不存在文件的链接，可能会引起关注，因为 OpenLinux 无法确定指定文件是否存在。
+
+> 请参阅 symlinks 手册页以获取 absolute、lengthy、messy、relative 和 other_fs 链接诊断的定义。
+
+作为一名初级系统管理员，你可以使用 symlinks 递归查看文件目录，然后打印有关文件系统状态的报告。这里有一个有用的命令行，可用于检查 Linux 文件系统（排除其他系统，如 Windows）中的所有符号链接：
+
+```
+# symlinks -vr / | fgrep "dangling" >symlinkstatusreport.txt
+```
+
+此命令行使用 symlinks 命令递归遍历你的 OpenLinux 文件系统并报告悬空链接。然后 fgrep 命令在 symlinks 找到悬空符号链接时打印所有匹配项并创建你的报告。随着你成为更熟练的系统管理员，你将设计自己的技巧包来帮助诊断系统。
+
+## 节省磁盘空间
+
+本节为你提供一些节省磁盘空间的技巧。作为系统管理员的一部分是维护文件系统的健康并偶尔执行清理操作以释放磁盘空间。一旦你找到了适合你的系统和工作方式的技术或方法，你会发现可以常规地修剪和恢复数兆字节的磁盘空间。
+
+节省磁盘空间的一个好方法是不要安装太多软件。例如，你真的需要多少种不同的文字处理器？你需要多少图形程序？如果你找到一个功能强大的程序，请删除执行相同功能的其它程序。务必阅读第 22 小时，以了解 rpm 命令如何帮助你通过删除程序包和支持软件来释放磁盘空间并自定义你的 Linux 安装。
+
+你通常可以通过查找使用较少的程序或你不需要的图形或文本集合来减小目录的大小。你已经看到了一种查找可能需要清理的目录的方法。你还应该考虑可以删除的其他文件类型。
+
+例如，一些 Linux 程序会创建以波浪号（~）为前缀的备份文件。你可以按如下方式搜索这些文件：
+
+```
+# find / -name ~ -xdev
+```
+
+一旦你对结果感到满意，你可以将文件名通过管道传输到 rm 命令，使用 xargs 命令构建清理命令行（尽管你也可以使用 find 命令的 -exec 命令行选项）：
+
+```
+# find / -name ~ -xdev | xargs rm -f
+```
+
+你还应该搜索名为 core 的文件。这些是 core dumps，或在程序异常中止时创建的程序内存转储。其中一些文件可能非常大！你可以使用 bash 或 pdksh shell 的 ulimit 命令限制这些 core 文件的大小。要查看 core 文件当前允许的大小，请使用 ulimit 命令的 -c 选项：
+
+```
+# ulimit -c
+100000
+```
+
+> 幸运的是，OpenLinux 下默认的 bash shell ulimit 设置对于 core dumps 的大小为 0。如果你是 Linux 程序员并且需要 core 文件（用于调试），请更改此设置。
+
+这并不意味着 core dumps 限制为 1MB，而是 1,000,000 个 512 字节块。你可以使用 -c 选项限制 core 文件的大小，如
+
+```
+# ulimit -c 1000
+```
+
+这将 core 文件的最大大小设置为 512,000 字节。如果你使用 csh shell，请使用
+
+```
+# limit coredumpsize 1000
+```
+
+限制这些文件的大小是未来节省磁盘空间的一种方法。其他可删除的候选对象包括
+
+- .bak, *.BAK — 备份文件
+- .o — 编译操作期间创建的目标文件
+- # — 备份文件
+- *, 1, *.2, *.3 — /var/log 目录下系统日志文件的扩展名。
+
+一些日志可能会变得相当大，除非你真的需要它们，否则应将其删除。

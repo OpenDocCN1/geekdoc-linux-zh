@@ -1,0 +1,146 @@
+
+These lines are in the format of display item, foreground color, and background color.
+
+According to the slrn manual page, these colors can be
+
+| black | gray |
+|---|---|
+| red | brightred |
+| green | brightgreen |
+| brown | yellow |
+| blue | brightblue |
+| magenta | brightmagenta |
+| cyan | brightcyan |
+| lightgray | white |
+
+With a little bit of work, you can devise your own display.
+
+Make your changes and then save the file. To use color during your newsreading sessions, start slrn with its -C or color option:
+
+```
+# slrn -C
+```
+
+When slrn starts, you'll have a color display and you can use your mouse to click menu items at the top of the screen, click a newsgroup to see lists of messages, or click a message in a message list to read the message.
+
+The slrn newsreader is a flexible, customizable program that will work in black-and-white or color, with or without X11, and with the keyboard and your mouse.
+
+## Reading Usenet News with the knr Client
+
+The knr client, included with KDE, is a graphical interface to reading Usenet news. You must run X11 in order to use the program (but you don't have to use KDE). If you use KDE for your X11 sessions, start knr by clicking the Application Starter button on your desktop's panel, selecting the Internet menu item, and then clicking the News client item. If you use some other window manager, you can start knr from the command line of a terminal window like this:
+
+```
+# knr &
+```
+
+After you press Enter, the knr main dialog will appear, as shown in Figure 12.4.
+
+To configure knr, select the Options menu and then click Identity. The identity dialog will appear, as shown in Figure 12.5. Enter your real name, your email address (if you want, use the previous method for slrn to mask your address from spammers), and your Organization. (This field cannot be left empty, so you can use the default hyphen (-) entry.) This information will be used when you reply by email or follow up to a newsgroup posting. When finished, click OK to save your settings.
+
+### FIGURE 12.4
+
+The knr newsreader features the familiar KDE graphical interface with a menu bar, buttons, and scrolling window.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_300_0.png)
+
+### FIGURE 12.5
+
+The knr identity dialog sets your username and email address.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_300_1.png)
+
+Next, open the Options menu and click NNTP Options. In the dialog, shown in Figure 12.6, type the name of your ISP's mail server. Then, click in the NNTP Server field and type the name of your ISP's news server. If you want knr to connect to your ISP's news server as soon as it starts, select the appropriate option. If you need a username or password to access your ISP's news server, enter the correct username and password. These settings are used when knr connects to your news server and when you email a reply to a Usenet post. When finished, click OK to save your settings.
+
+### FIGURE 12.6
+
+The knr NNTP options dialog is where you set access options for email and news service when news-reading.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_300_2.png)
+
+You can set other options, such as how long you want to hold onto messages or how to print, through other menu items under the Options menu.
+
+The main knr dialog features a row of buttons you can use to connect to or disconnect from your news server, list or find groups, subscribe or unsubscribe to groups, check for unread articles, or post new articles. To get an initial list of newsgroups from your ISP, click the Get list of active groups button (left of the Find group button with the small magnifying glass). knr will then ask whether it can connect to your ISP's news server. Click OK.
+
+This operation might take several minutes as knr builds a list of newsgroups from your server. You'll see the size of the group file along with the message “Getting active list from server” at the bottom of knr's window. When knr is finished, click the small plus sign (+) to the left of the All newsgroups folder.
+
+The folder will open and list each top hierarchy of Usenet's newsgroups as another series of folders. Scroll through the list, and continue to click open folders until you reach a desired newsgroup, such as alt.os.linux.caldera. The newsgroup will appear, as shown in Figure 12.7.
+
+### FIGURE 12.7
+
+The knr client retrieves a list of newsgroups from your ISP and displays them in a hierarchy of folders.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_301_0.png)
+
+Click and highlight a newsgroup name and then press the Subscribe button from knr's menu bar. The small, blank document icon of the newsgroup will change to a document with a small quill attached. Repeat this step to build your list of subscribed newsgroups. The next time you start knr, your newsgroups will appear in the Subscribed folder.
+
+To retrieve all available messages in the newsgroup, double-click the newsgroup name. The knr main newsreading window will appear after all unread messages have been retrieved and will show a list of articles (messages). If you click an article, its text will appear in the lower half of the newsreading window, as shown in Figure 12.8.
+
+### FIGURE 12.8
+
+The knr newsreading window features scroll bars and a point-and-click interface for reading, replying to, or following up on newsgroup articles.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_302_0.png)
+
+The numerous buttons in the window's menu bar let you
+
+- Navigate through the newsgroup's articles
+- Search for subjects
+- Print
+- Save to disk
+- Reply to by email
+- Follow up with a post
+- Reply and follow up
+- Forward by email
+- Mark as read or unread
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_302_1.png)
+
+Click your mouse button on the Sender, Date, Lines, or Subject column headings to sort the article list.
+
+## Reading Usenet News with Netscape Discussions
+
+Without a doubt, one of the most popular Internet software suites for OpenLinux is Netscape Communicator. You can use the Netscape Discussions component of Communicator to read Usenet news. If you're using KDE, click the Netscape icon in your desktop's panel to start Netscape, and then select the Communicator menu and click the Collabra Discussions menu item.
+
+You can also start Netscape and jump right into Discussions from the command line of a terminal window by using the netscape command and the -news option:
+
+```
+# netscape -news &
+```
+
+After you press Enter, the Discussions window will appear. It looks similar to Netscape's Messenger, as shown in Figure 12.9.
+
+### FIGURE 12.9
+
+Before configuration to read Usenet news, Netscape Discussions looks very similar to Netscape's Messenger, or email window.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_303_0.png)
+
+To configure Discussions to read news, first Open the Preferences menu and then click Preferences. Next, in the dialog shown in Figure 12.10, click the Groups Server under the Mail and Groups list item. Type the name of your ISP's news server, and specify the directory you'd like to use to save newsgroups messages. When finished, click OK.
+
+### FIGURE 12.10
+
+The Preferences dialog is where you set the name of your ISP's news server and your news directory.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_304_0.png)
+
+You'll be returned to the Discussions window. To get a list of newsgroups from your ISP, click the Join Groups button in the window's menu bar. A newsgroup dialog will appear, as shown in Figure 12.11. Make sure your ISP's news server is selected at the bottom of the dialog and then click the Get Discussion Groups button.
+
+### FIGURE 12.11
+
+The newsgroup dialog is used to retrieve and subscribe to various Usenet newsgroups.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_304_1.png)
+
+Discussions will retrieve the list of newsgroups available from your ISP. This operation, similar to that for knr, might take some time. When Discussions finishes, you'll see a list of newsgroups, sorted by hierarchy. Scroll through the list and open folders until you reach a newsgroup you like. Next, click the newsgroup and then click the Join button to subscribe. A small blue checkmark will appear to right of the newsgroup name. Repeat this step until you have subscribed to the desired number of groups. When finished, click the OK button.
+
+> Instead of clicking the Join button, you can click the tiny ball to the right of each newsgroup name to make the checkmark appear and subscribe to the group.
+
+You're returned to the main Discussions window. Click the small plus sign (+) next to the name of your ISP's news server in the list of folders in the window. The list of your subscribed (joined) groups will appear. To retrieve articles for a newsgroup, double-click the newsgroup's name in the list. Discussions will launch the newsreading window with the list of articles for the group, as shown in Figure 12.12.
+
+### FIGURE 12.12
+
+The Discussions newsreading window lists each newsgroups articles in a scrolling list.
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_305_0.png)
+
+Use the buttons on the newsreading window's menu bar during your group session.

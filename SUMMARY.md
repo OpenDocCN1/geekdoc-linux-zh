@@ -1893,6 +1893,7 @@
 +   [Sams 24 小时自学 GNOME](docs/sams-teach-yourself-gnome-in-24-hours-sams-teach-yourself-in/README.md)
 +   [Sams 21 天学会 GTK+ 编程](docs/sams-teach-yourself-gtk-programming-in-21-days-teach-yoursel/README.md)
 +   [10 分钟学会 Linux 入门指南](docs/sams-teach-yourself-linux-in-10-minutes/README.md)
++   [Sams 24小时自学Linux（第2版）](docs/sams-teach-yourself-linux-in-24-hours-2nd-edition/README.md)
 +   [Sams 24 小时学会 LINUX 第一版](docs/sams-teach-yourself-linux-in-24-hours-first-edition/README.md)
 +   [Sams 24 小时学会 Linux 编程 [电子资源]](docs/sams-teach-yourself-linux-programming-in-24-hours-electronic/README.md)
 +   [Sams 24 小时教你 Linux 安全基础](docs/sams-teach-yourself-linux-security-basics-in-24-hours-sams-t/README.md)

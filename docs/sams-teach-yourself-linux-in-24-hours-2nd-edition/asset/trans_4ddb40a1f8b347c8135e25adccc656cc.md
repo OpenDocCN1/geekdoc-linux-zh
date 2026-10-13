@@ -1,0 +1,161 @@
+
+shell 为每个输入和输出文件分配一个文件编号。对于标准输入，编号为零（0）。对于标准输出，编号为一（1），对于标准错误（程序通常发送错误消息的地方），编号为二（2）。了解这一点后，你可以静默运行 cpio，并将任何错误发送到文件。可以通过组合标准输出重定向操作符和标准错误的文件编号来实现，如以下示例所示。
+
+```
+# cpio -o < trashfiles.txt >trash.cpio 2>cpio.errors
+# cat cpio.errors
+cpio: /tmp/trash/file3: No such file or directory
+1 block
+```
+
+如你所见，cpio 命令将其错误发送到了名为 cpio.errors 的文件中，而这些错误通常会发送到标准错误输出（你的显示器）。
+
+通常，每次将输出重定向到文件时，要么创建指定的文件，要么如果文件已存在，则覆盖该文件，其先前内容将不可逆地丢失。
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_146_0.png)
+
+> 你应该谨慎使用文件重定向。如果将输出重定向到现有文件，你将丢失原始文件，这可能不是你想要的。
+
+如果你想保留文件原始内容，可以使用连接（>>），或追加，重定向操作符将程序的输出追加到文件中：
+
+```
+# cpio -o < trashfiles.txt >trash.cpio 2>>cpio.errors
+```
+
+该命令行保存 cpio.errors 文件的先前内容，并将任何新错误追加到文件末尾。这种方法在运行 cpio 命令时保留错误日志。如果为 Linux 启用了系统日志记录，就会使用此方法。查看（作为 root 操作员）位于 /var/log 目录下的名为 messages 的文件内容。
+
+如果你还记得第 4 小时“阅读和导航命令”中的简单 cat 命令文本编辑器示例，你会记得标准输出重定向操作符与 cat 命令一起使用，从终端读取输入以创建文本文件：
+
+```
+# cat >file.txt
+this is a line
+this is another line
+EOF
+# cat file.txt
+this is a line
+this is another line
+```
+
+文件结束符，或 EOF，用于关闭文件，通过按住 Ctrl 键并按下 D 键输入。通过使用 <<，或 here，重定向操作符为此简单编辑器添加新功能，该操作符告诉 shell EOF 字符是紧跟在 << 操作符之后的字符：
+
+```
+# cat >file.txt <<
+> This is a line of text.
+> This is another line of text.
+# cat file.txt
+This is a line of text.
+This is another line of text.
+```
+
+请注意，在单独一行输入句点（.）后文件即关闭，这比使用控制键组合关闭文件更方便。你可以使用任何字符或字符组合来表示 EOF。
+
+现在尝试使用 here 操作符通过结合 egrep 命令（在第 5 小时“操作和搜索命令”中讨论）和输入重定向来构建一个简单、独立的数据库文件。首先，使用你喜欢的文本编辑器（如随 pine 邮件程序提供的 pico）创建一个名为 db 的文件。输入地址列表，然后通过在开头放置 egrep 命令并在文件末尾放置结束输入字符字符串来包装列表。创建文件如下：
+
+```
+# pico db
+```
+
+![](img/b5a8a94bdbf7778e1f1f2a5ed6c74e27_147_0.png)
+
+> pico 编辑器可能很容易成为你 OpenLinux 的最爱文本编辑器，因为它易于使用、速度快，并且在保存文本文件时极其安全。有关这个很棒的小编辑器的详细信息，请参阅第 14 小时“文本处理”。
+
+接下来，输入 egrep 命令，后跟简短的地址列表，并以匹配 here 操作符的方式结束文件，如下所示：
+
+```
+egrep -i $1 <<zzzz
+Debby, 275 Collins Rd., Vestal NY 13850
+Cathy, 1001 N. Vermont St., Arlington, VA 22003
+Scotty, 2004 N. 16th St., Arlington, VA 22001
+Bill, 4000 N. Pennsylvania Ave., Washington, DC 10000
+Fred, Slip 417, N. Woodward Ave., Boca Raton, FL 46002
+zzzz
+```
+
+通过输入 Ctrl+X 保存文件。最后，使用 chmod 命令使文本文件成为可执行程序，如下所示：
+
+```
+# chmod +x db
+```
+
+这创建了一个简短的地址数据库。通过输入 db，后跟姓名、城市、州或邮政编码来测试你的数据库，如下所示：
+
+```
+# db deb
+Debby, 275 Collins Ave., Vestal NY 13850
+```
+
+数据库通过使用 egrep 命令读取文件直到结束输入字符串 zzzz 来工作。-i 命令行选项告诉 egrep 命令不区分大小写字符。$1 字符串是一个 shell 变量（将在下一节讨论），表示要传递给 egrep 命令的命令行参数。
+
+shell 的输入和输出重定向可以用多种不同的方式使用。本文继续讨论，并介绍 shell 变量并展示一些自定义 shell 的实用技巧。
+
+## 自定义你的 Shell
+
+新术语 当你使用 shell 时，你是在包含环境变量的环境中运行 shell。环境变量是预定义的值或路径名，位于你的主目录和 /etc 目录下的各种资源文本文件中。对于 bash shell，默认的系统范围环境变量在 /etc/profile 文件中定义，而个人设置可以在主目录中的 .bashrc 文件中找到。
+
+有许多不同的环境变量。使用 printenv 或 set 命令查看当前使用的变量列表：
+
+```
+# printenv
+...
+PATH=/usr/local/bin:/bin:/opt/kde/bin:/usr/bin:.:/usr/X11R6/bin:/home/bball/bin
+HOME=/home/bball
+SHELL=/bin/bash
+...
+```
+
+本小时不列出你可能为 OpenLinux shell 定义的所有环境变量，但其中最重要之一是 $PATH 变量。该变量告诉 shell 在哪里查找可执行程序。没有 $PATH，你必须输入命令的完整路径或目录层次结构才能运行程序。例如，如果你想运行 ifconfig 命令来检查网络连接状态，你可能会首先尝试在命令行上输入其名称：
+
+```
+# ifconfig
+bash: ifconfig: command not found
+# whereis ifconfig
+ifconfig: /sbin/ifconfig
+```
+
+如你所见，这并不意味着 ifconfig 命令不存在或未安装在你的系统上；只是你的 shell 不知道在哪里找到该程序。要运行 ifconfig 命令，你可以在命令前输入完整路径名，但如果你需要重复使用此程序，请将其目录包含在 shell 的 $PATH 环境变量的已知路径列表中。
+
+通过在命令行上使用 bash shell 的 export 命令（保存新的变量定义并使其可用于你的 shell）将 /sbin 目录添加到你的 $PATH 变量中来执行此操作：
+
+```
+# ifconfig
+bash: ifconfig: command not found
+# PATH=$PATH:/sbin ; export PATH
+# ifconfig
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Bcast:127.255.255.255  Mask:255.0.0.0
+          UP BROADCAST LOOPBACK RUNNING  MTU:3584  Metric:1
+          RX packets:436 errors:0 dropped:0 overruns:0
+          TX packets:436 errors:0 dropped:0 overruns:0
+```
+
+如你所见，你的 shell 现在知道在哪里找到 ifconfig 命令。但这是临时的，仅在你登录或运行特定终端时有效。通过将路径添加到主目录中的 .bash_profile 文件，或如果你是 root 操作员并希望所有用户受益，则添加到 /etc 目录下的 profile 文件，使此更改在每次登录时生效。
+
+在 .bash_profile 文件中查找以下行：
+
+```
+PATH=$PATH:$HOME/bin
+```
+
+使用文本编辑器，添加 /sbin 目录：
+
+```
+PATH=$PATH:$HOME/bin:/sbin
+```
+
+如果你是 root 操作员，请在 /etc 目录下的 profile 文件中的以下行添加 /sbin 目录：
+
+```
+PATH="/bin:/sbin:/usr/bin"
+```
+
+完成这些更改后，使用 bash shell 的 source 命令读取新的 $PATH，如下所示：
+
+```
+# source /etc/profile
+```
+
+在 profile 文件中，你还会看到类似以下的行：
+
+```
+export PS1="[\u@\h \W]\$ "
+```
