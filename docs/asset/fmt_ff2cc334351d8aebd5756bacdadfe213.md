@@ -1,0 +1,136 @@
+
+要修改 `pkcsslotd` 守护进程的运行时行为，请使用 `pkcscanf` 实用工具。此工具允许您显示和配置守护进程的状态，以及列出和修改当前配置的 `插槽` 和 `令牌`。例如，要显示有关 `令牌` 的信息，请发出以下 command（请注意，所有需要与 `pkcsslotd` 守护进程通信的非 root 用户必须属于 `pkcs11` 系统组）：
+
+```
+~]$ pkcsconf -t
+```
+
+查看 `pkcsconf(1)` 手册页以获取 `pkcsconf` 工具可用参数的列表。
+
+![](img/c62903c5bdbf5bcc6bc0ae8373bee5f4_112_0.png)
+
+> 请记住，只有完全受信任的用户才应被赋予 `pkcs11` 组的成员资格，因为该组的所有成员都有权阻止其他 `openCryptoki` 服务用户访问已配置的 `PKCS#11` 令牌。该组的所有成员还可以以 `openCryptoki` 其他用户的权限执行任意代码。
+
+### 4.9.4. 使用智能卡为 OpenSSH 提供凭证
+
+智能卡是一种采用 USB 闪存盘、MicroSD 卡或智能卡外形规格的轻量级硬件安全模块。它提供了可远程管理的加密密钥存储库。在 Red Hat Enterprise Linux 7 中，OpenSSH 支持使用智能卡进行身份验证。
+
+要将智能卡与 OpenSSH 配合使用，请将卡中的公钥存储到 `~/.ssh/authorized_keys` 文件中。在客户端上安装由 `opensc` 软件包提供的 `PKCS#11` 库。`PKCS#11` 是一种公钥密码标准，定义了用于称为令牌的加密设备的应用程序编程接口（API）。以 `root` 身份输入以下命令：
+
+```
+~]# yum install opensc
+```
+
+#### 4.9.4.1. 从卡中检索公钥
+
+要列出卡上的密钥，请使用 `ssh-keygen` 命令。使用 `-D` 指令指定共享库（以下示例中为 OpenSC）。
+
+```text
+~]$ ssh-keygen -D /usr/lib64/pkcs11/opensc-pkcs11.so
+ssh-rsa AAAAB3NzaC1yc[...] +g4Mb9
+```
+
+#### 4.9.4.2. 在服务器上存储公钥
+
+要在远程服务器上启用使用智能卡的身份验证，请将公钥传输到远程服务器。可以通过将检索到的字符串（密钥）复制并粘贴到远程 shell 中，或者将密钥存储到文件（以下示例中为 `smartcard.pub`）并使用 `ssh-copy-id` 命令来完成此操作：
+
+```text
+~]$ ssh-copy-id -f -i smartcard.pub user@hostname
+user@hostname's password:
+
+Number of key(s) added: 1
+```
+
+现在尝试使用 `"ssh user@hostname"` 登录该机器，并检查是否仅添加了所需的密钥。
+
+在没有私钥文件的情况下存储公钥需要使用 `SSH_COPY_ID_LEGACY=1` 环境变量或 `-f` 选项。
+
+#### 4.9.4.3. 使用智能卡上的密钥验证到服务器
+
+OpenSSH 可以从智能卡读取你的公钥，并使用你的私钥执行操作，而不暴露密钥本身。这意味着私钥不会离开卡。要使用智能卡进行身份验证以连接到远程服务器，请输入以下命令并输入保护卡的 PIN：
+
+```
+[localhost ~]$ ssh -I /usr/lib64/pkcs11/opensc-pkcs11.so `hostname`
+Enter PIN for 'Test (UserPIN)':
+[hostname ~]$
+```
+
+将 `hostname` 替换为你要连接的实际主机名。
+
+为了在下次连接到远程服务器时避免不必要的输入，请将 `PKCS#11` 库的路径存储在你的 `~/.ssh/config` 文件中：
+
+```
+Host `hostname`
+        PKCS11Provider /usr/lib64/pkcs11/opensc-pkcs11.so
+```
+
+通过运行不带任何额外选项的 `ssh` 命令来连接：
+
+```
+[localhost ~]$ ssh `hostname`
+Enter PIN for 'Test (UserPIN)':
+[hostname ~]$
+```
+
+#### 4.9.4.4. 使用 `ssh-agent` 自动化 PIN 登录
+
+设置环境变量以开始使用 `ssh-agent`。在大多数情况下，你可以跳过此步骤，因为在典型会话中 `ssh-agent` 已经在运行。使用以下命令检查你是否可以连接到你的身份验证代理：
+
+```
+~]$ ssh-add -l
+Could not open a connection to your authentication agent.
+~]$ eval `ssh-agent`
+```
+
+为了避免每次使用此密钥连接时都输入 PIN，请通过运行以下命令将卡添加到代理中：
+
+```
+~]$ ssh-add -s /usr/lib64/pkcs11/opensc-pkcs11.so
+Enter PIN for 'Test (UserPIN)':
+Card added: /usr/lib64/pkcs11/opensc-pkcs11.so
+```
+
+要从 `ssh-agent` 中移除卡，请使用以下命令：
+
+```
+-]$ ssh-add -e /usr/lib64/pkcs11/opensc-pkcs11.so
+Card removed : /usr/lib64/pkcs11/opensc-pkcs11.so
+```
+
+**注意**
+
+FIPS 201-2 要求个人身份验证（PIV）卡持卡人采取明确的用户操作，作为使用存储在卡上的数字签名密钥的条件。OpenSC 正确地执行了此要求。
+
+但是，对于某些应用程序，要求持卡人在每次签名时都输入 PIV 是不实际的。要缓存智能卡 PIN，请移除 `/etc/opensc-x86_64.conf` 中 `pin_cache_ignore_user_consent = true;` 选项前的 `#` 字符。
+
+有关更多信息，请参阅 **PIV 数字签名密钥的持卡人身份验证（NISTIR 7863）** 报告。
+
+#### 4.9.4.5. 附加资源
+
+设置你的硬件或软件令牌的过程在 **Red Hat Enterprise Linux 7 中的智能卡支持** 文章中进行了描述。
+
+有关用于管理和使用智能卡及类似 `PKCS#11` 安全令牌的 `pkcs11-tool` 实用程序的更多信息，请参阅 `pkcs11-tool(1)` man 页。
+
+### 4.9.5. 受信任和加密的密钥
+
+*受信任和加密* 密钥是由内核生成的变长对称密钥，它们利用内核密钥环服务。密钥始终以未加密形式不出现在用户空间的事实意味着可以验证其完整性，进而意味着它们可以被例如扩展验证模块（EVM）使用来验证和确认运行系统的完整性。用户级程序只能以加密块的形式访问这些密钥。
+
+受信任的密钥需要硬件组件：*可信平台模块*（TPM）芯片，它用于创建和加密（密封）密钥。TPM 使用称为*存储根密钥*（SRK）的 2048 位 *RSA* 密钥来密封密钥。
+
+除此之外，受信任的密钥也可以使用 TPM 的特定 *平台配置寄存器*（PCR）值集进行密封。PCR 包含一组反映 BIOS、引导加载程序和操作系统的一致性管理值。这意味着 PCR 密封的密钥只能由创建加密它们的同一精确系统上的 TPM 解密。然而，一旦加载了 PCR 密封的受信任密钥（添加到密钥环中），并且验证了其相关的 PCR 值，就可以使用新的（或未来的）PCR 值对其进行更新，例如，以便可以引导新的内核。单个密钥也可以保存为多个块，每个块具有不同的 PCR 值。
+
+加密密钥不需要 TPM，因为它们使用内核 *AES* 加密，这使得它们比受信任的密钥更快。加密密钥是使用内核生成的随机数创建的，并在导出到用户空间块时由主密钥加密。此主密钥可以是受信任的密钥或用户密钥，这是它们的主要缺点——如果主密钥不是受信任的密钥，那么加密密钥的安全性仅与用于加密它的用户密钥相同。
+
+#### 4.9.5.1. 处理密钥
+
+在进行任何密钥操作之前，需要加载相关的内核模块。对于受信任的密钥，是 `trusted` 模块；对于加密密钥，是 `encrypted-keys` 模块。作为 `root` 用户，使用以下命令同时加载这两个模块：
+
+```bash
+~]# modprobe trusted encrypted-keys
+```
+
+可以使用 `keyctl` 实用程序创建、加载、导出和更新受信任和加密的密钥。有关使用 `keyctl` 的详细信息，请参阅 keyctl(1)。
+
+**注意**
+
+为了使用 TPM（例如用于创建和密封受信任的密钥），需要启用并激活它。这通常可以通过机器 BIOS 中的设置或使用 `tpm-tools` 实用程序软件包中的 `tpm_setactive` 命令来实现。此外，需要安装 `TrouSers` 应用程序（`trousers` 软件包），并且运行 `TrouSers` 套件的一部分 `tcsd` 守护进程来与 TPM 通信。
