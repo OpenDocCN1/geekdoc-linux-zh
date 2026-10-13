@@ -1,0 +1,153 @@
+
+- J.D.C. J. Donald Capra: 免疫球蛋白
+- J.D.C. John De Cicco: 非欧几里得几何
+- J.D.Co. James D. Cobine
+- J.D.Coh. Jerry D. Cohen
+- J.D.Ga. Joe D. Gamble
+- J.D.H. J. Donald Harris
+- J.D.Hu. J. D. Hurley
+- J.D.J. James D. Johnston
+- J.D.Jo. Jon D. Johnson
+- J.D.L. J. Dennis Lawrence
+- J.D.Ma. J. D. MacDonald
+- J.D.Me. James D. Metzger
+- J.D.P. James D. Palmer
+- J.D.Ro. J. David Roberston
+- J.D.S. James D. Scheffler
+- J.D.Si. John D. Singleton
+- J.D.T. John D. Turner
+- J.D.Tr. James D. Tollinger
+- J.E. John Ethirich
+- J.El. Joseph Elgomoelayer
+- J.Ev. John Everett, Jr.
+- J.E.A. James E. Anners, Sr.
+- J.E.B. James E. Bayfield
+- J.E.Ba. John E. Banks
+- J.E.Be. James E. Beck
+- J.E.Ei. John E. Eigel
+- J.E.Bl. James E. Blankenship
+- J.E.D.B. John E. D. Ball
+- J.E.E. James E. Eckewelder
+- J.E.F. James E. Ferrell
+- J.E.F. J. E. Fischer
+- J.E.G. John E. Glickon
+- J.E.Gr. Jonathan E. Gridalay
+- J.E.Gu. James E. Gunckel
+- J.E.H. John E. Haines
+- J.E.Ho. J. Edgar Hoover
+- J.E.Jo. James E. Johnson
+
+## 贡献者
+- J.E.K. Jessica Elzea Kogel；高岭土
+- J.E.K. John E. Kutzbach：气候历史
+- J.E.Lo. James E. Loughlin
+- J.E.Ma. James E. May
+- J.E.McC. John E. McCarthy
+- J.E.N. James E. Nordman
+- J.E.O. John E. Oliver
+- J.E.O'L. John E. O'Leary
+- J.E.R. Johannes F. Rijnsdorp
+- J.E.Ro. James E. Rodman
+- J.E.S. James E. Schindler
+- J.E.Sc. James E. Scott, Jr.
+- J.E.U. John E. Ullmann
+- J.E.We. J. E. Webb
+- J.E.Wi. Judith E. Winstein
+- J.E.Wo. James E. Woodall
+- J.Fa. Joseph Farrell
+- J.Fi. John Fiore
+- J.Fo. Joseph Ford
+- J.F.A. John F. Aloia
+- J.F.B. Joseph F. Burnett
+- J.FBa. J. F. Bash
+- J.F.C. James F. Connors
+- J.FCl. John F. Clark
+- J.F.Cr. James F. Crow
+- J.F.Di. J. F. Dillon, Jr.
+- J.F.E. John F. Endicott
+- J.F.F. James F. Ferry：柳树
+- J.F.F. James F. Fitzsimons；鸡蛋（家禽）
+- J.F.H. John F. Hahn
+- J.F.Heb. J. F. Herbst
+- J.F.Hu. John F. Hubert
+- J.F.Ja. John F. Jarvis
+- J.F.L. J. F. Loneragan
+- J.FLe. Justinus F. Lehmann
+- J.FLi. Josef F. Liebmann
+- J.F.M. Jose F. Maldonado-Moll
+- J.FMcM. John F. McMahon
+- J.F.McP. Joseph F. McPartland
+- J.F.Me. John F. Meyer
+- J.F.P. J. F. Parr；肥料
+- J.F.P. James F. Price；地理学等
+- J.F.Pr. John F. Presley
+- J.F.R. John F. Reintjes
+- J.F.Ri. James F. Riordan
+- J.F.S. James F. Scott
+- J.F.Se. Joseph F. Seibald
+- J.F.T. John F. Timoney
+- J.F.W. John F. Wallace
+- J.F.W. Jonathan F. Weil
+- J.F.Web. Jacqueline F. Webb
+- J.G. John Garcia
+- J.Ga. John Gamble；安山岩
+- J.Ga. John Garland；伐木
+- J.Ge. John Gergely
+- J.Gei. Jon Geist
+- J.Ger. Janos Gertler
+- J.Gi. J. Gijksuenen；恒化器
+- J.Gi. Jacques Gilloeteau；胆囊
+- J.Gr. Jerry Grey
+- J.Gr. Jack Greenberg
+- J.G.B. James B. Blencoe
+- J.G.Br. John G. Brooks
+- J.G.C. J. G. Carter
+- J.G.D. John G. Dorsey
+- J.G.F. J. G. Futral
+- J.G.H. James G. Horfall
+- J.G.J. James G. Johnson
+- J.G.Ja. I. Gordon Jarvis
+- J.G.L. John G. Liou
+- J.G.Le. John G. Leonard
+- J.G.Ma. John G. Maicey
+- J.G.Pe. John G. Peacey
+- J.G.S. James G. Speight
+- J.Han. John Hansen
+- J.Hal. John Halterl
+- J.Ham. John Hamilton
+- J.Hard. John Hardy
+- J.Hare. Jonathan Hare
+- J.Har. Jack Harstein
+- J.He. Jeff Fester
+- J.Ho. James Hodgdon
+- J.Hu. Jack Huelser
+- J.Hur. J. Hurli
+- J.H.Bi. Jesse H. Bidan
+- J.H.C. Joseph H. Camin
+- J.H.Ca. James H. Calderwood
+- J.H.Car. Jack H. Carlson
+- J.H.Cl. J. Harold Clarke
+- J.H.Co. J. H. Collins
+- J.H.Cr. John H. Crowe
+- J.H.D. John H. Davis
+- J.H.F. J. Homer Ferguson
+- J.H.Fe. Janos H. Fenderer
+- J.HFi. Joseph H. Field
+- J.H.G. Joseph H. Golden
+- J.H.H. John H. Hamilton
+- J.HHi. Joel H. Hildebrand
+- J.H.L. Jean H. Langerhein
+- J.H.Le. John H. Lewis
+- J.H.Lo. John H. Lockhead
+- J.H.Ma. John H. Madison
+- J.H.Me. John H. Merod
+- J.H.Na. James H. Naaland
+- J.H.O. John H. Ostrom
+- J.H.S. James H. Schulman
+- J.H.Sa. John H. Sayler
+- J.H.Sa. John H. Shergold
+- J.H.T. J. Herbert Taylor
+- J.H.U. James H. Underwood
+- J.H.W. J. H. Walker
+- J.H.Z. John H. Zikfac
+- J.I.K. Joseph I. Karash

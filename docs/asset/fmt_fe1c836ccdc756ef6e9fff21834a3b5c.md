@@ -1,0 +1,53 @@
+
+- 图 5-5: Thunderbird 电子邮件客户端 163
+- 图 5-6: Thunderbird 电子邮件账户检测 164
+- 图 5-7: KMail 166
+- 图 5-8: Wine 下的 Adobe Digital Editions 172
+- 图 5-9: Wine 下的 Mobipocket 电子书读者 172
+- 图 5-10: Kindle (Kindle for PC) 电子书读者注册 173
+- 图 5-11: Kindle (Kindle for PC) 电子书读者 173
+- 图 5-12: 使用 nano 编辑 176
+
+- 图 6-1: GNOME 图像查看器：Eye of GNOME 185
+- 图 6-2: GIMP 186
+- 图 6-3: Inkscape 186
+- 图 6-4: GNOME 图像查看器和安装解码器 187
+- 图 6-5: KDE 系统设置和安装解码器 188
+- 图 6-6: KDE 桌面 188
+- 图 6-7: Rhythmbox 192
+- 图 6-8: Juk 192
+- 图 6-9: Totem 播放器 194
+- 图 6-10: KDE 桌面 194
+- 图 6-11: KDE 播放器 (VideoLAN) 195
+- 图 6-12: VLC 播放器 (VideoLAN) 195
+- 图 6-13: Totem 插件 196
+- 图 6-14: Caffeine 197
+- 图 6-15: Caffeine TV 197
+- 图 6-16: 音频设置 200
+- 图 6-17: 音频设置硬件选项卡 201
+- 图 6-18: Pulse 输入 201
+- 图 6-19: Pulse 输出 202
+- 图 6-20: Pulse 应用 202
+- 图 6-21: 音频设置硬件选项卡，多个设备 202
+- 图 6-22: 音频设置输出选项卡，环绕声设置 203
+- 图 6-23: 音频设置硬件选项卡，数字音频设置 203
+
+- 图 7-1: Firefox 浏览器 208
+- 图 7-2: Firefox 设置 210
+- 图 7-3: Firefox 插件管理 211
+- 图 7-4: Chrome 浏览器 (Google) 212
+- 图 7-5: Konqueror 213
+- 图 7-6: 带有分视图和侧边栏的 Konqueror 214
+- 图 7-7: Transmission 客户端 216
+- 图 7-8: Transmission 客户端属性 217
+- 图 7-9: GNOME FTP 访问，连接服务器和文件管理器 219
+- 图 7-10: Pidgin 好人列表 223
+- 图 7-11: Ekiga VoIP 224
+- 图 7-12: Skype VoIP 和面板图标 226
+- 图 7-13: KDE 博客 226
+- 图 7-14: Google Earth 227
+
+- 图 8-1: 管理员权限验证对话框 233
+- 图 8-2: 日期设置：system-config-date，网络时间 244
+- 图 8-3: 日期设置：system-config-date，网络时间 244
+- 图 8-4: KDE 任务调度器 249
