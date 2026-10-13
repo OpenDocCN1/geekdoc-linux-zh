@@ -1,0 +1,72 @@
+
+```
+domain: siipp.com
+status: lock
+owner: Anne Mitchell
+organization: Law Offices of Anne P. Mitchell
+email: shedevil@appmail.com
+address: 520 S. Murphy Ave.
+city: Sunnyvale
+state: CA
+postal-code: 94006
+country: US
+phone: 408-244-1204
+admin-c: shedevil@appmail.com#0
+tech-c: shedevil@appmail.com#0
+billing-c: shedevil@appmail.com#0
+server: ns.siipp.com.64.165.36.235
+server: ns.nsee.com
+created: 2003-08-17 06:59:17 UTC
+modified: 2004-08-24 18:30:54 UTC
+expires: 2005-08-17 02:58:58 UTC
+```
+
+# 与世界交互
+
+source: joker.com live whois service
+
+query-time: 0.065194
+
+db-updated: 2005-05-17 17:25:04
+
+这里最重要的字段在最后。注意，你现在可以看到这个位于加利州阳光市（Sunnyvale）的特定域名所有者的姓名、地址和联系电子邮件地址。
+
+你自己试一下：使用 `whois com` 看看我是否真的拥有该域名。
+
+与全球用户来回发送电子邮件是学习 Unix 最令人兴奋和有趣的部分之一。例如，我经常阅读杂志文章，作者会在文中列出一个电子邮件地址。如果我对文章有疑问或代码，发送一条消息是一项简单的任务。许多杂志，从《犹他读者》（Utah Reader）到万事达卡（MasterCard），甚至为编辑部列出了电子邮件地址。《华尔街日报》和《新时报》的记者也都在互联网上。
+
+## 任务 20.4：更智能的电子邮件替代方案，elm
+
+正如行编辑器与 `vi` 等屏幕编辑器相比显得相形见绌，Berkeley 与 Elm 邮件系统（或 `elm`）相比也显得逊色一筹。尽管 Elm 邮件系统并非在所有的 Unix 系统上都可用，但它被广泛发布，如果你的系统中没有它，你系统的供应商应该能够提供帮助。
+
+`elm` 的基本前提是用户应该关注消息本身，而不是媒介。重点放在显示人类信息上。展示它如何运作的最好方法就是直接开始尝试！
+
+我可能对 `elm` 有点偏见，因为我是该程序的作者。然而，该设计的广泛接受表明，在寻求比 Berkeley Mail 更友好的替代方案方面，我并不孤单。
+
+另一个具有非常相似界面的邮件程序是 Pine。如果你可以同时使用 Elm 和 Pine，我建议你选择 Elm，因为它让你能更高效地处理邮件。不过，在决定之前，请阅读课程的最后一节以更多更多关于 Pine 信息！
+
+1. 要启动 Elm 邮件系统，输入 `elm`：
+
+```
+$ elm
+```
+
+![](img/9187b56a3187b3f4de32441e7ff5d7a5_420_0.png)
+
+## 第 20 小时：通过电子邮件通信
+
+屏幕清空并替换为以下内容：
+
+```
+Mailbox is '/usr/spool/mail/taylor/boom. with 15 messages [ELM]
+--> 1  Dec 8   taylor@notemail (27)
+2  Dec 8   taylor@notemail (52)
+3  Dec 8   taylor@notemail (24)
+4  Dec 8   taylor@notemail (69)
+5  Dec 8   taylor@notemail (37)
+6  Dec 8   taylor@notemail (57)
+7  Dec 8   taylor@notemail (29)
+8  Dec 8   taylor@notemail (31)
+9  Dec 8   taylor@notemail (28)
+10 Dec 8   taylor@notemail (14)
+```
