@@ -1,0 +1,7 @@
+You can allow access to Apache through ports 80 and 443, to some or all systems with **iptables**-command-based firewalls. Apache files and directories are associated with several different SELinux contexts. Different Apache functions may be regulated by a variety of different SELinux boolean settings.
+
+The **Listen** and **NameVirtualHost** directives direct traffic to the Apache web server to ports 80 and 443, along with specified virtual hosts. Host- and user-based security can also be set up within Apache configuration files with commands like **htpasswd** and directives such as **Allow** and **Deny**.
+
+With the right security options, user- and group-managed directories are possible. In fact, there's a commented stanza that can enable directories in user home directories. Group-managed directories are somewhat more complex, combining aspects of Apache-based user directories and shared group directories discussed in Chapter 8. Also in security, new certificates can be created for a specific host like www.example.org from the **/etc/pki/tls/certs** directory with a command like **genkey www.example.org**.
+
+The configuration of CGI content on an Apache web site is easier than it looks. In fact, detailed information on the process is included with Apache documentation, including a Perl script that you can use to confirm that the resulting configuration works.

@@ -1,0 +1,207 @@
+
+在 smb.conf 中，定义服务器整体属性的全局设置位于第一组注释之后，其中包括前面提到的与 SELinux 相关的注释。[global] 部分以下两行开始：
+
+```
+################ Global Settings ################
+[global]
+```
+
+现在检查随后的全局设置。首先，如果看到以下行
+
+```
+# -authconfig--start-line--
+```
+
+这意味着配置文件已被 authconfig 或 system-config-authentication 工具修改过。
+
+## 网络相关选项
+
+向下滚动到标题为的子节
+
+```
+# ---------------- Network Related Options ----------------
+```
+
+（在 RHEL 6 的早期版本中，“Network”一词实际被拼写错误为“Netwok”。）牢记这一点，查看全局设置部分中这一部分的每个指令。尽管名称如此，workgroup 变量指定的是工作组名称，或更常见的是域名称。但由于点对点工作组是首先开发的，因此 Samba 默认工作组是 WORKGROUP，这恰好是默认点对点工作组的旧名称。现在它被设置为 Microsoft Windows 7 的默认工作组：
+
+```
+workgroup = MYGROUP
+```
+
+随后出现的 server string 指令会成为在可见浏览列表中与系统 NetBIOS 名称一起显示的注释，其中 Samba 会用版本号替换 %v 变量：
+
+```
+server string = Samba Server Version %v
+```
+
+在此文件中为本地系统添加 NetBIOS 名称是个好主意。虽然限制为 15 个字符，但它可以与系统使用的主机名相同。这就是其他客户端在网络浏览列表中看到的内容，例如通过 Microsoft net view 命令或常规 Linux smbclient 命令显示的列表。
+
+```
+; netbios name = MYSERVER
+```
+
+如果本地系统连接到多个网络，可以使用 interfaces 指令指定它们，如下所示。当然，设备和网络地址应适当更改。
+
+```
+; interfaces = lo eth0 192.168.12.2/24 192.168.13.2/24
+```
+
+如果激活 hosts allow 指令，该操作可以限制对指定网络(s)的访问。以下默认值将限制对具有 192.168.12.0 和 192.168.13.0 网络 IP 地址的网络以及本地计算机（127.）的访问：
+
+```
+; hosts allow = 127. 192.168.12. 192.168.13.
+```
+
+以类似方式配置 hosts deny 指令也是可能的。通过此类指令，可以为 Samba 设置基于主机的安全性。在全局部分，此类安全将应用于整个服务器。您还可以在本章后面描述的各个共享目录的定义中使用 hosts allow 和 hosts deny 指令。
+
+## 日志选项
+
+下一节设置日志选项，如以下标签所示：
+
+```
+#---------- Logging Options ----------
+```
+
+如图所示的 log file 指令为连接到此 Samba 服务器的每台机器设置单独的日志文件，基于其机器名称（%m）。默认情况下，日志文件限制为 50KB。如注释所建议，超过给定大小的日志文件将被轮转。如果日志超过该大小，您仍会在 /var/log/samba 目录中看到它们，并带有 .old 扩展名。
+
+```
+# logs split per machine
+log file = /var/log/samba/%m.log
+# max 50KB per log file, then rotate
+max log size = 50
+```
+
+## 独立服务器选项
+
+以下部分基于作为独立服务器的配置设置安全选项：
+
+```
+#---------- Standalone Server Options ----------
+```
+
+security 指令可能有点令人困惑。如图所示的指令标准值意味着连接检查本地密码数据库。在将此计算机配置为域控制器（DC），具体为主要域控制器（PDC）时是合适的。
+
+```
+security = user
+```
+
+另外，要将此计算机配置为域上的成员服务器，请使用来自 DC 的密码数据库。奇怪的是，在这种情况下，您将替换为以下命令：
+
+```
+security = domain
+```
+
+![](img/9139201cfcaf4292284a0eed074928e5_833_0.png)
+
+**_将 Linux 系统设置为在 Microsoft 域上共享目录的工作站时，您需要将计算机设置为该域的成员服务器。_**
+
+要将系统配置为 Active Directory 网络上的成员服务器，请替换为以下命令：
+
+```
+security = ads
+```
+
+另外，要使用来自非 DC 的另一台计算机的数据库，您将替换为以下命令：
+
+```
+security = server
+```
+
+最后，要将系统配置在不需要用户名的点对点工作组上，请替换为以下命令：
+
+```
+security = share
+```
+
+总结一下，有五种基本身份验证选项：**share**、**user**、**server**、**domain** 和 **ads**。
+
+现在将此指令重新聚焦于身份验证数据库。默认值为 **security = user**；在这种情况下，请确保您创建的 Samba 用户名和密码与网络上各个 Windows NT/2000/XP/Vista 系统上的匹配。如果数据库是本地的，可以是以下两种之一
+
+```
+passdb backend = smbpasswd
+```
+
+或
+
+```
+passdb backend = tdbsam
+```
+
+smbpasswd 数据库是本地的，存储在本地 /etc/samba 目录中。tdb sam 选项，即 Trivial Database Security Accounts Manager 的缩写，在 /var/lib/samba 目录中设置本地账户数据库。
+
+另外，对于 LDAP 等远程数据库，您可以激活以下指令。如果 LDAP 服务器位于远程系统上，则该统一资源标识符（URI）地址可以在此处包含。
+
+```
+passdb backend = ldapsam
+```
+
+如果您已设置 security = server 或 security = domain，您还希望使用密码服务器的名称或 IP 地址激活以下指令。或者，您可以用 * 替换 <NT-Server-Name>，以便 Samba 搜索密码服务器。
+
+```
+; password server = <NT-Server-Name>
+```
+
+如果您已设置 security = ads，您还希望激活以下指令以指定 Active Directory（AD）域，将 MY_REALM 替换为实际的 AD 域：
+
+```
+; realm = MY_REALM
+```
+
+## 域控制器选项
+
+以下部分支持将系统配置为域控制器，从以下注释开始：
+
+```
+#---------- Domain Controller Options ----------
+```
+
+配置为域控制器的 Samba 服务器需要额外的配置。简而言之，这些选项指定系统作为域主机的角色，即接收域登录请求的系统：
+; domain master = yes
+; domain logins = yes
+下一个命令按计算机和用户设置 Microsoft 命令行批处理文件。之后的命令将 Microsoft 用户配置文件存储在本地 Samba 服务器上。这意味着除非您有访问 Microsoft Windows 计算机的权限，否则这些命令无法在 Red Hat 考试中进行测试。由于我无法确定 Red Hat 考试的内容，我只能建议 Red Hat 可能不希望在考试期间提供单独的 Microsoft Windows 计算机。当然，Microsoft Windows 客户机虚拟机包含在 Red Hat 企业虚拟化课程的描述中。
+
+```
+# the login script name depends on the machine name
+; logon script = %m.bat
+# the login script name depends on the unix user used
+; logon script = %U.bat
+; logon path = \\%L\Profiles\%U
+```
+
+剩余的命令相当不言自明，作为添加和删除用户、组和机器账户的脚本。
+
+```
+; add user script = /usr/sbin/useradd %u -n -g users
+; add group script = /usr/sbin/groupadd %g
+; add machine script = /usr/sbin/adduser -n -c \
+"Workstation (%u)" -M -d /nohome -s /bin/false %u
+; delete user script = /usr/sbin/userdel %u
+; delete user from group script = /usr/sbin/userdel %u %g
+; delete group script = /usr/sbin/groupdel %g
+```
+
+## 浏览控制选项
+
+以下部分控制系统是否以及如何配置为浏览主机，该主机维护网络上资源的列表。相关指令以以下注释开始：
+
+```
+#---------- Browser Control Options ------------
+```
+
+除非 Samba 服务器被明确指定为本地浏览主机，
+
+```
+; local master = no
+```
+
+Samba 会像其他 Microsoft Windows 计算机一样参与浏览器选举，使用指定的 os level。
+
+```
+; os level = 33
+```
+
+另外，如果域控制器尚未被选为浏览主机，您可以使用 preferred master 命令使本地计算机更容易赢得浏览器选举：
+
+```
+; preferred master = yes
+```

@@ -1,0 +1,125 @@
+
+Red Hat 防火墙配置工具，它会在 /etc/sysconfig/iptables 配置文件中添加以下规则：
+
+```
+-A INPUT -m state --state NEW -m udp -p udp --dport 137 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp --dport 138 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT
+```
+
+换句话说，如表 15-2 所描述，涉及多个服务。你会注意到其中三个服务使用用户数据报协议（UDP），这是一种无连接协议。综合起来，这三个相关端口指定了通过 TCP/IP 的 NetBIOS 通信（NBT）。
+
+对于 Samba 客户端系统，只需打开端口 137 和 138。
+
+## 为 Samba 配置 SELinux 布尔值
+
+有若干指令与使 Samba 服务器在 targeted 模式下与 SELinux 协同工作相关，如表 15-3 所描述。其中只有一个布尔值（samba_export_all_cifs）默认启用。然而，你可能需要激活其中多个布尔值以支持不同的 Samba 功能。
+
+对于一些读者来说，这可能显得有些重复。然而，即使是许多 Linux 专家也并不完全理解 SELinux。例如，如果你想允许 Samba 与网络上的其他用户共享本地主目录，请运行以下命令：
+
+```
+# setsebool -P samba_enable_home_dirs 1
+```
+
+-P 确保更改在重启后仍然保留。
+
+在某些情况下，启用 samba_export_all_ro 或 samba_export_all_rw 布尔值是合适的，例如通过其他服务器共享的目录。例如，通过 Apache Web 服务器共享的文件必须标记为 httpd_sys_content_t 文件类型。
+
+### 表 15-2
+Samba 通信服务
+
+| Port/Protocol | Description |
+|---|---|
+| 137/UDP | NetBIOS 名称服务 |
+| 138/UDP | NetBIOS 数据报服务 |
+| 139/TCP | NetBIOS 会话服务 |
+| 445/TCP | Microsoft 目录服务，也称为 Samba over IP |
+
+### 表 15-3
+Samba SELinux 布尔值
+
+| Boolean | Description |
+|---|---|
+| allow_smb_anon_write | 支持向配置了 public_content_rw_t SELinux 设置的目录写入文件。 |
+| cdrecord_read_content | 允许 cdrecord 命令读取共享的 Samba（和其他网络）目录。 |
+| qemu_use_cifs | 与访问 CIFS 文件系统配合使用；默认启用。 |
+| samba_create_home_dirs | 支持创建主目录，通常为外部用户设置。 |
+| samba_domain_controller | 允许 Samba 作为域控制器用于身份验证管理。 |
+| samba_enable_home_dirs | 启用主目录的共享。 |
+| samba_export_all_ro | 设置对任何目录的只读访问，即使这些目录没有 samba_share_t 文件类型标签。 |
+| samba_export_all_rw | 设置对任何目录的读写访问，即使这些目录没有 samba_share_t 文件类型标签。 |
+| samba_run_unconfined | 支持从 /var/lib/samba/scripts 目录执行非限制脚本。 |
+| samba_share_fusefs | 允许 Samba 共享挂载到 fusefs 的文件系统，这是 Microsoft NTFS 文件系统的常见挂载方式。 |
+| samba_share_nfs | 启用 NFS 文件系统的共享。 |
+| use_samba_home_dirs | 支持使用远程服务器作为 Samba 主目录。 |
+| virt_use_samba | 允许虚拟机访问挂载到 CIFS 文件系统上的文件。 |
+
+## 为 Samba 配置 SELinux 文件类型
+
+通常，Samba 只能共享标记为 samba_share_t 文件类型的文件和目录。确实，如果启用了 samba_export_all_ro 或 samba_export_all_rw 布尔值，则不需要 samba_share_t 文件类型。然而，这会带来安全风险。
+
+因此在大多数情况下，你希望使用如下命令为目录（及其中的文件）启用所注明的 文件类型：
+
+```
+# chcon -R -t samba_share_t /share
+```
+
+此外，为了确保更改在 SELinux 重新标记后仍然保留，你需要在 /etc/selinux/targeted/contexts/files 目录中设置 file_contexts.local 文件，可使用如下命令：
+
+```
+# semanage fcontext -a -t samba_share_t /share
+```
+
+## Samba 守护进程
+
+在类 Microsoft 网络上共享目录和打印机需要多个守护进程和若干相关命令。协同工作时，这些命令可以帮助配置 Samba，而守护进程则帮助其通过本章前面描述的不同通信端口进行通信。
+
+Samba 包含大量运行服务并辅助配置的命令。其中最重要的命令是位于 /usr/sbin 目录中启动各种 Samba 服务的二进制文件。
+
+运行 Samba 需要两个守护进程：主 Samba 服务（smbd）和 NetBIOS 名称服务（nmbd）。此外，大多数管理员希望运行 Winbind 服务（winbindd）以进行用户和主机名解析。全部三个都通过 /etc/samba/smb.conf 配置文件进行配置。
+
+如果你希望在下次 Linux 启动时确保服务正在运行，则 /etc/init.d 目录中的相关脚本为 smb、nmb 和 winbind。它们使用 /etc/sysconfig/samba 文件中的以下选项启动相关的 smbd、nmbd 和 winbindd 守护进程：
+
+```
+SMBDOPTIONS="-D"
+NMBDOPTIONS="-D"
+WINBINDOPTIONS=""
+```
+
+是的，虽然 winbind 守护进程没有包含选项，但可以在所注文件中用引号包含选项。要确认守护进程的运行方式，ps aux | grep smb 命令可以帮助。例如，以下 ps aux | grep smb 命令的输出确认 Samba 服务正在使用 -D 开关运行：
+
+```
+root 12836 0.0 0.2 203612 1648 ? S Mar08 0:00 smbd -D
+```
+
+## Samba 服务器全局配置
+
+你可以通过主 Samba 配置文件 /etc/samba/smb.conf 来配置 Samba 服务器。该文件很长，并包含若干需要理解与 Microsoft Windows 网络相关概念的命令。幸运的是，该文件的默认版本还包含有帮助的文档，其中包含建议和有用的选项。
+
+与某些其他服务不同，默认的 Samba 配置文件除了默认值外还包含若干注释的指令。此类指令的默认值可以在 smb.conf 文件的手册页中找到。
+
+你可以直接编辑此文件或使用 SWAT 创建目录共享。在使用任何 GUI 工具之前，请勇敢一些。研究原始的 /etc/samba/smb.conf 文件。一旦了解文件结构，请备份它。尝试直接编辑文件。尝试使用本章后面描述的 SWAT 工具更改文件。通过以下命令重启 Samba 服务器来测试结果：
+
+```
+# service smb restart
+```
+
+为帮助你完成此过程，我将分析该文件的默认 RHEL 6 版本。接下来显示的代码基本上是该文件的完整视图。在某些情况下，我已用自己的解释替换了文件中的注释。你也可以浏览自己的 /etc/samba/smb.conf 文件。
+
+smb.conf 文件包含两种类型的注释行。井号（#）用于一般文本注释。这通常是描述功能的文字。第二种注释符号是分号（;），用于注释掉 Samba 指令（你以后可能希望取消注释以启用被禁用的功能）。（请注意，本书的物理尺寸限制了代码行的长度。在少数情况下，我已略微修改代码行以满足此限制，而不改变该配置文件中任何命令的意图。）
+
+```
+# This is the main Samba configuration file. You should read the
+# smb.conf(5) manual page in order to understand the options listed
+# here. Samba has a huge number of configurable options (perhaps
+# too many!) most of which are not shown in this example.
+#
+# NOTE: Whenever you modify this file you should run the command
+# "testparm" to check that you have not made any basic syntactic
+# errors.
+```
+
+> 考试提示 正如 Red Hat 考试准备指南所述，RHCE 必须能够为基本操作配置各种服务，包括 Samba。主 Samba 配置默认版本的一些细节超出了基本操作。
+
+虽然你需要了解可以用不同的全局设置做什么，但应尽可能少地更改。更改越少，出错的可能性就越小。并不需要完美的配置文件。满足考试或工作特定要求的配置文件即可。

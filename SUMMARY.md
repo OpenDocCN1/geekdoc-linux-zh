@@ -1861,6 +1861,7 @@
 +   [RHCSA® Red Hat® Enterprise Linux® 9 认证学习指南，第八版 (考试 EX200)](docs/rhcsa-red-hat-enterprise-linux-9-certification-study-guide-e/README.md)
 +   [RHCSA Red Hat Enterprise Linux 9：培训与考试备考指南 (EX200)，第三版](docs/rhcsa-red-hat-enterprise-linux-9-training-and-exam-preparati/README.md)
 +   [RHCSA & RHCE Red Hat Enterprise Linux 7：培训与考试准备指南，EX200 和 EX300 考试，第三版](docs/rhcsa-rhce-red-hat-enterprise-linux-7-training-and-exam-prep/README.md)
++   [RHCSA RHCE Red Hat Linux 认证学习指南 (考试 EX200 & EX300)，第6版 (Certification Press)](docs/rhcsa-rhce-red-hat-linux-certification-study-guide-exams-ex2/README.md)
 +   [RHCSA／RHCE Red Hat Enterprise Linux 8 认证学习指南，第八版（考试 EX200 & EX294) (RHCSA／RHCE Red Hat Enterprise Linux 认证学习指南）](docs/rhcsarhce-red-hat-enterprise-linux-8-certification-study-gui/README.md)
 +   [RHCSA／RHCE Red Hat Linux 认证虚拟机实践指南：（考试 EX200 & EX300）](docs/rhcsarhce-red-hat-linux-certification-practice-exams-with-vi/README.md)
 +   [RHCSA／RHCE Red Hat Linux 认证学习指南 (考试 EX200 & EX300)，第6版 (Certification Press)](docs/rhcsarhce-red-hat-linux-certification-study-guide-exams-ex20/README.md)

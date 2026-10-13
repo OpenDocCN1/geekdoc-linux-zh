@@ -1,0 +1,144 @@
+
+名为 server1 的系统。一旦密码确认，scp 命令会以加密格式将 FO2-20.tif 文件复制到名为 server1 的远程系统上的指定目录。
+
+## 图形化安全 Shell 访问
+
+ssh 命令可用于在网络上传输 GUI 工具。听起来很奇怪，但如果本地系统充当 GUI 服务器，同时你从远程系统调用远程 GUI 客户端应用程序，则可以工作。
+
+默认情况下，SSH 服务器和客户端配置文件均已设置好以支持网络上的 X11 通信。你需要做的就是使用 -X 开关连接到远程系统。例如，你可以使用图 2-17 中所示的命令序列来管理远程系统上的用户。
+
+**图 2-17**
+
+通过 SSH 进行远程 GUI 访问。
+
+![](img/9139201cfcaf4292284a0eed074928e5_113_0.png)
+
+## 认证目标 2.05
+
+## 考虑添加这些命令行工具
+
+你可能需要考虑添加几个命令行工具来帮助管理各种 Linux 系统。本书稍后将使用这些工具来确保各种服务器确实处于运行状态。虽然最好使用实际的电子邮件客户端（如 Evolution 和 Thunderbird）来测试 Postfix 等服务，但 telnet、nmap 和 mutt 等命令行工具可用于从命令行界面远程检查这些服务。出于考试目的，你可以在下载复杂工具（如 Evolution）所需的时间内使用这些工具来测试、诊断和解决系统问题。虽然 ssh 命令可以帮助远程访问 GUI 工具，但与此类工具的通信可能耗时。
+
+出于管理目的，感兴趣的工具包括以下内容：
+
+- 使用 telnet 和 nmap 验证对开放端口的远程访问。
+- 将 mutt 作为电子邮件客户端来验证电子邮件服务器的功能。
+- 将 elinks 作为网页浏览器以确保 Web 服务可访问。
+- 使用 lftp 通过命令补全访问 FTP 服务器。
+
+## 使用 telnet 检查端口
+
+telnet 命令是一个出人意料的强大的工具。任何了解明文客户端安全影响的人都可能犹豫使用 telnet。使用 telnet 登录远程服务器的人确实会以明文传输其用户名、密码和其他命令。任何拥有 Ethereal 等协议分析器的人都可以相当容易地读取这些数据。
+
+但 telnet 还能做更多事情。在本地运行时，它可以验证服务的操作。例如，以下命令验证本地系统上 vsFTPd 的操作：
+
+```
+$ telnet localhost 21
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+220 (vsFTPd 2.2.2)
+```
+
+“Escape character”是同时按下 CTRL 键和右方括号（]）。从所述屏幕按下此命令组合会调出 telnet> 提示符。从那里，你可以使用 quit 命令退出。
+
+```
+^J
+telnet> quit
+```
+
+你甚至不需要执行 Escape 字符即可退出；只需输入 QUIT 命令即可。
+
+如果 vsFTP 未运行或已配置为在 21 以外的端口上通信，你会收到以下响应：
+
+```
+Trying 127.0.0.1...
+telnet: connect to address 127.0.0.1: Connection refused
+```
+
+如果没有防火墙，你会从远程系统得到相同的结果。但是，如果防火墙阻止端口 21 上的通信，你会收到类似以下的消息：
+
+```
+telnet: connect to address 192.168.122.50: No route to host
+```
+
+一些服务（如 Postfix 电子邮件服务器）默认配置为仅接受来自本地系统的连接。在这种情况下，无论是否有防火墙，从远程系统尝试连接时都会收到“connection refused”消息。
+
+## 使用 nmap 检查端口
+
+nmap 命令是一个强大的端口扫描工具。因此，nmap 开发人员的网站声明“如果使用不当，nmap 在（极少数情况下）可能会让你被起诉、解雇、开除、监禁或被你的 ISP 禁止。”尽管如此，它包含在标准 RHEL 6 仓库中。因此，Red Hat 支持其合法使用。这是一个快速查看本地和远程开放服务的便捷方法。例如，图 2-18 中所示的 nmap localhost 命令检测并显示本地系统上正在运行的服务。
+
+但相比之下，当端口扫描器从远程系统运行时，看起来只有一个端口是开放的。这显示了防火墙对服务器的影响。
+
+```
+Starting Nmap 5.21 ( http://nmap.org ) at 2010-11-29 09:52 PST
+Nmap scan report for server1.example.com (192.168.122.50)
+Host is up (0.00027s latency).
+Not shown: 999 filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+```
+
+**图 2-18** [root@server1 ~]# nmap localhost
+
+本地应用端口扫描器
+
+```
+Starting Nmap 5.21 ( http://nmap.org ) at 2010-11-29 09:47 PST
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled.
+Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000070s latency).
+Hostname localhost resolves to 2 IPs. Only scanned 127.0.0.1
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+25/tcp   open  smtp
+111/tcp  open  rpcbind
+
+Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
+[root@server1 ~]#
+```
+
+## 配置电子邮件客户端
+
+对于任何 Red Hat 认证的候选人来说，GUI 电子邮件客户端的配置过程应该是微不足道的。然而，命令行客户端可能并非如此，它们对于测试标准电子邮件服务器服务（如 Postfix 和 sendmail）的功能很有用。例如，一旦服务器为邮局协议（POP）电子邮件配置，甚至使用几乎无处不在的版本 3（POP3）传递的电子邮件，都可以使用以下命令进行检查：
+
+```
+# mutt -f pop://username@host
+```
+
+由于 GUI 电子邮件客户端对读者来说应该是微不足道的，本节其余部分重点介绍命令行电子邮件客户端的使用。
+
+## 命令行邮件
+
+测试本地邮件系统的一种方法是使用内置的命令行 mail 实用程序。它提供了一个简单的基于文本的界面。系统将每个用户的邮件保存在与每个用户名关联的 /var/mail 目录中。使用 mail 实用程序阅读消息的用户还可以回复、转发或删除相关消息。
+
+你当然可以使用其他邮件阅读器，例如 mutt，或与不同 GUI 网页浏览器关联的电子邮件管理器来测试你的系统。其他邮件阅读器将消息存储在不同的目录中。例如，pine 实用程序会在 /home/mj/mail 目录中为用户 mj 创建并存储消息。如果本地系统启用了简单邮件传输协议（SMTP）服务器，则 mutt、mail 和 pine 等邮件阅读器可用于发送消息。
+
+使用 mail 有两种基本方法。首先，你可以输入主题然后输入消息正文。完成后，按 CTRL-D，然后如果需要，在 Cc: 行输入另一个收件人。当你按下 ENTER 时，消息将被发送，mail 实用程序停止并返回命令行。
+
+```
+$ mail Michael
+Subject: Test Message
+Sent and received
+Cc: mjang@example.com
+$
+```
+
+或者，你可以将文件重定向为发送给另一用户的电子邮件正文。例如，以下命令将 /etc/hosts 的副本发送给 root 用户，主题名为“hosts file”：
+
+```
+$ mail -s 'hosts file' < /etc/hosts root@localhost
+```
+
+## 阅读邮件消息
+
+默认情况下，除非适当文件中实际有电子邮件，否则邮件系统不会为用户打开。一旦邮件系统打开，用户将看到新邮件和已读邮件的列表。如果你为一个账户打开了邮件系统，你可以输入消息编号并按 ENTER。如果你不带参数按 ENTER，mail 实用程序会假设你想阅读下一条未读消息。要删除邮件消息，请在阅读消息后使用 d 命令，或使用 d# 删除编号为 # 的消息。
+
+或者，邮件消息可以从本地 /var/mail 目录中的用户指定文件中读取。该目录中的文件以关联的用户名命名。
+
+## 文本和图形浏览器的使用
+
+Linux 包含各种图形浏览器。通过其相关协议超文本传输协议（HTTP）及其安全版本超文本传输协议安全（HTTPS）可以访问常规和安全网站。对于任何 Linux 的认真用户来说，图形浏览器的使用应该是微不足道的。
+

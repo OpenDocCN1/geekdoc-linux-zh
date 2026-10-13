@@ -1,0 +1,134 @@
+
+## 表 2-3
+virt-install 的命令开关
+
+| 开关 | 描述 |
+|---|---|
+| -n (--name) | 设置 VM 的名称 |
+| -r (--ram) | 配置内存大小（以 MB 为单位） |
+| --disk | 定义虚拟磁盘；通常与 path=/var/lib/libvirt/images/virt.img 一起使用 |
+| -l (--location) | 指定包含安装文件的目录或 URL |
+| -x (--extra-args*) | 包含额外数据，例如 Kickstart 文件的 URL |
+
+此命令创建一个名为 `outsider1.example.org` 的 VM，在所述 IP 地址上运行 FTP 服务器，内存为 768MB，并使用 `outsider1.example.org.img` 虚拟磁盘。
+
+```bash
+# virt-install -n outsider1.example.org -r 768 --disk \
+path=/var/lib/libvirt/images/outsider1.example.org.img \
+-l ftp://192.168.122.1/pub/inst \
+-x "ks=ftp://192.168.122.1/pub/ks1.cfg"
+```
+
+如果使用基于先前 KVM 安装定制的 Kickstart 文件运行 `virt-install` 命令，可能会失败。标准的 KVM 安装将第一个虚拟磁盘配置在设备 `/dev/vda` 上。相比之下，`virt-install` 命令假定所讨论的第一个虚拟磁盘是设备 `/dev/sda`。本章后面描述的 Kickstart 文件需要针对此差异进行定制。
+
+所述文件包含多个开关。所示的大多数开关都在 `virt-install` 命令的手册页中列出的示例中进行了描述。例外是 `-x`，它是 `--extra-args=` 开关的另一个名称。您可能会注意到其他开关，它们很有帮助，但对于 RHEL 6 安装并非必需。然而，它们是查找给定 Kickstart 文件所必需的。因此请记住额外参数的格式，包括引号，也可以表示为：
+
+```bash
+--extra-args="ks=ftp://192.168.122.1/pub/ks1.cfg"
+```
+
+### virsh 命令
+
+`virsh` 命令启动现有 KVM VM 的前端。单独运行时，它会从常规命令行切换到以下提示符：
+
+```bash
+virsh #
+```
+
+从该提示符运行 **帮助** 命令。它提供了对多个命令的访问，其中一些列在表 2-4 中。**帮助** 命令输出中显示的这些命令并非全部对 KVM 激活。那些可用的 **virsh** 命令也可以直接从 bash shell 提示符运行；例如，`virsh list --all` 命令列出所有已配置的 VM，无论它们是否正在运行。在 KVM 的上下文中，每个 VM 的名称是一个域，不同的 **virsh** 命令使用它。
+
+查看我在系统上运行 `virsh list --all` 命令的输出：
+
+```text
+Id Name State
+--------------------------
+- server1.example.com shut off
+- tester1.example.com shut off
+```
+
+使用正确的 **virsh** 命令，您可以满足两个 RHCSA 目标。首先，以下命令启动所述的 `server1.example.com` 系统：
+
+```bash
+# virsh start server1.example.com
+```
+
+不幸的是，截至本文撰写时，`virsh shutdown` 命令无法工作。因此，要从命令行实际停止 VM，您必须运行一个较为严厉的命令：
+
+```bash
+# virsh destroy server1.example.com
+```
+
+`virsh destroy` 命令开关在功能上等同于拔掉物理系统的电源线。由于这可能导致不同问题，最好通过在 VM 内部运行 `poweroff` 命令来停止 VM。
+
+![](img/9139201cfcaf4292284a0eed074928e5_92_0.png)
+
+*虽然 shutdown 命令在 Kickstart 配置文件中有效，但要从命令行关闭系统，功能性命令是 poweroff。*
+
+### 表 2-4
+virsh 提示符下的命令
+
+| virsh 命令 | 描述 |
+|---|---|
+| autostart <domain> | 在主机系统启动过程中启动域 |
+| capabilities | 列出本地 hypervisor 的功能 |
+| edit <domain> | 编辑域的 XML 配置文件 |
+| list --all | 列出所有域 |
+| start <domain> | 启动指定的域 |
+| shutdown <domain> | 优雅地关闭指定的域 |
+
+> **考试提示**
+> 要启动和停止 VM，您可以运行 `virsh start vmname` 和 `virsh destroy vmname` 命令，其中 `vmname` 是 VM 的名称，如 `virsh list --all` 命令的输出所示。
+
+即使在最受保护的系统上，也会发生电源故障。内核更新仍需要系统重启。在这些情况下，在启动过程中自动化虚拟主机上 VM 的启动很有帮助。
+
+此外，`virsh` 命令是最直接的方式来确保 VM 在系统下次启动时启动。例如，以下命令在主机系统启动过程中启动所述的 `tester1.example.com` 系统。
+
+```bash
+# virsh autostart tester1.example.com
+```
+
+一旦主机和 VM 的启动过程完成，您将能够使用诸如 `ssh` 之类的命令正常连接到该 VM 系统。然而，从虚拟主机 GUI，您仍需要启动虚拟机管理器并连接到关联的 hypervisor，才能实际连接到该 `tester1.example.com` 系统的虚拟控制台。
+
+该命令在 `/etc/libvirt/qemu/autostart` 目录中创建一个软链接文件。要逆转此过程，请运行以下命令：
+
+```bash
+# virsh autostart --disable tester1.example.com
+```
+
+或从该目录中删除以目标 VM 命名的软链接文件。
+
+### virt-clone 命令
+
+`virt-clone --prompt` 命令可用于克隆现有 VM。在开始过程之前，请确保要克隆的系统已关闭。操作很简单；一个从 `server1.example.com` 系统创建 `tester1.example.com` 系统的示例显示在图 2-15 中。
+
+> **考试提示**
+> 要配置 VM 在系统启动时自动启动，您可以运行 `virsh autostart vmname` 命令，其中 `vmname` 是 VM 的名称，如 `virsh list --all` 命令的输出所示。
+
+过程完成后，您不仅会在指定目录中找到所述的硬盘映像，还会在 `/etc/libvirt/qemu` 目录中找到该 VM 的新 XML 配置文件。
+
+#### 图 2-15
+克隆虚拟机
+
+```bash
+[root@maui ~]# virt-clone --prompt
+What is the name of the original virtual machine? server1.example.com
+What would you like to use for the cloned virtual machine? tester1.example.com
+What would you like to use as the cloned disk (file path) for '/var/lib/libvirt/images/server1.example.com.img'? /var/lib/libvirt/images/tester1.example.com.img
+What would you like to use as the cloned disk (file path) for '/var/lib/libvirt/images/server1.example.com-1.img'? /var/lib/libvirt/images/tester1.example.com-1.img
+What would you like to use as the cloned disk (file path) for '/var/lib/libvirt/images/server1.example.com-2.img'? /var/lib/libvirt/images/tester1.example.com-2.img
+Allocating 'tester1.example.com.img'              | 12 GB  01:23
+Allocating 'tester1.example.com-1.img'            | 1.0 GB  00:01
+Allocating 'tester1.example.com-2.img'            | 1.0 GB  00:01
+
+Clone 'tester1.example.com' created successfully.
+[root@maui ~]#
+```
+
+第一次启动克隆的机器时，最好将其启动到运行级别 1。如第 5 章所述，运行级别 1 不会启动大多数服务，包括网络。在这种情况下，您可以在将克隆的机器启动到生产网络之前修改任何固定的网络设置，例如主机名和 IP 地址。此外，您需要确保更改相关网卡的硬件地址，以避免与原始网卡冲突。
+
+虽然对于一两个 VM 来说该过程可能并不困难，但想象一下设置几十个 VM，每个 VM 稍后配置为不同的服务。这种情况可以通过更多自动化来改善。为此，Red Hat 提供了一个名为 Kickstart 的系统。
+
+## 认证目标 2.03
+自动化安装选项
+
+Kickstart 是 Red Hat 用于自动化 Red Hat 安装的解决方案。将安装过程中执行的每个步骤视为一个问题。使用 Kickstart，每个问题都可以用一个文本文件自动回答。使用 Kickstart，您可以非常快速地设置相同的系统。为此，Kickstart 文件对于 Linux 系统的快速部署和分发很有用。此外，安装过程也是了解更多关于 RHEL 6 的机会，不仅是启动介质，还有可以配置的分区和逻辑卷
