@@ -1,0 +1,99 @@
+
+- Ferrell，Thomas F. 教授。田纳西州橡树岭，橡树岭国家实验室健康与安全研究部。
+- Ferris，Gordon F. 教授。已故；曾任职于斯坦福大学国家弗里西博物馆。
+- Ferris，James F. 博士。麦迪逊学院生物系。
+- Feshbach，Herman 博士。麻省理工学院物理系。
+- Fetz，Eberhard E. 博士。华盛顿大学医学院生理学系与生物物理系。
+- Fev，Arthur 教授。莱斯大学空间物理与天文学系。
+- Fiala，Alan D. 博士。华盛顿特区，美国海军天文台。
+- Fiedero，Giuseppe 博士。瑞士日内瓦，欧洲核子研究中心（CERN），EP 分部。
+- Fiedler，Peggy L. 博士。加利福尼亚州派德蒙特。
+- Fields，Paul R. 高级化学家，伊利诺伊州阿贡，阿贡国家实验室。
+- Fields，Thomas H. 伊利诺伊州阿贡，阿贡国家实验室物理部。
+- Fleischmann，J. R. S. 教授。英国利兹大学遗传学系。
+- Findlay，David M. 博士。澳大利亚阿德莱德，阿德莱德皇家医院，阿德莱德大学骨科与创伤系。
+- Fingedoi，Sydney M. 博士。加利福尼亚州洛杉矶，退伍军人管理局瓦兹沃思医院中心传染病分部主任。
+- Fingerman，Milton 博士。杜兰大学生物系。
+- Fink，Donald G. 退任主任，IEEE；《电子工程师手册》主编。麦格劳 - 希尔图书公司，纽约。
+- Fink，Jordan N. 教授。威斯康星医学院医学系过敏 - 免疫学分部主任。
+- Finkelstein，L. 教授。英国伦敦，伦敦城市大学物理系。
+- Finkelstein，Richard 博士。密苏里大学医学院微生物学系，哥伦比亚。
+- Finks，Robert M. 博士。纽约市立大学皇后学院地质学系。
+- Finstaello，Daniele 博士。俄亥俄州肯特，肯特州立大学液晶研究所。
+- Firebaugh，Millard S. 华盛顿特区，海军海洋系统司令部。
+- Firk，Frank W. K. 教授。自由大学电子加速器实验室。
+- Fior，John W. 博士。科罗拉多州博尔德，国家大气研究中心高级研究项目主任。
+- Fischer，Alfred G. 教授。加利福尼亚州圣佩德罗。
+- Fischer，Harold。密歇根州弗林特，通用汽车公司。
+- Fischer，Henry W. 纽约州哈里斯蒂与汉诺威。
+- Fischer，J. E. 教授。宾夕法尼亚大学材料与工程系，费城。
+- Fisher，Jack B. 博士。佛罗里达州迈阿密，费尔柴尔德热带花园与研究中心。
+- Fisher，Robert A. 博士。新墨西哥州洛斯阿拉莫斯，洛斯阿拉莫斯科学实验室。
+- Fisher，Robert L. 博士。加利福尼亚州拉霍亚，斯克里普斯海洋研究所地质研究部。
+- Fisher，Russell A. 教授。西北大学物理系。
+- Fisher，William L. 博士。德克萨斯大学奥斯汀分校地质科学系。
+- Fisk，Nelson S. 教授。哥伦比亚大学土木工程系。
+- Fiske，Richard P. 上尉。退休；前美国海军海洋工程总监/打捞与潜水主管。
+- Fitch，Val 教授。普林斯顿大学物理系。
+- Fitzsimons，James T. 英国剑桥大学生理学实验室。
+- Flathers，George W., II. 弗吉尼亚州麦肯，MITRE 公司。
+- Fleischer，R. L. 博士。纽约州尚切塔迪，通用电气公司通用物理实验室物理科学分部。
+
+## 贡献者
+
+- Fleminger，Abraham 博士。加利福尼亚州拉霍亚，斯克里普斯海洋研究所研究生物学家。
+- Flessa，Karl Walter 博士。华盛顿特区，美国国家科学基金会地球科学部。
+- Flint，Richard F. 博士。耶鲁大学地质学与地球物理系。
+- Flinn，Robert B. 伊利诺伊州哈瓦那，VORTAC 顾问。
+- Floe，Carl I. 教授。麻省理工学院冶金系。
+- Flye，M. Wayne 教授。密苏里州圣路易斯，华盛顿大学医学院外科、微生物学与免疫学系。
+- Flynn，Thomas M. 博士。科罗拉多州博尔德，低温工程顾问。
+- Focht，Dennis D. 教授。加利福尼亚大学里弗塞德分校土壤与环境科学系。
+- Fogel，David B. 博士。加利福尼亚州拉霍亚，Natural Selection, Inc.
+- Foon，Kenneth A. 博士。纽约州布法罗，罗威尔 - 帕克纪念研究所。
+- Ford，Derek C. 教授。加拿大安大略省汉密尔顿，麦克马斯特大学地理系。
+- Ford，E. B. 教授。已故；曾任职于英国牛津大学动物学系遗传学实验室。
+- Ford，Karen Grady 博士。南卡罗来纳州查尔斯顿学院生物系。
+- Foley，Peter 博士。英国伦敦，自然历史博物馆古生物学系。
+- Forster，Mr. Denis。密苏里州圣路易斯，孟山都公司。
+- Foster，Jackson W. 教授。已故；前德克萨斯大学微生物学教授。
+- Foster，Mark K. 博士。退休；弗吉尼亚大学工程与应用科学学院电气工程。
+- Foster，Merill W. 教授。布拉德利大学地质学系。
+- Foster，Robert J. 博士。圣何塞州立大学物理系。
+- Fountain，David M. 博士。怀俄明大学地质学与地球物理系。
+- Fourner，Charles R. 博士。纽约州立大学布法罗分校生物科学系。
+- Fowler，W. Beall 教授。理海大学物理系。
+- Fox，Christopher 博士。弗吉尼亚州哈里森堡，詹姆斯麦迪逊大学计算机科学系。
+- Fox，Marcy Anne 博士。德克萨斯大学奥斯汀分校化学系。
+- Fox，Richard 博士。加拿大艾伯塔省埃德蒙顿，阿尔伯塔大学生物科学系。
+- Fox，Robert M. 博士。佛罗里达大学工程学院电气工程。
+- Franklin，David M. 博士。韦恩州立大学物理系。
+- Fraleiy，Dennis J. 博士。德克萨斯州奥斯汀，德州仪器公司。
+- Frakes，William B. 博士。弗吉尼亚州 falls Church，弗吉尼亚理工大学北弗吉尼亚中心。
+- Frame，J. Sutherland 教授。密歇根州立大学数学荣誉退休教授。
+- Franc，Jean-Marie 博士。法国维勒班，克劳德·贝纳尔大学组织学与组织生物学实验室。
+- France，Diane L. 博士。科罗拉多州福特的斯普林斯。
+- Francis，Arthur W. 博士。纽约州塔里敦，联合碳化物公司。
+- Frank，Bernard 教授。已故；前科罗拉多州立大学流域管理教授。
+- Franklin，David. 加利福尼亚州帕洛阿尔托，电力研究所核系统与材料项目经理。
+- Franzese，Kenneth 博士。新泽西州克利夫顿，Bright Star Industries, Inc. 研发部。
+- Franzini，Paolo 博士。意大利罗马第一大学物理系。
+- Freeman，A. E. 博士。爱荷华州立大学动物科学系。
+- Freeman，Daniel X. 博士。加利福尼亚大学医学院精神病学与行为科学系。
+- Freeman，Harry M. 美国环境保护局风险减少保护实验室废物最小化分部主任，俄亥俄州辛辛那提。
+- Freeman，Jeremiah P. 教授。圣母大学化学系。
+- Freeman，Ralph L. 教授。退休；爱荷华州立大学机械工程系。
+- Freeman，Wendy L. 博士。加利福尼亚州帕萨迪纳，卡内基华盛顿机构天文台。
+- Freire，Ernesto 教授。约翰霍普金斯大学生物学术中心主管，马里兰州巴尔的摩。
+- Freiser，Henry 教授。亚利桑那大学图森分校化学系。
+- Fremed，Raymond E. 纽约，Bureau-Masterelil 合资公司。
+- French，J. Bruce 博士。罗切斯特大学物理系。
+- Fretter，William B. 教授。加利福尼亚大学伯克利分校物理系。
+- Freudenstein，Ferdinand 博士。哥伦比亚大学机械工程系。
+- Freundt，E. A. 博士。丹麦奥胡斯大学医学微生物学研究所。
+- Frey，Kenneth J. 博士。爱荷华州立大学农艺系。
+- Fribout，Henry A. 教授。田纳西州诺克斯维尔，田纳西大学植物与土壤科学系。
+- Frick，Oscar L. 博士。加利福尼亚大学医学中心儿科。
+- Fridovich，Irwin 博士。杜克大学医学中心生物化学系。
+- Fried，George H. 博士。纽约市立大学布鲁克林学院。
+- Fried，Sherman 博士。伊利诺伊州阿贡，阿贡国家实验室化学部。
