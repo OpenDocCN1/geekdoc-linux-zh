@@ -1,0 +1,60 @@
+
+与 FEDORA 和 LINUX 相关的命令
+
+你可以使用这些命令在 Fedora 中创建和配置 X Window 系统：
+- `xorg`--由 The X.Org Foundation 提供的 X Window System 发行版中的 X 服务器
+- `mouseconfig`--Fedora 的基于文本的 GUI 指针设备配置程序
+- `kcontrol`--KDE 控制中心客户端
+- `system-config-display`--Fedora 的图形化 X11R7 配置工具
+- `system-config-mouse`—Fedora 的图形化鼠标配置工具
+- `gdmsetup`—GNOME 显示管理器配置客户端
+- `startx`—一个用于从 shell 命令行启动一个或多个 X 会话的 shell脚本
+- `xsri`—显示管理器根桌面装饰客户端
+
+![](img/c4a0ea5ab3561ff33a8da88887702720_226_0.png)
+
+图 6.12 你可以使用 KDE 控制中心管理 KDE 桌面会话的每一个方面。
+
+## 参考
+
+- http://www.x.org/—X Window 系统的维护者。
+- http://www.x.org/Downloads_mirror.html—想下载 X 的最新修订源码吗？从这个镜像站点列表开始。
+- http://www.xfree86.org/—The XFree86 Project, Inc. 的主页，近 10 年来为 Linux 提供了图形界面。
+- http://www.kde.org/—学习 KDE 及其最新进展的地方。
+- http://www.gnome.org/—获取更多 GNOME 信息的启动点、新客户端链接以及 GNOME 开发项目链接。
+- http://people.redhat.com/~-hp/metacity/—Havoc Pennington 的 metacity 下载页面，你可以在这里获取此窗口管理器的最新源码版本。
+- http://sawmill.sourceforge.net/—sawfish 窗口管理器（以前称为 sawmill）的主页。
+- http://www.icewm.org/—最新版本 Window Maker 的源码。
+- http://www.icewm.org/—IceWM 主页。
+- http://www.lesstif.org/—LessTif 项目的主页，其目的是提供 OS/Motif 兼容库的 GNU GPL 版本。
+- http://scwm.sourceforge.net/—scwm 主页。
+- http://www.icewm.org/—FVWM 的主页。
+- http://www.novell.com/products/desktop/—GNOME 软件包。
+
+# 第 7 章 管理软件包
+
+在 2003 年 8 月，Ximian 被 Novell, Inc. 收购。Ximian GNOME 发行版（现名为 Ximian Desktop 2）未包含在 Red Hat 的 Enterprise Linux 发行版或 Fedora 中，但你可能可以通过 CD-ROM 安装它，或者如果你有宽带，可以在互联网上花费一小时或更短的时间完成。该版本适用于许多不同的 Linux 发行版（即使是非 Intel 平台的版本也是如此）。
+
+要开始使用，你可以访问 Novell 的 Ximian Desktop 网站：http://www.novell.com/products/desktop/download.html。你首先使用 `wget` 快速下载一个图形化安装程序，该程序用于选择下载站点、选定的文件以及基础 Ximian 发行版。下载和安装是以自动过程完成的，Ximian 将你默认的 GNOME 软件替换为它自己的 GNOME 发行版。安装完成后，你可以通过使用 Ximian 桌面上的更新图标快速安装更新并修复漏洞。但请注意，Ximian GNOME 可能会给 Fedora 带来困扰，主要是因为安装了不同版本的软件包导致包冲突，使得在不出现不兼容包问题的情况下难以升级。当你准备好更新 GNOME 时，你可能需要删除现有的包并安装全新的包以确保平滑过渡。
+
+图 6.10 显示了一个运行用于设置主题的 `gconftool-2` 客户端的典型 GNOME 桌面。
+
+![](img/c4a0ea5ab3561ff33a8da88887702720_224_0.png)
+
+图 6.10 Fedora 的 GNOME 桌面使用 metacity 窗口管理器，并提供多种 GNOME（以及 KDE）主题。
+
+你可以通过多种方式配置桌面，并使用“偏好”菜单下的不同菜单项，该菜单可以在主桌面菜单中找到。大量的配置选项允许你定制系统外观和感受的每一个方面。在图 6.11 中，你可以看到可用的偏好选项。
+
+![](img/c4a0ea5ab3561ff33a8da88887702720_225_0.png)
+
+图 6.11 你可以使用 Nautilus 图形外壳中可用的偏好设置来自定制 Fedora 桌面。
+
+# KDE：K桌面环境
+
+Fedora 包含了 KDE，它自1996年以来已适用于 Linux、Xorg 和 XFree86。KDE 是一个图形化桌面环境，提供了大量的客户端程序，包括一个名为 K 的免费办公套件。KDE 客户端位于 `/usr/bin` 目录下，几乎所有的客户端名称都以 k 开头。
+
+你主目录下的 `.kde` 目录包含自定义设置和会话信息。你可以使用 KDE 的控制中心（如图 6.12 所示）来定制桌面设置。你可以通过点击 KDE 桌面菜单（由桌面底部的面板托管，称为 kicker）中的“控制中心”菜单项来启动此客户端，或者从命令行启动，如下所示：
+
+```bash
+kcontrol &
+```
