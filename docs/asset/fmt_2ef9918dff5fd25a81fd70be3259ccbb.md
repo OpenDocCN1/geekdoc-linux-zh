@@ -1,0 +1,91 @@
+
+# 932 索引
+
+- `/etc/ldap/ldap.conf`, 402, 406
+- `/etc/ldap/schema/` 目录, 402, 404
+- `/etc/ldap/slapdd.conf` 文件, 402, 403–404, 406
+- `/etc/passwd` 文件, 56, 705–707
+- `/etc/postfix/main.cf` 文件, 450–451
+- `/etc/postfix/master.cf` 文件, 475
+- `/etc/postfix/transport` 配置, 540–541
+- `/etc/irccapap` 本配置, 231, 244
+- `/etc/ircaptap.local` 配置, 232
+- `/etc/ircaptap.old` 配置文件, 232
+- `/etc/rc.d/init/` 函数源库, 99, 679
+- `/etc/rc.d/init/named` 文件, 415
+- `/etc/rc.d/init/nfs` NFS 启动脚本, 300
+- `/etc/rc.d/init/nfs` LOCK 启动脚本, 301
+- `/etc/rc.d/local` 目录, 120, 110
+- `/etc/rc.d/local` 文件, 101, 110–112, 451
+- `/etc/resolv.conf` 文件, 198, 200, 258–259, 411–412
+- `/etc/rc6.d.` 目录, 200
+- `/etc/rc3.d.` 目录, 208–209
+- `/etc/services` 文件, 360
+- `/etc/shadow` 文件, 56, 174, 706–708
+- `/etc/shutdown.allow` 文件, 824
+- `/etc/sudoers` 文件, 828–829
+- `/etc/sysconfig` 目录。参参见其中所有特定目录, 196–197 文件, 184–196 概述, 174
+- `/etc/sysconfig/named` 文件, 415
+- `/etc/sysconfig/network` 文件
+  - DHCP 客户端配置, 270
+  - IP 地址设置, 199
+  - NIC 配置, 259
+  - NIS 客户端配置, 339
+  - NIS 服务器配置, 330
+  - 概述, 192–193
+- `/etc/vsftpd.ftpuser_list` 文件, 470–471
+- `/etc/vsftpd.ftpusers` 文件, 469–470
+- `/etc/vsftpd/vsftpd.conf` 文件, 469, 471–474
+- `/etc/wvdial.conf` 文件, 174
+- `/etc/X11` 目录, 217
+- `/etc/X11/fs/config` 文件, 226–227
+- `/etc/X11/XFB6Config` 文件, 217–221
+- `/etc/xinet.d/vsftp` 文件, 475
+- `/etc/yp.conf` 文件, 335–348
+- `/etc/ypserv.conf` 配置, 325–326
+- 以太网适配器。也指 NIC（网络接口卡）
+  - 购买新闻, 20, 377
+  - dev 设备, 285–232
+  - 内核配置, 600–602
+  - 网络配置工具, 277–279
+  - NFS 性能和, 377
+  - 网络规划和, 20–21
+  - 此光盘的需要, 919
+  - 两个, 故障排除, 909
+- 以太网地址, 253, 254。参见 MAC（介质访问控制）
+- 以太网 (10 或 100Mit) 对话框, 601–603
+- `efsck` 命令, 636, 637
+- `embeddev` 虚拟文件, 130
+- `exports` 配置, 300, 302–303
+- 导出文件系统 (NFS) 定义, 286
+- FS 服务器配置工具, 305–308
+- 性能问题, 376
+- 限制, 290–291
+- SGI 的扩展文件系统 (XFS), 123
+- 扩展型行业标准架构 (EISA) 总线, 330
+- 可扩展固件接口 (EFI) 壳, 92
+- 提取存档, 784–785
+- `ext3` (第三代扩展文件系统), 119–121,
+- `ext2` (第二代扩展文件系统), 119–121, 636–637, 642–643, 695–696
+
+# F
+
+- 备备集群, 24, 25
+- `fallback title-name` 命令 (`GRUB`), 109
+- FAT 文件系统, 122–123
+- 容错性, 8–9, 24–25
+- `fb` 虚拟系统, 130
+- 磁盘工具, 167, 171, 636
+- Fedora 项目, 755, 758
+- FHS (文件层次标准), 115–116
+- 光纤布线, 118
+- 文件完整性软件。参见 Tripwire
+- 文件服务器。参见 NFS 服务器
+- 文件系统。参见 `/proc`; 特定文件
+- Linux 优 Windows 的进展, 116
+- 每次重启检查, 905
+- 无法挂载, 904
+- 检查和修复, 637
+- 创建 ext2 文件使用, 636–637
+- 显示磁盘空间使用, 645
+- 显示空闲磁盘空间, 645
