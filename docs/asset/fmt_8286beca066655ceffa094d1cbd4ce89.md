@@ -1,0 +1,161 @@
+
+# T
+
+- `-T` 目录恢复选项，说明，569
+- `-t/{*fs-type*}` 选项（用于 `mount` 命令），说明，195
+- `-t` 选项
+    - 与 `tar` 工具一起使用，168
+- `-t` 选项
+    - 用于 `edquota` 命令，217
+- `t`（更改分区类型）命令，发出，206
+- 磁带设备，使用 `mt` 程序操作，564–565
+- 磁带管理，评估其备份需求，562
+- `Amanda` 中的 `tapetype` 参数，解释，574
+- `transfers-out` *number* `BIND` 配置选项，说明，316
+- `transfers-per-ns` *number*；`BIND` 配置选项，说明，316
+- `Tripiwire` 包，使用其监控系统，280
+- `try_*first_pass` `PAM` 参数，说明，137
+- 数据库中的 `TSTL` 条目，用途，327
+- `TTSI` 包，解释，444
+- `tune2fs-*j` 命令，使用其转换 `ext` 文件系统，209
+- `TXT` 和 `RP` `DNS` 记录类型，概述，326–327
+- `xinetd` 进程中的 `Type` 变量，237
+
+# U
+
+- `*-U*` `username` 参数（用于 `smbclient`），说明，514
+- `*-U*` 选项（`rpm` 命令），90
+- `*-u*` *allow*|*deny*:user, *user 选项（用于 `lpadmin` 工具），说明，536
+- `*-u*` `client/*/dir*/mount` 选项，与 `exportfs` 命令一起使用，469
+- `*-u*` `dump` 参数，说明，567
+- `*-u*` `login` 选项（用于 `edquota` 命令），说明，217
+- `*-u*` 选项（用于 `ps` 命令），说明，173
+- `*-u*` `uid` 选项（用于 `useradd` 命令行工具），说明，123
+- `UID`（用户 ID）
+    - 使用 `NFS` 时的建议，467
+    - 动态特性，118
+    - 用途，112
+- `umount` 命令
+    - 关于它的建议，196
+    - 发出，195
+- `uname` 程序，使用其显示系统名称，179
+- `M4` 宏语言中的 `undefine` 指令，与 `Sendmail` 一起使用，389
+- 未安装的包，识别相关信息，92。*参见* 包
+- `Postfix` 中的 `unix` 指定符，解释，408
+- `mt` 命令的 `unlock` 参数，说明，565
+- 卸载，强制，196–197
+- `Postfix` 中的 `unprivileged` 字段，解释，408
+- `unset` 命令，使用其取消设置环境变量，148
+- `up2date` 实用工具
+    - 配置，268–270
+    - 手动执行安全更新，270
+    - 运行，263
+    - 升级，263–268
+- `uptime` 命令
+    - 在服务器配置中的作用，20
+    - 与 `MTA` 一起使用，416
+- `use-lease-addr-for-default-route` 参数，与 `DHCP` 服务器一起使用，552
+- `use_ct_file` `Sendmail` 功能，说明，392
+- `use_cw_file` `Sendmail` 功能，说明，392
+- `use_first_pass` `PAM` 参数，说明，137
+- `use_mapped_pass` `PAM` 参数，说明，137
+- 用户账户
+    - 禁用，117–118
+    - 创建指南，115
+- `user` 命令，与 `POP` 邮件和 `telnet` 一起使用，427
+- 用户数据库
+    - 列出内容，127
+    - 管理，116–120
+- 用户目录，创建，126
+- 用户列表，位置，45
+- `user` 日志消息设施字符串，在 `/etc/syslog.conf` 文件中的作用，242
+- 用户管理工具，使用，121–125
+- `xinetd` 进程中的 `User` 变量，237
+- `useradd` 命令行工具，概述，122–123
+- `userdel` 命令行工具，概述，124
+- `usermod` 命令行工具，概述，124
+- `SMB` 中的用户名和密码，概述，503
+- `users`（用户）
+    - 使用 `redhat-config-users` 实用工具添加，128
+    - 使用 `NFS` `netgroups` 收集，494–495
+    - 使用 `redhat-config-users` 实用工具删除，129
+    - 使用 `redhat-config-users` 实用工具修改，128–129
+    - 在 `SSHD` 服务器上限制，450
+    - 作为用户运行程序，131–133
+- `users`，使用 `su` 命令切换，144–145
+- `/usr` 目录，内容，31
+- `/usr/include/security` 配置文件位置，说明，135
+- `/usr/local/src` 目录，存储 `tar` 包，97
+- `/usr` 分区
+    - 创建，206–207
+    - 解释，205
+- `usrquota` 选项，为分区设置，216
+- `uucp` 日志消息设施字符串，在 `/etc/syslog.conf` 文件中的作用，242
+
+# V
+
+- `-v` 选项
+    - 用于 `uname` 程序，179
+    - 与 `exportfs` 命令一起使用，469
+    - 与 `tar` 工具一起使用，168
+- `-v` 恢复选项，说明，569
+- `-v` `RPM` 命令行选项，说明，90
+- `-v` `URL` 选项（用于 `lpadmin` 工具），说明，536
+- 权限值，列表，158–159
+- `/var` 目录，内容，31
+- `/var/named/named.conf` 名称，内容，330
+- `/var/named/named.local` 名称，内容，329–330
+- `/var/named/named.rev` 文件，内容，330
+- `/var` 分区，解释，205
+- `-vd` `printname` 选项（用于 `lpadmin` 工具），说明，536
+- `vi` 文本编辑器，概述，184
+- `View SWAT` 菜单，说明，509–518
+- 虚拟域，为 `Apache HTTP Server` 配置，370–371
+- `Postfix` 中的虚拟域，概述，412–414
+- 虚拟 `FTP` 服务器，配置，352–354。参见 `FTP`（文件传输协议）条目
+- `KDE` 中的虚拟屏幕，修改默认设置，78
+- `Postfix` `mail.cf` 文件的 `virtual_map` 选项，解释，411
+- `virtusertable` `Sendmail` 功能，说明，393–394
+- `visudo` 命令，发出，132
+- `vsftp` 服务器
+    - 设置，343–346
+- `vsftpd` 服务器
+    - 关于它的建议，344
+    - 配置，346–352
+    - 默认 `conf` 文件内容，346–348
+    - 定位文档，344
+- `vsftpd` 服务器，使用，340
+- `Postfix` 中的 `wakeup` 字段，解释，408
+- `warn` 日志消息优先级字符串，在 `/etc/syslog.conf` 文件中的作用，242
+- `warning` 日志消息优先级字符串，在 `/etc/syslog.conf` 文件中的作用，242
+- 基于 `Web` 的管理，在 `CUPS` 服务器设置中的作用，534–535
+- 网站
+    - `Apache HTTP Server`，358，370
+    - 启动盘创建，25
+    - `BugTraq`，285
+    - `CERT`（计算机应急响应团队），285，461–462
+    - `foomatic`，532
+    - `GNU` 和 `GPL`，6
+    - `HTTP`（超文本传输协议），359
+    - `ISC`（互联网软件联合会），301
+    - `KDE`，73
+    - 基于 `KDE` 的主题，76
+    - `KDirStat` 包，97–98
+    - `Linux` 主页，15
+    - `Linux` 安全，286
+    - `MacSSH` for `Mac OS`，444
+    - `MindTerm SSH` 客户端，444
+    - `Netcraft Ltd.`，358
+    - 开源许可证，6
+    - `OpenBSD`，443
+    - `OpenNCS`，295
+    - `PAMs`（可插拔身份验证模块），134
+    - `PuTTY SSH` 客户端，444
+    - `RAID` 概念和配置，34
+    - `Red Hat` 硬件支持站点，18
+    - `RPM` 包，89
+    - `SecureCRT SSH` 客户端，444
+    - `Security Focus`，286
+    - `SSH TClient Client v1.0` for `RIM 957 Blackberry`，444
+    - `sshd’c` for `PocketPC/WinCE`，444
+    - `swatch` 包，279
