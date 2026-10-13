@@ -1,0 +1,69 @@
+
+`-d`、`-e` 和 `-x` 选项可分别禁用、启用和从 Samba 身份验证数据库中删除给定用户。
+
+## Test Changes to `/etc/samba/smb.conf`
+
+对 `/etc/samba/smb.conf` 进行任何更改后，在投入生产之前应始终测试系统。使用 `testparm` 实用程序可以对 Samba 配置文件进行简单的语法检查，如图 15-6 所示。这并不会实际检查服务是否正在运行或是否正常运行；它仅检查基本文本语法和命令段。
+
+### FIGURE 15-5 SWAT server password management
+
+![](img/9139201cfcaf4292284a0eed074928e5_854_0.png)
+
+显示的指令是共享段，以及相关的指令。例如，`[homes]` 共享不是只读的，并且对所有客户端不可浏览。
+
+## Review User- and Host-Based Samba Security
+
+如 RHCE 目标所建议，你需要知道如何为每个服务配置“基于主机的和基于用户的”。
+
+基于主机和基于用户的 Samba 系统安全性可通过以下指令增强：`invalid users`、`valid users`、`hosts allow` 和 `hosts deny`。
+
+重申一下，本节仅关注与 RHCE 目标相关的那些指令。
+
+## Share Settings
+
+要查看 SWAT 可以对 `smb.conf` 配置文件中的共享设置进行哪些操作，请从 SWAT 基于 Web 的菜单顶部单击 `Shares`。单击与 `Choose Share` 关联的下拉文本框，然后单击 `Homes`。接下来在 `Change View To` 旁边，单击 `Advanced` 以显示图 15-3 所示的屏幕。相关选项分为几个类别。
+
+### FIGURE 15-3 SWAT share settings
+
+![](img/9139201cfcaf4292284a0eed074928e5_851_0.png)
+
+此页面上的选项很直接。要创建第二个共享，请在 `Create Share` 文本框中输入名称，然后单击 `Create Share` 按钮。然后你可以在其后的文本框中对其进行配置。过程完成后，单击 `Commit Changes`。出现的许多指令已在全局设置部分解释过，但仅适用于本地共享。这些指令在此未重复。
+
+- `comment` 与共享名称一起包含的信息。
+- `path` 要共享的目录的路径。
+- `username` 在没有机器用户名时替代用户名；很少使用。
+- `force user` 分配给所有连接到共享的用户帐户。
+- `force group` 分配给所有连接到共享的组帐户。
+- `read only` 如此标记的共享只能读取。
+- `guest only` 仅允许访客用户连接。
+- `guest ok` 允许访客用户连接；无需密码。
+
+你会注意到大多数这些指令在此未涵盖，事实上很少使用。
+
+## Server Status
+
+要查看系统上 Samba 的当前状态，请从 SWAT 基于 Web 的菜单顶部单击 `Server Status`。如图 15-4 所示，它支持对 Samba、NetBIOS 和 Winbind 守护进程的控制。如果存在活动连接、活动共享目录和正在使用的文件，它们也会在此视图中列出。
+
+## View Configuration
+
+使用 SWAT 所做的任何更改，一旦保存就会写入 `/etc/samba/smb.conf` 文件。单击 `View`。它包含该文件的当前只读视图。
+
+## User Management
+
+你可以使用 SWAT 管理 Samba 用户身份验证数据库。为此，请从 SWAT 基于 Web 的菜单顶部单击 `Password`。如图 15-5 所示，它支持为当前用户更改密码。此外，你还可以使用所示的屏幕将新用户添加到本地 Samba 身份验证数据库。
+
+### FIGURE 15-4 Default installed Apache home page
+
+![](img/9139201cfcaf4292284a0eed074928e5_853_0.png)
+
+但这些只是 `smbpasswd` 命令的前端。在任何一种情况下，用户都必须存在于 Linux 身份验证数据库中。例如，以下命令将当前用户 `michael` 采用并提示输入新密码：
+
+```
+# smbpasswd michael
+```
+
+或者，以下命令将用户 `donna` 添加到 Samba 身份验证数据库，并提示输入密码：
+
+```
+# smbpasswd -a donna
+```
