@@ -1,0 +1,15 @@
+worries that many people have, making the move to Linux means not only savings for you but also more computing versatility. You will not be hamstrung at some point along the way because you don’t have this or that program when you need it most—you’ll have it all from the get-go or else be able to download it easily ... and at no cost!
+
+You might counter with the fact that there are a lot of freeware applications out there for other operating systems, but c’mon, let’s face it—these are often rather limited in terms of their capabilities. The programs with a little more oomph are mostly shareware, and most shareware programs these days are limited in some way, or they let you use them for a short time unless you are willing to pay for them. Sure, their costs are relatively low, but $25 here and $35 there eventually adds up to a considerable chunk of change. There is also the problem that some of these programs, unknownst to you, install backdoors or keyloggers or make your system a sudden garden of adware. Finally, at least in my experience, the majority of such programs are hardly worth the money asked.
+
+# Is It All Just About Money?
+
+Although money is important to the average user, it is certainly not the only reason for taking the Linux plunge; there are a variety of other reasons as well. As I mentioned, Linux is noted for its stability. Try running your current system for a month without restarting and see what happens. Linux has been known to run without a reboot for more than a year without a hitch or decrease in performance. With its multilingual capabilities, Linux is also a perfect choice for language students or users in a multilingual environment.
+
+In addition, Linux is infinitely customizable: You can get your system to look and act the way you want it to without being “wizarde” to death. And then there are the applications that come with most Linux distributions. In addition to their wide variety, most are well up to industry snuff, with some, such as Evolution, the GIMP, and Inkscape, being sources of envy for those outside the Linux world.
+
+Finally, with the advent of Microsoft’s Windows 7 system and its more demanding hardware requirements (especially if you want to take advantage of its most touted new features), you may find your current machine on the fast track to obsolescence. Turning it into a Linux machine will ensure it several more years of working life. After all, it’s a shame to put good hardware out to pasture so early.
+
+# But Is Linux Really Ready for the Desktop?
+
+Despite the advances Linux has made in recent years, this question still pops up quite often, and that’s fair enough. But consider this: When you install a program on your current Windows system and get an error message saying that the program can’t run because some DLL file is missing, or when you connect a piece of hardware and can’t get it to run, no one asks if that operating system is ready for the desktop.

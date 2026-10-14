@@ -1,0 +1,90 @@
+
+Totem Movie Player ........................................................................................ 293
+
+Using Totem to Play DVDs, VCDs, and Other Multimedia Files ................................... 294
+
+Totem as an Audio Player? ................................................................................ 294
+
+A Couple of Other Cool Totem Features ............................................................... 295
+
+An Alternative to Totem: VLC Media Player ........................................................... 296
+
+Editing Digital Video with PiTiVi ........................................................................ 297
+
+## Project 16B: Capturing Digital Video with Kino ....................................................... 299
+
+### 16B-1: Installing Kino and Setting Up Your System ............................................... 300
+
+### 16B-2: Capturing and Editing Digital Video with Kino ............................................ 300
+
+Other Video Apps .............................................................................................. 303
+
+## 17
+FEATHERED FLIPPERS
+Linux Gaming
+305
+
+## Project 17A: Expanding Your Game Collection via the Ubuntu Software Center ............... 306
+
+### 17A-1: Installing Missing GNOME Games ........................................................... 306
+
+### 17A-2: Installing Some Linux Classics: Frozen Bubble, Tux Racer, and Pingus ........ 307
+
+3D Games ........................................................................................................ 310
+
+Checking for Hardware Acceleration ................................................................... 310
+
+Shooting Games ............................................................................................... 311
+
+Strategy Games ................................................................................................ 313
+
+Simulators ........................................................................................................ 314
+
+Even More 3D Games—Beyond the Ubuntu Software Center .................................... 317
+
+## Project 17B: Installing a Java-Based Game: Schnapsen ............................................. 318
+
+### 17B-1: Installing the Java Runtime Environment ................................................... 318
+
+### 17B-2: Getting and Extracting Schnapsen ........................................................... 319
+
+### 17B-3: Running and Anglicizing Schnapsen ........................................................ 320
+
+Online Gaming .................................................................................................. 321
+
+Searching for More Games ................................................................................ 321
+
+## 18
+PENGUINS AT THE GATES
+Working with Ubuntu in a Windows World
+323
+
+## Project 18A: Accessing Files on Your Windows Partition (for Dual-Booters) .................. 324
+
+### 18A-1: Mounting Your Windows Partition ............................................................. 324
+
+### 18A-2: Unmounting Your Windows Partition ........................................................ 325
+
+Accessing a Linux Partition While Running Windows ............................................. 325
+
+## Project 18B: Installing Microsoft Windows Core Fonts ............................................. 326
+
+Dual-Booting: Changing the Boot Order and Timeout ............................................ 327
+
+Linux Equivalents to Your Windows Applications .................................................. 329
+
+## Project 18C: Running Windows Programs .............................................................. 329
+
+### 18C-1: Installing and Testing Wine ..................................................................... 330
+
+### 18C-2: Installing a Windows Application in Wine ................................................. 330
+
+### 18C-3: Getting Windows Apps to Work in Wine with PlayOnLinux ........................... 332
+
+Installing Windows Inside Ubuntu ....................................................................... 334
+
+Sharing Files with Windows Users on Your Network .............................................. 337
+
+Accessing Files Stored on a Windows Computer .................................................. 337
+
+Making Your Files Accessible from a Windows Computer ...................................... 337

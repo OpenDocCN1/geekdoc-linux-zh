@@ -1,0 +1,38 @@
+
+
+![](img/f7cef0df22f9dba5a41777808c98eece_184_0.png)
+
+Figure 8-21: Changing the way the login screen looks
+
+## 8D-2: Adding a Picture to Your User Account
+
+Aesthetics aside, it’s time to make things a little more personal. What better way to do this than by adding a picture to your user account? Select System ▸ Preferences ▸ About Me, and when the window appears (Figure 8-22), click the button that looks like a blank face. The Select Image window will appear—choose one of the stock images from the list, or use the pane on the left of the screen to find a picture from elsewhere (a passport photo, perhaps). Now, click Open to finalize your selection, and the picture will appear next to your username in the About Me window.
+
+While you’re there, fill out some of the other information if you like. It’s not used for very much, but as anyone who has ever possessed a permanent marker knows, it can be fun to stamp your identity all over your things. When you’re finished, close the About Me window. The picture you chose will be displayed next to your username on the login screen the next time you start the computer (as you can see in Figure 8-21).
+
+![](img/f7cef0df22f9dba5a41777808c98eece_185_0.png)
+
+Figure 8-22: The About Me window
+
+## 8D-3: Logging In Automatically
+
+While you’re tinkering with the login screen, it seems like a good idea to mention some of the other login-related options that you can change. Log in to your user account again, and select System ▸ Administration ▸ Login Screen. Click the Unlock button, and type your password to gain access to the settings in the Login Screen Settings window that appears.
+
+If you’re the only person who uses the computer, you can save time by having your user account automatically log in when the machine starts up. Select the Log in as option, and choose your username from the drop-down list (it should be selected automatically). If you’re not the only user but you’re the person who uses the computer for most of the time, there’s also a setting to give other people a chance to log in before you’re logged in automatically. Check Allow 30 seconds for anyone else to log in first, and change the amount of time you’d like GDM to wait before logging you in.
+
+The last option in this window (the one talking about default sessions) can be used to switch between different desktop environments. As you know, Ubuntu uses the GNOME desktop by default, but you can install others like KDE and Xfce instead. That’s a bit of a teaser for you would-be geeks out there—if you want to perform the ultimate customization and change the whole desktop environment, this is one of the settings you’re going to need to change. Changing desktops is beyond the scope of this book, though, so I’m just going to leave it there! (If you’re interested in trying a different desktop environment, you might find https://help.ubuntu.com/community/FromUbuntuToKubuntu/ useful.)
+
+> NOTE If you’re not keen on the sound that plays every time you log in, uncheck the Play log-in sound option in the Login Screen window.
+
+When you’re happy with your changes, close the Login Screen Settings window, and restart your computer for the changes to take effect. Then, depending on which option you chose, either you’ll be logged in straightaway or an Automatic Login button will appear and count down the seconds until it logs you in. In the latter case, you can stop the automatic login by selecting a different username.
+
+## Choosing a Screensaver
+
+Screensavers used to be a must-have (and must-use) item for computer users who wanted to prevent damage (burn-in) to their monitors. Video display technology, however, has now advanced to the point where screensavers are no longer necessary. Nevertheless, screensavers are cool to look at, and plenty are available online to supplement the 15 that come installed by default. Right out of the box, the screensaver is set up to merely blank your screen after 5 minutes. However, you can also choose to have the various screensavers switch randomly every few minutes, or you can opt for a single screensaver that you especially like. You can change these settings by selecting System ▸ Preferences ▸ Screensaver, after which the Screensaver Preferences window (Figure 8-23) will appear.
+
+> NOTE If you’d prefer a screensaver with a more personal touch, choose the Pictures folder option from the list on the left of the window. This will display a slide show of all the photos in your Pictures folder when the screensaver is activated.
+
+![](img/f7cef0df22f9dba5a41777808c98eece_186_0.png)
+
+Figure 8-23: Setting screensaver preferences
+

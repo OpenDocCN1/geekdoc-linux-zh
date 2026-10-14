@@ -1,0 +1,9 @@
+greatest limitations are its inability to capture video from digital video cameras or video streams, its inability to apply transitions or effects to videos, and, to top it all off, its inability to add titles to videos. Although these features are promised for the future, the fact that they are not available now makes the decision to bundle PiTiVi with Ubuntu a rather peculiar one.
+
+Limitations and peculiarities aside, the actual editing process in PiTiVi is relatively straightforward. First you start a new project and decide its name and settings (Project ▸ Project Settings). Then you add files to that project, either by dragging and dropping from your home folder to the PiTiVi window or by clicking the Import clips button and then selecting the files you want to add via the Import a clip window that appears. The files, now called clips, will then appear in the Clip Library pane of the PiTiVi window. From that pane, you can drag the clips you want to work on to the timeline below and then split the clips, delete the embarrassing or boring bits out, and combine files (Figure 16-7). Be sure to save your project as you go along.
+
+![](bbox=[0.22, 0.48, 0.92, 0.85])
+
+Figure 16-7: Editing video with PiTiVi
+
+Once done with your editing, you can produce your new film by clicking the Render project button, after which a Render project window will appear. In that window, click the Choose File button, and then give your new film a title in the Choose file to render to window. This will be the name of the actual file that will be produced. Once done, click OK, and then click the Render

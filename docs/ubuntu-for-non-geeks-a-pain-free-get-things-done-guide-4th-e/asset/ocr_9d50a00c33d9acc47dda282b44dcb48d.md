@@ -1,0 +1,21 @@
+When you’ve chosen what to keep and what to ignore, click Forward again to get to the summary page. Check that everything looks hunky-dory, and click Backup to start the backup. If you chose to encrypt your backup, you’ll be asked to type a password, so do this and click Continue.
+
+Make sure you keep that password safe; otherwise, you won’t be able to recover your backed-up files at a later date! A flurry of file copying will ensue and may last for some time if you have lots of files to back up. Once that’s finished, click Close, and safely remove your backup disk (or whatever you have instead).
+
+That should be it . . . for now. But remember, there’s little point in backing up if you don’t do it regularly, since you’ll only be able to recover your older files (and not more recent ones) if something does go wrong. I make a backup about once a month, but I should probably do it more regularly than that. It’s not much of a chore; when you next use Déjà Dup, it’ll remember all of your settings from the previous backup. If you want to do something different, click Edit ▸ Preferences in the main window, and change the options there. You’ll find options for automatically backing up as well: check the Automatically backup on a regular schedule setting in the Preferences window, and then choose how often you’d like the backup to happen. Click Close, and Déjà Dup should take care of the rest.
+
+> NOTE Canonical, the company behind Ubuntu, now offers an online backup service called Ubuntu One. Take a look at https://one.ubuntu.com/ for more information on that.
+
+# Recovering from a Backup
+
+Ideally you’ll never have to recover your backup, but if you do, here’s a quick guide:
+
++   1. Find your backup disk, hook it up to the computer, and start Déjà Dup.
++   2. Select Edit ▸ Preferences, and make sure that the disk is selected as the Backup location. Click Close to get back to the main screen.
++   3. Click Restore, and enter the password you chose for the backup if you encrypted it.
++   4. You’ll be asked to choose which backup you want to restore. Choose the one that looks right (normally the most recent one), and click Forward.
++   5. If you want the files to be put back exactly where they came from, choose Restore files to original locations. Otherwise, you can choose a folder to restore them to. Click Forward again.
++   6. Glance over the summary to make sure everything looks OK, and click Apply to restore your files. There’s a chance that you might have to reenter your encryption password, so go ahead and do so if asked.
++   7. Click Close once the restoration has finished, and check that the files have been put back correctly.
+
+Everything should have returned to normal now. Phew!

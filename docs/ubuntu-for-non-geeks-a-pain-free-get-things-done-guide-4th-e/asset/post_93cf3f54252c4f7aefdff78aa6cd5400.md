@@ -1,0 +1,45 @@
+
+## Adding Extra Software Repositories
+
+The Ubuntu software repositories contain more than 30,000 packages—enough to last a lifetime, or so you might think. But as it turns out, a whole world of software is waiting for you outside the official Ubuntu repositories, and it’s not much more difficult to reach. Various individuals and companies compile small numbers of packages that are not available in Ubuntu into their own third-party repositories. These are typically free to access, if you can find them. All you need to do is tell APT to search for packages in one of these repositories as well as Ubuntu’s, and you’ll be able to get at the extra software.
+
+Each repository has its own APT line. This is similar to a web address but contains extra information about the repository, which APT uses to figure out what sort of packages it contains. You’ll need to get the correct APT line from the website of the repository you’re trying to add, so let’s pick an example to see how it works. Open Firefox, and head over to http://www.getdeb.net/updates/Ubuntu/all#how_to_install. GetDeb specializes in making packages for software that hasn’t officially made it into Ubuntu yet. There should be some instructions on installing packages from GetDeb in a box at the top of the page, so skip to the second item in the list and find the APT line, which should look something like this: deb http://archive.getdeb.net/ubuntu lucid-getdeb apps. This follows the same format as all APT lines: the word deb, followed by a web address, followed by a couple of other words that specify which part of the repository should be checked by APT when it’s looking for programs. Highlight the APT line, right-click it, and select Copy from the popup menu.
+
+While you’re in Firefox, you’ll also need to grab the repository’s GPG key (which I’ll explain more at the end of this section). It should be linked to from the same website you got the APT line from; in the case of GetDeb, go to http://archive.getdeb.net/getdeb-archive.key, when the Opening getdeb-archive.key window opens, select Save File, and click OK to save the key file.
+
+Now that you’re in possession of these vital bits of information, adding the repository to your system is pretty straightforward:
+
+- 1. Select System ▸ Administration ▸ Software Sources. Enter your password if asked, and then click the Other Software tab in the Software Sources window that appears.
+- 2. Click Add. You’ll be prompted to enter the APT line, so paste it into the box, and then click Add Source (Figure 6-7). A new entry should appear in the Other Software list.
+- 3. Select the Authentication tab, and click Import Key File. Use the window that appears to find the .key file you downloaded earlier. (It’s probably in your Downloads folder.)
+- 4. Select the .key file by clicking it once, and then click OK. Check the list of trusted software providers to make sure that the GetDeb Archive Automatic Signing Key is now present, as it is in Figure 6-8.
+
+### Enter the complete APT line of the repository that you want to add as source
+
+The APT line includes the type, location and components of a repository, for example `deb http://archive.ubuntu.com/ubuntu lucid main`.
+
+APT line: `deb http://archive.getdeb.net/ubuntu lucid-getdeb apps`
+
+Figure 6-7: Entering the APT line for the GetDeb repository
+
+### Software Sources
+
+Ubuntu Software Other Software Updates Authentication Statistics
+
+### Trusted software providers
+
+- 437D0585 2004-09-12
+- Ubuntu Archive Automatic Signing Key <ftpmaster@ubuntu.com>
+- FBB75431 2004-12-30
+- Ubuntu CD Image Automatic Signing Key <cdimage@ubuntu.com>
+- 46D7E7CF 2009-05-15
+- GetDeb Archive Automatic Signing Key <archive@getdeb.net>
+
+Import Key File Remove Restore Defaults Revert Close
+
+Figure 6-8: Checking the list of trusted software providers to see whether the GetDeb key is there
+
+- 5. Close the Software Sources window. You’ll be told that the information about available software is outdated, so click Reload to fetch the most recent package information. It might take a little while to download.
+- 6. Open the Ubuntu Software Center (or close it and then reopen it, if it was already open), and search for the program you wanted from the new repository. For instance, try searching for BookWrite, a fun little program to help you write your own novel. It should appear in the search results just like any other application, so you can install it in the usual way.
+
+That was quite a few steps to go through, but that’s all there is to it. It beats driving to your local computer store to buy a new program, eh?

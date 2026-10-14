@@ -1,0 +1,14 @@
+An alternative is to add support for Linux partitions into Windows by installing some extra software. Unfortunately, the state of such software is pretty dire: Support for the old-fashioned ext2 format is pretty good, but Ubuntu uses ext4 nowadays, which is a different beast entirely. As far as I can tell, the best that people have managed to do is to get an ext4 partition mounted in Windows in read-only mode. Although you won’t be able to add new files to the partition, at least you’ll be able to see what’s in there and copy them into Windows. See http://www.soluvas.com/read-browse-explore-open-ext2-ext3-ext4-partition-filesystem-from-windows-7/ for an example of how you can do this.
+
+# Project 18B: Installing Microsoft Windows Core Fonts
+
+Like it or not, the computing world is still pretty much a Microsoft world, and that means the vast majority of users, even Mac users, are using Microsoft fonts. That being the case, it is inevitable that you will have to deal with documents using fonts such as Georgia, Verdana, Times New Roman, and Courier, to name a few. Of course, your system can substitute the fonts it has for those used in the document. But for you to see things precisely as they were intended and to allow others to see your documents the way you intended, it behoove you to install those Microsoft core fonts on your own system.
+
+Fortunately for you, there are two ways to get these fonts. One is to download and install them via the Ubuntu Software Center, while the other, for those of you with a dual-boot setup, is to simply copy them from your Windows partition. In the former case, all you need to do is to install the Microsoft Core Fonts package using the Ubuntu Software Center. This is the older set of fonts from Windows XP, so installing this package won’t get you any of the swishy new fonts that are bundled with later Windows versions. When the installation process is complete, your new Microsoft fonts will have been successfully installed and made ready for immediate use by every user account on your machine.
+
+If you’re a dual-booter, you can copy the fonts directly from your Windows installation. This has the advantage of getting all your Windows fonts into Ubuntu, even the newer ones (if you have Vista or Windows 7 installed). Here’s what you need to do:
+
++   1. Mount your Windows partition, as described in “Project 18A: Accessing Files on Your Windows Partition (for Dual-Booters)” on page 324.
++   2. Open the Windows partition in Nautilus, and browse to the Windows/Fonts folder.
++   3. Now for a little trick: Select Edit ▸ Select Items Matching, type *.ttf in the box that appears, and click OK (Figure 18-3). This will select all the files in the folder with names ending in .ttf, which are all TrueType font files.
++   4. Copy the files to a convenient location (somewhere in your home folder should do it).
