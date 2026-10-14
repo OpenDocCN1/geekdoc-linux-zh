@@ -2145,6 +2145,7 @@
 +   [Linux 内核指南](docs/the-linux-kernel/README.md)
 +   [Linux Kernel API 入门指南](docs/the-linux-kernel-api/README.md)
 +   [Linux 内核指南](docs/the-linux-kernel-book/README.md)
++   [Linux 内核模块编程指南](docs/the-linux-kernel-module-programming-guide/README.md)
 +   [Linux 内核模块编程指南；内核 2.6](docs/the-linux-kernel-module-programming-guide-kernel-26/README.md)
 +   [Linux 内存管理器指南](docs/the-linux-memory-manager/README.md)
 +   [Linux Mint 初学者指南](docs/the-linux-mint-beginners-guide/README.md)

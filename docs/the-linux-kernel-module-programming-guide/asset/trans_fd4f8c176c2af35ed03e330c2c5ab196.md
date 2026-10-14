@@ -1,0 +1,80 @@
+
+
+```
+250     pr_err("Please check the symbol name from 'syscall_sym'\n→ parameter.\n");
+251     return err;
+252 }
+253 #else
+254     if (!(sys_call_table_stolen = acquire_sys_call_table()))
+255         return -1;
+256
+257     disable_write_protection();
+258
+259     /* keep track of the original open function */
+260     original_call = (void *)sys_call_table_stolen[__NR_openat];
+261
+262     /* use our openat function instead */
+263     sys_call_table_stolen[__NR_openat] = (unsigned long *)our_sys_openat;
+264
+265     enable_write_protection();
+266 #endif
+267
+268     pr_info("Spying on UID:%d\n", uid);
+269     return 0;
+270 }
+271
+272 static void __exit syscall_steal_end(void)
+273 {
+274 #if USE_KPROBES_PRE_HANDLER_BEFORE_SYSCALL
+275     unregister_kprobe(&syscall_kprobe);
+276 #else
+277     if (sys_call_table_stolen)
+278         return;
+279
+280     /* Return the system call back to normal */
+281     if (sys_call_table_stolen[__NR_openat] != (unsigned long *)our_sys_openat)
+282     {
+283         pr_alert("Somebody else also played with the ");
+284         pr_alert("open system call\n");
+285         pr_alert("The system may be left in ");
+286         pr_alert("an unstable state.\n");
+287     }
+288
+289     disable_write_protection();
+290     sys_call_table_stolen[__NR_openat] = (unsigned long *)original_call;
+291     enable_write_protection();
+292 #endif
+293
+294
+295 }
+296 msleep(2000);
+297
+298 module_init(syscall_steal_start);
+299 module_exit(syscall_steal_end);
+300 MODULE_LICENSE("GPL");
+```
+
+## 11 阻塞进程和线程
+
+### 11.1 睡眠
+
+当有人向你请求一件你现在无法立即完成的事情时，你会怎么做？如果你是一个人类，被另一个人类打扰，唯一能说的话就是：“现在不行，我很忙。走开！”。但如果你是一个内核模块，被一个进程打扰，你还有另一种选择。你可以让该进程进入睡眠，直到你能为其提供服务。毕竟，进程会被内核不断地放入睡眠并唤醒，这就是多个进程似乎能在单颗 CPU 上同时运行的方式。
+
+这个内核模块就是一个例子。该文件（称为 /proc/sleep）一次只能被一个进程打开。如果文件已被打开，内核模块会调用 wait_event_interruptible。保持文件打开最简单的方法是使用：
+
+```
+tail -f
+```
+
+此函数会将任务的状态（任务是内核数据结构，用于保存有关进程及其当前所处系统调用的信息，如果有的话）更改为 TASK_INTERRUPTIBLE，这意味着该任务将不会运行，直到以某种方式被唤醒为止，并将其添加到 WaitQ，即等待访问文件的任务队列中。然后，该函数调用调度程序进行上下文切换到另一个进程，一个对 CPU 有用的进程。
+
+当进程使用完文件后，它会关闭文件，并调用 module_close。该函数会唤醒队列中的所有进程（没有机制只唤醒其中一个）。然后它返回，刚刚关闭文件的进程可以继续运行。随着时间的推移，调度程序决定该进程已经运行足够长的时间，并将 CPU 控制权交给另一个进程。最终，队列中的其中一个进程将由调度程序分配到 CPU。它从 wait_event_interruptible 调用之后的那一点开始。
+
+这意味着进程仍处于内核模式——就进程而言，它发出了 open 系统调用，而系统调用尚未返回。进程并不知道在它发出调用和返回之间的大部分时间里，有人使用了 CPU。
+
+然后它可以继续设置一个全局变量，告诉所有其他进程文件仍然是打开的，并继续它的生命周期。当其他进程获得 CPU 时间片时，它们会看到该全局变量并再次进入睡眠。
+
+因此，我们将使用 tail -f 在后台保持文件打开，同时尝试用另一个进程访问它（同样在后台，这样我们就不必切换到不同的 vt）。一旦第一个后台进程被 kill %1 杀死，第二个进程就会被唤醒，能够访问文件并最终终止。
+
+为了让我们的生活更有趣，module_close 并没有唤醒等待访问文件的进程的垄断权。信号，例如 Ctrl +c（SIGINT）也可以唤醒进程。这是因为我们使用了
+

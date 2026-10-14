@@ -1,0 +1,31 @@
+```
+...
+gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
+COLLECT_GCC_OPTIONS='-v' '-Q' '-O2' '--help=target' '-mtune=generic' '-march=x86-64'
+/usr/lib/gcc/x86_64-linux-gnu/9/cc1 -v ... -fcf-protection ...
+GNU C17 (Ubuntu 9.3.0-17ubuntu1~20.04) version 9.3.0 (x86_64-linux-gnu)
+...
+```
+
+But CET should not be enabled in the kernel, it may break the Kprobes and bpf. Consequently, CET is disabled since v5.11. To guarantee the manual symbol lookup worked, we only use up to v5.4.
+
+Unfortunately, since Linux v5.7 kallsyms_lookup_name is also unexported, it needs certain trick to get the address of kallsyms_lookup_name. If CONFIG_KPROBES is enabled, we can facilitate the retrieval of function addresses by means of Kprobes to dynamically break into the specific kernel routine. Kprobes inserts a breakpoint at the entry of function by replacing the first bytes of the probed instruction. When a CPU hits the breakpoint, registers are stored, and the control will pass to Kprobes. It passes the addresses of the saved registers and the Kprobe struct to the handler you defined, then executes it. Kprobes can be registered by symbol name or address. Within the symbol name, the address will be handled by the kernel.
+
+Otherwise, specify the address of sys_call_table from /proc/kallsyms and /boot/System.map into sym parameter. Following is the sample usage for /proc/kallsyms:
+
+```
+$ sudo grep sys_call_table /proc/kallsyms
+ffffffff82000280 R x32_sys_call_table
+ffffffff820013a0 R sys_call_table
+ffffffff820023e0 R ia32_sys_call_table
+$ sudo insmod syscall-steal.ko sym=0xffffffff820013a0
+```
+
+Using the address from /boot/System.map, be careful about KASLR (Kernel Address Space Layout Randomization). KASLR may randomize the address of kernel code and data at every boot time, such as the static address listed in /boot/System.map will offset by some entropy. The purpose of KASLR is to protect the kernel space from the attacker. Without KASLR, the attacker may find the target address in the fixed address easily. Then the attacker can use return-oriented programming to insert some malicious codes to execute or receive the target data by a tampered pointer. KASLR mitigates these kinds of attacks because the attacker cannot immediately know the target address, but a brute-force attack can still work. If the address of a symbol in /proc/kallsyms is different from the address in /boot/System.map, KASLR is enabled with the kernel, which your system running on.
+
+```
+$ grep GRUB_CMDLINE_LINUX_DEFAULT /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+$ sudo grep sys_call_table /boot/System.map-$(uname -r)
+ffffffff82000300 R sys_call_table
+```
