@@ -1,0 +1,129 @@
+
+```python
+# To save us writing lots of Python code
+# we are using the list_detail generic view
+
+# list_detail is the name of the view we are using
+urlpatterns = patterns('django.views.generic.list_detail',
+    # issue-list and issue-detail are the template names
+    # which will be looked in the default directories
+    url(r'^$', object_list, info, name='issue-list'),
+    url(r'^(?P<object_id>\d+)/$', object_detail, info, name='issue-detail'),
+)
+```
+
+要显示问题列表和详情，我们使用了一个名为通用视图的 Django 功能。在这种情况下我们使用名为 `list` 和 `details` 的视图。这使我们能够创建问题列表视图和问题详情视图。然后这些视图使用 `issue_list.html` 和 `issue_detail.html` 模板应用。在接下来的步骤中我们将创建模板文件。
+
+### 09 设置模板和媒体目录
+
+在本步骤中我们将创建模板和媒体目录。我们已经提到模板目录为 `TEMPLATE_DIRS = (get_abs_path('templates'))`。
+
+这相当于 `ludissueTracker/ludissueTracker/templates/`。由于我们将从 `ludissues` 应用访问模板，完整的目录路径将为 `ludissueTracker/ludissueTracker/templates/ludissues`。在你的项目文件夹中创建这些文件夹。
+
+另外，创建目录 `ludissueTracker/ludissueTracker/media/` 用于存放 CSS 文件。从代码文件夹的 `resources` 目录复制 `style.css` 文件。
+
+要从此文件夹提供文件，我们需要使其公开可用。为此，打开 `settings.py` 并在 `ludissueTracker/urls.py` 中添加以下行：
+
+```python
+from django.conf.urls import patterns, include, url
+from django.conf import settings
+# Uncomment the next two lines to enable the admin:
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    (r'^', include('ludissues.urls')),
+    (r'^admin/', include(admin.site.urls)),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT}),
+)
+```
+
+#### 管理员主页
+
+点击 Issues 旁边的 Add 按钮。在这里你会注意到你可以为问题输入 Owner、Status 和 Summary，但我们建模应用时定义的 `opened_on` 和 `modified_on` 字段怎么办？它们不在这里，因为它们不应该由用户输入。`opened_on` 将自动设置为创建时的日期/时间，而 `modified_on` 将自动设置为问题被修改时的日期/时间。
+
+另一件很酷的事情是 `owner` 字段会自动填充站点内的所有用户。
+
+我们在模型中定义了列表视图以显示 ID、name、status、owner 和 'modified on'。你可以通过导航到 `http://localhost:8000/admin/ludissues/issue/` 来访问此视图。
+
+#### '添加问题' 菜单
+
+#### 问题的列表视图
+
+![](img/3b256f430f51c98f1315671f6e4eec19_63_0.png)
+
+![](img/3b256f430f51c98f1315671f6e4eec19_63_1.png)
+
+![](img/3b256f430f51c98f1315671f6e4eec19_63_2.png)
+
+### 10 创建模板文件
+
+模板将从 `ludissueTracker/ludissueTracker/templates` 目录加载。在 Django 中，我们从 `ludissueTracker/ludissueTracker/templates/base.html` 模板开始。把它想象成可以被从属模板继承的主模板。
+
+`ludissueTracker/ludissueTracker/templates/base.html`
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>{% block title %}{% endblock %} | LUD Issues</title>
+<link rel="stylesheet" href="{{ MEDIA_URL }}style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="hd">
+<h1>LUD Issue Tracker</h1>
+</div>
+<div id="mn">
+<ul>
+<li><a href="{% url issue-list %}" class="sel">View Issues</a></li>
+<li><a href="/admin/">Admin Site</a></li>
+</ul>
+</div>
+<div id="bd">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
+```
+
+`{{ variableName }}` 代表一个 Django 变量。 `{% block title %}` 代表块。块的内容由 Django 评估并显示。这些块可以被子模板替换。
+
+![](img/3b256f430f51c98f1315671f6e4eec19_64_0.png)
+
+杂志 Issue Tracker 运行中 – 问题列表
+
+现在我们需要创建 `issue_list.html` 模板。此模板负责显示系统中所有可用的问题。
+
+`ludissueTracker/ludissueTracker/templates/ludissues/issue_list.html`
+
+```html
+{% extends 'base.html' %}
+{% block title %}View Issues - {% endblock %}
+{% block content %}
+<table cellspacing="0" class="column-options">
+<tr>
+<th>Issue</th>
+<th>Description</th>
+<th>Status</th>
+<th>Owner</th>
+</tr>
+{% for issue in object_list %}
+<tr>
+<td><a href="{% url issue-detail issue.id %}">{{ issue.id }}</a></td>
+<td><a href="{% url issue-detail issue.id %}">{{ issue.name }}</a></td>
+<td>{{ issue.status }}</td>
+<td>{{ issue.owner }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+```
+
+这里我们继承了之前创建的 `base.html` 文件。 `{% for issue in object_list %}` 在 `urls.py` 发送的对象上运行。然后我们对 `object_list` 中的 `issue.id` 和 `issue.name` 进行迭代。
+
+现在我们将创建 `issue_detail.html`。此模板负责显示案例的详情视图。
+
+`ludissueTracker/ludissueTracker/templates/ludissues/issue_detail.html`
