@@ -1,0 +1,13 @@
+endpoints with ssh or stunnel and the like because the traffic that would be captured by the packet sniffer would be encrypted. passwd does not work with syslog-ng if syslog-ng is configured to use TCP instead of UDP; however, you can easily set up Snort to look for TCP port 514 instead of UDP port 514.
+
+Regardless of whether you are using stealth logging, if you use a central logging server, you should set up a monitoring system so that you are immediately alerted if this logging server is down for any reason because it could be a prelude to an intrusion.
+
+# Avoid Logging in As Root
+
+By design, the root user has access to everything on a system. It is the workhorse account and must be used to perform the more intricate and dangerous tasks on a system. You might be tempted to use the root account all the time because it permits unfettered access to all the commands necessary for maintaining a system. The downside is that using it all the time also eliminates the warning flag the system generates when something dangerous is about to happen.
+
+In the normal course of events, the system warns a typical user that he or she does not have the necessary privileges for performing a certain function. The warning serves two purposes: Restricting access to parts of the system (or particular functions) and identifying the command requested can have significant repercussions. If the root account is used, many of these warnings are suppressed, and possible repercussions are not flagged. A simple keystroke can turn a simple command into a disaster.
+
+It is therefore a good system management practice to use the root account as little as possible. It is also important to keep the root account restricted to a minimum number of individuals and locked down to the console. Auditing the use of a generic account such as root is difficult if not impossible. There are few business reasons for numerous individuals to have complete access to all the directories and files on a system. In a mission-critical system, it is not uncommon to have only one individual allocated to root.
+
+In Chapter 5, “User Environment Management and Security,” we explored the use of the su and sudo commands as appropriate replacements for the root account. When appropriate, the su command can be used to attain root access to the system. Access to the su command can be restricted and requires knowledge of the root password. Once granted, however, this level of access is equivalent to the root user and should therefore be strictly controlled. A more granular method for granting elevated privileges is to use the sudo

@@ -1,0 +1,305 @@
+
+## G
+- FTC (Federal Trade Commission) website, 113
+- FTP (File Transfer Protocol), 255-256
+- anonymous, 260
+- Pure-FTPd, 256-262
+- security, 454
+- TFTP server, 266-267
+- vsftpd (Very Secure FTP Daemon), 262-266
+- ftp groups, defaults GID, 87
+- ftp users, default UID, 83
+- full backups, 326
+- fuser command, 195
+- Games groups, defaults GID, 87
+- games user, default UID, 83
+- GCOS (General Comprehensive Operating System), 89-90
+- gdm user, default UID, 83
+- gedit text editor, 494
+- General Comprehensive Operating System (GCOS), 89-90
+- GFS rotation schemes (Grandfather-Father-Son rotation schemes), 330-332
+- GID (group ID), 81-88
+- information data, 88-89
+- /etc/group file, 93-95
+- /etc/passwd file, 89-91
+- /etc/shadow file, 91-93
+- glFTPd website, 255
+- Gnome website, 494
+- Gnu Privacy Guard (GnuPG), 183-188
+- GNU website, 494
+- GnuPG (Gnu Privacy Guard), 183-188
+- gnupg.org website, 455
+- Grand Unified Bootloader (GRUB), 68-71
+- Grandfather-Father-Son rotation schemes (GFS rotation schemes), 330-332
+- group ID. See GID
+- group-owned files, hacker exploits, 163-165
+- groupadd command, 110
+- groupdel command, 110
+- groupmod command, 110
+- groups
+- GID (group ID), 81-88
+- information data, 88-89
+- /etc/group file, 93-95
+- /etc/passwd file, 89-91
+- /etc/shadow file, 91-93
+- managing accounts, 95-97
+- creating, 108-110
+- creating user accounts, 97-104
+- default properties, 105-108
+- security, 110-111
+- auditing default accounts, 119-120
+- file ownership changes, 163
+- multiple groups per user, 122
+- root account, 120-122
+- strong passwords, 111-119
+- grsecurity kernel patch, 443
+- GRUB (Grand Unified Bootloader), 68-71
+- gVim text editor, 494
+
+## H
+- -h directory option, restore program, 356
+- hackers, strong password policies, 384-391
+- hacking versus testing, 407
+- Haclient groups, defaults GID, 87
+- Hacluster users, default UID, 83
+- hard disks
+- configuration, 14
+- installation preparation, 20
+- partitioning schemes, 13
+- hardening, 441-442
+- automating, 479-481
+- hardware, 463
+- changing default passwords, 464-465
+- physical access, 463-464
+- sniffing switches, 465-466
+- principles, 442-444
+- SLES 9 packages, 477-478
+- syslog host server, 447-450
+- hardware
+- configuration, 28
+- hardening, 463
+- changing default passwords, 464-465
+- physical access, 463-464
+- sniffing switches, 465-466
+- server, 44
+- adding disk, 45-57
+- preparation, 44-45
+- system requirements, 10-11
+- YaST maintenance, 34
+- hashed passwords, 92
+- hashing algorithms, user password security, 115-119
+- HIDS (Host-based Intrusion Detection Systems), 405
+- /home mount point, 197
+- home wireless networks, restricting access, 467
+- Honeynet Project website, 450
+- Host-based Intrusion Detection Systems (HIDS), 405
+- hosts
+- intrusion detection, 428-429
+- AIDE (Advanced Intrusion Detection Environment), 431-435
+- chkrootkit, 429-431
+- log files, 429
+- stealth logging, 450-451
+- hot backups, databases, 336-337
+- HTTP protocol, 312
+
+## I
+- -i file option, cpio utility, 344
+- -i option
+- cpio utility, 344
+- restore program, 356
+- IBM website, 490
+- IBSS (independent basic service set), 467
+- identity provisioning, 383
+- ifconfig command, 469
+- implementation, backups, 328-330
+- consideration points, 333-335
+- databases, 336-337
+- GFS rotation scheme, 330-332
+- Tower of Hanoi rotation scheme, 332-333
+- implicit classes, 315
+- incident responses, security policies, 399-401
+- incremental backups, 326, 329-331
+- independent basic service set (IBSS), 467
+- inetd (Internet services daemon), 221
+- Info Security website, 441
+- information security, corporate policies, 376-401
+- Information Technology Security Evaluation Criteria (ITSEC), security ratings, 486
+- infrastructure mode, WLANs, 467
+- init command, 194
+- init program, runlevels, 72-73
+- Initialization Vector, 471
+- input
+- mode, vi text editor, 495
+- redirection, bash shell, 130
+- Insecure.org website, 499
+- installation
+- manual download, 5
+- packages, 36
+- SLES, 4-5
+- AutoYaST, 9-10
+- CD-ROM, 6
+- configuration, 22
+- hard disks, 20
+- hardware configuration, 28
+- language preference, 18
+- method selection, 17-18
+- network connectivity, 23-24
+- networks, 9
+- online updates, 24
+- pre-installation planning, 10-17
+- service configuration, 24-25
+- settings, 18-20
+- troubleshooting, 29
+- user settings, 25-27
+- VNC-based method, 6-9
+- interfaces
+- printer types, 306
+- YaST, 33
+- Internet Security Systems website, 500
+- Internet services daemon (inetd), 221
+- Internet Storm Center website, 500
+- intrusion detection
+- assessing vulnerabilities, 407
+- Nessus tool, 410-418
+- nmap tool, 407-410
+- defining, 403-405
+- host intrusions, 428-429
+- AIDE (Advanced Intrusion Detection Environment), 431-435
+- chkrootkit, 429-431
+- log files, 429
+- network-based intrusions, 418
+- ACID (Analysis Console for Intrusion Databases), 422-428
+- NIDS (Network Intrusion Detection Systems), 419-420
+- Snort, 420-422
+- traffic flow restrictions, 418-419
+- reducing exposure, 405-406
+- tools
+- Cacti, 437
+- Ethereal, 438-439
+- MRTG, 437
+- scanning, 436-437
+- Intrusion Detection Systems (LIDS) website, 499
+- IP addresses, remote access, 286-287
+- ippl, 478
+- iptables, packet filtering, 460-463
+- IPTraf, 478
+
+## J - K - L
+- irc users, default UID, 83
+- IrDA interface type, 306
+- itox utility, 221
+- ITSEC (Information Technology Security Evaluation Criteria), security ratings, 486
+- IV (Initialization Vector), 471
+- -j option, tar utility, 340
+- JetDirect protocol, 312
+- Jetico website, 186
+- JOE text editor, 494
+- John the Ripper, 387, 478
+- download website, 387
+- password cracker, 111
+- quick-start steps, 387-388
+- John the Ripper website, 499
+- journaling, filesystem metadata, 190-191
+- Kaspersky, 255
+- Kate text editor website, 494
+- Kerberos, network service authentication, 303-304
+- kernel, system management, 210-211
+- filesystem access, 213-216
+- parameter tuning, 211-213
+- kernel boot, 71-72
+- kernel.sem parameter, 212
+- kernel.shmall parameter, 212
+- kernel.shmmax parameter, 212
+- kernel.shmmin parameter, 212
+- key pairs, 183
+- Key Server website, 184
+- KillDisk website, 189
+- KMail, 253
+- Kmem group, defaults GID, 86
+- -L label option, dump program, 352
+- laptops, policies, 379
+- Large File Support (LFS), 16
+- LDAP (Lightweight Directory Access Protocol), 302
+- client configuration, 26
+- configuration, 24-25
+- network service authentication, 302-303
+- Ldap groups, defaults GID, 87
+- Ldap users, default UID, 83
+- LDP protocol, 312
+- Learning the vi Editor, 498
+- Lefebvre, Jean-Pierre, 256
+- Legato NetWorker, 368
+- legislature, Sarbanes-Oxley Act, 377
+- LFS (Large File Support), 16
+- /lib mount point, 197
+- LIDS (Intrusion Detection Systems) website, 499
+- Lightweight Directory Access Protocol. See LDAP
+- LILO (Linux Loader) configuration, 67-68
+- lilo boot loaders, corrupted, 326
+- limits module, PAM (Pluggable Authentication Module), 137-139
+- Line Printer Daemon (LPD), 305
+- Linux distributions, 3
+- Linux Journal website, 450
+- Linux Kernel website, 500
+- Linux Loader (LILO), 67-68
+- Linuxrc, 5
+- listings
+- Backup Shell Script Using rsync utility, 360
+- /bash_profile Content, 132
+- Comment Entered at Console, 75
+- Content of /etc/pam.d/login, 135
+- Default /etc/ntp.conf File, 238
+- Default /etc/xinetd.conf File, 228
+- DHCP Server Pollux /etc/passwd file, 126
+- Disk Quota Warning Configuration File, 146
+- Environment Variable Verification, 132
+- /etc/bash.bashrc Generated Aliases, 131
+- Execute Permission Bit on Directory, 158-159
+- fdisk Tool Session, 49
+- GRUB menu.lst, 69-70
+- LILO configuration, 67-68
+- Login Time Restriction Example for time.conf, 140
+- Minimal Sample smb.conf File, 273
+- PAM limits.conf File, 137-138
+- pam_time.so Module Configuration File, 139
+- Runlevel 5 xdm files, 73
+- Sample /etc/sudoers File, 151
+- Sample dump Log Messages, 353
+- Snort Alert, 422
+- Typical Output from top Command, 202
+- ln command, 195
+- local groups, adding, 109
+
+## M
+- local printers
+- adding to server, 307-310
+- configuration, 306-307
+- local users, adding, 27
+- log files
+- host intrusion detection, 429
+- syslog servers, 444-446
+- hardening central host, 447-450
+- stealth logging host, 450-451
+- system management, 200-201
+- logger command-line tool, 449
+- Logical Volume Manager (LVM), 45, 336
+- logins
+- restricting root logins, 451-452
+- shells, 127, 130-133
+- users, system monitoring, 206-210
+- Logsurfer, 478
+- Lp groups, defaults GID, 86
+- lp users, default UID, 82
+- lpdadmin parameters, 317
+- LPD (Line Printer Daemon), 305
+- ls -l command, file permission settings, 154
+- ls command, 195
+- lsof command, 195, 207
+- Lucas, Edouard, Tower of Hanoi game, 332
+- LVM (Logical Volume Manager), 45, 336
+- MAC addresses
+- filtering, 469
+- sniffing switched networks, 466
+- Mail groups, defaults GID, 86
+- mail users, default UID, 82
+- Mail User Agents (MUAs), 185

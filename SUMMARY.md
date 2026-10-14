@@ -2028,6 +2028,7 @@
 +   [SUSE Linux Enterprise Server 10 入门指南](docs/suse-linux-enterprise-server-10-fundamentals/README.md)
 +   [SUSE Linux Enterprise Server 10：网络服务](docs/suse-linux-enterprise-server-10-network-services/README.md)
 +   [SUSE Linux Enterprise Server 10：安全指南](docs/suse-linux-enterprise-server-10-security/README.md)
++   [SUSE Linux Enterprise Server 9 管理员手册](docs/suse-linux-enterprise-server-9-administrators-handbook-novel/README.md)
 +   [SUSE Linux Enterprise Server 管理指南 (课程 3037) (Novell 授权教材)](docs/suse-linux-enterprise-server-administration-course-3037-nove/README.md)
 +   [SUSE Linux 企业服务器管理（课程 3112）：CLA, LPIC - 1 & Linux+](docs/suse-linux-enterprise-server-administration-course-3112-cla-/README.md)
 +   [SuSE Linux Firewall 光光版 - VPN 版](docs/suse-linux-firewall-on-cd---vpn-edition/README.md)

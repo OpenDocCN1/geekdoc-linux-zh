@@ -1,0 +1,296 @@
+
+- social engineering, 112
+- software
+  - package installation, 13
+  - SLES installation planning, 11
+  - support information, 13
+  - YaST maintenance, 34
+- Software Selection screen, 21
+- Solar Designer, 387
+- Sophos, 255
+- SourceForge website, 364
+- SourceForge.Net website, 494
+- SpamAssassin website, 253
+- special permission bits, 168-170, 177-178
+- security against SUID program, 176-177
+- SGID file sharing, 172-174
+- SUID program, 174-176
+- SUID/SGID security, 170-172
+- Spitzer, Lance, 450
+- spooling, print job lifecycle, 313
+- squid user, default UID, 83
+- /srv mount point, 198
+- ssh (Secure Shell), 281-282
+- Sshd group, defaults GID, 87
+- sshd users, default UID, 83
+- SSID (Service Set ID), 474-476
+- Standard Boot Floppies, 370
+- startup, servers
+  - boot loaders, 65-71
+  - emergency recovery, 75-77
+  - init program, 72-73
+  - kernel boot, 71-72
+  - stat command, 195
+- State packets, 462
+- --stats option, rsync utility, 359
+- status line command mode, vi text editor, 495
+- stealth logging hosts, 450-451
+- sticky bit, special file permissions, 168-170, 177-178
+- sticky permission, value, 155
+- storage
+  - backups, 327
+  - disk space, user management, 141-148
+  - medias, backups, 327-328
+  - offsite policies, 379
+- stumbling utilities, 468
+- Stunnel users, default UID, 83
+- su command, 84, 148-152
+- sudo command, 148-152, 451-452
+- SUID (Set UID), 156
+  - permission value, 155
+  - special permission bit, 168-170
+  - sample program, 174-176
+  - security against program, 176-177
+  - security implications, 170-172
+- super users, 148
+- super-servers, 220
+- SUSE
+  - FTP Server, 500
+  - mailing lists, 501
+  - website, 45
+- SUSE GmbH, 3
+- SUSE LINUX Enterprise Server. See SLES
+- SuSEconfig, 32-33
+- switches, sniffing, 465-466
+- symmetric encryption, GnuPG, 183
+- Sys groups, defaults GID, 86
+- /sys mount point, 198
+- syslog servers, 444-446
+- hardening central host, 447-450
+- message locations, 445
+- stealth logging host, 450-451
+- syslog-ng, 448
+- SYSTAT, xinetd, 223
+- System Backup Administrator (SBA), 368
+- systems
+  - configuration maintenance, 31-36
+  - management
+    - basic commands, 194-195
+    - monitoring, 198-210
+    - root filesystem, 196-198
+  - server tuning, 210-216
+  - tools, 196
+  - requirements, SLES installation planning, 10-11
+  - resources, user management
+    - disk space, 141-148
+    - PAM (Pluggable Authentication Module), 133-141
+
+## T
+- -t file option, restore program, 356
+- -T option, restore program, 356
+- -t option
+  - cpio utility, 344
+  - tar utility, 340
+- tape archive (tar utility), 339
+- tar utility, backups, 339-343
+- tarballs, 339
+- tarfiles, 339
+- TCFS website, 187
+- Tcp packets, 462
+- TCP/IP ports, 312
+- tcpd, 478
+- TCPDump website, 500
+- TCSEC (Trusted Computer System Evaluation Criteria), 485
+- Telnet, 312
+- remote access, 281
+- security, 454
+- Temporal Key Integrity Protocol (TKIP), 473
+- terminal emulators, 281
+- terminal sessions, invoking YaST, 33
+- testing versus hacking, 407
+- text editors, resources, 493-498
+- TFTP (Trivial File Transfer Protocol), 255, 266-267
+- TightVNC website, 8
+- TIME, xinetd, 224
+- timing services, 234-237
+  - configuring NTP client, 237-243
+  - NTP server configuration, 243-246
+  - troubleshooting NTP, 246-249
+- TKIP (Temporal Key Integrity Protocol), 473
+- /tmp mount point, 198
+- tools
+  - backups, 337-339, 364-366
+  - commercial products, 367-369
+  - cpio utility, 343-345
+  - dd utility, 345-348
+  - dump program, 348-358
+  - restore program, 348, 355-358
+  - rsync utility, 358-360
+  - scheduling, 366-367
+  - tar utility, 339-343
+  - YaST Backup module, 360-364
+
+## tools
+- intrusion detection
+  - Cacti, 437
+  - Ethereal, 438-439
+  - MRTG, 437
+  - scanning, 436-437
+  - system management, 196
+  - top command, 201-203
+  - Tower of Hanoi rotation scheme, 332-333
+  - triplets, 154
+  - Tripwire, 431, 478, 499
+  - Trivial File Transfer Protocol (TFTP), 255, 266-267
+  - troubleshooting
+    - NTP 246-249
+    - SLES installation, 29
+  - trusted applications, 485
+  - Trusted Computer System Evaluation Criteria (TCSEC), 485
+  - Trusted groups, defaults GID, 87
+  - trustee assignments, file permissions, 153-159
+    - changing, 159-162
+  - hacker exploits, 163-165
+  - ownership changes, 163
+  - Tty groups, defaults GID, 86
+  - tuning filesystems, 213-216
+
+## U
+- -u option
+  - cpio utility, 344
+  - dump program, 352
+  - tar utility, 340
+- UID (user ID), 81-88
+- information data, 88-89
+- /etc/group file, 93-95
+- /etc/passwd file, 89-91
+- /etc/shadow file, 91-93
+- umask settings, file default permissions, 166-168
+- UML (User Mode Linux), 458-460
+- UNC (Unique Naming Convention), 272
+- Unique Naming Convention (UNC), 272
+- UniTrends Software website, 367
+- Unix Backup & Recovery (italic), 366
+- updates, SLES installation, 24
+- UPG (user private group), 104
+- uptime command, 199-200
+- USB interface type, 306
+- User and Group Administration module, YaST, 98
+- user id. See UID
+- User Mode Linux (UML), 458-460
+- user private group (UPG), 104
+- usermod command, changing user password, 103
+- users
+  - account policies, 382-384
+  - configuration, 25-27
+  - information data, 88-89
+  - /etc/group file, 93-95
+  - /etc/passwd file, 89-91
+  - /etc/shadow file, 91-93
+  - login, system monitoring, 206-210
+  - management
+    - account authentication, 126-127
+    - environment configuration, 127-133
+    - su and sudo command, 148-152
+    - system resources, 133-148
+  - managing accounts, 95-97
+  - creating accounts, 97-104
+  - creating groups, 108-110
+  - default properties, 105-108
+  - security, 110-111
+  - auditing default accounts, 119-120
+  - file ownership changes, 163
+  - multiple groups per user, 122
+  - root account, 120-122
+  - strong passwords, 111-119
+  - YaST maintenance, 34
+- UID (user ID), 81-88
+- Users groups, defaults GID, 88
+- /usr mount point, 198
+- /usr/bin/chage application, user management, 96
+- /usr/bin/chfn application, user management, 96
+- /usr/bin/chsh application, user management, 96
+- /usr/bin/gpasswd application, group management, 97
+- /usr/bin/passwd application, user management, 96
+- /usr/sbin/chpasswd application, user management, 96
+- /usr/sbin/groupadd application, group management, 96
+- /usr/sbin/groupdel application, group management, 96
+- /usr/sbin/groupmod application, group management, 97
+- /usr/sbin/grpck application, group management, 97
+- /usr/sbin/pwck application, user management, 96
+- /usr/sbin/useradd application, user management, 96
+- /usr/sbin/userdel application, user management, 96
+- /usr/sbin/usermod application, user management, 96
+- utilities, backups, 337-339, 364-366
+- commercial products, 367-369
+- cpio, 343-345
+- dd, 345-348
+- dump program, 348-358
+- restore program, 348, 355-358
+- rsync, 358-360
+- scheduling, 366-367
+- tar, 339-343
+- YaST Backup module, 360-364
+- Utmp groups, defaults GID, 87
+- Uucp groups, defaults GID, 86
+- uucp users, default UID, 82, 262-266
+
+## V
+- -v option
+  - cpio utility, 344
+  - restore program, 356
+  - rsync utility, 359
+  - tar utility, 340
+- /var mount point, 198
+- variables, environment
+  - bash shell, 130
+  - user configuration, 130-133
+- Venema, Dr. Wietse, Postfix, 250
+- verification, backups, 335
+- Very Secure FTP Daemon (vsftpd), 255, 262-266
+- Vi Lovers Home page, 498
+- vi text editor
+  - editing commands, 497
+  - modes of operation, 495
+  - single-character commands, 496
+- Video group, defaults GID, 87
+- Vim text editor, 494
+- Virtual Network Computing. See VNC
+- Visual command mode, vi text editor, 495
+- VMware website, 18
+- VNC (Virtual Network Computing), 6, 283-284
+  - security, 454
+  - SLES installation, 6-9
+- Vscan groups, defaults GID, 88
+- vscan users, default UID, 83
+- vsftpd (Very Secure FTP Daemon), 255
+
+## W
+- w command, 195
+- -W option, tar utility, 340
+- warchalking, 468
+- wardriving, 468
+- Web services, 296-301
+- websites
+  - AirSnort, 472
+  - APCC, 380
+  - Artisoft, 188
+  - Balabit, 448
+  - BitDefender, 255
+  - Cacti, 437
+  - CFS, 187
+  - chiark, 455
+  - Computer Associates, 368
+  - CPAN, 119
+  - Crypticide, 387
+  - deploying, 426
+  - EncFS, 187
+  - Ethereal, 439
+  - F-Prot, 255
+  - FTC (Federal Trade Commission), 113
+  - glFTPD, 255
+  - Gnome, 494
+  - GNU, 494
+  - GnuPG, 183
+  - grub.org, 455
+  - Honeynet Project, 450

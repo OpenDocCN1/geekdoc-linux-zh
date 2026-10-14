@@ -1,0 +1,13 @@
+The third and final step in the initial setup is to specify a range of TCP/IP addresses available for distribution. The range you choose here can be based on many factors. Single subnet sites may reserve the first 30 addresses for servers, the next 15 addresses for printers, and the rest for dynamic allocation. Other options include having your servers in a subnet, printers and network devices in another, and workstations in yet a third. After you make this decision, you will be required to enter a lower and upper IP address to define the DHCP range.
+
+After configuring, you will be able to start your DHCP server. Changing a client’s configuration to permit DHCP and restarting the network services should be all that is required. Your client should now have a valid address in the appropriate pool of addresses.
+
+DHCP allows for the quick configuration of workstations. It also alleviates the tedious task of keeping track of machine-IP pairings. If these pairings are still required, DHCP provides added functionality whereby a network card’s MAC address can be registered and matched to a unique IP. Though this is still a tedious task, the data is maintained in the DHCP server itself. It is therefore impossible to allocate the same address twice—something a spreadsheet or paper system is known for.
+
+The MAC address reservation scheme is also useful for quarantine purposes. A questionable machine discovered on the network could have its MAC address reservation point to a quarantine subnet. Such a subnet can be configured not to interact with other subnets, causing the end user to contact the help desk. The help desk staff can then deal with the infected machine without requiring hours of checking from cubicle to cubicle.
+
+# DNS and DHCP
+
+You can perform additional configuration steps to more closely tie DNS and DHCP together. Both of these applications are LDAP aware. If a corporate LDAP directory exists, it is possible for these applications to store their information within the structures provided.
+
+An additional feature that has not been discussed here is the linking of information collected by DHCP with the capabilities of DNS. You might want to populate the DNS database with the names and IP addresses of DHCP. SLES allows you to do this using DynamicDNS. This option permits the passing of information from the DHCP server to the DNS server. Auto-registration of the machine name and domain is performed in the DNS environment. This permits hosts to have dynamic IP addresses while retaining the capability to be accessed by name when required.

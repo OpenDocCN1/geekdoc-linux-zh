@@ -1,0 +1,12 @@
+# NOTE
+
+Quite often, you cannot use the strongest key supported by the hardware because a handful of clients have an older wireless card that supports only 64-bit WEP keys. In such cases, you have to settle for a (weakened) 64-bit key because it is the lowest common denominator, or you might consider upgrading those clients to newer cards. Given the low cost of wireless network cards available today and the potential cost of having your network compromised, you can easily justify the upgrade.
+
++   - Use different WEP keys for different APs. Doing this, however, may limit the mobility of your legitimate users within the building. On the other hand, some companies install a WLAN so they do not have to run cables. In such instances, varying WEP keys should not be a hindrance.
++   - Although it may be administratively intensive, periodically changing the WEP key can serve to deter WEP key cracking. Depending on the frequency with which you change your key, unless the attacker uses the cracked key immediately, he may have to start all over again when he returns, thinking he has gained access to your APs from his previous visit. Depending on the client workstation configuration, you may be able to push out new WEP keys automatically and transparently.
+
+Recognizing the shortcomings of WEP, IEEE 802.11i is a new standard that specifies improvements to wireless LAN networking security. The 802.11i standard addresses many of the security issues of the original 802.11 standard. While at the time of this writing, the new IEEE 802.11 standard is still being ratified, wireless vendors have agreed on an interoperable interim standard known as Wi-Fi Protected Access (WPA).
+
+With WPA, encryption is done using the Temporal Key Integrity Protocol (TKIP, originally named WEP2), which replaces WEP with a stronger encryption algorithm (but still uses RC4 ciphers). Unlike WEP, TKIP avoids key reuse by creating a temporary key using a 128-bit IV (instead of the quickly repeating 24-bit IV used by WEP), and the key is changed every 10,000 packets. It also adds in the MAC address of the client to the mix, such that different devices will never seed RC4 with the same key. Because TKIP keys are determined automatically, there is no need to configure an encryption key for WPA.
+
+If your WLAN equipment supports WPA in addition to WEP, by all means, use WPA.
