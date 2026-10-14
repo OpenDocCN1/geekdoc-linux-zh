@@ -1,0 +1,112 @@
+
+*C right angles
+
+Poor: 只有一项备选答案与题干在语法上正确地使用了连词。
+
+## Better: 提出直接问题以聚焦题目。
+
++ 6. What is a scarf?
++ A band of cloth worn around the neck
++ B type of wood joint
++ C a tool for trimming shrubs
++ *D both (A) and (B) are scarves
+
+题干 1 中的不定冠词 a 给学生一个线索，表明备选答案 (C) 是正确的。其他两个备选答案以元音开头，因此需要不定冠词 an。在题干 3 中，连词 when 仅适用于选项 (B) 的表述。题干 5 中题干的复数动词形式提示学生选择多个定义。
+
+重叠的备选答案 每个备选答案应是独立的，而不是另一个备选答案的逻辑子集。包含彼此全部或部分内容的备选答案称为重叠备选答案。如果你编写包含重叠备选答案的题目，你就给知识较少但擅长应试的学生提供了正确答案的线索。以下是改进使用重叠备选答案编写的题目的几个示例。
+
+## 示例
+
+Poor: 使用“over”使得 A 和 B 与 C 重叠。
++ 1. What is the population of Modesto, CA?
++ A over 180,000
++ B over 160,000
++ *C over 140,000
+
+Better: 备选答案的数值不重叠。
+
+Poor: 备选答案 B、C 和 D 基本相同，因此可以被排除。
++ 5. How long does a perennial plant live?
++ *A It continues to live year after year.
++ B It lives only for one growing season.
++ C It needs to be replanted every year.
++ D It dies after the first year.
+
+Better: 备选答案重新聚焦，直接询问年限。
++ 6. How long does a perennial plant live?
++ *A It continues to live for several years.
++ B It lives only for two years.
++ C It lives for only one year.
+
+在题干 1 中，选项 (C) 与选项 (A) 和 (B) 重叠。即使学生不知道正确答案，学生也可能选择选项 (C)。在题干 3 中，选项 (A)、(B) 和 (C) 基本上说的是同一件事：一个擅长应试的学生，认识到这种重叠，即使不知道下科罗拉多河盆地需水情况，也很可能选择选项 (D)。同样，对于题干 5，选项 (B)、(C) 和 (D) 基本上说的是同一件事，但这里“以上皆是”并不是一个选项。因此，应试的学生会知道选项 (A) 必须正确。
+
+## 避免一组真假备选答案
+
+这种缺陷的常见原因是教师在创建题目时没有明确的问题或问题。以下是通过重新聚焦一组真假备选答案来改进题目的示例。
+
+## 示例
+
+Poor: 备选答案是一组不集中的真假陈述。
++ 1. Reliability is
++ *A increased by making a test longer
++ B decreased by making the test longer
++ C unrelated to the test’s standard deviation
++ D the same as the test’s standard error of measurement
+
+Better: 题干聚焦于一个问题。
++ 2. Which of the following situations will likely increase a test’s reliability coefficient?
++ *A A 40-item test is lengthened to 50-items.
++ B A 50-item test is shortened to 40-items.
++ C The coefficient is computed using only the upper 27% of the students.
+
+在题干 1 中，很难确定学生需要回答的单一问题。所有选项仅因它们都可以用短语“Reliability is”开头而相关。选项 (B)、(C) 和 (D) 与该短语一起使用时成为假陈述。该题目缺乏焦点，因为它实际上嵌入了三个思想：测验长度如何影响信度、群体变异性（标准差）如何影响信度，以及信度系数与测量标准误之间的关系。应只选择其中一个思想并作为修订题目的基础，就像题干 2 所做的那样。 （但是，要制作多个真假题目，请参阅第 7 章。）
+
+## 避免“以上均不是”
+
+关于在多选题中使用“以上均不是”这一短语的研究表明，它会导致信度较低、难度更大的题目（Haladyna & Downing, 1989b）。因此，在使用该短语作为选项时要非常谨慎。该选项绝不能与最佳答案类型（见本章前面给出的示例）的多选题一起使用。最佳答案问题的本质要求所有选项在某种程度上都是不正确的，但其中一个是“最佳”。在这种条件下要求学生选择“以上均不是”似乎是不合逻辑的。
+
+然而，使用“以上均不是”与某些正确答案问题一起是有意义的，当学生寻找一个完全正确的选项时。在算术、某些英语用法、拼写等方面，可以明确地建立并捍卫一个完全正确的答案。一些评估专家建议仅在学生更可能先解决问题然后再查看选项，而不是在着手解决问题之前先搜索干扰项时才使用“以上均不是”（Wood, 1977）。
+
+使用“以上均不是”相关的两个特殊问题是 (a) 学生可能不相信该选择可以是正确的，因此他们认为它不可信；以及 (b) 选择它的学生可能在思维错误时获得学分（Ebel, 1951）。为避免第一个问题，使用“以下均不是”作为测试开始时几个简单题目中的正确答案。这会让学生养成认真考虑“以上均不是”作为可能正确答案的习惯。然后它可以在测试的后面作为正确或错误的答案使用。第二个问题通过在干扰项涵盖了可能出现的错误答案的大多数情况下使用“以上均不是”作为正确答案的题目来处理（见下面的题干 1），或将其作为干扰项用于大多数可能的错误答案无法纳入干扰项的题目（Ebel, 1951）（见题干 2）。
+
+## 示例
+
+“以上均不是”的可接受使用：作为正确答案
+1. What is the difference?
+      106
+      -21
+      ----
+       ?
+A 81
+B 89
+C 101
+*D None of the above
+
+“以上均不是”的可接受使用：作为合理的干扰项
+2. What is the sum?
+      46
+      47
+      48
+      --
+       ?
+A 161
+B 171
+*C 141
+D None of the above
+
+更有可能的是；然而，像 1 和 2 这样的题目作为完形（简答）题目比作为多选题更好。如果你使用完形题目，你就能检查学生的错误答案以确定他们为何回答错误；然后你可以对学生进行补救。
+
+关于此点的最后两点评论。避免使用“以上均不是”作为增加干扰项数量的填充物。记住干扰项必须具有可信度。其次，作为一个选项，“以上均不是”对年轻学生来说可能比对年长学生更令人困惑。
+
+## 避免“以上皆是”
+
+关于使用“以上皆是”的研究尚无定论（Haladyna & Downing, 1989b）。如果使用，该选项应仅限于多选题的正确答案类型。它不能与最佳答案类型一起使用，因为“所有选项”不能同时是最好的。还出现了两个进一步的困难：(a) 知道其中一个选项正确但可能简单地选择它并在不复核其余选项的情况下继续下一题的学生，以及 (b) 知道四个选项中有两个正确但不知道第三个选项正确性的学生可以选“以上皆是”。第一个困难可以通过在列表中将第一个选择写成“以下所有说法均正确”在一定程度上减少。然而，这种措辞也可能让小学和初中学生感到困惑。一般的建议是避免使用“以上皆是”。将多答案题目改写为两个或多个题目并避免这些问题。或者，将题目改写为多项真假题目（见第 7 章）。
+
+避免文字线索 未遵循此规则会使题目更容易并降低测试信度（Haladyna & Downing, 1989b）。文字线索包括使用重叠备选答案、荒谬或可笑的干扰项、押韵（即同音词）或其他题干与正确答案之间的词语关联、正确答案与题干的重复或相似性，以及特定限定词。备选答案中的文字线索经常引导知识较少但语言能力强的学生找到正确答案。以下是措辞不当且包含文字线索的题目示例。
+
+## 示例
+
+Poor: 通过题干与正确答案中词语的关联来回答。
+1. Which government agency is most concerned with our nation's agricultural policies?
+*A Department of Agriculture
+B Department of Education
