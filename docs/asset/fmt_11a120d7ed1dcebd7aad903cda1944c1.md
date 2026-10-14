@@ -1,0 +1,200 @@
+
+- user configuration, 128-130
+- Basic Input Output System (BIOS), 65-66
+- basic service sets (BSS), 467
+- Bastille, 478
+- Bastille Linux
+  - automating hardening, 479-481
+  - website, 499
+- Bauer, Mick, 450
+- BCWipe, 188
+- Beale, Jay, 441
+- Bin groups, defaults GID, 86
+- `/bin` mount point, 197
+- bin users, default UID, 82
+- `/bin/false` shell, 384
+- BIOS (Basic Input Output System), 65-66
+- BitDefender, 255
+- Blowfish, user password security, 115-119
+- boot devices, BIOS, 66
+- boot loaders, 65-67
+  - `GRUB` (Grand Unified Bootloader), 68-71
+  - `LILO` (Linux Loader), 67-68
+- `/boot` mount point, 197
+- booting
+  - rescue disks, 369-371
+  - servers
+    - boot loaders, 65-71
+    - emergency recovery, 75-77
+    - init program, 72-73
+    - kernel boot, 71-72
+- bootloaders, selection, 14
+
+## B
+- 启动密码与配置密码，380
+- BrightStor ARCserve Backup，368
+- BRU（备份和恢复实用程序），368
+- BSS（基本服务集），467
+- Bugzilla 网站，501
+
+## C
+- `-C bufsize` 选项，`cpio` 实用程序，344
+- `-C` 选项，`restore` 程序，356
+- `-c` 选项
+  - `rsync` 实用程序，359
+  - `tar` 实用程序，340
+- CA（证书颁发机构），24-25
+- Cacti 工具，437
+- 容量，服务器硬件，44
+  - 添加磁盘，45-57
+  - 准备，44-45
+- CCITSE（信息技术安全评估通用准则），486
+- CD-ROM，SLES 安装，6
+- Cdrom 组，默认 GID，87
+- 中央服务器，syslog，444-446
+  - 加固中央主机，447-450
+  - 隐蔽日志主机，450-451
+- CERT（计算机应急响应团队）网站，499
+- 证书颁发机构（CA），24-25
+- 认证，操作系统，485-491
+- CFS 网站，187
+- CHARGEN，`xinetd`，224
+- `chgrp` 命令，文件所有权更改，163
+- chiark 网站，455
+- `chkrootkit`，429-431
+- `chmod` 命令
+  - 访问模式更改，160
+  - 常见设置，161-162
+- `chown` 命令
+  - 文件分配，157
+  - 文件所有权更改，163
+- chroot jail，242，458
+- CIFS（通用互联网文件系统），268，272
+- 冷备份，数据库，336-337
+- 冷启动服务器
+  - 引导加载程序，65-71
+  - 内核启动，71-72
+- 命令行
+  - 补全，`bash` shell，129
+  - 管道，`bash` shell，130
+  - 打印队列配置，316-318
+  - 工具，管理用户账户，95-97
+  - 创建账户，97-104
+  - 创建组，108-110
+  - 默认属性，105-108
+- 命令
+  - `bash` shell 标准，129
+  - 历史记录，`bash` shell，129
+  - 系统管理，194-195
+  - `vi` 文本编辑器，496-497
+- 信息技术安全评估通用准则（CCITSE），486
+- 通用互联网文件系统（CIFS），268，272
+- 通用 UNIX 打印系统。参见 CUPS
+- 完整安全性，376
+- 压缩磁带归档器（CTAR），367
+- Computer Associates 网站，368
+- 计算机应急响应团队（CERT）网站，499
+- 管道，在楼层之间运行，381
+- 配置
+  - 硬件，28
+  - `LILO`，67-68
+  - 手工编辑，32
+  - 网络，更改，57-63
+  - NTP
+    - 客户端，237-243
+    - 服务器，243-246
+  - PAM（可插拔认证模块），136
+  - 密码与启动密码，380
+  - 打印，306
+    - 添加本地打印机，307-310
+    - 添加网络打印机，310-312
+    - 本地打印机，306-307
+    - 网络打印机，307
+  - 服务，24-25
+  - SLES 安装，22
+  - 系统，31-32
+  - SuSEconfig，32-33
+  - YaST，33-36
+  - 用户，25-27，127
+    - 默认 shell，127-130
+    - 环境变量，130-133
+    - 登录脚本，130-133
+- Console 组，默认 GID，87
+- 控制标志，134
+- 复制输入输出实用程序（`cpio` 实用程序），343
+- 复制输入模式（`cpio -i` 模式），343
+- 复制输出模式（`cpio -o` 模式），343
+- 复制传递模式（`cpio -p` 模式），344
+- Corbato，Fernando J.，220
+- CPAN 网站，119
+- `cpio -i` 模式（复制输入模式），343
+- `cpio -o` 模式（复制输出模式），343
+- `cpio -p` 模式（复制传递模式），344
+- `cpio` 实用程序，备份，343-345
+- Crack，111，387
+- crypt 库调用，哈希算法，118
+- Crypticide 网站，387
+- 密码学，92
+- CSRC 网站，500
+- CTAR（压缩磁带归档器），367
+- CUPS（通用 UNIX 打印系统），305
+  - 队列管理，314-315
+  - 命令行配置，316-318
+  - 打印机基础，318-319
+  - Web 界面，319-324
+  - YaST 配置，315-316
+- CUPS/IPP 协议，312
+- 自定义软盘，370
+- Cyrus 用户，默认 UID，83
+
+## D
+- Daemon 组，默认 GID，86
+- 守护进程
+  - 网络服务，220-221
+  - `/etc/xinetd.conf` 文件，228-232
+  - 访问控制，232-234
+  - 安全，234
+  - `xinetd` 配置，221-228
+- 用户，默认 UID，82
+- Darik's Boot and Nuke（DBAN），189
+- 数据
+  - 备份
+    - 启动救援磁盘，369-371
+    - 实现，328-337
+    - 政策，379
+    - 策略，326-328
+    - 工具，337-369
+  - 加密，183-188
+  - 安全，企业政策，376-401
+  - 嗅探，未经授权的嗅探器，454
+- 数据输入模式，`vi` 文本编辑器，495
+- 数据库
+  - 备份，336-337
+  - 受信任的应用程序，485
+- DAYTIME，`xinetd`，224
+- DBAN（Darik's Boot and Nuke），189
+- `dd` 实用程序，备份，345-348
+- 默认值
+  - 文件访问权限，166-168
+  - 系统组设置，86-88
+  - 系统用户设置，82-83
+- 《Samba 3 权威指南》，268
+- `--delete` 选项，`rsync` 实用程序，359
+- `--delete-exclude` 选项，`rsync` 实用程序，359
+- 军事化隔离区（DMZ），393
+- 部署网站，426
+- 基于 DES 的算法，用户密码安全，115-119
+- `/dev` 挂载点，197
+- 设备，网络 YaST 维护，34
+- `df` 命令，194
+- DHCP（动态主机配置协议），292
+  - DNS 链接，295
+  - 网络名称服务，292-295
+- dhcpd 用户，默认 UID，83
+- 对话框，Archive Settings，361
+- Dialout 组，默认 GID，86
+- 增量备份，329
+- 目录，权限，153-159
+  - 更改，159-162
+  - 黑客利用，163-165
+    - 所有权更改，163
