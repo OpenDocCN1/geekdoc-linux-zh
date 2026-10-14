@@ -1,0 +1,38 @@
+
+much more robust set of features to increase user privileges compared to the traditional su program. Here is a list of some of the more interesting features of sudo:
+
+### Uses the user's password for authentication
+
+When the sudo command is run and the user is prompted for a password, each user enters his or her own password instead of the password for the user he or she wants to become. This helps with security because it means that you can give people superuser privileges without having to tell them the root password (if it is enabled) or the password for any other users on the system. It also means that a user can't directly log in to the system as the root user since there is no password—since all Linux machines have a root user, it's the most common account someone will try to brute force.
+
+### Limitation on superuser access
+
+With sudo a user doesn't have to have complete root access. Instead, you can define a list of programs a user can execute with superuser privileges. With this feature you can better follow the principle of least privilege. If a user really needs root privileges only to run apache2ctl, why give the user root access over the entire system? With sudo you can easily limit the user's access strictly to apache2ctl.
+
+### Support for group-based and host-based access
+
+The sudo configuration file allows you to put users into groups and then assign access to that group. If you find that you have a number of different sudo rules for the same set of users, this makes it much easier to organize the file and add or remove users from the group. You can also define rules based on the host. With this feature you can maintain a single sudoers file (sudo configuration file) that can be copied to all hosts on your network (or even shared via LDAP).
+
+### Auto-expiration of sudo access
+
+Once you pass the password check once, you can continue to run sudo commands and sudo won't prompt you for a password for a configurable amount of time. This certainly saves time when you need to run multiple sudo commands in a row and provides extra protection in case you forget to lock your terminal and leave your desk.
+
+### Logging of all sudo access
+
+Every time users run sudo they generate a new log entry in /var/log/auth.log that lists the time, the users who ran sudo, and what commands they ran. This gives an administrator a nice forensics trail. Also, sudo can send the administrator an e-mail whenever a user fails the password check.
+
+### Can configure passwordless access to rules
+
+While you wouldn't necessarily want to enable this for every sudo rule, there is sometimes a need for a script (particularly cron scripts) to gain root access to run a particular command. Since it's a cron script, it's much easier if it can run without your having to code support for the interactive password prompt. It might be tempting to give complete passwordless sudo access to a user, but I recommend you limit rules like this to individual commands.
+
+### Configure sudo
+
+sudo's configuration file can be found at /etc/sudoers. Ubuntu provides a basic file by default that allows the root user to do anything as any other user and allows members of the admin group to become root (the user you create at install time is automatically added to this group). Your natural inclination might be to open the file with your favorite text editor; however, this is not recommended. The sudo package provides a tool called visudo that you should use whenever you want to make changes to the file, so to view and edit the /etc/sudoers file, type
+
+```
+$ sudo visudo
+```
+
+The reason you want to use visudo is that it automatically checks your sudoers file for mistakes. Since a mistake in the sudoers file could potentially lock you out of root access, this syntax check is pretty important. If you do make a mistake, visudo will tell you about it after you save and exit. You will have the option to go back and fix your mistake, exit without saving, or ignore its warnings and save anyway (which is not recommended).
+
+While the basics of sudoers syntax are pretty straightforward, the full set of features and syntax for things like user or command groups can get

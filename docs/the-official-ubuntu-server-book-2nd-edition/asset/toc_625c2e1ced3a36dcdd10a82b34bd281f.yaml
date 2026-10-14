@@ -1,0 +1,1328 @@
+- - '##'
+  - 对《官方 Ubuntu 服务器书籍》的赞誉
+- - '##'
+  - 前言
+- - '###'
+  - 关于本书
+- - '###'
+  - 本书的结构
+- - '###'
+  - Media with This Book
+- - '###'
+  - Acknowledgments
+- - '###'
+  - Introduction
+- - '###'
+  - Welcome to Ubuntu Server
+- - '###'
+  - Free Software, Open Source, and Linux
+- - '###'
+  - Free Software and GNU
+- - '###'
+  - Linux
+- - '###'
+  - 开源
+- - '###'
+  - Ubuntu 项目简史
+- - '###'
+  - 马克·沙特尔沃思
+- - '###'
+  - 疣猪们
+- - '###'
+  - The Ubuntu Community
+- - '###'
+  - Ubuntu 的承诺与目标
+- - '###'
+  - 哲学目标
+- - '###'
+  - 行为准则与守则
+- - '###'
+  - 技术目标
+- - '####'
+  - Canonical 有限公司
+- - '###'
+  - 引言
+- - '###'
+  - Ubuntu 基金会
+- - '###'
+  - Ubuntu Server 的历史
+- - '###'
+  - 简单、安全、受支持
+- - '#'
+  - 第1章
+- - '####'
+  - 安装
+- - '####'
+  - 获取 Ubuntu
+- - '####'
+  - 启动画面
+- - '###'
+  - Disk Partitioning
+- - '####'
+  - What Is a Partition?
+- - '###'
+  - /home
+- - '###'
+  - /var
+- - '###'
+  - /opt
+- - '###'
+  - /usr
+- - '###'
+  - /tmp
+- - '###'
+  - /boot
+- - '###'
+  - Guided—Use Entire Disk
+- - '###'
+  - Guided with LVM
+- - '###'
+  - Manual
+- - '###'
+  - Initialize a Blank Drive
+- - '###'
+  - Allocate Free Space
+- - '###'
+  - Figure 1-3 File system settings for manual partitioning
+- - '###'
+  - Mail server
+- - '###'
+  - OpenSSH server
+- - '###'
+  - PostgreSQL database
+- - '###'
+  - Print server
+- - '###'
+  - Installer Console
+- - '###'
+  - 重启系统
+- - '#'
+  - 第 2 章
+- - '##'
+  - 基本命令行管理
+- - '####'
+  - 在系统中移动
+- - '###'
+  - File Ownership
+- - '###'
+  - Check Running Processes
+- - '###'
+  - Edit Files
+- - '###'
+  - 成为 Root
+- - '###'
+  - Ubuntu 启动过程
+- - '###'
+  - GRUB
+- - '###'
+  - 内核启动过程
+- - '###'
+  - /sbin/init
+- - '###'
+  - RUNLEVELS
+- - '###'
+  - init Scripts
+- - '###'
+  - Upstart
+- - '###'
+  - 更改默认运行级别
+- - '###'
+  - 服务
+- - '####'
+  - Write Your Own Init Script
+- - '#####'
+  - BEGIN INIT INFO
+- - '#####'
+  - END INIT INFO
+- - '###'
+  - Xinetd
+- - '###'
+  - 文件系统层次结构
+- - '####'
+  - /usr
+- - '####'
+  - /usr/bin
+- - '####'
+  - /usr/sbin
+- - '####'
+  - /usr/lib
+- - '####'
+  - /usr/local
+- - '####'
+  - /opt
+- - '####'
+  - /boot
+- - '####'
+  - /etc
+- - '####'
+  - /root
+- - '####'
+  - /dev
+- - '####'
+  - /mnt
+- - '####'
+  - /media
+- - '####'
+  - /proc
+- - '####'
+  - /sys
+- - '####'
+  - /tmp
+- - '###'
+  - Networking
+- - '###'
+  - 网络配置文件
+- - '###'
+  - 核心网络程序
+- - '#'
+  - CHAPTER 3
+- - '##'
+  - Introduction to Package Management
+- - '##'
+  - Background on Packages
+- - '##'
+  - What Are Packages?
+- - '##'
+  - 软件包管理的
+- - '##'
+  - 软件包管理的基本功能
+- - '##'
+  - 软件包管理系统的高级功能
+- - '##'
+  - Debian 包
+- - '##'
+  - 源代码包
+- - '##'
+  - 二进制包
+- - '##'
+  - Ubuntu 中的包管理
+- - '##'
+  - 保持最新
+- - '##'
+  - 搜索和浏览
+- - '##'
+  - 安装和移除
+- - '####'
+  - aptitude install most
+- - '####'
+  - aptitude remove most
+- - '##'
+  - 操作已安装的软件包
+- - '##'
+  - 操作软件源
+- - '##'
+  - Ubuntu 默认仓库
+- - '##'
+  - 使用其他仓库
+- - '##'
+  - 升级整个系统
+- - '##'
+  - 镜像系统
+- - '####'
+  - dpkg --get-selections > package_list
+- - '####'
+  - dpkg --set-selections < package_list
+- - '####'
+  - apt-get dselect-upgrade
+- - '##'
+  - 自行制作软件包
+- - '##'
+  - 重新构建软件包
+- - '####'
+  - apt-get -t jaunty build-dep most
+- - '##'
+  - 新的上游版本
+- - '##'
+  - 自行托管你的包
+- - '#'
+  - CHAPTER 4
+- - '##'
+  - Options to set on the command line
+- - '##'
+  - Networking Options
+- - '##'
+  - Partitioning
+- - '###'
+  - Expert Partition Recipes
+- - '##'
+  - LVM
+- - '##'
+  - Packages and Mirrors
+- - '###'
+  - Custom Package Repositories
+- - '##'
+  - 用户设置
+- - '##'
+  - 杂项
+- - '##'
+  - 动态预设
+- - '##'
+  - 链式加载 Preseed 文件
+- - '##'
+  - 在安装期间运行自定义命令
+- - '##'
+  - Kickstart
+- - '##'
+  - CD-ROM 的基本 Kickstart 配置
+- - '####'
+  - This section was added by hand
+- - '##'
+  - 账户选项
+- - '##'
+  - 局限性
+- - '##'
+  - 在安装期间运行自定义命令
+- - '##'
+  - PXE Boot Server Deployment
+- - '##'
+  - DHCP
+- - '##'
+  - TFTPD
+- - '##'
+  - 配置 Pxelinux
+- - '##'
+  - Web
+- - '##'
+  - Test Your PXE Server
+- - '##'
+  - Boot Cheat Codes
+- - '####'
+  - Change preseed settings for web servers
+- - '####'
+  - Change preseed settings for mysql servers
+- - '####'
+  - Change preseed settings for dns servers
+- - '####'
+  - Change preseed settings for RAID
+- - '##'
+  - DHCP Selection
+- - '##'
+  - DHCP 按子网选择
+- - '#'
+  - 第 5 章
+- - '##'
+  - Ubuntu 常见服务器指南
+- - '##'
+  - DNS 服务器
+- - '##'
+  - 安装 BIND
+- - '##'
+  - Ubuntu 约定
+- - '##'
+  - 缓存域名服务器
+- - '##'
+  - DNS 主服务器
+- - '##'
+  - DNS Slave
+- - '###'
+  - Configure the Master Server
+- - '##'
+  - Manage BIND with rndc
+- - '##'
+  - Web 服务器
+- - '###'
+  - 安装 Web 服务器
+- - '###'
+  - Ubuntu Apache 惯例
+- - '####'
+  - /etc/apache2/sites-available/
+- - '####'
+  - /etc/apache2/sites-enabled/
+- - '####'
+  - apache2ctl
+- - '###'
+  - 优雅地停止 Apache
+- - '###'
+  - 诊断 apache2ctl 命令
+- - '##'
+  - 安装 WordPress
+- - '##'
+  - 配置 Apache
+- - '##'
+  - 配置 MySQL
+- - '##'
+  - 图 5-2 WordPress Web 安装页面
+- - '##'
+  - 邮件服务器
+- - '##'
+  - 安装 Postfix
+- - '##'
+  - Postfix 配置类型
+- - '##'
+  - Ubuntu Postfix 惯例
+- - '##'
+  - Administering Postfix
+- - '##'
+  - Default Postfix Example
+- - '####'
+  - 有关带注释的更完整版本，请参阅 /usr/share/postfix/main.cf.dist
+- - '####'
+  - Debian 特有：指定文件名将导致该文件的第一行被用作名称。Debian 默认
+- - '####'
+  - 是 /etc/mailname。
+- - '####'
+  - 追加 .domain 是 MUA 的工作。
+- - '####'
+  - 取消注释下一行以生成“延迟邮件”警告
+- - '####'
+  - TLS 参数
+- - '####'
+  - 有关在 smtp 客户端中启用 SSL 的信息，请参阅 postfix-doc
+- - '####'
+  - 软件包中的 /usr/share/doc/postfix/TLS_README.gz
+- - '##'
+  - 辅助邮件服务器
+- - '##'
+  - Greylisting Mail Server
+- - '###'
+  - Install and Configure Postgrey
+- - '##'
+  - POP/IMAP 服务器
+- - '##'
+  - 在 Postfix 上启用 Maildirs
+- - '##'
+  - 安装 Dovecot
+- - '##'
+  - Ubuntu OpenSSH Conventions
+- - '##'
+  - DHCP Server
+- - '###'
+  - Install DHCP
+- - '###'
+  - Ubuntu DHCP Conventions
+- - '###'
+  - Configure DHCP
+- - '###'
+  - Dynamic DHCP Configuration
+- - '##'
+  - 数据库服务器
+- - '##'
+  - MySQL
+- - '##'
+  - 安装 MySQL
+- - '##'
+  - Ubuntu MySQL 惯例
+- - '####'
+  - /etc/mysql/conf.d/
+- - '####'
+  - /etc/init.d/mysql
+- - '####'
+  - /var/log/syslog
+- - '####'
+  - /var/lib/mysql/
+- - '##'
+  - mysqladmin
+- - '##'
+  - MySQL Web Administration
+- - '##'
+  - INSTALL PHPMYADMIN
+- - '##'
+  - PostgreSQL
+- - '##'
+  - Install PostgreSQL
+- - '##'
+  - Ubuntu 中 PostgreSQL 的惯例
+- - '##'
+  - 基于 Web 的 PostgreSQL 管理
+- - '##'
+  - 文件服务器
+- - '##'
+  - 图 5-5 phpPgAdmin 默认页面
+- - '##'
+  - 图 5-6 phpPgAdmin 数据库管理
+- - '##'
+  - Samba
+- - '##'
+  - 安装 Samba
+- - '##'
+  - Ubuntu Samba 惯例
+- - '####'
+  - /var/log/samba/
+- - '##'
+  - 示例 Samba 配置
+- - '##'
+  - NFS
+- - '###'
+  - 安装 NFS
+- - '###'
+  - Ubuntu NFS 惯例
+- - '###'
+  - /var/log/syslog
+- - '###'
+  - 示例 NFS 配置
+- - '###'
+  - NFS 用户权限
+- - '##'
+  - Edubuntu 和 LTSP
+- - '##'
+  - 什么是 LTSP？
+- - '###'
+  - 提示
+- - '##'
+  - LTSP 引导过程的技术细节
+- - '##'
+  - LTSP 的优势
+- - '##'
+  - 其他用途
+- - '##'
+  - Ubuntu 中的 LTSP 可用性
+- - '##'
+  - 安装 LTSP 服务器
+- - '##'
+  - LTSP 服务器配置
+- - '##'
+  - Figure 5-10 Selecting the primary network interface
+- - '##'
+  - Initial LTSP Server Setup
+- - '##'
+  - Initial LTSP Client Setup
+- - '##'
+  - 在 Ubuntu 或桌面安装中安装 LTSP 环境
+- - '##'
+  - 在 Ubuntu 或桌面安装中安装 LTSP 环境
+- - '##'
+  - 特殊 LTSP 情况
+- - '###'
+  - 设置 LTSP 与现有 DHCP 服务器共存
+- - '##'
+  - 与硬盘上的另一个操作系统双启动
+- - '##'
+  - Changing Your IP Address
+- - '###'
+  - TIP
+- - '###'
+  - TIP
+- - '##'
+  - Local Devices over LTSP
+- - '##'
+  - 通过 LTSP 播放声音
+- - '#'
+  - 第 6 章
+- - '###'
+  - 通用安全原则
+- - '###'
+  - Uses the user's password for authentication
+- - '###'
+  - Limitation on superuser access
+- - '###'
+  - Support for group-based and host-based access
+- - '###'
+  - Auto-expiration of sudo access
+- - '###'
+  - Logging of all sudo access
+- - '###'
+  - Can configure passwordless access to rules
+- - '###'
+  - Configure sudo
+- - '##'
+  - sudo Aliases
+- - '##'
+  - AppArmor
+- - '##'
+  - AppArmor 配置文件
+- - '####'
+  - vim:syntax=apparmor
+- - '####'
+  - 'Last Modified: Fri Jun 1 16:43:22 2007'
+- - '##'
+  - 强制模式与抱怨模式
+- - '##'
+  - Ubuntu AppArmor 约定
+- - '##'
+  - SSH 安全性
+- - '##'
+  - sshd_config
+- - '##'
+  - 基于密钥的身份验证
+- - '##'
+  - SSH 暴力破解攻击
+- - '##'
+  - 防火墙
+- - '##'
+  - ufw 命令
+- - '###'
+  - 启用和禁用
+- - '###'
+  - 状态
+- - '###'
+  - 默认
+- - '###'
+  - 日志
+- - '###'
+  - 允许和拒绝
+- - '###'
+  - 删除允许和删除拒绝
+- - '##'
+  - ufw 规则语法
+- - '##'
+  - 扩展 ufw 规则
+- - '##'
+  - ufw 示例
+- - '###'
+  - 注意
+- - '###'
+  - SSH
+- - '###'
+  - DNS
+- - '###'
+  - Web
+- - '###'
+  - SMTP
+- - '##'
+  - POP/IMAP
+- - '##'
+  - MySQL
+- - '##'
+  - PostgreSQL
+- - '###'
+  - Samba
+- - '###'
+  - NFS
+- - '##'
+  - Ubuntu ufw 惯例
+- - '####'
+  - /etc/ufw/after.rules 和 /etc/ufw/after6.rules
+- - '####'
+  - /etc/init.d/ufw
+- - '####'
+  - /etc/defaults/ufw
+- - '####'
+  - /lib/ufw/user.rules 和 /lib/ufw/user6.rules
+- - '####'
+  - /var/log/syslog
+- - '##'
+  - 入侵检测
+- - '##'
+  - 更新 Tripwire 策略
+- - '####'
+  - /root
+- - '####'
+  - These files change the behavior of the root account
+- - '####'
+  - These files change the behavior of the root account
+- - '##'
+  - 初始化 Tripwire 数据库
+- - '##'
+  - 更新 Tripwire 数据库
+- - '##'
+  - Ubuntu Tripwire 惯例
+- - '##'
+  - 事件响应
+- - '##'
+  - 服务器重新部署
+- - '##'
+  - 取证
+- - '##'
+  - 图 6-1 默认 Autopsy 页面
+- - '#'
+  - 第 7 章
+- - '##'
+  - 备份原则
+- - '##'
+  - 驱动器镜像
+- - '##'
+  - 数据库备份
+- - '##'
+  - MySQL
+- - '##'
+  - 恢复 MySQL 备份
+- - '##'
+  - MySQL 备份 Cron 作业
+- - '##'
+  - PostgreSQL
+- - '##'
+  - PostgreSQL Backup Cron Job
+- - '##'
+  - BackupPC
+- - '##'
+  - BackupPC Storage
+- - '##'
+  - 默认 BackupPC 配置
+- - '###'
+  - 基于 Web 的配置
+- - '###'
+  - 命令行配置
+- - '##'
+  - 配置客户端机器
+- - '##'
+  - 配置 SSH 密钥
+- - '##'
+  - 设置客户端
+- - '###'
+  - 配置 sudo
+- - '##'
+  - 将客户端添加到 BackupPC
+- - '###'
+  - Web 界面
+- - '###'
+  - 命令行
+- - '##'
+  - 启动第一次备份作业
+- - '##'
+  - rsync 微调
+- - '###'
+  - 校验和种子
+- - '###'
+  - 单一文件系统
+- - '###'
+  - 主机特定的微调
+- - '##'
+  - Change the Backup Schedule
+- - '##'
+  - Restore Files
+- - '##'
+  - Figure 7-6 BackupPC restore file browser
+- - '##'
+  - Ubuntu BackupPC Conventions
+- - '#'
+  - CHAPTER 8
+- - '##'
+  - Monitoring
+- - '####'
+  - start_smartd=yes
+- - '##'
+  - sysstat
+- - '##'
+  - Ganglia
+- - '##'
+  - 在所有主机上安装 ganglia-monitor
+- - '####'
+  - gridname "MyGrid"
+- - '####'
+  - authority "http://mycluster.org/newprefix/"
+- - '##'
+  - 安装 Ganglia Web 前端
+- - '##'
+  - Nagios
+- - '###'
+  - 安装 GroundWork
+- - '##'
+  - GroundWork 文件约定
+- - '####'
+  - /etc/init.d/groundwork
+- - '##'
+  - 初始配置
+- - '##'
+  - 初始主机扫描
+- - '##'
+  - Profiles
+- - '##'
+  - Hosts
+- - '##'
+  - Contacts
+- - '##'
+  - Escalations
+- - '##'
+  - Commands
+- - '##'
+  - Time periods
+- - '##'
+  - Groups
+- - '##'
+  - Control
+- - '##'
+  - 将更改提交到 Nagios
+- - '##'
+  - 配置联系人列表
+- - '##'
+  - 为 Nagios 启用通知
+- - '##'
+  - 为主机添加服务检查
+- - '##'
+  - 添加新主机
+- - '##'
+  - 高级配置
+- - '##'
+  - 创建新的服务检查
+- - '##'
+  - More GroundWork Information
+- - '#'
+  - CHAPTER 9
+- - '###'
+  - Virtualization
+- - '###'
+  - KVM
+- - '###'
+  - Install KVM
+- - '###'
+  - Enable Support in BIOS
+- - '###'
+  - Install KVM Packages
+- - '##'
+  - 配置 KVM 网络
+- - '##'
+  - 创建新的虚拟机
+- - '##'
+  - Extra vmbuilder 选项
+- - '##'
+  - 包管理
+- - '##'
+  - 网络设置
+- - '##'
+  - 安装后脚本
+- - '##'
+  - Manage VMs with virsh
+- - '##'
+  - KVM 图形控制台与管理工具
+- - '##'
+  - 远程 KVM 管理
+- - '##'
+  - VMware Server
+- - '###'
+  - 安装 VMware Server
+- - '##'
+  - 配置 VMware Server
+- - '##'
+  - VMware Server 初始化脚本
+- - '##'
+  - VMware Web 管理
+- - '##'
+  - 图 9-4 默认 VMware 管理页面
+- - '##'
+  - 创建新的虚拟机
+- - '##'
+  - 存储设置
+- - '##'
+  - 图 9-5 VM 摘要屏幕
+- - '##'
+  - VM 控制台访问
+- - '##'
+  - Suspend
+- - '##'
+  - 本地 VM 存储
+- - '##'
+  - 虚拟设备
+- - '##'
+  - Ubuntu 企业云
+- - '##'
+  - UEC 系统要求
+- - '##'
+  - 安装 UEC 前端服务器
+- - '##'
+  - 安装 UEC 节点服务器
+- - '##'
+  - 管理你的云
+- - '##'
+  - 安装新服务器镜像
+- - '##'
+  - 启动新实例
+- - '##'
+  - 创建并启用 SSH 密钥对
+- - '##'
+  - 查看 VM 类型
+- - '###'
+  - 图 9-9 UEC VM 类型
+- - '##'
+  - 选择你的镜像
+- - '#'
+  - 第10章
+- - '##'
+  - 容错
+- - '###'
+  - 检验你的冗余性。
+- - '###'
+  - 消除一切单点故障。
+- - '###'
+  - 快速响应故障。
+- - '##'
+  - RAID
+- - '##'
+  - RAID级别
+- - '##'
+  - RAID 0
+- - '##'
+  - RAID 1
+- - '##'
+  - RAID 5
+- - '##'
+  - NOTE
+- - '###'
+  - RAID 5 作为根分区
+- - '##'
+  - Configure RAID during Installation
+- - '####'
+  - Figure 10-2 RAID partitioning completed
+- - '##'
+  - Configure RAID after Installation
+- - '###'
+  - Figure 10-4 Completed RAID partitioning
+- - '##'
+  - Software RAID Management
+- - '##'
+  - Replace a Failed Disk
+- - '##'
+  - 将非 RAID 迁移到软件 RAID
+- - '####'
+  - mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 missing
+- - '####'
+  - mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdb5 missing
+- - '####'
+  - mkfs.ext4 /dev/md0
+- - '####'
+  - mkswap /dev/md1
+- - '####'
+  - mkdir /mnt/temp
+- - '####'
+  - mount /dev/md0 /mnt/temp
+- - '####'
+  - cd /target
+- - '####'
+  - ./usr/bin/find . -xdev -print0 | ./bin/cpio -pa0V /mnt/temp
+- - '####'
+  - mdadm --detail --scan >> /mnt/temp/etc/mdadm/mdadm.conf
+- - '####'
+  - chroot /mnt/temp update-initramfs -u 2.6.32-19-generic-pae
+- - '##'
+  - 从 RAID 1 迁移到 RAID 5
+- - '####'
+  - mdadm /dev/md0 --fail /dev/sdb1
+- - '####'
+  - mdadm /dev/md0 --remove /dev/sdb1
+- - '####'
+  - mdadm /dev/md1 --fail /dev/sdb5
+- - '####'
+  - mdadm /dev/md1 --remove /dev/sdb5
+- - '####'
+  - mdadm --create /dev/md2 --level=1 --raid-devices=3 /dev/sdb1
+- - '####'
+  - mdadm --create /dev/md3 --level=5 --raid-devices=3 /dev/sdb2
+- - '####'
+  - mdadm --create /dev/md4 --level=5 --raid-devices=3 /dev/sdb5
+- - '####'
+  - cat /proc/mdstat
+- - '####'
+  - mkfs.ext4 /dev/md2
+- - '####'
+  - mkfs.ext4 /dev/md3
+- - '####'
+  - mkswap /dev/md4
+- - '####'
+  - mkdir /mnt/boot
+- - '####'
+  - mkdir /mnt/root
+- - '####'
+  - mount /dev/md2 /mnt/boot
+- - '####'
+  - mount /dev/md3 /mnt/root
+- - '####'
+  - cd /target
+- - '####'
+  - ./usr/bin/find . -xdev -print0 | ./bin/cpio -pa0V /mnt/root
+- - '####'
+  - mv /mnt/root/boot/* /mnt/boot/
+- - '####'
+  - umount /mnt/boot
+- - '####'
+  - mount /dev/md2 /mnt/root/boot
+- - '####'
+  - mdadm --detail --scan >> /mnt/root/etc/mdadm/mdadm.conf
+- - '####'
+  - chroot /mnt/root update-initramfs -u 2.6.32-19-generic-pae
+- - '####'
+  - '/etc/fstab: static file system information.'
+- - '####'
+  - <file system> <mount point>   <type>  <options>       <dump>  <pass>
+- - '##'
+  - 向 RAID 5 数组添加驱动器
+- - '####'
+  - mdadm /dev/md2 --add /dev/sdd1
+- - '####'
+  - mdadm /dev/md3 --add /dev/sdd2
+- - '####'
+  - mdadm /dev/md4 --add /dev/sdd5
+- - '####'
+  - cat /proc/mdstat
+- - '####'
+  - mdadm --grow --raid-devices=4 /dev/md2
+- - '####'
+  - mdadm --grow --raid-devices=4 /dev/md3
+- - '####'
+  - mdadm --grow --raid-devices=4 /dev/md4
+- - '####'
+  - while [ 1 ]; do cat /proc/mdstat; sleep 15; done;
+- - '##'
+  - LVM
+- - '###'
+  - 逻辑卷管理器的故事
+- - '####'
+  - e2fsck -f /dev/md3
+- - '####'
+  - resize2fs /dev/md3
+- - '####'
+  - mkswap /dev/md4
+- - '####'
+  - update-initramfs -u 2.6.32-19-generic-pae
+- - '##'
+  - LVM 理论与术语
+- - '##'
+  - 设置 LVM
+- - '##'
+  - TIP LVM 不提供冗余
+- - '##'
+  - 以太网绑定
+- - '###'
+  - balance-rr or 0
+- - '###'
+  - active-backup or 1
+- - '###'
+  - balance-xor or 2
+- - '###'
+  - broadcast or 3
+- - '###'
+  - 802.3ad or 4
+- - '####'
+  - '**balance-tlb or 5**'
+- - '####'
+  - '**balance-alb or 6**'
+- - '####'
+  - This file describes the network interfaces available on your system
+- - '####'
+  - and how to activate them. For more information, see interfaces(5).
+- - '####'
+  - The loopback network interface
+- - '####'
+  - The primary network interface
+- - '####'
+  - address 192.168.0.5
+- - '####'
+  - netmask 255.255.255.0
+- - '####'
+  - gateway 192.168.0.1
+- - '##'
+  - Clusters
+- - '##'
+  - Split-brain syndrome
+- - '##'
+  - Quorum
+- - '##'
+  - Fencing
+- - '##'
+  - Shooting the other node in the head
+- - '##'
+  - Separate connection for node monitoring
+- - '##'
+  - Heartbeat
+- - '###'
+  - Example Cluster
+- - '###'
+  - Install and Configure Heartbeat
+- - '###'
+  - HA.CF
+- - '##'
+  - auto_failback
+- - '##'
+  - HARESOURCES
+- - '##'
+  - AUTHKEYS
+- - '##'
+  - DRBD
+- - '##'
+  - Configure Heartbeat
+- - '##'
+  - drbdadm 磁盘管理
+- - '##'
+  - CHANGE DRBD.CONF
+- - '##'
+  - REPLACE A FAILED DISK
+- - '##'
+  - MANUALLY SOLVE SPLIT BRAIN
+- - '#'
+  - 第11章
+- - '###'
+  - 故障排除
+- - '##'
+  - 通用故障排除哲学
+- - '###'
+  - 划分问题空间
+- - '###'
+  - 优先选择快速、简单的测试而非缓慢、复杂的测试
+- - '###'
+  - 优先考虑过去的解决方案
+- - '##'
+  - 良好的沟通在协作时至关重要
+- - '##'
+  - 理解系统的工作原理
+- - '##'
+  - 记录你的问题和解决方案
+- - '##'
+  - 使用互联网，但要谨慎
+- - '##'
+  - 抵制重启
+- - '##'
+  - 本地主机排查
+- - '##'
+  - 主机反应迟缓或无响应
+- - '##'
+  - 系统负载
+- - '##'
+  - 什么是高负载平均值？
+- - '##'
+  - top
+- - '##'
+  - Diagnose High User Time
+- - '##'
+  - 诊断内存不足问题
+- - '##'
+  - OOM KILLER
+- - '##'
+  - Diagnose High I/O Wait
+- - '##'
+  - Out of Disk Space
+- - '###'
+  - Out of Inodes
+- - '###'
+  - 是否已连接？
+- - '##'
+  - NOTE — 慢速网络
+- - '##'
+  - 接口是否已启动？
+- - '##'
+  - 是否在本地网络上？
+- - '##'
+  - Is DNS Working?
+- - '##'
+  - NO NAME SERVER CONFIGURED OR INACCESSIBLE NAME SERVER
+- - '##'
+  - 缺少搜索路径或名称服务器问题
+- - '##'
+  - 我能路由到远程主机吗？
+- - '##'
+  - 远程端口是否打开？
+- - '##'
+  - 在本地测试远程主机
+- - '###'
+  - 测试监听端口
+- - '###'
+  - 防火墙规则
+- - '##'
+  - 硬件故障排除
+- - '##'
+  - 网卡错误
+- - '##'
+  - 测试硬盘
+- - '##'
+  - 测试 RAM
+- - '#'
+  - 第 12 章
+- - '##'
+  - Ubuntu 恢复模式
+- - '##'
+  - File Systems Won’t Mount
+- - '##'
+  - File System Corruption
+- - '####'
+  - fsck -y -C /dev/sda5
+- - '####'
+  - mke2fs -n /dev/sda5
+- - '####'
+  - fsck -b 8193 -y -C /dev/sda5
+- - '##'
+  - Fstab Mistakes or UUID Changed
+- - '####'
+  - ls -l /dev/disk/by-uuid
+- - '##'
+  - 问题 Init 脚本
+- - '####'
+  - mv /etc/rc2.d/S99rc.local /etc/rc2.d/D99rc.local
+- - '##'
+  - 重置密码
+- - '####'
+  - passwd ubuntu
+- - '####'
+  - mount -o remount,rw /
+- - '##'
+  - Ubuntu Server Recovery CD
+- - '##'
+  - 启动到 Recovery CD
+- - '##'
+  - Figure 12-2 Recovery operations menu
+- - '##'
+  - Recover GRUB
+- - '####'
+  - update-grub
+- - '##'
+  - Repair the Root File System
+- - '####'
+  - fsck -y /dev/sda1
+- - '##'
+  - Ubuntu Desktop Live CD
+- - '##'
+  - Boot the Live CD
+- - '##'
+  - Add the Universe Repository
+- - '##'
+  - 恢复已删除文件
+- - '##'
+  - 恢复分区表
+- - '##'
+  - 拯救濒死的驱动器
+- - '##'
+  - NOTE Image Drives or Partitions?
+- - '#'
+  - CHAPTER 13
+- - '###'
+  - Help and Resources
+- - '##'
+  - Paid Support from Canonical
+- - '##'
+  - Forums
+- - '##'
+  - Internet Relay Chat
+- - '###'
+  - Figure 13-5 使用图形化频道列表在 XChat 中加入频道
+- - '##'
+  - Mailing Lists
+- - '##'
+  - Online Documentation
+- - '##'
+  - Localhost Documentation
+- - '##'
+  - Local Community Teams
+- - '##'
+  - Other Languages
+- - '##'
+  - Tech Answers System (Launchpad)
+- - '##'
+  - Bug Reporting
+- - '##'
+  - Summary
+- - '#'
+  - CHAPTER 14
+- - '##'
+  - Basic Linux Administration
+- - '##'
+  - Regular Expressions
+- - '##'
+  - 管道与重定向
+- - '###'
+  - 管道
+- - '##'
+  - Redirection
+- - '##'
+  - chmod
+- - '##'
+  - Linux File Types
+- - '##'
+  - 设备文件
+- - '##'
+  - At 和 Cron
+- - '###'
+  - At
+- - '##'
+  - Cron
+- - '####'
+  - '/etc/crontab: system-wide crontab'
+- - '####'
+  - Unlike any other crontab, you don't have to run the 'crontab'
+- - '####'
+  - command to install the new version when you edit this file
+- - '####'
+  - and files in /etc/cron.d. These files also have username fields,
+- - '####'
+  - that none of the other crontabs do.
+- - '####'
+  - m h dom mon dow user    command
+- - '####'
+  - '/etc/cron.d/mybackup: run my backup script outside of'
+- - '####'
+  - regular cron.daily
+- - '##'
+  - 附录
+- - '##'
+  - 实用技巧与窍门
+- - '###'
+  - 避免 grep 出现在 grep 输出中
+- - '###'
+  - 命令路径的快捷方式
+- - '###'
+  - 用一行命令擦除磁盘
+- - '###'
+  - 反复运行一条命令
+- - '###'
+  - 在服务器重新上线时发出提示音
+- - '###'
+  - 在文件中搜索并替换文本
+- - '##'
+  - find 和 exec 命令
+- - '##'
+  - 参数过多的 Bash 命令
+- - '##'
+  - 使用你的 Bash 历史记录
+- - '##'
+  - 这些文件是否相同？
+- - '##'
+  - 返回到上一个目录
+- - '##'
+  - 找出占用你想要卸载的文件系统的进程
+- - '##'
+  - 使用 telnet 发送测试电子邮件
+- - '##'
+  - 简单的 SSH 密钥共享
+- - '##'
+  - 索引
+- - '####'
+  - 索引
+- - '##'
+  - D
+- - '##'
+  - 文件系统层次结构，核心目录，*续*
+- - '###'
+  - 防火墙
+- - '###'
+  - 防火墙，ufw 程序
+- - '###'
+  - 刷新
+- - '###'
+  - 格式化
+- - '###'
+  - G
+- - '###'
+  - Ganglia 监控。另请参阅 监控，工具。
+- - '###'
+  - Ganglia 服务器
+- - '###'
+  - Ganglia Web 前端
+- - '##'
+  - H
+- - '##'
+  - 索引
+- - '##'
+  - J
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - 索引
+- - '####'
+  - O
+- - '####'
+  - P
+- - '##'
+  - S
+- - '####'
+  - (hash mark), comment indicator, 72
+- - '####'
+  - （井号），注释指示符，31
+- - '##'
+  - 虚拟机 (KVM)，创建，继续
+- - '##'
+  - 虚拟机 (KVM)，管理
+- - '##'
+  - 虚拟机 (KVM)，网络
+- - '##'
+  - 虚拟机 (KVM)，包管理
+- - '##'
+  - 虚拟机 (KVM)，脚本
+- - '##'
+  - 虚拟机 (VMware)，创建。另见 VMware。
+- - '##'
+  - 虚拟机 (VMware)，快照，319–320。另见 挂起当前状态。
+- - '##'
+  - VMware Server
+- - '##'
+  - W
+- - '##'
+  - X
+- - '##'
+  - Z

@@ -1,0 +1,89 @@
+BackupPC, configuration, continued
+command line based, 251–252
+config.pl file, 249–250
+default, 249–250
+SSH keys, 252
+sudo, 253
+Web-based, 250–251
+BackupPC, rsync tweaks
+backup retention, specifying, 260
+blackout periods, 260–261
+--checksum-seed option, 256
+excluding directories, 257–258
+full backup interval, 259–260
+FullAgeMax option, 260
+FullKeepCnt option, 260
+FullKeepCntMin option, 260
+FullPeriod option, 259–260
+host-specific tweaks, 258–259
+limiting to one file system, 256–257
+scheduling backups, 259–261
+balance-alb or 6 mode, 366
+balance-rr or 0 mode, 365
+balance-tlb or 5 mode, 366
+balance-xor or 2 mode, 365
+Bash commands, too many arguments, 480–481
+Bash history, 481
+bcast option, 306, 373
+/bin directory, 40
+Binaries directories, 40–41
+Binary packages
+autobuilding, 55–56
+creating, 55–56
+installing, 56–57
+overview, 63
+BIND (Berkeley Internet Name Domain). See DNS servers, BIND.
+Bind 9 DNS server, 13
+bind9 package, 15
+bind9-doc package, 13
+Black hole, redirecting files to, 470
+Blackout periods, 260–261
+Blk_read: total blocks read, 404
+Blk_read/s: blocks read per second, 404
+Blk_wrtn: total blocks written, 404
+Blk_wrtn/s: blocks written per second, 404
+Blogging software. See WordPress.
+Bond modes, Ethernet bonding, 365–366
+Boot arguments, editing, 87–88
+Boot cheat codes, 119–121
+/boot directory, 7, 42
+Boot flag, setting, 13
+Boot loader, partitioning 7. See also GRUB.
+Boot parameters, listing, 5
+Boot process, GRUB boot loader
+automating updates to, 25
+changing temporarily, 25–26
+configuration file, 25
+definition, 25–26
+documentation for, 25
+internal comments, 25
+kernel options, defining, 25–26
+menu.lst file, 25
+update-grub program, 25
+Boot process, kernel
+init script, 27
+initial RAM disk file, 26
+initramfs file, 26–27
+initrd file, 26
+modular kernels, 26–27
+root file system, mounting, 27
+Boot process, /sbin/init program (System V init model). See also Upstart.
+description, 27–28
+drawbacks, 30–31
+/etc/init.d script, 28–29
+/etc/rc0.d — /etc/rc6.d scripts, 29
+/etc/rc.local script, 29
+/etc/rcS.d script, 29
+force-reload command, 29
+init scripts, 28–29
+reload command, 29
+reloading settings, 29
+restart command, 29
+runlevels, 28
+start command, 29
+starting/stopping, 29
+start-up scripts, 28–30
+status command, 29
+stop command, 29
+system states. See Runlevels.
+user scripts, 29

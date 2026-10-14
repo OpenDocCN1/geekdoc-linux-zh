@@ -1,0 +1,7 @@
+of Kickstart configuration files by hand, I recommend using the GUI as much as you can to set up your base template and then tweaking the resulting configuration file by hand only if you need to.
+
+The Kickstart GUI tool is not installed by default on a typical Ubuntu desktop system, so use your preferred package management tool to install the system-config-kickstart package. Once it is installed, you can find the program in Applications->System Tools->Kickstart. As you launch the program, you will see that it is broken up into a basic two-pane window, as shown in Figure 4-2. On the left side is the set of configuration categories you can change, and as you select one of them, the right pane changes to list the options you can configure. Go through each of the categories and make sure the default settings match what you want on your server. Also be sure to go to the Partition Information category and set up your partitions. Unlike with preseeding, you do have to give the Kickstart file some sort of guide on how to partition the system. Once you finish your settings in the GUI, click File->Save and save the file to ks.cfg.
+
+![](bbox=[0.3, 0.57, 0.88, 0.88])
+
+Figure 4-2 Kickstart Configurator program

@@ -1,0 +1,11 @@
+other packages that will break in this upload. As a result, users can structure uploads—or the system can structure it for them—so that API and ABI breakage is not unanticipated, and users can ensure that all packages that depend on a single shared library can be upgraded in tandem.
+
+Finally, at any point, users can use the cryptographic signature on a package and the list of hashes (usually MD5 sums) of the files included in that package to verify the integrity of the files on their system against corruption or compromise by an attacker.
+
+# Advanced Functions of Package Management Systems
+
+While these features lead to the powerful potential to manage software on a system, packaging systems with only these features—essentially, the state of packaging in the mid-1990s—introduced important limitations. Large-scale API and ABI transitions required downloading many packages and a high degree of coordination by the user. Users were forced to figure out the dependency status of programs during an installation or upgrade and then find, download, and do simultaneous installations of new pieces of software. For complex pieces of software with many dependencies, this process was often exceedingly tedious.
+
+As a result, most system upgrades and ABI/API changes were done with large upgrade scripts between releases of a distribution. Users would be expected to install every package involved in a major transition at once with an upgrade script that would structure the order correctly and handle dependencies appropriately. While these problems are limitations of a limited package management system, they are mostly problems that exist outside of package management systems. Without a package management system, shared libraries that undergo API and ABI changes are either never or rarely approached (with dangerous consistency and security implications to each) or are subject to the same limitations without the warnings that a packaging system provides.
+
+Spurred on by the Debian project’s creation of a program called dselect and its frequently lauded Advanced Package Tools (APT, originally named deity and implemented primarily in a program called apt-get), the last half-decade has seen a major evolution in the scope and success of package managers. Most of these tools are levels of abstraction upon or “front

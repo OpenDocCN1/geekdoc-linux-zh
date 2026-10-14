@@ -1,0 +1,11 @@
+and mouse. Even though SSH was designed with security at the forefront, poor management of the service can open you up to attack. In fact, one of the most common ways that Linux servers are attacked at the moment is via SSH brute-force attacks. I cover how to manage those attacks, but first I discuss a few other methods to enhance the security of SSH.
+
+# sshd_config
+
+The /etc/ssh/sshd_config file is where you will find all of the settings for the SSH server. The default Ubuntu sshd_config file is pretty secure out of the box, as it allows only SSH protocol 2, uses privilege separation, and allows authentication keys to be used. The only questionable setting is `PermitRootLogin yes`. This option allows the root user to log in via SSH. In a way this setting is useless on a default Ubuntu install, since the root account is disabled, but if you decide to enable the root account, you might want to set this option to no and run `sudo service ssh reload` to save the settings. This way you force users to log in with their regular accounts and sudo up to root, and you also prevent a user from being able to guess the root password and gain access.
+
+# Key-Based Authentication
+
+If there is a weak link in SSH security, password authentication would probably be it. I know plenty of people who have been hacked simply because of a weak user password. There are many brute-force SSH scripts active in the wild that constantly scan for new machines and run through a dictionary full of passwords until one works. I know of a honeypot server intentionally set with weak passwords that was hacked and used as part of a botnet within hours of showing up online.
+
+The good news is that you don’t need password authentication to log in to an SSH server. SSH supports key-based authentication. In this approach the user generates a public and private key. The public key is then placed in a special file on the remote server. When the user logs in, these keys are used to authenticate the user instead of a password. It’s certainly more convenient to be able to log in to a machine without typing a password every time, although if you want an extra layer of security, you can set a passphrase on your keys as well.

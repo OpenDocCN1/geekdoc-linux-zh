@@ -1,0 +1,3 @@
+# More GroundWork Information
+
+I’ve really only scratched the surface of Nagios and GroundWork configuration. GroundWork includes its own documentation via the Bookshelf link at the top of the Web interface. Click that and a new window will pop up with a searchable index and a predefined list of documentation topics you can browse through. In addition, http://groundworkopensource.com has a number of different configuration guides as well as a forum you can join to ask questions and get tips from other GroundWork users.

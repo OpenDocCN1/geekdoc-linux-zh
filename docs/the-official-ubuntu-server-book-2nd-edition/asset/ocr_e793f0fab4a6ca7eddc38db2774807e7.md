@@ -1,0 +1,11 @@
+The arrays will sync up in the background, but you can use your system in the meantime. Now you will want to update your GRUB configuration so that it points to the new UUIDs and devices (otherwise you would have to edit it by hand each time). In the past you would have to edit things by hand, but if you just type sudo update-grub, the update program will detect and change all of the relevant entries for you. Now run sudo grub-install /dev/sda so that the GRUB instance on /dev/sda is updated.
+
+Now the problem you will find when you run a software RAID array is that GRUB will install only on the first disk. If you lose the first disk, the second disk won’t automatically be able to boot the system. To fix this you will have to manually install GRUB to the second disk. This is easy enough—just type sudo grub-install /dev/sdb. Change the device from /dev/sdb to your second RAID device if it’s different. If you have a third or fourth RAID device, just run grub-install for that device as well.
+
+The final step, if you haven’t done so already, is to use a partitioning tool on /dev/sda and set both partitions to partition type fd so that they will automatically be detected as RAID devices. Reboot your system one final time to ensure it will boot to your RAID array. Now your system is fault tolerant and ready to use.
+
+# Add a Drive to a RAID 5 Array
+
+It can be difficult to plan storage for a system. Even with the best plans in place, sometimes a machine’s purpose changes. In any case, when you need more storage on a RAID 5 array, you have a few options. You could potentially back up all of the data, create a brand-new RAID 5 array with an extra drive, and then restore, or you could attempt to grow the RAID 5 array hot. Now growing a RAID 5 array hot isn’t for the faint at heart. I would recommend you make a backup of your data if possible, just in case.
+
+All warnings aside, let’s assume I have a standard three-disk system using RAID 5 as in my previous RAID 1 to RAID 5 migration example. I have added a fourth disk, /dev/sdd, to the server, and I want to extend my RAID arrays across it. Since we want to grow the file system of our root partition, we need to do all of these steps from a rescue disc, so boot your Ubuntu Server install CD into recovery mode. When you are prompted to select a

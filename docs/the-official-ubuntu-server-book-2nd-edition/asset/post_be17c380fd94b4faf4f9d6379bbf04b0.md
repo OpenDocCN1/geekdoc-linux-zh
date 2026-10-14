@@ -1,0 +1,182 @@
+
+- Restoring from backups, file conventions, continued
+  - password directory, 263
+  - /var/lib/backuppc, 264
+  - /var/lib/backuppc/log, 264
+  - /var/lib/backuppc/pc, 264
+  - virtual host settings, 263
+- Restricted repositories, 73–74
+- resume command, 308–309
+- resume option, 422
+- Resuming KVM VMs, 308–309
+- Resyncing swapped disks, 346
+- retrieving zone command, 134
+- Retransferring zone files, 134
+- Right angle bracket (>), redirection operator, 462–464
+- Right angle brackets (>>), redirection operator, 462–464
+- rndc tool, 134
+- Rolling back to snapshots, 308
+- /root, editing, 228
+- Root account, enabling, 98
+- /root directory, 44
+- Root file system
+  - mounting, 27
+  - repairing, 430–431
+- Rootkits, checking for, 235–236
+- root option, 423
+- Root partition size, specifying, 302
+- Root shell, enabling, 423–424
+- Root squashing, disabling, 179
+- Root user. See also System administrator.
+  - home directory, 44
+  - password, disabling, 109
+  - permissions, assuming, 24
+  - privileges, enabling, 109
+- rootpw command, 109
+- --rootsize option, 302
+- Round-robin policy, 365
+- route command, 49, 410–411
+- Routing outbound mail, 152
+- Routing to the remote host, troubleshooting
+  - asterisks in the output, 414
+  - closed ports vs. firewalls, 415–416
+  - firewall rules, listing, 416–417
+  - firewalls, detecting, 415–416
+  - ICMP blocked, 415
+  - listening ports, testing, 416
+  - netstat command, 416
+  - nmap command, 415–416
+  - remote port, testing, 415–416
+  - tcptraceroute package, 414–415
+  - testing locally, 416
+  - testing the route, 414–415
+  - traceroute command, 414–415
+  - ufw command, 416–417
+- RPM package format, 52
+- RRD files, 272
+- RSA keys, 160
+- rsync tweaks
+  - backup retention, specifying, 260
+  - blackout periods, 260–261
+  - --checksum-seed option, 256
+  - excluding directories, 257–258
+  - full backup interval, 259–260
+  - FullAgeMax option, 260
+  - FullKeepCnt option, 260
+  - FullKeepCntMin option, 260
+  - FullPeriod option, 259–260
+  - host-specific tweaks, 258–259
+  - limiting to one file system, 256–257
+  - scheduling backups, 259–261
+- Rules
+  - AppArmor, directory, 210
+  - firewall, hacking, 214
+  - passwordless access to, 203
+- Rules, ufw program
+  - delete command, 220
+  - extended, 218–219
+  - firewall, undoing, 217
+  - iptables, rules directory, 224–225
+  - removing, 219
+  - syntax, 217–218
+  - undoing, 220
+- Rules file, source packages, 62–63
+- Runlevels
+  - default, changing, 33–34
+  - System V init model, 28
+
+## S
+
+- safe-upgrade command, 65, 76
+- Samba file servers. See also NFS.
+  - configuration, 176–177
+  - configuration files, 174–175
+  - databases used by, 175
+  - DRBD, 387
+  - /etc/init.d/nmbd, 175
+  - /etc/init.d/smbd, 175
+  - /etc/init/nmbd.conf, 175
+  - /etc/init/samba/, 174
+  - /etc/samba/smb.conf, 174–175
+  - file conventions, 174–176
+  - init script, 175
+  - installing, 15, 174
+  - Kickstart authentication, 109
+  - log files, 176
+  - overview, 174
+  - passwords, setting, 175
+  - sharing directories, 176–177
+  - ufw firewall example, 223
+  - user accounts, creating or disabling, 175
+  - /usr/bin/smbpasswd, 175
+  - /usr/share/doc/samba-doc/, 175
+  - /var/lib/samba, 175
+  - /var/log/samba/, 175
+- samba package, 15
+- samba-doc package, 15
+- sar tool, 268–271
+- Satellite system option, 146
+- save command, 308
+- /sbin directory, 40
+- /sbin/init program. See Boot process, /sbin/init program.
+- sc (Storage Controller), 325
+- Scanning hard drives for problems, 436–439
+- Scheduling
+  - database backups, 244–246, 246–247
+  - program execution. See at command; cron command.
+  - system backups, 239, 259–261
+- Screen magnifier, enabling, 4
+- Screen reader, enabling, 4
+- Screen resolution, LTSP, 187–188
+- script option, 32
+- Scripts. See Init scripts.
+- Scrolling terminal output, 23
+- Search and replace text, 479–480
+- Search path missing, 413
+
+- Searching for
+  - available packages, 65–67
+  - files. See Grep command.
+  - installed packages, 69–71
+- Secondary Postfix servers, 153–154
+- Security
+  - defense in depth, 201
+  - encryption. See SSH security.
+  - general principles, 200–201
+  - greylisting mail servers, 154–156
+  - intrusion detection. See IDSs (intrusion detection systems); Tripwire.
+  - intrusion response. See Incident response.
+  - keeping it simple, 200
+  - layers of protection, 201
+  - open relays, 153
+  - permissions. See AppArmor; sudo command.
+  - principle of least privilege, 200–201
+  - responding to intrusion. See Incident response.
+  - security by obscurity, 201
+  - security patches, 201
+  - servers. See OpenSSH servers; SSH security.
+  - spam exposure, 153, 154–156
+- Selected time periods, monitoring, 270–271
+- Server BIOS, 3
+- Server caches, flushing, 134
+- Server communication, troubleshooting
+  - client connection, verifying, 408–409
+  - client problems vs. server, 408–409
+  - default gateway accessing, verifying, 410–411
+  - dig tool, 412
+  - DNS status, checking, 412–413
+  - ethtool program, 409
+  - ifconfig command, 410
+  - inaccessible name server, 412–413
+  - name server not configured, 412–413
+  - name server problem, 412–413
+  - network interface configuration, verifying, 410
+  - nslookup command, 412–413
+  - nslookup tool, 412
+  - overview, 408
+  - ping command, 411
+  - route command, 410–411
+  - search path missing, 413
+- Server roles
+  - DNS, 13
+  - LAMP, 13–14
