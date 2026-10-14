@@ -1,0 +1,225 @@
+
+The interesting part of the script is how it determines whether an integer is even or odd. By performing a modulo `2` operation on the number, which divides the number by `2` and returns the remainder, it can tell if the number is odd or even.
+
+## test 命令的一个更现代版本
+
+`bash` 的最新版本包含一个复合命令，可以作为 `test` 的增强替代品。它使用以下语法：
+
+`[[ expression ]]`
+
+其中 `expression` 是一个求值为 `true` 或 `false` 的表达式。`[[ ]]` 命令与 `test` 非常相似（它支持 `test` 的所有表达式），但增加了一个重要的新字符串表达式：
+
+`string1 =~ regex`
+
+如果 `string1` 与扩展正则表达式 `regex` 匹配，则该表达式返回 `true`。这为执行数据验证等任务打开了大量可能性。在之前关于整数表达式的示例中，如果常量 `INT` 包含除整数以外的任何内容，脚本就会失败。脚本需要一种方法来确认该变量包含的是整数。使用带有 `=~` 字符串表达式运算符的 `[[ ]]`，我们可以这样改进脚本：
+
+```
+#!/bin/bash
+
+# test-integer2: evaluate the value of an integer.
+
+INT=-5
+
+if [[ $INT =~ ^-?[0-9]+$ ]]; then
+
+    if [ $INT -eq 0 ]; then
+
+        echo "INT is zero."
+
+    else
+
+        if [ $INT -lt 0 ]; then
+
+            echo "INT is negative."
+
+        else
+
+            echo "INT is positive."
+
+        fi
+
+        if [ $(($INT % 2)) -eq 0 ]; then
+
+            echo "INT is even."
+
+        else
+
+            echo "INT is odd."
+
+        fi
+
+    fi
+
+else
+
+    echo "INT is not an integer." >&2
+
+    exit 1
+
+fi
+```
+
+通过应用正则表达式，我们能够将 `INT` 的值限制为：以可选的减号开头，后跟一个或多个数字的字符串。这个表达式还消除了空值的可能性。
+
+`[[ ]]` 的另一个新增特性是，`==` 运算符支持与路径名展开相同方式的模式匹配。例如：
+
+```
+[me@linuxbox ~]$ FILE=foo.bar
+[me@linuxbox ~]$ if [[ $FILE == foo.* ]]; then
+> echo "$FILE matches pattern 'foo.*'"
+> fi
+foo.bar matches pattern 'foo.*'
+```
+
+这使得 `[[ ]]` 在评估文件和路径名时非常有用。
+
+## (( )) —— 专为整数设计
+
+除了 `[[ ]]` 复合命令之外，`bash` 还提供了 `(( ))` 复合命令，它适用于对整数进行操作。它支持一整套算术求值，我们将在第 34 章中全面讨论这个主题。
+
+`(( ))` 用于执行算术真值测试。如果算术求值的结果为非零，则算术真值测试的结果为 `true`。
+
+```
+[me@linuxbox ~]$ if ((1)); then echo "It is true."; fi
+It is true.
+[me@linuxbox ~]$ if ((0)); then echo "It is true."; fi
+[me@linuxbox ~]$
+```
+
+使用 `(( ))`，我们可以稍微简化 `test-integer2` 脚本，如下所示：
+
+```
+#!/bin/bash
+
+# test-integer2a: evaluate the value of an integer.
+
+INT=-5
+
+if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
+
+    if ((INT == 0)); then
+
+        echo "INT is zero."
+
+    else
+
+        if ((INT < 0)); then
+
+            echo "INT is negative."
+
+        else
+
+            echo "INT is positive."
+
+        fi
+
+        if (( (INT % 2) == 0)); then
+
+            echo "INT is even."
+
+        else
+
+            echo "INT is odd."
+
+        fi
+
+    fi
+
+else
+
+    echo "INT is not an integer." >&2
+
+    exit 1
+
+fi
+```
+
+注意，我们使用了小于号和大于号，并且用 `==` 来测试是否相等。这是处理整数时看起来更自然的语法。还要注意，因为复合命令 `(( ))` 是 `shell` 语法的一部分，而不是普通命令，并且它只处理整数，所以它能够按名称识别变量，无需进行展开。
+
+## 组合表达式
+
+也可以组合表达式来创建更复杂的求值。表达式通过逻辑运算符进行组合。我们在第 17 章学习 `find` 命令时见过这些运算符。`test` 和 `[[ ]]` 有三种逻辑操作：AND、OR 和 NOT。`test` 和 `[[ ]]` 使用不同的运算符来表示这些操作，如表 27-4 所示。
+
+表 27-4：逻辑运算符
+
+| 操作 | test | [[ ]] 和 (( )) |
+|-----------|------|-----------------|
+| AND       | -a   | &&              |
+| OR        | -o   | \|\|              |
+| NOT       | !    | !               |
+
+下面是一个 AND 操作的示例。以下脚本判断一个整数是否在某个值范围内：
+
+```
+#!/bin/bash
+
+# test-integer3: determine if an integer is within a
+# specified range of values.
+
+MIN_VAL=1
+MAX_VAL=100
+INT=50
+
+if [[ "$INT" =~ ^[0-9]+$ ]]; then
+
+    if [[ INT -ge MIN_VAL && INT -le MAX_VAL ]]; then
+
+        echo "$INT is within $MIN_VAL to $MAX_VAL."
+
+    else
+
+        echo "$INT is out of range."
+
+    fi
+
+else
+
+    echo "INT is not an integer." >&2
+
+    exit 1
+
+fi
+```
+
+在该脚本中，我们判断整数 `INT` 的值是否介于 `MIN_VAL` 和 `MAX_VAL` 之间。这是通过一次使用 `[[ ]]` 实现的，其中包含由 `&&` 运算符分隔的两个表达式。我们也可以使用 `test` 来编写此逻辑：
+
+```
+if [ $INT -ge $MIN_VAL -a $INT -le $MAX_VAL ]; then
+    echo "$INT is within $MIN_VAL to $MAX_VAL."
+else
+    echo "$INT is out of range."
+fi
+```
+
+`!` 否定运算符会反转表达式的结果。如果表达式为假，则返回真；如果表达式为真，则返回假。在下面的脚本中，我们修改了评估逻辑，以查找 `INT` 的值超出指定范围的情况：
+
+```
+#!/bin/bash
+
+# test-integer4: determine if an integer is outside a
+# specified range of values.
+
+MIN_VAL=1
+MAX_VAL=100
+INT=50
+
+if [[ "$INT" =~ ^[-0-9]+$ ]]; then
+
+    if [[ ! ( $INT -ge $MIN_VAL && $INT -le $MAX_VAL ) ]]; then
+
+        echo "$INT is outside $MIN_VAL to $MAX_VAL."
+
+    else
+
+        echo "$INT is in range."
+
+    fi
+
+else
+
+    echo "INT is not an integer." >&2
+
+    exit 1
+
+fi
+```
