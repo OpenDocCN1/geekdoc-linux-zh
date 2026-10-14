@@ -1,0 +1,2 @@
+
+# SuSE Linux 初学者指南 [SuSE Linux 6.2 刻光版]
