@@ -1,0 +1,155 @@
+
+在 `rsync` 命令后添加 `--append` 选项以查看数据传输。
+
+# Rsync over ssh
+要通过 SSH 传输 rsync 数据，请使用 `rsync -avz ssh [source] [destination]`
+
+# 排除文件
+Rsync 还允许你在运行 rsync 时，通过 `--exclude='pattern'` 选项跳过你指定的文件。
+
+# 测试同步
+首次使用的用户应该使用 `--dry-run` 选项来模拟 rsync 操作，并在运行前扫描输出以检查任何意外结果。
+
+# 限制带宽
+要限制 rsync 操作的带宽，请在 rsync 中使用 `--bwlimit=KB` 选项。
+
+# 不要排除文件
+Tar 是创建磁盘存档的有用工具。使用 `--file-system` 选项确保你不会备份任何已挂载的分区或虚拟文件系统（`/proc/`）。
+
+# 安全与防火墙
+查找哪些端口正在运行，以查看特定应用程序正在通信的端口列表。
+
+# 禁用 ping
+Ping 可用于洪水攻击并造成网络损害。通过 `echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all` 禁用，或为了永久防止对添加的网络进行响应，执行 `echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all`。
+
+# 排除更新
+如果你自定义了内核的 iptables 规则，请确保使用 `iptables-save > iptables.bak` 备份它们。
+
+# 拦截域名
+首先，你需要获取你主机的 IP 地址：`example.com`。使用 `[ IP Address ] get CIDR` 获取 CIDR。使用该 CIDR 拦截对域名的访问，例如 `iptables -A OUTPUT -p tcp --drop`。
+
+# 修改用户密码
+如果你忘记了用户的密码，你可以在不需要密码的情况下使用 `sudo passwd [username]` 设置新密码。
+
+# 复制权限
+使用 `--reference` 选项将一个文件的权限复制到另一个文件，例如 `chmod --reference=[copy-from-file] [apply-on-this-file]`。
+
+# 安全删除文件
+安装并使用 `shred` 删除文件，使其无法被恢复。例如，`shred [file]` 将多次用随机数据覆盖该文件。
+
+# 启用内置防火墙
+其他工具如 UFW 具有更简单的端到端界面，称为 UFW。默认情况下，你可以通过 `ufw enable` 启用它。
+
+# 允许接入连接
+UFW 默认允许接入连接。要调整此策略并允许服务器之间的连接，请使用 `ufw allow ssh`、`ufw allow www` 等。
+
+# 网络与互联网
+## 174 运行命令
+你可以使用 `ssh` 在远程机器上执行命令，例如 `ssh [hostname][command]`。
+
+## 175 复制 SSH 密钥
+使用 `ssh-copy-id [remote-host]` 将你的公钥复制到远程主机。
+
+## 176 保持连接
+如果你经常从 ssh 会话中断开连接，请使用 `ServerAliveInterval` 选项，例如在 `~/.ssh/ssh_config` 文件中使用 `ServerAliveInterval 60`。
+
+## 177 通过隧道浏览
+首先使用 `ssh -f -N [user@host]` 为远程主机创建一个 ssh 隧道。然后通过该隧道进行。
+
+# 查找内存
+要确定哪些进程正在大量占用内存，使用 `ps --sort=`，它会将进程按内存消耗从低到高排列并位于底部。
+
+# 特定进程的内存
+使用 `pmap -x <PID>` 查看进程的详细内存消耗报告，它会显示每个映射的非共享、匿名和锁定内存的量。
+
+# 追踪二进制文件的执行过程
+如果你有一个未知的二进制文件，可以使用 `strace -v` 对其进行追踪，以查看它发出的信号和系统调用。
+
+# 登录用户
+使用 `w` 获取登录用户及其进程列表，使用 `-o` 在输出中包含用户的主机名。
+
+# 杀死进程
+输入 `kill <PID>` 将进程更改为无响应状态。如果它仍然存在抵抗，使用 `kill -9 <PID>` 终止进程。
+
+# 降低使用率
+如果你想降低整体使用率，可以使用 `renice` 编辑交换分区或更改 `vm.swappiness` 的值。
+
+# 备份
+## 备份启动区
+启动区包含在你意外写入 MBR 时的信息。使用 `dd if=/dev/sda count=1 bs=512 of=/root/boot.bak` 备份启动区。
+
+![](img/532f1b7284ceaabe875a6e3330711435_135_0.png)
+
+# 备份分区
+在发生故障或其他关键位损坏时，你也应该保留分区的备份。使用 `dd if=/dev/sda1 of=/root/sda1.bak` 备份分区。
+
+# 监控磁盘
+安装 `parted` 工具来监控磁盘报告。例如，使用 `df -h --output=avail,pcent /dev/sda1` 检查使用情况。
+
+# 加快传输
+如果带宽有限，使用 `rsync -z` 传输文件，并通过压缩更改的块来节省时间。
+
+# 查看源之间的差异
+使用 `diff` 查看操作更改的项目列表，或使用 `rsync -n --delete` 查看变化。
+
+# 追踪进程
+在 `rsync` 命令后添加 `--append` 选项以查看数据传输。
+
+# Rsync over ssh
+要通过 SSH 传输 rsync 数据，请使用 `rsync -avz ssh [source] [destination]`
+
+# 排除文件
+Rsync 还允许你在运行 rsync 时，通过 `--exclude='pattern'` 选项跳过你指定的文件。
+
+# 测试同步
+首次使用的用户应该使用 `--dry-run` 选项来模拟 rsync 操作，并在运行前扫描输出以检查任何意外结果。
+
+# 限制带宽
+要限制 rsync 操作的带宽，请在 rsync 中使用 `--bwlimit=KB` 选项。
+
+# 不要排除文件
+Tar 是创建磁盘存档的有用工具。使用 `--file-system` 选项确保你不会备份任何已挂载的分区或虚拟文件系统（`/proc/`）。
+
+# 安全与防火墙
+查找哪些端口正在运行，以查看特定应用程序正在通信的端口列表。
+
+# 禁用 ping
+Ping 可用于洪水攻击并造成网络损害。通过 `echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all` 禁用，或为了永久防止对添加的网络进行响应，执行 `echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all`。
+
+# 排除更新
+如果你自定义了内核的 iptables 规则，请确保使用 `iptables-save > iptables.bak` 备份它们。
+
+# 拦截域名
+首先，你需要获取你主机的 IP 地址：`example.com`。使用 `[ IP Address ] get CIDR` 获取 CIDR。使用该 CIDR 拦截对域名的访问，例如 `iptables -A OUTPUT -p tcp --drop`。
+
+# 修改用户密码
+如果你忘记了用户的密码，你可以在不需要密码的情况下使用 `sudo passwd [username]` 设置新密码。
+
+![](img/532f1b7284ceaabe875a6e3330711435_135_1.png)
+
+- 使用 Needs 获取应用程序消耗带宽的实时视图。
+
+# 复制权限
+使用 `--reference` 选项将一个文件的权限复制到另一个文件，例如 `chmod --reference=[copy-from-file] [apply-on-this-file]`。
+
+# 安全删除文件
+安装并使用 `shred` 删除文件，使其无法被恢复。例如，`shred [file]` 将多次用随机数据覆盖该文件。
+
+# 启用内置防火墙
+其他工具如 UFW 具有更简单的端到端界面，称为 UFW。默认情况下，你可以通过 `ufw enable` 启用它。
+
+# 允许接入连接
+UFW 默认允许接入连接。要调整此策略并允许服务器之间的连接，请使用 `ufw allow ssh`、`ufw allow www` 等。
+
+# 网络与互联网
+## 174 运行命令
+你可以使用 `ssh` 在远程机器上执行命令，例如 `ssh [hostname][command]`。
+
+## 175 复制 SSH 密钥
+使用 `ssh-copy-id [remote-host]` 将你的公钥复制到远程主机。
+
+## 176 保持连接
+如果你经常从 ssh 会话中断开连接，请使用 `ServerAliveInterval` 选项，例如在 `~/.ssh/ssh_config` 文件中使用 `ServerAliveInterval 60`。
+
+## 177 通过隧道浏览
+首先使用 `ssh -f -N [user@host]` 为远程主机创建一个 ssh 隧道。然后通过该隧道进行。
