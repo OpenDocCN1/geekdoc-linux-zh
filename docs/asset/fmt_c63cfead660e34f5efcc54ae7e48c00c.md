@@ -1,0 +1,214 @@
+
+# C
+
+- 故障排除, 1139
+- 光盘/可刻录 (CD-DR), 561
+- 光盘/可写 (CD-RW), 561
+- CompactFlash, 665
+- Imbiz, 208–219
+- CompConfig Manager (CCSM), 201–208
+- 组件, 仓库, 672–681
+- 合成, 189–219
+- 压缩/解压缩器 (codec), 561
+- CompServe, 356
+- 计算机系统研究小组 (CSRG), 1076
+- 并发版本系统 (CSV), 846
+- 备份排除 (`BackupExclude`), 101
+- 压缩级别 (`CompressLevel`), 1010, 1012
+- DHCP 地址范围 (`DHCPAddressRanges`), 1007
+- 配置, 888
+- 配置, 782
+- `~/config/compiz-manager`, 193
+- 配置对话框, 打印机, 724–725
+- 冲突, DEB 软件包, 698
+- 默认操作, 643–648
+- 定制, 645–648
+- 文件系统, 641
+- Nautilus管理器, 645
+- 添加/编辑, 262–264
+- 定制, 257–261
+- 电子邮件, 257–266
+- `crit`, 1033
+- C-shell, 400
+- CSRG. 参见计算机系统研究小组 (Computer Systems Research Group)
+- CSS. 参见内容混淆系统 (Content Scramble System)
+- CSV. 参见逗号分隔值 (Comma-Separated Value)
+- Cub 2: Sauerbraten, 639
+- Cube Gears, 208
+- CUPS: 参见通用 UNIX 打印系统 (Common UNIX Printing System)
+- CUPS: 通用 UNIX 打印系统 (Sweet), 1103
+- `cups`, 1102
+- `curl` 1, 928
+- 货币数据类型, OpenOffice.org Calc, 516–517
+- 光标
+  - Emacs, 451–452
+  - vi, 432–433
+- 虚拟机, 894
+- 自定义
+  - CE, 645–648
+  - 联系人, 257–261
+  - Emacs, 453–456
+  - GNOME, 146–166
+  - 菜单, 141–146
+  - 鼠标, 146–148
+  - OpenOffice.org Writer, 472–473
+  - 面板, 149–155
+  - `sudo`, 972–975
+  - vim, 439–441
+- CVS. 参见并发版本控制系统 (Concurrent Versioning System)
+- `cwi`, 434
+- 青、品、黄、黑 (CMYK), 532, 540
+- Cyrus IMAP, 1049
+- `.dbt`, 519
+- DBX, 336
+- `/occ` chat 昵称, 386
+- DCIM, 665
+- `.dcam`, 546
+- `dd`, 590, 994
+- DDNS. 参见动态 DNS (Dynamic DNS)
+- `dns-update-type`, 1066
+- DEB 软件包, 12, 698–699
+  - `alien`, 714
+  - TimeVault, 1020
+- `debfoster`, 718
+- `debhelper`, 714
+- Debian, 7, 11–12
+  - Almquist shell, 400
+  - 软件, 668
+- `debstrap`, 892
+- `deborphhan`, 718
+- `debug`, 1033
+- 调试
+  - Apache 2.x, 1032–1033
+  - NFS, 119–1122
+  - 电源管理, 160
+- DEF. 参见设备公司 (Digital Equipment Corporation)
+- 默认操作, CE, 643–645
+- 默认演示, 524
+- 默认租用时间, 1066
+- 默认域, 979
+- 默认挂载, `mount`, 120
+- `delay_warning_time`, 1045
+- 删除
+  - 数字音频播放器, 658
+  - Evolution, 234
+  - vi, 434
+- `delprinc`, 980
+- dent, Kyle D., 1057
+- 去饱和度, F-Post, 562
+- Deskar 插件, 153
+- GNOME, 179–181
+- 桌面. 参见 GNOME 桌面
+  - 背景, 162–163
+  - 搜索应用程序, GNOME, 173–181
+  - 用户, 14–17
+- GNOME, 129–187
+  - 安装 CD, 21
+  - 用户和群组工具, 958
+  - 虚拟化, 858
+
+# D
+
+- `cp`, 1001
+- 权限, 124
+- `-d`, `rdesktop`, 919
+- 3D 象棋, 627
+- DAE. 参见数字音频提取 (digital audio extraction)
+- DansGuardian, 16
+- Dapper, 140
+- Dasher, 165
+- DAT. 参见数字音频带 (digital audio tape)
+- 数据交换格式, (`.dif`), 519
+- 数据分区, 882
+- 数据报文协议 (UDP), 765
+- DAV svn, 851
+
+# Desktop CD
+
+- 数字音频播放器, 654–665
+- 64 位, 32
+- 启动, 32–36, 746
+- 磁盘, 49–51
+- 示例, 47–49
+- 游戏, 618
+- 安装, 31–32, 37–47
+- 持久化, 52–56
+- USB 闪存盘, 52–56
+- 桌面 Cube/Rotate, 208
+- 桌面尺寸, CCSM, 204
+- 桌面系统
+  - 在 CD 上的安装, 97–98
+  - 文本模式, 997
+- 桌面壁, Compiz 偏好, 195
+- 重复项, F-Spot, 650
+- `dev`, `mount`, 170
+- `/dev`, 107, 010
+- `/dev/cdrom`, 589, 894
+- `/dev/video`, 58
+- 开发者, 865
+- 设备驱动程序, 721
+  - 指针, 728
+  - 无线网络, 813–818
+- 设备独立接口 (DVI), 463
+- 设备管理器, 760–761
+- GNOME, 569–570
+- 设备选择器,PulseAudio, 577–578
+- 设备
+  - 网络工具, 788
+  - 打印机连接, 726
+- `/dev/sdc`, 746
+- `/dev/sdX`, 741
+- `/dev/vboxdrv`, 868
+- `df`, 752
+- `dhcient`, 103
+- DHCP. 参见动态主机配置协议 (Dynamic Host Configuration Protocol)
+- `dhcp-client`, 1062
+- `dhcp-common`, 1062
+- `dhcp.conf`, 1066
+- `dhppd3`, 1063–1067
+- Dia, 554, 557
+- 拨号连接, 786
+- `.di com`, 546
+- `.dif` 参见数据交换格式 (Data Interchange Format)
+- `diff.gz`, 693
+- 数字音频提取 (DAE), 561
+  - 复制, 658
+  - 默认操作, 643–645
+  - 删除, 658
+  - 断开, 659
+  - GNOME, 657
+  - 播放列表, 658–659
+  - Rhythmbox, 656
+- 数字音频带 (DAT), 561
+- 数字相机
+  - 默认操作, 643
+  - F-Spot, 648–654
+  - 导入, 649–652
+  - JPEG, 544
+  - 万像素, 544
+- 设备公司 (DEC), 1076
+- 数字图像与通信医学, 546
+- 数字千年版权法案 (DMCA), 561
+- 数字权利管理 (DRM), 562
+- 数字信号处理 (DSP), 252
+- 数字视频 (DVD), 562
+- 添加驱动器, 738–757
+- 烧录, 589–600, 987, 998
+  - Brasero, 595–996
+  - k3b, 599–606
+  - 复制, 604–606
+  - 加密, 581
+  - ISO, 590
+  - 多媒体, 570–573, 579–583
+  - totem, 581–583
+- 数字录像机 (DVR), 641
+- 直接恢复, 1015–1016
+- 直接视频表达式 (DIX), 314
+- 目录, 106–108, 985–1021
+  - 命令行, 408–414
+  - `/etc/fstab`, 119
+  - 导入, 1114–1117 GNOME, 106
+  - iPod, 661–662
+  - k3b, 587
+  - 微软迁移, 351–353
+  - 挂载, 1117–1119
