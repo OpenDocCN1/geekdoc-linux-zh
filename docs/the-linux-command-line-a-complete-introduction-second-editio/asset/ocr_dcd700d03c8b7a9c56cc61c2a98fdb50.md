@@ -1,0 +1,21 @@
+![](bbox=[0.18, 0.12, 0.38, 0.42])
+
+# LINUX BASICS FOR HACKERS
+
+Getting Started with Networking, Scripting, and Security in Kali
+
+by OCCUPYTHEWEB
+
+DECEMBER 2018, 248 PP., $34.95
+
+ISBN 978-1-59327-855-7
+
+PHONE:
+800.420.7240 OR
+415.863.9900
+
+EMAIL:
+SALES@NOSTARCH.COM
+
+WEB:
+WWW.NOSTARCH.COM

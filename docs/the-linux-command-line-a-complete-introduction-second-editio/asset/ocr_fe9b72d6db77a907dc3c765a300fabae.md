@@ -1,0 +1,3 @@
+wristwatches to mainframes), they may have overlooked a particular device. By locating and downloading the source code for the driver, it is possible for you (yes, you) to compile and install the driver yourself. This process is not overly difficult, but it is rather involved. We’ll talk about compiling software in a later chapter.
+
++   - **The hardware vendor is hiding something.** It has neither released source code for a Linux driver nor has it released the technical documentation for somebody to create one for them. This means the hardware vendor is trying to keep the programming interfaces to the device a secret. Because we don’t want secret devices in our computers, it is best that you avoid such products.

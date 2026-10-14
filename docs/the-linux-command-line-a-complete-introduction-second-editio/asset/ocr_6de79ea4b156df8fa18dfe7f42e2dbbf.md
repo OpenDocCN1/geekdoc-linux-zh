@@ -1,0 +1,41 @@
++   1. Get cutting board.
++   2. Get knife.
++   3. Place carrot on cutting board.
++   4. Lift knife.
++   5. Advance carrot.
++   6. Slice carrot.
++   7. If entire carrot sliced, then quit; else go to step 4.
+
+Steps 4 through 7 form a loop. The actions within the loop are repeated until the condition, “entire carrot sliced,” is reached.
+
+# while
+
+bash can express a similar idea. Let’s say we wanted to display five numbers in sequential order from 1 to 5. A bash script could be constructed as follows:
+
+```
+#!/bin/bash
+
+# while-count: display a series of numbers
+
+count=1
+
+while [[ "$count" -le 5 ]]; do
+    echo "$count"
+    count=$((count + 1))
+done
+echo "Finished."
+```
+
+When executed, this script displays the following:
+
+```
+[me@linuxbox ~]$ while-count
+1
+2
+3
+4
+5
+Finished.
+```
+
+The syntax of the while command is as follows:

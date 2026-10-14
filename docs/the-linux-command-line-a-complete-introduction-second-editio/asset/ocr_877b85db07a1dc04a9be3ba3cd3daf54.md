@@ -1,0 +1,15 @@
+# 24
+
+# WRITING YOUR FIRST SCRIPT
+
+![](bbox=[0.35, 0.23, 0.65, 0.44])
+
+In the preceding chapters, we assembled an arsenal of command line tools. While these tools can solve many kinds of computing problems, we are still limited to manually using them one by one on the command line. Wouldn’t it be great if we could get the shell to do more of the work? We can! By joining our tools together into programs of our own design, the shell can carry out complex sequences of tasks all by itself. We can enable it to do this by writing shell scripts.
+
+# What Are Shell Scripts?
+
+In the simplest terms, a shell script is a file containing a series of commands. The shell reads this file and carries out the commands as though they have been entered directly on the command line.
+
+The shell is somewhat unique, in that it is both a powerful command line interface to the system and a scripting language interpreter. As we will see, most of the things that can be done on the command line can be done in scripts, and most of the things that can be done in scripts can be done on the command line.
+
+We have covered many shell features, but we have focused on those features most often used directly on the command line. The shell also

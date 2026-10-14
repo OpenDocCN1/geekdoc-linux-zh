@@ -1,0 +1,1 @@
+also saw the important role that make plays in the maintenance of programs. The make program can be used for any task that needs to maintain a target/dependency relationship, not just for compiling source code.
