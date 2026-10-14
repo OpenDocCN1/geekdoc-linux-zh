@@ -1,0 +1,36 @@
+# The Linux Cookbook: Tips and Techniques for Everyday Use:
+
+This command opens a copy of *The GNU tar Manual* in info.
+
+To read the contents of a file written in Info format, give the name of the file to read with the `-f` option. This is useful for reading an Info file that you have obtained elsewhere, and is not in the `/usr/info` directory with the rest of the installed Info files. Info can automatically recognize and expand Info files that are compressed and have a `.gz` file name extension (see section Compressed Files).
+
++   - To read `faq.info`, an Info file in the current directory, type:
+
+```
+$ info -f faq.info RET
+```
+
+This command starts info and opens the Info file `faq.info`, beginning at the top node in the file.
+
+To read a specific node in an Info file, give the name of the node to use in quotes as an argument to the `-n` option.
+
++   - To read `faq.info`, an Info file in the current directory, beginning with the node Text, type:
+
+```
+$ info -n 'Text' -f faq.info RET
+```
+
+> NOTE: You can also read Info documentation directly from the Emacs editor; you type C-h i from Emacs to start the Info reader, and then use the same commands as in the standalone info tool (see section Getting Acquainted with Emacs).
+
+The Emacs "incremental" search command, C-s, also works in info; it's a very fast, efficient way to search for a word or phrase in an entire Info text (like this entire book); see Searching Incrementally in Emacs.
+
+# 3.8.6 Reading System Documentation and Help Files
+
+```
+@sf(Debian): 'doc-linux-text'
+@sf(WWW): http://linuxdoc.org/
+```
+
+The `/usr/doc` directory is for miscellaneous documentation: HOWTOs, FAQs, Debian-specific documentation files and documentation files that come with commands. (To learn more about files and directories, see Files and Directories.) To peruse any of these files, use less, described in full in Perusing Text.
+
+When a software package is installed, any additional documentation files it might have beyond a manual page and Info manual are placed here, in a subdirectory with the name of that package. For example, additional documentation for the hostname package is in `/usr/doc/hostname`, and documentation for the passwd package is in `/usr/doc/passwd`. Most packages have a file called `README`, which usually contains relevant information. Often this file is compressed as `README.gz`, in which case you

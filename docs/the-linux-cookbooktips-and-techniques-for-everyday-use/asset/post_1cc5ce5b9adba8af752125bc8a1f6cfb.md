@@ -1,0 +1,39 @@
+
+## Footnotes
+
+- (1) The word "free" in this context refers to freedom or liberty, and not price; this distinction is explained in Introduction.
+- (2) This key is labelled `Enter` on some keyboards.
+- (3) The name "Unix" was first written as "Unics," which stood for "Uniplex Information and Computing System."
+- (4) No such "official GNU" operating system has yet been released in its entirety, but most people today consider Linux-based free software systems to be the effective realization of their goals—hence the "GNU" in "Debian GNU/Linux."
+- (5) You can extend this "free software movement" to be part of a greater "free information" or "free speech" movement, to include all *other* kinds of free works—including works of literature and music.
+- (6) Presumably, many of these courses use Linux now.
+- (7) This was not the original name, however. Torvalds had originally called it freax, for "`free` + `freak` + the obligatory `-x`"; while the 1990s were fast becoming the "freaky" alterna decade (at least in fashion), more people seemed to favor "Linux," and the name stuck.
+- (8) The GNU Project's own kernel is called Hurd, and is still in development; Debian's experimental distribution of a Hurd-based free software system, not yet publicly released, is called Debian GNU/Hurd.
+- (9) Because of this approach, and because of its free and open nature, I have come to call Linux a "synergetic" operating system, in honor of the late R. Buckminster Fuller, who invented a new mathematical system based on these same principles.
+- (10) If your keyboard has two **ALT** and **CTRL** keys, use the *left* set of these keys.
+- (11) LDP documents are available in other formats as well, including HTML and DVI.
+- (12) The Unix way of saying it is that the command "rings the system bell."
+- (13) Sometimes you might see it referred to as "X Windows," but this term is incorrect.
+- (14) If you have a mouse with only two buttons, click both buttons simultaneously to emulate the middle button.
+- (15) Technically, there *are* other characters that you can use—but doing so may get you into trouble later on.
+- (16) Called a URN, or "Uniform Resource Name."
+- (17) This key works in X as well, and works as it does in the console.
+- (18) On an increasing number of systems, this file is being replaced with `/usr/share/dict/words`; administrators should make a symbolic link from this to the shorter, preferred form.
+- (19) If a word is reasonably universal, you may, of course, contact the global maintainers of wenglish or other appropriate packages and try to convince them that said word ought to be included.
+- (20) There was also a set of tools for formatting text called the "Documenter's Workbench" (DWB), and there was a planned "Reader's Workbench": we can only guess at what that might have been, but today we do have Project Gutenberg, a new etext reader.
+- (21) In The Third Mind, by William S. Burroughs and Brion Gysin.
+- (22) The ed command is still available on virtually all unices, Linux inclusive, and the old `g/re/p` still works.
+- (23) The default shell on most Linux systems, bash, doesn't—but it's still probably good practice to quote a regexp with a caret in it.
+- (24) If the input is a file, use cat to do this, as in the example.
+- (25) This is the term given to the currently-fashionable hardware devices that allow for display and reading of text. A book in plain text with or without formatting commands is called an "etext," but as more information is handled in machine-readable form, the e- prefix will probably be dropped.
+- (26) The `mf` also stands for "Metafont," the name of the font language that is part of TeX.
+- (27) LyX, being in essence a graphical front-end to LaTeX, uses these same document classes.
+- (28) In addition, a more advanced LaTeX style for printing many different kinds of shipping and package labels is normally installed at `/usr/share/texmf/tex/latex/labels/`.
+- (29) The manuscript template requires that your system has the LaTeX style file called `manuscript.sty`; most TeX distributions have this installed at `/usr/share/texmf/tex/latex/misc/manuscript.sty`.
+- (30) This is a proprietary scanned image format from Kodak, which is a current standard for scanning film images to digital.
+- (31) You can also use this tool with a CD-RW drive and write to a CD-RW disc.
+- (32) Ogg Vorbis is one such format; see http://www.vorbis.com/.
+- (33) This works if your administrator has set up the floppy drive filesystem for user access—see Letting Users Access Hardware Peripherals.
+- (34) This is sometimes called being "under the mount point" of the disk.
+- (35) This works if your administrator has set up the CD-ROM drive filesystem for user access—see Letting Users Access Hardware Peripherals.
+- (36) The shell command separator; see Running a List of Commands.

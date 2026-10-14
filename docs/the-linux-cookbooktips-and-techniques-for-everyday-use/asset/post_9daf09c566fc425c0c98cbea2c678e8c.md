@@ -1,0 +1,79 @@
+
+## C
+
+- Cable Modem Providers HOWTO 30.1 Connecting to the Internet
+- calculating arithmetic 29.1 Calculating Arithmetic
+- calendar file, making 28.4.1 Making an Appointment File
+- calendar files, including 28.4.2 Including Holidays in Your Reminders
+- calendar, displaying a 28.3.1 Displaying a Calendar
+- calendar, displaying in Emacs 28.3.2 Displaying a Calendar in Emacs
+- calendars 28.3 Calendars
+- calling out on a modem 30.3 Calling Out on a Modem
+- cancelling a print job 26.1.4 Cancelling a Print Job
+- cancelling a shutdown A.2.3 Cancelling a Shutdown
+- capture logs 4.5 Recording a Shell Session
+- carbon copies, sending in mail 31.1 Sending Mail
+- caret, in regexps 15.2.1 Matching Lines Beginning with Certain Text
+- carriage returns, replacing with linefeeds 15.6.4 Searching and Replacing in Emacs
+- Case Western Reserve University 11.2 Emacs
+- cassette labels, PostScript template for 16.6 Other Word Processors and Typesetting Systems
+- CD, sampling sound from a 23.2 Sampling Sound from a CD
+- CD–R, writing an audio 23.3 Writing an Audio CD–R
+- CD–ROM drives, letting users mount A.4.3 Letting Users Mount Drives
+- CD–ROM, mounting a 25.4.1 Mounting a CD–ROM
+- CD–ROM, unmounting a 25.4.2 Unmounting a CD–ROM
+- CD–ROMs 25.4 CD–ROMs
+- changing directories 6.2 Changing Directories
+- changing file modification time 9.2 Changing File Modification Time
+- changing file names to lowercase 6.5.1 Changing File Names to Lowercase
+- changing the amplitude of a sound file 24.2.1 Changing the Amplitude of a Sound File
+- changing the ownership of a file 7.2.2 Changing the Ownership of a File
+- changing the permissions of a file 7.3.2 Changing the Permissions of a File
+- changing the root window parameters 5.6.3 Changing the Root Window Parameters
+- changing the sampling rate of a sound file 24.2.2 Changing the Sampling Rate of a Sound File
+- changing the shell prompt 4.6.1 Changing the Shell Prompt
+- changing the size of an image 19.1.1 Changing the Size of an Image
+- changing the volume level 22.2.2 Changing the Volume Level
+- changing to the last directory you visited 6.2.2 Changing to the Last Directory You Visited
+- changing to your home directory 6.2.1 Changing to Your Home Directory
+- changing your password 3.5 Changing Your Password
+- Chao, Buwei Yang 1.4 Acknowledgments
+- character chart, viewing a 10.4 Viewing a Character Chart
+- characters, counting in a text 13.1.1 Counting the Characters in a Text
+- characters, quoting 4.1.1 Passing Special Characters to Commands
+- chatting directly with a user 33.6.1 Chatting Directly with a User
+- chatting with other users 33.6 Chatting with Other Users
+- chatting with users on ICQ 33.6.3 Chatting with Users on ICQ
+- chatting with users on IRC 33.6.2 Chatting with Users on IRC
+- CheapBytes A.3.1 Getting and Installing Debian
+- checking grammar 12.3 Checking Grammar
+- checking in a file revision 9.7.1 Checking In a File Revision
+- checking out a file revision 9.7.2 Checking Out a File Revision
+- checking SGML document syntax 16.5.2 Checking SGML Document Syntax
+- checking text for difficult sentences 12.3.4 Checking Text for Difficult Sentences
+- checking text for doubled words 12.3.2 Checking Text for Doubled Words
+- checking text for long sentences 12.3.5 Checking Text for Long Sentences
+- checking text for misused phrases 12.3.1 Checking Text for Misused Phrases
+- checking text for readability 12.3.3 Checking Text for Readability
+- checking whether a system is online 33.4.1 Checking Whether a System Is Online
+- checking whether a user is online 33.4.2 Checking Whether a User Is Online
+- Chet's Emacs 11.2 Emacs
+- choosing a newsreader 33.3.1 Choosing a Newsreader
+- choosing a window manager 5.6.4 Choosing a Window Manager
+- choosing the perfect text editor 11.1 Choosing the Perfect Text Editor
+- choosing the right typesetting system for the job 16.1 Choosing the Right Typesetting System for the Job
+- chorus, adding to a sound file 24.2.7 Adding Chorus to a Sound File
+- clearing the screen 4.6.4 Customizing Future Shells
+- clients, X 5.2 Running a Program in X
+- color directory listing 6.3.5 Listing Directories in Color
+- color map 19.1.3 Adjusting the Colors of an Image
+- color reduction 19.1.3 Adjusting the Colors of an Image
+- colors, window 5.2.2 Specifying Window Colors
+- columns, placing text in 14.2.2 Placing Text in Columns
+- combining images 19.1.7 Combining Images
+- combining PostScript documents 21.2.2 Combining PostScript Documents
+- combining PostScript pages 21.1.3 Combining PostScript Pages
+- command history 4.4 Command History
+- command line 4.1 Keys for Command Line Editing
+- command line editing, keys for 4.1 Keys for Command Line Editing
+- command, finding the location of a 8.4 Finding Where a Command Is Located

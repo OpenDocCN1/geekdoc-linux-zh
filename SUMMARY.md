@@ -2138,6 +2138,7 @@
 +   [Linux 秘籍（第二版）](docs/the-linux-cookbook-second-edition/README.md)
 +   [Linux 秘籍：日常使用技巧与技术](docs/the-linux-cookbook-tips-and-techniques-for-everyday-use/README.md)
 +   [Linux 秘籍：日常使用的技巧与方法，第 2 版](docs/the-linux-cookbook-tips-and-techniques-for-everyday-use-2nd-/README.md)
++   [Linux 秘籍：日常使用的技巧与诀窍](docs/the-linux-cookbooktips-and-techniques-for-everyday-use/README.md)
 +   [Linux 开发平台：完整编程环境的配置、使用与维护](docs/the-linux-development-platform-configuring-using-and-maintai/README.md)
 +   [Linux DevOps  way](docs/the-linux-devops-handbook/README.md)
 +   [Linux 企业级集群：使用通用硬件和免费软件构建高可用集群指南](docs/the-linux-enterprise-cluster-build-a-highly-available-cluste/README.md)
