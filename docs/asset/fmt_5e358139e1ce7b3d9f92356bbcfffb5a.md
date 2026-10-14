@@ -1,0 +1,107 @@
+
+有一点你需要确保的是，你使用的电脑有足够的存储空间来容纳所有下载的数据。为了与网络上其他系统和设备最大程度兼容，最好使用 NTFS 文件系统格式化存储区域。如果你计划将同一块磁盘也用于操作系统，最好将操作系统文件放在单独的分区上。
+
+Linux 上有许多种子客户端可用。我们将在这个小项目中使用 Deluge BitTorrent 客户端，它可以在我们的无头服务器上作为守护进程运行，并接受来自其他 Deluge 客户端的连接。Deluge 客户端是跨平台的，因此你可以从 Linux、Windows 和 Mac OS X 连接到种子下载机。
+
+Deluge 提供多种远程访问方式。你可以通过基于浏览器的用户界面访问基本功能。设置起来并不需要太多工作，但只暴露了 Deluge 的部分功能。要充分利用它，你需要设置 Deluge 守护进程以接受来自其他桌面 Deluge 安装的连接。
+
+## 设置 Deluge
+
+让我们先设置 Deluge 的 WebUI，这并不费力。使用以下命令拉取所需的软件包：`sudo apt-get install deluged python-mako deluge-web`。该命令会自动启动 Deluge 守护进程，但你需要在终端中输入 `deluge-web &` 来启动 Web 界面。
+
+默认情况下 Deluge Web 客户端运行在 `8112` 端口。启动浏览器并指向服务器的 IP 地址，例如 `192.168.3.101:8112`。Deluge Web 界面会提示你输入密码。默认密码是 `deluge`。一旦
+
+## 使用 Raspberry Pi 驱动种子服务器
+
+你可以使用 Raspberry Pi 来驱动种子下载机。安装 Deluge 守护进程和 WebUI 的命令与本教程没有任何不同。当然，Raspberry Pi 没有硬盘，因此你需要使用外部 USB 驱动器以及 Samba 服务器，如漫游中所述（见第 113 页）。
+
+然而，Raspberry Pi 需要一个额外的步骤。你需要做一些 CLI 魔法来确保 Deluge 守护进程和 WebUI 在 Pi 启动时自动启动。为此，复制粘贴 Deluge 开发者为 Ubuntu 提供的两个配置文件（http://bit.ly/1nO2w5）。使它们都可执行并将其添加到启动项中，使用 `sudo chmod 755 /etc/default/deluge-daemon` 和 `sudo update-rc.d deluge-daemon defaults`。
+
+最后，更新 init 文件以包含它们：`sudo chmod 755 /etc/init.d/deluge-daemon` 和 `sudo update-rc.d deluge-daemon defaults`。
+
+添加几个脚本，让你的 Raspberry Pi 作为专用种子服务器使用。
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_109_0.png)
+
+## torrent 服务器
+
+你进入网页界面，Deluge 会提示你更改密码。
+
+在使用网页客户端之前，你需要先连接到 Deluge 守护进程。网页界面会自动启动连接管理器窗口，其中列出了所有正在运行的 Deluge 守护进程。只需选择守护进程并点击连接按钮即可。现在你就可以使用网页客户端来添加和控制在种子盒上运行的所有种子。
+
+如果你想更改网页客户端运行的端口，你需要编辑其配置文件。进入 Deluge 的配置目录 `cd ~/.config/deluge/` 并用你喜欢的文本编辑器打开名为 `web.conf` 的配置文件。向下滚动文件找到写着 `port: 8112` 的行，并将 `8112` 替换为 1000 以上的任意端口号。
+
+### 守护进程的工作
+
+如前所述，要充分利用 Deluge，你需要配置 Deluge 守护进程以接受来自远程客户端的连接。首先通过以下命令启动 Deluge 控制台客户端来对 Deluge 守护进程进行配置更改：
+
+```
+sudo apt-get install deluge-console
+sudo pkill deluged
+```
+
+并用你喜欢的文本编辑器打开其配置文件 `~/.config/deluge/auth`。
+
+滚动到文件底部并输入三个参数来指定你希望使用的用户名和密码，以及守护进程的身份验证级别，用冒号分隔，例如 `my-username:my-password:10`。请记得替换 `my-username` 和 `my-password` 参数。`10` 身份验证级别会赋予守护进程管理员权限。
+
+保存文件并退出文本编辑器。回到控制台，使用 `deluged` 命令启动 Deluge 守护进程。然后在终端中输入 `deluge-console` 进入 Deluge 控制台。这将启动 Deluge 守护进程的命令行界面。
+
+我们将使用控制台使 Deluge 守护进程接受远程连接。在控制台中输入：
+
+```
+config -s allow_remote True
+```
+
+客户端会确认已成功更改配置值。现在你可以通过输入 `exit` 退出控制台客户端，然后先使用 `sudo pkill deluged` 停止 Deluge 守护进程，再使用 `deluged` 重新启动它来使更改生效。
+
+就这样。Deluge 现在已全部设置好，可以在网络上接受来自远程客户端的连接。按照向导设置客户端以连接到你的盒子。
+
+### 连接到服务器
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_110_0.png)
+
+- 1. **安装客户端**
+
+现在 Deluge 守护进程已准备好接受连接，你需要在网络上的其他计算机上安装 Deluge 桌面客户端。大多数桌面发行版都在其仓库中包含 Deluge，因此你可以从发行版的包管理器下载。Deluge 跨平台，你也可以前往 Deluge 的下载页面获取 Windows 和 Mac OS X 客户端，如有需要。
+
+- 2. **启用经典模式**
+
+默认情况下，Deluge 客户端设置为下载到本地计算机。我们希望更改此行为，因此你需要启动 Deluge 客户端并前往 编辑 > 首选项，然后切换到 接口 类别。在这里你会注意到一个默认启用的经典模式复选框。取消选中此框，点击确定，然后重新启动 Deluge 桌面客户端。
+
+- 3. **添加主机**
+
+重新启动 Deluge 后，它会自动启动连接管理器。在连接管理器中点击添加按钮并输入有关守护进程的连接详细信息。点击添加按钮返回连接管理器。选择添加的条目并点击连接按钮以将客户端与在种子盒上运行的守护进程连接。
+
+**订阅 Linux Format**  http://myfavouritemagazines.co.uk/LINsubs
+
+## 提升你的种子体验
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_0.png)
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_1.png)
+
+### 1 启用 Deluge 插件
+
+Deluge 包含大量有用的插件。要启用它们，请前往 编辑 > 首选项 并切换到 插件 类别。点击插件旁边的复选框即可启用它。已启用的插件会作为首选项窗口中的单独类别出现。客户端自带八个插件，你可以点击查找更多插件按钮来获取并安装额外的第三方插件。
+
+### 2 有用的插件
+
+一个有用的插件是调度程序，它可让你根据一天中的时间限制带宽使用。通知插件会在种子下载完成时在桌面上显示弹出窗口或向你发送电子邮件提醒。高级用户也会喜欢执行插件，它会在添加新种子或种子下载完成时运行指定的命令。
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_2.png)
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_3.png)
+
+### 3 Firefox 扩展
+
+如果你使用 Firefox 网络浏览器，可以添加 Bit Torrent WebUI+ Firefox 扩展，它将允许你通过网页界面将种子添加到 Deluge 守护进程。安装扩展后，它会打开一个对话框供你输入 Deluge WebUI 的连接详细信息，以后当你点击种子链接时，种子将被自动添加到远程种子盒。
+
+### 4 Google Chrome 扩展
+
+如果你使用 Chrome 浏览器，可以从 Google Play 商店安装 DelugeSiphon 应用。安装后，你需要点击地址栏中的图标并前往选项页面。输入守护进程的 IP 地址以及 WebUI 的端口号和密码。这将使你能够右键单击任何种子文件并选择发送到 Deluge 选项以添加种子。
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_4.png)
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_111_5.png)
+
+### 5 使用移动客户端
