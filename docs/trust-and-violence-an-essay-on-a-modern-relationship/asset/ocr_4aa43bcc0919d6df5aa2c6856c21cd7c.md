@@ -1,0 +1,13 @@
+# RICHARD III: A FLAWED POWER CALCULUS
+
+The Duke of Gloucester, and the later King Richard III, is one of Shakespeare’s most unscrupulous regicides, and a man obsessed with his legitimacy. His plans to kill the king are shaped by dynastic considerations: wooing wives, securing heirs, eliminating legitimate rivals, exploiting Parliament and the Church. Except for a scene in which he tries to recruit a henchman in most unregal fashion, Richard shows perfect command of legitimizing rhetoric, and has even mastered the verbal chicanery needed to convince those he has hurt that it’s all for the best. Consider the famous scene in the first act where Richard interrupts the funeral procession of the king he murdered in order to propose to the dead king’s daughter-in-law, whose husband he also killed. A great seducer in the erotic sense as well as in every other, Richard eventually prevails upon her to accept. In act IV, he goes one step further, asking the woman whose sons he murdered for her daughter’s hand—again, with success. What’s particularly striking about this latter scene is how Richard, in making his case, underscores the mechanisms all murderous regimes use to generate normality, amnesty, and amnesia:
+
+> Plead what I will be, not what I have been;
+> Not my deserts, but what I will deserve.
+> Urge the necessity and state of times,
+> And be not peevish found in great designs.
+> (IV.4.414–17)
+
+Richard III is a textbook case of how to deploy strategic violence and institutionalize its outcome. Yet Richard fails in the end. Why? One could plausibly argue that his enemies are too powerful. But we must also keep in mind that Richard helps his opponents with his own mistakes (which Shakespeare scrutinizes as thoroughly as his triumphs). Put simply: Richard never manages to win over the establishment, only individuals. Despite the legitimacy he gains through murder and marriage, Richard remains a parvenu. He lacks the knack for creating dependency outside personal allegiance. He is a gang leader without a full-fledged gang, and the few who support him are far from constituting a governing elite. Most damaging of all, he doesn’t recognize the need for generosity, or, at the very least the importance of making good on his promises. Richard fails to grasp that power can be maintained only when it can reward as well as punish those it subjects.
+
+Fixated on violence, Richard seeks to secure his sovereignty as king through coercion alone. The two children who might one day challenge his claim to the

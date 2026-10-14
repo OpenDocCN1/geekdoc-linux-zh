@@ -1,0 +1,13 @@
+so, produces—trust in each other and in the social structure. They affirm the distance between them while forming an allegiance against those “questionable elements.” As in the previous scene, the social expectations are clear to all.
+
+*In modern and premodern periods both, social stability rests on mutual expectations that allow society to presume its own stability as given. The difference is that premodern social stability was secured by representing one’s social class while modern social stability is secured by minimizing one’s horizon of expectations. The former was about what one did; the latter is about what one doesn’t do.*
+
+# TRUST
+
+Until recently sociology gave little attention to that elementary fact of social life we call trust. In 1968 Niklas Luhmann lamented the paucity of research with trust as its main subject.³ By 2001 Martin Hartmann spoke of “the flood of publications … that shows no signs of stopping.”⁴ Today most essays and books on trust, including this one, are able to review only part of the vast mountain of literature on the subject.⁵ Generally, those who write about trust share the view that it is one of the most basic elements of social cohesion, if not the most basic of all. Luhmann writes:
+
+> In many situations . . . one can choose in certain respects whether or not to bestow trust. But a complete absence of trust would prevent him even from getting up in the morning. He would be prey to a vague sense of dread, to paralysing fears. . . . Anything and everything would be possible. Such abrupt confrontation with the complexity of the world at its most extreme is beyond human endurance.⁶
+
+Despite the apparent intuitiveness of this description, there is much disagreement about the phenomena trust comprises. For instance Claus Offe rejects the idea of trust in institutions, while Anthony Giddens believes that “the nature of modern institutions is deeply bound up with the mechanisms of trust in abstract systems.”⁷ Another view insists that trust is purely interpersonal, entirely graspable with the tools of rational choice theory.⁸ Still another understands trust as something like the social equivalent of ether in early modern physics: a hard-to-define universal medium.
+
+The range of what is understood under the notion of trust opens the door to conflicting views but also constitutes its theoretical charm and intellectual appeal. More to the point is the fact that attempts to reduce either to the abstract or to the interpersonal are unconvincing.⁹ Trust in society does not arise from the belief that we could theoretically verify the trustworthiness of its

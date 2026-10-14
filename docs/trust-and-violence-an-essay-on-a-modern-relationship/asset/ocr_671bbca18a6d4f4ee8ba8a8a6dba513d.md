@@ -1,0 +1,15 @@
+dispensation. After the emperor's daughter identifies him as Rome's secret savior, Robert is granted her hand along with half the empire.
+
+The film The Dirty Dozen (1967) tells a similar story. It is 1944, and a group of American military convicts are given a choice: to either let justice take its course (some have been sentenced to hard labor; others are on death row) or volunteer for a risky mission behind enemy lines and be pardoned if they succeed. As the movie unfolds, the viewer develops sympathy for the band of thieves and murderers, whose purgatory-like training turns them into a company of combat-ready soldiers. Despite each having a criminal past, only one makes us uneasy: Archer Maggot, who was imprisoned for raping and murdering an Englishwoman and whose psychotic urges end up jeopardizing the entire mission. In the end, only one member of the unit survives.
+
+Violence at the right time and place—when the framework is right and there are clear-cut villains—can be pleasurable. Violence at the wrong time and place is another matter. This violence unsettles us. It is mysterious, not inherently, but, as I argued in the introduction, because we mystify it. Violence at the wrong time and place calls modernity into question while coexisting with it. This coexistence functions so well that, once we experience it first hand, we will never forget its unsettling effect, even after life returns to normal.
+
+In his 1831 novella Der Hexen-Sabbath ('The Witches' Sabbath), Ludwig Tieck thematizes this vexing potential of violence. It is the time of the late Middle Ages, and the people of Arras believe they have left the horrors of the Inquisition for a more enlightened era. A discussion between a high-ranking clergy official and a wealthy widow illustrates prevailing opinion:
+
+> "The old rule of the clergy is over, and if they don't conform to the world their power will collapse everywhere. The books and stories of Boccaccio, as those by other bright minds, have found acceptance by everyone. Even the farmer laughs at things today that he would have kneeled before in awed reverence thirty years ago..."
+> 
+> "So you believe," said Catharine, "that the terrible darkness, the wild superstition, the inquisitions and the martyrs that we read about in horror whenever we open the old histories can never happen again?"
+> 
+> "Certainly not," said the dean. "Everything that gave rise to error and madness has ended. That sickness of the soul is exhausted ... hence everything our dear old bishop, this puny shrimp, does and wants is only laughable. The most ridiculous trait of his character is his belief that he possesses the finest and most extensive knowledge of human nature."²
+
+But it turns out that the dean is wrong about "the terrible darkness" being a thing of the past, and the diminutive bishop he pokes fun at will be the very

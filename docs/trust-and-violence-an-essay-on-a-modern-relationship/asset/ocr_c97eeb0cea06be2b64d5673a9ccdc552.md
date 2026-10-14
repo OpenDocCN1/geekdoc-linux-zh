@@ -1,0 +1,19 @@
+Complete Psychological Works of Sigmund Freud, 18:65–144. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+———. “Thoughts for the Times on War and Death.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 14:273–300. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+———. “Three Essays on the Theory of Sexuality.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 7:125–253. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+———. “The Uncanny.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 17:217–52. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+———. “Why War?” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 22:195–216. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+Friedländer, Saul. Die Entdecker des Ich: Montaigne—Pascal—Diderot. Munich: R. Piper, 1969.
+Friedländer, Saul. Nazi Germany and the Jews. Volume 1, The Years of Persecution, 1933–1939. New York: HarperCollins, 1997.
+———. Nazi Germany and the Jews. Volume 2, The Years of Extermination, 1939–1945. New York: HarperCollins, 2007.
+Fromm, Erich. The Anatomy of Human Destructiveness. New York: Holt, Rinehart and Winston, 1973.
+Gänzfried, Daniel. Alias Wilkomirski: Die Holocaust-Travestie: Enthüllung und Dokumentation eines literarischen Skandals. Berlin: Jüdische Verlagsanstalt, 2002.
+Gernhardt, Robert. Gedichte: 1954–1994. Zurich: Haffmans Verlag, 1996.
+Giddens, Anthony. The Consequences of Modernity. Stanford: Stanford University Press, 1990.
+———. The Constitution of Society: Outline of the Theory of Structuration. Cambridge: Polity Press, 1984.
+Gnesenau, Neidhardt von. “Plan zur Vorbereitung eines Volksaufstands.” In Guerrilleros, Partisanen: Theorie und Praxis, 41–68. Edited by Joachim Schickel. Munich: C. Hansen, 1970.
+Goethe, Johann Wolfgang von. Egmont. Translated by Michael Hamburger. In Goethe’s Collected Works, 7:83–152. New York: Suhrkamp Publishers, 1983–89.
+———. Faust Part One. Translated with an introduction by David Luke. Oxford: Oxford University Press, 1998.
+———. Faust Part Two. Translated with an introduction by David Luke. Oxford: Oxford University Press, 1998.
+———. From My Life: Poetry and Truth. Translated by Robert R. Heitner. In Goethe’s Collected Works, 4/5:1–605. New York: Suhrkamp Publishers, 1983–89.
+———. Goetz von Berlichingen with the Iron Hand. Translated by Cyrus Hamlin. In Goethe’s Collected Works, 7:1–82. New York: Suhrkamp Publishers, 1983–89.

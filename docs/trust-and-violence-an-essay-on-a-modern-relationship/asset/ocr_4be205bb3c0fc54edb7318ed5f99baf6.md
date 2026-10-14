@@ -1,0 +1,14 @@
+have dominated its reception. One sees Antigone as the symbol of a humanity that defies the dictatorial pretensions of the Theban king Kreon. The other, more in keeping with the Greek notion of tragedy, sees an irresolvable conflict between two equally legitimate principles.39 A third, more convincing, account is that of Christian Meier, who points out that Kreon’s decision to forbid the burial of Polyneikes in Thebes is in keeping with the customs of the time, which prohibited traitors from being buried within the polis.40
+
+Antigone, Polyneikes’s sister, follows one of those customs when she secretly pours earth over her brother’s body in a symbolic act of burial. When officials remove the dirt, she repeats the ritual, but this time she is caught and brought before Kreon. In her own defense, she argues that Kreon’s decree cannot trump the unchangeable laws of the gods.41 Where Kreon invokes absolute political power, Antigone insists on a prepolitical—which is to say, traditional—legal order. Kreon’s position depends on the citizens of Thebes consciously refraining from traditional duty and piety and declaring their loyalty to the polis and the sovereign who embodies it. Kreon’s tyranny is the law of the city; he legitimizes it by claiming that anarchy that would reign in his absence:
+
+> Whoever is put into power by
+> The city must be obeyed in everything—
+> In small things, and what’s just, and the opposite.
+> There is no greater evil than lack of rule.
+> This is what brings cities to ruin …
+> … what does save the skins of most of those
+> Who act right is obedience! Therefore—
+> We must safeguard the orders of the rulers.42
+
+In Livy’s The History of Rome, we find a similar logic in the words of general Lucius Papirius Cursor as he attempts to justify punishing a popular lieutenant for his overzealousness.43 Hobbes’s version of the argument is resolute. The question of right and wrong does not arise; those that pose it call the polis into question. The Thebans who follow Kreon’s decree demonstrate who they are and want to be: subjects. They pledge loyalty to the representative of political power and affirm the stability of the polis. From this perspective, Antigone is an anarchist, yet this is not how she sees herself. Her intent is not to challenge the city or its sovereign or to make a larger point or affirm a competing order. She acts from her individual sense of duty alone, and she is ready to accept the consequences should it conflict with the laws of the polis. Her act is autonomos, literally by her own law. It’s political only insofar as she introduces the

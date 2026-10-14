@@ -1,0 +1,13 @@
+out President Bush's ties to the oil business. Back in 1890, Helmuth von Moltke, the former chief of staff of the Prussian army and a member of Parliament, delivered a speech urging the government to increase military spending:
+
+Not long since, Gentlemen, the assertion was repeatedly made from the other side of the House, at least from the extreme Left, that all our military precautions are only taken in the interests of the wealthy classes, and that it is princes who bring about wars, and that, were it not for them, the nations would live together in peace and amity.151
+
+Moltke denounced this argument as anachronistic:
+
+The days of Cabinet wars are past—now we have only the People's war, and to conjure up such a war as this, with all its incalculable consequences, cannot be resolved upon by any prudent Government, except with the greatest reluctance. No, Gentlemen, the elements which menace peace are to be found among the People.152
+
+This state of affairs worried Moltke. Wars were no longer driven by rational political thought, directed toward predictable goals and calculable means, but by national and racial aspirations and the greed of those who felt slighted. Moreover, wars in Europe between heavily armed and populated powers could no longer be settled in one or two campaigns: "Gentlemen, it may be a Seven Years' War, it may be a Thirty Years' War," Moltke predicted.153 To ensure that Germany was adequately prepared, Moltke sold parliamentary approval of military expenditures as an act of patriotism. When war did break out—its duration was fewer than seven years but its outcome was far more catastrophic than Moltke could have imagined in 1890—the opposition party did its duty and voted to provide funding. Hugo Haase, second in command at the SPD, had spoken out against a war loan during party discussions, but after being outvoted he volunteered to present the party's decision before the Reichstag. This background makes Haase's speech particularly remarkable: a justification of modern war that went against conviction. Haase began with a topos of delegitimation going back to the military criticism of Voltaire, Abbt, and Moltke—that rulers start wars with their own interests in mind. "We are standing," he declared,
+
+in an hour of solemn destiny. The consequences of the imperialistic policy—which brought about an era of armaments and made international difficulties more acute—have now fallen upon Europe like a storm-flood.
+
+The responsibility for this recoils upon the leaders of that policy; we decline to accept it.154

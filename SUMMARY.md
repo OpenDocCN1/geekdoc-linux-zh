@@ -2226,6 +2226,7 @@
 +   [Tru64 Unix 系统管理员指南](docs/tru64-unix-system-administratiors-guide/README.md)
 +   [Tru64 UNIX 故障排除：系统问题诊断与修复 (HP 技术)](docs/tru64-unix-troubleshooting-diagnosing-and-correcting-system-/README.md)
 +   [Tru64 UNIX：针对互联网服务器调优 Tru64 UNIX](docs/tru64-unix-tuning-tru64-unix-for-internet-servers/README.md)
++   [信任与暴力：关于现代关系的论述](docs/trust-and-violence-an-essay-on-a-modern-relationship/README.md)
 +   [TurboLinux 圣经](docs/turbolinux-bible/README.md)
 +   [TurboLinux 初学者指南 (附 CD-ROM)](docs/turbolinux-for-dummies-with-cd-rom/README.md)
 +   [非技术人员的 Ubuntu 入门指南](docs/ubunto-for-non-geeks/README.md)
