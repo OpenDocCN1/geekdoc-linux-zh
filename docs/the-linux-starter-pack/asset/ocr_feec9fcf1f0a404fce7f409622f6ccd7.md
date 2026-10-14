@@ -1,0 +1,53 @@
+# Glossary
+
+![](bbox=[0.074, 0.085, 0.493, 0.352])
+
+Gimp is the only real choice for professional graphics development on Linux.
+
+Gnome The GNU Network Object Model Environment was created as an alternative graphical desktop to KDE, back when the Qt graphical library used by KDE wasn’t available under the GPL. Gnome’s primary focus is on usability, eschewing features that have long been incorporated into KDE.
+
+GTK The Gimp Toolkit. This is a set of GUI controls that enable developers to build advanced user interfaces quickly and easily. As you can guess by the full name, GTK made its debut as part of Gimp development, but it has since outgrown that program to be used as the general GUI toolkit for the Gnome environment.
+
+GNU The GNU Project was founded in 1984 to develop a complete, free Unix-like operating system. Every Linux distro depends heavily on the work of the GNU project, for everything from basic command-line programs to the compilers and the Gnome desktop environment.
+
+GUI Graphical user interface, also known by the phrase Windows, Icons, Menus and Pointing devices (WIMP). A GUI represents your programs and documents using high-colour graphics and icons on-screen. Home directory Each user on a Linux system has a home directory, usually contained in /home. For example, a user called Richard will have /home/richard, and user Ralph will have /home/ralph. Most distributions automatically create a home directory for each user, but some do not.
+
+GnuCash Open-source accounting system for the Gnome desktop environment. It can import Quicken files, create balance-sheet reports, manage your income, and even print out cheques.
+
+GPL GNU General Public License. This is the foundation of free software, allowing programmers to access, modify, redistribute and even sell source code with this licence under the condition that they grant others the same rights. Unlike the BSD licence, any program that uses GPL code must itself be licensed under the GPL (or compatible licence).
+
+HTTP Hypertext Transfer Protocol is used as the primary method for requesting and sending web pages and their content. An HTTP client – usually a web browser – requests an item from a server using a Uniform Resource Locator (URL), and the server sends the content back.
+
+Grub GRand Unified Bootloader. Grub is similar to the Lilo bootloader, in that they both allow you to choose which operating system you would like to boot. However, Grub has many more features than Lilo, including the ability to edit the menu as the machine boots.
+
+IEEE 1394 The technical name for the FireWire technology for connecting devices together. Sometimes known as iLINK on many Sony devices, FireWire has roughly the same bandwidth as USB 2.0; however, it is faster for transferring large files.
+
+IRC Internet Relay Chat is an interactive discussion protocol to handle groups of people chatting in virtual rooms (known as channels). IRC is often quite a seedy place to visit, and is a hive of illegal software, hacks and sci-fi fans.
+
+Java Cross-platform language and graphical toolkit developed by Sun Microsystems to power ‘smart’ devices. Java powers over 650 million PCs and 750 million smartcards, as well as everything from cars to set-top boxes.
+
+system is known as the kernel, and it’s this part that handles running programs, allocating resources, monitoring devices and receiving user input. Technically speaking, Linux is only the kernel of the operating system: everything else is taken from other projects.
+
+Kicker The long control bar that, by default, runs along the bottom of your KDE desktop. The Kicker is an incredibly powerful tool that can hold quick launch icons, program lists and RSS feeds. Right-click on the Kicker to start learning.
+
+Kate The KDE Advanced Text Editor is the most feature-rich GUI text editor you’ll find on any platform. Although it only handles text, it can colour code what you type if you’re programming, run scripts, handle projects, and it even embeds a command line into the window.
+
+KOffice The KDE-based office suite that comprises a generous group of applications: KWord, the word processor; KSpread, the spreadsheet; KPresenter, the presentation program; Kivio, the technical drawing package; Karbon14, the vector art application; Krita, the pixel-based art tool (like Gimp); Kugar, the report generator; KPlato, the project manager; and Kexi, the database management system. KOffice applications are smaller, faster but less functional than their OpenOffice.org equivalents.
+
+K3b The standard CD and DVD writing tool for KDE. K3b is generally acknowledged to be the easiest way to write to optical media, and you can use it to take backups and write ISO files to disc.
+
+KDE The K Desktop Environment was originally known as the Kool Desktop Environment. KDE uses the Qt toolkit for drawing its interfaces, and the two teams work very closely together. KDE is known for having a strong focus on features, although increasingly developers are choosing to focus on its usability.
+
+Konqueror The default web browser and file management system for KDE. Konqueror, like Windows Explorer, works as a browser, a file manager and a file preview tool that can view many file types. Konqueror uses the same rendering engine as Apple’s Safari.
+
+KDE Wallet The KDE standard way for storing user passwords and personal information needed by KDE applications.
+
+Kontact Integrated personal information manager (similar to Outlook) for KDE. Also consider Evolution.
+
+Kernel The core of any operating
+
+![](bbox=[0.507, 0.685, 0.895, 0.9])
+
+KDE's advanced text editor Kate has a plethora of options.
+
+Linux starter pack [121]

@@ -1,0 +1,35 @@
+# 20 top apps
+
+# Stellarium
+
+Thanks to Linux, you can gaze at the stars even without windows.
+
+# Quick tip
+
+If you don't know your longitude and latitude, many websites now offer a Google Maps modification that give you the details you need when you simply click on a map.
+
+Stellarium is a desktop planetarium. It's the virtual equivalent of one of those domed theatres where the stars and constellations are projected on to the internal surface of the dome. Like the theatre, Stellarium is a projection of the night sky, but instead of using a dome it uses your screen. When you start Stellarium from the Applications > Education menu, the first thing you have to do is set your current location. After the application has loaded, and you've been suitably impressed by the super-realistic view, click on the small spanner icon in the bottom-left toolbar. This is the configuration panel, and you need to click on the Location tab. The window will now show a map of the world so you can locate your nearest city. This window hides one of Stellarium's best features. Hold down the left mouse button and drag the cursor across the map. The Stellarium display in the background will update immediately with the local view. It's fascinating to watch the sunlight and stars shift location as your mouse shuttles across the surface of the globe. It's worth putting in your coordinates as any error in your location will be translated to time differences in the main view.
+
+# It's full of stars
+
+Close the configuration window to return to the main view. Depending on the time of day, you'll either see a beautifully lit field with very few stars, or the night sky with strange silhouettes on the horizon. Stellarium uses a real image to draw the ground, as well as atmospheric effects that approximate overhead visibility. You can turn both of these features off from the bottom-left toolbar by clicking on the icon of the sky (labelled 'atmosphere'), and a similar icon with an additional tree (labelled 'ground'). Similarly, you can enable and disable other features from the same toolbar, including constellation lines and images, as well as labels for most objects in the night sky. The small toolbar in the bottom-right of the window accelerates time. This makes it easy to see the passage of time on the night sky, as well as switch from day to night without difficulty.
+
+Apart from displaying the view from your garden, Stellarium can also display many of the objects you'd typically find in a telescope. To find Saturn, for example, click on the magnifying glass in the toolbar. In the window that appears, type 'saturn'. The display will then rotate and zoom into the yellow giant. The location of Saturn's rings and moons are correct, and you can zoom in and out with the middle mouse button. You can also see the current phase of the moon in the same way, as well as all the other planets in the night sky with images for them all. Stellarium features accurate images of many nebulae, most of them freely provided by the Faulkes telescopes in Hawaii and Australia. Try a search for the Pleiades or M110 to see some great examples. Not only is Stellarium a great tool for discovering the night sky from your desktop, it's also the perfect tool for planning a night's viewing – just remember a blanket, in case it's chilly out.
+
+![](bbox=[0.21, 0.41, 0.49, 0.625])
+
+Stellarium is the best way of learning what all the constellations are without getting either frostbite or insomnia.
+
+# Solar Eclipse: Cornwall 11/08/99
+
+![](bbox=[0.1, 0.72, 0.35, 0.86])
+
+1 Set the date To show off a little of Stellarium's power, set your location to Plymouth on 11 September 1999 at 9:00 am, and switch back to the main view.
+
+![](bbox=[0.37, 0.72, 0.62, 0.86])
+
+2 Zoom in Centre in on the moon using the search function. Click on the moon and press space to keep it centred, and zoom just enough to see both celestial bodies at once.
+
+![](bbox=[0.64, 0.72, 0.89, 0.86])
+
+3 Forget the clouds Gradually move the time forward and watch the last total eclipse in the UK unfold before your eyes. Only this time, the weather doesn't get in the way.

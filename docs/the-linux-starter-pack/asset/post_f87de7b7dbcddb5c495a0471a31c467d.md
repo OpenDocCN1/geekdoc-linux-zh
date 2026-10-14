@@ -1,0 +1,29 @@
+
+## Working with photos
+### Sharing your photos
+
+Now that you've got your photos organised and edited, it's time to share them.
+
+There's no point going to all this trouble with your photo collection if you're never going to let other people see them. And in the age of the internet, that means sharing your photos with people online. There are as many different methods for uploading as there are websites, from sharing a few images privately with family and friends, to turning your camera lens into a window on your life for the whole internet to see – it's up to you.
+
+F-Spot, the application we've been using for managing and editing our photos, can export your images to many of the more popular photo websites, as well as your own if you run one. You can see which sites are supported by opening the File > Export menu. The list includes names like Flickr, Picasa Web Albums and SmugMug. Each of these is an online photo repository. The first two offer a free hosting service for your own photos, while all three offer commercial packages that are tuned for the more serious photographer. If you want an informal, easy-to-use online photo presence, then choosing one of these options is likely to be the best option. You can choose to keep photos private, share them with your friends or family, as well as making them publicly visible.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_53_0.png)
+
+Many internet providers give you web space as part of an online package, and you can use this to host your web albums.
+
+For both Google Picasa and SmugMug, you need to click on the green '+' symbol in the Export window and add your username and password for the remote site. These details will be remembered by F-Spot so that you don't need to enter them again.
+
+But before you export any images, it's worth spending some time writing comments for them and giving them titles. All this information is used by the online hosting site. Flickr will even use any tags you've assigned to the image, making a search your own photos and anyone else's much easier. Any photos you select will be exported, and you can select individual thumbnails by holding down the Ctrl key. If none are selected, all the photos in the current view or album will be included by default. After choosing your export profile, you may want to resize the images before they're uploaded. Both the free user accounts on Flickr and Picasa place a restriction on the size of the images you upload, and restricting your exported images to a resolution such as 1024x768 is a great way to get extra space. This is big enough for most web users, and small enough that the file size isn't prohibitively large. To enable this feature, make sure Resize is enabled, and set the size to 1024 pixels – this will be the scaled length of the longest side.
+
+### Flickr, Picasa and SmugMug
+
+Each service works in roughly the same way. The first step is to create an account with the host of your choice. This account information is needed by F-Spot so that it can automatically communicate with the remote site while sending your photos. With Flickr, for example, when you select the export module from F-Spot, you need to click on the large Authorise button. This will load the Flickr site into a web browser, and from here you'll need to log in to your Flickr account, before heading back to F-Spot and clicking on the Continue Authorisation button. This will then update both Flickr and F-Spot with the details they need to talk to one another. With the export
+
+You can export your photos directly from F-Spot to many of the more popular online photo repositories.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_53_1.png)
+
+### Host your own
+
+If you'd rather not be limited by the hosting company, you might want to consider hosting your own photos. This obviously requires a little more technical ability, but exporting an album is still an easy task. If you've got your own web space and you're using the PHP application Gallery, F-Spot can export images and create the necessary web pages automatically. For this option, select 'Export To Web Gallery' from the Export menu. In the window that appears, press the large Add button and enter the details for your website, including the full URL, a username and password. F-Spot will then create a new album each time you export your images. If you'd rather do things by hand, you can also export an HTML

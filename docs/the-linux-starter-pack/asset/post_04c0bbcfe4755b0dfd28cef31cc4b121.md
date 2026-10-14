@@ -1,0 +1,36 @@
+
+## Instant messaging
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_86_0.png)
+
+Changing your status is a nice way to keep your contacts up to date with what you're up to without getting drawn in to a time-consuming conversation.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_86_1.png)
+
+You can change which set of emoticons are used from the Preferences window, and Pidgin can also download your contact's custom emoticons when they use them.
+
+All you need to do to initiate a chat is double click on one of your contacts. After doing so, the messenger window will open, and it's from here that you can chat and see your contact's messages. If you've used an instant messenger client before, this should feel familiar, and there really isn't all that much to it. You type in the lower area and the message history scrolls through the top area. You can add smiley characters to your conversation (known as emoticons) using either the insert button, or the key combination if you happen to know it. Pidgin will also interpret emoticons used by your buddy, and you'll see the images for those embedded within the conversation window. When you receive a message, the window will flash as a notification, as will the tiny Pidgin icon in your toolbar. If you've got speakers connected to your Linux box, you'll also hear a jingle, and sound options can be changed from the Preferences window by switching to the 'Sounds' tab.
+
+To add buddies, you need to know their messenger ID for the protocol you're both using. If you'd like to see which protocol everyone is connected to all the time, just select 'Protocol Icons' from the File > Show menu.
+
+## Status messages
+
+You can see your current status in the drop-down list at the bottom of the buddies window. Most of the time it's 'Available', but you can also change this from the same list. 'Invisible' is a useful choice, for example, because it enables you to see which contacts are online without them seeing you. Another important aspect to status messages is leaving your computer unattended. By default, Pidgin will wait a set period of time (configured in preferences) when there's no activity on your computer and change your status to 'Away'. Your contacts will then see this as your current status, and most messenger clients will also fade out your name in the contact list. But you can be more imaginative, and change your away message to something else. Many people like to say what they're doing, and while you don't have to be quite so zealous, a small message can be useful if someone is waiting to contact you.
+
+## Tyop alert!
+
+While typing your replies, misspelt words have a red underscore, and you can see the suggested correction by right-clicking on the offending word.
+
+With most protocols you can also format your conversation using the font button. You can change your font by selecting the 'Font Face' option, but you can also change the appearance of general text by selecting bold, italics, underline or strikethrough, as well as change the colour.
+
+If you're connected to more than one account at the same time, contacts for each account are silently added to the buddies list. Pidgin keeps the protocol each contact is using hidden simply to keep the user interface clear. It shouldn't make any difference to conversations, as most of the major protocols share the same core functionality such as sharing files and the use of emoticons. The only way you can tell which protocol each contact is using is by holding the mouse over your buddy and reading the information from the window that pops up. If you want to
+
+## Google Talk
+
+If you use Google's email service, GMail, you will have come across Google Talk. It's the integrated messaging client you can use from your browser while you're checking email. But it's also possible to connect to the Google Talk network with Pidgin. The only problem is that some of the settings in the default Google Talk configuration are wrong. To get it working, open the Accounts window (Accounts > Add/Edit menu), click on 'Add' and select the 'Google Talk' protocol from the drop-down list. In the Screen Name field, enter your Gmail username without the @gmail.com or @googlemail.com part. For the domain field, enter the gmail.com or googlemail.com part of your username and switch to the Advanced tab. On this page you need to enable the top option (Force old (port 5223) SSL), and change the port to 5223 for good measure. The connect server field should also contain talk.google.com. When you save the options, you'll be asked for your password (unless you entered one into the password field), and you will find that you connect to
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_86_2.png)
+
+Google Talk works well with Pidgin – you just have to connect to the server manually.
+
+Google Talk without further hassle. One thing to be wary of is that if you log messages in Gmail, these will still be logged even if you're using Pidgin.

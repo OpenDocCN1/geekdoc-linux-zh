@@ -2160,6 +2160,7 @@
 +   [Linux 编程接口：Linux 与 UNIX 系统编程手册](docs/the-linux-programming-interface-a-linux-und-unix-system-prog/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
 +   [Linux Shell 脚本手册：从入门到精通](docs/the-linux-shell-scripting-handbook---from-journeyman-to-mast/README.md)
++   [Linux 入门指南](docs/the-linux-starter-pack/README.md)
 +   [Linux TCP/IP 栈：嵌入式系统网络 (网络系列)](docs/the-linux-tcp-ip-stack-networking-for-embedded-systems-netwo/README.md)
 +   [Linux TCP/IP 栈：嵌入式系统网络指南 (网络系列)](docs/the-linux-tcpip-stack-networking-for-embedded-systems-networ/README.md)
 +   [Linux 初学者指南 - 命令行轻松上手](docs/the-linux-terminal-for-beginners---the-command-line-made-eas/README.md)

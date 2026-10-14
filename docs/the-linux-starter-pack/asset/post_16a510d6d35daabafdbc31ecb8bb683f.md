@@ -1,0 +1,24 @@
+
+## Working with photos
+
+## Advanced photo editing with Gimp
+
+If no other tool can do the work you need, it's time to get acquainted with Gimp. It's the closest Linux users get to a native version of Adobe's Photoshop.
+
+Linux developers aren't that good at coming up with good names for their work. Gimp is possibly the worst example of this, because the functionality that hides behind that ridiculous name makes Gimp a serious competitor to the likes of Adobe's Photoshop. On the Linux desktop, Gimp is the last word in image editing and photo manipulation. If you need to fix something, this is what you need to finish the task. The only problem is that, like its Adobe sibling, this amount of flexibility brings complexity. Gimp isn't easy to use, and there's something of a learning curve. This is a consequence of the trade-off between flexibility and complexity. For example, with even the most straightforward editing functions, you will need to get your head around layers and how editing an image in one layer will effect the final result. This might seem overly complex if all you want to do is add some text to your photos, but the addition of layers means you can easily add drop shadows and bevel effects.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_55_0.png)
+
+Drop shadows and effects make good use of layers in Gimp. The shadow is one layer, while the effect is another.
+
+New text is always placed in its own layer. This means it can move freely, and as long as you haven't flattened the layer, it can even be edited.
+
+### What are layers?
+
+Layers are like the onion skin paper that animators used to use to create cartoons. Before CGI took over the world, an artist would draw an image of a face, perhaps Mickey Mouse, and animate a dozen expressions on to that single face by simply drawing the expressions on top of a new layer of onion skin. The viewer would never know they were really looking at a smile drawn on top of a transparent layer, with the static face drawn behind. It meant the artist didn't need to laboriously draw a new face each time an expression changed or when the character needed to speak. While layers in Gimp aren't primarily designed for animation, they benefit from the same advantages as the old artist had drawing on onion skin. Images on each layer are entirely independent of those beneath them (unless you choose to lock them to a lower layer), and transparent areas in higher layers will let image data through from the lower layers. For example, you might draw a brick wall in a lower layer and a square window in a higher layer. The window will be superimposed on the brick wall. Similarly, you could take two photos taken from the same location and use the best bits of both to construct a new image. You can also process the image data in a lower layer with the image data in a higher layer, using this to lighten or darken lower pixels according to the data in the higher pixels. You could use this effect to trace a shadow of a higher image on to the pixel data of a lower image. There are more than 20 different layer filters, many of which are geared to fixing damaged photographs.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_55_1.png)
+
+### Text with shadows
+
+The best way to get your head around layers is to use them. We're going to show you how to put text on top of a photo, and generate a drop shadow from the text using layers. Open Gimp and load an image that will suit overlaid text – perhaps a design for a birthday or Christmas card. Adding text is as simple as clicking on the 'A' symbol in the tool palette, and clicking on the approximate position in the image you need the text. A text editing window will appear, and you can use this to enter the text you want to overlay on to the image. As you type, the text will show up on the background. You can change the size of the font using the window beneath the toolbar palette.

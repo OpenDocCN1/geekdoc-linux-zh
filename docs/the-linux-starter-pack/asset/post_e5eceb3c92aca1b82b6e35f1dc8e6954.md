@@ -1,0 +1,57 @@
+
+## Browse the web
+
+## Get on the web!
+
+More speed, more features and more safety than any other web browser around – get started using Firefox!
+
+A lot of people take the world wide web for granted, but then a lot of people haven’t tried Firefox – it’s a relatively young project that aims to revolutionise the way we use the internet, and has already attracted millions of users. There are lots of things you could attribute Firefox’s success to:
+
+- 1. It supports web standards very well – much better than Internet Explorer, for example.
+- 2. It was built for strong security, so problems are not often found, and major problems (i.e. ones that can be exploited remotely) are very rare indeed.
+- 3. It comes with lots of powerful functionality as standard, including tabbed browsing, an integrated search box, and even search predictions.
+- 4. It has a powerful add-ons system that can build in some impressive extra functionality.
+- 5. It was designed with ease of use in mind, which means it’s very easy for first-time users to find their way around.
+
+Of course, it’s more likely that Firefox is popular for all those reasons and more, but while it’s easy to master the basics yourself, with a few minutes of learning you can get a lot more out of the world’s most popular web browser…
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_21_0.png)
+
+Ctrl+- Decreases the font size.
+Ctrl+0 Returns font size to default.
+Ctrl+Enter Adds ‘www.’ and ‘.com’ to a URL, so typing ‘intel’ then pressing Ctrl+Enter will load the page www.intel.com.
+Alt+Left Goes to the previous page you were looking at (equivalent to the ‘Back’ button).
+Alt+Right Goes to the next page in your history (equivalent to the ‘Forward’ button).
+Alt+Home Goes to your home page.
+Alt+Enter Opens a URL in a new tab (use it rather than pressing Enter when typing a URL).
+Of those, Ctrl+L, Ctrl+K and Ctrl+T are easily the most useful, so give them a try and watch them speed your browsing!
+
+Another little shortcut is the / key, which enables quick find mode. For example, if you type /hello, Firefox will find the first instance of the word ‘hello’ on the current page. If you are specifically looking for link text, try using * instead, eg ‘*hello’ – that will find the first link with the text ‘hello’.
+
+Firefox is a simple and fast web browser at its core, but those who want more features have a lot to explore in Firefox’s add-ons – see p24.
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_21_1.png)
+
+## Keyboard shortcuts
+
+There’s lots to read on the web, and any serious web user wants to make most of the time they have to surf. So, here are a few sneaky little keyboard shortcuts that you can use to streamline your Firefox experience:
+
+- Shortcut
+- Ctrl+H Opens the History sidebar.
+- Ctrl+J Opens the Download Manager so you can see how your downloads are doing.
+- Ctrl+K Focuses the search box so you can type a query.
+- Ctrl+L Focuses the location bar so you can type a URL.
+- Ctrl+R Reloads the current page.
+- Ctrl+T Opens a new tab.
+- Ctrl+Z Copy URL from previous tab (use it when you’ve just pressed Ctrl+T for a new tab).
+- Ctrl++ Increases the font size.
+
+## The search is on
+
+Firefox has a search box in the top right-hand corner of its user interface, meaning that you can get access to your favourite search engine very easily. By default, Google is used as the search engine, but you can change that very easily by clicking the small G button next to the search box – Firefox will bring up a list of alternative search providers, including Amazon, eBay, Creative Commons, Yahoo and even Microsoft Live Search. If you particularly want one of these providers then feel free to choose them, but using Google has one big advantage: search suggestions.
+
+Sometimes searching for things can be frustrating – you have only a vague idea of what you’re looking for, you need to try several times to get it right, and sometimes you don’t find it at all. Well, when Firefox uses Google as its search engine, it can help suggest search terms as you type, based on what other people have searched for. All you have to do is make sure suggestions are enabled by right-clicking on the search box and ensuring ‘Show Suggestions’ is selected, then just type a few letters into the search box and wait a microsecond or two for your suggestions to appear. If one of the suggestions match what you wanted, just use the Up and Down keys to select it, then press Enter.
+
+## The bookmark bar
+
+With the web being so big, it’s no surprise that bookmarks (or ‘favourites’ in Internet Explorer parlance) have been around since its inception. But while other browsers have a menu for your bookmarks, Firefox also has a toolbar so that you can

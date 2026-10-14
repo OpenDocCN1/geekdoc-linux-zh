@@ -1,0 +1,40 @@
+
+# Browse the web
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_23_0.png)
+
+The about:config screen is full of options to change, so type something in the filter box to slim down the list a little!
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_23_1.png)
+
+AdBlock Plus lets you build your own advertiser filters, or subscribe to someone else's (which is much simpler).
+
+## Add-ons
+
+Without a doubt, add-ons are the most impressive thing about Firefox, because it has been designed to be open to its very core – the add-ons that people create can modify any part of the browser, and there are some incredibly powerful ones around.
+
+To help get you started, here's our list of the best add-ons out there. But be warned: you should only install these from the Firefox homepage, because the fact that the add-ons can modify Firefox means that it's possible to install malicious add-ons if you don't get them from a trusted source. Firefox does take this very seriously, so if you try to install an add-on from an untrusted source, expect to be warned again!
+
+To install an add-on, go to Tools > Add-Ons, then choose Get Extensions. Note that the 'Get Ubuntu Add-Ons' link is very similar, but offers a much smaller selection of add-ons because it only allows you to install add-ons that Ubuntu supports, as opposed to everything available to Firefox users. When you're on the Firefox Add-Ons site, you can search for add-ons by name, then click on the Add To Firefox button to install the ones that interest you. Before the add-on is installed, you'll be asked to confirm you want it – just click Install Now, then restart Firefox when installation has finished so that the add-on can be initialised.
+
+the "freenode" link to connect to that server network, then when the connection is complete type /join #ubuntu to join the official Ubuntu support channel. Have fun chatting!
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_23_2.png)
+
+IRC is full of people to talk to, but make sure you keep your identity private – not everyone can be trusted.
+
+## ForecastFox
+
+British people have a natural obsession with the weather, which is strange, really, given how little of it we have. So if you're feeling the need to check just how much rain we're going to get tomorrow, ForecastFox is for you: tell it where you live, and it will tell you the latest weather forecasts for your area. When it's first installed it will say you're in Forecast Location 00000 – ignore that, and click Find Code. When the Location Search dialog appears, enter the name of your town or city and click Search, then choose the best match from the list that appears and click OK then Apply – your weather forecasts will now appear at the bottom of the Firefox window, and will update automatically. Magic!
+
+## AdBlock Plus
+
+Designed to block every advert under the sun to leave the web a content-only place, AdBlock Plus (ABP) is both a blessing and a curse. It's a blessing because – let's face it – some of the adverts out there are downright annoying, with flashing colours, silly animations, and worse. But it's a curse because the vast majority of websites out there are funded through advertising, so if everyone blocked all their adverts then they would simply cease to exist. When you install ABP, you'll be prompted to choose a set of advertiser filters – either choose the one nearest to you, or if you're not sure just choose the first item on the list, then click Subscribe. And that's it: you're safe from adverts, and can go on browsing the web – now with a little less bandwidth wastage.
+
+## ChatZilla
+
+Before the web, there was Internet Relay Chat – an interactive text system where people joined channels based on common interests, and discuss/argue/flame long evenings away. Despite the invention and ultimate rise to supremacy of the web, IRC lives on, and ChatZilla is an excellent add-on for extension that builds IRC support directly into your web browser. Once installed, start ChatZilla by going to Tools > ChatZilla. When it loads, some text will appear saying "Available networks are [dalnet, efnet..... webnet]". Click on
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_23_3.png)
+
+Firefox's status bar doesn't do much, so put it to good use with ForecastFox – never get caught out by the weather again!

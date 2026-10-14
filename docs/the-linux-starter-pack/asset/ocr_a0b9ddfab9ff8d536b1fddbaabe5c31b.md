@@ -1,0 +1,33 @@
+# Help and resources
+
+# Help and resources
+
+Switching to another operating system is no easy task, but before you shout “Heeeeeeeeeelp!”, read this...
+
+For most people, the hardest part of installing Linux is stepping out of their comfort zone and trying new things. If it were just a matter of learning a new office suite the problem would be small enough to cope with, but Linux gives you a new web browser, a new desktop environment, a new filesystem and a new configuration panel – in short, it’s faster to count the things that have stayed the same than the things that have changed. It’s because of all these changes that lots of people install Linux with the best intentions only to find themselves frustrated and upset two weeks later, ready to reformat their hard disks, install Windows and pretend it was all just a bad dream.
+
+We don’t want that to happen, naturally. Linux is as easy as Windows once you get over the initial differences, and as long as you know where to find help we think you’ll be a pro in no time. Because Linux is a much larger and more complex system than Windows, if you want to learn all of it the key to understanding lies not in knowing it all yourself but knowing where to look.
+
+If you have a question, work your way through this list of possible resources, trying each one until you get the answer you need. Good luck!
+
+# Help, I need somebody!
+
+Linux is packed with documentation of all types; you just have to know where to look for it. Help files can be broadly split into two types – command line and GUI – but there is some crossover between them. The most basic help system is the manual page (usually called man page), which is a plain text system designed for command-line use. To try this out, open up a terminal window and type man ls to bring up the manual page for the ls command. You might think that ls is quite a simple command, but as you will see from the manual page it includes many options that enable you to format and filter the output.
+
+You can also view manual pages using Konqueror, the KDE web browser, by typing man:/ in the location bar followed by the manual page you’re interested in. For example, loading man:/ls would bring up the same ls manual page as before, but this time it would be formatted nicely for viewing in a graphical environment.
+
+A step up from man pages are info pages, which are man pages with hyperlinks inside. This is useful for complex topics, such as how to use Bash. Accessing an info page is much the same as accessing a man page; just type info yourtopic at the command line and you will load up the index page. If your documentation has more than one page, use the cursor keys to highlight a link to jump to, and press Enter to browse to it. You can also use the N key to flip to the next page, the P key to flip back to the previous page and U to go up a level.
+
+As with man pages, you can view info pages inside Konqueror by using the protocol info:/. For example, info:/bash would load the Bash info page nicely formatted inside Konqueror. This has the added benefit that you can just click links to read topics rather than having to memorise a load of tricky keypresses.
+
+If there’s a particular command you’re interested in, chances are it will have a special --help switch that prints out usage information. This is nearly always just a list of all the parameters you can use with a command, but because certain commands accept many parameters the output from this can be quite long. For example, ls --help lists all the ways you can use the ls command, which happens to be about three screens of information. To solve this problem, pipe the output through the less command by using | less, eg ls --help | less or cd --help | less. The pipe key, |, is usually Shift+\, but this depends on what type of keyboard you’re using.
+
+For graphical user interface programs, which account for the majority of programs on Linux, there is usually a Help menu where you can get started. More often than not, pressing F1 on your keyboard will bring up the program help. If not, or if there is no Help menu for some reason, you can try looking in the KDE Help Centre. This is usually on the K menu somewhere (Documentation or More Applications > More Applications) are the most common places to find it, or you can run it manually by entering the command khelpcenter. This contains links to all the help files inside KDE, along with shortcuts to the Unix man and info pages.
+
+# Reading treeware
+
+Although there are thousands of documentation writers out there, help files generally serve as reference guides for a given program – they aren’t very easy to use if you want to learn something from scratch. If this is your goal, your best bet is to either read
+
+![](bbox=[0.35, 0.56, 0.9, 0.89])
+
+The Firefox help system is hugely comprehensive and contains hints and tips about every aspect of the program. If you don’t find what you’re looking for here, search the web.

@@ -1,0 +1,49 @@
+# Help and resources
+
+![](bbox=[0.1, 0.19, 0.35, 0.36])
+
+IRC is a good place to find experts waiting to help with your questions, but it’s best to go online after 5pm New York time so that everyone is awake and talking.
+
+it isn’t possible (in which case you’ve saved everyone’s time) or if it is possible at least you can show some effort on your behalf when asking the question.
+
+4 Don’t force people to prise information out of you like a clam. Let them know your problem, what software you’re using, what hardware you’re using, what you expect to happen and what has actually happened. If you’re running an unusual Linux distro or a very old computer, say so. If the problem only appears now and then, say so. No one can help you if you simply
+
+5 Be grateful when they help, and grateful if they can’t. If you’re writing an email to a mailing list, “thanks in advance” goes a long way to showing that you’re a polite person.
+
+6 If you get an answer you don’t understand, go back to Step 1 by looking up the parts that confuse you, both in the manual pages and on Google. Usually you’ll be fine, but if not it’s OK to ask for clarification – as long as you can show that you have done your homework.
+
+7 If you don’t get an answer, the people you are asking may not know it. In this case, it’s pointless to ask again and again until someone responds with an angry comment; instead, take your question elsewhere.
+
+Now you know how to ask questions, it’s time to look at where to ask them. There are three places you can usually find help: message boards, mailing lists and IRC.
+
+# Amateur experts
+
+Message boards – often called forums – are websites where you post questions for others to respond. Usually you will be asked to register first, primarily to discourage troublemakers.
+
+site is www.linuxquestions.org, which also has a number of people ready and willing to help at all difficulty levels.
+
+Usually it takes about a day to get sufficient response to your question that you’ll be able to do what you want, but if you want a more immediate answer you can try Internet Relay Chat (IRC). This is an interactive text chat environment where you can join ‘channels’ of users who focus on specific topics, ask questions and get immediate answers. However, getting the best answers from IRC requires a bit of thought as to which IRC network to connect to (there are several, and usually have overlapping channel content), and also the time of your connection. IRC networks are large groups of interconnected servers that allow people to connect to a chat server near them.
+
+There are also several different network groups, such as Dalnet, Efnet, Freenode, Undernet and more. Of them all, Efnet is usually the best place to check for general questions, but it’s also one of the hardest networks to connect to because its servers frequently go down. Freenode hosts a number of official IRC channels for various Linux projects, such as #KDE, #Gnome, #WineHQ and #Bash, but with all of these networks your best bet is just to take a guess at the name of the channel, such as #linux, #linuxhelp or #php.
+
+The last place to look is on mailing lists. These are project-specific group emails where you can email your question to the group and have them answer it. Mailing lists are somewhat tricky to use, because they invariably have very rigid guidelines (be sure that you’re not sending your email in HTML format!), and you often need to subscribe to the mailing list to get an answer back. Subscribing is usually easy, but it means you can expect to receive everyone else’s questions and answers along with your own. If there is a Digest option, we recommend you use it. This will group all the emails together and send them en masse, either once a day or once a week depending on how popular the list is. You should be aware that many lists – particularly the general user lists – are extremely popular, and may receive thousands of messages each day.
+
+Many mailing lists actually have archives of their emails stored online, which you can search for questions similar to yours. Unless you’re encountering a real corner case that no one has come across before, the chances are that somebody somewhere will have already solved a similar problem.
+
+> “If you are using a laptop and have a question, the best thing you can do is take it to your local Linux user group.”
+
+say “KDE crashes” – they need to know whether you compiled KDE yourself, what made it crash, whether it crashes by itself or whether you clicked a button, and so on. It’s also very helpful if you can tell people what manual pages you have read and what search results you got when you tried looking up your problem on Google.
+
+More often than not you will get responses back from several people, sometimes providing complementary answers but sometimes offering different solutions to your problem. The Linux Format forums (at www.linuxformat.co.uk) are full of people who are capable of answering questions of all types, including real beginner problems. Another great
+
+# If all else fails...
+
+If you’ve tried the forums, tried IRC, called your commercial support line, searched the web, read the manual, bought the O’Reilly book and still have problems, clearly it’s something quite serious! When you get to this dire state, there is still one option left open to you: write in to Linux Format. Each issue we print (and solve) the trickiest of reader questions to guide readers through installation, configuration and maintenance of their Linux computers. Our team of experts tackle all sorts of questions, such as how to install modems, how to configure your mail server and how to set up a secure virtual private network to communicate from home to office. If you have a general Linux question, drop us a line at lfx.answers@futurenet.co.uk.
+
+If your question is specifically about system administrations (databases, web servers, and so on), email sysadminqa @rackspace.co.uk to ask your question direct to our on-hand expert from Rackspace. All the same tips for asking on IRC and message board apply here: the more information you provide, the more easily we can help you solve the problem.
+
+![](bbox=[0.5, 0.78, 0.65, 0.95])
+
+# Face-to-face help
+
+Everything covered so far has been possible without leaving your computer chair. You can subscribe to Linux Format, you can buy books from Amazon, send email, all without really lifting a finger. Now it’s time to go outside and greet the wider world by visiting a Linux user group (LUG). These are independent groups of
