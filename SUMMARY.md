@@ -2235,6 +2235,7 @@
 +   [Ubuntu 20.04 核心：Ubuntu 20.04 桌面版与服务器版指南](docs/ubuntu-2004-essentials-a-guide-to-ubuntu-2004-desktop-and-se/README.md)
 +   [Ubuntu 22.04 核心：Ubuntu 22.04 桌面版与服务器版指南](docs/ubuntu-22-04-essentials-a-guide-to-ubuntu-22-04-desktop-and-/README.md)
 +   [Ubuntu 23.04 核心：Ubuntu 23.04 桌面版与服务器版指南](docs/ubuntu-23-04-essentials-a-guide-to-ubuntu-23-04-desktop-and-/README.md)
++   [Ubuntu 7.10 Linux 完全指南 第三版](docs/ubuntu-710-linux-unleashed-3rd-edition-unleashed/README.md)
 +   [Ubuntu 8.10 Linux 圣经：为桌面或网络设置 Ubuntu；下载音乐、观看 DVD 或玩游戏；利用易于使用的管理工具；Kubuntu 全面指南](docs/ubuntu-810-linux-bible-set-up-ubuntu-for-desktops-or-network/README.md)
 +   [Ubuntu 和 CentOS Linux 服务器管理](docs/ubuntu-and-centos-linux-server-administration/README.md)
 +   [Ubuntu 和 CentOS 服务器管理指南](docs/ubuntu-and-centos-server-administration/README.md)

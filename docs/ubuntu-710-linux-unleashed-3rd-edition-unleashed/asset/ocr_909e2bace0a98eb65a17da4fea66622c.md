@@ -1,0 +1,17 @@
+# DHCP
+
++   - http://www.oth.net/dyndns.html—For a list of Dynamic DNS service providers, go to this site.
++   - http://www.isc.org/products/DHCP/dhcpv3-README.html—The DHCP README is available at this site.
+
+# Wireless
+
++   - http://www.ieee.org—The Institute of Electrical and Electronics Engineers (IEEE) website.
++   - http://www.mozillaquest.com/Network_02/Wireless_Network_Technology_03_Story-01.html—Wireless networking with Red Hat 7.2.
+
+# Books
+
++   - *Sams Teach Yourself TCP/IP Network Administration in 21 Days*, Sams Publishing, ISBN: 0-672-31250-6
++   - *TCP/IP Network Administration*, O'Reilly Publishing, ISBN: 1-56592-322-7
++   - *Practical Networking*, Que Publishing, ISBN: 0-7897-2252-6
++   - *Samba Unleashed*, Sams Publishing, ISBN: 0-672-31862-8
++   - *The DHCP Handbook*, Sams Publishing, ISBN: 0-672-32327-3

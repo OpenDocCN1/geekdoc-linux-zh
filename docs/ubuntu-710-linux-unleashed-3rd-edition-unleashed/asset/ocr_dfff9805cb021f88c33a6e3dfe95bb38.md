@@ -1,0 +1,31 @@
+command-line options, but can be simply used with the name or IP address of the remote computer, like this:
+
+```
+[andrew@laptop ~]$ ssh 192.168.0.41
+The authenticity of host '192.168.0.41 (192.168.0.41)' can't be established.
+RSA key fingerprint is e1:db:6c:da:3f:fc:56:1b:52:f9:94:e0:d1:1d:31:50.
+Are you sure you want to continue connecting (yes/no)?
+
+yes
+```
+
+The first time you connect with a remote computer using ssh, Linux displays the remote computer's encrypted identity key and asks you to verify the connection. After you type yes and press Enter, you are warned that the remote computer's identity (key) has been entered in a file named known_hosts under the .ssh directory in your home directory. You are also prompted to enter your password:
+
+```
+Warning: Permanently added '192.168.0.41' (RSA) \
+to the list of known hosts.
+andrew@192.168.0.41's password:
+andrew@optimus:~$
+```
+
+After entering your password, you can then work on the remote computer. Again, everything you enter on the keyboard in communication with the remote computer is encrypted. Use the exit or logout commands to exit your session and return to the shell on your computer.
+
+# Using Environment Variables
+
+A number of in-memory variables are assigned and loaded by default when the user logs in. These variables are known as shell environment variables, which can be used by various commands to get information about your environment, such as the type of system you are running, your home directory, and the shell in use. Environment variables are used by Linux operating systems to help tailor the computing environment of your system, and include helpful specifications and setup, such as default locations of executable files and software libraries. If you begin writing shell scripts, you might use environment variables in your scripts. Until then, you only need to be aware of what environment variables are and do.
+
+The following list includes a number of environment variables, along with descriptions of how the shell uses them:
+
++   PWD—To provide the name of the current working directory, used by the pwd command (such as /home/andrew/foo)
++   USER—To declare the user's name, such as andrew
++   LANG—To set language defaults, such as English

@@ -1,0 +1,21 @@
+difficulties was the controllerless modem, also colloquially known as a WinModem. The good news is that modem chipset manufacturers have been more forthcoming with driver details. Some original equipment manufacturers, such as IBM, have made a concerted effort to provide Linux support. Support for the ACP Mwave modem, used in ThinkPad 600/Es and 770s, is included in the Linux kernel. Drivers have been developed for many of the controllerless modem chipsets that formally did not work with Linux.
+
+If a driver is not available for your controllerless modem, you have a few options. You can download the driver's source code and build the driver yourself. Alternatively, you can download a binary-only software package and install the driver.
+
+Some controllerless modems might also need to be initialized and configured using a separate utility program. The modem, if supported, should work normally after installing and configuring the driver.
+
+You can research Linux support for controllerless modems by browsing to http://www.linmodems.org/.
+
+# USB Devices
+
+Ubuntu supports hundreds of different Universal Serial Bus devices. USB is a design specification and a protocol used to enable a host computer to talk to attached peripherals. Because of lack of manufacturer and device ID information or lack of technical specifications regarding certain chipsets, some devices might not work with Ubuntu. USB 1.1 devices are designed to support data transfer speeds between 1.5 and 12Mbps.
+
+Common USB devices include cameras, keyboards, mice, modems, network interfaces, printers, scanners, storage devices, video (such as webcams), and hubs (to chain additional devices).
+
+Although some enlightened manufacturers are aware of opportunities in the Linux marketplace, most still do not support Linux. It pays to determine Linux support before you buy any USB device; again, research Linux USB support and its current state of development by browsing to http://www.gqbx.ch/usb/devices/.
+
+The newer USB 2.0 specification enables devices (such as hard and CD drives) to use speeds up to 480Mbps. Ubuntu supports USB 2.0 with the ehci-hcd kernel module. This driver, in development since early 2001, enables the use of many forms of newer USB 2.0 devices as long as you have a supported USB controller. Check out the current state of Linux USB 2.0 support by browsing to http://www.linux-usb.org/usb2.html.
+
+# Motherboard-Based Hardware
+
+Small form factor PCs, thin clients, notebooks, and embedded devices are part of a growing trend in the PC industry. Manufacturers are cramming more functionality into fewer chips to simplify design and lower power requirements. Today, many computers come with built-in video graphics, audio chipsets, and network interfaces, along with a host of peripheral support.

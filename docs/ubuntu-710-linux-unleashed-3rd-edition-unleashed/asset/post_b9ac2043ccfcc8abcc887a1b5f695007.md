@@ -1,0 +1,51 @@
+
+## NOTE
+
+You can also use the blank= option with the cdrecord command to erase CD-RW disks. The cdrecord command has fewer options than mkisofs does, but it offers the -multi option, which enables you to make multisession CDs. A multisession CD enables you to write a data track, quit, and then add more data to the CD later. A single-session CD can be written to only once; any leftover CD capacity is wasted. Read about other options in the cdrecord man page.
+
+Current capacity for CD media is 700MB of data or 80 minutes of music. (There are 800MB/90 minute CDs, but they are rare.) Some CDs can be overburned; that is, recorded to a capacity in excess of the standard. The cdrecord command is capable of overburning if your CD-RW drive supports it. You can learn more about overburning CDs at http://www.cdm.../hardware/cdrom/cd_oversize.shtml/.
+
+## Creating DVDs from the Command Line
+
+There are several competing formats for DVD, and with prices rapidly falling, it is more likely that DVD-writing drives will become commonplace. The formats are as follows:
+
+- ► DVD+R
+- ► DVD-R
+- ► DVD+RW
+- ► DVD-RW
+
+Differences in the + and – formats have mostly to do with how the data is modulated onto the DVD itself, with the + format having an edge in buffer underrun recovery. How this is achieved impacts the playability of the newly created DVD on any DVD player. The DVD+ format also has some advantages in recording on scratched or dirty media. Most drives support the DVD+ format. As with any relatively new technology, your mileage may vary.
+
+We focus on the DVD+RW drives because most drives support that standard. The software supplied with Ubuntu has support for writing to DVD-R/W (rewritable) media as well. It will be useful for you to review the DVD+RW/+R/-R/[W] for Linux HOWTO at http://fy.chalmers.se/~appro/linux/DVD+RW/ before you attempt to use dvd+rw-tools, which you need to install to enable DVD creation (also known as mastering) as well as the cdrttools package. You can ignore the discussion in the HOWTO about kernel patches and compiling the tools.
+
+### TIP
+
+The 4.7GB size of DVD media is measured as 1000 megabytes per gigabyte, instead of the more commonly used 1024 megabytes per gigabyte, so do not be surprised when the actual formatted capacity, about 4.4GB, is less than you anticipated.
+dvd+rw-tools does not allow you to exceed the capacity of the disk.
+
+You need to have the dvd+rw-tools package installed (as well as the cdtools package). The dvd+rw-tools package contains the growisofs application (that acts as a front end to mkisofs) as well as the DVD formatting utility.
+
+You can use DVD media to record data in two ways. The first way is much the same as that used to record CDs in a session, and the second way is to record the data as a true file system, using packet writing.
+
+### Session Writing
+
+To record data in a session, you use a two-phase process:
+
+- 1. Format the disk with dvd+rw-format /dev/scd0 (only necessary the first time you use a disk).
+- 2. Write your data to the disk with growisofs -Z /dev/scd0 -R -J /your_files.
+
+The growisofs command simply streams the data to the disk. For subsequent sessions, use the -M argument instead of -Z. The -Z argument is used only for the initial session recording; if you use the -Z argument on an already used disk, it erases the existing files.
+
+> CAUTION
+> Some DVDs come preformatted; formatting them again when you use them for the first time can make the DVD useless. Always be sure to carefully read the packaging your DVD comes in to ensure that you are not about to create another coaster!
+
+> TIP
+> Writing a first session of at least 1GB helps maintain compatibility of your recorded data with other optical drives. DVD players calibrate themselves by attempting to read from specific locations on the disk; you need data there for the drive to read it and calibrate itself.
+> Also, because of limitations to the ISO9660 file system in Linux, do not start new sessions of a multisession DVD that would create a directory past the 4GB boundary. If you do so, it causes the offsets used to point to the files to "wrap around" and point to the wrong files.
+
+### Packet Writing
+
+Packet writing treats the CD or DVD disk like a hard drive in which you create a file system (like ext3) and format the disk, and then write to it randomly as you would to a conventional hard drive. This method, although commonly available on Windows-based computers, is still experimental for Linux and is not yet covered in detail here.
+
+> TIP
+> DVD+RW media are capable of only about 1,000 writes, so it is very useful to mount them with the noatime option to eliminate any writing to update their inodes or simply mount them as read-only when it's not necessary to write to them.

@@ -1,0 +1,37 @@
+```
+```ini
+[programs]
+path = /usr/local/programs
+writeable = true
+```
+```
+
+This bit shares the /usr/local/programs directory with any valid user who asks for it and makes that directory writable. It is the most basic share because it sets no limits on the directory.
+
+Here are some parameters you can set in the sections:
+
++   - Requiring a user to enter a password before accessing a shared directory
++   - Limiting the hosts allowed to access the shared directory
++   - Altering permissions users are allowed to have on the directory
++   - Limiting the time of day during which the directory is accessible
+
+The possibilities are almost endless. Any parameters set in the individual sections override the parameters set in the [global] section. The following section adds a few restrictions to the [programs] section:
+
+```
+```ini
+[programs]
+path = /usr/local/programs
+writeable = true
+valid users = ahudson
+browseable = yes
+create mode = 0700
+```
+```
+
+The valid users entry limits userid to just ahudson. All other users can browse the directory because of the browseable = yes entry, but only ahudson can write to the directory. Any files created by ahudson in the directory give ahudson full permissions, but no one else will have access to the file. This is exactly the same as setting permissions with the chmod command. Again, there are numerous options, so you can be as creative as you want to when developing sections.
+
+# Setting Global Samba Behavior with the [global] Section
+
+The [global] section set parameters establishes configuration settings for all of Samba. If a given parameter is not specifically set in another section, Samba uses the default setting in the [global] section. The [global] section also sets the general security configuration for Samba. The [global] section is the only section that does not require the name in brackets.
+
+Samba assumes that anything before the first bracketed section not labeled [global] is part of the global configuration. (Using bracketed headings in /etc/samba/smb.conf makes your configuration file more readable.) The following sections discuss common Samba settings to share directories and printers. You will then see how to test your Samba configuration.

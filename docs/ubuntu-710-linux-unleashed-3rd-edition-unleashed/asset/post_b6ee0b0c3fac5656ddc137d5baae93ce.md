@@ -1,0 +1,34 @@
+
+14. Reboot and test the new kernel.
+
+15. Repeat the process if necessary, choosing a Configuration Interface.
+
+Over time, the process of configuring the Linux kernel has changed. Originally, you configured the kernel by responding to a series of prompts for each configuration parameter (this is the make config utility described shortly). Although you can still configure Linux this way, most users find this type of configuration confusing and inconvenient; moving back through the prompts to correct errors, for instance, is impossible.
+
+The make config utility is a command-line tool. The utility presents a question regarding kernel configuration options. The user responds with a Y, N, M, or ?. (It is not case sensitive.) Choosing M configures the option to be compiled as a module. A response of ? displays context help for that specific options, if available. (If you choose ? and no help is available, you can turn to the vast Internet resources to find information.) We recommend that you avoid the make config utility, shown in Figure 32.1.
+
+![](img/7aaa8e4f2209bf9f2fb443905096e94c_731_0.png)
+
+FIGURE 32.1 The make config utility in all its Spartan glory.
+
+If you prefer to use a command-line interface, you can use make menuconfig to configure the Linux kernel. menuconfig provides a graphical wrapper around a text interface. Although it is not as raw as make config, menuconfig is not a fancy graphical interface either; you cannot use a mouse, but must navigate through it using keyboard commands. The same information presented in make config is presented by make menuconfig, but as you can see in Figure 32.2, it looks a little nicer. Now, at least, you can move back and forth in the selection process in case you change your mind or have made a mistake.
+
+FIGURE 32.2 The make menuconfig utility, a small improvement over make config.
+
+In make menuconfig, you use the arrow keys to move the selector up and down and the spacebar to toggle a selection. The Tab key moves the focus at the bottom of the screen to either Select, Exit, or Help.
+
+If a graphical desktop is not available, menuconfig is the best you can do. However, both menuconfig and xconfig (see below) offer an improvement over editing the .config file directly. If you want to configure the kernel through a true graphical interface—with mouse support and clickable buttons—make xconfig is the best configuration utility option. To use this utility, you must have the X Window System running. The application xconfig is really nothing but a Tcl/Tk graphics widget set providing borders, menus, dialog boxes, and the like. Its interface is used to wrap around data files that are parsed at execution time. Figure 32.3 shows the main menu of xconfig for the 2.6.7 kernel.
+
+After loading this utility, you use it by clicking on each of the buttons that list the configuration options. Each button you click opens another window that has the detail configuration options for that subsection. Three buttons are at the bottom of each window: Main Menu, Next, and Pre(vious). Clicking the Main Menu button closes the current window and displays the main window. Clicking Next takes you to the next configuration section. When configuring a kernel from scratch, click the button labeled Code Maturity Level Options, and then continue to click the Next button in each subsection window to proceed through all the kernel configuration choices. When you have selected all options, the main menu is again displayed. The buttons on the lower right of the main menu are for saving and loading configurations. Their functions are self-explanatory. If you just want to have a look, go exploring! Nothing will be changed if you elect not to save it.
+
+FIGURE 32.3 The much nicer make xconfig GUI interface. We recommend that you use this interface if you are able.
+
+If you are upgrading kernels from a previous release, it is not necessary to go though the entire configuration from scratch. Instead, you can use the directive make oldconfig; it uses the same text interface that make config uses, and it is noninteractive. It will just prompt for changes for any new code.
+
+## Using xconfig to Configure the Kernel
+
+For simplicity's sake, during this brisk walk-through, we will assume that you are using make xconfig. Prior to this point, we also assume that you will have completed the first five steps in our kernel compilation checklist shown previously.
+
+As you learned in the preceding section, you configure the kernel using make xconfig by making choices in several configuration subsection windows. Each subsection window contains specific kernel options. With hundreds of choices, the kernel is daunting to configure. We cannot really offer you detailed descriptions of which options to choose because your configuration will not match your own system and setup.
+
+Table 32.1 provides a brief description of each subsection's options so that you can get an idea of what you might encounter. We recommend that you copy your kernel's .config file to /usr/src/linux-2.6 and run make xconfig from there. Explore all the options. As long as you do not save the file, absolutely nothing will be changed on your system.

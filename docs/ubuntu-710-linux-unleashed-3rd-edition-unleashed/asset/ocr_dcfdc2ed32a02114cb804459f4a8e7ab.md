@@ -1,0 +1,17 @@
++   Gnumeric—This spreadsheet program enables you to manipulate numbers in a spreadsheet format. Support for all but the most esoteric Microsoft Excel functions means that users should have little trouble trading spreadsheets with Excel users.
+
++   The GIMP—This graphics application allows you to create images for general use. It can import and export all common graphic file formats. The GIMP is analogous to Adobe’s Photoshop application and is described in Chapter 7, “Multimedia Applications.”
+
++   Evolution—Evolution is a mail client with an interface similar to Microsoft Outlook, providing email, scheduling, and calendaring. It is described in Chapter 5, “On the Internet.”
+
+The loose association of applications known as Gnome Office includes several additional applications that duplicate the functionality of applications already provided by Ubuntu. Those extra GNOME applications are not included in a default installation of Ubuntu to eliminate redundancy. They are all available from the Gnome Office website, at http://www.gnome.org/gnome-office/. Both The GIMP and Evolution are available with Ubuntu by default. You have to use yum or pirut to retrieve the remaining components.
+
+Ubuntu provides the AbiWord editor as part of its Extras, shown in Figure 6.14. AbiWord can import XML, Microsoft Word, RTF, UTF8, plain text, WordPerfect, KWord, and a few other formats. AbiWord is notable for its use of plug-ins, or integrated helper applications, that extend its capabilities. These plug-ins add language translation, HTML editing, a thesaurus, a Linux command shell, and an online dictionary, among other functions and features. If you just need a simple yet powerful word processing application, you should examine AbiWord.
+
+AbiWord is not installed by default in Ubuntu, so you’ll need to install it either using apt-get or synaptic. The package is simply called abiword-gnome, although you might want to install the meta-package gnome-office, which will include the other Gnome Office applications.
+
+After you’ve installed Abiword, it becomes available in the Applications menu, under the Office submenu. Simply click the icon to launch the application.
+
+If you are familiar with Microsoft Works, the AbiWord interface will be familiar to you because its designers based the interface upon Works.
+
+You can use the Gnumeric spreadsheet application to perform financial calculations and to graph data, as shown in Figure 6.15. It can import comma- or tab-separated files, text, or files in the Gnumeric XML format, saving files only as XML or text. You need to install Gnumeric using either apt-get or synaptic in the same way as Abiword. If you have already installed the gnome-office package, Gnumeric will be available under Applications, Office as Gnumeric Spreadsheet.

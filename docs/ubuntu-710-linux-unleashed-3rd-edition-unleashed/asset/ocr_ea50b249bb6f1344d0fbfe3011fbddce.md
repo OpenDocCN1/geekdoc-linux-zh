@@ -1,0 +1,28 @@
+# CHAPTER 17
+
+# Apache Web Server Management
+
+This chapter covers the configuration and management of the Apache web server. The chapter includes an overview of some of the major components of the server and discussions of text-based and graphical server configuration. You will see how to start, stop, and restart Apache using the command line. The chapter begins with some introductory information about this popular server and then shows you how to install, configure, and start using Apache.
+
+# About the Apache Web Server
+
+Apache is the most widely used web server on the Internet today, according to a Netcraft survey of active websites in June 2007, which is shown in Table 17.1.
+
+Note that these statistics do not reflect Apache’s use on internal networks, known as intranets.
+
+The name Apache appeared during the early development of the software because it was “a patchy” server, made up of patches for the freely available source code of the NCSA HTTPd web server. For a while after the NCSA HTTPd project was discontinued, a number of people wrote a variety of patches for the code, to either fix bugs or add features they wanted. A lot of this code was floating around and people were freely sharing it, but it was completely unmanaged.
+
+After a while, Brian Behlendorf and Cliff Skolnick set up a centralized repository of these patches, and the Apache project was born. The project is still composed of a small core group of programmers, but anyone is welcome to submit patches to the group for possible inclusion in the code.
+
+# IN THIS CHAPTER
+
++   - About the Apache Web Server
++   - Installing the Apache Server
++   - Starting and Stopping Apache
++   - Runtime Server Configuration Settings
++   - File System Authentication and Access Control
++   - Apache Modules
++   - Virtual Hosting
++   - Logging
++   - Other Web Servers for Use with Ubuntu
++   - Reference

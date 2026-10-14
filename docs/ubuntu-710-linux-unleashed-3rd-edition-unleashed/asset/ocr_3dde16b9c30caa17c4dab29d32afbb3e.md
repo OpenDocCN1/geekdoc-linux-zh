@@ -1,0 +1,25 @@
+![](bbox=[0.09, 0.14, 0.62, 0.46])
+
+FIGURE 16.1 You can use Ubuntu's share-admin client to quickly set up local directories for export using NFS.
+
+In the Path drop-down box, choose the directory that you want to share; in the Share drop-down box, choose NFS. Click the Add Host button that appears to specify which hosts, IP addresses, or networks to be allowed access to the directory. By default, a directory is exported as read/write, but you can choose read-only by ticking the Read Only option. When finished, click the OK button, click the Apply button, and then use the File menu to quit.
+
+# NFS Client Configuration
+
+To configure your host as an NFS client (to acquire remote files or directories), edit the /etc/fstab file as you would to mount any local file system. However, instead of using a device name to be mounted (such as /dev/hda1), enter the remote hostname and the desired file system to be imported. For example, one entry might look like this:
+
+```
+# Device          Mount Point  Type  Options        Freq Pass
+yourhost:/usr/local  /usr/local  nfs  nfsvers=3,ro  0  0
+```
+
+> NOTE
+> If you use autofs on your system, you need to use proper autofs entries for your remote NFS mounts. See the section 5 man page for autofs.
+
+The Options column uses the same options as standard fstab file entries with some additional entries, such as nfsvers=3, which specifies the third version of NFS. You can also use the mount command, as root, to quickly attach a remote directory to a local file system by using a remote host's name and exported directory. For example:
+
+```
+$ sudo mount -t nfs 192.168.2.67:/music /music
+```
+
+After you press Enter, the entire remote directory appears on your file system. You can verify the imported file system using the df command, as follows:

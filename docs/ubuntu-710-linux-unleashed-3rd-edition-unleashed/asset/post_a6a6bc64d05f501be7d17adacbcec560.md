@@ -1,0 +1,218 @@
+
+- /etc/samba/smb.conf files, 370-373
+- /etc/services network configuration files, 332
+- /etc/squid/squid.conf configuration file, 477
+- /etc/vsftpd.banned emails configuration file, 430
+- /etc/vsftpd.chroot list configuration file, 430
+- /etc/vsftpd.user list configuration file, 430
+- Ethereal tool, 282
+- Evolution email client, 108-109, 137, 519
+- Exchange Server (Microsoft), alternatives to, 471-473
+- exclamation points (!)
+  - != is not equal symbol (SQL), 493
+  - string comparison operators, 257
+  - string expression operators, 252
+  - logical comparison operators, 256
+  - number comparison operators, 260
+- execute permissions, 198-199
+- execution operators (PHP), 577
+- Exim MTA (Mail Transport Agents), 459
+- exit command, 82
+- exit statements, 270
+- expressions (comparison of), 77, 234
+  - pdksh shells versus bash shells
+    - file comparisons, 255-256
+    - logical comparisons, 256-257
+    - number comparisons, 254-255
+    - string comparisons, 252-253
+  - tcsh shells
+    - file comparisons, 259-260
+    - logical comparisons, 260-261
+    - number comparisons, 258-259
+    - string comparisons, 257
+- external commands (ftpconversions file), 446
+- external computer attacks, defining, 625-626
+- extract() array function, 586-587
+- extraversion level (kernel), 697
+
+## F
+
+- \-f file comparison operators, 255, 259
+- F-Spot photo management, 152-153
+- faxes, 387
+- fclose() file function, 589
+- FDDI (Fiber Distributed Data Interface) networks, 321
+- Feisty Fawn, 719
+- Fetchmail MDA (Mail Delivery Agents), 465
+  - global configuration options, 466
+  - installing, 466
+  - mail server options, 467
+  - user accounts, 467-469
+- fiber optic cable, 323
+- fiber optic NIC (Network Interface Cards), 321
+- file command, determining file compression methods, 686
+- file_get_contents() file function, 587
+- file_put_contents() file function, 587
+- File Roller, 299
+- file systems
+  - hosting, 744-745
+  - navigating, 74-76
+  - optimizing, 640-641
+  - sync command, 640
+  - virtual, 79
+- file-conversion actions, configuring FTP servers, 445-447
+- filenaming wildcards, 77
+- files. See also directories
+  - access permissions, changing via chmod shell command, 655
+  - avi, 167
+  - backups, restoring from, 298
+  - comparisons (comparison of expression), 255-256, 259-260
+  - compressing, 77-78
+  - contents, printing via cat shell command, 652-653
+  - copying
+    - cp command, 304-305
+    - cp shell command, 655
+    - mc command-line file management software, 305
+    - multiple files between servers, 358-359
+    - tar command-line backup software, 303-304
+  - current directory, listing in via ls shell command, 664-666
+  - deleting via rm shell command, 668-669
+  - DVIx, 167
+  - editing, 78-79
+  - /etc/fstab, 215
+  - /etc/passwd, 206-207
+  - FTP server files, editing, 430
+  - graphics formats, 148-150
+  - handles, 589
+  - header files, 600
+  - include file, 600
+  - linking via ln shell command, 663-664
+  - managing, 76-77
+  - mov files, 167
+  - moving via mv shell command, 667
+  - MP3 files, 163
+  - MPEG files, 163, 167
+  - ogg, 163
+  - paging through output via less shell command, 660-662
+  - permissions, 90, 198-199
+    - assigning, 91-92
+    - directories, 92-94
+    - suid/sgid, 94-95
+  - PHP functions
+    - fclose(), 589
+    - file_get_contents(), 587
+    - file handles, 589
+    - file_put_contents(), 587
+    - filesize(), 589
+    - fopen(), 588-589
+    - fread(), 589
+    - fwrite(), 589
+  - ppd, 171
+  - printing last lines via tail shell command, 669
+  - qt, 167
+  - raw, 162
+  - remote files, copying
+    - locally, 358
+    - remote servers, 358
+  - remote servers, copying to, 357
+  - searches
+    - from index via locate shell command, 664
+    - via find shell command, 657-659
+  - sharing
+    - NFS, 366-368
+    - Samba, 369-378
+  - sound formats, 162-164
+  - variable data, accessing, 81
+  - video formats, 167
+  - wav, 163
+  - xorg.conf, 55-60, 63
+- Files section, xorg.conf file, 57
+- filesize() file function, 589
+- find command, 297, 657-659
+- find2perl utility, 544
+- finger information fields, 206
+- Firefox, 106, 113, 421, 476
+- Firestarter, 47
+- firewalls
+  - configuring, 47, 632
+  - hosts as, 317
+- FireWire (IEEE-1394) drives, 295
+- Flash plug-ins (Macromedia), 168
+- flat file databases, 486-487
+- flexbackup backup software, 302
+- floating-point numeric values (Python), 549
+- floppy disks, system boots, 307
+- fopen() file function, 588-589
+- for loops, 579
+  - Perl, 534
+  - Python, 556-557
+- for statements, 261-262
+- foreach loops, 535, 580
+- formatting
+  - GIMP 146
+    - capturing screen images, 150
+    - graphics file formats, 148-150
+    - scanners, 147-148
+  - groups, 199-202
+  - passwords, 206
+    - /etc/passwd files, 206-207
+    - shadow passwords, 207-209
+    - system policies, 206
+    - users, 209
+  - sound, 162-164
+  - spreadsheets (OpenOffice.org), 132
+  - user accounts, 195
+    - file permissions, 198-199
+    - super users/root users, 196-198
+    - UIDs/GIDs, 198
+    - users
+      - adding, 203-204
+      - monitoring, 204-205
+      - tools, 202-203
+  - video
+    - DVD/video players, 169
+    - personal video recorders, 168
+    - TV hardware, 164-166
+    - viewing, 167-168
+- forwarding email with aliases, Postfix MTA, 465
+- fread() file function, 589
+- free command, 235, 280
+- free memory, viewing, 280
+- Free Software Foundation, 715
+- FROM clauses, SELECT statements
+- FTP (File Transfer Protocol), 423
+  - commands list, 454
+  - ftp.kernel.org, 697
+  - installing, 425-427
+  - servers
+    - administration commands, 449-454
+    - allowing/denying connections, 448
+    - anonymous servers, 423-424, 433
+    - authenticated servers, 423-424
+    - Bsdftpd servers, 425
+    - choosing, 423-424
+    - connected user information, 449-450
+    - editing files, 430
+    - file-conversion actions, 445-447
+    - NcFTPd servers, 424-425
+    - packages, 424
+    - vsftpd servers, 424, 429-432
+    - wu-ftpd servers, 428, 432-444
+    - users, 426-428
+- ftp command, 357, 454
+- ftpaccess files, 433-444
+- ftpaccess Wu-FTPd server configuration files, 432
+- ftpconversions Wu-FTPd server configuration files, 432
+- ftpcopy command, 454
+- ftpcount command, 449
+- ftpcp command, 454
+- ftphosts Configuration File for Allowing or Denying Users listing (20.3), 448
+- ftphosts files, allowing/denying FTP server connections, 448
+- ftphosts Wu-FTPd server configuration files, 432
+- ftprestart command, 449, 452
+- ftpshut command, 449
+- FTP servers, scheduling downtime, 451
+- magic cookies, 452
+- ftpusers file, ftpaccess configuration file, 435
+- ftpwho -V Command Output listing (20.4), 450
+- ftpwho command, 449-450

@@ -1,0 +1,20 @@
+![](bbox=[0.09, 0.17, 0.52, 0.56])
+
+FIGURE 11.1 You can enable and disable Ubuntu's boot-up services by toggling the check-boxes in the Services dialog.
+
+The telinit command uses the init command to change runlevels and shut down currently running services.
+
+After booting to single-user mode, you can then return to multi-user mode, like this:
+
+```
+# telinit 2
+```
+
+> TIP
+> Linux is full of shortcuts: If you exit the single-user shell by typing exit at the prompt, you will go back to the default runlevel without worrying about using telinit.
+
+# Troubleshooting Runlevel Problems
+
+Reordering or changing system services during a particular runlevel is rarely necessary when using Ubuntu unless some disaster occurs. But system administrators should have a basic understanding of how Linux boots and how services are controlled in order to perform troubleshooting or to diagnose problems. By using additional utilities such as the dmesg | less command to read kernel output after booting or by examining system logging with cat /var/log/messages | less, it is possible to gain a bit more detail about what is going on when faced with troublesome drivers or service failure.
+
+To better understand how to troubleshoot service problems in Ubuntu, look at the diagnosis and resolution of a typical service-related issue.

@@ -1,0 +1,33 @@
+
+- ► Impress—This presentation program is similar to Microsoft PowerPoint and enables you to create slide show presentations that include graphs, diagrams, and other graphics. Impress also works well with PowerPoint files.
+
+- ► Math—This math formula editor enables you to write mathematical formulas with a number of math fonts and symbols for inclusion in a word processing document. Such symbols are highly specialized and not easily included in the basic functionality of a word processor. This is of interest primarily to math and science writers, but Math can be useful to anyone who needs to include a complex formula in text.
+
+- ► Base—This database was introduced with the OpenOffice.org 2.0 suite, which is provided with Ubuntu. It provides a fully functional database application.
+
+- ► Draw—This graphics application allows you to create images for inclusion in the documents produced with OpenOffice.org. It saves files only in OpenOffice.org format, but it can import most common image formats.
+
+- ► Dia—This technical drawing editor from the GNOME Office suite enables you to create measured drawings, such as those used by architects and engineers. Its functionality is similar to that of Microsoft Visio.
+
+- ► Planner—You can use this project management application for project planning, scheduling, and tracking; this application is similar to, but not compatible with, Microsoft Project. It is found in the Office menu as the Project Planner item.
+
+## A Brief History of OpenOffice.org
+
+The OpenOffice.org office suite is based on a commercial suite called StarOffice. Originally developed by a German company, StarOffice was purchased by Sun Microsystems in the United States. One of the biggest complaints about the old StarOffice was that all the component applications were integrated under a StarOffice "desktop" that looked very much like a Microsoft Windows desktop, including a Start button and menus. This meant that to edit a simple document, unneeded applications had to be loaded, making the office suite slow to load, slow to run, and quite demanding on system resources.
+
+After the purchase of StarOffice, Sun Microsystems released a large part of the StarOffice code under the GNU Public License, and development began on what has become OpenOffice.org, which is freely available under the GPL. Sun continued development on StarOffice and released a commercial version as StarOffice 6.0. The significant differences between the free and commercial versions of the software are that StarOffice provides more fonts and even more import/export file filters than OpenOffice.org (these filters cannot be provided in the GPL version because of licensing restrictions) and StarOffice provides its own relational database, Software AG's Adabas D database. The StarOffice counterpart to OpenOffice.org 2.3 is StarOffice 8.
+
+## Configuring OpenOffice.org
+
+The installation of OpenOffice.org is done on a systemwide basis, meaning that all users have access to it. However, individual users have to go into OpenOffice.org to configure it for their individual needs. This initial configuration happens transparently the first time you load any of the OpenOffice.org components, and might mean the application takes a little longer to load as a result. Be patient, and your desired application will appear.
+
+> TIP
+> OpenOffice.org is constantly improving its productivity applications. You can check the OpenOffice.org website (http://www.openoffice.org/) for the latest version. The website provides a link to download the source or a pre-compiled version of the most current working installation files. A more current version might offer file format support that you need. Should you need a Windows-compatible version, you will also find it at the website.
+
+Shown in Figure 6.1 is the Office menu, which is found under Applications. You can see the entries for Database (Base), Presentation (Impress), Spreadsheet (Calc), and Word Processor (Writer).
+
+![](img/7aaa8e4f2209bf9f2fb443905096e94c_154_0.png)
+
+FIGURE 6.1 The OpenOffice.org suite provided by Ubuntu is simple to configure and use.
+
+As is the case with many Linux applications, you may be somewhat overwhelmed by the sheer number of configuration options available to you in OpenOffice.org. Mercifully, a lot of thought has gone into organizing these options, which are available if you click the Tools menu and select Options. It does not matter which program you use to get to this dialog box; it appears the same if summoned from Writer, Impress, or Calc. It acts as a central configuration management tool for all OpenOffice.org applications. You can use it to set global options for all OpenOffice.org applications, or specific options for each individual component. For instance, in Figure 6.2, you can change the user details and information, and this is reflected across all OpenOffice.org applications.

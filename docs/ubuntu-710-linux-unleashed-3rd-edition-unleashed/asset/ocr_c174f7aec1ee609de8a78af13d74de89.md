@@ -1,0 +1,4 @@
++   - http://pear.php.net/—The home of the PEAR project contains a large collection of software you can download and try, and it has thorough documentation for it all.
++   - http://www.phparch.com/—There are quite a few good PHP magazines around, but *PHP Architect* probably leads the way. It posts some of its articles online for free, and its forums are good, too.
+
+Quality books on PHP abound, and you are certainly spoiled for choice. For beginning developers, the best available is *PHP and MySQL Web Development* (Sams Publishing), ISBN 0-672-32672-8. For a concise, to-the-point book covering all aspects of PHP, check out *PHP in a Nutshell* (O'Reilly). Finally, for advanced developers, you can consult *Advanced PHP Programming* (Sams Publishing), ISBN 0-672-32561-6.

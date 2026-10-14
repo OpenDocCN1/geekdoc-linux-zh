@@ -1,0 +1,82 @@
+
+You can add as many rules as you like, although you should be careful to try to order them so that they make sense. Keep in mind that all conditions in a line must be matched for the line to be matched. Here is a more complex example:
+
++   You want a category newssites that contains serious websites people need for their work.
+
++   You want a category playsites that contains websites people do not need for their work.
+
++   You want a category worktime that stretches from 09:00 to 18:00.
+
++   You want a category freetime that stretches from 18:00 to 20:00, when the office closes.
+
++   You want people to be able to access the news sites, but not the play sites, during working hours.
+
++   You want people to be able to access both the news sites and the play sites during the free time hours.
+
+To do that, you need the following rules:
+
+```
+acl newssites dstdomain .bbc.co.uk .slashdot.org
+acl playsites dstdomain .tomshardware.com .ubuntu-linux.org
+acl worktime time MTWHF 9:00-18:00
+acl freetime time MTWHF 18:00-20:00
+http_access allow newssites worktime
+http_access allow newssites freetime
+http_access allow playsites freetime
+```
+
+## NOTE
+
+The letter D is equivalent to MTWHF in meaning "all the days of the working week."
+
+Notice that there are two http_access lines for the newssites category: one for worktime and one for freetime. This is because all the conditions must be matched for a line to be matched. Alternatively, you can write this:
+
+```
+http_access allow newssites worktime freetime
+```
+
+However, if you do that and someone visits news.bbc.co.uk at 2:30 p.m. (14:30) on a Tuesday, Squid will work like this:
+
++   Is the site in the newssites category? Yes, continue.
+
++   Is the time within the worktime category? Yes, continue.
+
++   Is the time within the freetime category? No; do not match rule, and continue searching for rules.
+
+It is because of this that two lines are needed for the worktime category.
+
+One particularly powerful way to filter requests is with the url_regex ACL line. This allows you to specify a regular expression that is checked against each request: If the expression matches the request, the condition matches.
+
+For example, if you want to stop people downloading Windows executable files, you would use this line:
+
+```
+acl noexes url_regex -i exe$
+```
+
+The dollar sign means “end of URL,” which means it would match http://www.somesite.com/virus.exe but not http://www.executable.com/innocent.html. The -i part means “not case-sensitive,” so the rule will match .exe, .Exe, .EXE, and so on. You can use the caret sign (^) for “start of URL.”
+
+For example, you could stop some pornography sites using this ACL:
+
+```
+acl noporn url_regex -i sex
+```
+
+Do not forget to run the kill -SIGHUP command each time you make changes to Squid; otherwise, it will not reread your changes. You can have Squid check your configuration files for errors by running squid -k parse as root. If you see no errors, it means your configuration is fine.
+
+## NOTE
+
+> It is critical that you run the command kill -SIGHUP and provide it the PID of your Squid daemon each time you change the configuration; without this, Squid will not reread its configuration files.
+
+## Specifying Client IP Addresses
+
+The configuration options so far have been basic, and you can use many more to enhance the proxying system you want.
+
+After you are past deciding which rules work for you locally, it is time to spread them out to other machines. You do so by specifying IP ranges that should be allowed or disallowed access, and you enter these into Squid using more ACL lines.
+
+If you want to, you can specify all the IP addresses on your network, one per line. However, for networks of more than about 20 people or using Dynamic Host Control Protocol (DHCP), that is more work than necessary. A better solution is to use classless interdomain routing (CIDR) notation, which allows you to specify addresses like this:
+
+```
+192.0.0.0/8
+192.168.0.0/16
+192.168.0.0/24
+```

@@ -1,0 +1,44 @@
+/etc/nsswitch.conf—Linux network information service configuration
+/etc/resolv.conf—Domain name service domain (search) settings
+/etc/host.conf—Network information search order (by default, /etc/hosts and then DNS)
+
+After these files are modified, the changes are active. As with most configuration files, comments can be added with a hash mark (#) preceding the comment. All of these files have a man page written about them for more information.
+
+# Adding Hosts to /etc/hosts
+
+The /etc/hosts file is a map of IP to hostnames. If you are not using DNS or another naming service, and you are connected to a large network, this file can get quite large and can be a real headache to manage. A small /etc/hosts file can look something like this:
+
+```
+127.0.0.1      localhost
+127.0.0.1      optimus
+
+# The following lines are desirable for IPv6 capable hosts
+::1            ip6-localhost ip6-loopback
+fe00::0        ip6-localnet
+ff00::0        ip6-mcastprefix
+ff02::1        ip6-allnodes
+ff02::2        ip6-allrouters
+ff02::3        ip6-allhosts
+```
+
+The first entry is for the loopback entry. The second is for the name of the machine. If no naming service is in use on the network, the only host that myhost will recognize by name is yourhost. (IP addresses on the network can still be used.)
+
+# Service Settings in /etc/services
+
+The /etc/services file maps port numbers to services. The first few lines look similar to this (the /etc/services file can be quite long, more than 500 lines):
+
+```
+# Each line describes one service, and is of the form:
+#
+# service-name port/protocol [aliases ...] [# comment]
+
+tcpmux      1/tcp                # TCP port service multiplexer
+tcpmux      1/udp                # TCP port service multiplexer
+rje         5/tcp                # Remote Job Entry
+rje         5/udp                # Remote Job Entry
+echo        7/tcp
+echo        7/udp
+discard     9/tcp                sink null
+discard     9/udp                sink null
+systat      11/tcp               users
+```

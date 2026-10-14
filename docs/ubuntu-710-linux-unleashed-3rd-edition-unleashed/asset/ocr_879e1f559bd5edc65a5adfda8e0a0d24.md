@@ -1,0 +1,29 @@
+# TABLE 17.1 Netcraft Survey Results (June 2007)
+
+| Web Server | Number | Percentage |
+|---|---|---|
+| Apache | 65,588,298 | 53.76% |
+| Microsoft* | 38,836,030 | 31.83% |
+| Google | 4,872,765 | 3.99% |
+| SunONE | 2,273,173 | 1.86% |
+| lighttpd | 1,470,930 | 1.21% |
+| *All web server products | | |
+
+There has been a surge of interest in the Apache project over the past several years, partially buoyed by a new interest in open source on the part of enterprise-level information services. It's also due in part to crippling security flaws found in Microsoft's Internet Information Services (IIS); the existence of malicious web task exploits; and operating system and networking vulnerabilities to the now-infamous Code Red, Blaster, and Nimda worms. IBM made an early commitment to support and use Apache as the basis for its web offerings and has dedicated substantial resources to the project because it makes more sense to use an established, proven web server.
+
+In mid-1999, The Apache Software Foundation was incorporated as a nonprofit company. A board of directors, who are elected on an annual basis by the ASF members, oversees the company. This company provides a foundation for several open-source software development projects, including the Apache Web Server project.
+
+The best places to find out about Apache are the Apache Group's website, http://www.apache.org/, and the Apache Week website, http://www.apacheweek.com/, where you can subscribe to receive Apache Week by email to keep up on the latest developments in the project, keep abreast of security advisories, and research bug fixes.
+
+# TIP
+
+> You'll find an overview of Apache in its frequently asked questions (FAQs) at http://httpd.apache.org/docs/2.0/faq/. In addition to extensive online documentation, you'll also find the complete documentation for Apache in the HTML directory of your Apache server. You can access this documentation by looking at http://localhost/manual/index.html on your new Ubuntu system with one of the web browsers included on your system. You'll need to have Apache running on your system!
+
+Ubuntu ships with Apache 2.0, and the server (named apache2) is included on this book's CD-ROMs and DVD. You can obtain the latest version of Apache as a package file from an Ubuntu FTP server, through Synaptic, or by getting the source code from the Apache website and, in true Linux tradition, build it for yourself.
+
+To determine the version of Apache included with your system, use the web server's -V command-line option like this:
+
+```
+$ /usr/sbin/apache2 -V
+Server version: Apache/2.0.50
+```

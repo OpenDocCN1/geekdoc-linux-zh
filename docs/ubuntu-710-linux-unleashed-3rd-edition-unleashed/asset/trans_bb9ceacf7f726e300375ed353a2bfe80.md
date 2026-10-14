@@ -1,0 +1,67 @@
+
+
+messages in the queue and attempt to deliver them whenever you connect to your ISP.
+You can configure Postfix to do so by adding the following line to /etc/ppp/peers/ppp0:
+
+/usr/sbin/sendmail -q
+
+This line causes Postfix to automatically send all mail when connecting to your ISP.
+
+However, Postfix will still attempt to send mail regardless of whether the computer is on or off line, meaning that your computer may dial out just to send email. To disable this, you need to enter the following line into mail.cf:
+
+```
+defer_transports = smtp
+```
+
+This stops any unwanted telephone calls from being placed!
+
+## TIP
+
+If you use networking over a modem, there is a configuration file for pppd called ppp0, which is located in /etc/ppp/peers. Any commands in this file automatically run each time the PPP daemon is started. You can add the line sendmail -q to this file to have your mail queue automatically processed each time you dial up your Internet connection.
+
+## Mail Relaying
+
+By default, Postfix will not relay mail that did not originate from the local domain. This means that if a Postfix installation running at hudson.org receives mail intended for hudzilla.org, and that mail did not originate from hudson.org, the mail will be rejected and will not be relayed. If you want to allow selected domains to relay through you, add an entry for the domain to the main.cf file like so:
+
+```
+mynetworks = 192.168.2.0/24, 10.0.0.2/24, 127.0.0.0/8
+```
+
+The IP address needs to be specified in CIDR format. For a handy calculator, head on over to http://www.subnet-calculator/cidr.php. You must restart Postfix for this change to take effect.
+
+## CAUTION
+
+You need a good reason to relay mail; otherwise, do not do it. Allowing all domains to relay through you will make you a magnet for spammers who will use your mail server to send spam. This can lead to your site being blacklisted by many other sites, which then will not accept any mail from you or your site's users—even if the mail is legitimate!
+
+## Forwarding Email with Aliases
+
+Aliases allow you to have an infinite number of valid recipient addresses on your system, without having to worry about creating accounts or other support files for each address. For example, most systems have “postmaster” defined as a valid recipient, but do not have an actual login account named “postmaster.” Aliases are configured in the file /etc/aliases. Here is an example of an alias entry:
+
+```
+postmaster: root
+```
+
+This entry forwards any mail received for “postmaster” to the root user. By default, almost all the aliases listed in the /etc/aliases file forward to root.
+
+## CAUTION
+
+Reading email as root is a security hazard; a malicious email message can exploit an email client and cause it to execute arbitrary code as the user running the client. To avoid this danger, you can forward all of root’s mail to another account and read it from there. You can choose one of two ways for doing this.
+
+You can add an entry to the /etc/aliases file that sends root’s mail to a different account. For example, root: foobar would forward all mail intended for root to the account foobar.
+
+The other way is to create a file named .forward in root’s home directory that contains the address that the mail should forward to.
+
+Anytime you make a change to the /etc/aliases file, you will need to rebuild the aliases database before that change will take effect. This is done with the following:
+
+```
+$ sudo newaliases
+```
+
+## Using Fetchmail to Retrieve Mail
+
+SMTP is designed to work with systems that have a full-time connection to the Internet. What if you are on a dial-up account? What if you have another system store your email for you and then you log in to pick it up once in awhile? (Most users who are not setting up servers will be in this situation.) In this case, you cannot easily receive email using SMTP, and you need to use a protocol, such as POP3 or IMAP, instead.
+
+## NOTE
+
+Remember when we said that some mail clients can include some MTA functionality? Microsoft Outlook and Outlook Express can be configured to use SMTP and, if you use a dial-up connection, will offer to start the connection and then use SMTP to send your mail, so a type of MTA functionality is included in those mail clients.
+

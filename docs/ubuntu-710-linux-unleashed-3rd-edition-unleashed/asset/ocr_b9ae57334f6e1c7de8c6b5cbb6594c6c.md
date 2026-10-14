@@ -1,0 +1,37 @@
+The next function is `preg_match_all()`, which gives you an array of all the matches it found. However, to be most useful, it takes the array to fill with matches as a by-reference parameter and saves its return value for the number of matches that were found.
+
+We suggest you use `preg_match_all()` and `var_dump()` to get a feel for how the function works. This example is a good place to start:
+
+```
+```php
+<?php
+    $string = "This is the best test in the west";
+    $result = preg_match_all("/[A-Za-z]+/", $string, $matches);
+    var_dump($matches);
+?>
+```
+```
+
+That outputs the following:
+
+```
+```text
+array(1) {
+  [0]=>
+  array(3) {
+    [0]=>
+    string(4) "best"
+    [1]=>
+    string(4) "test"
+    [2]=>
+    string(4) "west"
+  }
+}
+```
+```
+
+If you notice, the `$matches` array is actually multidimensional in that it contains one element, which itself is an array containing all the matches to our regular expression. The reason for this is because our expression has no *subexpressions*, meaning no independent matches using parentheses. If we had subexpressions, each would have its own element in the `$matches` array containing its own array of matches.
+
+Moving on, `preg_replace()` is used to change all substrings that match a regular expression into something else. The basic manner of using this is quite easy: You search for something with a regular expression and provide a replacement for it. However, a more useful variant is *backreferencing*, using the match as part of the replacement. For our example, we will imagine you have written a tutorial on PHP but want to process the text so each reference to a function is followed by a link to the PHP manual.
+
+PHP manual page URLs take the form http://www.php.net/<function>—for example, http://www.php.net/preg_replace. The string we need to match is a function name, which is a string of alphabetic characters, potentially also mixed with numbers and underscores and terminated with two parentheses, (). As a replacement, we will use the match we found, surrounded in HTML emphasis tags (<em></em>), and then with a link to the relevant PHP manual page. Here is how that looks in code:

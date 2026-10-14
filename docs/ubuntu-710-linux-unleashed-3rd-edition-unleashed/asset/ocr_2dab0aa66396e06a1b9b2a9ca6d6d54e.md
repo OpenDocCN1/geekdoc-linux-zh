@@ -1,0 +1,20 @@
+# Flat file databases are unsuitable for multi-user environments—Depending on how the database is set up, it either enables only one user to access it at a time or allows two users to make changes simultaneously, and the changes could end up overwriting each other and cause data loss.
+
+These limitations obviously make the flat file database unsuitable for any kind of serious work in even a small business—much less in an enterprise environment. Relational databases, or relational database management systems (RDBMSs) to give them their full name, are good at finding the relationships between individual pieces of data. An RDBMS stores data in tables with fields much like those in spreadsheets, making the data searchable and sortable. RDBMSs are the focus of this chapter.
+
+Oracle, DB2, Microsoft SQL Server, and the freely available PostgreSQL and MySQL are all examples of RDBMSs. The following sections discuss how relational databases work and provide a closer look at some of the basic processes involved in administering and using databases. You will also learn about SQL, the standard language used to store, retrieve, and manipulate database data.
+
+# How Relational Databases Work
+
+An RDBMS stores data in tables, which you can visualize as spreadsheets. Each column in the table is a field; for example, a column might contain a name or an address. Each row in the table is an individual record. The table itself has a name you can refer to that table when you want to get data out of it or put data into it. Figure 21.1 shows an example of a simple relational database that stores name and address information.
+
+| last_name | first_name | address | city | state | zip | phone |
+|---|---|---|---|---|---|---|
+| Doe | John | 501 Somestreet | Anytown | NY | 55011 | 555-555-1212 |
+| Doe | Jane | 501 Somestreet | Anytown | NY | 55011 | 555-555-1212 |
+| Palmer | John | 205 Anystreet | Sometown | NY | 55055 | 123-456-7890 |
+| Johnson | Robert | 100 Easy street | Easytown | CT | 12345 | 111-222-3333 |
+
+FIGURE 21.1 In this visualization of how an RDBMS stores data, the database stores four records (rows) that include name and address information, divided into seven fields (columns) of data.
+
+In the example shown in Figure 21.1, the database contains only a single table. Most RDBMS setups are much more complex than this, with a single database containing multiple tables. Figure 21.2 shows an example of a database named sample_database that contains two tables.
