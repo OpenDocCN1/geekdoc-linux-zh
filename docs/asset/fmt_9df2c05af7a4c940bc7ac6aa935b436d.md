@@ -1,0 +1,178 @@
+
+`audit(12280116.960:575): operation="file_permission" \`
+`requested_mask="w" allowed="w" fuid=1000 \`
+`name="/dev/pts2" pid=11135 profile="null-complain-profile"`
+
+`Dec 14 14:26:00 kernel: [12245.881309] type=1502 \`
+`audit(12280116.960:516): operation=socket_sendmsg \`
+`family="inet6" sock_type="stream" protocol=6 pid=11134 \`
+`profile="/usr/sbin/dropbear"`
+
+你可以回到启动 `aa-genprof` 工具时的窗口或终端会话，并输入 `S` 告诉 `aa-genprof` 工具扫描日志中的相关消息。`aa-genprof` 命令显示如下：
+
++ 正在从 `/var/log/messages` 读取条目。
+更新 `/etc/apparmor.d` 中的 AppArmor 配置文件。
+正在分析：`/usr/sbin/dropbear`
+`[(S)扫描日志 SubDomain 事件] / (F)inch`
+
+重复此步骤几次，然后响应 `F` 告诉 `aa-genprof` 工具完成完整的创建过程。你将看到如下输出：
+
++ 将 `/usr/sbin/dropbear` 设置为强制模式（enforce mode）。
+已在强制模式下重新加载 SubDomain 配置文件。
+完成为 `/usr/sbin/dropbear` 生成配置文件。
+
+由于我们正在创建一个新配置文件，它可能是不完整的，因此没有在强制模式下运行，如果应用程序尝试访问配置文件中未列出的资源，这将阻止应用程序的运行。你可以使用 `aa-complain` 命令将其更改为合规模式（comply mode），下面的示例显示了该命令及其输出：
+
+```
+$ sudo aa-complain /usr/sbin/dropbear
+
+将 /usr/sbin/dropbear 设置为合规模式
+```
+
+你可以使用 `cat` 命令显示已创建的配置文件，如下例：
+
+```
+$ cat usr.sbin.dropbear # 最后修改时间：Sat Dec 11 14:25:15 2008
+
+#include <tunables/global>
+
+/usr/sbin/dropbear flags=(complain (
+
+#include <abstractions/base>
+
+}
+```
+
+该规则表明在合规模式下规则是有效的，并且已经创建了一些规则，尽管你之前看到的某些特定文件的日志消息似乎并不存在（更多内容稍后将介绍）。
+
+# 第四部分 奖励章节
+
+我们可以使用 `aa-gen autodep` 来识别 `/usr/sbin/dropbear` 二进制文件中的依赖项，所有这些项都包含在 `/etc/apparmor.d/abstractions-base` 文件中。为了验证这是否正确，使用 `ldd` 命令手动检查 `/usr/sbin/dropbear` 可执行文件中的依赖项，如下所示：
+
+```
+$ ldd /usr/sbin/dropbear
+
+linux-vdso.so.1 => (0x00007ff7b4fe0000)
+
+libutil.so.1 => (0x00007fe66c5f0000)
+
+libz.so.1 => /usr/lib/libz.so.1 (0x00007fe66c3d8000)
+
+libcrypt.so.1 => /usr/lib/libcrypt.so.1 (0x00007fe66c1a0000)
+
+libc.so.6 => /usr/lib/libc.so.6 (0x00007fe66be2e000)
+
+/lib64/ld-linux-x86-64.so.2
+```
+
+第一个列表是 Linux 内核的虚拟动态共享对象，但其他对象应该被 `#Included` 规则中的规则匹配。然后你可以检查 `/etc/apparmor.d/abstractions/base` 文件，查看它是否包含了指定的库，它确实包含了。规则如下：
+
++ - `/lib/lib*.so` mr
+- `/usr/lib*.so` mr
+- `/lib64/ld-*.so` mixix
+
+正如前面提到的，示例配置文件中没有包含我们之前看到的日志消息，这很奇怪。然而，可以通过运行 `aa-logprof` 程序手动添加这些消息。运行此程序时不需要任何选项，因为它会扫描自上次事件以来的系统日志，寻找新的审计消息，如下所示：
+
+```
+$ sudo aa-logprof
+
+正在从 /var/log/messages 读取日志条目。
+
+更新 /etc/apparmor.d 中的 AppArmor 配置文件。
+
+合规模式更改：
+```
+
+Profile: `/usr/sbin/dropbear`
+Path: `/dropbear/host_key`
+Mode: owner r
+Severity: unknown
+1 - `/dropbear/host_key`
+`(A)ll /(D)eny /(G)lob /(E)xt /(F)ish /(O)pts`
+
+处理文件的选项以列表形式显示。列表中的默认选择在方括号内——在这种情况下，你必须输入字符来处理检测到的消息和文件（与之关联）。列表中的默认选项在方括号内。最常见的选择是允许 `(A)`，默认情况下在方括号内拒绝 `(D)` 访问文件。其他选择是中止 `(r)`且不保存更改，或者完成 `(F)`，将更改写入配置文件。在那种情况下，识别出的单个文件显然与应用程序相关，并且处理该文件只有一个选项供选择，输入 `A` 接受此项。
+
+# 管理系统策略与安全
+
+规则已添加到配置文件中，`aa-logprof` 程序显示如下消息，解释了它执行的操作：
+
+将 `/etc/gai.conf` owner r 添加到配置文件。
+
+`/var/log/syslog` 中的下一条消息被处理，显示了该消息的相关信息，如下
+
+Profile: `/usr/sbin/dropbear`
+Path: `/etc/gai.conf`
+Mode: owner r
+Severity: unknown
+1 - include `<abstractions/names>`
+2 - `/etc/gai.conf` `[A]ll /(D)eny /(G)lob /(E)xt /(F)ish /(O)pts`
+
+在这种情况下，有两个选项：
+
+- 使用 `#include` 语句包含一个可能包含服务规则的文件，即用于创建客户端或服务器信息的 `/etc/gai.conf`。
+- 显式允许访问 `/etc/gai.conf`。
+
+第二个选项是默认选项，并且看起来是一个合理的规则，所以你只需按 `A` 接受。规则已添加到配置文件，`aa-logprof` 程序显示如下消息，解释了它执行的操作：
+
+将 `/etc/gai.conf` owner r 添加到配置文件。
+
+`/var/log/syslog` 中的下一条消息被处理，显示了该消息的相关信息。此过程重复直到所有新的日志消息都处理完毕，当显示最后一条消息时，如下
+
+Changed Local Profiles =
+以下本地配置文件发生了变化。你想保存它们吗？
+
++ 1 - `/usr/sbin/cupsd`
+2 - `/usr/sbin/dropbear`
+3 - `/usr/sbin/smbd`
+
+`(S)ave Changes / [(V)iew Changes] / Ab(r)`
+
+为 `/usr/sbin/cupsd` 更新配置文件。
+
+为 `/usr/sbin/dropbear` 更新配置文件。
+
+为 `/usr/sbin/smbd` 更新配置文件。
+
+# 第四部分 奖励章节
+
+此时，你可以输入 `S` 保存更新的条目。指定的配置文件已更新并重新加载。然后可以使用 `cat /etc/apparmor.d/usr/sbin/dropbear` 来更新配置文件，如下所示：
+
+```
+$ cat /etc/apparmor.d/usr/sbin.dropbear
+
+# 最后修改时间：Sat Dec 14 15:08:34 2008
+
+#include <tunables/global>
+
+/usr/sbin/dropbear {
+
+#include <abstractions/base>
+
+network inet dgram,
+
+network inet6 dgram,
+
+network inet6 dgram,
+
+owner /etc/dropbear/dss_host_key r,
+
+owner /etc/dropbear/rsa_host_key r,
+
+owner /etc/gai.conf r,
+
+owner /etc/hosts r,
+
+owner /etc/nswitch.conf r,
+
+owner /etc/resolver/run/resolv.conf r,
+
+owner /etc/shadow r,
+
+owner /etc/shells r,
+
+owner /usr/sbin/dropbear r,
+
+owner /var/run/dropbear.pid w
+
+}
+```
