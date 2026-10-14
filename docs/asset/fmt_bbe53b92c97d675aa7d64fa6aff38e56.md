@@ -1,0 +1,183 @@
+
+## Table 12-6: Replace Confirmation Keys
+
+| Key | Action |
+|-----|--------|
+| `y` | Perform the substitution. |
+| `n` | Skip this instance of the pattern. |
+| `a` | Perform the substitution on this and all subsequent instances of the pattern. |
+
+| Key | Action |
+| --- | --- |
+| `q` or `Esc` | 退出替换。 |
+| `1` | 执行此替换然后退出。简写为“last”。 |
+| `Ctrl-e`, `Ctrl-y` | 分别向下滚动和向上滚动。用于查看建议替换的上下文。 |
+
+如果输入`y`，替换将被执行，`n`将导致`vi`跳过此实例并继续下一个。
+
+## 编辑多个文件
+
+同时编辑多个文件通常很有用。你可能需要对多个文件进行更改，或者可能需要将内容从一个文件复制到另一个文件。使用`vi`，我们可以通过在命令行上指定它们来打开多个文件进行编辑：
+
+```
+vi file1 file2 file3...
+```
+
+让我们退出现有的`vi`会话并创建一个新的文件进行编辑。输入`:wq`退出`vi`，保存我们修改后的文本。接下来，我们将在主目录中创建一个额外的文件供我们使用。我们将通过捕获`ls`命令的输出来创建该文件：
+
+```
+[me@linuxbox ~]$ ls -l /usr/bin > ls-output.txt
+```
+
+让我们用`vi`编辑旧文件和新文件：
+
+```
+[me@linuxbox ~]$ vi foo.txt ls-output.txt
+```
+
+`vi`将启动，我们将看到第一个文件在屏幕上：
+
+```
+The quick brown fox jumped over the lazy dog. It was cool.
+Line 2
+Line 3
+Line 4
+Line 5
+```
+
+### 在文件之间切换
+
+要从一个文件切换到下一个文件，使用此`ex`命令：
+
+```
+:n
+```
+
+要返回到上一个文件，使用：
+
+```
+:N
+```
+
+虽然我们可以从一个文件移动到另一个文件，但`vi`强制执行一项策略，防止在当前文件有未保存更改时切换文件。要强制`vi`切换文件并放弃你的更改，在命令后加上感叹号 (`!`) 。
+
+除了上面描述的切换方法外，`vim`（以及某些版本的`vi`）还提供了一些`ex`命令，使多个文件更易于管理。我们可以使用`:buffers`命令查看正在编辑的文件列表。执行此操作将在显示底部显示文件列表：
+
+```
+:buffers
+  1 %a "foo.txt"              line 1
+  2      "ls-output.txt"      line 0
+Press ENTER or type command to continue
+```
+
+要切换到另一个缓冲区（文件），输入`:buffer`后跟你希望编辑的缓冲区的编号。例如，要从包含文件`foo.txt`的缓冲区 1 切换到包含文件`ls-output.txt`的缓冲区 2，我们将输入：
+
+```
+:buffer 2
+```
+
+我们的屏幕现在将显示第二个文件。
+
+### 打开额外的文件进行编辑
+
+也可以将文件添加到当前编辑会话。`ex`命令`:e`（“edit”的缩写）后跟文件名将打开一个额外的文件。让我们结束当前编辑会话并返回到命令行。用一个文件重新启动`vi`：
+
+```
+[me@linuxbox ~]$ vi foo.txt
+```
+
+要添加第二个文件，输入：
+
+```
+:e ls-output.txt
+```
+
+它应该出现在屏幕上。第一个文件仍然存在，我们可以通过以下方式验证：
+
+```
+:buffers
+  1 #  "foo.txt"                line 1
+  2 %a  "ls-output.txt"        line 0
+Press ENTER or type command to continue
+```
+
+> **Note:** 你不能使用`:n`或`:N`命令切换通过`:e`命令加载的文件。要切换文件，请使用`:buffer`命令后跟缓冲区编号。
+
+### 从一个文件复制内容到另一个文件
+
+在编辑多个文件时，我们通常会想要将一个文件的一部分复制到正在编辑的另一个文件中。这很容易通过我们之前使用的通常的`yank`和`paste`命令完成。我们可以按如下方式演示。首先，使用我们的两个文件，通过输入切换到缓冲区 1（`foo.txt`）：
+
+```
+:buffer 1
+```
+
+这应该会给我们：
+
+```
+[me@linuxbox ~]$ vi ls-output.txt
+```
+
+我们将再次看到文件列表：
+
+```
+total 343700
+-rw-r--r-x 1 root root     31316 2007-12-05 08:58 [
+-rw-r--r-x 1 root root      8240 2007-12-09 13:39 41toppm
+-rw-r--r-x 1 root root     111276 2008-01-31 13:36 a2p
+-rw-r--r-x 1 root root     25368 2006-10-06 20:16 a52dec
+-rw-r--r-x 1 root root     11532 2007-05-04 17:43 aafire
+-rw-r--r-x 1 root root      7292 2007-05-04 17:43 aainfo
+```
+
+将光标移动到第三行，然后输入以下`ex`命令：
+
+```
+:r foo.txt
+```
+
+`:r`命令（“read”的缩写）在光标位置之前插入指定的文件。我们的屏幕现在应该如下所示：
+
+```
+total 343700
+-rw-r--r-x 1 root root     31316 2007-12-05 08:58 [
+-rw-r--r-x 1 root root      8240 2007-12-09 13:39 41toppm
+The quick brown fox jumped over the lazy dog. It was cool.
+Line 2
+Line 3
+Line 4
+Line 5
+-rw-r--r-x 1 root root     111276 2008-01-31 13:36 a2p
+-rw-r--r-x 1 root root     25368 2006-10-06 20:16 a52dec
+-rw-r--r-x 1 root root     11532 2007-05-04 17:43 aafire
+-rw-r--r-x 1 root root      7292 2007-05-04 17:43 aainfo
+```
+
+### 保存我们的工作
+
+像`vi`中的其他一切一样，保存编辑文件有几种不同的方法。我们已经介绍过`ex`命令`:w`，但还有一些其他可能也有帮助的方法。
+
+在命令模式下，输入`ZZ`将保存当前文件并退出`vi`。同样，`ex`命令`:wq`将`:w`和`:q`命令组合成一个命令，该命令将同时保存
+
+file and exit.
+
+`:w`命令也可以指定一个可选的文件名。这相当于“另存为...”。例如，如果我们正在编辑`foo.txt`并想保存一个名为`foo1.txt`的替代版本，我们将输入以下内容：
+
+```
+:w foo1.txt
+```
+
+> 注意：上面的命令将文件保存为新名称，但不会更改您正在编辑的文件的名称。随着您继续编辑，您仍然在编辑`foo.txt`，而不是`foo1.txt`。
+
+## Summing Up
+
+有了这套基本技能，我们现在就可以执行维护典型 Linux 系统所需的大部分文本编辑工作。定期学习使用`vim`从长远来看会有所回报。由于`vi`风格的编辑器在 Unix 文化中根深蒂固，我们将看到许多受其设计影响的其他程序。`less`就是这种影响的一个很好的例子。
+
+## Further Reading
+
+即使我们在本章中涵盖了所有内容，我们也只触及了`vi`和`vim`能力的冰山一角。以下是一些在线资源，您可以用它们继续迈向`vi`精通之旅：
+
+- Learning The vi Editor – 来自 Wikipedia 的一本 Wikibook，提供`vi`及其多个类似工具包括`vim`的简明指南。它可在以下地址获得： http://en.wikibooks.org/wiki/Vi
+
+- The Vim Book - `vim`项目有一本 570 页的书籍，涵盖了`vim`中（几乎）所有的功能。您可以在以下地址找到它： ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf.
+
+- 关于`vi`的创建者 Bill Joy 的 Wikipedia 文章： http://en.wikipedia.org/wiki/Bill_Joy
