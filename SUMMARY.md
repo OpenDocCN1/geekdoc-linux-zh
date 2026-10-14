@@ -2119,6 +2119,7 @@
 +   [执法与取证检查人员的 Linux 入门指南：作为数字取证平台的 Linux 初学者指南](docs/the-law-enforcement-and-forensic-examiners-introduction-to-l/README.md)
 +   [Linux A 到 Z](docs/the-linux-a-to-z/README.md)
 +   [Linux 启动盘指南](docs/the-linux-bootdisk-howto/README.md)
++   [Linux 命令行](docs/the-linux-command-line/README.md)
 +   [Linux 命令行：入门指南，第 3 版](docs/the-linux-command-line---a-complete-introduction-3e/README.md)
 +   [Linux 命令行，2nd Edition：完整入门指南](docs/the-linux-command-line-2nd-edition-a-complete-introduction/README.md)
 +   [Linux 命令行第 7 互联网版](docs/the-linux-command-line-7th-internet-edition/README.md)

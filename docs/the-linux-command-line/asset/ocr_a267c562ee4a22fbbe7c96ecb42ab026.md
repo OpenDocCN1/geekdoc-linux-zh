@@ -1,0 +1,34 @@
+Your graphical desktop environment (most likely KDE or GNOME), in an effort to behave like Windows, probably has its focus policy set to “click to focus.” This means for a window to get focus (become active) you need to click on it. This is contrary to the traditional X behavior of “focus follows mouse” which means that a window gets focus by just passing the mouse over it. The window will not come to the foreground until you click on it but it will be able to receive input. Setting the focus policy to “focus follows mouse” will make the copy and paste technique even more useful. Give it a try. I think if you give it a chance you will prefer it. You will find this setting in the configuration program for your window manager.
+
+# Try Some Simple Commands
+
+Now that we have learned to type, let's try a few simple commands. The first one is date. This command displays the current time and date.
+
+```
+[me@linuxbox ~]$ date
+Thu Oct 25 13:51:54 EDT 2007
+```
+
+A related command is cal which, by default, displays a calendar of the current month.
+
+```
+[me@linuxbox ~]$ cal
+    October 2007
+Su Mo Tu We Th Fr Sa
+      1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+```
+
+To see the current amount of free space on your disk drives, type df:
+
+```
+[me@linuxbox ~]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda2      15115452  5012392   9949716  34% /
+/dev/sda5       59631908 26545424  30008432  47% /home
+/dev/sda1        147764    17370    122765  13% /boot
+tmpfs            256856        0    256856   0% /dev/shm
+```

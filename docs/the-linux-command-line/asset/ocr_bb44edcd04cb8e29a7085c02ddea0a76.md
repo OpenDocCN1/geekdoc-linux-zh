@@ -1,0 +1,28 @@
+```
++---------------------------+
+| Fedora      5   2006-03-20 |
+| Fedora      6   2006-10-24 |
+| Fedora      7   2007-05-31 |
+| Fedora      8   2007-11-08 |
+| Fedora      9   2008-05-13 |
+| Fedora     10   2008-11-25 |
+| SUSE      10.1  2006-05-11 |
+| SUSE      10.2  2006-12-07 |
+| SUSE      10.3  2007-10-04 |
+| SUSE      11.0  2008-06-19 |
+| Ubuntu     6.06  2006-06-01 |
+| Ubuntu     6.10  2006-10-26 |
+| Ubuntu     7.04  2007-04-19 |
+| Ubuntu     7.10  2007-10-18 |
+| Ubuntu     8.04  2008-04-24 |
+| Ubuntu     8.10  2008-10-30 |
++---------------------------+
+```
+
+Adding the -t option to groff instructs it to pre-process the text stream with tbl. Likewise, the -T option is used to output to ASCII rather than the default output medium, PostScript.
+
+The format of the output is the best we can expect if we are limited to the capabilities of a terminal screen or typewriter-style printer. If we specify PostScript output and graphically view the resulting output, we get a much more satisfying result:
+
+```
+[me@linuxbox ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-tbl .sed | groff -t > ~/Desktop/foo.ps
+```

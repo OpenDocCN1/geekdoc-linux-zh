@@ -1,0 +1,42 @@
+
+$
+S^HSY^HYN^HNO^HOP^HPS^HSI^HIS^HS$
+1^H1s^HS [_^HO_^HP_^HT_^HI_^HO_^HN]... [_^HF_^HI_^HL_^HE]...$
+
+The ^H (Control-h) characters are the backspaces used to create the boldface effect. Likewise, we can also see a backspace/underscore sequence used to produce underlining.
+
+## Graphical Printers
+
+The development of GUIs led to major changes in printer technology. As computers moved to more picture-based displays, printing moved from character-based to graphical techniques. This was facilitated by the advent of the low-cost laser printer which, instead of printing fixed characters, could print tiny dots anywhere in the printable area of the page. This made printing proportional fonts (like those used by typesetters), and even photographs and high quality diagrams, possible.
+
+However, moving from a character-based scheme to a graphical scheme presented a formidable technical challenge. Here’s why: the number of bytes needed to fill a page using a character-based printer can be calculated this way (assuming sixty lines per page each containing eighty characters):
+
+60 X 80 = 4800 bytes
+
+In comparison, a three hundred dot per inch (DPI) laser printer (assuming an eight by ten inch print area per page) requires:
+
+(8 X 300) X (10 X 300) / 8 = 900000 bytes
+
+Many of the slow PC networks simply could not handle the nearly one megabyte of data required to print a full page on a laser printer, so it was clear that a clever invention was needed.
+
+That invention turned out to be the page description language (PDL). A page description language is a programming language that describes the contents of a page. Basically it says, “go to this position, draw the character ‘a’ in ten point Helvetica, go to this position...” until everything on the page is described. The first major PDL was PostScript from Adobe Systems, which is still in wide use today. The PostScript language is a complete programming language tailored for typography and other kinds of graphics and imaging. It includes built-in support for thirty-five standard, high-quality fonts, plus the ability to accept additional font definitions at run time. At first, support for PostScript was built into the printers themselves. This solved the data transmission problem. While the typical PostScript program was very verbose in comparison to the simple byte stream of character-based printers, it was much smaller than the number of bytes required to represent the entire printed page.
+
+A PostScript printer accepted a PostScript program as input. The printer contained its own processor and memory (oftentimes making the printer a more powerful computer than the computer to which it was attached) and executed a special program called a *PostScript interpreter*, which read the incoming PostScript program and *rendered* the results into the printer’s internal memory, thus forming the pattern of bits (dots) that would be transferred to the paper. The generic name for this process of rendering something into a large bit pattern (called a *bitmap*) is *raster image processor* or RIP.
+
+As the years went by, both computers and networks became much faster. This allowed the RIP to move from the printer to the host computer, which, in turn, permitted high quality printers to be much less expensive.
+
+Many printers today still accept character-based streams, but many low-cost printers do not. They rely on the host computer’s RIP to provide a stream of bits to print as dots. There are still some PostScript printers, too.
+
+## Printing With Linux
+
+Modern Linux systems employ two software suites to perform and manage printing. The first, CUPS (Common Unix Printing System) provides print drivers and print job management, and the second, Ghostscript, a PostScript interpreter, acts as a RIP.
+
+CUPS manages printers by creating and maintaining print queues. As we discussed in our history lesson above, Unix printing was originally designed to manage a centralized printer shared by multiple users. Since printers are slow by nature, compared to the computers that are feeding them, printing systems need a way to schedule multiple print jobs and keep things organized. CUPS also has the ability to recognize different types of data (within reason) and can convert files to a printable form.
+
+## Preparing Files For Printing
+
+As command line users, we are mostly interested in printing text, though it is certainly possible to print other data formats as well.
+
+## pr — Convert Text Files For Printing
+
+We looked at pr a little in the previous chapter. Now we will examine some of its many options used in conjunction with printing. In our history of printing, we saw how character-based printers use monospaced fonts, resulting in fixed numbers of characters per line and lines per page. pr is used to adjust text to fit on a specific page size, with optional page headers and margins. Here is a summary of its most commonly used options:

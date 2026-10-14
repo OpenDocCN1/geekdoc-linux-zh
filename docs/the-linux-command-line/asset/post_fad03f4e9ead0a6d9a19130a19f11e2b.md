@@ -1,0 +1,70 @@
+
+|  |  |
+|---|---|
+|  | only signs negative numbers. |
+| *width* | A number specifying the minimum field width. |
+| *.precision* | For floating point numbers, specify the number of digits of precision to be output after the decimal point. For string conversion, *precision* specifies the number of characters to output. |
+
+Here are some examples of different formats in action:
+
+Table 22-6: print Conversion Specification Examples
+
+| Argument | Format | Result | Notes |
+|---|---|---|---|
+| 380 | "%d" | 380 | Simple formatting of an integer. |
+| 380 | "%#x" | 0x17c | Integer formatted as a hexadecimal number using the "alternate format" flag. |
+| 380 | "%05d" | 00380 | Integer formatted with leading zeros (padding) and a minimum field width of five characters. |
+| 380 | "%05.5f" | 380.00000 | Number formatted as a floating point number with padding and five decimal places of precision. Since the specified minimum field width (5) is less than the actual width of the formatted number, the padding has no effect. |
+| 380 | "%010.5f" | 0380.00000 | By increasing the minimum field width to 10 the padding is now visible. |
+| 380 | "%+d" | +380 | The + flag signs a positive number. |
+| 380 | "%-d" | 380 | The - flag left aligns the formatting. |
+| abcdefghijk | "5s" | abcdefghijk | A string formatted with a minimum field width. |
+| abcdefghijk | ".5s" | abcde | By applying precision to a string, it is truncated. |
+
+Again, printf is used mostly in scripts where it is employed to format tabular data, rather than on the command line directly. But we can still show how it can be used to solve various formatting problems. First, let’s output some fields separated by tab characters:
+
+```
+[me@linuxbox ~]$ printf "%s\t%s\t%s\n" str1 str2 str3
+str1  str2  str3
+```
+
+By inserting \t (the escape sequence for a tab), we achieve the desired effect. Next, some numbers with neat formatting:
+
+```
+[me@linuxbox ~]$ printf "Line: %05d %15.3f Result: %+15d\n" 1071 3.14156295 32589
+Line: 01071        3.142 Result:           +32589
+```
+
+This shows the effect of minimum field width on the spacing of the fields. Or how about formatting a tiny web page:
+
+```
+[me@linuxbox ~]$ printf "<html>\n\t<head>\n\t\t<title>%s</title>\n\t</head>\n\t<body>\n\t\t<p>%s</p>\n\t</body>\n</html>\n" "Page Title" "Page Content"
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <p>Page Content</p>
+    </body>
+</html>
+```
+
+## Document Formatting Systems
+
+So far, we have examined the simple text formatting tools. These are good for small,
+
+simple tasks, but what about larger jobs? One of the reasons that Unix became a popular operating system among technical and scientific users (aside from providing a powerful multitasking, multiuser environment for all kinds of software development) is that it offered tools that could be used to produce many types of documents, particularly scientific and academic publications. In fact, as the GNU documentation describes, document preparation was instrumental to the development of Unix:
+
+> The first version of UNIX was developed on a PDP-7 which was sitting around Bell Labs. In 1971 the developers wanted to get a PDP-11 for further work on the operating system. In order to justify the cost for this system, they proposed that they would implement a document formatting system for the AT&T patents division. This first formatting program was a reimplementation of McIlroy’s ‘roff’, written by J. F. Ossanna.
+
+There are two main families of document formatters that dominate the field: those descended from the original roff program including nroff and troff, and those based on Donald Knuth’s TeX (pronounced “tek”) typesetting system. And yes, the dropped “E” in the middle is part of its name.
+
+The name “roff” is derived from the term “run off” as in, “I’ll run off a copy for you.” The nroff program is used to format documents for output to devices that use monospaced fonts, such as character terminals and typewriter-style printers. At the time of its introduction, this included nearly all printing devices attached to computers. The later troff program formats documents for output on typesetters, devices used to produce “camera-ready” type for commercial printing. Most computer printers today are able to simulate the output of typesetters. The roff family also includes some other programs that are used to prepare portions of documents. These include eqn (for mathematical equations) and tbl (for tables).
+
+The TeX system (in stable form) first appeared in 1989 and has, to some degree, displaced troff as the tool of choice for typesetter output. We won’t be covering TeX here, due both to its complexity (there are entire books about it) and to the fact that it is not installed by default on most modern Linux systems.
+
+Tip: For those interested in installing TeX, check out the texlive package which can be found in most distribution repositories, and the LyX graphical content editor.
+
+## groff
+
+groff is suite of programs containing the GNU implementation of troff. It also includes a script that is used to emulate nroff and the rest of the roff family as well.

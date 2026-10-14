@@ -1,0 +1,7 @@
++   - http://docs.freebsd.org/44doc/usd/20.meref/paper.pdf
++   - *Tbl – A Program To Format Tables:*
++     http://plan9.bell-labs.com/10thEdMan/tbl.pdf
++   - And, of course, try the following articles at Wikipedia:
++     http://en.wikipedia.org/wiki/TeX
++     http://en.wikipedia.org/wiki/Donald_Knuth
++     http://en.wikipedia.org/wiki/Typesetting

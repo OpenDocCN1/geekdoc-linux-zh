@@ -1,0 +1,38 @@
+```
+polkituser:x:110:122:PolicyKit,,,:/var/run/PolicyKit:/bin/false
+pulse:x:107:116:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+```
+
+By specifying the colon character as the field separator, we can sort on the seventh field.
+
+# uniq
+
+Compared to sort, the uniq program is a lightweight. uniq performs a seemingly trivial task. When given a sorted file (including standard input), it removes any duplicate lines and sends the results to standard output. It is often used in conjunction with sort to clean the output of duplicates.
+
+> Tip: While uniq is a traditional Unix tool often used with sort, the GNU version of sort supports a -u option, which removes duplicates from the sorted output.
+
+Let's make a text file to try this out:
+
+```
+[me@linuxbox ~]$ cat > foo.txt
+a
+b
+c
+a
+b
+c
+```
+
+Remember to type Ctrl-d to terminate standard input. Now, if we run uniq on our text file:
+
+```
+[me@linuxbox ~]$ uniq foo.txt
+a
+b
+c
+a
+b
+c
+```
+
+the results are no different from our original file; the duplicates were not removed. For uniq to actually do its job, the input must be sorted first:

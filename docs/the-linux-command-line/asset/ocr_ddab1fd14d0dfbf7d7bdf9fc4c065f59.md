@@ -1,0 +1,34 @@
+In most cases, you can think of cat as being analogous to the TYPE command in DOS. You can use it to display files without paging, for example:
+
+```
+[me@linuxbox ~]$ cat ls-output.txt
+```
+
+will display the contents of the file ls-output.txt. cat is often used to display short text files. Since cat can accept more than one file as an argument, it can also be used to join files together. Say we have downloaded a large file that has been split into multiple parts (multimedia files are often split this way on USENET), and we want to join them back together. If the files were named:
+
+movie.mpeg.001  movie.mpeg.002 ... movie.mpeg.099
+
+we could join them back together with this command:
+
+```
+cat movie.mpeg.0* > movie.mpeg
+```
+
+Since wildcards always expand in sorted order, the arguments will be arranged in the correct order.
+
+This is all well and good, but what does this have to do with standard input? Nothing yet, but let's try something else. What happens if we type “cat” with no arguments:
+
+```
+[me@linuxbox ~]$ cat
+```
+
+Nothing happens, it just sits there like it's hung. It may seem that way, but it's really doing exactly what it's supposed to.
+
+If cat is not given any arguments, it reads from standard input and since standard input is, by default, attached to the keyboard, it's waiting for us to type something! Try this:
+
+```
+[me@linuxbox ~]$ cat
+The quick brown fox jumped over the lazy dog.
+```
+
+Next, type a Ctrl-d (i.e., hold down the Ctrl key and press “d”) to tell cat that it has reached end of file (EOF) on standard input:

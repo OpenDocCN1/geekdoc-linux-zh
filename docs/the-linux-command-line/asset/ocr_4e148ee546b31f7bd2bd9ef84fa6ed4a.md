@@ -1,0 +1,41 @@
+```
+if [ $number = 1 ]; then
+    echo "Number is equal to 1."
+else
+    echo "Number is not equal to 1."
+fi
+```
+
+When executed, the results look like this:
+
+```
+[me@linuxbox ~]$ trouble
++ number=1
++ '[' 1 = 1 ']'
++ echo 'Number is equal to 1.'
+Number is equal to 1.
+```
+
+With tracing enabled, we see the commands performed with expansions applied. The leading plus signs indicate the display of the trace to distinguish them from lines of regular output. The plus sign is the default character for trace output. It is contained in the PS4 (prompt string 4) shell variable. The contents of this variable can be adjusted to make the prompt more useful. Here, we modify the contents of the variable to include the current line number in the script where the trace is performed. Note that single quotes are required to prevent expansion until the prompt is actually used:
+
+```
+[me@linuxbox ~]$ export PS4='$LINENO + '
+[me@linuxbox ~]$ trouble
+5 + number=1
+7 + '[' 1 = 1 ']'
+8 + echo 'Number is equal to 1.'
+Number is equal to 1.
+```
+
+To perform a trace on a selected portion of a script, rather than the entire script, we can use the set command with the -x option:
+
+```
+#!/bin/bash
+
+# trouble: script to demonstrate common errors
+
+number=1
+
+set -x # Turn on tracing
+if [ $number = 1 ]; then
+```

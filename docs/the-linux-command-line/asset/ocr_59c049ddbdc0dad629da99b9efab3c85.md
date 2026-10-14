@@ -1,0 +1,31 @@
+# 37 – Exotica
+
+In this, the final chapter of our journey, we will look at some odds and ends. While we have certainly covered a lot of ground in the previous chapters, there are many bash features that we have not covered. Most are fairly obscure, and useful mainly to those integrating bash into a Linux distribution. However, there are a few that, while not in common use, are helpful for certain programming problems. We will cover them here.
+
+# Group Commands And Subshells
+
+bash allows commands to be grouped together. This can be done in one of two ways; either with a group command or with a subshell. Here are examples of the syntax of each:
+
+Group Command:
+
+```
+{ command1; command2; [command3; ...] }
+```
+
+Subshell:
+
+```
+(command1; command2; [command3; ...])
+```
+
+The two forms differ in that a group command surrounds its commands with braces and a subshell uses parentheses. It is important to note that, due to the way bash implements group commands, the braces must be separated from the commands by a space and the last command must be terminated with either a semicolon or a newline prior to the closing brace.
+
+So what are group commands and subshells good for? While they have an important difference (which we will get to in a moment), they are both used to manage redirection. Let's consider a script segment that performs redirections on multiple commands:
+
+```
+ls -l > output.txt
+echo "Listing of foo.txt" >> output.txt
+cat foo.txt >> output.txt
+```
+
+This is pretty straightforward. Three commands with their output redirected to a file

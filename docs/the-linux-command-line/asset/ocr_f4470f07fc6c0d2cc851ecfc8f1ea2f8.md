@@ -1,0 +1,36 @@
+program. We’ll do this by placing the program in the background. Think of the terminal as having a foreground (with stuff visible on the surface like the shell prompt) and a background (with hidden stuff behind the surface.) To launch a program so that it is immediately placed in the background, we follow the command with an- “&” character:
+
+```
+[me@linuxbox ~]$ xlogo &
+[1] 28236
+[me@linuxbox ~]$
+```
+
+After entering the command, the xlogo window appeared and the shell prompt returned, but some funny numbers were printed too. This message is part of a shell feature called job control. With this message, the shell is telling us that we have started job number 1 (“[1]”) and that it has PID 28236. If we run ps, we can see our process:
+
+```
+[me@linuxbox ~]$ ps
+  PID TTY      TIME CMD
+10603 pts/1    00:00:00 bash
+28236 pts/1    00:00:00 xlogo
+28239 pts/1    00:00:00 ps
+```
+
+The shell’s job control facility also gives us a way to list the jobs that are have been launched from our terminal. Using the jobs command, we can see this list:
+
+```
+[me@linuxbox ~]$ jobs
+[1]+ Running                 xlogo &
+```
+
+The results show that we have one job, numbered “1”, that it is running, and that the command was xlogo &.
+
+# Returning A Process To The Foreground
+
+A process in the background is immune from keyboard input, including any attempt interrupt it with a Ctrl-c. To return a process to the foreground, use the fg command, this way:
+
+```
+[me@linuxbox ~]$ jobs
+[1]+ Running                 xlogo &
+[me@linuxbox ~]$ fg %1
+```

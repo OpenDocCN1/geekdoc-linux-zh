@@ -1,0 +1,37 @@
+```
+man
+lp
+mail
+news
+```
+
+Using the -d option, we are able to specify the colon character as the field delimiter.
+
+# paste
+
+The paste command does the opposite of cut. Rather than extracting a column of text from a file, it adds one or more columns of text to a file. It does this by reading multiple files and combining the fields found in each file into a single stream on standard output. Like cut, paste accepts multiple file arguments and/or standard input. To demonstrate how paste operates, we will perform some surgery on our distros.txt file to produce a chronological list of releases.
+
+From our earlier work with sort, we will first produce a list of distros sorted by date and store the result in a file called distros-by-date.txt:
+
+```
+[me@linuxbox ~]$ sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt > distros-by-date.txt
+```
+
+Next, we will use cut to extract the first two fields from the file (the distro name and version), and store that result in a file named distro-versions.txt:
+
+```
+[me@linuxbox ~]$ cut -f 1,2 distros-by-date.txt > distros-versions.txt
+[me@linuxbox ~]$ head distros-versions.txt
+Fedora      10
+Ubuntu      8.10
+SUSE        11.0
+Fedora      9
+Ubuntu      8.04
+Fedora      8
+Ubuntu      7.10
+SUSE        10.3
+Fedora      7
+Ubuntu      7.04
+```
+
+The final piece of preparation is to extract the release dates and store them a file named distro-dates.txt:

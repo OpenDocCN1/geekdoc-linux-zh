@@ -1,0 +1,22 @@
+are not 0700. Fortunately, find provides a way to combine tests using logical operators to create more complex logical relationships. To express the aforementioned test, we could do this:
+
+```
+[me@linuxbox ~]$ find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
+```
+
+Yikes! That sure looks weird. What is all this stuff? Actually, the operators are not that complicated once you get to know them. Here is the list:
+
+# Table 18-4: find Logical Operators
+
+| Operator | Description |
+|---|---|
+| -and | Match if the tests on both sides of the operator are true. May be shortened to -a. Note that when no operator is present, -and is implied by default. |
+| -or | Match if a test on either side of the operator is true. May be shortened to -o. |
+| -not | Match if the test following the operator is false. May be abbreviated with an exclamation point (!). |
+| ( ) | Groups tests and operators together to form larger expressions. This is used to control the precedence of the logical evaluations. By default, find evaluates from left to right. It is often necessary to override the default evaluation order to obtain the desired result. Even if not needed, it is helpful sometimes to include the grouping characters to improve readability of the command. Note that since the parentheses characters have special meaning to the shell, they must be quoted when using them on the command line to allow them to be passed as arguments to find. Usually the backslash character is used to escape them. |
+
+With this list of operators in hand, let’s deconstruct our find command. When viewed from the uppermost level, we see that our tests are arranged as two groupings separated by an -or operator:
+
+```
+( expression 1 ) -or ( expression 2 )
+```

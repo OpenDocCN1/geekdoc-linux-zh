@@ -1,0 +1,30 @@
+# Signals
+
+The kill command is used to “kill” programs. This allows us to terminate programs that need killing. Here’s an example:
+
+```
+[me@linuxbox ~]$ xlogo &
+[1] 28401
+[me@linuxbox ~]$ kill 28401
+[1]+  Terminated              xlogo
+```
+
+We first launch xlogo in the background. The shell prints the jobspec and the PID of the background process. Next, we use the kill command and specify the PID of the process we want to terminate. We could have also specified the process using a jobspec (for example, “%1”) instead of a PID.
+
+While this is all very straightforward, there is more to it than that. The kill command doesn’t exactly “kill” programs, rather it sends them signals. Signals are one of several ways that the operating system communicates with programs. We have already seen signals in action with the use of Ctrl-c and Ctrl-z. When the terminal receives one of these keystrokes, it sends a signal to the program in the foreground. In the case of Ctrl-c, a signal called INT (Interrupt) is sent; with Ctrl-z, a signal called TSTP (Terminal Stop.) Programs, in turn, “listen” for signals and may act upon them as they are received. The fact that a program can listen and act upon signals allows a program to do things like save work in progress when it is sent a termination signal.
+
+# Sending Signals To Processes With kill
+
+The kill command is used to send signals to programs. Its most common syntax looks like this:
+
+```
+kill [-signal] PID...
+```
+
+If no signal is specified on the command line, then the TERM (Terminate) signal is sent by default. The kill command is most often used to send the following signals:
+
+Table 11-4: Common Signals
+
+| Number | Name | Meaning |
+|---|---|---|
+| 1 | HUP | Hangup. This is a vestige of the good old days when terminals were attached to remote |
