@@ -1,0 +1,183 @@
+
+# 索引 872
+
+- `mac_ip filters`, 837
+- `mac_keychaindump_plugin`, 847
+- `mac_lrdmodules`, 824
+- `mac_list_files_plugin`, 813–814, 843–844
+- `mac_list_sessions_plugin`, 819
+- `mac_list_zones_plugin`, 809–811
+- `mac_losf_plugin`, 818
+- `mac_mount_plugin`, 814–819
+- `mac_netstat_plugin`, 806–808
+- `mac_notifiers_plugin`, 833
+- `mac_proc_maps_plugin`, 801–802
+- `mac_psaux_plugin`, 818
+- `mac_pstree_plugin`, 798
+- `mac_psview_plugin`, 796–797, 829–830
+- `mac_recover_filesystem_plugin`, 814
+- `macros`, `list_del_init`, 772
+- `mac_route_plugin`, 819
+- `mac_strings_plugin`, 516
+- `Maxpreter`, 824
+- `mactime`, 690
+- `mactime_utility`, 541–542, 547
+- `mac_trustedbsd_plugin`, 834–835
+- `mac_vhell_plugin`, 850–852
+- `major function table`, 381
+- `MajorFunction`, 381
+- `MajorFunction array`, 383
+- `MajorFunction table`, 31
+- `malfindind`, 155, 258–261
+
+# N
+
+- `messagehooks`, 410, 456–459
+- 消息，Adium, 856–858
+- 元数据，提取, 684–685
+- 文件系统复制, 685–689
+- 时间线溯源 (`timelining`), 688–690
+- `MFT` (主文件表), 477–478
+- 数据提取, 487–492
+- 嵌入时间戳, 386–487
+- 条目，大小, 478
+- 文件快捷方式, 484–485
+- `mfartparser`, 479–482
+- 回收站 (Recycle Bin), 485–486
+- 扫描，缺点, 492–493
+- `timeimoping`, 492
+- `mfartparser`, 479–482, 544
+- `ADS` (备数据流), 482–484
+- 文件访问, 484–408
+- 微内核, 376–777
+- `Microsoft Hyper-V`, 105
+- `MITM` (中间人)攻击, 78
+- `mmap`, 618–620
+- `MMMC` (微软管理控制台)，Windows 服务, 347–348
+- `MmMGetSystemRoutineAddress`, 393
+- `MMR` (内存读取器), 780–783
+- `MM_SESSION_SPACE`, 411–416
+- `mm_struct`, 617
+- `MMU` (内存管理单元), 5
+- `moddump` 插件, 242, 372
+- `modplus` 插件, 368, 372
+- 暴力破解扫描, 374
+- 模块, 667–668, 722
+- `modules` 插件, 372, 373
+- `Moonsools Windows Memory Toolkit`, 82, 92–95
+- 主板板, 4
+- `mount` 命令, 609
+- 挂载文件系统, 676–679
+- `linux_mount` 插件, 677–679
+- 挂载选项, 679
+- 临时, 680–681
+- `mount_hashtable`, 676–677
+- 鼠标移动流线化, 444–447
+- `mpro_check_get_task` 策略钩子, 834–835
+- `MRXcls` 服务, 355
+- `MRxNet` 服务, 355
+- `MSDN` (微软开发者网络), 351
+- 变异对象 (Mutant object), 118
+- `mutantsc` 插件, 130
+- 互锁 (`mutexes`), 434–435
+- 命名共享内存, 519
+- 命名规范, 65
+- 网络接口, 648
+- `Native API`, 内核模块及, 372
+- 邻居, 653–654
+- `high. tables` 全局变量, 654
+- `netnet` 命令, 551
+- `Netfilter`, 内核模式 rootkit, 745–748
+- `netscan` 插件, 328–329
+- `netstat` 命令, 609, 640
+- `netstatve`, 下一代 TCP/IP 栈, 328
+- 网络产物, 492
+- `ARP` 缓存, 652–654
+- 连接, 309
+- 接口, 646–649
+- `Macintoshic`, 304–808
+- 网络连接, 640–643
+- 网络套接文件描述符, 637–640
+- 队列数据包, 643–646
+- 路由缓存, 650–652
+- 套接字 (`sockets`), 679
+- 创建, 309
+- 网卡，不稳定的, 313
+- 网络连接, 640
+- 分类, 807
+- 数据结构, 641
+- `TCP`, 641–643
+- `UDP`, 641–643
+- `Unix` 套接字, 643
+- 网络数据结构、时间线及, 561–567
+- 网络接口, 646–647
+- 别名, 648–649
+- 数据结构, 675
+- 列出信息, 648–649
+- 命名规范, 648
+- 原始套接字 (`raw sockets`), 629
+- 队列网络包, 643–646
+- 网络协议，内核模式 rootkit 及, 742–743
+- 钩子 (`hooks`), 744–745
+- 序列操作, 743–744
+- 网络套接字文件描述符, 637–640
+- 数据结构, 638
+- 下一代 TCP/IP 栈, 327–328
+- 位图图 (`bitmaps`), 322–333
+- `netscan` 插件, 328–329
+- 分区表, 330–332
+- 端口池, 333–332
+- `NextID`, 267
+- `Nirsoft`, 内核模块, 372
+- `NKES` (网络内核扩展), 477
+- `IP` 过滤器, 837
+- 套接字文件, 837–838
+- `stime` 挂载选项, 679
+- `nodev` 挂载选项, 679
+- `nodinate` 挂载选项, 679
+- `noexec` 挂载选项, 679
+- `norelate` 挂载选项, 679
+- `nosid` 挂载选项, 225–226
+- `Notepad` 中的文本, 224–225
+- 通知例程 (notification routines)
+- `totifier_block`, 736–739
+- `NSCreateObjectImage`, 824
+- `NSCreateObjectFromMemory`, 824
+- `NSCreateObjectFromMemory API`, 825
+- `NSLink`, 824
+- `NtAllocateVirtualMemory`, 192
+- `NtKeyValue`, 394
+- `NTFS` (新文件系统), 477
+- 元数据，TrueCrypt, 506–507
+- `NtLoadDriver`, 346, 354
+- 内核模块, 370
+- `NtQueryDirectoryFile`, 394
+- `NtQueryInformation`, 394
+- `NtSetSystemInformation`, 内核模块, 370–371
+- `NtLoadDriver` 函数, 391
+- `NumberObjects` 参数, 127
+- `NumberOfBuffers`, 529
+- `NumStrings`, 267
+- `_OBJECT_SYMBOL_LINK`, 118
+- `_OBJECT_TYPE`, 119
+- 一维数组, 30
+- 打开的文件句柄, 626–630
+- 文件名, 639
+- `OpenProcessToken`, 167
+- 操作系统, 3–4
+- 权限, 17–18
+- 保护环 (protection rings), 17–18
+- 系统调用, 18
+- 孤儿线程 (orphan threads), 379–380
+- `rootkits`, 380
+- `essession.ev` 日志, 269
+- `OSXPem`, 780–781, 784
+- `OTR` (Off-the-Record) 时消息, 845
+- 覆盖, 53–54
+- 覆盖代码, 699–607
+- 加壳二进制文件, 245–256
+- 64位 DLLs, 248–251
+- `ELF`, 595
+- 恶意软件, 246–248
+- 解壳问题, 248
+- 捕获数据，时间线及, 545–546

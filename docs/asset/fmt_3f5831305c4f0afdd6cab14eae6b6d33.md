@@ -1,0 +1,200 @@
+
+# 索引 868
+
+- rootkits, 723–826
+- 检测, 257
+- 反射的, 252, 257
+- 空进程, 258–261
+- SSDT, 394
+- InLoadOrderModuleList linked-list, 222
+- InMemoryOrderModuleList linked-list, 222
+- ipsecs_kbeast_v1, 723–724
+- IRP 函数表, 381
+- 设备树, 387
+- IRP_MJ_DEVICE_CONTROL, 383
+- IRP_MJ_WRITE 函数, 382–383
+- IRPs (I/O 请求包), 381
+- is_kernel_text, 663
+- ISR (中断服务例程), 16–17
+- 隐藏已登录用户, 751–752
+- 现场取证, 750–751
+- 隐藏内核模块, 772
+- 剥离, 725–726
+- 反汇编, 724–725
+- 文件句处理器, 726–727
+- KBeast, 723–724
+- 内核模式代码注入, 727–728
+- sysfs 文件系统, 223
+- 内联钩子, 752–754
+- 键盘通知, 735–736
+- 恶意, 725–736
+- Netfilter 钩子, 745–746
+- 网络协议结构, 742–743
+- 钩子, 744–745
+- 序列操作, 733–744
+
+## K
+
+- KAV (卡巴斯基病毒防护软件), 442–443
+- KBast, 723–724
+- dbgscan, 64
+- _KDEBUGGER_DATA, 64, 63–64
+- KernelUtilizer, 396
+- RegisterCheckCallback API, 396
+- RegisterCheckReasonCallback API, 396
+- 内核
+    - 回调, 396
+    - 检查, 396
+    - 调试消息, 396
+    - 文件系统注册, 396
+    - 镜像，加载, 396
+    - 恶意, 397–399
+    - PnP, 396
+    - 进程创建, 396
+    - 注册表修改, 396
+    - 系统关机, 396
+    - 线程创建, 396
+- 扩展, 815–818
+- 句柄，进程, 177–178
+- 标识分页, 607–608
+- 微内核, 776–777
+- Phalanx, 257–758
+- procf, 609
+- 内核内存
+    - ifacts
+    - 数据结构, 667–668
+    - 调试缓冲区, 663–667
+    - LKMs, 667–672
+    - 物理内存映射, 657–661
+    - 虚拟内存映射, 661–663
+- kmem 缓存, 611
+- task_struct, 611–613
+- 内核模式，访问, 721–722
+- 内核模式 rootkits, 721
+- 平均代码, 732–733
+- 文件操作, 748–749
+- suterus, 723
+- 系统调用调用，内联处理器, 734–735
+- TTY 处理器, 739–742
+- 内核模块, 367–369
+- 分类, 369–370
+- 反汇编, 724–725
+- EnumDeviceDrivers 函数, 771
+- 提取, 375–378, 670–672
+- 隐藏
+    - 剥离, 725–726
+    - 文件句处理器, 726–727
+    - KBeast, 723–724
+    - 内核模式代码注入, 727–728
+- sysfs 文件系统
+- 现场取证，列举, 371–372
+- 加载, 370–371
+
+# 索引 869
+
+- 内核线程, 380–388
+- WMI 和, 371–372
+- 内核，分配, 125–126
+- 内核根程序 (kernel rootkits)
+- 扩展, 228–829
+- IOKit 通知器, 832–834
+- IPC 句处理器, 835–836
+- LogText, 833–834
+- NKES (网络内核扩展), 836–838
+- 进程, 229–830
+- 影子系统调用表, 832
+- sysctl, 831–831
+- 系统调用表, 831–832
+- 内核陷阱钩子 (trap hooks kernel), 831–832
+- TrustedBSys 子系统, 833–834
+- 内核定时器, 399–400
+- 延迟过程调用 (deferred procedures calls), 400
+- 定时器对象, 403
+- 定时器插件, 400–401
+- 内核模式注入, 727–728
+- 环境变量, 626
+- KeServiceDescriptorTable, 393
+- kextstat, 828–832
+- 密钥对象, 119
+- 键盘通知器, 735–736
+- 恶意, 736–739
+- tty_struct, 740–742
+- 钥匙链恢复, 845–846
+- 破坏性更改, 846–848
+- chainbreaker, 846
+- volinfo, 846
+- 键 (注册表), 288–289
+- Shellbags, 297–304
+- Shimacque, 297–298
+- Userassist, 295–296
+- 击击服务函数, 444–447
+- KiSystemService 函数, 390–391
+- KLDR_DATA_TABLE_ENTRY, 367, 373, 379
+- KLOG, 388–389
+- kmem, 611, 750
+- kmod 全局, 816–818
+- kmod_info, 817, 829
+- _KMUT, 118
+- tentcrypt.exe 实用, 86–887
+- kTools, 82
+- _ko 文件, 667
+- object_del, 723
+- _KPROCESS 令牌侧向, 169–170
+- 启动代理 (Launch Agent), 842–844
+- 分层架构, 386–387
+- LD_PRELOAD, 715
+- 钩子函数, 712–713
+- 预载文件提取, 714
+- 预载变量, 714–715
+- _LDR_DATA_TABLE_ENTRY, 222–223, 237–238
+- ldrmules 插件, 237–238, 245, 261
+- LDR 寄存器, 99
+- 列出, 708
+- 搜索顺序, 827
+- shellcode 注入, 705–712
+- LiME (Linux 内存提取器), 580–582
+- lime_header, 581
+- lime 插件, 661
+- 线性地址, 7–8
+- 链表, 38
+- 双向链, 38–39
+- InitializationOrderModuleList, 222
+- LoadOrderModuleList, 222
+- InMemoryOrderModuleList, 222
+- 单向链, 37–38
+- 虚拟内存, 39
+- lmpstan 插件, 323–324
+- 地址翻译, 608–609
+- DTB, 608
+- 标识分页 (identity paging), 607–608
+- 分析，对比 Macintosh, 793–794
+- container_of_macro , 606–607
+- 哈希表, 605
+- 列表, 605–606
+- 树, 605
+- 文件系统, 678
+- `/dev/kem`, 578
+- `/dev/mem`, 578
+
+# 索引 870
+
+- fmem, 579–580
+- 历史方法, 577–578
+- LIME, 580–582
+- 现代, 579–583
+- `/kscore`, 583
+- pstrace, 578
+- 打开文件, 626–630
+- Volatility 配置文件, 583–589
+- 字符串，提取, 513–514
+- VFS (虚拟文件系统), 681–683
+- lux_iphooks_plugin, 719
+- lux_arp_plugin, 652–654
+- lux_bash_plugin, 631–633
+- lux_bash_hash_plugin, 744–745, 757–758
+- lux_check_afinto_plugin, 752–754
+- lux_check_op_plugin, 739–752
+- lux_check_inline_kernel_plugin
+- lux_check_kernel_inline_plugin, 734–735
+- lux_check_modules, 723–724
+- lux_check_syscall_plugin, 663, 734–735, 757–758
