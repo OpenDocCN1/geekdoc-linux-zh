@@ -1,0 +1,67 @@
+
+- Winbind 守护进程用于将 SUSE Linux 与 Active Directory 环境集成。Active Directory Kerberos 票证由 SUSE Linux 客户端上的 PAM 模块处理。
+- 你可以使用 `YaST` 配置 SUSE Linux 系统以使用 Active Directory。你还应确保系统使用 `NTP` 具有正确的时间，转发到 Active Directory `DNS` 服务器，并且没有活动的防火墙。然后你可以使用 `GDM`、`KDM` 或 `ssh` 命令登录到 Active Directory 域。
+- 你可以使用 `Samba` 与 Windows 计算机共享文件和打印机资源。`Samba` 使用 `smbd` 和 `nmbd` 守护进程以及 `/etc/samba/smb.conf` 文件中的条目来模拟 Windows 网络上使用的 SMB 和 NetBIOS 协议。
+- Windows 计算机上大多数共享资源都使用 NetBIOS 名称通过 UNC 访问。`nmblookup` 命令可用于测试 NetBIOS 名称解析。
+- `Nautilus` 可用于创建 `Samba` 共享以及访问网络上的 Windows 共享。你还可以使用 `mount` 和 `smbclient` 命令连接到 Windows 或 `Samba` 共享。
+- Novell 网络通常使用 `eDirectory` 服务通过 `LDAP` 提供集中身份验证和资源访问。`eDirectory` 用户帐户可以使用 `LUM` 或 Novell `iManager` 管理。你可以在 SUSE Linux 安装期间或使用 `YaST` 配置 `LUM`。Novell `iManager` 必须使用 Web 浏览器访问。
+- 要访问所有 `eDirectory` 服务，必须在 SUSE Linux 系统上配置 Novell Client for Linux。你可以使用 `YaST` 或使用自定义配置文件配置 Novell Client for Linux。
+- 你可以通过在图形桌面环境中单击 Novell Client 系统托盘应用程序来访问 Novell Client for Linux。
+- Novell `iFolder` 可用于在安装了 `iFolder` 客户端并创建了 `iFolder` 帐户的 Linux 和 Windows 系统之间共享文件。你可以轻松加密并控制对 `iFolder` 共享文件的访问。
+
+## Key Terms
+
+- `/etc/auto.master` Automounter 配置文件。
+- `/etc/fstab` 一个用于在系统初始化时自动挂载文件系统的文件。
+- `/etc/nsswitch.conf` 一个列出服务在 Linux 系统上访问信息所使用的方法的文件。
+- `/etc/opt/novell/ncl` 存储 Novell Client 配置文件的一个目录。
+- `/etc/samba/smb.conf` Samba 主配置文件。
+- `/etc/samba/smbfs tab` 一个包含 Samba 文件系统挂载选项的文件。
+- `/opt/novell/ifolder3/bin/ifolder` iFolder 客户端程序。
+- `/opt/novell/ncl/bin/ncl_tray` Novell Client 系统托盘应用程序。
+- `/usr/sbin/automount` SUSE Linux 中的 Automounter 程序。
+- `Active Directory (AD)` Windows 网络上使用的目录服务。
+- `attributes` LDAP 对象中包含的属性。
+- `autofs` SUSE Linux 中的 Automounter 软件包。
+- `autofs daemon` SUSE Linux 中的 Automounter 守护进程。
+- `Automounter` 一个自动将远程资源连接到本地目录的系统服务。
+- `container object` 用于组织叶对象的 LDAP 对象。
+- `directory` 包含有关资源（如用户帐户）的信息的数据库。
+- `Directory Information Tree (DIT)` LDAP 数据库的层次结构。
+- `directory service` 可用于查询目录获取信息的服务。
+- `distinguished name (DN)` LDAP 叶对象的完整路径名。
+- `Domain Name System (DNS)` 互联网上使用的命名系统。每个主机由主机名和域名标识。
+- `Dynamic Host Configuration Protocol (DHCP)` 用于在网络上向主机分配 TCP/IP 配置信息的协议。
+- `eDirectory` Novell 网络上使用的目录服务。
+- `entry` LDAP 对象的引用。
+- `firewall` 限制主机计算机上某些网络流量的服务。
+- `GNOME Display Manager (GDM)` GNOME 桌面环境使用的登录屏幕。
+- `iFolder` 参见 Novell iFolder。
+- `iFolder Client` 安装在 iFolder 客户端上的软件组件，可用于连接和管理共享文件。
+- `iManager` 参见 Novell iManager。
+- `insserv command` 用于在系统初始化时配置守护进程启动的命令。
+- `K Display Manager (KDM)` KDE 桌面环境使用的登录屏幕。
+- `Kerberos` UNIX、Linux 和 Windows 目录服务使用的安全身份验证协议。Kerberos 使用票证来识别已身份验证的计算机和服务。
+- `Key Distribution Center (KDC)` 用于签发 Kerberos 票证的计算机。
+- `Konqueror` KDE 桌面中使用的图形文件管理实用程序。
+- `leaf object` 表示网络资源的 LDAP 对象。
+- `Lightweight Directory Access Protocol (LDAP)` 用于提供中央身份验证并将信息分发到网络计算机的协议。
+- `Lightweight Directory Interchange Format (LDIF)` 用于创建、修改和查询 LDAP 数据库中对象的文件的格式。
+- `Linux User Management (LUM)` 一种管理套件，旨在管理 SUSE Linux 计算机上的本地和基于目录的用户帐户。
+- `Name Service Switch (NSS)` 提供 Linux 系统上名称服务信息的软件组件。
+- `Nautilus` SUSE Linux 中使用的默认图形文件管理实用程序。
+- `NetBIOS` 使用唯一的 15 字符计算机名来标识网络主机的 Windows 协议。
+- `NetWare Core Protocol (NCP)` Novell NetWare 系统在网络上使用的应用层协议。
+- `Network File System (NFS)` UNIX 和 Linux 系统使用的文件共享协议。
+- `Network Information Service (NIS)` 允许 Linux 和 UNIX 配置集中的服务。
+- `Network Time Protocol (NTP)` 用于从互联网上的时间服务器获取时间信息的协议。
+- `NFS client` 使用 NFS 协议访问 NFS 服务器上导出文件的计算机。
+- `NFS Lock Manager (NLM)` 提供 NFS 文件锁定的内核模块。
+- `NFS server` 使用 NFS 协议托管（导出）文件的计算机。
+- `nmbd` Samba 软件包中的 NetBIOS 守护进程。
+- `nmblookup command` 显示主机 NetBIOS 计算机名的命令。
+- `Novell Client for Linux` 可用于访问 Novell 网络服务的 SUSE Linux 软件组件。
+- `Novell iFolder` 可由 Windows 和 Linux 系统使用的安全文件共享系统。
+- `Novell iManager` 可用于管理目录用户帐户的基于 Web 的实用程序。
+- `Novell Modular Authentication Services (NMAS)` Novell 网络使用的安全分布式身份验证系统。
+- `novfs.ko` Novell Client for Linux 使用的内核模块。
