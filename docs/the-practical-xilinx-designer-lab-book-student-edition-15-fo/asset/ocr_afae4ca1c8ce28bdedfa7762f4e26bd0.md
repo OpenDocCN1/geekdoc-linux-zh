@@ -1,0 +1,9 @@
+# Figure 5.16 Displaying hierarchical signals in the 8-bit adder.
+
+from how your circuit was mapped into the FPLD chip. You can tell the Foundation Series Implementation tools to generate this information for either schematic or HDL mode projects by selecting the Implementation → Options... menu item in the Project Manager window. Then check the Produce Timing Simulation Data box in the Options window (see Figure 5.17). Then run the Foundation Implementation tool and it will extract the routing and gate delays as it maps the netlist into the FPLD.
+
+Once you have run the Foundation Implementation tools, you can click on the button in the Flow tab of the Project Manager window. This brings up the Logic Simulator window with the Timing mode selected. Other than that, you use the same steps to add signals and do simulations as you did for functional simulations.
+
+The resulting waveforms for the 8-bit ripple-carry adder are shown in Figure 5.18. In this case, we compiled the adder for an XC4000XL FPGA with a −3 speed rating. In the simulation, the CIN input transitions at the 80 ns mark. The COUT output transitions in response at 121 ns. Thus, the delay through the 8 adder bits (including gate, I/O buffer, and wiring delays) is 41 ns. The worst-case combinatoral delays through an XC4000XL-3 CLB range from 1.6 ns to 3.2 ns. That would make the total gate delay through the 8 CLBs of the carry chain between 12.8 ns and 25.6 ns. The remainder of the delay is buffer propagation time and wiring delays.
+
+All of our experiments have been done on ripple-carry adders. The ABEL and VHDL descriptions for a 4-bit carry-lookahead adder are shown in Listings 5.4 and 5.5, respectively. You should be able to see the correspondence between the

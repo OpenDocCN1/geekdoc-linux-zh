@@ -2191,6 +2191,7 @@
 +   [Ubuntu 服务器官方书（第2版）](docs/the-official-ubuntu-server-book-2nd-edition/README.md)
 +   [Ubuntu Server 官方指南](docs/the-official-ubuntu-server-book-with-dvd/README.md)
 +   [操作系统 Linux 与编程语言：导论](docs/the-operating-system-linux-and-programming-languages-an-intr/README.md)
++   [Xilinx 设计师实验室实践指南：学生版 1.5；适用于 Microsoft Windows](docs/the-practical-xilinx-designer-lab-book-student-edition-15-fo/README.md)
 +   [管理心理学：心智在确定、教授和实施最小浪费方法中的功能](docs/the-psychology-of-management-the-function-of-the-mind-in-det/README.md)
 +   [Python 教程：在 Linux 下开始 Python 编程所需的一切](docs/the-python-book---everything-you-need-to-start-coding-with-p/README.md)
 +   [Python 书：Python 编程终极指南](docs/the-python-book-the-ultimate-guide-to-coding-with-python/README.md)

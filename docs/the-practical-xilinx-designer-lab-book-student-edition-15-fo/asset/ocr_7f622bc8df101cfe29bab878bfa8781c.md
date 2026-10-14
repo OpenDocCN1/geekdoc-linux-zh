@@ -1,0 +1,15 @@
+Lines, W0–W3, are usually at logic 0. However, on line 38, if the input address equals 0 (A==0) and the write input is low (WEB), then the W0 line goes to logic 1. If the conditions for activating W0 are not met, but instead A==1 and the WEB==0, then the W1 line goes to logic 1 (Line 39). The logic to control the W2 and W3 write lines is similar and is described on lines 40 and 41. If none of the Boolean expressions evaluates to a logic 1, then none of the equations is activated and the write lines all stay at logic 0.
+
+Lines 45–48 attach the write control lines to the clock inputs of their respective registers. Note that the clock inputs are inverted so they are normally high except when the register is being written. Thus, a rising edge will occur on the clock inputs at the end of the write operation, causing the D flip-flops to be loaded with new values. This will clock the value on the input bus into the selected register. The memory is asynchronous since each of the registers receives its own individual clock, which is derived from the main write control input to the RAM.
+
+Lines 52–55 use the WHEN…THEN…ELSE construct to describe a multiplexer circuit. The multiplexer just examines the input address and gates the output of one of the registers onto the output bus. Line 58 attaches the OE output to the output enable control of the output data bus buffers. Thus, the buffers will be in a high impedance state if OE is low. The value of a memory location can only be read out when OE is at a logic 1.
+
+The output from the memory drives an LED decoder circuit described by the truth-table on lines 61–77.
+
+The VHDL version of the 4×4 memory is shown in Listing 8.2. The ENTITY block on lines 1–7 declares the interface to the memory. The following ARCHITECTURE declaration begins with a declaration of the four 4-bit signal arrays that will store the register contents (lines 21–24). This is followed by declarations for the write-enable controls for the registers (lines 26 and 27).
+
+The memory address decoder is described on lines 33 through 41. The write control line for a register is lowered if its address matches the address inputs and the main write-enable input is low. If the write-enable input is not low or none of the addresses matches, then the write control lines all remain at logic 1.
+
+Each write control line serves as a clock for one of the individual register processes on lines 43–48, 50–55, 57–62, or 64–69. In these processes, the value on the input data bus is written into the register on the rising edge of the write control signal.
+
+The output multiplexer on lines 71 through 74 uses the input address to select one of the registers and pass its contents onto the intermediate output bus, outbus. Then the value on the intermediate output bus is passed onto the main output bus if the output enable is high (line 75). If the output enable is low, then the output bus is placed in a high-impedance state.

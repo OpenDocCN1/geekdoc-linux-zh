@@ -1,0 +1,92 @@
+
+
+## 清单 7.4 饮料分配器控制器的 VHDL 代码。
+
+```
+044-
+045- SIGNAL inputs: STD_LOGIC_VECTOR (4 DOWNTO 0);-- vector of inputs
+046- SIGNAL outputs: STD_LOGIC_VECTOR (3 DOWNTO 0);-- vector of outputs
+047- -- definitions for different input vectors
+048- CONSTANT no_input: STD_LOGIC_VECTOR (0 TO 4) := "00000";
+049- CONSTANT insert_nickel: STD_LOGIC_VECTOR (0 TO 4) := "10000";
+050- CONSTANT insert_dime: STD_LOGIC_VECTOR (0 TO 4) := "01000";
+051- CONSTANT press_return: STD_LOGIC_VECTOR (0 TO 4) := "00100";
+052- CONSTANT press_swill: STD_LOGIC_VECTOR (0 TO 4) := "00010";
+053- CONSTANT press_krunk: STD_LOGIC_VECTOR (0 TO 4) := "00001";
+054- CONSTANT reset: STD_LOGIC_VECTOR (0 TO 4) := "11111";
+055-
+056- BEGIN
+057-
+058- -- collect all the individual inputs into a single input vector
+059- inputs <= (nickel,dime,coin_ret,swill,krunk); -- aggregate of inputs
+060- ret_nick <= outputs(3); -- connect the components of
+061- ret_dime <= outputs(2); -- the output vector to the
+062- disp_swill <= outputs(1); -- individual outputs
+063- disp_krunk <= outputs(0);
+064- cents0 <= drink_state(0); -- connect the components of
+065- cents5 <= drink_state(1); -- the state vector to the
+066- cents10 <= drink_state(2); -- individual state outputs
+067- cents15 <= drink_state(3);
+068- cents20 <= drink_state(4);
+069- cents25 <= drink_state(5);
+070-
+071- -- set the outputs according to the current drink machine state and inputs
+072- outputs <=
+073- -- current state = 0 cents
+074- "0000" WHEN ((drink_state=st_cents0) AND (inputs=insert_nickel)) ELSE
+075- "0000" WHEN ((drink_state=st_cents0) AND (inputs=insert_dime)) ELSE
+076- "0000" WHEN ((drink_state=st_cents0) AND (inputs=press_return)) ELSE
+077- "0000" WHEN ((drink_state=st_cents0) AND (inputs=press_swill)) ELSE
+078- "0000" WHEN ((drink_state=st_cents0) AND (inputs=press_krunk)) ELSE
+079- "0000" WHEN ((drink_state=st_cents0) AND (inputs=no_input)) ELSE
+080- -- current state = 5 cents
+081- "0000" WHEN ((drink_state=st_cents5) AND (inputs=insert_nickel)) ELSE
+082- "0000" WHEN ((drink_state=st_cents5) AND (inputs=insert_dime)) ELSE
+083- "1000" WHEN ((drink_state=st_cents5) AND (inputs=press_return)) ELSE
+084- "0000" WHEN ((drink_state=st_cents5) AND (inputs=press_swill)) ELSE
+085- "0000" WHEN ((drink_state=st_cents5) AND (inputs=press_krunk)) ELSE
+086- "0000" WHEN ((drink_state=st_cents5) AND (inputs=no_input)) ELSE
+087-        -- current state = 10 cents
+088- "0000" WHEN ((drink_state=st_cents10) AND (inputs=insert_nickel)) ELSE
+089- "0000" WHEN ((drink_state=st_cents10) AND (inputs=insert_dime)) ELSE
+090- "0100" WHEN ((drink_state=st_cents10) AND (inputs=press_return)) ELSE
+091- "0000" WHEN ((drink_state=st_cents10) AND (inputs=press_swill)) ELSE
+092- "0000" WHEN ((drink_state=st_cents10) AND (inputs=press_krunk)) ELSE
+093- "0000" WHEN ((drink_state=st_cents10) AND (inputs=no_input)) ELSE
+094-        -- current state = 15 cents
+095- "0000" WHEN ((drink_state=st_cents15) AND (inputs=insert_nickel)) ELSE
+096- "0000" WHEN ((drink_state=st_cents15) AND (inputs=insert_dime)) ELSE
+097- "0100" WHEN ((drink_state=st_cents15) AND (inputs=press_return)) ELSE
+098- "0000" WHEN ((drink_state=st_cents15) AND (inputs=press_swill)) ELSE
+099- "0000" WHEN ((drink_state=st_cents15) AND (inputs=press_krunk)) ELSE
+100- "0000" WHEN ((drink_state=st_cents15) AND (inputs=no_input)) ELSE
+101-        -- current state = 20 cents
+102- "0000" WHEN ((drink_state=st_cents20) AND (inputs=insert_nickel)) ELSE
+103- "1000" WHEN ((drink_state=st_cents20) AND (inputs=insert_dime)) ELSE
+104- "0100" WHEN ((drink_state=st_cents20) AND (inputs=press_return)) ELSE
+105- "0000" WHEN ((drink_state=st_cents20) AND (inputs=press_swill)) ELSE
+106- "0000" WHEN ((drink_state=st_cents20) AND (inputs=press_krunk)) ELSE
+107- "0000" WHEN ((drink_state=st_cents20) AND (inputs=no_input)) ELSE
+108-        -- current state = 25 cents
+109- "1000" WHEN ((drink_state=st_cents25) AND (inputs=insert_nickel)) ELSE
+110- "0100" WHEN ((drink_state=st_cents25) AND (inputs=insert_dime)) ELSE
+111- "0100" WHEN ((drink_state=st_cents25) AND (inputs=press_return)) ELSE
+112- "0010" WHEN ((drink_state=st_cents25) AND (inputs=press_swill)) ELSE
+113- "0001" WHEN ((drink_state=st_cents25) AND (inputs=press_krunk)) ELSE
+114- "0000" WHEN ((drink_state=st_cents25) AND (inputs=no_input)) ELSE
+115-        -- default output
+116- "0000";
+
+118- u0: IBUF PORT MAP(I=>c, O=>in_c);       -- buffer the clock
+119- u1: BUFG PORT MAP(I=>in_c, O=>buf_c);
+
+121- -- this process changes the drink machine state vector
+122- PROCESS (buf_c,nickel,dime,coin_ret,swill,krunk)
+123- BEGIN
+124- IF inputs=reset THEN       -- asynchronous reset
+125-   drink_state <= st_cents0;
+126-   -- otherwise, change the state on each rising clock edge
+127- ELSIF (buf_c'event AND buf_c='1') THEN
+128-   -- current state = 0 cents
+129-   IF ((drink_state=st_cents0) AND (inputs=insert_nickel)) THEN
+```

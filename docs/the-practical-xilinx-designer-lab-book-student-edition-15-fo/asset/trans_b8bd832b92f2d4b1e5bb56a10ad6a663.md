@@ -1,0 +1,99 @@
+
+
+044- buf g1: BUFG PORT MAP (I=>bufg_wrb,O=>bufg_wrb);
+045-
+046- -- assert reset signal when both the read and write inputs are low
+047- reset <= '1' WHEN (bufg_wrb='0' AND bufg_rdb='0') ELSE '0';
+048-
+049- -- next two processes describe the operation of the flags which
+050- -- store the type of the last FIFO operation.
+051- PROCESS (bufg_rdb,bufg_wrb)
+052- BEGIN
+053-   IF bufg_rdb='0' THEN
+054-     prevop0 <= '0'; -- clear flag on FIFO read operation
+055-   ELSIF (bufg_wrb'event AND bufg_wrb='0') THEN
+056-     prevop0 <= '1'; -- set flag on initiation of a FIFO write
+057-   END IF;
+058- END PROCESS;
+059-
+060- PROCESS (bufg_rdb,bufg_wrb,prevop0)
+061- BEGIN
+062-   -- local clock signal pulses for either a FIFO read or write
+063-   loc_clk <= bufg_wrb AND bufg_rdb;
+064-   IF reset='1' THEN
+065-     prevop1 <= '0';
+066-   -- prevop1 loaded with prevop0 at end of read or write operation
+067-   ELSIF (loc_clk'event AND loc_clk='1') THEN
+068-     prevop1 <= prevop0;
+069-   END IF;
+070- END PROCESS;
+071-
+072- rdeqwr <= '1' WHEN rdptr=wrptr ELSE '0';
+073- -- the FIFO is empty if the read and write pointers are equal and
+074- -- the last FIFO operation was a read (prevop1=0).
+075- empty <= rdeqwr AND NOT(prevop1);
+076- -- the FIFO is full if the read and write pointers are equal and
+077- -- the last FIFO operation was a write (prevop1=1).
+078- full <= rdeqwr AND prevop1;
+079-
+080- PROCESS (bufg_rdb,reset) -- inc read pointer process
+081- BEGIN
+082-   IF reset='1' THEN   -- async reset of read pointer to start of RAM
+083-     rdptr <= "0000";
+084-   ELSIF (bufg_rdb'event AND bufg_rdb='1') THEN
+085-   -- inc read ptr at end of read operation only if FIFO is not empty
+086-  IF empty='0' THEN
+087-      rdptr <= rdptr + 1;
+088-  END IF;
+089- END IF;
+090- END PROCESS;
+091-
+092- PROCESS (bufg_wrb,reset) -- inc write pointer process
+093- BEGIN
+094-  IF reset='1' THEN       -- async reset of write pointer to start of RAM
+095-      wrptr <= "0000";
+096-  ELSIF (bufg_wrb'event AND bufg_wrb='1') THEN
+097-      -- inc write ptr at end of write operation only if FIFO is not full
+098-      IF full='0' THEN
+099-          wrptr <= wrptr + 1;
+100-      END IF;
+101-  END IF;
+102- END PROCESS;
+103-
+104- csb <= '0'; -- keep the chip-select low so the RAM is always enabled
+105- -- address(14 DOWNTO 4) <= "000000000"; -- upper address bits forced to 0
+106- -- addr: lower bits driven by FIFO address, else by wrptr
+107- address(3 DOWNTO 0) <= rdptr WHEN bufg_rdb='0' ELSE wrptr;
+108- -- data on the bus is RAM output when a read operation,
+109- -- Otherwise, the drivers are disabled.
+110- data(3 DOWNTO 0) <= inp  WHEN bufg_wrb='0' ELSE "ZZZZ";
+111- data(7 DOWNTO 4) <= "0000" WHEN bufg_wrb='0' ELSE "ZZZZ";
+112- -- RAM write-enable follows the FIFO output only if FIFO is not full
+113- web <= bufg_wrb WHEN NOT(full) ELSE '1';
+114- -- enable RAM data bus drivers during a FIFO read
+115- oeb <= bufg_rdb;
+116- -- FIFO output is driven by the lower four bits of the RAM data bus
+117- outp <= data(3 DOWNTO 0);
+118-
+119- u0: leddcd PORT MAP(d=>data(3 DOWNTO 0),s=>s); -- show output on LED
+120-
+121- END fifo_arch;
+
+## Listing 8.7 (Cont’d.)
+
+the RAM. The 4-bit read and write pointers will give us a total FIFO size of 16 registers. The prevop and prevpl flag flip-flops for storing the type of the last FIFO operation are declared. Then the various clock signals and buffers which drive the read/write pointers and the flags are declared.
+
+The description of the circuitry begins on line 41–44 by connecting the read and write inputs to low-skew buffers (this is only necessary when targeting the XC4005XL FPGA). The internal reset signal is generated when the FIFO read and write inputs are both low (line 47).
+
+The two processes on lines 51–58 and 60–70 describe the circuitry shown in Figure 8.17 that records the type of the last FIFO operation. Lines 72–78 use the values in the flag flip-flops to generate the FIFO full and empty status signals. The processes on lines 80–90 and 92–102 describe the read and write pointers, respectively. The VHDL code replicates the functions shown in Figure 8.16. For example, the read-pointer is incremented whenever a read operation occurs as long as the FIFO is not empty. The use of the addition operator (+) provided by the std_logic_unsigned package lets us describe this behavior very concisely.
+
+The description of the interface circuitry between the FPLD and the external RAM follows. The external RAM is enabled by holding its chip select line low as shown on line 104. Since we are only using 16 locations of the external RAM for our FIFO, the upper 11 bits of the RAM address bus are held at logic 0 on line 105. Line 107 describes a 4-bit multiplexer that connects the read-pointer to the lower 4 bits of the RAM address bus when the FIFO is being read. At all other times, the write-pointer drives the lower part of the RAM address.
+
+Lines 110–111 setup the data bus to the external RAM. The 4-bit input bus to the FIFO drives the lower 4 bits of the RAM data bus and the upper 4 bits are held at logic 0 during a FIFO write operation. This lets the FPLD drive new data into the data bus of the RAM. Also, the RAM write control line is pulsed low as long as the FIFO is not full (line 113). The flow of data is depicted in Figure 8.24a.
+
+When data is being read from the FIFO, line 115 lowers the output enable of the external RAM so that the RAM data bus drivers are activated. This lets the RAM drive a data value into the FPLD as shown in Figure 8.24b. To prevent interfering with the data coming from the RAM, the FPLD pin drivers are tristated (lines 110 and 111 with the write control input at logic 1). Line 117 passes the data coming from the RAM to the outputs of the FIFO. This lets the FIFO output bus drive whatever circuitry is requesting a read of the FIFO.
+
+Finally, line 119 instantiates an LED decoder module and connects it to the FIFO output bus so we can see what value is coming out of the FIFO.
+
+The VHDL in Listing 8.7 is targeted at an XC4005XL FPGA, but it can also be used with an XC95108 CPLD by removing the clock buffers on the read and write control inputs. The constraint files used for the ABEL version can also be used with the VHDL version, but all the bus indices have to be surrounded with "<" and ">" (e.g., address4 should be changed to address<4> in the VHDL constraint file).
+

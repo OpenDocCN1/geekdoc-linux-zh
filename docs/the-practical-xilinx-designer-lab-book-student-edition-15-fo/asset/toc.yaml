@@ -1,0 +1,888 @@
+- - '#'
+  - Xilinx 设计师实验室实践指南：学生版 1.5；适用于 Microsoft Windows
+- - '##'
+  - Trademarks
+- - '###'
+  - 引言
+- - '###'
+  - 触发器
+- - '###'
+  - 状态机设计
+- - '###'
+  - 存储器
+- - '###'
+  - GNOME微型计算机
+- - '###'
+  - DWARF微型计算机
+- - '###'
+  - 附录A
+- - '###'
+  - 附录B
+- - '####'
+  - 图 1.1
+- - '###'
+  - 实验
+- - '####'
+  - 构建一个晶体管-晶体管逻辑电路
+- - '###'
+  - 规格说明
+- - '####'
+  - 图 1.2
+- - '####'
+  - 图 1.3
+- - '###'
+  - 输入与输出
+- - '###'
+  - 真值表
+- - '###'
+  - 布尔方程
+- - '####'
+  - 图 1.5 各城市之间最快的路线。
+- - '####'
+  - 表 1.1 Trip-Genie 逻辑的真值表。
+- - '###'
+  - 门级设计
+- - '####'
+  - 图 1.6 (a) NOT、(b) AND、(c) OR、(d) NAND 和 (e) NOR 布尔运算的逻辑门原理图符号。
+- - '####'
+  - (a)
+- - '####'
+  - (b)
+- - '####'
+  - (c)
+- - '####'
+  - 图 1.7 Trip Genie 逻辑中 Hwy3 输出的门级原理图的构建过程。
+- - '####'
+  - 图 1.9 一些常见的 TTL 集成电路：(a) 四路 2 输入 NAND 芯片（74LS00）；(b) 四路 2 输入 NOR 芯片（74LS02）；(c)
+    六路反相器芯片（74LS04）。
+- - '####'
+  - '图 1.8 计算高速公路 #3 是否在路线中的 AND-OR-NOT 逻辑原理图。'
+- - '####'
+  - 图 1.10 DeMorgan 定理。
+- - '####'
+  - 图 1.11 将图 1.8 中的与-或-非逻辑转换为与非-或非-非逻辑。
+- - '###'
+  - 构建电路
+- - '###'
+  - 调试电路
+- - '###'
+  - 项目
+- - '###'
+  - 可编程逻辑设计技术
+- - '####'
+  - 目标
+- - '####'
+  - 讨论
+- - '####'
+  - 计算机辅助设计和可编程逻辑的优点
+- - '###'
+  - Programmable Logic Architecture
+- - '####'
+  - Figure 2.2 A PLA.
+- - '####'
+  - Discussion
+- - '####'
+  - Figure 2.5 Internal organization of the XC95108 CPLD.
+- - '####'
+  - Figure 2.8 A generic FPGA architecture.
+- - '###'
+  - Experimental
+- - '###'
+  - The Programmable Logic Design Flow
+- - '###'
+  - Trip-Genie 项目设计（原理图模式）
+- - '###'
+  - 开始新项目
+- - '####'
+  - 图 2.10 Foundation Series 1.5 Project Manager 主窗口。
+- - '###'
+  - 使用 ABEL 硬件描述语言输入设计
+- - '####'
+  - 图 2.13 已填入 Trip-Genie ABEL 代码框架的 HDL 编辑器窗口。
+- - '####'
+  - 图 2.14 将 TRIPGENI.ABL 文件添加到 TRIPG_95 项目后的 Project Manager 窗口。
+- - '###'
+  - 使用原理图编辑器输入设计
+- - '####'
+  - 图 2.17 在原理图编辑器窗口中连接门。
+- - '####'
+  - 图 2.18 完成的原理图。
+- - '###'
+  - 设计的功能仿真
+- - '###'
+  - 编译逻辑设计的准备工作
+- - '###'
+  - 编译逻辑设计
+- - '####'
+  - 图 2.28 实现窗口。
+- - '####'
+  - 图 2.30 此 Flow Engine 窗口显示将网表映射到 XC9500 CPLD 的处理步骤。
+- - '###'
+  - 执行时序仿真
+- - '###'
+  - 为下载到 XS95 准备比特流
+- - '####'
+  - 图 2.31 此 Flow Engine 窗口显示将网表映射到 XC4000XL CPLD 的处理步骤。
+- - '####'
+  - Figure 2.32
+- - '###'
+  - Downloading the Logic Design to the XS40 or XS95 Board
+- - '###'
+  - Testing the Downloaded Logic Design
+- - '###'
+  - Trip-Genie 项目设计（HDL 模式）
+- - '####'
+  - 开始新项目
+- - '####'
+  - 使用 VHDL 硬件描述语言输入设计
+- - '####'
+  - Figure 2.37 Adding inputs and outputs to the TRIPGENI design.
+- - '###'
+  - Synthesizing the Netlist
+- - '###'
+  - 项目
+- - '###'
+  - 组合逻辑
+- - '####'
+  - 目标
+- - '####'
+  - 讨论
+- - '####'
+  - 多路选择器
+- - '####'
+  - 图 3.1 2^M 对 1 多路复用器的输入和输出。
+- - '####'
+  - 表 3.1 2 对 1 多路复用器的真值表。
+- - '####'
+  - 表 3.2 2 对 1 多路复用器的带“无关项”真值表。
+- - '####'
+  - 图 3.2 2 对 1 多路复用器的逻辑电路。
+- - '###'
+  - 解码器
+- - '####'
+  - 图 3.3 M 输入、2^M 输出解码器的输入/输出。
+- - '####'
+  - 表 3.3 2-4 解码器的真值表。
+- - '####'
+  - 表 3.4 用于数字 0 到 9 的 LED 解码器的真值表（输出为逻辑 1 表示对应的 LED 段被点亮）。
+- - '###'
+  - 优先编码器
+- - '###'
+  - 奇偶校验生成器
+- - '###'
+  - Adders
+- - '####'
+  - Figure 3.9 Logic circuitry for a 3-input even-parity generator.
+- - '####'
+  - Table 3.7 Truth-table for a 2-input XOR gate.
+- - '####'
+  - Figure 3.10 An M-bit full adder.
+- - '####'
+  - Table 3.8 Truth-table for a 2-bit adder with carry input and output.
+- - '####'
+  - Figure 3.11 Logic circuitry for a 1-bit adder.
+- - '###'
+  - Experimental
+- - '####'
+  - 1-Bit Adder for the XS40 Board
+- - '####'
+  - Figure 3.12 Initiating the 1-bit adder project for the XC4005XL FPGA.
+- - '####'
+  - Figure 3.13 Schematic for the 1-bit adder.
+- - '###'
+  - 实现报告文件
+- - '###'
+  - XS95 板的 1 位加法器
+- - '###'
+  - 1-Bit Adder in VHDL
+- - '####'
+  - Listing 3.1 The VHDL description of the 1-bit adder.
+- - '####'
+  - Figure 3.19 Targeting the synthesis of the 1-bit adder to the XC4005XL FPGA.
+- - '###'
+  - LED Decoder for the XS95 Board
+- - '####'
+  - Figure 3.20 Initiating the LED decoder project for the XC95108 CPLD.
+- - '####'
+  - Figure 3.21 Vector-type input and output ports for the LED decoder.
+- - '####'
+  - Listing 3.2 The ABEL HDL description of the LED decoder.
+- - '###'
+  - LED Decoder in VHDL
+- - '####'
+  - 图 3.23 1 位加法器的输入和输出端口。
+- - '####'
+  - 列表 3.3 LED 解码器的 VHDL 描述。
+- - '###'
+  - 项目
+- - '###'
+  - 模块化设计与层次结构
+- - '###'
+  - 目标
+- - '###'
+  - 讨论
+- - '###'
+  - 实验
+- - '###'
+  - 适用于 XS95 开发板的奇偶校验生成器
+- - '####'
+  - 图4.2 奇偶校验发生器的构建。
+- - '###'
+  - 2位偶校验发生器（列表4.1）：
+- - '####'
+  - 列表4.1 2位偶校验发生器的ABEL描述。
+- - '###'
+  - 4位偶校验发生器（列表4.2）：
+- - '###'
+  - 8位偶校验发生器（列表4.3）：
+- - '####'
+  - 清单4.2 4位偶校验生成器的ABEL描述
+- - '###'
+  - 用于XS95板的VHDL奇偶校验生成器
+- - '####'
+  - Listing 4.4 8位偶校验生成器的层次化 VHDL 描述。
+- - '###'
+  - XS40 板的奇偶校验生成器
+- - '####'
+  - 图 4.5 将偶奇偶校验生成器符号添加到原理图。
+- - '####'
+  - NET B6  LOC=P32;
+- - '####'
+  - NET B7  LOC=P34;
+- - '###'
+  - 用于 X595 板的 8 位加法器
+- - '####'
+  - Figure 4.10 Creating a symbol for the 1-bit adder module.
+- - '####'
+  - Figure 4.11 Placing the components for the 8-bit adder.
+- - '####'
+  - 图 4.16 将 8 位加法器的总线添加到波形查看器窗口。
+- - '####'
+  - 图 4.17 添加激励后 8 位加法器输入的波形查看器窗口。
+- - '####'
+  - 图 4.18 8 位加法器仿真的波形。
+- - '####'
+  - the following constraints assign unused ADDB terminals to out-of-the-way pins
+- - '###'
+  - 面向 XS40 板的 8 位加法器
+- - '####'
+  - the following constraints assign unused ADDB terminals to out-of-the-way pins
+- - '####'
+  - 图 4.19 XS40 为基础的 8 位加法器布线更改。
+- - '###'
+  - VHDL 中的 8 位加法器
+- - '####'
+  - 清单4.5 包含一位全加器组件的VHDL库文件。
+- - '####'
+  - 图4.20 已在ADD8_95 HDL模式工程中创建xse库。
+- - '####'
+  - 图4.21 XSE.VHD文件已添加到xse库中。
+- - '####'
+  - 清单4.6 迭代实例化全加器组件以创建8位加法器的VHDL代码。
+- - '####'
+  - Listing 4.7 8-bit adder VHDL code modified to get an input through the MD0 pin
+    of the XC4005XL FPGA.
+- - '####'
+  - Listing 4.7  修改为通过 XC4005XL FPGA 的 MD0 引脚获取输入的 8 位加法器 VHDL 代码。（续。）
+- - '####'
+  - Listing 4.8  XC4005XL FPGA 的 MD0 引脚的 XNF 文件。
+- - '####'
+  - 'NET B<2>      LOC=P6;    # DON''T LIST B<2>!!'
+- - '####'
+  - the following constraints assign unused ADD8 terminals to out-of-the-way pins
+- - '###'
+  - Projects
+- - '###'
+  - Electrical Characteristics
+- - '###'
+  - Objectives
+- - '###'
+  - Discussion
+- - '###'
+  - I/O Characteristics
+- - '####'
+  - 图 5.1 简单反相器的操作。
+- - '####'
+  - 图 5.2 FPLD I/O 选项。
+- - '####'
+  - 图 5.3 使用开漏输出的线与。
+- - '####'
+  - Figure 5.4 Circuitry for a tristate output.
+- - '###'
+  - Circuit Delays
+- - '####'
+  - Figure 5.6 Gate propagation delay.
+- - '####'
+  - 图 5.7 行波进位加法器进位路径中的累积门延迟。
+- - '####'
+  - of gates = Σ_{i=0}^{N-1} i + 4 = N(N - 1)/2 + 4N
+- - '####'
+  - 图 5.8 由 8 位进位超前加法器段构成的 32 位加法器。
+- - '###'
+  - 实验
+- - '####'
+  - 使用 FPLD I/O 选项
+- - '####'
+  - 使用三态输出
+- - '####'
+  - 为 XS95 板的 LED 译码器添加空白控制
+- - '####'
+  - Listing 5.1 带消隐输入和三态输出的 LED 解码器。
+- - '####'
+  - 为 XS40 板的 LED 解码器添加消隐控制
+- - '####'
+  - Figure 5.11 连接带三态缓冲器的 LED 解码器。
+- - '####'
+  - 使用 VHDL 添加 LED 解码器的消隐控制
+- - '####'
+  - Listing 5.2 带消隐输入和三态输出的 LED 解码器的 VHDL 版本。
+- - '####'
+  - Listing 5.3 来自 XSE.VHDL 库 VHDL 源代码的 led 包和 LED 解码器模块描述。 (续。)
+- - '###'
+  - Measuring Gate Delay
+- - '####'
+  - Figure 5.14 Simulated waveforms for the DELAY circuit with unit gate delays.
+- - '####'
+  - Figure 5.16 Displaying hierarchical signals in the 8-bit adder.
+- - '####'
+  - Listing 5.4 ABEL code for a 4-bit carry-lookahead adder (L.KADD.ABL).
+- - '####'
+  - Listing 5.5 4位超前进位加法器的 VHDL 代码 (LKADD.VHD)。
+- - '###'
+  - 项目
+- - '###'
+  - 触发器
+- - '####'
+  - 目标
+- - '####'
+  - 讨论
+- - '####'
+  - 图 6.1 S-R 触发器的操作。
+- - '####'
+  - 图 6.2 一个时钟 S-R 触发器。
+- - '####'
+  - 图 6.3 一个时钟 D 触发器。
+- - '####'
+  - 图 6.4 一个负边沿触发的主从 D 触发器。
+- - '####'
+  - Figure 6.5
+- - '####'
+  - Figure 6.6
+- - '####'
+  - 图 6.7 由触发器构建计数器。
+- - '###'
+  - 实验
+- - '####'
+  - 一个 S-R 触发器
+- - '####'
+  - 列表 6.1 简单 SR 触发器的 ABEL 代码。
+- - '####'
+  - 列表 6.2 简单 SR 触发器的 VHDL 代码。
+- - '####'
+  - 清单 6.3 单个宏单元或 LUT SR 触发器的 ABEL 代码。
+- - '####'
+  - 清单 6.4 单个宏单元或 LUT SR 触发器的行为级 VHDL 代码。
+- - '###'
+  - 带时钟的 SR 触发器
+- - '####'
+  - 列表 6.6 时钟 SRFF 的行为 VHDL 代码。
+- - '####'
+  - 图 6.9 时钟 SR 触发器的模拟波形。
+- - '###'
+  - 边沿触发 D 触发器
+- - '####'
+  - 列表 6.7 边沿触发主从 D 触发器的 ABEL 代码。
+- - '####'
+  - Listing 6.8 用于边沿触发的主从 D 触发器的行为 VHDL 代码。
+- - '####'
+  - Figure 6.10 边沿触发主从 D 触发器的模拟波形。
+- - '###'
+  - 带异步清零的边沿触发 D 触发器
+- - '####'
+  - 'Listing 6.9 Listing 6.9: 带异步清零的 D 触发器的 ABEL 代码。'
+- - '####'
+  - 列表 6.10 带有异步清零的 D 触发器的行为级 VHDL 代码
+- - '###'
+  - 内置 D 触发器
+- - '####'
+  - 列表 6.11 使用内置 D 触发器并带有异步清零的 ABEL 代码
+- - '####'
+  - Listing 6.12 使用 XC9500 内置 D 触发器带异步清零的 VHDL 代码。
+- - '####'
+  - Listing 6.13 XC9500 CPLD 内置 D 触发器带异步清零的 XNF。
+- - '####'
+  - Figure 6.12 内置 D 触发器的仿真波形。
+- - '###'
+  - A Toggle Flip-Flop Counter
+- - '####'
+  - Listing 6.14 由触发器构成的 3 位计数器的 ABEL 代码。
+- - '####'
+  - 列表 6.15 由触发器构成的 3 位计数器的 VHDL 代码。
+- - '####'
+  - 图 6.13 由触发器构成的 3 位计数器的仿真波形。
+- - '###'
+  - 项目
+- - '###'
+  - 状态机设计
+- - '###'
+  - 目标
+- - '###'
+  - 讨论
+- - '###'
+  - 简单状态机
+- - '####'
+  - 图 7.1 一个简单的状态机。
+- - '####'
+  - 图 7.2 一个具有外部输入的状态机。
+- - '####'
+  - 图 7.4 一个 Mealy 状态机。
+- - '###'
+  - 通用设计流程
+- - '###'
+  - 状态机设计流程
+- - '####'
+  - 图 7.5 为状态机设计修改后的逻辑设计流程。
+- - '####'
+  - 图 7.6 具有复位和上下输入的三状态计数器的气泡图。
+- - '####'
+  - 表 7.1 具有复位和上下输入的 3 状态计数器的状态转换表。
+- - '####'
+  - 表 7.2 三状态计数器的状态转换和输出真值表。
+- - '####'
+  - 图 7.7 同步状态机的时序问题。
+- - '####'
+  - 图 7.8 时钟偏移。
+- - '####'
+  - 图 7.9 构建具有使能的计数器的引入偏移方法和无偏移方法。
+- - '###'
+  - Experimental
+- - '###'
+  - 一个上/下计数器
+- - '####'
+  - Listing 7.2 3-state up/down 计数器的 VHDL 代码。
+- - '####'
+  - Figure 7.10 3-state up/down 计数器的仿真波形。
+- - '###'
+  - A Drink Dispenser Controller
+- - '####'
+  - 图 7.11：饮品分配器控制器的 I/O 和内部状态。
+- - '####'
+  - 表 7.3 饮品分配器控制器的状态转换表。
+- - '####'
+  - 表 7.4 饮品分配器控制器的一热状态编码。
+- - '####'
+  - 表 7.5 饮品分配器控制器的输入编码。
+- - '####'
+  - 表 7.6 饮料分配器逻辑的真值表
+- - '####'
+  - 图 7.12 饮料分配器状态机。
+- - '####'
+  - 列表 7.3 饮料分配器控制器的 ABEL 代码。
+- - '####'
+  - 清单7.4 饮料自动售货机控制器的VHDL代码
+- - '####'
+  - 清单 7.4 饮料分配器控制器的 VHDL 代码。
+- - '####'
+  - 列表 7.4 饮料分配器控制器的 VHDL 代码。
+- - '###'
+  - 重新审视饮料分配控制器
+- - '####'
+  - Listing 7.5 ABEL code for the revised drink dispenser controller.
+- - '####'
+  - Listing 7.5 ABEL code for the revised drink dispenser controller.
+- - '###'
+  - Using the State Editor
+- - '####'
+  - Listing 7.6 VHDL code for the revised drink dispenser controller.
+- - '####'
+  - 列表 7.6 修订后的饮料分配器控制器的 VHDL 代码。（续。）
+- - '####'
+  - Figure 7.14 Simulated waveforms for the revised drink dispenser controller.
+- - '####'
+  - Figure 7.15 Beginning window for using the state editor.
+- - '####'
+  - Figure 7.16 Selecting the type of HDL code generated by the state editor.
+- - '####'
+  - Figure 7.19 Selecting the number of state machines in the design.
+- - '####'
+  - 图7.20 CNT3SE_4设计的初始屏幕
+- - '####'
+  - 图7.21 为CNT3SE_4设计添加3个状态
+- - '####'
+  - 图7.22 为CNT3SE_4设计添加状态转换
+- - '####'
+  - 图7.23 为状态转换标注条件
+- - '####'
+  - 图7.24 为状态机添加复位
+- - '####'
+  - 图7.25 为状态标注输出动作
+- - '####'
+  - 清单7.7 为CNT3SE状态机生成的ABEL代码
+- - '####'
+  - 清单 7.7 为CNT3SE状态机生成的ABEL代码（续）
+- - '###'
+  - 项目
+- - '####'
+  - 图 8.2 写入和读取存储器。
+- - '####'
+  - 图 8.3 RAM 地址解码器。
+- - '####'
+  - 表 8.1 地址解码器的真值表。（读为高电平有效，写为低电平有效。）
+- - '####'
+  - 图 8.4 一个单独的存储器位置。
+- - '####'
+  - 图 8.6
+- - '####'
+  - 图 8.7
+- - '####'
+  - 图 8.8 读取存储器。
+- - '####'
+  - 图 8.10 一个更现实的 RAM。
+- - '###'
+  - 专用存储器
+- - '####'
+  - 同步存储器
+- - '####'
+  - 双端口存储器
+- - '####'
+  - 图 8.11 同步 RAM。
+- - '####'
+  - 图 8.12 双端口 RAM。
+- - '###'
+  - 先进先出缓冲器
+- - '###'
+  - 控制逻辑：
+- - '###'
+  - Experimental
+- - '####'
+  - Building a Small Asynchronous Memory
+- - '####'
+  - Listing 8.1 ABEL version of a 4-bit wide asynchronous memory built from 4 register
+    modules.
+- - '####'
+  - Listing 8.1  ABEL 版本的 4 位宽异步存储器，由 4 个寄存器模块构成。 (续)
+- - '####'
+  - Listing 8.2  由 4 个寄存器模块构成的 4 位宽异步存储器的 VHDL 版本。 (续)
+- - '####'
+  - 'NET INP2  LOC=P32;    # B6 argument of XSPORT'
+- - '####'
+  - 'NET INP3  LOC=P34;    # B7 argument of XSPORT'
+- - '###'
+  - 构建一个小型同步存储器
+- - '####'
+  - 'NET inp<2>  LOC=P32;    # B6 argument of XSPORT mapped to M0'
+- - '####'
+  - 'NET inp<3>  LOC=P34;    # B7 argument of XSPORT mapped to M2'
+- - '####'
+  - Listing 8.3 ABEL version of a 4-bit wide synchronous memory built from 4 register
+    modules.
+- - '####'
+  - Listing 8.3 ABEL version of a 4-bit wide synchronous memory built from 4 register
+    modules. (Cont'd.)
+- - '####'
+  - 'Listing 8.4: 由 4 个寄存器模块构成的 4 位宽同步存储器的 VHDL 版本。'
+- - '####'
+  - Figure 8.20 同步存储器的仿真波形。
+- - '###'
+  - 使用内置存储器
+- - '####'
+  - 'NET NE oe          LOC=P45;    # OE is not used with the internal memories'
+- - '####'
+  - 'NET inpc<2>         LOC=P32;    # B6 argument of XSPORT'
+- - '####'
+  - 'NET inpc<3>         LOC=P34;    # B7 argument of XSPORT'
+- - '####'
+  - 清单 8.5 使用内置 FPGA 存储器构建的 4 位宽异步存储器的 VHDL 版本。（续。）
+- - '####'
+  - 'NET DPRA0  LOC=P32;  # B6 argument of XSPORT'
+- - '####'
+  - 'NET DPRA1  LOC=P34;  # B7 argument of XSPORT'
+- - '###'
+  - Using a Memory Chip
+- - '####'
+  - Figure 8.23 Connections between the FPLD and the external RAM for a FIFO.
+- - '####'
+  - Listing 8.6 A 4-bit wide FIFO built with an external RAM.
+- - '####'
+  - Listing 8.6 使用外部 RAM 构建的 4 位宽 FIFO。（续。）
+- - '####'
+  - Listing 8.7 (Cont’d.)
+- - '###'
+  - 项目
+- - '###'
+  - GNOME 微型计算机
+- - '###'
+  - 目标
+- - '###'
+  - 讨论
+- - '####'
+  - 图9.3 字节中位与半字节的排列
+- - '####'
+  - 图9.4 4位二进制数乘法的流程图
+- - '####'
+  - 表 9.2 GNOME 指令集操作码。
+- - '####'
+  - 图 9.5 8 位加法程序的 GNOME 机器码。
+- - '####'
+  - Figure 9.6 Major pieces of the GNOME microcomputer.
+- - '####'
+  - Figure 9.7 Buses for the ALU.
+- - '####'
+  - Figure 9.8 Multiplexing and extending addresses for the external RAM.
+- - '####'
+  - Figure 9.9 Input and output data buses for the external RAM.
+- - '####'
+  - 图 9.10 用于递增 PC 的电路。
+- - '####'
+  - 图 9.11 支持跳转指令的附加电路。
+- - '####'
+  - 设计摘要
+- - '####'
+  - 列表 9.2 GNOME 微处理器的 ABEL 代码。
+- - '####'
+  - 列表 9.2  GNOME 微处理器的 ABEL 代码 for the GNOME microprocessor. (续)
+- - '####'
+  - Listing 9.2 GNOME 微处理器的 ABEL 代码。 （续。）
+- - '####'
+  - Listing 9.2 GNOME 微处理器的 ABEL 代码。 （续。）
+- - '###'
+  - GNOME in VHDL
+- - '####'
+  - Listing 9.3 VHDL code for the GNOME microprocessor.
+- - '###'
+  - 第9.3节 GNOME 微处理器的 VHDL 代码
+- - '####'
+  - Listing 9.3 VHDL code for the GNOME microprocessor. (Cont’d.)
+- - '####'
+  - 列表 9.3 GNOME 微处理器的 VHDL 代码。（续。）
+- - '###'
+  - 资源摘要
+- - '###'
+  - 设计摘要
+- - '###'
+  - 项目
+- - '###'
+  - DWARF
+- - '###'
+  - 目标
+- - '###'
+  - 讨论
+- - '###'
+  - 8 位数据通路
+- - '###'
+  - 寄存器集
+- - '###'
+  - 索引和间接寻址
+- - '###'
+  - 输入和输出端口
+- - '###'
+  - 子程序调用和返回指令
+- - '###'
+  - 中断处理
+- - '###'
+  - 实验
+- - '####'
+  - 表 10.1 DWARF 指令集。
+- - '####'
+  - 表 10.1 DWARF 指令集。（续）
+- - '####'
+  - 表 10.2 DWARF 指令集编码。
+- - '####'
+  - Figure 10.2 DWARF architecture.
+- - '####'
+  - Figure 10.3 DWARF's register set and ALU
+- - '####'
+  - Figure 10.4 Detailed circuitry for DWARF's register set.
+- - '####'
+  - Figure 10.5 Details of DWARF's arithmetic circuitry.
+- - '####'
+  - Figure 10.6 Detailed circuitry for DWARF's ZEROTEST module.
+- - '####'
+  - Figure 10.7 Detailed circuitry for DWARF's carry flag.
+- - '####'
+  - Figure 10.8 DWARF's program counter, stack pointer, address selector, and RAM
+    control circuitry.
+- - '####'
+  - 图 10.10 DWARF 的 I/O 端口电路。
+- - '####'
+  - 图 10.11 DWARF 的中断处理电路。
+- - '####'
+  - 图 10.12 DWARF 的指令寄存器和数据总线接口。
+- - '####'
+  - 图 10.13 DWARF 指令解码模块。
+- - '####'
+  - Listing 10.1 The ABEL version of the DWARF instruction decoder description.
+- - '####'
+  - Listing 10.1 DWARF 指令解码器描述的 ABEL 版本。 （续。）
+- - '####'
+  - Listing 10.1 DWARF 指令解码器描述的 ABEL 版本。 (续。)
+- - '####'
+  - Listing 10.2 DWARF 指令解码器描述的 VHDL 版本。
+- - '####'
+  - 列表 10.2 DWARF 指令解码器描述的 VHDL 版本。（续）
+- - '####'
+  - 列表 10.2 DWARF 指令解码器描述的 VHDL 版本。（续）
+- - '####'
+  - 清单10.2 DWARF指令解码器描述的VHDL版本。（续）
+- - '####'
+  - 清单10.2 DWARF指令解码器描述的VHDL版本。（续）
+- - '###'
+  - 设计摘要
+- - '###'
+  - Projects
+- - '###'
+  - Final Word
+- - '###'
+  - Building the XS40 and XS95 Lite Boards
+- - '####'
+  - Discussion
+- - '####'
+  - Experimental
+- - '###'
+  - Building the XS40 Lite Board
+- - '####'
+  - Table A.1 XS40 Lite Board parts list.
+- - '####'
+  - Power Supply
+- - '####'
+  - XC4005XL FPGA
+- - '####'
+  - Parallel Port Interface
+- - '###'
+  - 存储器
+- - '###'
+  - 时钟电路
+- - '###'
+  - 构建 XS95 Lite 板
+- - '####'
+  - 电源
+- - '####'
+  - XC95108 CPLD
+- - '####'
+  - 表 A.7 XC95108 CPLD 的电源和地引脚。
+- - '####'
+  - 并行端口接口
+- - '####'
+  - LED 显示
+- - '####'
+  - 存储器
+- - '####'
+  - 表 A.8
+- - '####'
+  - 表 A.9 CPLD 与 LED 数码管段之间的连接。
+- - '####'
+  - 时钟电路
+- - '###'
+  - 构建和测试 XS40 和 XS95 Lite 板的提示
+- - '###'
+  - 安装和使用 XSLOAD 和 XSPORT 程序
+- - '####'
+  - 安装程序
+- - '####'
+  - 使用 XSLOAD 下载配置文件
+- - '###'
+  - 使用 XSPORT 测试设计
+- - '###'
+  - 附录 B
+- - '###'
+  - 使用 ABEL 与 Xilinx PLD
+- - '###'
+  - 摘要
+- - '###'
+  - 引言
+- - '###'
+  - ABEL 语言结构
+- - '###'
+  - 头部区段
+- - '###'
+  - 声明区段
+- - '###'
+  - 逻辑描述区段
+- - '###'
+  - Equations
+- - '###'
+  - Test Vectors
+- - '###'
+  - Dot Extensions
+- - '###'
+  - Logical Operators
+- - '###'
+  - Arithmetic Operators
+- - '###'
+  - 关系运算符
+- - '####'
+  - 表 B.1 ABEL 运算符
+- - '###'
+  - 使用真值表
+- - '###'
+  - 输入测试向量
+- - '###'
+  - 使用状态图
+- - '###'
+  - 使用属性语句
+- - '####'
+  - fast
+- - '####'
+  - logic_opt
+- - '####'
+  - minimize
+- - '####'
+  - partition
+- - '####'
+  - pwr
+- - '####'
+  - .prld
+- - '###'
+  - 设计示例
+- - '####'
+  - 双向引脚
+- - '###'
+  - 锁存器
+- - '####'
+  - latch_out & !le
+- - '####'
+  - latch_out & input;
+- - '###'
+  - 计数器
+- - '###'
+  - 多路选择器
+- - '###'
+  - 结论
+- - '###'
+  - 索引
+- - '####'
+  - A
+- - '####'
+  - B
+- - '####'
+  - C
+- - '####'
+  - D
+- - '####'
+  - E
+- - '###'
+  - Index
+- - '###'
+  - J
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - N
+- - '###'
+  - O
+- - '###'
+  - P
+- - '###'
+  - R
+- - '###'
+  - S
+- - '###'
+  - T
+- - '###'
+  - THE PRACTICAL XILINX® DESIGNER LAB BOOK 1.5
+- - '###'
+  - 目录
