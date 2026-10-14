@@ -1,0 +1,177 @@
+
+```
+$ df | grep '[sd][a-z]:
+
+[ 864.54636] SCSI device sda: 2344168 512-byte sectors (120034 MB)
+
+[ 864.54653] SCSI device sdb: drive-cache: write
+
+[ 864.56541] SCSI device sda: 2344168 512-byte sectors (120034 MB)
+
+[ 864.56526] SCSI device sdb: drive-cache: write
+
+[ 864.56531] SCSI device sda: sda
+
+[ 864.57571] SCSI device sdb: 15629375 512-byte sectors (80025 MB)
+
+[ 864.578850] SCSI device sda: 15629375 512-byte sectors (80025 MB)
+
+[ 864.57826] SCSI device sdb: drive-cache: write
+
+[ 864.578830] SCSI device sdb: sdb2
+
+[ 824.272430] hdc: 0116k; ATPI: R/W CD-DVD-ROM drive
+
+[ 852.161948] SCSI device sda: 8910423 512-byte sectors (4562 MB)
+
+[ 852.170635] SCSI device sdc: drive-cache: write
+
+[ 852.171452] SCSI device sda: 8910423 512-byte sectors (4562 MB)
+
+[ 852.172941] SCSI device sdc: sdc1
+```
+
+在这个系统上，这些信息告诉你你发现了三个使用 SCSI 设备命名规则的存储设备，外加一个作为 `/dev/hdc` 的旧 IDE/ATA CD/DVD-ROM 驱动器。第一个存储设备 `/dev/sda` 似乎不包含任何分区。第二个设备 `/dev/sdb` 包含两个分区：`/dev/sdb1` 和 `/dev/sdb2`，以及第三个分区 `/dev/sdb5`。（这这可能意味着分区 `/dev/sdb2` 是一个扩展分区，它包含了
+
+# 添加硬件和附加外设
+
+分区 `/dev/sd5` ——（瞬间就完成了）。第三个存储设备 `/dev/sdc` 包含两个物理分区：`/dev/sdc1` 和 `/dev/sdc2`。
+
+你可以使用 `fdisk` 命令并配合 `-l`（列表）来获取关于这些存储设备的更详细信息。例如，`fdisk` 提供了关于该存储设备上分区的以下信息：
+
+```
+$ sudo fdisk -l /dev/sdb
+
+Disk /dev/sdb: 80.0 GB, 8002580000 bytes
+
+255 heads, 66 sectors, 9729 cylinders
+
+Units = cylinders / 16065 * 512 = 82252820
+```
+
+| 设备 | 启动 | 起始 | 结束 | 块 | | | 系统 |
+|---|---|---|---|---|---|
+| `/dev/sdb1` | | 1 | 9567 | 7683863+ | 8 Linux |
+| `/dev/sdb2` | | 9567 | 9729 | 130297+ | 5 Extended |
+| `/dev/sdb5` | | 9567 | 9729 | 1302966 | 82 Linux swap / Solaris |
+
+这表明正如我们怀疑的那样，分区 `/dev/sdb2` 是一个包含其他分区的扩展分区，而 `/dev/sdb5` 是在该扩展分区内部创建的分区。
+
+在结合了晦涩的命令行语法和内核日志后，你的大脑可能会有些麻木，但这让你对你的系统以及其中包含的存储设备有了深刻的见解。由于这些存储设备之一（本节第一个示例中的 SATA 驱动器 `/dev/sda`）没有包含任何分区，它对你的系统来说仍然相当没用。下一节将解释如何从命令行对新添加的磁盘进行格式化和分区。
+
+# 使用命令行工具分区和格式化磁盘
+
+第 4 章介绍了磁盘、分区和文件系统等基础计算机系统术语。正如本章讨论的，在对磁盘进行分区并将每个分区格式化为可使用的“文件系统”之前，你无法使用磁盘上的存储空间。本节解释了如何使用命令行命令 `fdisk`、`mkfs` 和（有时）`mkswap` 来完成这些。这些命令执行以下功能：
+
+- `fdisk`：在指定的磁盘上创建和管理分区。我们对 f 标准代表什么都有自己的想法，但它确实非常正式。
+- `mkfs`：在指定的分区上创建指定类型的文件系统。
+- `mkswap`：将指定的分区格式化为 Linux 交换分区（swap partition），这是你的 Ubuntu 系统可以用作虚拟内存的特殊分区。
+
+一旦你向你的系统添加了新磁盘，你想要做的第一件事就是对其进行分区。前一节使用 `fdisk` 命令简单地列出特定存储设备上的可用分区——现在让它工作起来吧。接下来的示例将在 `/dev/sdb` 磁盘上创建两个分区。
+
+要使用 `fdisk` 对磁盘进行分区，请执行以下操作：
+
+- 1. 使用 `sudo fdisk` 启动 `fdisk` 命令，并将你想要分区的磁盘名称作为参数提供，如下例：
+
+```
+$ sudo fdisk /dev/sdb
+
+The number of cylinders for this disk is set to 14593.
+```
+
+这没有问题，但由于它大于 1024，在某些设置下可能会导致以下问题：
+1) 启动时运行的软件（例如，旧版本的 LILO）
+2) 从其他操作系统启动并分区的软件（例如 DOS DISK，OS/2 DISK）
+Command (for help):
+
+最后一段输出示例是 `fdisk` 的命令提示符，它显示自己正在等待磁盘。毕竟，你不想意外地在错误的磁盘上尝试创建分区或破坏现有的数据。此命令及其输出看起来如下：
+
+- 2. 使用 `p`（打印）命令显示磁盘上可能已经存在的任何分区的列表。
+
+```
+Command (for help): p
+
+Disk /dev/sda: 120.0 GiB, 120034123776 bytes
+
+255 heads, 63 sectors/track, * 14593 cylinders
+
+Units = cylinders of 16065 * 512 = 825280 bytes
+
+Device Boot Start End Blocks
+
+Command (for help):
+```
+
+和最后的分区列表一样，此磁盘目前不包含任何分区。
+
+- 3. 使用 `n`（新建）命令定义一个新分区：
+
+```
+Command (for help): n
+
+Command action
+
+e extended
+
+p primary partition (1-4)
+```
+
+- 4. 输入此命令会提示你输入想要创建的分区类型，即 `e`（扩展的）或 `p`（物理的）。使用 `p` 命令创建一个物理分区：
+
+```
+p
+
+Partition number (1-4):
+```
+
+- 5. 指定要创建一个物理分区会提示你想要创建的分区编号。Linux 磁盘最多只能包含四个物理分区，其中一个可以是扩展分区。通过输入 `1` 来创建 1 号分区，如下例：
+
+```
+First cylinder (1-14593, default 1):
+```
+
+- 6. 识别你想要创建的物理分区编号会提示分区开始的块位置，并显示可能值的范围（1–14593）。按回车接受默认值：
+
+```
+Using default value 1
+
+Last cylinder or +size (1-14593, default 14593):
+```
+
+- 7. 在创建分区时，你可以根据分区开始的块来定义它们，也可以根据分区开始的块和分区的大小来定义。输入 `+30G` 来定义你想创建一个的 30GB 分区：
+
+```
+Last cylinder or +size (1-14593, default 14593): +30G
+```
+
+- 8. 这完成了创建分区所需的信息，但并没有告诉你实际上是否成功了。使用 `p` 命令列出当前定义的任何分区：
+
+```
+Command (m for help): p
+
+Disk /dev/sda: 120.0 GB, 120034123776 bytes
+
+255 heads, 63 sectors/track, 14593 cylinders
+
+Units = cylinders of 16065 * 512 = 822580 bytes
+
+Device Boot Start End Blocks
+
+/dev/sda1 3648 23258 
+```
+
+你创建了一个扩展分区，但除非写入磁盘，这些更改仅存储在内存中。
+
+- 9. 重复此过程以创建第二个分区：
+
+```
+Command (m for help): n
+
+Command action
+
+e extended
+
+p primary partition (1-4)
+
+Partition number (1-4): 2
+```
