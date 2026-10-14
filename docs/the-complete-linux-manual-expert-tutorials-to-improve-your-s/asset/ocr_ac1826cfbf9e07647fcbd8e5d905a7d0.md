@@ -1,0 +1,3 @@
+# Using the Terminal
+
+![](bbox=[0.0, 0.42, 1.0, 0.92])

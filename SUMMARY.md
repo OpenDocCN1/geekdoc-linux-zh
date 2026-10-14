@@ -2088,6 +2088,7 @@
 +   [Linux 编码完全手册 - 第18版，2023年](docs/the-complete-linux-coding-manual---18th-edition-2023/README.md)
 +   [Linux 完整手册](docs/the-complete-linux-manual/README.md)
 +   [Linux 完全手册 (第5版) - 2020年4月](docs/the-complete-linux-manual-5th-ed---april-2020/README.md)
++   [完整 Linux 手册 – 提升技能的专家教程，第7版 2020年10月](docs/the-complete-linux-manual-expert-tutorials-to-improve-your-s/README.md)
 +   [Red Hat Linux 5 操作系统全版 CD-ROM. [NBM／CD-ROM]](docs/the-complete-red-hat-linux-5-operating-system-cd-rom-nbmcd-r/README.md)
 +   [Redhat Linux 操作系统完全指南](docs/the-complete-redhat-linux-operating-system/README.md)
 +   [Linux 下 XFree 86 简明指南](docs/the-concise-guide-to-xfree-86-for-linux/README.md)

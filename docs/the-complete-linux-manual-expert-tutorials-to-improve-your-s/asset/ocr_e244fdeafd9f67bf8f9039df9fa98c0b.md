@@ -1,0 +1,1 @@
+Admiral Grace Hopper, debugging computers since the '40s
