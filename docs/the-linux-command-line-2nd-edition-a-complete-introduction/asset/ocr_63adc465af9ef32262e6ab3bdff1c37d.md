@@ -1,0 +1,37 @@
+```
+[me@linuxbox diction-1.11]$ ls /usr/include
+```
+
+The header files in this directory were installed when we installed the compiler.
+
+# Building The Program
+
+Most programs build with a simple, two-command sequence:
+
+```
+./configure
+make
+```
+
+The configure program is a shell script which is supplied with the source tree. Its job is to analyze the build environment. Most source code is designed to be portable. That is, it is designed to build on more than one kind of Unix-like system. But in order to do that, the source code may need to undergo slight adjustments during the build to accommodate differences between systems. configure also checks to see that necessary external tools and components are installed. Let’s run configure. Since configure is not located where the shell normally expects programs to be located, we must explicitly tell the shell its location by prefixing the command with ./ to indicate that the program is located in the current working directory:
+
+```
+[me@linuxbox diction-1.11]$ ./configure
+```
+
+configure will output a lot of messages as it tests and configures the build. When it finishes, it will look something like this:
+
+```
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for library containing gettext... none required
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating diction.1
+config.status: creating diction.texi
+config.status: creating diction.spec
+config.status: creating style.1
+config.status: creating test/rundiction
+config.status: creating config.h
+[me@linuxbox diction-1.11]$
+```

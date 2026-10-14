@@ -1,0 +1,40 @@
+```
+file
+```
+
+```
+${parameter/pattern/string}
+${parameter//pattern/string}
+${parameter/#pattern/string}
+${parameter/%pattern/string}
+```
+
+This expansion performs a search-and-replace upon the contents of parameter. If text is found matching wildcard pattern, it is replaced with the contents of string. In the normal form, only the first occurrence of pattern is replaced. In the // form, all occurrences are replaced. The /# form requires that the match occur at the beginning of the string, and the /% form requires the match to occur at the end of the string. /string may be omitted, which causes the text matched by pattern to be deleted.
+
+```
+[me@linuxbox ~]$ foo.JPG.JPG
+[me@linuxbox ~]$ echo ${foo/JPG/jpg}
+jpg.JPG
+[me@linuxbox ~]$ echo ${foo//JPG/jpg}
+jpg.jpg
+[me@linuxbox ~]$ echo ${foo/#JPG/jpg}
+JPG.JPG
+[me@linuxbox ~]$ echo ${foo/%JPG/jpg}
+JPG.jpg
+```
+
+Parameter expansion is a good thing to know. The string manipulation expansions can be used as substitutes for other common commands such as sed and cut. Expansions improve the efficiency of scripts by eliminating the use of external programs. As an example, we will modify the longest-word program discussed in the previous chapter to use the parameter expansion ${#j} in place of the command substitution $(echo $j | wc -c) and its resulting subshell, like so:
+
+```
+#!/bin/bash
+
+# longest-word3 : find longest string in a file
+
+for i; do
+    if [[ -r $i ]]; then
+        max_word=
+        max_len=
+        for j in $(strings $i); do
+            len=${#j}
+            if (( len > max_len )); then
+```

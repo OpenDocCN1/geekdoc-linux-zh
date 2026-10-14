@@ -1,0 +1,41 @@
+mand. There is a third way called a here document or here script. A here document is an additional form of I/O redirection in which we embed a body of text into our script and feed it into the standard input of a command. It works like this:
+
+```
+command << token
+text
+token
+```
+
+where command is the name of command that accepts standard input and token is a string used to indicate the end of the embedded text. We’ll modify our script to use a here document:
+
+```
+#!/bin/bash
+
+# Program to output a system information page
+
+TITLE="System Information Report For $HOSTNAME"
+CURRENT_TIME=$(date +"%x %r %Z")
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+cat << _EOF_
+<HTML>
+    <HEAD>
+        <TITLE>$TITLE</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>$TITLE</H1>
+        <P>$TIMESTAMP</P>
+    </BODY>
+</HTML>
+_EOF_
+```
+
+Instead of using echo, our script now uses cat and a here document. The string _EOF_ (meaning “End Of File,” a common convention) was selected as the token, and marks the end of the embedded text. Note that the token must appear alone and that there must not be trailing spaces on the line.
+
+So what’s the advantage of using a here document? It’s mostly the same as echo, except that, by default, single and double quotes within here documents lose their special meaning to the shell. Here is a command line example:
+
+```
+[me@linuxbox ~]$ foo="some text"
+[me@linuxbox ~]$ cat << _EOF_
+> $foo
+```

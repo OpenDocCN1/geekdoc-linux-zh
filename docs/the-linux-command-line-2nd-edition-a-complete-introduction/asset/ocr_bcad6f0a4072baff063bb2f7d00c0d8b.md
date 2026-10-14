@@ -1,0 +1,30 @@
+# 34 – Strings And Numbers
+
+Computer programs are all about working with data. In past chapters, we have focused on processing data at the file level. However, many programming problems need to be solved using smaller units of data such as strings and numbers.
+
+In this chapter, we will look at several shell features that are used to manipulate strings and numbers. The shell provides a variety of parameter expansions that perform string operations. In addition to arithmetic expansion (which we touched upon in Chapter 7), there is a common command line program called bc, which performs higher level math.
+
+# Parameter Expansion
+
+Though parameter expansion came up in Chapter 7, we did not cover it in detail because most parameter expansions are used in scripts rather than on the command line. We have already worked with some forms of parameter expansion; for example, shell variables. The shell provides many more.
+
+# Basic Parameters
+
+The simplest form of parameter expansion is reflected in the ordinary use of variables. For example:
+
+```
+$a
+```
+
+when expanded, becomes whatever the variable a contains. Simple parameters may also be surrounded by braces:
+
+```
+${a}
+```
+
+This has no effect on the expansion, but is required if the variable is adjacent to other text, which may confuse the shell. In this example, we attempt to create a filename by appending the string "_file" to the contents of the variable a.
+
+```
+[me@linuxbox ~]$ a="foo"
+[me@linuxbox ~]$ echo "$a_file"
+```

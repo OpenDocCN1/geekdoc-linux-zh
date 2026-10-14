@@ -1,0 +1,33 @@
+called *wildcards*. Using wildcards (which is also known as *globbing*) allow you to select filenames based on patterns of characters. The table below lists the wildcards and what they select:
+
+# Table 4-1: Wildcards
+
+| Wildcard | Meaning |
+|---|---|
+| * | Matches any characters |
+| ? | Matches any single character |
+| [characters] | Matches any character that is a member of the set characters |
+| [!characters] | Matches any character that is not a member of the set characters |
+| [[:class:]] | Matches any character that is a member of the specified class |
+
+Table 4-2 lists the most commonly used character classes:
+
+# Table 4-2: Commonly Used Character Classes
+
+| Character Class | Meaning |
+|---|---|
+| [:alnum:] | Matches any alphanumeric character |
+| [:alpha:] | Matches any alphabetic character |
+| [:digit:] | Matches any numeral |
+| [:lower:] | Matches any lowercase letter |
+| [:upper:] | Matches any uppercase letter |
+
+Using wildcards makes it possible to construct very sophisticated selection criteria for filenames. Here are some examples of patterns and what they match:
+
+# Table 4-3: Wildcard Examples
+
+| Pattern | Matches |
+|---|---|
+| * | All files |
+| g* | Any file beginning with "g" |
+| b*.txt | Any file beginning with "b" followed by any characters and ending with ".txt" |

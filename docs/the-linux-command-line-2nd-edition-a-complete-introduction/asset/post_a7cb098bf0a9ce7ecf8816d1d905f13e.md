@@ -1,0 +1,94 @@
+
+# Entering Insert Mode
+
+In order to add some text to our file, we must first enter *insert mode*. To do this, we press the “i” key. Afterward, we should see the following at the bottom of the screen if vim is running in its usual enhanced mode (this will not appear in vi compatible mode):
+
+```
+-- INSERT --
+```
+
+Now we can enter some text. Try this:
+
+```
+The quick brown fox jumped over the lazy dog.
+```
+
+To exit insert mode and return to command mode, press the Esc key.
+
+## Saving Our Work
+
+To save the change we just made to our file, we must enter an *ex command* while in command mode. This is easily done by pressing the “:” key. After doing this, a colon character should appear at the bottom of the screen:
+
+```
+:
+```
+
+To write our modified file, we follow the colon with a “w” then Enter:
+
+```
+:w
+```
+
+The file will be written to the hard drive and we should get a confirmation message at the bottom of the screen, like this:
+
+```
+"foo.txt" [New] 1L, 46C written
+```
+
+**Tip:** If you read the vim documentation, you will notice that (confusingly) command mode is called *normal mode* and ex commands are called *command mode*.
+
+Beware.
+
+## Moving The Cursor Around
+
+While in command mode, vi offers a large number of movement commands, some of which it shares with less. Here is a subset:
+
+Table 12-1: Cursor Movement Keys
+
+| Key | Moves The Cursor |
+|---|---|
+| l or Right Arrow | Right one character. |
+| h or Left Arrow | Left one character. |
+| j or Down Arrow | Down one line. |
+| k or Up Arrow | Up one line. |
+| 0 (zero) | To the beginning of the current line. |
+| ^ | To the first non-whitespace character on the current line. |
+| $ | To the end of the current line. |
+| w | To the beginning of the next word or punctuation character. |
+| W | To the beginning of the next word, ignoring punctuation characters. |
+| b | To the beginning of the previous word or punctuation character. |
+| B | To the beginning of the previous word, ignoring punctuation characters. |
+| Ctrl-f or Page Down | Down one page. |
+| Ctrl-b or Page Up | Up one page. |
+| numberG | To line number. For example, 1G moves to the first line of the file. |
+| G | To the last line of the file. |
+
+Why are the h, j, k, and l keys used for cursor movement? Because when vi was originally written, not all video terminals had arrow keys, and skilled typists could use regular keyboard keys to move the cursor without ever having to lift their fingers from the keyboard.
+
+Many commands in vi can be prefixed with a number, as with the “G” command listed above. By prefixing a command with a number, we may specify the number of times a command is to be carried out. For example, the command “5j” causes vi to move the cursor down five lines.
+
+## Basic Editing
+
+Most editing consists of a few basic operations such as inserting text, deleting text, and moving text around by cutting and pasting. vi, of course, supports all of these operations in its own unique way. vi also provides a limited form of undo. If we press the “u” key while in command mode, vi will undo the last change that you made. This will come in handy as we try out some of the basic editing commands.
+
+## Appending Text
+
+vi has several different ways of entering insert mode. We have already used the i command to insert text.
+
+Let's go back to our foo.txt file for a moment:
+
+```
+The quick brown fox jumped over the lazy dog.
+```
+
+If we wanted to add some text to the end of this sentence, we would discover that the i command will not do it, since we can't move the cursor beyond the end of the line. vi provides a command to append text, the sensibly named “a” command. If we move the cursor to the end of the line and type “a”, the cursor will move past the end of the line and vi will enter insert mode. This will allow us to add some more text:
+
+```
+The quick brown fox jumped over the lazy dog. It was cool.
+```
+
+Remember to press the Esc key to exit insert mode.
+
+Since we will almost always want to append text to the end of a line, vi offers a shortcut to move to the end of the current line and start appending. It's the “A” command. Let's try it and add some more lines to our file.
+
+First, we'll move the cursor to the beginning of the line using the “0” (zero) command.

@@ -1,0 +1,134 @@
+
+
+> "$foo"
+> '$foo'
+> \$foo
+> _EOF_
+some text
+"some text"
+'some text'
+$foo
+
+正如我们所见，shell 对引号不予理会。它将它们视为普通字符。这使我们能够在 here 文档中自由嵌入引号。这对于我们的报表程序来说可能非常方便。
+
+Here 文档可与接受标准输入的任何命令一起使用。在此示例中，我们使用 here 文档将一系列命令传递给 ftp 程序，以便从远程 FTP 服务器检索文件：
+
+```
+#!/bin/bash
+
+# Script to retrieve a file via FTP
+
+FTP_SERVER=ftp.nl.debian.org
+FTP_PATH=/debian/dists/lenny/main/installer-i386/current/images/cdrom
+REMOTE_FILE=debian-cd_info.tar.gz
+
+ftp -n << _EOF_
+open $FTP_SERVER
+user anonymous me@linuxbox
+cd $FTP_PATH
+hash
+get $REMOTE_FILE
+bye
+_EOF_
+ls -l $REMOTE_FILE
+```
+
+如果我们将重定向运算符从 "<<" 改为 "<<-"，shell 将忽略 here 文档中行首的制表符。这允许 here 文档被缩进，从而可以提高可读性：
+
+```
+#!/bin/bash
+
+# Script to retrieve a file via FTP
+
+FTP_SERVER=ftp.nl.debian.org
+FTP_PATH=/debian/dists/lenny/main/installer-i386/current/images/cdrom
+REMOTE_FILE=debian-cd_info.tar.gz
+
+ftp -n << _EOF_
+  open $FTP_SERVER
+  user anonymous me@linuxbox
+  cd $FTP_PATH
+  hash
+  get $REMOTE_FILE
+  bye
+_EOF_
+
+ls -l $REMOTE_FILE
+```
+
+## 总结
+
+在本章中，我们启动了一个项目，该项目将贯穿构建成功脚本的整个过程。我们介绍了变量和常量的概念以及它们如何被使用。它们是我们将找到的参数扩展的众多应用中的第一个。我们还研究了如何从脚本中产生输出，以及嵌入文本块的各种方法。
+
+## 进一步阅读
+
+- 有关 HTML 的更多信息，请参阅以下文章和教程：
+  - http://en.wikipedia.org/wiki/Html
+  - http://en.wikibooks.org/wiki/HTML_Programming
+  - http://html.net/tutorials/html/
+- bash 手册页包含一个名为“HERE DOCUMENTS”的部分，其中对该功能有完整描述。
+
+## 26 – 自顶向下设计
+
+随着程序变得越来越大和复杂，它们变得更难以设计、编码和维护。与任何大型项目一样，通常将大型复杂任务分解为一系列小型简单任务是个好主意。让我们想象一下，我们正试图向火星人描述一个常见、日常的任务，即去市场买食物。我们可能会将整体过程描述为以下一系列步骤：
+
+- 1. 上车。
+- 2. 驾车去市场。
+- 3. 停车。
+- 4. 进入市场。
+- 5. 购买食物。
+- 6. 返回车上。
+- 7. 驾车回家。
+- 8. 停车。
+- 9. 进入房子。
+
+然而，火星人可能需要更多细节。我们可以将子任务“停车”进一步分解为以下一系列步骤：
+
+- 1. 找到停车位。
+- 2. 将车驶入车位。
+- 3. 关闭发动机。
+- 4. 拉起手刹。
+- 5. 下车。
+- 6. 上锁。
+
+“关闭发动机”子任务可以进一步分解为包括“关闭点火”“取出点火钥匙”等步骤，直到整个去市场的过程的每一步都得到充分定义。
+
+识别顶层步骤并开发对这些步骤的越来越详细的视图的过程称为 *自顶向下设计*。这种技术使我们能够将大型复杂任务分解为许多小型简单任务。自顶向下设计是设计程序的常用方法，尤其适用于 shell 编程。
+
+在本章中，我们将使用自顶向下设计来进一步开发我们的报表生成脚本。
+
+## Shell 函数
+
+我们的脚本目前执行以下步骤来生成 HTML 文档：
+
+- 1. 打开页面。
+- 2. 打开页面头部。
+- 3. 设置页面标题。
+- 4. 关闭页面头部。
+- 5. 打开页面主体。
+- 6. 输出页面标题。
+- 7. 输出时间戳。
+- 8. 关闭页面主体。
+- 9. 关闭页面。
+
+对于我们下一个开发阶段，我们将在步骤 7 和 8 之间添加一些任务。这些将包括：
+
+- 系统运行时间和负载。这是自上次关机或重启以来的时间，以及处理器在几个时间间隔内当前正在运行的任务的平均数量。
+- 磁盘空间。系统存储设备上的总体空间使用情况。
+- 主目录空间。每个用户正在使用的存储空间量。
+
+如果我们为每个任务都有一个命令，我们就可以通过命令替换简单地将它们添加到脚本中：
+
+```
+#!/bin/bash
+
+# Program to output a system information page
+
+TITLE="System Information Report For $HOSTNAME"
+CURRENT_TIME=$(date "+%x %r %Z")
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+cat << _EOF_
+<HTML>
+    <HEAD>
+```

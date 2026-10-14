@@ -1,0 +1,145 @@
+
+
+#!/bin/bash
+
+# Program to output a system information page
+echo "<HTML>
+    <HEAD>
+        <TITLE>Page Title</TITLE>
+    </HEAD>
+    <BODY>
+        Page body.
+    </BODY>
+</HTML>"
+
+A quoted string may include newlines, and therefore contain multiple lines of text. The shell will keep reading the text until it encounters the closing quotation mark. It works this way on the command line, too:
+
+```
+[me@linuxbox ~]$ echo "<HTML>
+>     <HEAD>
+>         <TITLE>Page Title</TITLE>
+>     </HEAD>
+>     <BODY>
+>         Page body.
+>     </BODY>
+> </HTML>"
+```
+
+The leading ">" character is the shell prompt contained in the PS2 shell variable. It appears whenever we type a multi-line statement into the shell. This feature is a little obscure right now, but later, when we cover multi-line programming statements, it will turn out to be quite handy.
+
+## Second Stage: Adding A Little Data
+
+Now that our program can generate a minimal document, let’s put some data in the report. To do this, we will make the following changes:
+
+```
+#!/bin/bash
+
+# Program to output a system information page
+echo "<HTML>
+    <HEAD>
+        <TITLE>System Information Report</TITLE>
+</HEAD>
+<BODY>
+<H1>System Information Report</H1>
+</BODY>
+</HTML>"
+```
+
+We added a page title and a heading to the body of the report.
+
+## Variables And Constants
+
+There is an issue with our script, however. Notice how the string “System Information Report” is repeated? With our tiny script it’s not a problem, but let’s imagine that our script was really long and we had multiple instances of this string. If we wanted to change the title to something else, we would have to change it in multiple places, which could be a lot of work. What if we could arrange the script so that the string only appeared once and not multiple times? That would make future maintenance of the script much easier. Here’s how we could do that:
+
+```
+#!/bin/bash
+
+# Program to output a system information page
+
+title="System Information Report"
+
+echo "<HTML>
+<HEAD>
+<TITLE>$title</TITLE>
+</HEAD>
+<BODY> <H1>$title</H1>
+</BODY>
+</HTML>"
+```
+
+By creating a variable named title and assigning it the value “System Information Report”, we can take advantage of parameter expansion and place the string in multiple locations.
+
+So, how do we create a variable? Simple, we just use it. When the shell encounters a variable, it automatically creates it. This differs from many programming languages in which variables must be explicitly declared or defined before use. The shell is very lax about this, which can lead to some problems. For example, consider this scenario played out on the command line:
+
+```
+[me@linuxbox ~]$ foo="yes"
+[me@linuxbox ~]$ echo $foo
+yes
+[me@linuxbox ~]$ echo $foo1
+
+[me@linuxbox ~]$
+```
+
+We first assign the value “yes” to the variable foo, and then display its value with echo. Next we display the value of the variable name misspelled as “foo1” and get a blank result. This is because the shell happily created the variable foo1 when it encountered it, and gave it the default value of nothing, or empty. From this, we learn that we must pay close attention to our spelling! It’s also important to understand what really happened in this example. From our previous look at how the shell performs expansions, we know that the command:
+
+```
+[me@linuxbox ~]$ echo $foo
+```
+
+undergoes parameter expansion and results in:
+
+```
+[me@linuxbox ~]$ echo yes
+```
+
+Whereas the command:
+
+```
+[me@linuxbox ~]$ echo $foo1
+```
+
+expands into:
+
+```
+[me@linuxbox ~]$ echo
+```
+
+The empty variable expands into nothing! This can play havoc with commands that require arguments. Here’s an example:
+
+```
+[me@linuxbox ~]$ foo=foo.txt
+[me@linuxbox ~]$ foo1=foo1.txt
+[me@linuxbox ~]$ cp $foo $foo1
+cp: missing destination file operand after `foo.txt'
+Try `cp --help` for more information.
+```
+
+We assign values to two variables, foo and foo1. We then perform a cp, but misspell the name of the second argument. After expansion, the cp command is only sent one argument, though it requires two.
+
+There are some rules about variable names:
+
+- 1. Variable names may consist of alphanumeric characters (letters and numbers) and underscore characters.
+- 2. The first character of a variable name must be either a letter or an underscore.
+- 3. Spaces and punctuation symbols are not allowed.
+
+The word “variable” implies a value that changes, and in many applications, variables are used this way. However, the variable in our application, title, is used as a constant. A constant is just like a variable in that it has a name and contains a value. The difference is that the value of a constant does not change. In an application that performs geometric calculations, we might define PI as a constant, and assign it the value of 3.1415, instead of using the number literally throughout our program. The shell makes no distinction between variables and constants; they are mostly for the programmer’s convenience. A common convention is to use uppercase letters to designate constants and lower case letters for true variables. We will modify our script to comply with this convention:
+
+```
+#!/bin/bash
+
+# Program to output a system information page
+
+TITLE="System Information Report For $HOSTNAME"
+
+echo "<HTML>
+    <HEAD>
+        <TITLE>$TITLE</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>$TITLE</H1>
+    </BODY>
+</HTML>"
+```
+
+We also took the opportunity to jazz up our title by adding the value of the shell variable HOSTNAME. This is the network name of the machine.
+

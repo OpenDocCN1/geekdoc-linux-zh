@@ -1,0 +1,24 @@
+we see that rsync detected the change and copied only the updated file.
+
+As a practical example, let’s consider the imaginary external hard drive that we used earlier with tar. If we attach the drive to our system and, once again, it is mounted at /media/BigDisk, we can perform a useful system backup by first creating a directory named /backup on the external drive, and then using rsync to copy the most important stuff from our system to the external drive:
+
+```
+[me@linuxbox ~]$ mkdir /media/BigDisk/backup
+[me@linuxbox ~]$ sudo rsync -av --delete /etc /home /usr/local /media/BigDisk/backup
+```
+
+In this example, we copied the /etc, /home, and /usr/local directories from our system to our imaginary storage device. We included the --delete option to remove files that may have existed on the backup device that no longer existed on the source device (this is irrelevant the first time we make a backup, but will be useful on subsequent copies). Repeating the procedure of attaching the external drive and running this rsync command would be a useful (though not ideal) way of keeping a small system backed up. Of course, an alias would be helpful here, too. We could create an alias and add it to our .bashrc file to provide this feature:
+
+```
+alias backup='sudo rsync -av --delete /etc /home /usr/local /media/BigDisk/backup'
+```
+
+Now all we have to do is attach our external drive and run the backup command to do the job.
+
+# Using rsync Over A Network
+
+One of the real beauties of rsync is that it can be used to copy files over a network. After all, the “r” in rsync stands for “remote.” Remote copying can be done in one of two ways. The first way is with another system that has rsync installed, along with a remote shell program such as ssh. Let’s say we had another system on our local network with a lot of available hard drive space and we wanted to perform our backup operation using the remote system instead of an external drive. Assuming that it already had a directory named /backup where we could deliver our files, we could do this:
+
+```
+[me@linuxbox ~]$ sudo rsync -av --delete --rsh=ssh /etc /home
+```

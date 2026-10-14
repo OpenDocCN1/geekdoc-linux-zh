@@ -1,0 +1,22 @@
+# Where Does The locate Database Come From?
+
+You may notice that, on some distributions, locate fails to work just after the system is installed, but if you try again the next day, it works fine. What gives? The locate database is created by another program named updatedb. Usually, it is run periodically as a cron job; that is, a task performed at regular intervals by the cron daemon. Most systems equipped with locate run updatedb once a day. Since the database is not updated continuously, you will notice that very recent files do not show up when using locate. To overcome this, it's possible to run the updatedb program manually by becoming the superuser and running updatedb at the prompt.
+
+# find – Find Files The Hard Way
+
+While the locate program can find a file based solely on its name, the find program searches a given directory (and its subdirectories) for files based on a variety of attributes. We're going to spend a lot of time with find because it has a lot of interesting features that we will see again and again when we start to cover programming concepts in later chapters.
+
+In its simplest use, find is given one or more names of directories to search. For example, to produce a list of our home directory:
+
+```
+[me@linuxbox ~]$ find ~
+```
+
+On most active user accounts, this will produce a large list. Since the list is sent to standard output, we can pipe the list into other programs. Let's use wc to count the number of files:
+
+```
+[me@linuxbox ~]$ find ~ | wc -l
+47068
+```
+
+Wow, we've been busy! The beauty of find is that it can be used to identify files that meet specific criteria. It does this through the (slightly strange) application of options, tests, and actions. We'll look at the tests first.

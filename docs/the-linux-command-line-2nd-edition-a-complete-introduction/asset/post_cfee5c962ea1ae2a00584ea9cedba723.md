@@ -1,0 +1,111 @@
+
+```
+[me@linuxbox ~]$ x=5
+[me@linuxbox ~]$ if [ $x -eq 5 ]; then echo "equals 5"; else echo "does not equal 5"; fi
+equals 5
+[me@linuxbox ~]$ x=0
+[me@linuxbox ~]$ if [ $x -eq 5 ]; then echo "equals 5"; else echo "does not equal 5"; fi
+does not equal 5
+```
+
+In this example, we execute the command twice. Once, with the value of x set to 5, which results in the string “equals 5” being output, and the second time with the value of x set to 0, which results in the string “does not equal 5” being output.
+
+The if statement has the following syntax:
+
+```
+if commands; then
+    commands
+[elif commands; then
+    commands...]
+[else
+    commands]
+fi
+```
+
+where commands is a list of commands. This is a little confusing at first glance. But before we can clear this up, we have to look at how the shell evaluates the success or failure of a command.
+
+## Exit Status
+
+Commands (including the scripts and shell functions we write) issue a value to the system when they terminate, called an exit status. This value, which is an integer in the range of 0 to 255, indicates the success or failure of the command’s execution. By convention, a value of zero indicates success and any other value indicates failure. The shell provides a parameter that we can use to examine the exit status. Here we see it in action:
+
+```
+[me@linuxbox ~]$ ls -d /usr/bin
+/usr/bin
+[me@linuxbox ~]$ echo $?
+0
+[me@linuxbox ~]$ ls -d /bin/usr
+ls: cannot access /bin/usr: No such file or directory
+[me@linuxbox ~]$ echo $?
+2
+```
+
+In this example, we execute the ls command twice. The first time, the command executes successfully. If we display the value of the parameter $?, we see that it is zero. We execute the ls command a second time, producing an error, and examine the parameter $? again. This time it contains a 2, indicating that the command encountered an error. Some commands use different exit status values to provide diagnostics for errors, while many commands simply exit with a value of one when they fail. Man pages often include a section entitled “Exit Status,” describing what codes are used. However, a zero always indicates success.
+
+The shell provides two extremely simple builtin commands that do nothing except terminate with either a zero or one exit status. The true command always executes successfully and the false command always executes unsuccessfully:
+
+```
+[me@linuxbox ~]$ true
+[me@linuxbox ~]$ echo $?
+0
+[me@linuxbox ~]$ false
+[me@linuxbox ~]$ echo $?
+1
+```
+
+We can use these commands to see how the if statement works. What the if statement really does is evaluate the success or failure of commands:
+
+```
+[me@linuxbox ~]$ if true; then echo "It's true."; fi
+It's true.
+[me@linuxbox ~]$ if false; then echo "It's true."; fi
+[me@linuxbox ~]$
+```
+
+The command echo "It's true." is executed when the command following if executes successfully, and is not executed when the command following if does not execute successfully. If a list of commands follows if, the last command in the list is evaluated:
+
+```
+[me@linuxbox ~]$ if false; true; then echo "It's true."; fi
+It's true.
+[me@linuxbox ~]$ if true; false; then echo "It's true."; fi
+[me@linuxbox ~]$
+```
+
+## test
+
+By far, the command used most frequently with if is test. The test command performs a variety of checks and comparisons. It has two equivalent forms:
+
+```
+test expression
+```
+
+and the more popular:
+
+```
+[ expression ]
+```
+
+where expression is an expression that is evaluated as either true or false. The test command returns an exit status of zero when the expression is true and a status of one when the expression is false.
+
+## File Expressions
+
+The following expressions are used to evaluate the status of files:
+
+Table 27-1: test File Expressions
+
+| Expression | Is True If: |
+|---|---|
+| file1 -ef file2 | file1 and file2 have the same inode numbers (the two filenames refer to the same file by hard linking). |
+| file1 -nt file2 | file1 is newer than file2. |
+| file1 -ot file2 | file1 is older than file2. |
+| -b file | file exists and is a block-special (device) file. |
+| -c file | file exists and is a character-special (device) file. |
+| -d file | file exists and is a directory. |
+| -e file | file exists. |
+| -f file | file exists and is a regular file. |
+| -g file | file exists and is set-group-ID. |
+| -G file | file exists and is owned by the effective group ID. |
+| -k file | file exists and has its “sticky bit” set. |
+| -L file | file exists and is a symbolic link. |
+| -O file | file exists and is owned by the effective user ID. |
+| -p file | file exists and is a named pipe. |
+| -r file | file exists and is readable (has readable permission for |

@@ -1,0 +1,29 @@
+have the file extension “.BAK” (which is often used to designate backup files), we could use this command:
+
+```
+find ~ -type f -name '*.BAK' -delete
+```
+
+In this example, every file in the user’s home directory (and its subdirectories) is searched for filenames ending in .BAK. When they are found, they are deleted.
+
+> **Warning:** It should go without saying that you should *use extreme caution* when using the `-delete` action. Always test the command first by substituting the `-print` action for `-delete` to confirm the search results.
+
+Before we go on, let’s take another look at how the logical operators affect actions. Consider the following command:
+
+```
+find ~ -type f -name '*.BAK' -print
+```
+
+As we have seen, this command will look for every regular file (-type f) whose name ends with .BAK (-name '*.BAK') and will output the relative pathname of each matching file to standard output (-print). However, the reason the command performs the way it does is determined by the logical relationships between each of the tests and actions. Remember, there is, by default, an implied -and relationship between each test and action. We could also express the command this way to make the logical relationships easier to see:
+
+```
+find ~ -type f -and -name '*.BAK' -and -print
+```
+
+With our command fully expressed, let’s look at how the logical operators affect its execution:
+
+| Test/Action | Is Performed Only If.. |
+|---|---|
+| -print | -type f and -name '*.BAK' are true |
+| -name '*.BAK' | -type f is true |
+| -type f | Is always performed, since it is the first test/action in an -and relationship. |

@@ -1,0 +1,160 @@
+
+## read – Read Values From Standard Input
+
+The read builtin command is used to read a single line of standard input. This command can be used to read keyboard input or, when redirection is employed, a line of data from a file. The command has the following syntax:
+
+```
+read [-options] [variable...]
+```
+
+where options is one or more of the available options listed below and variable is the name of one or more variables used to hold the input value. If no variable name is supplied, the shell variable REPLY contains the line of data.
+
+Basically, read assigns fields from standard input to the specified variables. If we modify our integer evaluation script to use read, it might look like this:
+
+```
+#!/bin/bash
+
+# read-integer: evaluate the value of an integer.
+
+echo -n "Please enter an integer -> "
+read int
+
+if [[ "$int" =~ ^-?[0-9]+$ ]]; then
+    if [ $int -eq 0 ]; then
+        echo "$int is zero."
+    else
+        if [ $int -lt 0 ]; then
+            echo "$int is negative."
+        else
+            echo "$int is positive."
+        fi
+        if [ $((int % 2)) -eq 0 ]; then
+            echo "$int is even."
+        else
+            echo "$int is odd."
+        fi
+    fi
+else
+    echo "Input value is not an integer." >&2
+    exit 1
+fi
+```
+
+We use echo with the -n option (which suppresses the trailing newline on output) to display a prompt, and then use read to input a value for the variable int. Running this script results in this:
+
+```
+[me@linuxbox ~]$ read-integer
+Please enter an integer -> 5
+5 is positive.
+5 is odd.
+```
+
+read can assign input to multiple variables, as shown in this script:
+
+```
+#!/bin/bash
+
+# read-multiple: read multiple values from keyboard
+echo -n "Enter one or more values > "
+read var1 var2 var3 var4 var5
+echo "var1 = '$var1'"
+echo "var2 = '$var2'"
+echo "var3 = '$var3'"
+echo "var4 = '$var4'"
+echo "var5 = '$var5'"
+```
+
+In this script, we assign and display up to five values. Notice how read behaves when given different numbers of values:
+
+```
+[me@linuxbox ~]$ read-multiple
+Enter one or more values > a b c d e
+var1 = 'a'
+var2 = 'b'
+var3 = 'c'
+var4 = 'd'
+var5 = 'e'
+[me@linuxbox ~]$ read-multiple
+Enter one or more values > a
+var1 = 'a'
+var2 = ''
+var3 = ''
+var4 = ''
+var5 = ''
+[me@linuxbox ~]$ read-multiple
+Enter one or more values > a b c d e f g
+var1 = 'a'
+var2 = 'b'
+var3 = 'c'
+var4 = 'd'
+var5 = 'e f g'
+```
+
+If read receives fewer than the expected number, the extra variables are empty, while an excessive amount of input results in the final variable containing all of the extra input.
+
+If no variables are listed after the read command, a shell variable, REPLY, will be assigned all the input:
+
+```
+#!/bin/bash
+
+# read-single: read multiple values into default variable
+echo -n "Enter one or more values > "
+read
+echo "REPLY = '$REPLY'"
+```
+
+Running this script results in this:
+
+```
+[me@linuxbox ~]$ read-single
+Enter one or more values > a b c d
+REPLY = 'a b c d'
+```
+
+## Options
+
+read supports the following options:
+
+Table 28-1: read Options
+
+| Option | Description |
+|---|---|
+| -a array | Assign the input to array, starting with index zero. We will cover arrays in Chapter 35. |
+| -d delimiter | The first character in the string delimiter is used to indicate end of input, rather than a newline character. |
+| -e | Use Readline to handle input. This permits input editing in the same manner as the command line. |
+| -i string | Use string as a default reply if the user simply presses Enter. Requires the -e option. |
+| -n num | Read num characters of input, rather than an entire line. |
+| -p prompt | Display a prompt for input using the string prompt. |
+| -r | Raw mode. Do not interpret backslash characters as escapes. |
+| -s | Silent mode. Do not echo characters to the display as they are typed. This is useful when inputting passwords and other confidential information. |
+| -t seconds | Timeout. Terminate input after seconds. read returns a non-zero exit status if an input times out. |
+| -u fd | Use input from file descriptor fd, rather than standard input. |
+
+Using the various options, we can do interesting things with read. For example, with the -p option, we can provide a prompt string:
+
+```
+#!/bin/bash
+
+# read-single: read multiple values into default variable
+
+read -p "Enter one or more values > "
+
+echo "REPLY = '$REPLY'"
+```
+
+With the -t and -s options we can write a script that reads “secret” input and times out if the input is not completed in a specified time:
+
+```
+#!/bin/bash
+
+# read-secret: input a secret passphrase
+
+if read -t 10 -sp "Enter secret passphrase > " secret_pass; then
+  echo -e "\nSecret passphrase = '$secret_pass'"
+else
+  echo -e "\nInput timed out" >&2
+  exit 1
+fi
+```
+
+The script prompts the user for a secret passphrase and waits 10 seconds for input. If the entry is not completed within the specified time, the script exits with an error. Since the -s option is included, the characters of the passphrase are not echoed to the display as they are typed.

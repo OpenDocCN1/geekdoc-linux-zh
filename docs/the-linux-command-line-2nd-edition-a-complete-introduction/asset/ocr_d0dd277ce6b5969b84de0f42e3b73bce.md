@@ -1,0 +1,37 @@
+```
+[me@linuxbox ~]$ sort foo.txt | uniq
+a
+b
+c
+```
+
+This is because uniq only removes duplicate lines which are adjacent to each other.
+uniq has several options. Here are the common ones:
+
+Table 20-2: Common uniq Options
+
+| Option | Description |
+| --- | --- |
+| -c | Output a list of duplicate lines preceded by the number of times the line occurs. |
+| -d | Only output repeated lines, rather than unique lines. |
+| -f n | Ignore n leading fields in each line. Fields are separated by whitespace as they are in sort; however, unlike sort, uniq has no option for setting an alternate field separator. |
+| -i | Ignore case during the line comparisons. |
+| -s n | Skip (ignore) the leading n characters of each line. |
+| -u | Only output unique lines. This is the default. |
+
+Here we see uniq used to report the number of duplicates found in our text file, using the -c option:
+
+```
+[me@linuxbox ~]$ sort foo.txt | uniq -c
+  2 a
+  2 b
+  2 c
+```
+
+# Slicing And Dicing
+
+The next three programs we will discuss are used to peel columns of text out of files and recombine them in useful ways.
+
+# cut
+
+The cut program is used to extract a section of text from a line and output the extracted
