@@ -1,0 +1,245 @@
+
+# P
+
+- `pvn_vplist_dirty` (540)
+- `pvn_write_done` (539)
+- `pvn_write_kluster` (540)
+- `open()` 17, 483, 484
+- 打开 PROM 107
+- Oracle 203
+- 页（内存） 126
+- 缓存 590
+- 着色 172, 176, 177
+- 计数器 239
+- 126
+- 错误 141, 152
+- 空闲列表 171
+- 硬件特有 129
+- `pageio_done` (540)
+- `pageio_setup` (172)
+- `pagelock` (147)
+- 页出 114, 126
+- `pageprot` 152
+- 页定位 169
+- 分页交换器之前的页 595
+- 偷页 183
+- 分页计数器 239
+- 分页参数 599
+- 并行架构 62
+- 部分存储顺序 (PSO) 67
+- `page_create` 172
+- `page_create_va` 176, 213
+- `page_exists` 172
+- `page_first` 168, 172
+- `page_hash` 169
+- `page_free` 171
+- `page_imod` 126
+- `page_prot` 152
+- `page_now` 173
+- `page_need` 183
+- `page_lookup` 168
+- `page_skip` 172
+- `page_traversal` 270
+
+# 索引
+
+651
+- `exitclass` 352
+- `fork` 352
+- `forklet` 352
+- `getclinfo` 351
+- `getclpi` 351
+- `glob` 355
+- `parmsget` 352
+- `parmin` 351
+- `parmsout` 351
+- `parmsset` 352
+- `preempt` 354
+- `setrun` 354
+- `sleep` 354
+- `swapin` 353
+- `swapout` 353
+- `swapri` 353
+- `tick` 354
+- `trap` 353
+- `wakeup` 354
+- `yield` 355
+- `classes` 343, 348
+- `parameters` 345
+- `sclass structure` 349
+- CSCI 26, 494, 514
+- SDLC 9
+- 节标题表 264
+- 另见内核同步优先级 63
+- 另见线程，内核 14
+- 另见直接内存访问
+- Seek 513
+- `seg kmem` 220, 221
+- `seg_map` 统计 553
+- `segkp` 段 289
+- `segmap` 206
+- `segmap_fault()` 550
+- `segmap_getmap()` 550
+- `segmap_pagecreate()` 550, 582
+- `segmap_pageunlock()` 550
+- `segmap_release()` 550, 582
+- 段 (ELF 文件) 264
+- 段 (内存) 20
+- 描述 127
+- 驱动程序 9, 143
+- `seg_dev` 145
+- `seg_drv` 146
+- `seg_kmem` 145, 212
+- `seg_kp` 145, 212
+- `seg_lock` 146
+- `seg_map` 145, 212, 582
+- `seg_mapdev` 146
+- `seg_mdi` 146
+- `seg_nf` 146, 212
+- `seg_spt` 145
+- `seg_sx` 146
+- `seg_vn` 145, 549
+- 内核段 206
+- 内核段驱动方法
+- `segkm_checkprot()` 216
+- `segkm_create()` 216
+- `segkm_getmap()` 216
+- `segkm_setprot()` 216
+- `seg_map` 段 212, 549
+- `segkp` 段 289
+- 段违规 141
+- `SEGP_FAULT()` 145
+- `sgevn_create()` 144, 148
+- `sgevn_fault()` 149
+- `select()` 485
+- `select(3C)` 475
+- 选择并确认算法 396
+- `SEM_NEMS_MAX` 453
+- `sem_open(3R)` 452, 453
+- `SEM_VALUE_MAX` 453
+- `sema_sobj_ops` 71, 101
+- 信号量值 436
+- 信号量 68
+- 接口 452
+- 内核 68
+- 内核函数 99
+- 限制 (可调参数)
+- `semmaem` 439
+- `semmap` 437
+- `semmn` 437
+- `semmns` 438
+- `semmnu` 438
+- `semmsl` 438
+- `semomp` 438
+- `semume` 438
+- `semusz` 439
+- `semvx` 439
+- P 和 V 操作 99
+- posIX 421, 452
+- System V 18
+- `semget(2)` 436, 440
+- `semid_ds` 440
+- `semmap` 425
+- 顺序一致性模型 66
+- SIGTSTP 338
+- 会话 338
+- SIGTTIN 339
+- 会话组长 340
+- SIGTTO 339
+- `set_anoninfo()` 156
+- SIGVTALRM 56
+- `setfacl` 522
+- SIGWAITOR 408
+- `settimer(2)` 147
+- SIGXCPU 56, 325
+- `setprot()` 147
+- SIGXFSZ 325
+- 共享库 147
+- SIGTTIN 339
+- 共享映射文件 150
+- 单一内核镜像 61
+- `sixtyfour(64)` 限制 (可调参数)
+- 64 位应用程序 5
+- 64 位数据类型 5
+- 64 位设备支持 507
+- 64 位文件应用 506
+- 64 位内核 8
+- 64 位支持 5
+- 64 位二进制文件 4
+- POSIX 452
+- System V 18
+- 共享内存多处理器 507
+- 共享内存 4
+- 共享 126
+- `slab` 分配器 2, 217
+- `slab_create` 230
+- `slab_destroy` 230
+- `slab_traper` 166
+- `slab_size` 229
+- 兄弟进程 (进程) 271
+- `SHM_SHARE_MMU` 203
+- `si_pc` 166
+- `si_traper` 166
+- 64 位应用程序 5
+- 64 位数据类型 5
+- 64 位设备支持 507
+- 64 位文件应用 506
+- 64 位内核 8
+- 64 位支持 5
+- 64 位二进制文件 4
+- POSIX 452
+- System V 18
+- 共享内存多处理器 507
+- 共享内存 4
+- 共享 126
+- `slab` 分配器 2, 217
+- `slab_create` 230
+- `slab_destroy` 230
+- `slab_traper` 166
+- `slab_size` 229
+- 兄弟进程 (进程) 271
+- `SHM_SHARE_MMU` 203
+- `si_pc` 166
+- `si_traper` 166
+- 顺序一致性模型 66
+- 信号量 69
+- P 和 V 操作 99
+- posIX 421, 452
+- System V 18
+- System V 消息队列 18
+- System V 共享内存 18
+- System V 信号量 另见共享内存
+- `t_pre_sys` 285
+- `t_preempt` 284
+- `t_pri` 285, 369
+- `t_proc_flag` 284
+- `t_procp` 285
+- `t_release_all()` 96
+- `t_scheduler` 284
+- Solaris 653
+- Solaris 架构 11
+- Solaris 管理器 9
+- Solstice 磁盘 (SDS) 494, 566
+- SuperARC 201
+- SVR3 5
+- SVR4 5
+- 交换 168, 237
+- 交换设备 599
+- 交换空间 (Swap Space) 158, 236
+- `swapctl()` 162
+- `swapfs` 158, 189
+- `swapfs_getpage()` 159
+- `swapfs_getv()` 159
+- `swapmin` 164
+- `swapwsfree` 164
+- `swapout()` 147
+- 已换出 157
+- 交换 128, 190
+- `swch()` 382, 393
+- 对称多进程处理 8
+- 对称多处理器 60
+- `sync()` 147
+- `sysdef` 592
+- `sysent` 表 44
+- 系统调用 22, 44
+- 系统文件 11
