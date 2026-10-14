@@ -1,0 +1,218 @@
+
+```
+da10:~ # rpm --qi wget
+Name        : wget                         Relocations: (not relocatable)
+Version     : 1.10.2                       Vendor: SUSE LINUX Products GmbH,
+Nuernberg, Germany
+Release     : 15                           Build Date: Mon May 8
+21:16:26 2006                              Build Host: nicolai.suse.de
+Install Date: Wed May 15 10:28:23 2006
+Group       : Productivity/Networking/Web/Utilities Source RPM: wget-
+1.10.2-15.src.rpm
+Size        : 1532429                      License: GPL
+Signature   : DSA/SHA1, Mon May 8 21:20:08 2006, Key ID a84edae89c800aca
+Packager    : http://bugs.open\-suse.org
+URL         : http://wget.sunsite.dk/
+Summary     : A Tool for Mirroring FTP and HTTP Servers
+Description :
+Wget enables you to retrieve WWW documents or FTP files from a server.
+This can be done in script files or via the command line.
+Authors:
+---------
+    Hrvoje Niksic <hn niksic@srce.hr>
+Distribution: SUSE Linux Enterprise 10 (i586)
+```
+
+`-f` 选项仅在您使用完整路径指定完整文件名时才有效。您可以输入多个文件名，如下所示：
+
+```
+da10:~ # rpm -qf /bin/rpm /usr/bin/wget
+rpm-4.4.2-43
+wget-1.10.2-15
+```
+
+这将返回 `/bin/rpm` 和 `/usr/bin/wget` 的信息。借助 RPM 数据库，您可以使用 `-V` 或 `--verify` 选项执行验证检查。如果软件包中的任何文件自安装以来已被更改，则会显示出来。
+
+RPM 使用表 6-2 中显示的字符符号来提示更改。
+
+| Character | Description |
+|---|---|
+| 5 | MD5 校验和 |
+| S | 文件大小 |
+| L | 符号链接 |
+| T | 修改时间 |
+| D | 主次设备号 |
+| U | 所有者 |
+| G | 组 |
+| M | 模式（权限和文件类型） |
+
+表 6-2
+
+对于配置文件，将显示字母 `c`。以下是 `/etc/wgetrc` (`wget`) 更改的示例：
+
+```
+rpm -V wget
+S.5.....T c /etc/wgetrc
+```
+
+## 安装、更新和卸载软件包
+
+对于大多数 RPM 软件包，您使用以下命令安装软件：
+
+```
+rpm --i *package_name*.rpm
+```
+
+安装 RPM 软件包时，可执行程序、文档文件、配置文件和启动脚本会被复制到文件系统中的相应目录。
+
+您可以使用 `-U`（或 `--upgrade`）和 `-F`（或 `--freshen`）选项通过以下语法更新软件包：
+
+```
+rpm --F *package_name*.rpm
+```
+
+此命令删除旧版本的文件并立即安装新文件。如果未安装先前版本，则不会安装该软件包。
+
+如果安装了旧版本，`-U` 选项与 `-F` 相同。但是，如果未安装先前版本，`-U` 会安装新版本。
+
+要卸载（删除）RPM 软件包，请输入以下内容：
+
+```
+rpm --e package_name
+```
+
+卸载软件包时，除已修改的配置文件外，所有文件都会在 RPM 数据库的帮助下从系统中删除。这确保了干净的卸载。
+
+RPM 仅在不破坏依赖关系的情况下删除软件包。如果其他软件包依赖于您要删除的软件包，则会在错误消息中列出这些软件包。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_197_0.png)
+
+请参阅手册页或 RPM 以获取可用选项的完整参考。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_197_1.png)
+
+## 练习 6-3：使用 RPM 管理软件
+
+在本练习中，您收集已安装软件的信息，并卸载和安装软件包。首先，通过查找 `/usr/bin/wget` 文件的信息来获取 RPM 的信息：
+
+- 找出哪个软件包包含 `/usr/bin/wget` 文件。
+- 获取该软件包的信息。
+- 列出该软件包包含的文件。
+- 验证文件的完整性。
+- 列出该软件包中包含文档的文件。
+
+然后，从 DVD 安装 `gcal` 软件包，运行程序 `gcal`，并卸载 `gcal`。
+
+### 完成此练习的详细步骤
+
+- 第 I 部分：获取软件包信息
+- 第 II 部分：使用 RPM 移除和安装软件
+
+### 第 I 部分：获取软件包信息
+
+要获取软件包信息，请执行以下操作：
+
+1. 使用 RPM 查找 `wget` 软件包的信息：
+
+   a. 从终端窗口，输入以下命令确定哪个软件包安装了 `/usr/bin/wget` 文件：
+
+```
+rpm -qf /usr/bin/wget
+```
+
+请注意，`wget` 软件包安装了 `wget` 文件。
+
+   b. 输入以下命令查找 `wget` 软件包的信息：
+
+```
+rpm -qi wget
+```
+
+请注意，信息包括安装日期和描述。
+
+   c. 输入以下命令显示 `wget` 软件包安装的所有文件：
+
+```
+rpm -ql wget
+```
+
+您可以在哪里找到有关 `wget` 软件包的信息？（请注意 README 文件的位置。）
+
+2. 以 root 身份登录，并使用您选择的编辑器修改 `/etc/wgetrc` 文件中的某些注释。通过输入以下命令查看自 `wget` RPM 最初安装以来硬盘驱动器上的文件发生了什么变化：
+
+```
+rpm -V wget
+```
+
+3. 输入以下命令查看 `wget` 命令的文档文件：
+
+```
+rpm -qd wget
+```
+
+请注意，其中一些文件仍被压缩（`*.gz`）。
+
+### 第 II 部分：使用 RPM 移除和安装软件
+
+要使用 RPM 移除和安装软件，请执行以下操作：
+
+1. 从终端窗口，切换到用户 root（`su -`，密码 `nov311`）。
+2. 输入以下命令删除 `gcalctool` 软件包：
+
+```
+rpm -e gcalctool
+```
+
+3. 输入以下命令验证软件包是否已不再安装：
+
+```
+rpm -ql gcalctool
+```
+
+4. 将 *SUSE Linux Enterprise Desktop 10 SP1 产品 DVD* 插入 CD-ROM 驱动器。
+5. 输入命令 `ls /media`。将有一个根据 DVD 标签命名的目录。请注意该目录的名称。
+6. 输入以下命令列出未安装的 `gcalctool` 软件包包含的所有文件：
+
+```
+rpm -qpl /media/cdlabel/suse/i586/gcalctool*.i586.rpm
+```
+
+7. 输入以下命令安装 `gcalctool` 软件包：
+
+```
+rpm -ihv /media/cdlabel/suse/i586/gcalc*.i586.rpm
+```
+
+8. 从驱动器中取出 DVD。
+9. （条件）如果 CD 驱动器无法打开，输入以下内容：
+
+```
+eject
+```
+
+然后重试。
+10. 输入以下命令测试软件包的安装：
+
+```
+gcalctool
+```
+
+11. 输入以下命令列出已安装的 `gcal` 软件包包含的所有文件
+
+```
+rpm -ql gcalctool
+```
+
+12. 输入以下命令以 root 身份注销
+
+```
+exit
+```
+
+13. 关闭终端窗口。
+
+## 摘要
+
+- 在 SUSE Linux 安装后，最简单的方法是使用 YaST 的软件管理模块来安装、更新、管理和卸载软件包。尽管 YaST 默认从安装介质获取软件包，但您可以指定其他安装源，例如网络服务器或互联网上的软件存储库。
+- 您可以将 YaST 的在线更新模块用于获取 SUSE Linux 系统的最新软件更新，前提是您拥有有效的 SUSE Customer Center 订阅。
+- 大多数 Linux 软件采用 Red Hat Package Manager（RPM）格式。RPM 软件包文件名包括软件版本、发布号、架构和 `rpm` 扩展名。
