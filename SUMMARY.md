@@ -2081,6 +2081,7 @@
 +   [Zope 之书 [电子资源]：Web 应用构建与交付指南](docs/the-book-of-zope-electronic-resource-how-to-build-and-delive/README.md)
 +   [Linux 与开源的商业与经济](docs/the-business-and-economics-of-linux-and-open-source/README.md)
 +   [Chromebook Google Linux 指南：免费访问超过 5 万个软件包](docs/the-chromebook-guide-to-google-linux-easy-access-to-over-50-/README.md)
++   [Linux 傻瓜指南 第二版 附 CD-ROM](docs/the-complete-idiots-guide-to-linux-2e-with-cd-rom/README.md)
 +   [UNIX 入门指南](docs/the-complete-idiots-guide-to-unix/README.md)
 +   [Linux 完全指南](docs/the-complete-linux/README.md)
 +   [Linux 编码完全手册 - 第 17 版，2023 年](docs/the-complete-linux-coding-manual---17th-edition-2023/README.md)

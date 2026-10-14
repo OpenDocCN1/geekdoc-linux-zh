@@ -1,0 +1,171 @@
+
+
+## Shell 种类
+
+可供选择的 shell 有很多。为什么？因为人们喜欢以不同的方式做事，而且许多程序员创建了新的 shell 来解决他们喜欢的 shell 中的某些不足。这里列出的内容实际上是一棵多物种的 shell 进化树。第一个 shell（sh）的特性进行了交叉授粉，帮助了特性的演进：
+
+- sh—起初，这是你唯一的选项。它被称为 Bourne shell。不幸的是，它没有提供你在 shell 中真正想要的东西，例如命令行编辑。
+- ksh—Korn shell。这是一个非常流行的 UNIX shell。在过去，如果你安装了特定品牌的 UNIX，才能使用这个 shell。
+- csh—C shell。这个 shell 在交互使用（在屏幕上输入）方面与其他两个相似，但在其编程语法上却非常不同。C shell 是第一个提供作业控制（一种管理运行命令的方式）和命令历史的 shell。
+- tcsh—tcsh 是增强版的 C shell（csh）。这个 shell 与 csh 相似，但提供了命令和文件名补全以及一些命令行编辑功能。
+- bash—这是大多数 Linux 发行版中的默认 shell。它被称为“Bourne Again Shell”，由自由软件基金会（GNU）创建和分发。这是一个非常好的 shell 可供学习；它具有命令行编辑和文件名补全，并且与原始的 Bourne shell 兼容。
+- zsh—这是所有 shell 中最新的一种。它与 Bourne shell 兼容。
+
+Check This Out:
+大多数 shell 都提供自己的编程语言。你在 Linux 下运行的许多程序实际上都是为这里介绍的 shell 或其他命令解释器（如 Perl 和 Python）编写的 shell 脚本。
+
+要访问内容，请单击章节和节标题。
+
+## Complete Idiot's Guide to Linux
+
+（Publisher: Macmillan Computer Publishing）
+Author(s): Manuel Ricart
+ISBN: 078971826x
+Publication Date: 12/22/98
+
+Search this book:
+
+Previous Table of Contents Next
+
+## Graphic Consoles
+
+即使你正在运行图形终端，终端也只是让 shell 与你通信的花哨前端。KDE 提供了一个名为 kvt 的应用程序，你可以用它来访问 shell。你可以通过单击面板上的 kvt 图标来启动终端。该图标如图下一图所示。
+
+面板上的 kvt 按钮看起来像这样。
+
+![](img/edf072a03d4de1f8f4a13465ac79e7fb_113_0.png)
+
+kvt 终端程序通过 KVT 提供对 shell 的直接访问。（其他终端仿真器，例如称为 xterm 的仿真器，也可供你使用。）
+
+如果你正在运行 X，现在按 Ctrl+Alt+F2 进入控制台。我希望你能充分体验在命令行上工作的感觉，并放弃图形环境提供的一些便利。这会让你的体验更“纯粹”。
+
+## Check This Out:
+
+如果你在控制台上工作，你可以同时在多个控制台上工作。每次切换时，你可以通过按 Alt+Fn 来访问虚拟控制台，其中 Fn 为 F1–F6。你将获得一个全新的虚拟控制台，包含登录提示等一切内容。
+
+如果你已登录 X（KDE），你仍然可以访问虚拟控制台。你可以通过按 Ctrl+Alt+Fn 来激活虚拟控制台，其中 Fn 为 F2–F6。要返回到运行 KDE 的 X 会话，请按 Alt+F7。（默认情况下 X 会话在终端 7 下运行。）
+
+## Logging in Through a Console
+
+通过控制台登录与登录 KDE 或 X Windows 并无太大不同。显而易见的区别是，与使用漂亮的 GUI 不同，你会得到一个文本界面：
+
+```
+Caldera OpenLinux(TM)
+Lite
+Version 1.2
+Copyright 1996–1998 Caldera, Inc.
+
+login: username
+Password: mypassword
+```
+
+通常，你的密码不会回显到屏幕上，以保护你和你的账户。如果你正确输入了登录名和密码，你就可以开始了。
+
+## What Shell Are You Running?
+
+默认情况下，除非你的系统由其他人配置，否则你应该正在运行 bash。要检查你正在运行什么 shell，请输入 echo $SHELL。
+
+前面带有美元符号的词表示该词实际上是一个变量的名称。echo 命令将打印该 $SHELL 环境变量中找到的值。结果应类似于此处所示的内容：
+
+```
+[alberto@digital alberto]$ echo $SHELL
+/bin/bash
+```
+
+如果由于某种奇怪的原因你运行的不是 bash，请在提示符下输入命令 bash 以在本次会话的剩余时间内开始使用 bash shell。
+
+> Check This Out:
+> 在向 shell 输入命令时，请记住 Linux 是区分大小写的，因此 BASH、bash、Bash 和 BaSH 对 shell 来说是不同的命令。通常你输入的命令将全部为小写。
+
+## Command Line Program Syntax
+
+大多数命令行程序使用以下语法：
+
+```
+commandname [flags] arg1 arg2 argn
+```
+
+术语定义如下：
+
+- *commandname* 是命令的名称。
+- *flags* 或参数是在程序名称之后给出的选项，用于控制程序的行为。标志通常通过前导的破折号或双破折号与其它类型的参数区分开，如 `-h` 或 `--help`。其他类型的参数可以是文件名或某些程序定义的关键字。标志是区分大小写的，并且具有许多选项的工具会使用大小写字母来命名其选项。
+- *arg1-argn* 是程序要处理的参数列表。通常这将是文件列表、目录名称或程序所需的东西。
+
+一些常用命令，例如 `ls` 和 `pwd`，也内置于某些 shell 中以提高性能。我们将在下一节讨论这些命令。
+
+> **Note:**
+> 要永久更改你的 shell，请参阅第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中的“Changing Your Shell”部分。
+
+## Navigating the File System
+
+你需要学习的第一件事是如何使用 shell 导航。你知道如何使用 KFM 在文件系统中移动并访问文件；通过 shell 做同样的事情并不困难太多。然而，你需要学习一些命令：
+
+- `pwd`
+- `ls`
+- `cd`
+
+## Where Are You?: pwd
+
+你可能想知道的第一件事是你在哪一个文件系统中。如果你刚登录，你可能在你的主目录中。即使我们知道这一点，为了学习体验，在提示符下输入 pwd：
+
+```
+[alberto@digital alberto]$ pwd
+/home/alberto
+```
+
+`pwd` 代表“print working directory”。shell 将通过列出你当前位置的绝对路径来响应。绝对路径是指从根（`/`）目录指定的路径。
+
+Products | Contact Us | About Us | Privacy | Ad Info | Home
+
+Use of this site is subject to certain Terms & Conditions. Copyright © 1996-2000 EarthWeb Inc.
+All rights reserved. Reproduction whole or in part in any form or medium without express written permission of EarthWeb is prohibited.
+
+To access the contents, click the chapter and section titles.
+
+## Complete Idiot's Guide to Linux
+
+（Publisher: Macmillan Computer Publishing）
+Author(s): Manuel Ricart
+ISBN: 078971826x
+Publication Date: 12/22/98
+
+Search this book:
+
+## Listing Files
+
+接下来你想做的事情是列出当前目录中的文件。这是通过 ls 命令完成的，其代表 list：
+
+```
+[alberto@digital alberto]$ ls
+Desktop      images      linkToImages  test.txt
+Mail         kde         nsmail        test.txt<
+html         lg          test.rc       todo.txt
+```
+
+正如你所见，ls 的普通调用并不能很好地区分目录（文件夹）和文件。
+
+要让 ls 为你提供有关找到的文件的更多信息，你需要指定 -F 标志。此选项使 ls 在文件名后附加一个字符以指示其类型。
+
+文件类型指示符为
+
+- * 用于程序或可执行脚本
+- / 用于目录
+- @ 用于符号链接
+- | 用于管道
+- = 用于套接字
+- 无用于普通文件
+
+```
+[alberto@digital alberto]$ ls -F
+Desktop/      images/      linkToImages@  test.txt
+Mail/         kde/         nsmail/        test.txt<
+html/         lg/          test.rc        todo.txt
+```
+
+现在你可以区分基本类型。ls 提供了许多更多选项。更有用的选项在下表中列出。
+
+## Useful ls Options
+
+| Option | Action |
+|--------|--------|
+

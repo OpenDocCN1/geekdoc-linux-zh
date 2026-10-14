@@ -1,0 +1,1108 @@
+- - '##'
+  - 关于作者
+- - '##'
+  - 如何使用本书
+- - '##'
+  - 为什么是 Linux？
+- - '##'
+  - Conventions
+- - '##'
+  - About the Author
+- - '##'
+  - Dedication
+- - '##'
+  - Acknowledgments
+- - '##'
+  - Tell Us What You Think!
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 第 3 章
+- - '##'
+  - 本章内容
+- - '##'
+  - 通过 KFM 的文件系统
+- - '##'
+  - The KFM Navigation Toolbar
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Opening a Folder
+- - '##'
+  - Opening a File
+- - '##'
+  - A Tree View
+- - '##'
+  - A File List
+- - '##'
+  - What the Listing Means
+- - '##'
+  - Bookmarks
+- - '##'
+  - Selecting Files and Folders
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 4
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 桌面分页器：切换应用程序和桌面
+- - '##'
+  - 启用活动桌面边框选项
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Changing the Number of Virtual Desktops
+- - '##'
+  - 自定义虚拟桌面的外观
+- - '##'
+  - 自动启动应用程序
+- - '##'
+  - KDE 工作区自动恢复功能
+- - '##'
+  - KDE 应用程序帮助：kdehelp
+- - '##'
+  - 退出应用程序
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 5
+- - '##'
+  - 本章内容
+- - '##'
+  - 创建和保存文件
+- - '##'
+  - Copying and Moving Text
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 6
+- - '##'
+  - In This Chapter
+- - '##'
+  - 'Getting Organized: Creating a Folder'
+- - '##'
+  - Copying Files and Folders
+- - '##'
+  - Copying Files Using Drag and Drop
+- - '##'
+  - Copying Files Using the Clipboard
+- - '##'
+  - Moving Files and Folders
+- - '##'
+  - Linking Files and Folders
+- - '##'
+  - Replacing a File or a Folder
+- - '##'
+  - Deleting a File or Folder
+- - '##'
+  - Moving a File or Folder to the Trash
+- - '##'
+  - Retrieving a File or Folder from the Trash
+- - '##'
+  - Emptying the Trash
+- - '##'
+  - 完全傻瓜的 Linux 使用指南
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 7
+- - '##'
+  - In This Chapter
+- - '##'
+  - Configuring the System to Allow Users to Access the CD-ROM and the Floppy
+- - '##'
+  - Starting a Superuser KFM Session
+- - '##'
+  - Enabling Regular Users to Access Disk Devices
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 为软盘和 CD 创建 kdelnk 文件
+- - '##'
+  - 复制文件到或从软盘
+- - '##'
+  - 打开和保存文件到软盘
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 访问 CD-ROM
+- - '##'
+  - 准备新的软盘
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 第8章
+- - '##'
+  - 本章内容
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 添加新的拨号配置
+- - '##'
+  - 配置 IP 设置
+- - '##'
+  - 技术谈：好吧，聪明人，TCP、UDP 和 PPP 到底是什么？
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 配置调制解调器设备
+- - '##'
+  - 调试连接
+- - '##'
+  - 通过本地网络连接
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 第 9 章
+- - '##'
+  - 访问网络
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - SEARCH ITKNOWLEDGE
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - FTP
+- - '##'
+  - BROWSE BY TOPIC
+- - '##'
+  - Email
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Configuring Your Identity for Netscape Messenger
+- - '##'
+  - Configuring Your Mail Server
+- - '##'
+  - Reading Email
+- - '##'
+  - Composing an Email Message
+- - '##'
+  - 新闻
+- - '##'
+  - Telnet
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 第 10 章
+- - '##'
+  - 本章内容
+- - '##'
+  - 将应用程序添加到面板或应用程序启动器
+- - '##'
+  - 完全傻瓜Linux指南
+- - '##'
+  - 将应用程序与 KFM 和应用程序启动器关联
+- - '##'
+  - 面板管理：添加和删除应用程序
+- - '##'
+  - 其他 KDE 选项
+- - '##'
+  - KDE 控制中心
+- - '##'
+  - Part 2
+- - '##'
+  - Chapter 11
+- - '##'
+  - In This Chapter
+- - '##'
+  - The UNIX Command Prompt
+- - '##'
+  - Shell 种类
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Graphic Consoles
+- - '##'
+  - 'Check This Out:'
+- - '##'
+  - Logging in Through a Console
+- - '##'
+  - What Shell Are You Running?
+- - '##'
+  - Command Line Program Syntax
+- - '##'
+  - Navigating the File System
+- - '##'
+  - 'Where Are You?: pwd'
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Listing Files
+- - '##'
+  - Useful ls Options
+- - '##'
+  - 'Techno Talk: Links, Sockets, and Inodes???'
+- - '##'
+  - ls in Technicolor
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Making Shell Options the Default
+- - '##'
+  - 'Changing Directories: cd'
+- - '##'
+  - Relative and Absolute Paths
+- - '##'
+  - 'Techno Talk: The PATH Environment Variable'
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 'Filename Expansion: Tab'
+- - '##'
+  - Exiting the Console
+- - '##'
+  - Shutting Down a Linux Box
+- - '##'
+  - Rebooting a Linux Box
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 12
+- - '##'
+  - In This Chapter
+- - '##'
+  - Working with Files and Folders
+- - '##'
+  - 'Creating a New Empty File: touch'
+- - '##'
+  - 'Removing Files: rm'
+- - '##'
+  - 'Creating a Directory: mkdir'
+- - '##'
+  - 重点关注：谨防 root 的强大权限！
+- - '##'
+  - 删除空目录：rmdir
+- - '##'
+  - 同时删除文件和目录：rm -R
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 复制文件：cp
+- - '##'
+  - 复制目录
+- - '##'
+  - 移动文件和目录：mv
+- - '##'
+  - 技术谈：符号链接
+- - '##'
+  - 技术谈：硬链接
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 创建链接：ln
+- - '##'
+  - 读取文件
+- - '##'
+  - 拼接：cat
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 一次查看一页：less
+- - '##'
+  - 查看前几行：head
+- - '##'
+  - 查看最后几行：tail
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 13
+- - '##'
+  - 本章内容
+- - '##'
+  - 改进的视觉编辑器：Vim
+- - '##'
+  - 交互式 Vim 教程
+- - '##'
+  - 《Linux 完全傻瓜指南》：在 Shell 下进行文本编辑
+- - '##'
+  - 《Linux 完全傻瓜指南》
+- - '##'
+  - Vim 基础
+- - '##'
+  - XEmacs
+- - '##'
+  - 检查拼写：Ispell
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 第 14 章
+- - '##'
+  - 让 Shell 发揮作用
+- - '##'
+  - 本章内容
+- - '##'
+  - 同时使用多个命令
+- - '##'
+  - 命令组和子 Shell
+- - '##'
+  - 重定向
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - STDOUT
+- - '##'
+  - 重定向到文件：>
+- - '##'
+  - 追加文件：>>
+- - '##'
+  - 《Linux 完全傻瓜指南：让 Shell 发光发热》
+- - '##'
+  - 《Linux 完全傻瓜指南》
+- - '##'
+  - STDERR
+- - '##'
+  - 《Linux 完全傻瓜指南》
+- - '##'
+  - 'Getting the Needed Input: Input Redirection'
+- - '##'
+  - Regular Expressions
+- - '##'
+  - 'Match Anything: *'
+- - '##'
+  - 'Match Any Letter: ?'
+- - '##'
+  - Table 14.2 Examples of Using the Question Mark
+- - '##'
+  - 'Match in a Range: []'
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 'Negating a Range: !'
+- - '##'
+  - Command History
+- - '##'
+  - 'Jobs: Working on Multiple Things Using a Shell'
+- - '##'
+  - Suspending a Job
+- - '##'
+  - Killing a Job
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 15
+- - '##'
+  - In This Chapter
+- - '##'
+  - UNIX 手册页
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 搜索工具：apropos
+- - '##'
+  - 获取简要命令描述：whatis
+- - '##'
+  - 搜索标准位置：whereis
+- - '##'
+  - 内置命令信息
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 通过 /usr/doc 在线帮助
+- - '##'
+  - 更多关于 HOWTO 文档
+- - '##'
+  - Mini HOWTOs
+- - '##'
+  - LDP—Linux 文档项目
+- - '##'
+  - 阅读压缩文档：zless
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - Info 页面
+- - '##'
+  - 表 15.2 Info 命令
+- - '##'
+  - Usenet：互联网新闻组
+- - '##'
+  - 有用的书籍
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 第 16 章
+- - '##'
+  - 权限：保护和共享你的工作
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 有效用户 ID
+- - '##'
+  - 替代用户：su
+- - '##'
+  - 当心 root 的权力！
+- - '##'
+  - 更改组：newgrp
+- - '##'
+  - 特殊用户
+- - '##'
+  - 主目录
+- - '##'
+  - 更改文件权限
+- - '##'
+  - 按数字设置权限：4、2、1 和 0
+- - '##'
+  - 使用符号设置权限：u、g、o、r、w 和 x
+- - '##'
+  - 表 16.1 使用符号授予权限
+- - '##'
+  - 表 16.2 使用符号拒绝权限
+- - '##'
+  - 使用 chmod 更改权限
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - Setuid、Setgid 和 Sticky 位
+- - '##'
+  - 默认文件模式：umask
+- - '##'
+  - 组所有权和用户私有组
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 第 17 章
+- - '##'
+  - 本章内容
+- - '##'
+  - 用户实用程序
+- - '##'
+  - 更改密码：passwd
+- - '##'
+  - 更改你的 Shell：chsh
+- - '##'
+  - 更改个人信息：chfn
+- - '##'
+  - 系统上有哪些人：who 和 w
+- - '##'
+  - 完全傻瓜 Linux 使用指南
+- - '##'
+  - 查看和设置日期和时间：date
+- - '##'
+  - 获取日历：cal
+- - '##'
+  - 完全傻瓜 Linux 使用指南
+- - '##'
+  - 查找文件
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 'Locating Files: locate'
+- - '##'
+  - 'Building the locate Database: updatedb'
+- - '##'
+  - 'Finding a File: locate'
+- - '##'
+  - 'Finding Files that Contain a Word or Pattern: grep'
+- - '##'
+  - Text and File Utilities
+- - '##'
+  - 'Counting Lines, Words, and Characters: wc'
+- - '##'
+  - 完全傻瓜指南 Linux
+- - '##'
+  - 对文本行进行排序：sort
+- - '##'
+  - 格式化文本：fmt
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 将文件拆分为较小文件：split
+- - '##'
+  - 通过网络访问计算机：telnet
+- - '##'
+  - 在控制台上工作：setfont
+- - '##'
+  - 完全傻瓜的 Linux 使用指南
+- - '##'
+  - UNIX 打印入门
+- - '##'
+  - 完全傻瓜的 Linux 使用指南
+- - '##'
+  - UNIX 文本处理
+- - '##'
+  - 完全傻瓜Linux指南
+- - '##'
+  - Part 3
+- - '##'
+  - Chapter 18
+- - '###'
+  - In This Chapter
+- - '###'
+  - Adding Users
+- - '####'
+  - adduser
+- - '####'
+  - Useradd
+- - '###'
+  - 'Modifying Users: usermod'
+- - '####'
+  - Moving a Home Directory
+- - '####'
+  - Changing a Login Name
+- - '##'
+  - 更改次要组隶属关系
+- - '##'
+  - 删除用户：userdel
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 添加、修改和删除组
+- - '###'
+  - Groupadd
+- - '###'
+  - 管理组成员资格：gpasswd
+- - '##'
+  - 更改次要组隶属关系
+- - '##'
+  - 删除用户：userdel
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Adding, Modifying, and Removing Groups
+- - '###'
+  - Groupadd
+- - '###'
+  - 'Managing Group Memberships: gpasswd'
+- - '##'
+  - Users and Passwords
+- - '###'
+  - Password Don'ts
+- - '###'
+  - Password Do's
+- - '##'
+  - Linux and Shadow Passwords
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 19
+- - '###'
+  - 'Backups: Safeguarding Your Work'
+- - '###'
+  - In This Chapter
+- - '##'
+  - Media Are Just Devices
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Backup Media
+- - '###'
+  - Floppy Disks
+- - '###'
+  - Floptical Disks
+- - '###'
+  - Magneto-Optical Disks
+- - '###'
+  - Quarter-Inch Cartridge Tapes
+- - '###'
+  - Travan Tapes
+- - '##'
+  - 完全傻瓜的 Linux 使用指南
+- - '##'
+  - 一次性写入 CD-ROM
+- - '##'
+  - 可重写 CD-ROM
+- - '##'
+  - Iomega Jaz 和 Zip 驱动器
+- - '##'
+  - 九轨磁带
+- - '##'
+  - 4mm 数字音频磁带
+- - '##'
+  - 8mm 卡式磁带
+- - '##'
+  - DLT 卡式磁带
+- - '##'
+  - 要备份的内容
+- - '##'
+  - 简单备份
+- - '##'
+  - 磁带归档：tar
+- - '##'
+  - 创建 tar 文件
+- - '##'
+  - 从 tar 归档中提取文件
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 提取文件到设备
+- - '##'
+  - 将数据 tar 到设备
+- - '###'
+  - 软盘设备
+- - '###'
+  - 磁带设备
+- - '##'
+  - mt 命令
+- - '##'
+  - 从设备提取
+- - '##'
+  - 跨多个磁盘或磁带
+- - '##'
+  - 备份策略
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - dump 命令
+- - '###'
+  - Techno Talk：以单用户模式启动
+- - '##'
+  - 磁带容量
+- - '##'
+  - dump 示例
+- - '##'
+  - restore 命令
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - restore Examples
+- - '##'
+  - Graphical Backup Programs
+- - '##'
+  - BRU2000
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 20
+- - '###'
+  - In This Chapter
+- - '##'
+  - 'RPM: The Red Hat Package Manager'
+- - '##'
+  - 安装、升级、降级和删除软件
+- - '##'
+  - 安装
+- - '##'
+  - 升级
+- - '##'
+  - 降级
+- - '##'
+  - 卸载
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 已安装软件的数据库
+- - '##'
+  - 查找有关软件包的信息
+- - '##'
+  - 查找拥有文件 的软件包
+- - '##'
+  - 查找由软件包拥有的文件
+- - '##'
+  - 查找与软件包相关的文档
+- - '##'
+  - 验证您的系统
+- - '##'
+  - RPM 的图形前端
+- - '##'
+  - Linux完全傻瓜指南
+- - '##'
+  - 非 RPM 包
+- - '##'
+  - Tar
+- - '##'
+  - UNIX 压缩归档：Gzip 和 Compress
+- - '##'
+  - Windows 压缩归档：Zip
+- - '##'
+  - 第 21 章
+- - '###'
+  - 本章内容
+- - '##'
+  - LISA 的基本功能
+- - '##'
+  - 详细系统分析
+- - '##'
+  - 软件包管理
+- - '##'
+  - Linux 完全傻瓜指南
+- - '##'
+  - 系统配置
+- - '###'
+  - 硬件配置区域
+- - '###'
+  - 系统配置区域
+- - '##'
+  - 网络配置区域
+- - '###'
+  - 主机表配置
+- - '##'
+  - 网络访问配置
+- - '##'
+  - 通用网络服务配置
+- - '##'
+  - 启动管理器配置
+- - '##'
+  - 完全傻瓜 Linux 指南
+- - '##'
+  - 第 22 章
+- - '##'
+  - 本章内容
+- - '##'
+  - 监控内存
+- - '###'
+  - 内存有多少：free
+- - '###'
+  - Procinfo
+- - '##'
+  - 完全傻瓜 Linux 指南：系统监控：关注你的系统
+- - '##'
+  - 完全傻瓜 Linux 指南
+- - '##'
+  - 监控进程
+- - '###'
+  - 列出当前前台进程：top
+- - '##'
+  - 表 22.1 Top 选项
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 进程状态：ps
+- - '##'
+  - 终止进程：kill
+- - '##'
+  - “为进程 nice”：nice 和 renice
+- - '##'
+  - 监控你的磁盘
+- - '##'
+  - Linux 完全 idiot's Guide
+- - '##'
+  - 找出磁盘文件占用多少空间：du
+- - '##'
+  - 'Finding the Amount of Free Disk Space: df'
+- - '##'
+  - Log Files
+- - '##'
+  - 'Monitoring Logins: last'
+- - '##'
+  - 'Monitoring Bad Logins: lastb'
+- - '##'
+  - Disabling an Account
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 23
+- - '##'
+  - In This Chapter
+- - '##'
+  - NFS
+- - '##'
+  - Exporting an NFS Volume
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Mounting an NFS Volume
+- - '###'
+  - The mount Command
+- - '###'
+  - The umount Command
+- - '##'
+  - FTP
+- - '###'
+  - Connecting to an FTP Site
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Hosting an FTP Service
+- - '###'
+  - 'Techno Talk: Network Services: /etc/inetd and tcpd'
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - HTTP
+- - '##'
+  - Configuring an Apache Server
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Controlling Access
+- - '##'
+  - Creating an htpasswd File
+- - '##'
+  - 'SMB: Sharing Disks and Printers to PCs'
+- - '##'
+  - 'Accessing a PC Network Drive from Linux: smbclient'
+- - '##'
+  - Listing Services
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - Chapter 24
+- - '##'
+  - In This Chapter
+- - '###'
+  - Customizing Your Linux Kernel with LISA
+- - '###'
+  - Customizing Your Linux Kernel by Recompiling
+- - '###'
+  - Getting Started
+- - '###'
+  - Kernel Building Approaches
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '###'
+  - Configuring the New Kernel
+- - '###'
+  - 'Check This Out: Say what? You want sound?'
+- - '###'
+  - Compiling the Kernel and Necessary Modules
+- - '##'
+  - 《Linux 完全傻瓜指南》：自定义 Linux 内核
+- - '##'
+  - 安装新内核
+- - '##'
+  - 《Linux 完全傻瓜指南》
+- - '##'
+  - 安装新模块
+- - '##'
+  - 配置 LILO
+- - '##'
+  - 配置新模块并重新启动
+- - '##'
+  - 《Linux 完全傻瓜指南》
+- - '##'
+  - Part 4
+- - '##'
+  - Appendix A
+- - '##'
+  - In This Appendix
+- - '##'
+  - 了解你的硬件
+- - '##'
+  - 信息来源
+- - '##'
+  - 硬件和网络清单
+- - '###'
+  - 表 A.1 硬件清单
+- - '###'
+  - 表 A.2 网络信息
+- - '##'
+  - 安装 Caldera OpenLinux 的基本要求
+- - '##'
+  - 多启动系统
+- - '##'
+  - 与另一操作系统共享磁盘
+- - '##'
+  - 安装 Linux
+- - '##'
+  - 制作启动和模块软盘
+- - '##'
+  - 开始安装
+- - '##'
+  - 语言选择
+- - '##'
+  - 键盘布局选择
+- - '##'
+  - 使用先前保存的配置
+- - '##'
+  - 更改 LISA 设置
+- - '##'
+  - 硬件发现（IDE/ATAPI）
+- - '##'
+  - 谨慎自动探测
+- - '##'
+  - 硬件发现（硬盘/CD-ROM/以太网）
+- - '##'
+  - 内核模块管理器
+- - '##'
+  - 模块选项
+- - '##'
+  - Changing the Partition Table
+- - '##'
+  - Using Fdisk
+- - '##'
+  - Creating the Primary Linux Partition
+- - '##'
+  - Creating the Swap Partition
+- - '##'
+  - Saving Your Changes
+- - '##'
+  - The Configure Swap Space Panel
+- - '##'
+  - Installation Source Selection
+- - '##'
+  - Creating the Root Partition
+- - '##'
+  - Selecting the Installation Type
+- - '##'
+  - Selecting the X-Server
+- - '##'
+  - Configuring the Network
+- - '##'
+  - Hostname Entry
+- - '##'
+  - Network Card Configuration
+- - '##'
+  - Configuring the Clock
+- - '##'
+  - Configuring the Mouse Type
+- - '##'
+  - Selecting your Printer
+- - '##'
+  - Setting the Root Password
+- - '##'
+  - 创建第一个账户
+- - '##'
+  - 配置 LILO
+- - '##'
+  - 配置守护进程服务
+- - '##'
+  - 配置 X Windows
+- - '##'
+  - XF86Setup
+- - '##'
+  - X Windows 的鼠标设置
+- - '##'
+  - 键盘配置
+- - '##'
+  - 视频卡配置
+- - '##'
+  - 配置你的显示器
+- - '##'
+  - 选择分辨率
+- - '##'
+  - 其他配置
+- - '##'
+  - 完成配置
+- - '##'
+  - SPIDER KILLER
+- - '##'
+  - spider catcher
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 附录 B
+- - '##'
+  - CD-ROM 驱动器
+- - '##'
+  - CD-ROM 驱动器
+- - '##'
+  - 支持的 CD-ROM 驱动器
+- - '##'
+  - 支持的 CD-ROM 接口卡
+- - '##'
+  - 支持的 CD-ROM 接口卡
+- - '##'
+  - Company
+- - '##'
+  - 并行端口 CD-ROM 驱动器
+- - '##'
+  - 兼容的并行端口 CD-ROM 驱动器
+- - '##'
+  - 网络卡
+- - '##'
+  - 以太网卡
+- - '##'
+  - 以太网卡
+- - '##'
+  - 帧中继卡
+- - '##'
+  - FDDI 卡
+- - '##'
+  - 无线调制解调器/网络卡
+- - '##'
+  - 令牌环卡
+- - '##'
+  - 软盘驱动器
+- - '##'
+  - 兼容的笔记本软盘驱动器
+- - '##'
+  - IDE 驱动器
+- - '##'
+  - IDE 硬盘驱动器、CD-ROM 驱动器和磁带驱动器
+- - '##'
+  - 兼容驱动器
+- - '##'
+  - IDE 软盘（可移动）驱动器
+- - '##'
+  - 软盘驱动器
+- - '##'
+  - 鼠标指针设备
+- - '##'
+  - 鼠标指针设备
+- - '##'
+  - PC 卡支持（PCMCIA）
+- - '##'
+  - SCSI 适配器
+- - '##'
+  - SCSI 适配器
+- - '##'
+  - IDE-SCSI 设备
+- - '##'
+  - 串行板
+- - '##'
+  - 串行板
+- - '##'
+  - 磁带驱动器
+- - '##'
+  - 磁带驱动器
+- - '##'
+  - SCSI 和 IDE 磁带驱动器
+- - '##'
+  - XFree86 v3.3.2 支持的视频卡
+- - '##'
+  - XFree86 v3.3.2 支持的视频卡
+- - '##'
+  - 兼容的 XT 硬盘
+- - '##'
+  - 兼容的 XT 硬盘
+- - '##'
+  - 声音卡
+- - '##'
+  - 目录
+- - '##'
+  - Complete Idiot's Guide to Linux
+- - '##'
+  - 索引
+- - '##'
+  - 符号
+- - '##'
+  - A
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - H
+- - '##'
+  - J-K
+- - '##'
+  - N
+- - '##'
+  - O
+- - '##'
+  - P
+- - '##'
+  - S
+- - '##'
+  - T
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - X
+- - '##'
+  - Y-Z

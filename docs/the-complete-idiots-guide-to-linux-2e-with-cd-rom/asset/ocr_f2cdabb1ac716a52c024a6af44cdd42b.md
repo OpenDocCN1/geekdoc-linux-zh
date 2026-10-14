@@ -1,0 +1,15 @@
+access.conf, and srm.conf. Configuration for Apache is straightforward. Directives appear one per line. The first word on the line is the directive; the rest are the parameters or configuration settings. Fire up your editor and open /etc/httpd/apache/conf/httpd.conf to see what I am talking about. You’ll see the following:
+
++   - The httpd.conf file is the primary Web server configuration file. This file sets the default behavior of the server, such as its name, the port it runs under, the location of configuration, logs, and error files. Without getting into the depths of it, here is the only directive that you need to change in this file:
++     ServerName—This should reflect a valid DNS name for your system. If you don’t know the fully qualified DNS name for your system, leave this as localhost.
++   - The srm.conf configuration file keeps track of where information published by the Web server resides. It also provides a mapping between icons and files that the Web server uses when generating automatic file indexes. There are two directives that are important for you to know about:
++     DocumentRoot—This directive specifies where your HTML documents are found. By default on Linux, this points to /home/httpd/html. This directory contains HTML help Linux documentation pages (if you are running Caldera’s distribution) or the Apache Server documentation.
++     UserDir—This directive specifies the name of a directory users can create in their accounts. Files in this directory are accessible using a browser and a URL such as http://servername/~username/ (note the tilde (~) before the username).
++     DirectoryIndex—This directive specifies the name of files that will be loaded when a user requests a directory instead of an HTML file. If you take a look at the URL in the preceding item (http://servername/~username/), this URL doesn’t request a file, it requests a directory. (This is similar to when you request http://www.caldera.com; this is just the name of a machine!). This directive specifies a filename to search when incomplete URLs are specified; if the file is found, it is sent to the browser. Otherwise, the server will generate an automatic server index, listing all files contained in the directory. You can define multiple DirectoryIndex files like this:
++   - Other files such as mime.types provide information to the server as to the MIME (Multipurpose Internet Mail Extensions) format of files per their file extension. When a Web server sends a file to the browser, the Web server tells the browser the type of data it is sending through a MIME type.
+
+```
+DirectoryIndex index.html index.htm dir.html dir.txt
+```
+
+Maintaining a Web server or any other sort of public Internet service is serious business. In the coziness of an intranet, you only have to worry about security from your peers. On the Internet, you need to worry about the entire world. There are some evil people out there that could do serious damage to your system.

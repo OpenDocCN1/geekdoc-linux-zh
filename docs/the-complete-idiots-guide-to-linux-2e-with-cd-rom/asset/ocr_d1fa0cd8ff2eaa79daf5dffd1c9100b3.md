@@ -1,0 +1,6 @@
+Previous Table of Contents Next
+
+Products | Contact Us | About Us | Privacy | Ad Info | Home
+
+Use of this site is subject to certain Terms & Conditions. Copyright © 1996-2000 EarthWeb Inc.
+All rights reserved. Reproduction whole or in part in any form or medium without express written permission of EarthWeb is prohibited.
