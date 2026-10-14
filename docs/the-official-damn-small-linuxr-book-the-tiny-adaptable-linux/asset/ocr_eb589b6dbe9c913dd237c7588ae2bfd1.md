@@ -1,0 +1,13 @@
+advantage posts from the forums. These posts discussed how live CD users were always at a disadvantage when it comes to selection of applications. The typical live CD contains the selection of applications that the distribution maintainers, such as John and I, have selected. Their choices may not be your choices.
+
+At the time, it was not possible to add applications to live CD systems. Therefore, most live CD offerings were huge with as many applications that could be packed onto a CD. Users wanting to install additional software knew hard drive installs were the way to go. Besides, that was the way it was always done: Get a CD and install it to your hard drive. After a system is installed, the Debian Apt system is an excellent tool for adding applications.
+
+How is it possible for a 50MB distribution to compete? During these early days, DSL had many who copied DSL and remastered it, only to offer a few more applications and add a few more MB. Some of the remasters would wholesale copy every new feature that was created for DSL. My thoughts turned to wanting to offer something different. I wanted something that could compete with the slightly larger remasters.
+
+I did not want to be just bigger. I did not want to abandon our users on smaller hardware, or the 50MB limit. But I also wanted to offer the advantage to live CD users that it seemed only hard drive installed users had. My solution was to be able to easily add software without the complex remastering process. To allow users to easily create any sized ISO they wanted. This would allow DSL to compete with the slightly larger distributions. DSL would become variable sized.
+
+# The Birth of MyDSL
+
+With the accumulated experience of the previous milestones, I set out to create the MyDSL system. I had to keep in mind the less capable hardware that DSL had built its reputation on. I began by leveraging John’s breakthrough techniques of download scripts, along with my writable /opt for shared apps. As proof of concept, I adapted and packaged the OpenOffice.org office suite as the first MyDSL application under the name openoffice.
+
+I created openoffice as a simple gzipped tarball and dropped it into /opt. I then created boot time options to load the software from that package back into /opt. That way, the package didn’t have to be included in the base DSL system. It also meant the package wouldn’t have to be included in the backup/restore process, which would have been a huge burden to bear every time DSL shut down. I then added a separate software package (oo-user.tar.gz) to hold the icon and menu items specifically for DSL as a live CD and for the default user ds1. This was going to work!

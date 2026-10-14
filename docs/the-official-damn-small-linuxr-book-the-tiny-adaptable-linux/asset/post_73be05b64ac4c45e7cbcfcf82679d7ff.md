@@ -1,0 +1,200 @@
+
+## F
+
+- evilwm.uci extension, 389
+- expandability of DSL, 12
+- ext2 filesystem, 184
+- ext3 filesystem, 184
+- extensions. See specific extensions
+- f2 file, 229
+- f3 file, 229
+- failsafe boot option, 39
+- falling_tower.tar.gz extension, 356
+- feh.uci extension, 403
+- festival.dsl extension, 365
+- festival.uci extension, 403
+- figurine.dsl extension, 347
+- files. See specific files
+- filesystems, 184
+- .filetool.lst tool, 73-74
+- findutils.uci extension, 389
+- Firefox, 57-58
+- firefox-1.5.0.6.uci extension, 390
+- firefox-1.5.uci extension, 390
+- firefox-2.0-gtk1.uci extension, 390
+- firefox-gtk1-2.1.0.uci extension, 390
+- firefox-gtk2-1.0.4.tar.gz extension, 363
+- firewalls, 321-324
+- flac.dsl extension, 365
+- flex-bison-libtool.dsl extension, 378
+- floppies, boot
+  - creating, 34, 133, 163-164
+  - installing DSL from, 169-172
+  - Tom's Root Boot, 296-297
+- fltk.uci extension, 390
+- Fluxbox
+  - Docked.lua tool, 53-54
+  - fluxbox-0.9.11.tar.gz extension, 398
+  - fluxbox_0.9.14.uci extension, 390
+  - Fluxter, 50-51
+  - overview, 15, 48
+  - tabbed applications, 51-53
+  - virtual desktops, navigating, 48-50
+  - Fluxter, 50-51
+- formatting swap partitions, 182
+- forums (DSL), 40
+- FOSS (free and open source software), 18
+- Free Software Foundation GNU project, 18
+- freebird.dsl extension, 366
+- freeciv.dsl extension, 356
+- frobtds.uci extension, 390
+- frozen-bubble.dsl extension, 357
+- Frugal installs
+  - compared to hard drive installs, 177-178
+  - definition of, 152
+  - Grub hard drive install, 156-159
+  - Lilo CompactFlash install, 159-163
+  - overview, 154
+  - partitioning with Cfdisk, 154-156
+  - on Windows 9x or DOS
+    - Lilo boot loader, 166-167
+    - loadlin.exe boot loader, 167-168
+- FTP, 63
+  - AsY FTP, 56
+  - configuring, 327-328
+- full KNOPPIX remastering. See KNOPPIX remastering
+- fuse module, 268
+- fusion_dsl_xmms_skin.tar.gz extension, 386
+
+## G
+
+- gaim-1.5.0.uci extension, 403
+- gaim-gtk2-1.3.1.dsl extension, 363
+- gambas.dsl extension, 347
+- games, 103, 355-364
+  - Ace of Penguins, 55
+  - Xtris, 62
+- gcc1.dsl extension, 379
+- gcc1-with-libs.dsl extension, 379
+- gcc1-with-libs.uci extension, 403
+- gcc-2.95.uci extension, 403
+- gcompris-1.2.1-2.dsl extension, 357
+- gcompris2.dsl extension, 357
+- generic virtual DSL, setting up with
+  - dsl-base.bat, 141
+- gftp-gtk2-0.17.7.dsl extension, 363
+- gimp-1.2.dsl extension, 347
+- gimp-gtk2-2.2.8.dsl extension, 363
+- gkrellm-gtk2-2.2.2.dsl extension, 363
+- glest.dsl extension, 357
+- gLinks.uci extension, 252, 390
+- Global Index technology (Skype), 273
+- gmtoo.dsl extension, 347
+- gnomeicu.dsl extension, 373
+- GNU project, 18
+- gnu-utils.dsl extension, 379
+- gnu-utils.uci extension, 404
+- gnucash.dsl extension, 363
+- gnumeric.dsl extension, 363
+- gnumeric.uci extension, 403
+- gnupg.dsl extension, 379
+- gnupg.uci extension, 403
+- gnuplot.tar.gz extension, 347
+- gnuplot.dsl extension, 366
+- GParted live CD, 186
+- gPhone, 58
+- gps.dsl extension, 379
+- gpsk31.dsl extension, 347
+- GQview, 301-302
+- gqview-1.2.2.uci extension, 390
+- gqview.dsl extension, 347
+- graphics. See images
+- grip-3.0.0.dsl extension, 366
+- groups of contacts (Skype), 284
+- Grub, 185-186
+  - grub.dsl extension, 379
+  - hard drive install, 156-159
+- gRun, 58
+- gscore-gtk2-0.79.dsl extension, 363
+- gtetrinet.dsl extension, 357
+- GTK+, 47
+- gtk+-2.10.9.mce extension, 404
+- gtk-theme-switch.uci extension, 404
+- Gtk2 extensions (MyDSL), 104
+- gtk2-0705.dsl extension, 363
+- gtk2-0705.uci extension, 404
+- gtkam.dsl extension, 366
+- gtkedit.tar.gz extension, 347
+- GtkFind, 59
+- gtkfind.dsl extension, 348
+- gtkgep.dsl extension, 366
+- gtkguitune.dsl extension, 366
+- gtkpod-gtk2-0.93.dsl extension, 363
+- gtksee.dsl extension, 348
+- gtoaster_1.0beta6.dsl extension, 366
+- guile.uci extension, 391
+- gv.dsl extension, 348
+- Gvu, 59
+
+## H
+
+- hard drive installs
+  - apt-get, enabling with dpkg-restore, 186
+  - compared to Frugal installs, 177-178
+  - Debian compatibility, 178-179
+  - dsl-hdinstall script, 183-185
+  - Grub, 156-159
+  - hardware requirements, 179
+  - multi-boot systems, 186
+  - partitioning with Cfdisk, 180-182
+  - single user mode, 183
+  - swap file formatting, 182
+- hard drives
+  - partitions, 300
+    - creating with Cfdisk, 154-156, 180-182
+    - swap partitions, 182
+  - restarting XAMPP from, 335-336
+  - saving XAMPP server to, 334-335
+  - swap file formatting, 182
+  - virtual hard drives, 141-144
+- hardware requirements, 31
+  - hard drive installs, 179
+  - network installs, 172-173
+  - Skype VoIP service, 274
+  - headsets (Skype), 288
+- helixplayer.uci extension, 391
+- help, 37
+- hexagon.tar.gz extension, 357
+- /home/dsl/.xdesktop directory, 193
+- host boot option, 45
+- httpd.conf file (Apache Web Services), 326-327
+- hydra-5.2.uci extension, 391
+- hydrogen.dsl extension, 366
+
+## I
+
+- libbio, 109
+- icewm.uci extension, 391
+- icons, 76
+  - adding, 78
+  - creating, 225-226
+  - displaying, 77
+  - layout, 77-78
+  - removing, 79-80
+- ifconfig command, 173
+- imagemagick.tar.gz extension, 348
+- imagemagick.uci extension, 391
+- images
+  - backgrounds/wallpapers, 80-81
+  - bootable images, 217
+  - icons, 76
+    - adding, 78
+    - creating, 225-226
+    - displaying, 77
+    - layout, 77-78
+    - removing, 79-80
+  - Isolinux ISO image, 230-233
+  - Syslinux ISO image, 233-235
+- imlib-palette.dsl extension, 379
+- impress1_1_beta9.dsl extension, 348
+- inadyn.dsl extension, 373

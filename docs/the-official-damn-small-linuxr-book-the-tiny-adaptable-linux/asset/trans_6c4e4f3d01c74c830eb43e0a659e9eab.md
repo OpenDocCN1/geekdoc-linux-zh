@@ -1,0 +1,31 @@
+
+
+## UCI 扩展
+
+| Title | 描述 / 版本 / 网站 / 大小 | 注释 |
+|---|---|---|
+| lighttpd.uci | 轻量级 Web 服务器 / 1.4.12 / http://www.lighttpd.net | 小巧、安全、快速、合规且灵活的 Web 服务器，已针对高性能环境进行了优化。 |
+| madwifi-ng-2.4.26.uci | Madwifi-NG（Atheros）Wi-Fi 驱动程序，适用于运行内核 2.4.26 的 Damn Small Linux / r1453-20060220 / http://www.madwifi.org | Madwifi Atheros 驱动程序。 |
+| man.uci | Linux 手册分页器 / 1.6 / http://primates.ximian.com/~flucifredi/man / 5.1MB | 包含 man 应用程序，以及标准 Linux 手册页集合和 DSL 1.2 中许多程序的手册页。 |
+| mc.uci | GNU Midnight Commander / 4.6.1 / http://www.ibiblio.org/mc | Midnight Commander 的“完整”版本。它包含诸如子 shell 支持、虚拟文件系统和内置编辑器等功能，这些功能在 DSL 中不可用。 |
+| mozilla-1.7.uci | Mozilla 套件 / 1.7 / http://www.mozilla.com | 完整的 Mozilla 套件。包含 flash 插件，如果你使用 jre1_5_0.uci，则包含指向 Java 插件的符号链接。 |
+| mplayer-1.0pre8cvs.uci | MPlayer-CVS mencoder 及相关工具 / MPlayer + mencoder dev-CVS-060515 / http://www.mplayerhq.hu / 30MB | MPlayer 的最新 CVS 构建，包含 mencoder、当前稳定的转码套件、ffmpeg（CVS）、vorbis、lame、oggvorbis、ogm 工具等。功能强大的最新媒体工具包。 |
+| mrxvt.uci | 带标签的 VT102 终端模拟器 / 0.5.2 / http://matern.sourceforge.net | 基于 rxvt 版本 2.7.11 CVS，并具有 rxvt 的大部分功能，同时增加了一些主要增强功能（主要是多个标签页和透明度）。 |
+| naim_TOC2.uci | nAIM nIRC nICQ / 0.11.7.4-jw4 / http://joshuawise.com/code/naim / 169KB | AOL 即时通讯器（AIM）、AOL 我找你（ICQ）、Internet Relay Chat（IRC）和 lily CMC 的控制台客户端。 |
+| nedit-5.5.uci | Nirvana 编辑器 / 5.5 / http://www.nedit.org / 905KB | X Window 系统的多用途文本编辑器，结合了标准、易于使用的图形用户界面和用户每天编辑文本八小时所需的全面功能和稳定性。 |
+| nmap-4.03.uci | nmap 网络映射器 / 4.03 / http://www.insecure.org/nmap | 网络探索工具和安全/端口扫描器。 |
+| nvu-1.0.uci | GTK2-所见即所得 HTML 编辑器 GTK2 / 1.0 - D1.1 / http://www.nvu.com / 9.2MB | 功能非常全面且易于使用的 HTML 编辑器。 |
+| NX.uci | NoMachine 的 NX 客户端 v2.0 / 2.0.0-98 / http://www.nomachine.com | nxclient 命令的最新版本。它由 nomachine 网站上提供的静态编译版本制作，具体来说是无需 xft 扩展的 .tar 版本。 |
+| openoffice.org2.0.uci | Openoffice 办公套件 / 2.0.4 / http://www.openoffice.org | 既是跨平台多语言办公套件，也是开源项目。与所有其他主要办公套件兼容，该产品可免费下载、使用和分发。 |
+| openoffice.uci | Openoffice 办公套件 / 1.1 / http://www.openoffice.org / 66MB | OpenOffice.org 办公套件的压缩 .iso + userfiles 版本。 |
+| openoffice-2.0.uci | Openoffice 办公套件 / 2.0 beta / http://www.openoffice.org / 110MB | 既是跨平台多语言办公套件，也是开源项目。与所有其他主要办公套件兼容，该产品可免费下载、使用和分发。 |
+| opera-8.01.uci | Opera 8.01 网页浏览器 / 8.01 / http://www.opera.com / 6.1MB | 一个快速、功能齐全的网页浏览器，在旧电脑和新电脑上运行都很出色。这是包含小横幅的免费版本。 |
+| opera850.uci | Opera 8.50 网页浏览器 / 8.50 / http://www.opera.com | 一个快速、功能齐全的网页浏览器，在旧电脑和新电脑上运行都很出色。这是不再包含小横幅的免费版本。 |
+| opera9.uci | Opera 9.0 网页浏览器 / 9.0 Build 334 / http://www.opera.com / 7.3MB | 目前最好的浏览器之一的最新版本。此软件包仅包含英语。可能需要 opera9_prefs.ds1。 |
+| outguess.uci | Outguess 通用隐写工具 / 0.2 / http://www.outguess.org/download.php / 123KB | 一个通用的隐写工具，允许将隐藏信息插入到数据源的冗余位中。 |
+| owfs.uci | One Wire 文件系统 / 2.2 / http://owfs.sourceforge.net / 131KB | 从命令行使用 Dallas one-wire 传感器。 |
+| procps.uci | 查看和控制进程的工具 / 3.2.6 / http://procps.sourceforge.net | 虽然这些应用程序已作为 Busybox 的一部分包含在 DSL 中，但这些工具的功能在一定程度上受限，以换取更小的文件大小。 |
+| python.uci | Python 通用脚本语言 / 2.3.4 / www.python.org / 12MB | 一种解释型、交互式、面向对象、可扩展的编程语言。 |
+| python2.3-gtk2.uci | 包含允许你在 Python 程序中使用 GTK+ 的模块的存档 / 2.3-gtk2 | 包含该工具包新版本 2.0 的绑定包。 |
+| qcad.uci | QCad Linux Autocad 应用 / 2.0.3.1 / http://www.ribbonssoft.com/qcad.html / 41MB | QCad 是一个用于二维计算机辅助绘图的应用程序。使用 QCad，你可以创建技术图纸，例如建筑、室内或机械零件的平面图。 |
+

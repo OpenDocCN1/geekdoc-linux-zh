@@ -2175,6 +2175,7 @@
 +   [NT Insider 2017年第2期](docs/the-nt-insider-2017-issue-2/README.md)
 +   [CompTIA Linux+ 官方自学指南 (考试 XK0-004) 电子](docs/the-official-comptia-linux-self-paced-study-guide-exam-xk0-0/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
++   [Damn Small Linux 官方书：可在任何设备上运行的微型可适配 Linux（Negus Live Linux 系列）](docs/the-official-damn-small-linuxr-book-the-tiny-adaptable-linux/README.md)
 +   [GNOME 2 开发者官方指南](docs/the-official-gnome-2-developers-guide/README.md)
 +   [树莓派官方初学者指南（树莓派官方初学者指南：如何使用你的新电脑）](docs/the-official-raspberry-pi-beginners-guide-the-official-raspb/README.md)
 +   [Red Hat Linux 官方入门指南：Red Hat Linux 6.2](docs/the-official-red-hat-linux-getting-started-guide-red-hat-lin/README.md)

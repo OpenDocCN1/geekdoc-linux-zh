@@ -1,0 +1,120 @@
+
+目录。Syslinux 的 `boot.img` 是标准 DSL 软盘镜像，因此不需要包含在备份/恢复过程中。
+
+- 第 9 行是实际的 ISO 创建操作。它将 `master/` 目录中的文件合并到 `iso/` 目录中的 ISO 镜像文件中。
+- 第 13 到 17 行检查脚本是否以 `cd` 作为选项启动。脚本默认将 CD-ROM 刻录机设置为设备位置 0,0,0。使用此选项会将新的 ISO 镜像写入 CD-R。
+- 第 19 行创建用于网络传输和验证的 md5sum 校验和文件。
+- 第 21 行验证校验和的一致性。
+
+## 创建 Syslinux ISO 镜像
+
+许多较旧的计算机无法引导基于 Isolinux 的 CD-ROM。这些较旧的计算机仅限于使用与实际软盘大小相同的初始引导镜像。较旧的 Syslinux 引导加载程序正是使用了这种机制。
+
+## makesys 脚本
+
+makesys 脚本位于随附 CD-ROM 的 `chapter11/remaster` 目录中。该脚本应在你的工作目录内运行，以创建 Syslinux 可引导 ISO 镜像。以下展示了该脚本的内容：
+
+```sh
+#!/bin/sh
+RELEASE=`cat release.txt`
+#
+if [ -d master/boot ]; then
+  tar -czvf boot.isolinux.tgz master/boot/
+  rm -rf master/boot
+fi
+cp boot.img master/KNOPPIX/.
+mkisofs -pad -l -r -J -b KNOPPIX/boot.img -c KNOPPIX/boot.cat -hide-rr-moved -o iso/"$RELEASE"-syslinux.iso master
+sync
+sync
+if [ -n "$1" ]; then
+if [ "$1" == "cd" ]; then
+  cdrecord -v speed=4 dev=0,0,0 -data iso/"$RELEASE"-syslinux.iso
+fi
+fi
+cd iso
+md5sum "$RELEASE"-syslinux.iso > "$RELEASE"-syslinux.iso.md5.txt
+sync
+md5sum -c "$RELEASE"-syslinux.iso.md5.txt
+cd ../.
+```
+
+关于 makesys 脚本，请注意以下几点：
+
+- 第 2 行提供了你的 ISO 镜像文件和校验和文件的名称。
+- 第 4 到 7 行允许同时处理 DSL 的 Isolinux 和 Syslinux 版本。Syslinux 使用 `boot.img` 作为引导文件，而 Isolinux 使用目录。这些行提供了一种备份/恢复 Isolinux 目录的机制。Syslinux 的 `boot.img` 是标准 DSL 软盘镜像，因此不需要包含在备份/恢复过程中。
+- 第 8 行复制 DSL 标准引导软盘，以替换引导文件的 `isolinux/` 目录。
+- 第 9 行是实际的 ISO 创建操作。它将 `master/` 目录中的文件与 `boot.img` 合并到 `iso/` 目录中的 ISO 镜像文件中。
+- 第 12 到 16 行检查脚本是否以 `cd` 作为选项启动。脚本默认将 CD-ROM 刻录机设置为设备位置 0,0,0。使用此选项会将新的 ISO 镜像写入 CD-R。
+- 第 18 行创建用于网络传输和验证的 `md5sum` 校验和文件。
+- 第 20 行验证校验和的一致性。
+
+## Syslinux 初始 RAM 磁盘
+
+要更改 Syslinux 版本的初始 RAM 磁盘，请使用以下步骤：
+
+1. 将目录更改为 `master/KNOPPIX`。在那里，你可以找到一个名为 `boot.img` 的文件。该文件实际上与用于从实际软盘引导 DSL 的 `bootfloppy.img` 相同。
+
+2. 创建挂载点并挂载软盘镜像：
+   ```
+   # mkdir boot
+   # mount boot.img boot/ -t msdos -o loop
+   ```
+
+3. 复制并解包 minirt24.gz 初始 RAM 磁盘：
+   ```
+   # cp boot/minirt24.gz .
+   # gunzip minirt24.gz
+   ```
+
+4. 创建挂载点并挂载初始 RAM 磁盘：
+   ```
+   # mkdir mroot
+   # mount minirt24 mroot/ -t ext2 -o loop
+   ```
+
+5. 和之前使用 Isolinux 版本时一样，将目录更改为 mroot，并按照之前对引导模块或引导脚本 `linuxrc` 更改的描述执行必要的编辑。请注意，Syslinux 版本的初始 RAM 磁盘必须保持在物理软盘的大小以内。
+
+要反转此过程并将初始 RAM 磁盘及相关文件重新打包回 `boot.img` 文件，请执行以下操作：
+
+1. 将目录移出 mroot，卸载并压缩初始 RAM 磁盘：
+   # cd ..
+   # umount mroot/
+   # gzip -9 minirt24
+
+2. 将压缩后的 RAM 磁盘移回引导挂载点：
+   # mv minirt24.gz boot/
+   mv: Overwrite "boot/minirt24.gz"? y
+
+3. 卸载引导挂载点并删除工作目录：
+   # umount boot
+   # rmdir boot/ mroot/
+
+## 构建 DSL Qemu 嵌入式版本
+
+虚拟化目前非常流行。DSL 包含了许多功能，使得在沙盒独立虚拟环境中运行 DSL 变得非常容易。使用工作目录中的 mkqemu 自动化脚本，创建 zip 镜像也非常容易。
+
+## makeqemu 脚本
+
+makeqemu 脚本位于 CD-ROM 的 chapter11/ remaster 目录中。与其它脚本一样，该脚本应在你的工作目录根目录下运行。以下展示了 makeqemu 脚本的内容：
+
+```
+#!/bin/bash
+RELEASE=`cat release.txt`
+rm iso/"$RELEASE"-embedded.zip
+cd qemu
+pwd
+cp ../master/KNOPPIX/KNOPPIX knoppix/.
+../gnu/zip -r ../iso/"$RELEASE"-embedded.zip .
+cd ../iso
+md5sum "$RELEASE"-embedded.zip > "$RELEASE"-embedded.zip.md5.txt
+sync
+md5sum -c "$RELEASE"-embedded.zip.md5.txt
+cd ../..
+```
+
+关于 makeqemu 脚本，请注意以下几点：
+
+- 第 2 行为你的发行版文件命名。
+- 第 3 行删除你的发行版文件的任何先前副本。
+- 第 6 行将压缩的运行时镜像文件复制到 qemu/ 目录中。
+

@@ -1,0 +1,39 @@
+
+
+## 多媒体扩展
+
+| Title | DESCRIPTION / VERSION / SITE / SIZE | COMMENTS |
+|---|---|---|
+| xmms_skins.tar.gz | XMMS skins collection / 1.0 / http://www.xmms.org / 2.2MB | XMMS skins collection for DSL. With this collection, you have more than 30 different skins you can choose to change the look of the XMMS player. |
+| xvid4conf-gtk2.ds1 | XviD configuration tool / 1.12 / http://zebra.fl-weigarten.de/~transcode/xvid4conf / 45KB | Creates XviD configuration files. The generated configuration file can be read by transcode and XviD, which are included in the mplayer-1.0pre8cvs.uci package. |
+| xwave.ds1 | Wave recorder for X / 0.6 / http://www.funet.fi/~kouhia/waves/xwave2.tar.gz / 82KB | Wave recorder for small machines. |
+| yasr.ds1 | Console screen reader voice/synth / 0.6.7 / http://yasr.sourceforge.net / 7.3MB | A general purpose console screen reader for GNU/Linux and other UNIX-like operating systems. |
+
+## 网络扩展
+
+| Title | Description / Version / Site / Size | Comments |
+|---|---|---|
+| airsnort-0.1.1.ds1 | AirSnort Key Retrieval / 0.1.1 / http://airsnort.shmoo.com / 779KB | A wireless LAN (WLAN) tool that recovers encryption keys. |
+| amsn-0.94.tar.gz | Alvaro's MSN messenger / 0.94 / http://amsn.sourceforge.net / 1.6MB | A full-featured messenger for one of the most popular chat clients around. This is version 0.94. |
+| amsn.tar.gz | Alvaro's MSN messenger / 0.93 / http://amsn.sourceforge.net / 1.9MB | A full-featured messenger for one of the most popular chat clients around. This is version 0.93. |
+| amsn-tcltk-0.95-ver3.ds1 | Alvaro's MSN messenger / 0.95 / http://amsn.sourceforge.net / 2.25MB | A full-featured messenger for one of the most popular chat clients around. This is version 0.95. |
+| apache-2.0.54.tar.gz | Apache Web Server with PHP / 2.0.54 / http://www.apache.org / 7.3MB | Apache 2.0.54 Web Server, including PHP-4.4.0. Compiled from sources at www.apache.org and www.php.net. |
+| bittorrent-cli.ds1 | BitTorrent p2p client / 3.4.2 / http://www.bittorrent.com / 2.0MB | A protocol for distributing files over the Internet by swarming the file between all users downloading it. |
+| bittorrent-gui.ds1 | BitTorrent File Protocol / 3.4.2 / http://bitconjurer.org / 8.0MB | A protocol for distributing files. When multiple downloads of the same file happen concurrently, the downloaders upload to each other, making it possible for the file source to support very large numbers of downloaders. |
+| cheops.ds1 | Network Swiss army knife / 0.61-2 / http://www.marko.net/cheops / 797KB | A combination of a variety of network tools to provide system administrators and users with a simple interface to managing and accessing their networks. |
+| cicq.ds1 | Centericq multiprotocol IM / 4.11.0 / www.centericq.org / 2.9MB | Centericq multiprotocol Instant Messenger Console mode. |
+| ctorrent.tar.gz | CTorrent's small BitTorrent client in C / 1.3.4 / http://ctorrent.sf.net / 168KB | A very popular file swarming application. This is a tiny client. |
+| d4x.ds1 | File downloader for X / http://www.krasu.ru/soft/chuchelo / 928KB | X-based tool that you can use to download files from the Internet. It supports FTP and HTTP download. |
+| eciadsl-usermode-0.11-ver2.ds1 | Globespan chipset-based driver for ADSL USB modems / 0.11 / http://eciadsl.flashtux.org / 200KB | A GNU/Linux driver for Globespan chipset-based ADSL USB modems. The driver works in many countries, for many ADSL USB modems, with different PPP encapsulation layers modes. |
+| edna.ds1 | An MP3 server / 0.5 / http://edna.sourceforge.net / 1.0MB | Allows you to access your MP3 collection from any networked computer. |
+| elmo.ds1 | Elmo mail client / 1.3.2 / http://elmo.sourceforge.net / 218KB | A feature-rich, highly configurable, and fast mail client. It's a mail user agent that offers much more than traditional MUAs. |
+| epic4.dsl | Enhanced programmable IRCII client / 1.12 / http://www.epicsol.org / 1.4MB | An IRC client, very similar to irssi, but not 100% compatible. EPIC offers a staggering number of features. |
+| firefox-gtk1.2-1.0.4.tar.gz | Mozilla Firefox GTK1.2 version / 1.0.4 / www.mozilla.org / 7.1MB | Mozilla Firefox compiled against the GTK1.2 toolkit. The GTK2 libraries are not required. |
+| firefox.tar.gz | Firefox web browser (Mozilla based) / 0.9 / http://www.mozilla.org / 8.1MB | Firefox 0.9 is the award-winning preview of Mozilla’s next generation browser. Firefox empowers you to browse faster, more safely, and more efficiently than any other browser. |
+| gnomeicu.dsl | Internet communications utility / http://gnomeicu.sourceforge.net / 2.1MB | Internet chat utility. |
+| inadayn.dsl | A free dynDNS IP updater / 1.96 / http://inadyina-tech.net | A free DynDNS client. It lets you have a hostname registered on the Internet, although your IP might be changing. |
+| iscribe.dsl | i.scribe mail program / 1.87 / www.memecode.com/scribe.php / 1.4MB | A small and fast email client with an integrated contact database and calendar. It supports all the major Internet mail protocols and uses international standards where possible. |
+| limewire4.8.0.dsl | File-sharing app for X / 4.8.0 / http://www.limewire.com / 4.3MB | Offers an advanced peer-to-peer client software package compatible with the Gnutella file-sharing protocol. |
+| lynx.dsl | Text web browser / 2.8.4.re1.1 / lynx.isc.org / 1.4MB | Very tiny but powerful web browser similar to links. |
+| micq.dsl | Console mode ICQ IM / 0.4.11 / www.micq.org / 1.1MB | Instant Messenger ICQ protocol Console mode. |
+

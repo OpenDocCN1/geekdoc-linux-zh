@@ -1,0 +1,40 @@
+
+FIGURE 12-4 The eBox III, a very compact machine with room for a hard drive.
+
+![](img/af53325d7f38f1cdafca9f44568e4ab8_276_0.png)
+
+FIGURE 12-5 Compare the size of the BareBones to a typical Mini-ITX case.
+
+![](img/af53325d7f38f1cdafca9f44568e4ab8_276_1.png)
+
+The Bargain BareBones is an example of a Mini-ITX-based thin client. Again, the design is very small, much more compact than a typical Mini-ITX computer. The BareBones was never intended to be a standalone workstation, and it has no provision for a hard drive or a media drive. Although the unit comes without RAM, it accepts 184-pin DIMM socket DDR RAM up to 1GB.
+
+Unlike the DSM, the BareBones cannot take a hard drive, but there is room for an IDE DOM; at the DSL store, we have 1GB units available. The DOM is not needed if you are content with booting via USB.
+
+Personally, I use one of each of these thin client computers. I have the DSM in my home office and the BareBones at work. Each of them has an IDE DOM, but I do not use them for booting. Instead, I only use them for occasional backup when I have important documents I want to save on them in one place.
+
+I go back and forth between the two units using a single bootable pen drive that I use as my portable office. This way, regardless of where I am, I have my desktop the way I like it and I can continue working from the point at which I last stopped. DSL’s auto configuration automatically sets the ramdisk according to the available RAM.
+
+Other than this adjustment, I have the same system, same files, same everything on both thin clients. It is a nice way to work. Unlike the traditional use of these computers as thin clients, I am not dependent on any network for my files or applications, and I have all my work with me on the pen drive.
+
+If you are not the mobile type, you may want to consider running DSL from an IDE drive, whether it is a hard drive (DSM), IDE CF conversion (DSM), or disk on module (DSM or Bargain BareBones). The units are self-contained with this approach. The fact that most of the newer thin clients can boot from USB makes installing to an IDE drive easy. Simply boot up DSL via USB and perform a Frugal install (see Chapter 8).
+
+## Green Machines
+
+In general, alternative hardware is often environmentally friendly, whether it is a diskless homemade PC, a Mini-ITX system, a discarded laptop, or a thin client converted to run as a desktop PC. You can feel good about using less energy than with a conventional computer. In addition, when working with used equipment, you are keeping usable systems out of landfills. By using Damn Small Linux, you are contributing to a healthier planet. Now about that SUV…..
+
+## SUMMARY
+
+Alternative hardware is often cheap, silent, and very energy efficient. With the alternative installation methods available for DSL, such as the USB and Frugal installations, you have an operating system that is perfect for such systems.
+
+## Making an Edna Music Server in DSL
+
+Damn Small Linux is a very good base for creating an Edna Music Server. It is compact, yet it has everything needed to run a basic server and the tools in place to do remote streaming, while accessing files locally and over a network. This means that one may have access to one’s music shared over a local network even if the music files are stored elsewhere on the Internet. With DSL plus Edna, you have the power to get your music where you want without having to worry about storing local copies, which is a problem that occurs in many office situations. Let’s explore how this is done.
+
+### ABOUT THE EDNA MUSIC SERVER
+
+The Edna Music Server was written in the Python scripting language by Greg Stein. He calls it a quick hack, which is not a term that does it justice. Edna is an HTTP server that allows users to stream audio files, including MP3, Ogg Vorbis (.ogg), and other audio files. It is compatible with XMMS (included in DSL) and other popular MP3 players such as Winamp, Sonique, and FreeAmp.
+
+Edna is constructed so that you can browse a music selection remotely. It uses a URL construct that allows you to link to a specific song. Edna also automatically makes a playlist for directory structures that can be played in sequence or in a random shuffle.
+
+Edna also dynamically builds pages according to the underlying directory structure of your music collection. Thus, categorizing is very simple and logical. You can organize your music by using the names of your directories and subdirectories as the categories and subcategories. Similarly, Edna servers offer .m3u playlists.
