@@ -1,0 +1,176 @@
+
+This defines someone as the client with IP 192.168.168.17. You specify a whole subnet like this:
+
+```
+acl mynetwork src 192.168.168.0/255.255.255.0
+```
+
+This ACL defines mynetwork to be all machines with IP 192.168.168.x. If you wanted to create an ACL for just a few of these machines, the ACL would be as follows:
+
+```
+acl friends src 192.168.168.5-192.168.168.56/255.255.255.0
+```
+
+Now friends is defined as all machines from IP 192.168.168.5 to 192.168.168.56.
+
+srcdomain—This ACL type uses domains rather than IPs to define clients. For example, to define an ACL for all clients coming from mycompany.com domain, you would use the following:
+
+```
+acl mycompany srcdomain mycompany.com
+```
+
+srcdom_regex—This ACL type defines source ACLs using patterns. You can enter a regular expression to define a pattern. The following defines a source ACL for any machine with the word friend as part of its domain name:
+
+```
+acl friends srcdom_regex friend
+```
+
+This ACL is case sensitive, however. To make it case insensitive, use the -i option:
+
+```
+acl friends srcdom_regex -i friend
+```
+
+These were the source definition types; you also can define destination types, such as the following:
+
+dst—To define an ACL for requests to a specific IP, enter the following:
+
+```
+acl companyserver dst 192.168.168.17/255.255.255.255
+```
+
+This ACL defines companyserver as a destination ACL with IP 192.168.168.17.
+
+dstdomain—This is used to define domains. The following creates an ACL for the infosek.com domain:
+
+```
+acl searchingengine dstdomain infosek.com
+```
+
+dstdom_regex—Destinations also can be patterns. This is particularly useful if you want to block access to a certain genre of sites. You use the dstdom_regex type to use patterns. To create an ACL for destinations that contain the word "music" in them, type the following:
+
+```
+acl musicsites dstdom_regex music
+```
+
+And just like the srcdom_regex type, you can use -i to make the pattern case insensitive:
+
+```
+acl musicsites dstdom_regex -i music
+```
+
+url_regex—The previous ACL type blocks domains, but what if you want to block URLs with a specific word in them? You use url_regex. To block the "music" from any URL, enter the following:
+
+```
+acl music url_regex music
+```
+
+### time
+This can be used to define time ACLs. You can use this to control when the server is to be used. The format of the time ACL is as follows:
+
+```
+acl workhours time [day] [time-range]
+```
+
+day can be S (Sunday), M (Monday), T (Tuesday), W (Wednesday), H (Thursday), F (Friday), or A (Saturday). Time range is in the format start_hour:start_minute-end_hour:end_minute. The following is an example:
+
+```
+acl timeslot time s,a 00:00-08:00
+```
+
+This ACL defines timeslot to be on Saturday and Sunday from midnight to 8 a.m.
+
+### port
+This can be used to define connections that specify the port. For example, use the following to create an ACL for the common Internet ports such as HTTP and FTP:
+
+```
+acl commonports port 80
+```
+
+You also can specify a range of ports:
+
+```
+acl portrange port 360-1024
+```
+
+### proto
+This is used to define protocols. To define an ACL for common Internet protocols, type the following:
+
+```
+acl commonprotocols proto HTTP FTP
+```
+
+The commonprotocols ACL corresponds to HTTP and FTP.
+
+> **TIP** In all the ACL statements, you can replace the defining statement with a path to a file that has the pattern you want. This is useful if you want to maintain a list of domains without having to edit /etc/squid.conf every time you add a new domain. The format of the ACL is as follows:
+> /etc/squid.conf
+> acl domains destdomain "/etc/domainlist.txt"
+> /etc/domainlist.txt is a file containing a list of domains, with each on a separate line.
+
+These are the most common ACL types. Now that you know them, how can you use them? ACLs are made to define how squid reacts to a connection request. When a client attempts to connect to a squid proxy server, squid checks its access list to see whether this client is allowed to connect or not. This access list is a set of ACLs that define the different entities, but this list alone does not do anything. ACLs are used by another tag called http_access. The http_access tag is responsible for telling squid what to do with connecting clients and their requests.
+
+So, when a client connects, squid goes through the http_access tags to see whether this client is allowed to connect or not. If the client is allowed access, squid checks whether the request the client has made is allowed or not, again by checking the http_access tags. This might sound a bit confusing at first, but a good example will clear up all that confusion.
+
+Say that you have the following section in your /etc/squid.conf file:
+
+```
+acl localnetwork src 192.168.168.0/255.255.255.0
+acl protocols proto HTTP FTP
+```
+
+```
+acl localhost src 127.0.0.1/255.255.255.255
+acl all src 0.0.0/0.0.0.0
+http_access allow localnetwork
+http_access deny !protocols
+http_access deny all
+```
+
+The section starts off by defining a few ACLs. It defines localnetwork as the subnet 192.168.168.x, protocols as HTTP and FTP, localhost as the IP of the machine, and all as all IPs.
+
+Then it starts to define access rules using http_access. It tells squid to allow all clients from localnetwork to connect to the server, to deny any protocols other than protocols (the ! means NOT, so the http_access statement says to deny all protocols that are not HTTP and FTP), and finally to deny all IPs.
+
+You might be confused by the last http_access statement, but hold on; enlightenment is on the way. When squid checks for access rules, it goes through the list of rules and tries to match the request with a rule. If it fails with a rule, it checks the next one. So, if a client from localnetwork connects, squid will find a match for it in the first access rule and allow it. When that client requests a Web page, squid will match the protocol with the second access rule and allow it. If squid fails to match to any of the access rules, it will do the opposite of the last rule in the list. Therefore, if the last rule happens to be an allow, it will become a deny and vice versa. This is why it's good practice to enter http_access deny all as your last line. This way, if a matching rule is not found, the last rule will always match and prevent squid from reversing the last rule—whatever it may be—and do something wrong.
+
+> **CAUTION**
+> Don't ever enter http_access deny all as the first rule. If you do, no one will be able to connect to your proxy because all checks will match to this rule and squid won't proceed to check the rest of the rules. It will simply deny the connection. The same applies for http_access allow all; if you enter it as the first rule, everyone will be allowed to connect regardless of any other rules you have later in the section.
+
+You can get really creative with ACLs and http_access rules. You are limited only by your imagination. You can put ACLs together on the same http_access rule to come up with more complicated rules. For example, to allow friends to use your proxy on Sundays only:
+
+```
+acl timeslot time s 00:00:23:59
+acl friends src 192.168.168.0/255.255.255.0
+acl all src 0.0.0/0.0.0.0
+http_access allow friends timeslot
+http_access deny all
+```
+
+Clients connecting from the subnet 192.168.168.0 will have access to the proxy server only on Sundays.
+
+You can get more information about ACLs and http_access rules by reading /etc/squid.conf. It has a lot of documentation and examples.
+
+## Controlling How Squid Will Use Your System Resources
+
+As is the case with very active programs, you should have a way of controlling the amount of resources that they will attempt to devour. Squid is quite an active program, and it will take whatever amount of resources you give it. Fortunately, you can tell squid how much of your valuable resources to use.
+
+The first parameter that you will want to adjust is the cache_mem. This is how much memory squid is going to use for its operations, not how much memory squid is going to use overall. The amount of memory that you specify in this parameter will be exceeded if the need arises. This might happen if the requests to the server are more than the designated memory can handle. Squid will free the extra blocks as soon as the load decreases, however. The following is the format of this parameter:
+
+```
+cache_mem  8 MB
+```
+
+Of course, you would replace the 8 with the amount of RAM you want squid to use. A good estimate is 5 MB for every 1 GB of cache.
+
+The maximum_object_size is used to tell squid the maximum size of an object to save on disk. Any objects larger than the value you set here will not be saved on disk. The following is the format of this parameter:
+
+```
+maximum_object_size  4096 KB
+```
+
+This is set to 4MB, which is squid's default value for this parameter. This is a reasonable size, but it really depends on your network and surfing habits.
+
+The cache_dir parameter tells squid where your cache is and how big it should be. Squid usually has built it values for this, but you can override them with this parameter. The following is the format of this parameter:
+
+```
+cache_dir  /var/squid/cache  100  16  256
+```

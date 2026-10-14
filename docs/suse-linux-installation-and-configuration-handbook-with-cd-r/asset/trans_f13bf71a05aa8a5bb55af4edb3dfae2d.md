@@ -1,0 +1,108 @@
+
+
+- **status**—此命令接受全部（表示所有队列）或打印机队列名称作为参数。此命令将向您报告指定队列的状态。
+- **topq**—此命令用于重新排序打印作业。它以新顺序作为参数。顺序可以是作业编号或用户名。
+- **abort**—此命令接受全部（表示所有队列）或打印机队列名称作为参数。该命令将终止活动队列并禁止进一步打印到该队列。效果是立即的。
+- **clean**—此命令接受全部（表示所有队列）或打印机队列名称作为参数。此命令将删除由打印守护进程创建的任何临时文件、数据文件或控制文件。
+- **exit or quit**—这两个命令中的任何一个都将退出 lpc。
+
+这就是使用打印机命令的速成课程。为什么你需要知道所有这些？所有应用程序最终都会使用这些命令来打印，因此如果你需要充分利用打印机，就应该知道如何使用它们。最后，所有这些命令都将在默认打印机上运行。你可以使用 -P 选项覆盖该设置。要指定要使用的打印机名称，只需将其紧跟在 -P 选项之后即可。例如，要指定 NETPRINT 作为要操作的打印机，请输入以下内容：
+
+```
+$lpr -P NETPRINT ......
+```
+
+或者，你可以将名为 PRINTER 的环境变量设置为你想要操作的打印机名称。然后，所有之前的命令将默认使用该打印机——例如，
+
+```
+$ export PRINTER=NETPRINT
+```
+
+## Troubleshooting
+
+*lpd does not want to start.*
+
+这很可能是因为你没有正确配置它。你可能将 /dev/lp0 用作 2.2.x 内核的打印机设备文件。记住，2.2.x 内核使用 /dev/lp1 而不是 /dev/lp0，而后者由 2.0.x 内核使用。
+
+*lpq starts, but I can't print to it.*
+
+## I can't seem to print to a remote UNIX printer.
+
+确保你的机器名称包含在远程打印机的允许列表中。如果没有，远程打印机将不会授权你打印到它。还有一件事你应该检查的是，你是否使用了正确的打印机名称——请与机器所有者或系统管理员核实。
+
+## I can't print to a Windows machine.
+
+确保你有正确的 Samba 配置。你应该能够浏览你尝试打印到的机器。然后，确保你向 YaST 指定了正确的打印机名称。如果远程打印机需要用户名和密码，请确保提供正确的用户名和密码。
+
+## Printing stopped suddenly, what should I do?
+
+你的打印机守护进程可能因某些意外原因而停止；使用 lpc 命令重新启动它。
+
+## Configuring Peripherals
+
+## In this chapter
+
+- CD-ROM, CR-R, CD-RW, and DVD 242
+- Zip/Jaz Drives 250
+- Joysticks and Gamepads 255
+- Fax 256
+- Scanners 261
+- TV Cards 263
+- Troubleshooting 264
+
+## CD-ROM, CR-R, CD-RW, and DVD
+
+光盘是目前最有效便携式存储介质之一。将 650MB 数据存储在薄薄的塑料光盘上并随身携带极其方便。数据以光盘表面的微观凹坑形式存储，然后由扫描光盘旋转的激光束读取。第一代 CD-ROM 驱动器的传输速率相当慢，为 150 k/s。随后出现了速度提高两倍、然后四倍的驱动器，等等。现在我们有可读取高达 50 倍该速度的驱动器，使 CD 的速度几乎与硬盘一样快。
+
+光盘技术涵盖了几种不同的系列。CD-ROM 是普通的只读驱动器；CD-R 是可记录驱动器，可将数据写入 CD 一次；CD-RW 是可重写驱动器，可多次写入 CD；DVD 是一种容量非常大的光盘。Linux 对所有这些驱动器类型都有相当好的支持。
+
+要使用你的 CD 驱动器，你首先必须配置系统。让我们看看配置这些驱动器需要做什么。
+
+## CD-ROM Drives
+
+CD-ROM 驱动器是最容易配置的，因为它们存在时间最长。
+
+CD-ROM 驱动器使用 ATAPI 增强型 IDE 接口、小型计算机系统接口（SCSI）或某种厂商特定的接口。Linux 对大多数 CD-ROM 驱动器都有可靠的支持，因此你可以确信你的驱动器会正常工作。让我们从配置最常见的 CD-ROM 类型，即 ATAPI 增强型 IDE CD-ROM 开始。
+
+## ATAPI-Enhanced IDE CD-ROM
+
+要配置 ATAPI 增强型 IDE CD-ROM，你需要配置内核。在大多数情况下，你的内核已经内置了此类支持，特别是如果你没有更改 SuSE 为你安装的默认内核。如果不确定是否已具备该支持，请继续按照以下步骤操作。（我们假设你已安装了实际的 CD-ROM 驱动器硬件。）
+
+- 1. 以 root 身份登录。
+- 2. 将目录更改为 Linux 内核源代码目录：
+  `#cd /usr/src/linux`
+- 3. 通过输入以下命令启动内核配置模块：
+  `#make menuconfig`
+- 4. 内核配置模块将启动；导航到 Block Devices 并按 Enter。
+- 5. 使用方向键突出显示 Include IDE/ATAPI CDROM Support 选项并按 Y 将其包含在内核中。
+- 6. 按两次 Esc 键退出此菜单。
+- 7. 现在，你还需要添加对 CD-ROM 文件系统的支持。导航到 Filesystems 并按 Enter。
+- 8. 突出显示 ISO 9660 CDROM Filesystem Support 并按 Y 将其包含在内核中，或按 M 将其作为仅在需要时加载的模块包含。
+- 9. 突出显示 Microsoft Joliet CDROM Extensions 选项并按 Y 将其包含。 这是微软添加到 CD-ROM ISO 9660 文件系统的扩展集。许多 CD 都使用这些扩展，因此你应该启用它。
+- 10. 按两次 Esc 退出此菜单。
+- 11. 再按两次 Esc 退出内核配置模块。它会询问你是否要保存新的内核配置；选择 Yes。
+- 12. 现在你需要重新编译内核以使这些更改生效。为此，依次输入以下命令：
+  `#make dep`
+  `#make clean`
+  `#make bzImage`
+  `#make modules`
+  `#make modules_install`
+- 13. 这些命令中的每一个执行都需要一些时间，并且会滚动大量文本——不用担心，这是正常的。当所有命令执行完毕后，重新启动系统以加载新内核。
+
+系统启动后，你应该会看到它检测到了你的 CD-ROM 驱动器。请密切注意分配给你的 CD-ROM 驱动器的设备文件。这应该是一个 /dev/hd? 设备文件，因为这是一个 IDE CD-ROM 驱动器。
+
+## SCSI CD-ROM
+
+SCSI CD-ROM 的性能优于 ATAPI 增强型 IDE 驱动器。这是因为 SCSI 接口比 ATAPI 增强型 IDE 更快；但它也更昂贵。安装 SCSI CD-ROM 与安装 ATAPI IDE 非常相似。你需要重新编译内核。只需按照以下步骤操作：
+
+- 1. 以 root 身份登录。
+- 2. 将目录更改为 Linux 内核源代码目录：
+  `#cd /usr/src/linux`
+- 3. 通过输入以下命令启动内核配置模块：
+  `#make menuconfig`
+- 4. 内核配置模块将启动；导航到 SCSI Support 并按 Enter。
+- 5. 使用方向键突出显示 SCSI support 选项并按 Y 将其包含在内核中。
+- 6. 突出显示 SCSI CD-ROM Support 并按 Y 将其包含在内核中。
+- 7. 滚动到菜单底部，突出显示 SCSI Low-Level Drivers 并按 Enter。
+- 8. SCSI 低级驱动程序菜单弹出；从列表中找到你的 SCSI 适配器并按 Y 将其包含。这很重要，因为除非执行此步骤，否则你的 SCSI CD-ROM 将无法工作。
+

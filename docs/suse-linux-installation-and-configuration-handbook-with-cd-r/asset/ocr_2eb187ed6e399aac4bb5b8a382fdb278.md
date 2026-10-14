@@ -1,0 +1,3 @@
+# *Quota does not work!*
+
+Well, are you sure your kernel is compiled with quota support? Check for that and recompile if necessary. Do you have all the tools for quota? If not, install the quota RPM from your AP series on your SuSE CD. Did you create the quota.user and quota.group files? Are these files readable and writeable by root only? Did you mark the filesystem on which you want to use quota? Is quota support on? If not, check the previous section on starting and stopping quota support.

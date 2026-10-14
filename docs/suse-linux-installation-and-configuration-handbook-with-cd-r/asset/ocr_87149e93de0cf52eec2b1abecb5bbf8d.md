@@ -1,0 +1,15 @@
+# Defining the Kernel
+
+Some Linux professional users like to think that you aren't a Linux user unless you have recompiled your own kernel. Although this might be very true for them, it is not really a fact. You might never really need to recompile your kernel; it all depends on the requirements of your system. SuSE Linux specifically attempts to provide a ready-to-use kernel for several system configurations, so you can simply install one of them and start working without having to recompile your own kernel. But, of course, sometimes you will need to recompile. Reasons for this can be if you are upgrading your kernel to a newer version that offers better performance or fixes a bug you were experiencing, or if you added a new piece of hardware that needs a special driver or parameters to be built in to the kernel.
+
+The kernel is the heart or core of the operating system. The kernel is the layer that separates the hardware layer from the applications layer. Applications that need to access the hardware do so through calls to the kernel services. The kernel then communicates or “talks” to the hardware and returns results and messages back to the application. This way, applications do not have to worry about directly talking to the hardware in its native and complex protocols; the kernel simplifies all that for the application. The kernel manages all the system resources, such as memory and CPU time. Another very important role for the kernel is to control the execution of programs (or processes) and schedule them in an efficient manner to accomplish multitasking.
+
+# Why Should I Install a New Kernel?
+
+The most common case in which you might want to install a new kernel is to install a new driver or component on the system. For example, if you have just purchased a new SCSI hard drive, and you never had SCSI devices on your system before, you will need to install the device driver in order for the SCSI interface to use your hard drive. This is done by configuring the kernel to include the correct SCSI interface for your hard drive and recompiling the kernel to activate that driver.
+
+Another reason to install a new kernel is if a new release of the kernel is out and it has better performance or fixes bugs that you are experiencing. In this case, you would download that new kernel and install it on your system. And last but not least, some of us like to install new kernels just for the sake of compiling a new kernel!
+
+# Installing a Precompiled Kernel Versus Compiling Your Own
+
+Before you attempt to install a new kernel, you have to make an important decision. Do I have to compile my kernel? Or can I get away with a precompiled one? This is an important decision to make because your choice will dictate the process you have to go through to reach your goal. To make such a decision, you will need to have sufficient background information.

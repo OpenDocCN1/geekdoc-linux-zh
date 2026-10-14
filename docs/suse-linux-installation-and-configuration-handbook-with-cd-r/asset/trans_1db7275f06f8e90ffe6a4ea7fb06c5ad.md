@@ -1,0 +1,147 @@
+
+
+Starting More Than
+One X Session 690
+
+Getting the Most Out of a Netscape
+Crash 690
+
+Menus in X Terminals 690
+
+Networking Tips 690
+
+Listing All Open Connections 690
+
+Speeding Up Your TCP/IP 691
+
+Disabling Ping Responses 691
+
+Changing Your MAC Address 691
+
+## E Various Utilities 693
+
+Your Toolbox 694
+
+Compression and Data Archiving
+Tools 694
+
+compress 694
+
+gzip 695
+
+bzip2 696
+
+tar 696
+
+zip 698
+
+Editors 698
+
+pico 698
+
+Emacs 699
+
+vi 701
+
+Other Tools 702
+
+grep 702
+
+find 702
+
+Pagers 703
+
+## Index 705
+
+## About the Authors
+
+**Nazeeb Amin El-Dirgham** graduated with a degree in computer science from the American University in Cairo, where he installed and configured multiple Linux servers throughout the Computer Science Department. He has written a series of Arabic articles about Linux, which were the first ever to provide an in-depth introduction of Linux to the Arab world. He currently works as a software developer at ITWorx, developing software for Corel Linux.
+
+**Youssef A. Abu Kwaik** graduated from the American University in Cairo, majoring in economics and minoring in computer science. He has installed SuSE Linux for the weather forecasting ministry in Egypt and written a series of Arabic articles about Linux for the prominent Arabic magazine *Computer Publishing*. He started using SuSE Linux when version 4.3 was released and has enjoyed the art of scripting that SuSE Linux offers ever since. He currently is a software developer at ITWorx, where he develops software for Corel Linux.
+
+## Dedication
+
+*I would like to dedicate this book to my family. My father for getting me hooked on computers very early in my life, and for being such a great dad! My mother for being the light of my life; everything that I am is because of her. My little brother for being so understanding and nice to me, even though he would never admit it!*
+
+Nazeeh Amin El-Dirgham
+
+*To my father for spending his life making me what I am. To my mother for enlightening my life. To my brother and sisters for being who they are.*
+
+Youssef A. Abu Kwaik
+
+## Acknowledgments
+
+The authors would like to thank the following people and entities for making this book happen.
+
+We would like to thank God for making all this happen, and for giving us the knowledge and the ability to project it to others.
+
+We would like to thank our parents, brothers, and sisters for being there for us throughout our lives. Youssef especially would like to thank his mother for going through the trouble of waking him up at night to work on the book. Nazeeh would like to thank his parents for enduring having to live without seeing him for days because he was busy working on the book.
+
+We would like to thank the SuSE team for creating such an amazing distribution. We had a lot of fun using and studying it. Again, thanks SuSE, we owe you a lot!
+
+We would like to thank the whole Macmillan team for making this book possible—Gretchen Ganser for contacting and pushing us to get this book out on time; Maureen McDaniel for her amazing development abilities that taught us so much; Brian Schau for his excellent technical remarks (there was always something to learn from them); Megan Wade for her superb editing—she will probably fix this sentence for us; and Susan Moore for being so nice about late chapters.
+
+We would like to thank all our friends for still wanting to know us even though we haven't gone out with them for months. We also would like to thank all the people at ITWorx, you guys are great!
+
+Nazeeb would like to thank the following people:
+
+- Nenad Andjelic (did I spell it right, Ned?) for introducing me to Linux. Thanks a lot, Ned!
+- Hazem Nassef for teaching me so much about Linux and UNIX in general. I owe you a lot of what I know.
+- Dr. Mohy Mahmood for teaching me so much about computer science.
+- Dr. Amr El-Kadi for increasing my interest in Linux even further.
+- Youssef for believing me when I told you about Linux—we make the best team ever!
+- Metallica, Megadeth, WASP, Blind Guardian, Amorphis, and Yngwie J. Malmsteen for making such excellent music!
+
+Youssef would like to thank the following people:
+
+- Sally El-Oguei for standing by me and supporting me every minute of the day.
+- Dr. Mohy Mahmood for standing by me when I needed help. Thanks, Doctor!
+- Dr. Amr Goneid for pushing me to challenge myself.
+- Peter Norton for being my idol in programming.
+- Nazeeb for introducing me to Linux and for making the best partner ever!
+- Manowar and Meat Loaf for making such good music!
+
+We would also like to thank Linus Torvalds for creating Linux, and the whole GNU/Linux community for teaching us the art of sharing. We owe so much to everyone who ever wrote a piece of documentation for Linux—thank you. We also would like to thank the StarOffice team—this whole book was written on it.
+
+Thank you Blizzard for creating StarCraft; we never enjoyed a game so much!
+
+Finally, we would like to thank Microsoft for making Windows the way it is. If it weren't for that, we never would have looked at Linux.
+
+## Tell Us What You Think!
+
+As the reader of this book, you are our most important critic and commentator. We value your opinion and want to know what we're doing right, what we could do better, what areas you'd like to see us publish in, and any other words of wisdom you're willing to pass our way.
+
+As a Publisher for Que, I welcome your comments. You can fax, email, or write me directly to let me know what you did or didn't like about this book—as well as what we can do to make our books stronger.
+
+*Please note that I cannot help you with technical problems related to the topic of this book, and that due to the high volume of mail I receive, I might not be able to reply to every message.*
+
+When you write, please be sure to include this book's title and author as well as your name and phone or fax number. I will carefully review your comments and share them with the author and editors who worked on the book.
+
+Fax: 317.581.4666
+
+Email: quetechnical@macmillanusa.com
+
+Mail: Tracy Dunkelberger
+Associate Publisher
+Que Corporation
+201 West 103rd Street
+Indianapolis, IN 46290 USA
+
+## INTRODUCTION
+
+## What Is Linux?
+
+You can't open a magazine or go to a large computer exhibition these days without seeing or hearing something about Linux. It seems to be the buzzword these days—Linux this, Linux that, and so on. A lot of people still do not know what exactly Linux is. Is it just another power application? Is it a new paradigm of software applications? Is it a new and cool game?
+
+Linux is an operating system that runs on a variety of hardware architectures ranging from the Intel x86 to PowerPCs. An operating system is the software responsible for controlling your hardware resources and organizing how your applications will use them. Without an operating system, your machine would just sit there doing nothing. You would have invested in the most expensive and technically advanced paperweight ever.
+
+The operating system brings life to your machine by controlling every aspect of your hardware. The operating system controls how your CPU, RAM, hard drive, sound card, video card, modem, networking card, and so on are used. The operating system also gives application developers the required interfaces they need to access their hardware. This eliminates having to worry about what hardware you have and having to communicate with it using its rather complex protocols. The operating system completely shields users from this by giving them a unified interface to all the different types of hardware and performing the task of talking to the hardware directly.
+
+Several types of operating systems exist in today's market, such as the tried and trusted UNIX system, along with its variants; the popular MS Windows, along with all its various versions; the MacOS for Macintosh computers; the IBM OS/2; and so on. Because Linux was developed in the image of UNIX, it greatly resembles it in every aspect.
+
+UNIX is one of the most popular operating systems worldwide. It was originally developed at AT&T as a multitasking system for minicomputers and mainframes in the 1970s, but has since grown to become one of the most widely-used operating systems anywhere despite its sometimes confusing interface and lack of central standardization. In the almost 30 years that it has been around, UNIX has thoroughly been tested and proven to be a very stable system. Currently, UNIX machines run the foundation of the Internet, which is a huge but stable network. This is attributed to the well-designed and highly stable UNIX systems that control it.
+
+Linux was developed using the same design standards as UNIX. Therefore, Linux has inherited the rock-solid nature of its parent, UNIX. However, Linux is a modern UNIX; it has support for new technologies that have not existed on UNIX flavors before. Bringing these technologies to the world of UNIX is just one way Linux has paid back UNIX for its stable nature.
+
+One characteristic that Linux hasn't inherited from UNIX, though, is its price. UNIX has always been quite expensive. Linux, on the other hand, is absolutely free of charge. You do not have to pay a dime for it; it is freely available on the Internet for you to download. To understand why this is the case, let's look at Linux's history.
+

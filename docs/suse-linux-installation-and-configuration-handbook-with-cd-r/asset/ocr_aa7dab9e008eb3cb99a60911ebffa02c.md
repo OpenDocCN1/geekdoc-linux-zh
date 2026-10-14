@@ -1,0 +1,15 @@
+# Corel WordPerfect 8.0 Features
+
+Corel WordPerfect is one of the leading and highly featured word processors in the market. WordPerfect runs on several platforms, namely all Microsoft Windows versions, Unix, and Linux. For a long time, WordPerfect was available for Linux, but it was not free. With the introduction of version 8.0, Corel decided to give away its award-winning word processor to the Linux community. This was a highly regarded and appreciated move. Now anyone can download the fully functional WordPerfect 8.0 for Linux for free personal use. A deluxe version is also available for purchase. This version includes more features than the download version such as a complete manual, clipart, photos, fonts, and so on.
+
+WordPerfect 8.0 has a lot of features that make it an amazing word processor:
+
++   - The ability to open most of the commonly used file formats (40 formats), including Microsoft Word 97 files.
++   - It incorporates the Shadow Cursor technology, enabling you to point and click anywhere in the document and start typing. This feature is simply amazing when it comes to inserting text in unusual places in the document. To insert text in the same place without this tool you would normally need to use lots of spaces and new lines or even tables. With Shadow Cursor, just point, click, and type! This can make filling in forms very easy.
++   - It is fully compatible with all previous versions of WordPerfect. This way, you won't lose any documents you previously had; this includes all versions of WordPerfect since version 1. WordPerfect uses the same file format across platforms, so you can exchange documents very easily.
++   - By using the Corel Versions technology, you can keep track of document revisions. This helps if you are working on the same document with more than one person. You can then keep track of who changed what in the document.
++   - Corel's Grammar-As-You-Go technology checks your text for any grammatical errors as you type. Suggestions are also provided to you; these show how you can better phrase your sentence. You can even set the level of grammar check to suit the type of document you are writing.
++   - Corel's Spell-As-You-Go technology checks your text for any spelling errors as you type. Misspelled words are clearly underlined for you and a list of correct words is provided.
++   - File management is a breeze thanks to WordPerfect File Manager.
++   - WordPerfect has an extensive functionality for charting and drawing. Images can be moved, rotated, and sized. Text can be wrapped around and beside them. Graphics can be placed on top of text, and then gradients applied to them, 3D objects and lines inserted, and so on.
++   - All table modifications are point and click. This includes changing the size of the table, splitting and joining cells, and so on.

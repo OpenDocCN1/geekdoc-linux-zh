@@ -1,0 +1,216 @@
+
+
+The format of this file is as follows:
+
+```
+username userid utmp_entry login_program [arguments]
+```
+
+The following are the format options:
+
+- **username**—This is the login name first sent by the dialing users. You can use an asterisk (*) to specify a default behavior. If the user first sends /AutoPPP/, you can redirect the login program to the pppd program and have it perform the authentication.
+- **userid**—This is a valid SuSE Linux username. You must use a hyphen (-) to not set a login user id and keep the uid/euid root for /bin/login.
+- **utmp_entry**—This will appear when a user executes the who command to list users currently logged in. Use - to not set a utmp_entry. You should not set a utmp_entry if you are executing /bin/login. Use the at sign (@) to set it to the username. The utmp_entry should not exceed eight characters.
+- **login_program [arguments]**—The program that will be executed, with the arguments passed in [arguments]. You have to use @ to send the username entered to the login program.
+
+For example, the following line makes mgetty wait for a connection from a Windows 9x box, which will eventually send an AutoPPP request:
+
+```
+/AutoPPP/ - a_ppp /usr/sbin/pppd auth
+```
+
+When a connection is established, mgetty will keep the root uid/euid and write a utmp_entry of a_ppp. The authentication is performed entirely through the pppd. This is why mgetty did not send a @.
+
+## Preparing dialin.config
+
+If you have installed a caller ID, you can filter the calls mgetty should answer and those it should not answer. For example, say you have a mobile phone and notebook and, to increase security, you want to restrict the calls your SuSE Linux should answer to only calls you make through your mobile phone. To do this, you use the dialin.config, which has a very simple format. The grammar of this file is as follows:
+
+- **number or prefix**—This is the number or prefix to allow.
+- **!number or !prefix**—This is the number or prefix that will not be answered.
+- **none**—These are the callers whose numbers could not be identified.
+- **all**—This designates all numbers.
+- **OUT_OF_AREA**—These are numbers that are out of the area.
+
+The following example allows only numbers we know and disallows answering for out-of-area numbers:
+
+```
+#disallow all numbers
+!all
+#disallow calls whose numbers couldn't be identified
+!none
+#disallows out of area
+!OUT_OF_AREA
+#allow the following numbers
+4186813
+2436371
+#allow this prefix
+456
+```
+
+> **NOTE** To restart mgetty, issue the following command:
+> bash#kill -9 `ps aux|grep mgetty`
+
+In actuality, this command kills mgetty, and then whenever init finds that mgetty is down, it spawns it again.
+
+## Preparing PPP
+
+Initiating a PPP connection between your SuSE Linux and a client is one of the most important factors for establishing an ISP As you have learned in the previous sections, you can have pppd handle the authentication. This is important for two authentication protocols: PAP and CHAP In this section and the following ISP example, we will set up pppd without pap and CHAP The next sections will set up PAP and CHAP.
+
+> **NOTE** For people with ISDN connections, the same rules that apply on pppd should apply on ipppd. Whenever the options file is mentioned, the ioptions file should be used instead.
+
+### The /etc/ppp/options File
+
+If you use your modem to dial out and want to use it to dial in as well, you must ensure that the /etc/ppp/options file works for both. The options to prepare this file to dial out are discussed in Chapter 23. In general, you need to have only the following lines:
+
+```
+modem
+-detach
+proxyarp
+lock
+```
+
+For this example, assume that your SuSE Linux has only one modem to which you're dialing in using terminal login.
+
+### The /etc/ppp/options ttySxx Files
+
+Each serial port on your SuSE Linux can have its own configuration file. For example, you can have a /etc/ppp/options.modem in which modem is a symbolic link to your modem serial port. If you have a multi-port board—a board that has more than one serial board designed for ISPs—each serial port can have its own options file, too. This configuration is integral to assigning IPs to users dialing in to this serial port.
+
+The following is an example of a /etc/ppp/options.modem that will assign the caller an IP of 192.168.1.2 while assigning SuSE Linux an IP of 192.168.1.1:
+
+```
+# server  : client
+192.168.1.1:192.168.1.2
+```
+
+If you have more than one modem or a multi-port board, you can assign IPs to callers by modifying the files. You can accomplish this using the following example, which assumes you are on a class C network with IPs starting from 208.159.7.0 to 208.159.7.255:
+
+```
+/etc/options/ttyC0
+
+# server  : client
+208.159.7.100:208.159.7.101
+```
+
+```
+/etc/options/ttyC1
+
+# server  : client
+208.159.7.100:208.159.7.102
+```
+
+```
+/etc/options/ttyC2
+
+# server  : client
+208.159.7.100:208.159.7.103
+```
+
+```
+/etc/options/ttyC3
+
+# server  : client
+208.159.7.100:208.159.7.104
+```
+
+## A Dial-In Server Example
+
+In this example, you will learn how to apply the configurations discussed in the previous sections. The following are assumed:
+
+- The SuSE Linux server is connected over a LAN—SuSE Linux has the IP 192.168.1.24 over this LAN. The DNS servers of the LAN are 192.168.1.1 and 192.168.1.2.
+- The SuSE Linux server has only one modem, which has a symbolic link /dev/modem that points to the correct serial port.—You use this modem to dial to the Internet, and now you want to use it to dial in. The phone line to which SuSE Linux is connected supports caller ID, as does the modem.
+- You will be connecting to SuSE Linux using Windows 9x—Throughout this example, the machine dialing in and its OS will be called the client. You will be dialing in to this server from the following number: 4186813. All other numbers will be disallowed.
+
+Your goal is to contact the SuSE Linux server, log in to it, and view shares of the LAN on your Windows 9x Network Neighborhood.
+
+The following steps are required to perform such an operation:
+
+1. Set up Samba on your SuSE Linux server. This is important if you want to enable your clients to see the Windows shares on the LAN. Check whether your SuSE Linux server can see the shares.
+2. Set up the workgroup in your Windows 9x to be the same workgroup as in your LAN. This step and the previous one are discussed in more detail in Chapter 15, "Connectivity with Windows Through Samba."
+
+After you have set up these prerequisites, you can move on to configuring the dial-in facility.
+
+## The Configuration for the Simple Dial-In Server
+
+All the settings in the following section must be performed as root.
+
+Add the following entry in the /etc/inittab:
+
+```
+mo:23:respawn:/usr/sbin/mgetty -s 38400 modem
+```
+
+After you have added the entry, issue the following command:
+
+```
+bash#kill -1 1
+```
+
+Then, add the following lines to the /etc/mgetty+sendfax/mgetty.config file:
+
+```
+speed 38400    #set the speed to 38400 for all modems
+rings 3        #answer after the third ring
+port modem     #modem on port /dev/modem
+```
+
+Check whether your /etc/mgetty+sendfax/login.config file has the following entry. Because it is a default, it's not important that the file has this entry; however, you should make sure that it is not overridden:
+
+```
+*       -       /bin/login @
+```
+
+Add the following lines to your /etc/mgetty+sendfax/dialin.config:
+
+```
+#disallow all numbers
+!all
+#allow the following numbers
+4186813
+```
+
+Next, add the following lines to the /etc/ppp/options file:
+
+```
+ms-dns 192.168.1.1
+ms-dns 192.168.1.2
+modem
+proxyarp
+-detach
+lock
+```
+
+Then, add the following lines to the /etc/ppp/options.modem file:
+
+```
+# server : client
+192.168.1.24: 192.168.1.xxx
+```
+
+In the previous code, xxx replaces the IP number you want to assign to your client when she logs in. You should not assign an IP that is used by another client on the network.
+
+## Setting Up the Windows 9x Client
+
+To set up the Windows 9x side of the connection, follow these steps:
+
+1. Double-click My Computer to open it.
+2. Double-click Dial-Up Networking.
+3. Double-click Make New Connection.
+4. In the Make New Connection dialog, enter a name for the new connection. In this example, call it SuSE Linux. Now, you need to configure your modem to show a terminal window from which you can log in to your SuSE Linux. Click Configure to open the Modem Properties dialog. Click the Options tab and check the Bring up Terminal Window after Dialing checkbox. Click OK to accept the changes. In the Make New Connection dialog, click Next to begin setting up the phone number.
+5. Enter the phone number to which your SuSE Linux is connected. When you have completed filling in the information, click Finish.
+
+After you have made the new connection, double-click it to make a new connection to your SuSE Linux. When you connect to your SuSE Linux, a terminal window should pop up asking for your username and password. Enter your username and password to log in to your SuSE Linux.
+
+When you see the bash prompt, enter pppd. This will start pppd with the configuration you previously set up. Click the Continue button in your terminal window to start the PPP connection.
+
+## What You Can Do
+
+Using this simple configuration, you should be able to view all the Windows shares on the LAN from your Network Neighborhood. Click the Network Neighborhood on your desktop to access them. You also can download your SuSE Linux local mail. As you can see, you have access to all the facilities SuSE Linux provides as if you were sitting right there in front of it.
+
+To run SuSE Linux commands, you must telnet to it and run those commands. Click Start, Run and enter telnet 192.168.1.24 in the Run dialog box.
+
+SuSE Linux comes with freeware and shareware X servers for Windows 9x. You can install these packages if you want to run X programs on your Windows 9x. The X server for Windows 9x is on the first CD in the path cdrom:/dosutils/mix. You must telnet to your SuSE Linux and export the display to your IP. While running the X server for Windows 9x, issue the following command to the bash prompt in the telnet session:
+
+```
+bash#export DISPLAY=192.168.1.xxx:0
+```
+

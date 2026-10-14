@@ -1,0 +1,258 @@
+
+## 27 Installing GIMP 537
+- What Is the GIMP? 538
+- Installing the GIMP 540
+- System Requirements for GIMP 542
+- Obtaining and Compiling the GIMP 542
+- Getting the CVS Version 543
+- Getting and Installing Plug-Ins 545
+- Obtaining and Installing Script-Fu Scripts 545
+- Troubleshooting 546
+
+## 28 Installing and Configuring Netscape Communicator 547
+- A Briefing on Netscape 548
+- Netscape and Linux 548
+- Software Requirements 548
+- Obtaining the Latest Netscape Version 549
+- Choosing Which Netscape Package to Get 549
+- Connecting to the Netscape FTP Site 549
+- Installing the Latest Netscape Version 550
+- Configuring Netscape's Appearance (Netscape Navigator) 550
+- Fonts 551
+- Colors 551
+- Configuring Netscape Browser (Netscape Navigator) 551
+- Languages 551
+- Applications 551
+- Smart Browsing 552
+- Configuring Netscape Messenger (Email Client and News Reader) 553
+- Identity 553
+- Mail Servers 554
+- News Groups Servers 554
+- Addressing 554
+- Messages 554
+- Copies and Folders 554
+- Formatting 554
+- Return Receipts 554
+- Disk Space 555
+- Configuring Composer (HTML Editor) 555
+- New Page Colors 555
+- Publish 556
+- Configuring Netscape's Advanced Options 556
+- Cache 557
+- Proxies 557
+- Netscape Tips and Tricks 557
+- Troubleshooting Netscape Communicator 558
+
+## 29 Configuring MySQL 559
+- A Briefing on MySQL 560
+- Software Requirements 560
+- Using the MySQL Shell 560
+- Creating a New Database 560
+- Creating Tables 561
+- The show Command 561
+- Invoking the Editor 563
+- Killing a Thread 564
+- Comments in MySQL 564
+- Parsing a MySQL File 565
+- Stuff That You'll Miss 565
+- Administering MySQL 566
+- Logging In 566
+- Changing a User's Password, Namely the Root Password 567
+- The Privilege System in MySQL 568
+- When the Server Gets the News 570
+- Backing Up a Database 570
+- How Can I Back Up a Database? 570
+- How Can I Restore a Database? 571
+
+## 30 Installing and Configuring Oracle 573
+- A Briefing on Oracle 574
+- Hardware Requirements 574
+- Software Requirements 575
+- Pre-Installing Oracle 8.1.5 EE|STD on SuSE Linux 6.3/6.2 576
+- Extracting and Installing the Software Provided by SuSE (Version 6.3 and 6.2) 576
+- Applying the Patch (Version 6.3 and 6.2) 576
+- Creating Mount Points (Version 6.3 and 6.2) 577
+- Creating Groups (Version 6.2) 577
+- Creating Users (Version 6.2) 577
+- Setting the Environment Variables (Version 6.2 and 6.3) 577
+- Installing Oracle 8.1.5 EE|STD on SuSE Linux 6.3/6.2 578
+- File Locations 579
+- The UNIX Group 579
+- Oracle Products 580
+- Installation Types 580
+- Creating a Database 581
+- Creating a Database During the Installation 581
+- Network Protocols 582
+- Installation Summary 582
+- Post-Installing Oracle 8.1.5 EE|STD on SuSE Linux 6.3/6.2 582
+- Automating Database Startup and Shutdown (Version 6.2 and 6.3) 582
+- Configuration of SQL*Plus 583
+- SQL*Plus Configuration Files 583
+- Basics of Oracle on Linux 583
+- Who Is Who? 584
+- Database Users 584
+- Troubleshooting Oracle 584
+
+## 31 Using the Shell 587
+- The Command-Line Interface 588
+- Using the Shell 588
+- Navigating Directories 588
+- Copying, Moving, and Renaming Files 590
+- Using Symbolic Links 591
+- File Ownership and Permissions 592
+- Using Pipes and Redirection 593
+- The Bash Shell 594
+- Initialization Files 594
+- Environment Variables 595
+- Scripting in Bash 597
+- TCSH Specifics 600
+- Initialization Files 600
+- Environment Variables 601
+- Scripting in TCSH 602
+- A Briefing on Midnight Commander 604
+- Midnight Commander Software Requirements 604
+- Configuring Midnight Commander 604
+- The Left/Right Menus 604
+- The Midnight Commander Options 606
+
+## V Appendixes 613
+
+## A Getting More Information 615
+- The SuSE Help System 616
+- Software Requirements 616
+- Chapter-by-Chapter Walkthrough 618
+- Chapter 1, "Pre-Installing SuSE Linux" 618
+- Chapter 2, "Installing SuSE Linux" 618
+- Chapter 3, "Installing the X Window System" 619
+- Chapter 4, "Managing Users and Groups" 619
+- Chapter 5, "Managing Filesystems" 619
+- Chapter 6, "Backing Up the System" 619
+- Chapter 7, "System Upgrade" 619
+- Chapter 8, "Installing a New Kernel" 619
+- Chapter 9, "Configuring the System Boot Up Sequence" 620
+- Chapter 10, "Sound Card Configuration" 620
+- Chapter 11, "Printing" 620
+- Chapter 12, "Configuring Peripherals" 620
+- Chapter 13, "Configuring a TCP/IP Network" 620
+- Chapter 14, "Configuring Domain Name Service" 621
+- Chapter 15, "Connectivity with Windows Through Samba" 621
+- Chapter 16, "Connectivity with Other Operating Systems" 621
+- Chapter 17, "Configuring a Usenet News Service" 621
+- Chapter 18, "Setting Up the Apache Web Server" 621
+- Chapter 19, "Configuring the FTP Server" 621
+- Chapter 20, "Configuring the Mail Server" 621
+- Chapter 21, "Configuring the Dial-In Server" 622
+- Chapter 22, "Setting Up SuSE Linux as a Proxy Server" 622
+- Chapter 23, "Connectivity to the Internet" 622
+- Chapter 24, "Configuring the Desktop" 622
+- Chapter 25, "Installing and Configuring StarOffice" 622
+- Chapter 26, "Installing and Configuring WordPerfect" 622
+- Chapter 27, "Installing GIMP" 623
+- Chapter 28, "Installing and Configuring Netscape Communicator" 623
+- Chapter 29, "Configuring MySQL" 623
+- Chapter 30, "Installing and Configuring Oracle" 623
+- Chapter 31, "Using the Shell" 623
+- Appendix B, "Hardware Compatibility List" 623
+- Appendix C, "YaST" 623
+- Appendix D, "Tips and Tricks on Tuning Your Linux Box" 623
+- Appendix E, "Various Utilities" 623
+
+## B Hardware Compatibility List 625
+- Supported Motherboards, CPUs, and Memory 626
+- Supported Video Graphics Cards 626
+- Hard Drive Controllers 640
+- Hard Drives 642
+- Tape Drives 642
+- ATAPI Tape Drives 642
+- CD-ROMs 643
+- CD-Writers 644
+- Removable Drives 644
+- Mice 645
+- Controllers (I/O) 645
+- Controllers (Multiport) 645
+- Network Adapters 646
+- ISDN 648
+- Pocket and Portable Adapters 648
+- Slotless 649
+- ARCnet 649
+- Token Ring 649
+- FDDI 649
+- Amateur Radio (AX.25) 649
+- Ethernet 649
+- ISDN 650
+- ATM 650
+- Frame Relay 650
+- Wireless 650
+
+## C YaST 657
+- Sound Cards 650
+- Modems 651
+- Printers 652
+- Scanners 653
+- Amateur Radio 654
+- Terminals on Serial Port 654
+- Joysticks 655
+- Video Capture Boards/Frame Grabbers/TV Tuners 655
+- UPS 656
+- SuSE YaST: An Introduction 658
+- The Opening Screen 658
+- Adjustments of Installation 659
+- Select Language 660
+- Select Keymap 660
+- Select Installation Medium 660
+- Configure Hard Disk Partitions 663
+- Set Target Partitions/Filesystems 664
+- Installing to a Directory 664
+- Choose/Install Packages 664
+- Change/Create Configuration 666
+- Install Packages 667
+- Delete Packages 667
+- System Administration 668
+- Integrate Hardware into System 669
+- Kernel and Bootconfiguration 672
+- Select Boot Kernel 672
+- LILO Configuration 673
+- Network Configuration 673
+- Network Base Configuration 674
+- Configure YP Client 674
+- Configure sendmail 674
+- Configure ISDN Parameters 675
+- Configure a PPP Network 675
+- Administer Remote Printers 675
+
+## D Tips and Tricks on Tuning Your Linux Box 681
+- Connect to a Printer via Samba 676
+- Connect to a Printer via Novell Network 677
+- System Administration: Continued 677
+- Login Configuration 677
+- Settings of suswm 678
+- User Administration 678
+- Group Administration 678
+- Create Backups 679
+- Troubleshooting 679
+- Tuning Your SuSE Linux 682
+- Filesystem Tips 682
+- Speeding Up Your Hard Drive 682
+- Detecting Changed Files 683
+- Protecting Your Files 683
+- Gaining More Hard Drive Space 684
+- Freeing Up More Space 684
+- Locating Big Files 684
+- Can't Unmount a Device? 684
+- Spreading Your IDE Drives 685
+- Jailing Programs 685
+- Safe Transfers 685
+- Identifying File Types 685
+- Tips for Using Your System 686
+- Reading Binary Files 686
+- Viewing All Running Processes 686
+- Recursive grep 686
+- Easy Downloading 686
+- Using the Manual Pages 687
+- Changing the Priority of Your Processes 687
+- Viewing Files in Pieces 687
+- Killing Processes 688
+- X Window System Tips 688
+- Speeding Up Your X Window System 688
+- More Acceleration to Your X Window System 689
+- Using the Geometry Option 689

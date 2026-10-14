@@ -1,0 +1,3 @@
+# Environment Variables That Can Be Used with ESD
+
+One important environment variable that can be used with ESD is ESPEAKER. This environment variable is used by ESD to find out which host it should connect to. When using bash, try exporting ESPEAKER=localhost and then running ESD. This should be no different from using ESD without setting this variable. The only effect this may have occurs when you try to export this variable over a network. When you play sound, it might be played through the other machine's sound card. ●

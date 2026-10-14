@@ -1,0 +1,469 @@
+- - '#'
+  - CD-ROM SUSE Linux 安装和配置手册
+- - '##'
+  - D 调整你的 Linux 机的技巧 681
+- - '##'
+  - E Various Utilities 693
+- - '##'
+  - Index 705
+- - '##'
+  - About the Authors
+- - '##'
+  - Dedication
+- - '##'
+  - Acknowledgments
+- - '##'
+  - Tell Us What You Think!
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - What Is Linux?
+- - '##'
+  - 使用 Linux 的优点
+- - '##'
+  - 使用 Linux 的缺点
+- - '##'
+  - 为什么选择 SuSE Linux？
+- - '##'
+  - 谁应该购买本书
+- - '##'
+  - 本书涵盖内容
+- - '##'
+  - 安装
+- - '##'
+  - 预安装 SuSE Linux
+- - '##'
+  - 本章内容
+- - '##'
+  - 安装前的准备
+- - '##'
+  - 为自己做好准备
+- - '##'
+  - 硬件要求
+- - '##'
+  - 安装的硬件要求
+- - '##'
+  - 是的，你可以同时拥有 Linux 和 Windows
+- - '##'
+  - 空间要求
+- - '###'
+  - 表 1.1 使用 YaST2 安装 SuSE Linux 所需的硬盘空间
+- - '###'
+  - 表 1.2 额外软件包和环境
+- - '###'
+  - 从 DOS 进行磁盘分区
+- - '###'
+  - 主分区、扩展分区和逻辑分区
+- - '###'
+  - 图 1.1
+- - '###'
+  - 使用 FIPS 分割分区
+- - '###'
+  - FIPS 的作用
+- - '##'
+  - FIPS in Action
+- - '##'
+  - Getting and Using Partition Resizer (PRESIZER)
+- - '##'
+  - Partition Resizer Controls
+- - '##'
+  - CAUTION
+- - '##'
+  - 'Mission: Disk Space'
+- - '##'
+  - 其他商业软件
+- - '##'
+  - 故障排除
+- - '##'
+  - Partition Resizer 没有显示我的分区表的图形表示。它显示的是垃圾信息。
+- - '##'
+  - Partition Resizer 不允许我调整分区大小，而 FIPS 不允许我分割分区。
+- - '##'
+  - 我应该在哪里查找有关 Partition Resizer 和 FIPS 的更多信息？我有一个本章未列出的问题。
+- - '##'
+  - 安装 SuSE Linux
+- - '##'
+  - 本章内容
+- - '##'
+  - 安装基础
+- - '##'
+  - 你需要什么
+- - '##'
+  - 从 SuSE Linux 安装介质安装
+- - '##'
+  - 从目录安装
+- - '##'
+  - 通过 NFS 或 FTP 安装
+- - '##'
+  - 准备你的系统
+- - '##'
+  - CD-ROM/DVD
+- - '##'
+  - 准备磁盘
+- - '###'
+  - 图 2.1
+- - '##'
+  - RaWrite 实用程序
+- - '##'
+  - 使用 RaWrite 实用程序创建磁盘
+- - '##'
+  - 为安装做准备
+- - '##'
+  - 多用户环境
+- - '##'
+  - SuSE Linux 中的磁盘分区
+- - '###'
+  - 表 2.1 Linux 分区映射
+- - '##'
+  - YaST 与 YaST2
+- - '##'
+  - 使用 YaST2 快速安装
+- - '##'
+  - 开始安装过程
+- - '##'
+  - 基本配置
+- - '##'
+  - 鼠标配置
+- - '##'
+  - 安装方法
+- - '##'
+  - 安装目标
+- - '###'
+  - FIGURE 2.6
+- - '##'
+  - 选择软件
+- - '###'
+  - FIGURE 2.7
+- - '##'
+  - LILO 安装
+- - '##'
+  - 创建系统用户
+- - '##'
+  - 使用 root 密码保护您的 SuSE Linux
+- - '###'
+  - FIGURE 2.9
+- - '###'
+  - FIGURE 2.10
+- - '##'
+  - 确认
+- - '##'
+  - 使用 YaST 进行 SuSE Linux 安装
+- - '##'
+  - 第 1 步：选择和准备安装介质
+- - '##'
+  - 从 NFS 安装
+- - '##'
+  - 从 FTP 安装
+- - '##'
+  - 第 2 步：引导安装程序
+- - '###'
+  - 从 MS-DOS 引导
+- - '###'
+  - 从引导盘引导
+- - '###'
+  - 从 CD-ROM 引导
+- - '##'
+  - 第 3 步：Linuxrc
+- - '###'
+  - 图 2.12
+- - '###'
+  - 图 2.13
+- - '##'
+  - 内核模块
+- - '##'
+  - 'Step 3: Linuxrc Continued'
+- - '###'
+  - FIGURE 2.15
+- - '###'
+  - FIGURE 2.16
+- - '##'
+  - Installing from CD-ROM
+- - '##'
+  - Installing from Network (NFS)
+- - '##'
+  - Installing from Network (FTP)
+- - '##'
+  - Installing from Hard Drive
+- - '##'
+  - 'Step 4: YaST'
+- - '##'
+  - Installing Linux from Scratch
+- - '###'
+  - FIGURE 2.18
+- - '###'
+  - FIGURE 2.19
+- - '###'
+  - FIGURE 2.20
+- - '###'
+  - FIGURE 2.21
+- - '###'
+  - FIGURE 2.22
+- - '###'
+  - '*Booting and Configuring SuSE Linux*'
+- - '###'
+  - FIGURE 2.23
+- - '###'
+  - FIGURE 2.24
+- - '###'
+  - FIGURE 2.25
+- - '###'
+  - FIGURE 2.26
+- - '###'
+  - FIGURE 2.27
+- - '###'
+  - FIGURE 2.28
+- - '###'
+  - FIGURE 2.29
+- - '###'
+  - FIGURE 2.30
+- - '###'
+  - FIGURE 2.31
+- - '###'
+  - FIGURE 2.32
+- - '###'
+  - FIGURE 2.33
+- - '###'
+  - FIGURE 2.34
+- - '###'
+  - FIGURE 2.35
+- - '##'
+  - 使用专家模式安装 Linux
+- - '##'
+  - 配置硬盘分区
+- - '##'
+  - 设置目标文件系统
+- - '##'
+  - 选择软件包
+- - '##'
+  - 安装 X Window 系统
+- - '###'
+  - 本章内容
+- - '##'
+  - 历史
+- - '##'
+  - 安装 X Window 系统
+- - '##'
+  - 软件包需求：
+- - '###'
+  - 'Series x:'
+- - '###'
+  - Series xsrv:（你应该从以下列表中选择与你的显卡相匹配的服务器。）
+- - '##'
+  - 配置 X Window System
+- - '###'
+  - SaX
+- - '###'
+  - 使用 SaX 进行鼠标配置
+- - '###'
+  - FIGURE 3.1
+- - '###'
+  - FIGURE 3.2
+- - '###'
+  - 使用 SaX 进行键盘配置
+- - '###'
+  - FIGURE 3.3
+- - '###'
+  - 使用 SaX 进行卡配置
+- - '###'
+  - FIGURE 3.4
+- - '###'
+  - FIGURE 3.5
+- - '##'
+  - Monitor Configuration Using SaX
+- - '###'
+  - CAUTION
+- - '###'
+  - FIGURE 3.6
+- - '##'
+  - Desktop Configuration Using SaX
+- - '###'
+  - FIGURE 3.7
+- - '###'
+  - FIGURE 3.8
+- - '##'
+  - Resolution Configuration Using SaX
+- - '##'
+  - XF86Setup
+- - '###'
+  - FIGURE 3.9
+- - '##'
+  - Mouse Configuration Using XF86Setup
+- - '###'
+  - FIGURE 3.10
+- - '##'
+  - Keyboard Configuration Using XF86Setup
+- - '###'
+  - FIGURE 3.11
+- - '##'
+  - Card Configuration Using XF86Setup
+- - '###'
+  - FIGURE 3.12
+- - '###'
+  - FIGURE 3.13
+- - '##'
+  - Monitor Configuration Using XF86Setup
+- - '##'
+  - Mode Configuration Using XF86Setup
+- - '###'
+  - FIGURE 3.14
+- - '###'
+  - FIGURE 3.15
+- - '##'
+  - Other Configurations Using XF86Setup
+- - '###'
+  - FIGURE 3.16
+- - '##'
+  - Mode Tuning Using xvidtune
+- - '##'
+  - xf86config
+- - '##'
+  - 设置 XDM/KDM
+- - '##'
+  - 设置 Frame Buffer Device X Server
+- - '##'
+  - X Display 提示
+- - '###'
+  - 'Tip #1: Adding Hosts to the Access Control List'
+- - '###'
+  - 'Tip #2: Exporting the DISPLAY Environment Variable'
+- - '###'
+  - 'Tip #3: Starting X Programs on Other Servers and Exporting the DISPLAY Variable
+    to Your X Server'
+- - '##'
+  - Troubleshooting the X Window System
+- - '##'
+  - PART II
+- - '##'
+  - 系统管理
+- - '##'
+  - 管理用户和组
+- - '##'
+  - 本章内容
+- - '##'
+  - Linux：多用户操作系统
+- - '##'
+  - 什么是账户？
+- - '##'
+  - 管理用户
+- - '###'
+  - 添加新用户
+- - '###'
+  - yast --mask user
+- - '###'
+  - 修改用户
+- - '###'
+  - 删除用户
+- - '##'
+  - 禁用用户账户
+- - '###'
+  - passwd -l john
+- - '###'
+  - passwd -u john
+- - '##'
+  - 管理组
+- - '##'
+  - 创建组
+- - '###'
+  - yast --mask group
+- - '##'
+  - 修改组
+- - '###'
+  - yast --mask group
+- - '##'
+  - 删除组
+- - '###'
+  - yast --mask group
+- - '##'
+  - 管理家目录
+- - '##'
+  - 为用户设置全局偏好
+- - '###'
+  - chown root.root /etc/skel -R
+- - '##'
+  - Protecting Home Directories
+- - '##'
+  - Controlling Your Users
+- - '##'
+  - Controlling the System Resources Available to Users
+- - '###'
+  - /etc/profile
+- - '###'
+  - adjust some limits (see bash(1))
+- - '###'
+  - first we check if that user belongs to the users group
+- - '###'
+  - Now we check if that user belongs to the students group
+- - '##'
+  - Controlling How Much Hard Disk Space Your Users Are Allowed to Have (Quota)
+- - '##'
+  - Preparing to Use Quota Support
+- - '##'
+  - 重新配置你的内核
+- - '##'
+  - 安装软件
+- - '##'
+  - 修改系统以运行配额支持
+- - '###'
+  - End of YaST-generated fstab lines
+- - '###'
+  - End of YaST-generated fstab lines
+- - '##'
+  - 创建记录文件
+- - '###'
+  - touch /quota.user
+- - '###'
+  - touch /quota.group
+- - '###'
+  - chmod 600 /quota.user
+- - '###'
+  - chmod 600 /quota.group
+- - '##'
+  - 为用户分配配额
+- - '###'
+  - export EDITOR=pico
+- - '###'
+  - edquota -u john
+- - '##'
+  - 为多个用户分配配额
+- - '###'
+  - 'edquota -p john `awk -F: ''$3 > 499 {print $1}'' /etc/passwd`'
+- - '##'
+  - 为组分配配额
+- - '###'
+  - export EDITOR=pico
+- - '###'
+  - edquota -g students
+- - '##'
+  - 设置宽限期
+- - '###'
+  - edquota -t
+- - '##'
+  - 更新你的设置
+- - '##'
+  - 查看配额状态
+- - '###'
+  - repquota -u /
+- - '###'
+  - repquota -g /
+- - '###'
+  - repquota -ua
+- - '###'
+  - repquota -ga
+- - '##'
+  - 开启和关闭配额
+- - '###'
+  - cd /etc/rc.d
+- - '###'
+  - ./quota stop
+- - '###'
+  - cd /etc/rc.d
+- - '###'
+  - ./quota start
+- - '##'
+  - 故障排除
+- - '###'
+  - cd /etc/rc.d
+- - '###'
+  - ./nscd restart
+- - '##'
+  - 配额无法工作！

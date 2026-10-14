@@ -2034,6 +2034,7 @@
 +   [SUSE Linux 企业服务器管理（课程 3112）：CLA, LPIC - 1 & Linux+](docs/suse-linux-enterprise-server-administration-course-3112-cla-/README.md)
 +   [SuSE Linux Firewall 光光版 - VPN 版](docs/suse-linux-firewall-on-cd---vpn-edition/README.md)
 +   [SuSE Linux 初学者指南 [SuSE Linux 6.2 刻光版]](docs/suse-linux-for-dummies-suse-linux-62-on-cd-rom/README.md)
++   [CD-ROM SUSE Linux 安装和配置手册](docs/suse-linux-installation-and-configuration-handbook-with-cd-r/README.md)
 +   [IBM eServer Server Xseries 和 Netfinity Suse Linux 集成指南](docs/suse-linux-integration-guide-for-ibm-elogo-server-xseries-an/README.md)
 +   [Suse Linux 高级指南](docs/suse-linux-professional/README.md)
 +   [Suse Linux 专业管理指南 9.1](docs/suse-linux-professional-administration-guide-91/README.md)

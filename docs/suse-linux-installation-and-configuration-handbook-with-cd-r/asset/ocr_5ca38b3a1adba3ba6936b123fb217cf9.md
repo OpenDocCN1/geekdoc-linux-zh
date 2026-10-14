@@ -1,0 +1,14 @@
++   - **No-show users**—Users in this list will not be shown as icons in the KDM login manager. If you check the Show All Users But No-Show Users Box, the users in the All users list will be shown as icons. Users belonging to this list will not show up as icons in KDM.
+
+You can uncheck the Show Users check box to hide all users and allow logins only by typing in the username and password. Also, if you check the Sort Users check box, users' icons will be sorted according to username. By selecting a user from any group and clicking the icon, you can change the icon that belongs to this user. The default KDM users icon path is `/opt/kde/share/apps/kdm/pics/users`. If you add more icons to this path, you will be able to set up an icon for each user who can access the system. It is convenient for each user to have her icon so that she won't have to read the username or type it in. Use different icons for quick access to the system.
+
+**Sessions**—KDM enables you to control the behavior of shutting down the system and session types through the Sessions tab. The groups in this tab are as follows:
+
++   - **Allow to shutdown**—You can choose which people are allowed to shut down the system using KDM with the options available in this combo box. The selections are All: All users are allowed to shut down the system; Root Only: After the user clicks shutdown, she must enter the root password to shut down the system; Console Only: Users can shut down the system using the console; and None: No user is allowed to shut down the system using KDM.
++   - **Shutdown command**—In this field, you must enter the command KDM should use to shut down the system. If your system supports turning off the system—most ATX motherboards do—you can choose to use the command `/sbin/poweroff`. KDE comes with the command `/sbin/halt` by default. The latter command shuts down only the operating system, not the computer.
++   - **Restart command**—This field should contain the restart command. The restart command on SuSE Linux is `/sbin/reboot`. There isn't much that you can change in this field.
++   - **Session types**—This list contains the sessions that appear in the KDM session type combo box upon login. You can remove a session from the KDM list by selecting the session and clicking remove. If you want to add a session, type in the session name—the executable name of the window manager—and click Add. You can move sessions up and down in the list by selecting the session you want to move and using the up and down arrows next to the session list.
+
+# File Manager
+
+The File Manager node in the Applications branch is used to configure the look and feel of KFM when it's used as a file manager (see Figure 24.11). The File Manager configuration has the following tabs:

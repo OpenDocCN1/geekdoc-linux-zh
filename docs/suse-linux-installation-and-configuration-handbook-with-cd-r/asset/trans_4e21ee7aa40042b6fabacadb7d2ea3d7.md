@@ -1,0 +1,286 @@
+
+
+The extensive and easy-to-follow guide to optimal performance with SuSE Linux
+
+CD-ROM
+Includes
+SuSE Linux
+version 6.3
+
+ILLA JOHNSON / SIS
+
+# SuSE Linux
+
+# INSTALLATION & CONFIGURATION
+
+# HANDBOOK
+
+![](img/659f91d9da7b29976c0625e2e9628511_0_0.png)
+
+![](img/659f91d9da7b29976c0625e2e9628511_0_1.png)
+
+# Install and Maintain SuSE Linux
+
+| For More Information About... | Check Out Page... |
+|---|---|
+| Securing Your SuSE Linux with a Root Password | 38 |
+| Installing SuSE with YaST | 40 |
+| Configuring the X Window System | 66 |
+| Adding New Users | 89 |
+| Creating, Modifying, and Deleting a Group | 92 |
+| Controlling Your Hard Disk Quota | 99 |
+| Mounting and Unmounting Filesystems | 109 |
+| Formatting a New Drive or Partition | 113 |
+| Using the Network Filesystem (NFS) | 116 |
+| Backing Up Your System with YaST | 124 |
+| Upgrading SuSE Linux | 133 |
+| Obtaining the Latest Version of X Windows from SuSE | 137 |
+| Downloading and Unpacking a New Kernel | 164 |
+| Configuring Your Kernel | 167 |
+| Understanding the Important Configuration Parameters | 175 |
+| Configuring LILO | 186 |
+| Setting Up Hardware for Sound Card Configuration | 204 |
+| Printing in SuSE Linux | 226 |
+| Crash Course on Using the Linux Printing Commands | 236 |
+| Configuring CD and DVD Drives | 242 |
+| Troubleshooting Peripheral Configuration | 264 |
+| Using YaST to Configure Your Network | 272 |
+| Securing Your Network Using a Firewall | 278 |
+| Setting Up Domain Name Service | 291 |
+| Configuring Samba | 303 |
+| Tuning Samba for Faster Performance | 316 |
+| Configuring a Local News Server | 338 |
+| Advanced Apache Functionality | 350 |
+| Configuring sendmail | 372 |
+| Configuring a Dial-In Server | 379 |
+| Installing and Configuring a Proxy Server | 394 |
+| Creating a Cache Hierarchy | 401 |
+| Establishing a Connection to the Internet | 417 |
+| Troubleshooting Your Modem Connection | 429 |
+| Configuring the ISDN Network Interface via YaST | 437 |
+| Configuring KDE and GNOME | 453 and 478 |
+| Setting Up StarOffice As a Web Browser | 511 |
+| Running and Configuring WordPerfect | 526 |
+| Installing and Compiling GIMP | 540 |
+| Configuring Netscape Navigator | 551 |
+| Using the MySQL Shell | 560 |
+| Backing Up and Restoring a Database | 570 |
+| Navigating Your Filesystem with the Shell | 588 |
+| Scripting in the bash Shell | 597 |
+| Manipulating Packages with YaST | 664 |
+| System Administration with YaST | 668 |
+| Filesystem, X Window, and Networking Tips | 681 |
+| Compression and Data Archiving Tools | 694 |
+| Using SuSE Linux Editors | 698 |
+
+# SuSE® Linux
+INSTALLATION AND CONFIGURATION
+HANDBOOK
+
+# SuSE® Linux
+INSTALLATION AND CONFIGURATION HANDBOOK
+
+Nazeeb Amin El-Dirghami and
+Youssef A. Abu Kwaik
+
+QUE®
+A Division of Macmillan USA
+201 West 103rd Street, Indianapolis, Indiana 46290
+
+# SuSE® Linux Installation and Configuration Handbook
+
+Copyright © 2000 by Que Corporation
+
+All rights reserved. No part of this book shall be reproduced, stored in a retrieval system, or transmitted by any means, electronic, mechanical, photocopying, recording, or otherwise, without written permission from the publisher. No patent liability is assumed with respect to the use of the information contained herein. Although every precaution has been taken in the preparation of this book, the publisher and author assume no responsibility for errors or omissions. Neither is any liability assumed for damages resulting from the use of the information contained herein.
+
+International Standard Book Number: 0-7897-2355-7
+
+Library of Congress Catalog Card Number: 00-100074
+
+Printed in the United States of America
+
+First Printing: May 2000
+
+# Trademarks
+
+All terms mentioned in this book that are known to be trademarks or service marks have been appropriately capitalized. Que Corporation cannot attest to the accuracy of this information. Use of a term in this book should not be regarded as affecting the validity of any trademark or service mark.
+
+SuSE is a registered trademark of SuSE, Inc.
+
+# Warning and Disclaimer
+
+Every effort has been made to make this book as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an "as is" basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book or from the use of the CD or programs accompanying it.
+
+ASSOCIATE PUBLISHER
+Tracy Dunkelberger
+
+ACQUISITIONS EDITOR
+Gretchen Ganser
+
+DEVELOPMENT EDITOR
+Maureen A. McDaniel
+
+TECHNICAL EDITOR
+Brian Schau
+
+MANAGING EDITOR
+Matt Purcell
+
+SENIOR EDITOR
+Susan Ross Moore
+
+COPY EDITOR
+Megan Wade
+
+INDEXER
+Kevin Kent
+
+PROOFREADERS
+Juli Cook
+Heather Hiatt Miller
+
+TEAM COORDINATOR
+Cindy Teeters
+
+MEDIA DEVELOPER
+Craig Atkins
+
+INTERIOR DESIGNER
+Anne Jones
+
+COVER DESIGNER
+Anne Jones
+
+COPY WRITER
+Eric Borgert
+
+LAYOUT TECHNICIANS
+Stacey Richwine-DeRome
+Heather Hiatt Miller
+Ayanna Lacey
+Mark Walchle
+
+# Contents at a Glance
+
+Introduction
+
+# I Installation 11
+
+- 1 Pre-Installing SuSE Linux 13
+- 2 Installing SuSE Linux 27
+- 3 Installing the X Window System 63
+
+# II System Administration 85
+
+- 4 Managing Users and Groups 87
+- 5 Managing Filesystems 107
+- 6 Backing Up the System 121
+- 7 System Upgrade 131
+- 8 Installing a New Kernel 157
+- 9 Configuring the System Boot Up Sequence 185
+- 10 Sound Card Configuration 201
+- 11 Printing 225
+- 12 Configuring Peripherals 241
+
+# III Network Configuration 267
+
+- 13 Configuring a TCP/IP Network 269
+- 14 Configuring Domain Name Service 285
+- 15 Connectivity with Windows Through Samba 301
+- 16 Connectivity with Other Operating Systems 321
+- 17 Configuring a Usenet News Service 337
+- 18 Setting Up the Apache Web Server 345
+- 19 Configuring the FTP Server 359
+- 20 Configuring the Mail Server 371
+- 21 Configuring the Dial-In Server 377
+- 22 Setting Up SuSE Linux as a Proxy Server 391
+- 23 Connectivity to the Internet 405
+
+# IV Software 443
+
+- 24 Configuring the Desktop 445
+- 25 Installing and Configuring StarOffice 501
+- 26 Installing and Configuring WordPerfect 521
+- 27 Installing GIMP 537
+- 28 Installing and Configuring Netscape Communicator 547
+- 29 Configuring MySQL 559
+- 30 Installing and Configuring Oracle 573
+- 31 Using the Shell 587
+
+# V Appendixes 613
+
+- A Getting More Information 615
+- B Hardware Compatibility List 625
+- C YaST 657
+- D Tips and Tricks on Tuning Your Linux Box 681
+- E Various Utilities 693
+
+Index 705
+
+# Table of Contents
+
+# Introduction 1
+
+- What Is Linux? 2
+- Advantages of Using Linux 4
+- Disadvantages of Using Linux 5
+- Why SuSE Linux? 6
+- Who Should Buy This Book 8
+- What This Book Covers 8
+
+# I Installation 11
+
+# 1 Pre-Installing SuSE Linux 13
+
+- Preparing for the Installation 14
+- Prepare Yourself 14
+- Hardware Requirements 14
+- Hardware Requirements for Installation 14
+- Yes, You Can Have Both Linux and Windows Together 15
+- Space Requirements 15
+- Disk Partitioning from DOS 17
+- Primary, Extended, and Logical Partitions 17
+- Using FIPS to Split Your Partitions 19
+- What FIPS Does 19
+- Preparing for FIPS 19
+- FIPS in Action 20
+- Getting and Using Partition Resizer (PRESIZER) 21
+- Partition Resizer Controls 22
+- Mission: Disk Space 23
+- Other Commercial Software 24
+- Troubleshooting 24
+
+# 2 Installing SuSE Linux 27
+
+- Installation Basics 28
+- What You Need 28
+- Installing from the SuSE Linux Installation Media 28
+- Installing from a Directory 29
+- Installing Through NFS or FTP 29
+- Preparing Your System 29
+- CD-ROM/DVD 29
+- Preparing the Disks 29
+- The RaWrite Utility 30
+- Using the RaWrite Utility to Create the Disks 30
+- Preparing Yourself 32
+- Multuser Environment 32
+- Disk Partitions in SuSE Linux 32
+- YaST Versus YaST2 33
+- Quick Installation Using YaST2 33
+- Starting the Installation Process 34
+- The Basic Configuration 34
+- Mouse Configuration 35
+- Installation Method 35
+- Installation Target 36
+- Selecting Software 37
+- LILO Installation 38
+- Creating a System User 38
+- Securing Your SuSE Linux with a Root Password 38
+- Confirmation 39
+- SuSE Linux Installation Using YaST 40
+- Step 1: Selecting and Preparing the Installation Medium 40
+- Step 2: Booting the Installation Program 42
+- Step 3: Linuxrc 43
+- Step 3: Linuxrc Continued 45
+- Step 4: YaST 48
+

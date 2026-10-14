@@ -1,0 +1,1 @@
+One of the most famous packages SuSE recommends to use in mission-critical systems is Time Navigator by Quadratec (http://www.quadratec-software.com). Time Navigator is an advanced package that can be used to integrate and back up giant databases on SuSE Linux. Visit their Web site for more information on the availability of the package. ●

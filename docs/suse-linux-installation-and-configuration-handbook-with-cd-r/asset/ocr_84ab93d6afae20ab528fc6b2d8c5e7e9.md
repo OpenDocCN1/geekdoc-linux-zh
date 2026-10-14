@@ -1,0 +1,15 @@
+# The K Desktop Environment
+
+> “UNIX popularity grows thanks to the free variants, mostly Linux. But still a consistent, nice looking free desktop-environment is missing. There are several nice either free or low-priced applications available, so that Linux/X11 would almost fit everybody’s needs if we could offer a real GUI.”
+
+The previous paragraph was the first paragraph of the posting by Matthias Ettrich in 1996. In his posting, he hit upon many important problems with the Linux desktop. At that point in time, there was nothing known as consistency in widget sets. You had to practice with each application to check the response of your Backspace key, which might work in one but not the other. Your mouse keys would behave one way in some applications but in a completely different way in others. Ettrich realized this inconsistency would make it hard for new users to switch to Linux and UNIX. In 1998, version 1.0 of the K Desktop Environment (KDE) was released. At that time, the KDE FTP contained not only the KDE base applications, but also numerous KDE-based applications. In January 1999, KDE version 1.1 was released. This version had many improvements over the 1.0 version. KDE was, and still is, progressing very quickly. The number of applications increases everyday. In late 1999, KDE released Krash, which is a developers’ version of KDE 2.0 released only for testing. KDE 2.0 is considered a breakthrough in the Linux desktop over any scale.
+
+SuSE Linux 6.3 comes equipped with KDE 1.1.2, which is the latest stable release of KDE. KDE is the primary desktop environment for SuSE Linux Snapshot, which is included on the CD that comes with this book. In this chapter, you will learn the philosophy of KDE, how to configure KDE, how to tweak it, and how to get the best performance out of it.
+
+# Understanding KDE
+
+Before you begin configuring KDE, you should note some important points. If you are used to the Linux environment, you probably know most of these. If you are porting to SuSE Linux from the Windows 9x/NT environment, you definitely need to know these points.
+
+KDE is not your operating system and is not responsible for configuring your system; it is only your desktop environment. In a Windows 9x/NT environment, the operating system is connected to the desktop environment, but this is not the case in SuSE Linux. Currently, some system configuration tools exist in KDE. Yet, to configure the system properly in SuSE Linux, you must use YaST. In some cases where YaST cannot configure a specific service, you might have to edit the configuration files manually.
+
+On the other hand, many projects from the KDE team include packages that are meant to configure system services. Hopefully, we might find an alternative to editing configuration files for the services in the near future.

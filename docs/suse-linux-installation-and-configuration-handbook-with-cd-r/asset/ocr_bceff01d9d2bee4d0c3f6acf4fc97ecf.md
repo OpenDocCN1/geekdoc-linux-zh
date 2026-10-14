@@ -1,0 +1,25 @@
+wrong, they are the target at which all fingers point. Managers are not concerned with hardware or software crashes; they are concerned only with outcomes. So, keep in mind that you need to perform this task correctly or you could end up in trouble.
+
+First, shut down the mysqld if it is still running. Some users still might be connected and trying to update, but the database is already at an inconsistent state so there’s no need to make matters worse. Second, shut down all network activities. Sometimes the problem can be that someone has cracked into the system. Third, back up the state at which the database is at right where you are. Of course, do not use the same media on which you have the last consistent backup—that’s a treasure that might now equal your job!
+
+# Step 1: Fixing a Corrupt Database
+
+If the database becomes inconsistent or database files become corrupt, before you try to restore the backup copy, you should try fixing the database. Several utilities exist that will help you do this. One such command is isamchk, which checks and repairs ISAM tables. As MySQL documentation states, this command works 99.9 percent of the time. Remember to shut down mysqld first and then issue the following command:
+
+```
+bash$ cd /var/mysql/university
+bash$ isamchk -r *.ISM
+```
+
+This command should fix all the problems associated with your database files, as long as they exist in the first place. In other words, this command cannot fix files that have been lost because of a disk crash, for example.
+
+# Step 2: Restoring a Database from Backup
+
+This step requires that you already have made a backup. You should restore a database only after you have tried the first step unsuccessfully. Follow these steps:
+
++   1. Copy the files of your backup to their original place. This step restores the last consistent state of the database that you have. In other words, it will restore your database to the state it was in when you performed the backup.
++   2. If you didn’t lose the log files of your database that are called hostname.n, where hostname refers to the hostname from which the connection was made and n refers to the number of logins, you can restore the database to the last state before which it was corrupted. The following command will replicate the changes that were lost:
+
+```
+bash> ls -l -t -r hostname.[0-9]* | xargs cat | mysql
+```
