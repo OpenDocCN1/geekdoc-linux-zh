@@ -1,0 +1,141 @@
+
+```
+#!/bin/bash
+
+# make a temporary file
+INPUT="$(mktemp /tmp/asciifilter.$$.XXXXXX)"
+
+# First store everything from stdin in $INPUT
+# to have the input as a regular file
+cat >$INPUT
+
+# Recode the INPUT
+recode lat1..ibmpc $INPUT
+
+# Add a FormFeed at the end of $INPUT
+# to get the last page out of the printer
+echo -en "\f" >>$INPUT
+
+# Send $INPUT to stdout
+cat $INPUT
+
+# Remove the INPUT file
+rm $INPUT
+```
+
+文件 34：`/usr/local/myprinterfilter/asciifilter`
+
+使用以下命令使这个脚本对所有用户可执行：
+
+```
+earth: # chmod -v a+x /usr/local/myprinterfilter/
+earth: # chmod -v a+rx /usr/local/myprinterfilter/asciifilter
+```
+
+使用 `lprsetup` 创建一个额外的打印机队列（参见 `lprsetup --help`）。
+
+此处，`af` 代表“asciifilter”，即队列名称。
+
+```
+earth: # lprsetup --add af --lprng --device /dev/lp0 --raw --sf
+```
+
+在 `/etc/printcap` 的 `af` 条目中，找到相应行，并将 `/usr/lib/lpd/filter/bin/if` 替换为 `/usr/local/myprinterfilter/asciifilter`。整个条目应如下所示：
+
+```
+af:\
+        :cm=lpdfilter drv= method=raw color=no:\
+        :method=ascii color=no:\
+        :lp=/dev/lp0:\
+        :sd=/var/spool/lpd/af:\
+        :lf=/var/spool/lpd/af/log:\
+        :af=/var/spool/lpd/af/acct:\
+        :if=/usr/local/myprinterfilter/asciifilter:\
+        :la=mx#0:\
+        :tr=\f:
+```
+
+文件 35：`/etc/printcap`：自定义过滤器
+
+使用以下命令停止并重新启动打印假脱机服务：
+
+```
+earth: # rclpd stop  
+earth: # rclpd start
+```
+
+现在，所有用户都应能使用 `lpr -Paf ascii-file` 进行打印。
+
+## 10 内核与内核参数
+
+内核是系统的心脏。虽然接下来的章节不会教您如何成为内核“黑客”，但它们将带您进入内核的世界。其中包含编译定制内核的基础知识。
+
+- 内核源代码 ........................................ 230
+- 内核模块 ........................................ 230
+- 内核配置 .................................. 233
+- 内核配置中的设置 .................. 234
+- 编译内核 .................................. 234
+- 安装内核 .................................. 235
+- 创建启动盘 .................................. 236
+- 编译后清理硬盘 ............. 237
+- 内核中的驱动程序 .................................. 238
+- 关于驱动程序与参数的一些提示 ................... 239
+- 参数 ........................................ 239
+
+标准 SuSE 内核在安装期间写入磁盘，在正确安装的系统中的 `/boot` 目录下可以找到，它被配置为尽可能支持广泛的硬件。如果您在安装或更新期间做出了正确的选择，该内核将针对您的处理器进行专门优化。因此，不一定需要自己编译内核。但是，如果您想测试实验性功能和驱动程序，则可能需要生成一个新内核。您必定能深入了解当前的开发状态。
+
+内核附带几个 Makefile 以自动化该过程。这些 Makefile 几乎为您处理了所有细节。您唯一需要手动完成的是为硬件设置和其他内核功能作出选择。
+
+### 内核源代码
+
+要构建内核，必须安装以下软件包：内核源代码（软件包 `kernel-source`）、C 编译器（软件包 `gcc`）、GNU binutils（软件包 `binutils`）以及 C 编译器的包含文件（软件包 `glibc-devel`）。它们位于系列 D（开发）中。无论如何，强烈建议安装 C 编译器，因为 C 语言与 UNIX 操作系统密不可分。
+
+内核源代码位于 `/usr/src/linux`。如果您计划试验不同的内核，请将它们解压到不同的子目录中，并创建一个指向当前内核源代码的符号链接。由于有些软件包依赖 `/usr/src/linux` 中的源代码，您应将此目录维护为指向当前内核源代码的符号链接，以便需要访问内核源代码的系统程序能够无错编译。
+
+### 内核模块
+
+许多驱动程序和功能不再需要直接编译到内核中，而是可以在运行时作为内核模块加载。要编译到内核中的驱动程序以及作为运行时模块加载的驱动程序在内核配置中定义。内核模块位于 `/lib/modules/<Version>`，其中 `<Version>` 是当前内核版本。
+
+基本上，系统启动不需要的组件应构建为模块。这样可以确保内核不会过大，以免 BIOS 或引导加载程序无法加载。对于 ext2 驱动程序、基于 SCSI 的系统上的 SCSI 驱动程序以及类似驱动程序，应编译到内核中。相比之下，isofs、msdos 或 sound 等并非启动计算机系统所必需的项，可以构建为模块。
+
+### 模块管理
+
+可使用以下命令：
+
+- `insmod`
+
+  `insmod` 在 `/lib/modules/(Version)` 的子目录中搜索请求的模块后加载它。但最好使用 `modprobe`（见下文）而不是 `insmod`。
+
+- `rmmod`
+
+  卸载请求的模块。仅当不再需要此模块时才能执行此操作。例如，当 CD 仍处于挂载状态时，无法卸载 isofs 模块。
+
+- `depmod`
+
+  创建 `/lib/modules/(Version)` 中的 `modules.dep` 文件，该文件定义所有模块的依赖关系。这可以确保所有依赖模块都与所选模块一起加载。如果在 `/etc/rc.config` 中设置了 `START_KERNEL`，则每次系统启动时都会重建此文件。
+
+- `modprobe`
+
+  在考虑给定模块的依赖关系的情况下加载或卸载该模块。此命令非常强大，可用于许多操作（例如，探测给定类型的所有模块，直到成功加载一个）。与 `insmod` 不同，`modprobe` 会检查 `/etc/modules.conf`，因此是加载模块的首选方法。有关此主题的详细信息，请参阅相应的手册页。
+
+- `lsmod`
+
+  显示当前已加载的模块以及有多少其他模块正在使用它们。由内核守护进程启动的模块会标记为 `autoclean`。此标签表示这些模块一旦达到空闲时间限制，将被自动移除。
+
+- `modinfo`
+
+  显示详细的模块信息。
+
+### /etc/modules.conf
+
+`/etc/modules.conf` 影响模块的加载方式。请参阅 `depmod` 的手册页（`man depmod`）。
+
+在此文件中输入直接访问硬件的模块的参数。此类模块可能需要系统特定的选项（例如，CD-ROM 驱动程序或网络驱动程序）。此处输入的参数大部分与内核启动提示符下给出的参数相同；例如，使用 LILO（参见第 240 页的*启动提示符下的内核参数*一节），但在许多情况下，启动提示符下使用的名称是不同的（要比较这些名称，请参见第 255 页的*modprobe 参数*一节）。如果某个模块加载失败，请尝试在此文件中指定硬件，并使用 `modprobe` 而不是 `insmod` 来加载该模块。
+
+### Kmod — 内核模块加载器
+
+内核模块加载器是使用模块最优雅的方式。Kmod 在后台进行监视，并确保当内核功能被激活时，一旦运行 `modprobe`，所需模块就会自动加载。要使用 Kmod，请在内核配置 '内核模块加载器'（`CONFIG_KMOD`）中设置相应变量。
+
+访问根文件系统所需的驱动程序应直接编译到内核中。不要将 SCSI 驱动程序或文件系统（通常为 ext2）配置为模块。
+
+> **警告**
