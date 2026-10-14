@@ -1,0 +1,41 @@
+
+The login: prompt appears on the terminal after the system boots. If your system is configured to start the X Window System at boot time, you'll be presented with an X login screen instead of the standard login prompt. If that happens, press CTRL-ALT-F2 to switch to the text login screen; this is explained further in Recipe 2.3 [Using Consoles and Terminals], page 32.
+
+To log in to the system, type your username (followed by RET) at the login: prompt, and then type your password when asked (also followed by RET). For security purposes, nothing is displayed on the screen when you type your password; if you make a mistake while typing it in, type CTRL-U to erase the line of input and start over.
+
+⇒ To log in to the system with a username of “kurt” and a password of “empathy,” type:
+
+```
+Debian GNU/Linux 3.0 bardo tty1
+
+bardo login: kurt RET
+Password: empathy RET
+Linux bardo 2.4.18 #1 Sat Dec 6 16:05:52 EST 2003 i686 unknown
+
+Copyright (C) 1993-1998 Software in the Public Interest, and others
+
+Most of the programs included with the Debian Linux system are freely redistributable; the exact distribution terms for each program are described in the individual files in /usr/doc/*/copyright
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+Last login: Tue Apr 5 12:03:47 on tty1.
+No mail.
+$
+```
+
+As soon as you log in, the system displays the contents of /etc/motd, the “Message of the Day” file. The system then displays the time and date of your last login, and reports whether or not you have mail waiting for you (see Chapter 32 [Email], page 611). Finally, the system puts you in a shell—the environment in which you interact with the system and give it commands. The default shell on most Linux systems is Bash, and how you use it is discussed in Chapter 3 [The Shell], page 53.
+
+The dollar sign ($) displayed to the left of the cursor is called the shell prompt; it means that the system is ready and waiting for input. (You can change this prompt to any text of your liking; to learn how, see Recipe 3.5.6 [Changing the Shell Prompt], page 80.) Many distributions are set up so that the shell prompt includes the name of the current directory by default, which it places to the left of the dollar sign. When you log in, you are in your home directory, which the shell represents as the tilde character (~). Directories are explained in Chapter 5 [Files and Directories], page 125.
+
+NOTES: Every Linux system has its own name, called the system's hostname; a Linux system is sometimes called a host, and it identifies itself with its hostname at the login: prompt. It's important to name your system; like a username for a user account, a hostname gives a name to the system you are using (and it becomes especially important when putting the system on a network). The system administrator usually names the system when it is being initially configured (the hostname can always be changed later; its name is kept in the file /etc/hostname).
+
+Like usernames, hostnames are single words in all lowercase letters. People usually give their systems a name they like, such as darkstar or shiva. In the preceding examples, "bardo" is the hostname of this particular Linux system, which happens to be running the Debian distribution.
+
+The name of the terminal you are connecting from is displayed just after the hostname. In this example, the terminal is tty1, which means that this is the first terminal on this particular system. (Incidentally, "tty" is short for "teletype," which historically was the kind of terminal hardware that most UNIX-based systems used by default.)
+
+### 2.2.2 Logging Out of the System
+
+Logging out of the system frees the terminal you were using—and ensures that nobody can access your account from that terminal.
+
+To end your session on the system, type logout at the shell prompt. This command logs you out of the system, and a new login: prompt appears on the terminal.
+
+What works equally well as typing the logout command is to just type CTRL-D (hold down CTRL and press D). You don't even have to type RET afterwards. Many users prefer this quick shortcut.

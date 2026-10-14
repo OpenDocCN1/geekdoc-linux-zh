@@ -1,0 +1,76 @@
+
+directories, listing tree graphs of . . . . 156
+directories, making . . . . . . . . . . . . . 130
+directories, moving . . . . . . . . . . . . . 144
+directories, naming . . . . . . . . . . . . . 129
+directories, removing . . . . . . . . . . . . 149
+directories, renaming . . . . . . . . . . . . 144
+directory listings, finding files in . . . . 182
+directory order, sorting text in . . . . . . 322
+directory panels . . . . . . . . . . . . . . . 158
+directory tree . . . . . . . . . . . . . . . . . 125
+directory tree, finding files in a . . . . . 172
+directory tree, making a . . . . . . . . . . 131
+directory, changing to the last one you visited . . . . . . . . . . . . . . . . . . . 133
+directory, finding the largest files in a . . 182
+directory, finding the smallest files in a . 183
+directory, mailing a . . . . . . . . . . . . . 613
+disk storage . . . . . . . . . . . . . . . . . . 501
+disk usage, listing a file's . . . . . . . . . 502
+disk, listing the free space on a . . . . . . 501
+diskette . . . . . . . . . . . . . . . . . . . . 501
+diskettes . . . . . . . . . . . . . . . . . . . 503
+disks, floppy . . . . . . . . . . . . . . . . . 503
+displaying a calendar . . . . . . . . . . . . 539
+displaying a calendar in Emacs . . . . . . . 541
+displaying a tool's available options . . . . 37
+displaying CPU type . . . . . . . . . . . . . 719
+displaying how long the system has been up . . . . . . . . . . . . . . . . . . . . 719
+displaying information about a host . . . . 684
+displaying information about a sound file . . . . . . . . . . . . . . . . . . . . . 471
+displaying information about an audio CD . . . . . . . . . . . . . . . . . . . . . . 479
+displaying information about an mp3 file . . . . . . . . . . . . . . . . . . . . . . 472
+displaying information about an ogg file . . . . . . . . . . . . . . . . . . . . . . 472
+displaying information about the system . . . . . . . . . . . . . . . . . . . . . . 718
+displaying information about users . . . . 683
+displaying memory usage . . . . . . . . . . . 720
+displaying non-printing characters . . . . 217
+displaying random quotations . . . . . . . . 587
+displaying text . . . . . . . . . . . . . . . . 216
+displaying the beginning part of text . . . 218
+displaying the characters in a console font . . . . . . . . . . . . . . . . . . . . 400
+displaying the characters in an X font . . . 398
+displaying the contents of a variable . . . . 79
+displaying the date and time . . . . . . . . 537
+displaying the day of the year . . . . . . . 538
+displaying the distribution version . . . . 720
+displaying the end part of text . . . . . . 218
+displaying the hex values of text . . . . . 221
+displaying the Linux version . . . . . . . . 720
+displaying the literal characters of text . . . . . . . . . . . . . . . . . . . . . 221
+displaying the middle part of text . . . . . 219
+displaying the minute of the hour . . . . . 538
+displaying the text between strings . . . . 220
+displaying the version of a tool . . . . . . 38
+displaying your username . . . . . . . . . . 39
+distinguishing between TeX and LaTeX files . . . . . . . . . . . . . . . . . . . 373
+distribution, displaying the version . . . . 720
+distribution, installing packages for your . . . . . . . . . . . . . . . . . . . . 707
+distributions of Linux . . . . . . . . . . . . 19
+distributions, Linux . . . . . . . . . . . . . 731
+distroWatch . . . . . . . . . . . . . . . . . . 731
+DMCA . . . . . . . . . . . . . . . . . . . . . . 22
+docBook DTD . . . . . . . . . . . . . . . . . . 380, 382
+document classes . . . . . . . . . . . . . . . 375
+document Type Definition (DTD) . . . . . . . 388
+documentation, system . . . . . . . . . . . . 50
+documenter's Workbench (DWB) . . . . . . . 286
+domain name, listing the owner of a . . . . 688
+domain record . . . . . . . . . . . . . . . . . 688
+dome . . . . . . . . . . . . . . . . . . . . . . 580
+doob, Michael . . . . . . . . . . . . . . . . . 376, 735
+dos . . . . . . . . . . . . . . . . . . . . . . . 28, 93, 231, 267, 270, 525
+dos disk, copying files to and from a . . . 526
+dos disk, deleting files on a . . . . . . . . 526
+dos disk, formatting a . . . . . . . . . . . . 526
+dos disk, listing the contents of a . . . . . 525

@@ -2135,6 +2135,7 @@
 +   [Linux 命令行：通往高效计算之路：初学者与资深用户的 Linux 潜力解锁指南](docs/the-linux-command-line-your-path-to-faster-computing-unleash/README.md)
 +   [Linux 命令手册](docs/the-linux-commands-handbook/README.md)
 +   [Linux 伴侣：理解并释放 Linux 潜力所需的一切](docs/the-linux-companion-everything-you-need-to-know-to-understan/README.md)
++   [Linux 秘籍（第2版）：日常使用技巧与技法](docs/the-linux-cookbook-2nd-edition-tips-and-techniques-for-every/README.md)
 +   [Linux 秘籍（第二版）](docs/the-linux-cookbook-second-edition/README.md)
 +   [Linux 秘籍：日常使用技巧与技术](docs/the-linux-cookbook-tips-and-techniques-for-everyday-use/README.md)
 +   [Linux 秘籍：日常使用的技巧与方法，第 2 版](docs/the-linux-cookbook-tips-and-techniques-for-everyday-use-2nd-/README.md)
