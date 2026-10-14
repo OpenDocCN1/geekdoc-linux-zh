@@ -1,0 +1,13 @@
++   - Don't install non-operating system hardware on the root disk. If you have additional disks, place user and user software there.
++   - Be careful about the number of patches and drivers you install. Only install what you need, and remove any obsolete drivers and patches. You'll be surprised how much disk space three years' worth of patches can devour.
++   - Manage your log files aggressively. Don't leave months of log files in /var. Periodically go through your log files and remove files older than a couple of months. If you need to retain your log files, compress them, or migrate them to a log server or another partition.
+
+By taking the time to manage the space on your root partition, you will be rewarded at upgrade time when you are able to upgrade to the new version of the operating system on the first try.
+
+# MAKING A COPY OF THE /ETC DIRECTORY
+
+An effective technique that many administrators discover with time is making a copy of the files in the /etc directory and moving them to a safe, yet easily accessible place prior to an upgrade. After an upgrade, especially if you perform a new installation, the majority of your time is spent restoring the original identity of the system. This usually includes modifying the /etc/hosts file, mount locations, sendmail configurations, default routers, and other network, NIS, and DNS configurations. By archiving the /etc directory, you can quickly recover this information without having to employ the backup tape or manual re-creation method. However, make sure the syntax of these files has not changed from the previous operating system.
+
+# UNMOUNTING DATA FILESYSTEMS
+
+One final step before you begin your upgrade is to unmount any non-operating system filesystems. If you followed the guidelines for system configuration in Chapter 2, you should have all of your data files located on filesystems that are not part of the root operating system partition. Removing them from vfst ab or fstab will ensure that during the upgrade, the installation program won't accidentally choose these areas to grow the root filesystem. Some upgrade utilities allow you to grow a filesystem in place, and these utilities may go looking for additional places to add new operating system files. Unmounting data directories does not excuse you from backing up your data directories before the upgrade. Make sure any and all filesystems are backed up and verified to avoid problems later.

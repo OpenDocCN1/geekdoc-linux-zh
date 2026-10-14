@@ -1,0 +1,11 @@
+| Variable | Value | Description |
+|---|---|---|
+| `security` | `Share` \| `User` \| `Server` \| `domain` | Specifies the security level employed by the SAMBA server. The values correspond to their Windows counterparts. Share-level security provides a password for each service/resource. User-level security requires that the user connecting be authenticated via the `passwd` file. Server- and domain-level security both use Windows NT servers to authenticate user connections. Domain-level security allows users from trusted domains to authenticate, while server-level security does not. |
+| `password server` | `NetBIOS name` | Specifies the name of the server (typically the PDC) to use as the authentication server. |
+| `username map` | `Pathname` | Specifies the file that maps UNIX user names to NT user names. This can be useful for users, such as root and administrator, which do not have identically named users on their respective systems. |
+| `domain group map` | `Pathname` | This is the same as the `username map` variable, except it provides group mappings. |
+| `encrypt passwords` | `yes/no` | Specifies whether passwords will be encrypted or passed as clear text. You should always specify `yes` when using server- or domain-level security. |
+| `socket options` |  | Use the default values for this parameter, they work! |
+| `local master` | `yes/no` | Specifies whether or not the SAMBA server will be a local master browser on the NetBIOS network. Unless an NT server is not available on the local subnet, you should always specify `no` for this parameter. |
+| `domain master` | `yes/no` | Specifies whether or not the SAMBA server will be a domain master browser on the NetBIOS network. Unless an NT server is not available on the domain/workgroup, you should always specify `no` for this parameter. |
+| `preferred master` | `yes/no` | Specifies whether the SAMBA server will be a preferred master browser on the NetBIOS network. Unless an NT server is not available anywhere, always specify `no` for this parameter. |

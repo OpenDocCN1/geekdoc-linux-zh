@@ -2206,6 +2206,7 @@
 +   [Ubuntu 之书：所有 Ubuntu 用户的终极手册](docs/the-ubuntu-book-the-ultimate-handbook-for-all-ubuntu-users/README.md)
 +   [终极 Linux Shell 脚本指南：使用 Linux Shell 脚本实现自动化、优化与赋能任务](docs/the-ultimate-linux-shell-scripting-guide-automate-optimize-a/README.md)
 +   [快速轻松学习 Linux 的终极分步指南](docs/the-ultimate-step-by-step-guide-to-quickly-and-easily-learni/README.md)
++   [UNIX 和 Windows 2000 手册：规划、集成与管理](docs/the-unix-and-windows-2000-handbook-planning-integration-and-/README.md)
 +   [Unix 秘籍](docs/the-unix-cook-book/README.md)
 +   [UNIX Web服务器书籍：构建自有信息网站的工具与技术](docs/the-unix-web-server-book-tools-and-techniques-for-building-y/README.md)
 +   [Unix 工作台](docs/the-unix-workbench/README.md)

@@ -1,0 +1,78 @@
+- - '##'
+  - 商标
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 部分：规划
+- - '##'
+  - 表 1.2 实施新邮件系统的成本
+- - '##'
+  - Internet host table
+- - '##'
+  - Internet host table
+- - '##'
+  - Internet host table
+- - '##'
+  - 图 2.4
+- - '##'
+  - 图 2.5
+- - '##'
+  - 图 2.9
+- - '##'
+  - 图 2.10
+- - '##'
+  - 2024年高考物理模拟试题（一）
+- - '##'
+  - Matlab license manager.
+- - '##'
+  - 符号表示注释，其右侧的所有内容都会被忽略。在本例中，我们调用的是 Matlab 许可证管理器 `/etc/lmboot`。逻辑调用 `if` 以结束调用 `fi`
+    结尾。测试 `[-f /etc/lmboot ]` 很重要。它检查文件是否存在，然后执行该文件，并显示一行文字确认你已经执行了该脚本。在添加你自己的内容时，始终使用
+    `-f` 谓词确认文件存在后再执行；输出确认信息能让你在启动脚本挂起时更容易调试。
+- - '##'
+  - newfs -i 4096 /dev/rdsk/c0t0d0s4' to create one inode for every 4096 bytes.
+- - '##'
+  - newfs -m 5 /dev/rdsk/c0t0d0s4
+- - '##'
+  - UNIX 中的格式化
+- - '##'
+  - format
+- - '##'
+  - 'PARTITION MENU:'
+- - '##'
+  - newfs /dev/rdsk/c0t0d0s4
+- - '##'
+  - Figure 2.31
+- - '##'
+  - Figure 2.32
+- - '##'
+  - Figure 2.33
+- - '##'
+  - Figure 2.34
+- - '##'
+  - Figure 2.35
+- - '##'
+  - Figure 2.36
+- - '##'
+  - Figure 2.37
+- - '##'
+  - Figure 2.38
+- - '##'
+  - Figure 2.39
+- - '##'
+  - Figure 2.40
+- - '##'
+  - Figure 2.41
+- - '##'
+  - Figure 2.42
+- - '##'
+  - Figure 2.43
+- - '##'
+  - Figure 2.44
+- - '##'
+  - Figure 2.45
+- - '##'
+  - The Default Installation Quandary
+- - '##'
+  - 图 2.46
+- - '##'
+  - Figure 4.12

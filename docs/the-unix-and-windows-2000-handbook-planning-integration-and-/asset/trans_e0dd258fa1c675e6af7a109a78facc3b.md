@@ -1,0 +1,141 @@
+
+
+# 索引
+
+Costs:
+ hardware, 10
+ for implementing new email system, 14
+ installation, 11
+ labor, 12
+ maintenance contracts, 11
+ ongoing support, 11
+ software, 10-11
+ training, 11
+ for upgrading existing email system, 13
+ Cp command, 615
+ Crack, 464
+ Crackers, 437
+ Create Shared Folder dialog box, 337
+ Create Volume Wizard, 142
+ Crontab, 586-88
+ Custom Attributes option, mailbox Properties window options, 388
+ CyberCop Sting (NAI), 470, 484
+ Cylinder group block, 113
+ Daemon map, 307
+ Data block, 113
+ Data Encryption Standard (DES), 127
+ Debugging Mode command, 103
+ Deception systems, 477-78
+ Deception Toolkit, 484
+ Default installation problem, 67-71
+ standard installation:
+  creating, 69
+  what to include in, 70
+ standard installation model, 68, 69
+ standard installation server, managing, 70-71
+ Default, 32
+ Delegated administration, 286
+ Delivery Options option, mailbox Properties window options, 388
+ Delivery Restrictions option, mailbox Properties window options, 388
+ Denial of service attack, 455
+ Desktop icons, 525-26
+ Detection, 435
+ Detection of intrusion, 476-84
+ intrusion detection system (IDS) tools, 477-78
+ DHCP, 235-44, 246
+ DHCP Manager MMC snap-in, 237-38
+ static, 243
+ tips, 243-44
+ using, 246
+ Windows 2000 DHCP clients, 235-36
+ configuration, 236
+ Windows 2000 DHCP servers, 237-43
+ Activate Scope selection screen, 243
+ Adding Exclusions configuration screen, 240
+ Configure DHCP Options selection screen, 241
+ Domain Name and DNS Servers configuration screen, 242
+ IP Address Range configuration screen, 239
+ Lease Duration configuration screen, 240
+ New Scope Wizard window, 239
+ Router (Default Gateway) configuration screen, 241
+ Scope Name configuration screen, 239
+ setting up the scope, 237-43
+ WINS Servers configuration screen, 242
+ dig, 438
+ Directories, 116
+ UNIX, 118
+ Directory services, 248-302
+ Active Directory, 277-94
+ Active Directory Services Interface (ADSI), 288-89
+ DNS integration, 283-85
+ domain controllers and partitioning, 284-85
+ domains, 278
+ features, 283-89
+ forests, 278
+ installing, 290-294
+ namespace, 290
+ objects/object classes, 279-80
+ organizational units, 278, 290
+ overview, 277
+ planning for, 289-90
+ replication, 285
+ schema, 279-83
+ security, 286-87
+ sites, 278, 290
+ structure, 277-83
+ trees, 279
+ Lightweight Directory Access Protocol (LDAP), 297-301
+ Innosoft Distributed Directory Server (IDDS), 300
+ Netscape Directory Server, 300
+ OpenLDAP Project, 300
+ Sun Directory Services, 301
+ University of Michigan server, 300
+ Windows 2000 Server, 298-300
+ Yp1dapd, 301
+ Network Information System (NIS), 255-277
+ client, 264-66
+ commands, 266-67
+ connecting client systems, 264-66
+ creating the NIS+ master, 267-70
+ files and maps, 255
+ master server creation, 256-63
+ NIS compatibility mode, using in NIS+, 275-76
+ replica NIS+ servers, 273-77
+ rpc.ypxfrd, 260
+ startup scripts, 260-63
+ slave server creation, 263
+ troubleshooting, 266-67
+ Windows 2000 Directory Services, 277-294
+ Directory Services Restore Mode option, 103
+ Dirty Page tables, 138
+ Disk defragmentation, and NTFS, 131-32
+ Disk driver, 144
+ Disk partitioning:
+  in UNIX, 22-24, 155
+ Disk commands, in UNIX, 24
+ Disk quotas, and NTFS, 128-30
+ Disk system, 572
+ d1s8 (Y7), 105-5
+ Distributed denials of service (DDOS), 455
+ Distributed filesystems (DFS), 304-53
+ SMB protocol, 330-50
+ UNIX Network Filesystem (NFS), 306-24
+ Windows Services for UNIX (SFU) version, 324-30
+ Distributed host-based IDS, 478
+ Distribution lists, creating, 389-90
+ Distribution Lists option, mailbox Properties window options, 388
+ DNS (Domain Name Service), 21, 30-31
+ client, and UNIX name resolution, 191-94
+ configuration file, 210-12
+ name resolution using, 245
+ server, 199-227
+ and Windows 2000 name resolution, 195-99
+ Advanced TCP/IP Settings window, 198
+ DNS properties window, 198
+ Local Area Connection Properties window, 196
+ Network and Dial-up Connections properties window, 196
+ TCP/IP properties window, 197
+ DNS master server, 200-212
+ DNS configuration file, 210-12
+ host database file, 201-4
+

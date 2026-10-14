@@ -1,0 +1,54 @@
+
+
+option, the `disk(y)` parameter specifies which disk is being accessed. Incorrect ARC paths will prevent the system from booting and can force you to perform a system recovery.
+
+## BOOT.INI SWITCHES
+
+There are a few switches available for your use in the `boot.ini` file. These switches provide additional functionality to suit your personal preference. They have some troubleshooting value as well. Table 3.5 describes the available switches in detail.
+
+| Switch | Description |
+|---|---|
+| `/basevideo` | You can add this switch to an entry in your `boot.ini` file to force Windows 2000 to load the default VGA driver instead of an adapter-specific driver. This is useful when you are having problems with your display driver. This switch performs the same function as the Enable VGA Mode option on the Advanced Options Menu. |
+| `/fastdetect=[comx comx,y,z]` | This switch disables the detection of serial mice on the specified port(s). If no ports are specified, then serial mouse detection is disabled on all ports. This option is added to the `boot.ini` file by default during Windows 2000 setup. |
+| `/maxmem:n` | This switch specifies the maximum amount of memory Windows 2000 can use. This switch is useful if you have or suspect that you have a bad memory module. |
+| `/noguiboot` | Specifying this switch disables the Windows 2000 splash screen normally displayed during the boot process. |
+| `/sos` | This switch causes the names of device drivers to be displayed on-screen as they are loaded. This switch is very useful when attempting to determine which driver is failing to load during boot. |
+
+## MODIFYING BOOT.INI
+
+You can use your favorite text editor to make changes to the boot.ini file. By default, Windows 2000 sets the boot.ini file to be read-only. To successfully edit and save the boot.ini file, you will need to remove the read-only attribute. Once you are done modifying the file, add the read-only attribute to prevent the file from being accidentally deleted or modified.
+
+## Shutting Down Windows 2000
+
+Well, if you’ve made it this far, then you probably haven’t done too bad setting up and configuring your system. This section will round out the chapter by describing how to shut down a Windows 2000 system. In the past, many people assumed that shutting down a Windows-based system was as simple as turning off the power. Well, times have changed, and it is just as important that a Windows 2000 system be shut down correctly as it is that a UNIX system be shut down correctly.
+
+Earlier you read about the UNIX shutdown process. You may have been a bit overwhelmed by the complexity of the shutdown process. Fortunately, Windows 2000 shutdown is as simple as point and click. The operating system itself conveniently hides all of the steps necessary to safely shut down the system. The following steps detail how to properly shut down your Windows 2000 system:
+
+- 1. Open the Shut Down Windows dialog box by choosing Shut Down... from the Start menu. The dialog box is displayed in Figure 3.10.
+- 2. Select Shut down from the drop-down list.
+
+![](img/415c89a1ede71e11e5040a0038b6916c_126_0.png)
+
+Figure 3.10
+Shut Down
+Windows dialog
+box.
+
+- 3. Click the OK button.
+- 4. The system will close all applications and shut down cleanly.
+- 5. A message box will be displayed when a safe shutdown has been completed.
+
+## WINDOWS 2000 SHUTDOWN POLICIES
+
+Windows 2000 is far more resilient to unfriendly starting and stopping. However, since they are becoming more interconnected, users should still be cautioned against restarting systems that are not theirs. The guidelines suggested for UNIX earlier in the chapter also apply to Windows 2000, especially in an integrated infrastructure. File and application sharing are becoming as prevalent in the NT/2000 community as they are in UNIX.
+
+## Summary
+
+## THE PHYSICAL BOOT SEQUENCE
+
+The UNIX and Windows 2000 boot sequences are very similar. Actually, the x86-based UNIX operating systems share the same physical boot sequence as the Windows 2000 operating system. Once the power switch is turned on, the firmware or BIOS perform low-level diagnostics and begin the initial processes of loading the operating system. The firmware used in RISC-based architectures of traditional UNIX computers is completely vendor-dependent. The firmware supplied by Sun is different than that provided by HP or SGI. There are also a variety of BIOS chips on the market, but a few standard configurations dominate.
+
+## LOADING THE OPERATING SYSTEM
+
+The operating system can be viewed as a complex interface between the physical capabilities of the hardware: memory, CPU, and disk, and the resource demands of the software applications. In reality, it is also a software application that uses low-level I/O and computational routines embedded in system components. UNIX and Windows 2000 take different approaches to the process of creating this interpretation layer. Within the UNIX family of operating systems, there are two major groups, BSD and SysV. Differences between the two are apparent in the early stages of loading the operating system. Though they both use rc scripts, the BSD variants use them in a sequential chain and the SysV variants use them in a main directory structure. SysV also has more run levels than BSD, using the inittab file to control the rc scripts used for each run level.
+

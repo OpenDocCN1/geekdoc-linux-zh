@@ -1,0 +1,3 @@
+The filesystem is the lifeblood of the modern operating system. The filesystem is a cohesive, structured organism that contains the data required and created by the operating system and applications. This chapter will discuss the features, structures, and use of the UNIX and Windows 2000 filesystems. While we will avoid discussing the low-level details of how the filesystems work, we will provide the framework necessary for you to use them effectively.
+
+![](bbox=[0.0, 0.38, 1.0, 0.95])

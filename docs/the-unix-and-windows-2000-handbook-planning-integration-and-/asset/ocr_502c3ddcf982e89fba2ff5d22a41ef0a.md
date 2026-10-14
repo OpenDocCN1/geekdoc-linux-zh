@@ -1,0 +1,3 @@
+For most people, the simple act of flipping on the power is the whole boot process. In this chapter, we will take you through the steps performed by the system while you are waiting for the login screen. We call this process "booting" (short for bootstrapping) the system.
+
+The booting sequence involves both hardware and software components. Understanding this process is essential to a system administrator. There are very few things in this field more frustrating than a system that will not boot, often for no apparent reason, and usually in the presence of a user. Knowledge of these steps (from powering up the system to getting a login) is essential to properly diagnose and correct problems that occur when the system is most vulnerable.

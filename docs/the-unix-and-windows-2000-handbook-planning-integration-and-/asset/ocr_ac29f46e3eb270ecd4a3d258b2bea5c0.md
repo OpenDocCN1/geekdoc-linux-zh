@@ -1,0 +1,8 @@
+Initially, the opponent was an individual or small group using mainly a sequence of commands based on their knowledge and guesses to probe and penetrate. These same people have now developed tools (like nmap) to help them by automating some tasks like probing vulnerable hosts.
+
+Unfortunately, what we are witnessing today is the emergence of a new generation of tools allowing an opponent to launch distributed denials of service (DDOS) using hundreds of machines (most of the time which have been compromised) in a coordinated way. More information on this new topic can be found at the following sites:
+
++   - http://www.fbi.gov/nipc/trinoo.htm.
++   - http://www.cert.org/advisories/CA-2000-01.html.
+
+Even worse, it is the strong assumption that tools have been developed (and closely held by their authors) for automating the tasks of remotely compromising dozens of machines, exploiting security holes, and installing components of DDOS tools. However, there are currently no tools that allow a site to defend itself efficiently against DDOS attacks. Patching security holes in an IT system becomes a nightmare, since during the time a security bug is discovered, it becomes public knowledge and hundreds or thousands of machines can be compromised. Obviously, the risk is out there, and system administrators are in need of new tools—more intelligent tools that can be used for collaboration. And, above it all, there is a need more than ever to have CERT track opponents quickly and from an international perspective.
