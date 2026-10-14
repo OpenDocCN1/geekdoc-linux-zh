@@ -1,0 +1,60 @@
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 状态标头和 WWW-Authenticate。显示 401。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+（重复重复1 ）
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+（重复 4
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
+
+使用浏览器访问以下 URL：`http://www.paunchy.net/chapter/12.` Apache 将发送 401 状态标头和 WWW-Authenticate。浏览器将显示 401 。现在，除了文件所有者和 Apache 之外的用户都不应该对这些文件有权限。
