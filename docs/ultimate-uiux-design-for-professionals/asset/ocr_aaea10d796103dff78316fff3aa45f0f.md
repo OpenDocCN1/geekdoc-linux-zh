@@ -1,0 +1,11 @@
+| Scope | UCD is mostly focused on creating goods and services that satisfy consumer demands. It is frequently utilized in disciplines including product design, human-computer interaction (HCI), and user experience (UX) design. | Beyond product design, design thinking has a wider application and can be used to address a variety of issues, such as organizational change, social innovation, and commercial strategy. |
+| Tools and Techniques | In order to comprehend user demands and assess design solutions, UCD commonly uses tools and techniques like personas, wireframing, usability testing, and user research. | In order to promote creativity, cooperation, and invention, design thinking employs a variety of tools and approaches, including empathy mapping, brainstorming sessions, prototyping, and storytelling. |
+| Summary | In conclusion, while UCD and design thinking both aim to provide solutions that satisfy user demands, they take distinct approaches to problem-solving and place emphasis on various stages of the design process. UCD concentrates on comprehending and meeting user demands all along the way, whereas design thinking adopts a more comprehensive strategy, stressing experimentation, empathy, and creativity to produce novel solutions. |
+
+Table 2.2: Differences between User-Centered design and the Design Thinking Process
+
+# Factors that Influence User Experience
+
+These days, small enterprises as well as large corporations need to prioritize excellent design and user experience. When it comes to introducing a new product or making improvements to an existing one, user experience design (UX) is crucial.
+
+What then ought to designers bear in mind to ensure user satisfaction? Peter Morville, a well-known UX designer who has written popular books and advises big companies, has identified seven essential components of an excellent user experience. The ‘User Experience Honeycomb,’ which he created by arranging these seven components, has gained a lot of traction in the design community. Think of these components as the individual cells of a honeycomb; they come together to form a delightful and fulfilling whole.

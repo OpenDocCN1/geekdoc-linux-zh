@@ -1,0 +1,10 @@
++   coherent design.
++   - **Efficiency:** The ease and speed with which a user can complete tasks using the interface, often enhanced by well-designed UI patterns.
++   - **Content Display Patterns:** Design approaches used to arrange content in a way that is easy for users to consume and engage with.
++   - **Toast Messages:** Brief, non-intrusive notifications that appear temporarily on the screen, usually at the bottom, to inform users about the outcome of an action, like confirming a save or deletion.
++   - **Walkthroughs:** Step-by-step guides or tutorials within an app that help new users understand how to navigate and use key features effectively, often using animations or tooltips.
++   - **Floating Action Button (FAB):** A prominent circular button that provides quick access to the primary action of the app, usually located in the bottom right corner.
++   - **Multi-Step Process:** A sequence of actions or stages that must be completed in a specific order to achieve a final outcome. In UI/UX design, this often refers to tasks that require users to go through several steps, such as filling out a form or completing an online purchase.
++   - **Progress Bar:** A visual indicator used in interfaces to show the completion status of a task or process. It helps users understand how much of the task has been completed and how much is still pending, improving the overall user experience by setting clear expectations.
++   - **Modal Windows:** A type of pop-up window that appears on top of the main content to draw attention to a specific action or information. Modals often require the user to interact with them before returning to the main interface, commonly used for alerts, forms, or confirmation dialogs.
++   - **Pre-Made Elements:** Pre-designed components or assets that can be reused across different parts of a design or application. These elements help maintain consistency and reduce the time needed to create a user interface, often found in design systems or UI kits.

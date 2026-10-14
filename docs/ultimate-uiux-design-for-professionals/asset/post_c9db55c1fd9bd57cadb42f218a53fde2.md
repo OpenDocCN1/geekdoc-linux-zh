@@ -1,0 +1,38 @@
+
+user experience on a range of screens and devices. We will go over the fundamentals of RWD, including flexible images, fluid grids, and media queries, which let webpages adapt dynamically to various viewing situations. We will also go over typical problems faced by designers and how to solve them, as well as best practices for creating responsive design. Understanding RWD is essential for ensuring your website remains user-friendly and visually appealing, regardless of how it is accessed.
+
+## Key Terms
+
+- **Blueprints:** Detailed plans or designs used as a guide for constructing or developing a project.
+- **Mockup:** A visual representation of a design, often used to showcase the layout, structure, and appearance before final development.
+- **Resolution:** The clarity and detail of an image or display, measured in pixels.
+- **UI Elements:** The individual components that make up a user interface, such as buttons, menus, and icons.
+- **Visual Hierarchy:** The arrangement or presentation of elements in a way that suggests importance, often achieved through color contrast, size, and placement.
+- **Typography:** The art and technique of arranging type, including font selection, size, spacing, and alignment.
+- **Interactive Components:** UI elements that respond to user actions, such as buttons, sliders, and forms.
+- **Anatomy:** The structure and components that make up a design or system.
+- **Static Mockups:** Non-interactive visual representations of a design, used to demonstrate layout and style.
+- **Interactive Mockups:** Mockups that simulate user interactions, allowing for a closer approximation of the final product’s behavior.
+- **Usability:** The ease with which a user can navigate and interact with a system or interface.
+- **Responsive Mockups:** Designs that adapt to different screen sizes and orientations, ensuring usability across devices.
+- **Orientations:** The direction in which a screen or design is viewed, such as portrait or landscape.
+- **iOS:** Apple’s mobile operating system, used on devices like iPhones and iPads.
+- **Android:** Google’s mobile operating system, used on a wide range of smartphones and tablets.
+- **Style Guides:** Documents that outline the design standards, including color schemes, typography, and UI elements, to ensure consistency.
+- **Annotations:** Notes or comments added to a design, providing explanations or instructions for developers and stakeholders.
+- **Vector:** A type of graphic that uses mathematical equations to create images, allowing for scalability without loss of quality.
+- **Plugin Library:** A collection of software add-ons that extend the functionality of a main program or application.
+- **Dynamic Content:** Content that changes or updates automatically based on user interaction or other variables.
+- **Interactivity:** The degree to which a user can interact with a design, often involving real-time feedback or actions.
+- **Handoff:** The process of transferring design files and specifications from designers to developers for implementation.
+- **Frameworks:** Pre-built structures or systems that provide a foundation for developing applications or websites.
+- **Microcopy:** Brief, targeted text that guides users through an interface, such as button labels, error messages, or tooltips.
+- **Slack:** A communication platform often used by teams for collaboration and project management.
+- **Empathy:** The ability to understand and share the feelings of users, crucial in designing user-centered experiences.
+- **Microinteractions:** Small, subtle animations or feedback in a design that enhance the user experience.
+- **Progressive:** A design approach that emphasizes gradual enhancement and improvement, particularly in terms of user experience.
+- **Artificial Intelligence (AI):** The simulation of human intelligence by machines, enabling them to perform tasks that typically require human intelligence.
+- **Data-Driven Decisions:** Decision-making processes that are guided by data analysis and interpretation.
+- **3D Models:** Digital representations of objects in three dimensions, used in design, gaming, and simulations.
+- **Templates:** Pre-designed layouts or structures that serve as a starting point for creating new designs or documents.
+- **Algorithm:** A set of rules or steps used to solve problems or perform tasks, often implemented in software.

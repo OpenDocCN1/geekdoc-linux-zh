@@ -1,0 +1,3 @@
+# About the Technical Reviewer
+
+**Sidharth Khurana** is a Senior UX Designer based in New Delhi, India, with a passion for creating user-centered, data-driven experiences that make an impact. Over the years, he has worked on diverse projects — from building design systems and crafting end-to-end user journeys to designing immersive experiences in cloud security, education, and crypto trading platforms. He excels at using storytelling to bring complex ideas to life through intuitive and visually engaging interfaces. Currently, he leads design initiatives at Averlon Inc., where he ensures the delivery of cohesive and impactful experiences for users.

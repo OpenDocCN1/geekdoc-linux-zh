@@ -1,0 +1,10 @@
+simple sketch is less expensive than a more intricate prototype or finished product.
+
++   - **Encourages Creativity:** Low-fidelity prototyping is simple and encourages innovation. Designers are free to explore and brainstorm without being constrained by technical implementation issues or high-detail design requirements.
++   - **Facilitates Early User Testing:** Prototypes with low fidelity allow for early user testing and feedback. Before going on to more complicated stages, designers can find usability difficulties, comprehend user needs, and make the necessary improvements by including users in the early stages.
++   - **Improves Communication:** These prototypes are great means of enhancing communication. They ensure that everyone is aware of the project’s main idea and direction by assisting designers in effectively communicating their concepts to clients, team members, and stakeholders.
++   - **Reduces Risk:** Low-fidelity prototype helps to lower risks by spotting possible issues early in the design process. Designers have the ability to address problems before they become expensive and time-consuming to correct later on.
++   - **Promotes Teamwork:** Low-fidelity prototyping fosters teamwork among participants. Better overall design solutions result from allowing everyone to share ideas and offer comments in an open, iterative atmosphere.
++   - **Focuses on Functionality:** Low-fidelity prototypes assist teams in concentrating on the essential features and user experience because they do not include intricate design aspects. This guarantees that the foundational elements of the product are sound before incorporating aesthetic elements.
+
+Low-fidelity prototype is an important tool in the design process that has several benefits that make it easier to produce high-quality, cost-effective products that are focused on the needs of users.
