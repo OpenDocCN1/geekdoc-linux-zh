@@ -1,0 +1,108 @@
+
+**ALSA** *高级 Linux 声音架构（Advanced Linux Sound Architecture）*。该库为多种声卡提供支持，使 Linux 系统能够提供多媒体反馈。
+
+**Amarok** 首选的 KDE 媒体播放器。*Amarok* 可以定位和管理您的歌曲、播放列表、专辑封面和歌词，当然还能播放音乐！大多数发行版还附带 *JuK*，这是 KDE 的另一款媒体播放器。
+
+**Apache** 互联网上最流行的 Web 服务器，支撑着近 70% 的 Web 域名。其名称来源于最初的名字“A Patchy Web Server”（补丁式 Web 服务器），因为它是由许多修改拼凑而成的。
+
+**AppleTalk** 旧款 Macintosh 计算机使用的常见文件和打印共享协议。在 Linux 上，您可以使用 *Netatalk* 库通过 AppleTalk 支持，让 Mac 连接到您的机器。
+
+**APT** *高级打包工具（Advanced Packaging Tool）*，由 Debian 团队编写的一套用于处理软件包安装和维护的实用程序。
+
+**Bash** *Bourne-Again SHell（重生版 Bourne Shell）* 是 Linux 上主要的命令行解释器。它基于由 Stephen Bourne 为 AT&T 创建的原始 *Bourne SHell*，并包含作业控制、脚本编写和别名等功能。
+
+**Boot** 启动计算机的通用术语。Rebooting 意味着重新启动，引导过程是 Linux 启动时执行的最初一系列步骤。
+
+**BSD** 伯克利软件发行版（Berkeley Software Distribution），Unix 的一种变体（也是 Linux 的近亲），既是自由软件，又使用 BSD 许可证自由授权。BSD 许可证允许将代码并入专有软件，而无需公开修改内容。
+
+**命令行** Linux 纯文本电传输入系统最常见的名称。Linux 上传统的命令行解释器是 `Bash`。
+
+**编译** 将源代码（人类可读的编程语言）转换为二进制可执行文件（可由 Linux 运行的程序）的过程称为编译。
+
+**控制台** 命令行的另一个术语。
+
+**Debian** 广受欢迎的 Linux 发行版，强调软件自由和稳定性，以创始人 Ian Murdock 及其当时的女友 Debra 的名字命名。Debian 项目以其非常长的发布周期而闻名。
+
+**显示管理器** 用于 X 的会话管理器，负责处理用户登录和选择首选桌面。原始的显示管理器是 `xdm`（*X 显示管理器*），而 GNOME 和 KDE 分别制作了 `gdm` 和 `kdm`。
+
+**发行版** 发行版（distribution）的简称，是 Linux 内核的定制版本，外加一组软件包以及附加脚本和程序。Fedora、Mandriva Linux、Mepis、Debian 和 Ubuntu 都是广受欢迎的 Linux 发行版。
+
+**Ekiga** 用于 GNOME 的视频会议工具，使用 H.323 协议和隧道技术在参与者之间提供高速聊天。以前称为 *GnomeMeeting*。
+
+**Emacs** 从核心上讲，这仅仅是一个文本编辑器（名称来源于 Editing Macros），但 *Emacs* 有许多扩展和插件，允许你编译和调试代码、阅读电子邮件、玩游戏等等。*Emacs* 有多个克隆版本，包括创新的 *XEmacs*。
+
+**Evolution** 基于 GNOME 的个人信息管理器，处理电子邮件、日历和联系人。对于 KDE，对应的软件是 *Kontact*。
+
+**ext3** 标准 Linux 文件系统。其日志功能允许系统在意外关机或其他故障后安全恢复。您不需要对 ext3 磁盘进行碎片整理。
+
+**Fedora** 由 Red Hat 赞助并主要开发的广受欢迎的 Linux 发行版。Fedora 项目计划每年发布两次新的“Core”更新，该发行版以率先整合尖端功能而闻名。
+
+**Firefox** 成功的开源 Web 浏览器，作为 *Mozilla* 的衍生品而诞生。*Firefox* 使用与 *Mozilla* 相同的 HTML 渲染系统（称为 *Gecko*），但将其包装在直观且设计良好的用户界面中。您还可以尝试 *Konqueror*、*Mozilla* 或专有（但可免费下载）的 Opera。
+
+**FSF** 自由软件基金会（Free Software Foundation）成立于 1985 年，是一个致力于促进软件自由的非营利组织。该组织仍是 GNU 项目的主要赞助商。
+
+**FTP** 文件传输协议（File Transfer Protocol）是一种客户端-服务器架构，使用户能够快速高效地上传和下载文件。以这种方式分发文件时，FTP 长期以来一直优于 HTTP，因为它支持简单的身份验证、配额管理和断点续传。
+
+**GConf** Linux 中最接近 Windows 注册表的东西。它旨在为 GNOME 桌面及其应用程序存储用户偏好，您会发现有些选项只能在 *GConf* 中设置，而在应用程序中无法设置！
+
+**Gentoo** 最流行的基于源代码的 Linux 发行版。基于源代码的发行版将所有软件包以压缩源代码的形式下载，然后根据您的系统偏好进行解压和编译。因此，Gentoo 具有高度的可定制性。
+
+**Gimp** *GNU 图像处理程序（GNU Image Manipulation Program）* 是 Linux 上最流行、最强大的图像编辑器。虽然大致模仿了 *Adobe Photoshop* 的用户界面，但 *Gimp* 更难使用，并且缺少一些更高级的功能，例如高质量的配色。
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_119_1.png)
+
+> **Emacs：文本编辑器，操作系统，还是更强大的东西？它有大批粉丝争辩说这是一种生活方式——你来决定！**
+
+## Glossary
+
+![](img/afd38ba98c33e56aa8435c9f1db6bed0_120_0.png)
+
+### Gimp
+
+Gimp 是 Linux 上专业图形开发的唯一真正选择。
+
+### Gnome
+
+GNU Network Object Model Environment 是在 KDE 使用的 Qt 图形库尚未在 GPL 下可用时创建的，作为 KDE 的替代图形桌面。Gnome 的主要关注点是易用性，放弃了长期以来已纳入 KDE 的功能。
+
+### GTK
+
+The Gimp Toolkit。这是一套 GUI 控件，使开发人员能够快速轻松地构建高级用户界面。正如你从全名可以猜到的那样，GTK 最初是在 Gimp 开发中 debut 的，但此后它已发展成为 Gnome 环境的通用 GUI 工具包。
+
+### GNU
+
+GNU 项目成立于 1984 年，旨在开发一个完整的、自由的类 Unix 操作系统。每个 Linux 发行版都严重依赖 GNU 项目的工作，从基本命令行程序到编译器和 Gnome 桌面环境。
+
+### GUI
+
+图形用户界面，也被称为 Windows、Icons、Menus 和 Pointing devices（WIMP）。GUI 使用高色彩图形和屏幕上的图标来表示你的程序和文档。
+
+### Home directory
+
+每个 Linux 系统上的用户都有一个主目录，通常位于 `/home` 中。例如，名为 Richard 的用户将拥有 `/home/richard`，而用户 Ralph 将拥有 `/home/ralph`。大多数发行版会自动为每个用户创建主目录，但有些则不会。
+
+### GnuCash
+
+Gnome 桌面环境的开源会计系统。它可以导入 Quicken 文件，创建资产负债表报告，管理你的收入，甚至打印支票。
+
+### GPL
+
+GNU General Public License。这是自由软件的基础，允许程序员在授予他人相同权利的条件下访问、修改、重新分发甚至出售该许可证下的源代码。与 BSD 许可证不同，任何使用 GPL 代码的程序本身必须在 GPL（或兼容许可证）下许可。
+
+### HTTP
+
+超文本传输协议用作请求和发送网页及其内容的主要方法。HTTP 客户端——通常是网络浏览器——使用统一资源定位符（URL）从服务器请求项目，服务器将内容发送回。
+
+### Grub
+
+`Grub` 与 `Lilo` 启动加载程序类似，因为它们都允许你选择要启动哪个操作系统。然而，`Grub` 比 `Lilo` 具有更多功能，包括在机器启动时编辑菜单的能力。
+
+### IEEE 1394
+
+连接设备使用的 FireWire 技术的技术名称。在许多索尼设备上有时也称为 iLINK，FireWire 的带宽大致与 USB 2.0 相同；然而，它在传输大文件时更快。
+
+### IRC
+
+Internet Relay Chat 是一种交互式讨论协议，用于处理在虚拟房间（称为频道）中聊天的人群。IRC 通常是一个相当阴暗的地方，是非法软件、黑客和科幻迷的大本营。
+
+### Java

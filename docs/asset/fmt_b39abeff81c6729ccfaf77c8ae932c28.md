@@ -1,0 +1,272 @@
+
+## compiler
+
+将编译语言的源代码转换为二进制文件的程序。
+
+## computer language
+
+可按预定义方式排列以使计算机执行语言使用者定义的任务的单词和语法规则集。
+
+## console
+
+操作系统提供的纯文本界面，提供命令行界面。不是 GUI 的一部分。
+
+## container
+
+一种特殊的 Apache 配置指令，仅在满足条件或仅在特定上下文中时才激活其他指令。
+
+## cookie
+
+程序用来识别有关主机或用户的信息的数字令牌。
+
+## copyleft
+
+一个讽刺性的术语，指 GNU 通用公共许可证（GPL），表示与标准版权有根本性的背离。
+
+## core dump
+
+当程序意外结束（崩溃）时，操作系统创建的诊断文件（名为 core）。
+
+## cron job
+
+你已安排在未来特定时间重复执行的命令或脚本。
+
+## current working directory
+
+你正在工作的目录。使用 `pwd` 命令显示。
+
+## cylinder
+
+硬盘所有盘片上同一位置的一组磁道。
+
+## daemon
+
+一种通常没有屏幕输出的后台进程，等待特定系统活动然后对其做出反应。
+
+## defragment
+
+一种将每个文件排列使其各部分在硬盘上彼此相邻的程序；将组成文件的所有扇区放置到连续的磁盘位置。
+
+## denial of service (DoS)
+
+一种黑客活动，用大量虚假网络流量占用被攻击的服务器或特定程序，使其无法响应有效请求。
+
+## direct memory access (DMA) channel
+
+计算机内部的一种通信方法，允许设备直接读写计算机的 RAM，而无需先经过微处理器。
+
+## directory record
+
+一种特殊类型的文件，包含其他文件的文件名和 inode 编号。
+
+## disk image
+
+包含软盘精确副本的单个文件。
+
+## disk quotas
+
+分配给每个用户或组的限制，限制用户或组在文件系统上可消耗的总空间量。
+
+## distributed DoS (DDoS)
+
+一种特殊的拒绝服务攻击类型，其中黑客渗透多个系统并安装程序，在黑客命令下对指定目标执行 DoS 攻击。
+
+## DNS server
+
+响应客户端请求的服务器，这些客户端需要将域名转换为（解析为）IP地址。
+
+## Domain Name System (DNS)
+
+用于将 www.course.com 等域名转换为 198.60.22.5 等 IP 地址的协议。
+
+## dynamically linked applications
+
+不包含自身所需库函数的 Linux 程序。库必须作为共享库安装在应用程序执行的 Linux 系统上。
+
+## dynamic routing
+
+使用 RIP、OSPF 或 BGP 等路由协议自动收集和更新路由表信息。
+
+## effective UID
+
+用于确定用户被允许对文件系统访问权限的用户 ID。`su` 命令会更改 effective UID。
+
+## emacs
+
+一种功能强大的编辑器，提供宏、编程工具、自定义功能和数百个键盘快捷键。
+
+## e-mail alias
+
+可用于向用户账户发送电子邮件的替代名称。
+
+## end user
+
+在组织中使用计算机系统完成分配任务的个人，但通常依赖系统管理员使这些系统平稳运行。
+
+## environment variable
+
+由 Linux shell 定义的变量，以便所有程序都可以访问其值。
+
+## epoch backup
+
+包含系统上所有数据的完整备份。
+
+## Ethereal
+
+一种功能强大的图形网络流量分析工具。
+
+## Ethernet
+
+最广泛使用的网络硬件类型。
+
+## executable file
+
+包含计算机可执行的数字代码的文件。由编译器从源代码文件创建，可执行文件是用户可以运行的程序。
+
+## execute permission (x)
+
+允许用户将文件作为程序启动或在目录中查看文件的权限。用字母 `x` 表示。
+
+## exit code
+
+程序或 shell 脚本提供的数字代码，用于指示预期操作成功或失败。
+
+## exterior routing protocols
+
+为不同组织控制的网络之间路由数据包而设计的路由协议；数据包基于管理策略路由，通常由对特定组织路由信息的信任程度控制。
+
+## face browser
+
+图形登录屏幕的一个功能，使其为每个用户显示一个小图形图像。
+
+## facility
+
+分配给系统消息的类别，标识提供消息的程序类型。设施在 `syslog.conf` 中使用。
+
+## FAT (File Allocation Table)
+
+DOS 和旧版 Windows 使用的文件系统类型。
+
+## FAT32
+
+（32 位 FAT）某些版本的 Windows（如 Windows 98）使用文件系统类型。
+
+## fault tolerance
+
+在发生意外硬件或软件故障时优雅响应的能力，以防止系统完全关闭。
+
+## File Transfer Protocol (FTP)
+
+为在服务器和一个或多个客户端计算机之间传输文件而设计的协议。
+
+## file extension
+
+文件名的最后一部分，传统上是最后三个字母，由句点与文件名的其余部分分隔。在某些情况下用于指示文件包含的信息类型，例如特定格式的文档或图形图像。
+
+## file handle
+
+允许在 Linux 中打开并使用单个文件的内部存储机制。
+
+## file manager
+
+用于管理文件和子目录的图形实用程序。GNOME 桌面中的 `Nautilus` 是一个例子。`Konqueror` 是 KDE 桌面的默认文件管理器。
+
+## file permissions
+
+定义用户对 Linux 系统上的文件或目录的访问类型的访问权限。也称为文件或目录的访问模式。
+
+## file record
+
+Linux 文件系统中的记录，包含文件名和 inode 编号，或者如果是符号链接，则包含文件名和链接引用的另一个文件名。
+
+## file system
+
+存储设备，通常是硬盘上信息的有序集合。
+
+## filtering
+
+根据复杂规则或模式在文本文件中添加、删除或更改数据的过程。
+
+## FIPS
+
+从现有的 Windows 分区创建两个单独分区的程序。用于创建可删除的空分区，并将 resulting 空闲空间用于安装 Linux。不能与 NTFS 文件系统（Windows NT、2000、XP 或 Server 2003）一起使用。
+
+## firewall
+
+根据其特征和一组规则过滤（阻止）IP 数据包的程序。
+
+## for loop
+
+根据 `for` 命令提供的参数重复执行的命令列表。
+
+## fork
+
+在 Linux 中通过在现有进程内部启动来创建新进程的方法。
+
+## forking
+
+基于现有项目启动新的自由软件项目。
+
+## Free Software Foundation (FSF)
+
+由 Richard Stallman 创立的组织，旨在推广其自由软件理念并创建和分发该软件。
+
+## function
+
+一组被命名并可在以后通过引用该名称执行命令的集合。
+
+## gateway
+
+连接到两个或多个网络的计算机，使得一个网络上的计算机可以通过向网关计算机发送数据包来访问其他网络。
+
+## gcc
+
+一种 C 语言编译器。GNU 项目最著名的产品之一。
+
+## gdm
+
+随 GNOME 提供的显示管理器；用于提供图形登录提示。
+
+## gigabyte (GB)
+
+计算机上的空间度量，等于 1024 MB，大约足以存储 10 亿个字符。
+
+## Global Information Assurance Certification (GIAC)
+
+由 SANS Institute 运营的实践安全认证计划。
+
+## GNOME desktop (guh-NOME)
+
+许多 Linux 发行版，包括 Red Hat Linux 使用的图形界面。
+
+## GNOME System Monitor
+
+GNOME 桌面的图形实用程序，用于监视和控制 Linux 上运行的进程。
+
+## GNU General Public License (GPL)
+
+Richard Stallman 为 GNU 项目创建的程序开发的自由软件许可证。
+
+## GNU Project
+
+自由软件基金会为创建自由的类 UNIX 操作系统而进行的努力。每个 Linux 发行版中的许多程序都来自 GNU 项目。
+
+## graceful shutdown
+
+在关闭或重新启动计算机之前，以有序的方式停止所有 Linux 服务并关闭所有文件访问的技术。
+
+## graphical libraries
+
+X 客户端可用于更有效地创建和管理图形环境元素的编程函数集合。
+
+## graphical user interface (GUI)
+
+提供鼠标驱动应用程序、菜单栏、按钮等的软件。
+
+## group
+
+由一组用户组成的命名账户。组的每个成员都可以访问该组拥有的文件。
+
+## group permissions
+
+一组三个文件权限（`r`、`w` 和 `x`），可授予分配给文件或目录的组成员。
