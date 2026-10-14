@@ -1,0 +1,84 @@
+
+> 来源：摘自 S.W. Valencia 和 N.A Place 的《Literacy Portfolios for Teaching, Learning, and Accountability: The Bellevue Literacy Project》，载于 Sheila W. Valencia、E.H. Hiebert 和 Peter P. Afflerbach 主编的《Authentic Reading Assessment: Practice and Possibilities》（第 146 页），1994 年，Newark, DE：International Reading Association。经 Sheila W. Valencia 和 International Reading Association 许可转载。版权所有。
+
+- 1. 包含真实作品。学生纳入作品集中的作品必须为他提供直接机会，让他参与该领域或学科工作者通常使用的思考方式和能力。例如，在科学作品集中，学生应从事评估证据、利用科学解释说明数据，或收集数据以支持或反驳解释的工作。
+
+- 2. 记录概念发展。作品集条目必须记录学生自己的解释、理解和概念框架。随着学生在一个项目或问题解决过程中进展，这一记录必须经常更新，以显示学生在项目发展过程中概念框架和思维的变化。
+
+ops。仅包含成品是不够的。例如，学生应定期在科学作品集中记录她对所遇事件、观察结果和所学概念的当前科学解释。
+
+- 3. 参与反思活动。学生利用作品集内容作为与教师讨论他对作品所依据的概念、原理和理论的理解的基础。教师引导讨论，使学生使用该领域或学科工作者使用的相同思维策略和能力。例如，如果学生正在解决科学问题，她应利用作品集内容参与科学思维和活动。学生应记录随着新证据积累其解释的变化。
+
+你必须具备知识和自发性。使用这些作品集要求你具备显著的知识、技能和能力。此外，你需要非常精通你正在评估进展的学科。你也应该注意到，这种作品集评估活动比使用最佳作品作品集评估更自发、更不正式。这些特征不一定是弱点，因为作品集与互动教学一起使用，并作为形成性评估工具。
+
+## 最佳作品作品集的组织和内容
+
+组织最佳作品作品集。你在示例 12.1 中看到了最佳作品作品集的评分量规示例。仔细研究该图，你会看到最佳作品作品集是如何组织的。此示例中的作品集是州学校问责制系统的一部分。州教育部门强制规定了作品集的内容和组织。作品集旨在评估问题解决、数学推理、数学交流以及理解核心课程概念方面的学习目标。为了实现这一评估，州政府强制要求每个作品集包含某些类型的数学作业。因此，每个作品集必须包含以下示例：数学调查、应用、非常规问题的解决方案、项目、跨学科问题解决方案以及关于数学的写作。
+
+学生在整个学年准备条目。除了作品集截止日期外，没有强制的时间表。然而，为了帮助学生准备，教师会向学生提供解释和建议，帮助他们决定应包含哪些示例。示例 12.10 显示了教师在准备最佳作品数学作品集时给学生提供的一些解释和自我反思问题。
+
+## 最佳作品作品集应符合课程
+
+为了有效，作品集必须与州或学区课程框架的目标、标准和学习目标以及你的日常教学活动保持一致。在规划你的作品集组织和内容时，请记住以下几点（Arter & Spandel, 1992）：
+
+## 示例 12.10
+
+给四年级学生关于如何准备数学作品集的建议示例。
+
+### 什么有效？
+
+### 来看看！
+
+以下是你应纳入作品集的作品类型：
+
+- investigations—研究数学主题或进行数学实验
+- applications—使用数学解决现实世界问题
+- non-routine—结合或发明问题解决策略以得出解决方案或结果
+- projects—完成需要数天或更长时间的问题
+- interdisciplinary—将数学与其他学科结合使用
+- writing—写关于数学以解释你的思维或解决方案
+
+这些作品还应表明你能做到以下几点：
+
+- understand ways to solve problems and do more with the problem (problem solving)
+- think by using mathematical ideas and prove your solution is correct by using logical explanations (reasoning)
+- Explain mathematics to others using mathematical language, symbols, and drawings (mathematical communication)
+- understand mathematical topics and use mathematics in other subjects and everyday life (understanding/connecting core concepts)
+
+在为作品集选择作品时，请自问以下问题：
+
+- Did I solve the problem in different ways?
+- Have I done other things with the problem?
+- Is my answer correct and does it make sense?
+- Did I use correct mathematical language, symbols, and/or drawings?
+- Is my mathematics connected to other subjects and everyday life?
+- Have I listed the mathematical tools (calculators, blocks, beans, etc.) I used?
+- Did I explain my thinking and show all my work?
+- Does my explanation show that I understand mathematics?
+- Have I edited and corrected my work so this is my best effort?
+- Have I chosen different types of pieces for my portfolio?
+- Did I show all the mathematical topics (core concepts)?
+- If I chose a group entry, did I include my own ideas and explanations?
+- Have I talked with my teacher about the pieces in my portfolio?
+
+来源：摘自 Kentucky Department of Education 的《Portfolios and You》（第 3 页），1993b，Frankfort, KY：作者。经许可转载。
+
+作品集应强调与日常教学中强调的相同标准、课程目标和学习目标。
+
+用于评估学生作品集条目的标准应与日常教学中使用的标准相同。
+
+你组织和使用作品集的方式应与你在教学活动中传达的价值观一致（例如，如果你的教学强调学生对自己学习负责，你使用的作品集程序应与这种方法一致）。
+
+## 最佳作品作品集中什么算作证据？
+
+这里的问题是作品集中应包含或排除什么。最佳作品作品集的目的是提供主要学习目标已实现的确凿证据。因此，这些学习目标决定了包含什么内容。你还需要决定作品集是否是评估这些学习目标成就的最佳方法。作品集与其他表现性评估一样，不应用于评估课程中的每个学习目标。随着学生成熟并承担更多对自己学习的责任，他们可以自行决定什么构成成就的适当证据。在这种情况下，你需要向学生提供学习目标的明确陈述以及你将用来评判其条目的标准。
+
+accomplishment. In that case, you will need to give students clear statements of learning targets and of the criteria by which you will judge their entries.
+
+## 最佳作品作品集的条目标题
+
+作品集很快就会变成一堆难以评估的材料和纸张。为了改善这种情况，每个条目都应附有适当的作品集条目表（或标题），包含以下信息：
+
+- Name of the student
+- Date of entry
+- Title or description of the entry. For example, “Comparison of the Population Growth of Mexico and the United States.”
