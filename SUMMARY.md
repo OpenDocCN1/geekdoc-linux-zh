@@ -2023,6 +2023,7 @@
 +   [SUSE Linux 9.3 傻瓜书](docs/suse-linux-93-for-dummies-isbn---0764596152/README.md)
 +   [SuSE Linux 入门指南](docs/suse-linux-basis/README.md)
 +   [SUSE Linux Enterprise Desktop 10：训练手册](docs/suse-linux-enterprise-desktop-10-training-workbook/README.md)
++   [SUSE Linux Enterprise Desktop 管理 (课程 3086)](docs/suse-linux-enterprise-desktop-administration-course-3086/README.md)
 +   [SUSE Linux Enterprise Server 10 管理指南](docs/suse-linux-enterprise-server-10-administration/README.md)
 +   [SUSE Linux Enterprise Server 10 高级管理指南](docs/suse-linux-enterprise-server-10-advanced-administration/README.md)
 +   [SUSE Linux Enterprise Server 10 入门指南](docs/suse-linux-enterprise-server-10-fundamentals/README.md)

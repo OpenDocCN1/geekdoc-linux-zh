@@ -1,0 +1,243 @@
+
+在下面的示例中，root 使用 chown 将 hello.txt 文件的所有权从 geeko 更改为用户 tux：
+
+```text
+da10:/tmp # ls -la hello.txt
+-rw-r--r-- 1 geeko users 0 2006-04-06 12:43 hello.txt
+da10:/tmp # chown tux:users hello.txt
+da10:/tmp # ls -la hello.txt
+-rw-r--r-- 1 tux users 0 2006-04-06 12:43 hello.txt
+da10:/tmp #
+```
+
+在下面的示例中，使用 chown 将 list.txt 文件的访问权限限制为 advanced 组的成员：
+
+```text
+da10:/tmp # ls -la list.txt
+-rw-r--r-- 1 geeko users 0 2006-04-06 12:43 list.txt
+da10:/tmp # chown :advanced list.txt
+da10:/tmp # ls -la list.txt
+-rw-r--r-- 1 geeko advanced 0 2006-04-06 12:43 list.txt
+da10:/tmp #
+```
+
+当然，root 和文件所有者仍然拥有访问文件的权限。尽管组已更改，但所有者权限保持不变。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_308_0.png)
+
+## 练习 9-2：管理文件权限和所有权
+
+在本练习中，你创建具有不同权限的目录。
+首先，创建一个 /files/ 目录，其中包含两个子目录（private/ 和 public/）。
+更改 private/ 目录的权限，使只有 root 具有读、写和执行权限，并更改 public/ 的权限，使每个人对该目录都有权限。
+然后，切换到用户 geeko。尝试在这些目录中的每一个内创建一个 geeko 文件。
+更改 /files/public/geeko 文件的权限，使 users 组具有写权限，而其他用户没有任何权限。
+
+## 完成此练习的详细步骤
+
+Part I: Create a Private and a Public Directory
+Part II: Try to Create a File as a Normal User in Both Directories
+
+## Part I: Create a Private and a Public Directory
+
+要创建私有和公共目录，请执行以下操作：
+
+- 1. 打开一个终端窗口。
+- 2. 使用密码 n0v3ll 切换到 root (su -)。
+- 3. 通过输入创建 /files/ 目录
+
+```text
+mkdir /files
+```
+
+- 4. 通过输入更改到 `/files/` 目录
+  ```
+  cd /files
+  ```
+- 5. 通过输入在 `/files/` 下创建 private 和 public 子目录
+  ```
+  mkdir private public
+  ```
+- 6. 通过输入更改 `private/` 目录的权限，使只有 root 具有读、写和执行权限
+  ```
+  chmod 700 private
+  ```
+- 7. 通过输入更改 `public/` 目录的权限，使每个人对该目录都有权限
+  ```
+  chmod 777 public
+  ```
+- 8. 通过输入验证更改
+  ```
+  ls -l
+  ```
+
+## Part II: Try to Create a File as a Normal User in Both Directories
+
+要尝试以普通用户身份在两个目录中创建文件，请执行以下操作：
+
+- 1. 通过按 Ctrl+Alt+F+3 切换到虚拟终端 3。
+- 2. 使用 novell 密码以 geeko 身份登录。
+- 3. 通过输入切换到 `/files/` 目录
+  ```
+  cd /files
+  ```
+- 4. 通过输入尝试在 `private/` 目录中创建名为 geeko 的文件
+  ```
+  touch private/geeko
+  ```
+  注意权限被拒绝。
+- 5. 通过输入尝试在 `public/` 目录中创建名为 geeko 的文件
+  ```
+  touch public/geeko
+  ```
+- 6. 通过输入验证文件是否已创建
+  ```
+  ls public
+  ```
+- 7. 通过输入更改到 `public/` 目录
+  ```
+  cd public
+  ```
+- 8. 通过输入列出 geeko 文件的权限
+  ```
+  ls -l geeko
+  ```
+  注意 users 组和其他用户对该文件只有读权限。
+- 9. 通过输入更改权限，使 users 组具有写权限，而其他用户没有任何权限
+  ```
+  chmod g+w,o-r geeko
+  ```
+- 10. 通过输入验证更改
+  
+      ls -l
+  
+- 11. 通过输入 `exit`（或按 Ctrl+d）以 geeko 身份注销；然后通过按 Ctrl+Alt+F7 返回 GNOME 桌面。
+- 12. 关闭终端窗口。
+
+## 修改默认访问权限
+
+如果未更改默认设置，文件将以访问模式 666 创建，目录以 777 创建。
+
+要修改（限制）这些默认访问模式设置，可以使用 umask 命令。你使用此命令时带有一个三位数字值，例如 022。
+
+umask 中设置的权限将从默认权限中移除。
+
+例如，输入 umask 022 的结果如表 9-5 所示。
+
+|  | 目录 |  |  | 文件 |  |  |
+|---|---|---|---|---|---|---|
+| 默认权限 | rwx | rwx | rwx | rw- | rw- | rw- |
+|  | 7 | 7 | 7 | 6 | 6 | 6 |
+| umask | -- | -w- | -w- | -- | -w- | -w- |
+|  | 0 | 2 | 2 | 0 | 2 | 2 |
+| 结果 | rwx | r-x | r-x | rw- | r-- | r-- |
+|  | 7 | 5 | 5 | 6 | 4 | 4 |
+
+表 9-5
+
+以下列表显示了不同 umask 的效果示例。
+
+```
+da10:~ # touch example1
+da10:~ # mkdir exampledir1
+da10:~ # umask 000
+da10:~ # touch example2
+da10:~ # mkdir exampledir2
+da10:~ # umask 022
+da10:~ # touch example3
+da10:~ # mkdir exampledir3
+da10:~ # ls -l
+total 629
+-rw-r--r-- 1 root root 0 May 16 11:18 example1
+-rw-rw-rw- 1 root root 0 May 16 11:18 example2
+-rw-r--r-- 1 root root 0 May 16 11:18 example3
+drwxrwxrwx 2 root root 48 May 16 11:18 exampledir1
+drwxrwxr-x 2 root root 48 May 16 11:18 exampledir2
+drwxrwxr-x 2 root root 48 May 16 11:18 exampledir3
+da10:~ #
+```
+
+通过输入 umask 077，你将访问限制为所有者和 root 仅；组和其他用户没有任何访问权限。
+
+umask 不带任何参数显示 umask 的当前值，前面带有一个前导零。
+
+```
+da10:~ # umask
+0022
+da10:~ #
+```
+
+要使 umask 设置永久生效，可以更改系统范围的 /etc/profile.local 配置文件中 umask 的值。如果你希望设置特定于用户，请在相应用户的主目录中的 .bashrc 文件中输入 umask 的值。
+
+## 配置特殊文件权限
+
+表 9-6 中显示的属性用于特殊情况。
+
+| 字母 | 数字 | 名称 | 文件 | 目录 |
+|---|---:|---|---|---|
+| t | 1 | 粘滞位 | 不适用 | 用户只能在他们是所有者时、是 root 时或目录所有者时删除文件。这通常应用于 /tmp/ 目录。 |
+| s | 2 | SGID（设置组 ID） | 当程序运行时，这会将进程的组 ID 设置为文件的组 ID。 | 在此目录中创建的文件属于该目录所属的组，而不是用户的初始组。在此目录中创建的新目录继承 SGID 位。 |
+| s | 4 | SUID（设置用户 ID） | 当程序运行时，将进程的用户 ID 设置为文件所有者的用户 ID。 | 不适用。 |
+
+表 9-6
+
+你可以使用 chmod 设置粘滞位，要么通过其他人的权限（例如 chmod o+t /tmp），要么以数字方式（例如 chmod 1777 /tmp）。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_311_0.png)
+
+在旧的 UNIX 系统上，粘滞位使可执行程序在终止后仍保留在内存中，以便可以快速重新启动。然而，对于现代的 UNIX 和 Linux 系统，这仅影响目录。
+
+粘滞位列在其他人的权限中（t），如下所示：
+
+```
+geeko@dal0:~ > ls -ld /tmp
+drwxrwxrwt 1000 root root 608 2006-04-06 12:45 /tmp
+geeko@dal0:~ >
+```
+
+以下是 SUID 的示例：
+
+```text
+geeko@da10:~ > ls -l /usr/bin/passwd
+-rwsr-xr-x 1 root shadow 79765 2006-03-24 12:19
+/usr/bin/passwd
+geeko@da10:~ >
+```
+
+每个用户都可以更改其密码，但用户必须具有 root 权限才能将哈希密码写入 /etc/shadow 文件。
+
+以下是 SGID 的示例：
+
+```text
+geeko@da10:~ > ls -l /usr/bin/wall
+-rwxr-sr-x 1 root tty 10192 2006-03-22 05:24
+/usr/bin/wall
+geeko@da10:~ >
+```
+
+使用 wall，你可以将消息发送到所有虚拟终端。如果你使用 wall，此命令将以组 tty 的权限执行。
+
+如果设置了 SUID 或 SGID 属性，程序将以所有者（在 SUID 示例中：root）或组（在 SGID 示例中：tty）拥有的特权执行。
+
+如果程序的所有者是 root，则程序将以 root 的权限执行。不幸的是，这样做存在安全风险。例如，用户可能利用程序中的错误，在进程结束后再保留 root 特权。
+
+因此，此位应仅为经过充分测试的应用程序设置，并且在没有其他方式可以授予对特定任务的访问权限的情况下设置。
+
+## 确保文件系统安全
+
+用户登录系统后，用户被允许做什么以及不被允许做什么主要由文件系统的安全设置决定。
+
+在 Linux 中，文件系统安全尤其重要，因为系统上可用的每个资源都表示为一个文件。
+
+例如，当用户尝试访问声卡以播放音频数据时，声卡的访问权限由 /dev 目录中相应设备文件的权限设置决定。
+
+为了确保基本的文件系统安全，你需要知道以下内容：
+
+- - 用户写访问的基本规则
+- - 用户读访问的基本规则
+
+## 用户写访问的基本规则
+
+Linux 中使用的文件系统在结构上是 UNIX 文件系统。它们支持典型的文件访问权限（读、写、执行、粘滞位、SUID、SGID 等）。
+
+除了各种时间戳等附加标准功能外，访问权限可以分别针对文件所有者、用户组和世界其他用户（user、group、others）进行管理。

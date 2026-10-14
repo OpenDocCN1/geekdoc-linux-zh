@@ -1,0 +1,92 @@
+
+- **/etc/cron.d** 包含额外的系统 cron 表的目录。
+- **/etc/crontab** 系统 cron 表。
+- **/etc/cups/client.conf** 在 SUSE Linux 系统上列出远程 CUPS 服务器的文件。
+- **/etc/cups/cupsd.conf** CUPS 主配置文件。
+- **/etc/cups/ppd** 存储特定打印机所使用的活动配置文件 的目录。
+- **/etc/cups/printcap** 用于存储 CUPS 客户端配置信息的文件。
+- **/etc/cups/printers.conf** 包含 CUPS 打印机定义的文件。
+- **/etc/default/passwd** 更改密码时使用的默认值的文件，例如加密算法。
+- **/etc/default/useradd** 创建用户账户时使用的默认值的文件。
+- **/etc/exports** 用于配置 NFS 共享目录的文件。
+- **/etc/fstab** 包含分区挂载信息的文件。用于在系统初始化时挂载文件系统。
+- **/etc/group** 包含系统组及其成员的文件。
+- **/etc/init.d** 包含用于启动和停止大多数守护进程的脚本的目录。
+- **/etc/init.d/boot** 用于在系统初始化期间激活文件系统和交换的脚本。
+- **/etc/init.d/boot.crypto** 在系统初始化时读取以解密加密分区的文件。它会提示您输入用于解密分区的密码。
+- **/etc/init.d/rc** 根据运行级别启动和停止守护进程的脚本。
+- **/etc/init.d/rc.runlevel.d** init 守护进程用于在每个运行级别启动和终止守护进程的目录。
+- **/etc/init.d/skeleton** 可复制以创建用于启动守护进程的脚本的示例脚本。
+- **/etc/inittab** init 程序的配置文件。
+- **/etc/lilo.conf** LILO 配置文件。
+- **/etc/login.defs** 创建用户账户时使用的默认值的文件。
+- **/etc/logrotate.conf** logrotate 命令的配置文件。它通常使用 /etc/logrotate.d 目录中为每个日志文件列出的参数。
+- **/etc/logrotate.d** 存储供 logrotate 命令使用的日志文件特定信息的目录。
+- **/etc/modprobe.conf.local** 列出在系统初始化时加载的内核模块的配置文件。
+- **/etc/mtab** 包含已挂载文件系统列表的文件。
+- **/etc/nsswitch.conf** 列出服务在 Linux 系统上访问信息所使用的方法的文件。
+- **/etc/opt/gnome/desktop-profiles** 用于存储桌面配置文件编辑器创建的用户配置文件和配置文件信息的目录。
+- **/etc/opt/gnome/gconf** 存储系统范围 GConf 配置的目录。
+- **/etc/opt/novell/ncl** 存储 Novell 客户端配置文件 的目录。
+- **/etc/passwd** 包含用户账户信息的文件，例如名称、UID、主组、主目录和 shell。
+- **/etc/printcap** 指向 /etc/cups/printcap 文件的符号链接。
+- **/etc/profile** 在系统上所有用户读取的 bash shell 配置文件。
+- **/etc/profile.local** 可用于存储系统范围变量（如 umask）的文件。
+- **/etc/rpmrc** 包含写入 /usr/lib/rpm/rpmrc 文件的配置信息的文件。
+- **/etc/samba/smb.conf** Samba 主配置文件。
+- **/etc/samba/smbfsstab** 包含 Samba 文件系统挂载选项的文件。
+- **/etc/shadow** 通常包含系统上用户账户的加密密码和密码到期信息的文件。
+- **/etc/shells** 列出有效系统 shell 的文件，例如 /bin/bash。
+- **/etc/skel** 包含在新用户创建后复制到所有新用户主目录的文件和目录的目录。
+- **/etc/ssh/known_hosts** 用于存储已知 SSH 主机加密密钥的文件。
+- **/etc/ssh/ssh_config** 系统范围 ssh 客户端程序配置文件。
+- **/etc/ssh/sshd_config** SSH 守护进程配置文件。
+- **/etc/ssh/ssh_host_dsa_key** 用于存储供 SSH 使用的 DSA 密钥的文件。
+- **/etc/ssh/ssh_host_rsa_key** 用于存储供 SSH 使用的 RSA 密钥的文件。
+- **/etc/sudoers** 列出允许以其他用户身份运行某些命令的用户的文件。
+- **/etc/sysconfig** YaST 存储的配置信息的目录。
+- **/etc/sysconfig/backup** 控制自动系统备份的配置文件。
+- **/etc/sysconfig/cron** 包含 cron 守护进程参数的文件。
+- **/etc/sysconfig/kernel** 系统初始化期间使用的 Linux 内核的配置文件。
+- **/etc/sysconfig/language** 定义 SUSE Linux 系统上使用的默认字符编码的文件。
+- **/etc/sysconfig/network** 包含大多数网络配置信息的目录。
+- **/etc/sysconfig/network/config** 包含网络配置设置的文件，例如 NetworkManager。
+- **/etc/sysconfig/SuSEfirewall2** 存储供 SUSE Linux 中 netfilter 框架使用的包过滤信息的文件。
+- **/etc/sysconfig/syslog** 包含 Syslog 守护进程配置参数的文件。
+- **/etc/syslog-ng/syslog-ng.conf** 定义 Syslog 守护进程如何记录系统进程信息 的配置文件。
+- **/etc/syslog-ng/syslog-ng.conf.in** 用于创建 /etc/syslog-ng/syslog-ng.conf 文件的模板。
+- **/etc/udev/rules.d** 用于包含 udev 系统使用的规则的目录。
+- **/home directory** 用户主目录的默认位置。
+- **/lib directory** 包含共享程序库（供 /bin 和 /sbin 中的命令使用）以及内核模块的目录。
+- **/media directory** 用于访问（挂载）磁盘（如软盘和 CD-ROM）的目录。
+- **/mnt directory** 用于访问（挂载）磁盘（如软盘和 CD-ROM）的目录。
+- **/opt directory** 存储额外软件程序文件的目录。
+- **/opt/novell/iFolder3/bin/iFolder** iFolder 客户端程序。
+- **/opt/novell/ncl/bin/ncl_tray** Novell 客户端托盘应用程序。
+- **/proc** 包含 Linux 系统上硬件、软件和进程信息的目录。
+- **/proc directory** 包含进程和内核信息的目录。
+- **/root directory** root 用户的主目录。
+- **/root/autoinst.xml** 由 SUSE Linux 安装生成供 AutoYaST 使用的文件。
+- **/sbin directory** 包含用于管理的系统二进制命令的目录。
+- **/sbin/config.d** 存储供 SuSEconfig 使用的脚本的目录。
+- **/sbin/init** 用于在系统初始化时启动系统服务的初始化程序。
+- **/srv directory** 包含 Linux 网络服务使用的文件内容的目录。
+- **/sys directory** 包含当前系统信息的目录。
+- **/tmp directory** 保存程序创建的临时文件的目录。
+- **/usr directory** 包含大多数系统命令和实用程序的目录。它代表 UNIX Special Resources 或 UNIX System Resources。
+- **/usr/lib/rpm/rpmrc** RPM 主配置文件。
+- **/usr/sbin/automount** SUSE Linux 中的 Automounter 程序。
+- **/usr/share/doc** 存储 Linux 系统上系统和程序文档的目录。
+- **/usr/share/info** 包含 SUSE Linux 系统上 info 页面 的目录。
+- **/usr/share/man** 包含 SUSE Linux 系统上手册页 的目录。
+- **/var directory** 包含日志文件和 spool 的目录。
+- **/var/adm/backup/rpmdb** 存储 RPM 数据库备份副本的目录。
+- **/var/lib/autoinstall/repository** 用于存储 AutoYaST 配置文件的默认目录。
+- **/var/lib/rpm** 存储 RPM 数据库的目录。
+- **/var/log** 包含 Linux 系统上大多数日志文件的目录。
+- **/var/log/audit/audit.log** AppArmor 的日志文件。
+- **/var/log/boot.log** 包含启动过程中写入的所有消息的文件。
+- **/var/log/cups/access_log** 存储网络打印请求信息的 CUPS 日志文件。
+- **/var/log/cups/error_log** 存储 CUPS 守护进程信息的 CUPS 日志文件。
+- **/var/log/cups/page_log** 存储发送到打印机的每个页面信息的 CUPS 日志文件。
+- **/var/log/firewall** 存储防火墙相关消息的日志文件。

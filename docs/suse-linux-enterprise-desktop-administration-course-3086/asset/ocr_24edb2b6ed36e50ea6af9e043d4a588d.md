@@ -1,0 +1,3 @@
+# Text-Based Installation
+
+Some video adapter cards are incompatible with the SUSE Linux installation program. In this case, you can install SUSE Linux using a text-based menu interface (called ncurses) rather than a graphical interface; on the first boot following installation, SLES will then detect and install your video card. Some administrators choose to perform a text-based installation because it is faster than a graphical installation because the graphical subsystem does not need to be loaded. Perform Exercise 1-1 again, but instead of selecting an installation in Step 4, press the F3 key twice and choose to perform a Text Mode installation of SUSE Linux. You will need to use the Tab key to navigate through screen options during the installation.
