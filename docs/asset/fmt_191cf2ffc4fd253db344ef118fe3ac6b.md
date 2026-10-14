@@ -1,0 +1,98 @@
+
+### 3. 再往下，你会看到 `[Win95]`、`[DOS]`、`[Linux]` 和 `[Common]` 标签。在 `[Common]` 下输入全局设置（Windows 95 中只有少数几项）。在其余标签下输入其他与启动菜单相关的设置。为此，可以使用你当前 `config.sys` 中的相应行。你可以从以下示例中获得启发。
+
+```text
+[Win95]
+dos=high,umb
+device=c:\windows\himem.sys /testmem:off
+
+[DOS]
+device=c:\plugplay\drivers\dos\dwcfgmg.sys
+dos=high,umb
+device=c:\windows\himem.sys /testmem:off
+device=c:\windows\emm386.exe noems I=B000-B7FF
+devicehigh=c:\cdrom\torisan.sys /D:TSYCD3 /P:SM
+
+[Linux]
+shell=c:\loadlin\loadlin.exe @c:\loadlin\linux.par
+
+[Common]
+accdate=c+ D+ H+
+switches= /F buffers=20
+```
+
+最后，保存文件。
+
+### 4. 现在打开 `c:\autoexec.bat` 文件。在该文件中输入相同的标签及其对应的条目。不过，表示法会略有不同。启动菜单中选择的标签存储在变量 `%config%` 中。你可以输入如下内容：
+
+```bat
+@echo off
+loadhigh keyb gr,,c:\windows\command\keyboard.sys
+goto %config%
+
+:Win95
+win
+goto end
+
+:DOS
+path c:\;d:\;c:\windows\command;c:\util;
+loadhigh c:\windows\command\mscdex.exe /D:TSYCD3 /L:x
+loadhigh c:\windows\command\doskey
+c:\windows\command\mouse.exe
+goto end
+
+:end
+echo * And now? *
+```
+
+### 5. 现在，当你启动机器时，你自行设计的启动菜单将出现。你将有五秒钟的时间选择要启动的系统。否则，Windows 95 将自动启动。如果你选择“Linux”，Linux 将启动并提示你登录。
+
+## X Window 系统
+
+### 历史背景
+
+X Window 系统是 UNIX 事实上的标准 GUI。然而，X Window 系统远不止于此——X11 是一个基于网络的系统。只要两台机器通过网络相连，运行在 `earth` 机器上的应用程序就可以在 `sun` 机器上显示其结果。这个网络可以是本地网络（LAN），也可以是相距数千英里的计算机之间通过 Internet 建立的连接。
+
+X11 最初是 DEC（Digital Equipment Corporation，数字设备公司）与麻省理工学院（MIT）的 Athena 项目合作开发的成果。X11R1 的首次发布是在 1987 年 9 月。自第 6 版发布以来，X Consortium, Inc. 一直负责 X Window 系统的开发。
+
+`XFree86™` 是用于 PC 系统的 X 服务器的免费实现。它由一群雄心勃勃的程序员开发，他们于 1992 年创建了 XFree86 团队。1994 年，该团队又创建了 XFree86 项目，其目标是继续对 X11 进行研究和开发，并将其提供给公众。自 2000 年 3 月起，经过全面修订的主要版本 `XFree86-4.0` 可从 `http://www.XFree86.org` 下载。默认情况下，SuSE Linux 安装 `XFree86-4.0`。下面仔细看看这个版本的功能。
+
+SuSE 感谢 XFree86 团队提供的帮助，并感谢他们允许我们将 beta 服务器放入我们的 CD 中；如果没有这些，SuSE 的生产即使有可能，也会困难得多。
+
+> ¹ 本文档的部分内容摘自 [HHMK96] 中的 *配置 XFree86* 章节，该章节由 Dirk Hohndel 友好提供。
+
+接下来的几个部分讲述如何配置 X 服务器。为此，将讨论 `SaX2` 和 `xf86config`，它们是配置 X Window 系统的简单工具。`SaX2` 用于配置 `XFree86-4.0`，`SaX` 用于配置 `XFree86 3.3.x` 版本。
+
+与基于文本的 `xf86config` 不同，这两个 SaX 版本直接与 X 服务器配合，并且可以通过鼠标操作。因此，请使用 YaST 安装 SaX（包 `sax`，系列 `x`）或 SaX2（包 `sax2`，系列 `x`）程序以及相关的依赖包。`XFree86-4.0` 的基本包中包含所有必要的显卡驱动程序，而如果使用 `XFree86-3.3.x`，则必须安装与你的显卡匹配的 X 服务器——尤其是 `xvga16` 包——如果已知的话。X 服务器列在系列 `x` 中。如果你忘记选择服务器，SaX 会检测到这一点，并使用 YaST 安装合适的服务器。在 `XFree86-4.0` 中，必要的显卡驱动程序已包含在基本选择中。
+
+为了充分利用可用的硬件（显卡、显示器、键盘），请手动优化配置。下面将解释此优化的某些方面。关于配置 X Window 系统的更详细信息，可在目录 `/usr/share/doc/packages/xf86` 以及 `XF86Config` 的手册页（`man XF86Config`）中找到。
+
+> **警告**
+>
+> 配置 X Window 系统时务必非常小心。在配置完成之前，切勿启动 X Window 系统。配置错误的系统可能对硬件造成不可修复的损坏（这尤其适用于固定频率显示器）。本书作者和 SuSE 对由此造成的损坏不承担任何责任。这些信息经过仔细研究，但不能保证这里介绍的所有方法都正确且不会损坏你的硬件。
+
+### XFree86 4.x 版本
+
+本版本的 SuSE Linux 附带 `XFree86 4.x` 版本，该版本在许多方面与以前使用的 3.3 版本不同。总体而言，用户在操作图形桌面时几乎感觉不到差异。KDE 或 GNOME 等图形桌面应用程序在新版本上的行为方式与早期发行版中包含的 3.3.6 版本相同。
+
+²`SaX`：SuSE 高级 X 配置工具。用于配置 `XFree86-4.0` 的配置程序 `SaX2`（`sax2`）使 `XF86Setup`（包 `xfsetup`，系列 `x`）不再需要。
+
+### 优点
+
+新的 X 服务器不再是一个单一的整体程序，而只是一个相对较小的基本框架，必要时可以在其上添加所需的程序模块。例如，不再像以前版本那样为不同的显卡提供众多不同的 X 服务器，而只有一个名为 `XFree86` 的可执行程序，位于目录 `/usr/X11R6/bin` 中。这才是实际的 X 服务器。随后负责控制显卡的显卡驱动是一个可加载模块。
+
+类似的方法也用于支持各种输入设备、字体或 X 协议。这些同样由可随后被 X 服务器加载的独立模块组成。通常，你不需要担心这些模块。在计算机上运行图形桌面所需的模块配置，会尽可能由 `SaX2` 管理。
+
+通过这种模块化概念，供应商可以轻松地为特殊硬件（如触摸屏或新显卡）实现驱动程序。开发人员甚至确保各种操作系统所需的模块只需提供一次，这意味着例如在 FreeBSD 中编译的显卡驱动模块也可以在 Linux 中使用，反之亦然。但是，这种可移植性仅限于相同的硬件平台：为 PowerPC 上的 Linux 编译的模块不能在 Intel PC 上使用。
+
+对鼠标的支持也得到了显著改进。尤其是在高负载下，鼠标对鼠标移动的反应比以前 `XFree86` X 服务器快得多、直接得多。总体而言，输出速度也有所提高，因此由于经过彻底修订的 `XAA`（*XFree86 加速架构*），图形操作通常比旧 X 服务器执行得更快。
+
+与 `XFree86 3.3.x` 相比，配置文件的格式略有不同，现在位于 `/etc/X11/XF86Config`。有关微调 X 配置的详细信息，包括配置文件的结构及其工作原理，请参见第 160 页的*优化 X Window 系统的安装*一节。
+
+错误记录也得到了改进。X 服务器会创建一个非常详细的日志文件，你始终可以在 X 服务器启动后在文件 `/var/log/XFree86.0.log` 中找到它。该版本的另一个特性是支持特殊选项，例如 True Type 字体。其他功能还包括提供 3D 协议扩展 `glx`、屏幕伽马校正，以及支持用于 Multihead 配置的多个显卡。更多相关信息请参见第 160 页的*优化 X Window 系统的安装*一节。
+
+## 变更
+
+`XFree86-4.0` 当然基于 3.3.x 版本。遗憾的是，并非所有驱动程序都被包含在内，因为有些驱动非常复杂，无法移植到新的 XAA 架构中。如果这些显卡之前受 SuSE Linux 支持，您仍然可以在 `XFree86 3.3.x` 版本中使用它们。请使用 SaX 配置这些显卡。
+
+这里涉及的显卡是此前与以下 X 服务器配合使用的型号：`XF86_S3`、`XF86_Mach8`、`XF86_Mach32` 和 `XF86_8514`。
