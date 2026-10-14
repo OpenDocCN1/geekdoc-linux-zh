@@ -1,0 +1,11 @@
+# Table 3-1 Linux Shells
+
+| Shell name | Program name | Description |
+|---|---|---|
+| Bourne shell | sh | The original UNIX shell. The sh program on Linux usually refers to the bash program. bash contains all sh functionality, plus interactive features such as history and tab completion (described later in this chapter) and shell programming via shell script files. |
+| Bourne Again shell (bash) | bash | An enhanced and extended version of the Bourne shell created by the GNU Project for use on many UNIX-like operating systems. Commonly referred to as the bash shell, rather than by its full name; bash is the default Linux shell. |
+| C shell | csh | A shell developed by Bill Joy in the 1970s. He focused on adding easy-to-use features for interactive work at the shell prompt. The C shell was the first to contain features such as history and tab completion (described later in this chapter); these features were later added to the bash shell and other shells as well. The C shell uses a more complex syntax for shell programming than the Bourne and bash shells. Because of this, it is not popular for shell programming, though its interactive features make it popular with users who are not creating shell programs. |
+| TENEX/TOPS C shell (also called the TC shell) | tcsh | An enhancement of the C shell. This is the version of the C shell that is commonly used on Linux systems. |
+| Korn shell | ksh | A proprietary (not freely available) shell written by David Korn. The Korn shell is a revision of the Bourne shell that includes the interactive features of the C shell but maintains the Bourne shell programming syntax, which is considered easier to use than C shell programming syntax. |
+| Public domain Korn shell | pdksh | A version of the Korn shell that is freely available. (This shell is often accessed using the program named ksh on Linux systems.) |
+| Z shell | zsh | A recently developed shell that combines Korn shell interactive features with the C shell programming style (for those who prefer the more complex syntax of the C shell). |

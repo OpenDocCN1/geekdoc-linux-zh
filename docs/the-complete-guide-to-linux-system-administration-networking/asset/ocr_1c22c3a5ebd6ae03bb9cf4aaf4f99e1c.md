@@ -1,0 +1,12 @@
+As with other operating systems, the exact components you need to install depend on what you intend to do with Linux. The more components you add, the more space you need on the hard disk. Each Linux distribution offers different standard installation options. Usually you can select a standard installation (such as Desktop or Server), or you can select more precisely which software packages you want to install. If you are familiar with Linux software, you may want to specify one or more packages to install; otherwise, you should simply indicate a general type of installation, such as a Desktop or Server system.
+
+The sizes of a few standard options that you might see as you install different Linux distributions are shown in Table 8-3. Most distributions inform you of the amount of disk space needed as you select different options.
+
+# Table 8-3 Typical Linux Installation Options
+
+| Type of installation | Typical hard disk space required | Comments |
+|---|---|---|
+| Server installation without graphics support | 300–600 MB | A server system doesn’t require graphical support, which saves hard disk space. The amount of space required depends on which network services are provided (for example, e-mail server, Web server, file server, etc.). For many servers, you should also calculate the amount of hard disk space needed for data storage (such as Web pages or e-mail messages). Other servers (DNS) require very little hard disk space. |
+| Standard desktop/workstation installation with graphics and common utilities | 600–900 MB | If you do not intend to use your system as a server, a workstation installation is a good choice. It includes a graphical desktop, some networking capabilities, common utilities, and documentation. |
+| Developer’s workstation | 700 MB–1.3 GB | A developer typically uses a standard graphical workstation but adds many packages to aid in software development. |
+| Complete installation | 1.3 GB–6+ GB | A "complete installation" combines all packages for a graphical workstation, a developer, a network server, and more. It typically does not install all packages in the distribution, however, because some are experimental, or highly specialized, or conflict with each other (that is, you can choose one or the other but not both). If you have plenty of hard disk space, a complete installation is a nice way to make nearly everything available that you might want to use as you explore Linux. |

@@ -1,0 +1,11 @@
+CUPS class is a group of printers to which a user can submit a print job. Whichever printer within the class is first available is used to print the job.
+
+For example, suppose you manage the printing for a busy office that has three high-capacity laser printers that you have defined as lexmark1, lexmark2, and lexmark3. Without classes, users would try to guess which printer to send their print job to so it wouldn’t have to wait for another long job to finish; polite users might send out a department-wide e-mail: “380 page job going to lexmark2.” You decide to use CUPS and create a class called lexmarks that includes all three lexmark print queues. Now users send all print jobs to lexmarks. Each time any one of the three printers finishes a print job, CUPS sends the next print job to that printer. Users get the fastest possible service. In exchange, they have to check three different printers to see which one their print job came out on. (Printers within a class are typically located next to each other in an office.)
+
+To create a class in CUPS, click the Classes button at the top of the CUPS page and then click the Add Class button on the Classes page. The page that appears lets you define a name, location, and description. You must include at least a name, such as “lexmarks.” In a large department with many users or printers, it’s also a good idea to enter a location and description, for example “Downstairs by Robin’s Cube” and “Main dept. laser printers.”
+
+When you choose Continue, you see a listing of all printers defined within CUPS. You select all of the printers that should be included in the class you are defining. Then choose Continue. A confirmation page shows you that the class was successfully completed. If you return to the Classes page by clicking Classes at the top of the page, you see that your class is shown with most of the same options as a regular printer, except that the icon shows multiple printers, and many of the buttons differ. Figure 12-16 shows the Classes page.
+
+![](bbox=[0.15, 0.73, 0.64, 0.92])
+
+Figure 12-16 The Classes page within the CUPS configuration

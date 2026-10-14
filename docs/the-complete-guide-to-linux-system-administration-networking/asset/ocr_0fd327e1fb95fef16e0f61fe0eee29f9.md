@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.14, 0.62, 0.62])
+
+# Figure 2-5 The GDM Setup utility
+
+On the General tab, you can also select whether to use a standard greeter (login screen) or a graphical greeter for users logging in locally or remotely. Remote login is a powerful feature of the X Window System, but it is not discussed in detail in this book. Chapter 15, “Advanced Topics and Troubleshooting,” contains some additional information. The Security and XDMCP tabs of this utility are also discussed further in Chapter 15, though it is helpful to at least review the Security tab at this point to see what options it offers; several of them may be helpful, such as allowing configuration of the graphical login screen from within the graphical login screen (i.e., before logging in successfully).
+
+Separate tabs configure the standard and graphical greeter screens. The graphical greeter is used by default for local users (users sitting at the computer). On the Graphical greeter tab, you see a list of themes for the graphical login screen. A theme is a collection of colors, fonts, and images that give a display a certain look and feel. You can set up themes for other parts of the desktop interface, as described in the next section. In the Graphical greeter tab, you can select one of the installed themes from the list shown in Figure 2-6, or click the Install new theme button to add a theme to the list that you have downloaded from an Internet site or created yourself.
+
+The face browser feature of the graphical login screen causes it to display a small graphic image for each user. If the theme you select for your graphical greeter includes a face browser, or if the face browser option is selected on the Standard greeter tab (under the Miscellaneous section in the bottom left of the window), then you can configure your own graphical image (your face, or whatever image you choose), by choosing Preferences, then Login Photo on the GNOME main menu.

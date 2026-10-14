@@ -1,0 +1,15 @@
+Reading about X clients and X servers, you may realize that the term "server" and "client" used in this situation have the opposite meanings that they normally do. That is, you normally think of the central place that runs a program as the server and the computer or program that the end-user is using as the client. The X Window System lets you separate client and server onto two different computers, so the terms can become even more confusing. In most situations, a server provides data in response to client requests for that data. Multiple remote clients can request data that is centrally located. When you use X, however, the servers (the part closest to each end-user) provide keyboard clicks and mouse movements to the clients, which are the applications being run in a central location.
+
+As part of the Linux installation process, the XFree86 X server program is installed. Other Linux X servers are available from companies such as Xi Graphics (www.xig.com). Although the XFree86 X server is highly regarded, a commercial server may support video cards that the XFree86 server does not support; they may also provide higher performance (faster video) than XFree86 in some cases.
+
+Because the X Window System separates the control of the video card (located in the X server) from the display presented to the user (by the window manager and desktop interface), the X Window System permits you to use different components at any "level" in the graphical system. For example, in addition to using different X servers, as just mentioned, you can use different window managers and different desktop interfaces.
+
+The GNOME and KDE desktop interfaces each include a window manager. The window manager and the desktop are integrated so that you seldom work directly with the window manager unless you are configuring its features (as described in the next section).
+
+A basic window manager that is available on most Linux distributions is called twm. twm does not include a desktop interface—instead, it provides only a minimal interface to help you launch other graphical applications. When only twm is running, you see a blank screen with a color pattern and a mouse pointer. Pressing a mouse button opens a menu from which you can start programs or execute other functions to control the graphical environment.
+
+Some of the window managers available for Linux are described in the following list.
+
++   - twm (Tab Window Manager): A classic UNIX window manager that has been used for many years, included with most versions of Linux, and installed as part of Red Hat Linux and Fedora
+
++   - fvwm (Feeble Virtual Window Manager): Developed by Robert Nation, this program was the most common window manager for Linux until well-developed desktop interfaces became popular. It includes many of the same characteristics as twm, but requires only about half the memory required to run twm. The latest version of fvwm is called fvwm2. You can find more information about fvwm at www.fvwm.org.

@@ -1,0 +1,12 @@
+# HARDWARE INITIALIZATION
+
+The phrase "booting a computer" comes from the word "bootstrapping," or "pulling yourself up by your bootstraps." The computer must get itself started from scratch. The CPU immediately has "control" when you turn on a computer's power, but the CPU needs instructions to follow. The basic process for bootstrapping is for the CPU to begin executing commands in the BIOS (and stored in various other hardware components); the BIOS to pass control to a boot loader; and the boot loader to pass control to the Linux kernel. Once the kernel is running, it must perform various steps before it can run regular programs.
+
+> The phrase "pass control" means that one program can load another program into memory and tell the CPU to start executing that program instead of itself.
+
+Becoming more familiar with some of these steps can help you manage your systems and understand various features of the Linux kernel. Here is a more detailed outline of what happens after you start a PC-type computer:
+
++   1. The CPU (for example, the Intel Pentium IV processor) initializes itself and begins sending out signals to control other parts of the computer.
++   2. The BIOS performs a power-on self test (POST), during which it checks memory and other hardware, such as detecting the type of storage devices that are attached to the system. During the POST phase, if any errors are found, the system beeps a number of times, with the number of beeps corresponding to the hardware problem discovered. This lets you diagnose the problem when you don't yet have a screen display visible because the video card has not been activated.
++   3. The BIOS sends a signal to the SCSI controller card (if one is installed), telling it to initialize itself. SCSI controllers usually contain their own BIOS. As the main system BIOS activates the SCSI controller, the SCSI BIOS determines how the system sees the devices attached to the SCSI controller. You can configure the SCSI BIOS by pressing a key during the SCSI BIOS initialization sequence (a message on the screen tells you when and what key to press).
++   4. Other hardware components, such as special IDE cards, USB expansion cards, or network cards, may be instructed to initialize themselves. During Steps 3, 4, and 5, you may see messages on the screen indicating that you can press a key to enter a setup menu of some type. In that menu, you can control how that device operates. Chapter 8, "Installing Linux," discussed the BIOS setup menus. Similar menus may be available for other devices as well.

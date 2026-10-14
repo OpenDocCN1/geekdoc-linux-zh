@@ -1,0 +1,15 @@
+specific sequence of steps, or specific input to give to a network program, so that the program becomes confused and tries to use computer memory inappropriately: The buffer, or memory space, reserved for a part of the program overflows. The result can be corruption of system data, a crashed server, or even direct root access, any of which may be the goal of the attacker.
+
++   - **Denial-of-service (DoS)** attacks try to overwhelm a server so that valid users cannot access it. This is often done by attacking numerous insecure systems and using all of them at the same time to send requests to a server. This is called a **distributed DoS (DDoS)** attack. Services such as DNS and the Web are among those vulnerable to this type of attack. Because a server is designed to accept any incoming connection, this type of attack can be very hard to anticipate and prevent, though features in modern routers and in newer protocols make prevention easier.
+
++   - **Port scanning** is a technique used by both attackers and system administrators checking the security of their network. Networked applications in Linux typically (but not always) communicate with other systems by using ports. A **port** is a number, like an address, associated with an application running on a computer. Many port numbers are predefined for standard services; others are used on an as-needed basis. A port-scanning program sends packets to a server to gain information about the server based on its response. Port scanning normally involves sending packets to many ports or sending malformed packets to gain knowledge that the host is not intentionally sharing.
+
+> If you are a network administrator with responsibility for the security of a particular network, feel free to use port scanning and packet-sniffing tools to learn about your network's weaknesses and improve your security. For any other networks, ask before you act or you risk causing yourself and the other network administrator many problems.
+
++   - **Packet sniffing** (also called **network traffic analysis**) is another technique used by both attackers and skilled network administrators studying the network. Sniffing lets you see the headers and data contained within every packet on a network, not just those that are addressed to your own host.
+
+# Security Tools
+
+The most widely used port-scanning utility is **nmap**, the network mapper. **nmap** is a powerful command-line utility that can use a variety of different scanning methods. **nmap** is installed by default on Red Hat Linux and Fedora.
+
+The home page for the **nmap** utility is www.insecure.org/nmap, where you can also find a number of very interesting security-related articles. One of the most valuable is the list of 75 most used security utilities, from a survey of hundreds of network administrators. You can find this list at www.insecure.org/tools.html. A simple example of using nmap to scan a host is shown here:

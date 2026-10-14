@@ -1,0 +1,14 @@
+If you want to manage the printers or the print jobs on another system running CUPS anywhere on your network, you enter that system's name with the CUPS port, 631. For example, suppose you are working on host arizona and you want to manage CUPS on host colorado. You simply enter this URL in any browser: http://colorado:631.
+
+> Before you can perform any management tasks, such as defining new printers, you should log in as root when prompted. This is true even when you are managing CUPS on your local system.
+
+The cupsd program is configured in much the same way as the popular Apache Web server. The file /etc/cups/cupsd.conf contains directives that specify a setting for each active server option. Hundreds of comments in this file describe the current options, as well as options that are supported but not activated. For example, this file can configure CUPS to:
+
++   - Use a variety of authentication systems for determining which users can configure or manage printing.
++   - Use encryption techniques to protect your user and password information as you manage networked print servers.
++   - Manage how hosts can browse the network to see printers on each print server.
++   - Limit which hosts on the network can use certain printers.
+
+To configure a new printer from the first page of the CUPS interface, choose the Manage Printers link or the Printers item on the bar across the top of the page. The page that appears shows any CUPS printers that you have already defined. These are taken from the /etc/printcap file, and CUPS generates a revised /etc/printcap file by default when you make changes using CUPS. (Printer information is also maintained in a separate file, /etc/cups/printers.conf.) To define a new printer (add a new printer definition, or print queue), click the Add Printer button. Enter the root user name and password when prompted. Then, on the pages that follow, enter printer information as you did for the printconf-gui and the KDE Control Center tools: you enter a name, a location, and a description; you select a device and a device URI for the printer; you select a make, model, and print filter. Once you have completed the definition, the printer you defined appears on the Printers page, as shown in Figure 12-15.
+
+Behind the scenes in CUPS, many printers are configured using a PostScript Printer Description (PPD) file. Each PPD file describes the capabilities of a printer using a standardized language. By consulting the PPD file for a printer model, a graphical print configuration utility or a graphical application such as OpenOffice.org or GIMP can display all supported options for a specific printer. An appropriate graphical dialog box is built "on the fly" based on the information in the PPD file. By relying on PPD files, printer manufacturers can easily create a text-based configuration file that permits their printer to be graphically configured using standard utilities.

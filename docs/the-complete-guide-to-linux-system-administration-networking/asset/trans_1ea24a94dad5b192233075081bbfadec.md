@@ -1,0 +1,122 @@
+
+
+你无法卸载该文件系统。如果你尝试使用 umount 命令卸载文件系统，但系统告知你文件系统正在使用中，你可以使用 fuser 命令来了解是哪个用户在使用该文件系统。然后你可以要求该用户停止正在进行的操作，或者在紧急情况下以 root 身份终止该进程。
+
+![](img/43f64015de86d989e30eff5bb284fb96_527_0.png)
+
+> 在用户打开文件的情况下杀死用户的进程要小心，因为这可能会导致该人员丢失未保存的数据！
+
+使用 fuser 的最简单方法是列出你想要了解的文件系统：
+
+```
+# fuser /home
+```
+
+fuser 命令也可以引用串行端口甚至网络连接：
+
+```
+# fuser /dev/ttyS1
+```
+
+```
+# fuser telnet/tcp
+```
+
+使 fuser 杀死所有使用指定挂载文件系统的进程的命令（-k 选项，使用 -m 选项指定的挂载文件系统，在此示例中为 /home）是：
+
+```
+# fuser -km /home
+```
+
+## 授予有限的 Root 访问权限
+
+虽然你必须非常谨慎地保护 Linux 系统的 root 账户，但系统管理员甚至普通用户可能偶尔需要执行只有 root 允许处理的任务。sudo 命令允许你为任何用户账户分配权限，以便该用户只能执行 sudo 配置指定的程序。以下是此功能有用的示例：
+
+- 系统管理员在无需 su 到 root 的情况下完成常见的系统管理任务
+- 用户在没有 root 访问权限的系统上挂载和卸载可移动磁盘或 CD-ROM 光盘
+- 用户能够杀死崩溃或停止响应的程序
+- 没有 root 访问权限但管理特定服务（如打印或 Samba）的用户可以访问这些程序的配置工具
+
+sudo 命令使用 /etc/sudoers 配置文件来确定哪些用户可以执行哪些任务。不幸的是，此文件的语法可能非常复杂。如果你没有正确遵循语法，sudo 将完全拒绝执行。 （相反，你可能使用正确的语法编辑配置文件，但没有完全理解文件允许的操作，从而造成安全漏洞。）sudoers 的 man 手册详细描述了语法，但对于 sudo 的新手来说，跳到 man 手册末尾并查看带解释的示例，而不是阅读所有可能配置的语法图会更简单。配置行的基本格式是：
+
+```
+user host = command_list
+```
+
+配置 sudo 的强大之处（也可能造成混淆）在于你可以定义别名，通过一个单词代表以下任意一项：
+
+- 被授予权限的用户集合
+- 授予一个或多个用户权限的主机集合
+- 授予一个或多个用户权限的程序集合
+- 应用于上述任意集合的 sudo 选项集合。
+
+要编辑 /etc/sudoers 文件，你必须使用 visudo 程序。此程序可防止多个打开文件之间的冲突（假设你的系统上有多个用户具有 root 访问权限），并在退出时检查 /etc/sudoers 配置文件的语法。在 Red Hat 和 Fedora Linux 上，你必须包含此命令的路径才能执行它：
+
+```
+# /usr/sbin/visudo
+```
+
+默认的 /etc/sudoers 文件包含可列出各种类型别名的部分，以及一些示例。假设，例如，你希望所有用户都能挂载和卸载 CD-ROM 驱动器。/etc/sudoers 中的以下行允许这样做：
+
+```
+%users ALL=/sbin/mount /cdrom, /sbin/umount /cdrom
+```
+
+%users 指的是系统上名为 "users" 的组；你必须创建该组或确保所有用户都是其成员，此配置才能正确工作。当在 /etc/sudoers 中使用时，ALL 关键字始终匹配，因此此示例中的主机字段不受控制。最后，用户可以执行的两个命令是 /sbin/mount /cdrom 和 /sbin/umount /cdrom。用户可以这样执行 mount 命令：
+
+```
+$ sudo /sbin/mount /cdrom
+```
+
+在检查 /etc/sudoers 文件后，sudo 命令会执行作为参数给出的命令。为使此操作正常工作，你必须在 /etc/fstab 中有条目，以便 /cdrom 挂载点被正确定义。例如，/etc/fstab 应该将 CD-ROM 定义为挂载在 /mnt/cdrom。因为 mount /mnt /cdrom 未列在 sudoers 中，用户将无法挂载 CD-ROM。这指出了需要仔细测试 sudo 配置，不仅要检查语法（visudo 会处理此问题），还要检查实际效果。
+
+使用对单个命令的访问来获得对其他命令的访问。假设，例如，你在 /etc/sudoers 中加入了以下行以允许用户编辑打印配置文件：
+
+```
+jamesg    ALL=vi /etc/printcap
+```
+
+一旦 jamesg 以 root 权限使用 vi 编辑此文件，他只需输入 :bash，vi 就会运行一个 bash 命令 shell——具有 root 权限。许多程序都以这种方式支持 shell 外部操作，或至少在一定程度上能够从原始程序内部执行其他程序。sudo 程序无法预见或控制所有这些情况。系统管理员必须谨慎授予 sudo 权限。
+
+再考虑另一个例子：Sarah 帮助系统管理员完成一些需要 root 访问权限的基础 Web 服务器管理任务。系统管理员创建一个包含 Sarah 需要使用的命令的符号链接的子目录，并使 Web 用户 www 成为这些程序（实际上是符号链接）的所有者。使用 /etc/sudoers，以下行授予 Sarah 在本地机器上以用户 www 身份运行该目录中任何命令的权限：
+
+```
+sarah    myhost = (www) /usr/local/webcommands
+```
+
+单行配置可以分配对多个命令的访问权限，每个命令都以不同的用户身份运行。默认情况下，用户必须输入密码来验证其身份，然后 sudo 才会执行请求的命令。这可以在 /etc/sudoers 中针对一个或多个特定命令进行覆盖。数十种其他选项让你可以控制用户可以执行哪些任务以及如何执行。
+
+## 使用可插拔认证模块
+
+你所了解的 Linux 密码架构（包括 /etc/passwd 和 /etc/shadow 文件）为许多站点提供了足够强大的安全性。然而它对所有站点来说都不够强大，也不能提供其他操作系统长期以来提供的配置灵活性。此外，将 Linux 添加到其他系统（如 Windows NT/2000/Server 2003）的网络中可能会给系统管理员带来真正的负担，因为他必须使用两套配置文件来更新用户信息，而不是一套。
+
+你可能已经看到 PAM 在运行。如果你使用的是标准的 Red Hat Linux 或 Fedora 安装，PAM 默认已配置。作为其操作的一个示例，当你更改密码时，如果你输入一个短词（例如三个字符），除非你是 root，否则你无法输入。相反，你会看到一条消息，告诉你密码“太短了！”并且密码不会被更改。此消息来自 Red Hat Linux 默认配置的 PAM 模块，用于阻止用户输入不安全的密码。
+
+要使用 PAM，你选择希望控制特定程序活动的 PAM 模块。你在该程序的配置文件中列出这些模块，并设置参数来确定模块的行为。一些示例将帮助你了解如何操作。
+
+PAM 使用单个配置文件 /etc/pam.conf 或 /etc/pam.d 目录中的一系列配置文件进行配置。 （编译软件的人员选择使用哪种配置样式。）Red Hat Linux 和 Fedora 使用目录方法，因为它使软件包能够简单地向你的系统添加文件以配置新添加的程序。/etc/pam.d 目录包含一个与正在配置的程序名称匹配的文件。例如，文本文件 /etc/pam.d/login 配置 login 程序。每个文件包含 PAM 在运行该程序时使用的一个或多个模块的列表。如果程序尝试使用 PAM 但在 /etc/pam.d 中找不到特定配置文件，则使用名为 "other" 的文件。/etc/pam.d 中文件的每一行的语法如下所示。每个元素在下面进行描述。
+
+```
+module_type  control_flag  module_path  argumentscode
+```
+
+![](img/43f64015de86d989e30eff5bb284fb96_530_0.png)
+
+> 在处理 PAM 配置文件时要小心。例如，如果你删除了 /etc/pam.d/login 文件，你将无法登录到你的系统，甚至作为 root！
+
+为了讨论这些元素，有一个示例文件供参考会有所帮助。下面是 Fedora 默认的 /etc/pam.d/login 文件。行号仅供下面参考；这些数字不是实际文件的一部分。
+
+```
+1 #%PAM-1.0
+2 auth required /lib/security/pam_securetty.so
+3 auth required /lib/security/pam_stack.so service=system-auth
+4 auth required /lib/security/pam_nologin.so
+5 account required /lib/security/pam_stack.so service=system-auth
+6 password required /lib/security/pam_stack.so service=system-auth
+7 session required /lib/security/pam_selinux.so multiple
+8 session required /lib/security/pam_stack.so service=system-auth
+9 session optional /lib/security/pam_console.so
+```
+
+每行上的第一个元素是 module_type，它定义了模块的使用时间。可能的类型包括：
+

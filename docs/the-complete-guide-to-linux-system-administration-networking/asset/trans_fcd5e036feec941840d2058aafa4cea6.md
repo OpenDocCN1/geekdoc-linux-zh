@@ -1,0 +1,76 @@
+
+
+如何将两个 IDE 控制器，每个控制器使用单独的电缆，连接到硬盘和 CD-ROM 设备。
+
+![](img/43f64015de86d989e30eff5bb284fb96_360_0.png)
+
+图 8-1 多个 IDE 接口上的硬盘和 CD-ROM 设备
+
+在查看较新计算机的硬件时，您会看到对 EIDE、IDE-U、UltraIDE 和 ATA-100 的引用。这些术语都指的是 IDE 兼容设备。IDE 的最新版本（如 UltraIDE）提高了 IDE 接口的速度和配置灵活性。所有这些都应得到 Linux 的支持。在查看 IDE 硬盘的规格时，请注意，更快的型号转速为 7200 rpm；较慢的型号转速为 5400 rpm，但价格更低。
+
+较新的 Serial-ATA 标准与较新 PC 中标准的增强型 IDE 控制器不同，但 Serial-ATA 也得到 Linux 的支持。一些附加 IDE 控制器卡 however 提供对超过标准四个 IDE 设备的支持。其中一些附加控制器未得到 Linux 支持。
+
+SCSI 是一种高性能接口，用于将许多类型的设备连接到计算机。SCSI 的性能设计优于 IDE。单个 SCSI 控制器最多可支持 15 个设备，并且随着新设备的添加，性能不会下降，而 IDE 控制器则会下降。但 SCSI 设备比 IDE 设备贵得多，随着 USB 的日益普及，SCSI 在台式 PC 中很少见。SCSI 设备包括硬盘、扫描仪、绘图仪、磁带备份驱动器和其他设备。与 IDE 一样，SCSI 控制器卡提供 SCSI 兼容设备与计算机 CPU 之间的连接。单个 SCSI 控制器卡最多可连接 15 个设备，每个设备通过电缆连接，如图 8-2 所示。
+
+![](img/43f64015de86d989e30eff5bb284fb96_361_0.png)
+
+# 图 8-2 多个 SCSI 设备通过电缆连接在一起
+
+USB 接口用于从扫描仪和数码相机到硬盘和 DVD 驱动器等各种设备。最近版本的 Linux 对 USB 的支持非常好，尤其是因为内核可以在设备插入后自动检测 USB 设备并立即使其可用。虽然 USB 支持通常默认设置好（如本章后面安装的 Fedora Linux），但您也可以参考 www.linux-usb.org 以了解有关 Linux 中 USB 支持的更多信息。
+
+# 支持的 Linux 硬件
+
+Linux 可与数千种不同的硬件设备配合使用，从非常旧的专用 CD-ROM 驱动器到最新的高速网络卡。但并非所有设备都与 Linux 兼容。虽然 Linux 越来越受欢迎，但并非所有设备制造商都提供支持其产品在 Linux 上运行的软件。相反，他们有时依赖自由软件社区创建该软件，通常基于制造商提供的技术信息。因此，如果没有自由软件开发者对您需要的硬件产品感兴趣提供支持，该产品可能在 Linux 中不受支持。事实上，硬件设备越新，Linux 支持它的可能性就越小，因为 Linux 开发者自产品发布以来还没有时间获取规格并创建设备驱动程序。例外的是相对较少的积极支持 Linux 平台的公司。
+
+用于在 Linux 中支持硬件设备的软件通常称为驱动程序，或设备驱动程序。您必须拥有适当的驱动程序才能使用任何硬件设备，包括键盘这样简单的设备。许多设备驱动程序已标准化并默认包含在 Linux 中；只有少数设备需要特别努力才能找到驱动程序软件。
+
+然而，这夸大了问题，因为几乎所有您可能感兴趣的硬件设备都得到 Linux 支持。Linux 支持的硬件列表太长，无法收录在这本书中。但在开始 Linux 安装之前，最好在 Linux 供应商的网站上检查一下您希望包含在 Linux 系统中的硬件是否受支持。
+
+探索 Linux 硬件兼容性的最全面站点之一位于 http://hardware.redhat.com。虽然该站点由 Red Hat Software 运营，但您在此找到的信息适用于所有 Linux 发行版。这是因为硬件支持是通过 Linux 内核提供的，而所有版本的 Linux 都依赖于本质上相同的内核。图 8-3 显示了该硬件兼容性站点上的示例网页。
+
+![](img/43f64015de86d989e30eff5bb284fb96_362_0.png)
+
+# 图 8-3 Red Hat Software 网站上的 Linux 硬件兼容性信息
+
+# 理解网络
+
+在第 7 章“使用网络客户端”中，您学习了有关网络的基本信息。本节提供有关网络概念的更多详细信息。如果您的系统管理员已在您的网络上设置了 DHCP 服务器，则在安装 Linux 时配置网络很容易：您只需指定“使用 DHCP”或“使用动态配置”等选项。
+
+如果您的网络上没有 DHCP 服务器，并且您计划在网络上使用 Linux，则在安装 Linux 时需要定义基本网络参数。即使您首次安装使用 DHCP，作为 Linux 系统管理员，您对网络概念的基本了解对于您的工作也至关重要。
+
+为了有效相互通信，计算机系统使用网络协议。协议是有组织的信号或单词模式。Linux 网络涉及许多不同的协议，其中一些您在第 7 章中看到过。一个协议提供网络适配器（计算机中提供计算机与网络之间接口的硬件）之间基本通信。另一个让 Web 浏览器与 Web 服务器通信。总的来说，Linux 支持数十种网络协议，每种协议都为不同目的而设计。其中一些最重要的协议在以下各节中讨论。
+
+# IP 网络
+
+请记住，为了配置网络，每台计算机必须有一个唯一的 IP 地址，要么显式分配，要么由 DHCP 服务器分配。IP 地址在世界各地使用，但如果任何两个用户具有相同的 IP 地址，他们的网络可能会出现故障。为了避免这些问题，您只能使用分配给您安装 Linux 的计算机的 IP 地址。通常，如果您不依赖 DHCP，您的讲师或您的 Internet 服务提供商（ISP）会从他们被分配的地址范围内为您分配一个 IP 地址。
+
+> NOTE
+> 还有一个较新的 IP 版本称为 IPv6（版本 6），或 IPng（下一代），目前尚未广泛使用。IPv6 地址是常规 IP 地址（有时称为 IPv4，即版本 4）的四倍大。地址更大意味着 IPv6 可以支持更多网络设备。IPv6 还具有许多其他高级功能来改进 Internet。IPv6 是一个高级主题，本书中未讨论，但 Linux 完全支持 IPv6 网络。您可以通过访问 www.6bone.net 了解更多信息。
+
+单个网络上的所有 IP 地址都相关；例如，它们的头三个数字可能相同。设置 Linux 网络时与之关联的几个特殊 IP 地址，以便数据包可以在网络上传输。这些特殊 IP 地址是：
+
+- 一个网络掩码，告诉 Linux 中的网络系统如何识别属于本地网络的 IP 号码，而不是分配给本地网络外部计算机的 IP 号码。
+- 一个网络地址，标识计算机所属的本地网络。此地址用于确定数据如何路由到其预期目的地。
+- 一个广播地址，标识一个特殊的 IP（Internet 协议）地址，将数据包发送到本地网络上的所有计算机。
+- 一个网关地址，标识可以发送数据包到本地网络外部、到 Internet 或到组织中其他网络的计算机。
+
+大多数 Linux 安装程序如果您输入分配的 IP 地址，将计算上述地址的默认值。如果您依赖 DHCP 服务器，它将提供所有这些值。在安装 Linux 时检查屏幕上的值，并确保它们与您的系统管理员或讲师提供的信息相匹配。如果您只收到一个 IP 地址，请接受安装程序提供的默认值。
+
+# 域名和主机名
+
+分配给组织用于标识其计算机集合的名称称为域名。域名示例有 ibm.com、linux.org 和 nasa.gov。大型组织内的域名可能比这更长。例如，在 IBM 内部，您可能会找到 marketing.ibm.com、sales.ibm.com 和 research.ibm.com 等域。域名的最后一个词始终是标准顶级（最通用）域名之一。表 8-2 显示了您可能会看到的几个顶级域。并非列出所有顶级域名，因为每个国家都有单独的顶级域名。此外，还偶尔添加其他顶级域名，例如 .info 和 .biz。您可以通过访问 www.iana.net 了解有关当前域名的更多信息。
+
+表 8-2 顶级域
+
+| Name | Description |
+|------|-------------|
+| .com | Commercial/business entities |
+| .org | Noncommercial organizations |
+| .net | Organizations whose work relates to the Internet |
+| .edu | Educational institutions, usually colleges and universities in the United States |
+| .gov | U.S. government organizations |
+| .mil | U.S. military organizations |
+| .us | Top-level domain for networks in the United States; used mostly for local governments and schools |
+| .de | Top-level domain of Germany (Deutschland) |
+| .uk | Top-level domain of the United Kingdom |
+

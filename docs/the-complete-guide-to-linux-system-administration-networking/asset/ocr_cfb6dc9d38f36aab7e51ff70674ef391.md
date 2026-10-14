@@ -1,0 +1,31 @@
+# Changing File Permissions
+
+You can change file permissions using the chmod (change mode) command. As a regular user, you can alter the permissions assigned to any file or directory that you own. If you are logged in as root, you can use chmod to change the permissions of any file or directory on the system.
+
+To use the chmod command, include the type of permissions you want to change (user, group, or other, entered as u, g, or o), followed by a plus, minus, or equal sign to add, remove, or set all permissions, followed by the permissions you want to set (r, w, or x for read, write, or execute). For example, to add the read permission for other users to the file report.doc, use this command:
+
+```
+$ chmod o+w report.doc
+```
+
+Using a plus or minus sign in a chmod command adds or removes permissions from what is already assigned; using an equal sign sets specific permissions (overriding the previously assigned file permissions). For example, suppose the report.doc file has r-x permissions set for the group. The following command changes those permissions to rwx:
+
+```
+$ chmod g+w report.doc
+```
+
+But the following command changes the group permissions to be only rw, removing the x permission:
+
+```
+$ chmod g=rw report.doc
+```
+
+System administrators normally use a shortcut syntax with the chmod command. This alternative syntax is easier to use once you are familiar with it, but it's more challenging to learn. In this alternative syntax, each of the sets of three permissions (for user, group, and other) is represented by a number from 0 to 7. The three possible permissions (read, write, and execute) are assigned values of 4, 2, and 1, respectively. Now suppose that a system administrator wanted to grant read (4) and write (2) permission for the user, read (4) permission to the group, and no permissions to other users. The first digit used in chmod is for the user. In this case it is 6, the sum of 4 and 2. The second digit is for the group. In this case it is 4. The third digit is for other; here it is 0 (no permissions are granted). So the command looks like this (with the resulting permissions shown by ls after the chmod command):
+
+```
+$ chmod 640 report.doc
+$ ls -l report.doc
+-rw-r----- 1 nwells 45223 May 27 14:01 report.doc
+```
+
+Using the same method, if the system administrator wants to assign read (4), write (2), and execute (1) permissions to the user, and read (4) and execute (1) permissions to the group and to other users for a program file, the command looks like this (again with the results from ls shown after the chmod command):

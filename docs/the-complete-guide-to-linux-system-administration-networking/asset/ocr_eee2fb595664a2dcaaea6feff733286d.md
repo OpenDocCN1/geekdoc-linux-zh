@@ -1,0 +1,14 @@
+# The Strengths of Linux
+
+Although the ability to use Linux without paying for it is an incentive to many people, large businesses would not choose Linux for this reason. Indeed, businesses generally prefer to pay for software in exchange for having someone to turn to for technical support, upgrades, and other services. These organizational users select Linux over competing products because it is a high-quality operating system. Some of the features for which Linux is highly regarded include:
+
++   - **Stability:** Linux servers are known for being able to run for months or even years without needing to be restarted. (The site www.netcraft.com has impressive statistics regarding Linux as a Web server.)
++   - **Security:** Having source code available has meant that the occasional security flaw in open source software is located and repaired more quickly than is typical for commercial products.
++   - **Speed:** Linux makes very efficient use of hardware, from very small systems to very large. (An excellent resource to study speed comparisons between Linux and Windows systems is www.kegel.com/nt-linux-benchmarks.html.)
++   - **Cost:** Linux is free, but most users pay something for it, as discussed in the next part of this chapter. Still, the price paid is generally much lower than a competing solution based on commercial software. Many studies have been done on the **total cost of ownership (TCO)** for various products. The TCO includes the cost of the software plus the ongoing cost to maintain, support, and upgrade it. Red Hat Software has done many studies to show the favorable TCO for Linux-based business solutions.
++   - **Multiprocessing and other high-end features:** As the popularity of Linux grows, it continues to add features that were formerly found only in systems costing many thousands of dollars. These include the ability to run on computers with multiple microprocessors (**multiprocessing**), support for numerous new hardware devices, and other features you will read more about later in this book. (See, for example, the information at www.redhat.com/software/rhel/features/.)
++   - **Applications:** Linux now boasts a long list of general purpose and specialized applications, including office suites (similar to Microsoft Office), powerful database tools, and Internet applications. Many of the largest software vendors have created Linux versions of their products. You can also run many Windows programs directly on Linux using special utilities.
+
+# LINUX IN THE MARKET
+
+In this section you learn about how Linux is packaged and sold, including the specific products offered by Red Hat Software, the current market leader. You also learn about Linux certification programs.

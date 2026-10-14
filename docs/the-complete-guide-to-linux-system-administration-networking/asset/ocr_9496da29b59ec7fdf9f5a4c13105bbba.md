@@ -1,0 +1,9 @@
+To understand why LPRng printer definitions might not have a one-to-one correspondence to physical printers, consider two examples. In the first, imagine a large network where many users need to print files. By configuring a single print queue that sends print jobs to multiple printers, users can send files to a single location instead of trying to discover which printer isn't busy at the moment. The lpd print server sends print jobs from the single print queue to whichever printer is available. This arrangement is shown in Figure 12-10.
+
+![](bbox=[0.07, 0.28, 0.88, 0.56])
+
+# Figure 12-10 A single print queue can refer to multiple physical printers
+
+The arrangement in Figure 12-10 can also be implemented using classes in the Common UNIX Printing System (CUPS), as described later in this chapter.
+
+As a second example, suppose you have only a single printer. The system administrator on a small office network configures separate print queues for envelopes, color printing, legal-sized documents, and standard printing. Users on the network submit files to the print queues depending on the type of document being printed. The person maintaining the printer would activate the print queue for legal-sized documents (and disable all other print queues) only when legal-sized paper was inserted and ready to print. When envelopes were inserted in the single printer, the envelope queue could be activated, and so forth. This method requires that someone actively maintain the printer unless the printer holds multiple paper trays, and users must wait while each queue is processed in turn. But this may be much more convenient than trying to print an envelope while everyone else is printing out reports. Figure 12-11 shows this arrangement.

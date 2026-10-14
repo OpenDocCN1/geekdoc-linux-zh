@@ -1,0 +1,5 @@
+![](bbox=[0.14, 0.11, 0.66, 0.62])
+
+# Figure 2-30 The Identity window used in Evolution as part of the new e-mail account setup procedure
+
+Type field. The window changes based on the type you select. Figure 2-31 shows the window for configuring a POP e-mail account. Click Forward when you have completed the information in the window according to what your system administrator has provided. You may need to complete an additional page of configuration options as well, depending on the server type you selected. For example, POP e-mail accounts can specify how often to check the e-mail server for new messages, and whether to erase messages on the server when they are downloaded to Evolution. (If you are working at a remote site temporarily, for example, you might want to leave all messages on the e-mail server, reading them at the remote site but downloading them to your main working system when you return home.)

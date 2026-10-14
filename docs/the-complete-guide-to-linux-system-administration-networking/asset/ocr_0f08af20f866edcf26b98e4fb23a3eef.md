@@ -1,0 +1,15 @@
++   - **auth:** Authentication modules are used to identify a user, normally by prompting for a password.
++   - **account:** These modules manage the user's account once identity has been established by an auth module. These modules typically restrict access, for example, allowing access only during certain times of the day.
++   - **session:** These modules manage a user's current session, normally attending to tasks that must be completed before a user is allowed to work, such as creating log files or mounting a file system that the user needs.
++   - **password:** These modules are executed when a user needs to change a password (or other authentication tokens).
+
+![](bbox=[0.18, 0.42, 0.26, 0.52])
+
+Complete documentation on PAM and individual modules is located in /usr/share/doc/pam-0.77 on Red Hat Linux and Fedora.
+
+When a PAM-compatible program such as login or passwd is executed, it checks to see which applicable modules are configured for a given task. For example, when a user first logs in, login passes control to PAM, which must run all the modules listed as auth modules (lines 2, 3, and 4 in the above example file). When multiple modules are listed for a module type, modules are said to be stacked. Unless a control_flag dictates otherwise, PAM executes all of the modules in a stack in the order they are listed, and returns a result of Access Permitted or Access Denied based on the modules' results. The control_flag element determines how PAM processes stacked modules. The control_flag has two forms; the older and simpler syntax is still used in most configuration files. It supports four possible values:
+
++   - **required:** The module must succeed for the final result to be Access Permitted. Because later modules in the stack are also executed, the user cannot tell which module failed, but the final result is Access Denied if any required module fails.
++   - **requisite:** The module must succeed for the final result to be Access Permitted. If a requisite module fails, remaining modules in a stack are not executed; if a requisite module succeeds, remaining modules are also executed.
++   - **sufficient:** The final result can be Access Permitted even if this module fails, but if this module succeeds, that is sufficient for an Access Permitted result. If a sufficient module succeeds, no other modules are executed; if a previous required module in the stack did not fail, PAM returns immediately with a result of Access Permitted. If a sufficient module fails, later modules are executed without regard to the result of the sufficient module.
++   - **optional:** The result of an optional module does not affect the final result of a module stack. Optional modules are used to perform tasks such as logging that are not part of determining access but are helpful in system administration or meeting user needs.
