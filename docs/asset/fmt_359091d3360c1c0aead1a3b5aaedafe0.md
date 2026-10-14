@@ -1,0 +1,163 @@
+
+默认情况下，文件权限设置为 600。
+
+- `包含 Apache 密码的文件`—这些文件的位置取决于您的配置。它们包含对 Web 服务器的授权访问的密码。
+- `/etc/openldap/slapd.conf`—此文件包含 openLDAP 服务器的 root 密码。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_313_0.png)
+
+安装 `openldap2` 软件包后，此文件的权限设置为 644。
+- `/boot/grub/menu.lst`—此文件可能包含 GRUB 启动加载器的密码。
+
+默认情况下，文件权限设置为 600。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_313_1.png)
+
+此列表并不完整。根据您的系统配置和软件选择，系统上可能还有更多密码文件。
+
+某些密码文件可以由非 root 账户读取。这通常是服务守护进程在其用户 ID 下运行的账户。
+
+例如，Apache Web 服务器在用户 `wwwrun` 的用户 ID 下运行。因此，密码文件必须对用户 `wwwrun` 可读。
+
+在这种情况下，您必须确保只有此守护进程账户而不是其他用户被允许读取该文件。
+
+## 目标 4—以其他用户身份执行任务
+
+某些任务只能从 root 用户账户执行。有时 root 可能希望将任务委托给普通用户。本目标涵盖这两种情况：
+
+- 以 root 身份执行管理任务
+- 使用 sudo 委托管理任务
+
+### 以 root 身份执行管理任务
+
+作为系统管理员，建议您以普通用户身份登录，仅在需要 root 权限的任务时切换到 root。
+
+在执行管理任务时在普通用户和 root 之间切换，您可以执行以下操作：
+
+- 从 GNOME 以其他用户身份启动程序
+- 使用 `su` 切换到另一个用户
+- 使用 `newgrp` 切换到另一个组
+
+### 从 GNOME 以其他用户身份启动程序
+
+在 GNOME 中，您可以使用程序 `gnomesu` 以不同的 UID 启动任何程序（只要您知道密码）。
+
+从 GNOME 桌面，按 `Alt+F2` 打开命令行对话框；然后输入 `gnomesu`。系统会提示您输入 root 密码。输入后，会出现一个终端窗口。路径仍为登录到 GNOME 的用户路径；如果需要 root 的标准环境，请在终端窗口中输入 `su -`。
+
+您可以指定除 root 以外的其他用户，并使用以下语法直接启动程序：`gnomesu --user command`。如果命令不在登录到 GNOME 的用户路径中，您必须输入完整路径，例如 `gnomesu /sbin/yast2`，在输入 root 密码后启动 YaST。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_314_0.png)
+
+对于某些程序，在输入 `Alt+F2` 后无需使用 `gnomesu`。例如，直接输入 `yast2` 时，系统会自动提示您输入 root 密码。
+
+### 使用 su 切换到另一个用户
+
+您可以使用 `su` (*切换用户*) 命令承担 root 或其他用户的 UID。
+
+以下是 `su` 的语法：
+
+```
+su [options]... [-] user [argument]
+```
+
+例如，要切换到用户 `geeko`，请输入 `su geeko`。要切换到用户 root，请输入 `su root` 或 `su`（不带用户名）。如果您想在切换到另一个用户账户时启动登录 shell，请输入 `su - username`。
+
+![](img/9129877170834ca9d5fdac5319bf5f12_314_1.png)
+
+Root 可以在不知道用户密码的情况下切换到任何用户 ID。
+
+要返回到之前 的用户 ID，请输入 `exit`。
+
+要切换到用户 root 并执行单个命令，请使用选项 `-c`：
+
+```
+geeko@dal0:~> su -- -c "grep geeko /etc/shadow"
+```
+
+![](img/9129877170834ca9d5fdac5319bf5f12_315_0.png)
+
+有关 `su` 命令的更多信息，请输入 `su --help`。
+
+### 使用 newgrp 切换到另一个组
+
+用户可以是多个组的成员，但一次只能有一个有效（当前）组。通常，这是主组，在 `/etc/passwd` 文件中指定。
+
+如果用户创建目录或文件，则它们属于该用户和有效组。
+
+您可以使用命令 `newgrp` 或 `sg`（例如 `sg video`）更改有效组 GID。
+
+只有组成员才能执行此组更改，除非定义了组密码。在这种情况下，知道组密码的任何用户也可以进行更改。
+
+您可以通过输入 `exit` 或按 `Ctrl+d` 来撤销更改（返回到原始有效 GID）。
+
+### 使用 sudo 委托管理任务
+
+有时有必要允许普通用户访问通常保留给 root 的命令。例如，您可能希望同事在您休假期间接管关机和创建用户等任务，而无需共享 root 密码。
+
+SUSE Linux Enterprise Desktop 10 中 `sudo` 的默认配置需要知道 root 密码。如果您知道 root 密码，则无需使用 `sudo` 执行管理任务。尽管如此，使用它也有优点：执行的命令记录到 `/var/log/messages`，并且您无需为每个命令重新输入密码（如使用 `su -c command`），因为 `sudo` 会将其缓存数分钟。
+
+```
+geeko@dal0:~> sudo /sbin/shutdown -h now
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+  #1) Respect the privacy of others.
+  #2) Think before you type.
+  #3) With great power comes great responsibility.
+
+root's password:
+```
+
+您可以更改 `sudo` 的配置，使其要求用户密码而不是 root 密码。为此，请使用 `visudo` 命令在 `/etc/sudoers` 中在以下两行前面加上注释符号（`#`）：
+
+```
+# In the default (unconfigured) configuration, sudo asks for the root
+# password. This allows use of an ordinary user account for
+# administration.
+# of a freshly installed system. When configuring sudo, delete the two
+following lines:
+Defaults targetpw  # ask for the password of the target user i.e. root
+ALL ALL=(ALL) ALL # WARNING! Only use this together with Defaults
+                  # targetpw!
+```
+
+使用 `visudo`，您可以通过配置 `/etc/sudoers` 文件来指定用户可以或不可以输入哪些命令。
+
+以下是配置文件中条目的通用语法：
+
+*用户/组 主机 = 命令1,命令2...*
+
+例如：
+
+```
+geeko ALL = /sbin/shutdown
+```
+
+在此示例中，用户 `geeko` 能够以 root 的权限在所有计算机（`ALL`）上执行 `/sbin/shutdown` 命令。能够在 `/etc/sudoers` 中指定计算机允许您将同一文件复制到不同的计算机，而无需在所有相关计算机上授予相同的权限。
+
+图 9-12 是一个更复杂的示例，说明了 `sudo` 的灵活性。
+
+```
+User_Alias ADMINS      = tux, geeko
+User_Alias WEBMASTER   = john
+User_Alias SUBSTITUTE  = olli, klaas
+
+# Cmnd alias specification
+
+Cmnd_Alias PRINTING    = /usr/sbin/lpc, /usr/bin/lprm
+Cmnd_Alias SHUTDOWN    = /sbin/shutdown
+Cmnd_Alias APACHE      = /etc/init.d/apache
+
+# User privilege specification
+root    ALL=(ALL) ALL
+
+ADMINS      ALL = NOPASSWD: /usr/bin/passwd, /usr/bin/passwd [A-Z]*, !/usr/bin/passwd root
+WEBMASTER   ALL = APACHE
+SUBSTITUTE  ALL = SHUTDOWN, PRINTING
+```
+
+**图 9-12**
+
+第 1–9 行定义了别名。你可以为以下内容执行此操作：
+
+- 使用 `User_Alias` 的用户（第 1–3 行）
