@@ -1,0 +1,116 @@
+
+
+## 16 处理访问
+
+如果用户授予我们的应用程序访问权限，他们将被重定向到我们在第 12 步中定义的回调 URL。重定向将包含 URL 参数，即我们的访问令牌和一个令牌验证字符串。Twitter 文档指出，我们应该检查在 URL 参数中收到的访问令牌是否与我们刚刚获得的令牌相同。如果一切顺利，我们的 /authenticate 端点将已将我们的令牌存储在会话字典中。如果我们存储的令牌与 Twitter 返回的令牌匹配，我们就可以准备将我们的访问令牌（目前仅具有受限权限）交换为具有完全读写权限的完全授权访问令牌（取决于您在首次创建应用程序时请求的权限）。
+
+## 17 第三次（也是最后一次）令牌交换
+
+因此，与之前一样：我们使用 sign_request() 准备提交参数，构建我们的 auth 头，然后发出请求。就像我们第一次检索请求令牌时一样，这是在后台完成，无需用户交互。如果一切顺利，您将获得一个完全授权的访问令牌，您可以开始构建自己的请求。
+
+## 18 启动你的服务器
+
+正如你所见，我们以以下内容结束了 flask.py 文件：
+
+```
+if __name__ == '__main__':
+    app.secret_key = 'r4nD0MCRypt0gr4ph1ck3y0f9535i0N'
+    app.run(host='0.0.0.0', debug=True)
+```
+
+如果我们在 run 函数中不包含任何参数，那么我们的服务器将运行并可在 127.0.0.1: 5000 访问，但它将无法被外部机器访问——这有点违背了拥有服务器的意义。通过传递 host='0.0.0.0'，Flask 将在默认端口 5000 上监听它可以处理的任何 IP 地址以接收潜在请求。debug=True 是 Flask 包含的一个错误信息美化器。与其让我们的服务器崩溃，错误页面将被提供，详细说明出了什么问题，以代替我们预期的返回。
+
+```
+headers(verifyRequestParams)
+try:
+    httpResponse = urllib2.urlopen(verifyRequest)
+except urllib2.HTTPError, e:
+    return e.read()
+
+responseData = getParameters(httpResponse.read())
+session['oauth_token'] = responseData['oauth_token']
+
+return "Authorised " + session['oauth_token']
+
+def getParameters(paramString):
+    paramString = paramString.split('&')
+    pDict = {}
+    for parameter in paramString:
+        parameter = parameter.split('=')
+        pDict[parameter[0]] = parameter[1]
+    return pDict
+
+def sign_request(parameters, method, baseURL):
+    baseURL = urllib.quote(baseURL, '')
+    p = collections.OrderedDict(sorted(parameters.items(), key=lambda t: t[0]))
+    requestString = method + "&" + baseURL + "&"
+    parameterString = ""
+    for idx, key in enumerate(p.keys()):
+        paramString = key + "=" + urllib.quote(str(p[key]), '')
+        if idx < len(p.keys()) - 1:
+            paramString += "&"
+        parameterString += paramString
+    result = requestString + urllib.quote(parameterString, '')
+    signingKey = consumer_secret + "&" + session['oauth_secret']
+    print signingKey
+    hashed = hmac.new(signingKey, result, sha1)
+    signature = binascii.b2a_base64(hashed.digest())[:-1]
+    return signature
+
+def create_oauth_headers(oauthParams):
+    oauthp = collections.OrderedDict(sorted(oauthParams.items(), key=lambda t: t[0]))
+    headerString = "OAuth "
+    for idx, key in enumerate(oauthp):
+        hString = key + "=\"" + urllib.quote(str(oauthp[key]), '') + "\""
+        if idx < len(oauthp.keys()) - 1:
+            hString += ", "
+        headerString += hString
+    return headerString
+
+if __name__ == '__main__':
+    app.secret_key = 'r4nD0MCRypt0gr4ph1ck3y0f9535i0N'
+    app.run(host='0.0.0.0', debug=True)
+```
+
+![](img/3b256f430f51c98f1315671f6e4eec19_118_0.png)
+
+![](img/3b256f430f51c98f1315671f6e4eec19_119_0.png)
+
+## 第一部分：编程一个 Space Invaders 克隆
+
+用 300 行 Python 编写你自己的 RasPi 射击游戏
+
+### 资源
+
+Raspbian: www.raspberrypi.org/downloads
+
+Python: www.python.org/doc
+
+Pygame: www.pygame.org/docs
+
+当你学习一种新语言的编程或试图掌握一个新的模块时，用一个熟悉且相对简单的项目进行实验是非常有用的练习，可以帮助你扩展对所使用工具的理解。我们的 Space Invaders 克隆就是这样一个例子，它非常适合 Python 和 Pygame 模块——这是一款规则和逻辑几乎被普遍理解的简单游戏。虽然 Invaders 启发的射击游戏要求...
+
+它们在屏幕上向你蜿蜒而下，是你的工作在躲避它们随机射击的同时将它们击落。当一波被征服时，另一波更快、更具攻击性的波次会出现。我们尝试使用了 Pygame 的许多功能，Pygame 的设计目的是使游戏和交互式应用程序的创建变得更容易。我们大量使用了 Sprite 类，它节省了数十行额外的代码，使碰撞检测变得简单，并将屏幕及其众多角色的更新变成了一行命令。我们希望你同意这是一款令人兴奋的游戏，也是一个学习更多关于 Python 和 Pygame 的好工具，但我们的感官系统在这里远未超载。别担心，这将在下一个教程中介绍，因为向我们的游戏添加动画和音效，以赋予它任何一个自尊的 Space Invaders 启发的射击游戏所要求的精致...
+
+## 01 设置依赖项
+
+如果你想更好地了解使用 Python 和 Pygame 编程游戏，我们强烈建议你将本教程中的 Pivaders 代码复制到你自己的程序中。这是非常好的练习，也给你机会根据自己的喜好调整游戏的各个元素，无论是不同的飞船图像、改变难度还是外星人波次的行为。如果你只是想玩游戏，这也很容易实现。无论哪种方式，游戏唯一的依赖项是 Pygame，如果尚未安装，可以从终端通过输入以下命令安装：
+
+```
+sudo apt-get install python-pygame
+```
+
+## 02 下载项目
+
+对于 Pivaders，我们使用了 Git，一种出色的版本控制形式，用于安全存储游戏文件并保留代码的历史版本。Git 应该已经安装在你的 Pi 上，如果没有，你可以通过输入以下命令获取它：
+
+```
+sudo apt-get install git
+```
+
+除了作为你代码的看护者之外，Git 还使你能够克隆其他人的项目副本，以便你可以在其上工作，或只是使用它们。要克隆 Pivaders，请在终端中进入你的主文件夹 [cd ~]，为项目创建一个目录 [mkdir pivaders]，进入该目录 [cd pivaders] 并输入：
+
+```
+git pull https://github.com/russ78/pivaders.git
+```
+

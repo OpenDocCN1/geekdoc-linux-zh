@@ -1,0 +1,115 @@
+
+
+```
+default_host')
+print config.get('MySQL','mysql.default_port')
+config.remove_option('MySQL','mysql.trace_mode')
+with open('php.ini', 'wb') as configfile:
+    config.write(configfile)
+```
+
+## 解析 JSON 数据
+
+JSON（也被称为 JavaScript Object Notation）是一种轻量级的现代数据交换格式。JSON 是 ECMA-262 下的一个开放标准。它是一种文本格式，并且完全与语言无关。JSON 也被用作现代应用程序（如 Mozilla Firefox 和 Google Chrome）的配置文件格式。JSON 在现代 Web 服务中也非常流行，例如 Facebook、Twitter、Amazon EC2 等。在本节中，我们将使用 Python 模块 'simplejson' 来访问 Yahoo Search（使用 Yahoo Web Services API），它输出 JSON 数据。
+
+要使用本节内容，你需要具备以下条件：
+
+- 1. Python 模块：simplejson。
+- 注意：你可以使用命令 `easy_install <module name>` 安装 Python 模块。此命令假定你拥有可用的互联网连接。
+- 2. Yahoo App ID：Yahoo App ID 可以从 https://developer.apps.yahoo.com/dashboard/createKey.html 创建。Yahoo App ID 将在下一页生成。详情见下面的截图。
+
+![](img/3b256f430f51c98f1315671f6e4eec19_98_0.png)
+
+生成 Yahoo App ID
+
+simplejson 非常易于使用。在下面的示例中，我们将使用将 JSON 数据结构直接映射到 Python 数据类型的功能。这让我们可以直接访问 JSON 数据，而无需编写任何 XML 解析代码。
+
+## JSON 与 Python 数据映射
+
+| JSON | Python |
+|------|--------|
+| object | dict |
+| array | list |
+| string | unicode |
+| number (int) | int, long |
+| number (real) | float |
+| TRUE | TRUE |
+| FALSE | FALSE |
+| null | None |
+
+在本节中，我们将使用 simplejson.load 函数，它允许我们将 JSON 对象反序列化为 Python 对象。
+
+```
+@code:LUDYSearch.py
+import simplejson, urllib
+APP_ID = 'xxxxxxx' # Change this to your APP ID
+SEARCH_BASE = 'http://search.yahooapis.com/WebSearchService/V1/webSearch?'
+```
+
+```
+class YahooSearchError(Exception):
+    pass
+
+def search(query, results=20, start=1, **kwargs):
+    kwargs.update({
+        'appid': APP_ID,
+        'query': query,
+        'results': results,
+        'start': start,
+        'output': 'json'
+    })
+    url = SEARCH_BASE + '?' + urllib.urlencode(kwargs)
+    result = simplejson.load(urllib.urlopen(url))
+    if 'Error' in result:
+        # An error occurred; raise an exception
+        raise YahooSearchError,
+        result['Error']
+    return result['ResultSet']
+```
+
+让我们在 Python shell 中使用上述代码来了解其工作原理。切换到保存了 LUDYSearch.py 的目录，然后打开一个 Python shell。
+
+```
+@code: Python Shell Output. Lines starting with >>> indicate input
+>>> execfile('LUDYSearch.py')
+>>> results = search('Linux User and Developer')
+>>> results['totalResultsAvailable']
+123000000
+```
+
+```
+>>> results['totalResultsReturned']
+20
+>>> items = results['Result']
+>>> for Result in items:
+...     print
+...     Result['Title'],Result['Url']
+...
+Linux User http://www.linuxuser.co.uk/
+Linux User and Developer - Wikipedia, the free encyclopedia http://en.wikipedia.org/wiki/Linux_User_and_Developer
+Linux User &amp; Developer | Linux User http://www.linuxuser.co.uk/tag/linux-user-developer/
+```
+
+## 收集系统信息
+
+系统管理员的一项重要工作就是收集系统信息。在本节中，我们将使用 SIGAR（System Information Gatherer And Reporter，系统信息收集与报告）API 来演示如何使用 Python 收集系统信息。SIGAR 是一个功能非常完整的 API，它可以提供大量信息，包括以下内容：
+
+- 1. 系统内存、交换分区、CPU、负载平均值、运行时间、登录信息。
+- 2. 每个进程的内存、CPU、凭据信息、状态、参数、环境变量、打开的文件。
+- 3. 文件系统检测和指标。
+- 4. 网络接口检测、配置信息和指标。
+- 5. TCP 和 UDP 连接表。
+- 6. 网络路由表。
+
+## 安装 SIGAR
+
+第一步是构建并安装 SIGAR。SIGAR 托管在 GitHub 上，所以请确保你的系统中安装了 Git。然后执行以下步骤来安装 SIGAR 及其 Python 绑定：
+
+```
+$ git clone git://github.com/hyperic/sigar.git
+$ cd sigar.git/bindings/python
+$ sudo python setup.py install
+```
+
+> Python 不会限制你对接口的选择。
+

@@ -1,0 +1,70 @@
+# Build tic-tac-toe with Kivy
+
+Ease into the workings of Kivy by creating the pen-and-paper classic in just over 100 lines of Python...
+
+Kivy is a highly cross-platform graphical framework for Python, designed for the creation of innovative user interfaces like multitouch apps. Its applications can run not only on the traditional desktop platforms of Linux, OS X and Windows, but also Android and iOS, plus devices like the Raspberry Pi
+
+That means you can develop cross-platform apps using Python libraries such as Requests, SQLAlchemy or even NumPy. You can even access native mobile APIs straight from Python using some of Kivy’s sister projects. Another great feature is the Cython-optimised OpenGL graphics pipeline, allowing advanced GPU effects even though the basic Python API is very simple.
+
+Kivy is a set of Python/Cython modules that can easily be installed via pip, but you’ll need a few dependencies. It uses PyGame as a rendering backend (though its API is not exposed), Cython for compilation of the speedy graphics compiler internals, and GStreamer for multimedia. These should all be available through your distro’s repositories, or via pip where applicable.
+
+With these dependencies satisfied, you should be able to install Kivy with the normal pip incantation. The current version is 1.8.0, and the same codebase supports both python2 and python3. The code in this tutorial is also version-agnostic, running in python2.7 and python3.3.
+
+pip install kivy
+
+If you have any problems with pip, you can use easy_install via easy_install kivy.
+
+There are also packages or repositories available for several popular distros. You can find more information on Kivy’s website. A Kivy application is started by instantiating and running an ‘App’ class. This is what initialises our app’s window, interfaces with the OS, and provides an entry point for the creation of our GUI. We can start by making the simplest Kivy app possible:
+
+```
+from kivy.app import App
+
+class TicTacToeApp(App):
+    pass
+
+if __name__ == "__main__":
+    TicTacToeApp().run()
+```
+
+You can already run this, your app will start up and you’ll get a plain black window. Exciting! We can build our own GUI out of Kivy widgets. Each is a simple graphics element with some specific behaviour of its own ranging from standard GUI functionality (eg the Button, Label or TextInput), to those that impose positioning on their child widgets (eg the BoxLayout, FloatLayout or GridLayout), to those abstracting a more involved task like interacting with hardware (eg the FileChooser, Camera or VideoPlayer). Most importantly, Kivy’s widgets are designed to be easily combined - rather than including a widget for every need imaginable, widgets are kept simple but are easy to join to invent new interfaces. We’ll see some of that in this tutorial.
+
+Since ‘Hello World!’ is basically compulsory in any programming tutorial, let’s get it over with by using a simple Label widget to display the text:
+
+```
+from kivy.uix.label import Label
+```
+
+We’ll display the ‘Label’ by returning it as our app’s root widget. Every app has a single root widget, the top level of its widget tree, and it will automatically be sized to fill the window. We’ll see later how to construct a full GUI by adding more widgets for this one, but for now it’s enough to set the root widget by adding a new method to the ‘App’:
+
+```
+def build(self):
+    return Label(text="Hello World!", font_size=100,
+```
+
+![](bbox=[0.68, 0.35, 0.9, 0.5])
+
+The classic 'Hello World!' in Kivy GUI form, using the built-in Label widget
+
+```
+color=0, 1, 0, 1)) # (r, g, b, a)
+```
+
+The ‘build’ method is called when the ‘App’ is run, and whatever widget is returned automatically becomes the root widget of that App. In our case that’s a Label, and we’ve set several properties - the ‘text’, ‘font_size’ and ‘color’. All widgets have different properties controlling aspects of their behaviour, which can be dynamically updated to alter their appearance later, though here we set them just once upon instantiation.
+
+Note that these properties are not just Python attributes but instead Kivy properties. These are accessed like normal attributes but provide extra functionality by hooking into Kivy’s event system. We’ll see examples of creating properties shortly, and you should do the same if you want to use your variables with Kivy’s event or binding functionality.
+
+That’s all you need to show some simple text, so run the program again to check that this does work. You can experiment with the parameters if it’s unclear what any of them are doing.
+
+# Our own widget: tic-tac-toe
+
+Since Kivy doesn’t have a tic-tac-toe widget, we’ll have to make our own! It’s natural to create a new widget class to contain this behaviour:
+
+```
+from kivy.uix.gridlayout import GridLayout
+class TicTacToeGrid(GridLayout):
+    pass
+```
+
+Now this obviously doesn’t do anything yet, except that it inherits all the behaviour of the Kivy GridLayout widget - that is, we’ll need to tell it how many columns to have, but then it will
+
+> You can develop cross-platform apps using various Python libraries

@@ -2193,6 +2193,7 @@
 +   [Python 教程：在 Linux 下开始 Python 编程所需的一切](docs/the-python-book---everything-you-need-to-start-coding-with-p/README.md)
 +   [Python 书：Python 编程终极指南](docs/the-python-book-the-ultimate-guide-to-coding-with-python/README.md)
 +   [Python 书：Python 编程终极指南 - 20 多个实实战项目](docs/the-python-book-the-ultimate-guide-to-coding-with-python---o/README.md)
++   [Python 书籍·第1卷：Python 编码终极指南](docs/the-python-book-volume-1-the-ultimate-guide-to-coding-with-p/README.md)
 +   [Samba 秘籍](docs/the-samba-book-professional-mindware/README.md)
 +   [SmartTouch 系列 – Python 之书 – 第 113 期，第 11 版，2021](docs/the-smarttouch-series---the-python-book---issue-113-11th-edi/README.md)
 +   [Suse Linux 网络高级指南](docs/the-suse-linux-network-professional-mindware/README.md)

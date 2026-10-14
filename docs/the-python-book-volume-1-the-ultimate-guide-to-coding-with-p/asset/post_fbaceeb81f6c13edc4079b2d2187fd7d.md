@@ -1,0 +1,85 @@
+
+```python
+class Ball(Widget):
+    def update(self, dt):
+        self.pos_hint_x += self.velocity[0] * dt
+        self.pos_hint_y += self.velocity[1] * dt
+        if self.right > self.parent.right:  # Bounce from right
+            self.velocity[0] = -1 * abs(self.velocity[0])
+        if self.x < self.parent.x:  # Bounce from left
+            self.velocity[0] = abs(self.velocity[0])
+        if self.top > self.parent.top:  # Bounce from top
+            self.velocity[1] = -1 * abs(self.velocity[1])
+        if self.y < self.parent.y:  # Lose at bottom
+            self.parent.lose()  # Not implemented yet
+        self.bounce_from_player(self.parent.player)
+
+    def bounce_from_player(self, player):
+        if self.collide_widget(player):
+            self.velocity[1] = abs(self.velocity[1])
+            self.velocity[0] += (
+                0.1 * ((self.center_x - player.center_x) /
+                       player.width))
+```
+
+```python
+class GameEndPopup(ModalView):
+    message = StringProperty()
+    game = ObjectProperty()
+
+class Game(Widget):
+    def lose(self):
+        self.stop()
+        GameEndPopup(message='[color=#ff0000]You lose![/color]',
+                     game=self).open()
+
+    def win(self):  # Not called yet, but we'll need it later
+        self.stop()
+        GameEndPopup(message='[color=#00ff00]You win![/color]',
+                     game=self).open()
+```
+
+```python
+<GameEndPopup>:
+    size_hint: 0.8, 0.8
+    auto_dismiss: False  # Don't close if player clicks outside
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: root.message
+            font_size: 60
+            markup: True
+            halign: 'center'
+        Button:
+            size_hint_y: None
+            height: sp(80)
+            text: 'Play again?'
+            font_size: 60
+            on_release: root.game.start(); root.dismiss()
+```
+
+Here you will be needing some basic dependencies, which can be installed with ease just by using your distro's normal repositories. The main ones to use are OpenJDK7, zlib, an up-to-date Cython, and Git. If you are using a 64-bit distro you will also be in need of 32-bit compatibility libraries for zlib, libstdc++, as well as libgcc. You can then go on and download and install buildozer:
+
+```bash
+git clone git://github.com/kivy/buildozer
+cd buildozer
+sudo python2.7 setup.py install
+```
+
+When you're done with that part you can then go on and navigate to your Kivy app, and you'll have to name the main code file ‘main.py’, this is the access point that the Android APK will expect. Then:
+
+```bash
+buildozer init
+```
+
+This creates a ‘buildozer.spec’ file, a settings file containing all the information that Buildozer needs to create your APK, from the name and version to the specific Android build options. We suggest that you check through the whole file just to see what's available but most of the default settings will be fine, the only thing we suggest changing is (Fig. 11). There are various other options you will often want to set, but none are really all that vital right now, so you're able to immediately tell Buildozer to build your APK and get going!
+
+```bash
+buildozer android debug
+```
+
+This will take some time, so be patient and it will work out fine. When you first run it, it will download both the Android SDK and NDK, which are large (at least hundreds of megabytes) but vital to the build. It will also take time to build these and to compile the Python components of your APK. A lot of this only needs to be done once, as future builds will take a couple of minutes if you change the buildozer.spec, or just a few seconds if you've only changed your code.
+
+The APK produced is a debug APK, and you can install and use it but there are extra steps if you want to fully digitally sign it so that it can be posted on the Play store. This isn't hard, and Buildozer can do some of the work, but you can check the documentation online for full details.
+
+Assuming everything goes fine (it should!), your Android APK will be in a newly created 'bin' directory with the name 'KivyBreakout-0.1-debug.apk'. You can send it to your phone any way you like (eg email), though you may need to enable application installation from unknown sources in your Settings before you can install it.
