@@ -2169,6 +2169,7 @@
 +   [多启动配置手册 [电子资源]](docs/the-multi-boot-configuration-handbook-electronic-resource/README.md)
 +   [新的 XFree86 [学习新 XFree86 的更好方法]](docs/the-new-xfree86-a-better-way-to-learn-the-new-xfree86/README.md)
 +   [Linspire Desktop Linux 操作系统实话指南](docs/the-no-nonsense-guide-linspire-desktop-linux-operating-syste/README.md)
++   [NT Insider 2017年第2期](docs/the-nt-insider-2017-issue-2/README.md)
 +   [CompTIA Linux+ 官方自学指南 (考试 XK0-004) 电子](docs/the-official-comptia-linux-self-paced-study-guide-exam-xk0-0/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
 +   [GNOME 2 开发者官方指南](docs/the-official-gnome-2-developers-guide/README.md)
