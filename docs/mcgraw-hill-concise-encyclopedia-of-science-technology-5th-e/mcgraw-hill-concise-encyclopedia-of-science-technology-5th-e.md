@@ -47255,7 +47255,7 @@ $S = \int p \, dq
 $M_{11}x_1 + M_{12}x_2 + \dots + M_{1n}x_n = b_1$
 $M_{21}x_1 + M_{22}x_2 + \dots + M_{2n}x_n = b_2$
 $M_{m1}x_1 + M_{m2}x_2 + \dots + M_{mn}x_n = b_m$. (1)
-
+```
 
 
 
@@ -47905,9 +47905,8 @@ $a_{11} \ a_{12} \ \dots \ a_{1n}$
 $a_{21} \ a_{22} \ \dots \ a_{2n}$
 $\dots$
 $a_{m1} \ a_{m2} \ \dots \ a_{mn}$
-```
-```
 $\begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \dots \end{vmatrix} = |A|$
+```
 
 克莱姆法则（Cramer's rule）可以找到唯一解，它通过两个行列式的比值给出未知数 $x_1, x_2, \dots, x_n$ 的值。参见行列式（DETERMINANT）。具体来说，克莱姆法则给出：
 
