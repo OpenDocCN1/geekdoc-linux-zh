@@ -1,0 +1,19 @@
+Z-Wave is likely to be the better choice. On the other hand, if there’s only a subset of devices, or you plan on building your own then Zigbee is more likely to appeal. Especially given the Arduino XBee shield (http://arduino.cc/en/Main/ArduinoXbeeShield) and its successor (http://arduino.cc/en/Main/ArduinoWirelessShield) are still available.
+
+Next, look at the physical space of your home. If, for example, you have lots of basement space or similar situations that need multiple units to allow the RF to “see around corners,” then ZigBee is a better choice, because its better bandwidth can facilitate more messages being repeated in order to get the signal to its destination. The caveat here is if your traditional WiFi signal is unable to permeate the walls, then neither will ZigBee, as they operate on the same frequency and there’ll be even more lost bandwidth as both devices try to coexist.
+
+# C-Bus
+
+Although there are several well-known protocols for appliance control, X10 and Z-Wave are better known, with members of the knowledgeable public being aware of them, primarily because of their generally low barrier to entry. Within the HA community, however, it is the ownership of a Clipsal C-Bus system, which becomes the goal.
+
+# About C-Bus
+
+The C-Bus system was developed by an Australian company, Clipsal, as a means of controlling various light systems remotely. Clipsal’s original intention wasn’t in the field of HA but in stadium lighting rigs and commercial arena and conference centers. This meant the system had to support much longer cable runs than would be utilized in a home setup and a larger address space. It succeeded on both counts, with cable lengths of 1km being possible with 100 appliances on a subnet—with each subnet being capable of connections to another six through basic bridges or considerably more through the now available Ethernet bridges.
+
+# Differences Between X10 and C-Bus
+
+C-Bus’s primary difference is with its installation. Although X10 transmits its data along existing power cables, C-Bus devices are controlled by utilizing a proprietary protocol that travels along a separate Cat-5 cable. Consequently, such installations can be carried out only by qualified Clipsal-approved staff, pushing up the initial cost. However, once all the cables have been laid, one achieves the benefit of a near-zero level of maintenance since the interconnects will always exist and remain future-proof. It also provides two-way communication between the switch and a computer, making it trivial to query the state of the light dimmer or appliance. Furthermore, because the signal speed is not limited by the zero-crossings in the power line, all light changes happen instantaneously—a benefit that only those with many years of experience with X10 systems can truly appreciate.
+
+To lower this initial overhead, Clipsal has recently introduced a wireless version of C-Bus, which eliminates the need for costly installations, so it is this subset of devices on which I’ll concentrate. This optionally supports 128-bit encryption of its data stream, making it more secure than an (unfiltered) X10 wireless solution, although it’s still hackable by the determined. Its wireless range is no better than the RF-X10 combinations covered previously, with a 5 to 20 meter range according to material. Unfortunately, there is a maximum of 30 devices on a C-Bus wireless subnet, making it less capable than an X10 system using two house codes. The generally adopted approach to C-Bus installations is that a wired version is used for the initial house configuration, with wireless being added later as a cheap upgrade path.
+
+⁶C-Bus is used mostly in the United Kingdom and Australia, with the U.S. equivalent known as SquareD Clipsal. This is to avoid confusion with a similar technology called CEBus/EIA-600 utilizing the consumer electronics bus (CEBus).

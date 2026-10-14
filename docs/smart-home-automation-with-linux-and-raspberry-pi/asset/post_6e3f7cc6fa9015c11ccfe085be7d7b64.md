@@ -1,0 +1,406 @@
+
+## Index
+
+### A
+
+- Active (AV) distribution, 114
+  - splitting and merging, 115
+  - switch box, 115
+- Appliance control, 1
+  - C-Bus, 29
+    - about, 29
+    - controllers, 31
+    - devices, 30–31
+    - differences (X10 and C-Bus), 29
+    - gateways, 31
+    - modes, 30
+  - infrared remote (IR) control, 45
+    - all-in-one remotes, 46
+    - IR controls, 50–51
+    - IR relays, 46–47, 49
+  - lighting control
+    - Hue, 31–33
+    - Insteon, 34
+    - LIFX, 34
+    - night lights, 35
+    - sheding lights, 35–36
+  - methods, 1
+  - networking devices
+    - address, 38–40
+    - CCTV cameras, 43
+    - computer names, 40
+    - concepts, 37
+    - custom hardware, 44
+    - ethernet devices, 36–37
+    - Linux software, 45
+    - network services, 41–43
+    - primer, 37
+    - stand-alone BitTorrent clients, 45
+    - wireless cameras, 44
+- ZigBee, 28
+  - differences (Z-Wave), 28
+  - Linux software, 28
+- Z-Wave
+  - bypassing NDAs, 26–27
+  - system design, 26
+- Appliance hacking, 53. *See also* Hardware hacks
+  - software hacks
+    - game consoles, 55–60
+    - history, 53
+    - Linksys NSLU2, 53–55
+    - Slug development, 55
+    - wetware, 53
+- Appliance MicroModule (AWM2), 11, 13
+- Appliance Module (AM12U), 12–13
+- Application control. *See* X10
+- Arduino, 63
+  - Arduino software
+    - audio output creation, 70
+    - C/C++/Java, 65
+    - IDE, 65
+    - potential divider circuit, 67
+    - reading analog inputs, 68
+    - reading digital inputs, 66–67
+    - rising/falling edge trigger, 68
+    - sending analog outputs, 70
+    - sending digital outputs, 69–70
+  - communication-PC, 71–72
+  - Dictaphone
+    - codes, 78–79
+    - control program, 77
+    - switches and inputs, 76
+  - electronics, 64
+  - hardware
+    - Ethernet networking, 73
+    - motors, 74
+    - shields, 73
+    - wireless control, 73–74
+  - installation and setup, 64–65
+  - interface
+    - display systems, 81
+    - sound production, 79–81
+  - speech synthesis, 79
+  - Star Trek, 80
+  - PWM, 63
+  - shields, 64
+  - sketch, 64
+  - specification, 63
+  - welcome Mat, 74–76
+  - Arduino, Raspberry Pi, 290
+    - connecting to, 291
+    - inter integrated circuit (I²C), 291
+    - USB, 290
+- AV distribution network, 271
+  - matrix switcher, 272
+  - Nodeo, 272
+
+### B
+
+- Bayonet Lamp Module (LM15EB), 8
+- Blu-ray discs (BD)
+  - designing keys, 9
+  - rip as ISO files, 91
+  - rip as movie files, 91
+
+### C
+
+- C-Bus system, 29
+  - about, 29
+  - controllers, 31
+  - devices, 30
+    - controlling application, 31
+    - controlling lights, 31
+  - differences (X10 and C-Bus), 29
+  - gateways, 31
+  - modes, 30
+- Communication, 153
+  - computer-to-human, 154
+  - e-mail
+    - autoprocess, 156–159
+    - Linux, 155
+    - security issues, 159–160
+    - sending e-mail, 155–156
+  - human-to-computer, 154
+  - human-to-human, 153
+  - IP telephony
+    - Asterisk, 154
+    - Skype, 154
+  - methods, 153
+- Communication. See Voice; Web access
+- Control hubs, 217
+  - network configuration
+    - external server, 271
+    - Linux server, 270
+    - simple, 269
+  - online electric teakettle, 218–219
+  - technology integration, 217–218
+  - wiring looms
+- Cosmic, 237. See also Minerva
+  - configuration, 237–238
+  - Bearskin command, 237
+  - heyu daemon, 237
+  - state-based control, 238
+  - mode creation, 238
+
+### D
+
+- Data source, 189. See also Public data
+  - automation
+    - error handling, 216
+    - time events, 213–215
+  - distribution, 193
+  - legalities
+    - APIs, 193
+    - copyright, 189
+    - screen scraping, 190–192
+    - technical and legal view, 189
+  - private data, 208
+    - calendar, 208–209
+    - e-mail, 209–211
+    - Facebook, 213
+    - Twitter, 211–212
+  - time events
+    - occasional control-at, 215
+    - periodic control-cron jobs, 213–215
+- Device modules, X10
+  - Appliance MicroModule (AWM2), 11
+  - Bayonet Lamp Module (LM15EB), 8
+  - categories, 6
+  - combination devices
+    - prebuilt, 14
+    - retrofit solution, 13–14
+  - controlling appliance
+    - AM12U, 12–13
+    - AWM2, 13
+  - controlling lights, 6
+  - DIN Rail Dimmer (LD11), 10–11
+  - internal devices, 13
+  - Lamp Module (LM12U), 6–7
+  - MicroModule with Dimmer (LWM1), 9–10
+  - Wall Switch (LW10U), 8–9
+- DIN Rail Dimmer (LD11), 10–11
+- Domain Name System (DNS), 40
+- DVD
+  - file, 88
+  - movie issues, 91
+  - Rip As ISO, 89
+  - Rip As movie files, 90
+  - traditional process, 89
+
+### E
+
+- E-mail, 155
+  - autoprocess
+    - action, 157
+    - conditions, 157
+    - expressions, 158
+    - inbox, 159
+    - lightcontrol script, 158
+    - mail messages, 157
+    - mode, 157
+    - .procmailrc file, 156
+    - .procmailrc script, 157
+  - Linux
+    - mail retrieval, 155
+    - MTA, 155
+    - MUA, 155
+    - sending e-mail, 155–156
+  - security issues, 159–160
+
+### F
+
+- Filesystem in Userspace (FUSE) project, 95
+
+### G
+
+- General Purpose Input/Output (GPIO), 287
+  - Gertboard programming, 290
+    - input signals, 288
+    - motor, 288–289
+    - physical pin, 288
+    - pins, 287
+  - Python program, 288
+  - wiring pin, 288
+
+### H
+
+- Handheld RF Remote (HR10U), 16
+- Handheld transmitter modules, 16
+  - HR10U, 16
+  - KR22E, 17
+    - EasyTouch35 Universal Remote Control, 18
+    - EasyTouch Panel10 RF, 17
+- Hardware hacks. See also Arduino
+  - Extreme NXT, 63
+  - hacking laptops, 83
+  - input controllers, 83
+- High-level separation, UPnP
+  - closed versions
+    - AirPlay, 114
+    - DLNA, 113–114
+  - control points, 112–113
+  - new applications, 113
+  - renderers
+    - real-life hardware, 112
+    - totem, 112
+  - VLC, 111–112
+  - XBMC, 112
+  - server
+    - minidlna, 109–110
+    - Rygel, 110
+    - XBMC, 111
+    - stack-based arrangement, 109
+- Home automation setup. See Physical practicalities
+- Home automation system. See Online electric teakettle
+
+### I, J
+
+- Infrared remote control conduit, 228
+- Infrared remote (IR) control, 45
+  - all-in-one, 46
+  - IR relays, 46
+    - aerial cable, 46
+    - IR control, 50–51
+    - IR over IP, 47–49
+    - IR-RF-IR gateway, 47
+- Inter-Integrated Circuit (I²C)
+  - Arduino connection, Raspberry, 291
+  - SMBus reference library, 292
+- IP telephony
+  - Asterisk, 154
+  - Skype, 154
+- Joysticks
+  - force feedback, 82
+  - loop, 82
+  - SDL, 82
+
+### K
+
+- Keyfob Remote (KR22E)
+  - EasyTouch35 Universal Remote Control, 18
+  - EasyTouch Panel10 RF, 17
+
+### L
+
+- Lamp Module (LM12U), 6–7
+- LEGO Mindstorms, 62–63
+- Lighting control
+  - Hue, 31–33
+  - Insteon, 34
+  - LIFX, 34
+  - night lights, 35
+  - sheding lights, 35
+    - flux, 35
+    - RedShift, 36
+- Linksys NSLU2, 60
+  - always on, 60
+  - overclocking, 61–62
+  - serial port, 62
+  - powered devices
+    - low voltage control, 86
+    - WiFi control, 85–86
+    - X10 control, 84–85
+- Linux-based machine. *See* Stand-alone hardware
+- Linux Box, 96
+  - filesystem, 97
+  - machine, 97
+  - master server, 98–99
+- Linux operating system
+  - operating system, 104
+  - software
+    - freevo, 106
+    - MythTV, 105
+    - navigable interface, 105
+    - remote-control option, 105
+    - screen, 105
+    - video disk recorder project, 106
+    - visuals, 105
+    - Xbox media center, 106
+- Logical Block Addressing (LBA), 93
+
+### M
+
+- Mail transfer agent (MTA), 155
+- Mail user agent (MUA), 155
+- Matrix switchers, 117
+- Maxi Controller (SC2800), 15–16
+- Mean time between failures (MTBF), 130
+- Media systems, 87. *See also* Remote control and UPnP
+  - data chain
+    - Blu-ray, 91
+    - cassette tape and vinyl, 92
+    - compact disc, 88
+    - DVD, 88–90
+    - meaning, 87
+    - ripping, 87
+  - distribution, 114
+    - active (AV), 114–115
+    - local vs. remote processing, 114
+    - matrix switchers, 117
+    - wireless AV distribution, 117
+    - wiring looms, 116–117
+  - extenders, 99 (*see also* Stand-alone hardware)
+  - local control, 118
+  - remote-control methods
+    - bluetooth control, 119
+    - direct control, 119
+    - relay control, 119
+  - server control
+    - SMS, 120
+    - web interface, 120
+    - storage (*see also* Network addressable storage (NAS))
+- Linux Box, 96–99
+- Linux operating system, 104–106
+- NAS (media playback), 96
+- Memory management unit (MMU), 57
+- MicroModule Transmitter Dimmer (TMD4), 18
+- MicroModule with Dimmer (LWM1), 9–10
+- Minerva. *See also* Control hubs
+  - basic structure, 220
+  - conduits
+    - administration, 229
+    - building, 233–234
+    - directory hierarchy, 227
+    - echo, 228
+    - email, 228
+    - infrared remote control, 228
+    - input, 227
+    - input-receiving messages, 231–233
+    - logging, 228
+    - msginstall command, 229
+    - msgxmit and msgrcv command, 229
+    - output conduits, 227
+    - sms, 228
+    - transmission, 230–231
+    - twitter, 228
+    - vox, 228
+    - weblog, 229
+    - winalert, 229
+  - device abstractions
+    - application abstractions, 224–225
+    - Bearskin, 223, 225
+    - devlist file, 224
+    - finddev script, 224
+    - Marple, 224
+    - monexec, 225
+    - TODO application, 226–227
+  - Linux accounts
+    - codes, 223
+    - Minerva user, 223
+    - multistage approach, 222
+    - public user, 223
+    - user accounts details, 222
+  - living modes, 240–241
+  - location-based messaging
+    - Bluetooth monitor software, 236
+    - doormat pressure sensors, 236
+    - RFID tags, 236
+  - manifest system, 263
+    - directory, 264
+    - driver commands, 264
+  - Marple
+    - Bearskin compatibility, 267
+    - protocol handling, 265–266
+    - workings, 265
+- message relays system, 234
+- Minty, 243

@@ -1956,6 +1956,7 @@
 +   [Slackware Linux 入门指南，第2版](docs/slackware-linux-essentials-2nd-edition/README.md)
 +   [Slackware Linux 精要：Slackware Linux 官方指南](docs/slackware-linux-essentials-the-official-guide-to-slackware-l/README.md)
 +   [Slackware Linux 解锁指南](docs/slackware-linux-unleashed/README.md)
++   [Linux and Raspberry Pi 智能家居自动化](docs/smart-home-automation-with-linux-and-raspberry-pi/README.md)
 +   [Snort 傻瓜书](docs/snortâ-for-dummies/README.md)
 +   [你想成为嵌入式工程师吗：从咨询到职场进阶的嵌入式工程指南](docs/so-you-wanna-be-an-embedded-engineer-the-guide-to-embedded-e/README.md)
 +   [Linux 移动软件指南](docs/software---linux-on-the-move/README.md)

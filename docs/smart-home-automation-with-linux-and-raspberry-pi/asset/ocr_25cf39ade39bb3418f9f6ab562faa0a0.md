@@ -1,0 +1,21 @@
+are included, so it is best to check compatibility first (http://sourceforge.net/apps/mediawiki/libff/index.php?title=SupportedDevices). The use of force feedback is primarily for games, because the game causes a slight jolt of the device, through a small motor in the joystick, when the player is attacked or dies. The vibrate option on mobile phones and pagers works in the same way. There is very little scope for shaping the vibration in any advanced or meaningful way, and very few (if any) games in Linux support the library. However, fftest (from the ffutils project at http://sourceforge.net/projects/libff/ (libff/utils)) may be hacked to provide a small rumble when an e-mail arrives.
+
+# Other Input Controllers
+
+Game development has never been a strong selling point to the Linux community; consequently, the libraries available (and the resultant quality of the games) have been few in number. This has led to a sporadic approach to the problem of device control. One good example of this is the separation between SDL (for good solid joystick processing, but with force feedback currently available only in an unstable SVN branch) and ffib (for force feedback). There is currently just one project that is attempting to close this divide, and it’s called the Object Oriented Input System (OIS); you can find it at http://sourceforge.net/projects/wiisois/.
+
+OIS is planning on abstracting away all the device (and driver) specific elements of user input devices (including keyboard, mice, and joysticks) and providing a unified API to them. Although this is admirable for the games developers, it doesn’t help us a great deal...except for the recent introduction of code that supports the Nintendo Wii’s remote wand (aka the Wiimote). This peripheral operates through Bluetooth and can determine the area of the screen it’s pointing at by imaging into its sensor the infrared LEDs held in a bar attached to the top or bottom of the screen. This can also determine its orientation and acceleration. This makes it a very suitable controller for complex applications running on a TV screen, where a mouse is not suitable but an equivalent means of control is needed.
+
+There is also the CWiid tool, available in some distros by default, which provides a mouse driver wrapper, allowing unported mouse-based applications to be controlled by the Wiimote.
+
+# Hacking Laptops
+
+The price of netbooks, with solid-state storage and preinstalled Linux software, are now so low that their cost isn’t much greater than the top-of-the-range stand-alone photo frames. And as a bonus, you get a better processor, video playback, network connectivity (often wireless), and VoIP software. This makes the netbook an ideal home automation panel, with many uses.
+
+Obviously, older laptops can also be used for hacking. Any that are lacking a hard drive, have dead batteries, or have broken keyboards are particularly good value because the cost of new parts makes them too expensive to rebuild, and having a laptop reliant on a tethered power line is not such a problem for home automation users as it is for others.
+
+Their use as a control panel is obvious, because the screen and keyboard halves can be folded flat and mounted to any wall or surface quite easily. Or, the keyboard base (with the lion’s share of electronics) can be hidden away underneath a desk or worktable, with just the screen poking out. It can then be controlled with a joystick input or, more impressively, a touchscreen.
+
+Touchscreens can be added retroactively to most laptops. They exist as a transparent membrane that fits over the screen and a PS/2 socket that mimics the behavior of a mouse delivering X and Y coordinates and left-button up and down messages. It should be noted that the software interface must be suitably programmed, since the membrane cannot detect the mouse position unless there is pressure on it (i.e., mouse over or hover events won’t exist), and there is no input for a right mouse button. Fortunately, most web interfaces are generally suitable.
+
+> **Note**  The touchscreen membranes cannot be cut to the size of your laptop; they must be bought pre-sized, so check carefully before purchasing, and remember that screen size is measured diagonally across the LCD screen itself, not the visible area.

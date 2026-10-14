@@ -1,0 +1,21 @@
+# Switching
+
+The cheapest piece of necessary equipment is an AV switch box, or AV source selector box. This provides multiple inputs for your various devices, DVD, PVR, VCR, and so on, and routes one of these to the TV output. Most equipment give you the option of using either S-Video, RCA, or SCART inputs. This naturally requires that the TV is always set to receive the input from the box, not its internal tuner. There are many switch boxes available, so the features to consider include:
+
+*Infrared remote control:* This is a necessity, really. Because this box takes the place of your TV channel changer, it must have the functionality you’d expect from the TV . . . which at a bare minimum is a remote control.
+
+*Active or passive devices:* Active units have a small amplifier in them and therefore need power. These ensure a strong signal but at the expense of a lower quality on the cheaper models, as their internal amplifier isn’t as good as the ones on the DVD player or on a TV. Passive devices have no such amplification and are more likely to lack an IR remote.
+
+*Input connections:* Although some boxes provide S-Video, RCA, and SCART for each input, they might not be interconnected. That is, the RCA input socket might only be connected to the RCA output socket and not to the S-Video or SCART. Because you only have one output to the TV, this requires you to compensate for adapting your interconnects to the most common form factor and to convert every other input into the same type of plug (there are converters available in most electronics shops). You then use the equivalent output. This part of the specification isn’t usually well documented, so check the shops return policy first.
+
+*Number of inputs:* Count the devices you have, add to this the number of devices you want to buy, and add two more for good measure! Once this limit has been exceeded, you have no real choice but to buy a bigger switch box. You can chain them, which is troublesome and lowers quality, or you can use a separate EXT input on the TV for each switch box, which is equally annoying but has fewer electronics in the signal chain.
+
+The biggest omission on the entry-level switch boxes is the facility to switch between stereo audio and 5.1 surround. Consequently, you will need a separate set of cables from the 5.1 output of the DVD (controlling the 5.1 speakers) and the stereo output of the DVD connected to your switch box.
+
+# Splitting and Merging
+
+Once you have the AV signal ready, you might want to split it so that the video part of the signal goes to the TV, while the audio makes its way into the line-input on a HiFi. There are two main ways of achieving this. The first is the easy way and works if your TV has its own stereo-out sockets, as they can be connected from the TV to the HiFi directly without a problem. The other way is to split the signal coming out the switch box into two (or more) outputs—one for the TV and one for the HiFi. This approach means you won’t be able to use the HiFi to amplify any stations selected using the TV’s internal tuner, but this can be rectified by watching the TV solely through a receiver (such as a cable tuner or digibox) or VCR, which has been plugged into the switch box. This can be done in a variety of ways. The cheapest is the use two Y-cables (aka Y-adapters), one each for the left and right audio signals. These provide two identical outputs from one input and require no power. These work well when splitting audio signals but can be less than satisfactory when used on video signals because of impedance problems. If the quality isn’t good enough, then you need a more involved splitter box.
+
+A splitter box acts like its Y-cable counterpart but usually has an amplifier in it to stop signal degradation. This also allows it to provide more outputs for very little extra cost, allowing you to run a separate pair of cables into, say, the kitchen and dining room.
+
+If neither of these is suitable, you can split the output after the amplifier stage by running multiple speaker cables.
