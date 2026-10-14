@@ -1,0 +1,145 @@
+
+#define IN6ADDR_ANY { 0,0,0,0,0,0,0,0 }
+
+#define IN6ADDR_LOOPBACK { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 }
+
+## 11.3 IPv6 地址
+
+## 11.4：IPv6 地址格式
+
+IPv4 使用 `ARP` 协议将 IP 地址映射到链路层 MAC 地址。相比之下，IPv6 不使用 ARP，而是使用*链路本地地址*的概念。链路本地地址将 6 字节以太网地址直接到 IPv6 地址中。链路本地地址以 fe8 开头。链路本地地址的地址空间分配如表 11.1 所示。例如，此笔记本电脑上的802.11 无线适配器具有以下以太网地址：
+
+00-02-2D-84-D1-A1
+
+该适配器的链路本地 IPv6 地址如下。
+
+FE80::2:2D84:D1A1
+
+`11AB::DE40:FEDC:BA98:7654:3210/56`
+
+该地址的网络号如下。
+
+11AB:0:0:DE00:0:0:0:0
+
+也可以用另一种方式表示。
+
+11AB::DE00:0:0:0:0:0
+
+主机部分如下。
+
+40:FEDC:BA98:7654:3210
+
+IPv6 还定义了一个回环地址。但所有后续比特位均为 0。
+
+::1
+
+它定义了一个称为“未指定地址”（unspecified address）的地址，其全为 0。
+
+::
+
+IPv4 使用地址的前三位来定义地址分类。更多关于 IPv4 划分的知识，请参见第 3 章。IPv6 同样使用变长的前导位来定义地址类型。该前导组被称为格式前缀（FP）。表 11.1 显示了根据格式前缀分配的地址空间。
+
+## 表 11.1：IPv6 地址类型分配
+
+| 二进制格式前缀 | 地址空间比例 | 分配 |
+| :--- | :--- | :--- |
+| 0000 0000 | 1/256 | 预留。未指定地址（全 0）和嵌入的 IPv4 地址从此空间分配。 |
+| 0000 0001 | 1/256 | 未分配 |
+| 0000 0001 | 1/128 | 预留用于 NSAP 分配 |
+| 0000 | 1/128 | 预留用于 IPX 分配 |
+| 0000 0011 | 1/128 | 未分配 |
+| 0000 1 | 1/32 | 未分配 |
+| 0001 | 1/16 | 未分配 |
+| 001 | 1/8 | 可聚合全局单播地址 |
+| 010 | 1/8 | 未分配 |
+| 011 | 1/8 | 未分配 |
+| 100 | 1/8 | 未分配 |
+| 101 | 1/8 | 未分配 |
+| 110 | 1/8 | 未分配 |
+| 1110 | 1/16 | 未分配 |
+| 1111 0 | 1/32 | 未分配 |
+| 1111 10 | 1/64 | 未分配 |
+| 1111 110 | 1/128 | 未分配 |
+| 1111 1110 | 1/256 | 未分配 |
+| 1111 1111 10 | 1/1024 | 链路本地单播地址 |
+| 1111 1111 11 | 1/1024 | 站点本地单播地址 |
+| 1111 1111 | 1/256 | 组播地址 |
+
+IPv4 使用 `ARP` 协议将 IP 地址映射到链路层 MAC 地址。相比之下，IPv6 不使用 ARP，而是使用*链路本地地址*（link-local addresses）的概念。链路本地地址将 6 字节以太网地址直接到 IPv6 地址中。链路本地地址以 fe8 开头。链路本地地址的地址空间分配如表 11.1 所示。例如，此笔记本电脑上的802.11 无线适配器具有以下以太网地址：
+
+00-02-2D-84-D1-A1
+
+该适配器的链路本地 IPv6 地址如下。
+
+FE80::2:2D84:D1A1
+
+根据定义，IPv6 地址被分配给网络接口而不是主机。此外，一个接口可以有多个任意类型的地址。然而，每个接口必须分配至少一个链路本地地址。
+
+还有一些特定的组播地址与邻居发现（Neighbor Discovery）和其他协议相关。第一个是请求节点组播（solicited-node multicast，[RFC 1883]）。该地址通过取单播或任组播地址的低 24 位，并应用以下 96 位前缀 FF02::0:0:0:1 形成。这产生了一个从 FF02::1:0:0 到 FF02::1:FFFF:FFFF 的组播地址范围。下一个是所有路由器组播（all-routers multicast），它是用于到达所有节点的链路本地范围地址，FF02::2。另一个是用于到达所有链路本地节点的全本地组播（all-local multicast），FF02::1。
+
+Linux 提供了一个表示 IPv6 地址类型的数据结构，定义在文件 `in6.h` 中。
+
+```c
+struct in6_addr {
+  union {
+    __u8 u6_addr[16];
+  };
+  __u16 u6_addr16[8];
+  __u32 u6_addr32[4];
+};
+```
+
+该结构允许以 32 位字序列、16 位段或 8 位字节的形式来指定地址。以下两个定义（同样在 `in6.h` 中），它们定义了未指定地址（通配符）和回环地址的类型，两者在源码中都被频繁引用。
+
+```c
+#define IN6ADDR_ANY { 0,0,0,0,0,0,0,0 }
+#define IN6ADDR_LOOPBACK { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 }
+```
+
+```c
+struct ifmcaddr6      *mc_tomb;
+rwlock_t           mc_lock;
+unsigned long      mc_vl_seen;
+unsigned long      mc_maxdelay;
+unsigned char       mc_qrv;
+unsigned char       mc_gq_running;
+unsigned char       mc_ifc_count;
+```
+
+以下字段是通用查询，下一个下来的是接口定时器。
+
+```c
+struct timer_list      mc_gq_timer;
+struct timer_list      mc_ifc_timer;
+struct ifacaddr6       *ac_list;
+rwlock_t             lock;
+atomic_t              refcnt;
+  u32                 if_flags;
+int                    dead;
+```
+
+```c
+#ifndef CONFIG_IPV6_PRIVACY
+u8                   rndid[8];
+u8                   entropy[8];
+struct timer_list     regen_timer;
+struct inet6_ifaddr   tempaddr_list;
+  u8                   work_ei64[8];
+  u8                   work_digest[16];
+#endif
+```
+
+```c
+struct neigh_parms    *nd_parms;
+struct inet6_dev      *next;
+struct ipv6_devconf   cnf;
+struct ipv6_devstat   stats;
+```
+
+## 11.5.1 IPv6 初始化
+
+IPv6 在 `/net/ipv6/af_inet6.c` 文件中初始化。该文件中的函数为 AF_INET 地址族提供了大多数粘接协议，包括套字注册。主初始化函数是 `inet6_init`。
+
+```c
+static int __init_inet6_init(void);
+```
