@@ -2153,6 +2153,7 @@
 +   [Linux Mint 初学者指南](docs/the-linux-mint-beginners-guide/README.md)
 +   [Linux 网络（M&t Books Slackware 系列）](docs/the-linux-network-the-mt-books-slackware-series/README.md)
 +   [Linux 网络架构：Linux 内核中网络协议的设计与实现](docs/the-linux-networking-architecture-design-and-implementation-/README.md)
++   [Linux 问题解决专家 (with CD-ROM)](docs/the-linux-problem-solver-with-cd-rom/README.md)
 +   [Linux 进程管理器：调度、中断与信号内部机制](docs/the-linux-process-manager-the-internals-of-scheduling-interr/README.md)
 +   [Linux 程序员工具箱 (Prentice Hall 开源软件开发系列)](docs/the-linux-programmers-toolbox-prentice-hall-open-source-soft/README.md)
 +   [Linux 编程接口](docs/the-linux-programming-interface/README.md)

@@ -1,0 +1,171 @@
+
+## F
+
+- filesharing
+  - with Macintosh machines, 95–98
+  - with Windows machines, 87–89
+- filesystem modules, 181–182
+- filesystems
+  - fixing, 211–212
+  - mounting, 52
+- find, 4
+- finger, 39
+- firefighting, 1
+- firewalls, 32
+  - chains, 33
+  - IP sample, 35–36
+  - restrict services with, 39
+  - troubleshooting, 36
+- fixed mounts, 53
+- flood ping, 45
+- floppy disks
+  - creating bootable, 208–209
+  - troubleshooting, 175
+- Fontmap, 123
+- fonts
+  - configuring and troubleshooting, 123–124
+  - usage in this book, 3
+- forward chain, 33–34
+- forward slash (/), 16, 21
+  - before filenames, 140
+  - in literal arguments, 16
+- fsck, 12, 211
+  - -f option, 212
+  - running manually, 213
+  - troubleshooting, 212
+- FTP as alternative to nonanonymous, 39
+- ftpd, 39
+- FTP proxy, 35
+- full backups, 187
+  - frequency of, recommended, 205
+  - weekly, 204
+- Fvwm taskbar, lingering processes, 235
+
+## G
+
+- g++, 136
+- garbage, printer spouting, 119
+- gatewaying, 33
+- gateways, 19
+  - troubleshooting, 38
+- gcc, 136, 165
+  - troubleshooting, 174, 186
+- gdbm files, 59
+- generic kernels, 167
+- getfqdn, 142
+- getty, 5
+- getzones (Netatalk command), 120
+- Ghostscript (gs)
+  - and autoconf, 146
+  - for non-PostScript printers, 122–126
+  - options, 124–125
+  - troubleshooting, 133, 134
+  - utilities, 130
+- globbing, 15
+- GNU autoconf, 137
+  - and Makefile, 141
+  - packages that do not use, 146–151
+  - packages that use, 142–145
+- GNU readline, 222
+- GNU tar, 139, 197
+- GNU version of cpio, 196
+- graphics files, 130
+- gs. *See* Ghostscript
+- gv, 130
+- gzip, 138, 139
+
+## H
+
+- hacking, dealing with, 43–44, 75
+- hard drives for backups, 189
+- hardware errors, 86
+- hash mark (#), lines beginning with, 147
+- header files, 136
+  - path names in, 148–149
+- header pages, suppressing, 110
+- Hewlett Packard
+  - DAT drives, 199
+  - laser printers, 113
+- .h files, skipping lines in, 158
+- holding disks, 200
+- home directories, 223
+- host, 48
+- host access, troubleshooting, 83
+- host entries in netgroup maps, 66
+- host keys (ssh)
+  - generating, 40–41, 73
+- host name resolution, 20, 48
+  - disabling, 47
+- hostnames for printers, 114
+- HP DAT drives, 199
+- HP laser printers, 113
+- HUP (hangup) signal, 6
+  - with mount, 57
+
+## I
+
+- identity file, 75
+- IDE tape drives for backups, 188
+- ifconfig, 18
+- #ifdef, 158
+- ifhp, 113–117
+  - ifhp.conf, 116–117
+- ifpap, 119
+- ignored errors, 154
+- image, 146, 149
+- Imakefiles, 149–150
+- #include directives, errors involving, 176
+- include files, 136
+  - troubleshooting, 159, 160
+- incremental backups, 187
+  - frequency of, recommended, 205
+- inetd, 21
+  - extra processes on, checking for, 38, 44
+- init, 5, 38
+  - errors, 216
+- init.d
+  - location, 6
+  - script, 92, 93
+- initdefault, 5
+- input chain, 33, 34
+- insmod, 181
+- interactive mode of restore, 196–197
+- interactive shell commands, errors involving, 230
+- interactive shells, 226
+- interface configuration, 18–19
+- interfaces, 17
+- interoperability, Unix approach to, 77
+- intruders, dealing with, 43–44
+- I/O errors, 56
+- IP addresses. See host name resolution
+  - mapping to NetBIOS names, 81–82
+- IP chains, 33–38
+- ipchains, 233
+  - options, 34–35
+- IP filters, 33, 34–35, 171
+  - when to use, 75
+- IP firewall, sample, 35–36
+- IP forwarding, 32, 35
+- IP masquerading, 33, 34, 36–38, 171
+- ISPs, distinguishing among multiple, 29
+
+## K
+
+- Kerberos and printing, 111
+- kermit, 30
+- kernel, 163. See also source code files
+  - boot, 210–211
+  - boot disk, 175
+  - building, 165
+  - compiling, 173–176
+  - configuring, 37, 167–173
+  - documentation directory for, 169
+  - information, 13–14
+  - navigating among options, 167, 168
+  - networking options, 171
+  - processor type and features options, 167–168, 169
+  - production releases, 164
+  - release series, 164
+  - routing table, 19
+  - setup options, general, 170
+  - SMB filesystem in, 90

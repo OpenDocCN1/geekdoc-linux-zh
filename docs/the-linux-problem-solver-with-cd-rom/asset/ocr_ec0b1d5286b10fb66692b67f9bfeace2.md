@@ -1,0 +1,15 @@
+# THE
+
+# LINUX
+# PROBLEM
+# SOLVER
+
+HANDS-ON SOLUTIONS FOR
+SYSTEMS ADMINISTRATORS
+
+Brian Ward
+
+![](bbox=[0.483, 0.83, 0.558, 0.891])
+
+No Starch Press
+San Francisco

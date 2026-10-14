@@ -1,0 +1,53 @@
+
+up with a satisfactory organization when you’re juggling everything else a systems administrator has to do.
+
+Amanda (http://www.amanda.org/) is a package for automating backups. Consisting of a client program that runs on the machines you’re backing up and a server for use on the machine with the tape drive, Amanda works across Unix platforms—you just have to install the client side of the program on all the machines. You’ll need a large disk with plenty of free space.
+
+The format Amanda writes to the tapes is nothing special. The first file is an index and the rest consist of a bunch of archives, which can be of any type (tar, dump/restore, cpio, etc). When everything is in place, you can use amrestore cover for casual file restoration. If you get in a real bind, you can always look up the files and restore them with the usual utilities, such as tar.
+
+## Configuring Amanda
+
+The hardest part about Amanda is starting out. Once you get the ball rolling with at least a partially correct configuration file and familiarize yourself with a few of its programs, fine-tuning your installation is simple; Amanda’s online documentation is complete and descriptive enough to smooth out the rough edges. Therefore, this section will introduce Amanda to the point of getting it running—not necessarily perfectly, but so you can change the setup if it isn’t appropriate for your needs.
+
+You’ll probably need to build the package, which you’ll find on the included CD-ROM in support/backupcrash, from source as described in Chapter 6. When configuring, specify which users have write access to the filesystems on the machines you’re backing up (with the --with-user=user option to configure—probably root if you’re using GNU tar), as well as which group can run the programs that setuid to root (with the --with-group option, used for non-root operator access). You might also want to change the default configuration directory to dir using --with-configdir=dir because it’s difficult to maintain a default over a larger network. We strongly recommend the option --with-amandahosts; this tells the clients to use a .amandahosts file instead of the .rhosts file for dump access (we’ll mention this again a little later in this section).
+
+After you’ve installed Amanda, you need to create at least one configuration directory. This is where Amanda keeps information about which machines and directories it should back up, a list of tapes to use, tape settings, and so on. If you give an installation prefix of /usr/local and make a directory named /usr/local/etc/amanda/servers, then servers is a valid configuration directory name.
+
+You’ll need three files in the configuration directory: amanda.conf, disklist, and tapelist. General backup parameters are in amanda.conf, and disklist contains a list of the directories to back up. Amanda creates the tapelist file for you after one run of amdump.
+
+### amanda.conf
+
+The best way to create amanda.conf is to copy an example and modify it to suit your needs. When you configure Amanda, you'll get an example amanda.conf in the source code's example subdirectory. Make a copy of this file, edit the copy, skip the first section, and go down to the part that reads as follows:
+
+```
+runtapes 1      # number of tapes to be used in a single run of amdump
+tpchanger "chg-manual"  # the tape-changer glue script
+tapedev "/dev/null"    # the no-rewind tape device to be used
+rawtapedev "/dev/null"  # the raw device to be used (ftape only)
+changerfile "/usr/adm/amanda/DailySet1/changer"
+changerfile "/usr/adm/amanda/DailySet1/changer-status"
+changerfile "/usr/local/amanda/amanda..."
+changerdev "/dev/null"
+```
+
+Here you'll need to make some changes. First change the /dev/null for tapedev to your tape device. This should be, as the comment suggests, the no-rewind tape device. The line that mentions ftape may not apply; newer versions of the ftape driver should provide full file-marker emulation. Comment all of the changer lines out—these are for tape changers; even if you have one, it's easier to start with a simple configuration.
+
+The next line in the file is this:
+
+```
+tapetype HP-DAT      # what kind of tape it is (see tapetypes below)
+```
+
+Unless you're using an HP DAT drive, change this line. The list of tape types appears later in the file, with definitions like this:
+
+```
+define tapetype HP-DAT {
+  comment "DAT tape drives"
+  # data provided by Rob Browning
+  length 1930 mbytes
+  filemark 111 kbytes
+  speed 468 kbytes
+}
+```
+
+Make sure you change these specifications accordingly. If you can't find the specifications in your tape drive's manual, try the extensive tapetype reference available from the Amanda Web site.

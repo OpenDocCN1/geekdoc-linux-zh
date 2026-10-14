@@ -1,0 +1,23 @@
+# What You Should Back Up
+
+Home directories are obviously your first priority. Administrators of large networks should run incremental backups on home directories once a night, with full backups every one to four weeks. Home directories change more than system directories, so regular full backups of these keep the size of the incremental backups down.
+
+System configuration and data are the next most important files to back up. Items located in etc directories, as well as select stuff in /var, change frequently, and you’ll want to keep track of this. Incremental backups of /etc stay at a fairly constant size, so you won’t need to perform full backups as often as for home directories.
+
+Locally installed software sets are next on the priority list. If you lose a package, it’s often not worth the trouble to look for a backup, especially since it may take less time to install a new version of a package than to find the old one.
+
+System software is the least of your worries when it comes to backups, for several reasons. If you have several machines and you use rdist or an alternative to maintain identical software on them, several complete copies of the system exist on hard drives throughout the network. Also, system software isn’t unique; if you back up your configuration files regularly, you’ll be in good shape—you probably spent more time working on those files than you did installing the software.
+
+# 8.2 A Survey of Devices
+
+Before going over the details of specific backup software, we first need to review the backup device types available. While we’ve already expressed a preference for tape drives, you have a few other options for backups you don’t need to do so regularly.
+
+# SCSI Tape Drives
+
+SCSI drives are far and away the most reliable and convenient way to back up a lot of data. They are also the most expensive means. Travan and DAT drives currently make up the low end of the SCSI drive spectrum, with DLT at the high end. If you’re halfway serious about backups, you’ll want a SCSI drive.
+
+Which one you choose depends on how fast you need it, how much capacity you require, and whether you have a huge amount of money to invest.
+
+# IDE Tape Drives
+
+The Linux kernel supports IDE tape drives, but you probably only want to consider this option if you already have such a device. You can get a low-end SCSI counterpart at only a slightly higher price than an IDE drive, and the price of a cheap, narrow SCSI controller won’t kill you. IDE tape drives have two main weaknesses: poorer, non-uniform driver support, and limited features—all high-end tape drives are SCSI.

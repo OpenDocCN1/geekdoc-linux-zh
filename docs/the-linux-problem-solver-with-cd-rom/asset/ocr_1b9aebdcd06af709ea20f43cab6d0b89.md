@@ -1,0 +1,13 @@
+# PROBLEM 104 (CONTINUED)
+
+4. Check that the file before the actual reboot command (which should be the very last file that starts with S in the rc*.d directory for reboot) has umount -a and mount -n -o ro,remount / commands, in that order. On Debian systems, for example, this appears in /etc/rc6.d; the first file (actually a link) is S40umountfs, and you do the reboot with S90reboot. The commands should be in the files (unless someone removed them by hand), but a test inside the files may prevent the commands from running; if this is the case, find out and fix whatever is causing the tests to fail.
+
+You might also have a problem with lingering processes. Run a full process listing with ps auxw. There shouldn’t be all that many processes active. See if any on the list is running inappropriately in single-user mode (only some low-numbered kernel processes should use this mode). Kill off any process that looks wrong, then try the umount -a again.
+
+Once you’ve found the culprit, you have two ways to turn it off during system shutdown. The proper way (described in Chapter 1) is through the rc*.d convention for stopping services, scripts, or links to scripts starting with K; this convention makes init pass the stop argument to the script. The other way to turn off the problematic process is to do a generic kill-off by sending signals to all processes (for example, with killall5 -15 followed by killall5 -9). Most distributions do this near the end of their shutdown configuration (for example, in Debian it’s /etc/rc6.d/S20sendsigs). So if you see a problem here, the process is probably going into a bad zombie stage, which usually indicates driver problems, but also results from not giving it enough time to shut down.
+
+5. If none of the above seems relevant, you may just need to allow more time for shutdown. Do so with a sleep inside one of the init.d scripts after you’ve killed all processes.
+
+If you have really serious problems with a filesystem that fsck can’t fix, the debugfs utility can help by performing low-level actions. Take special care when using debugfs commands that change the filesystem; debugfs allows you to clear blocks and wipe out inodes.
+
+Like tune2fs, debugfs has a good manual page. When you use debugfs, either you want to look at the filesystem’s internal structure or the kernel is complaining about some bad inode that fsck can’t seem to find. In the latter case (probably a result of bad memory corrupting a cache), you’ll want debugfs’ clri command.
