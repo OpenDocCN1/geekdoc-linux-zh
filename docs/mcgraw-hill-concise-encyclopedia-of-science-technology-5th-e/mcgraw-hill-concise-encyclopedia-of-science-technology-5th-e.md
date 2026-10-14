@@ -68432,7 +68432,6 @@ E = ⟨Ψ|H⟩
 
 ```
 $-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2} = 0$ (6)
-```
 
 λ = h/p (2a)
 
