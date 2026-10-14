@@ -1,0 +1,1693 @@
+- pgno: 0
+  md: '# The operating system Linux
+
+    and programming languages
+
+
+    # An introduction
+
+
+    Joachim Puls and Michael Wegner
+
+
+    # Contents:
+
+
+    +   1 General remarks on the operating system UNIX/Linux
+
+    +   2 First steps at the computer
+
+    +   3 File systems
+
+    +   4 Editing and printing text files
+
+    +   More important commands
+
+    +   5 UNIX-shells
+
+    +   6 Process administration
+
+    +   7 The programming language C++ - an overview
+
+    +   8 Fortran 90/95 - an overview
+
+    +   9 Creating executable programs
+
+
+    Additional material
+
+
+    +   - vi basics: vi_brief.pdf
+
+    +   - reference for vi: vi_reference.pdf
+
+    +   - reference for emacs: emacs_reference.pdf
+
+
+    *Acknowledgements.* Many thanks to Tadziu Hoffmann for carefully reading the manuscript
+    and useful comments.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 1 General remarks on the operating system UNIX/Linux
+
+
+    # Classification of UNIX/Linux
+
+
+    UNIX is a *Multi-User/Multi-Tasking* operating system and exists in many different
+    versions (“derivatives”): Solaris, AIX, XENIX, HP-UX, SINIX, **Linux**.
+
+
+    ![](img/7620eb00c0475a5b7427437d851a4cd6_1_0.png)
+
+
+    **Operating system (OS):** Sum of all programs which are *required* to operate
+    a computer and which control and monitor the application programs.
+
+
+    # Essential features
+
+
+    # UNIX
+
+
+    +   - has been originally written in the programming language C, and is therefore
+    a classical platform for C-programs. UNIX contains well suited environments for
+    program development (C, C++, Java, Fortran, ...).
+
+    +   - is mainly used for scientific-technical applications on mainframes and workstations,
+    but has become, because of **Linux**, also popular for classical PC-applications
+    throughout the last years.
+
+    +   - is perfectly suited for application in networks. Larger systems and networks
+    require an administrator.
+
+    +   - offers various alternatives for the solution of most tasks. The multitude
+    of commands (more than in any other OS) are brief and flexible.
+
+    +   - is originally command-line oriented, but can be used via a graphical user
+    interface (*X Window system*).
+
+
+    **Linux** is available (also via internet) in different *distributions* (S.u.S.E.,
+    Fedora, Debian etc.). Meanwhile there is a variety of *direct-start (live) systems*,
+    which can be started, without installation, directly from CD or other bootable
+    storage devices (Knoppix, Ubuntu, ...). There are also interesting “mini versions”
+    (<100 MB) designed for a start from USB-sticks (e.g., Puppy). The source code
+    of Linux is free.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Literature
+
+
+    +   - **Peek, J., et al.:** *Unix Power Tools.*
+
+    +     O''Reilly Media 2002 (3rd edition).
+
+    +   - **Gilly, D., et al.:** *UNIX in a Nutshell.*
+
+    +     O''Reilly, Köln. 1998 (1st edition).
+
+    +   - **Wielsch, M.:** *Das große Buch zu UNIX.*
+
+    +     Data Becker, Düsseldorf. 1994 (1st edition).
+
+    +   - and numerous other text books
+
+    +   - **online-tutorial**
+
+    +     http://www.ee.surrey.ac.uk/Teaching/Unix
+
+
+    # 2 First steps at the computer
+
+
+    # User, logon, logoff
+
+
+    Since UNIX is a *multi-user* operating system, it can deal with several users
+    simultaneously. Each user needs a *user account*.
+
+
+    Each user has a personal environment (*home directory, shell*), which can be accessed
+    only by her/himself (and by the system administrator and those people who know
+    the password – legitimate or by hacking).
+
+
+    Inside the system the user is identified by his *user ID (UID)* and his group
+    identity (*group ID, GID*).
+
+
+    There are two user types:
+
+
+    +   - ''normal'' users with *restricted* rights and the
+
+    +   - system administrator (*root*) with all privileges. The latter is responsible
+    for the installation, configuration and maintenance of the system as well as the
+    user administration.
+
+
+    Each user has to logon and to logoff from the system (*login/logout*). Each user
+    account is protected by a *password*.
+
+
+    # Exercise:
+
+
+    *Login to the system with your user account!*'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Graphical user interface
+
+
+    Originally, UNIX is command-line oriented. The X Window System enables convenient
+    interaction via a window-oriented graphical interface, similar to other OS.
+
+
+    The *window manager* is responsible for the management and display of the individual
+    windows. Each window manager (and there are a variety of such managers) can be
+    distinguished by its own *Look and Feel* (appearance of window decorations and
+    control devices etc.). Most window managers can be choosen at the login-menu.
+
+
+    Examples for simple window managers:
+
+
+    +   - `twm`: very simple and resource-saving
+
+    +   - `mwm`: Motif window manager, more common and more advanced
+
+    +   - `xfce`: convenient, simple, and resource-saving (recommended for use in
+    virtual machines)
+
+
+    Moreover, almost all Linux distributions provide graphical *desktop environments*
+    such as **KDE** or GNOME, which have a functionality far beyond simple window
+    managers.
+
+
+    command `xterm`
+
+
+    # Syntax:
+
+
+    ```
+
+    xterm [options]
+
+    ```
+
+
+    Though there is a graphical interface, UNIX needs the possibility for direct command
+    input for practical use. Therefore, at least one terminal window needs to be open.
+    This can be accomplished via the window manager or the desktop environment (‘console’)
+
+
+    More windows can then be opened with the command `xterm`.
+
+
+    Generally, all UNIX commands have a variety of options, which usually begin with
+    `-`. For the commands which will be introduced in the following, we will provide
+    only the most important ones.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > xterm -geo 80x40 -fn 10x20
+
+    ```
+
+
+    The command xterm is called with two options -geo, -fn, which, in this case, need
+    additional arguments (width and height of window, font name & size).
+
+
+    # Exercise:
+
+
+    +   1. Open a terminal window (“terminal program”) via KDE.
+
+    +   2. From there, start another xterm!'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# command `man`
+
+
+    # Syntax:
+
+
+    ```
+
+    man command
+
+    man -k expression
+
+    ```
+
+
+    displays the manual pages ("man pages") for the provided command. man -k searches
+    for man pages containing the expression in the NAME section. A man page usually
+    consists of the following sections
+
+
+    +   - NAME command and purpose
+
+    +   - SYNOPSIS syntax of command
+
+    +   - DESCRIPTION of command effect
+
+    +   - FILES which are modified and/or needed
+
+    +   - OPTIONS if present
+
+    +   - EXAMPLE(S) for application (rarely)
+
+    +   - BUGS errors, if known
+
+    +   - SEE ALSO other commands in the same context
+
+
+    # Exercise:
+
+
+    *Display information about the command xterm!*
+
+
+    # command `passwd`
+
+
+    # Syntax:
+
+
+    ```
+
+    passwd
+
+    ```
+
+
+    sets a new password.
+
+
+    Passwords should be constructed from a combination of letters, digits and special
+    characters, and should not appear in any dictionary or similar list. Otherwise,
+    the password can be hacked by systematic search algorithms.
+
+
+    The command to set/change the password and the required conventions (length, number
+    of digits/letters/special characters) can vary from system to system. The following
+    example is a common one, e.g., valid for the workstations at the CIP Pool (but
+    not for the workstations of the USM).
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > passwd
+
+    Changing password for wegner
+
+    Old password: myoldpasswd
+
+    Enter the new password
+
+    (minimum of 5, maximum of 8 characters)
+
+    Please use a combination
+
+    of upper and lower case letters and numbers.
+
+    New password: mynewpasswd
+
+    Re-enter new password: mynewpasswd
+
+    Password changed.
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 3 File systems
+
+
+    # Logics, file types
+
+
+    > "In UNIX everything is a file."
+
+
+    The following *file-system objects* can be found
+
+
+    +   - ‘normal’ (text-) files
+
+    +   - executable files (binary files or *shell scripts*)
+
+    +   - directories
+
+    +   - device files
+
+    +   - *pipes*
+
+    +   - symbolic or hard *links* (references to files)
+
+
+    All files and file system objects are ordered within a hierarchical *file tree*
+    with exactly one *root directory* ‘/’.
+
+
+    In contrast to the MS-Windows file system, the UNIX file system does not distinguish
+    between different drives. All physical devices (hard disks, DVD, CDROM, USB, floppy)
+    are denoted by specific files inside a certain directory within the file tree
+    (usually within /dev).
+
+
+    File names consist of a sequence of letters, digits and certain special characters,
+    and must not contain *slashes* (for convenience, they should neither contain empty
+    spaces).
+
+
+    Avoid characters which might be interpreted by the *shell* in a special way.
+
+
+    A file can be referenced within the file tree by either an *absolute* or a *relative
+    path name*. An absolute path name consists of all directories leading to the file
+    and the file name, and always begins with a / (the root directory).
+
+
+    In many shells and application programs, the tilde denotes the home directory.
+
+
+    # command `pwd`
+
+
+    # Syntax:
+
+
+    ```
+
+    pwd
+
+    ```
+
+
+    displays the current directory.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > pwd
+
+    /home/wegner
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    *Display the current directory!*'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# command cd
+
+
+    # Syntax:
+
+
+    ```
+
+    cd [directory]
+
+    ```
+
+
+    Changes into the given directory, or into the home directory when no parameter
+    is provided.
+
+
+    As in MS-DOS/Windows, ".." denotes the parent and "." the current directory.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > cd /home/puls
+
+    wegner@arber:/home/puls > pwd
+
+    /home/puls
+
+    wegner@arber:/home/puls > cd ..
+
+    wegner@arber:/home > pwd
+
+    /home
+
+    wegner@arber:/home > cd
+
+    wegner@arber:~ > pwd
+
+    /home/wegner
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    *Change to the directory /usr/share/templates and back to your home directory!
+    (-> file name completion with TAB)*
+
+
+    *Check for successful change with pwd!*
+
+
+    # Search pattern for file names
+
+
+    In principle, the *shell* is a specific program which deals with the interpretation
+    of input commands. If these commands have parameters which are file names, several
+    files can be addressed simultaneously by means of a search pattern, which is *expanded*
+    by the shell. In any case, the file name expansion is performed *prior* to the
+    execution of the command.
+
+
+    | expression | meaning |
+
+    |---|---|
+
+    | * | ''almost'' arbitrary (incl. empty) string of characters |
+
+    | ? | a single ''almost'' arbitrary character |
+
+    | [...] | a range of characters |
+
+    | [!...] | a negated range of characters |
+
+
+    ''almost'' arbitrary: leading dot (e.g., hidden files, ../ etc.) excluded
+
+
+    # command ls
+
+
+    # Syntax:
+
+
+    ```
+
+    ls [-alR] [file/directory]
+
+    ```
+
+
+    displays the names (and, optionally, the properties) of files or lists the content
+    of a directory. File and directory names can be be absolute or relative.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# Important options\n\n+   -a list also files/directories which begin with\
+    \ a dot (hidden)\n+   \n+   -l long listing format. Displays permissions, user\
+    \ and group, time stamp, size, etc.\n+   \n+   -R for directories, all sub-directories\
+    \ will be displayed recursively.\n\n# Example:\n\n```\nwegner@arber:~ > ls\nhello*\
+    \ hello.cpp hello.f90 nsemail/\nwegner@arber:~ > ls -a\n./ .bash_history .netscape/\
+    \ hello.cpp\n../ .bashrc* .ssh/ hello.f90\n.Xauthority .history hello* nsemail/\n\
+    wegner@arber:~ > ls /var/X11R6\napp-defaults/ bin/ lib0 sax/\nscores/ xfine/ xkb/\n\
+    wegner@arber:~ > ls *.b*\n.bash_history .bashrc*\nwegner@arber:~ > ls [-h]*\n\
+    hello* hello.cpp hello.f90\nwegner@arber:~ > ls *.?[9]?\nhello.cpp hello.f90\n\
+    wegner@arber:~ >\n```\n\n# Exercise:\n\nList the complete content of your home\
+    \ directory!\nWhat is displayed with ls .* ?\n\n# Copy, move and delete files/directories\n\
+    \nIn addition to ls there are other commands for working with files which can\
+    \ be used together with file name patterns.\n\ncommand mkdir, rmdir\n\n# Syntax:\n\
+    \n```\nmkdir directory\nrmdir directory\n```\n\nmkdir creates an empty directory,\
+    \ rmdir deletes an empty directory.\n\n# Example:\n\n```\nwegner@arber:~ > ls\n\
+    hello* hello.cpp hello.f90 nsemail/\nwegner@arber:~ > mkdir numerik\nwegner@arber:~\
+    \ > ls\nhello* hello.cpp hello.f90 nsemail/ numerik/\nwegner@arber:~ > rmdir numerik\n\
+    wegner@arber:~ > ls\nhello* hello.cpp hello.f90 nsemail/\nwegner@arber:~ >\n```\n\
+    \n# Exercise:\n\nCreate a directory yourname.exercise within your home directory,\
+    \ where yourname is your actual name!"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# command cp
+
+
+    # Syntax:
+
+
+    ```
+
+    cp file1 file2
+
+    cp file1 [file2 ...] directory
+
+    cp -r dir1 dir2
+
+    cp -r dir1 [dir2 ...] directory
+
+    ```
+
+
+    copies files or directories. The original file/directory remains unmodified.
+
+
+    # option:
+
+
+    -r directories are copied recursively with all sub-directories.
+
+
+    # Several possibilities:
+
+
+    ```
+
+    cp file1 file2
+
+    ```
+
+
+    file1 is copied to file2. Attention: if file2 already exists, it is overwritten
+    (mostly without warning), and the original file2 is lost!!!
+
+
+    ```
+
+    cp file1 [file2 file3] dir
+
+    ```
+
+
+    If dir exists, file1 [, file2, file3] are copied into dir. If dir does not exist,
+    you get an error warning (for more than two arguments), or, for two arguments,
+    dir is interpreted as a file name and file1 is copied to a file named dir.
+
+
+    ```
+
+    cp -r dir1 dir2
+
+    ```
+
+
+    If dir2 already exists, dir1 is recursively copied into dir2. If dir2 does not
+    exist, a recursive copy of dir1 is created and named dir2.
+
+
+    ```
+
+    cp -r dir1 dir2 dir3 dir4
+
+    ```
+
+
+    If dir4 already exists, dir1, dir2, dir3 are copied into dir4. If dir4 does not
+    exist, you get an error warning, as well as for other combinations of files and
+    directories within the command.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > ls
+
+    hello* hello.cpp hello.f90 nsmail/ numerik/
+
+    wegner@arber:~ > cp hello.cpp hello2.cpp
+
+    wegner@arber:~ > ls
+
+    hello* hello.f90 nsmail/
+
+    hello.cpp hello2.cpp numerik/
+
+    wegner@arber:~ > cp hello.cpp numerik
+
+    wegner@arber:~ > ls numerik
+
+    hello.cpp
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    +   a) Check whether the directory ubung0 is present in your home directory. If
+    not, copy, via scp, the directory ubung0 from account/host numprakt@ltsp08.usm.uni-muenchen.de
+    to your home directory.
+
+
+    +   b) Copy the files from ubung0 into your directory yourname.exercise!'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# command mv
+
+
+    # Syntax:
+
+
+    ```
+
+    mv file1 file2
+
+    mv file1 [file2 ...] directory
+
+    mv dir1 dir2
+
+    mv dir1 [dir2 ...] directory
+
+    ```
+
+
+    Rename or move files or directories. Similar to cp, but original is ''destroyed''.
+    First command from above renames files, other commands move files/directories.
+    (Actually, only the pointer in the ''inode table'' is changed, but there is no
+    physical move – except if you move the file to another file system).
+
+
+    Note: no option [-r] required
+
+
+    Several possibilities, analogue to cp.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~> ls
+
+    hello*      hello.f90  nsmail/
+
+    hello.cpp   hello2.cpp numerik/
+
+    wegner@arber:~> mv hello2.cpp hello3.cpp
+
+    wegner@arber:~> ls
+
+    hello*      hello.f90  nsmail/
+
+    hello.cpp   hello3.cpp numerik/
+
+    wegner@arber:~> ls numerik
+
+    hello.cpp
+
+    wegner@arber:~> mv hello3.cpp numerik
+
+    wegner@arber:~> ls
+
+    hello*  hello.cpp  hello.f90  nsmail/  numerik/
+
+    wegner@arber:~> ls numerik
+
+    hello.cpp  hello3.cpp
+
+    wegner@arber:~>
+
+    ```
+
+
+    # Exercise:
+
+
+    +   1. Rename your directory yourname.exercise to yourname.exercise0! This will
+    be your working directory for the following exercises.
+
+    +   2. Move the file .plan from yourname.exercise0 to your home directory! Try
+    to move an arbitrary file from your home directory to the root directory. What
+    happens?'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# command rm
+
+
+    # Syntax:
+
+
+    ```
+
+    rm [-irf] file(s)/directory(ies)
+
+    ```
+
+
+    Delete files and/or directories. After deleting, the deleted files cannot be recovered!
+    Use rm only with greatest caution. E.g., the command rm -r * deletes recursively
+    (in most cases without further inquiry) the complete file tree below the current
+    directory (leaving the hidden files/directories beginning with . though).
+
+
+    # Options:
+
+
+    +   -i delete only after confirmation
+
+
+    +   -r directories will be recursively deleted (with all sub-directories)
+
+
+    +   -f force: suppress all safety inquiries.
+
+
+    Note: Varying from system to system, rm without the option -f might need a confirmation
+    or not (the latter is the standard).
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~/numerik > ls
+
+    hello.cpp  hello3.cpp
+
+    wegner@arber:~/numerik > rm -i hello3.cpp
+
+    rm: remove ‘hello3.cpp’? y
+
+    wegner@arber:~/numerik > ls
+
+    hello.cpp
+
+    wegner@arber:~/numerik >
+
+    ```
+
+
+    # File permissions/Access rights
+
+
+    The UNIX file system distinguishes between three different access rights or file
+    mode bits. (Note: actually, there are more access rights, but these are of interest
+    only for administrators.)
+
+
+    r read: permits the reading of file contents, or, for directories, the listing
+    of their content.
+
+
+    w write: permits the modification of files (incl. delete). To create or delete
+    files, the parent directory(ies) need write access as well!
+
+
+    x execute: permits the execution of binary files (commands, programs) and of shell
+    scripts from the command line. For directories, the x bit is required to change
+    into this directory and to access the files/directories inside.
+
+
+    Access rights are individually defined for
+
+
+    +   u the owner of the object
+
+
+    +   g the group to which the object belongs
+
+
+    +   o all other users
+
+
+    +   a all users (i.e., u + g + o)
+
+
+    The access rights of a file can be changed by means of the command chmod.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "command `chmod`\n\n# Syntax:\n\n```\nchmod [ugoa][+-=][rwx] file(s)/directory(ies)\n\
+    ```\n\nChange the access rights of files or directories. These rights are displayed\
+    \ by `ls -l` according to the pattern\n\n```\nuuugggooo\nrwxrwxrwx\n```\n\n# Example:\n\
+    \n```\nwegner@arber:~/numerik > ls -l\ntotal 4\n-rw-r--r-- 1 wegner stud 100 Oct\
+    \ 20 15:02 hello.cpp\nwegner@arber:~/numerik > chmod go+w hello.cpp\nwegner@arber:~/numerik\
+    \ > ls -l\ntotal 4\n-rw-rw-rw- 1 wegner stud 100 Oct 20 15:02 hello.cpp\nwegner@arber:~/numerik\
+    \ >\n```\n\n# Exercise:\n\n+   1. Remove the execution right for the directory\
+    \ `yourname.exercise0!` Try to change to the directory.\n+   \n+   2. Remove all\
+    \ rights for the file `linux.txt`! How can this be undone?\n\n# 4 Editing and\
+    \ printing text files\n\nTo modify (= edit) the content of a text file, an editor\
+    \ is needed. Within UNIX there is a variety of editors, which can be distinguished\
+    \ mostly with respect to ease of use and memory requirements.\n\n# The editor\
+    \ `vi` and `vim`\n\n`vi` is the only editor which is present on *all* UNIX systems.\
+    \ The editor `vi`\n\n+   - can be completely keyboard controlled\n+   - is extremely\
+    \ flexible\n+   - rather difficult to learn\n\n`vim` is a derivate from `vi`,\
+    \ and can be controlled also by the mouse.\n\nThose of you who enjoy a challenge\
+    \ should learn using this editor.\n\nA somewhat simpler and more convenient alternative,\
+    \ which is also implemented in (almost) all UNIX systems, is\n\n# The editor `emacs`\n\
+    \nThe editor emacs works in an own window, and can be controlled (in addition\
+    \ to keys) by menus and mouse. emacs has rather large memory requirements (no\
+    \ problem for today's computers), since this ‘editor’ can do much more than only\
+    \ editing."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Exercise:\n\n+   1. *Edit the program* `hello.f90`!\n+   \n+      Start emacs\
+    \ with emacs hello.f90 & from the command line. The ampersand, &, ensures that\
+    \ emacs runs in the background, so that you can continue your work from the command\
+    \ line, independent from the emacs window (see Section ‘Process administration’).\n\
+    +   \n+      Try to change the comments in those lines starting with !\n+   \n\
+    +   2. Split the screen with Ctrl X 2. Return to one screen with Ctrl X 1.\n+\
+    \   \n+   3. Save the file with Ctrl X Ctrl S!\n+   \n+   4. Quit emacs with Ctrl\
+    \ X Ctrl C!\n\nNote: Whenever you save a file in emacs, a backup of the previous\
+    \ version is automatically created under name file~.\n\nExamples for additional\
+    \ possibilities\n\n+   - Advanced use of man pages (e.g., searching for certain\
+    \ strings):\n+     In emacs, type Esc X man CR xterm to open the xterm man pages.\
+    \ To search for ‘terminal’, type Ctrl S terminal, and then Ctrl S for the next\
+    \ instance.\n+   \n+   - Spell checking within emacs via the the command Esc x\
+    \ ispell. Try it!\n\nTry to learn the most important key controlled commands.\
+    \ After a while, you can edit your files much faster than by using mouse and menus.\
+    \ A quick reference is provided in the appendix.\n\ncommand `cat`\n\n# Syntax:\n\
+    \n```\ncat  file\n```\n\ndisplays the content of a file on the standard output\
+    \ channel (usually the screen).\n\nAs many other UNIX commands, cat is a filter,\
+    \ which can read not only from files, but also from the standard input channel\
+    \ (usually the keyboard via the command line). Thus, cat can be used to directly\
+    \ create smaller text files. In this case, the output has to be re-directed into\
+    \ a file via >. cat then expects some input from the command line, which must\
+    \ be finished with Ctrl D.\n\n# Example:\n\n```\nwegner@arber:~ > cat > test\n\
+    This is a test.\n^D\nwegner@arber:~ > cat test\nThis is a test.\nwegner@arber:~\
+    \ > more test\nThis is a test.\nwegner@arber:~ >\n```\n\n# Exercise:\n\n+   1.\
+    \ View the file .plan!\n+   \n+   2. View the file linux.txt! Is cat a suitable\
+    \ tool?"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# command `more`
+
+
+    # Syntax:
+
+
+    ```
+
+    more file
+
+    ```
+
+
+    more permits to view also larger files page by page. Important commands within
+    more are b to scroll back and q to quit.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > more hello.f90
+
+    ```
+
+
+    # Exercise:
+
+
+    View the file linux.txt with more! Which effect do the keys CR and SPACE have?
+
+
+    # command `lpr, lpq, lprm`
+
+
+    # Syntax:
+
+
+    ```
+
+    lpr -Pprintername file
+
+    lpq -Pprintername
+
+    lprm job_id
+
+    ```
+
+
+    lpr prints a file on the printer named printername. To find out the printername,
+    ask a colleague or your administrator.
+
+
+    lpq lists all print jobs on the printer printername and provides the corresponding
+    job.ids.
+
+
+    lprm deletes the print job with id job.id from the printing queue.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > a2ps hello.f90 -o hello.ps
+
+    [hello.f90 (Fortran): 1 page on 1 sheet]
+
+    [Total: 1 page on 1 sheet] saved into the file ‘hello.ps’
+
+    wegner@arber:~ > ls
+
+    hello*  hello.f90  nsmail/  test
+
+    hello.cpp  hello.ps  numerik/
+
+    wegner@arber:~ > lpr -Plp0 hello.ps
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    Print the file linux.txt!'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'locate search expression. Lists all files and directories in the local database,
+    which correspond to the search expression. Extremely well suited to search for
+    files (if the database is frequently updated → system administrator)
+
+
+    find searches recursively for files corresponding to search expression within
+    the given path.
+
+    Example: find . -name ''*.txt'' searches recursively for all *.txt files, starting
+    within the current directory.
+
+
+    grep searches for text within given files.
+
+    Example: grep ''test'' ../*.f90 searches for the text test in all *.f90 files
+    in the parent directory.
+
+    The most important option is [-i], which forces grep to ignore any distinction
+    between upper and lower case.
+
+
+    # 5 UNIX shells
+
+
+    The shell is a service program through which the user communicates with the OS
+    and which is responsible for the interpretation of the input commands.
+
+
+    # Different UNIX shells
+
+
+    Since the shell does not directly belong to the OS, a number of different shells
+    have been developed in the course of time:
+
+
+    +   - Bourne shell (sh). A well-known and widespread shell, named after its inventor
+    Steven Bourne. An advanced derivate, the bash, Bourne again shell (note the pun)
+    is most popular under Linux.
+
+    +   - C-Shell (csh). Developed in Berkeley, and uses a more C-like syntax. An
+    improved version of the C-shell is the tcsh.
+
+    +   - Bash shell (bash). Advanced Bourne shell and standard on many systems.
+
+
+    Each shell contains a set of system variables, which can be augmented by user-defined
+    variables. This set comprises the process environment for the programs running
+    inside the shell.
+
+
+    Moreover, the shell can be used to run (system-) programs via shell scripts.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Shell scripts
+
+
+    *Shell scripts* are small programs consisting of UNIX commands and shell-specific
+    program constructs (branches, loops etc), which behave like UNIX commands but
+    are present in text form (instead of binary). These scripts are *interpreted*
+    by the shell.
+
+
+    The syntax of shell scripts differs (considerably) from shell to shell.
+
+
+    Some shell scripts are *automatically* called under certain conditions:
+
+
+    +   - `.profile` and/or `.login` are executed, if present, at login (i.e., for
+    the *login shell*), and only once.
+
+
+    +   - `.bashrc` and `.cshrc` / `.tcshrc` are called whenever a new bash or csh/tcsh
+    is opened, respectively.
+
+
+    # Exercise:
+
+
+    +   1. *Copy the file .tcshrc to your home directory and inspect the file!*
+
+
+    +   2. *Open a (new) tcsh by typing tcsh on the command line! What happens? Exit
+    the tcsh with exit!*
+
+
+    # Re-directing input and output
+
+
+    All UNIX commands use *input and output channels* to read data and to output data.
+    Usually, these are the keyboard and the screen assigned to the specific user,
+    respectively.
+
+
+    These standard channels can be redirected within the shell such that a command
+    can either read directly from a file (instead from the keyboard) and/or write
+    into a file (instead of the screen). For re-direction, use the characters `>`
+    (for output) and `<` (for input)
+
+
+    With `>>`, the output will be *appended* to an existing file. If the file does
+    not exist, this command behaves as `>`.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > ls
+
+    hello.cpp  linux.txt  numerik/
+
+    hello.f90  nsmail/
+
+    wegner@arber:~ > cat linux.txt > linux2.txt
+
+    wegner@arber:~ > ls
+
+    hello.cpp  linux.txt  nsmail/
+
+    hello.f90  linux2.txt  numerik/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Pipes
+
+
+    Furthermore, many UNIX commands act as so-called filters: They read from the standard
+    input and write to the standard output. Thus, they can be combined via so-called
+    pipes such that the output of one command acts as the input of another:
+
+
+    ![](img/7620eb00c0475a5b7427437d851a4cd6_19_0.png)
+
+
+    Pipes are constructed on the command line by using the ''|'' character between
+    commands.
+
+
+    A re-direction to a file with ''>'' or ''>>'' can be present only at the end of
+    such a chain.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > man g++ | a2ps -P printer
+
+    [Total: 151 pages on 76 sheets]
+
+    wegner@arber:~ >
+
+    ```
+
+
+    With this pipe, the man pages for g++ are formatted and printed via one command.
+
+
+    # 6 Process administration
+
+
+    A process is a running program or script and consists of
+
+
+    +   - the program/script itself and
+
+    +   - the corresponding environment, which consists of all required additional
+    information necessary to ensure a correct program flow.
+
+
+    Characteristics of a process are (among others)
+
+
+    +   - a unique process ID (PID),
+
+    +   - PID of the parent process (PPID),
+
+    +   - User and group number of the owner and
+
+    +   - priority of the process.
+
+
+    Normally, when a process has been started from a shell, the shell cannot be used
+    for other input until the end of the process. But processes and programs can also
+    be run in the background. To enable this feature, the command line which calls
+    the process/program must end with an ampersand, ''&''.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > firefox &
+
+    [1] 21749
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    Start the program xeyes in the background!'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# command `ps`\n\n# Syntax:\n\n```\nps [-al] [-u user]\n```\n\nDisplay running\
+    \ processes with their characteristics. Without options, only the user's own processes\
+    \ running in the current shell are displayed.\n\nImportant options:\n\n+   - `-a`\
+    \ display all processes assigned to any terminal (tty)\n+   - `-l` long format\
+    \ display. Additional information about owner, parent process etc.\n+   - `-u`\
+    \ display all processes which are owned by a specific user.\n\n# Example:\n\n\
+    ```\nwegner@arber:~ > ps\n  PID TTY       TIME CMD\n21733 pts/4    00:00:00 bash\n\
+    22197 pts/4    00:00:00 xterm\n22198 pts/5    00:00:00 bash\n22212 pts/4    00:00:00\
+    \ ps\nwegner@arber:~ >\n```\n\n# Exercise:\n\n*View all current processes within\
+    \ your shell!*\n\n# command `kill`\n\n# Syntax:\n\n```\nkill [-9] PID\n```\n\n\
+    Terminates the process with number PID. Can be executed only by the owner of the\
+    \ process or by *root*.\n\nImportant option:\n\n+   - `-9` for ‘obstinate’ processes\
+    \ which cannot be terminated by a normal kill.\n\n# Example:\n\n```\nwegner@arber:~\
+    \ > ps\n  PID TTY       TIME CMD\n21733 pts/4    00:00:00 bash\n22197 pts/4  \
+    \  00:00:00 xterm\n22198 pts/5    00:00:00 bash\n22212 pts/4    00:00:00 ps\n\
+    wegner@arber:~ > kill 22197\nwegner@arber:~ > ps\n  PID TTY       TIME CMD\n21733\
+    \ pts/4    00:00:00 bash\n22214 pts/4    00:00:00 ps\n[1]+  Exit 15  xterm\nwegner@arber:~\
+    \ >\n```\n\n# Exercise:\n\n*Terminate eyes via kill!*"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 7 The programming language C++: An overview
+
+
+    *Programming languages* allow to formulate certain problems or algorithms by means
+    of particular syntactic rules. Such a *program* can be ''translated'' by dedicated
+    programs (*interpreter, compiler*) into machine-readable code and then executed
+    by the computer.
+
+
+    Historically, various programming languages of different complexity have been
+    established, where this complexity was and is determined by the progress in computer
+    science/hardware and the intended application.
+
+
+    The approach for solving a certain problem can be discriminated by different programming
+    *paradigms*.
+
+
+    # Procedural and object-oriented programming
+
+
+    # Procedural programming
+
+
+    The emphasis is on the used *algorithm*. A program consists of a hierarchic dissection
+    of the problem into *functional* units.
+
+
+    Data and functions are separated, and data are publicly accessible.
+
+
+    **Programming languages:** C, Fortran77, Pascal, …
+
+
+    # Object-oriented programming
+
+
+    useful introduction:
+
+    https://www.youtube.com/watch?v=IbXsrHGhBAU
+
+
+    *User-defined types (classes)* and associated operations are introduced.
+
+
+    Thus, data and associated functions (methods) build a unit *within a class*. Data
+    are (usually) accessible only via the associated methods.
+
+
+    *Inheritance* of common properties allows to distinguish between general and special
+    attributes of the types/classes.
+
+
+    **Example:** Genealogical tree of the various classes of animals and plants, families,
+    orders, species etc.
+
+
+    Within the emerging *hierarchy*, similar functions, sharing the same interface
+    but defining a specific behaviour for each particular type/class, can be implemented
+    (*polymorphism*).
+
+
+    By this approach, an (almost) exact model of reality shall be created which reflects
+    all relevant dependencies within the program.
+
+
+    Advantages of object-oriented programming:
+
+
+    +   - better abstraction possibilities because of holistic approach.
+
+    +   - improved structure and modularity, allowing for easy maintenance of programs.
+
+    +   - reusability.
+
+
+    **Programming languages:** C++, Java, Python,…'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Essential features of C and C++
+
+
+    +   - At present, C++ is one of the most used programming languages.
+
+    +   - C++ originates from C and is a superset of C.
+
+    +   - C++ allows both for efficient, hardware-oriented programming (as already
+    C), but also for programming on a high, object-oriented abstraction level. Thus,
+    C++ is sometimes called a *hybrid* language.
+
+    +   - The OS UNIX has been completely written in C.
+
+    +   - C++ and C are standardized (by international ANSI standard).
+
+    +   - C und C++ do not comprise special functions for input and output, graphics
+    and hardware programming etc., but there are corresponding *libraries*.
+
+    +   - The *standard library* includes a comprehensive set of functions and classes
+    required for typical applications, and is installed together with each compiler.
+
+    +   - According to aficionados, C++ - programming is fun!
+
+
+    # Literature
+
+
+    +   - **Stroustrup, B.**: *The C++ Programming Language: Special Edition*, Addison-Wesley
+    Longman, Amsterdam, 2000.
+
+    +   - **Kernighan, B., Ritchie, D.**: *The C Programming Language*, Prentice Hall,
+    1988 (2nd ed.).
+
+    +   - **Meyers, S.**: *Effective C++: 55 Specific Ways to Improve Your Programs
+    and Designs*, Addison-Wesley, München, 2005 (3rd ed.).
+
+    +   - **Josuttis, N.**: *The C++ Standard Library: A Tutorial and Reference*,
+    Addison-Wesley Longman, Amsterdam, 1999.
+
+    +   - **Booch, G., Maksimchuk, R. A., Engle, W. et al.**: *Object Oriented Analysis
+    and Design with Applications*, Addison-Wesley Longman, Amsterdam, 2007 (3rd ed.).
+
+
+    The C++ Standard (INCITS/ISO/IEC 14882-2003) can be downloaded via [http://www.ansi.org](http://www.ansi.org)
+    (≈ 30$).'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# Online resources\n\nWWW\n\n+   - **C++ tutorial**  \n+     http://www.cplusplus.com/doc/tutorial\n\
+    +   \n+   - **Bjarne Stroustrup’s homepage** (author of the C++ programming language)\
+    \  \n+     http://www2.research.att.com/~bs\n+   \n+   - **C++ FAQs**  \n+   \
+    \  http://www.parashift.com/c++-faq-lite\n\nNewsgroups\n\n+   - `comp.lang.c++.moderated`\
+    \  \n+     General C++ discussion forum.\n+   \n+   - `comp.std.c++`  \n+    \
+    \ Discussions related to the C++ standard.\n\n# 8 Fortran 90/95: An overview\n\
+    \n# Brief history\n\n+   - introduced 1954.\n+   \n+   - continued by Fortran\
+    \ II, Fortran IV, Fortran66, *Fortran77* (still in use).\n+   \n+   - Fortran\
+    \ 90, since 1991 ISO, since 1992 ANSI standard.\n+   \n+   - Fortran 95, since\
+    \ 1996/97 ISO/ANSI standard.\n+   \n+   - meanwhile Fortran 2000 and Fortran 2003\
+    \ (latest standard).\n+   \n+   - F95 and Fortran 2000 include relatively minor\
+    \ revisions of F90.\n+   \n+   - Fortran 2003 is a major revision, supporting\
+    \ (among other features) object-oriented programming (inheritance, polymorphism).\n\
+    +   \n+   - Fortran 2008 under development.\n+   \n+   - most current compilers\
+    \ for F90/95, but Fortran 2003 standard (almost) reached with newest version of\
+    \ Intel *Fortran* compiler, v11."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# Important features\n\n+   - Fortran was *and is* the most used language for\
+    \ solving physical problems, particularly numerical simulations.\n+   - The introduction\
+    \ of F90/95 allowed for similar features as in C/C++, except for the hardware-orientation.\
+    \ With Fortran 2003, even object-oriented programming became possible.\n+   -\
+    \ The capabilities of F90 are rather large and there are numerous *standard* operations\
+    \ and functions. E.g., vector- and matrix-operations belong to the standard:\n\
+    +   \n+     $$a = b + c$$\n+   \n+     can mean scalar, vector or matrix addition,\
+    \ depending on the definition of $a,b,c$. Vector- and matrix products can be calculated\
+    \ by likewise simple instructions (*fast execution*),\n+   \n+     $$a = \\text{dot\\\
+    _product}(b,c);\\qquad a = \\text{matmul}(b,c).$$\n+   - There are comprehensive\
+    \ program libraries, particularly for Linear Algebra and eigenvalue-problems (available\
+    \ both as source codes or highly optimized binary objects), e.g., `BLAS`, `LAPACK`,\
+    \ `EISPACK`.\n+   - Optimized programs (more-D, parallel) execute mostly faster\
+    \ than corresponding C++ programs (factor 2 to 3).\n\n+   - *Simple* possibility\
+    \ for parallelization via HPF (high performance Fortran).\n+   - The basic structures\
+    \ are very simple, and the language can be learned more easily than C++ (at least\
+    \ regarding the basic concepts).\n+   - Until the next couple of years, Fortran\
+    \ needs to be known by any physicist who is not solely interested in purely experimental/observational\
+    \ or purely theoretical work.\n+   \n+     Examples for physical research areas\
+    \ which use (almost) exclusively Fortran: Aero-/hydro-dynamics, computational\
+    \ astrophysics, atomic and nuclear physics, geophysics, meteorology.\n+   - Programming\
+    \ in Fortran is fast!"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# Literature\n\n+   - **Reference manuals**\n+     - Gehrke, W.: *Fortran90\
+    \ Reference-Handbuch*, 1991, Hanser, München, ISBN 3446163212.\n+     - *‘Fortran\
+    \ 90’*, RRZN (available at the LRZ).\n+   - **Text books**\n+     - Adams, J.C.,\
+    \ et al.: *Fortran 2003 Handbook: The Complete Syntax, Features and Procedures*,\
+    \ Springer, Berlin, 2008, ISBN 184623787.\n+     - Metcalf, M., et al.: *Fortran\
+    \ 95/2003 explained*, Oxford Univ. Press, 2004, ISBN 0198526938 (paperback).\n\
+    \n# Online resources\n\n+   - Online-Tutorial at Univ. Liverpool  \n+     http://www.liv.ac.uk/HPC/HTMLFrontPageF90.html\n\
+    +   - German Fortran Website  \n+     http://www.fortran.de\n+   - Metcalf’s Fortran\
+    \ Information  \n+     http://www.fortran.com/metcalf\n+   - Michel Olagnon’s\
+    \ Fortran 90 List  \n+     http://www.fortran-2000.com/MichelList\n\n# 9 Creating\
+    \ executable programs\n\n# Three subsequent phases\n\nDuring the generation of\
+    \ executable programs from C++ or Fortran source files, always the same steps\
+    \ have to be performed (also for other higher programming languages such as Basic\
+    \ or Pascal).\n\n![](img/7620eb00c0475a5b7427437d851a4cd6_25_0.png)\n\nThe *pre-processor*\
+    \ replaces symbolic constants and macros and inserts additional files, if required.\
+    \ Usually omitted for Fortran programs.\n\nThe *compiler* ‘translates’ the source\
+    \ code to machine readable code, creating the object files.\n\nThe *linker* binds\
+    \ all present object files (and, optionally, object files from libraries) to the\
+    \ executable program (executable object)."
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# command g++
+
+
+    # Syntax:
+
+
+    ```
+
+    g++ [-c] [-g] [-O] file.cpp [-o outfile]
+
+    ```
+
+
+    We suggest using the GNU C++ compiler, which is included in almost any Linux distribution.
+    The linker is already included, but can be called separately.
+
+
+    # Important options:
+
+
+    +   -o the name of the executable object (program). Default ‘a.out’.
+
+
+    +   -c compile only, do not link.
+
+
+    +   -g include debug information. Necessary for later debugging. Increases the
+    size and execution time of the program.
+
+
+    +   -O optimization (default: intermediate optimization)
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > g++ hello.cpp
+
+    wegner@arber:~ > ./a.out
+
+    Hello, world!
+
+    wegner@arber:~ > g++ hello.cpp -o hello
+
+    wegner@arber:~ > ./hello
+
+    Hello, world!
+
+    ```
+
+
+    The character ./ in front of a.out and hello is usually required to tell the shell
+    that the executable program is located within the current directory.
+
+
+    Now in two steps: compile at first, then link
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > g++ -c hello.cpp
+
+    wegner@arber:~ > g++ hello.o -o hello
+
+    ```
+
+
+    If more than one source file is present (e.g., if each sub-program is contained
+    in a separate source file), one can avoid unnecessary compilations and a lot of
+    command-line typing by using so-called makefiles, which allow updating executable
+    programs using just one command. For further info, google for makefile and/or
+    contact your supervisor.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'command ifort, gfortran
+
+
+    # Syntax:
+
+
+    ```
+
+    ifort [-c -g -O] file.f90 [-o outputfile]
+
+    gfortran [-c -g -O] file.f90 [-o outputfile]
+
+    ```
+
+
+    Within the GNU open source project, a GNU Fortran 95 compiler is available under
+    the command gfortran (if implemented and installed within your Linux distribution/system).
+    Since this compiler (in its final stage) is quite new and has not been tested
+    thoroughly at our institute, we recommend to use the Intel Fortran 95 compiler
+    ifort when possible (installed, e.g., at the workstations of the USM. Sometimes,
+    you need to invoke the command module load fortran to make the compiler available).
+
+
+    Note that both compilers comply with the F95 standard (ifort v11 and later additionally
+    supports most Fortran 2000/2003 features), and that gfortran does not support
+    16-byte reals, in contrast to ifort.
+
+
+    When you have no possibility to use ifort (e.g., when working at home without
+    connection to the the USM), use gfortran, which has identical or similar options
+    as ifort. gfortran is also available as an MS-Windows binary.
+
+
+    If you want to debug your code with the GNU debugger ddd or gdb (next topic),
+    we suggest to use gfortran. (ifort v12 and later works in most cases as well).
+
+
+    In both compilers, the linker is included again, but can be called separately.
+
+
+    # Important options for ifort and gfortran:
+
+
+    +   -o the name of the executable object (program).
+
+    +     Default ‘a.out’.
+
+
+    +   -c compile only, do not link
+
+
+    +   -g include debug information (see g++)
+
+
+    +   -O optimization (default: intermediate optimization)
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:~ > ifort hello.f90 -o hello
+
+    wegner@arber:~ > ./hello
+
+    Hello, world!
+
+    wegner@arber:~ >
+
+    ```
+
+
+    # Exercise:
+
+
+    +   1. Compile the Fortran version of HelloWorld with ifort und start the program!
+
+
+    +   2. Compile the program with gfortran using the option -c und link in a second
+    step via gfortran hello.o!'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Debugging
+
+
+    After you have successfully compiled and linked your program, it can be started
+    from the shell by giving its name as command (a.out or ownname when compiled with
+    -o ownname). This does not mean, however, that
+
+
+    +   1. your programm runs successfully to its end,
+
+    +   2. it complies with your intentions.
+
+
+    If some run-time error occurs, you have to debug the program. You can do this
+    either manually (by printing out certain intermediate results and test statements),
+    or you use a so-called debugger. Such a tool allows, e.g.,
+
+
+    +   - to execute the statements stepwise
+
+    +   - to view the current content of the variables
+
+    +   - to stop the program at so-called breakpoints defined by yourself.
+
+
+    An open source and window-oriented debugger available under Linux is ddd (Data
+    Display Debugger), which works for C++ und Fortran programs (at least those compiled
+    with g++ and gfortran, respectively, and with option -g).
+
+
+    The debugger is simply called via
+
+
+    ```
+
+    ddd program_name
+
+    ```
+
+
+    where program_name is the name of the executable object (e.g., a.out).
+
+
+    The core of ddd (which actually provides the window interface ‘only’) is the debugger
+    gdb, which can be alternatively used alone to debug the program (from the console).
+    It is called via
+
+
+    ```
+
+    gdb program_name
+
+    ```
+
+
+    but needs some knowledge of the involved commands.
+
+
+    Remember: To debug a program, it has to be compiled with the option -g in order
+    to include the required debug information.
+
+
+    # Example:
+
+
+    ```
+
+    wegner@arber:> gfortran -g hello.f90 -o fhello
+
+    wegner@arber:> ddd fhello
+
+    GNU DDD 3.3.11 (x86_64-suse-linux-gnu),
+
+    by Dorothea Luetkehaus and Andreas Zeller.
+
+    ...
+
+    (gdb)
+
+    ```
+
+
+    # Exercise:
+
+
+    +   1. Compile the program p1.f90 and run it. Re-compile with the option -g!
+
+    +   2. Start ddd for the executable object. Become acquainted with the most important
+    entries (Run, Step, Next, ...) in the control panel und buttons (Break, Print)
+    in the menu bar.'
+  merge: -1
+  img_proc: true
