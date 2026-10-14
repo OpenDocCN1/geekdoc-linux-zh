@@ -1,0 +1,269 @@
+
+base 标识此索引包含树中节点的基础值。
+
++   * 树结构索引
+
+索引：`treeID.nodeID`
+
+示例：`Tree_InternalArray(tree0.1)`
+
+* 此节点在创建节点时设置，用于内部过程以确认句柄（handle）引用了有效节点。它不包含任何有用数据。
+
+`treeID` 树的标识符
+
+`nodeID` 节点标识符
+
+索引：`treeID.nodeID.children`
+
+示例：`Tree_InternalArray(tree0.1.children)`
+
+* 此索引包含由 `treeID.nodeID` 标识的节点的子句柄列表
+
+`treeID` 树的标识符
+
+`nodeID` 节点标识符
+
+`children` 表示此索引为子列表。
+
+索引：`treeID.nodeID.parent`
+
+示例：`Tree_InternalArray(tree0.1.parent)`
+
+* 此索引包含由 `treeID.nodeID` 标识的节点的父句柄
+
+`treeID` 树的标识符
+
+`nodeID` 节点标识符
+
+`parent` 表示此索引为父句柄。
+
++   * 键/值数据索引
+
+索引：`treeID.nodeID.node.Key`
+
+示例：`Tree_InternalArray(tree0.1.node.Key1)`
+
+## 5.4 Tcl 中的树
+
++   * 这些索引允许节点作为容器对象。脚本可以在由树/节点标识符和 Key 指定的索引中存储任意数据，稍后可以使用节点和 Key 标识符检索该数据。
+
+`treeID` 树的标识符
+
+`nodeID` 节点标识符
+
+`node` 一个标记，表示此键/数据对与某个特定节点关联，而不是整棵树。
+
+`Key` 键/值数据对的键。数据存储在由此索引引用的关联数组变量中。
+
+**索引：** `treeID.`
+
+**示例：** `Tree_InternalArray(tree0.tree.treeKey1)`
+
++   * 这些索引将数据附加到树，而不是单个节点。可以使用任何节点句柄和 Key 检索数据。
+
+`treeID` 树的标识符
+
+`nodeID` 节点标识符
+
+`tree` 一个标记，表示此键/数据对与整棵树关联，而不仅仅是一个节点。
+
+`Key` 键/值数据对的键。数据存储在由此索引引用的关联数组变量中。
+
+该包包含几个可以从用户脚本访问的过程（`procs`），以及几个仅供树包过程使用的内部过程。
+
+Scriptics 和 Sun Microsystems 的 *Tcl 风格指南*建议，您打算在包内部使用的过程名称应大写字母开头，而供外部使用的过程以小写字母开头。它还建议包中的所有入口都以可识别的字符串开头，以避免在需要加载多个包时发生名称冲突。
+
+为此包提供程序接口的过程都以 `tree` 开头。内部变量和过程以单词 `Tree` 开头。
+
+此包实现的命令有：
+
+**语法：** `treeCreate`
+
+`treeCreate` 创建一个新的空树并返回根节点的句柄。
+
+**语法：** `treeCreateChild parent`
+
+`treeCreateChild` 创建一个新节点并将其附加到给定的父节点上。返回新节点的句柄。
+
+`parent` 要附加到新子节点的父节点句柄。
+
+**语法：** `treeGetChildList parent`
+
+`treeGetChildList` 返回附加到父节点的所有子节点列表，如果父节点没有子节点，则返回空列表。
+
+`parent` 父节点的句柄。
+
+**语法：** `treeGetParent node`
+
+`treeGetParent` 如果节点有父节点，则返回节点的父节点。
+
+`node` 节点的句柄。
+
+**语法：** `treeSetNodeValue node Key Value`
+
+`treeSetNodeValue` 在节点中设置一个键/值对。
+
+`node` 节点的句柄。
+
+`Key` 该数据的标识符。
+
+`Value` 该数据的值。
+
+**语法：** `treeGetNodeValue node Key`
+
+`treeGetValue` 返回此节点中与 Key 关联的值。
+
+`node` 节点的句柄。
+
+`Key` 该数据的标识符。
+
+## 5.4 Tcl 中的树
+
+语法： `treeSetTreeValue anyNode Key Value`
+
+`treeSetTreeValue`
+
+在整棵树中设置一个键/值对。
+
+`anyNode`
+
+树中任何节点的句柄。
+
+`Key`
+
+该数据的标识符。
+
+`Value`
+
+该数据的值。
+
+语法： `treeGetTreeValue anyNode Key`
+
+`treeGetNodeValue`
+
+返回此树中与 Key 关联的值。
+
+`anyNode`
+
+此树中任何节点的句柄。
+
+`Key`
+
+该数据的标识符。
+
+这里有一个展示树使用的示例：
+
+示例 5.4.2-1
+
+# 示例脚本
+
+```
+# 加载定义了过程和
+# Tree_InternalArray 的脚本文件
+source tree.tcl
+```
+
+```
+# 创建一个树。返回根节点。
+set root [treeCreate]
+```
+
+```
+# 为根节点的 Key "displayText" 附加一些数据
+treeSetroot displayText "We can see"
+```
+
+```
+# 创建一个附加到根节点的子节点
+# 并在子节点的 "displayText" 键上附加一些数据
+```
+
+```cl
+set child1 [treeCreateChild $root]
+treeSetNodeValue child1 displayText "the forest for",
+```
+
+```cl
+# 创建另一个附加到根节点的子节点
+# 并在子节点的 "displayText" 键上附加一些数据
+```
+
+```cl
+set child2 [treeCreateChild $root]
+treeSetNodeValue child2 displayText "the forest for",
+```
+
+```cl
+# 创建第三个附加到根节点的子节点
+# 并在子节点的 "displayText" 键上附加一些数据
+```
+
+```cl
+set child3 [treeCreateChild $root]
+treeSetNodeValue child3 displayText "the forest for",
+```
+
+# 创建另一个附加到根节点的子节点
+
+# 并在子节点的 "displayText" 键上附加一些数据
+
+## 5.5 Tree 包实现
+
+### 示例
+
+```cl
+TreeGetNameParts tree1.2 treeName nodeID
+puts "Tree Name is: $treeName. Node ID is: $nodeID"
+```
+
+# 输出
+
+Tree Name is: tree1. Node ID is: 2
+
+### 5.5.2 创建新树
+
+此包中创建新树的命令是 `treeCreate`。它会增加 `Tree_InternalArray(base)` 中的计数器，创建新的树名，并将 `Tree_InternalArray(treeName.base)` 计数器设置为 0（这是节点 ID 数字的起始值）。操作完成后，会创建一个新节点作为该树的顶级节点，并返回新节点的句柄。
+
+### 示例 5.5.2-1
+
+```cl
+TreeGetNameParts
+proc treeCreate {} {
+    global Tree_InternalArray
+
+    # 为此树创建唯一名称。
+
+    set primaryName "tree$Tree_InternalArray(base)"
+    incr Tree_InternalArray(base)
+
+    # 不能有两个同名的树。
+    # 这种情况永远不应该发生，但以防万一...
+
+    if {[array name Tree_InternalArray $primaryName.base] != ""} {
+        error "$primaryName already exists"
+    }
+
+    # 设置此树中节点的初始唯一 ID。
+    #
+    set Tree_InternalArray($primaryName.base) 0
+    #
+    # 创建根节点
+    set rootNode [TreeCreateNode $primaryName.base]
+
+    #
+    # 看起来不错，发布吧！
+    #
+    return $rootNode
+}
+```
+
+```cl
+set tree [treeCreate ]
+puts "The root node for this tree is: $tree"
+```
+
+# 输出
+
+The root node for this tree is: tree0.1
+
+### 5.5.3 创建新子节点
