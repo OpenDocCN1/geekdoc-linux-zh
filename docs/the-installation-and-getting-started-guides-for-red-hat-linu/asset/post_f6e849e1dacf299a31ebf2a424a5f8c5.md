@@ -1,0 +1,35 @@
+
+completed. Everyone should review the Red Hat Linux Getting Started Guide for more information on available Linux documentation as well as using Red Hat Linux 6.0 to its full potential. While many people will find the resources described in the Getting Started Guide to be very helpful, people who are just starting to use Linux will likely need additional information. The information that will be most helpful to you depends on your level of Linux expertise:
+
+New To Linux — If this is your first time using Linux (or any Linux-like operating system, for that matter), you'll need solid introductory information on basic UNIX concepts. For example, O'Reilly and Associates (http://www.ora.com/) produce a wide variety of Linux and UNIX-related books. Give their more general titles a try.
+
+Some Linux Experience — If you've used other Linux distributions (or a Linux-like operating system), you'll probably find what you're looking for in some of the more in-depth reference material available. For example, O'Reilly's more specialized titles are valuable when you need a lot of information on a particular subject.
+
+Old Timer — If you're a long-time Red Hat Linux user, you probably don't need us telling you what documentation to read. Thanks for reading this far!
+
+## The Red Hat Linux 6.0 Components
+
+The Red Hat Linux 6.0 set that you are currently learning about contains the one volume manual that includes the Red Hat Linux 6.0 Getting Started Guide and the Red Hat Linux 6.0 Installation Guide as well as 2 CD-ROMs
+
+## Installation Guide
+
+The Red Hat Linux Installation Guide is what you're currently reading. It contains the information necessary to install Red Hat Linux. In addition, it contains information about aspects of the operating system that are unique to Red Hat Linux.
+
+## Red Hat Linux Getting Started Guide
+
+The Red Hat Linux Getting Started Guide contains information on what to do after the installation has taken place. It will be referred to on many occasions in this text. We believe it is both well written and informative, and will guide you through the necessary steps of actually using your system once the install is in place. The Red Hat Linux Getting Started Guide covers topics ranging from learning the basics of your system, to navigating your system, to Gnome.
+
+## CDs 1 and 2
+
+These two Compact Discs contain the entire Red Hat Linux distribution, including source code. CD 1 contains all the binary packages built for your Intel computer. CD 2 contains the source packages that were used to build the binary packages on CD 1.
+
+## Boot Diskette
+
+This diskette is used to start the installation process for Red Hat Linux/Intel. Depending on your computer's configuration and the type of installation you select, you may or may not need the boot diskette. In addition, you may require a support diskette, again depending on your system's hardware configuration, and the installation method you choose. When we discuss the different installation methods later in this chapter, we'll explain which diskettes are needed for each type of installation, and give you instructions for producing any diskettes you require.
+
+## Checking for Updated Diskette Images
+
+From time to time, we find that the installation may fail, and that a revised diskette image is required in order for the installation to work properly. In these cases, we make special images available via the Red Hat Linux Errata. Since this is a relatively rare occurrence, you will in general save time if you try to use the standard diskette images first, and then review the Errata only if you experience any problems completing the installation. There are two ways to review the Errata:
+
+- 1 World Wide Web — By pointing your web browser at http://www.redhat.com/errata, you can read the Errata on-line, and download diskette images easily.
+- 2 Electronic Mail — By sending an empty mail message to errata@redhat.com, you will receive a mail message containing the complete Errata. Also included

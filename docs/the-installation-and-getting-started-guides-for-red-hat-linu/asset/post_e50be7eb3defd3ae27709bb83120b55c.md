@@ -1,0 +1,48 @@
+
+on files in the GNOME File Manager.
+
+- **Find File** - Find File brings up a dialog which allows you to search for particular files on your system.
+
+- **Edit mime types** - This option will launch the GNOME Control Center Capplet that allows you to edit Mime Types for GNOME. Mime types determine, among other things, what application will handle particular file types. You can read more about mime types in the section called GNOME Mime Types in Chapter 10.
+
+- **Run Command** - This menu item allows you to run a command from GMC.
+
+- **Run Command in panel** - This menu item lets you run preloaded commands or commands you specify within the directory that you are currently in. Such commands might be to find SUID or SGID programs, etc.
+
+- **Exit** - This will allow you to exit out of the GNOME File Manager.
+
+**IMPORTANT:** This will exit all GNOME File Manager processes which include the GNOME Desktop. If you exit you will lose all functionality on your desktop. This option is not recommended.
+
+## A Drag and Drop Tour of GNOME
+
+There are many tips and tricks to the Desktop in GNOME. The Drag and Drop functionality extends to many areas of GNOME making it easy to interconnect GNOME in many interesting ways. Below is a series of tips and tricks to using GNOME Drag and Drop. This is a good tour of GNOME and will show you how to utilize GNOME to its fullest extent.
+
+- **Drag a Color onto the Panel** - Whenever you have a color selector displayed you may drag a color from the selected color bar to the Panel and it will change the Panel to that color.
+
+- **Drag a Pixmap to the Background Selector** - If you would like to change the background to an image, you can drag that image from your GNOME File Manager to the Monitor Image in the Background Capplet of the Control Center and it will change to that image.
+
+- **Drag to an Application** - Many GNOME-compliant applications will accept drag and drop. If you would like to open a file in Gnumeric, a GNOME compliant spreadsheet application, you may simply drag the file from the GNOME File Manager onto Gnumeric and it will open the file. The same is true for applications built using Motif. You may drag a saved URL onto Netscape 4x and it will open the URL. This can be very useful if you are working within the GNOME File Manager and wish to quickly open a file.
+
+- **Adding an Application Launcher to the Panel** - If you would like to add an application launcher to the Panel you may drag and drop any executable file from the GNOME File Manager, or the Desktop, onto the Panel. This will display the Create Launcher applet dialog box which will allow you to select a name and an icon for that launcher.
+
+- **Dragging Files** - There are many ways to use drag and drop to help you manage your system. You can open two GNOME File Manager windows to two different directories then drag files between the two windows to copy, move, or link files. You can drag files from the File Manager to the desktop to make it more accessible. Use the middle mouse button or the right and left mouse buttons together and Drag a directory folder to the desktop. Choose the link option from the pop-up menu to make a link to the desktop. This will give you a quick way to launch the File Manager to that directory.
+
+- **Dragging Directories** - You can drag a directory out of the GNOME File Manager and place it on the Panel. This will create a new menu which allows you easy access to the files in that directory.
+
+You may drag any sub menu from the Main Menu to the panel and a new menu launcher is added to the panel. This allows easier access to that subset of menus.
+
+## 8 Configuring the Panel
+
+### Introduction
+
+The GNOME Panel is highly configurable and comes equipped with many graphical tools to help you do the configuration. In this section you will learn how to configure any GNOME Panel the way you would like it.
+
+### Global Panel Properties
+
+To start configuring the GNOME panel right click on the panel and select the Global Properties menu item. You may also press the Main Menu button and select the Panel | Global Properties menu item.
+
+This will bring the Global Panel Configuration dialog up. With this dialog you can set the global properties for all panels you use now and any panels you add in the future.
+
+![](img/46f4935125ba89e12897afbe9d77a097_600_0.png)
+
+Figure 8-1: The Global Panel Configuration Dialog

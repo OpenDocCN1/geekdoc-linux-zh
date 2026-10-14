@@ -1,0 +1,18 @@
+# The Getting Started Guide for Red Hat Linux 6.0
+
+The Global Panel Configuration Dialog contains six tabs which help you configure the global properties of the GNOME Panel: Animation, Launcher Icon, Drawer Icon, Menu Icon, and Miscellaneous. Each of these tabs is explained below.
+
+# Animation Tab
+
++   - **Enable animations** - This allows the animations configurable on this tab to be visible. The animations must be enabled to use the other features of this tab. The default position is on.
++   - **Auto-Hide Animation Speed** - If you have the panel hiding automatically this will control how fast it occurs.
++   - **Explicit-Hide Animation Speed** - This controls the hide speed when you press the Panel's Hide Button.
++   - **Drawer Animation Speed** - If you use a Drawer panel this will control how fast the drawer menu will raise.
++   - **Auto-Hide Minimize Delay(ms)** - If you have the Panel set to minimize automatically this will allow you to control how much time passes before it minimizes. The Panel will start the time count once the mouse is no longer over it. This time is measured in milliseconds. The panel will appear again when the mouse is passed over the area it occupied before it was minimized.
++   - **Auto-Hide Minimized Size(pixels)** - If you have the Panel hiding automatically this determines the number of pixels that will show while the Panel is minimized.
+
+# Launcher icon Tab
+
++   - **Tiles enabled** - This checkbox will enable background tiles for all icons on the Panel.
++   - **Tile filename (up)** - This is the name and path of the image file you wish to use for the tile in the up position (inactive, not pressed). You may press the Browse button to search for the file. Tiles must be enabled to access this option.
++   - **Tile filename (down)** - This is the name and path of the image file you wish to use for the tile in the down position (active, pressed). You may press the Browse button to search for the file. Tiles must be enabled to access this option.

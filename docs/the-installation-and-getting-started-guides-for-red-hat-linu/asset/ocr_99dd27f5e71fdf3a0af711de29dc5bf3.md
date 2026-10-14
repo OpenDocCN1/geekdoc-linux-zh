@@ -1,0 +1,7 @@
+Whether tooltips are enabled when your mouse is over the buttons.
+
++   - **Keybindings Tab** - In this tab you can change the keybindings associated with the GNOME CD Player. These keybindings allow you to use the Player without using your mouse. If you want to change one of the bindings select it with your mouse and type the new key in the **Click here to change** text box. Press Apply to save the changes
+
++   - **CDDB Settings Tab** - CDDB stands for CD Database and is a huge global database of CD information. Each CD has an identity which the CD Player can read. If you are connected to the Internet it will then search a CDDB server for that CD identity and return any information it has on it. This usually includes CD Title, Artist, and Track Titles. It can also include notes and lyric information. Once retrieved the GNOME CD Player will store the information on your hard drive for future access. In the CDDB Settings tab you can change the CDDB server and edit your local CDDB database. You can read more about CDDB by visiting the CDDB Website (http://www.dcdb.org).
+
+Another feature in the GNOME CD Player is the Track Editor. The track editor can be launched by the Track Editor button on the main GNOME CD Player window. The Track Editor allows you to edit the CD track information in case it is incorrect or there was no CDDB entry for your CD. You may also check the status of the CDDB information by pressing the CDDB Status button at the bottom of the Track Editor. This will show you what messages, if any, were returned from the CDDB server.

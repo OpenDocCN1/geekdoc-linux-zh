@@ -2110,6 +2110,7 @@
 +   [脑理论与神经网络手册：第二版](docs/the-handbook-of-brain-theory-and-neural-networks-second-edit/README.md)
 +   [纳米技术手册：商业、政策与知识产权法](docs/the-handbook-of-nanotechnology-business-policy-and-intellect/README.md)
 +   [HP-UX 11.x 系统管理手册与工具包（第2版）](docs/the-hp-ux-11x-system-administration-handbook-and-toolkit-2nd/README.md)
++   [Red Hat Linux 6.0 的安装和入门指南（Linux 资源系列）](docs/the-installation-and-getting-started-guides-for-red-hat-linu/README.md)
 +   [互联网边缘：网络世界的社会、技术与法律挑战](docs/the-internet-edge-social-technical-and-legal-challenges-for-/README.md)
 +   [Linux 的乐趣：开源美食指南](docs/the-joy-of-linux-a-gourmet-guide-to-open-source/README.md)
 +   [KCNA Book：Kubernetes 与云原生认证指南指南](docs/the-kcna-book-kubernetes-and-cloud-native-associate/README.md)

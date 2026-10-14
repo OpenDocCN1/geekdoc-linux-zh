@@ -1,0 +1,1 @@
+In the lower left corner of the Week View there is a small month calendar. You may change the month or year of the small month calendar by pressing the forward and backward arrows on the top. You may use the small month calendar to navigate the days as well. Double clicking on any day in the small month calendar will move the current week view to that particular week.

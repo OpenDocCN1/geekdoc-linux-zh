@@ -1,0 +1,30 @@
+Copyright © 1999 Red Hat Software, Inc.
+
+Red Hat is a registered trademark and the Red Hat Shadow Man logo, RPM, the RPM logo, and Glint are trademarks of Red Hat Software, Inc.
+
+Linux is a registered trademark of Linus Torvalds.
+
+Motif and UNIX are registered trademarks of The Open Group.
+
+Alpha is a trademark of Digital Equipment Corporation.
+
+SPARC is a registered trademark of SPARC International, Inc. Products bearing the SPARC trademarks are based on an architecture developed by Sun Microsystems, Inc.
+
+Netscape is a registered trademark of Netscape Communications Corporation in the United States and other countries.
+
+Windows is a registered trademark of Microsoft Corporation.
+
+All other trademarks and copyrights referred to are the property of their respective owners.
+
+Red Hat Software, Inc.
+2600 Meridian Parkway
+Durham, NC 27713
+P. O. Box 13588
+Research Triangle Park, NC 27709
+(919) 547-0012
+redhat@redhat.com
+http://www.redhat.com
+
+While every precaution has been taken in the preparation of this book, the publisher assumes no responsibility for errors or omissions, or for damages resulting from the use of the information contained herein.
+
+The Official Red Hat Linux Getting Started Guide may be reproduced and distributed in whole or in part, in any medium, physical or electronic, so long as this copyright notice remains intact and unchanged on all copies. Commercial redistribution is permitted and encouraged, but you may not redistribute it, in whole or in part, under terms more restrictive than those under which you received it.

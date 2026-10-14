@@ -1,0 +1,35 @@
+```
+install=/boot/boot.b
+prompt
+timeout=100
+image=/boot/vmlinuz
+  label=linux
+  root=/dev/hda1
+  read-only
+```
+
+Now you must update /etc/lilo.conf. If you built a new initrd image you must tell LILO to use it. In this example of /etc/lilo.conf we have added four lines in the middle of the file to indicate another kernel to boot from. We have renamed /boot/vmlinuz to /boot/vmlinuz.old and changed its label to old. We have also added an initrd line for the new kernel:
+
+```
+boot=/dev/hda
+map=/boot/map
+install=/boot/boot.b
+prompt
+timeout=100
+image=/boot/vmlinuz
+  label=linux
+  initrd=/boot/initrd
+  root=/dev/hda1
+  read-only
+image=/boot/vmlinuz.old
+  label=old
+  root=/dev/hda1
+  read-only
+```
+
+Now when the system boots and you press [Tab] at the LILO boot: prompt two choices will be shown;
+
+```
+LILO boot:
+linux old
+```
