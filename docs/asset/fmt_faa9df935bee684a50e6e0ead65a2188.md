@@ -1,0 +1,18 @@
+
+Thanks also are due to the regulars on the Webmin users' and Webmin developers' mailing lists. Many patient individuals helped me learn the ropes of Webmin long ago. The fine users of Webmin have continued to provide support and assistance to me throughout the writing of this book by spotting the problems and complaining loudly. It is surely a better book because of the criticisms of every person who sent emails detailing my failings. It could be said that this book has been continuously edited by the Webmin community from the day of its first publication on the web. Of particular note for sharing their in-depth knowledge of Webmin, Perl, and Linux systems in general, are Ryan W. Maple and Tim Niemuller.
+
+Much thanks are also due to members of the docbook-apps mailing list, where all of my SGML and DocBook questions were answered. The book would not be as nice to look at or read without the guidance of the kind individuals there. In particular, Norman Walsh deserves praise for his modular DocBook stylesheets and the prompt attention to my questions regarding them, and Sebastian Rahz is due thanks for his JadeTeX and PDFjadeTeX macro package, as well as the great work he does in helping to compile the TeXLive CD, all of which were instrumental in producing the HTML, PostScript, and PDF variants of the book. There seems to be a small revolution in the world of open tools for publishing, and the folks involved in making all of these technologies possible are due my highest praise and appreciation. I couldn't have prepared a book for publication without their hard work on PDFLaTeX, Jade and OpenJade, teTeX, and probably others that I don't even realize are involved in the process. My next book will be in XML DocBook, so I'm hopeful they will still be around to help me through the process.
+
+Finally, the screenshots within this text have been made using the Swell Technology Webmin theme. The icons in this theme were created primarily by me, but with early assistance and guidance by Youngjin Hahn (aka Artwiz), a very talented young artist who is perhaps best known for his excellent icon and themes work at Themes.org [http://www.themes.org]. Other design elements, including the theme colors and titles, were created with the assistance from Charity Baesell, the webmistress and graphic designer at Swell Technology and of the PenguinFeet project. Thanks also go to Jamie for making Webmin themeable to start with. Not to say the original theme was ugly or anything . . . well, I'm just happy Webmin is themeable.
+
+**NOTE** *The latest version of the Swell Technology Webmin theme can be downloaded from the Open Source Projects page [http://www.swelltech.com/projects] at swelltech.com.*
+
+# 1. OBTAINING AND INSTALLING WEBMIN
+
+![](img/d84604054810a13cacfdac212ebee2f7_28_0.png)
+
+Obtaining Webmin is easy. In fact, it may be installed on your system already. Several Linux distributions now include Webmin as either its primary system administration interface or as an optional package. Also, a large number of Linux hardware vendors use Webmin or a modified version of Webmin as their graphical administration interface. Best of all, because Webmin is free software, even if you don't have Webmin already, it is only a download away.
+
+## Where to Download Webmin
+
+It is often best to obtain Webmin from your OS vendor if it provides a package for it. In this way, you can be sure it is automatically configured suitably for your particular OS and version. Executable and configuration file locations vary somewhat from OS version to version and from vendor to vendor, so getting Webmin from your vendor ensures consistency.
