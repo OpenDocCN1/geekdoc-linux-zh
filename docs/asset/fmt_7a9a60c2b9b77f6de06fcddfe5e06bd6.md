@@ -1,0 +1,135 @@
+
+            86400          ; Retry
+
+            2419200        ; Expire
+
+            604800 )       ; Negative Cache TTL
+
+;
+
+@  IN  NS  ns1.example.net.
+
+@  IN  A   192.168.0.6
+
+ns1 IN  A   192.168.0.5
+
+www IN  A   192.168.0.7
+
+gateway IN  A   192.168.0.1
+
+在本区域文件中，有一些需要注意的地方。首先，我将 TTL 从七天改为了一天。虽然我本可以用秒来指定，但 BIND 支持简写，所以我可以用 `1d` 表示一天，或用 `4h` 表示四小时。我将 `ns1.example.net` 设置为 SOA，并将 `root@example.net` 设置为联系电子邮件地址。我还将 `ns1.example.net` 设置为此区域使用的名称服务器，但请注意 NS 记录引用的是主机名。由于此名称服务器位于同一域 `example.net` 中，因此我需要在这里为其添加一条记录，列出其 IP 地址。另请注意，我不需要在任何 A 记录中添加 `.example.net`。
+
+> NOTE
+> 
+> 请确保保存区域文件后，其权限和所有权与目录中其他区域文件相同——这是避免在重新加载 BIND 后出现权限问题的最佳方法。
+
+现在我已经创建了区域文件，我需要在 `named.conf` 中添加对其的引用。当我用文本编辑器打开它时，我可以看到许多类似的区域示例，例如 `db.local` 文件的示例：
+
+```
+zone "localhost" {
+    type master;
+    file "/etc/bind/db.local";
+};
+```
+
+因此我只需在文件最底部添加一个类似的条目：
+
+```
+zone "example.net" {
+    type master;
+    file "/etc/bind/db.example.net";
+};
+```
+
+保存更改后，我只需告诉 BIND 重新加载其配置，然后我应该能够查询名称服务器以获取其中一条新记录：
+
+```
+$ sudo service bind9 reload
+```
+
+执行后输出：
+
+```
+ * Reloading domain name server... bind        [OK]
+
+$ nslookup www.example.net localhost
+
+Server:         localhost
+
+Address:        127.0.0.1#53
+
+Name:   www.example.net
+
+Address: 192.168.0.7
+```
+
+如果 BIND 重新加载失败，它会在命令行上显示。如果该命令行输出没有告诉你 BIND 为什么拒绝重新加载，你可以查看 `/var/log/syslog` 以寻找线索。
+
+## DNS Slave
+
+DNS 从服务器是一种从称为主服务器的另一台 DNS 服务器检索其区域信息的 DNS 服务器。事实上，BIND 服务器可以作为一个区域的主服务器，同时作为另一个区域的从服务器。拥有主服务器和一个或多个从服务器大大简化了你的 DNS 管理，因为你只需在主服务器上更新区域信息，它就会自动传播到从服务器。当你在主服务器上更新区域并递增该区域内的序列号时，一旦 BIND 重新加载，所有从服务器都会收到区域已更改的通知，并会自动拉取更新。
+
+由于 DNS 从服务器从主服务器检索其区域信息，因此其配置要简单得多。只要主服务器配置为允许从服务器进行区域传输，在从服务器上你只需在 `/etc/bind/named.conf` 中添加一个条目即可。对于我们的示例，假设我想添加一台第二台名称服务器，`ns2.example.net`，地址为 `192.168.0.10`。
+
+### Configure the Master Server
+
+在我的主服务器 `192.168.0.5` 上，我需要编辑我的 `db.example.net` 文件并添加对 `ns2.example.net` 的引用：
+
+```
+;
+
+; BIND data file for example.net
+
+```
+
+## Manage BIND with rndc
+
+到目前为止，我一直使用 `bind9` 初始化脚本来重新加载 BIND。Ubuntu 包含另一个名为 `rndc` 的工具，可帮助你进行 BIND 管理。例如，要使用 `rndc` 重新加载 BIND 配置，我会输入
+
+```
+$ sudo rndc reload
+```
+
+你可以向 `rndc` 传递许多其他参数，以获取有关 BIND 服务的更多信息或向其提交命令。`rndc` 命令的一个有用之处在于，如果你希望管理员能够更新 DNS 但没有完全的 root 权限，你可以给该人 `sudo` 访问 `rndc` 命令的权限。如果你不带任何参数输入 `rndc`，你将获得一个帮助页面，其中列出了可用命令。以下是其中一些更有趣的命令：
+
+- `reload` — 重新加载所有配置文件和区域。如果你指定 `reload` 命令后的特定区域，它将只重新加载该区域。
+
+- `retransfer zone` — 无论序列号是否已递增，都重新传输区域。
+
+- `reconfig` — 与 `reload` 命令类似，只是它只重新加载 `named.conf` 和任何新区域。
+
+- `flush` — 刷新服务器的所有缓存。如果缓存名称服务器保留了不再有效的陈旧 IP 地址，这很有用。
+
+- `status` — 输出有关 BIND 进程当前状态的一些统计信息，包括它管理的区域数量以及其当前工作负载的一些统计信息。
+
+如果你想了解更多关于 BIND 配置文件语法或 DNS 管理的一般信息，有大量资源可用。`bind9-doc` 包包含一系列位于 `/usr/share/doc/bind9-doc/` 下的文档文件，是一个很好的起点。例如，要查看 BIND 版本 9 HTML 手册的第一章，请输入 `w3m /usr/share/doc/bind9-doc/arm/Bv9ARM.ch01.html`。
+
+## Web 服务器
+
+LAMP 是 Linux、Apache、MySQL、PHP（有时也指 Perl 或 Python）的缩写。它指的是这样一种认识：一种非常常见的 Web 服务器部署是将 Apache Web 服务器程序与 Perl、PHP 或 Python 用于动态内容以及后端 MySQL 数据库结合起来，所有这些都在 Linux 上运行。这种在 Linux 下搭建网站的方式已变得如此常见，以至于 Ubuntu 甚至将所有必要的软件包都打包在了一起。
+
+事实上，LAMP 环境有许多不同的实现方式。对于高流量的网站，Web 服务器通常与 MySQL 数据库服务器运行在不同的硬件上。即使你在安装时选择了 LAMP 服务器选项，也可能需要额外安装一些 Apache 模块或其他软件。我将在本章的数据库服务器部分介绍 MySQL 服务器，因此如果你计划在一台服务器上运行完整的 LAMP 环境，请务必也查看该部分。
+
+### 安装 Web 服务器
+
+在默认的 Ubuntu 服务器安装上，有几种不同的方式来设置 Web 服务器。最简单的方法是在初始安装时或之后使用 `tasksel` 工具选择 LAMP 服务器。这将添加 `apache2`、`apache2-mpm-prefork`、`mysql-server-5.1`、`mysql-client-5.1` 和 `php5-mysql` 软件包以及它们所有的库和其他依赖项。或者你也可以从命令行安装这些软件包：
+
+```
+$ sudo apt-get install apache2 apache2-mpm-prefork \
+ mysql-server-5.1 mysql-client-5.1 php5-mysql
+```
+
+无论哪种情况，包管理器在安装过程中都会提示你为 MySQL 输入 root 密码。这是可选步骤，但我强烈建议你在此时设置密码。一方面，没有密码，系统上的任何人都可以访问你的数据库并更改和删除数据。另一个不太技术性的原因是，在此阶段指定它比在命令行上运行额外的 MySQL 命令要简单得多。`apache2` 和 `mysql` init 脚本都将被配置为在启动时自动启动。
+
+现在如果你的网站不使用 MySQL 后端，或计划在单独的服务器上运行 MySQL，你可以跳过 `mysql-server-5.1` 软件包：
+
+```
+$ sudo apt-get install apache2 apache2-mpm-prefork \
+ mysql-client-5.1 php5-mysql
+```
+
+### Ubuntu Apache 惯例
+
+与大多数其他发行版一样，Ubuntu 在 Apache 管理方面也有某些惯例。配置文件按特定方式组织，管理工具和日志也是如此。如果你不习惯 Debian 和 Ubuntu 对 Apache 的组织方式，它与你在其他发行版上看到的会大不相同。以下是 Apache 的主要文件惯例：
+
+- **/etc/apache2**
