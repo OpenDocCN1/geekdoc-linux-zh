@@ -1,0 +1,85 @@
+```
+ssh ubuntu@192.168.2.101
+```
+
+This will prompt you for the password for the ubuntu user which is the one you set when you first booted the distro.
+
+To view the graphical desktop running on top of your Linux distro on the Android device, tap on the home button to minimise the terminal app, then tap and launch the VNC app (such as androidVNC).
+
+The VNC app will prompt you for various settings so it can connect to the distro running on the device. Enter localhost in the field that asks you for the IP address of the VNC server and 5900 as the port. In addition to these you’ll also need a password to authenticate with the VNC server. This varies from distro to distro. For the Ubuntu images, the password is ubuntu. For Arch Linux it’s archlinux, for the Debian flavours it’s debian and so on. The password is listed on the distro’s wiki page on the LinuxOnAndroid project’s website.
+
+Note that if you are using androidVNC, the app suggests that you change the colour format to 24-bit color (4bpp). Tap the Connect button to initiate the VNC session once you’ve entered all the information and hey presto! The VNC client will connect to your device and display the graphical desktop that’s running inside the distro you’re currently running.
+
+Again, the app developers advise androidVNC users to change the input mode to touchpad. To do so, tap on the menu button from inside the VNC session. This will bring up a bunch of options; you need to tap on Input Mode and then select the Touchpad radio button from the list of supported input modes.
+
+You can now interact with and operate the desktop just like you would on a PC. On the androidVNC app, a single tap equates to a left-click. Tap twice to simulate a right-click.
+
+You can also use the package manager to install new apps. Remember, however, that the distro will only be able to install apps that have been ported for the ARM architecture, which is true for almost every popular app.
+
+When you’ve finished, close the VNC session by logging out of the desktop. Now pull down the app drawer and tap on the terminal session that’s been running in the background. Type exit to shut down the Linux distro. When the distro shuts down you’ll have to type the exit command a couple more times to exit and close the terminal session.
+
+# Advanced tweaks
+
+You can use the steps described above to download, set up, boot and use any of the supported distros on your device. However, the app also offers some other options to further customise the distros and tweak your user experience.
+
+For starters, you may wish to change the settings of the distro you specified when you first booted into it. To do so, select the distro you wish to customise from the drop-down list in the Launch section. In addition to the Start Linux button, you’ll also see a Configure Linux button. Tap on it to bring up the settings page. Here you’ll find checkboxes for enabling and disabling the start of the SSH and VNC servers. You can also modify the resolution of the VNC screen by altering the values listed on this page.
+
+The page offers a couple of interesting options, including the Create 1GB SWAP File checkbox. As you can imagine, when this is toggled, the app will create a swap file for the distro to use. Make sure you have adequate free space on your SD card before you enable this option.
+
+The app can also mount folders from the Android filesystem into the running Linux. Tap on the Configure
+
+![](bbox=[0.48, 0.15, 0.92, 0.38])
+
+Mounts button to launch the mount editor. Tap on Options in the top-right corner and then on the Add Mount option. This pops up a page where you’ll have to specify the location of the Android folder you wish to share manually (such as /storage/sdcard0/Downloads), followed by the path where you want to mount it (such as /home/ubuntu/Downloads). You can add as many folders as you wish. When you’ve done tap on the Save Changes button and exit the mount editor.
+
+When you boot now into the distro, LinuxOnAndroid will mount the listed Android folders in the specified locations inside the distro.
+
+Depending on how you use the distro, sooner or later you’ll run out of space inside the image. In such a case you’ll have to make a larger image and copy over all the files and folders from inside the existing image to the new one.
+
+Start by firing up a terminal and creating a blank image of the size you want. For example, the command
+
+```
+dd if=/dev/zero of=ubuntuNEW.img bs=1M count=0 seek=4096
+```
+
+will create a 4GB image called ubuntuNEW.img. Then you’ll need to format this new image and create a filesystem. The command
+
+```
+mkfs.ext4 -F ubuntuNEW.img
+```
+
+should do the trick. Then copy the image file that you want to inflate from the device into your computer. Let’s call it ubuntuOLD.img. Now create two folders on your desktop (ubuntuNEW and ubuntuOLD) to mount these images. The commands
+
+```
+sudo mount -o loop ubuntuOLD.img ubuntuOLD/
+```
+
+```
+and
+sudo mount -o loop ubuntuNEW.img ubuntuNEW
+```
+
+will mount the images into their respective folders. Once that’s done, copy over all the files from the old image to the new image. The command
+
+```
+sudo cp -rp ubuntuOLD/* ubuntuNEW
+```
+
+will make sure the files and folders are copied along with their ownership permissions. Round up the process by simply unmounting the images with
+
+```
+sudo umount ubuntuOLD
+```
+
+```
+and
+sudo umount ubuntuNEW
+```
+
+You can now transfer the ubuntuNEW.img file to your phone, remove the existing image and make sure the distro’s entry in the Launch screen points to the new image.
+
+> Make sure your Android device uses an ARM V7 CPU since most distros only support that particular ARM architecture.
+
+# Quick tip
+
+To remove a distro, make sure it isn’t in use and then remove the folder that houses the relevant IMG file.

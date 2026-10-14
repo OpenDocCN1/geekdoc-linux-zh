@@ -1,0 +1,53 @@
+
+## Encrypt your hard drive
+
+Do you want to keep your data safe from pilferers? We show you how to fortify your hard drive using disk encryption.
+
+There’s been a lot of talk in the past year or so about the security of your internet data, first with the Edward Snowden revelations and later with the Heartbleed bug in OpenSSL and Shellshock, the Bash vulnerability. There was also a lower-profile bug in GnuTLS discovered shortly before Heartbleed. As a result of all this, we’re paying more attention to the security of our data in transmission – but what about when we store it? We’ve previously mentioned TrueCrypt, which is great for encrypting removable storage (as long as you use the right version, see p14 for details), especially because it’s available for Windows and Mac too, but if you’re really concerned you may want to encrypt your entire home directory, or even the whole hard drive. This is not just about protection from black hat hackers: what if you have personal, business or otherwise confidential information stored on your laptop and it’s lost on the train or taxi or simply stolen?
+
+There are two popular types of encryption that are supported by the Linux kernel: dm-crypt and ecryptfs. The latter is an encrypted filesystem that sits on top of a standard filesystem. If you mount the ‘lower’ filesystem, you’ll see all the files but their contents, and usually their names, are encrypted. It works at the directory level, and other directories on the same filesystem can be left unencrypted or encrypted separately. This is the method used by Ubuntu, among others, to encrypt users’ home directories.
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_33_0.png)
+
+The other method, which is the one we’ll look at here, is dm-crypt, and it works at a lower level, encrypting the block device that the filesystem is created on. A benchmark run by Phoronix showed better performance from a whole disk that was encrypted with dm-crypt than with using ecryptfs on home directories.
+
+## A stack of blocks
+
+Before we look at the encryption, it’s important to understand how block devices work. Block devices are the system’s interface to storage hardware, for example /dev/sda1. Underneath the block device is the hardware driver, such as a SATA driver, and then the hardware itself. The operating system then works with the block device to create a filesystem on it.
+
+That is the usual view of block devices, but they can be much more. In particular, a block device can be an interface to another set of block devices – they can be stacked. You already do this: you have a filesystem on /dev/sda1 (a disk partition) that is a block device referencing /dev/sda (the whole disk).
+
+```
+luksKillSlot --device <device> --key-slot <key slot> -- wipe key with number <key slot> from LUKS dev
+luksUUID --devices - print UUID of LUKS device
+luksDump --device - tests --device for LUKS partition header
+luksDump --device - dump LUKS partition header information
+cryptDump --devices - dump LUKS device information
+luksSuspend --device - Suspend LUKS device and wipe key (all I/O are frozen)
+luksOpen --device - Open LUKS device and map it
+luksHeaderBackup --device - Backup LUKS device header and keyslots
+luksHeaderRestore --device - Restore LUKS device header and keyslots
+
+You can also use old actions syntax aliases:
+open: create (plainOpen, luksOpen, loopaesOpen, cryptOpen)
+close: remove (plainClose, luksClose, loopaesClose, cryptClose)
+
+<name> is the device to create under /dev/mapper
+<device> is the encrypted device
+<key slot> is the LUKS key slot number to modify
+<key file> optional key file for the new key for luksAddKey action
+
+Default compiled in key and passphrase parameters:
+Maximum keyfile size: 8192kB, Maximum interactive passphrase length 512 (characters)
+PBKDF2 iteration time for LUKS: 1000 ms
+
+Default compiled in device cipher parameters:
+loop-AES: aes, Key 256 bits
+plain: aes-cbc-essiv:sha256, Key 256 bits, Password hashing: ripemd160
+luks: aes-cbc-essiv:sha256, Key 256 bits, LUKS header hashing: sha1, RNG: /dev/random
+[net/Hostor] - 0h
+```
+
+You can also use old actions syntax aliases:
+
+Running cryptsetup --help not only shows the commands you can use, but also displays a list of the available hashes and ciphers.

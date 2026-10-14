@@ -1,0 +1,45 @@
+# Secure your device
+
+Batten down the ports and hatches.
+
+In addition to restricting the flow of data to third-party apps and encrypting all forms of communication, you’ll also need to protect against physical compromise. Securing the device safeguards it against the most common fears – theft and unauthorised access.
+
+Privacy conscious users should enable and use one of the several options to lock the phone. You can restrict access via a pattern, a numerical pin, an alpha-numeric password, or a voice command. If you are using a lock screen you should also disable any lock screen widgets. Disabling lock screen widgets required third-party apps like Lockscreen Policy, but is now built into the latest version of Android.
+
+Locking the phone is one thing, but it wouldn’t help when you hand over an unlocked phone to someone. You can use Screen Locker (http://bit.ly/LRBtzz) to lock your screen before handing the phone to someone else. The app disables all forms of inputs and prevents the users from viewing anything other than what’s on the screen. You can then enter a preset pattern to unlock the device.
+
+Then there are apps which will lock access to an app with a password. One such is Privacy Master Free, which can also take a crash to prevent an app from launching, and prevent access to key areas such as the Google Play Store. You can also block the task manager as well as USB connections.
+
+Then there’s the AppLock app which, along with the ability to block access to apps, also has two separate vaults where you can hide photos and videos. The app can also prevent toggling of settings such as Wi-Fi. One of the best features is its ability to create lock profiles. So you can create a list of apps you want to lock when you’re in the office, and another set when you’re with naughty nephews. You can trigger the locks based on time or location.
+
+On the security side, the app can randomly rearrange its numeric keyboard to prevent others from figuring out your password by following your fingers. It also allows you to hide the app from the application drawer to keep its existence on your device a secret.
+
+is a one-way process, which is to say that once turned on there’s no mechanism to turn off the encryption. You’ll have to factory reset your phone and lose all your data. Also, make sure you back up your data before initiating the encryption process and don’t interrupt the process. If you do you’ll sure lose the data and render the device unusable.
+
+Before you begin, make sure you have set up a lock screen PIN or password, which is required because Android will use it as your decryption key. To begin encryption, head to System Settings > Security > Encrypt device. When it’s done you’ll have to enter the PIN or password each time you boot your phone.
+
+Instead of encrypting the whole device, you can also choose to encrypt selected files. One of the best apps for this purpose is SSE Universal Encryption. The app offers all the popular encryption algorithms including AES-256, Serpent-256 and Blowfish-256, and has three modules: the Password Vault module allows you to safely store passwords and organise them into folders. The Message Encryptor module encrypts snippets of text. But the most interesting option is the File/Dir Encryptor module. It lets you pick a file using the built-in file browser and then encrypts it.
+
+> “Privacy Master Free can fake a crash to prevent an app from launching…”
+
+Installing CyanogenMod does require some doing, but if you can borrow a Windows machine you can save yourself effort via the CyanogenMod Installer at http://get.cm. Free software enthusiasts would want to check out the Replicant distribution. It’s based on CyanogenMod and replaces all proprietary Android components with their free software alternatives. Phil Zimmermann’s Silent Circle has tied up with the Spanish Geeksphone handset manufacturer and is about to launch the Blackphone for the privacy conscious. The phone will run the PrivatOS distribution.
+
+# Encrypt your device
+
+Finally, privacy minded users should encrypt the data on their phone using the built-in feature. However, there are some caveats involved with the process. For one, encryption
+
+In addition to encryption, SSE can also securely delete files to remove all danger.
+
+![](bbox=[0.06, 0.42, 0.32, 0.78])
+
+![](bbox=[0.72, 0.04, 0.84, 0.22])
+
+# Switch to a third-party firmware
+
+Every year Google offers a vanilla Android operating system popularly known as AOSP for download. Many developers take this version and work on it to develop their own customised version of Android.
+
+CyanogenMod is one such Android distribution and also one of the most popular, with millions of users. One reason for its popularity is that it gives you complete control over your device and frees it from any ties to Google, your network or the phone’s manufacturer. It’s also worth mentioning that the CyanogenMod team is quick to patch security holes and fix bugs that were only fixed by Google in the next Android release.
+
+The third-party firmware also includes the the Privacy Guard app which gives you better control over apps and their permissions.
+
+The newer versions of the app also include the AppOps feature, redacted by Google in Android 4.3. With this feature users can prevent individual apps for accessing your data. The latest version of CyanogenMod also integrates the secure SMS app TextSecure in the firmware itself.

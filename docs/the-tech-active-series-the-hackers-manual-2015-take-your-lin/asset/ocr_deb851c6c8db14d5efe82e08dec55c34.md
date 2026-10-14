@@ -1,0 +1,73 @@
+# Hardware
+
+the appropriate ranges of ASCII codes:
+
+```
+ascii = range(48,59) + range(65,91) + range(97,123)
+chars = [chr(i) for i in ascii]
+```
+
+We can use the `itertools` module to generate all possible combinations of a given length here. This saves on some potentially irksome code. The `itertools.product` class returns a generator object, so rather than squashing us (or rather our Pis and Brambles) with a huge list, it spits out one combination per iteration. The repeat parameter is the length of the outputted strings. So we repeatedly check to see if its output hashes to our target hash.
+
+```
+for j in itertools.product(chars, repeat=length):
+    guess = ''.join(j)
+    m = hashlib.md5(guess)
+    hash = m.hexdigest()
+    if hash == target_hash_md5:
+        print "Great victory!"
+        break
+return(guess)
+```
+
+The functions md5cracker() and shacracker() can be called with the length argument described above and it is straightforward enough to modify it to brute-force a range of password lengths. On a single-core powered 2.1GHz Athlon laptop, attempting all three-character passwords using our set of characters took about 0.7 seconds; four characters took 40 seconds; and five figures took about 40 minutes. As we are dealing with 62 characters, the latter figure suggests we are churning through about 380 kilohashes per second, so we could expect to crack a six-character password in about two days and an eight-character one in about 18 years. For SHA-1, the same machine managed about 314kH/s, which is strictly close to 100,000 times pi. Less decrepit hardware will fare much better, but a lone Pi does much worse, managing a pitiful 6kH/s for MD5 and a not much better 8kH/s for SHA-1. All this with no X server or other daemons running. Clearly something does not work so well on the ARM architecture – further investigation is beyond the scope of this article, since anything we can do John the Ripper can do better (more on that later). Incidentally, the Python file also contains the following codeblock at the end:
+
+```
+if __name__ == '__main__':
+    import timeit
+    print(timeit.timeit(stmt = "shacracker(4)", setup="from __main__ import shacracker", number=1))
+```
+
+This means that if the file is executed from the command prompt, then it will be automatically benchmarked by the `timeit` module. One could attempt to speed this code
+
+using Cython to generate C code, but gains here may be limited. The `hashlib` and `itertools` functions are all implemented in C, so it is unlikely that you would be able to speed up these at all. Besides, even if you could, string manipulations have their own drawbacks in C, so unless you are pretty deft with malloc() and free() it would be hard to speed these up. You are welcome to try, though.
+
+# Adding more brains
+
+Brute-forcing hashes is an example of an “embarrassingly parallel” computation: it is simple to divide up the work that it would be embarrassing not to. As such, you can pretty much expect to multiply your hash rate by the number of Pis you are using, since the work can be easily distributed by some judicious tampering with the generator function. More precisely, by assigning each unit a fixed range to consider for the first character. For example, with two Pis we would let one of them deal with passwords beginning with the first 31 characters of our range (0-u), and the second with the range (v-Z). In this way there is no further data that requires to be shared among the Pis – they are left to get on with their assigned duties without wasting time chatting.
+
+We will use the `dipsy` module to handle all the parallelism, which requires that all nodes run the `dipsynode` program. They can then be very easily called to action as required. We divide the whole keyspace into 62 chunks so that workers can request chunks as they are needed. This means that faster (or slower) machines can be added to the cluster with no fuss, since otherwise the workload would have to be distributed manually to avoid concurrency issues.
+
+We make an own outer loop for the first character, with the `itertools` loop inside it for the remainder.
+
+```
+def md5cracker(chunk_start,chunk_end,chars,length,thash):
+    for j in range(chunk_start,chunk_end):
+        for k in itertools.product(chars, repeat = length - 1):
+            guess = chars[j] + ''.join(k)
+            gh = hashlib.md5.new(guess).hexdigest()
+            if gh == target_hash_md5:
+                return guess
+    return False
+```
+
+While you could manually run from one Pi to another to call this function with appropriate chunk parameters, the work distribution can be made less tedious by using the `dipsy` module, which you can find on the disc. Install it with:
+
+```
+$ tar -xzvf dipsy-3.15.tar.gz
+$ sudo pip install -e dipsy-3.15
+```
+
+We’ve given our two Pis the addresses `10.0.1.1` and `10.0.1.2`, which can be easily achieved by fiddling with
+
+# Distributed D targon
+
+Computing architecture can be roughly split into four classes: Single Instruction Single Data (SISD), Single Instruction Multiple Data (SIMD), Multiple Instruction Single Data (MISD) and Multiple Instruction Multiple Data (MIMD). This categorisation originated in the 1960s and is known as Flynn’s Taxonomy, after its inventor Michael J. Flynn. Multiprocessor systems as we know them did not exist at the time, but machines were nonetheless capable of performing parallel operations, in much the same way as Intel’s SSE (Streaming SIMD Extensions) that first appeared in Pentium III.
+
+processors. Certain applications today straddle the boundaries of the Flynn classes, but they still provide a reasonably accurate overview of the present day situation. The pre-image discovery that is the subject of this tutorial falls nicely into the SIMD category, we perform the same instruction on multiple data sets – discrete sets of passwords of a given length. The most common category in use nowadays, however, is MIMD.
+
+At one end of the distributed computing spectrum we have a mated memory model in which the processing unit has its own
+
+individual memory store. If data needs to be shared between processors, then a messaging interface needs to be invoked. At the other end we have parallel computing, in which there is a shared memory that can be accessed by all processors. This may be bus-based, if all processors are connected to the same board, or software-based, where consistency is maintained by creating a virtual memory store. Either way, bus contention and access time penalties mean that care must be taken with memory-based operations when working in the parallel computing model.
+
+![](bbox=[0.831, 0.712, 0.847, 0.728])

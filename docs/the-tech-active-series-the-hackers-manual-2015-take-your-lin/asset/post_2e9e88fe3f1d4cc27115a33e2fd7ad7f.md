@@ -1,0 +1,36 @@
+
+## Set up the Tor Browser Bundle
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_10_0.png)
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_10_1.png)
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_10_2.png)
+
+### 1 Download and start
+
+The bundle has everything you need to connect to the Tor network, including Tor Browser, a custom version of Firefox. Once extracted, switch to the directory in the CLI to run the ./start-tor-browser script.
+
+### 2 Browse anonymously
+
+This script launches the Vidalia Control Panel, which will connect to the Tor network. Once connected, the Tor Browser will launch and point to http://check.torproject.org, which will confirm you are browsing anonymously.
+
+### 3 View the network
+
+Click on the 'View the Network' in Vidalia to bring up a world map which shows your routing and the active relays. When you're done, closing any windows will automatically flush the browser's cache and disconnect you.
+
+one major difference is that it only uses certified partners as nodes. Also you can choose which proxy nodes you wish to route the traffic through. You can view the location of its proxies and choose accordingly for increased security. JonDo caps connection speeds for free users, but you can subscribe to its premium service, which is as fast as VPN services. The project also has details on how to pay for the service while maintaining anonymity.
+
+JonDoBrowser is preconfigured to work with the JonDo proxy. Furthermore, unlike Tor, you can use the JonDo app to turn off anonymity and still continue using the JonDoBrowser. You can also use JonDo and Tor if you use a different browser, or a different network app, such as an instant messaging or email client. All you need to do is configure the applications to route all their traffic through these apps. To route traffic through them, go to the app's connection settings page and specify the following manual proxy settings. For JonDo, select the SOCKSv5 proxy and use 127.0.0.1 as the host and 4001 as the port. To pass the traffic through the Tor network, use 9150 as the port if you are running the bundle. Also remember that if you're a free user of JonDo, you can only connect to ports that are used for web browsing, 80 for HTTP and 443 for HTTPS. For other applications you have to subscribe to its premium services. Although it's difficult to compare JonDo and Tor, many consider the former to be a safer option. Tor is more susceptible to internal attacks where a node operator itself attacks the network. The possibility of
+
+### I know JonDo
+
+To use the service, download the Java-based JonDo client, extract its contents and run its installation script as root. The script will install the client under /usr/local. When it's done you can launch it by typing jondo on the command line. When it starts for the first time, an installation assistant will take you through a brief connection process. When it's done, the app will connect to a proxy server. You can choose which proxy network you want to use from a pull-down list. The geographic location of each network is marked with its country's flag. In addition to the JonDo tool, the project also produces a secure profile for Firefox called JonDoFox. Or, you can download JonDo's own Firefox-based browser called JonDoBrowser. You can download and install the Deb package for the browser from the project's website or add their repository to your Debian-based distro. The
+
+![](img/b6e789f7b1bc6629f6c97a3e4beae1de_10_3.png)
+
+Avoid being tracked by spoofing the MAC address of your network card, such as ifconfig eth0 hw ether 0A:A0:04:DA:AA:11
+
+### Security add-ons
+
+In addition to using a proxy service it's also a good idea to equip your web browser with a bunch of security and privacy-enhancing plugins. With AdBlock Plus you can blacklist and whitelist specific advertisers. Another useful addition is the NoScript Security Suite, which will prevent JavaScript, Java, Flash, Silverlight and other executable content from running. This add-on can prevent cross-site scripting attacks, cross-zone DNS rebinding, router hacking and clickjacking.

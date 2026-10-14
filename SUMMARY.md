@@ -2201,6 +2201,7 @@
 +   [SmartTouch 系列 – Python 之书 – 第 113 期，第 11 版，2021](docs/the-smarttouch-series---the-python-book---issue-113-11th-edi/README.md)
 +   [Suse Linux 网络高级指南](docs/the-suse-linux-network-professional-mindware/README.md)
 +   [Suse Linux Server (Professional Mindware)](docs/the-suse-linux-server-professional-mindware/README.md)
++   [Tech Active 系列. 黑客手册 2015： 将你的 Linux 技能提升到下一个层次](docs/the-tech-active-series-the-hackers-manual-2015-take-your-lin/README.md)
 +   [Kylix 之卷：Linux API](docs/the-tomes-of-kylix-the-linux-api-with-cd-rom/README.md)
 +   [Ubuntu 之书：所有 Ubuntu 用户的终极手册](docs/the-ubuntu-book-the-ultimate-handbook-for-all-ubuntu-users/README.md)
 +   [终极 Linux Shell 脚本指南：使用 Linux Shell 脚本实现自动化、优化与赋能任务](docs/the-ultimate-linux-shell-scripting-guide-automate-optimize-a/README.md)

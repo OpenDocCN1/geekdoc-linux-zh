@@ -1,0 +1,27 @@
+# PHP: Custom website scraping
+
+Based on your personal specifications, we'll help you find the exact data that you want from a website without any obstacles.
+
+Scraping websites is a very custom technique for obtaining gold from any website on the internet. There are endless reasons for scraping websites. However, one purpose we all share is finding the next great bargain, and scraping can lead you to find exactly what you're after. With a little coding that includes regular expressions, you can find the patterns in a web page, or various web pages that will retrieve for you the data you are seeking.
+
+This article will demonstrate how to scrape www.amazon.com to determine the selling price of items. The examples in this article will scrape data using Regex (Regular Expressions). Using regular expressions to find precise data is a 'jack of all trades' method, which can find the beginning and end of anything that exists in source code. Once you get comfortable with Regex, you can find the pieces of any puzzle.
+
+The coding for this scraping tutorial will be done with PHP but since it will use regular expressions to analyse web content, it could easily be modified for Perl usage too.
+
+When you begin a scraping project, you need to determine exactly what page or pages you want to scrape. If you are looking at scraping a single page, or product, the code will have a very simple start pattern and end pattern. However, if you intend to scrape a complete category with a wide range of items, you may need to run loops and different functions in order to scrape many individual items and pages that belong to that particular category.
+
+To walk you through the process, the first example will show how to scrape a single product. Then, the article will move forward and explain how to scrape the same product from various sellers. The bare bones concept behind scraping a web page is to convert a web page into a string. Once you have a string, you sort through it and gather the desired data. The simplest method uses a function called file_get_contents() while another method uses curl functions.
+
+# Using PHP
+
+Using the file_get_contents() function is the simplest method to make a string from a URL. Once you are comfortable with this method, you may want to move on to using Curl which has many features that the file_get_
+
+![](bbox=[0.22, 0.68, 0.95, 0.85])
+
+Curl is enabled and functions can be used.
+
+# Input remote content and output desired content
+
+Web developers and programmers have various methods to acquire the desired content from web pages. Two very popular methods are RSS feeds and APIs. The former permits you to grab XML formatted files for which you can sort and output as you find necessary. The latter usually requires some sort of registration in order to receive credentials for accessing the content you are seeking. Often, the output you want is returned in the form of arrays you can output with a loop, just like any other array.
+
+Unfortunately, the two above options may not exist, or you just want some precise information that is easier to acquire yourself. Well, here is where pattern matching and pattern replacing takes over. For a PHP programmer, the preg_match() and preg_replace() functions will allow you to find any pattern and replace any patterns with desired characters.
