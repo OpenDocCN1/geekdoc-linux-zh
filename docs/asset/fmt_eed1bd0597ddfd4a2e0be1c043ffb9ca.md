@@ -1,0 +1,242 @@
+
+## Q
+- `pvn_vplist_dirty()` 550
+- `pvn_write_done()` 549
+- `pvn_write_kluster()` 550
+- `pwrite` 489
+- `pwrite()` 495
+
+## Q
+- `QFS` 528
+- `qfs` 525
+- 配额 539
+
+## R
+- `RAM` 125, 168
+- `read()` 495, 544
+- `read()` 和 `write()` 系统调用 558
+- `readdir()` 600
+- 读写（`RW`）锁 68
+- 读写（`RW`）锁 65
+- 读-修改-写 63
+- `readv` 489
+- `readv` 和 `writev` 502
+- `readv()` 495
+- 实时 10
+- 实时 353
+- 实时优先级 351
+- `realtime_timeout()` 47
+- `rechoose_interval` 390
+- `reclaim()` 222
+- 回收 172
+- `RED` 状态 32
+- 寄存器 26
+- 常规（磁盘）文件系统 525
+- 松弛内存顺序（`RMO`）67
+- `reserved-procs` 291
+- 资源映射分配器 214
+- 资源映射 433
+- `resume()` 404
+- `resume_from_intr()` 函数 97
+- `rlim_cur` 282
+- `rlim_fd_cur` 484
+- `rlim_fd_max` 484
+- `rlim_max` 282
+- `rlimit` 282
+- `RLIMIT_VMEM` 301
+- 资源限制 113
+- `rmalloc()` 214, 215
+- `rmalloc_locked()` 215
+- `rmalloc_wait()` 215
+- `rmallocmap()` 214, 215
+- `rmallocmap_wait()` 215
+- `rmfree()` 215
+- `rmfreemap()` 214, 215
+- `rmget()` 215
+- 根 vnode 573
+- `rootvfs` 554, 555
+- 轮次 225
+- `RPC` 4
+- `rstchown` 112
+- `RT` 9, 16
+- `rt_enterclass()` 387
+- `rt_globpri` 368
+- `rt_quantum` 368
+- `RUN` 274
+- 运行时链接器 267
+- `rw_enter()` 函数 82
+- `rw_enter_sleep()` 函数 83, 84
+- `rw_exit()` 函数 82
+- `rw_exit_wakeup()` 函数 85
+- `rw_init()` 函数 82
+- `rw_rdfails` 84
+- `rw_sobj_ops` 71
+- `rw_waiters` 86
+- `rw_wlock` 86
+- `rw_wrfails` 84
+- `rw_wwh` 86
+
+## S
+- `SA_NOCLDWAIT` 302
+- `SA_ONSTACK` 335
+- `SA_SIGINFO` 333
+- `samfs` 525
+- `sar -g` 599
+- `sar -k` 236
+- `sar -v` 619
+- `sbrk()` 135
+- 可扩展性 4
+- 扫描速率 184, 606
+- `sched` 进程 359
+- `schedaging()` 187
+- 调度器激活 380
+- 调度器激活 352
+- 调度器操作 415
+- 调度器参数 351
+- 调度器 9
+- 调度 16
+- 调度类 262, 349
+  - `admin` 357
+  - `donice` 360
+  - `enterclass` 357
+  - `exitclass` 358
+  - `fork` 358
+  - `forkret` 358
+  - `getclinfo` 357
+  - `getplri` 357
+  - `globpri` 361
+  - `parmsget` 358
+  - `parmsin` 357
+  - `parmsout` 357
+  - `parmset` 358
+  - `preempt` 360
+  - `setrun` 360
+  - `sleep` 360
+  - `swapin` 359
+  - `swapout` 359
+  - `swapri` 359
+  - `tick` 360
+  - `trapret` 359
+  - `wakeup` 360
+  - `yield` 361
+- 调度类 262, 354
+- `sclass` 结构 355
+- `SCSI` 26, 504, 524
+- `SDLC` 9
+- 节头表 268
+- 查找 523
+- `seg_kmem` 221
+- `seg_dev` 145
+- `seg_drv` 146
+- `seg_kmem` 145, 212
+- `seg_kp` 145, 212
+- `seg_lock` 146
+- `seg_map` 145, 212, 595
+- `seg_map` 统计信息 564
+- `seg_mapdev` 146
+- `seg_mdi` 146
+- `seg_nf` 146, 212
+- `seg_spt` 145
+- `seg_sx` 146
+- `seg_vn` 145, 560
+- `segxmem` 208
+- `segkmem_checkprot()` 216
+- `segkmem_create()` 216
+- `segkmem_getprot()` 216
+- `segkmem_setprot()` 216
+- `segkmem32` 210
+- `segkp` 293
+- `segmap` 206
+- `segmap_fault()` 593
+- `segmap_getmap()` 561
+- `segmap_getmapfault()` 561
+- `segmap_pagecreate()` 561, 595
+- `segmap_pageunlock()` 561
+- `segmap_release()` 561, 595
+- 段 20
+- 段（`ELF` 文件）268
+- 段驱动程序 143
+- 段驱动程序 9
+- 分段违规 141
+- `SEGOP_FAULT()` 145
+- `segvn_create()` 144, 148
+- `segvn_fault()` 149
+- `select()` 495
+- `select(3C)` 485
+- 选择与批准算法 403
+- `SEM_NSEMS_MAX` 463
+- `sem_open(3R)` 462, 463
+- `SEM_VALUE_MAX` 463
+- `sema_destroy()` 函数 99
+- `sema_held()` 函数 99
+- `sema_init()` 函数 99
+- `sema_p()` 函数 99, 101
+- `sema_sobj_ops` 71
+- `sema_sobj_ops` 结构 102
+- `sema_v()` 函数 99
+- 信号量接口 462
+- 信号量限制
+  - `semaem` 448
+  - `semmap` 446
+  - `semmni` 446
+  - `semmns` 446
+  - `semmnu` 447
+  - `semmsl` 447
+  - `semvmx` 448
+- 信号量 P 和 V 操作 99
+- 信号量值 445
+- 信号量 68
+- `semget(2)` 445, 450
+- `semid_ds` 449
+- `semmap` 433
+- 顺序一致性模型 66
+- 会话 342
+- 会话首进程 345
+- `set_anoninfo()` 156
+- `setfacl` 532
+- `setitimer(2)` 57
+- `setproot()` 147
+- 共享 243
+- 共享库 147
+- 共享映射文件 150
+- 共享内存 4
+- 共享内存多处理器 60
+- 共享程序库 4
+- 共享程序二进制文件 126
+- `SHM_SHARE_MMU` 203
+- `shmat()` 439
+- `shmget()` 438
+- `shmid_ds` 435
+- `shmmax` 436, 437
+- `shmmin` 436
+- `shmmni` 436, 437
+- `shmseg` 436
+- `si_pc` 166
+- `si_trapafter` 166
+- 兄弟进程 275
+- `SIDL` 275
+- `sigaction` 308, 333
+- `sigaction(2)` 334
+- `sigaltstack(2)` 335
+- `SIGCHLD` 329
+- `SIGCLD` 275, 302
+- `SIGDANGER` 158
+- `siginfo` 332, 338
+- `SIGIO` 503
+- `SIGKILL` 275
+- 信号处理方式 325
+- 信号生成 331
+- 信号 19
+- `signotify` 334
+- `SIGPROF` 56
+- `SIGSEGV` 139, 141, 513
+- `sigsend(2)` 325
+- `sigtoproc()` 337
+- `SIGTRAP` 165
+- `SIGTSTP` 343
+- `SIGTTIN` 343
+- `SIGTTOU` 343
+- `SIGVTALRM` 56
+- `SIGWAITING` 416
+- `SIGXCPU` 56, 329
+- `SIGXFSZ` 329

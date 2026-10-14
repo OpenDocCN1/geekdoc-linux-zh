@@ -1,0 +1,239 @@
+
+## K
+
+- `tune_t_minarmem` 625
+- `ufs`
+  - `ufs_HW` 627
+  - `ufs_LW` 627
+  - `ufs_WRITES` 627
+- `ufs_inode` 627
+- 内核虚拟地址映射 633
+- 内核虚拟内存 205
+- 内核虚拟内存布局 205
+- `kernel/unix` 208
+- Kessler 最佳桶 178
+- `kill(2)` 325
+- Kirk McKusick 577
+- `kluster()` 147
+- `klustsize` 189
+- `kmem_cache_alloc()` 219, 222
+- `kmem_cache_create()` 219
+- `kmem_cache_create()` 220, 222
+- `kmem_cache_destroy()` 219, 222
+- `kmem_cache_free()` 222
+- `kmem_cache_stat()` 222
+- `kmem_content_maxsize` 233
+- `kmem_depot_contention` 227
+- `kmem_flags` 231
+- `kmem_freepages()` 217
+- `kmem_getpages()` 216, 217
+- `kmem_log_size` 233
+- `kmem_reap_interval` 227
+- `kmem_reapahead` 228
+- `kmem_update_interval` 226
+- `kpreempt()` 398
+- `kpreemptpri` 389
+- `krthd` 109, 110
+- `ktestxseg` 634
+- `kvalloc` 634
+- `kvseg32` 634
+
+## L
+
+- L2 缓存 175
+- 大型设备 518
+- 大页 202
+- 大页 200
+- 大文件 519
+- 大文件编译环境 520
+- 大文件峰会 520
+- 大页支持 7
+- 延迟 61
+- `lbolt` 55
+- `ldstub` 指令 64, 67, 68
+- `libaio` 503
+- 库文件 132
+- 轻量级进程 210
+- 轻量级进程 14, 205, 264
+- `limit(1)` 282
+- 链接 22, 579
+- Linux 602
+- 加载/存储缓冲区（硬件） 66
+- 可加载文件系统模块 543
+- 锁对象操作向量 70
+- 锁原语 63
+- 锁写者位 76
+- 锁唤醒行为 81
+- `lock_set()` 函数 98
+- `lock_set_spl()` 函数 98
+- 锁统计信息 7
+- `lockop()` 147
+- `lockstat` 76
+- `lockstat(1M)` 77, 82
+- 日志结构 533
+- 日志记录 533
+- 日志式（Journaling）文件系统 532
+- 日志式 UFS 7
+- `lookupn()` 566
+- `lotsfree` 180, 181, 184, 186, 607
+- LP64 8
+- `lrusage` 318
+- `lseek()` 494
+- `lstat()` 494
+- LWP 165, 503
+- LWP 池激活 417
+- `lwp_ap` 286
+- `lwp_asleep` 286
+- `lwp_create` 507
+- `lwp_create()` 375
+- `lwp_curinfo` 286
+- `lwp_cursig` 286
+- `lwp_errno` 286
+- `lwp_error` 286
+- `lwp_exit` 304
+- `lwp_kill(2)` 325
+- `lwp_mstate` 321
+- `lwp_pcb` 286
+- `lwp_proc` 286
+- `lwp_scall_start` 286
+- `lwp_sigaltstack` 286
+- `lwp_siginfo` 286
+- `lwp_sigoldmask` 286
+- `lwp_stime` 286
+- `lwp_thread` 286
+- `lwp_utime` 286
+
+## M
+
+- `m_owner` 78
+- `m_owner` 字段 75
+- `m_spinlock` 字段 75
+- 机器状态 286
+- `MADV_DONTNEED` 513
+- `MADV_RANDOM` 513
+- `MADV_SEQUENTIAL` 513
+- `MADV_WILLNEED` 513
+- 存储仓大小 226
+- `magazine_size` 231
+- 存储仓 225
+- `magic(4)` 298
+- `main()`，内核函数 110
+- 主缺页错误 141
+- `malloc(3)` 131, 135, 158
+- `MAP_FIXED` 511
+- `MAP_NORESERVE` 511
+- `MAP_PRIVATE` 151, 152, 153, 157, 159, 511
+- `MAP_SHARED` 151, 511
+- `mapelfexec()` 301
+- 映射文件 147
+- 映射共享 132
+- 文件映射 512
+- 文件映射 4
+- 映射选项 511
+- 大规模并行处理器 60
+- `max_procs` 112, 291, 293, 570
+- `max_percent_cpu` 185
+- `maxpgio` 187, 190, 611
+- `MAXPID` 279, 293
+- `maxpid` 112
+- `MAXSIG` 325
+- `maxslp` 190
+- `maxuprc` 112, 292
+- `maxusers` 111, 291, 570
+- `memcntl()` 560
+- `memcntl(2)` 353
+- 内存屏障（`membar`）指令 68
+- 内存屏障指令 67
+- 空闲内存 235
+- 内存硬件 125
+- 内存锁定 353
+- 内存管理 11
+- 内存管理异常 32
+- 内存模型 66, 67
+- 内存监控 235
+- 内存监控工具 239
+- 内存页锁定 442
+- 内存调度器 189
+- 内存短缺 237
+- 进程使用的内存 235
+- 文件系统页缓存使用的内存 235
+- 内存利用率 235
+- 内存，文件系统缓存内存 236
+- 内存，空闲内存 236
+- 内存，内核内存 236
+- 内存，物理内存总量 236
+- `memory_class` 231
+- `memps` 247
+- `memstat` 239, 254, 610
+- `MemTool` 163, 235, 239, 245
+- 消息头 455
+- 消息队列限制
+  - `msgmap` 452
+  - `msgmax` 453
+  - `msgmnb` 453
+  - `msgmni` 453
+  - `msgseg` 454
+  - `msgssz` 454
+  - `msgtql` 453
+- 元数据 534, 593
+- 元数据日志记录 533
+- MicroSPARC 193
+- microSPARC 174
+- 微状态 321
+- `min_percent_cpu` 185
+- `minfree` 187
+- 次缺页错误 150
+- 次缺页错误 141
+- `mknod` 17
+- `mlock(3C)` 353
+- `mmap()` 148, 150, 510, 558
+- `mmap(2)` 429, 461
+- MMU 21, 127, 141, 149, 152, 193, 197
+- MMU 生成的陷阱 200
+- MMU 专用页结构 169
+- `mod_install` 119
+- `mod_modinfo` 结构 118
+- `mod_ops` 结构 120
+- `modctl` 结构 119
+- `modinfo` 106
+- `modload()`，内核函数 117
+- `modload(1M)` 435
+- 模块加载 12
+- 模块文本与数据 209
+- `mount` 614
+- `mpstat` 42
+- `mpstat(1M)` 88
+- `mq_maxmsg` 466
+- `mq_maxsz` 466
+- `mq_open(3R)` 465
+- `mq_receive(3R)` 465
+- `mq_send(3R)` 465
+- MS-DOS 文件系统 9
+- `msgmap` 433, 454
+- `msqid_ds` 453, 455
+- 多处理器 4
+- 多处理器 60
+- 多处理器 4
+- 多线程 8
+- 多线程应用程序 63
+- 多线程内核 8
+- 互斥锁 65, 71
+- `MUTEX_DEFAULT` 75
+- `mutex_exit()` 函数 74
+- `mutex_init()` 函数 74, 76
+- `mutex_sobj_ops` 71
+- `MUTEX_SPIN` 75
+- `mutex_vector_enter()` 函数 75, 76
+- `mutex_vector_exit()` 函数 77
+- 互斥锁 68
+
+## N
+
+- `ncsize` 112, 570, 616
+- `ndquot` 112
+- 嵌套陷阱 34
+- 网络文件系统 541
+- 网络文件系统 23
+- 网络 11
+- `nextofkin` 278
+- Nexus 驱动程序 25
