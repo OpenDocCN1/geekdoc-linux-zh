@@ -1,0 +1,100 @@
+
+你可以从此列表中看到 `c0t6d0` 已经镜像化到 `c1t3d0` 上。
+
+## F21
+
+重启系统以确认所有更改已生效。重启后，执行以下操作以创建转储（dump）。按键必须处于“Service”位置 `^b` 才能生效（你必须在服务器上操作才能生效）。
+
+使用 `^b` 进入 `CM>` 提示符。
+
+在 `CM>` 提示符下使用 `te` 命令创建核心转储（core dump）。
+
+## F22
+
+系统会在核心转储后自动重启。使用以下命令将核心转储保存到带上。尽管核心转储在 `dump` 逻辑卷而不是 `/var/adm/crash` 目录下，但仍需要 `/var/adm/crash` 文件名。
+
+```
+# savecore -t /dev/rmt/0m /var/adm/crash
+```
+
+### 交换转储优先的可选步骤
+
+## F23
+
+然后使用 `savecore -xt` 和目录名提取核心转储。如果你没有足够的空间存放核心转储，或者你想进行更彻底的检查，可以联系 HP Response Center 验证 `savecore` 到磁带的操作是否成功。
+
+```
+# savecore -xt /dev/rmt/0m /var/adm/crash
+```
+
+核心转储的空间需求是从 dump 末端向前方计算的。因此，大约有 1.5 GBytes 被写入 `dump` 逻辑卷，然后大约有 600 MBytes 被写入 `ivol2`。
+
+### 交换转储优先的可选步骤
+
+此过程使用 `lvmboot` 从 `/dev/vg00` 中移除所有启动定义（包括交换分区和转储分区），并用 `lvlnboot` 替换它们。这样做是因为 `ivol2` 是主 dump 逻辑卷 (0)，而 `dump` 是次 dump 逻辑卷 (1)。
+
+你必须重启使这些更改生效。图 2-8 显示了完成此可选步骤所需的步骤。
+
+图 2-8 更改转储优先级的步骤（可选）
+
+## F24
+
+使用 `lvrmboot` 完全从 `vg00` 中移除启动区。
+
+```
+# lvrmboot -r /dev/vg00
+```
+
+## F25
+
+使用 `lvlnboot` 验证启动区已移除。
+
+```
+# lvlnboot -v
+Boot Definitions for Volume Group /vg00: The Boot Area is empty.
+```
+
+## F26
+
+使用 `lvlnboot` 将根逻辑卷分配到 `vg00` `lvol1`。
+
+```
+# lvlnboot -r lvol1 /dev/vg00
+```
+
+## F27
+
+将交换分区分配到 `vg00` `lvol2`。
+
+```
+# lvlnboot -s lvol2 /dev/vg00
+# swapinfo
+TYPE      Kb AVAIL KB USED PCT  START/LIMIT NAME
+dev       512000 0 FREE 512000 0%        0 /dev/vg00/lvol2
+reserve             23144 -23144
+memory    167108 27324 164384      2%
+```
+
+## F28
+
+将转储分配到 `vg00` `dump` 逻辑卷。
+
+```
+# lvlnboot -s dump /dev/vg00
+```
+
+## F29
+
+将次要转储分配到 `vg00` `lvol2`。
+
+```
+# lvlnboot -d dump /vg00
+```
+
+## F30
+
+运行 `lvlnboot` 确认 `lvol2` 已正确配置为次要转储。
+
+```
+# lvlnboot -d lvol2 /vg00
+```
