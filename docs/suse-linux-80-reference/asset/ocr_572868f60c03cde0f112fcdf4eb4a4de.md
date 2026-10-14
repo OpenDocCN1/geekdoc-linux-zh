@@ -1,0 +1,13 @@
+# Advantages
+
+The new X server is no longer a monolithic program, but just a relatively small basic scaffolding to which the necessary program modules can be later added, if and when required. For example, there are no longer many different X servers and graphics cards as in the previous version, but just one executable program called XFree86, which can be found in the directory `/usr/X11R6/bin`. This is also the actual X server. The graphics driver, which then takes on the task of controlling the graphics card, is a loadable module.
+
+A similar method is used to support the various input devices, fonts, or X protocols. This again consists of individual modules that can be later loaded by the X server. As a rule, you do not need to worry about these modules. The configuration of the modules to operate the graphical desktop on your computer is managed as far as possible by SaX2.
+
+Though this module concept, it is easy for a vendor to implement a driver for exotic hardware, such as touch screens or new graphics cards. The developers have even ensured that the necessary modules for various operating systems only need to be made available once, which means that a graphics driver module compiled in FreeBSD, for example, can also be used in Linux and vice versa. This portability, however, is limited to the same hardware platform: a module compiled for Linux on PowerPCs cannot be used on an Intel PC.
+
+Support for the mouse has also been significantly improved. Especially under heavy loads, the reaction of the mouse to mouse movements is considerably faster and more direct than with the previous XFree86 X server. Overall, the output speed has also been improved, so graphics operations are generally performed more quickly than on the old X server due to the completely revised XAA (*XFree86 Acceleration Architecture*).
+
+Compared to XFree86 3.3.x, the configuration file has a slightly different format and is now located in `/etc/X11/XF86Config`. For fine-tuning your X configuration, details on the structure of the configuration file and how it functions can be found in Section *Optimizing the Installation of the X Window System* on page 160.
+
+Error logging has also been improved. The X server creates a very detailed log file, which you can always find after the X server has started in the file `/var/log/XFree86.0.log`. One of the further features of this version is the support of special options, such as True Type fonts. Other features also include the provision of the 3D protocol extension, glx, gamma correction of the screen, and the support of multiple graphics cards for Multihead configurations. More information on this can be found in Section *Optimizing the Installation of the X Window System* on page 160.

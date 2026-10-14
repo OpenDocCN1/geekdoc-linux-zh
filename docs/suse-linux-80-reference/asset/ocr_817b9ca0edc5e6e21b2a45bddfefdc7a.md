@@ -1,0 +1,13 @@
+Only newer BIOS versions allow access to additional devices, for example, in connection with EIDE hard disk controllers for up to four EIDE devices. Many modern SCSI controllers even allow SCSI devices to be “pushed to the front” to make them bootable. To use this feature with LiLO, look at the disk options on page 101.
+
+For the sake of simplicity, all this is referred to as the “1024-cylinder limit.” It should be considered while partitioning your hard disks *before* installing Linux for the first time. Afterwards, it may be too late and may cause a lot of extra work. For more information, see Section *The 1024-Cylinder Limit* on page 115. The following locations are acceptable for storing the LiLO boot sector.
+
++   - **on a floppy disk.** This is the most secure, but also the slowest alternative for booting with LiLO (see Section *Boot Disk with LiLO* on page 107). Choose this alternative if you do not want to change boot sectors.
++   
++   - **in the boot sector of a primary Linux partition on the first hard disk.** This leaves the MBR untouched. Before it can be booted, the partition must be marked active, with fdisk. If Linux is fully installed on logical drives or partitions on the second hard disk, there is only the boot sector of the extended drive of the first drive left, if there is one. Linux fdisk can also activate such a partition.
++   
++     To boot multiple systems from the hard disk, this is extremely awkward. Every time you want to boot, you have to activate the corresponding boot sector *beforehand*. The next two variants are much less cumbersome.
++   
++   - **in the Master Boot Record.** This variation offers the highest flexibility. It is the only alternative possible if all of the Linux partitions reside on the second hard disk and there is no extended partition on the first drive. Every setting of the MBR must be edited with extreme care since errors may have severe consequences. The safety aspects are described in Section *Installing and Uninstalling LiLO* on page 103.
++   
++   - **in a boot sector booted by another boot manager.** Try this if you have used another boot manager and want to continue using it. Depending on its flexibility and power, there are several variations. A common case: you have a primary Linux partition on the second hard disk from which you boot Linux. Your boot manager is able to boot this partition via a boot sector. Then you can activate your Linux partition by installing LiLO into this boot sector and telling your boot manager that it is active.

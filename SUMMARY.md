@@ -2013,6 +2013,7 @@
 +   [SUSE Linux 10 达人迷](docs/suse-linux-10-for-dummies-for-dummies-computertech/README.md)
 +   [SUSE Linux 10.0 解锁指南](docs/suse-linux-100-unleashed/README.md)
 +   [SuSE Linux 6.2 深度解析](docs/suse-linux-62-unleashed/README.md)
++   [SUSE Linux 8.0 参考手册](docs/suse-linux-80-reference/README.md)
 +   [SuSE Linux 8.1 用户指南](docs/suse-linux-81-user-guide/README.md)
 +   [SuSE Linux 8.2 管理指南](docs/suse-linux-82-administration-guide-authors-frank-bodammer/README.md)
 +   [SuSE Linux 8.2 用户指南](docs/suse-linux-82-user-guide-authors-stefanie-haefner/README.md)

@@ -1,0 +1,14 @@
+Uncompressed audio data of CD quality takes up almost 10 MB per minute. Therefore, the MP3 encoding procedure was developed at the Fraunhofer Institute. Unfortunately, this procedure is patented. Companies that sell MP3 encoders must pay licensing fees. For this reason, the high-performance MP3 encoder developed for Linux, Lame, is not included in our distribution, although its source code falls under the GPL. Obtain more information about the legal status at the project’s web site, http://lame.sourceforge.net. Using Lame is only permitted for research purposes in some countries, including Germany and the USA.
+
+Ogg Vorbis is a free compressed audio format. The Ogg format is already supported by KoNCD, xmms, terminatorX, and many other players. This project’s web site can be found at http://www.xiph.org/ogg/vorbis. The vorbis-tools package includes an encoder and a simple player. The encoder is started at the command line with oggenc. The WAV file to compress is the only required parameter. The option `-h` presents a summary of additional parameters. In the latest version, the Ogg encoder even supports coding with variable bit rate. This way, an even higher compression rate can be obtained with the same quality. Parameters can also be specified for the bit rate itself. The parameter `-b` defines the average bit rate. `-m` and `-M` specifies the minimum and maximum bit rate. Instead of the bit rate, the parameter `-q` for the desired quality can be given.
+
+ogg123 is an Ogg player for the command line. As a parameter, specify the device to use for playback. Start the application with a command like
+
+```
+ogg123 -d alsa09 mysong.ogg
+```
+
+# Buffering and Latencies
+
+This section explains how to guarantee interruption-free audio playback. This is not solely a Linux problem, but a problem that exists for all multitasking operating systems. Normally in a multitasking operating system, several processes are running simultaneously. Since the processor can only execute one process at a time, each process is given a certain amount of processor time by the operating system’s scheduler. The switching action between processes normally happens so quickly that the user does not notice anything at all.
+For audio output, however, this phenomenon is noticeable in the form of short interruptions or clicks. Audio programs therefore use a cache (buffering) for output. The audio data stored in the cache will continue to be relayed to the output of the sound card, even when the audio application is interrupted by the scheduler. A cache large enough to bridge the longest interruptions guarantees click-free output.
