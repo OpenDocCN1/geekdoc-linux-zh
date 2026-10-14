@@ -1,0 +1,91 @@
+
+# Linux 实用手册：日常使用的技巧与方法
+
+## 索引
+
+- calculating arithmetic 29.1 计算算术
+- calendar file, making 28.4.1 创建预约文件
+- calendar files, including 28.4.2 在提醒中包含假日
+- calendar, displaying a 28.3.1 显示日历
+- calendar, displaying in Emacs 28.3.2 在 Emacs 中显示日历
+- calendars 28.3 日历
+- calling out on a modem 30.3 通过调制解调器拨出
+- cancelling a print job 26.1.4 取消打印作业
+- cancelling a shutdown A.2.3 取消关机
+- capture logs 4.5 记录 Shell 会话
+- carbon copies, sending in mail 31.1 在邮件中发送抄送
+- caret, in regexps 15.2.1 匹配以特定文本开头的行
+- carriage returns, replacing with linefeeds 15.6.4 在 Emacs 中搜索和替换
+- Case Western Reserve University 11.2 Emacs
+- cassette labels, PostScript template for 16.6 其他文字处理器和排版系统
+- CD, sampling sound from a 23.2 从 CD 采样声音
+- CD–R, writing an audio 23.3 刻录音频 CD–R
+- CD–ROM drives, letting users mount A.4.3 允许用户挂载驱动器
+- CD–ROM, mounting a 25.4.1 挂载 CD–ROM
+- CD–ROM, unmounting a 25.4.2 卸载 CD–ROM
+- CD–ROMs 25.4 CD–ROM
+- changing directories 6.2 更改目录
+- changing file modification time 9.2 更改文件修改时间
+- changing file names to lowercase 6.5.1 将文件名更改为小写
+- changing the amplitude of a sound file 24.2.1 更改声音文件的振幅
+- changing the ownership of a file 7.2.2 更改文件的所有权
+- changing the permissions of a file 7.3.2 更改文件权限
+- changing the root window parameters 5.6.3 更改根窗口参数
+- changing the sampling rate of a sound file 24.2.2 更改声音文件的采样率
+- changing the shell prompt 4.6.1 更改 Shell 提示符
+- changing the size of an image 19.1.1 更改图像大小
+- changing the volume level 22.2.2 更改音量级别
+- changing to the last directory you visited 6.2.2 切换到上次访问的目录
+- changing to your home directory 6.2.1 切换到你的主目录
+- changing your password 3.5 更改你的密码
+- Chao, Buwei Yang 1.4 致谢
+- character chart, viewing a 10.4 查看字符表
+- characters, counting in a text 13.1.1 统计文本中的字符数
+- characters, quoting 4.1.1 向命令传递特殊字符
+- chatting directly with a user 33.6.1 直接与用户聊天
+- chatting with other users 33.6 与其他用户聊天
+- chatting with users on ICQ 33.6.3 与 ICQ 用户聊天
+- chatting with users on IRC 33.6.2 与 IRC 用户聊天
+- CheapBytes A.3.1 获取和安装 Debian
+- checking grammar 12.3 检查语法
+- checking in a file revision 9.7.1 检入文件修订版
+- checking out a file revision 9.7.2 检出文件修订版
+- checking SGML document syntax 16.5.2 检查 SGML 文档语法
+- checking text for difficult sentences 12.3.4 检查文本中的困难句子
+- checking text for doubled words 12.3.2 检查文本中的重复词
+- checking text for long sentences 12.3.5 检查文本中的长句子
+- checking text for misused phrases 12.3.1 检查文本中误用的短语
+- checking text for readability 12.3.3 检查文本的可读性
+- checking whether a system is online 33.4.1 检查系统是否在线
+- checking whether a user is online 33.4.2 检查用户是否在线
+- Chet's Emacs 11.2 Emacs
+- choosing a newsreader 33.3.1 选择新闻阅读器
+- choosing a window manager 5.6.4 选择窗口管理器
+- choosing the perfect text editor 11.1 选择完美的文本编辑器
+- choosing the right typesetting system for the job 16.1 为工作选择合适的排版系统
+- chorus, adding to a sound file 24.2.7 向声音文件添加合唱效果
+- clearing the screen 4.6.4 自定义未来的 Shell
+- clients, X 5.2 在 X 中运行程序
+- color directory listing 6.3.5 以彩色列出目录
+- color map 19.1.3 调整图像颜色
+- color reduction 19.1.3 调整图像颜色
+- colors, window 5.2.2 指定窗口颜色
+- columns, placing text in 14.2.2 将文本放置在列中
+- combining images 19.1.7 合并图像
+- combining PostScript documents 21.2.2 合并 PostScript 文档
+- combining PostScript pages 21.1.3 合并 PostScript 页面
+- command history 4.4 命令历史
+- command line 4.1 命令行编辑键
+- command line editing, keys for 4.1 命令行编辑键
+- command, finding the location of a 8.4 查找命令的位置
+
+| 索引条目 | 章节 |
+|---|---|
+| command, mailing the output of a | 31.1.2 Mailing a File or the Output of a Command |
+| command, repeating the last | 4.1.3 Repeating the Last Command You Typed |
+| command, running a | 3.4 Running a Command |
+| command, running on a delay | 28.6.3 Running a Command on a Delay |
+| commands available while perusing text | 10.1.3 Commands Available While Perusing Text |
+| commands, listing usage | 3.8.3 Listing the Usage of a Tool |
+| commands, making aliases for | 4.6.2 Making a Command Alias |
+| commands, piping | 4.2.4 Redirecting Output to Another Command's Input |
