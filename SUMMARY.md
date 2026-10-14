@@ -2124,6 +2124,7 @@
 +   [Linux 命令行，2nd Edition：完整入门指南](docs/the-linux-command-line-2nd-edition-a-complete-introduction/README.md)
 +   [Linux 命令行第 7 互联网版](docs/the-linux-command-line-7th-internet-edition/README.md)
 +   [Linux 命令行：完整入门指南](docs/the-linux-command-line-a-complete-introduction/README.md)
++   [Linux命令行完全入门指南（第1版）](docs/the-linux-command-line-a-complete-introduction-1st-edition/README.md)
 +   [Linux 命令行：入门指南](docs/the-linux-command-line-a-complete-introduction-2013/README.md)
 +   [Linux 命令行：完整入门指南 (第2版)](docs/the-linux-command-line-a-complete-introduction-2d-edition/README.md)
 +   [Linux 命令行：入门指南，第 2 版](docs/the-linux-command-line-a-complete-introduction-2nd-edition/README.md)

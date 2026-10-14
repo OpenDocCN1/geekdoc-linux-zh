@@ -1,0 +1,32 @@
+That’s better. At least now we can see what we are doing. Notice the trailing space within the double quotes. This provides the space between the dollar sign and the cursor when the prompt is displayed.
+Let’s add a bell to our prompt:
+
+```
+$ PS1="\a$ "
+```
+
+Now we should hear a beep each time the prompt is displayed. This could get annoying, but it might be useful if we needed notification when an especially long-running command has been executed.
+Next, let’s try to make an informative prompt with some hostname and time-of-day information:
+
+```
+$ PS1="\A \h $ "
+17:33 linuxbox $
+```
+
+Adding time-of-day to our prompt will be useful if we need to keep track of when we perform certain tasks. Finally, we’ll make a new prompt that is similar to our original:
+
+```
+17:37 linuxbox $ PS1="\u@\h \W\$ "
+<cme@linuxbox ~>$
+```
+
+Try out the other sequences listed in Table 13-1 and see if you can come up with a brilliant new prompt.
+
+# Adding Color
+
+Most terminal emulator programs respond to certain non-printing character sequences to control such things as character attributes (like color, bold text, and the dreaded blinking text) and cursor position. We’ll cover cursor position in a little bit, but first we’ll look at color.
+
+# TERMINAL CONFUSION
+
+> Back in ancient times, when terminals were hooked to remote computers, there were many competing brands of terminals and they all worked differently. They had different keyboards, and they all had different ways of interpreting control information. Unix and Unix-like systems have two rather complex subsystems (called termcap and terminfo) to deal with the babel of terminal control. If you look into the deepest recesses of your terminal emulator settings, you may find a setting for the type of terminal emulation.
+> In an effort to make terminals speak some sort of common language, the American National Standards Institute (ANSI) developed a standard set of character sequences to control video terminals. Old-time DOS users will remember the ANSI.SYS file that was used to enable interpretation of these codes.

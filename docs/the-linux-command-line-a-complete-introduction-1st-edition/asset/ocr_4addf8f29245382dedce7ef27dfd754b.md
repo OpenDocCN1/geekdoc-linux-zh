@@ -1,0 +1,43 @@
+While the output of help for the cd command is concise and accurate, it is by no means a tutorial, and as we can see, it also seems to mention a lot of things we haven’t talked about yet! Don’t worry. We’ll get there.
+
+# --help—Display Usage Information
+
+Many executable programs support a --help option that displays a description of the command’s supported syntax and options. For example:
+
+```
+[me@linuxbox ~]$ mkdir --help
+Usage: mkdir [OPTION] DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+
+    -Z, --context=CONTEXT (SELinux) set security context to CONTEXT
+Mandatory arguments to long options are mandatory for short options too.
+    -m, --mode=MODE      set file mode (as in chmod), not a=rwx - umask
+    -p, --parents        no error if existing, make parent directories as needed
+
+    -v, --verbose        print a message for each created directory
+        --help           display this help and exit
+        --version        output version information and exit
+Report bugs to <bug-coreutils@gnu.org>.
+```
+
+Some programs don’t support the --help option, but try it anyway. Often it results in an error message that will reveal the same usage information.
+
+# man—Display a Program’s Manual Page
+
+Most executable programs intended for command-line use provide a formal piece of documentation called a manual or man page. A special paging program called man is used to view them, like this:
+
+```
+man program
+```
+
+where program is the name of the command to view.
+
+Man pages vary somewhat in format but generally contain a title, a synopsis of the command’s syntax, a description of the command’s purpose, and a listing and description of each of the command’s options. Man pages, however, do not usually include examples, and they are intended as a reference, not a tutorial. As an example, let’s viewing the man page for the ls command:
+
+```
+[me@linuxbox ~]$ man ls
+```
+
+On most Linux systems, man uses less to display the manual page, so all of the familiar less commands work while displaying the page.
+
+The "manual" that man displays is broken into sections and covers not only user commands but also system administration commands, programming interfaces, file formats, and more. Table 5-1 describes the layout of the manual.

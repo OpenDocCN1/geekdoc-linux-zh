@@ -1,0 +1,90 @@
+
+medium. We can write them, but we sometimes cannot read them. Before we are tempted to run away in terror from this command, let’s look at how it was constructed. First, we know that the command will have this basic structure:
+
+```
+sed 's/regexp/replacement/' distros.txt
+```
+
+Our next step is to figure out a regular expression that will isolate the date. Since it is in MM/DD/YYYY format and appears at the end of the line, we can use an expression like this:
+
+```
+[0-9]{2}/[0-9]{2}/[0-9]{4}$
+```
+
+which matches two digits, a slash, four digits, and the end of line. So that takes care of regexp, but what about replacement? To handle that, we must introduce a new regular expression feature that appears in some applications that use BRE. This feature is called back references and works like this: If the sequence \n appears in replacement where n is a number from one to nine, the sequence will refer to the corresponding subexpression in the preceding regular expression. To create the subexpressions, we simply enclose them in parentheses like so:
+
+```
+([0-9]{2})/([0-9]{2})/([0-9]{4})$
+```
+
+We now have three subexpressions. The first contains the month, the second contains the day of the month, and the third contains the year. Now we can construct replacement as follows:
+
+```
+\3-\1-\2
+```
+
+which gives us the year, a dash, the month, a dash, and the day. Now, our command looks like this:
+
+```
+sed 's/([0-9]{2})/([0-9]{2})/([0-9]{4})$/\3-\1-\2/' distros.txt
+```
+
+We have two remaining problems. The first is that the extra slashes in our regular expression will confuse sed when it tries to interpret the s command. The second is that since sed, by default, accepts only basic regular expressions, several of the characters in our regular expression will be taken as literals, rather than as metacharacters. We can solve both these problems with a liberal application of backslashes to escape the offending characters:
+
+```
+sed 's/(\([0-9]\{2\}\)\/(\([0-9]\{2\}\)\/(\([0-9]\{4\}\)$)/\3-\1-\2/' distros.txt
+```
+
+And there you have it! Another feature of the s command is the use of optional flags that may follow the replacement string. The most important of these is the g flag, which instructs sed to apply the search and replace globally to a line, not just to the first instance, which is the default.
+
+Here is an example:
+
+```
+[me@linuxbox ~]$ echo "aaabbbccc" | sed 's/b/B/'
+aaaBBccc
+```
+
+We see that the replacement was performed but only to the first instance of the letter b, while the remaining instances were left unchanged. By adding the g flag, we are able to change all the instances:
+
+```
+[me@linuxbox ~]$ echo "aaabbbccc" | sed 's/b/B/g'
+aaaBBBccc
+```
+
+So far, we have given sed single commands only via the command line. It is also possible to construct more complex commands in a script file using the -f option. To demonstrate, we will use sed with our distros.txt file to build a report. Our report will feature a title at the top, our modified dates, and all the distribution names converted to uppercase. To do this, we will need to write a script, so we'll fire up our text editor and enter the following:
+
+```
+# sed script to produce Linux distributions report
+
+1 i\
+\
+Linux Distributions Report\
+
+s/([0-9]{2})\/([0-9]{2})\/([0-9]{4})\/\3-\2-\1/
+y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
+```
+
+We will save our sed script as distros.sed and run it like this:
+
+```
+[me@linuxbox ~]$ sed -f distros.sed distros.txt
+
+Linux Distributions Report
+
+SUSE          10.2      2006-12-07
+FEDORA        10        2008-11-25
+SUSE          11.0      2008-06-19
+UBUNTU        8.04      2008-04-24
+FEDORA        8         2007-11-08
+SUSE          10.3      2007-10-04
+UBUNTU        6.10      2006-10-26
+FEDORA        7         2007-05-31
+UBUNTU        7.10      2007-10-18
+UBUNTU        7.04      2007-04-19
+SUSE          10.1      2006-05-11
+FEDORA        6         2006-10-24
+FEDORA        9         2008-05-13
+UBUNTU        6.06      2006-06-01
+UBUNTU        8.10      2008-10-30
+FEDORA        5         2006-03-20
+```

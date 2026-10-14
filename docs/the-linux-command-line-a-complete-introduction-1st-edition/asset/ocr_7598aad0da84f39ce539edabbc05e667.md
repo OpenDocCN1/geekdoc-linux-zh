@@ -1,0 +1,53 @@
+```
+$ \a \
+\\:\\
+\
+End Of Report
+```
+
+The script now inserts the nl logical-page markup and adds a footer at the end of the report. Note that we had to double up the backslashes in our markup, because sed normally interprets them as escape characters.
+
+Next, we’ll produce our enhanced report by combining sort, sed, and nl:
+
+```
+[me@linuxbox ~]$ sort -k 1,1 -k 2n distros.txt | sed -f distros-nl.sed | nl
+```
+
+# Linux Distributions Report
+
+Name    Ver.    Released
+---     ---     -------
+1  Fedora 5     2006-03-20
+2  Fedora 6     2006-10-24
+3  Fedora 7     2007-05-31
+4  Fedora 8     2007-11-08
+5  Fedora 9     2008-05-13
+6  Fedora 10    2008-11-25
+7  SUSE 10.1    2006-05-11
+8  SUSE 10.2    2006-12-07
+9  SUSE 10.3    2007-10-04
+10 SUSE 11.0    2008-06-19
+11 Ubuntu 6.06  2006-06-01
+12 Ubuntu 6.10  2006-10-26
+13 Ubuntu 7.04  2007-04-19
+14 Ubuntu 7.10  2007-10-18
+15 Ubuntu 8.04  2008-04-24
+16 Ubuntu 8.10  2008-10-30
+
+```
+End Of Report
+```
+
+Our report is the result of our pipeline of commands. First, we sort the list by distribution name and version (fields 1 and 2), and then we process the results with sed, adding the report header (including the logical page markup for nl) and footer. Finally, we process the result with nl, which, by default, numbers only the lines of the text stream that belong to the body section of the logical page.
+
+We can repeat the command and experiment with different options for nl. Some interesting ones are
+
+```
+nl -n rz
+```
+
+and
+
+```
+nl -w 3 -s ' '
+```

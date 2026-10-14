@@ -1,0 +1,52 @@
+vi will start up, and we will see the first file on the screen:
+
+```
+The quick brown fox jumped over the lazy dog. It was cool.
+Line 2
+Line 3
+Line 4
+Line 5
+```
+
+# Switching Between Files
+
+To switch from one file to the next, use this ex command:
+
+```
+:n
+```
+
+To move back to the previous file, use:
+
+```
+:N
+```
+
+While we can move from one file to another, vi enforces a policy that prevents us from switching files if the current file has unsaved changes. To force vi to switch files and abandon your changes, add an exclamation point (!) to the command.
+
+In addition to the switching method described above, vim (and some versions of vi) provides some ex commands that make multiple files easier to manage. We can view a list of files being edited with the :buffers command. Doing so will display a list of the files at the bottom of the display:
+
+```
+:buffers
+  1 %a "foo.txt"           line 1
+  2   "ls-output.txt"      line 0
+Press ENTER or type command to continue
+```
+
+To switch to another buffer (file), type :buffer followed by the number of the buffer you wish to edit. For example, to switch from buffer 1, which contains the file foo.txt, to buffer 2, which contains the file ls-output.txt, we would type this:
+
+```
+:buffer 2
+```
+
+and our screen now displays the second file.
+
+# Opening Additional Files for Editing
+
+It's also possible to add files to our current editing session. The ex command :e (short for edit) followed by a filename will open an additional file. Let's end our current editing session and return to the command line.
+
+Start vi again with just one file:
+
+```
+[me@linuxbox ~]$ vi foo.txt
+```

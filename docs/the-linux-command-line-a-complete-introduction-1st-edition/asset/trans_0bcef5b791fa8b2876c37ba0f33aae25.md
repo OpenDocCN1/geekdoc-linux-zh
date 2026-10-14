@@ -1,0 +1,116 @@
+
+
+taken to mean that a match will occur only if the line in the file contains at least four characters and that somewhere in the line the characters b, z, i, and p are found in that order, with no other characters in between. The characters in the string bzip are all literal characters, in that they match themselves. In addition to literals, regular expressions may also include metacharacters, which are used to specify more complex matches. Regular expression metacharacters consist of the following:
+
+```
+^ $ . [ ] { } - ? * + ( ) | \
+```
+
+All other characters are considered literals, though the backslash character is used in a few cases to create metasequences, as well as allowing the metacharacters to be escaped and treated as literals instead of being interpreted as metacharacters.
+
+> Note: As we can see, many of the regular-expression metacharacters are also characters that have meaning to the shell when expansion is performed. When we pass regular expressions containing metacharacters on the command line, it is vital that they be enclosed in quotes to prevent the shell from attempting to expand them.
+
+## The Any Character
+
+The first metacharacter we will look at is the dot or period character, which is used to match any character. If we include it in a regular expression, it will match any character in that character position. Here’s an example:
+
+```
+[me@linuxbox ~]$ grep -h '.zip' dirlist*.txt
+bunzip2
+bzip2
+bzip2recover
+gunzip
+gzip
+funzip
+gpg-zip
+preunzip
+prezip
+prezip-bin
+unzip
+unzipfx
+```
+
+We searched for any line in our files that matches the regular expression .zip. There are a couple of interesting things to note about the results. Notice that the zip program was not found. This is because the inclusion of the dot metacharacter in our regular expression increased the length of the required match to four characters; because the name zip contains only three, it does not match. Also, if any files in our lists had contained the file extension .zjp, they would have been matched, because the period character in the file extension is treated as "any character," too.
+
+## Anchors
+
+The caret (^) and dollar sign ($) characters are treated as anchors in regular expressions. This means that they cause the match to occur only if the regular expression is found at the beginning of the line (^) or at the end of the line ($).
+
+```
+[me@linuxbox ~]$ grep -h '^zip' dirlist*.txt
+zip
+zipcloak
+zipgrep
+zipinfo
+zipnote
+zipsplit
+[me@linuxbox ~]$ grep -h 'zip$' dirlist*.txt
+gunzip
+gzip
+funzip
+gpg-zip
+preunzip
+prezip
+unzip
+zip
+[me@linuxbox ~]$ grep -h '^zip$' dirlist*.txt
+zip
+```
+
+Here we searched the list of files for the string zip located at the beginning of the line, the end of the line, and on a line where it is at both the beginning and the end of the line (i.e., by itself on the line.) Note that the regular expression '^$' (a beginning and an end with nothing in between) will match blank lines.
+
+## A CROSSWORD PUZZLE HELPER
+
+My wife loves crossword puzzles, and she will sometimes ask me for help with a particular question. Something like, "What's a five-letter word whose third letter is j and last letter is r that means . . . ?" This kind of question got me thinking.
+
+Did you know that your Linux system contains a dictionary? It does. Take a look in the /usr/share/dict directory and you might find one, or several. The dictionary files located there are just long lists of words, one per line, arranged in alphabetical order. On my system, the words file contains just over 98,500 words. To find possible answers to the crossword puzzle question above, we could do this:
+
+```
+[me@linuxbox ~]$ grep -i '..j..r' /usr/share/dict/words
+Major
+major
+```
+
+Using this regular expression, we can find all the words in our dictionary file that are five letters long and have a j in the third position and an r in the last position.
+
+## Bracket Expressions and Character Classes
+
+In addition to matching any character at a given position in our regular expression, we can also match a single character from a specified set of characters by using bracket expressions. With bracket expressions, we can specify a set of characters (including characters that would otherwise be interpreted as metacharacters) to be matched. In this example, using a two-character set, we match any line that contains the string bzip or gzip:
+
+```
+[me@linuxbox ~]$ grep -h '[bg]zip' dirlist*.txt
+bzip2
+bzip2recover
+gzip
+```
+
+A set may contain any number of characters, and metacharacters lose their special meaning when placed within brackets. However, there are two cases in which metacharacters are used within bracket expressions and have different meanings. The first is the caret (^), which is used to indicate negation; the second is the dash (-), which is used to indicate a character range.
+
+### Negation
+
+If the first character in a bracket expression is a caret (^), the remaining characters are taken to be a set of characters that must not be present at the given character position. We do this by modifying our previous example:
+
+```
+[me@linuxbox ~]$ grep -h '[^bg]zip' dirlist*.txt
+bunzip2
+gunzip
+funzip
+gpg-zip
+preunzip
+prezip
+prezip-bin
+unzip
+unzipfx
+```
+
+With negation activated, we get a list of files that contain the string zip preceded by any character except b or g. Notice that the file zip was not found. A negated character set still requires a character at the given position, but the character must not be a member of the negated set.
+
+The caret character invokes negation only if it is the first character within a bracket expression; otherwise, it loses its special meaning and becomes an ordinary character in the set.
+
+### Traditional Character Ranges
+
+If we wanted to construct a regular expression that would find every file in our lists whose name begins with an uppercase letter, we could do this:
+
+```
+[me@linuxbox ~]$ grep -h '^[ABCDEFGHIJKLMNOPQRSTUVWXYZ]' dirlist*.txt
+```

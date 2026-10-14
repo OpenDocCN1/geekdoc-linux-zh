@@ -1,0 +1,7 @@
+version. Again, we just delete the symbolic link pointing to the new version and create a new symbolic link pointing to the old version.
+
+The directory listing above (from the /lib directory of a Fedora system) shows a symbolic link called libc.so.6 that points to a shared library file called libc-2.6.so. This means that programs looking for libc.so.6 will actually get the file libc-2.6.so. We will learn how to create symbolic links in the next chapter.
+
+# HARD LINKS
+
+While we are on the subject of links, we need to mention that there is a second type of link called a hard link. Hard links also allow files to have multiple names, but they do it in a different way. We'll talk more about the differences between symbolic and hard links in the next chapter.
