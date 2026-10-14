@@ -1,0 +1,180 @@
+
+
+**UUencoding** 将二进制文件转换为 ASCII 格式的一种方法，以便可以通过电子邮件发送给其他 Internet 用户。uuencode 程序将二进制文件转换为 ASCII 格式，而 uudecode 程序则将文件恢复为原始形式。另见 *MIME*。
+
+**VT100** 许多计算机系统支持的标准终端类型。Telnet 程序模拟这种类型的终端以连接到许多 Internet 站点。
+
+**Web** World Wide Web 的常用缩写。
+
+**World Wide Web** 最初设计为研究人员共享文档的手段，World Wide Web（通常称为 Web 或 WWW）已成为 Internet 存储、呈现和研究信息的首要工具。Web 是位于 Internet 上的相互链接的电子文档、图像和声音文件的集合。
+
+**WWW** World Wide Web 的常用缩写。
+
+## INDEX
+
+斜体页码表示插图，并与文本引用分开列出。
+
+### SYMBOLS
+
+- + \. See backslash (\)
+- + {}. See braces ({})
+- + >>. See double greater than operator (>>)
+- + > . See greater than operator (>)
+- + <. See less than operator (<)
+- + ~. See tilde (~)
+- + """. See quotation marks ("" and ")
+- + ". See quotation marks ("" and ")
+- + #. See pound sign (#)
+- + $. See dollar sign ($)
+- + %. See percent sign (%)
+- + &. See ampersand (&)
+- + *. See asterisk (*)
+- + +. See plus sign (+)
+- + -. See dash (-); minus sign (-)
+- + .. See dot (.); dots (..)
+- + /. See forward slash (/)
+- + ;;. See semicolons (;)
+- + ?. See question mark (?)
+- + `. See backtick (`)
+- + |. See vertical bar (|)
+
+### A
+
+- AbiWord, 59
+- absolute file name, 120
+- access rights. See file permissions
+- adduser command, 97
+- Adobe Acrobat files, viewing, 340
+- ADSL connections, 88
+- Afterstep Clock applet, 142
+
+- aliases, 95, 104–105, 282, 286
+- ampersand (&)
+  - at end of Linux commands, 107
+- and, or, and not operators, 210
+- animations, creating desktop, 295, 329–330, 337–338
+- anonymous FTP, 394
+- Another Clock applet, 142
+- Apache Web server
+  - configuring options for, 282, 284
+  - home page, 89
+  - package, 361
+  - using, 89
+- Aphrodite, Herm, 285
+- applets. See also capplets
+  - GNOME Panel, 47–48
+  - Windows, 270–271
+- Application Launchers, 45–46
+- applications for Linux. See also file name extensions; Linux packages
+  - displaying lists of, 43, 44
+  - grouping together, 46
+  - how to run in File Manager, 51
+  - menu of preloaded, 40
+  - minimizing and restoring, 43
+  - third-party, 58–59, 271, 272
+- ApplixWare Office Suite, 58, 323
+- Archie, 394
+- archiving, 246, 249–253, 330–331
+- arguments
+  - Perl script, 218
+  - shell script, 208–209
+- array variables, 218
+- article, 394
+- ASCII, 394
+- asterisk (*)
+  - effect on Linux file names, 117
+
+wildcard character, 102, 130
+at command, 154–155
+atrm command, 155
+attachments to email, 239, 254–257, 394
+audio. See sound
+AUTOBOOT program, 11
+autoexec.bat file (DOS), 104
+auto-hide, 44
+awk command, 196–197
+
+### B
+
+- background color or wallpaper, modifying, 289, 296
+- background tasks
+  - defined, 361–365, 394
+  - launching, 107–108
+  - Linux packages for, 361–365
+- backslash (\ )
+  - effect on Linux file names, 117
+  - in path names, 118
+  - in Perl scripts, 217
+  - in shell scripts, 207, 208
+- backtick (`)
+  - in Perl scripts, 214
+  - in shell scripts, 214
+- backups. See archiving
+- bandwidth, 394
+- base (core) Linux packages, 357–361
+- Bash (Bourne Again Shell)
+  - about, 394
+  - alternatives to, 99
+  - Linux packages, 355, 370
+  - programming, 204
+  - prompt, 95
+  - starting, 95
+  - user profile scripts, 281–282
+- .bashrc script, 281–282
+- bash -x command, 214
+- batch files (DOS), 204. See also at command; case statement
+- Battery Monitor, 47
+- BBS (Bulletin Board Systems), 394
+  - list of Linux, 324
+- bg command, 108
+- binary files, 254, 394
+- bin command, 74
+- /bin directory, 119
+
+- bit, 394
+- bit bucket, 151
+- Boardwatch Directory of Internet Service Providers, 87
+- boolean operators in shell scripts, 210
+- Bootable Partitions screen, 25
+- boot diskette
+  - creating a DOS, 10
+  - creating a Linux, 11–12
+  - creating an emergency, 24–25
+- booting up Linux. See also /etc/bashrc file
+  - in graphical mode, 31, 95, 96, 282, 287
+  - in text mode, 95, 282, 287
+  - what happens during, 281–282
+- boot partition, default, 25–26
+- bounced email, 394
+- braces ({}), in Perl scripts, 221
+- browsers
+  - defined, 395
+  - Lynx, 80–81, 335
+  - Netscape Navigator, 84, 335
+- bug fixes, 321
+- bulletin boards, list of Linux, 324
+- Burke, Charles, 87
+
+### C
+
+- cable modem Internet connections, 88
+- calculations, numeric, 196, 197, 333
+- calculator programs for Linux, 54, 341
+- calendar programs for Linux, 54, 339, 341
+- C and C++ languages, 224–225
+- capital letters, using. See case sensitivity
+- capplets, 289
+- cascading menus, 41
+- case sensitivity
+  - of Emacs editor commands, 168
+  - of email addresses, 230
+  - ignoring when comparing file names, 154
+  - of Linux commands, 100
+  - of Linux file names, 117
+  - of RPM command flags, 304
+  - of Vi Editor commands, 163
+- case statement, 211–212, 221
+- cat command, 125, 128, 150–151
+- cd command, 32, 111, 120–121, 263, 265
+- CDE desktop, 323
+

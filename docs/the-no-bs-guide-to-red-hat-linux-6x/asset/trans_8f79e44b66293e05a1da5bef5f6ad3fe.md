@@ -1,0 +1,64 @@
+
+
+## 使用 MINICOM
+
+Minicom 是一个通信程序，类似于 Telix 或 Procomm。它并不是真正的 Internet 工具，但你可以用它拨号进入你的 shell 账户或访问公告板系统。使用 **minicom** 命令启动此程序。
+
+## X WINDOWS 的图形化 Internet 工具
+
+对于那些更喜欢点选而不是盲打的用户，Red Hat Linux 为你提供了图形化工具来处理电子邮件和浏览 Web。本节将介绍一些用于电子邮件、Web 浏览、FTP 和 IRC 的图形化工具。所有这些都是免费的，并且已安装在你的系统上。
+
+## 使用 EXMH
+
+exmh 程序是 X Windows 环境下功能齐全的电子邮件客户端，类似于流行的 Eudora 邮件程序（见图 3-8）。它发送、接收并将邮件存储在文件夹中。就像
+
+![](img/3137cdda7122042e86dbeafe9840d4ed_114_0.png)
+
+*图 3-8：exmh 电子邮件客户端*
+
+基于文本的邮件客户端一样，如果没有永久（或 UUCP）连接和注册的域名，你就无法直接在系统上接收 Internet 邮件。
+有关使用 exmh 的更多信息，请使用其帮助功能，可通过“Help”按钮访问。
+
+## 使用 NETSCAPE
+
+Red Hat Linux 附带了 Netscape Navigator 版本 4（见图 3-9）。它是一款出色的浏览器，与 FTP 站点配合良好，并内置了电子邮件客户端和 Usenet 新闻组阅读器，使其成为 Internet 工具中的瑞士军刀。
+如果你已经在 Windows 上使用 Netscape Communicator 的电子邮件客户端，我建议你也在 Linux 上使用它，而不是 exmh，这样你就不用学习另一个程序（见图 3-10）。
+
+![](img/3137cdda7122042e86dbeafe9840d4ed_115_0.png)
+
+*图 3-9：Netscape Navigator 浏览器*
+
+![](img/3137cdda7122042e86dbeafe9840d4ed_116_0.png)
+
+图 3-10：*Netscape Communicator 电子邮件客户端*
+
+## 使用 GFTP 进行文件传输
+
+如果你经常从 FTP 站点下载，可以在 X Windows 下使用 gFTP 程序让操作更方便一些（见图 3-11）。该客户端允许你存储常用 FTP 站点的地址，以便快速连接，并提供从远程站点到硬盘或反向的点选文件传输功能。
+
+## 使用 X-CHAT 进行 IRC 聊天
+
+你可以使用 IRC—Internet Relay Chat 与世界各地的其他 Internet 用户实时互动（见图 3-12）。使用 IRC 类似于在商业服务如 America Online 和 CompuServe 上进入聊天室。IRC 可以比作 CB 无线电——你调到特定的聊天频道，给自己一个 *handle*（昵称），并通过键入消息来与一个或多个人进行实时对话。连接到同一频道的任何人都可以阅读你的消息。
+
+对 IRC 的详细讨论超出了本书的范围，但你可以在 http://www.irchelp.org/ 在线找到一个不错的 IRC 教程。
+
+图 3-11：gFTP 文件传输客户端
+
+图 3-12：X-Chat IRC 客户端
+
+## 运行 Internet 站点
+
+如果你计划从 Linux 系统运行公共 Web 站点，你将必须注册一个域名并安排你的计算机永久（24 小时）连接到 Internet。
+
+## 注册你的域名
+
+要注册域名，请联系 InterNIC（Internet 中央名称注册库的管理者）http://rs.internic.net。在此站点上提供完整细节和在线注册表格。注册域名后，你将必须更新 /etc/hosts 和 /etc/HOSTNAME 文件以反映新的域名。你需要与你的 ISP 合作以使域名注册并投入运行。InterNIC 的域名注册费用目前为前两年 70 美元，此后每年 35 美元。你的 ISP 可能还会额外收取 50 至 100 美元的本地设置费用。
+
+NOTE：作为使用 InterNIC 注册自己的域名的替代方案，对于具有动态 IP 地址（例如典型的拨号连接）的人来说，有一些程序可以拥有静态域名。询问你的 ISP 是否提供此服务，或访问 Domain Host Services http://www.dhs.org 了解有关其免费服务的更多信息。
+
+## 获取连接
+
+根据你站点的预期流量和预算金额，你有多种全天候连接选项。你必须向电话公司支付安装和月度使用费用，你的 ISP 也会收取月度连接费。
+
+根据你选择的连接类型和当地电话公司费率，你的月度连接费用可能从数百美元到数千美元不等。以下各节总结了可能的连接类型。此外，Charles Burke 所著的《How to Build an Internet Service Company》一书（见 http://www.index.mis.net/kanti）提供了大量相关信息。你还应该获取 Boardwatch 杂志的《Internet Service Providers 目录》（见 http://www.boardwatch.com）以
+

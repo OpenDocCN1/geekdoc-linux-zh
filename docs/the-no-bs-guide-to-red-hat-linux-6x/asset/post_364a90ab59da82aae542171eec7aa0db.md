@@ -1,0 +1,71 @@
+
+## TEXT PROCESSING
+
+This section lists packages that are associated with the manipulation of text.
+
+- **OPEN** A tool which will start a program on a virtual console.
+- **PCIUTILS** Linux PCI utilities.
+- **PIRANHA-GUI** The cute little graphical configuration tool for lvs.
+- **PROCINFO** A tool for gathering and displaying system information.
+- **PROCPS** Utilities for monitoring your system and processes on your system.
+- **PROCPS-X11** An X-based system message monitoring utility.
+- **PSACCT** Utilities for monitoring process activities.
+- **PSMISC** Utilities for managing processes on your system.
+- **PVM-GUI** TCL/TK graphical frontend to monitor and manage a PVM cluster.
+- **RDATE** Tool for retrieving the date/time from another machine on your network.
+- **RDIST** Maintains identical copies of files on multiple machines.
+- **RHMASK** Generates and restores mask files based on original and update files.
+- **RP3** The Red Hat graphical PPP management tool.
+- **RPM2HTML** Translates an RPM database and dependency information into HTML.
+- **RPMFIND** Finds and transfers RPM files for a specified program.
+- **SAMBA-CLIENT** Samba (SMB) client programs.
+- **SAMBA-COMMON** Files used by both Samba servers and clients.
+- **SCREEN** A screen manager that supports multiple logins on one terminal.
+- **SETSERIAL** A utility for configuring serial ports.
+- **SETUPTOOL** A text mode system configuration tool.
+- **STATSERIAL** A tool which displays the status of serial port modem lines.
+- **SYMLINKS** A utility which maintains a system's symbolic links.
+- **TIME** A GNU utility for monitoring a program's use of system resources.
+- **TIMECONFIG** Text mode tools for setting system time parameters.
+- **TIMETOOL** A utility for setting the system's date and time.
+- **TKSYSV** An X editor for editing runlevel services.
+- **UCD-SNMP-UTILS** Network management utilities using SNMP, from the UCD-SNMP project.
+- **USERMODE** Graphical tools for certain user account management tasks.
+- **VLOCK** A program which locks one or more virtual consoles.
+- **WHICH** Displays where a particular program in your path is located.
+- **XCPUSTATE** An X Windows-based CPU state monitor.
+- **XISDNLOAD** An ISDN connection load average display for X Windows.
+- **XOSVIEW** An X Windows utility for monitoring system resources.
+- **XSYSINFO** An X Windows kernel parameter monitoring tool.
+- **XTOOLWAIT** A utility which aims to decrease X session start-up time.
+
+- **DIFFUTILS** A GNU collection of diff utilities.
+- **DOCBOOK** An SGML DTD for technical documentation.
+- **ED** The GNU line editor.
+- **GAWK** The GNU version of the awk text processing utility.
+- **GREP** The GNU versions of grep pattern matching utilities.
+- **INDENT** A GNU program for formatting C code.
+- **ISPELL** An interactive spelling checker program.
+- **ISPELL-CATALAN** Ispell spelling checker files for checking Catalan words.
+- **ISPELL-CZECH** Ispell spelling checker files for Czech words.
+- **ISPELL-DANISH** Ispell spelling checker files for Danish words.
+- **ISPELL-DICTS** Files for generating non-English Ispell dictionaries.
+- **ISPELL-DUTCH** Files needed to create an Ispell dictionary of Dutch words.
+- **ISPELL-ESPERANTO** Files needed to generate an Ispell dictionary of Esperanto words.
+- **ISPELL-FRENCH** Files needed to generate an Ispell dictionary of French words.
+- **ISPELL-GERMAN** Files needed to generate an Ispell dictionary of German words.
+- **ISPELL-GREEK** Files needed to generate an Ispell dictionary of Greek words.
+- **ISPELL-ITALIAN** Files needed to generate an Ispell dictionary of Italian words.
+- **ISPELL-NORWEGIAN** Files needed to generate an Ispell dictionary of Norwegian words.
+- **ISPELL-POLISH** Files needed to generate an Ispell dictionary of Polish words.
+- **ISPELL-PORTUGUESE** Files needed to generate an Ispell dictionary of Portuguese words.
+- **ISPELL-RUSSIAN** Files needed to generate an Ispell dictionary of Russian words.
+- **ISPELL-SPANISH** Files needed to generate an Ispell dictionary of Spanish words.
+- **ISPELL-SWEDISH** Files needed to generate an Ispell dictionary of Swedish words.
+- **JADE** A parser and tools for SGML plus DSSSL.
+- **LESS** A text file browser similar to more, but better.
+- **M4** The GNU macro processor.
+- **MAWK** An interpreter for the awk programming language.
+- **RGREP** A grep utility which can recursively descend through directories.
+- **SED** A GNU stream text editor.
+- **SGML-COMMON** Common SGML catalog and DTD files.

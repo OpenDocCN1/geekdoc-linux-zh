@@ -2170,6 +2170,7 @@
 +   [MagPi 必备：树莓派终端命令行指南](docs/the-magpi-essentials-conquer-the-commandline-the-raspberry-t/README.md)
 +   [多启动配置手册 [电子资源]](docs/the-multi-boot-configuration-handbook-electronic-resource/README.md)
 +   [新的 XFree86 [学习新 XFree86 的更好方法]](docs/the-new-xfree86-a-better-way-to-learn-the-new-xfree86/README.md)
++   [Red Hat Linux 6.x 无废话指南](docs/the-no-bs-guide-to-red-hat-linux-6x/README.md)
 +   [Linspire Desktop Linux 操作系统实话指南](docs/the-no-nonsense-guide-linspire-desktop-linux-operating-syste/README.md)
 +   [NT Insider 2017年第2期](docs/the-nt-insider-2017-issue-2/README.md)
 +   [CompTIA Linux+ 官方自学指南 (考试 XK0-004) 电子](docs/the-official-comptia-linux-self-paced-study-guide-exam-xk0-0/README.md)
