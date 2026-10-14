@@ -1,0 +1,23 @@
+# CRAFTING CHECKLISTS
+
+Several useful ways to record your assessments of students’ performance are briefly described in Table 12.2. Although each of the ways listed in the table has a special use, checklists and rating scales are the most frequently used with performance tasks. Suggestions for developing checklists are in this section. Suggestions for rating scales are in the next section.
+
+# Types of Checklists
+
+A checklist consists of a list of specific behaviors, characteristics, or activities and a place for marking whether each is present or absent. You may use a checklist for assessing a procedure a student uses, a product a student produces, or behaviors a student exhibits. Students may use checklists to evaluate their own performance.
+
+Procedure Checklist A procedure checklist assesses whether a student follows the appropriate steps in a process or procedure. Example 12.3 illustrates such a checklist. This checklist assesses whether a student is able to use a microscope properly. This checklist contains descriptions of possible inappropriate steps (errors) in the sequence as well as appropriate steps (correct). By including possible errors in the checklist, you can review these errors when you remediate students. The numbers recorded on the form represent the sequence that a particular student used to perform the task. Sometimes the major flaw in a student’s performance is the order in which he performs the steps. Recording the correct sequence and the student’s sequence on the form will help you attend to this aspect of performance.
+
+Product Checklist A product checklist focuses on the quality of the thing a student makes. Products include drawings, constructed models, essays, and term papers. These checklists identify the parts or other properties a product is supposed to have. You then inspect each product, checking whether those properties are present.
+
+Behavior Checklist A behavior checklist consists of a list of discrete behaviors related to a specific area of a student’s performance. For example, you may wish to identify the particular difficulties a student is having in the phonological, semantic, and syntactic aspects of spoken language. The behavior checklist might have items such as “uses only simple sentence structure” or “responds without delay to questions.”
+
+Table 12.2 Some useful methods of recording student's responses to performance tasks.
+
+Recording method | Description | Recommended use | Example of uses
+Anecdotal records | You observe the performance and write a description of what the student did. | These are primarily useful for keeping records of unanticipated or naturally occurring performances. Usually you can record only one student at a time. | A student shows unusual insights into current events and you want to keep a record of these to put into his portfolio or to recommend the student for a summer program for leadership.
+Behavior tallies | You create a list of specific behaviors of which you want to keep a record for a student. As you observe the performance you tally how many times each behavior occurs. The list is usually limited to only a few behaviors. | These are primarily useful for well-defined lists of behaviors that you can expect to occur frequently. They may be useful to keep track of undesirable behaviors, too. | As a communications arts teachers, you keep track of how often a student uses “uh-h-h” when speaking in front of the class.
+Checklists | You create a list of specific steps in a procedure or specific behaviors. You check each behavior that occurs. The list may be long. | These are primarily useful if the behaviors are in a sequence or if all the sub-tasks that make up the complete performance can be listed. | You are a science teacher and want to be sure that each student performs the steps in setting up a microscope properly.
+You are an automotive shop teacher and want to be sure that each student properly completes all the tasks necessary to change the oil in a car.
+Rating scales | You create standards or criteria for evaluating a performance. Each standard has levels of competence, and you rate students according to how well they performed each standard as they complete the task. | These are especially useful if each standard can be judged according to the level or the degree of quality rather than as simply being present or absent. | You are an art teacher and rate each student’s painting as to its composition, texture, theme, and technique.
+You are a mathematics teacher and rate a student’s problem solution according to how well the student demonstrates mathematical knowledge, uses a good strategy to solve the problem, and communicates her explanation of the solution in writing.

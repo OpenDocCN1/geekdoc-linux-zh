@@ -1,0 +1,24 @@
+# Example
+
+Harry’s obtained grade-equivalent score in science is 7.8, while in mathematics it is 7.4. Does this mean he is stronger in science than in math? No. The confidence band for science is 7.4 to 8.2; for math it is 7.0 to 7.8. Since the uncertainty intervals overlap, it is likely that his true scores on the two tests are not meaningfully different.
+
+![](bbox=[0.06, 0.29, 0.48, 0.44])
+
+Using the SEM to Interpret the Difference Between Two Students’ Scores Sometimes you want to see if one student is stronger than another student in a subject by comparing their scores on the same achievement test. The students’ obtained scores may be different, but since the scores contain measurement error, are the students’ true scores different? To answer this question, form an uncertainty interval around each student’s score. Then, see if the intervals overlap. No overlap means that the students’ true scores are probably meaningfully different. If the intervals do overlap, there may be no meaningful differences in the two students’ true scores because differences of the size observed could arise simply by errors of measurement 68% of the time.
+
+# Example
+
+In reading, Sally’s obtained grade-equivalent score was 8.2 while Jane’s was 7.0. The confidence band for Sally is 7.8 to 8.6; for Jane it is 6.6 to 7.4. Does this mean Sally is a stronger reader than Jane? Yes, since the bands do not overlap.
+
+![](bbox=[0.06, 0.9, 0.48, 1.0])
+
+Although you should be cautious about overinterpreting small differences in scores, you should not be so conservative as to err by underinterpreting or ignoring meaningful score differences. Perhaps a more widespread problem than overinterpreting scores is a “do-nothing pattern”: failing to interpret score changes or ups and downs of profiles because of overdemanding criteria of 68%, 90%, or 95% uncertainty bands (Feldt, 1967). To avoid wasting valuable information, corroborate the information obtained from one assessment with information from other sources (such as classroom performance), thereby reducing the probability of overinterpretation errors (Feldt, 1967).
+
+# ADDITIONAL FACTORS AFFECTING RELIABILITY AND SEM
+
+You should keep a number of factors in mind when interpreting reliability and SEM information, especially when comparing such information from two or more assessment procedures.
+
++   1. Longer assessment procedures are more reliable than shorter procedures. The greater the number of items, judges, occasions of observation, and so on that enter into formulation of a score, the more reliable that score will be. This means, for example, that you should put little confidence in a student’s score based on only one task, or even on clusters of two or three tasks. The general Spearman-Brown formula shows the relation between lengthening an assessment by adding similar tasks and the reliability of the resultant assessment procedure. Appendix J shows a computational example.
++   2. The numerical value computed for a reliability coefficient will fluctuate from one sample to another. The reliability coefficients reported in a test manual are based on samples of students. These numerical values will fluctuate from one sample to the next, so that any one published number is only as an estimate of what the reliability coefficient would be if the entire population of students was tested. Sampling fluctuations are greater for small samples drawn from the population than from large samples.
++   3. The narrower the range of a group’s ability, the lower the reliability coefficient tends to be. Many educators use assessment results to make decisions about students with similar abilities, grade levels, and ages. It is much easier, however, to distinguish individual differences in ability when students vary widely from one another. Therefore, look in test manuals for reliability coefficients calculated on data from students whose abilities are as close together as those with whom you must deal. Put less stock in a published high-reliability coefficient that was derived by pooling samples from groups with wide ranges of ability and/or from groups spanning many age levels. This is especially true when you will be using the assessment to evaluate students whose abilities are close.
++   4. Students at different achievement levels may be assessed with different degrees of accuracy. The SEM, being a single number for an entire test, represents only an average amount of score inconsistency. The consistency of results, however, varies with the level achievement. The SEM may be larger in the middle of the score range than at the extremes. If so, very high and very low scoring students are assessed with somewhat more consistency than are middle-range students. The technical manual of a published test

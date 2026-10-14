@@ -1,0 +1,63 @@
+
+
+follow them completely. Because the validity of your grading decisions is important, however, you need to use some type of systematic plan to develop unit assessments. But, you need not attempt to devise a formal plan for all units in one semester or year. If you develop a blueprint for a few units each year, after a few years most units will have blueprints. As the learning targets change, you can update these blueprints with less work than originally required. Also, several teachers could draft blueprints for different units in a subject and exchange them. Even if a colleague’s blueprint has to be modified to suit your particular teaching approach, you will likely save considerable time. When changes in the blueprints do occur, you should revise and redistribute the blueprints.
+
+## Simplified Specifications
+
+The blueprint shown in Figure 6.2 is rather complete. It is possible to create other useful but less complete specifications. Appendix G offers examples of other types of blueprints.
+
+## BLUEPRINTS FOR STUDENT-CENTERED ASSESSMENT
+
+As you can see, the assessment blueprint is a concise way to explain what is important for students to learn and to decide how much to emphasize each learning target in students’ summative evaluations. Blueprints are useful instructional tools, too, especially with students in junior and senior high school. Therefore, share your assessment blueprints with your students.
+
+Ideally, you should do this sharing when you begin the unit. You should review and discuss the blueprint thoroughly with the students to ensure they (a) have no misunderstandings, (b) understand the unit’s emphasis, (c) understand what they will be held accountable for performing, and (d) see how the summative assessment factors into their overall grades. In Chapter 5 we discussed your professional responsibility to give students sufficient information when administering assessments. A blueprint is a very good way of providing this information for junior and senior high school students. Older students may offer suggestions for changing the emphasis or manner of assessment, thus more fully engaging in their own learning and evaluation. Students can write test questions for each blueprint cell. Use them for a practice test.
+
+## CRITERIA FOR IMPROVING THE VALIDITY OF ASSESSMENT PLANS
+
+By now you have an idea of the general process of developing an assessment plan. The general steps required to move from initial assessment ideas to a draft of the assessment instrument are:
+
++   1. Define the purpose for assessment at this time.
++   2. Use the blueprint to specify the content and thinking processes you wish to observe and assess.
++   3. Use the blueprint to specify the learning targets and their weight in the assessment.
++   4. Identify the tasks and other techniques you need to use.
++   5. Develop the initial drafts of these tasks and techniques.
+
+So far, we have discussed the first three steps. Step four is the subject of the rest of this chapter. The last step, developing the tasks and assessment exercises, is the subject of Chapters 7 through 14.
+
+In this section, we emphasize some of the general criteria for evaluating your own planned assessment. These include (a) matching tasks to learning targets, (b) covering important skills, (c) selecting appropriate assessment task formats, (d) making assessments understandable, (e) satisfying validity criteria, (f) using the appropriate length of the assessment, (g) ensuring equivalence, and (h) identifying appropriate complexity and difficulty of tasks.
+
+The discussion in this section necessarily will be general, because we assume that you are not yet familiar with the technical aspects of crafting an assessment. This section, however, will show how you can integrate the knowledge you have already acquired through studying this book into the initial planning stages of a classroom assessment. Table 6.2 summarizes the main points.
+
+## Matching Assessment Tasks to Learning Targets
+
+Your teaching is most effective when your lesson plans, teaching activities, and learning targets are all aligned. All three should also be aligned with your state’s curriculum framework and standards (see Chapter 2). Your assessment plans specify the important learning targets to be taught and assessed. It is most important, therefore, that the actual tasks students perform on the assessment match those learning targets. To be valid, assessment procedures must match the learning targets.
+
+Assessment tasks must match the targets. For example, if a learning target calls for a student to build a model, write a poem, collect data, or perform a physical skill, the students should be administered a performance assessment. If your assessment task requires students only to list the parts of a model, to analyze an existing poem, to summarize data already collected, or to describe the sequence of steps needed for performing the physical skill, it does not match these learning targets. The validity of your classroom assessment results plummets when even some of the tasks do not match the stated learning targets.
+
+## Table 6.2 Criteria and ways to improve the validity of your summative assessments.
+
+| Criteria to Use | Ways to Evaluate Your Assessment Plan |
+|---|---|
+| Align assessment tasks with curriculum, standards, and instruction | • Be sure you clearly understand the main intent of the learning target to be taught and assessed.<br>• Think: What is the main intent of the learning target? Does the assessment task require a student to do exactly as the main intent requires?<br>• Analyze the assessment task to identify which part(s) may not match the learning target. Eliminate or rewrite the nonmatching parts. |
+| Assess only important learning targets | • Review the learning targets taught and assessed; prioritize them from most to least important. Eliminate assessments matching low-priority learning targets.<br>• Be sure your state’s standards or learning expectations are assessed by one or more of your assessments.<br>• Craft assessments that require students to demonstrate more than one high-priority learning target through the same task. |
+| Use appropriate multiple assessment formats | • Become skilled in crafting many types of assessment formats.<br>• Learn the strengths and limitations of each type of assessment format.<br>• Analyze each learning target. Think: What are several different ways I can assess this achievement? How can I use two or more ways?<br>• Analyze the assessment tasks to identify which parts may not match the learning target. Eliminate or rewrite the nonmatching parts.<br>• Plan for assessing each important learning target in two or more ways. |
+| Make assessments understandable | • Be sure each assessment procedure has clear directions to the student, and that you have prepared students concerning each assessment. (See "Preparing Students for the Assessment" in Chapter 14.)<br>• Learn to craft assessments well so they will satisfy the criteria and checklists in the tables contained in Chapters 7, 8, 9, 10, 11, 12, and 14.<br>• Learn to craft scoring rubrics well so they will satisfy the criteria and checklists in the tables contained in Chapters 9 and 12. |
+| Follow appropriate validity criteria | • Use the criteria described in Chapter 3, Table 3.1. |
+| Use appropriate length of assessments | • Be sure all students who know the material can finish within the time limits.<br>• Follow the suggestions for improving reliability given in Chapter 4.<br>• Follow the guidelines in Table 6.3 until you have considerable experience with your students. |
+| Assure equivalence across years | • Use blueprints from previous years to guide you in crafting this year’s assessment blueprints.<br>• Be sure to make the difficulty and complexity of this year’s assessment tasks equivalent to last year’s tasks. |
+| Assure appropriate difficulty and complexity of assessment tasks | • Be sure the conditions and tools for students to use during the assessment are appropriate for the learning targets and the students’ educational development.<br>• Add appropriate accommodations for students with disabilities (see Table 5.2).<br>• Follow the guidelines in Table 6.4. |
+
+As an example, consider the ninth-grade social studies learning target stated here and the three assessment tasks that follow it:
+
+## Example
+
+Learning target: Students will explain in their own words the meaning of the concept of culture.
+
++   Task 1. Name three things that are important to the culture of indigenous Americans.
++   Task 2. Give a short talk to the class comparing three different cultures. In your talk, make sure you describe the similarities and differences among the cultures you have chosen.
++   Task 3. Write a paragraph telling in your own words what is meant by the term culture.
+
+Only Task 3 matches the stated learning target. Consider Task 1: The performance required applies to a specific cultural situation rather than to the general concept of culture as intended by the learning target. Task 1 should not be used for the assessment of this learning target. The performances required in Task 2 are to "compare" and to "describe" ("giving a talk" is only the way the student has to indicate she is describing similarities and differences among the cultures). Although these are worthwhile activities, they seem to go beyond the more limited scope and main intent of the learning target. Because this task does not match the learning target, it should not appear on the assessment either.
+
+What should you do if you create or identify a "great" task that does not match the stated learning target? You have only three choices: Disregard the task, modify the task so it matches the learning target, or modify the learning target so it matches the task. Often, crafting an excellent assessment task helps further clarify a learning
+

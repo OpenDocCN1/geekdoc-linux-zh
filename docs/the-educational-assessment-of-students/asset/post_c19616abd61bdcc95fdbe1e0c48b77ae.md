@@ -1,0 +1,47 @@
+
+## Complementing Your State Assessment
+
+If your state mandates its own assessment, you will need to take its coverage into account before choosing a published standardized test. Most state assessments have accountability as their main purpose. This is not the case for a published standardized test, which is used primarily to
+
+## Uses for Single-Subject Tests
+
+If you are teaching in a single subject area, such as Algebra I or 19th-Century English Literature, you may be interested in assessing how well students are performing in just that subject. Multilevel tests are often inappropriate for
+
+such courses, because they span several grades with relatively few items and thus lack content relevance for a particular course. For most purposes, a teacher-made test for a subject is most appropriate: It is closest to the course content and contains the emphasis you desire.
+
+Single-subject or course tests have been found most useful for such purposes as: pretesting to determine the general background of students coming into a course; advanced placement in college courses; exemption from required or introductory courses; contests and scholarship programs that reward general knowledge of a particular subject; and granting college credit for knowledge acquired by independent study, work experience, or other types of nontraditional education. Many tests for specific subjects are listed in the Mental Measurements Yearbooks.
+
+## How to Administer Standardized Tests
+
+You certainly will be required to administer a standardized assessment to your students, most likely one or more per year. These assessments may be standardized achievement tests, performance assessments, or assessments mandated by your state department of education. Part of the validity of your students’ results will depend on how well you follow the standardization procedure specified in the teacher’s administration manual.
+
+## The Right Way to Prepare Yourself and Students for a Standardized Test
+
+There are two important areas of assessment administration that you directly control and that directly affect the validity of your students’ results. One area is how you prepare yourself and the students for the assessment. Standardized assessments, regardless of whether they are performance or multiple-choice formats, require students to be aware of (a) the fact that they will be assessed, (b) what they will be assessed on, (c) the reasons for the assessment, and (d) how their results will be used. Students should be prepared to do their best. You must also be prepared to administer, and perhaps to mark, the assessments. That means you must be familiar with the assessment procedures and materials, prepare the assessment environment so that a valid assessment can be done, understand how to administer the assessment—including what you are permitted to say to the students—and know how to prepare the students for the assessment.
+
+## The Right Way to Administer a Standardized Test
+
+A second area in which you need to perform well is in actually administering the assessment. Valid assessment results will depend on how well you carry out your responsibilities during the administration phase. You need to follow the procedures stated in the manual exactly: Otherwise, the assessment results will not be comparable across students and the norms will not be usable. Also, you need to monitor students to be sure they are following directions, marking their answers in the proper manner, and otherwise attending to the tasks. Table 16.4 is a checklist of what you must do to administer a standardized assessment without lowering its validity.
+
+Table 16.4 A checklist for administering a standardized assessment procedure to your students.
+
+Before the assessment date
+1. Prepare a schedule for assessment, including dates and times for each component you need to administer.
+2. Discuss the upcoming assessments with the students.
+a. Explain the purpose of the assessment.
+b. Explain what they will be doing.
+c. Explain when and how they will receive the results.
+d. Explain how the results will be used.
+3. Become familiar with the assessment procedure and the directions for administering it. (Practice taking the assessment yourself.)
+4. If proctors are necessary, schedule and train them.
+5. Be sure that all the assessment materials are available, that students have pencils and other necessary tools, and that scratch paper and other materials are available.
+6. Make any necessary physical adjustments to the room.
+7. Make a sign that reads, "Assessing. Please do not disturb us!" Use the sign during the assessment sessions.
+
+During the assessment
+1. Follow the directions exactly as given in the directions manual.
+2. Monitor students to be sure they are working on the correct pages and activities and are recording their responses properly.
+3. Supervise the work of any proctors that are present.
+4. Make notes describing any irregularities, either for individual students or for the entire group.
+
+Source: H. D. Hoover, A. N. Hieronymus, D. A. Frisbie, and S. B. Dunbar, 1993a. Copyright © 1993 by The University of Iowa. All rights reserved. Adapted from the Iowa Tests of Basic Skills, Directions for Administration, Forms K and L, Levels 9–14, p. 15, with permission of The Riverside Publishing Company.

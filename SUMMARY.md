@@ -2099,6 +2099,7 @@
 +   [4.4 BSD 操作系统的设计与实现（Unix 与开放系统系列）](docs/the-design-and-implementation-of-the-44-bsd-operating-system/README.md)
 +   [Docker 书：容器化是新虚拟化](docs/the-docker-book-containerization-is-the-new-virtualization/README.md)
 +   [荷兰人在哭泣：至少通过四种通用视觉语言](docs/the-dutch-are-weeping-in-four-universal-pictorial-languages-/README.md)
++   [学生教育评估](docs/the-educational-assessment-of-students/README.md)
 +   [Linux Mint 21.2 核心指南：阅读障碍友好版：你的 Linux Mint 21.2 之旅阅读障碍友好指南](docs/the-essential-guide-to-linux-mint-212-dyslexia-friendly-edit/README.md)
 +   [前线领导者：从零构建高绩效组织](docs/the-frontline-leader-building-a-high-performance-organizatio/README.md)
 +   [GIMP 核心参考：涵盖 GIMP 1.2、GTK 1.2 和 Skript-Fu](docs/the-gimp-essential-reference-covers-gimp-12-gtk-12-and-skrip/README.md)

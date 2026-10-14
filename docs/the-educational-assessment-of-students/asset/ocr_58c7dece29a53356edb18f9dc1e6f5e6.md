@@ -1,0 +1,27 @@
+Table 18.1 Facts to be reported in addition to standardized test results when evaluating school effectiveness.
+
+Attendance Includes absences of staff and students from school and parents from participation in parent-teacher organizations.
+Holding power Includes graduation and dropout rates.
+Parent involvement Includes parent-teacher organizations, volunteers, and parent-staffed programs.
+Diversity Includes staff and student gender, ethnicity, and home language and staff responsibilities.
+Economic conditions Includes parent income levels and students receiving free or reduced-cost lunches.
+Stability Includes percent of staff and students new to a school district.
+Experience Includes years of teaching experience and years of education beyond the initial qualifications.
+Staff development Includes inservice programs, peer mentoring, collaboration with businesses or colleges, and courses taken.
+Programs for students Includes study skills, counseling, dropout and at-risk prevention, reentry, cross-age tutoring, extra-curricular, and summer school.
+Achievement Includes performance of students at the next higher educational level; longitudinal patterns of achievement test results, student awards and honors, per-student library loans, National Merit scholars, college entrance test results, and out-of-class student accomplishments.
+School environment Includes incidents of vandalism and violence, gang-related activities, types of disciplinary actions, special services, extra-curricular activities, and library facilities.
+Instructional variables Includes length of day, year, and class periods; amount of time per subject per week; number of students using extended day academic program; homework actually assigned; and percent of school days devoted exclusively to academic learning.
+Fiscal Includes average teacher, staff, and administrator salaries; expenditures per student.
+
+Source: Adapted from "Putting Test Scores in Perspective: Communicating a Complete Report Card for Your Schools" by K. K. Matter, Understanding Achievement Tests: A Guide for School Administrators (pp. 121-129) by L. M. Rudner, J. C. Conoley and B. S. Plake (Eds.), 1989, Washington, DC: ERIC Clearinghouse on Tests, Measurements and Evaluation.
+
+and scoring service; and technical information about the assessment. (See our earlier discussion about restrictions in ordering tests.)
+
+Much of this material is bundled together in a specimen set, which is designed as a marketing tool as well as for critical review of materials. As a result, not all materials you will need to review a test intelligently are included. For example, some publishers' specimen sets do not include complete copies of the assessment booklets or scoring guidelines. You will need to order these separately.
+
+Technical Information about a Test's Quality Technical information about a test's quality is not found in a publisher's catalogue. Information about how the test was developed, reliability coefficients, standard errors of measurement, correlational and validity studies, equating methods, item analysis procedures, and norming-sample data are found in a test's technical manual. Technical manuals are not typically included in specimen sets and must be ordered separately from the tests. Although school-testing directors should have copies of the technical manuals for the tests the school uses, too often they do not. Some colleges and universities that maintain test collections for their faculty and students may have technical manuals. Usually, you will need to order the technical manual directly from the test's publisher.
+
+Committee Should Review All Materials Once you obtain the materials, the committee can review them. Be sure to compare similar assessments against the purposes you had in mind for using the assessments. It might be helpful for the committee to obtain input from noncommittee members for certain parts of the assessment: for example, mathematics teachers for the mathematics section, reading teachers for the reading assessment, and so forth. You could also call upon a college or university faculty member to help: For example, a testing and measurement faculty member may be better qualified to review and/or explain technical material. Contact the National Council of Educational Measurement (www.ncme.org) for the names of specialists who live near your school district.
+
+Achievement Tests Must Match the Curriculum It is important to match each test item with your state's standards and state or local curriculum. You do this by obtaining the complete list of standards or learning targets, organized by grade level. Two persons independently read each test item and record which standard or learning target it matches. When all items have been matched, the persons compare their results and reconcile the differences. The findings are summarized in a table that lists each standard and the I.D. number of the test items matching each. The number of nonmatching items is also recorded. This should be done separately for each grade, because a test's items may appear at a grade level that is different than the grade at which the corresponding learning target is taught. If there are a lot of these grade-sequence mismatches, the test will not be suitable for your school district. Be sure to note especially the match between the kinds of thinking and performance activities implied by the standards and the test items. Often the content

@@ -1,0 +1,26 @@
+formal (readiness test, intelligence test, projective test) as sessments were administered.
+This book discusses a variety of educational decisions that depend on assessments, especially in the classroom. Each time, it identifies the basic principles that relate to the evaluation and use of assessment information. It emphasizes basic principles rather than prescriptions to follow blindly (although you will find some of those, too). Once you understand the basic principles, however, you should be able to determine when those and other prescriptions are inappropriate.
+
+# TEACHERS’ CLASSROOM DECISIONS
+
+Teaching and learning require you to constantly gather information and make decisions. You might not realize it, but teachers make decisions about students at the rate of one every 2 to 3 minutes (Shavelson & Stern, 1981). That’s about 20 decisions every class period! Sound teaching decisions require sound information. Sound assessment procedures gather sound information. Researchers estimate that teachers may spend from one third to one half of their time in assessment-related activities (Stiggins, Conklin, & Associates, 1992).
+To help you think about the many decisions a teacher must make, I have organized a set of questions teachers must answer before, during, and after teaching. Examples of assessment procedures that may give you useful information for making the decisions are listed in parentheses after each question.
+
+# Decisions Before Beginning Teaching
+
++   1. What content do I need to cover during the next day, week, month, marking period, and so on? (Review the curriculum, the syllabus, the textbook, and the standardized tests your students will need to pass.)
++   2. What abilities (cultural background factors, interests, skills, etc.) of my students do I need to take into account as I plan my teaching activities? (Informal observation of the students during class; conversations with students’ previous teachers; scholastic aptitude test results; students’ past grades; standardized test results; knowledge of the student’s personal family circumstances.)
++   3. What materials are appropriate for me to use with this group of students? (Informal observation of students’ motivations, interests, beliefs, and experience with the topics you will teach; informal observations about students’ attitudes toward learning the topics; results from pretests, previous teacher’s evaluations, and standardized achievement tests.)
++   4. With what learning activities will my students and I need to be engaged as I teach the lesson (unit, course)? (Review the types of activities I used previously that stimulated the interests of my students; analyze the sequence of the learning activities students will follow; review how well the students achieved when those activities were used previously.)
+
+5. What learning targets do I want my students to achieve as a result of my teaching? (Review statements of goals and learning objectives; review test questions students should be able to answer; review performances ands to questions I have asked them; observing student interactions.)
+2. What should I do to make this lesson (activity) work better? (Diagnosis of the types of errors students made or erroneous thinking students are using; searching my memory for alternative ways to teach the material; identifying which students are not participating or are acting inappropriately.)
+3. What feedback should I give each student about how well he or she is learning? (Informal observation and experience on the amount and type of praise different students require; information about how close each student has come to achieving the learning target; homework and quiz results; interviewing students.)
+4. Are my students ready to move to the next activity in the learning sequence? (Informal observation and checking students’ completed work; questioning students about their understanding; students’ homework, quiz, and test results.)
+
+# Decisions After a Teaching Segment
+
++   1. How well are my students achieving the short- and long-term instructional targets? (Classroom tests, projects, observations, interviews with students, standardized test results.)
++   2. What strengths and weaknesses will I report to each student and to his or her guardian or parent? (Observations of each student’s classroom participation; review each student’s homework results; review each student’s standardized achievement and scholastic aptitude test results; review information about a student’s personal family circumstances.)
++   3. What grade should I give each student for the lesson or unit, marking period, or course? (Results from classroom learning activities, quizzes, tests, class projects, papers, labs, etc.; informal observation about how well the student has attained the intended learning targets; knowledge of the possible short- and long-term consequences to the student of reporting a particular grade.)
++   4. How effectively did I teach this material to the students? (Summaries of the class’s performance on the important
