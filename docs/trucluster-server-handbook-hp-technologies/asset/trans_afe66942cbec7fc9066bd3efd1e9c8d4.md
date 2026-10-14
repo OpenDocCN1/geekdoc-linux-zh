@@ -1,0 +1,149 @@
+
+
+```text
+# /usr/sbin/clu_get_info -full
+
+Cluster information for cluster babylon5
+Number of members configured in this cluster = 1
+memberid for this member = 1
+Cluster incarnation = 0xb63fd
+Cluster expected votes = 2
+Current votes = 2
+Votes required for quorum = 1
+Quorum disk = dsk5h
+Quorum disk votes = 1
+
+Information on each cluster member
+Cluster memberid = 1
+Hostname = molari.dec.com
+Cluster interconnect IP name = molari-ics0
+Cluster interconnect IP address = 10.0.0.1
+Member state = UP
+Member base O/S version = Compaq Tru64 UNIX V5.1A (Rev. 1885)
+Member cluster version = TruCluster Server V5.1A (Rev. 1312)
+Member running version = INSTALLED
+Member name = molari
+Member votes = 1
+csid = 0x10001
+```
+
+The clu_quorum(8) command is used for configuring or deleting a quorum disk and adjusting the quorum disk votes, individual member node votes, and overall expected votes. This command can also be used to display information about what quorum is in a cluster. For more detailed information concerning the clu_quorum command, please read Chapter 17 on the Connection Manager or the clu_quorum(8) reference page.
+
+In any event, let's look at quorum in our new single-node cluster using the clu_quorum command.
+
+```text
+# /usr/sbin/clu_quorum
+
+Cluster Quorum Data for: babylon5 as of Sun Apr 21 01:27:16 PDT 2002
+Cluster Common Quorum Data
+Quorum disk: dsk5h
+File: /etc/sysconfigtab.cluster
+Attribute                File Value
+expected votes                     2
+
+Member 1 Quorum Data
+Host name: molari.dec.com                     Status: UP
+File: /cluster/members/member1/boot_partition/etc/sysconfigtab
+Attribute    Running Value    File Value
+current votes    2             N/A
+quorum votes     1             N/A
+expected votes   2             2
+node votes       1             1
+qdisk votes      1             1
+qdisk major      19            19
+qdisk minor      384           384
+```
+
+## 10.5.3 Check the Cluster Alias Subsystem
+
+The cluamgr(8) command is used to manage and report information and statistics about cluster aliases. As this cluster was just created, there should only be information about one cluster alias – the default cluster alias. Let’s see what information is provided.
+
+```text
+# /usr/sbin/cluamgr -s all
+Status of Cluster Alias: babylon5.dec.com
+netmask: 0
+aliasid: 1
+flags: 7<ENABLED,DEFAULT,IP_V4>
+connections rcvd from net: 30
+connections forwarded: 22
+connections rcvd within cluster: 17
+data packets received from network: 8796
+data packets forwarded within cluster: 1361
+datagrams received from network: 2190
+datagrams forwarded within cluster: 37
+datagrams received within cluster: 3068
+fragments received from network: 0
+fragments forwarded within cluster: 0
+fragments received within cluster: 0
+Member Attributes:
+memberid: 1, selw=3, selp=1, rpri=1 flags=11<JOINED,ENABLED>
+```
+
+As we can see, the cluster alias is “babylon5.dec.com” and it only has one cluster member in the cluster. This is evident by the memberid field.
+
+More information on cluster aliases can be found in Chapter 16 on the Cluster Alias Subsystem.
+
+## 10.5.4 Check the Device Request Dispatcher (DRD) Subsystem
+
+The command used to configure and report on the DRD subsystem is the drdmgr(8) command. Let’s use the drdmgr command to look at the properties of the disk containing the cluster_root file system.
+
+First, let’s find out what disk is used for the cluster_root domain.
+
+```text
+# /sbin/showfmdn cluster_root
+Id                Date Created        LogPgs Version Domain Name
+3d013e89.0000fc70 Sun Apr 21 16:06:49 2002 512    4      cluster_root
+Vol   512-Blks   Free   % Used Cmode Rblks Wblks Vol Name
+1L    1048576    769360  27%    on     256    256    /dev/disk/dsk6a
+```
+
+Now let’s use the drdmgr command to examine dsk6.
+
+```text
+# /sbin/drdmgr dsk6
+
+View of Data from member molari as of 2002-04-21:01:24:17
+
+Device Name: dsk6
+Device Type: Direct Access IO Disk
+Device Status: OK
+Number of Servers: 1
+Server Name: molari
+Server State: Server
+Access Member Name: molari
+Open Partition Mask: 0xc1 - a g h
+Statistics for Client Member: molari
+Number of Read Operations: 8189
+Number of Write Operations: 910513
+Number of Bytes Read: 145510400
+Number of Bytes Written: 8068251648
+```
+
+Notice that molari is both the server and the client (Access Member Name) for this disk. Also notice that three partitions are open on this disk (from the Open Partition Mask) – partitions a, g, and h. These partitions correspond to the AdvFS domains for cluster_root, cluster_usr, and cluster_var.
+
+Now let’s look at the quorum disk.
+
+```text
+# /sbin/drdmgr dsk5
+
+View of Data from member molari as of 2002-04-21:01:29:39
+
+Device Name: dsk5
+Device Type: Direct Access IO Disk
+Device Status: OK
+Number of Servers: 1
+Server Name: molari
+Server State: Server
+Access Member Name: molari
+Open Partition Mask: 0
+Statistics for Client Member: molari
+Number of Read Operations: 200979
+Number of Write Operations: 200977
+Number of Bytes Read: 205805568
+Number of Bytes Written: 102903808
+```
+
+As you can see, there appears to be quite a bit of I/O activity to this disk but there does not appear to be any open partitions. As this is the quorum disk, the Connection Manager does not have any partitions open.
+
+For more detailed information on the DRD subsystem, please review Chapter 15 on the Device Request Dispatcher.
+

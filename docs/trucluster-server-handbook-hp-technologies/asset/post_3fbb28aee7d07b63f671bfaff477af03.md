@@ -1,0 +1,75 @@
+
+## 17.9 How to Regain Quorum
+
+In the event that you lose quorum, and it cannot be regained by booting additional members, there are ways to rectify the problem without having to rebuild the cluster.
+
+For example, let’s say we have a six-member cluster without a quorum disk and three members crash for some reason (hit by cosmic rays or something). The three remaining members would not have enough votes to keep the cluster running. Since we have lost quorum, we cannot use the `clu_quorum` command to adjust the cluster’s expected votes. What should we do?
+
+We can halt one of the suspended cluster members and boot it interactively to adjust the cluster’s expected votes. The `cluster_adjust_expected_votes` attribute in the clubase subsystem, when set to zero, will cause the cluster to adjust expected votes to the number of votes that it can currently see.
+
+You boot a system interactively by using an “i” to the “-flags” boot option. Note: the “a” indicates that the system should not stop in single-user mode but come all the way up.
+
+```
+>>> boot -flag ai
+(boot dkb100.1.0.3.2 -flags ai)
+block 0.0.0.1.0.3.2 is a valid boot block
+reading 19 blocks from dkb100.1.0.3.2
+bootstrap code read in
+Building FRU table
+base 200000, image_start = 0, image_bytes = 2600
+initializing HWRPB at 2000
+initializing page table at 1f2000
+initializing machine state
+setting affinity to the primary CPU
+jumping to bootstrap code
+
+UNIX boot - Wednesday August 01, 2001
+
+Enter: <kernel_name> [option_1 - option_n]
+...or: ls [name] 'help' or 'quit' to return to console
+press Return to boot 'vmunix'
+```
+
+The boot process will stop at the “#” prompt and wait for input. At this point, enter the kernel name followed by any number of white space delimited “subsystem:attribute=value” strings. In our case, the kernel is vmunix, the subsystem is clubase, the attribute is cluster_adjust_expected_votes, and the value is 0.
+
+```
+# vmunix clubase:cluster_adjust_expected_votes=0
+```
+
+At this point the node will continue to boot. Once the Connection Manager gets started, the cluster will adjust expected votes based on the number of votes currently available.
+
+```
+Loading vmunix ...
+Loading at 0xffffffc000023000.
+
+Sizes:
+text = 8624320
+data = 1778320
+bss = 3908272
+Starting at 0xffffffc0000242360
+
+Loading vmunix symbol table ... [2188944 bytes]
+Kernel argument clubase:cluster_adjust_expected_votes=0
+Alpha boot: available memory from 0x1c78000 to 0x1ffffc000
+
+CNX MGR: after joining the cluster, expected votes CNX MGR: Join operation complete
+CNX MGR: membership configuration index: 4 (3 additions, 1 removals)
+CNX MGR: cannot adjust expected votes, cluster busy.
+CNX MGR: Node molari 1 incarn 0xdf41e csid 0x10001 has been added to the cluster
+CNX MGR: cannot adjust expected votes, cluster busy.
+ics_mct: Declaring this node up 1
+CNX MGR: Node sheridan 2 incarn 0x4c64 csid 0x50002 has been added to the cluster
+CNX MGR: Node delem 3 incarn 0xecf4fc csid 0x30003 has been added to the cluster
+CNX MGR: cannot adjust expected votes, cannot become coordinator.
+CNX MGR: Using current votes (3) for expected votes.
+CNX MGR: Adjust expected votes operation completed with quorum.
+CNX MGR: quorum (re)gained, (re)starting cluster operations.
+```
+
+### CAUTION:
+
+You can only use "clubase:cluster_adjust_expected_votes=0" to regain quorum of a formed cluster. It cannot be used to form a cluster.
+
+Furthermore, the cluster_adjust_expected_votes attribute only affects the expected votes value of the currently formed cluster. In other words, this will get your cluster running but does not permanently change the cluster_expected_votes value in each member's sysconfigtab file. If you need to make the change permanent, use the clu_quorum command with the "-e" or "-m" option once the cluster regains quorum.
+
+As of this writing, the cluster_adjust_expected_votes attribute is not documented in the sys_attrs_clubase(5) reference page but is documented in the TruCluster Server Cluster Administration Guide.

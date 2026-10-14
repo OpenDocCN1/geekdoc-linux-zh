@@ -1,0 +1,44 @@
+
+
+## 23.4.4.1 常见资源属性
+
+表 23-4 列出了每种资源类型共有的资源属性。
+
+| 是否必需？ | 属性 | 默认值 | 描述 |
+|---|---|---|---|
+| ✓ | TYPE = resource-type | none | resource-type 可以是以下之一：<br>- application<br>- changer<br>- network<br>- tape |
+| ✓ | NAME = resource-name | none | resource-name：<br>- 必须是唯一的、用户定义的名称，包含任何字母数字字符、句点、逗号或下划线。<br>- 不能以下划线开头。<br>- 必须与配置文件前缀的相同名称。 |
+| ✗ | DESCRIPTION = description | none | description 是用户定义的描述该资源字符串。 |
+| ✗ | FAILURE_THRESHOLD = value | 0 | value 是资源在一段时间内启动失败的次数，在此次数内 CAA 会将资源标记为 OFFLINE 并停止监控它（请参阅 FAILURE_INTERVAL）。FAILURE_THRESHOLD 和 FAILURE_INTERVAL 必须同时非零才能进行监控。<br><br>值为 0（零）会禁用失败阈值监控。 |
+| ✗ | FAILURE_INTERVAL = value | 0 | value 是 FAILURE_THRESHOLD 进行统计和应用的时间（以秒为单位）。FAILURE_THRESHOLD 和 FAILURE_INTERVAL 必须同时非零才能进行监控。<br><br>值为 0（零）会禁用失败阈值监控。 |
+
+表 23-4：CAA 常见资源属性
+
+## 23.4.4.2 应用资源属性
+
+表 23-5 和表 23-6 列出了特定于 Application 资源的资源属性。
+
+### 应用资源属性
+
+| 是否必需？ | 属性 | 默认值 | 描述 |
+|---|---|---|---|
+| ✓ | `ACTION_SCRIPT = script` | none | • `script` 是 CAA 在启动、停止以及（可选）检查应用资源时调用的 shell 脚本名称。<br>• `script` 通常与 NAME 属性（请参阅常见资源属性）中使用的名称相同，并带有 ".scr" 扩展名。<br>• 除非脚本位于 `/var/cluster/caa/script` 目录中，否则必须使用完整路径名。操作脚本必须包含 start 和 stop 入口点。 |
+| ✗ | `CHECK_INTERVAL = seconds` | 60 | 在 CAA 调用操作脚本的 check 入口点之前将经过的秒数。值为 0（零）表示不执行检查。 |
+| ✗ | `SCRIPT_TIMEOUT = seconds` | 60 | 操作脚本完成前允许的最大秒数，超过此时间 CAA 将返回错误状态。 |
+| ✗ | `PLACEMENT = policy` | balanced | policy 可以是以下之一：<br>- **balanced**：放置资源，使集群中各资源的数量尽可能平衡（受依赖限制）。<br>- **favored**：在 HOSTING_MEMBERS 属性中列出的成员上启动资源。如果 HOSTING_MEMBERS 中列出的成员不可用，则在任何可用的集群成员上启动。<br>- **restricted**：在 HOSTING_MEMBERS 属性中列出的成员上启动资源。如果 HOSTING_MEMBERS 中列出的成员不可用，则不启动。 |
+| Varies. See item description | `HOSTING_MEMBERS = members` | none | 其中 members 是资源可以或必须运行的成员的以空白分隔的列表（请参阅 PLACEMENT）。如果 PLACEMENT 为 balanced，则 HOSTING_MEMBERS 不使用。 |
+| ✗ | `ACTIVE_PLACEMENT = value` | 0 | 如果 value 设置为 1，则当集群成员重新加入集群时，根据 PLACEMENT 属性重新评估资源的放置。请参阅第 23.6.3 节。 |
+
+### 应用资源属性（续）
+
+| 是否必需？ | 属性 | 默认值 | 描述 |
+|---|---|---|---|
+| ✗ | `OPTIONAL_RESOURCES = reslist` | none | 其中 *reslist* 是成员应尽可能提供的以空白分隔的资源列表。如果所列资源中部分甚至全部在成员上不可用，只要有成员可提供这些可选资源，则资源仍会启动，除非有成员可提供更大集合的这些可选资源。*reslist* 中资源的当前最大数量限制为 58。 |
+| ✗ | `REQUIRED_RESOURCES = reslist` | none | 其中 *reslist* 是成员必须可用的以空白分隔的资源列表，以便此资源可以启动。 |
+| ✗ | `REBALANCE = time` | none | 其中 *time* 的格式为 `t:day:hour:min`，用于指定重新评估发生的时间。**day**：一周中的某天（0 - 6），其中 0 = 星期日；**hour**：一天中的小时（0 - 23）；**min**：一天中的分钟（0 - 59）。可以使用星号（\*）作为通配符来指定每天和/或每小时。 |
+| ✗ | `AUTO_START = value` | 0 | 如果 *value* 设置为 1，则在成员重新启动后，无论重新启动前资源的状态如何，都会自动启动应用资源。如果 *value* 设置为 0（零），则仅在重新启动前资源为 ONLINE 时才启动应用资源。 |
+| ✗ | `RESTART_ATTEMPTS = value` | 1 | *value* 是资源管理器在尝试将资源迁移到其他位置之前，在该成员上尝试重新启动资源的次数。 |
+| ✗ | `FAILOVER_DELAY = seconds` | 0 | 资源管理器在应用资源失败后，在尝试将应用资源迁移到其他位置之前等待的 *seconds* 秒数。 |
+
+表 23-6：CAA 应用资源属性 – 第 2 部分
+

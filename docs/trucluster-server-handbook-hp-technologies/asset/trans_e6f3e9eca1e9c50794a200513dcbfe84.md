@@ -1,0 +1,131 @@
+
+# cnxread -q dak2
+The CNX Partition info for /dev/rdisk/dsk2h. This is a member boot disk.
+Quorum Section Information:
+
+nada (CSID: 0, incarn: 0)
+
+# Members - Current Votes - Quorum Votes - Qdisk Votes
+0           0           0           0
+
+Qdisk claimed on 19691232 at 19:00:00 by member:
+nobody (CSID: 0, incarn: 0, memberid: 0)
+
+Qdisk written on 19691232 at 19:00:00 by member:
+nobody (CSID: 0, incarn: 0, memberid: 0)
+Activity count = 0
+
+The quorum section contains nothing of interest on a member disk.
+
+## 17.8.5.1.2 Partition in Time (PIT) Segment
+
+As of this writing, the PIT segment has been reserved for future use.
+
+## 17.8.5.1.3 AdvFS cluster_root Devices Segment
+
+This segment is defined in the clupt.h file as containing the following information:
+
+- A magic number
+- A data sequence number
+- The number of devices in the cluster_root domain
+- An array of device IDs
+
+Using the cnxread program to look at a member's boot disk cnx partition, we can see that the cluster_root domain has only one device.
+
+```
+# cnxread dsk2
+The CNX Partition info for /dev/rdisk/dsk2h. This is a member boot disk.
+Cluster Root Filesystem (AdvFS) Segment Information
+
+Magic #: 0x42534, Sequence #: 88
+
+      maj,min
+      ----
+Devices: { 1}: 19, 52
+```
+
+We can quickly determine what device has major/minor number of “19, 52” by using the following command:
+
+```
+```bash
+# ls -l /dev/disk/* | grep "19, 52"
+brw-------    1 root     system       19, 52 Nov 27 03:59 /dev/disk/dsk1b
+```
+```
+
+Let’s temporarily add a device to the `cluster_root` domain.
+
+```
+```bash
+# addvol /dev/disk/dsk6g cluster_root
+```
+```
+
+```
+```text
+# cnxread dsk2
+
+The CNX Partition info for /dev/rdisk/dsk2h.  This is a member boot disk.
+
+Cluster Root Filesystem (AdvFS) Segment Information
+
+  Magic #: 0x42534, Sequence #: 90
+
+                    maj,min
+  Devices: [  1]: 19,142
+           [  2]: 19, 52
+```
+```
+
+The second device is also shown.
+
+## 17.8.5.1.4 CLSM cluster_root Devices Segment
+
+The CLSM segment is similar to the AdvFS segment in that it contains device information.  This segment contains:
+
+- A magic number
+- A sequence number
+- The LSM (or Veritas) version number
+- Number of devices
+- An array of device information (device name, type, ID)
+
+Here’s the output of a member boot disk’s cnx partition using an LSM volume for the `cluster_root` device. For more information on using LSM in a cluster, see Chapter 14.
+
+```
+# cnxread -l dsk2
+
+The CNX Partition info for /dev/rdisk/dsk2h. This is a member boot disk.
+Cluster Root Filesystem (AdvFS) Segment Information
+
+Magic #: 0x42534, Sequence #: 116
+
+      maj,min
+      ----
+Devices: [ 1]: 40, 5
+
+CLBN Segment Information
+
+Magic #: 0x4185, Sequence #: 22, Version 3.1
+
+      maj,min
+      ----
+Devices: [ 1]: 19,128   dsk5h (simp)
+        [ 2]: 19,142   dsk6g (simp)
+        [ 3]: 19,126   dsk5g (simp)
+```
+
+In our cluster, dsk5g and dsk6g are the two plexes in a mirrored volume that are used for cluster_root. The first device listed (dsk5h) is the private region disk in the rootdg. We are not exactly sure why it shows up because it is not in the cluster_root volume, but it does appear that any device in the rootdg will show up in the output.
+
+```
+# volprint -g rootdg
+TY NAME          ASSOC        KSTATE   LENGTH   PLOFFS   STATE   TUTIL0  PUTIL0
+dg rootdg        rootdg       -        -        -        -       -       -
+dm clu_mroot     dsk5g        -        8686058  -        -       -       -
+dm clu_root      dsk6g        -        8686058  -        -       -       -
+dm dsk5h         dsk5h        -        8686058  -        -       -       -
+v  cluster_rootvol cluroot  ENABLED 1048576  -        ACTIVE  -       -
+pl cluster_rootvol-01 cluster_rootvol ENABLED 1048576  -   ACTIVE  -       -
+sd clu_mroot-01 cluster_rootvol-01 ENABLED 1048576 0   -       -       -
+pl cluster_rootvol-02 cluster_rootvol ENABLED 1048576  -   ACTIVE  -       -
+sd clu_root-01 cluster_rootvol-02 ENABLED 1048576 0   -       -       -
+```

@@ -1,0 +1,52 @@
+
+## The Cluster File System (CFS)
+
+In this chapter, we discuss one of the truly outstanding features of Tru64 UNIX clustering: the Cluster File System. You may have heard the term “single-system image (SSI),” and while we disagree with the term “image” because it suggests using one kernel for all cluster members, the CFS does provide a common, transparent view of all file systems to all cluster members. This ability, along with the Cluster Alias subsystem (covered in chapter 16), makes up the heart and soul of Tru64 UNIX clustering.
+
+You may be thinking, “What’s so special? I can do that with NFS!” No, actually you can’t. Can NFS enable every member in a cluster to share the root (/) file system? No. Moreover, the CFS does this transparently. No fancy mount commands, no additional configuration files. If you want to mount a file system on a cluster, you log in to any member in the cluster, issue a normal mount (8) command, and **all** members in the cluster see the same file system at the same mount point. And what happens to an NFS file system if the NFS server crashes? Bye-bye file system. The CFS does not suffer from this problem because another cluster member will transparently take over the job of serving the file system to the other cluster members. The CFS does all this and still manages to adhere to the X-Open and POSIX standards. This is really cool stuff!
+
+The net result is that in a TruCluster Server environment you can log in to any member of the cluster and have virtually an identical view of the files on the cluster mounted file systems. We say “virtually” because some files will be member-specific, implemented as CDSs (see discussions in chapters 6 and 12).
+
+### 13.1 How Does the CFS Do That?
+
+You may be wondering how the CFS can accomplish this, without your needing to go out and learn how to work with a new file system. The CFS is conveniently sandwiched between the Virtual File System (VFS) and the physical file systems (see Figure 13-1) and acts as a router (or traffic cop) directing I/O from the VFS to all parts physical.
+
+A user runs a program that needs to perform file I/O. The program uses the same I/O routines it would normally use in a non-clustered environment (open, read, write, fcntl, etc.), these routines interface with the VFS, and the VFS interfaces with the CFS. It is the CFS’s job to coordinate access to the physical file system by determining where in the cluster the physical file
+
+- Direct I/O 13.7
+- Concurrent Direct I/O 13.7.1
+- Direct Access Cached Reads 13.8
+
+More information can also be found in the TruCluster Server Technical Overview for version 5.1 and 5.1A (section 2.2) and the TruCluster Server Cluster Administration Guide (chapter 9).
+
+Any member in the cluster can be a CFS server, and multiple CFS servers will likely exist in any instance of a running cluster because there is a CFS server per file system (or domain).
+
+### 13.2.1 Which Member is the CFS Server?
+
+You can use the cfsmgr(8) command to see which member is the CFS server for each file system or domain.
+
+```
+# cfsmgr /u1 /kits
+
+Domain or filesystem name = /u1
+Server Name = sheridan
+Server Status : OK
+
+Domain or filesystem name = /kits
+Server Name = sheridan
+Server Status : OK
+```
+
+Note that you can see all the mounted file systems by using the cfsmgr command without any arguments.
+
+When a cluster is first formed, the first member booted is apt to become the CFS server for all of the file systems it can see. As other members join the cluster, they will serve their member boot_partition file system as well as any file systems on local buses or semi-shared buses where the previously booted member(s) did not have physical access. The CFS will always choose a member with direct connectivity to a device to be the CFS server for a file system located on that device.
+
+Here is an example showing which file systems are served (by member) on our two-member cluster:
+
+```
+# cfs
+CFS Server          Mount Point                     File System          FS Type
+------------------  -------------------------------  --------------------  -----
+molari              /cluster/members/member1/        root1_domain#root    AdvFS
+                    boot_partition
+```

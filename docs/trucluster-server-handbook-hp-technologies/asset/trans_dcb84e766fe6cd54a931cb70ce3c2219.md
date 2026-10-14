@@ -1,0 +1,147 @@
+
+
+14. 最后，升级后的 TruCluster Server 软件子集已安装并加载。
+
+```
+^^^ Load Tru64 UNIX TruCluster(TM) Server Software V5.1A (Rev 1312) Software Subsets ^^^
+*** Subsets will be installed.
+
+Loading subset 1 of 3 ...
+
+TruCluster Migration Components
+    Copying from /var/adm/update/TruClusterKit (disk)
+    Verifying
+
+Loading subset 2 of 3 ...
+
+TruCluster Reference Pages
+    Copying from /var/adm/update/TruClusterKit (disk)
+    Verifying
+
+Loading subset 3 of 3 ...
+
+TruCluster Base Components
+    Copying from /var/adm/update/TruClusterKit (disk)
+        Working.... Thu Nov 8 13:09:18 PST 2001
+    Verifying
+3 of 3 subsets installed successfully.
+
+*** Starting profile merges for Tru64 UNIX TruCluster(TM) Server Software V5.1A (Rev 1312) ***
+
+*** Finished profile merges for Tru64 UNIX TruCluster(TM) Server Software V5.1A (Rev 1312) ***
+
+*** Starting configuration merges for Update Install ***
+
+Update Installation complete with loading of subsets.
+Rebooting system with Compute Computer Corporation Tru64 UNIX V5.1A
+ generic kernel for configuration phase...
+
+Removing temporary update installation files...done.
+***
+```
+
+15. 主集群成员将重新启动。系统恢复后，软件子集首先在 member0 上配置，然后在 member1 上配置。在此实例中，member1 是指定的主集群成员。
+
+## NOTE:
+
+你可能会注意到，部分配置消息显示软件子集正在 member0 上配置。这只是集群根文件系统上的目录 /cluster/members/member0，而不是集群成员 member0。
+
+16. 在所有软件子集配置完成后，将为集群主成员构建一个新内核。新内核将被复制到位，系统再次重新启动。
+
+```
+...
+rebooting.... (transferring to monitor)
+
+...
+The system is ready.
+```
+
+```
+Company T64 UNIX V5.1A (Rev. 1885) (malari.gene.com) console
+login: root
+Password:
+
+****************************************************************
+The 'clu' cluster is currently in a rolled state and the software versions
+that are available are different depending on which cluster member you
+are on. Additional information about the exact state of the system
+can be obtained using the /usr/bin/clu_upgrade command.
+****************************************************************
+```
+
+17. 在升级安装的此阶段，我们几乎完成了本阶段的任务。下一步将是验证安装阶段是否已完成且成功。请参阅第 25.5.5.1 节。
+
+## 25.5.4.2 补丁包安装的安装阶段
+
+我们已经看到了执行更新安装的安装阶段所需的各个步骤。现在让我们看看执行补丁包安装的安装阶段需要什么：
+
+- 1. 在主集群成员上更新系统固件。请查看第 25.5.1.3 节中的警告。
+- 2. 我们现在准备安装补丁包。再次强调，以下命令必须在主成员上执行：
+  - 如果从多用户模式安装补丁包：
+
+```
+# cd /usr/patch_kit
+# ./dpatch
+```
+← 或你的补丁包所在位置
+
+  - 如果从单用户模式安装补丁包：
+
+```
+# shutdown -sb now
+# bcheckrc
+# reinit start
+# cd /usr/patch_kit
+# ./dpatch
+```
+← 或你的补丁包所在位置
+
+> **WARNING:**
+> 
+> 虽然你可以选择在多用户或单用户模式下安装补丁包，但我们同意 HP 的建议，即补丁包安装应在此单用户模式下执行。这样做将降低另一位系统管理员造成非预期问题的风险。
+
+由于每个补丁包的内容因版本而异，我们在这里不会详述，而是请你参考补丁包的摘要和发行说明以获取更详细的信息。还应注意，补丁包的安装时间已知从三十分钟到两小时不等。这取决于补丁包中补丁的数量以及你尝试修补的服务器类型。
+
+- 3. dpatch 命令完成后，重新启动主集群成员。
+
+## 25.5.5 安装后阶段
+
+安装后阶段验证安装阶段是否已完成，并且更新安装和/或补丁包安装和/或 NHD 套件安装已成功完成。此阶段必须在“主”成员上执行。
+
+```
+# clu_upgrade postinstall
+This is the cluster upgrade program.
+You have indicated that you want to perform the 'postinstall' stage of the upgrade.
+Do you want to continue to upgrade the cluster? [yes]: yes
+```
+
+```
+The 'postinstall' stage of the upgrade has completed successfully.
+```
+
+我们现在建议你在将其他集群成员滚动到此新版本之前，先测试新升级的软件。
+
+## 25.5.5.1 测试新升级的 TruCluster Server 软件
+
+首先，让我们通过在各个集群成员之间迁移集群文件系统来测试集群文件系统。在此示例中，我们刚刚在服务器 molari 上完成了 installupdate。服务器 sheridan 尚未滚动到新版本的 TruCluster Server 软件。
+
+```
+# cfsmgr -v -a server /
+Domain or filesystem name = /
+Server Name = sheridan
+Server Status : OK
+```
+
+```
+# cfsmgr -h sheridan -r -a SERVER=molari /
+Recovering filesystem mounted at / to this node (member id 1)
+Recovery to this node (member id 1) complete for filesystem mounted at /
+```
+
+```
+# cfsmgr -v -a server /
+Domain or filesystem name = /
+Server Name = molari
+Server Status : OK
+```
+

@@ -1,0 +1,65 @@
+
+
+# cat /etc/evmchannel.conf
+
+# ==============================
+# 事件通道：二进制错误日志
+# ==============================
+channel {
+        name             binlog
+        path             /usr/share/evm/channels/binlog
+        events           @SYS_VIP.binlog
+        fn_get           "binlog_get -r 8"
+        fn_details       "binlog_details -decevent -ca localhost"
+        fn_explain       "binlog_explain"
+        fn_cleanup       "binlog_cleanup"
+}
+...
+
+在你问“那些 binlog2evm 和 binlogshow 文件是什么？”之前...
+
+# grep binlog2evm *
+
+binlog_get:CONVTOOL=$DIR/binlog2evm                 # 将 binlog 事件转换为 EVM 事件
+
+# grep binlogshow *
+
+binlog_details:CONVTOOL='${DIRNAME}$0' ./binlogshow
+
+最后，过滤器和模板定义在 /usr/share/evm/filters/binlog.evf 和 /usr/share/evm/templates/sys/binlog.evt 文件中（参见第 8.2.4 节和第 8.2.5 节）。
+
+关于通道的最后一点说明：如果计划定义自己的通道，请将定义放在 /etc/evmchannel.conf 中，但将支持文件放在 /var/evm/adm 目录树中，而不是 /usr/share/evm。
+
+## 8.2.4    EVM 过滤器文件
+
+EVM 过滤器文件位于 /usr/share/evm/filters 目录中（站点定义的过滤器文件应放在 /var/evm/adm/filters 目录中）。过滤器文件应以后缀 “.evf” 结尾。
+
+有关更多信息，请参阅第 8.5 节。
+
+## 8.2.5 EVM 命令
+
+EVM 命令的使用示例在第 8.7 节中，除了在第 8.2.2 节中已展示的 evmreload(8) 命令。EVM 命令如表 8-2 所示。
+
+| 运行?* | 命令 | 位置 | 手册 | 类型 | 描述 |
+|---|---|---|---|---|---|
+| ✓ | evmget | /usr/bin | 1 | binary | 此程序从日志文件中检索事件，并以二进制 EVM 事件的形式写入 stdout。 |
+| ✓ | evminfo | /usr/bin | 1 | binary | 此程序提供有关 EVM 子系统的信息。它还提供配置文件语法验证。 |
+| ✓ | evmpost | /usr/bin | 1 | binary | 此程序允许从命令行或脚本发布事件。它为管理员和用户提供向 EVM 发布快速（或简单）消息的能力。 |
+| ✓ | evmshow | /usr/bin | 1 | binary | 此程序显示 EVM 事件。 |
+| ✓ | evmsort | /usr/bin | 1 | binary | 此程序对 EVM 事件进行排序。 |
+| ✓ | evmwatch | /usr/bin | 1 | binary | 此程序监视系统或集群以等待事件发生。它还可以列出 EVM 子系统已知的已注册事件。 |
+| ✗ | evmchmgr | /usr/sbin | 8 | binary | evmchmgr 程序是 EVM 通道管理器。不要在命令行上运行此程序。 |
+| ✗ | evmcommandset | /usr/sbin | - | sh | 此 shell 脚本主要为 EVM 的多平台实现定义命令及其位置。 |
+| ✗ | evmd | /usr/sbin | 8 | binary | 此程序是 EVM 守护进程。不要在命令行上运行此程序。 |
+| ✗ | evmget_srv | /usr/sbin | - | binary | evmget_srv 程序由 evmd 守护进程调用，当 evmget 命令请求检索 EVM 事件时。 |
+| ✓ | evmlogger | /usr/sbin | 8 | binary | 此程序是 EVM 记录器。 |
+| ✗ | evmmkbin | /usr/sbin | - | binary | 此程序由 evmmkib 命令使用，将事件模板编译为 evmd 守护进程的二进制格式。 |
+| ✗ | evmmkib | /usr/sbin | - | sh | 此脚本由 evmd 和 evmreload 命令使用，为 evmkin 程序设置环境。 |
+|  | evmreload | /usr/sbin | 8 | sh | 此 shell 脚本发布一个事件以使 EVM 守护进程重新读取其配置文件。它还验证事件模板文件和配置文件的语法。 |
+| ✓ | evmstart | /usr/sbin | 8 | sh | 此 shell 脚本启动 EVM 守护进程。 |
+| ✗ | evmstop | /usr/sbin | 8 | sh | 此 shell 脚本停止 EVM 守护进程，尽管在正常情况下不应运行它。 |
+
+*✓ 表示程序可以运行。✗ 表示程序不应运行。
+
+# 表 8-2：EVM 命令
+

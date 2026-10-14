@@ -1,0 +1,143 @@
+
+
+你现在将被要求回答一系列关于系统的问答。默认答案显示在方括号（[]）中。要使用默认答案，请按 RETURN 键。
+
+```
+You will now be asked a series of questions about the system.
+Default answers are shown in square brackets ([]). To use a
+default answer, press the RETURN key.
+
+This machine contains the following network interfaces:
+    ee0
+    s10
+
+Which interface do you want to configure [ee0]: ee0
+You want to configure "ee0". Is this correct [yes]? yes
+```
+
+我们随后会被提示输入主机名和将用于此网络接口的网络 IP 地址。
+
+```
+Enter the hostname for interface "ee0" []: sheridan.dec.com
+The hostname for interface "ee0" is "sheridan.dec.com".
+Is this correct [yes]? yes
+
+Enter the Internet Protocol (IP) address for interface "ee0"
+in dot notation []: 192.168.0.69
+The IP address for interface "ee0" is "192.168.0.69".
+Is this correct [yes]? yes
+```
+
+我们随后会被提示输入本地网络的子网掩码，并被询问是否对网络接口使用任何额外的 ifconfig(8) 标志。
+
+```
+Subnetworks allow the systems on a local area network to be on different
+physical networks. For the following question, use the default answer
+unless the existing local area network is using subnet routing.
+If the local area network is using subnet routing, you need to know
+the subnet mask.
+
+Enter the subnet mask in dot notation (255.255.255.0): 255.255.255.0
+The subnet mask for "ee0" is "255.255.255.0".
+Is this correct [yes]? yes
+
+For the following question USE THE DEFAULT ANSWER unless you would like
+to add additional flags (found in the ifconfig reference page) to the
+ifconfig command. Normally, you will use THE DEFAULT ANSWER.
+
+Do you want to use additional ifconfig flags for this interface [no]? no
+```
+
+最后，我们被要求在配置开始前确认所输入的网络接口信息。
+
+```
+The configuration looks like:
+
+    interface "ee0" hostname: "sheridan.dec.com"
+    ifconfig ee0 192.168.0.69 netmask 255.255.255.0
+
+Is this correct [yes]? yes
+```
+
+```
+**** UPDATING /etc/rc.config ****
+"e0" is configured in /etc/rc.config
+
+Do you want to configure another network interface [yes]? no
+
+Enter whether you want to press "(c)onfigure" or "(d)elete" network interfaces.
+If you are finished, press the RETURN key:
+
+**** TruClusters Add Member Network Interface Configuration ****
+    1  Configure Interface
+    2  Exit
+
+Enter the number for your choice: 2
+**** Interface Configuration Completed ****
+```
+
+网络接口完成后，立即为新的集群成员设置与引导相关的 SRM 控制台变量。
+
+```
+Setting console variables
+set bootdef_dev = dsk2
+set boot_dev = dsk2
+set boot_reset = on
+```
+
+如果已配置电子邮件，则随后将其集群化，以便集群中的所有成员——既有成员和新添加的成员——都可以发送和/或接收电子邮件。
+
+```
+Clusterizing mail...
+```
+
+## 11.5 安装所有 License PAKs
+
+在新集群成员上要做的最后一件事之一是安装该集群成员特有的所有剩余 License PAKs。注意：作为向集群添加新成员的一部分，我们已经输入了 TruCluster Server License PAK，因此无需重新安装。
+
+我们建议使用 lmsetup(8) 命令，特别是用于安装多个 License PAKs。这是安装 License PAKs 最简单、最直接的机制。
+
+```
+# /usr/sbin/lmfsetup
+```
+
+一旦安装了所有 License PAKs 并重置了 License Management Facility 的数据库，我们使用 lmF(8) 命令验证所有 License PAKS 是否处于活动状态。
+
+```
+# /usr/sbin/lmf list
+Product          Status            Users: Total    Active
+OSF-SVR          active            unlimited       
+OSF-USR          active            unlimited       
+OSF-BASE         active            unlimited       
+OSF-BASE         active, multiple  unlimited       
+TCS-UA           active            unlimited
+```
+
+## 11.6 验证新的集群成员
+
+最后，让我们探索新添加的集群成员并验证一切是否已配置并正常运行。
+
+首先，让我们使用 hwmgr(8) 命令查看集群。
+
+```
+# /sbin/hwmgr -view cluster
+Member ID   State   Member HostName
+--------    -----   ----------------
+1           UP      molar1.dec.com
+2           UP      sheridan.dec.com (localhost)
+```
+
+现在让我们看看挂载了哪些文件系统。正如我们所见，新集群成员的 boot_partition 已被挂载。
+
+```
+# mount
+cluster_root#root on / type advfs (rw)
+root2_domain#root on /cluster/members/member2/boot_partition type advfs (rw)
+cluster_var#var on /var type advfs (rw)
+root1_domain#root on /cluster/members/member1/boot_partition type advfs (rw)
+cluster_var#usr on /usr type advfs (rw)
+/proc on /proc type procfs (rw)
+```
+
+最后，让我们检查集群配置，看看它是什么样子的。要检查集群配置，我们使用 clu_check_config(8) 命令，该命令检查 TruCluster Server 的大多数单个子系统。我们已精简输出，仅显示 member2 的信息。
+
