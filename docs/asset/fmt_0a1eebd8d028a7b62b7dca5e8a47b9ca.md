@@ -1,0 +1,194 @@
+
+- 网络管理器 (Synaptic), 722
+- Ubuntu 服务器, 70–72
+- `whereami` 工具, 722
+- 手动配置
+- 调制调器连接, 719–721
+- 网络硬件, 715–719
+- `network-admin` 工具, 715–719
+- PPP（点对点协议）, 719–721
+- 连通性 (connectivity), 测试, 725
+- 通过拷贝文件, 43
+- 动态 IP 地址, 714
+- 以太网电缆, 713
+- 网关 (gateways), 713–714
+- 家庭网关, 714
+- 集线器 (hubs), 713–714
+- IP 地址查找, 725
+- **891**
+- 14. *另见* DHCP。
+- 地址翻译 (Address Translation), 714–726
+- 地址 (addresses), 714
+- 配置 (ng), 725
+- 714
+- 播放, 725
+- 播放 (splaying), 725
+- 内存 (em), 95, 466–467
+- 内存 (em) 服务器
+- e 目录, 848
+- ms, 836
+- s, 840–845, 847–848
+- 在 (on), 837–838
+- –848
+- 教育通话 (edure Calls), 837
+- 840–845
+- nt, 838
+- , 845–847
+- , 838–839
+- 离子服务 (ion Service), 102
+- 54
+- es, 714
+- 编辑器 (ditor), 184
+
+## O
+
+- `-o` 选项, 190
+- .odm 文件扩展, 275
+- .odt 文件扩展, 275
+- OEM 模式, 84–85
+- Office 菜单项, 114
+- 办公套件 (office suites)。*另见* OpenOffice.org；文字处理器。
+  - Applixware, 301–302
+  - GNOME, 301
+  - KDE 办公套件, 302
+  - OpenOffice.org, 274
+- OpenDocument 标准 (standard), 274
+- OpenSSH 服务器, 安装, 439–441
+- OSX VNC 服务器, 443–444
+- OPML：大纲语言 (Language), 14
+- 收箱 (box), 230
+- 视图 (view), 227
+- P2P（点对点）, 369, 736。*另见*文件传输。
+- P2P（点对点）。*另见*包管理 (package management)。
+  - `apt-get` 工具, 568–569
+  - `aptitude` 工具, 568, 592
+  - 可用包 (available packages), 582–585
+  - 转换格式 (converting), 610–613
+  - 依赖项 (dependencies), 595
+  - 用户界面 (User Interfaces), 568–569
+  - 列表 (listing), 581–582
+  - 列表 (listing), 586–587
+  - 列表 (listing), 589–590
+  - 列表 (listing), 560
+  - 配置文件 (nf file), 638–639
+  - 配置文件 (nf file), 632–633
+  - 配置文件 (nf file), 629
+  - 字段 (field), 620
+  - 分区 (partitions), 73
+  - 分区 (partitions), 75
+  - 分区 (partitions), 49–58
+  - 分区 (partitions), 77–78
+  - 分区 (partitions), 76–78
+  - 分区 (partitions), 30
+  - 挂载点 (mount point), 指定, 75–76
+  - 大小 (size), 指定, 76–78
+  - 类型 (type), 指定, 75–81
+  - Ubuntu 服务器的分区, 67–68
+  - 身份验证问题 (authentication problems), 577–578
+  - 回源 (backports), 571
+  - 组件 (components), 570–572
+  - 启用 (enabling), 572–577
+  - 主组件 (main component), 570–571
+  - 多宇宙组件 (multiverse), 570–571
+  - 组织 (organizing), 570–571
+  - 添加或访问问题, 577–578
+  - 限制组件 (restricted component), 570–571
+  - 安全补丁 (security fixes), 572
+  - 设置 (setting up), 541
+  - 故障排除 (troubleshooting), 577–578
+  - 备份文件 (of backing up), 652
+  - `sudo` 命令, 635–636
+  - 用户 (users), 设置, 620–623
+- [PAGE 921]
+- 目录 (ctory) (`pwd`) 命令, 164
+- 密码文件 (s file), 96–98
+- 根内核包 (root kits), 检查, 727
+- `vi` 文本编辑器, 189–190
+- 使用 (using), 555–556
+- 使用 (and using), 555–556
+- `Bash` 壳 (shell), 171–172
+- 美国唱片协会 (RIAA), 369
+- command, 186
+- nd, 186
+- nd, 186
+- tion, 496
+- , 496
+- 386
+- 400
+- 167
+- ry) command, 167
+- orks, 736
+- 727
+- 05
+- vileges, 635
+- ngs, 315, 324
+- re Calls), 837
+- d Adleman), 438
+- dication), 15, 256–257
+- tility, 656–657, 661–663, 667–669
+- mple, 35
+- missions, 104
+- and replace command, 189
+- Output System), 852
+- ernet File System), 852
+- 61
+- g, 855–856
+- 861–864
+- –864
+- s, 856–858
+- 58
+- SMB (Server Message Block) protocol, 852
+- testing, 859–861
+- verifying configuration files, 858–859
+- Web resources, 865
+- Windows file sharing, 851–852
+- workgroups, identifying, 855–856
+- Same Gnome, 423–424
+- samples per inch (SPI), 346
+- SANE (Scanner Access Now Easy), 683, 688
+- `sane-find-scanner` utility, 688
+- `sane-utils` package, 688
+- SATA drives
+  - installing, 693
+  - name changes, troubleshooting, 694–695
+  - on SCSI systems, troubleshooting, 696
+- saving
+  - changes in `emacs` editor, 200–202
+  - changes in `vi` text editor, 185
+  - changes to groups, 626
+  - iPod changes, 507
+  - spreadsheets, 313
+  - Subversion changes, 546
+- Sbcl IDE, 520
+- Scalable Vector Graphics (SVG), 361
+- scanners
+  - configuring, 683–688
+  - detecting, 688
+  - image file size, determining, 686
+  - previewing a scan, 685–686
+  - SANE (Scanner Access Now Easy), 683, 688
+  - `sane-find-scanner` utility, 688
+  - `sane-utils` package, 688
+  - scan mode, setting, 686
+  - scan resolution, setting, 686
+  - support for, 683
+  - Web resources, 688
+  - XSane Image Scanner software, 683–688
+- scanning for wireless networks, 741–742
+- `scp` (secure copy) utility, 43
+- Scrabble clones, 434
+- screen burn, 132–133
+- screen magnification, 136–137
+- screen shots, 350–353
+- screensavers, 132–133
+- Scribus
+  - font warnings, 294
+  - frames, 299–300
+  - graphics, 296–299
+  - installing, 292–293
+  - modifying text, 296
+  - selecting a template, 294
+  - starting, 293
+  - tutorial, 299–301
+  - Web resources, 301
+- scripting, `Bash` shell, 177
