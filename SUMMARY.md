@@ -2218,6 +2218,7 @@
 +   [Tor 暗网系列：隐身艺术大师](docs/tor-darknet-series-master-the-art-of-invisibility/README.md)
 +   [Linux 防火墙故障排除指南](docs/troubleshooting-linuxr-firewalls-addison-wesley-professional/README.md)
 +   [Tru 集群服务器手册](docs/tru-cluster-server-handbook/README.md)
++   [Tru64 UNIX 命令和 Shell 用户指南](docs/tru64-unix-command-and-shell-users-guide/README.md)
 +   [Tru64 UNIX 文件系统管理手册 (HP Technologies)](docs/tru64-unix-file-system-administration-handbook-hp-technologi/README.md)
 +   [Tru64 UNIX-Oracle9i 集群快速参考 (HP 技术)](docs/tru64-unix-oracle9i-cluster-quick-reference-hp-technologies/README.md)
 +   [Tru64 Unix 系统管理员指南](docs/tru64-unix-system-administratiors-guide/README.md)
