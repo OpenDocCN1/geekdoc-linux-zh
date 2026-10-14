@@ -1,0 +1,23 @@
+
+### 使用以下命令重新读取 GNOME 显示管理器配置文件
+
+```
+$ sudo /etc/init.d/gdm reload
+```
+
+### 设置并验证两个图形登录控制台
+
+此操作对 `/etc/gdm/gdm.conf-custom` 配置文件进行的更改会被集成到 GNOME 显示管理器。要设置并验证两个图形登录控制台，请执行以下步骤：
+
+1. 在文本编辑器中打开 `gdm.conf-custom` 配置文件。
+2. 在 `[servers]` 部分添加以下指令：
+
+```
+1=Standard device=/dev/console
+2=Standard device=/dev/console
+```
+3. 使用以下命令重新读取 GNOME 显示管理器配置文件：
+
+```
+$ sudo /etc/init.d/gdm reload
+```
