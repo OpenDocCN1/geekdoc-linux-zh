@@ -1,0 +1,230 @@
+
+``` 
+Client {
+  Name = client-1
+  Address = headnode.localnet
+  FDPort = 9102
+  Catalog = my-catalog
+  Password = "my-password"
+}
+```
+
+``` 
+Schedule {
+
+  Name = "Weekly"
+
+Run = Full sat at 10:00
+
+Run = Incremental mon-thu at 02:00
+
+}
+```
+
+``` 
+Job {
+  Name = "users-backup"
+Type = Backup
+Client = client1
+FileSet="users-set"
+Schedule = "Weekly"
+Messages = Standard
+Pool = example-pool
+Write Bootstrap = "/var/spool/bacula/%n.bsr"
+Priority = 1
+```
+
+这里的 `Name` 是控制器的名称，`Password` 是访问的密码。
+
+其余参数应保持默认值。`Director` 章节之后通常是 `Catalog` 章节，它描述了用于存储内部信息的数据库参数。请保持此部分不变，仅指定必要的名称，例如 `"my-catalog"`。
+
+下一个部分是 `Storage`；我们需要在这里指定我们的存储器：
+
+# Storage {
+
+```
+Name = dir-storage1
+Address = stor1.localnet
+SDPort = 9103
+Password = "storage-password"
+Device = DiskArray
+Media Type = MyFiles
+}
+```
+
+`stor1` 也有一个类似的章节。
+
+`Name` 参数是用于在 `bacula-conf` 文件中标识 `Storage` 部分的唯一名称；`Device`、`MediaType` 和 `Password` 参数与 `bacula-sd.conf` 中指定的参数相同。
+
+下一个部分是 `Pool`，描述了介质池：
+
+# Pool {
+
+```
+Name = stor1-pool
+Pool Type = Backup
+AutoPrune = yes
+Recycle = yes
+Volume Retention = 1 month
+Maximum Volume Jobs = 1
+Maximum Volumes = 32
+Storage = Dir-Storage1
+Label Format = "stor1-"
+}
+```
+
+`Name` 参数定义了池的唯一名称。`Pool Type` 参数定义了类型，备份时应设置为 `Backup`。`Maximum Volume Jobs` 参数指定了可以放在介质上的数据任务最大数。对于文件，建议将其设置为 `1`。
+
+## 第 20 章 备份
+
+`Volume Retention`（卷保留时间）是存储在介质上的备份数据从 bacula 目录中删除之前所经过的时间。bacula 目录中的许多条目会显著减慢其运行速度。`Maximum Volumes` 是给定池中可用载体的最大数量。
+
+`Recycle` 参数表示被标记为过时（obsolete）的介质可以重新使用。在这种情况下，只有在没有剩余可用介质时，才会对介质进行实际覆盖，即当没有空磁带，或者文件数量等于 `Maximum Volumes` 且无法创建新文件时。
+
+`AutoPrune` 参数指示在下一次任务完成后自动从目录中删除过时记录。`Label Format` 参数定义了 bacula 用于标记介质（为文件命名或为磁带标记）时使用的前缀。`Storage` 参数包含了 `bacula-dir.conf` 文件中 `Storage` 部分 `Name` 参数所指定的存储设备名称。
+
+下一个部分是 `FileSet`。它定义了将保存（或恢复）哪组文件：
+
+```
+FileSet {
+  Name = "users-set"
+  Include {
+    Options {
+      signature = MD5
+      compression= GZIP
+      recurse = yes
+    }
+    File = /home
+    File = /etc/passwd
+    File = /etc/shadow
+    File = /etc/group
+  }
+  Exclude {
+    File = /home/tmp
+  }
+}
+```
+
+`Name` 参数定义了该集合的唯一名称。`Include` 部分包含文件和/目录的路径，`Exclude` 包含要从列表中排除的文件和/目录的路径。`Include` 部分包含一个可能的 `Options`，它定义了保留参数。`Signature` 参数指定计算文件校验和的算法，`Compression` 参数指定压缩文件的算法，`Recourse` 参数指定要包含的子目录。可以有多个 `FileSet` 章节，例如用户数据、系统设置、已安装应用程序包等。
+
+最后是 `client` 章节，即文件服务器：
+
+```
+Client {
+  Name = client-1
+  Address = headnode.localnet
+  FDPort = 9102
+  Catalog = my-catalog
+  Password = "my-password"
+}
+```
+
+这里 `Address` 指定了数据服务器的地址，`Catalog` 是目录名称（见 `Catalog` 章节），`Password` 是访问数据服务器的密码。每个数据服务器都有自己的 `Client` 章节。
+
+现在让我们来看 `Schedule` 和 `Job` 章节，它们描述了存档和恢复任务。所有数据都依赖于上述参数。
+
+# Schedule {
+
+```
+Name = "Weekly"
+Run = Full sat at 10:00
+Run = Incremental mon-thu at 02:00
+```
+
+# Job {
+
+```
+Name = "users-backup"
+Type = Backup
+Client = client1
+FileSet="users-set"
+Schedule = "Weekly"
+Messages = Standard
+Pool = example-pool
+Write Bootstrap = "/var/spool/bacula/%n.bsr"
+Priority = 1
+```
+
+`Schedule` 章节描述了启动任务的调度。你可以为不同的情况描述几种不同的调度计划。在示例中，运行在 `"Weekly"` 计划上的任务应该在每个工作日的凌晨 2:01 运行，进行增量复制，并在周六上午 10:00 运行完整复制。
+
+`Job` 章节描述了实际任务。`Type` 参数指定了任务类型；在我们的例子中是 `Backup`。`Schedule` 参数指定了调度的名称；它必须在其中一个 `Schedule` 章节中描述。
+
+`Write Bootstrap` 参数指定了一个文件路径，当在没有连接 Bacula Catalog 的情况下从备份恢复数据时，信息将写入该文件。该值会将 `%n` 替换为 `Name` 参数的值。
+
+现在让我们来看配置服务器。它的配置文件通常称为 `/etc/bacula/bacula-fd`。对于最少的自定义，只需指定控制器的 `Name`、`Address` 和 `Password` 即可。
+
+```
+Director {
+  Name = dir-storage1
+  Address = stor1.localnet
+  Password = "storage-password"
+}
+```
+
+```
+Storage {
+
+  Name = dir-storage1
+
+  Address = stor1.localnet
+
+  SDPort = 9103
+
+  Password = "storage-password"
+
+  Device = DiskArray
+
+  Media Type = MyFiles
+
+}
+```
+
+```
+Pool {
+  Name = stor1-pool
+Pool Type = Backup
+AutoPrune = yes
+Recycle = yes
+Volume Retention = 1 month
+Maximum Volume Jobs = 1
+Maximum Volumes = 32
+Storage = Dir-Storage1
+Label Format = "stor1-"
+}
+```
+
+```
+FileSet {
+
+  Name = "users-set"
+
+  Include {
+
+    Options {
+
+      signature = MD5
+
+      compression= GZIP
+
+      recurse = yes
+
+    }
+
+    File = /home
+
+    File = /etc/passwd
+
+    File = /etc/shadow
+
+    File = /etc/group
+
+  }
+
+  Exclude {
+
+    File = /home/tmp
+
+  }
+
+}
+```
