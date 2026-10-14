@@ -1,0 +1,15 @@
+# Webmin Groups
+
+Webmin, like UNIX, understands the concept of groups. Groups in Webmin are similar to UNIX groups in that they ease administration of heavily populated servers by allowing easy creation of any number of users with the same set of permissions and access controls. To create a group click the Create a new Webmin group link, give it a name, and select the modules that members of the new group should have access to. After saving the new group, any user can be assigned to the group and automatically receive the module access of the group, plus whatever modules are specified for the user. Currently users can only be a member of one group, so the Webmin groups feature is somewhat less flexible than that of most modern UNIX variants and Linux where users can be members of a primary group in addition to a number of supplemental groups.
+
+# Tutorial: Securing Webmin
+
+Because Webmin runs with the privileges of the root user, it is vitally important that Webmin be locked down tightly before allowing remote Internet access. Historically, Webmin is pretty secure, but there have been exploits discovered in the past, and there will probably be exploits discovered in the future. Any tool that runs as root has the potential to be an entry point for a malicious cracker to unlimited access to the machine.
+
+So in order to prevent all of the woes that can result from an exploited machine, we're going to take a few steps to limit our risk and minimize the damage that can be done without us noticing. We will briefly discuss password policy, application-level network access control, SSL, and firewall configuration. The tutorial will wrap up with a survey of some other techniques and technologies that can be used to help maintain a secure system.
+
+# Password Policy
+
+Countless studies and anecdotes from both sides of the security issue (crackers on one side and those who implement systems to protect against crackers on the other) have told us that cracking weak passwords is nearly always a reliable, if time-consuming way to obtain illicit entry into a system. Because many users, and even system administrators use weak, easily guessed passwords, it is quite common for a determined hacker to run an automated password hunt on a target system. Another, perhaps even more frightening, technique crackers use is what is known as Social Engineering.
+
+Social Engineering is a technique as old as malicious cracking itself, which plays on human nature to overcome technical barriers to entry by going the easier path of getting through a human's line of defense. One common technique is for a cracker to pose as tech support staff and simply ask for the user's password so they can "test" something or other on the network. This works disturbingly often, even among technically savvy users. This type of attack can happen via any communications medium, including telephone, IRC, email, and so on, and its continued success relies on the human desire to be helpful. This technique is often enhanced through the use of other subtle additions to further lower the guard of the person answering the phone or email. The cracker may mention

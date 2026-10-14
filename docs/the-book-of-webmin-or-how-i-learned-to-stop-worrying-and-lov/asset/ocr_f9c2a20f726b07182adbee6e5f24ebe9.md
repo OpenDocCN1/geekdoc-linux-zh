@@ -1,0 +1,7 @@
+**Maps to** field, you can technically enter anything you like (as long as we enter something). The custom seems to be to enter virtual in this field, as that is its purpose. Click **Save mapping** to add it to the virtual table.
+
+Next, you’ll want to add a postmaster alias, as all mail servers must have a functioning postmaster address to be compliant with the relevant RFC. So, click **New mapping** again. This time enter postmaster@virtual.domain into the **Name** field, where virtual.domain is the name of your domain. Then enter postmaster into the **Maps to** field so that mail to this address will be mapped to the local postmaster address for normal delivery.
+
+Finally, you’re ready to start adding your virtual domain users to the table. Once again, create a new mapping. Fill in your new virtual domain mail address in the **Name** field. For example, you might fill in joe@virtual.domain. In the **Maps to** section, enter the name of a local user that you would like to receive mail for this address. In this case, you would use virtual-joe or perhaps virtual.domain.joe. This new local user must exist for mail to be delivered; therefore you’ll need to add the new user to the system.
+
+Now, **Save and Apply** your changes, and test it out! The virtual maps can be handled by various database types or exported to an LDAP database. There is no reasonable limit to the number of virtual users and domains you can have.

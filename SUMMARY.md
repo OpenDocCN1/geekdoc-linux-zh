@@ -2077,6 +2077,7 @@
 +   [The Book of Postfix ： 现代邮件传输](docs/the-book-of-postfix-state-of-the-art-message-transport/README.md)
 +   [Qt 4 之书：Qt 4 应用构建指南](docs/the-book-of-qt-4-the-art-of-building-qt-4-applications/README.md)
 +   [VMware 之书：VMware Workstation 完全指南](docs/the-book-of-vmware-the-complete-guide-to-vmware-workstation/README.md)
++   [Webmin 之书，或，我如何学会不再担心并爱上 UNIX](docs/the-book-of-webmin-or-how-i-learned-to-stop-worrying-and-lov/README.md)
 +   [Zope 之书 [电子资源]：Web 应用构建与交付指南](docs/the-book-of-zope-electronic-resource-how-to-build-and-delive/README.md)
 +   [Linux 与开源的商业与经济](docs/the-business-and-economics-of-linux-and-open-source/README.md)
 +   [Chromebook Google Linux 指南：免费访问超过 5 万个软件包](docs/the-chromebook-guide-to-google-linux-easy-access-to-over-50-/README.md)

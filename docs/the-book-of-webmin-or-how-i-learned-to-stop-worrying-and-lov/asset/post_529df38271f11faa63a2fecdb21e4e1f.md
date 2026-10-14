@@ -1,0 +1,145 @@
+
+## 9
+FTP SERVER
+
+- Users and Classes ........................................................ 150
+- User classes ........................................................ 150
+- Unix users and UIDs to treat as guests and
+- Unix groups and GIDs to treat as guests ................................ 150
+- Unix users and UIDs not to treat as guests and
+- Unix groups and GIDs not to treat as guests ............................ 150
+- Unix users to deny (from /etc/ftpusers) ................................ 151
+- Unix users and UIDs to deny and Unix groups and GIDs to deny ........... 151
+- Unix users and UIDs not to deny and Unix groups and GIDs not to deny .. 151
+- Messages and Banners ................................................... 151
+- Message files ........................................................ 151
+- README files ......................................................... 152
+- Greeting level ....................................................... 152
+- Pre-login banner ..................................................... 152
+- Hostname for messages ................................................ 152
+- Owner's email address ................................................ 153
+- Limits and Access Control ............................................... 153
+- Deny access from ..................................................... 153
+- Concurrent user limits ............................................... 153
+- File and data transfer limits ........................................ 153
+- Deny access to files and Allow access to files even if denied ......... 153
+- Anonymous session limit Guest session limit ............................ 154
+- Maximum login failures ............................................... 154
+- Can switch groups? ................................................... 154
+- Networking .............................................................. 154
+- TCP window sizes ..................................................... 154
+- Addresses for PASV connections ....................................... 154
+- Ports for PASV connections ........................................... 154
+- Logging ............................................................... 155
+- Log all commands for ................................................. 155
+- Log transfers for .................................................... 155
+- Log transfers to ..................................................... 155
+- Log security violations for .......................................... 155
+- Aliases and Paths ...................................................... 155
+- Anonymous FTP .......................................................... 156
+- Anonymous FTP root directories ....................................... 156
+- Guest root directories ............................................... 156
+- Unix groups for anonymous users ...................................... 156
+- Anonymous FTP password check ........................................ 156
+- Anonymous FTP passwords to deny ...................................... 157
+- Permissions ............................................................ 157
+- Command restrictions ................................................. 157
+- Disallowed upload filenames .......................................... 157
+- Miscellaneous Options .................................................. 157
+- Long listing command, Short listing command, Plain listing ........... 157
+- Shutdown notification file ........................................................ 157
+- Service process nice level ........................................................ 158
+- Default umask for uploaded files ........................................................ 158
+
+## 10
+POSTFIX
+
+- General Options ............................................................ 161
+- Most Useful General Options .................................................. 161
+- Other General Options ........................................................ 162
+- Address Rewriting and Masquerading ............................................ 168
+- Rewrite "user%..." to "user@domain" ............................................ 168
+- Rewrite "user" to "user@Smydomain" ............................................ 169
+- Rewrite "user@host" to "user@host.$mydomain" .................................... 169
+- Rewrite "siteuser" to "user@site" ............................................ 169
+- Send mail with empty recipient to ............................................ 169
+- Address masquerading ...................................................... 169
+- Masquerade exceptions ...................................................... 169
+- Mail Aliases .............................................................. 170
+- Aliases Options .......................................................... 170
+- Aliases .............................................................. 170
+- Canonical Mapping .......................................................... 171
+- Canonical Mapping Tables .................................................. 171
+- Editing Canonical Mappings ................................................ 171
+- Virtual Domains .......................................................... 172
+- Domain mapping lookup tables .............................................. 172
+- Transport Mapping ........................................................ 172
+- Transport mapping lookup tables .......................................... 172
+- Relocated Mapping ........................................................ 173
+- Local delivery ........................................................... 173
+- Name of the transport for local deliveries ................................ 174
+- Shell to use for delivery to external command .............................. 174
+- Search list for forward .................................................. 174
+- Valid mail delivery to external commands .................................. 175
+- Valid mail delivery to external files ..................................... 175
+- Default rights of the local delivery agent ................................ 175
+- Pathname of user mailbox file ............................................. 175
+- Destination address for unknown recipients ................................ 176
+- Spool directory ........................................................ 176
+- External command to use instead of mailbox delivery ...................... 176
+- Optional actual transport to use ......................................... 176
+- Optional transport for unknown recipients ................................ 176
+- Max number of parallel deliveries to the same local recipient ............ 176
+- Max number of recipients per local message delivery ...................... 177
+- Prepend a Delivered-To: when ............................................. 177
+- General Resource Control ................................................ 177
+- Max size of bounced message .............................................. 177
+- Max time for delivery to external commands ........................................ 177
+- Max number of Postfix child processes ........................................ 177
+- Max number of addresses remembered by the duplicate filters ................... 178
+- Max attempts to acquire file lock ............................................. 178
+- Time in seconds between file lock attempts .................................... 178
+- Max attempts to fork a process ............................................... 178
+- Time in seconds between fork attempts ........................................ 178
+- Max memory used for processing headers ....................................... 178
+- Max memory used for handling input lines ..................................... 178
+- Max size of a message ....................................................... 179
+- Max number of messages in the active queue ................................... 179
+- Max number of in-memory recipients .......................................... 179
+- Min free space in the queue file system ...................................... 179
+- Max time after which stale lock is released .................................. 179
+- Time in seconds between attempts to contact a broken MDT ..................... 179
+- SMTP Server Options ......................................................... 179
+- SMTP greeting banner ....................................................... 179
+- Max number of recipients accepted for delivery ............................... 180
+- Disable SMTP VRFY command ................................................... 180
+- Timeout in seconds for SMTP transactions ..................................... 180
+- Timeout before sending 4xx/5xx error response ............................... 180
+- Error count for temporarily ignore a client .................................. 180
+- Error count for closing connection .......................................... 181
+- HELO is required ............................................................ 181
+- Allow untrusted routing ..................................................... 181
+- Restrict ETRN command upon .................................................. 181
+- Restrictions on client hostnames/addresses ................................... 183
+- Restrictions on sends in HELO commands ...................................... 183
+- Restrictions on sender addresses ............................................ 183
+- Restrictions on recipient addresses ......................................... 184
+- DNS domains for blacklist lookups ........................................... 184
+- Restrict mail relaying ...................................................... 184
+- SMTP server response on access map violation,
+- SMTP server response on RBL domains violation,
+- SMTP server response on forbidden relaying,
+- SMTP server response on unknown client reject,
+- SMTP server response on invalid hostname reject,
+- SMTP server response on unknown domain reject,
+- SMTP server response on unknown hostname reject ............................ 184
+- SMTP Client Options ........................................................ 185
+- Action when listed as best MX server ....................................... 185
+- Hosts/domains to hand off mail to on invalid destination ................... 185
+- Ignore MX lookup error ...................................................... 185
+- Skip 4xx greeting ........................................................... 185
+- Skip wait for the QUIT command ............................................. 185
+- Max number of parallel deliveries to the same destination .................. 186
+- Max number of recipients per delivery ...................................... 186
+- Timeout for completing TCP connections ..................................... 186
+- Timeout on waiting for the greeting banner .................................. 186

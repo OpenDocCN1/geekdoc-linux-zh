@@ -1,0 +1,76 @@
+
+
+your location for free. There is also a link to AirNav, which will provide altitude information for public landing sites (airports) in your area. This isn't as precise as a GPS system, but it's better than nothing and a lot more information than most DNS servers are configured to provide.
+
+## Edit Records File
+
+This option merely provides a simple text editor window that contains the complete db file for your zone. This allows you to edit it manually; however, this is not recommended unless you are familiar with the BIND configuration file grammar as it is not checked by Webmin for correctness.
+
+## Creating a Slave or Stub Zone
+
+Slave and Stub zones are created in exactly the same way, and are quite similar in some ways though their purposes are very different (Figure 8-10). Slave zones keep a complete copy in memory, and sometimes also on disk, of a zone that it receives via a zone transfer from a master zone. A slave zone can answer any queries for a zone, and as long as network connectivity remains intact between the master and slave and the servers are configured correctly, it will stay in sync with the master server. A stub zone also syncs to a master server; however it only keeps NS and SOA record information from the master server. This allows BIND to keep up with delegation information automatically.
+
+![](img/d84604054810a13cacfdac212ebee2f7_166_0.png)
+
+Figure 8-10: Creating a Slave Zone
+
+Creating a slave is extremely simple. The only information required is the domain name or the network (as was used in the master zone earlier), and the addresses of one or more master name servers. As with master zones, you configure both a forward and reverse zone type for each zone. This server can then be used by clients just as the master zone is used. In fact, whether it is a slave or master is entirely transparent to the user.
+
+## Creating a Forward Zone
+
+A forward zone is simpler still. It's only possible configuration options are whether it is a forward (name to address) or reverse (address to name) zone type, the name or network of the domain, and the master servers to forward requests to. A forward zone is just specific instructions for BIND that it should forward requests for a specific zone to one or more specific name servers. BIND does not perform zone transfers with a forward zone, as it does in the case of slave and stub zones.
+
+## Tutorial: Setting Up a Caching Name Server with BIND
+
+A caching name server can be beneficial in a number of situations. First, because it brings name service closer to the user, performance of all name-based services will likely be improved. Also, in secured environments with a strict firewall implementation, it can be used to allow local clients to obtain name service without having to pierce the firewall for all users. Only the local caching DNS server must have access to outside name servers. Finally, it provides a simple mechanism for providing a private name space to local users, by allowing users to obtain all name service from the local caching name server, which also acts as a master name server for the local network name space.
+
+A caching name server is perhaps the simplest type of name server to configure, and Webmin makes the configuration even easier. Because caching is a core part of how DNS scales, it is an automatic part of any BIND configuration. All that is left for us to do is allow Webmin to create our initial configuration files and alter a couple of options in the configuration.
+
+## Initializing the named.conf
+
+When first opening the Webmin BIND module, you'll be given a few choices about how to generate the initial configuration files. The ideal choice is to allow Webmin to initialize your configuration and download the root name server list. If you are not currently connected to the network you can choose to use the root name server list file that is included in the Webmin distribution.
+
+## Adding Forwarders
+
+After Webmin has completed the download, and initialized your files, click the Forwarding and Transfers icon. Add the primary and secondary name server addresses provided by your ISP to the field labeled Servers to forward queries to. Then select Yes for the option Lookup directly if no response from forwarder. Click Save.
+
+Believe it or not, your configuration is finished. Simply click the Start BIND button, point your client workstations to the IP of your server for their primary name server, and test it out. Check the later section on troubleshooting BIND if problems arise.
+
+## Tutorial: Name Resolution for Virtual Hosts
+
+As discussed earlier in the Apache chapter, a name-based virtual host has to have a name mapped to an IP address before you can even access its contents with a browser. BIND, of course, will be our means of providing lookup of those names. Because we're only concerned with web service for this tutorial, we only need to concern ourselves with the creation of a forward zone (a forward zone maps names to addresses).
+
+## Create a New Master Forward Zone
+
+Assuming you've already allowed Webmin to initialize your named configuration files you're ready to add a master forward zone for your domain (Figure 8-11). Click the Create a new master zone link on the front page of the BIND module.
+
+The Zone type should remain at its default of Forward. The Domain name/ Network field should contain the second level domain name under which your virtual hosts will reside. For example, if I had one or more virtual hosts under the swelltech.com domain, that would be the domain name I would enter here. If you have other second level domains, you will create a zone for each. It is easiest to allow Webmin to automatically name the Records file, and the Master server will probably be correct if your host name is configured correctly. Enter your email address, or the address you would like to be the administrative contact for this zone, into the Email address field. Finally, click Create. You will immediately be directed to the new zone for further configuration.
+
+![](img/d84604054810a13cacfdac212ebee2f7_168_0.png)
+
+Figure 8-11: An example master zone
+
+## Adding Address Records
+
+Now we can begin adding records to our new zone. The first record I would add to my swelltech.com domain would be swelltech.com itself, and it will be an address record, also known as an A record. Clicking the Addresses icon provides a simple form for adding the new record. Because this first record is for a host named simply swelltech.com, we enter nothing in the Name field. Then we enter the IP address of the server we'd like this name to point to, in my case it is the same address on which my Webmin server is running. All other fields can remain at their defaults. Clicking Create adds the record.
+
+Follow the same steps to add another address record for www.swelltech.com, presumably on the same IP. All that changes from the above steps is to enter www in the Name field instead of leaving it blank. If you've worked through the examples in the Apache tutorial on virtual hosting, you'll now have all of the pieces for web service on both domain names.
+
+## Adding an Mail Server Record for Mail
+
+Because no domain would be complete without mail service, and mail service for a domain does not have to reside on the same server as web service, we need to have some way to tell mail servers where to direct our mail. Luckily, the designers of DNS have thought of that already and provide the MX, or mail server, record as a means of notifying other mail servers where to send email destined for the domain.
+
+Adding a mail server is usually a two part process. First, a new record is created pointing to the address of the mail server. In the case of small networks, this will likely be a machine that is providing other services. For example, the Swell Technology mail server resides on the same machine as our web server and our NTP time server. So, in most cases we can use a Name Alias record, also known as a CNAME record, for our mail server name. If you have a dedicated mail server you will use an address record instead.
+
+## Adding a Name Alias
+
+Because my mail server is hosted on the same address as my web server, I've chosen to use a CNAME record, or name alias, for mail.swelltech.com. Creating a name alias record is a lot like creating an address record. Click the Name Alias icon, and fill in the appropriate fields. In this case, I will fill in mail for the Name and swelltech.com. for the Real Name. Notice there is a period at the end of my real name. This period is significant, and required to indicate a fully qualified domain name, otherwise the real name pointed to would be swelltech.com. swelltech.com, which is probably not what we want. Click Create to add the new record.
+
+> NOTE This step is not strictly necessary if your mail server is hosted on the same machine as other named services. However, traditionally mail servers have had a name record of their own, usually mail.domain.com or smtp.domain.com. It also makes it easier to plan for later network expansions if you begin your network design with appropriate names for all of the services available on your network. If you wish to avoid adding a CNAME for mail service, you can skip this step and point your MX record to an existing name.
+
+## Creating an MX Record
+
+Now that we have a name for our server, we can add an MX, or mail server, record. This is simply a record that indicates to other mail servers where mail for our domain should be delivered. In my case, I would like mail directed to swelltech.com and all names within the domain to be delivered to mail.swelltech.com. So when a mail server receives a mail from one of its users directed to joe@swelltech.com, it will first find out where that mail ought to be delivered by querying the name server that is authoritative for swelltech.com for its MX record.
+
+To create a new mail server record, click the Mail Server icon. Because we are currently concerned with our primary domain, in my case swelltech.com, the Name field can be left empty. The Mail Server field can be filled in with the name of the mail server we created in the previous step, mail.swelltech.com in my
+

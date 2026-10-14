@@ -1,0 +1,94 @@
+
+
+appropriate files on the system. This doesn't need to be changed from its defaults by the vast majority of users, as the Webmin default is usually right for your system.
+
+## Generate password for new users?
+
+If selected, new users will be assigned a random password when created. This password will be visible in the password entry field on the Create User page if Conceal plain-text password? is set to No.
+
+## Show office and phone details?
+
+Webmin can use the comment field in the /etc/passwd to store phone numbers and office information. If this option is selected, it displays the information when you view the user details. Modern implementations of the finger command can also display this information.
+
+## Display user email from
+
+Webmin can be used to send and receive mail by users who have access to the mail module. This option should be set to your active mail server. If using postfix, choose the sendmail option, because it use the same mailbox format and locations.
+
+## Password Restrictions
+
+The following options specify the restrictions that Webmin will place on passwords when creating a new user, or modifying an existing user password:
+
+## Minimum password length
+
+When users change their passwords through the Webmin interface, it is possible for Webmin to enforce a minimum password length. It is recommended to enforce at least a minimum password length of six characters if security is at all a concern. Shorter passwords are easier to guess, and are weaker when assaulted with a brute force attack. Operating systems using the older crypt encryption mechanism are limited to passwords of eight characters or less, but MD5-based systems usually have no limit or a much larger limit.
+
+## Prevent dictionary word passwords?
+
+Because a common method of attack against computer systems is to attempt logins using passwords pulled from a dictionary file, it is often wise to require passwords that do not match words in the system dictionary. This option will cause Webmin to display an error message if a user chooses a password found in the dictionary.
+
+## Perl regexp to check password against
+
+Here you may enter any Perl regular expression against which you would like passwords to be compared. For example, if you fear your users will often choose the company name, or the name of a local sports mascot, for their password, you may create a regular expression to match those terms.
+
+## Prevent passwords containing username?
+
+Users have a bad habit of choosing really bad passwords. Some even choose their own user name as a password. If enabled, this option will prevent a user from such a mistake. Unfortunately, in current versions of Webmin, it will not make jokes about the lack of intelligence of the user.
+
+## System Configuration
+
+The following options specify the locations of the system user and group information files:
+
+## Password file
+
+The password file is the location of the list of users, and it contains information about their home directory, their login shell, and their primary group. Usually, this is `/etc/passwd`. On modern systems this file does not contain user passwords. Passwords usually reside in the shadow file.
+
+## Group file
+
+The group file is the location of the file that contains the names and membership information of groups on the system. Usually, this is `/etc/group`.
+
+## Shadow password file
+
+The shadow password file is the file that contains the actual passwords. It is only readable by users with root permissions, and therefore is a more secure location than the `/etc/passwd` file, because the password file must be readable by everyone in order to allow groups and commands like `finger` to work. Usually, this is `/etc/shadow`.
+
+## BSD master password file
+
+Much like the shadow password file on Linux and some other UNIX variants, the BSD master password file is only readable by root and is usually the location of passwords on a BSD system rather than the `/etc/passwd` file. This is usually `/etc/master.passwd`.
+
+## Shadow group file
+
+If group passwords are in use on a system that supports shadow passwords, there will be a group shadow password file in addition to the shadow password file. This is usually named `/etc/gshadow`.
+
+## Creating a New User
+
+Creating a user with Webmin is a simple task. The steps can be simplified further through careful configuration of the module to set up users to suit your environment. Webmin can create a user manually, or it can import a text file list of new users or users to modify in an automated batch mode. This can be used, for example, to migrate an existing user list from a legacy system. Batch mode can also be useful for large organizations with a constantly shifting user base, such as a university or military installation.
+
+To create a user manually, click the Create a new user link. Fill in the appropriate details. If you've chosen your defaults in the module configuration file wisely, you should be able to get away with entering just a few details for each user. In Figure 5-12 below, I've added a few extras just to make the example more interesting.
+
+A username is always necessary, and because our user's name is Seymour, I've given him the username seymour. I've let Webmin choose the UID for me, which is the next available UID on the system above the minimum that is set in the module configuration. I've also entered Seymour's real name and his work telephone number. The password that appears in the normal password text entry box was selected at random by Webmin. It appears secure enough to me, so we'll leave that one alone. In the password options section, I've specified some reasonable timeout information. Finally, I've selected for Seymour to be a member of the users group, because I think he will be involved in many group projects that require him to be able to share files with co-workers easily.
+
+## Create User and Edit User Options
+
+When creating a new user or editing an existing user, the following options are available:
+
+## Username
+
+This is simply the username under which the user will log in. UNIX has a long tradition of using all lowercase letters for usernames, but capitalized names will work if you feel a strong urge to go against 30 years of tradition. Usernames may contain all alphanumeric characters, but no spaces or other special characters. Names must be unique and begin with a letter.
+
+## User ID
+
+The user ID is usually chosen automatically by Webmin, although you may enter a specific UID instead.
+
+> **NOTE** Recycling a UID or GID, i.e., reusing a deleted users old ID, can be dangerous, because file ownership is maintained at the OS level by the UID and GID number of the file rather than the name of the user. Thus if you create a new user with an old users UID or GID, and any files remain on the system owned by the previous user, the new user will have access to the files at the same level as the old user. There are reasonably reliable methods of locating such file permission problems using the find command, although it is beyond the scope of this book. A better choice is to never delete old users. Instead, disable their account by turning off logins, and if the user will never need to be re-enabled you may delete their home directory and other files. By doing this you ensure that Webmin will never reuse an old ID, unless you force it to.
+
+![](img/d84604054810a13cacfdac212ebee2f7_104_0.png)
+
+Figure 5-12: Creating a new user
+
+## Office, Work phone, Home Phone, Extra options
+
+The UNIX passwd file has a comment field that may be used for mostly free-form text entry. Many programs, however, have standardized on a few comma-separated field values for the comment. For example, running the finger command on a username that has provided these extra fields will result in these numbers being displayed in addition to the usual information, such as recent logins. The Extra options field may be used on some systems to configure the initial umask, nice level, and ulimit values for the user.
+
+## Home directory
+
+Users on a UNIX system generally have a directory that belongs to them called their home directory. Within their home directory, a user may read, write, delete, or execute files with no permissions restrictions. Quotas may limit the amount of space available to the user, but the user can otherwise work unrestricted in their home directory. The UNIX tradition places home directories in a partition labeled /home, with each user having their home directory named after their own username within it. For example, if our system has a user named s1im it would not be unreasonable to expect his home directory to be /home/s1im. As discussed previously, if you let it, Webmin will select the home directory for you based on the policy selected in the module configuration.
+

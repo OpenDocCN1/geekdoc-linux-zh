@@ -1,0 +1,104 @@
+
+
+case, the authority section gives us the primary and secondary name servers for this domain, ns1.megapath.com and ns2.megapath.com, and the additional section provides the IP addresses of those name servers.
+
+The last few lines give the time the query required, the server that was queried and the port on which it was queried, the time and date on which the query was made, and the size of the message received from the name server.
+
+Like host, dig has a mode in which you can query all of the information available about the domain. This can be done by appending the ANY argument to the end of the command line. Furthermore, the options NS, MX, CNAME, and so on are also available and do just what you would expect.
+
+## 9
+
+## FTP SERVER
+
+![](img/d84604054810a13cacfdac212ebee2f7_176_0.png)
+
+The File Transfer Protocol is a lightweight protocol for transferring files over a network. It is a client-server protocol requiring an FTP server, such as WU-FTPD [http://www.wu-ftpd.org/] and a client such as ncftp [http://www.ncftp.com/]. WU-FTPD is the most popular FTP server on the Internet, and though it has had its problems (primarily security-related), it is a very feature-rich FTP daemon.
+
+WU-FTPD has been in constant development for over ten years and has attracted a lot of users and developers during that time. This chapter covers all of the configuration files involved in running a WU-FTPD installation (Figure 9-1). It is highly recommended that you make sure your FTP server is running the latest version (2.6.2 is the version as of this writing), as all earlier versions have widely known security exploits.
+
+![](img/d84604054810a13cacfdac212ebee2f7_177_0.png)
+
+Figure 9-1: WU-FTPD Server
+
+## Users and Classes
+
+Here you configure the various user and group features of the ftpaccess file (Figure 9.2). For more on this file and its structure, see the ftpaccess man page [http://www.wu-ftpd.org/man/ftpaccess.html].
+
+### User classes
+
+Here you define a class of users, and the networks from which they are allowed to log in. Note that the default includes a class a11 for users of all types (real, guest, and anonymous) which matches all networks with the *. This option configures the class directive.
+
+### Unix users and UIDs to treat as guests and Unix groups and GIDs to treat as guests
+
+Here, you will define users and groups who would ordinarily qualify as real users who will be treated as guests, or anonymous users. In other words, a chroot will be done, and the user will not be permitted to use the USER or PASS commands. The users home directory must be properly set up, as an anonymous FTP directory would be. These two options correspond to the guestuser and guestgroup directives.
+
+### Unix users and UIDs not to treat as guests and Unix groups and GIDs not to treat as guests
+
+![](img/d84604054810a13cacfdac212ebee2f7_178_0.png)
+
+Figure 9-2: Users and Classes
+
+### Unix users to deny (from /etc/ftpusers)
+
+This is simply a list of users to deny access to the server to. This information is drawn from the /etc/ftpusers file. Adding to this list will add to the file. Note that if the next two sets of options are used to precisely control access to the FTP server (i.e., by blocking all access except for explicitly permitted users), then the ftpusers file becomes unnecessary.
+
+### Unix users and UIDs to deny and Unix groups and GIDs to deny
+
+Here you can enter any users or groups you would like to deny access to. These options configure the deny-uid and deny-gid directives.
+
+### Unix users and UIDs not to deny and Unix groups and GIDs not to deny
+
+These options can be used to negate the above options, if you chose to disallow all access from all users and groups. In this way, you could allow only explicitly configured users to access the server.
+
+## Messages and Banners
+
+WU-FTPD provides a simple mechanism for informing users of important information regarding the server, or files on the server. As in the previous section, this page configures certain aspects of the ftpaccess (Figure 9-3).
+
+### Message files
+
+This option configures the messages that will be displayed on login to the server. The default on many systems is to display a message contained in the file welcome.msg in the root FTP directory, if it exists, as soon as someone logs in. Also, when entering a directory the server will check for the existence of a file called .message in the new directory. If it exists, it will be displayed. Both of these are optional, and the names and actions can be changed at will. This option configures the message directive.
+
+![](img/d84604054810a13cacfdac212ebee2f7_179_0.png)
+
+Figure 9-3: Messages and Banners
+
+### README files
+
+Here, you can configure the behavior of the server with regard to README files. This, too, is set up by default on most systems. In this case, any file beginning README will be displayed to the user, both on logging into the server, and upon entering a new directory. This option configures the readme directive.
+
+### Greeting level
+
+Here you can select how much information about your server will be presented to the user. This can include the host name, the server version, and nothing. This can be a mild security risk, as the first step to cracking a box is to figure out what software and version is running. However, if the system is kept up to date (religiously), and the system is otherwise secured, this should not be an issue. Many paranoid types (and there’s no harm in being paranoid in a world where script kiddies are a dime a dozen) will disable all specific software and version information on all of their publicly accessible services. This option configures the greeting directive.
+
+### Pre-login banner
+
+Here you configure a banner that will be displayed before the user is prompted for a user name and password. This option can cause problems with non-compliant FTP client software. This option configures the banner directive.
+
+### Hostname for messages
+
+This will be the host name that is printed in the greeting message, and anytime the host name is inserted into a message for the user. This option configures the hostname directive.
+
+### Owner's email address
+
+Here you can set the email address of the servers maintainer. This will be presented as the contact email for this server. This option configures the email directive.
+
+## Limits and Access Control
+
+This page provides access to various resource limits, as well as provides system level access controls. If you wish to limit the system or network resources your server uses, this is the page to start with.
+
+### Deny access from
+
+Here you may deny access to the server from any number of IP addresses, and you can provide a filename of a text error message file to send the client in the event they have been denied access based on this rule. This option configures the deny directive.
+
+### Concurrent user limits
+
+Here you may limit the number of concurrent users from a given user class. To configure this option, you must provide a class for which the rule will apply, and the maximum number of users to allow to log in simultaneously. Next, you can choose times in UUCP L.sys format. This format is pretty simple, you choose the days by entering the first two letters with the first capitalized (i.e., Su for Sunday, or Mo for Monday), or Any for all days. Then the time is set in military format (1000 for 10AM, 2300 for 11PM, etc.). So to limit users during business hours, for example, we could enter MoTuWeThFr0800-1800. This option configures the limit directive.
+
+### File and data transfer limits
+
+This option provides access to the transfer limits features of WU-FTPD. It is possible to limit user's downloads based on files or data or both. You may also configure limits for outgoing and incoming transfers, and to which classes the limits should apply. This option configures the file-limit and data-limit directives.
+
+### Deny access to files and Allow access to files even if denied
+
+If there are files in your directory tree that you do not wish to be retrievable by one or more classes of users, you may enter it here. The path may be relative to the FTP chroot, or it may be an absolute path (select which using the Relative to chroot option). This option correlates to the noretrieve directive. The Allow access to files even if denied option allows you to unselect files that would ordinarily be made inaccessible by the previous option. This option correlates to the allow-retrieve directive.
+

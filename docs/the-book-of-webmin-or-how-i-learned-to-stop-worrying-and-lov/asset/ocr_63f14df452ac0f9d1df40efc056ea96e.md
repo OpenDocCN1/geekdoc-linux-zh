@@ -1,0 +1,11 @@
+![](bbox=[0.25, 0.12, 0.68, 0.48])
+
+# Figure 14-8: Printer Administration
+
+When entering the Printer Administration page, you will see a list of currently configured printers, a link to Add a new printer and a button to Stop Scheduler or Start Scheduler depending on the current status of the print scheduler.
+
+Clicking the Add a new printer link opens a page where you can configure a new printer. The Name field is an arbitrary name for the printer. Conventionally, lp or lpo are often used for the first printer, but you can name it anything. The Description can be a longer description of the printer. Accepting requests simply sets whether the printer should be available, and Printing enabled defines whether it is enabled for printing (the queue can still receive requests with this turned off if the previous option is still on). Max print job size is the maximum size request that will be accepted. This shouldn’t be too small, as many PostScript files are quite large.
+
+The next section is Print Destination, where you define the device type (local, file, remote UNIX, or remote Windows). Many standalone network printers support standard UNIX lp functionality in addition to Windows printer sharing. If your printer is local, choose the physical device to use, and if it is a remote printer, enter the IP or host name for the host where the print queue is located. If using a Windows shared printer, enter the User, Password, and Workgroup for the printer share (Figure 14-9).
+
+Finally, the third section of the page is for configuring the driver for your printer (Figure 14-10). If your printer is a simple text printer or a PostScript printer, the top selection is probably right for you. The second option is for a program to handle printer control. This could be a custom print driver for your printer or one of a couple of competing commercial and non-commercial printer packages. Finally, if your system provides them, there will be a list of available drivers. This section, on Red Hat systems, is a front end to the GhostScript printer drivers that come standard with Red Hat. It’s quite likely that your system will have its own set of drivers, or a front end, much like that of Red Hat.

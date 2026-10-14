@@ -1,0 +1,15 @@
+# Include Numbers
+
+Another good possibility is to enforce the inclusion of at least one number in all passwords. This automatically increases the pool of possible passwords by an order of magnitude, even if dictionary words are allowed. Again, this doesn't make passwords significantly less memorable for the user, but does increase the security of the password. However, use of birthdays, anniversaries, and so on should be discouraged, as these are easily guessable and more prone to Social Engineering attacks.
+
+# Scheduled Password Changes
+
+In environments where security is important, it is wise to implement a mandatory password change after some specified period of time. The inconvenience to users of this choice should be carefully balanced against the security needs of the environment. It is less useful if frustrated users alternate between two passwords because they are being forced to change them every two weeks, or even worse, if they write them down somewhere in their desk because they don't want to take the effort to remember a new password every week. Once every six months is probably frequent enough for all but the most extreme circumstances.
+
+# Failed Login Timeouts
+
+In the event that a cracker attempts a brute force attack on your server, password timeouts can be very effective at making the process extremely time-consuming, or even impossible. Going on the assumption that a user usually will not mistype their password more than a few times, many authenticators can timeout and refuse to allow any login for that user for a specified period of time after that number of failed logins is reached. With this feature enabled, it becomes a daunting task to use brute force password searches to break into a system that has password timeouts of this sort. It can potentially increase the time it takes by months or years, and the likelihood of detection of the scans considerably because one or more users will begin to complain of being unable to log in (because their password is in a state of timeout most of the time).
+
+# Education
+
+This is perhaps the most important in light of the prevalence of Social Engineering. Users of the network, both new and old, should receive training about the password policy, why the policy has been implemented, and how to use the tools required to take part in the new policy. This training doesn't have to be a large investment in time, effort, or money. In high-tech environments, a simple email reminder with the policy and instructions sent out every month to old users and immediately to new users could be enough. In traditional business, education, or government environments it may be better to schedule a one-hour group lecture the first time in order to explain both the whys and the hows, followed by a question and answer period. It is also vitally important that users understand that no one should ever ask for their password, and they should never give out their password to anyone, no matter who they claim to be. It might also
