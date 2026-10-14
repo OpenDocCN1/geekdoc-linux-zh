@@ -15184,8 +15184,7 @@ UNIX 的亮点之一是其强大的网络能力。本章涵盖了网络管理的
 
 - Cheswick, William, and Aviel. *Protecting Networks*. 2nd ed. Boston, MA: Addison-Wesley, 2003.
 
-- ... (其余参考文献略)
-[/content]
+
 # Part IV: Network Administration
 
 FreeBSD, FreeBSD, and NetBSD, and other UNIX variants. You can download Squid at http://www.squid-cache.org/. You can also find directions and help for compiling, installing, and running Squid at this site. you can also consult Squid: The Definitive Guide by Duane Wessels, published by O'Reilly and Associates, to learn more about Squid.
