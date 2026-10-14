@@ -2243,6 +2243,7 @@
 +   [面向小白的 Ubuntu 指南，第 4 版](docs/ubuntu-for-non-geeks-4th-edition/README.md)
 +   [非技术人员的 Ubuntu：无痛高效指南](docs/ubuntu-for-non-geeks-a-pain-free-get-things-done-guide---des/README.md)
 +   [非极客的Ubuntu：无痛、项目式、实用高效指南（涵盖Ubuntu 7.04 火猄版）](docs/ubuntu-for-non-geeks-a-pain-free-project-based-get-things-do/README.md)
++   [Ubuntu 功夫：提示、技巧、诀窍与黑客技巧](docs/ubuntu-kung-fu-tips-tricks-hints-and-hacks/README.md)
 +   [Ubuntu® Linux 入门指南](docs/ubuntu-linux/README.md)
 +   [Ubuntu Linux 经](docs/ubuntu-linux-bible/README.md)
 +   [Ubuntu Linux 圣经（第11版）](docs/ubuntu-linux-bible-11th-edition/README.md)
