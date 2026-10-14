@@ -1,0 +1,18 @@
+There are numerous ways to allocate multiple colors in an X client, but one of the most versatile is shown here. First, create an array of color name strings as in the listing. In this case, I named the array Roy_G_Biv in honor of the easily remembered acronym that stands for the basic colors of the rainbow: red, orange, yellow, green, blue, indigo, and violet. Unfortunately, however, X does not define Indigo, and the stock Violet color is too light—so I substituted two colors, Violet and DarkViolet, for the array's last two color names.
+
+Along with the array of color name strings, also define an array of unsigned long values, one for each color:
+
+```
+unsigned long colors[ MAXCOLORS ];
+```
+
+You could instead create an array of XColor objects if you need access to other fields in that structure, but here we need to save only the pixel values returned by XAllocNamedColor(). After connecting to the X server, the sample program calls a local function, GetColors(), to fill the colors array. This function (located near the end of the listing) calls XAllocNamedColor() for each color-name string and assigns the returned pixel value to the colors array. If any colors cannot be allocated, the program assigns a default color (black in this case). This is probably inadequate in this example because on a monochrome system, if all colors default to black, the results won't look much like a rainbow. However, this just points out one of the difficulties in using color under X. It's never possible to predict the exact outcome of color graphics, and a little guesswork plus some faith is always necessary.
+
+Because we are using color names, however, the program should work on most systems. To actually paint the rainbow, the program calls another local function, PaintRainbow(), when it receives an Expose event. The function merely paints half moons by calling the Xlib graphics primitive function XFillArc() with arguments set to fill the window with successive arcs, simulating a rainbow. The last call to XFillArc() erases the final half moon to the window's background color, completing the illusion. Notice how XSetForeground() assigns each pixel value from the colors array before drawing the arc shapes.
+
+Tip
+For online information on XFillArc(), type info XFillArc.
+
+The xrainbow.cpp program also demonstrates how to scale graphics to fit the window regardless of its size. To see how this feature works, run the program and change the window's size. No matter how small or large you make the window, the rainbow fills it from corner to corner. (Sorry, but there's no pot of gold at either end!)
+
+Scaling graphics isn't difficult as long as you design your drawing routines to calculate positions and other values based on the window's size. In this case, two integer variables, intWidth and intHeight, initialized before the window is created, record the window's size in pixels. To update these variables when the user resizes the window, add StructureNotifyMask to the event types passed to XSelectInput() before the program enters the event loop. Then, in the event loop, add a case for a ConfigureNotify event programmed like this:

@@ -1,0 +1,162 @@
+
+
+一个 if 语句通常检查一个值并执行相关的操作。例如，下面的 if 语句会在变量 value 大于 100 时显示一条消息：
+
+```
+if (value > 100)
+    cout << "Value is too large" << endl;
+```
+
+条件也可能是一个 C++ bool 变量，也许命名为 error：
+
+```
+bool error = false;
+```
+
+在其他地方，一条语句可以将 error 设置为 true 以表示发生了错误。回到函数 main() 中，一个 if 语句检查 error，如果为 true，则显示一条消息并退出程序：
+
+```
+if (error) {
+    cout << "*** Error detected. Phone home!" << endl;
+    exit(1); // Exit with error code == 1
+}
+```
+
+你可以这样写前面 if 语句的条件：
+
+```
+if (error == true)...
+```
+
+但更简单的形式完全可以接受。记住，即使是一个变量名也是一个具有值的表达式。表达式 (error) 等于 true 或 false，因此作为 if 语句条件是有效的。
+
+C 和 C++ 程序员通常利用这一事实来测试其他类型表达式的零值（false）或非零值（true）。在你习惯这种技术之前，它可能会令人困惑。考虑一个程序声明了一个 int 变量，例如
+
+```
+int condition = 1;
+```
+
+在其他地方，程序执行这个 if 语句：
+
+```
+if (condition)
+    cout << "Non-zero condition detected" << endl;
+```
+
+因为在 C 和 C++ 中，零等同于 false，非零等同于 true，所以这可行，但代码晦涩难懂。这是在 C 和 C++ 中常见的技术，但始终更好，并且不会影响性能，使用显式表达式来澄清非 bool 条件，例如：
+
+```
+if (condition == 0)
+    cout << "Condition detected" << endl;
+```
+
+### COMPLEX CONDITIONS
+
+if 语句的条件通常使用复杂的逻辑表达式来测试多个参数。为了说明这一点，清单 9.1，choice.cpp，会提示你输入 1 到 10 之间的值。程序使用一个 if 语句来检测错误条件，如果你输入的值不在预期范围内则显示消息。
+
+### LISTING 9.1 CHOICE.CPP
+
+```
+#include <iostream.h>
+
+int number; // User input
+
+int main()
+{
+cout << "Enter a number from 1 to 10: ";
+cin >> number;
+if ( (number < 1) || (number > 10) )
+    cout << "Incorrect answer!" << endl;
+return 0;
+}
+```
+
+编译并运行程序，然后输入一个整数值。如果输入的值超出预期范围，程序会表达不满，如以下示例运行所示：
+
+```
+$ g++ choice.cpp
+$ ./a.out
+Enter a number from 1 to 10: 11
+Incorrect answer!
+```
+
+程序使用 if 语句来测试输入的有效性，这可能是这种语句最常见的用途之一。仔细查看程序的 if 语句：
+
+```
+if ( (number < 1) || (number > 10) )
+cout << "Incorrect answer!" << endl;
+```
+
+条件测试 number 是否小于 1 或 (||) 大于 10。如果任一条件为真，整个表达式为真，程序会显示错误消息。圆括号对整个表达式进行分组。严格来说，内部的圆括号不是必需的，因为小于和大于运算符 < 和 > 的优先级高于逻辑或运算符 ||（参见附录 B，“C++ 运算符优先级和结合性”）。然而，额外的圆括号使语句非常清晰。
+
+### THE else STATEMENT
+
+你可以将 else 语句视为 if 语句的搭档。它必须跟在 if 语句之后以选择替代操作。一般来说，使用 else 如下：
+
+```
+if (condition)
+    statement1;
+else
+    statement2;
+```
+
+如果条件为真，则执行 statement1；否则，statement2 开始执行。语句可以是简单语句或复合语句。使用圆括号对相关语句进行分组，如下所示：
+
+```
+if (condition) {
+    statement1;
+    statement2;
+} else
+    statement3;
+```
+
+在该代码中，如果条件为真，则执行语句 1 和 2；否则，执行语句 3。两部分都可以是复合语句块：
+
+```
+if (condition) {
+    statement1;
+    statement2;
+} else {
+    statement3;
+    statement4;
+}
+```
+
+在该代码中，如果条件为真，则执行语句 1 和 2；否则，语句 3 和 4 执行。花括号的放置由你决定。一些程序员更喜欢将它们放在单独的行，如下所示：
+
+```
+}
+else
+{
+```
+
+### NESTED if-else STATEMENTS
+
+你可以将多个 if-else 语句嵌套在一起，创建一个多路决策器。
+
+下面显示了嵌套 if-else 语句的基本结构：
+
+```
+if (condition1)
+    statement1;
+else if (condition2)
+    statement2;
+else
+    statement3;
+```
+
+逐行理解，并确保理解其工作原理。如果 condition1 为真，则执行 statement1；否则，如果 condition2 为真，则执行 statement2。如果 condition1 和 condition2 都为假，则执行 statement3。三个语句中至少有一个保证会执行。你可以将这个想法推向极致，编写如下代码：
+
+```
+if (condition1)
+    statement1;
+else if (condition2)
+    statement2;
+else if (condition3)
+    statement3;
+else if (conditionN)
+    statementN;
+else    // Optional
+    defaultStatement; // Optional
+```
+

@@ -1,0 +1,11 @@
+# DEDICATION
+
+To Maureen Walsh Hunt, for believing in me.
+
+# ACKNOWLEDGMENTS
+
+So many people contribute to a book of this size and scope, it is impossible for me to thank them all. A mere thank you seems inadequate to folks such as Linus Torvalds who brought us Linux, and to Richard Stallman for starting the free-software ball rolling that led to the GNU project, and hence to Linux. I don't know these two gentlemen personally, but I am indebted to them as well as to the hundreds if not thousands of programmers worldwide who have improved Linux and GNU C++, and who continue to contribute to this amazing project. I also thank Bruce E. Wampler for developing the V C++ class library for X programming, introduced in this book's final two chapters.
+
+On a personal note, warm thanks to Barbara Paré for encouraging me to begin this project and see it through (and for keeping the bad weather at bay); to Larry Weeldreyer for the use of his scanner and for many tips and suggestions (plus the lunches and good company); to George Shetzley for helping me run errands and for friendship; to my friends at Sunset Marina for package handling, getting my phone service woes solved, and especially for the air conditioner; to Anne Swan for emotional support and for forwarding my mail while I travel around; to John Windholtz for reminding me to tell readers what a.out means (and to Patty Windholtz for the sundowners and company); to Barry Braverman for helping me maintain my sanity and improve my guitar playing; to my brother David Swan for encouraging me to knuckle down and do the work; and to my mother Mary Swan and my father Reyer Swan for the care packages and loving support not only during the time I wrote this book, but always.
+
+I am particularly grateful to the employees and associates of Que and Macmillan USA, and even though I don't know all your names, your hard work shines on every page. I especially thank (in alphabetical order) Richard Blum, Geneil Breeze, Erik Dafforn, Tom Hayes, Dean Miller, Julie Otto, John Pierce, Katie Robinson, and Mandie Rowell. My name might be on the cover, but without the help of these fine people and everyone at Que and Macmillan USA, this book would simply not exist.

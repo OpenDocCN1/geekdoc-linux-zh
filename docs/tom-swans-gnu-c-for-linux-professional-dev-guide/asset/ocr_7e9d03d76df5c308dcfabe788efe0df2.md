@@ -1,0 +1,19 @@
+You’d have to be living face down in a moon crater not to have heard about object-oriented programming, or OOP, as it is comically known. OOP is the programming paradigm of the future, the model (some say) upon which all the world’s software soon will be built. Whether that’s true or not, there’s no denying the value of OOP in constructing and maintaining complex software applications, and those who ignore OOP risk missing the major contribution of C++ to programming—the class.
+
+If this is your initial exposure to OOP, don’t be concerned if its advantages elude you at first. C++ lets you learn object-oriented programming techniques at your own speed. Unlike so-called “pure” OOP languages such as Smalltalk, C++ is a hybrid programming language that combines conventional and object-oriented methods. This means that you can use what you already know about conventional C and C++ while you learn how to program with classes and objects. Three concepts distinguish OOP from conventional programming:
+
++   - Encapsulation
++   - Inheritance
++   - Virtual functions
+
+In this chapter and the next, you learn how to create classes using encapsulation to marry data and functions in objects. You also learn some of the reasons classes and object-oriented programming help you write code that works reliably and is easy to maintain. The rest of the chapters in Part III introduce inheritance and virtual functions along with practical object-oriented programming techniques using GNU C++.
+
+# WHY USE OBJECT-ORIENTED PROGRAMMING?
+
+Object-oriented programming and C++ classes help reduce complexity, especially in large software applications. One reason this is true is because OOP encourages programmers to reuse existing code rather than rewrite functions from scratch. Reusing code doesn’t mean cutting and pasting source code text. With objects, you build new programming by inheriting existing, compiled C++ classes.
+
+Reusing code is far more difficult with conventional programming languages such as C and Pascal. Conventional C programmers, for example, typically rewrite the same functions over and over because it’s too much trouble to reuse existing, tested modules. C++ classes are easy to reuse and extend, and well-written C++ programs tend to evolve from existing modules the way trees grow by extending their branches. Rather than replant low-level code into every new program, with OOP you write programs that grow naturally from your current crop of tested modules.
+
+# INTRODUCING THE CLASS
+
+Simply stated, a class is an object-oriented tool for creating new data types that you can use in much the same way as native C++ types such as char, int, and double. A class encapsulates

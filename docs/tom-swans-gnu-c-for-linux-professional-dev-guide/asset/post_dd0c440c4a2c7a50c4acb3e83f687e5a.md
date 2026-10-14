@@ -1,0 +1,57 @@
+
+## TABLE 8.2 FLAGS FOR THE sprintf() FAMILY
+
+| Flag | Description |
+|------|-------------|
+| - | Left-justifies output. Fills any remaining space to the right with blanks. Default output is right-justified. |
+| + | Prefaces numeric values with a plus or minus sign. |
+| ' ' | A space displays a blank in front of positive numeric values, and a minus sign in front of negative ones. Don't type the quotes—just type a single space. |
+| # | Selects an alternate form for some conversion letters. If the conversion is x or X, this prefixes nonzero arguments with 0x or 0X, respectively. Use it to display hexadecimal values. If the conversion is o, this prefixes the value with 0. If the conversion is E, e, or f, this forces a decimal point to appear in the output (normally, a decimal appears only in nonzero fractions). If the conversion is g or G, a decimal point is forced into the output, and trailing zeros are not truncated as they are normally. |
+| 0 | Specifies zero padding. Except for the conversion letter n, zeros pad the formatted value to the left (normally blanks). |
+
+```
+% [flags] [width] [.precision] [h|l|L] conversion
+```
+
+The optional width value specifies a minimum column width. Normally, any extra space is filled with blanks. But if the width value begins with the digit 0, any extra space is filled with 0 characters. This is useful for aligning integers padded at left with zeros.
+
+The width value also can be an asterisk (*). This causes the next int argument to be used as the column width—a rare case in which a formatting command requires two arguments. With this command, you specify two values: an integer that represents the minimum width to use and the value to be formatted within that column width. The width integer comes before the value to format. Don't mix them up.
+
+```
+% [flags] [width] [.precision] [h|l|L] conversion
+```
+
+The optional precision value, which must begin with a period, denotes numeric precision for floating point values or, when used with integer objects, the minimum number of digits. Don't confuse the period with a decimal point! If a period appears at this location in the formatting string, the next value represents the precision to use for the formatted result. The exact meaning of the precision depends on the type of item being formatted.
+
+A positive integer value must follow the period. The default value is 0, so typing .0 is the same as specifying no precision. Default precisions are 1 for conversion characters d, i, o, u, x, and X; 6 for e, E, and f; a variable number of significant digits for g and G; and all characters for conversions s and c (strings and characters).
+
+If the conversion character is g or G, the precision represents the maximum number of significant digits in the formatted result. If the conversion is e, E, or f, the precision equals the number of decimal places to use, and the final digit is rounded. If conversion is s, the precision stands for the maximum number of characters to use from the string. Precision has no effect when using the conversion character c because single characters occupy only one character space in the final output. If the conversion character is d, i, o, u, x, or X, at least the number of digits specified by the precision are output, padded at left as necessary with 0 digits.
+
+```
+% [flags] [width] [.precision] [h|l|L] conversion
+```
+
+These optional modifiers select among size-related characteristics: h (short int), l (long), or L (long double). You may use only one of the three letters. GNU C++ also recognizes a few nonstandard modifiers such as q, ll, and Z, but these are for compatibility with other systems, and you are best advised not to use them.
+
+```
+% [flags] [width] [.precision] conversion
+```
+
+The required conversion character tells sprintf() the type of an argument to be converted according to the formatting instruction. It is your responsibility to ensure that the object is of this type (however, use the GNU C++ -Wformat option to check for type mismatches). Table 8.3 lists the conversion characters you may use in formatting strings. Case is significant. A lowercase g is not the same as an uppercase G. See the info sprintf pages for more detailed descriptions and some additional quirks and rules.
+
+## TABLE 8.3 CONVERSION CHARACTERS FOR sprintf()
+
+| Conversion | Description |
+|------------|-------------|
+| % | A percent sign. |
+| c | A character. |
+| d | A signed decimal. |
+| e | A double value to be formatted using scientific notation (for example, 1.0765e+10). |
+| E | Same as e, but inserts an uppercase E before the exponent. |
+| f | A double value to be formatted in decimal format such as 123.45. |
+| g | A double value to be formatted in either scientific or decimal notation. The format is automatically selected to (we hope) give the most accurate results in the smallest amount of space. |
+| G | Same as g, but if scientific notation is used, an uppercase E is written before the exponent. |
+| i | Same as d; a signed decimal. |
+| n | Treats the argument value as a pointer to an int variable in which sprintf() (and other functions in this family) stores a count of the number of characters formatted up to this point in the formatting string. Using this conversion character adds no characters to the output. It is valuable for creating variables used as column widths. |
+| o | An unsigned octal. |
+| p | A pointer, formatted in hexadecimal. |

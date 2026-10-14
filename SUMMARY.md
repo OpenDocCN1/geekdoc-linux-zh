@@ -2215,6 +2215,7 @@
 +   [深入理解 UNIX (队列-消费者-其他)](docs/think-unix-que-consumer-other/README.md)
 +   [时光飞逝（亚历山大·克吕格近期放映录像带选）](docs/time-keeps-on-slipping-some-recently-projected-videotapes-by/README.md)
 +   [TinyOS 编程](docs/tinyos-programming/README.md)
++   [Tom Swan 的 Linux 的 GNU C++ 专业开发指南](docs/tom-swans-gnu-c-for-linux-professional-dev-guide/README.md)
 +   [TOR 暗网合集包 (5合1) 隐形艺术大师 (比特币、黑客攻击、Kali Linux)](docs/tor-darknet-bundle-5-in-1-master-the-art-of-invisibility-bit/README.md)
 +   [Tor 暗网系列：隐身艺术大师](docs/tor-darknet-series-master-the-art-of-invisibility/README.md)
 +   [Linux 防火墙故障排除指南](docs/troubleshooting-linuxr-firewalls-addison-wesley-professional/README.md)

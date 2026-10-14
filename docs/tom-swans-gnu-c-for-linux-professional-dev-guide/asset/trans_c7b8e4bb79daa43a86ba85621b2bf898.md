@@ -1,0 +1,193 @@
+
+
+V 库，632  
+-v 选项，73，77  
+值参数，198-201  
+值，赋值，90  
+vApp，747-748  
+vapp.h，748  
+变量，90-91  
+  自动，196  
+  布尔，103-104  
+  char，111  
+  类成员，289  
+  控制，189-190  
+  调试，131-132  
+  声明，90  
+  声明多个，100  
+  点表示法，277  
+  浮点，108-110  
+  全局，94，99-100，195  
+  初始化，90，203，290-292  
+  整型，94-95  
+  字面值，104-105  
+  局部，99-100，195-196  
+  long long，105-107  
+  提示输入，203  
+  作用域，100，196-197  
+  字符串，110-112，115  
+  类型转换，91  
+  类型，查找，130  
+  回绕效应，107-108  
+vCanvasPane，753-757  
+vDC 类，753  
+vectdemo.cpp，537  
+vector 头文件，533  
+
+vector，567-571  
+  back()，571  
+  布尔，570  
+  容量，570  
+  构造，567  
+  容器类，537-538  
+  复制构造函数，568  
+  声明，567  
+  删除对象，569  
+  deque，578  
+  erase()，571  
+  扩容，567  
+  front()，571  
+  索引表达式，568  
+  insert()，571  
+  插入对象，569  
+  迭代器，569  
+  成员函数，571  
+  内存泄漏，568  
+  内存段错误，568  
+  operator=()，568  
+  pop_back()，572  
+  push_back()，572  
+  随机访问，567  
+  必需元素，568  
+  reserve()，570  
+  resize()，571  
+  大小，570  
+  栈，572，590  
+  STL，533  
+  swap()，572  
+详细（-v）选项，73  
+verybig.cpp，105  
+vgenx，729-732  
+视频位平面，641  
+
+虚 V 类库，748  
+虚基类，345，350，352  
+虚析构函数，335，339，343  
+虚函数，332-334，355  
+  =0，332  
+  抽象类，334  
+  调用，338-341  
+  容器类，334，337，339-345  
+  调试，352-354  
+  纯虚，335-336  
+  引用参数，333  
+  虚析构函数，335  
+  virtual 关键字，332  
+vkey/canvas.cpp，760  
+vkey/canvas.h，759  
+vkey/cmdwin.cpp，758  
+vkeys.h，758  
+vmenu/cmdwin.cpp，762  
+void，57，205  
+void *，228  
+vsketch/canvas.cpp，755  
+vsketch/canvas.h，754  
+vstat/canvas.cpp，772  
+vstat/canvas.h，771  
+vstat/cmdwin.cpp，774  
+vstat/cmdwin.h，772  
+vtool/cmdwin.cpp，768  
+wwelcome/app.cpp，748  
+wwelcome/app.h，748  
+wwelcome/cmdwin.cpp，750  
+v_defs.h，765，775  
+
+## W
+- -W 选项，67
+- -Wall 选项，67，138
+- walph a.cpp，176
+- Wampler, Bruce E.，726
+- 警告，64-65
+  - 选项，67-69
+  - 可移植性选项，70
+  - Shell 脚本，69
+- wchar.cpp，445
+- -Wcomment 选项，68
+- wcount.cpp，175
+- wdouble.cpp，453
+- 网站，786
+  - egcs.cygwin.com，786
+  - ftp.linux-mandrake.com，786
+  - www.calderasystems.com，786
+  - www.flightgear.org，786
+  - www.gnu.org，786
+  - www.linux-mandrake.com，786
+  - www.linuxjournal.com，786
+  - www.objectcentral.com，786
+  - www.redhat.com，786
+  - www.ssc.com/linux，786
+  - www.sunsite.unc.edu/pub/Linux，786
+  - www.tomswan.com，786
+- welcome.cpp，46，48
+- -Werror 选项，68
+- -Wformat 选项，158
+- what()，360
+- while，175-178。另请参阅 do while
+- 空白字符，50
+- 宽字符，509
+- 小部件，635
+- 宽度，159
+- 窗口重力，674，688-691
+- 窗口管理器，635，638-639
+- WindowCommand()，740
+- 窗口，640
+  - 属性函数，685
+  - 属性，640，645，682，684-686
+  - 背景，691-695
+  - 边框宽度，685
+  - 画布，741，753，757
+  - 清除，673
+  - 命令，732，749-753
+  - 创建，646，683-684
+  - 光标，687
+  - 显示文本，664-666，668-669
+  - 事件，648
+  - Expose 事件，647
+  - ForgetGravity 常量，689
+  - Gnome，640
+  - 图形上下文，640
+  - 重力，674，688-691
+  - 映射，647
+  - 名称，711
+  - 输出到，660
+  - 窗格，754-755
+  - 属性，显示，655
+- Redraw()，741
+- 保存图形以重绘，673-677
+- 缩放图形，707，710-711
+- 堆叠顺序，635
+- 标题属性，712
+- 窗口标题，647
+- 取消映射，651
+- 实用工具，655
+- V 类库，735
+- vgenx，732
+- X，632，635
+- XChangeWindows Attributes()，685
+- XCreateWindow()，683-684
+- XSetLineAttributes()，676
+- Windows（Microsoft），13-16
+- wline.cpp，449
+- 回绕效应，107-108
+- wrap.cpp，107
+- -Wreturn-type 选项，68
+- write()，450
+- 写入
+  - 二进制类对象，460-463
+  - 二进制文件，453-454，459-462
+  - 数据文件，440
+  - 前向迭代器，535
+  - string 对象，512-513
+  - 文本文件，445-447，449-450
+- wrong.cpp，451
+

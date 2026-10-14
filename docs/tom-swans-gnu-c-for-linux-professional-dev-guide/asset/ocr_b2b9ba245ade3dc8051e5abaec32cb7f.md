@@ -1,0 +1,3 @@
+# ABOUT THE AUTHOR
+
+Tom Swan (www.tomswan.com) is an internationally popular author of more than 30 books on computer programming in C++, Pascal, Delphi, and assembly language. His books are favorites in classrooms and have been translated into numerous languages worldwide. Professional developers have cut their programming teeth on Tom's bestselling books—such as Mastering Borland C++ 5.0, Mastering Turbo Assembler, Learning C++, and Delphi™ 4 Bible. Tom is a frequent contributor and former columnist for Dr. Dobb's Journal, PC World, and PC Techniques magazines. He is an avid Linux enthusiast who is building a new name by supporting free software distribution to the Linux community.

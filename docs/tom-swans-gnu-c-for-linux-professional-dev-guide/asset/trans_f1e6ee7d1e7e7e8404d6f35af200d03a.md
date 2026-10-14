@@ -1,0 +1,59 @@
+
+
+```cpp
+// Draw graphics using saved information
+// Uses STL iterator and vector-template techniques
+void TCanvasPane::Redraw(int x, int y, int w, int h)
+{
+    vector<TLine>::iterator it;
+    for (it = lines.begin(); it != lines.end(); it++)
+        DrawLine(it->GetX1(), it->GetY1(),
+                 it->GetX2(), it->GetY2());
+}
+```
+
+通常，TCanvasPane 类的构造函数会初始化该类的对象。构造函数应始终调用其祖先构造函数，如所示，以确保所有继承的成员都被正确初始化。同时初始化类对象，例如 lines 容器。像所有优秀的容器一样，这个 vector 模板会根据需要扩展以容纳更多对象，因此比标准数组使用起来容易得多。TCanvasPane 构造函数还会将其他参数设置为合理的初始值。析构函数无需执行任何操作，但我还是为了规范起见包含了它。
+
+其余模块展示了重写的虚拟画布函数的实现。每个函数都相当简单易懂。当用户在窗口画布内单击鼠标时，`V` 会调用 `mouseDown()` 函数，并将鼠标指针热点相对坐标推入参数 `x` 和 `y`。参数 `button` 等于按钮编号，但示例程序忽略了该值，你可以使用任何活动按钮进行绘制。
+
+`MouseMove()` 展示了如何绘制橡皮线——即在单击并拖动鼠标时看起来会拉伸和移动的线。在 Xlib 编程中，这需要将显示模式设置到图形上下文中，但在 V 中，你只需按所示调用 `DrawRubberLine()` 函数即可。用相同的坐标值再次调用该函数会擦除之前绘制的线，从而产生移动线的错觉。代码中其他橡皮函数包括 `DrawRubberEllipse()` 和 `DrawRubberRectangle()`。它们的工作方式类似，但当然绘制不同的形状。
+
+`MouseUp()` 通过先调用 `DrawRubberLine()` 擦除当前临时线，然后调用 `DrawLine()` 绘制最终线条，从而将线条固定在原位。该函数还通过在 lines 向量容器中存储一个 `TLine` 对象来保存线条坐标。请注意，即使开始和结束线条坐标相同——例如用户只是单击鼠标而未拖动时——也会执行此操作。
+
+最后在画布模块中，是在窗口被整体或部分遮挡后重新绘制所有线条的代码。在你自己的代码中，在 `Redraw()` 中执行绘制窗口内容的必要操作即可。在这里，我使用标准模板库技术为 lines 容器获取一个迭代器，然后对每个存储的 `TLine` 对象调用 `V` 的 `DrawLine()` 函数。
+
+`V` 将四个整数坐标传递给 `DrawLine()`，这些坐标表示相对于窗口绘图原点（左上角为 0,0）的矩形区域，即需要重绘的区域。在像这样简单的程序中，你可以简单地忽略这些变量并绘制所有内容。然而，如果窗口很复杂，你可能需要使用这些变量只绘制落在暴露区域内的对象。
+
+## KEYBOARD INPUT
+
+在 V 程序中拦截键盘活动主要有两种方式。你可以在窗口级别接收按键输入，也可以在应用程序对象中进行。窗口对传入的按键有优先处理权，因此这是通常的方法。此外，除非你需要编写一个全局键，无论哪个窗口处于活动状态都以相同方式工作，否则你可能只想处理具有输入焦点的窗口的按键。
+
+下一个示例程序 vKey 演示了如何拦截按键输入。为了参考，程序显示两个值——一个表示键本身，另一个表示 Shift、Control 或 Alt 键是否被按下，用于那些无法以其他方式唯一识别的键。图 30.3 显示了该程序窗口的一个示例。窗口中的值是我键盘上的 M-F1（Alt-F1）键。
+
+Figure 30.3
+vkey 应用程序显示按键和换档值——在本例中为 M-F1（Alt-F1）。
+
+![](img/6eab91cc30158075ed10d0cabbac9029_775_0.png)
+
+在颜色图形之后，X 编程中最危险的第二项工作可能就是处理键盘输入了。（处理调色板的程序员应该获得战斗津贴。）幸运的是，V 定义了虚拟键码，这些键码应与硬件无关。在某些情况下你可能无法访问专用键，但你应该拥有足够的函数键、键盘数字键、控制键和字母数字键来满足几乎任何应用程序的需求。列表 30.9，cmdwin.cpp，展示了 vKey 命令窗口模块中拦截按键的编程。
+
+## LISTING 30.9 VKEY/CMDWIN.CPP (PARTIAL)
+
+```
+#include <v/v_defs.h>  // Need standard definitions
+
+// Intercept keyboard events
+void TCmdWindow::KeyIn(vKey keysym, unsigned int shift)
+{
+    myCanvas->SaveKeyValues(keysym, shift);  // Pass to canvas
+    // Call ancestor function to handle unprocessed keystrokes
+    vWindow::KeyIn(keysym, shift);
+}
+```
+
+要在窗口对象中获取按键，请重写从 vWindow 类继承的 KeyIn() 函数，通常通过其后代 vCmdWindow。在窗口类的 public 部分添加以下声明，并按列表所示实现该函数：
+
+virtual void KeyIn(vKey keysym, unsigned int shift);
+
+vKey 值表示被按下的键。这可能是 ASCII 字母数字代码、控制键值，或 V 的 vkeys.h 头文件中定义的一个符号。这些是
+

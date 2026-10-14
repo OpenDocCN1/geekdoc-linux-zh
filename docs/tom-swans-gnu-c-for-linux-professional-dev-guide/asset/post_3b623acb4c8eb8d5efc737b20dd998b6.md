@@ -1,0 +1,179 @@
+
+## Q
+- protected, 259, 324
+  - class members, 324
+  - functions, 337
+- prototypes, 40
+  - class functions, 259
+  - functions, 193–194
+  - parameters, 201
+  - templates, 381
+- pseudo names, 127
+- ptr_fun object, 557
+- pyp command, 330, 395–397
+- ptype, 130
+- public, 259, 310
+- pure virtual functions, 332, 335
+- push_back(), 572, 579
+- push_front(), 579
+- put(), 146, 447
+- puts(), 51
+- qualify.cpp, 325
+- qualifying access to members, 325
+- question mark (?), 173
+- queue header files, 533, 592
+- queues, 591–597. *See also* deques
+  - application scheduling, 592
+  - back(), 593
+  - containers, 592
+  - convert to stacks, 576
+  - declarations, 592
+  - front(), 592
+  - insertion, 592
+  - pop(), 592
+  - priority, 593–597
+  - push(), 592
+- Xlib, 639
+- Quicksort algorithm, 337, 341
+- -quiet option, 82
+
+## R
+- radix, 104, 130, 155
+- Raise(), 375
+- randfunc.cpp, 555–556
+- random
+  - access, 567
+  - access iterators, 535, 542
+  - Fibonacci generators, 558–560
+  - number generator, 556
+  - random(), 557
+- randomize strings, 119–120
+- random_shuffle(), 542, 555–558, 560, 617–618
+- ranges of data types, 99
+- ranges.cpp, 98
+- rchar.cpp, 444
+- rdouble.cpp, 455
+- reading. *See also* I/O streams
+  - binary class objects, 460–463
+  - binary files, 455–457, 459–462
+  - data files, 440
+  - forward iterators, 535
+  - string objects, 512–513
+  - text files, 444–448
+- Readline library, 150
+- realloc(), 228
+- records, seeking, 468–471
+- recursion, 216–218
+- recursion, multiple inheritance, 345
+- Red Hat Linux, 6
+- Redraw(), 741, 755
+- redrawing windows, 673–674, 676–677, 741
+- reference counting, 477–488
+  - destructors, 485
+  - string objects, 509
+- reference operator (&), 201–204
+- reference parameters, 201–204, 293, 333
+- references
+  - return values, 207–208
+  - returning, 295–296
+- refindec.cpp, 430
+- relational operators, 137
+- remove(), 518, 520–522, 619
+- remove_copy(), 620–622
+- remove_copy_if(), 620–622
+- remove_if(), 620–622
+- rendering, 693
+- repetitive statements, 175
+- replace(), 518, 521, 542, 624
+- replacement algorithms, 624
+- replace_copy(), 624
+- replace_copy_if(), 624
+- replace_if(), 624
+- repository, template, 390
+- requests, 635
+- reserve(), 514, 570
+- reserved words, 92-93, 782
+- resize(), 514, 571
+- return, 57, 60
+- functions, 193, 195
+- missing, 68
+- objects, 294-296
+- pointers, 228, 294
+- references, 207-208
+- statement, 50
+- types, 193
+- values, 58-59, 205-208
+- void, 205
+- references, 295-296
+- reverse iterators, 537-538
+- reverse(), 542, 576
+- rfind(), 527-529
+- rline.cpp, 447
+- root window cut buffers, 714
+- root windows, 635, 646
+- RPM (Red Hat Package Manager), 34
+- rstrings.cpp, 512
+- rubber banding, 674, 677, 757
+- run options, 250
+- run (debugger) command, 83
+- runerror script, 58
+- runtime bugs, 64, 79
+- 5
+- -S option, 72
+- sample programs installation, 39-40
+- saving open files on exceptions, 368
+- scaling graphics, 707, 710-711
+- scientific notation, 108
+- scope, 100, 189, 196
+- conflicts, 196-197
+- resolution operator (::), 261-262, 283
+- scores.cpp, 586
+- scramble.cpp, 119
+- screen blankers, 13
+- screens, 635, 702. See also colormaps
+- scrolling, 742
+- sdeclare.cpp, 510
+- searching
+  - algorithms, 625
+  - arrays, 535-537
+  - lists, 572, 574
+  - string objects, 527-529
+  - strings, within, 115
+- seekg(), 468-471
+- seeking records, 468-471
+- seekp(), 469-471
+- segmentation errors, 284
+- segmentation memory faults, 474, 477
+- semicolon (;), 49-50
+- separate compilation, 74-75, 218
+- servers, 635-636
+- set header file, 533, 580
+- Set Save Path button, 730
+- setbase(), 154-155
+- setfill(), 154
+- setprecision(), 154-155
+- sets, 579-584. See also multisets
+  - creating, 580
+  - declarations, 579
+  - erase(), 582
+  - insert(), 580-581
+  - keys, 579
+  - member functions, 583
+  - ordering, 581, 583
+  - searching, 581
+  - standard algorithms, 612-613
+- setw(), 154
+- set_difference(), 612-613
+- set_intersection(), 614
+- set_new_handler function, 230
+- set_symmetric_difference(), 612-614
+- set_terminate(), 368
+- set_unexpected(), 368
+- set_union(), 612-613
+- s except.cpp, 515
+- sharable colorcells, 703
+- shell scripts, 58, 69
+- shells
+  - Bash (Bourne Again Shell), 19
+  - command line, 242
+  - installing, 19

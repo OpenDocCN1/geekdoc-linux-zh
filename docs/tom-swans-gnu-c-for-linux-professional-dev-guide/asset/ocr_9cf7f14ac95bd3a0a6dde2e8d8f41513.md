@@ -1,0 +1,29 @@
+To draw and fill a polygon using an array of XPoint structures, local function Paint() begins with three preparatory statements:
+
+```
+XSetForeground(display, gc, polyColor);
+XSetFillRule(display, gc, EvenOddRule);
+XSetFillStyle(display, gc, FillSolid);
+```
+
+The GC's foreground in this case specifies the solid color used to paint the polygon's interior. The foreground color, however, is valid only if the GC's fill style is set to FillSolid, done here in the third statement's call to XSetFillStyle(). The second statement sets the GC's fill rule to EvenOddRule, although this is the default setting. When filling polygons where lines cross, this rule determines whether an enclosed area is part of the pattern or belongs to the background. The other possible rule is WindingRule, which fills overlapping areas. (Change the fill rule to WindingRule to see the difference in the sample program.)
+
+The GC's fill style can be one of four values (these apply to all filled shapes, not just polygons):
+
++   - **FillSolid** This style uses the GC's foreground color to fill the shape.
++   - **FillStippled** This style replicates a single-plane bitmap using the foreground color to fill the shape for each bit that is set to 1 in the bitmap.
++   - **FillOpaqueStippled** This style is the same as FillStippled but also uses the GC's background color to paint bits set to 0 in the bitmap.
++   - **FillTiled** This style replicates a pixmap of the screen's depth to fill the shape. (See Listing 28.7, xpat.c, later in this section for an example of this style.)
+
+Keep in mind that the GC's fill rule and style control the outcome of the XFillPolygon() function (and other filled shapes). To select fill rules and styles, first initialize the GC and then pass it to the graphics function, as the local Paint() function demonstrates with its final statement:
+
+```
+XFillPolygon(display, win, gc, points, MAXPOINTS,
+Nonconvex, CoordModeOrigin);
+```
+
+To the function, pass the global display pointer, Window ID, GC (after configuring it as described), a pointer to an array of XPoint objects, and the number of objects in that array. The final two arguments select two more features available for drawing and filling polygons. The first of these values is the polygon's shape, which can be one of three symbols: Complex, Convex, or Nonconvex. These values are merely hints to the X server that may or may not improve display performance, and only if the server takes the hint to use different drawing algorithms based on the type of polygon. These values seem to produce the same effects on my system, but in a critical application, you might want to give users the option to select one of these settings.
+
+The last argument passed to XFillPolygon() selects the mode used to connect its XPoint coordinates. This can be one of the two values, which have somewhat misleading names:
+
++   - **CoordModeOrigin** Considers all XPoint coordinate values to be relative to the window's origin.

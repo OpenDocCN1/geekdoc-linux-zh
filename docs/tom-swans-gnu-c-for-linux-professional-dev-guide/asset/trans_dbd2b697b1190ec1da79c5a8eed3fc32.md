@@ -1,0 +1,82 @@
+
+
+整数 size 等于容器的容量——它能容纳多少个对象。整数 count 指定容器实际包含多少个对象。第三个变量 objects 的类型为 PTObject。它实际上是指向一个 TObject 指针数组的指针，这是我为此类选择的存储机制。
+
+> 提示
+> 因为 TContainer 的存储机制是类的私有部分，所以用于在容器中存储对象的机制可以在不影响使用该类的程序的情况下进行更改。
+
+TContainer 类包含一个受保护的声明——一个实现快速排序算法的函数 Quicksort()：
+
+```
+protected: void Quicksort(int left, int right);
+```
+
+由于此函数是受保护的，任何从 TContainer 派生的类都可以调用它。它们也可以通过重新声明该函数并为其实现编写新代码来替换该函数。声明 Quicksort() 为 public 似乎不明智，因为程序语句不太可能需要直接访问容器的排序算法。为此，该类提供了一个公共函数 Sort()，它调用受保护的函数。
+
+> 提示
+> 有时很难决定将函数设为 public、private 还是 protected。一般来说，如果一个函数严格由其他成员函数调用，并且尤其是如果它依赖于类的私有数据对象的内部特性，最好将其设为 private 或 protected。如果一个函数提供通用操作——例如 Display() 或 Sort()——那么它很可能应该设为 public。
+
+TContainer 声明了六个公共函数。其中前三个很简单，因此以内联方式实现：
+
+```
+bool IsFull() const { return (count >= size); }
+int GetSize() const { return size; }
+int GetCount() const { return count; }
+```
+
+函数 IsFull() 在容器的 count 等于其 size 时返回 true。（大于或等于的测试只是为了覆盖所有情况——count 不应大于 size。）GetSize() 和 GetCount() 仅返回其关联的私有变量。在你的类中，不要出于消除仅返回值的函数的错误尝试而将 size 和 count 等变量设为 public。相反，将函数声明为内联并使用 -O 选项编译，以便编译器将函数语句直接注入代码中。这在性能上不会带来任何损失，但极大地促进了未来的维护。
+
+最后在 TContainer 中有三个在单独模块中实现的公共成员函数：
+
+```
+void PutObject(PTObject pto);
+void ShowAllObjects(const char *msg);
+void Sort();
+```
+
+函数 PutObject() 将新对象插入容器。其参数 pto 的类型为 PTObject（指向 TObject 的指针）。对象的实际类型在运行时确定，但它必须是派生自 TObject 的类之一。除了这一限制外，PutObject 可以将任何类型的数据插入容器。其他两个函数的目的显而易见。ShowAllObjects() 提供了一种简单的方式来显示容器的内容。Sort() 对包含的对象进行排序。下一节将更详细地解释在甚至考虑容器实际包含什么对象之前，如何编写此类函数。
+
+> 注意
+> 前面的列表描述了容器类的所有方面，而无需了解它可能包含的数据类型。这种通用性是面向对象编程提供的主要好处之一。
+
+## 调用虚函数
+
+列表 15.3 显示了 TContainer 类实现模块的一部分，并演示了程序如何调用尚未完成的虚函数。
+
+### 列表 15.3 CONTAINER.CPP
+
+```
+#include <iostream.h>
+#include <stdlib.h>    // Need exit()
+#include "container.h"  // Need TContainer
+
+// Constructor
+TContainer::TContainer(int n)
+{
+    if (n <= 0) n = 1;   // Must have at least one element
+    size = n;           // Remember capacity
+    count = 0;          // Container is empty
+    //
+    // Create array of object pointers and set to NULL
+    //
+    objects = new PTObject[size];
+    for (int i = 0; i < size; i++)
+        objects[i] = NULL;
+}
+
+// Destructor
+// Define DEBUG to display trace
+TContainer::~TContainer()
+{
+    for (int i = 0; i < count; i++)
+        delete objects[i];  // Delete contained objects
+#ifdef DEBUG
+    cout << "Deleting container" << endl;
+#endif
+    delete objects;     // Delete array of TObject pointers
+}
+
+// Insert new object into container
+void TContainer::PutObject(PTObject pto)
+```
+
