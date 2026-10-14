@@ -2208,6 +2208,7 @@
 +   [快速轻松学习 Linux 的终极分步指南](docs/the-ultimate-step-by-step-guide-to-quickly-and-easily-learni/README.md)
 +   [Unix 秘籍](docs/the-unix-cook-book/README.md)
 +   [UNIX Web服务器书籍：构建自有信息网站的工具与技术](docs/the-unix-web-server-book-tools-and-techniques-for-building-y/README.md)
++   [Unix 工作台](docs/the-unix-workbench/README.md)
 +   [Wiley 学校选择手册](docs/the-wiley-handbook-of-school-choice/README.md)
 +   [Unix 入门指南](docs/think-unix/README.md)
 +   [深入理解 UNIX (队列-消费者-其他)](docs/think-unix-que-consumer-other/README.md)

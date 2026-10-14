@@ -1,0 +1,90 @@
+
+
+## % Total    % Received % Xferd  Average Speed
+   Time     Time     Time  Current
+##
+          Dload  Upload
+   Total   Spent    Left  Speed
+## 100 1198  100 1198    0     0 13681      0 \
+--:--:-- --:--:-- --:--:-- 13770
+
+```
+head -n 5 01-What-is-Unix.md
+```
+
+## What is Unix?
+##
+## Unix is an operating system and a set of tools. The tool we'll be using the
+## most in this book is a shell, which is a computer program that provides a
+## command line interface. You've probably seen a command line interface in the
+
+Looks like we got the file! The curl command is also commonly used for communicating with APIs. API stands for application programming interface. APIs are a set of rules which allow us to communicate with computer programs or with servers on the web. GitHub has a large API which allows us to find out information about GitHub's users and repositories. Let's use curl to look at what programming languages are used by some of my repositories. Let's start with the repository for this book:
+
+```
+curl https://api.github.com/repos/seankross/the-unix-workbench/languages
+```
+
+```
+{
+  "CSS": 2615,
+  "TeX": 22
+}
+```
+
+It looks like most of the repository is dedicated to making the book website look pretty! Take a look at the URL in the curl command above, and let's dissect it a little bit. The API itself is located at https://api.github.com/. Then each word in the rest of the url acts as a sort of argument. We're interested in repos in this case, specifically a repo belonging to the username seankross called the-unix-workbench, and we want to know about which languages are used in that repo. Let's take a look at one more of my repositories just to see how the response can be different:
+
+```
+curl https://api.github.com/repos/seankross/lego/languages
+```
+
+```
+{
+  "R": 4197,
+  "Shell": 442
+}
+```
+
+Use of curl, especially when coupled with using APIs can become very complicated and much more advanced content has been written on the subject. Let's get a little more in depth
+
+by looking through some of the examples from httpbin.org38. This website allows us to send requests to it with curl, and it will return to us a structured version of whatever information we sent. This is useful for debugging our curl commands. First let’s send a request which should return our IP address:
+
+```
+curl http://httpbin.org/ip
+```
+
+```
+{
+  "origin": "459.203.134.88"
+}
+```
+
+Looks like we’re getting the response we expect. Before we go on I should clarify: curl sends HTTP requests. HTTP is a technology for sending information over a network, and HTTP powers much of how the internet works. There are different categories of HTTP requests, and the categories are often called verbs. When we use curl without any flags we are sending a GET request (GET is an HTTP verb). A GET request is a message that says to a server: “Hi, I live at [IP address]. Would you mind sending some information about yourself to that IP?” In the case above we asked for our own IP address, which httpbin.org knew to just send back to us.
+
+Let’s send a general HTTP GET request to http://httpbin.org/get:
+
+```
+curl http://httpbin.org/get
+```
+
+```
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Connection": "close",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/7.47.0"
+  },
+  "origin": "459.203.134.88",
+  "url": "http://httpbin.org/get"
+}
+```
+
+The text that we get back from the request specifies four information groups: args, headers, origin, and url. The origin shows our own IP address, and url shows where we sent the request. The headers group shows some interesting information, including the User-Agent which shows that httpbin.org knows that we sent this request with curl. Notice that the args group is empty. The args group is short for arguments, which hints at the fact that we can provide arguments in an HTTP request, just like arguments we would use for a function, or the arguments we used in the GitHub API.
+
+In the general case we can provide arguments to an HTTP API by putting a question mark (?) after the API's URL. Let's try this out:
+
+```
+curl http://httpbin.org/get?Baltimore
+```
+

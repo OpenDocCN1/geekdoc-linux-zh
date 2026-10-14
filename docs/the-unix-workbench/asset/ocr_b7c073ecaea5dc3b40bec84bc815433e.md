@@ -1,0 +1,7 @@
+You do not need to add these lines to your file, though you should type exactly what I have typed below these lines. Note: please type all of the lines out for every program that we’re going to write, do not copy and paste. Typing code is a little different from typing an email, and you should practice typing the code out yourself as much as possible. Both of these lines start with the pound symbol (#) and in the Bash programming language anything that is typed after a pound symbol is ignored (unless the pound symbol is between curly brackets ({ }), but that’s only in very specific situations). The pound symbol allows you to make comments in your code which you can use to annotate code so that another human being who is reading your code can understand how your program is designed to function.
+
+If you’re using nano or another shell-based text editor you should perhaps open up two terminals, one where you can edit and save the programs you’re working on, and one where you can run your programs. One advantage of using Atom is that you can keep Atom open in a separate window and then run your programs in your terminal window.
+
+# Math
+
+The Bash programming language can do very basic arithmetic, which we’ll demonstrate in this section. Now that you have math.sh open in your preferred text editor type the following into your text editor:
