@@ -1,0 +1,74 @@
+
+## 7.5 软件包完整性
+
+正常操作下，手动验证已经可行，并且实验性中的 APT 版本已经实现了该功能。第二种方法称为 `dpkg-sig`，它尝试直接在 DEB 文件上附加签名，并承诺在不使用 APT 的情况下也能工作。
+
+### 7.5.1 软件包完整性的手动验证
+
+目前的软件包验证方法需要手动遍历校验和链，并根据 Debian 存档签名密钥对密码学签名进行验证。
+
+例如，如果你想确保你刚刚下载的 apache 软件包的完整性，你必须执行以下一系列步骤。首先，你将使用 `md5sum` 检查相关 DEB 文件的 MD5 校验和，并将其与索引存档的 `Packages` 文件进行比对。
+
+```
+# md5sum /var/cache/apt/archives/apache2-common_2.0.52-3_i386.deb
+
+08493881eccdde59a33501c70803479 apache2-common_2.0.52-3_i386.deb
+
+# dpkg-awk --file=/var/lib/apt/lists/[...]_Packages \
+filename=apache2-common_2.0.52-3_i386.deb -- md5sum
+
+md5sum: 08493881eccdde59a33501c70803479
+```
+
+上面的结果显示 apache2 DEB 文件与创建 `Packages` 索引文件时存在的文件处于同一个文件中。然而，如第 9.3 节所示，创建索引至关重要，因此我们假设攻击者也可能修改了该文件。因此，我们将索引文件（相对于存档的 dist 目录位于 `main/binary-i386/Packages.gz`，见第 4.1 节）与 `Release` 文件进行比对，而 `Release` 文件包含了可用索引文件的校验和（见第 4.1.3 节）。遗憾的是，当前版本的 APT 删除了这些校验和，我们必须手动获取文件。让我们从某个 Debian 镜像站检索：
+
+```
+# getfile /dists/release
+
+# md5sum /var/lib/apt/lists/[...]_main_binary-i386.Packages.gz
+
+99a03884619014d29a9f2d08ff15c24 Packages.gz
+
+# grep main/binary-i386/Packages.gz Release \
+99a03884619014d29a9f2d08ff15c24 3385272 main/binary-i386/Packages.gz
+[]
+```
+
+到此时，自 `Packages` 索引创建以来 DEB 文件未发生变化，且该索引与写入 `Release` 文件时完全相同。然而，任何攻击者都可以创建一个 `Release` 文件。为了解决这个问题，Debian 存档中的 `Release` 文件使用官方 Debian 签名密钥进行了密码学签名，该密钥会进行更换，并且始终可以从 `ftp-master.debian.org`¹¹ 获取。此外，对 `debian-keyring` 软件包的 APT 升级预计及时提供新的存档签名密钥，使得签名基础设施不需要用户过多交互。
+
+`Release` 文件使用离线签名签名，该签名位于一个必须下载的单独文件中：
+
+```
+# getfile /dists/sarge/Release.gpg
+
+# gpg --verify Release.gpg Release
+
+gpg: Signature date Sat Feb 12 20:27:25 2005 UTC
+   using RSA key 4F368B5D
+   Can't check signature: public key not found
+
+# gpg --recv-keys 4F368B5D
+
+# gpg --verify Release.gpg Release
+
+gpg: Signature mark using DSA key 4F368B5D
+gpg: Good signature from 'Debian Archive Automatic Signing Key (2005)
+<ftpmaster@debian.org>
+Primary key fingerprint:
+4CTA ESE 9454 F3E AEIE 7AD F1D5 3D8C 4F36 8D5D
+```
+
+这些结果证明了 `Release` 文件的真实性。显然，用于签名文件的密钥的信任级别必须通过其他手段建立。预期密钥的指纹可以从权威源获取，随后与上述命令的输出进行比较¹²，或者借助信任网对密钥进行验证。
+
+你的安全策略可能要求你在安装存档密钥之前显式验证它们。Debian 存档签名密钥本身使用至少一个 FTP master 的开发者密钥进行密码学签名。因此，2005 年的存档签名（密钥 ID 为 4F368B5D）可以通过确保其中一个 FTP master 已经使用以下命令签署了存档密钥来验证：
+
+```
+# wget -q http://ftp-master.debian.org/ziyi_key_2005.asc
+# gpg --import ziyi_key_2005.asc
+[...]
+gpg: key 4F368B5D: public key "Debian Archive Automatic
+Signing Key (2005) <ftpmaster@debian.org> imported
+[...]
+# gpg --list-sigs 4F368B5D | grep 'not found'
+sig 1DB11AE0 2005-01-31 [User ID not found]
+```
