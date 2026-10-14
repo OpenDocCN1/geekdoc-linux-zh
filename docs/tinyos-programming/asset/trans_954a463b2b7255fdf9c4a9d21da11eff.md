@@ -1,0 +1,85 @@
+
+
+```java
+catch (IOException exception) {
+    System.err.println("Exception thrown when sending packets. Exiting.");
+    System.err.println(exception);
+}
+```
+
+```java
+public static void main(String[] args) throws Exception {
+    /* Open connection to the mote, and start sending packets */
+    PhoenixSource phoenix = BuildSource.makePhoenix("serial@COM1:telosb", null);
+    MoteIF mif = new MoteIF(phoenix);
+    TestSerial serial = new TestSerial(mif);
+    serial.sendPackets();
+}
+```
+
+### Listing 7.4 Sending packets with mig and MoteIF
+
+接收到的包的处理遵循 AM “分发到按消息处理程序” 模型。`registerListener` 方法接受一个 mig 生成的类对象 O 和一个处理程序作为参数。对象 O 指定 AM 类型和布局；处理程序必须实现 `net.tinyos.messages.MessageListener` 接口：
+
+```java
+public interface MessageListener {
+    public void messageReceived(int to, Message m);
+}
+```
+
+### Listing 7.5 Interface for handling received packets
+
+当处理程序被调用时，会传入来自接收包的目的地址，而 m 是包含接收包负载的 O 的克隆。
+
+对 TestSerial.java 的 resulting 增加仅仅是声明一个 `messageReceived` 方法，并在 TestSerial 的构造函数中将其注册为 `test_serial_msg_t` 的处理程序：
+
+```java
+public class TestSerial implements MessageListener {
+    public TestSerial(MoteIF moteIF) {
+        this.moteIF = moteIF;
+        // Register this class as a handler for test_serial_msg_t AM packets
+        this.moteIF.registerListener(new TestSerialMsg(), this);
+    }
+
+    public void messageReceived(int to, Message message) {
+        // The actual type of 'message' is 'TestSerialMsg'
+        TestSerialMsg msg = (TestSerialMsg)message;
+        System.out.println("Received packet sequence number:" + msg.get_counter());
+    }
+}
+```
+
+### Listing 7.6 Receiving packets with mig and MoteIF
+
+请注意，`messageReceived` 方法是在 MoteIF 私有的线程中调用的。你的方法必须确保对共享数据的任何访问都与程序的其余部分适当同步。
+
+消息发送和接收都需要知道用于标识特定消息的 AM 类型——发送需要设置 AM 类型字段（`serial_packet_t` 中的 type），接收需要知道哪些消息对应于哪个 AM 类型，以便正确分发包。为支持此功能，mig 生成的类包含一个 AM 类型字段，可通过 `AMType` 和 `typeSet` 方法访问。当 mig 为结构 X 生成消息类时，它会查找名为 `AM_X` 的枚举常量来设置 `amType` 的默认值。例如，`nx_struct test_serial_msg` 的默认 AM 类型是 `AM_TEST_SERIAL_MSG` 的值（在 TestSerial.h 中定义）。
+
+当源代码中没有此类常量，或当消息使用多个 AM 类型时，你必须在使用 `send` 或 `registerListener` 方法之前通过 `typeSet` 方法设置正确的 AM 类型。
+
+## 7.3 Using ncg
+
+`ncg` 工具从 nesC 程序或 C 头文件中提取枚举常量，并生成包含具有相同名称和值的常量的 Java（或其他语言）文件。这避免了在两个地方指定相同的常量（这始终是一个维护问题），例如当你的包使用“魔术”值来表示命令、指定数组大小等时。
+
+例如，考虑 TinyOS 示波器演示应用程序，其中每个 mote 定期报告传感器读数组。Oscilloscope 有一个头文件（Oscilloscope.h）定义了其消息和相关常量：
+
+```c
+enum {
+    NREADINGS = 10,   /* Number of readings per message. */
+    DEFAULT_INTERVAL = 256, /* Default sampling period. */
+    AM_OSCILLOSCOPE = 0x93
+};
+
+typedef nx_struct oscilloscope {
+    nx_uint16_t version;    /* Version of the interval. */
+    nx_uint16_t interval;   /* Sampling period. */
+    nx_uint16_t id;         /* Mote id of sending mote. */
+    nx_uint16_t count;      /* Readings start at count*NREADINGS */
+    nx_uint16_t readings[NREADINGS];
+} oscilloscope_t;
+```
+
+### Listing 7.7 Constants and packet layout for Oscilloscope application
+
+Oscilloscope 的 Java GUI 为每个 mote 显示传感器读数的图表。为了知道读数编号（即读数在图表 X 轴上的位置），它需要知道 `count` 字段的值和 `NREADINGS` 常量的值。它
+

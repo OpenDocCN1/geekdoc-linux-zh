@@ -1,0 +1,57 @@
+
+## Structure
+
+![](img/53ede4f4266a5731b93bff15d85fa06a_195_0.png)
+
+## Participants
+
+- **ServiceProvider**: allocates state for each instance of the service and coordinates underlying resources based on all of the instances.
+- **ResourceImpl**: an underlying system resource that ServiceProvider multiplexes/demultiplexes service instances on.
+
+## Sample code
+
+HiTimerMilliC uses a VirtualizeTimerC to present a Service Instance of millisecond precision timers. VirtualizeTimerC takes a single underlying timer and virtualizes it to n timers for others to use:
+
+```
+generic module VirtualizeTimerC(typedef precision_tag, int max_timers) {
+provides interface Timer<precision_tag> as Timer[uint8_t num];
+uses interface Timer<precision_tag> as TimerFrom;
+}
+```
+
+Listing 10.2 VirtualizeTimerC
+
+It takes two parameters, a type for the Timer precision tag (TMilli, etc), and the number of timers (the number of service instances). Instantiating TimerMilliC to create a new timer thus involves many files:
+
+1. TimerMilliC, which wires to HiTimerMilliC's parameterized interface with a call to unique passing UQ_TIMER_MILLI.
+2. Timer.h, a header file that defines the unique key as UQ_TIMER_MILLI.
+3. HiTimerMilliC, which instantiates a VirtualizeTimerC with a call to uniqueCount passing UQ_TIMER_MILLI.
+4. VirtualizeTimerC, which provides n virtualized timers.
+5. The underlying per-platform components that provide the single Timer to be virtualized.
+
+## Known uses
+
+Most TinyOS services follow the Service Instance pattern, though most services (e.g. TimerMilliC, BlockStorageC from Chapter 6 or Atm128I2CMasterC from Chapter 13) hide it behind a programmer-friendly generic component.
+
+The generic arbiter implementations such as FcfsArbiterC (Chapter 11) expose the Service Instance pattern to the programmer, as does VirtualizeTimerC.
+
+In a similar vein, the epidemic dissemination protocol Drip (available via the DisseminatorC generic component) uses the service instance pattern to maintain epidemic state for each disseminated value.
+
+## Consequences
+
+The key aspects of the Service Instance pattern are:
+
+- It allows many components to request independent instances of a common system service: adding an instance requires a single wiring.
+- It controls state allocation, so the amount of RAM used is scaled to exactly the number of instances needed, conserving memory while preventing run-time failures due to many requests exhausting resources.
+- It allows a single component to coordinate all of the instances, which enables efficient resource management and coordination.
+
+Because the pattern scales to a variable number of instances, the cost of its operations may scale linearly with the number of users. For example, if setting the underlying clock interrupt rate depends on the timer with the shortest remaining duration, an implementation might determine this by scanning all of the timers, an O(n) operation.
+
+If many users require an instance of a service, but each of those instances are used rarely, then allocating state for each one can be wasteful. The other option is to allocate a smaller amount of state and dynamically allocate it to users as needs be. This can conserve RAM, but requires more RAM per real instance (client IDs need to be maintained), imposes a CPU overhead (allocation and deallocation), can fail at run-time (if there are too many simultaneous users), and assumes a reclamation strategy (misuse of which would lead to leaks). This long list of challenges makes the Service Instance an attractive – and more and more commonly used – way to efficiently support application requirements.
+
+There are situations, however, when a component internally re-uses a single service instance for several purposes: for example, the Maté virtual machine code propagation component uses a single timer instance for several different timers which never operate concurrently.
+
+## Related patterns
+
+- Dispatcher: a service instance creates many instances of an implementation of an interface, while a dispatcher selects between different implementations of an interface.
+- Keyspace: a Service Instance’s instance identifiers form a Local Keyspace.

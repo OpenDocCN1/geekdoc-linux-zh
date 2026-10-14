@@ -1,0 +1,19 @@
+# Motivation
+
+At a high level, sensor network applications execute operations in response to environmental input such as sensor readings or network packets. The operation’s details are not important to the component that presents the input. We need to be able to easily extend and modify what inputs an application cares about, as well as the operation associated with an input.
+
+For example, a node can receive many kinds of active messages (packets). Active messages (AM) have an 8-bit type field, to distinguish between protocols. A flooding protocol uses one AM type, while an ad hoc routing protocol uses another. ActiveMessageC, the component that signals the arrival of a packet, should not need to know what processing a protocol performs or whether an application supports a protocol. ActiveMessageC just delivers packets, and higher-level communication services respond to those they care about.
+
+The traditional approach to this problem is to use function pointers or objects, which are dynamically registered as callbacks. In many cases, even though registered at run-time, the set of operations is known at compile-time. Thus these callbacks can be replaced by a dispatch table compiled into the executable, with two benefits. First, this allows better cross-function analysis and optimization, and secondly it conserves RAM, as no pointers or callback structures need to be stored.
+
+Such a dispatch table could be built for the active message example by using a switch statement in ActiveMessageC. But this is very inflexible: any change to the protocols used in an application requires a change in a system component.
+
+A better approach in TinyOS is to use the Dispatcher pattern. A Dispatcher invokes operations using a parameterized interface, based on a data identifier. In the case of ActiveMessageC, the interface is Receive and the identifier is the active message type field. ActiveMessageC is independent of what messages the application handles, or what processing those handlers perform. Adding a new handler requires a single wiring to ActiveMessageC. If an application does not wire a receive handler for a certain type, ActiveMessageC defaults to a null operation.
+
+Another example of a Dispatcher is the scheduler of the Mate virtual machine that was implemented for TinyOS 1.x. Each instruction is a separate component that provides the MateBytecode interface. The scheduler executes a particular bytecode by dispatching to the instruction component using a parameterized MateBytecode interface. The instruction set can be easily changed by altering the wiring of the scheduler.
+
+# Applicable when
+
++   - A component needs to support an externally customisable set of operations.
++   - A primitive integer type can identify which operation to perform.
++   - The operations can all be implemented in terms of a single interface.

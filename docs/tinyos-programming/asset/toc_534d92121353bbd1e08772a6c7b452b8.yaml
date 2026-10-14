@@ -1,0 +1,639 @@
+- - '##'
+  - TinyOS and nesC
+- - '###'
+  - 1 Introduction
+- - '####'
+  - 1.1 Networked, embedded sensors
+- - '####'
+  - Golden Gate Bridge safety
+- - '####'
+  - Volcanic monitoring
+- - '####'
+  - Data center provisioning
+- - '####'
+  - 1.1.1 传感器节点解剖结构（mote）
+- - '####'
+  - 1.2 TinyOS
+- - '####'
+  - 1.2.1 TinyOS 提供的内容
+- - '####'
+  - 1.3 示例应用程序
+- - '####'
+  - 1.4 编译和安装应用
+- - '####'
+  - 1.5 本书其余部分
+- - '##'
+  - 2 名称和程序结构
+- - '###'
+  - 2.1 Hello World!
+- - '####'
+  - Listing 2.3 Simple nesC interfaces
+- - '####'
+  - Listing 2.4 PowerupAppC configuration in nesC
+- - '####'
+  - Figure 2.1 Wiring Diagram for Powerup application
+- - '###'
+  - 2.2 本质区别：组件、接口和连接
+- - '###'
+  - 2.3 接线与回调
+- - '###'
+  - 2.4 总结
+- - '##'
+  - 水彩特辑
+- - '##'
+  - Part II
+- - '##'
+  - Basic programming
+- - '##'
+  - 3 组件和接口
+- - '###'
+  - 3.1 组件签名
+- - '####'
+  - 3.1.1 可视化组件
+- - '####'
+  - 3.1.2 “as” 关键字和接口聚类
+- - '####'
+  - 编程提示 1 慷慨地使用 “as” 关键字。
+- - '###'
+  - 3.1.3 聚类接口
+- - '###'
+  - 3.2 接口
+- - '####'
+  - 组件和接口
+- - '####'
+  - 3.2.2 双向接口
+- - '###'
+  - 3.3 组件实现
+- - '####'
+  - 3.3.1 模块
+- - '####'
+  - 3.3.2 一个基本配置
+- - '####'
+  - 3.3.3 模块变量
+- - '####'
+  - 3.3.4 泛型组件
+- - '###'
+  - 3.4 分阶段接口
+- - '####'
+  - 3.4.1 Read
+- - '####'
+  - 3.4.2 Send
+- - '###'
+  - 3.5 模块内存分配、避免递归及其他细节
+- - '####'
+  - 编程提示 2 在模块内绝不要编写递归函数。结合 TinyOS 编码约定，这保证了所有程序的堆栈使用量都有界。
+- - '####'
+  - 编程提示 3 绝不要使用 MALLOC 和 FREE。在组件中分配所有状态。如果你的应用程序需求需要动态内存池，请将其封装在组件中并尽量限制使用者集合。
+- - '####'
+  - 3.5.1 内存所有权和分阶段调用
+- - '####'
+  - Listing 3.27 The Send interface
+- - '####'
+  - Listing 3.28 The Receive interface
+- - '####'
+  - 3.5.3 平台无关类型
+- - '####'
+  - Programming Hint 10
+- - '####'
+  - 3.5.6 C libraries
+- - '###'
+  - 3.6 Exercises
+- - '##'
+  - 4 配置和布线
+- - '###'
+  - 4.1 配置
+- - '####'
+  - 4.1.1 -> 和 <- 运算符
+- - '####'
+  - 4.1.2 The = operator
+- - '####'
+  - 4.1.3 Namespace management
+- - '####'
+  - 4.1.4  Wiring rules
+- - '####'
+  - Listing 4.7 MainC and LedsP
+- - '####'
+  - Listing 4.8 Valid alternate of PowerupToggleAppC
+- - '####'
+  - Listing 4.9 Invalid alternate of PowerupToggleAppC
+- - '####'
+  - 4.1.5 Wiring shortcuts
+- - '###'
+  - 4.2.1 组件命名
+- - '###'
+  - 4.2.2 组件初始化
+- - '###'
+  - 4.3 组件分层
+- - '####'
+  - 4.3.1 可扩展性
+- - '####'
+  - 4.3.2 硬件特异性
+- - '###'
+  - 4.4 多重连接
+- - '####'
+  - 4.4.1 扇入和扇出
+- - '####'
+  - 4.4.2 多重连线的用途
+- - '####'
+  - 4.4.3 组合函数
+- - '####'
+  - Programming Hint 14 NEVER IGNORE COMBINE WARNINGS.
+- - '###'
+  - 4.5 Generics versus singletons
+- - '####'
+  - 4.5.1 Generic components, revisited
+- - '####'
+  - Listing 4.24 RadioCountToLedsAppC
+- - '####'
+  - Listing 4.25 PoolC
+- - '####'
+  - 4.5.2 Singleton components, revisited
+- - '###'
+  - 4.6 Exercises
+- - '##'
+  - 5 执行模型
+- - '###'
+  - 5.1 概述
+- - '###'
+  - 5.2 任务
+- - '####'
+  - 5.2.1 任务时序
+- - '####'
+  - 5.2.2 时序和事件处理程序
+- - '####'
+  - 编程提示 16 如果事件处理程序需要进行可能长时间执行的命令调用，请发布任务来执行这些调用。
+- - '###'
+  - 5.3 任务与分阶段调用
+- - '####'
+  - 5.3.1 硬件与软件
+- - '####'
+  - 5.3.2 任务与调用循环
+- - '###'
+  - 5.4 练习
+- - '##'
+  - 6 应用
+- - '###'
+  - 6.1 基础：计时、LED 和启动
+- - '####'
+  - 'Listing 6.1 Anti-theft: simple flashing LED'
+- - '####'
+  - Listing 6.2 The Leds interface
+- - '####'
+  - 6.1.1 基于截止时间的计时
+- - '####'
+  - Listing 6.4 The full Timer interface
+- - '####'
+  - Listing 6.5 WarningTimer.fired with drift problem fixed
+- - '####'
+  - 6.1.2 Wiring AntiTheftC
+- - '####'
+  - 'Listing 6.6 Anti-Theft: application-level configuration'
+- - '###'
+  - 6.2 Sensing
+- - '####'
+  - 6.2.1 简单采样
+- - '####'
+  - 6.2.2 传感器组件
+- - '####'
+  - 6.2.3 Sensor values, calibration
+- - '####'
+  - 6.2.4 Stream sampling
+- - '####'
+  - 清单 6.11 防盗：检测移动
+- - '###'
+  - 6.3 单跳网络
+- - '####'
+  - 6.3.1 发送数据包
+- - '####'
+  - 清单 6.13 防盗：通过无线电报告盗窃
+- - '####'
+  - 清单 6.14 SplitControl 接口
+- - '####'
+  - 6.3.2 接收数据包
+- - '####'
+  - 6.3.3 选择通信栈
+- - '###'
+  - 6.4 多跳网络：收集、传播和基站
+- - '####'
+  - 6.4.1 收集
+- - '####'
+  - 6.4.2 分发
+- - '####'
+  - 6.4.3 连接收集与分发
+- - '####'
+  - 6.4.4 用于收集和分发的基站
+- - '####'
+  - 清单 6.23 DisseminationUpdate 接口
+- - '####'
+  - 清单 6.24 AntiTheft 基站代码：分发设置
+- - '####'
+  - 清单 6.25 RootControl 接口
+- - '####'
+  - 清单 6.26 AntiTheft 基站代码：报告盗窃事件
+- - '####'
+  - 清单 6.27 AntiTheft 基站连接
+- - '###'
+  - 6.5 存储
+- - '####'
+  - 6.5.2 配置数据
+- - '####'
+  - 图 6.4 ConfigStorage：写入与提交。
+- - '####'
+  - 6.5.3 块存储与日志存储
+- - '####'
+  - Listing 6.35 Simultaneously sampling and storing to flash (most error checking
+    omitted)
+- - '####'
+  - Listing 6.36 The BlockRead interface
+- - '####'
+  - Listing 6.37 LogStorageC signature
+- - '###'
+  - 6.6 Exercises
+- - '##'
+  - 7 Mote-PC 通信
+- - '###'
+  - 7.1 基础
+- - '####'
+  - 7.1.1 串行通信栈
+- - '###'
+  - 7.2 使用 mig
+- - '####'
+  - 7.2.1 发送和接收 mig 生成的数据包
+- - '####'
+  - Listing 7.4 Sending packets with mig and MoteIF
+- - '####'
+  - Listing 7.5 Interface for handling received packets
+- - '####'
+  - Listing 7.6 Receiving packets with mig and MoteIF
+- - '###'
+  - 7.3 Using ncg
+- - '####'
+  - Listing 7.7 Constants and packet layout for Oscilloscope application
+- - '###'
+  - 7.4 数据包源
+- - '###'
+  - 7.5 示例：简单可靠传输
+- - '####'
+  - 7.5.1 可靠传输协议
+- - '####'
+  - 7.5.2 Java 中的可靠传输
+- - '####'
+  - Listing 7.10 Java 中的可靠传输协议 - 传输
+- - '####'
+  - Listing 7.11 Reliable transmission protocol in Java - transmission
+- - '####'
+  - 7.5.3 Reimplementing TestSerial
+- - '###'
+  - 7.6 Exercises
+- - '##'
+  - Part III
+- - '##'
+  - Advanced programming
+- - '##'
+  - 8 Advanced components
+- - '###'
+  - 8.1 Generic components review
+- - '###'
+  - 8.2 Writing generic modules
+- - '####'
+  - 8.2.1 类型参数
+- - '####'
+  - 8.2 编写泛型模块
+- - '####'
+  - 8.2.2 作为泛型的抽象数据类型
+- - '####'
+  - 8.2.3 TinyOS 1.x 中的 ADT
+- - '###'
+  - 8.3.1 Parameterized interfaces and configurations
+- - '###'
+  - 8.3.2 Parameterized interfaces and modules
+- - '###'
+  - 8.3.3 默认值
+- - '###'
+  - 8.4 属性
+- - '####'
+  - Listing 8.21 nesC attributes
+- - '###'
+  - 8.5 Exercises
+- - '##'
+  - 9 高级连接
+- - '###'
+  - 9.1 unique() 和 uniqueCount()
+- - '####'
+  - 9.1.1 unique
+- - '####'
+  - 9.1.2 uniqueCount
+- - '####'
+  - '9.1.3 Example: HilTimerMilliC and VirtualizeTimerC'
+- - '####'
+  - Figure 9.1 Partial component structure of a typical HilTimerMilliC.
+- - '####'
+  - Listing 9.2 VirtualizeTimerC
+- - '####'
+  - Listing 9.3 Instantiating VirtualizeTimerC
+- - '####'
+  - '编程提示 19 如果一个组件依赖于唯一性，则在头文件中 #DEFINE 使用的字符串，以防止因字符串拼写错误而导致的 bug。'
+- - '###'
+  - 9.2 通用配置
+- - '####'
+  - 9.2.1 TimerMilliC
+- - '####'
+  - 9.2.2 CC2420SpiC
+- - '####'
+  - Listing 9.9 CC2420SpiC
+- - '####'
+  - Listing 9.10 CC2420SpiP
+- - '####'
+  - Listing 9.11 CC2420SpiC mappings to CC2420SpiP
+- - '####'
+  - Listing 9.12 The strobe implementation
+- - '####'
+  - 9.2.3 AMSenderC
+- - '####'
+  - 9.2.4 BlockStorageC
+- - '###'
+  - 9.4 练习
+- - '##'
+  - 10 设计模式
+- - '###'
+  - 10.1 行为型：Dispatcher
+- - '####'
+  - Intent
+- - '####'
+  - 动机
+- - '####'
+  - 适用场景
+- - '####'
+  - 已知用途
+- - '####'
+  - 影响
+- - '####'
+  - 相关模式
+- - '###'
+  - 10.2 结构型：Service Instance
+- - '####'
+  - Intent
+- - '####'
+  - Motivation
+- - '####'
+  - Applicable when
+- - '####'
+  - Structure
+- - '####'
+  - Participants
+- - '####'
+  - Sample code
+- - '####'
+  - Known uses
+- - '####'
+  - Consequences
+- - '####'
+  - Related patterns
+- - '###'
+  - 10.3 命名空间：键空间
+- - '####'
+  - 意图
+- - '####'
+  - 动机
+- - '####'
+  - 适用条件
+- - '####'
+  - 示例代码
+- - '####'
+  - 已知用途
+- - '####'
+  - 影响
+- - '####'
+  - 相关模式
+- - '###'
+  - 10.4 命名空间：键映射
+- - '####'
+  - 意图
+- - '####'
+  - 动机
+- - '####'
+  - 已知用途
+- - '####'
+  - 后果
+- - '####'
+  - 相关模式
+- - '###'
+  - 10.5 结构型：占位符
+- - '####'
+  - 意图
+- - '####'
+  - 动机
+- - '####'
+  - 适用条件
+- - '####'
+  - 结构
+- - '####'
+  - 参与者
+- - '####'
+  - 示例代码
+- - '####'
+  - 列表 10.3 Telos ActiveMessageC
+- - '####'
+  - 已知用途
+- - '####'
+  - 影响
+- - '####'
+  - 相关模式
+- - '###'
+  - 10.6 结构型：外观模式
+- - '####'
+  - 意图
+- - '####'
+  - 动机
+- - '####'
+  - 适用场景
+- - '####'
+  - 结构
+- - '####'
+  - 参与者
+- - '####'
+  - 示例 1.x 代码
+- - '####'
+  - Listing 10.4 The Matchbox facade
+- - '####'
+  - Sample 2.x code
+- - '####'
+  - Known uses
+- - '####'
+  - Consequences
+- - '####'
+  - Related patterns
+- - '###'
+  - '10.7 Behavioral: Decorator'
+- - '####'
+  - Intent
+- - '####'
+  - Motivation
+- - '####'
+  - Applicable when
+- - '####'
+  - Structure
+- - '####'
+  - 参与者
+- - '####'
+  - 示例代码
+- - '####'
+  - 已知用途
+- - '####'
+  - 效果
+- - '####'
+  - 相关模式
+- - '###'
+  - 10.8 行为型：适配器
+- - '####'
+  - 意图
+- - '####'
+  - 动机
+- - '####'
+  - 适用场景
+- - '####'
+  - 结构
+- - '####'
+  - Consequences
+- - '####'
+  - Related patterns
+- - '##'
+  - 11 Concurrency
+- - '###'
+  - 11.1 Asynchronous code
+- - '####'
+  - 11.1.1 The async keyword
+- - '####'
+  - 11.1.2  The cost of async
+- - '####'
+  - Listing 11.3 Toggling a state variable
+- - '####'
+  - Listing 11.4 A call sequence that could corrupt a variable
+- - '####'
+  - Listing 11.5 State transition that is not async-safe
+- - '####'
+  - Programming Hint 21 KEEP CODE SYNCHRONOUS WHEN YOU CAN. CODE SHOULD BE ASYNC ONLY
+    IF ITS TIMING IS VERY IMPORTANT OR IF IT MIGHT BE USED BY SOMETHING WHOSE TIMING
+    IS IMPORTANT.
+- - '###'
+  - 11.1.3 Atomic statements and the atomic keyword
+- - '###'
+  - 11.1.4 Managing state transitions
+- - '###'
+  - '11.1.5 Example: CC2420ControlP'
+- - '###'
+  - 11.1.6 任务（重访）
+- - '###'
+  - 11.2 电源锁
+- - '####'
+  - 11.2.1 锁需求示例：链路层确认
+- - '####'
+  - 11.2.2 分阶段锁
+- - '####'
+  - 11.2.3 锁内部结构
+- - '####'
+  - 11.2.4 Energy management
+- - '####'
+  - 11.2.5 Hardware configuration
+- - '####'
+  - '11.2.6 Example: MSP430 USART'
+- - '####'
+  - 11.2.7 Power lock library
+- - '###'
+  - 11.3 Exercises
+- - '##'
+  - 12 设备驱动程序与硬件抽象架构（HAA）
+- - '###'
+  - 12.1 可移植性与硬件抽象架构
+- - '####'
+  - 12.1.1 示例
+- - '####'
+  - 12.1.2 可移植性
+- - '###'
+  - 12.2 设备驱动程序
+- - '####'
+  - 12.2.1 访问控制
+- - '####'
+  - 12.2.2 访问控制示例
+- - '####'
+  - Listing 12.1 ActiveMessageC signature
+- - '####'
+  - 12.2.3 电源管理
+- - '####'
+  - A/D 的开启与关闭
+- - '####'
+  - 12.2.4 微控制器电源管理
+- - '##'
+  - 13 高级应用：SoundLocalizer
+- - '###'
+  - 13.1 SoundLocalizer 设计
+- - '####'
+  - 13.1.2 在 TinyOS 中实现 SoundLocalizer
+- - '###'
+  - 13.2 SynchronizerC
+- - '####'
+  - 清单13.1 SynchronizerC：SoundLocalizer的时间同步
+- - '####'
+  - 清单13.2 `Counter`接口
+- - '###'
+  - 13.3 DetectorC
+- - '####'
+  - 清单 13.3 DetectorC：用于 SoundLocalizer 的响亮声音检测
+- - '####'
+  - 清单 13.4 Alarm 接口
+- - '####'
+  - 清单 13.5 Atm128AdcSingle：底层单样本 ATmega128 A/D 转换器接口
+- - '###'
+  - 13.4 MicrophoneC
+- - '####'
+  - Figure 13.4 MTS300 microphone hardware.
+- - '###'
+  - 13.5 总结
+- - '##'
+  - 第四部分
+- - '##'
+  - 附录和参考文献
+- - '##'
+  - 附录 TinyOS API
+- - '###'
+  - A.1 启动
+- - '###'
+  - A.2 通信
+- - '####'
+  - A.2.1 单跳
+- - '####'
+  - A.2.2 多跳收集
+- - '####'
+  - A.2.4 二进制重编程
+- - '###'
+  - A.3 时间
+- - '###'
+  - A.4 传感
+- - '###'
+  - A.5 存储
+- - '###'
+  - A.6 数据结构
+- - '####'
+  - A.6.1 BitVectorC
+- - '####'
+  - A.6.2 QueueC
+- - '####'
+  - A.6.3 BigQueueC
+- - '####'
+  - A.6.4 PoolC
+- - '####'
+  - A.6.5 StateC
+- - '###'
+  - A.7 实用工具
+- - '####'
+  - A.7.1 随机数
+- - '####'
+  - A.7.2 Leds
+- - '####'
+  - A.7.3 循环冗余校验
+- - '####'
+  - A.7.4 Printf
+- - '###'
+  - A.8 低功耗
+- - '##'
+  - 索引

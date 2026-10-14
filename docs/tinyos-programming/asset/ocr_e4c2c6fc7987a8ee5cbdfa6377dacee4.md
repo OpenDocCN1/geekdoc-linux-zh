@@ -1,0 +1,5 @@
+# Acknowledgements
+
+We’d like to thank several people for their contributions to this book. First is Mike Horton, of Crossbow, Inc., who first proposed writing it. Second is Pablo Guerrero, who gave detailed comments and corrections. Third is Joe Polastre of Moteiv, who gave valuable feedback on how to better introduce generic components. Fourth, we’d like to thank Phil’s father, who although he doesn’t program, read the entire thing! Fifth, John Regh, Ben Greenstein and David Culler provided valuable feedback on this expanded edition. Last but not least, we would like to thank the TinyOS community and its developers. Many of the concepts in this book – power locks, tree routing, and interface type checking – are the work and ideas of others, which we merely present.
+
+Chapter 10 of this book is based on: Software design patterns for TinyOS, in ACM Transactions on Embedded Computing Systems (TECS), Volume 6, Issue 4 (September 2007), ©ACM, 2007. http://doi.acm.org/10.1145/1274858.1274860
