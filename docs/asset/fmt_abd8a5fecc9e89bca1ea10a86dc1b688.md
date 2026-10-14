@@ -1,0 +1,175 @@
+
+# 目录 » S
+
+- 相关资源, 404–405
+- 来源 (sourcing), 379
+- 变量中的, 398–399
+- `SHELLword`, Heiner’s, 405
+- `Shift+q`, 303
+- `Shift+g` 命令, 302
+- `showmount` 命令, 591–592
+- 关键字, GRUB 文件
+- 简单邮件传输协议 (SMTP)
+    - 配置 SLX, 760
+    - 启用, 760–761
+    - 使用 Telnet 测试, 426–427
+    - `smtpd` 参数, Postfix, 471
+    - `smtpd_clist_restrictions`, Postfix, 471
+    - `smtpd_helo_required` 参数, Postfix, 471
+    - `smtpd_helo_restrictions`, Postfix, 472
+    - `smtpd_recipient_restrictions`, Postfix, 472, 474
+    - `smtpd_sender_restrictions`, Postfix, 471, 478
+    - `smtpd_use_tls` 参数, Postfix, 472
+    - `smtp_sasl_auth_enable` 参数, Postfix, 472
+    - `smtp_use_tls` 参数, Postfix, 473
+- SNAT (源地址转换), 622–624
+- SOA (起始区域) 记录, DNS, 575, 576–578
+- 软措施, 305
+- 以 tar 归发发的软件, 365–366
+- 软件包. 另见 RPM (RPM 包管理器)
+- 服务, 网络（续上）
+    - 安全, 593
+    - 服务器, 226–228, 587–593
+- 门户, 773–774
+- 相关资源, 150
+- 共享文件夹, 创建, 763–764
+- 启用 SMTP 身份验证, 769
+- 与 Outlook 同步, 778–781
+- 系统资源, 监控, 764–765
+- 升级到版本 4.1, 740–741
+- 用户
+    - 别名, 754–755
+    - 创建, 754–755
+    - 组的, 762–763
+    - 登录, 765
+    - 查看关于数据, 755–756
+    - 虚拟域名, 757
+
+- SourceForge 网站, 152
+- `SOURCES` 目录, RPM, 333
+- spam (垃圾邮件), 479–760–761
+- SpamAssassin, 760–761
+- spec 文件
+    - 从该文件编译包, 339–341
+    - 创建, 333–338
+    - 定义, 331
+- `SPECS` 目录, RPM, 333
+- `spec` 命令, 280
+- 方方框 (11), 模式匹配中的范围, 32–53
+- Squid 报告分析器 (`sqanalyzer`) 工具, 662–663
+- Squid 日志读取器, 405–408
+- Squid 网页代理
+    - 缓存目录, 664
+    - 缓存管理器, 664
+    - 客户端代理设置, 657–658
+    - 定义, 655
+    - 文档, 657
+    - 在企业架构中, 680, 683
+    - 安装, 656
+    - 日志, 661–663
+    - 按硬件地址限制, 661
+    - 运行, 656–659
+    - 使用 squidGuard, 664–665
+        - 作为透明代理, 663
+        - 用户认证, 659–661
+    - 网站, 151
+- `squid.conf` 文件, 656–659
+- `squidGuard` 过滤器, 664–665
+- `SRPMS` 目录, RPM, 333
+- SSH 协议
+    - 定义, 425–428
+    - PPK 密钥, 429–431
+    - 公钥和私钥, 429–431
+    - 安全复制 (`scp`), 431
+    - 安全性, 425
+    - 通过虚拟终端服务, 428–429
+- `ssh` (安全外壳)
+    - 在 FTP 之后, 673
+    - 通过网络连接, 73–74
+    - 在 Konqueror 中使用, 206
+- `sh-keygen` 命令, 429–430
+- 使用 Linux 所需人员, 673–674
+- Stafford, Sterling (Linux 系统管理员), 146, 147
+- Stallman, Richard (emacs 编辑器), 311
+- 标准错误 (`stderr`), 54
+- 标准输入 (`stdin`), 54
+- 标准输出 (`stdout`), 54
+- 星号 (`*`), 通配符, 52–53
+- StarOffice 文件, 359
+- 起始柱, 119
+- 区域起始 (SOA) 记录, DNS, 575, 576–578
+- 启动脚本, 115, 116–117
+- `StartServers` 指令, Apache 配置, 449
+- 稳定于, 318–619
+- `stderr` (错误), 54
+- `stdin` (标准输入), 54
+- `stdout` (输出), 54
+- Stone, Richard (入门编程, 第三版), 332
+- 存储区域网络 (SANs)
+    - 访问, 684–685
+    - 定义, 684–683
+    - LUA, 686
+    - QLA 卡, 687–688
+    - 共享存储, 686–687
+- Novell 存储服务 (NSS), 789
+- 流式编辑器 (`seed` 命令), 286–288
+- `str_rfc_821_parameter`, Postfix, 472
+- `string` 命令, 297, 354–355
+- 结构化文件, 提取章节, 279
+- 结构化代理 (`gzip`, 命令), 279
+- `stdout` 命令, 194
+- 子网, 167–169
+- `sudo` 命令, 504
+- `sudoers` 文件, 504
+- `uid` (权限) 子句, 66
+- 超块备份, 94, 100–101
+- HP Superdome 服务, 676
+- 超级用户 (root 用户)
+    - 密码, 配置, 303
+    - 丢失, 在没有密码的情况下启动, 374
+    - 重置, 132–133, 374
+    - 接收邮件, 338
+    - 支持与维护, 673
+    - SUSE Linux 的支持数据库, 808
+    - 对 DVD 的支持, 808
+    - YaST 支持模块, 226
+- SUSE 配置和描述管理器 (SCPM), 241–244
+- SUSE 帮助中心, 141–142
+- SUSE Linux 10. 另见安装；内核; Samba
+    - 部署, 672–673
+    - 作为桌面操作系统
+    - 商业桌面 Linux 发行版, 799–800
+    - 磁盘 Linux 检查, 800–801
+    - 历史, 797–798
+    - NLD (Novell Desktop), 801–806
+    - OpenOffice.org, 以及 798
+    - SLD (SUSE Desktop), 801
+    - 专家应用程序, 迁移问题, 799
+    - 技术要求, 798
+    - Windows 仿真与模拟, 799
+    - 许可许可, 740
+- 邮件
+    - 阅读, 766
+    - 发送, 766–768
+- SUSE Open Mode Linux, 719–722
+- 架构,
+    - ent 架构, 670–672
+    - 支持的硬件架构, 110
+    - 安全性, 672
+    - 备注 (Pinboard 条目), 创建, 771–772
+- OSLON 连接器
+    - 配置, 775–778
+    - 定义, 775
+    - 下载, 775
+    - 安装, 775
+    - 使用所需人员, 673–674
+    - 支持与维护, 273, 808
+- SUSE Linux 10.0 启动, 781
+- SUSE Linux 管理指南 (Latimer, Harris), 135
+- SUSE Novell 和企业级服务器, 782
+- SUSE Linux Desktop (SLD), 801
+- SUSE Linux Enterprise Server (SLES), 790
+- SUSE Linux 论坛, 149
+- SUSE Linux 用户指南, 135
+- SUSE Wiki, 148
+- SMTP 认证, 760
