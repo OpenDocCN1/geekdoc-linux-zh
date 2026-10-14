@@ -1,0 +1,107 @@
+
+如果 `/etc/passwd` 中存在名为 `ftp` 的用户（在 SLES 9 上默认存在）并且其主目录可访问，Pure-FTPd 将接受匿名登录，即 `ftp` 或 `anonymous`。文件必须位于主 FTP 目录中。主目录中不需要 `bin`、`lib`、`etc` 和 `dev` 目录，也不需要外部程序，例如 `ls`（Pure-FTPd 不执行任何外部程序，并内置了 `ls` 工具）。请注意，您不需要将公共文件 `chown` 到 `ftp`，但对于可写目录（例如 `incoming`）应这样做。
+
+Pure-FTPd 的一个功能是为未在 `/etc/passwd` 中定义的用户提供支持。这些用户称为虚拟用户，只能通过 FTP 访问服务器。如果您不允许匿名 FTP 访问并且不希望这些仅 FTP 用户能够通过非 FTP 方式登录到 SLES 服务器，这是一个不错的功能。Pure-FTPd 虚拟用户信息存储在 PureDB 数据库中，并使用 `pure-pw` 实用程序进行管理。有关详细信息，请参阅 `/usr/share/doc/packages/pure-ftpd/README.Virtual-Users` 或 http://www.pure-ftpd.org/README.Virtual-Users。
+
+最后，如果您厌倦了使用命令行开关来管理 Pure-FTPd，有几个软件包提供了不错的 GUI 界面。对于 KDE 用户，有 `KcmPureFTPd`（http://lkr.sourceforge.net/kcmpureftpd）；图 8.4 显示了用户配置对话框。对于 GNOME 爱好者，可以查看 `PureAdmin`（http://purify.sourceforge.net）；图 8.5 显示了其用户管理器对话框的示例。
+
+#### 图 8.4
+
+KcmPureFTPd 的用户配置选项卡。
+
+![](img/ae8469257d2662b469f2360b3bbbe322_280_0.png)
+
+#### 图 8.5
+
+PureAdmin 的虚拟用户管理器。
+
+![](img/ae8469257d2662b469f2360b3bbbe322_281_0.png)
+
+还有一个基于浏览器的虚拟用户管理工具，称为 User Manager for PureFTPd（见图 8.6）。该工具由 Machiel Mastenbroek 使用 PHP 脚本开发，可让您从任何类型的客户端工作站轻松创建、修改或删除虚拟 Pure-FTPd 用户。要下载软件或了解有关此免费软件的更多信息，请访问 http://machiel.generaal.net/index.php?subject=user_manager_pureftpd。
+
+#### 注意
+
+截至本文撰写时，Pure-FTPd 版本 1.0.16 已添加使用 SSL/TLS 安全机制加密控制通道的实验性支持。启用该选项后，用户名和密码不会以明文发送；客户端发送的其他命令以及服务器的回复也不会以明文发送。但是，数据通道不会被 SSL/TLS 加密。有关详细信息，请参阅 `/usr/share/doc/packages/pure-ftpd/README.TLS` 或 http://www.pureftpd.org/README.TLS。
+
+### 使用 vsftpd
+
+`vsftpd`（Very Secure FTP Daemon）是一个安全且极快的 FTP 服务器。它具有丰富的特性集，与 Pure-FTPd 可用的特性集相似。例如，它提供以下功能：
+
+- 虚拟 IP 配置
+
+- 虚拟用户支持
+
+- 能够独立运行或在超级服务器下运行
+
+- 强大的按用户可配置性
+
+- 带宽限制
+
+- 按源 IP 可配置性
+
+- 按源 IP 限制
+
+- IPv6 支持
+
+#### 图 8.6
+
+User Manager for PureFTPd。
+
+![](img/ae8469257d2662b469f2360b3bbbe322_282_0.png)
+
+从 v2.0.1 开始（v2.0.0 未发布），`vsftpd` 包含 SSL/TLS 集成。与 Pure-FTPd 中仅为控制通道（端口 21）提供的实验性 SSL/TLS 支持不同，`vsftpd` 对控制通道和数据通道都提供完整支持。因此，如果您需要提供安全的 FTP 服务器解决方案，`vsftpd` 应该是您考虑的首选。由于其高性能和严格的安全性，`vsftpd` 被大量互联网站点使用，例如 `ftp.suse.com`、`ftp.redhat.com`、`ftp.gnu.org` 和 `rpmfind.net`。
+
+您可以在 http://vsftpd.beasts.org/#Performance 和 http://vsftpd.beasts.org/#security 上了解更多信息。
+
+#### 注意
+
+SLES 9 媒体中包含的 `vsftpd` 版本为 1.2.1，而要获得 SSL/TLS 支持，您至少需要版本 2.0.1（2004 年 7 月发布）。您可以从 http://vsftpd.beasts.org/#download 下载最新版本，或在 http://rpmseek.com 上找到 SUSE 的最新 RPM。
+
+您需要安装 OpenSSL 才能使用 SSL/TLS 选项。如果服务器上尚未安装 OpenSSL——您应该安装，因为它是基础运行时软件包的一部分——或想要使用最新版本，您可以从 http://www.openssl.org/source 下载最新的 tarball。
+
+与许多其他 FTP 守护进程不同（尤其是与 Pure-FTPd 相比），`vsftpd` 的所有行为都由其配置文件 `/etc/vsftpd.conf` 决定。其唯一的命令行选项是指定不同的配置文件。
+
+`vsftpd` 在启动时读取 `vsftpd.conf` 的内容，因此每次编辑文件后都必须重新启动 `vsftpd` 才能使更改生效。快速试用只需编辑 `/etc/vsftpd.conf`，删除 `listen=YES` 前的注释符号（`#`），然后执行 `/usr/sbin/vsftpd`。这将以独立模式启动守护进程，准备立即进行客户端连接。除 `listen=YES` 外，未做其他修改时，该文件使用以下您应了解的默认设置：
+
+- `vsftpd` 以匿名 FTP 服务器运行。配置文件中的 `anonymous_enable` 指令可设置为 `NO` 以禁用此功能。您还必须同时启用本地用户登录，方法是取消注释 `local_enable` 指令并将其值设置为 `YES`。
+
+- 该文件仅允许匿名 FTP 下载，而不允许上传。要允许上传，请取消注释 `anon_upload_enable` 指令并确保其设置为 `YES`。
+
+- 该文件不允许匿名用户在您的 FTP 服务器上创建目录。您可以通过修改 `anon_mkdir_write_enable` 指令来更改此设置。
+
+- 该文件将 FTP 访问记录到 `/var/log/vsftpd.log`。要更改为不同的文件或位置，请修改 `xferlog_file` 指令。
+
+- `vsftpd` 希望匿名 FTP 的文件放置在 `/var/ftp` 目录中。您可以通过修改 `anon_root` 指令来更改此设置。
+
+#### 注意
+
+使用匿名 FTP 时，始终存在用户发现写入匿名 FTP 目录的方法的风险。其结果是，如果使用默认设置，您可能会填满 `/var` 文件系统。最好让匿名 FTP 目录位于其自己的专用文件系统中。
+
+`/etc/vsftpd.conf` 中列出的指令远非详尽。例如，以下性能调优设置未包含在内：
+
+- `max_clients` 限制并发客户端连接的最大数量。
+
+- `max_per_ip` 限制来自同一源 IP 地址的并发连接数。
+
+- `anon_max_rate` 确定每个匿名登录的数据传输最大速率。
+
+- `local_max_rate` 规定每个非匿名登录的数据传输最大速率。
+
+您可以使用 `man vsftpd.conf` 或在线访问 http://vsftpd.beasts.org/vsftpd.conf.html 查找所有支持指令的详细描述及其默认值。
+
+#### 警告
+
+`vsftpd` 对其命令语法非常严格。在选项关键字、`=` 符号和值之间放置任何空白都是错误。例如，`anonymous_enable=YES` 有效，而 `anonymous_enable = YES` 则无效。
+
+与前面讨论的 Pure-FTPd 一样，您必须决定 `vsftpd` 应在服务器启动时以独立模式启动还是通过 `xinetd` 启动。如果您选择使用 `xinetd`，则默认配置文件已安装在 `/etc/xinetd.d/vsftpd`，其内容如下：
+
+```
+service ftp
+{
+    socket_type     = stream
+    protocol        = tcp
+    wait            = no
+    user            = root
+    server          = /usr/sbin/vsftpd
+#   server_args     =
+```
