@@ -1,0 +1,103 @@
+
+- 格式变式（varieties of formats），125–126
+- 简短任务（Short tasks），261
+- 模拟（Simulations），247–248
+- 单层标准化测验（Single-level standardized tests），367
+- 单一场合的信度估计（Single occasion, estimating reliability on），64–67
+- 单科测验的用途（Single-subject tests, uses for），378–379
+- 写作六加一特质®（Six + 1 Traits® of Writing），187
+- 摸底（Sizing up），102
+- 斯皮尔曼-布朗双倍长度公式（Spearman-Brown double-length formula），65–66
+- 特殊常模（Special norms），368, 387
+- 特定限定词（Specific determiners），135, 153
+- 特定智力技能（Specific intellectual skills），429
+- 具体学习结果（Specific learning outcomes），21
+- 具体学习目标（Specific learning targets），17
+  - 作为掌握陈述（as mastery statements），21
+- 特定评分量规（Specific scoring rubric），239, 266
+- 样本集（Specimen set），424
+- 速度化评估（Speeded assessment），66
+- 速度化程度（Speededness），53
+- 分半（Split），65
+- 分半法（Split-halves）
+  - 程序（procedure），65
+  - 信度系数（reliability coefficients），65–66
+- SS分数（SS-scores），393
+- SS分数评分法（SS-score method for grading），355–356
+- 稳定性系数（Stability coefficient），63
+- 利益相关者（Stakeholders），329
+- 标准年龄分数（Standard age score, SAS），439
+- 标准差（Standard deviation），50n, 353, 486–487
+- 测量标准误（Standard error of measurements, SEMs），62, 69–71
+  - 影响因素（factors affecting），71–72
+  - 含义（meaning of），69
+  - 信度系数与（reliability coefficients and），69
+  - 用于设置置信区间（using, to set confidence bands），69–71
+- 标准化病人格式（Standardized patient format），247
+- 标准化调查系列测验（Standardized survey batteries）
+  - 共同特征（common features），368
+  - 差异（differences），368, 372
+- 标准化测验（Standardized test(s)），82–83, 119
+  - 施测（administering），379
+  - 选择（choosing），377–379
+  - 开发（development of），425–426
+  - 学生练习的伦理与不伦理（ethical and unethical student practice for），380–381
+  - 为学生参加测验做准备（preparing students to take），83
+- 标准化测验结果（Standardized test results）
+  - 批评（criticisms of），375
+  - 课堂外用途（extra classroom uses），374
+  - 不当用途（inappropriate uses of），375–376
+  - 误用（misuses），375–376
+  - 课堂内用途（within-classroom uses），374
+- 基于标准的成绩单（Standards-based report card），337–338
+- 标准分数（Standard scores）
+  - 扩展正态化（extended normalized），401–402
+  - 正态化（normalized），397–400
+- 《教育与心理测验标准》（Standards for Educational and Psychological Testing），41, 79, 422
+- 《学生教育评估中的教师能力标准》（Standards for Teacher Competence in Educational Assessment of Students），13, 450–452
+- 斯坦福成就测验（Stanford Achievement Test），434
+- 斯坦福-比奈智力量表（Stanford-Binet Intelligence Scale），438–440
+- 标准九分制（Stanines），398–399
+  - 全国性（national），398
+- 州评估，补充你的评估（State assessment, complementing your），378
+- 州强制测验（State-mandated tests），373
+- 陈述与评论题（Statement-and-comment items），162–163
+  - 优点与批评（advantages and criticisms），163
+  - 编制建议（crafting suggestions），163
+  - 格式（format），162–163
+- 州标准与学习目标（State standards, learning targets versus），19, 21
+- 统计指标（Statistical index），480
+- 统计学（Statistics）
+  - 基本概念（basic concepts in），480–489
+  - 使用Excel电子表格计算基本统计量（calculating basic, with Excel spreadsheet），489
+- 茎叶图（Stem-and-leaf displays），481
+- 题干（Stems）
+  - 不完整（incomplete），150
+  - 多项选择题中的（in multiple-choice items），139, 144–148
+  - 否定式措辞（negatively worded），146
+- 污名化（Stigmatization），92
+- 策略性知识（Strategic knowledge），300
+- 策略作为批判性思维技能（Strategies as critical-thinking skills），224–226
+- 评分条（Strip key），129
+- 斯特朗兴趣量表（Strong Interest Inventory, SII），443, 444–445
+- 结构化按需任务（Structured on-demand tasks），239–241
+- 结构化人格评估（Structured personality assessment）
+  - 技术（techniques），447
+- 学生（Student(s)）
+  - 获得评估能力（acquiring competence to assess），12–13
+  - 有关学生的评估与教育决策（assessment and educational decisions about），9–12
+  - 评估责任（assessment responsibilities of），86
+  - 评分（assigning grades to），10
+  - 评价（evaluation of），9
+  - 对不同类型学生的公平性（fairness to different types of），39–40
+  - 反馈给学生（feedback to），10
+  - 成就的形成性评价（formative evaluation of achievement），9
+  - 识别学生错误（identifying errors of），296
+  - 访谈（interviewing），301
+  - 使评估易于学生理解（making assessments understandable to），112
+  - 激励学生（motivating），10
+  - 准备（preparing）
+    - 为评估做准备（for assessment），305–307
+    - 参加标准化测验（to take standardized tests），83
+  - 作为应试者的权利（rights of, as test takers），85
+  - 学生的成熟度（sophistication of），53
