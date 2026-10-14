@@ -1,0 +1,174 @@
+
+当然，如果你在三分钟内回到淋浴间并播放更多音乐，那么三分钟超时将重新开始。
+
+## 通用遥控器
+
+这是一款 iOS 应用⁴，可让你控制家庭自动化设置中的任何部分，无论它是否由 Minerva 运行。
+
+它之所以能做到这一点，是因为遥控器仅向 Web 服务器发送 HTTP 请求，所有配置随后都在服务器上完成。这与第 3 章中介绍的各种通信桥接解决方案有相似之处。虽然这会在链路中增加一个额外的环节，但确实意味着你只需要在控制客户端设备上设置该服务器的端点，包括：
+
+- URL（默认指向 Minerva 主页 `www.minervahome.net`）
+- 端口（通常为 80）
+- 脚本（`urc/echo.php`）
+
+这些会组合成 HTTP 请求：
+
+```
+GET http://www.minervahome.net:80/urc/echo.php?command=menu.1.icon.6.index.23&code=nocode
+```
+
+`command` 参数详细说明按下的是哪个具体按钮，其格式为：
+
+```
+command=menu.[index].icon.[icon_reference].index.[position_on_screen]
+```
+
+`code` 参数也可以从应用中进行配置，并作为密码发送，以提供基本的安全性。你的服务器端脚本可以自行决定处理（或忽略）该参数。接下来我们看看 `index`、`icon_reference` 和 `position_on_screen` 引用是如何确定的。
+
+### 配置
+
+既然我们已经说过应用是由服务器配置的，那么提供这样一个配置文件也是合情合理的。
+
+```
+<homeremote>
+    <menu>
+        <button text="TV"/>
+        <button icon="20"/>
+        <button icon="19"/>
+        <button icon="35"/>
+        <button icon="36"/>
+        <button menu="1"/>
+
+        <button icon="0" text="Film"/>
+        <button icon="38"/>
+        <button icon="37"/>
+        <button icon="40"/>
+        <button icon="39"/>
+        <button menu="2"/>
+
+        ... cut for brevity ...
+    </menu>
+</homeremote>
+```
+
+应用发送的第一个 GET 请求是针对服务器 URL 根目录下名为 `config.xml` 的文件。显示区域被划分为 6 × 6 的格子（在 `command` 参数中，`index` 首先被引用为屏幕上的位置），从左到右、从上到下排列，每个格子要么是一段文本、一个带图标的函数按钮，要么是到另一个菜单的链接。在本例中，我们的第一个菜单（编号为零）以一行电视控制项开头，这些控制项具有不同的图标引用，后面跟着一个指向菜单 1（即第二个菜单）的链接。该菜单的图标是预先确定的。
+
+*可用的图标如下：*
+
+- 0. 空白
+- 1. 省略号——保留用于菜单切换
+- 2. 关机
+- 3. 关机
+- 4. 书签
+- 5. 混音器电平
+- 6. 电视输出
+- 7. 音乐
+- 8. 照片
+- 9. 房屋控制
+- 10. 新闻或信息
+- 11. 电影
+- 12. 照片
+- 13. 邮件
+- 14. 天气
+- 15. CD
+- 16. 服务器（或云）上的文档
+- 17. 朋友
+- 18. 向上
+- 19. 向下
+- 20. 左/上一个
+- 21. 右/下一个
+- 22. 加号/更多
+- 23. 减号/更少
+- 24. 交叉/删除/移除
+- 25. 放大/显示/状态/信息
+- 26. 增大
+- 27. 电池或电源
+- 28. 聊天消息或对话
+- 29. 文档
+- 30. 播放/开始
+- 31. 暂停
+- 32. 停止
+- 33. 音量降低
+- 34. 静音
+- 35. 音量提高
+- 36. 快退
+- 37. 上一个
+- 38. 下一个
+- 39. 快进
+- 40. 收藏
+- 41. 标签
+
+> **注意** 由于配置文件涉及大量输入，可以在以下网址下载示例配置：  
+> `http://www.minervahome.net/homeremote.htm`
+
+如前所述，按下按钮后，会调用完整的 URL。然后你可以按点号拆分 `command`，并根据你的应用的具体情况解析每一部分。一个示例处理脚本如下所示：
+
+```php
+<?php
+
+$cmd = $_GET['command'];
+$code = $_GET['code'];
+
+if ($code != "nocode") {
+    echo "Invalid code";
+    return;
+}
+
+preg_match('/menu\.(\d+)\.icon\.(\d+)\.index\.(\d+)/', $cmd, $match);
+
+$menu = $match[1];
+$icon = $match[2];
+$index = $match[3];
+```
+```php
+$minbin = "/usr/local/minerva/bin/";
+
+$menuActions = array();
+
+// Main menu screen
+$menuActions[0] = array(
+    10=>'media default next music 5',
+    16=>'media default next music 5',
+    19=>'mixer default toggle', 20=>'mixer default quiet', 21=>'mixer default loud',
+    25=>'weatherstatus',26=>'hdbquery get lut sp',27=>'todo list steev',28=>'getcalendar steev 1',
+    29=>'media default status',
+    30=>'media default stop', 31=>'media default toggle', 32=>'manifest default next music',
+    33=>'housenight', 34=>'homedevice default on bedroom',
+);
+
+// ... other menu actions here ...
+
+$result = "Unknown command";
+if (array_key_exists($menu, $menuActions)) {
+    if (array_key_exists($index, $menuActions[$menu])) {
+        $command = $menuActions[$menu][$index];
+        $command = $minbin.$command;
+        $command .= " >&1";
+
+        $output = array();
+        exec($command, $output);
+
+        $result = join("\n", $output);
+    }
+}
+print $result;
+?>
+```
+
+此脚本产生的任何输出都会被传回应用，并显示在状态窗口中。默认的 `echo.php` 脚本只会将传入的每个参数原样返回给应用。这有助于验证你对所按菜单、屏幕位置和图标的判断。该脚本很简单：
+
+```php
+<?php
+print_r($_GET);
+?>
+```
+
+并且在开发你自己的脚本时，值得保留这个脚本。
+
+### Web 小程序
+
+对大多数人来说，通过 Web 浏览器控制房屋是次要目标（当然，是在语音识别之后！）。正如我在第 5 章中提到的，这是 20 世纪和 21 世纪无处不在的通信方式，因此你有义务通过这样的界面提供对所有 Bearskin 命令的访问，并将其隐藏在 SSL 以及用户名和密码提供的安全保护之后。
+
+在最简单的层面上，你可以构建自己的网站，提供一组执行服务器上 Bearskin 命令的链接。但 Web 提供了更丰富的操作画布，可用来呈现现有命令无法提供的、对家庭友好的功能。
+
+除了从台式 PC 或笔记本电脑控制家中的设备，你还可能需要考虑购买一台或多台新机器，用作信息亭或家庭终端。它们可以是平板电脑、手机，或者带有触摸屏显示器和微型化 PC（如第 8 章介绍的 Raspberry Pi，或第 4 章介绍的 Fit-PC2 和 Mini-ITX 机器）的自制设备。这台机器可以按照你的清醒时间进行开关机，并安装一个小而快的 Linux 版本，例如第 3 章提到的 Webconverger。例如，在厨房放一台这样的设备，你就可以从网上阅读食谱；而使用触摸屏（而不是键盘和鼠标）会让你在双手沾满面糊时更容易操作。
