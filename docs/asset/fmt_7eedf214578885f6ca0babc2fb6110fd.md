@@ -1,0 +1,89 @@
+
+> cs 28. `tcp_rfree()`.
+
+## 9.3 释放接收缓冲器的内存分配
+
+`tcp_recvmsg()` 中的接收队列通过调用 `tcp_eat_skb()` 将内存返回到套字的内存池中。此例通过调用 `__kfree_skb()` 释放缓冲区，该函数调用接收缓冲区的析构回调 `tcp_rfree()`（cs 98）。在此过程中，我们从读套字缓冲区的总分配内存中减去大小（`sk->rmem_alloc`）。这将为接收队列中的额外一个数据段腾出空间。我们在第 359 行将与缓冲区相关的内存返回套字的内存池（`sk->forward_alloc`）。
+
+## 9.4 关于 TCP 内存管理，全局控制参数值得注意
+
+- `tcp_memory_allocated`: 这是全局范围内分配给 TCP 套接字的总内存。
+- `sysctl_tcp_mem[0]`: 分配给 TCP 套字缓冲区内存在范围内，`tcp_memory_pressure` 重置。
+- `sysctl_tcp_mem[1]`: 处于压力下。当整体 TCP 内存达到限制时开始压力。我们设置全局变量 `tcp_memory_pressure` 表示 TCP 内存压力已开始。
+- `sysctl_tcp_mem[2]`: 我们达到了硬限制且 `tcp_memory_pressure` 被设置。当整体 TCP 内存达到此限制时，我们开始抑制为 TCP 套字缓冲区分配内存。
+- `tcp_memory_allocated`: 每次为 TCP 套字缓冲区分配内存量子时，`tcp_memory_allocated` 统计分配给套字缓冲区（TCP 载荷 + `sk_buff`）的内存。
+
+# TCP 内存管理
+
+| 接收到的新数据段 | 中断上下文 | 内核空间 |
+| :--- | :--- | :--- |
+| 无法为新缓冲区生成空间，因此丢弃新缓冲区。 | `tcp_rcv_established()` | | |
+| 套字接收缓冲区配额已满，尝试挤入接收队列。 | | | |
+| 如果数据尚未被应用程序读取，需要为新缓冲区分配内存。 | `tcp_prune_queue()` | | | |
+| 通过挤入接收队列产生新空间。 | | | | |
+| 内存不足，需要为套字内存池分配新配额。 | `tcp_rmem_schedule()` | | | |
+| 套字内存池中有足够的内存 | | | | |
+| 套字内存池中可用内存不足。 | | | | |
+| 丢弃新缓冲区。 | | | | |
+| `tcp_set_owner_r()`，更新 `sk->rmem_alloc`, `sk->forward_alloc`。 | | | | |
+| 将缓冲区内存返回到套字内存池 | | | | | |
+
+![](img/b3f231108facab5be0138b2cfd3f681a_338_0.png)
+
+图 9.3. 当我们需要合并队列时，队列中有四个缓冲区。
+
+![](img/b3f231108facab5be0138b2cfd3f681a_338_1.png)
+
+图 9.4. 分配了新缓冲区并将第一个缓冲区拷贝到新缓冲区中。完整的，并且对于第三个缓冲区，我们已经分配了一个新缓冲区并将第三个缓冲区的头部拷贝到新缓冲区中。一旦我们将 TCP 载荷从第四个缓冲区拷贝到第二个缓冲区，最终结果如图 9.6 所示。因此，四个段被合并为两个段，消除了两个缓冲器的开销。
+
+## 9.2.5 `_skb_queue_purge()`
+
+调用此例用于销毁缓冲区链。它主要用于在资源极度短缺时销毁乱序队列。`_skb_dequeue()` 返回链的头部并从链中移除缓冲区（cs 27）。
+
+# TCP 内存管理
+
+![](img/b3f231108facab5be0138b2cfd3f681a_339_0.png)
+
+**图 9.5.** 来自两个相邻缓冲区的数据被容纳到新缓冲区的一个内存页中。
+
+![](img/b3f231108facab5be0138b2cfd3f681a_339_1.png)
+
+**图 9.6.** 最后在合并队列后，我们有两个新缓冲区替换了四个旧缓冲区。
+
+## 关于 TCP 内存管理，全局控制参数值得注意
+
+```c
+include/net/tcp.h
+
+1009 static inline void __skb_queue_purge(struct sk_buff_head *list)
+
+1010 {
+
+1011     struct sk_buff *skb;
+
+1012     while ((skb=__skb_dequeue(list))!=NULL)
+
+1013         kfree_skb(skb);
+
+1014 }
+```
+
+> cs 27.-`skb_queue_purge()`.
+
+```c
+net/ipv4/tcp.c
+
+354 void tcp_rfree(struct sk_buff *skb)
+
+355 {
+
+356     struct sock *sk= skb->sk;
+
+357
+
+358     atomic_sub(skb->rmem_alloc, &sk->rmem_alloc);
+
+359     sk->forward_alloc += skb->rmem_alloc;
+
+360 }
+```
