@@ -17724,10 +17724,9 @@ matthew@seymour:~$ git pull git://path/to/repository/directory/proj.git
 
 向仓库中添加新文件，使用以下：
 
-助助助助助助助助助助助助助助助助
 
 ```
-matthew@seymour:~$ git add 助助助助助助助
+matthew@seymour:~$ git add ??
 ```
 
 从仓库中删除文件，使用：
@@ -17735,7 +17734,7 @@ matthew@seymour:~$ git add 助助助助助助助
 点击此处查看代码
 
 ```
-matthew@seymour:~$ git rm 助助助助助助
+matthew@seymour:~$ git rm ??
 ```
 
 在做出更改后检查代码，你需要在你的 .`gitconfig` 文件中设置你的电子邮件和名称，使用 `git config --global user.name` 和 `git config --global user.email` 这样才能工作。
