@@ -1,0 +1,7 @@
+allows you to access and use a Windows server desktop directly from your Ubuntu workstation.
+
+Ubuntu also includes the Transmission software, which allows you to download large files using the BitTorrent protocol. BitTorrent provides a central server to manage a file download, and it allows clients to interact with each other, downloading pieces of a large file from other clients as they become available. Many Linux distributions are turning to BitTorrent as a means of efficiently distributing Linux releases.
+
+Although not included as part of the default Ubuntu installation, the gFTP software package is another important piece of Internet software that you can easily install. It provides a graphical interface for advanced FTP capabilities, such as downloading entire folders of files and using newer encrypted FTP protocols such as secure FTP (SFTP). FTP repositories are still popular on the Internet, and it's a good idea to have a graphical tool handy.
+
+You'll notice one Internet application that's not discussed in this chapter. With the popularity of Internet email, Ubuntu now includes the Evolution email client package. Because Internet email is a complex topic, the entire next chapter is devoted to configuring and using Evolution.

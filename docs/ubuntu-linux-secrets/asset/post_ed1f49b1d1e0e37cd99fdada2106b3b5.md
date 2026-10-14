@@ -1,0 +1,173 @@
+
+- Pilot Applet, 93
+- Pinch and Whirl effect, 267
+- Ping program, 351–352
+- pipes, 558, 618–620
+- Places entry, 120
+- Places feature, 118
+- Places menu, 82–84
+- plug-ins. See also extensions; specific plug-ins
+  - Firefox and, 210–211, 303–306
+  - gedit and, 140–141
+  - Totem, 299–300
+- PNG, 383
+- PNM, 260, 383
+- podcasts, 288
+- Pointer Capture, 93
+- pointer (PTR) records, 474, 476, 492
+- policies, 361
+- Policies group, 373
+- POP Receiving Options dialog box, 234
+- POP/POP3 (post office protocol), 229, 231, 232, 233, 234
+- port scan, 355
+- port setting, 582
+- portable music players. See music players
+- ports. See TCP
+- post office protocol. See POP/POP3
+- postalias, 561
+- postcat, 561
+- postconf, 561
+- postdrop, 558
+- Postfix, 73, 74, 551, 557–574
+  - block diagram, 557
+  - configuration, 566–574
+  - files, 561–562
+  - modifying, 573–574
+  - window, 74
+  - core programs, 558–559
+  - installing, 563–566
+  - Internet site option, 563–564
+  - Internet with SmartHost option, 564–565
+  - local-only option, 566
+  - lookup tables, 562–563
+  - message queues, 559–560
+  - reliability of, 570
+  - satellite system option, 565–566
+  - setup, 557–559
+  - utility programs, 560–561
+  - wizard windows, 567–572
+- postfix, 561
+- postgres administrative account, 596
+- postgres program, 591
+- PostgreSQL
+  - configuration files, 592
+  - database cluster folders, 592
+  - databases and, 599–603
+  - programs (list), 594
+  - psql commands, 594–599
+  - server, 72, 75, 590–604
+    - configuring, 592–593
+    - files for, 591
+    - interacting with, 593–594
+    - managing, 591–592
+  - users in, 602
+- postgresql.conf file, 592
+- postkick, 561
+- postlock, 561
+- postlog, 561
+- postmap, 561
+- postmaster program, 591
+- PostScript, 383, 540
+- PostScript printer description (PPD) files, 371, 372, 373, 374
+- postsuper, 561
+- Power Manager applet, 86
+- PowerPoint documents, 113. See also Impress package
+- PPD (PostScript printer description) files, 371, 372, 373, 374
+- PPP, GNOME, 343–345
+- .ppt format, 180
+- Preferences (menu option), 84
+- Preferences dialog box
+  - gedit, 138–141
+  - keyboard, 104
+  - mouse, 104–105
+  - Nautilus, 121–125
+    - Behavior tab, 122
+    - Display tab, 122–123
+    - List Columns tab, 123–124
+    - Media tab, 124–125
+    - Preview tab, 124
+    - Views tab, 121–122
+  - Pidgin, 215–216
+  - Tomboy, 157–158
+- Preferences window
+  - Firefox, 203–212
+  - Kino, 310–311
+  - Remote Desktop, 217–218
+  - Rhythmbox, 285–286
+  - Synaptic Package Manager, 329
+  - Totem, 301–302
+- Preferred Applications dialog box, 102
+- presentations. See Impress package
+- presentation formats, 180, 189
+- Presentation wizard, 174–176
+- Preview pane, 242
+- Preview tab, 124
+- Preview window (XSane), 381–382
+- primary domain controller (PDC), 523
+- print server, 72, 75. See also CUPS
+- Printer Configuration tool, 368–369
+  - Access Control group, 373–374
+  - adding new printer with, 370–372
+  - CUPS settings and, 369
+  - Job Options tab, 375–376
+  - modifying printer properties in, 372–376
+  - Policies group, 373
+  - Printer Options group, 374
+  - Settings group, 372–373
+- Printer Options group, 374
+- printers, 368–376. See also CUPS
+  - adding, 370–372
+  - connection types, 371
+  - Samba and, 528–529
+  - Ubuntu installation and, 50
+- printing
+  - direct, 539
+  - filtered, 539–540
+  - in Linux, 539–540
+- printing flowchart, on Linux, 540
+- Printing Support (add-in), 159
+- Privacy section (Firefox preferences), 208–209
+- private (visibility keyword), 761
+- private key, 246
+- proc, 11
+- /proc, 112
+- process, 8
+- process IDs. See PIDs
+- Processes tab, 427–429
+- procmail, 553, 572, 574–578
+  - action line special characters, 576
+  - recipe flags, 574–575
+  - special conditions, 575–576
+  - using, 576–578
+- .procmailrc file, 574
+- Product class, 761, 762, 763, 764, 765, 766, 767, 768
+- profile file, 449
+- program code. See code
+- programming languages, 605. See also object-oriented programming; specific programming languages
+  - C, 661–685
+  - Java, 687–712
+  - Perl, 638–652, 659
+  - PHP, 741–769
+  - Python, 652–659
+  - Ruby, 713–739
+  - shell scripts, 607–636
+- properties (class), 730, 760
+- Properties dialog box
+  - Nautilus, 128–133
+  - Vista, 28
+- Properties option, 97
+- Proprietary Devices Manager applet, 86
+- proprietary drivers, 318
+- protected (visibility keyword), 761
+- protocols. See also DHCP, FTP, POP/POP3; SSH protocol; TCP
+  - DNS, 478
+  - Finger, 357
+  - gFTP, 222–224
+  - ICA, 218
+  - ICMP, 351, 352, 354, 364
+  - IPP, 371
+  - LDAP, 245, 512, 746
+  - RDP, 218
+  - SMB, 11, 522
+  - UDP, 361, 478, 481, 483
+  - VNC, 218

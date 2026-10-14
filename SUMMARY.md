@@ -2255,6 +2255,7 @@
 +   [Ubuntu Linux 圣经：9.10 和 10.04 版本](docs/ubuntu-linux-bible-versions-910-and-1004/README.md)
 +   [Ubuntu Linux 桌面：Linux 操作系统使用视觉蓝图](docs/ubuntu-linux-desktop-your-visual-blueprint-to-using-the-linu/README.md)
 +   [非技术人员的 Ubuntu Linux：无痛、项目导向、实战指南](docs/ubuntu-linux-for-non-geeks-a-pain-free-project-based-get-thi/README.md)
++   [Ubuntu Linux 秘籍](docs/ubuntu-linux-secrets/README.md)
 +   [Ubuntu Linux：完全参考指南](docs/ubuntu-linux-the-complete-reference/README.md)
 +   [Ubuntu Linux：完全参考 (完全参考系列)](docs/ubuntu-linux-the-complete-reference-complete-reference-serie/README.md)
 +   [Ubuntu Linux 工具箱：面向 Ubuntu 和 Debian 高级用户的 1000+ 条命令](docs/ubuntu-linux-toolbox-1000-commands-for-ubuntu-and-debian-pow/README.md)

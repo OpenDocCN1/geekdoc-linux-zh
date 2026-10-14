@@ -1,0 +1,5 @@
+interface. It also showed how to configure and use both wired and wireless Ethernet network cards. These cards are popular and are used with broadband Internet connections, such as cable and DSL modems.
+
+After showing how to get your Ubuntu workstation on the network, the chapter focused on the Network Tools program provided in Ubuntu. The Network Tools program provides several common network tools for troubleshooting network issues. It includes the Ping, Netstat, Traceroute, Port Scan, Lookup, Finger, and Whois utilities all in one easy graphical interface. You can troubleshoot almost any network issue using these tools.
+
+The next chapter focuses on using other devices with your Ubuntu workstation. In a real environment, most likely you'll want to connect devices to your workstation, such as printers, scanners, digital cameras, and portable music players. The next chapter walks through the steps required to get these devices working on your Ubuntu workstation and shows how to use them once they're connected.

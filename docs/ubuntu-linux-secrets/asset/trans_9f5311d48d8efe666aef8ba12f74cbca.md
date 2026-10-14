@@ -1,0 +1,127 @@
+
+
+# nslookup 程序
+
+nslookup 程序是一个极其多用途的工具，可用于各种故障排除情况。nslookup 可以在两种模式下运行。
+
+在非交互模式下，它的行为与之前讨论过的 host 命令非常相似。只需在命令行上输入你感兴趣的主机或域名，nslookup 就会显示其基本信息。nslookup 命令的基本格式为
+
+```
+nslookup [-option...] [host | - ] [server]
+```
+
+如果你在命令行上输入 host 参数，nslookup 将以非交互模式运行并返回查询结果，类似于 host 命令。
+
+如果没有给出参数，或者第一个参数是连字符 (-)，nslookup 进入交互模式。在交互模式下，nslookup 程序提供自己的命令行，你可以在其中输入命令。
+
+如果你想使用不同的 DNS 服务器，可以使用 server 参数指定，其中 server 是要使用的 DNS 服务器的 IP 地址。否则，nslookup 将使用 /etc/resolv.conf 文件中列出的默认 DNS 服务器。
+
+在 nslookup 程序中更改选项设置有三种方法：
+
+- 将它们作为选项列在命令行中。
+- 在交互命令行上使用 set 命令指定它们。
+- 在你的 $HOME 目录中创建一个名为 .nslookuprc 的文件并逐行输入选项。
+
+可用选项的列表显示在表 20-4 中。
+
+## 表 20-4：nslookup 选项
+
+| Option | Description |
+|---|---|
+| all | Print current values of options |
+| class | Set the DNS class value (default = IN). |
+| [no]debug | Turn debugging mode on (or off) (default = nodebug) |
+| [no]d2 | Turn exhaustive debugging mode on (or off) (default = nod2) |
+| domain=name | Set the default domain name to name |
+| srchlist=name1/name2 | Change default domain name to name1 and the search list to name1,name2, etc. |
+| [no]defname | Append default domain name to a single component lookup request |
+| [no]search | Append domain names in search list to the hostname (default = search) |
+| port=value | Change TCP/UDP port to value (default = 53) |
+| querytype=value | Change type of information requested to type value (default = A) |
+
+## 表 20-4：（续）
+
+| Option | Description |
+|---|---|
+| type=value | Same as querytype |
+| [no]recurse | Tell nameserver to query other servers to obtain an answer (default = recurse) |
+| retry=number | Set number of retries to number (default = 4) |
+| root=host | Change name of root server to host (default = ns.internic.net) |
+| timeout=number | Change initial timeout interval to wait for a reply to number (default = 5 seconds) |
+| [no]vc | Always use a virtual circuit (default = novc) |
+| [no]ignoreetc | Ignore packet truncation errors (default = noignoreetc) |
+
+让我们看一个用于获取主机 www.ubuntu.com 信息的示例 nslookup 会话：
+
+```
+$ nslookup
+> www.ubuntu.com
+Server: 10.0.1.1
+Address: 10.0.1.1#53
+
+Non-authoritative answer:
+Name: www.ubuntu.com
+Address: 91.189.94.249
+>
+```
+
+当你在命令行上输入 nslookup 时，它会产生自己的命令行提示符，大于号（>）。此时，你可以输入命令或要查找信息的主机名。
+
+以下示例显示了检索典型主机名的基本 IP 地址信息。你还可以为特定类型的 DNS 记录设置输出以检索该信息：
+
+```
+> set type=MX
+> ubuntu.com
+Server: 10.0.1.1
+Address: 10.0.1.1#53
+
+Non-authoritative answer:
+ubuntu.com mail exchanger = 10 mx.canonical.com
+
+Authoritative answers can be found from:
+>exit
+$
+```
+
+在此示例中，我将记录类型设置为 MX 以返回该域的邮件服务器。
+
+# dig 程序
+
+dig 程序使用简单的命令行格式查询 DNS 服务器以返回域的所有信息。它为站点可能需要的所有 DNS 信息提供一站式服务。dig 命令的格式如下：
+
+```
+dig [@server] [options] domain [query-type] [query-class] [query-options]
+```
+
+有几种类型的参数可以修改 dig 命令检索和显示的 DNS 信息：
+
+- @server: 可选的 DNS 服务器，用于代替默认系统设置。
+- query-type: 你请求的 RR 类型信息，例如 A、SOA、NS 和 MX 记录。使用 query type any 返回有关域的所有可用信息。
+- query-class: 你请求的网络信息类别。默认值为 Internet (IN)。
+- query-options: 用于更改 DNS 数据包中的选项值或更改 dig 输出格式。这些选项与 nslookup 程序中可用的选项镜像。
+
+除了这些参数之外，dig 命令还有自己的一组参数来指定影响 dig 操作的其他选项。表 20-5 显示了一些可用于微调 dig 命令及其输出的其他选项。
+
+## 表 20-5：dig 命令选项
+
+| Option | Description |
+|---|---|
+| -b address | Specify the source address of the query |
+| -c class | Specify the query class (default is IN) |
+| -f filename | Read a file for batch mode processing |
+| -k filename | Specify a file to read the encryption key used to sign the DNS query |
+| -p | Specify a port number to use |
+| -q name | Specify the query name |
+| -t type | Specify type of query |
+| -x addr | Specify a reverse lookup of the address specified |
+| -y | Specify an encryption key to digitally sign the DNS query |
+
+dig 程序产生的与 host 和 nslookup 相同的信息，但它提供了有关答案如何以及从何处获取的更多详细信息：
+
+```
+$ dig ubuntu.com MX
+; <<>> DiG 9.5.0-P2 <<>> ubuntu.com MX
+;; global options: printcmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6464
+```
