@@ -1,0 +1,112 @@
+
+# Apache Configuration
+
+`DocumentRoot` `/home/httpd/html`
+
+`UserDir` `public_html`
+
+`DirectoryIndex` `index.html` `index.shtml` `index.cgi`
+
+`FancyIndexing` `on`
+
+`AddIconByEncoding` (`CMP`,`/icons/compressed.gif`) `x-compress` `x-gzip`
+
+`AddIconByType` (`TXT`,`/icons/text.gif`) `text/*`
+
+`AddIconByType` (`IMG`,`/icons/image2.gif`) `image/*`
+
+`AddIconByType` (`SND`,`/icons/sound2.gif`) `audio/*`
+
+`AddIconByType` (`VID`,`/icons/movie.gif`) `video/*`
+
+`AddIcon` `/icons/binary.gif` `.bin` `.exe`
+
+`AddIcon` `/icons/binhex.gif` `.hqx`
+
+`AddIcon` `/icons/tar.gif` `.tar`
+
+`AddIcon` `/icons/world2.gif` `.wrl` `.wrl.gz` `.vrml` `.vrm` `.iv`
+
+`AddIcon` `/icons/compressed.gif` `.Z` `.z` `.tgz` `.gz` `.zip`
+
+`AddIcon` `/icons/a.gif` `.ps` `.ai` `.eps`
+
+`AddIcon` `/icons/layout.gif` `.html` `.shtml` `.htm` `.pdf`
+
+`AddIcon` `/icons/text.gif` `.txt`
+
+`AddIcon` `/icons/c.gif` `.c`
+
+`AddIcon` `/icons/p.gif` `.pl` `.py`
+
+`AddIcon` `/icons/f.gif` `.for`
+
+`AddIcon` `/icons/dvi.gif` `.dvi`
+
+`AddIcon` `/icons/uuencoded.gif` `.uu`
+
+`AddIcon` `/icons/script.gif` `.conf` `.sh` `.shar` `.csh` `.ksh` `.tcl`
+
+`AddIcon` `/icons/tex.gif` `.tex`
+
+`AddIcon` `/icons/bomb.gif` `core`
+
+`AddIcon` `/icons/back.gif` `..`
+
+`AddIcon` `/icons/hand.right.gif` `README`
+
+`AddIcon` `/icons/folder.gif` `^^DIRECTORY^^`
+
+`AddIcon` `/icons/blank.gif` `^^BLANKICON^^`
+
+`DefaultIcon` `/icons/unknown.gif`
+
+`ReadmeName` `README`
+
+`HeaderName` `HEADER`
+
+`IndexIgnore` `.??*` `*~` `*#` `HEADER*` `README*` `RCS`
+
+`AccessFileName` `.htaccess`
+
+`TypesConfig` `/etc/mime.types`
+
+`DefaultType` `text/plain`
+
+`AddEncoding` `x-compress` `Z`
+
+`AddEncoding` `x-gzip` `gz`
+
+`AddLanguage` `en` `.en`
+
+`AddLanguage` `fr` `.fr`
+
+`AddLanguage` `de` `.de`
+
+`AddLanguage` `da` `.da`
+
+`AddLanguage` `el` `.el`
+
+`AddLanguage` `it` `.it`
+
+`LanguagePriority` `en` `fr` `de`
+
+`Alias` `/icons/` `/home/httpd/icons/`
+
+`ScriptAlias` `/cgi-bin/` `/home/httpd/cgi-bin/`
+
+`AddType` `text/html` `.shtml`
+
+`AddHandler` `server-parsed` `.shtml`
+
+`AddHandler` `imap-file` `map`
+
+`BrowserMatch` `"Mozilla/2"` `nokeepalive`
+
+`BrowserMatch` `"MSIE 4\.0b2;"` `nokeepalive` `downgrade-1.0` `force-response-1.0`
+
+`BrowserMatch` `"RealPlayer 4\.0"` `force-response-1.0`
+
+`BrowserMatch` `"Java/1\.0"` `force-response-1.0`
+
+`BrowserMatch` `"JDK/1\.0"` `force-response-1.0`
