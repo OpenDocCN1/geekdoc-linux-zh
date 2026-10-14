@@ -1,0 +1,71 @@
+
+#### 清单10.2 DWARF指令解码器描述的VHDL版本。（续）
+
+```
+192-         drv_d_data<='1'; ld_pc<='1';-- load it into program counter
+193-     ELSE                 -- else step over the jump address to the next instr.
+194-         ld_pc<='1'; inc_pc<='1';-- increment PC past address
+195-     END IF;
+196-     next_st <= T0;        -- done with this instruction; get another
+197- WHEN LOAD_REG =>        -- load ACC with data from a register
+198-     pass<='1'; ld_acc<='1';
+199-     next_st <= T0;        -- done with this instruction; get another
+200- WHEN LOAD_INX =>        -- load ACC with data whose memory addr is in reg
+201-     addr_sel<=DATA; read<='1';-- address memory with reg value
+202-     drv_d_data<='1'; pass<='1'; ld_acc<='1';-- RAM data into ACC
+203-     next_st <= T0;        -- done with this instruction; get another
+204- WHEN LOAD_IMM =>        -- load ACC with data from program memory
+205-     addr_sel<=PROGRAM; read<='1'; drv_d_data<='1';-- read RAM data
+206-     pass<='1'; ld_acc<='1';-- pass it thru the ALU and into ACC
+207-     ld_pc<='1'; inc_pc<='1';-- inc the PC to the next instr.
+208-     next_st <= T0;        -- done with this instruction; get another
+209- WHEN LOAD_DIR =>        -- load R0 with the address of the data
+210-     addr_sel<=PROGRAM; read<='1'; drv_d_data<='1';-- get RAM addr
+211-     R0A<='1'; ld_reg<='1';-- store address in R0
+212-     ld_pc<='1'; inc_pc<='1';-- increment PC to the next instr.
+213- next_st <= T2; -- not done with this instruction; keep going
+214- WHEN LOAD_IND => -- load R0 with the addr of the addr of the data
+215- addr_sel<=PROGRAM; read<='1'; drv_d_data<='1';-- get addr
+216- R0A<='1'; ld_reg<='1';-- store address in R0
+217- ld_pc<='1'; inc_pc<='1';-- increment PC to the next instr.
+218- next_st <= T2; -- not done with this instruction; keep going
+219- WHEN STORE_REG => -- store ACC into a register
+220- drv_d_acc<='1'; ld_reg<='1';
+221- next_st <= T0; -- done with this instruction; get another
+222- WHEN STORE_INX => -- store ACC into memory whose addr is in reg
+223- addr_sel<=DATA; -- address RAM with the contents of a register
+224- drv_d_acc<='1'; write<='1';-- output ACC value on data bus
+225- next_st <= T0; -- done with this instruction; get another
+226- WHEN STORE_DIR => -- get address at which to store accumulator
+227- addr_sel<=PROGRAM; read<='1'; drv_d_data<='1';-- get RAM addr
+228- R0A<='1'; ld_reg<='1';-- store address in R0
+229- ld_pc<='1'; inc_pc<='1';-- increment PC to the next instr.
+230- next_st <= T2; -- not done with this instruction; keep going
+231- WHEN STORE_IND => -- get addr of addr at which to store ACC
+232- addr_sel<=PROGRAM; read<='1'; drv_d_data<='1';-- get address
+233- R0A<='1'; ld_reg<='1';-- store address in R0
+234- ld_pc<='1'; inc_pc<='1';-- increment PC to the next instr.
+235- next_st <= T2; -- not done with this instruction; keep going
+236- WHEN ADD_OP => -- ACC <- ACC + Register
+237- pass<='0'; add<='1'; ld_acc<='1';
+238- ld_cry<='1'; alu_cry<='1';-- update carry with ALU carry out
+239- next_st <= T0; -- done with this instruction; get another
+240- WHEN XOR_OP => -- ACC <- ACC $ Register
+241- pass<='0'; add<='0'; ld_acc<='1';
+242- next_st <= T0; -- done with this instruction; get another
+243- WHEN TEST => -- bitwise-AND test of ACC against a register
+244- ld_z <='1'; -- zero flag is set if the result is 0
+245- next_st <= T0; -- done with this instruction; get another
+246- WHEN SET_C => -- set carry flag
+247- ld_cry<='1'; set_cry<='1';
+248- next_st <= T0; -- done with this instruction; get another
+249- WHEN CLEAR_C => -- clear carry flag
+250- ld_cry<='1'; set_cry<='0';
+251- next_st <= T0; -- done with this instruction; get another
+252- WHEN OTHERS =>
+253- END CASE;
+254- WHEN T2 => -- instruction processing
+255-    CASE ir(7 DOWNTO 3) IS
+256-      WHEN JSR => -- store program counter on stack and increment SP
+257-        drv_d_pc<='1'; addr_sel<=STACK; write<='1'; --store PC onto stk
+```
