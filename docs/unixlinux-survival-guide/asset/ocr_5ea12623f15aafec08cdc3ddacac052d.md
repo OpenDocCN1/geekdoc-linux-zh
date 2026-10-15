@@ -1,0 +1,13 @@
+Naturally commercial products like PureLoad™ or others like it allow much finer grained tests, but one of the goals of this book is to help you use the tools at your disposal in the operating system. Besides, if you write a script, then you learn something about the system and know for sure what happens.
+
+# 5.3 BOOTING A SYSTEM
+
+The sequence a computer starts with is, independent of the used operating system, more or less the same on all platforms. The system receives power, and a ROM or PROM starts to execute the code stored within. What a program does next depends on the hardware.
+
+If it is an x86-based platform, the BIOS tries to find an executable program on whatever storage media is available. There is no further interaction with the user. Many other hardware platforms come with an intelligent, operating system–type program that allows the user to interact with the hardware without using an operating system. The PA-RISC architecture (something that evolved with extinction) allows a limited interaction with the found hardware before the operating system starts to run. One step further in the evolution is the Open Firmware system (http://playground.sun.com/1275/) found in systems by Sun Microsystems, Fujitsu Siemens, and Apple. The system is based on ANS Forth and allows, among other things, the definition of variables to ease the access to disks or network cards. This means an Open Firmware–based system is able to connect to another system on the network and load the operating system from that system instead of using the local harddisk. It is even possible to write programs for Open Firmware; there are hardware updates by Sun that get started from the Open Firmware prompt to ensure that there is no activity on the system during the upgrade. If you use a hardware architecture with similar capabilities, then you should make sure to understand the possibilities of such a system. The Open Firmware–based systems allow you to use the command probe-scsi-all to start the self-test of all connected SCSI devices and report the findings—a quick way to test the connected harddisks.
+
+If the computer starts to load the operating system, either automatically or by a command issued at the hardware prompt, then every *NIX system goes through stages, the so-called init states.
+
+# 5.3.1 The Init States
+
+The meaning of the different init states varies between the various *NIX derivates. There is a general distinction between init states used for administrative purposes and the so-called multi-user init states. The system used here as an example is a Solaris system, and the init states there are compared to the differences in HP-UX,

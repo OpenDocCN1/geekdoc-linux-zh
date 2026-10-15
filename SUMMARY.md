@@ -2375,6 +2375,7 @@
 +   [UNIX 用户手册](docs/unix-users-handbook/README.md)
 +   [Unix：Unix 宇宙视觉化蓝图 (视觉化阅读，深度学习)](docs/unix-your-visual-blueprint-to-the-universe-of-unix-visual-re/README.md)
 +   [Unix 用户指南：100% 详尽可靠：Unix 操作系统高级工具与配置详解](docs/unix-библия-пользователя-100-исчерпывающе-достоверно-то-что-/README.md)
++   [Unix/Linux 生存指南](docs/unixlinux-survival-guide/README.md)
 +   [非官方 Red Hat RHCSA 8 & 9 考试 (EX200) 完全参考：红 Hat企业 Linux (RHEL) 8 & 9](docs/unofficial-red-hat-rhcsa-8-9-exam-ex200-complete-reference-r/README.md)
 +   [Linux 内核破解不靠谱指南](docs/unreliable-guide-to-hacking-the-linux-kernel/README.md)
 +   [Linux 上的 DB2 快速指南](docs/up-and-running-with-db2-on-linux-title-from-title-screen---r/README.md)

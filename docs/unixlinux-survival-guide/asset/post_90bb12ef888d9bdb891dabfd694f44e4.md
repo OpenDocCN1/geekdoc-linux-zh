@@ -1,0 +1,63 @@
+
+processes as an alternative to init 3, as in IRIX. HP-UX uses this runlevel as standard runlevel including the graphical user interface.
+
+## 5.3.1.6 init 5
+
+Runlevel 5 is very dangerous for system administrators switching back and forth between Solaris and GNU-Linux. Switching to init 5 in Solaris takes the system down and removes power if supported by the hardware. GNU-Linux uses this runlevel as standard runlevel, similar to init 3 in Solaris and IRIX and init 4 in HP-UX, respectively. System administrators switching between Solaris and GNU-Linux should put a visible indication about the differences on the system’s housing.
+
+## 5.3.1.7 init 6
+
+Runlevel 6 is used to reboot the system; the same holds true for IRIX and GNU-Linux.
+
+![](img/e121d664a879353483b8ef78e54b87ea_174_0.png)
+
+> There is a saying that you can determine the age of a system administrator by the commands he uses to reboot a system. The rule of thumb is this: the older the administrator the more likely you are to see the commands sync Enter sync Enter reboot Enter.
+
+> What does the command sync do? It is used to flush the buffers to the respective disks. Often the reply is like this: “But this is what the system does anyway, doesn’t it?” Right, if all goes according to plan.
+
+> The separate command should not be necessary anymore. But the author uses the word “should” deliberately, meaning “most of the time.” Using the eight characters and the Enter key twice might make the difference if the data is written to the disk or not. The author’s opinion is simple (regardless of age): the two syncs should be used, especially if the system feels strange. Losing data for the sake of ten pressed keys is not an option.
+
+## 5.3.1.8 init 0
+
+Runlevel 0 is used to halt the machine. If the hardware uses Open Firmware, its prompt will be shown. The same holds true for HP-UX and IRIX. This runlevel is reserved in AIX, and GNU-Linux simply halts the system if run on x86.
+
+## 5.3.2 init State Overview
+
+Table 5.4 gives an overview of the init states on different systems.
+
+### TABLE 5.4 init State Overview
+
+| State | Solaris | AIX | HP-UX | IRIX | Linux |
+|---|---|---|---|---|---|
+| 0 | Firmware | Reserved | Firmware | Powerdown | halt |
+| 1 | Admin | Reserved | Admin | Admin | Admin |
+| 2 | Multi-User local | Multi-User NFS xdm | Multi-User local | Multi-User local | Multi-User local |
+| 3 | Multi-User NFS xdm | User defined NFS | Multi-User NFS | Multi-User NFS | Multi-User NFS |
+| 4 | Alternate Multi-User | User defined | Multi-User NFS xdm | Alternate Multi-User | Not used |
+| 5 | Shutdown and Power down | User defined | Not used | Firmware | Multi-User NFS xdm |
+| 6 | Reboot | User defined (up to 9) | Not used | Reboot | Reboot |
+
+## 5.4 SUMMARY
+
+This chapter discussed the installation of a system, including the planning phase and some of the necessary configurations. It continued with a discussion about the difference between an installed system and a system that is ready for production, followed by hints concerning what needs to be done and a description of a “burn-in.” The chapter closed with a refresher about the various init states and their use on different *NIX brands.
+
+## 6 The Test System and the “Secure” System
+
+### In This Chapter
+
+- A System for Testing
+- Documentation
+
+Before you apply patches and upgrades or deploy new software on the production systems, you need to test. The first part of this chapter discusses what a system to run these tests should look like. Another system that should be part of every system administrator’s tool chest is the so-called secure system. In this sense, a secure system is not a special system, but rather a concept that helps to deal with certain aspects of the daily workload. (How to secure a set of systems is discussed in Chapter 7) Another topic mentioned often in this book is documentation. *NIX already provides tools to tackle this touchy subject right out of the box.
+
+## 6.1 A SYSTEM FOR TESTING
+
+It is not easy to find the right arguments for a test system, especially to "sell" it to someone not working in the system administration profession. The following section is an introduction to the ideas behind using a system for testing. Hopefully the case is persuasive enough to arm you with the right information to get it into your budget.
+
+### 6.1.1 Description of a Test System
+
+The test system should be exactly the same system as the production system, in a perfect world. If you manage to put an exact twin of the production system(s) into the budget to be used as a test bed, congratulations, and please proceed to Section 6.1.2 "A 'Secure' System," because you are done here. All others, bear with the author. The system to run tests on should at least be able to mimic the behavior of the production system. This means it should have the same CPU, not necessarily the same amount of RAM. Testing software, upgrades, and patches intended for a Solaris box on a GNU-Linux system could be interesting, to say the least, but the quality of the findings will obviously lack substance. The test system should be able to run all the software deployed on the production system, not necessarily at the same speed, though. It should be possible to re-create scenarios that exist on the production systems or test scenarios intended to be deployed on the production system. If you want to deploy a customization of the application software bought at SAP, for example, you should test it for errors and stability on a system meant for testing only first. This is a prerequisite to deploy any customization on the system. In other words, the procedure is a requirement before deployment of the system in your company and still holds true if you need to apply further customizations while you are using the system for production. It is that simple: you have to have a test system. If you deploy first on the production system and test later, good luck calling support.
+
+This approach to testing is valid in all aspects regarding your systems, regardless of the software or operating system used. But here comes the upside common to all systems intended for testing only: they should be able to mimic the real system in a deterministic manner. Nothing else is required. The findings and results of the tests should mirror similar tests executed on the real system.
+
+The test system should not be used to run production services. Testing them, even public testing inside the company, is okay, but as soon as the service becomes mission critical, it has to be moved to a real server. Make sure there are no problems whatsoever. If the test system goes down in the most horrible way you can imagine, that is what it is there for. Its sole purpose is to find errors and problems without disrupting the flow of work inside the company. You should create a good

@@ -1,0 +1,861 @@
+- - '##'
+  - LIMITED WARRANTY AND DISCLAIMER OF LIABILITY
+- - '##'
+  - 前言
+- - '###'
+  - 1 需要检查的内容
+- - '####'
+  - 本章内容
+- - '###'
+  - 1.1 环境变量
+- - '####'
+  - 1.1.1 $PATH 变量
+- - '####'
+  - 清单 1.1 显示当前的 $PATH
+- - '####'
+  - 1.1.2 提示符
+- - '####'
+  - 清单 1.2 通用提示符
+- - '####'
+  - 清单 1.3 bash 的替代序列
+- - '####'
+  - LISTING 1.4 包含当前路径的序列
+- - '####'
+  - 1.1.3 $MANPATH 变量
+- - '####'
+  - LISTING 1.5 在 Solaris 上创建索引
+- - '####'
+  - LISTING 1.6 GNU-Linux 上的 $MANPATH
+- - '####'
+  - LISTING 1.7 Solaris 上的 $MANPATH
+- - '####'
+  - LISTING 1.8 OS X 上的 $MANPATH
+- - '####'
+  - LISTING 1.9 使用 man -k 搜索手册页
+- - '####'
+  - LISTING 1.10 使用 man 访问各章节中的信息
+- - '#####'
+  - NAME
+- - '#####'
+  - SYNOPSIS
+- - '#####'
+  - DESCRIPTION
+- - '####'
+  - 1.1.4 现在几点了？
+- - '#####'
+  - 1.1.4.1 如何设置 $TZ
+- - '#####'
+  - 1.1.4.2 如何设置时间
+- - '####'
+  - LISTING 1.11 手动设置时间
+- - '###'
+  - 1.2 准备工作
+- - '####'
+  - 1.2.1 root 的 $HOME
+- - '####'
+  - LISTING 1.12 创建 root $HOME
+- - '####'
+  - 1.2.2 更多的 root？
+- - '####'
+  - LISTING 1.13 Finding Users with UID 0
+- - '####'
+  - LISTING 1.14 Finding Users with UID 0 (More Than One Superuser)
+- - '####'
+  - 1.2.3 How Many Volumes?
+- - '####'
+  - LISTING 1.15 Displaying the Mounted Volumes
+- - '####'
+  - 1.2.4 What Is Going On?
+- - '#####'
+  - 1.2.4.1 ps
+- - '####'
+  - LISTING 1.16 Running ps
+- - '####'
+  - LISTING 1.17 Count of Running sendmail Processes
+- - '####'
+  - LISTING 1.18 Displaying Executing sendmail Processes
+- - '####'
+  - LISTING 1.19 Suppressing the Display of Lines Containing grep
+- - '####'
+  - LISTING 1.20 Suppressing the Display of Lines Containing grep without a Second
+    Process
+- - '#####'
+  - 1.2.4.2 top
+- - '####'
+  - LISTING 1.21 top Default Display
+- - '####'
+  - LISTING 1.22 top Filtering One User
+- - '####'
+  - LISTING 1.23 top Filtered Display
+- - '#####'
+  - 1.2.4.3 sar
+- - '####'
+  - LISTING 1.24 sar One Shot (1)
+- - '####'
+  - LISTING 1.25 sar One Shot (2)
+- - '####'
+  - 1.2.5 Create a List
+- - '####'
+  - LISTING 1.28 Creation of a List of One Hard Disk Only
+- - '####'
+  - LISTING 1.29 Adding Directories to the List
+- - '####'
+  - LISTING 1.30 Searching the Location of a File
+- - '####'
+  - 1.2.6 邮件
+- - '#####'
+  - LISTING 1.31 命令 mailstats 的输出
+- - '#####'
+  - LISTING 1.32 激活邮件统计收集
+- - '#####'
+  - LISTING 1.33 供进一步处理的输出
+- - '####'
+  - 1.2.7 已安装软件
+- - '###'
+  - 1.3 SUMMARY
+- - '##'
+  - 2 Working on *NIX
+- - '###'
+  - In This Chapter
+- - '###'
+  - 2.1 EXECUTABLES ON *NIX
+- - '####'
+  - 2.1.1 Why Is a Program Executed?
+- - '####'
+  - '2.1.2 What Is #!?'
+- - '####'
+  - LISTING 2.1 The First Line of an Executable Script
+- - '####'
+  - 2.1.3 Why Use ./ ?
+- - '###'
+  - 2.2 SHELL SCRIPTS STEP BY STEP
+- - '####'
+  - 2.2.1 创建脚本
+- - '#####'
+  - 清单 2.2 用于开发的目录结构 1
+- - '#####'
+  - 清单 2.3 用于开发的目录结构 2
+- - '#####'
+  - 选择编辑器
+- - '#####'
+  - 清单 2.4 ToDo.txt 的内容
+- - '#####'
+  - 清单 2.5 将 ToDo.txt 纳入版本控制
+- - '####'
+  - LISTING 2.6 Creating the First Version of the Script df_check.sh
+- - '####'
+  - LISTING 2.8  Filtering with grep
+- - '####'
+  - LISTING 2.9 Filtering with grep and awk
+- - '####'
+  - LISTING 2.10 Using the Commands in the Script
+- - '####'
+  - 2.2.2 使用变量
+- - '#####'
+  - LISTING 2.11 The df_check.sh Script Using Variables
+- - '#####'
+  - LISTING 2.12 Using rlog to List the Existing Versions
+- - '#####'
+  - LISTING 2.13 Displaying the Last Modification Using rlog
+- - '####'
+  - 2.2.3 Extending the Script
+- - '#####'
+  - LISTING 2.14 df_check.sh Output to File
+- - '#####'
+  - LISTING 2.15 Final df_check.sh Script
+- - '####'
+  - LISTING 2.16 Output of df_check.sh
+- - '###'
+  - 2.3 PERL SCRIPTS
+- - '####'
+  - 2.3.1 Creating a Perl Script
+- - '####'
+  - LISTING 2.17 Creating the Structure for the Perl Example
+- - '####'
+  - LISTING 2.18 First Version of the Perl Example
+- - '####'
+  - LISTING 2.19 Output of the Perl Script
+- - '####'
+  - LISTING 2.20 Splitting the Records into Fields
+- - '####'
+  - LISTING 2.21 Perl Script to Extract Usernames and IDs
+- - '####'
+  - 2.3.2 Using the Getopt Perl Module
+- - '####'
+  - LISTING 2.22 使用 Getopt
+- - '###'
+  - 2.4 自动化
+- - '####'
+  - 2.4.1 at 命令
+- - '####'
+  - LISTING 2.23 在当天 17:00 执行命令
+- - '####'
+  - LISTING 2.24 显示 at 队列
+- - '####'
+  - LISTING 2.25 从队列中移除已安排的作业
+- - '####'
+  - LISTING 2.26 Execution of at Using a File
+- - '####'
+  - LISTING 2.27 Contents of a Job Ticket (Solaris)
+- - '####'
+  - 2.4.2 The cron Mechanism
+- - '#####'
+  - 2.4.2.1 The crontab
+- - '####'
+  - LISTING 2.28 crontab 模板
+- - '####'
+  - LISTING 2.29 crontab 中重复作业的条目
+- - '#####'
+  - 2.4.2.2 cron 后台进程
+- - '###'
+  - 2.5 SUMMARY
+- - '##'
+  - 3 Maintenance
+- - '###'
+  - In This Chapter
+- - '###'
+  - 3.1 什么是基线化？
+- - '####'
+  - 3.1.1 为什么要基线化？
+- - '####'
+  - 3.1.2 基线化什么
+- - '####'
+  - 3.1.3 数据应保留多长时间？
+- - '####'
+  - 3.1.4 基线化的目录结构
+- - '####'
+  - LISTING 3.1 存储基线脚本和数据的目录结构
+- - '####'
+  - 3.1.5 监控磁盘空间
+- - '####'
+  - LISTING 3.2 Registering Free Hard Disk Space
+- - '####'
+  - LISTING 3.3 Script to Monitor Directories
+- - '####'
+  - 3.1.6 监控 CPU
+- - '####'
+  - LISTING 3.4 Creating Log Files from sar Output
+- - '####'
+  - LISTING 3.5 Script to Store the rung Size
+- - '####'
+  - 3.1.8 Network Retransmissions
+- - '####'
+  - LISTING 3.7 Transmissions and Retransmissions on Solaris
+- - '####'
+  - LISTING 3.8 Transmissions and Retransmissions on OS X
+- - '####'
+  - LISTING 3.9 Transmissions and Retransmissions on GNU-Linux
+- - '####'
+  - LISTING 3.10 Recording the Retransmission Ratio (Solaris)
+- - '#####'
+  - LISTING 3.11 Recording the Retransmission Ratio (GNU-Linux)
+- - '#####'
+  - 3.1.9 TIME_WAIT 的含义是什么？
+- - '#####'
+  - 3.1.10 监控 SYN 数据包
+- - '####'
+  - LISTING 3.13 Recording the Number of Connections Regarding the SYN State
+- - '####'
+  - 3.1.11 Creating the Graphs
+- - '####'
+  - LISTING 3.14 启动 gnuplot
+- - '####'
+  - LISTING 3.15 用于 base_netconns.png 的命令文件
+- - '####'
+  - LISTING 3.16 gnuplot 中的 help 函数
+- - '####'
+  - LISTING 3.17 用于输出数据集的命令文件
+- - '####'
+  - LISTING 3.18 Generating a Command File with Perl
+- - '####'
+  - FIGURE 3.3 Graph with a scaled axis.
+- - '####'
+  - LISTING 3.19 Script to Create the Graphs
+- - '####'
+  - 3.1.12 使用浏览器显示图形
+- - '#####'
+  - 清单 3.20 用于显示图形的 HTML 代码
+- - '#####'
+  - 清单 3.21 样式表
+- - '####'
+  - 3.1.13 管理日志文件
+- - '#####'
+  - 清单 3.22 用于轮转日志文件的脚本
+- - '####'
+  - LISTING 3.23 Saving the Log Files with a Date
+- - '###'
+  - 3.2 USERS AND GROUPS
+- - '####'
+  - 3.2.1 What Is a User?
+- - '####'
+  - 3.2.2 What Is the passwd File?
+- - '####'
+  - LISTING 3.24 A User Record in the passwd File
+- - '####'
+  - 3.2.3 What Is the shadow File?
+- - '####'
+  - LISTING 3.25 Access Permissions of passwd and shadow
+- - '####'
+  - LISTING 3.26 shadow 文件中的用户记录
+- - '####'
+  - 3.2.4 什么是骨架文件？
+- - '####'
+  - LISTING 3.27 用户的骨架目录
+- - '####'
+  - LISTING 3.28 开发人员的骨架目录
+- - '####'
+  - 3.2.5 什么是组？
+- - '####'
+  - 3.2.6 group 文件有什么用？
+- - '#####'
+  - LISTING 3.29 组记录的结构
+- - '####'
+  - 3.2.7 如何创建用户
+- - '####'
+  - 3.2.8 如何移动用户
+- - '#####'
+  - LISTING 3.30 The Use of cp
+- - '#####'
+  - LISTING 3.31 Moving a Directory with cpio
+- - '####'
+  - 3.2.9 How to Move a User to a Different System
+- - '###'
+  - 3.3 DAILY TASKS
+- - '####'
+  - 3.3.1 Check the Uptime
+- - '####'
+  - LISTING 3.33 The Output of uptime
+- - '####'
+  - 3.3.2 syslog 告诉你什么
+- - '#####'
+  - LISTING 3.34 检查 syslog 主文件中的错误消息
+- - '#####'
+  - LISTING 3.35 防火墙日志（Solaris）
+- - '####'
+  - 3.3.3 检查邮件数量
+- - '#####'
+  - LISTING 3.36 检查 mailstats 输出
+- - '####'
+  - 3.3.4 检查基线
+- - '####'
+  - 3.3.5 Security Patches
+- - '####'
+  - MAINTENANCE CONTRACTS ARE IMPORTANT
+- - '####'
+  - 3.3.6 Customer Relations
+- - '####'
+  - 3.3.7 Management Relations
+- - '###'
+  - 3.4 SUMMARY
+- - '##'
+  - 4 Backup
+- - '###'
+  - In This Chapter
+- - '####'
+  - 4.1.2 每周备份
+- - '####'
+  - 4.1.3 每月备份
+- - '####'
+  - 4.1.4异地备份
+- - '####'
+  - 4.1.5 “备份窗口”
+- - '####'
+  - 4.1.6 备份介质
+- - '#####'
+  - 4.1.6.1 CD-R/CD-RW/DVD-R/DVD-RW
+- - '#####'
+  - 4.1.6.2 磁带
+- - '###'
+  - 4.2 备份相关提示
+- - '####'
+  - 4.2.1 tar 重要文件
+- - '#####'
+  - 清单 4.1 备份重要文件的脚本
+- - '####'
+  - 4.2.4 使用 rcs 进行备份
+- - '#####'
+  - 清单 4.2 检入 hosts
+- - '####'
+  - 4.2.5 备份到另一台系统
+- - '####'
+  - 4.2.6 克隆启动磁盘
+- - '####'
+  - 4.2.8 Check the Backups!
+- - '###'
+  - 4.3 SUMMARY
+- - '##'
+  - 5 设置系统
+- - '###'
+  - 5.1 安装
+- - '####'
+  - 5.1.1 规划安装
+- - '####'
+  - 定位新文件？
+- - '####'
+  - 5.1.2 磁盘分区
+- - '####'
+  - 'Partitions:'
+- - '####'
+  - 5.1.4 Copy the Important Commands
+- - '####'
+  - 5.1.5 ntp Setup
+- - '####'
+  - Common Rules Regarding the Use of Time Servers
+- - '####'
+  - LISTING 5.2 Getting the Time
+- - '####'
+  - LISTING 5.3 ntp.conf
+- - '####'
+  - servers
+- - '####'
+  - check every 12*12 seconds
+- - '####'
+  - max check 17*17 seconds
+- - '####'
+  - LISTING 5.4 ntp.conf Internal Server
+- - '####'
+  - servers
+- - '####'
+  - check every 12*12 seconds
+- - '####'
+  - max check 17*17 seconds
+- - '####'
+  - LISTING 5.5 ntp.conf Internal System
+- - '####'
+  - LISTING 5.6 crontab entry
+- - '####'
+  - LISTING 5.7 ntp.keys
+- - '####'
+  - LISTING 5.8 ntp.conf Using Keys (Server)
+- - '####'
+  - servers
+- - '####'
+  - check every 12*12 seconds
+- - '####'
+  - max check 17*17 seconds
+- - '####'
+  - LISTING 5.9 ntp.conf Using Keys (Client)
+- - '####'
+  - LISTING 5.10 Query Using Keys
+- - '###'
+  - 5.2 HOW TO READY A SYSTEM FOR PRODUCTION
+- - '####'
+  - 5.2.1 Setting the $PATH
+- - '####'
+  - 5.2.2 配置 syslog.conf
+- - '####'
+  - 表 5.1 syslog 设施
+- - '####'
+  - 表 5.2 syslog 设施级别
+- - '####'
+  - 表 5.3 告诉 syslog 将消息存储在哪里
+- - '####'
+  - LISTING 5.12 Configuration for logrotate to Rotate /var/log/localmessages
+- - '####'
+  - LISTING 5.15 A Script to Monitor the File authlog
+- - '####'
+  - 5.2.3 网络中所有系统共用的文件
+- - '#####'
+  - LISTING 5.16 An Entry in the hosts File
+- - '#####'
+  - LISTING 5.17 The File resolv.conf
+- - '####'
+  - LISTING 5.19 使用 UID
+- - '####'
+  - LISTING 5.20 禁用 .rhosts、hosts.equiv 和 .netrc
+- - '####'
+  - LISTING 5.22 /tmp 目录
+- - '####'
+  - LISTING 5.23 设置粘滞位
+- - '####'
+  - 使用 chmod 与 1770
+- - '####'
+  - 列表 5.25 使用 loadtest.pl
+- - '####'
+  - 列表 5.26 通过网络使用 loadtest.pl
+- - '###'
+  - 5.3 启动系统
+- - '####'
+  - 5.3.1 Init 状态
+- - '#####'
+  - 5.3.1.1 init 5
+- - '#####'
+  - 5.3.1.2 init 1
+- - '#####'
+  - 5.3.1.3 init 2
+- - '#####'
+  - 5.3.1.4 init 3
+- - '#####'
+  - 5.3.1.5 init 4
+- - '#####'
+  - 5.3.1.6 init 5
+- - '#####'
+  - 5.3.1.7 init 6
+- - '#####'
+  - 5.3.1.8 init 0
+- - '####'
+  - 5.3.2 init 状态概述
+- - '#####'
+  - 表 5.4 init 状态概述
+- - '###'
+  - 5.4 总结
+- - '##'
+  - 6 测试系统与“安全”系统
+- - '###'
+  - 本章内容
+- - '###'
+  - 6.1 用于测试的系统
+- - '####'
+  - 6.1.1 测试系统的描述
+- - '####'
+  - 6.1.2 “安全”系统
+- - '####'
+  - 表6.1 安全系统可能的配置
+- - '###'
+  - 6.2 文档
+- - '####'
+  - 6.2.1 文档工具
+- - '#####'
+  - LISTING 6.1 Directory Structure to Document Servers
+- - '#####'
+  - LISTING 6.2 Searching the Structure for Patch Information
+- - '####'
+  - LISTING 6.3 Writing a sar File
+- - '####'
+  - 6.2.1.1 Why XML?
+- - '####'
+  - 6.2.1.1 安装
+- - '#####'
+  - 6.2.1.1.2 测试安装
+- - '####'
+  - LISTING 6.4 testarticle.xml 的内容
+- - '####'
+  - LISTING 6.5 testbook.xml 的内容
+- - '####'
+  - LISTING 6.7 通过运行 maketest.sh 创建文档
+- - '####'
+  - LISTING 6.8 使用 xmllint
+- - '#####'
+  - 清单 6.9 适用于 DocBook 的 Makefile
+- - '#####'
+  - 清单 6.10 使用带目标的 make
+- - '####'
+  - 6.2.1.1.3 有关 DocBook 和 XML 的提示
+- - '#####'
+  - LISTING 6.11 Using Entities in XML
+- - '####'
+  - 6.2.1.1.4 提取信息
+- - '#####'
+  - LISTING 6.12 XSLT File to Extract Certain Information
+- - '####'
+  - 6.2.1.5 A Closing Remark Concerning DocBook and XML
+- - '####'
+  - 6.2.1.2 A Closing Remark Regarding Documentation
+- - '####'
+  - 6.2.2 Bag of Tricks
+- - '#####'
+  - 6.2.2.1 Getting Things into vi
+- - '#####'
+  - LISTING 6.13 Getting Text into vi Using :r
+- - '#####'
+  - LISTING 6.14 Contents of the File after Execution of :r
+- - '#####'
+  - LISTING 6.15 Reading the Output of Commands (stdout)
+- - '#####'
+  - LISTING 6.16 Result of r !
+- - '####'
+  - 6.2.2.2 fold 命令
+- - '####'
+  - 6.2.2.3 bc 计算器
+- - '####'
+  - 6.2.2.4 使用 RSS 进行文档记录和通信
+- - '#####'
+  - 列表 6.22 不含内容的 RSS 文档结构
+- - '#####'
+  - 列表 6.23 RSS 2.0 项目结构
+- - '#####'
+  - 列表 6.24 包含三个新闻项目的完整 RSS 文件
+- - '####'
+  - LISTING 6.25 Script for Generating the RSS File
+- - '####'
+  - LISTING 6.26 News Item in Directory articles
+- - '####'
+  - 6.2.2.5 The script Command
+- - '####'
+  - LISTING 6.27 Recording a Terminal Session Using Script
+- - '###'
+  - 6.3 摘要
+- - '##'
+  - 7 安全
+- - '###'
+  - 本章内容
+- - '###'
+  - 7.1 一般性思考
+- - '###'
+  - 7.2 文件安全
+- - '####'
+  - 列表 7.2 计算 md5 校验和
+- - '####'
+  - 列表 7.3 生成列表的摘录
+- - '####'
+  - 列表 7.4 包含文件信息的列表
+- - '####'
+  - 列表 7.5 检查文件列表
+- - '####'
+  - 列表 7.6 比较 md5 校验和
+- - '####'
+  - 7.2.3 使用 aide 检查文件
+- - '#####'
+  - LISTING 7.7 Example aide.conf (Solaris)
+- - '#####'
+  - LISTING 7.8 Creating the Initial Database
+- - '####'
+  - 7.9 节 检查目录是否发生变化
+- - '####'
+  - 7.10 节 更新 aide 数据库
+- - '###'
+  - 7.3 系统安全
+- - '####'
+  - 7.3.1 安装介质存储位置
+- - '####'
+  - 7.3.2 如何监控登录
+- - '####'
+  - 7.3.3 何时以及如何使用 chkrootkit
+- - '#####'
+  - LISTING 7.13 执行 chkrootkit
+- - '#####'
+  - LISTING 7.14 提取编译到系统命令中的路径
+- - '#####'
+  - LISTING 7.15 使用 strings 提取程序中的路径
+- - '####'
+  - 7.3.4 使用 nmap 测试系统
+- - '#####'
+  - LISTING 7.16 使用 nmap 列出 IP 段中的可用机器
+- - '#####'
+  - LISTING 7.17 对单个主机使用 nmap 进行端口扫描
+- - '#####'
+  - LISTING 7.18 使用 nmap 揭示所使用的操作系统（1）
+- - '####'
+  - LISTING 7.19 Using nmap to Reveal the Operating System Used (2)
+- - '###'
+  - 7.4 NETWORK SECURITY
+- - '####'
+  - 7.4.1 Why use ssh?
+- - '####'
+  - LISTING 7.20 Configuration File for sshd (Excerpt)
+- - '####'
+  - LISTING 7.21 Login Using ssh
+- - '####'
+  - LISTING 7.22 Transferring a File Using scp
+- - '####'
+  - LISTING 7.23 Transferring a Directory Tree
+- - '####'
+  - 7.4.2 Unused Ports and Accounts
+- - '####'
+  - LISTING 7.24 Unused Ports
+- - '####'
+  - 7.4.3 监控网络使用情况
+- - '#####'
+  - 7.4.3.1 使用 snoop 监控网络流量（Solaris）
+- - '####'
+  - LISTING 7.25 Using snoop to Sniff a Connection
+- - '####'
+  - LISTING 7.26 dig Command Issued on 192.168.0.5
+- - '####'
+  - LISTING 7.27 Displaying the Captured Packets (Default View)
+- - '####'
+  - LISTING 7.28 Displaying the Captured Packets a Little More Verbose
+- - '####'
+  - LISTING 7.29 Displaying All Captured Information
+- - '####'
+  - 7.4.3.2 Monitoring Network Traffic with tcpdump
+- - '####'
+  - TABLE 7.1 snoop Examples
+- - '####'
+  - LISTING 7.30 Monitoring an IP Address with tcpdump
+- - '####'
+  - 清单 7.31 使用 tcpdump 捕获到文件并读取存储的信息
+- - '####'
+  - 清单 7.32 更详细地显示文件
+- - '####'
+  - 清单 7.33 显示数据包的内容
+- - '####'
+  - 表 7.2 tcpdump 示例
+- - '####'
+  - 7.4.4 入侵检测
+- - '#####'
+  - 7.4.4.1 使用 snort 的 IDS
+- - '####'
+  - LISTING 7.34 Using snort as Sniffer
+- - '####'
+  - 7.4.4.2 Configuring snort
+- - '####'
+  - LISTING 7.35 Messages During the Termination of snort
+- - '####'
+  - 7.4.6.3 How to Read the Results
+- - '####'
+  - LISTING 7.36 Entry in alert
+- - '####'
+  - 7.4.7 防火墙
+- - '#####'
+  - 7.4.7.1 在每台系统上使用防火墙
+- - '####'
+  - 清单 7.38 新安装系统的 nmap 扫描
+- - '####'
+  - 清单 7.39 运行防火墙的同一系统的 nmap 扫描
+- - '####'
+  - 清单 7.40 Solaris 系统的 nmap 扫描
+- - '####'
+  - LISTING 7.41 nmap Scan of the Same System with a Running Firewall
+- - '####'
+  - 7.4.7.2 Firewalling the Inside of the Network
+- - '###'
+  - 7.5 SECURITY POLICY
+- - '####'
+  - 7.5.1 为什么好的安全策略需要与平台无关
+- - '####'
+  - 7.5.2 如何计算风险
+- - '###'
+  - 7.6 总结
+- - '###'
+  - 7.7 参考文献
+- - '##'
+  - 8 就这样了（几乎）
+- - '###'
+  - 本章内容
+- - '###'
+  - 8.1 系统管理员的职业道德
+- - '###'
+  - 8.2 结束语
+- - '##'
+  - 附录 A 一行命令
+- - '###'
+  - A.1 SHELL 命令
+- - '####'
+  - A.1.1 查找和删除核心文件
+- - '#####'
+  - LISTING A.1 Finding and Removing Core Files
+- - '####'
+  - A.1.2 Finding Directories Consuming Disk Space
+- - '#####'
+  - LISTING A.2 Display Directories by Size, Sorted
+- - '####'
+  - A.1.3 Who Is Accessing This File?
+- - '#####'
+  - LISTING A.3 Using fuser
+- - '#####'
+  - LISTING A.4 Using fuser with a Device
+- - '####'
+  - A.1.4 How to Truncate a Log File?
+- - '#####'
+  - LISTING A.5 Truncate a File
+- - '####'
+  - A.1.5 How to Find the Libraries a Program Requires?
+- - '#####'
+  - LISTING A.6 Identifying the Required Libraries with ldd
+- - '####'
+  - A.1.6 如何更改文件名中的大小写
+- - '#####'
+  - 代码清单 A.7 将所有名称改为小写
+- - '###'
+  - A.2 Solaris 特有内容
+- - '####'
+  - A.2.1 prstat
+- - '####'
+  - A.2.2 注册 Solaris 系统
+- - '#####'
+  - 代码清单 A.8 在 Solaris 中禁用注册
+- - '###'
+  - A.3 sed 流编辑器
+- - '####'
+  - A.3.1 在找到搜索结果后创建空行
+- - '#####'
+  - 代码清单 A.9 使用 sed 插入空行
+- - '####'
+  - A.3.2 删除行首空格和制表符
+- - '#####'
+  - 代码清单 A.10 删除行首空白
+- - '#####'
+  - LISTING A.11 Conditional Removal of Whitespace
+- - '####'
+  - A.3.3 Inserting Characters at the Beginning of a Line
+- - '#####'
+  - LISTING A.12 Inserting Characters at the Beginning of the Line
+- - '###'
+  - A.4 THE VI EDITOR
+- - '####'
+  - A.4.1 Cursor Movement
+- - '####'
+  - A.4.2 Delete and Change
+- - '####'
+  - A.4.3 Global "Search and Replace"
+- - '#####'
+  - LISTING A.13 "Search and Replace" within the Whole Document
+- - '####'
+  - A.A.4 Using Abbreviations
+- - '#####'
+  - LISTING A.14 Definition of an Abbreviation in vi
+- - '#####'
+  - LISTING A.15 Abbreviations for Perl
+- - '####'
+  - A.4.5 Joining Lines
+- - '#####'
+  - LISTING A.16 Joining Lines in vi
+- - '####'
+  - A.4.6 A Short Table with Important vi Commands
+- - '####'
+  - TABLE A.1 Important vi Commands
+- - '###'
+  - A.5 日历
+- - '####'
+  - A.5.1 cal
+- - '####'
+  - A.5.2 gcal
+- - '###'
+  - A.6 ORACLE
+- - '####'
+  - A.6.1 向表空间添加数据文件
+- - '####'
+  - A.6.2 显示属于表空间的数据文件
+- - '####'
+  - A.6.3 移动或重命名数据文件
+- - '#####'
+  - 清单 A.22 移动或重命名数据文件
+- - '####'
+  - A.6.4 强制日志切换
+- - '#####'
+  - 清单 A.23 强制日志切换
+- - '##'
+  - B
+- - '###'
+  - B.1 Solaris 的软件
+- - '###'
+  - B.2 AIX 的软件
+- - '###'
+  - B.3 HP-UX 的软件
+- - '###'
+  - B.4 IRIX 的软件
+- - '##'
+  - 附录C 互联网
+- - '####'
+  - 表C.1 有用的互联网链接
+- - '##'
+  - 附录D 关于CD-ROM
+- - '####'
+  - 总体系统要求
+- - '####'
+  - 插图
+- - '####'
+  - 第2章（CH02）
+- - '####'
+  - 第3章（CH03）
+- - '####'
+  - 第4章（CH04）
+- - '####'
+  - 第5章 (CH05)
+- - '####'
+  - 第6章 (CH06)
+- - '####'
+  - 第7章 (CH07)
+- - '##'
+  - 索引

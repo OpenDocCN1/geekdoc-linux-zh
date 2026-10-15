@@ -1,0 +1,135 @@
+
+
+time-host, 8
+timestamps, 9
+tmp directory, 152
+$TODAY variable, 116
+ToDo.txt, 30
+top command, 15–17
+touch command, 143
+tripwire command, 206
+Trojans, 199
+
+U
+UIDs, 91
+$MAXUID variable, 150
+setting up production systems, 149–150
+UID 0, 10–12
+See also users
+uname command, 171
+unlocking files, 31
+uptime, checking, 99–100
+user data in log files, 63, 65
+user syslog facility, 140
+useradd command, 96
+user-context processes, 92
+users
+  creating, 96
+  described, 91
+  fuser command, 257–258
+  listing all, script for, 41–47
+  moving, 96–98
+  moving to different systems, 98–99
+  password file information, 91–92, 149
+  setting up production systems, 149–150
+  shadow file information, 92–93
+  skeleton directory, 93–95
+  UID (User Identification Number), 91
+  with UID 0, 10–12
+  unused accounts and security, 227
+See also superusers
+usr directories, 2–5, 22, 130, 138
+uucp syslog facility, 140
+
+V
+var directory, 63, 130, 144
+variables
+  $ symbol, 36
+  for path and program name, 35–36
+version control
+directory structure for development, 29
+putting file under, 30
+vi swap directory, 130
+vi editor
+  abbreviations, 265–266
+  commands, table of, 266–268
+  for cron tab, 53
+  cursor movement, 263–264
+  delete and change, 264
+  getting text into, 184–186
+  global search and replace, 264–265
+  joining lines, 266
+  for scripts, 29
+  for XML, 181
+  virtual systems, 123
+viruses, 199
+vmstat command, 171
+volumes
+  monitoring, script for, 31–41
+  mounted, 12, 130
+  percentage used, 34
+
+W
+wait I/O data in log files, 63, 65
+warnings, 141
+Web browsers, displaying graphs in, 87–89
+weekly backups, 109
+which command, 42
+whitespace site, 242
+windex databases, 4
+wio, see wait I/O data in log files
+
+X
+X11 server connections, 225
+xinetd.conf, 227
+XML documentation, 168, 171–173
+  editors, 181
+  extracting information, 182–183
+  using entities in, 181–182
+xmllint command, 178–179
+xntp package, 8
+XSLT (Extensible Stylesheet Language Transformations), 173
+
+## KEY FEATURES
+
+- Provides a quick, easy-to-use reference for Unix/Linux system administrators
+- Teaches what system administrators need to know to avoid system breakdowns
+- Explains a variety of vital administrative tasks, including programming small scripts, user administration, installing and configuring systems, preparing a new system for production, setting up a test system, backup, documentation, preventive maintenance techniques, and data security
+
+## SYSTEM REQUIREMENTS
+
+Unix/Linux operating system; Perl version 5.x or greater; Java Runtime Environment (JRE) 1.3 or newer for the DocBook example.
+
+## CHARLES RIVER MEDIA
+
+10 Downer Avenue
+Hingham, MA 02043
+(781) 740-0400
+(781) 740-8818 FAX
+info@charlesriver.com
+www.charlesriver.com
+
+## The Reference That Every Unix SysAdmin Needs!
+
+## UNIX / LINUX SURVIVAL GUIDE
+
+## Erik M. Keller
+
+All Unix/Linux systems, regardless of manufacturer, have inherent similarities for administrators. The Unix/Linux Survival Guide details these similarities and teaches SysAdmins how to tackle jobs on all systems. Mixing administrator knowledge and best practices, the book walks admins step-by-step through installing, setting up, and configuring a new system. It also teaches them how to administer systems they didn’t set up originally.
+
+Intended as a quick and dirty reference for administrators to use in their daily work, the book contains numerous hints on where to look and what to look for to get a Unix/Linux system up to speed and running smoothly. Admins will also learn preventive maintenance techniques to extract and evaluate baseline data and create a warning system that allows them to react to problems before users even notice. Daily task checklists are provided, and other key topics such as backup, security, and documentation are covered in detail. This book provides the knowledge, skill set, techniques, and approach of a NIX systems.
+
+## ON THE CD
+(see Appendix D for more details)
+
+- Scripts
+  - Contains the administration scripts from the book
+- Figures
+  - Includes all of the figures from the book by chapter
+
+## ABOUT THE AUTHOR
+
+Erik M. Keller (Munich, Germany) is a freelance consultant and trainer. He has over 18 years of experience on Unix/Linux as an administrator, consultant, DBA, trainer, and developer.
+
+Shelving Level: Unix / Linux / Networking Intermediate
+

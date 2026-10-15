@@ -1,0 +1,116 @@
+
+
+```perl
+@myrec = split(" ", $_);
+$tcpoutsegs = $myrec[0];
+}
+if(/segments retransmited/)
+{
+@myrec = split(" ", $_);
+$tcpretssegs = $myrec[0];
+}
+}
+
+close(MY_NETSTAT);
+
+# calculate ratio
+$retransratio = (($tcpretssegs * 100)/$tcpoutsegs);
+
+# write to file
+open(MY_LOG, ">>$varpath/$thelogfile")
+or die "$0: couldn't open log file: $!";
+print MY_LOG "$retransratio\n";
+
+close(MY_LOG);
+
+# EOF
+```
+
+使用的 GNU-Linux 变体（SuSE 8.2）允许你通过 -t 选项过滤 netstat 的输出以获取 TCP 统计信息。由此产生的行会被搜索字符串 segments send out 和 segments retransmited（这不是拼写错误）以获取值。
+
+以这两个脚本为基础，你应该能够根据需要进行定制，并在几乎每台机器上获得计算重传比率所需的数值。
+
+### 3.1.9 TIME_WAIT 的含义是什么？
+
+TCP 网络连接处于 TIME_WAIT 状态表示连接已终止，并且系统将等待预定义的时间段等待来自另一系统的传入数据包，或者分别等待连接伙伴确认连接的终止。TCP 协议就是这样设计的，以最大限度地减少数据包丢失。
+
+到目前为止一切都好——如果在预定义的时间段内未收到连接终止的确认请求，系统仍会丢弃连接。通常，这种设计选择根本不会构成问题，但对于具有大量开放连接的系统，例如 Web 服务器，这种方式可能会占用宝贵的资源。更糟糕的是，一些使用质量可疑的 TCP/IP 堆栈的客户端可能会让 TIME_WAIT 状态的连接数量呈指数级增长（即使该说法涵盖了大部分 Windows，但也有其他系统表现出相同的行为）。对 TIME_WAIT 的超时值的更改应谨慎执行。
+
+清单 3.12 中的脚本可让你获取处于 TIME_WAIT 状态的连接数（HP-UX 有时也会使用 TIME_WAIT2 状态）。
+
+**LISTING 3.12 记录 TIME_WAIT 中的连接数**
+
+```perl
+#!/usr/bin/perl
+# $Id: base_timewait.pl,v 1.1 2004/08/24 09:02:03 erikk Exp erikk $
+################################################################
+#
+#    file:          base_timewait.pl
+#
+#    purpose:       number of network connections
+#                   in TIME_WAIT state
+#
+#    author:        Erik Keller
+#
+#    parameters:    -4    counts inet4
+#                   -6    counts inet6
+#                   none  counts all
+#
+################################################################
+
+use Getopt::Std;
+
+# Variables
+# path and files !!!!!! change for every system
+$varpath="/export/home/users/erikk/work/baselines/var";
+$thelogfile="base_timewait.log";
+
+# connection counter
+$timewait_conns = 0;
+
+# check for options on cmdline
+# netstat options work on Solaris and OS/X
+# Linux needs -A <family>, check man-page
+getopt('');
+if ($opt_4)
+{
+$netstatcmd = "netstat -f inet";
+}
+elsif($opt_6)
+{
+    $netstatcmd = "netstat -f inet6";
+}
+else
+{
+    $netstatcmd = "netstat";
+}
+
+# open the input stream from netstat
+open(MY_NETSTAT, "$netstatcmd |") or die "$0: couldn't run: $!";
+while(<MY_NETSTAT>)
+{
+    chop;
+    if(/TIME_WAIT/)
+    {
+        $timewait_conns++;
+    }
+}
+
+close(MY_NETSTAT);
+
+# write to file
+open(MY_LOG,">>$varpath/$thelogfile")
+    or die "$0: couldn't open log file: $!";
+print MY_LOG "$timewait_conns\n";
+
+close(MY_LOG);
+
+# EOF
+```
+
+该脚本或多或少类似于用于计数活动网络连接的脚本。正如前面提到的，如果此脚本是为被监控系统的目的而需要的，则它在很大程度上取决于该系统的预期用途。
+
+### 3.1.10 监控 SYN 数据包
+
+网络连接的 SYN_SENT 和 SYN_RECEIVED 状态分别表示系统正在尝试建立连接（SYN_SENT）或另一个系统正在尝试建立到它的连接（SYN_RECEIVED）。这种行为相当正常，但由于并非所有连接到互联网的系统都是可信的，你应该意识到所谓的 SYN 攻击。这些攻击被用于查找
+

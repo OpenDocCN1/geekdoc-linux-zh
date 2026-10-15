@@ -1,0 +1,92 @@
+
+of that system—should give you a clear indication that misusing the services provided by others isn't a good idea, after all. Those servers went to their knees due to the onslaught of requests. Granted, all administrators need precise timing for their networks, but do you really need the accuracy of a stratum 1 server? The lag occurring from a stratum 1 to a stratum 2 server is almost nonexistent; you should have a very good reason to access a stratum 1 time-host. Exceptions from these rules are medical services, nuclear plants, or security services. You are the judge; decide if half a second, sometimes one second—this actually almost never happens, though—is really that crucial for the purpose of your network.
+
+Depending on the size of your network, you should try to fetch the time from two or even better three machines. The protocol uses the differences between the samples to calculate the actual time and thus compensates for the lag. If the gathered information originating from a time server deviates too much from the other samples, that information will be disregarded and checked again during the next cycle. Using three time hosts to get the data into your network provides added security. If two values differ, who is to decide? If there are three values, the majority vote wins. To set the internal clock of a system, you use the command ntpdate, as shown in Listing 5.2.
+
+## LISTING 5.2 Getting the Time
+
+```
+root@unixhost:~ ntpdate server1 server2 server3
+```
+
+This command tries to get the time from three servers and adjusts the internal clock accordingly. If you need to adjust the system time on a recurring basis, then the configuration file ntp.conf has to be changed (see Listing 5.3).
+
+## LISTING 5.3 ntp.conf
+
+```
+## servers
+## check every 12*12 seconds
+## max check 17*17 seconds
+server server1 minpoll 12 maxpoll 17
+server server2 minpoll 12 maxpoll 17
+server server3 minpoll 12 maxpoll 17
+```
+
+These settings in ntp.conf activate the sampling of time every 12*12 seconds. If you want to share the gathered information with other systems in your network, then the internal clock of the system needs to be in the configuration as well (see Listing 5.4).
+
+## LISTING 5.4 ntp.conf Internal Server
+
+```
+## servers
+## check every 12*12 seconds
+## max check 17*17 seconds
+server server1 minpoll 12 maxpoll 17
+server server2 minpoll 12 maxpoll 17
+server server3 minpoll 12 maxpoll 17
+
+# configure local clock to act as server
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+```
+
+The entry server 127.127.1.0 points at the internal clock of the system. 127.127.1.0 represents the clock of the machine. A 13 instead of 1 would describe a Leitch CSD 5300 Master Clock Controller, depending on the type of *NIX, of course. The supplied reference implementations of ntp vary between the different *NIX flavors. Denoting your internal clock with a bad stratum level like 10 enables your other systems to use it in times of need, for example, if the external or internal time sources are not available. At least the time used inside the network stays consistent that way. The command to degrade the internal clock to stratum level 10 is fudge 127.127.1.0 stratum 10.
+
+Now you are able to choose between three ways of providing the time service to your internal systems, or to mix and match as needed. One: you modify the ntp.conf on the systems to query your internal machine (see Listing 5.5). Two: configure the crontab on the machines to use ntpdate on a recurring basis (see Listing 5.6). Three: configure your time server to broadcast the fact that it is indeed a time-host.
+
+## LISTING 5.5 ntp.conf Internal System
+
+```
+server ip.address.of.your.time-host
+```
+
+## LISTING 5.6 crontab entry
+
+```
+13 * * * ntpdate ip.address.of.your.time-host
+```
+
+Using broadcasts seems to be the easiest solution, but there is a downside to that approach. The method is not that secure. If, for some reason—for example, a configuration error or even malicious intent—another time-host should appear on the internal network, broadcasting different values compared to the regular time servers, a situation that is really hard to debug arises. The file ntp.conf on the internal machines needs only one entry, broadcastclient. The file on the time server uses the entry broadcast your.ip.range.255. As already mentioned, this is not a solution, but a temporary fix, at best. If you want to use the broadcasts, you should deploy the authentication facilities of the protocol. ntp version 3 requires you to transfer the generated keys to every system; version 4 is able to distribute the keys from a central location. You just have to keep an eye on the address range(s) you are distributing your keys to.
+
+The keys are stored in either /etc/ntp.keys or /etc/inet/ntp.keys. You have various encryption methods at your disposal. Type M means encryption using MD5. Listing 5.7 presents an example.
+
+## LISTING 5.7 ntp.keys
+
+```
+1 M coolpassphrase1
+5 M anothercoolphrase
+10 M evenbetterphrase
+```
+
+You should use root-only read/write permissions on this file. The ntp.conf on the time server needs the entries shown in Listing 5.8.
+
+## LISTING 5.8 ntp.conf Using Keys (Server)
+
+```
+## servers
+## check every 12*12 seconds
+## max check 17*17 seconds
+server server1 minpoll 12 maxpoll 17
+server server2 minpoll 12 maxpoll 17
+server server3 minpoll 12 maxpoll 17
+
+# configure local clock to act as server
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+# keys
+enable auth
+keys /etc/inet/ntp.keys
+trustedkey 1 5 10
+broadcast your.ip.address.Range.255 key 5
+```
+
+The configuration file on the client system needs the entries shown in Listing 5.9.
