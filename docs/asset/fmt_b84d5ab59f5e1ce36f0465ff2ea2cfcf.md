@@ -1,0 +1,107 @@
+
+DB21011I In a partitioned database server environment, only the table spaces on the current node are listed.
+
+```
+db2inst1@UDBLNX08:~> db2 "select substr(tbspacename,1,20),tbspaceid,substr(dbpgname,1,15) DBPG,bufferpoolid,substr(ngname,1,15) NGName from syscat.tablespaces where tbspaceid>2"
+```
+
+| TBSPACENAME | TBSPACEID | DBPG | BUFFERPOOLID | NGNAME |
+|---|---|---|---|---|
+| TBSP32K0000 | 3 | IBM CATGROUP | 2 | IBM CATGROUP |
+| TBSP32KTMP0000 | 4 | IBM TEMPGROUP | 2 | IBM TEMPGROUP |
+
+2 record(s) selected.
+
+```
+db2inst1@UDBLNX08:~> db2 "select substr(bpname,1,15) BPName,bufferpoolid,substr(dbpgname,1,15) DBPG,npages,pagesize from syscat.bufferpools"
+```
+
+| BPName | BUFFERPOOLID | DBPG | NPAGES | PAGESIZE |
+|---|---|---|---|---|
+| IBMDEFAULTBP | 1 | - | 1000 | 4096 |
+| BP32K0000 | 2 | - | 250 | 32768 |
+
+2 record(s) selected.
+
+在前面的示例中，表空间 ID 为 3 的 `TBSP32K0000` 和表空间 ID 为 4 的 `TBSP32KTMP0000` 是由 `CREATE TOOLS CATALOG` 命令自动创建的，每个表空间的页大小均为 32K。第一个是用于存储任务相关表的常规表空间，第二个是临时表空间。此外，还创建了一个名为 `BP32K0000` 的缓冲池，其页大小为 32K。您需要回收数据库管理器以使新的更改生效。在停止实例之前，如果您使用 `LIST APPLICATIONS` 显示当前应用程序，您可能会发现某些应用程序已连接到 Tools Catalog Database，应用程序名为 "`db2dastm`"：
+
+## 示例：B-5 连接到 Tools Catalog Database 的应用程序
+
+```
+db2inst1@UDBLNX08:/db2home/dasusr1/das/bin> db2 list applications
+```
+
+| Auth Id | Agents | Application Name | Appl. Handle | Application Id | DB Name | # of |
+|---|---|---|---|---|---|---|
+| DB2INST1 | db2dasstm | 87 | *NO.db2inst1.079EF4175435 | TOOLSCAT | 1 |
+| DB2INST1 | db2dasstm | 86 | *NO.db2inst1.079EF4175434 | TOOLSCAT | 1 |
+
+因此，要重新启动数据库管理器，您可以使用带 `FORCE` 选项的 `DB2STOP`，或者使用以下步骤（以实例所有者身份，这里为 `DB2INST1`）：
+
+- 1. `$ /db2home/dasusr1/das/bin/db2admin stop`
+- 2. `$ db2stop [ force ]`
+
+  `# force may be required if other applications are still connected.`
+- 3. `db2start`
+- 4. `/db2home/dasusr1/das/bin/db2admin start`
+
+此时，Tools Catalog 应该可以使用了。
+
+## 相关出版物
+
+本节列出的出版物被认为特别适合更详细地讨论本红皮书中涵盖的主题。
+
+### IBM Redbooks
+
+有关订购这些出版物的信息，请参阅第 304 页的“如何获取 IBM Redbooks”。
+
+- `DB2 UDB Exploitation of the Windows Environment`, SG24-6893
+
+### 其他出版物
+
+这些出版物也是进一步的信息来源：
+
+- `IBM DB2 UDB Command Reference V8`, SC09-4828
+- `IBM DB2 UDB What's New V8`, SC09-4848
+- `IBM DB2 UDB Administration Guide: Planning V8`, SC09-4822
+- `IBM DB2 UDB Administration Guide: Implementation V8`, SC09-4820
+- `IBM DB2 UDB Administration Guide: Performance V8`, SC09-4821
+- `IBM DB2 UDB Data Movement Utilities Guide and Reference V8`, SC09-4830
+- `IBM DB2 UDB Data Recovery and High Availability Guide and Reference V8`, SC09-4831
+- `Federated Systems PIC Guide Version 8 Release 1`, GC27-1224
+- `IBM DB2 UDB Guide to GUI Tools for Administration and Development`, SC09-4851
+- `IBM DB2 UDB SQL Reference, Volume 1, V8`, SC09-4844
+- `IBM DB2 UDB SQL Reference, Volume 2, V8`, SC09-4845
+- `IBM DB2 UDB System Monitor Guide and Reference V8`, SC09-4847
+- `IBM DB2 UDB Application Development Guide: Building and Running Applications V8`, SC09-4825
+- `IBM DB2 UDB Application Development Guide: Programming Client Applications V8`, SC09-4826
+- `IBM DB2 UDB 应用程序开发指南：编程服务器应用程序 V8`, SC09-4827
+- `IBM DB2 UDB 调用级接口指南和参考：第 1 卷，V8`, SC09-4849
+- `IBM DB2 通用数据库调用级接口指南和参考：第 2 卷，V8`, SC09-4850
+- `数据仓库中心应用程序集成指南 版本 8 发行版 1`, SC27-1124
+- `DB2 XML Extender 管理和编程指南 版本 8 发行版 1`, SC27-1234
+- `IBM DB2 UDB DB2 客户端快速入门 V8`, GC09-4832
+- `IBM DB2 UDB DB2 服务器快速入门 V8`, GC09-4836
+- `IBM DB2 UDB 安装和配置补充 V8`, GC09-4837
+
+## 在线资源
+
+以下网站和 URL 也是相关的进一步信息来源：
+
+- **DB2**
+  - **数据库和数据管理**
+    - http://www.ibm.com/software/data/
+    - http://www.ibm.com/software/data/highlights/db2tco.html
+  - **DB2 开发者专区**
+    - http://www-7b.software.ibm.com/dmdd/
+  - **DB2 通用数据库**
+    - http://www.ibm.com/software/data/db2/udb/
+    - http://ibm.com/db2/v8
+  - **适用于 Linux 的 DB2 通用数据库**
+    - http://www.ibm.com/software/data/db2/linux/
+    - http://www.ibm.com/db2/linux/validate
+    - http://ibm.com/db2/linux
+    - http://www-3.ibm.com/software/data/db2/linux/validate
+  - **DB2 通用数据库 V8 应用程序开发**
+    - http://www.ibm.com/software/data/db2/udb/ad
+  - **DB2 技术支持**

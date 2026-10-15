@@ -1,0 +1,235 @@
+
+13 `echo "The value of \$oldargs is $oldargs."`
+
+14 `set $oldargs`
+
+15 `echo $1 $2 $3`
+
+```
+# 示例 8.8（续）
+
+（命令行和输出）
+$5 args a b c d
+
++   1 此脚本的名称是 args。
++   2 参数是 a b c d。
++   3 第一个参数是 a。
++   4 第二个参数是 b。
++   5 参数的数量是 4。
++   8 所有位置参数都是 Jake Nicky Scott。
++   9 位置参数的数量是 3。
++   10 再见了，Jake
++   12 日期是 Mar 25, 2004。
++   13 `$oldargs` 的值是 a b c d。
++   15 a b c
+```
+
+# 解释
+
++   1 脚本的名称存储在 `$0` 变量中。
++   2 `$*` 代表所有位置参数。
++   3 `$1` 代表第一个位置参数（命令行参数）。
++   4 `$2` 代表第二个位置参数。
++   5 `$#` 是位置参数（命令行参数）的总数。
++   6 所有位置参数都保存在一个名为 `oldargs` 的变量中。
++   7 `set` 命令允许你重置位置参数，清除旧列表。现在，`$1` 是 Jake，`$2` 是 Nicky，`$3` 是 Scott。
++   8 `$*` 代表所有参数，Jake、Nicky 和 Scott。
++   9 `$#` 代表参数的数量，3。
++   10 `$1` 是 Jake。
++   11 在命令替换执行后——即 `date` 被执行——位置参数被重置为 `date` 命令的输出。
++   12 显示 `$2`、`$3` 和 `$6` 的新值。
++   13 打印保存在 `oldargs` 中的值。
++   14 `set` 命令从保存在 `oldargs` 中的值创建位置参数。
++   15 显示前三个位置参数。
+
+# 示例 8.9
+
+```
+(The Script)
+
+#!/bin/sh
+
+# Scriptname: checker
+
+# Script to demonstrate the use of special variable modifiers and arguments
+
+name=${1:?'requires an argument'}
+
+echo Hello $name
+```
+
+```
+(The Command Line)
+
+$ checker
+
+./checker: 1: requires an argument
+
+$ checker Sue
+
+Hello Sue
+```
+
+# 解释
+
++   1. 特殊变量修饰符 `:?` 会检查 `$1` 是否有值。如果没有，脚本会退出并打印消息。
++   2. 程序在没有参数的情况下执行。`$1` 未被赋予值；显示错误。
++   3. `checker` 程序被赋予命令行参数 Sue。在脚本中，`$1` 被赋值为 Sue。程序继续执行。
+
+#### 8.4.2 `$*` 和 `$@` 有何不同
+
+`$*` 和 `$@` 只有在被双引号包围时才不同。当 `$*` 被双引号包围时，参数列表变成一个单一字符串。当 `$@` 被双引号包围时，每个参数都被引用；也就是说，每个词都被视为一个单独的字符串。
+
+# 示例 8.10
+
+```
+$ set 'apple pie' pears peaches
+
+$ for i in $*
+
+> do
+
+> echo $i
+
+> done
+
+apple
+
+pie
+
+pears
+
+peaches
+```
+
+# 示例 8.10（续）
+
+```
+3 $ set 'apple pie' pears peaches
+
+4 $ for i in "$*"
+
+> do
+
+> echo $i
+
+> done
+
+apple pie pears peaches
+```
+
+```
+5 $ set 'apple pie' pears peaches
+
+6 $ for i in $@
+
+> do
+
+> echo $i
+
+> done
+
+apple
+
+pie
+
+pears
+
+peaches
+```
+
+```
+7 $ set 'apple pie' pears peaches
+
+8 $ for i in "$@"    # At last!!
+
+> do
+
+> echo $i
+
+> done
+
+apple pie
+
+pears
+
+peaches
+```
+
+# 解释
+
+1 位置参数被设置。
+
+2 当 `$*` 被展开时，包围 `apple pie` 的引号被去掉；`apple` 和 `pie` 变成两个独立的词。`for` 循环依次将每个词赋给变量 `i`，然后打印 `i` 的值。每次循环，左边的词被移出，下一个词被赋给变量 `i`。
+
+3 位置参数被设置。
+
+4 通过将 `$*` 用双引号包围，整个参数列表变成一个字符串，`"apple pie pears peaches"`。整个列表作为一个词被赋给 `i`。循环只执行一次。
+
+5 位置参数被设置。
+
+6 未加引号时，`$@` 和 `$*` 的行为相同（参见本解释的第 2 行）。
+
+7 位置参数被设置。
+
+8 通过用双引号包围 `$@`，每个位置参数都被视为一个带引号的字符串。列表将是 `"apple pie"`、`"pears"`、`"peaches"`。最终获得了期望的结果。
+
+# 表 8.4 字符串、整数和文件测试（续）
+
+| 测试操作符 | 测试内容 |
+|---|---|
+| 逻辑测试 | |
+| expr1 -a expr2 | 逻辑与 |
+| expr1 -o expr2 | 逻辑或 |
+| ! expr | 逻辑非 |
+| 文件测试 | |
+| -b filename | 块特殊文件 |
+| -c filename | 字符特殊文件 |
+| -d filename | 目录存在 |
+| -f filename | 普通文件存在且不是目录 |
+| -g filename | 已设置组 ID |
+| -k filename | 已设置粘滞位 |
+| -p filename | 文件是命名管道 |
+| -r filename | 文件可读 |
+| -s filename | 文件大小非零 |
+| -u filename | 已设置用户 ID 位 |
+| -w filename | 文件可写 |
+| -x filename | 文件可执行 |
+
+#### 8.5.1 测试退出状态：`test` 命令
+
+以下示例说明如何测试退出状态。
+
+`test` 命令用于评估条件表达式，返回 true 或 false。它会在为真时返回零退出状态，在为假时返回非零退出状态。可以使用 `test` 命令或括号。 （请参考表 8.4。）
+
+# 示例 8.11
+
+```
+(At the Command Line)
+
+1 $ name=Tom
+
+2 $ grep " $name" /etc/passwd
+
+Tom:S2KX2F:S102:40:Tom Savage:/home/tom:/bin/ksh
+
+3 $ echo $?
+
+0 Success!
+
+4 $ test $name != Tom
+
+5 $ echo $?
+
+1 Failure
+
+6 $ [ $name = Tom ]    # Brackets replace the test command
+
+7 $ echo $?
+
+0 Success
+
+8 $ [ $name = [Tt]?m ]    # Wildcards are not evaluated by the test command
+
+9 $ echo $?
+```
