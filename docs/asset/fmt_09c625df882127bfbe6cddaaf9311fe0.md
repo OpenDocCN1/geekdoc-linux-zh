@@ -1,0 +1,98 @@
+
+- 描述更改工作目录的问题
+- 解释关闭继承的标准描述符并打开标准描述符的必要性
+- 描述从系统中移除已完成的子进程
+- 展示并讨论真正并发的、面向连接的生产服务器的结构
+- 涵盖系统调用、库调用、命令和原语
+
+```
+chdir(), close(),fcntl(), flock(), fork(), free(), getpid(), goto, malloc(), open(), perror(), read(), setsid(), signal(), sprintf(), sleep(), strlen(), umask(), wait3(), write()
+```
+
+## 21.1 引言
+
+在本章中，我们讨论了一些与系统编程一般以及服务器进程设计特别相关的重要的议题。这些议题包括阻塞 I/O、由于信号到达而在执行过程中被中断的系统调用的重启、使用线程安全的系统调用、可重入代码、忽略信号并设置服务器进程的 `umask`、以守护进程方式运行服务器进程、确保在给定时间内只能运行一个程序的副本、在进程中关闭继承的描述符、在守护进程中忽略 I/O、将错误重定向到文件，以及清理已终止的子进程。我们已经在第 18–20 章中详细讨论了其中一些议题。在这里，我们讨论一些特定的议题，特别是与服务器软件设计相关。我们描述了两种文件锁定方法，并在我们示例服务器的最终版本中使用了这两种方法，以确保服务器能够移植到 PC-BSD 和 Solaris 机器上。整章我们都使用防御性编程。
+
+## 21.2 重启系统调用
+
+我们应该编写能够重启在执行过程中被中断的系统调用的代码。这种情况在不同场景下会发生，具体取决于系统调用。然而，在所有情况下，系统调用都处于某种等待状态。等待可能是多种类型中的任何一种，包括等待 I/O 设备、通信通道或子进程终止。涉及的系统调用可能有 `read()`、`readv()`、`write()`、`writev()`、`ioctl()`、`fcntl()`、`wait()`、`waitpid()`、`wait3()`、`wait4()`、`wait6()`、`select()` 等等。
+
+我们在第 19 章和第 20 章中详细讨论了阻塞 I/O，同时解释了称为 UNIX pipe 的通信通道的概念，该通道用于相关进程之间的通信。对 pipe 执行阻塞 I/O 时，`read()` 或 `write()` 调用可能会被中断。对于 pipe 来说，阻塞输入意味着 `read()` 系统调用被阻塞，因为没有可读内容，pipe 为空。`write()` 系统调用在 pipe 已满时阻塞。阻塞读的另一个例子是当 `read()` 系统调用从键盘交互式读取输入时。`read()` 调用会阻塞，直到用户输入键盘内容。同样，`select()` 系统调用在等待描述符上的 I/O 请求时会阻塞。最后，一个进程在等待子进程终止时可能会阻塞，使用 `wait()` 类中的任何调用。
+
+如果系统调用处于阻塞状态，它可能在等待特定事件发生时被中断（数据进入 pipe、数据流出 pipe、子进程终止等）。大多数现代 UNIX 实现会自动重启被中断的系统调用。如果你不确定你的代码是否会在此类系统上运行，你需要编写代码来显式处理被中断系统调用的重启。以下代码片段可用于此目的。
+
+```
+repeat:
+    if ((nr = read(fd, buf, SIZE)) == -1) {
+    if(errno == EINTR) /* if interrupted system call */
+        goto repeat;
+```
+
+```
+/* handle other errors */
+}
+```
+
+`4.2BSD` 是第一个支持自动重启被中断系统调用的 UNIX 系统。当 I/O 相关调用在慢速设备或诸如 pipe 之类的通信通道上操作时，会被信号中断。然而，`wait()` 类的调用在接收到信号时总是会被中断。这是一个有问题的情况，系统设计者在 `4.3BSD` 中引入了一个特性，允许进程按信号 basis 禁用系统调用的自动重启。
+
+## 21.3 线程安全的系统调用
+
+在本节中，我们提供了实践上的考虑，这是对第 19 章关于线程所介绍材料的扩展。我们定义、讨论并给出两个重要并发主题的简单示例：线程安全和可重入函数。
+
+简单地说，线程安全函数可以从多个线程同时调用，即使调用使用共享数据，因为对共享数据的所有引用都被序列化。换句话说，每个线程在锁定数据后以互斥方式访问共享数据，使用自旋锁或信号量等同步原语。
+
+可重入函数也可以从多个线程同时调用，但前提是每次调用都使用自己的数据。因此，线程安全函数总是可重入的，但可重入函数并不总是线程安全的。这意味着在主内存中只有一个线程安全或可重入函数的副本时，多个线程或命令可以同时执行它。在分时系统上运行的大多数应用程序都是线程安全或可重入的，包括编译器、文字处理器和编辑器。`Single UNIX Specification`（`SUSv3`）中定义的所有函数都保证是线程安全的，除了表 21.1 中列出的那些。
+
+你不应在信号处理程序中使用非可重入函数，因为信号可能在控制处于非可重入函数中时发生，并且接收到另一个信号。显然，在这种情况下，由于非可重入函数的多次同时执行引起的竞争条件，程序可能会产生错误结果。例如，`malloc()` 函数维护一个动态分配区域的链表。我们不应在信号处理程序中使用 `malloc()`，因为它可能由于竞争条件而导致问题。假设我们在信号处理程序中使用 `malloc()`，一个信号发生，控制转到信号处理程序；`malloc()` 函数作为信号处理程序的一部分运行，并且在更新列表指针的中间时第二个信号发生。然后链表就会损坏。同样，访问全局（静态）变量的函数也容易出现非可重入和非线程安全的情况。没有系统调用和没有库函数被保证是可重入的，如果它们（a）使用 `malloc()` 或 `free()`，（b）使用全局数据结构，或（c）是标准 I/O 库的一部分。我们在本书中讨论过的所有系统调用都是可重入的。
+
+操作系统和线程库提供了用于编写线程安全和可重入函数的同步原语，包括信号量和互斥锁。我们在本书中不介绍这些原语，但你可以在书籍或互联网上阅读更多相关内容
+
+## 表 21.1 非线程安全函数
+
+| asctime() | fcvt() | getpwnam() | nl_langinfo() |
+
+| basename() | ftw() | getpwuid() | ptsname() |
+
+| catgets() | gcvt() | getservbyname() | putc_unlocked() |
+
+| crypt() | getdate_unlocked() | getservbyport() | putchar_unlocked() |
+
+| ctime() | getchar_unlocked() | getservent() | putenv() |
+
+| dbm_clearerr() | getdate() | getutxent() | pututxline() |
+
+| dbm_close() | getenv() | getutxid() | rand() |
+
+| dbm_delete() | getgrent() | getutxline() | readdir() |
+
+| dbm_error() | getgrgid() | gmtime() | setenv() |
+
+| dbm_fetch() | getgrnam() | hcreate() | setgrent() |
+
+| dbm_firstkey() | gethostbyaddr() | hdestroy() | setkey() |
+
+| dbm_nextkey() | gethostbyname() | hsearch() | setpwent() |
+
+| dbm_open() | gethostname() | inet_ntoa() | setutxent() |
+
+| dbm_store() | getlogin() | l64a() | strerror() |
+
+| dirname() | getnetbyaddr() | lgamma() | strtok() |
+
+| dlerror() | getnetbyname() | lgammaf() | ttyname() |
+
+| drand48() | getnetent() | lgammaf() | unsetenv() |
+
+| ecvt() | getopt() | localeconv() | wcstombs() |
+
+| encrypt() | getprotobyname() | localtime() | wctomb() |
+
+| endgrent() | getprotobynumber() | lrand48() |  |
+
+| endpwent() | getprotobyname() | mrand48() |  |
+
+| endutxent() | getpwent() | nftw() |  |
+
+关于 `pthread` 编程和/或 UNIX 系统编程的资料更全面地讨论了这些主题。
+
+## 21.4 后台运行进程：守护进程
