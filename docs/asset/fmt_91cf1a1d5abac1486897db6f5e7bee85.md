@@ -1,0 +1,14 @@
+
+- 显示管理器
+- 运行 X 应用程序的过程
+- `DISPLAY`环境变量
+- 客户端身份验证
+- 使用`SSH`进行 X 连接转发
+- X 服务器配置
+- 设备节 (Device sections)
+- 显示器节 (Monitor sections)
+- 屏幕节 (Screen sections)
+- 输入设备节 (InputDevice sections)
+- 服务器布局节 (ServerLayout sections)
+- `xrand`：不是你父亲那辈的 X 服务器配置器
+- 内核模式设置 (Kernel mode setting)
