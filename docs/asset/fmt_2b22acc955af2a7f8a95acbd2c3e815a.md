@@ -1,0 +1,40 @@
+
+With the `ftpwho` command, you can find out who is currently connected to your FTP server. `ftpwho` shows the current process information for each user. The output displays five fields: the process ID, the tty connection, the status of the connection, the amount of CPU time used so far for the process, and the connection details. The status of the connection is `R` for running, `S` for sleeping, and `Z` for crashed. The connection details include the Internet address from where the connection is made, the user making the connection, and the task currently being performed, such as downloading a file. The field begins with the name of the FTP daemon, usually `ftpd`, followed by the different segments separated by colons.
+
+The `ftpcount` command displays the number of users connected to your FTP server, broken down according to the classes specified in your `.ftpaccess` file. Along with the number of users, it shows the maximum number allowed to connect.
+
+# CHAPTER
+
+## Web 服务器：Apache
+
+Linux 发行版为系统提供了多个 Web 服务器供使用。主要 Web 服务器通常是 Apache，它几乎已成为 Red Hat Linux 的标准 Web 服务器。这是一个功能非常强大、稳定且配置相对容易的系统。其他 Web 服务器也可用，例如 Tux。Tux 体积更小，但速度非常快，并且在处理不会改变的 Web 数据时效率很高。Red Hat Linux 为 Web 服务器提供了默认配置，使其在安装后即可使用。
+
+Linux 可用的其他 Web 服务器包括 Red Hat Secure Server (`www.redhat.com`)、`Apache-SSL` (`www.apache-ssl.org`)、`Stronghold Enterprise Server` (`www.redhat.com/software/stronghold`) 和 Netscape Enterprise Server (`home.netscape.com`)。`Apache-SSL` 是一个基于 Apache 和 OpenSSL (`www.openssl.org`) 的加密 Web 服务器。Stronghold 是 Apache Web 服务器的商业版本，具有改进的安全性和管理工具。你也可以使用原始的 NCSA Web 服务器，尽管它已不再受支持 (`hoohoo.ncsa.uiuc.edu`)。AOLserver 是美国在线的 Web 服务器，现在已在 GPL 许可证下提供 (`www.aolserver.com`)。
+
+Apache 可免费使用 OpenSSL 实现完整的 SSH 加密。也有仅在获得许可费用后才可用的私有加密产品。无需直接获取许可，你可以简单地购买包含此类许可的 Apache 商业版本，例如 Stronghold 和 Raven (`www.covalent.net`)。以前，这种限制仅适用于美国对 RSA 技术的应用，当时它曾被专利保护。RSA 专利现已过期，现在可在 OpenSSL 等自由分发产品中使用。
+
+### Tux
+
+Tux，Red Hat 内容加速器，是一种静态内容 Web 服务器，设计为在 Linux 内核中以极快的速度运行。实际上，它在内核空间运行，使得响应时间比标准用户空间 Web 服务器如 Apache 快得多。作为内核空间服务器，Tux 可以非常高效地处理静态内容，例如图像。同时，它可以与用户空间 Web 服务器，如 Apache 协调，以提供动态内容，如 CGI 程序。Tux 甚至可以利用缓存来保存先前生成的动态内容，就像它一样静态。能够与用户空间 Web 服务器协调的功能让你可以使用 Tux 作为主要 Web 服务器。Tux 无法处理的任何内容，它都会交给用户空间 Web 服务器处理。
+
+> NOTE Tux 在 GNU 公共许可证下自由分发，并包含在许多发行版中。
+
+Tux 配置文件位于 `/proc/sys/net/tux`。在这里输入诸如 `serverport`、`max_doc_size` 和 `logfile` 等参数（请查阅 `www.redhat.com/support/manuals` 上的 Tux 参考手册以获取详细列表）。默认值已输入。`serverport`、`clientport` 和 `documentroot` 是必须设置的必需参数。`serverport` 是 Tux 将使用的端口——如果它是主要 Web 服务器则为 80。`clientport` 是 Tux 与之协调的用户空间 Web 服务器（如 Apache）使用的端口。`documentroot` 指定你的 Web 文档的根目录（Red Hat 上为 `/var/www/html`）。理想情况下，Tux 作为主要 Web 服务器运行，Apache 作为次要 Web 服务器运行。要配置 Apache 与 Tux 一起运行，Apache `httpd.conf` 文件中的端口条目需要从 80 改为 8080：
+
+```
+Port 8080
+```
+
+你可以使用 `service` 命令和 `/etc/rc.d/init.d/tux` 脚本来启动、停止和重启服务器。几个参数如 `DOCROOT` 可以作为参数指定给此 Tux 命令。你可以在 `/etc/sysconfig/tux` 文件中输入它们。
+
+> NOTE 你也可以将 Tux 作为 FTP 服务器运行。在 `/proc/sys/net/tux` 目录中，将文件 `serverport` 的内容改为 21，将 `application_protocol` 改为 1，将 `nongle` 改为 0，然后重启 Tux。在文档根目录中使用 `generatetuxlist` 命令生成 FTP 目录列表。
+
+### Apache Web Server
+
+Apache Web 服务器是由 Apache 服务器项目开发和维护的完整功能免费 HTTP（Web）服务器。该项目的目标是提供一个可靠、高效且易于扩展的 Web 服务器，其免费开源代码在自己的 Apache 软件许可证下提供。服务器软件包括服务器守护进程、配置文件、管理工具和文档。Apache 服务器项目由一群核心志愿者程序员维护，并得到全球众多贡献者的支持。Apache 服务器项目是目前由 Apache 软件基金会（前身为 Apache 组织）支持的多个项目之一。该非营利组织为各种 Apache 开源软件项目提供财务、法律和组织支持，包括 Apache HTTPd 服务器、Java Apache、Jakarta 和 XML-Apache。Apache 软件基金会的网站位于 `www.apache.org`。表 22-1 列出了各种与 Apache 相关的网站。
+
+Apache 最初基于在伊利诺伊大学厄巴纳-香槟分校国家超级计算应用中心开发的 NCSA Web 服务器。此后 Apache 已发展成为一个独立的服务器，并已成为使用最广泛的 Web 服务器之一。尽管最初为 Linux 和 Unix 系统开发，Apache 已成为跨平台应用程序，拥有 Windows 和 OS/2 版本。Apache 为其 Web 服务器提供在线支持和文档，网址为 `httpd.apache.org`。基于 HTML 的
+
+manual 也随服务器安装一起提供。你可以使用 Apache 配置工具轻松帮助配置你的 Apache 服务器。它可在任何 X Window System 窗口管理器上运行，包括 GNOME 和 KDE。此外，你还可以使用 Comanche 配置工具。Webmin 和 Linuxconf 也提供 Apache 配置支持。
+
+## Java：Apache Jakarta 项目
