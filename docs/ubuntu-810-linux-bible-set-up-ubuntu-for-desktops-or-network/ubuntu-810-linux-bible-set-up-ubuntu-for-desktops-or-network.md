@@ -29864,7 +29864,6 @@ apparmor module is loaded.
 /usr/share/gdm/guest-session/xsession
 /usr/sbin/cupsd
 /usr/lib/cups/backend/cups-pdf
-```
 
 0 profiles have profiles defined.
 1 processes are in enforce mode :
