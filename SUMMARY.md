@@ -2451,6 +2451,7 @@
 +   [你的 Linux 工具箱指南](docs/your-linux-toolbox/README.md)
 +   [你的 UNIX：终极指南](docs/your-unix-the-ultimate-guide/README.md)
 +   [你的 UNIX／LINUX：终极指南](docs/your-unixlinux-the-ultimate-guide/README.md)
++   [Z OS 系统程序员的 Z VM 和 Linux 操作](docs/z-vm-and-linux-operations-for-z-os-system-programmers/README.md)
 +   [Z／VM and Linux on IBM system z：RHEL 5.2 虚拟化秘籍](docs/zvm-and-linux-on-ibm-system-z-the-virtualization-cookbook-fo/README.md)
 +   [Linux 路由](docs/маршрутизация-в-linux/README.md)
 +   [Linux 内核：开发过程详解（Linux 内核设计与实现完整指南）](docs/ядро-linux-описание-процесса-разработки-исчерпывающее-руково/README.md)

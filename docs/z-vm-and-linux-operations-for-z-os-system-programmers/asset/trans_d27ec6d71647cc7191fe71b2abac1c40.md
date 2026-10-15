@@ -1,0 +1,105 @@
+
+将文件复制到新文件  77
+复制行  85
+CP  21
+CP INDICATE  324
+CP INDICATE PAGING  326
+CP QUERY ALLOC  327
+CP QUERY CPLOAD  329
+CP QUERY FRAMES  330
+CP QUERY NAMES  331
+CP QUERY STOR  333
+CP QUERY SYSTEM  333
+D U,,ALLOC  333
+删除  82
+DFSMS/VM  27
+转储查看工具 (DVF)  24
+转储  367
+EDIT 配置文件  93
+EREP  363
+不保存退出  91
+退出帮助  93
+FILEList (FILEL)  73
+文件名  74
+用于 z/VM 的 HCD 和 HCM  25
+HELP  36
+IEASYSxx, CP SET MAXUSERS  334
+使用 XEDIT 插入行  82
+插入外部文件  88
+语言环境 (LE)  26
+移动行块  85
+浏览 HELP 菜单  44
+OSA/SF  26
+Performance Toolkit for z/VM  30
+连续键入  89
+前缀子命令  79
+特权类别  71
+查询  68
+QUERY CPLEVEL  68
+QUERY SRM  333
+QUERY USERID  68
+用于 z/VM 的 RACF  31
+恢复行  83
+重复行  84
+REXX/VM  26
+RSCS  32
+调度程序与分派程序  34
+SEND 命令  228
+shell  96
+SHUTDOWN  235
+SMP/E  390
+状态行  80
+SYSLOG  360
+系统清除  67
+TCP/IP  23
+上移和下移  86
+USER DIRECT  18
+XEDIT  78
+XEDIT 前缀子命令  81
+z/OS 客户机  54, 121, 140, 220, 225, 246
+z/OS 提示  259, 262
+z/OS 映像  2, 16, 33, 122–123, 219, 320
+z/OS 系统  9, 121, 219, 293, 331, 388
+IPL  219, 223
+日志  226
+程序员  95
+z/OS 用户  51, 67, 124, 126, 228, 249, 276
+z/VM
+基本命令  65
+cons==sysg  155
+DIRECTXA 命令  186
+断开超时  172
+DISKMAP 命令  184
+FORMAT 命令  187
+INSTPLAN EXEC  151
+INSTVM EXEC  156
+IPWIZARD 命令  158
+PUT2PROD 命令  156
+RELEASE 命令  174
+关闭系统  165
+独立程序加载器  154
+z/VM CP  53
+z/VM CPACCESS 命令  174
+z/VM 客户机  13, 140, 219, 224, 251–252, 341, 343
+z/VM IPL  129
+进程  232
+时间  196
+z/VM 操作系统 (z/OS)  13, 17, 69, 121, 319
+z/VM 站点  122, 389, 394
+z/VM 系统  4, 9, 15–17, 122, 140, 143, 230, 236, 246, 269, 284–285, 320, 324, 356, 366, 387
+网络连接  44
+性能管理  324
+TCP/IP 地址  144, 159
+各种记录  356
+z/VM 用户  53, 55, 125, 128, 130, 227–228, 276
+z/VM 5.3 版
+检查磁盘链接和映射  132
+CMS  125
+控制台日志文件  359
+CP 模式  66
+安装介质  139, 145
+IPL 190 249
+IPL CMS 250
+IPL 进程  233
+LNXMAINT 控制台输出  361
+LOGON MAINT 125, 132
