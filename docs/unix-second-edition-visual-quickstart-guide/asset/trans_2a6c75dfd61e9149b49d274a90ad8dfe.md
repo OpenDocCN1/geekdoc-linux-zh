@@ -1,0 +1,97 @@
+
+
+## 表 A.9
+### 运行脚本和程序
+
+| COMMAND | DESCRIPTION |
+|---|---|
+| at 01:01 1 Jan 2004 | 安排作业或作业在 2004 年 1 月 1 日 01:01 运行。 |
+| at 01/01/04 | 安排作业在 1/1/04 运行。 |
+| at 3:42am | 安排作业在上午 3:42 运行。 |
+| at noon tomorrow | 安排作业在明天中午运行。 |
+| at now + 3 weeks | 安排作业在三周后运行。 |
+| at teatime | 安排作业在下午 4 点运行。 |
+| atq | 查看 at 队列中的作业。 |
+| atrm 3 | 删除指定的排队作业（本例中为 3）。 |
+| batch | 安排作业在系统负载允许时运行。 |
+| bg | 在后台运行最近挂起或受控的作业。 |
+| bg %2 | 在后台运行作业 2。 |
+| crontab -e | 编辑默认编辑器中的 crontab 以安排定期进程或作业。 |
+| Ctrl Z | 挂起正在运行的作业、程序或进程。 |
+| fg | 在前台运行最近挂起或受控的作业。 |
+| fg 1 | 在前台运行作业 1。 |
+| jobs | 查看当前受控作业的列表。 |
+| kill %ftp | 通过名称或作业编号终止作业。 |
+| kill 16217 | 终止进程号 16217。 |
+| kill -9 16217 | 终止进程 16217；-9 标志可让你终止常规 kill 无法影响的进程。 |
+| nice | 以“友好”方式运行作业——速度较慢且对系统和其他用户的影响较小。数字越大越友好，最高为 19。10 为默认值。 |
+| nice -n 19 slowscript | 以优先级 19 以友好方式运行 slowscript。 |
+| pkill badjob | 终止名为 badjob 的进程。 |
+| ps | 查看你正在运行的当前进程列表。 |
+| ps -a | 查看所有进程，包括其他用户的进程。 |
+| ps -f | 查看进程及其相互关系（森林视图）。 |
+| ps -x | 查看系统本身正在运行的进程（也称为守护进程）。 |
+| renice 19 processid-of -- slowscript | 以优先级 19 更友好地运行 slowscript（更改友好度）。 |
+| time script | 计时 script 运行所需的时间（实际时间和系统时间）。 |
+| top | 实时监控系统负载和进程。 |
+
+## 表 A.10
+### 编写基本脚本
+
+| COMMAND | DESCRIPTION |
+|---|---|
+| case ... in ... esac | 在 shell 脚本中使用以对多种情况执行不同的操作。 |
+| clear | 清屏。 |
+| continue | 在 shell 脚本中使用以跳过循环中剩余的命令并从循环开头重新开始。 |
+| echo | 在屏幕上显示语句或环境变量的值。 |
+| echo "Your shell is $SHELL" | 在屏幕上显示“Your shell is”以及你的 shell 名称。 |
+| echo -e "\tA Tab Stop" | 向右移动一个制表位并在屏幕上打印“A Tab Stop”。 |
+| for ... do ... done | 在 shell 脚本中使用条件和命令指定重复发生的循环。 |
+| getopts | 在 shell 脚本中使用以从命令行读取标志。 |
+| if ... then ... else ... fi | 在脚本中使用（带条件和命令）以设置条件进程。 |
+| read variable | 在脚本中使用以从终端获取输入（变量）。 |
+| sh -x script | 执行 script 并要求脚本在执行时显示每一行命令。 |
+| sleep 4h5m25s | 在此处暂停 4 小时、5 分钟和 25 秒。 |
+| sleep 5s | 暂停 5 秒。 |
+| test | 在脚本中使用以检查给定语句是否为真。 |
+| test expression | 查看 expression 是否为真或假——通常与条件语句一起使用。 |
+| while ... do ... done | 在 shell 脚本中使用以在条件为真时执行循环。 |
+
+## 表 A.12
+### 访问互联网
+
+| Command | Description |
+|---|---|
+| dig @nameserver.some.net www.raycomm.com | 从名称服务器 nameserver.some.net 查找名称 www.raycomm.com。 |
+| dig -x 192.168.12.52 | 查找对应 IP 地址 192.168.12.52 的名称。 |
+| ftp ftp.raycomm.com | 使用 FTP 协议向 ftp.raycomm.com 传输文件。 |
+| irc wazoo irc.netcom.com | 连接到 irc.netcom.com 上的 irc 服务器并使用昵称 wazoo。 |
+| links | 启动 links 网页浏览器。 |
+| links http://www.google.com/ | 在 http://www.google.com/ 启动 links 网页浏览器。 |
+| lynx -dump http://url.com > newname.txt | 从 http://url.com 的 HTML 文档中获取名为 newname.txt 的精美纯文本文件。 |
+| lynx | 启动 Lynx 网页浏览器。 |
+| lynx http://www.yahoo.com/ | 在 http://www.yahoo.com/ 启动 Lynx 网页浏览器。 |
+| mesg n | 拒绝 talk 和 write 消息。 |
+| mesg y | 接受 talk 和 write 消息。 |
+| nn | 阅读 Usenet 新闻。 |
+| nslookup www.raycomm.com > nameserver.some.net | 从名称服务器 nameserver.some.net 查找名称 www.raycomm.com。 |
+| nslookup www.raycomm.com | 查找主机 www.raycomm.com 的 IP 地址。 |
+| ping www.raycomm.com | 测试到主机 www.raycomm.com 的连接。 |
+| rn | 阅读 Usenet 新闻。 |
+| ssh somewhere.com | 安全地连接到名为 somewhere.com 的互联网计算机并使用它。 |
+| slrn | 阅读 Usenet 新闻。 |
+| talk deb | 与 ID 为 deb 的所有者进行交互式交谈。 |
+| talk id@wherever.com | 与系统 wherever.com 上的用户 id 进行交互式交谈。 |
+| telnet somewhere.com | 连接到名为 somewhere.com 的互联网计算机并使用它。 |
+| tin | 阅读 Usenet 新闻。 |
+| tin comp.unix.userfriendly | 从 comp.unix.userfriendly 组阅读 Usenet 新闻。 |
+| tn3270 library.wherever.edu | 连接到名为 library.wherever.edu 的主机计算机，该计算机使用 IBM 大型机类型的操作系统，如许多图书馆卡片目录。 |
+| traceroute www.yahoo.com | 识别你与主机 www.yahoo.com 之间的计算机和其他设备。 |
+| traceroute -n hostname | 检查到 hostname 的路径而不解析中间主机名以获得更快的結果。 |
+| trn | 阅读 Usenet 新闻。 |
+| trn comp.unix.shell | 从 comp.unix.shell 组阅读 Usenet 新闻。 |
+| wall | 向系统上的所有用户发送类似 write 的消息。 |
+| wget http://www.example.com/ | 下载 http://www.example.com/ 找到的文件。 |
+| wget -r -2 -l 2 http://www.example.com/ | 下载 http://www.example.com/ 找到的文件，下载深度为网页结构的两级。 |
+| write otherid | 向同一系统上的用户 otherid 发送消息。 |
+

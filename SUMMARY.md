@@ -2349,6 +2349,7 @@
 +   [UNIX 编程指南指南](docs/unix-programming/README.md)
 +   [UNIX编程：UNIX进程、内存管理、进程通信、网络及Shell脚本（英文版）](docs/unix-programming-unix-processes-memory-management-process-co/README.md)
 +   [UNIX 问答指南](docs/unix-questions-and-answers/README.md)
++   [Unix 第二版（视觉快速启动指南）](docs/unix-second-edition-visual-quickstart-guide/README.md)
 +   [UNIX 安全 (系统管理员必备参考系列) (系统管理员必备参考系列)](docs/unix-security-sys-admin-essential-reference-series-sys-admin/README.md)
 +   [UNIX Shell 程序员交互式手册](docs/unix-shell-programmers-interactive-workbook/README.md)
 +   [最可能遇到的 UNIX Shell 编程面试题：工作面试问题系列](docs/unix-shell-programming-interview-questions-youll-most-likely/README.md)
