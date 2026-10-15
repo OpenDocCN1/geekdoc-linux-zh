@@ -1,0 +1,78 @@
+
+
+当你完成启动设置配置后，继续选择 Next。随后会出现以下内容：
+
+## Figure 6-6
+
+![](img/8279afe915b153902294b0e58311b75a_113_0.png)
+
+从此对话框中，你可以输入并选择以下登录设置（主要存储在 /etc/login.defs 中）：
+
+- Delay After Incorrect Login Attempt. 在一次登录失败后，通常会有一段几秒钟的等待时间，然后才能再次登录。这使得密码破解者更难登录。
+
+此选项允许你调整下一次登录尝试前的延迟时间。默认值为 3 秒，这是一个合理的值。
+
+- Record Successful Login Attempts. 记录成功的登录尝试可能很有用，尤其是在警告你系统遭到未经授权的访问时（例如用户从非正常位置登录）。
+
+选择此选项可在文件 /var/log/wtmp 中记录成功的登录尝试。你可以使用命令 last 来查看谁在何时登录。
+
+- **Allow Remote Graphical Login.** 你可以选择此选项允许其他用户通过网络访问你的图形登录界面。
+
+由于这种类型的访问代表潜在的安全风险，因此默认情况下处于非活动状态。
+
+当你完成登录设置配置后，继续选择 Next。随后会出现以下内容：
+
+## Figure 6-7
+
+![](img/8279afe915b153902294b0e58311b75a_114_0.png)
+
+从此对话框中，你可以输入以下 ID 设置（存储在 /etc/login.defs 中）：
+
+- **User ID Limitations.** 输入最小值和最大值以配置可能的 user ID 号码范围。 新用户将从此范围内获取 UID。
+- **Group ID Limitations.** 输入最小值和最大值以配置可能的 group ID 号码范围。
+
+当你完成用户和组 ID 限制的配置后，继续选择 Next。 安全配置的最后一页会出现：
+
+## Figure 6-8
+
+![](img/8279afe915b153902294b0e58311b75a_115_0.png)
+
+从此对话框中，你可以选择以下杂项全局设置：
+
+**File Permissions.** 某些系统文件的权限设置在 **/etc/permissions.easy**、**/etc/permissions.secure** 或 **/etc/permissions.paranoid** 中配置。你也可以将自己的规则添加到文件 **/etc/permissions.local**。每个文件都包含文件语法和预设用途的描述。
+
+目录 **/etc/permissions.d/** 中的文件设置也会被包含。此目录由自带权限文件的软件包使用。
+
+从下拉列表中选择以下其中一项：
+
+- **Easy.** 选择此选项允许除 root 之外的用户读取大部分系统文件。
+- **Secure.** 选择此选项可确保某些配置文件（如 /etc/ssh/sshd_config）只能由用户 root 查看。某些程序只能由 root 或守护进程启动，而不能由普通用户启动。
+- **Paranoid.** 选择此选项可获得极其安全的系统。所有程序上的 SUID/SGID 位均已清除。请记住，某些程序可能无法正常工作，因为用户不再具有访问某些文件的权限。
+
+运行 SuSEconfig 会根据各自 /etc/permissions* 文件中的设置设置这些权限。这会修复权限不正确的文件，无论是意外造成的还是由入侵者造成的。
+
+**User Launching updatedb.** 如果安装了程序 updatedb，它会在每天或启动后自动运行。它会生成一个数据库（**locatedb**），其中存储了计算机上每个文件的位置。
+
+你可以使用 locate 实用程序搜索此数据库（输入 **man locate** 了解详情）。
+
+从下拉列表中选择以下其中一项：
+
+- nobody. 任何用户只能找到数据库中任何其他（无特权）用户可见的路径。
+- root. 系统中的所有文件都将被添加到数据库中。
+
+### Current Directory in root's Path and Current Directory in the Path of Regular Users.
+
+如果取消选择这些选项（默认），用户必须始终通过添加 "./"（例如 ./configure）来在当前目录中启动程序。
+
+如果选择这些选项，则点号 "." 会附加到 root 和用户的搜索路径末尾，使他们能够在当前目录中输入命令而无需附加 "./"。
+
+选择这些选项可能非常危险，因为用户可能会意外启动当前目录中的未知程序，而不是通常的系统范围文件。
+
+此配置写入 /etc/sysconfig/suseconfig。
+
+### Enable Magic SysRq Keys. 选择此选项即使系统崩溃（例如在内核调试期间）也能让你对系统进行一定程度的控制。详情请参阅 /usr/src/linux/Documentation/sysrq.txt。
+
+此配置写入 /etc/sysconfig/sysctl。
+
+当你完成杂项设置的配置后，通过选择 Finish 保存设置并运行 SuSEconfig。
+

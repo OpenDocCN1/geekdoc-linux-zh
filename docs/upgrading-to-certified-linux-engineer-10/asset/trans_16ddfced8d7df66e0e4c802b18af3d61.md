@@ -1,0 +1,103 @@
+
+
+## Objective 6
+
+### Understand Xen Networking
+
+通常 Xen 域的网络连接即插即用。然而，如果你想更改配置，使用 Xen 进行网络配置可能会有点棘手。以下内容将为你概述 Xen 域如何连接到物理网络。
+
+为了更好地理解 Xen 网络的概念，请执行以下操作：
+
+- Understand the Basic Networking Concept
+- Understand Bridging
+- Understand the Network Interfaces in domain0
+
+### Understand the Basic Networking Concept
+
+在 Xen 环境中，domain0 控制着主机系统的物理网络接口。非特权域通过虚拟以太网适配器连接到 domain0。
+
+非特权域中的一个虚拟适配器连接到 domain0 中的一个虚拟适配器。
+
+在 domain0 中，使用标准的 Linux 网络机制如桥接或路由，通过物理适配器将虚拟适配器连接到网络。
+
+以下是该基本概念的示意图：
+
+### Figure 8-10
+
+![](img/8279afe915b153902294b0e58311b75a_166_0.png)
+
+### Understand Bridging
+
+在 SUSE Linux Enterprise Server 10 上，连接 domain0 中虚拟和物理接口的默认机制是桥接。其他机制如带或不带网络地址转换（NAT）的路由不在本课程范围内。
+
+桥接基本上意味着多个网络接口被合并为一个。传统上，这种技术用于连接两个物理网络接口或网络段。
+
+在 Xen 系统中，桥接用于连接 domain0 中的虚拟和物理网络适配器。在 Xen 系统中，你可以将桥视为一种虚拟交换机，所有虚拟和物理接口都连接到该交换机上。
+
+桥的配置由 xend 管理进程完成。当创建新域时，会对网络配置进行以下更改（简化）：
+
+1. Xen 为新域提供一个虚拟接口。
+2. xend 在 domain0 中创建一个新的虚拟接口。
+3. 两个虚拟接口通过虚拟点对点连接相连。
+4. domain0 中的虚拟接口与物理接口一起添加到桥中。
+
+这些步骤仅影响一般的网络连通性。Xen 域中的 IP 配置需要通过 DHCP 或静态网络配置单独完成。
+
+xend 在 **/etc/xen/scripts/** 位置的脚本帮助下执行这些网络更改。以下脚本用于桥接网络：
+
+- **network-bridge.** 该脚本在 xend 启动时初始调用。它设置桥 **xenbr0** 并将物理接口移动到该桥上。
+- **vif-bridge.** 该脚本在每个域启动时调用，并将虚拟接口添加到桥中。
+
+在文件 **/etc/xen/xend-config.sxp** 中，你可以配置 xend 使用哪些网络脚本。
+
+### Understand the Network Interfaces in domain0
+
+当你使用命令 **ip a** 查看 domain0 中的网络接口时，你会发现接口比常规 Linux 安装中多得多。
+
+以下是 domain0 上 ip a 的示例输出（已缩短）：
+
+```
+linux-1ram:~# ip a
+1: lo: <LOOPBACK,UP> mtu 16436 qdisc noqueue
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: peth0: <BROADCAST,MULTICAST,NOARP,UP> mtu 1500 qdisc
+    pfifo_fast qlen 100
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+       valid_lft forever preferred_lft forever
+4: vif0.0: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+       valid_lft forever preferred_lft forever
+5: eth0: <BROADCAST,MULTICAST,NOTRAILERS,UP> mtu 1500 qdisc
+    noqueue
+    link/ether 00:11:25:81:4c:5b brd ff:ff:ff:ff:ff:ff
+    inet 149.44.171.67/23 brd 149.44.171.255 scope global
+    eth0
+       inet6 2001:780:101:aa00:211:25ff:fe81:4c5b/64 scope
+    global dynamic
+       valid_lft 29998sec preferred_lft 9996sec
+    inet6 fe80::211:25ff:fe81:4c5b/64 scope link
+       valid_lft forever preferred_lft forever
+6: vif0.1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+7: veth1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+    [...] 
+19: veth7: <BROADCAST,MULTICAST> mtu 1500 qdisc noop
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+20: xenbr0: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 2001:780:101:aa00::fcff:feff:feff:ffff/64 scope
+    global dynamic
+       valid_lft 29998sec preferred_lft 9996sec
+    inet6 fe80::200:ff:fe00:0/64 scope link
+       valid_lft forever preferred_lft forever
+23: vif3.0: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue
+    link/ether fe:ff:ff:ff:ff:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::fcff:ffff:feff:ffff/64 scope link
+       valid_lft forever preferred_lft forever
+```
+

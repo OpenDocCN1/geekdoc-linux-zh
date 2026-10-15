@@ -1,0 +1,5 @@
+Select **Continue**.
+
+The following dialog gives you a resume about the domain configuration. Usually there is nothing to do here. Select **Next** in this dialog and in the domain overview.
+
+A terminal window opens up where you can finish the remaining steps of the OS installation with YaST.

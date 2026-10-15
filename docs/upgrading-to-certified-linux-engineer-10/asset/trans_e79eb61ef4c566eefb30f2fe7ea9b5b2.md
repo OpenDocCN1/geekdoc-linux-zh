@@ -1,0 +1,123 @@
+
+
+## 练习 12-1 使用 AVMailGate 作为邮件病毒扫描器
+
+在本练习中，你将安装并配置 AVMailGate 作为邮件的病毒扫描器。最后，你将更新 AVMailGate 病毒特征码。
+
+执行以下操作：
+- 第一部分 - 安装 AVMailGate
+- 第二部分 - 配置 Postfix 使用 AVMailGate 作为内容过滤器
+- 第三部分 - 配置 AVMailGate 使用的端口
+- 第四部分 - 使用光盘上的病毒文件检查配置
+- 第五部分 - 更新你的病毒特征码
+
+### 第一部分 - 安装 AVMailGate
+
+- 1. 从主菜单启动 YaST。
+- 2. 输入 root 密码（novell）并选择确定。
+- 3. 在 YaST 控制中心，选择 软件 > 软件管理。
+- 4. 从过滤器下拉菜单中选择 搜索。
+- 5. 在搜索字段中输入 avmailgate；然后选择 搜索。
+- 6. 在右侧选择 avmailgate 软件包。
+- 7. 选择 接受；然后插入 SUSE Linux Enterprise Server 10 DVD。
+- 8. 选择 继续 以解决依赖关系。
+- 9. 安装完成后，取出 DVD 并关闭 YaST 控制中心。
+
+### 第二部分 - 配置 Postfix 使用 AVMailGate 作为内容过滤器
+
+- 1. 在文本编辑器中打开文件 /etc/postfix/master.cf。
+- 2. 取消注释以下行（在一行中）：
+  localhost:10025 inet n - n - smtpd -o content_filter=
+- 3. 在 /etc/postfix/main.cf 中添加以下行：
+  content_filter = smtp:127.0.0.1:10024
+- 4. 保存文件。
+- 5. 输入 postfix reload。
+
+### 第三部分 - 配置 AVMailGate 使用的端口
+
+- 1. 为确保 AVMailGate 在端口 10024 而非端口 25 上监听，编辑 /etc/avmailgate.conf：
+  ListenAddress 127.0.0.1 port 10024
+- 2. 为确保 AvMailGate 通过 SMTP 将邮件发送回 Postfix，主机为 localhost，端口为 10025，编辑 /etc/avmailgate.conf：
+  ForwardTo SMTP: localhost port 10025
+- 3. 由于 AvMailGate 以 AvMailGate 身份发送通知消息，在 /etc/aliases 中设置一个别名：
+  avmailgate: root
+- 4. 输入 newaliases。
+- 5. 输入 rcavgate start。
+
+### 第四部分 - 使用光盘上的病毒文件检查配置
+
+- 1. 以用户 geeko 登录。
+- 2. 发送一封感染病毒的邮件给用户 root，输入
+  mail root -s "Virus Test" -a /media/cdrecorder/section_4/sample-virus-executable.txt
+
+3. 输入电子邮件正文
+This is an infected mail.
+.
+
+4. 以用户 root 登录。
+
+5. 通过输入 mailq 检查邮件队列是否为空
+
+6. 通过输入 mail 检查感染的邮件是否到达
+
+7. 通过输入 ls /var/spool/avmailgate/rejected 检查感染的邮件是否被检测到
+
+### 第五部分 - 更新你的病毒特征码
+
+1. 要检查病毒特征码是否有新版本，输入 /usr/lib/AntiVir/antivir --update --check
+
+2. 要下载病毒特征码，输入 /usr/lib/AntiVir/antivir --update
+
+（练习结束）
+
+## AMaViSd-new
+
+AMaViSd-new（A Mail Virus Scanner）由守护进程和一些可选的辅助程序组成，这些程序仅在消息传输代理（MTA）与一个或多个内容检查器（病毒扫描器或 SpamAssassin）之间设置时才需要。
+
+邮件服务器将所有收发邮件发送到 AMaViSd。AMaViSd-new 将提取电子邮件并进行测试。
+
+AMaViSd 识别四种不受欢迎的邮件。它们是具有以下特征的邮件：
+- 1. 无效的头部
+- 2. 禁止的文件类型
+- 3. 病毒
+- 4. 垃圾邮件
+
+AMaViSd 按列出的顺序检查传入邮件的这四种类型。
+
+如果未发现任何问题，AMaViSd-new 将电子邮件发回邮件服务器，准备投递。
+
+默认情况下，AMaViSd-new 在端口 10024 上监听来自邮件服务器的传入邮件。
+
+AMaViSd-new 通过端口 10025 将干净的邮件发送到邮件服务器。它通常位于中央邮件服务器或其附近，而不一定是用户邮箱和最终投递所在的位置。
+
+本主题描述以下内容：
+- 安装 AMaViSd-new
+- 配置 AMaViSd-new
+
+## 安装 AMAViSd-new
+
+要安装 AMAViSd-new，请选择软件包 amavisd-new。
+
+如果系统上未安装病毒扫描器，AMAViSd-new 将无法工作。如果你只想使用 AMAViSd-new 进行垃圾邮件过滤，请在 /etc/amavisd.conf 中搜索 @bypass_virus_checks_acl 并删除该行开头的注释符号（"#"）。
+
+压缩工具 gzip、bzip2、arc、lha、unrar、zoo、cpio 和 lzop 也应安装。
+
+在 SUSE Linux Enterprise Server 10 安装期间，会创建一个用户 vscan。它用于 AMAViSd。
+
+```
+da51:~# grep vscan /etc/passwd
+vscan:x:65:104:vscan account:/var/spool/amavis::/bin/false
+```
+
+安装 AMAViSd-new 后，你可以使用 rcmavis start 启动守护进程。
+
+守护进程应监听端口 10024。
+
+```
+da51:~# telnet 127.0.0.1 10024
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+220 [127.0.0.1] ESMTP amavisd-new service ready
+```
+

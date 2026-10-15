@@ -1,0 +1,32 @@
+- - '###'
+  - 图 Intro-1
+- - '###'
+  - 目标 3 识别 GNOME 桌面组件
+- - '###'
+  - 目标 4 管理 GNOME 中的图标
+- - '####'
+  - 桌面
+- - '####'
+  - Panel
+- - '####'
+  - Main Menu
+- - '###'
+  - Objective 5 Use the GNOME File Manager (Nautilus)
+- - '###'
+  - Objective 6 Search for Files
+- - '###'
+  - 目标 7 从桌面访问命令行界面
+- - '###'
+  - 摘要
+- - '###'
+  - Objective 2 描述设备驱动程序的工作方式
+- - '###'
+  - Objective 3 描述设备驱动程序如何加载
+- - '###'
+  - Objective 4 手动管理内核模块
+- - '####'
+  - Kernel Module Basics
+- - '####'
+  - 从命令行管理模块
+- - '####'
+  - modprobe 配置文件 (/etc/modprobe.conf)

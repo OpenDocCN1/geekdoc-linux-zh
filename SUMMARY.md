@@ -2382,6 +2382,7 @@
 +   [Linux 内核破解不靠谱指南](docs/unreliable-guide-to-hacking-the-linux-kernel/README.md)
 +   [Linux 的 DB2 快速上手](docs/up-and-running-with-db2-for-linux-ibm-redbooks/README.md)
 +   [Linux 上的 DB2 快速指南](docs/up-and-running-with-db2-on-linux-title-from-title-screen---r/README.md)
++   [升级到认证 Linux 工程师 10](docs/upgrading-to-certified-linux-engineer-10/README.md)
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
 +   [Usenet：终极指南 (黑客、Linux、加密、PGP)](docs/usenet-the-ultimate-guide-hacking-linux-encryption-pgp/README.md)
 +   [Linux 使用与管理指南：卷 1](docs/using-and-administering-linux-volume-1/README.md)

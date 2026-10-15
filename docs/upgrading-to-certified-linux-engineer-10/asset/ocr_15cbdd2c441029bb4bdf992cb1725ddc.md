@@ -1,0 +1,13 @@
+| Objective | Summary |
+|---|---|
+| 3. Control AppArmor | AppArmor is started early during the boot process.
+
+`/etc/init.d/boot.apparmor` is the script used to control AppArmor.
+`/sbin/rcapparmor` is a link to it.
+
+The parameters `stop` and `kill` end the confinement of processes by AppArmor. `start` is used to activate confinement of processes—but only processes with profiles that are started after AppArmor has been activated are confined. `reload` or `restart` reload the profiles.
+
+`enforce` and `complain` toggle enforce and complain mode.
+
+`unconfined` lists processes with bound sockets that have no profile. |
+| 4. Monitor AppArmor | AppArmor can be configured via YaST to create reports on security events and to send email messages to inform on security events. |
