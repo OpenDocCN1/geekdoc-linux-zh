@@ -1,0 +1,5 @@
+14. Press F1 to boot into Microsoft Windows OS. On my computer, I successfully booted into Windows 98 (SE). So far so good! I rebooted and pressed F2 this time, and I successfully booted into FreeBSD as well. Bingo! You already have a dual-boot system which uses the FreeBSD boot loader to boot 2 operating systems.
+
+15. Depending on the configuration of your computer, you will receive bootup messages on your screen when you boot into FreeBSD for the first time. Though the messages scroll off the screen rather fast for you to read anything productive, you can always read it later by using the "/sbin/dmesg | more" command. Finally, you will arrive at the login prompt. Login using the username/password you set during installation. Readers must note: The Linux slice is not ready yet, cause we have not defined the mount points of the root (/) directory and swap filesystem as well. So, for doing this and more, we proceed to the chapter Chapter 6: Installing Red Hat Linux 7.3 (Valhalla). Readers must note that if you have already installed FreeBSD, you can skip the next 2 chapters and proceed with the Linux installation directly.
+
+Previous      Home      Next

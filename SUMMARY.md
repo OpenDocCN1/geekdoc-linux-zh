@@ -2419,6 +2419,7 @@
 +   [Windows Server 2022 与 Powershell 一册通](docs/windows-server-2022-powershell-all-in-one-for-dummies-for-du/README.md)
 +   [Windows 到 Linux 业务桌面迁移指南](docs/windows-to-linux-business-desktop-migration/README.md)
 +   [Windows 到 Linux 迁移工具包](docs/windows-to-linux-migration-toolkit/README.md)
++   [Windows+BSD+Linux 安装指南, v1.1](docs/windowsbsdlinux-installation-guide-v11/README.md)
 +   [无线黑攻击：Kali Linux 无线黑攻击入门指南](docs/wireless-hacking---introduction-to-wireless-hacking-with-kal/README.md)
 +   [无线黑客：如何破解无线网络 (破解技巧、无线黑客、渗透测试、安全、计算机黑客、Kali Linux)](docs/wireless-hacking-how-to-hack-wireless-network-how-to-hack-wi/README.md)
 +   [Kali Linux 无线破解：如何通过渗透测试快速学习破解任何无线网络](docs/wireless-hacking-with-kali-linux-begin-to-learn-fast-how-to-/README.md)

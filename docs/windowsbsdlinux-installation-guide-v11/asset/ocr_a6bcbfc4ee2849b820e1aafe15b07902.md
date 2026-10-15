@@ -1,0 +1,17 @@
+# 5. Conclusion
+
+So folks, this brings us to the end of our journey of creating a multi-boot system configured with three modern operating systems. Assuming that you followed every step of this guide and everything went well, allow me to congratulate you on your success. If in case, something went wrong, make sure you read documentation and manuals of the relative operating system. Otherwise you can always refer to the Online manuals and resources.
+
+Make sure you browse these links:
+
++   - Distribution specific Official Red Hat Linux Installation and Upgrade manuals
++   - Linux Kernel resources
++   - Linux Loader (LILO) and other boot loader questions
++   - Red Hat Linux Hardware questions
+
+For referring to Online manuals dealing with "multi-booting" specifically, I consider these as some of the "very" best:
+
++   - Installing and Using FreeBSD With Other Operating Systems
++   - An excellent page explaining booting process and methodologies.
+
+Ultimately, though, the responsibility for any errors or omissions you might find is mine and mine alone, so please address your ire to me at subhasish_ghosh@linuxwaves.com. For those who would like to send PRs (Problem Reports), please make sure you send enough valid and related information for me to work with. I cannot help you if you just send mails with messages like "This screwed up!", "That doesn't work!" and so on. Try sending detailed PRs. You may very well find your comments, suggestions and corrections reflected in the next version of this guide. Thank you!
