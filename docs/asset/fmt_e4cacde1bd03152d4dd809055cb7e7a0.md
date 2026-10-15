@@ -1,0 +1,111 @@
+
+减少重复的 `INPUT` 和 `FORWARD` 规则的常用方法是创建一个用户链，让 `INPUT` 和 `FORWARD` 链都引用它。你使用 `-N` 选项定义用户链。下一个示例显示了此安排的基本格式。创建一个名为 `incoming` 的新链（可以是任意名称）。你为 `FORWARD` 和 `INPUT` 链定义规则，现在为 `incoming` 链定义。`INPUT` 和 `FORWARD` 链然后使用 `incoming` 链作为目标，直接跳转到它并使用其规则处理收到的任何数据包。
+
+```
+iptables -N incoming
+
+iptables -A incoming -j DROP -i eth0 -s 192.168.0.45
+iptables -A incoming -j ACCEPT -i lo
+
+iptables -A FORWARD -j incoming
+iptables -A INPUT -j incoming
+```
+
+## ICMP 数据包
+
+防火墙经常会阻止某些 Internet 控制消息协议（ICMP）消息。特别是 ICMP 重定向消息，可能接管你的路由任务。然而，你需要启用一些 ICMP 消息，例如 ping、traceroute 所需的消息，特别是目的不可达操作。在大多数情况下，你始终需要确保目的不可达数据包被允许；否则，域名查询可能会挂起。表 19-6 列出了一些常见的 ICMP 数据包类型。你可以使用 `--icmp-type` 选项启用一种 ICMP 类型的数据包，其参数为表示该消息的数字或名称。以下示例启用了 echo-reply、echo-request 和 destination-unreachable 消息的使用，其编号分别为 0、8 和 3。
+
+```
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-reply -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type echo-request -d 10.0.0.1
+iptables -A INPUT -j ACCEPT -p icmp -i eth0 --icmp-type destination-unreachable -d 10.0.0.1
+```
+
+它们的规则列表将如下所示：
+
+```
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 0
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 8
+ACCEPT   icmp --  0.0.0.0/0       10.0.0.1       icmp type 3
+```
+
+Ping 操作需要进一步控制以避免 ping-of-death 安全威胁。你可以通过几种方式做到这一点。其中一种方法是拒绝任何 ping 分片。Ping 数据包通常非常小。你可以通过拒绝任何 ICMP 分片数据包来阻止 ping-of-death 攻击。使用 `-f` 选项表示分片。
+
+```
+iptables -A INPUT -p icmp -j DROP -f
+```
+
+另一种方法是限制对 ping 数据包的匹配次数。你使用 limit 模块来控制 ICMP ping 操作上的匹配次数。使用 `-m limit` 来使用 limit 模块，并使用 `--limit` 指定允许的匹配次数。`1/s` 将允许每秒一次匹配。
+
+```
+iptables -A FORWARD -p icmp --icmp-type echo-request -m limit --limit 1/s -j ACCEPT
+```
+
+| Number | Name | Required By |
+|---|---|---|
+| 0 | echo-reply | ping |
+| 3 | destination-unreachable | Any TCP/UDP traffic |
+| 5 | redirect | Routing if not running routing daemon |
+| 8 | echo-request | ping |
+| 11 | time-exceeded | traceroute |
+
+表 19-6 常见 ICMP 数据包
+
+## 控制端口访问
+
+如果你的系统托管 Internet 服务，例如 Web 或 FTP 服务器，你可以使用 `iptables` 来控制对其的访问。你可以通过使用源端口 `--sport` 或目标端口 `--dport` 选项与服务使用的端口来指定特定服务。`iptables` 允许你使用诸如 `www` 表示 Web 服务器端口之类的名称。服务名称及其使用的端口列在 `/etc/services` 文件中，该文件将端口映射到特定服务。对于域名服务器，端口将是 `domain`。你也可以使用端口号，如果你愿意的话，在数字前加上冒号。以下示例接受所有发送到位于 `192.168.0.43` 的 Web 服务器的消息：
+
+```
+iptables -A INPUT -d 192.168.0.43 --dport www -j ACCEPT
+```
+
+你也可以使用端口引用来保护某些服务并拒绝其他服务。这种方法通常用于设计对 Internet 更开放的防火墙，让用户更自由地使用 Internet 连接。你知道可能有害的某些服务，例如 Telnet 和 NTP，可以有选择地被拒绝。例如，要拒绝防火墙上的任何 Telnet 操作，你可以丢弃所有进入 Telnet 端口 23 的数据包。要保护 NFS 操作，你可以拒绝对 portmapper 使用的端口 111 的访问。你可以使用端口号或端口名称。
+
+```
+# deny outside access to portmapper port on firewall.
+ iptables -A arriving -j DROP -p tcp -i eth0 --dport 111
+ # deny outside access to telnet port on firewall.
+ iptables -A arriving -j DROP -p tcp -i eth0 --dport telnet
+```
+
+规则列表将如下所示：
+
+```
+DROP    tcp --  0.0.0.0/0      0.0.0.0/0       tcp dpt:111
+DROP    tcp --  0.0.0.0/0      0.0.0.0/0       tcp dpt:23
+```
+
+一个与端口相关的安全问题是访问 XFree86 端口范围从 6000 到 6009 的 X 服务器。在相对开放的防火墙上，这些端口可用于通过 X 服务器非法访问你的系统。端口范围可以用冒号指定，如 `6000:6009`。你也可以使用 `x11` 表示第一个端口，`x11:6009`。X 服务器上的会话可以通过使用 SSH 来保护，SSH 通常在端口 6010 上访问 X 服务器。
+
+```
+iptables -A arriving -j DROP -p tcp -i eth0 --dport 6000:6009
+```
+
+此处显示了检查的常见端口及其标签：
+
+| Service | Port Number | Port Label |
+|---|---|---|
+| Auth | 113 | auth |
+| Finger | 79 | finger |
+| FTP | 21 | ftp |
+| NTP | 123 | ntp |
+| Portmapper | 111 | sunrpc |
+| 服务 | 端口号 | 端口标签 |
+|---|---|---|
+| Telnet | 23 | telnet |
+| Web server | 80 | www |
+| XFree86 | 6000:6009 | x11:6009 |
+
+## Packet States: Connection Tracking
+
+连接跟踪的状态扩展
+
+其中更有用的扩展之一是状态扩展，它可以轻松检测数据包的跟踪信息。连接跟踪维护有关连接的信息，例如其源、目标和端口。它为确定哪些数据包属于已建立或相关的连接提供了一种有效的方法。要使用连接跟踪，首先使用 `-m state` 指定状态模块。然后你可以使用 `--state` 选项。在这里你可以指定以下任何状态：
+
+| 状态 | 描述 |
+|---|---|
+| NEW | 创建新连接的数据包 |
+| ESTABLISHED | 属于现有连接的数据包 |
+| RELATED | 与现有连接相关但不属于其一部分的数据包，例如 ICMP 错误或建立 FTP 数据连接的数据包 |
+| INVALID | 由于某种原因无法识别的数据包 |
+| RELATED+REPLY | 与已建立连接相关但不直接属于其一部分的数据包 |
