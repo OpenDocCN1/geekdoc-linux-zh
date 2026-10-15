@@ -1,0 +1,77 @@
+
+|------|-----------|----------------|-------------------|-------|
+
+| 多模 | OM1 | 62.5 µm | 125 µm | 橙色 |
+
+| 多模 | OM2 | 50 µm | 125 µm | 橙色 |
+
+| 多模 | OM3ᵇ | 50 µm | 125 µm | 水绿色 |
+
+| 单模 | OS1 | 8–10 µm | 125 µm | 黄色 |
+
+a. 根据 ISO 11801  
+b. OM3 为承载激光而优化。
+
+光纤端部使用的连接器类型超过 30 种，至于在何处使用哪种连接器，并没有明确的规律或理由。在特定情况下需要使用的连接器通常由设备供应商或您现有建筑的光纤布线决定。好消息是，转换跳线很容易获得。
+
+### 连接和扩展以太网
+
+以太网可以通过多种设备连接。以下选项按大致成本排序，最便宜的排在前面。设备用于将比特从一个网络移动到另一个网络的逻辑越多，其所需的硬件和嵌入式软件就越多，成本也可能越高。
+
+#### 集线器
+
+集线器也称为集中器或中继器。它们是在物理层连接以太网段的主动设备，需要外部供电。
+
+作为中继器，集线器会重新定时并重构以太网帧，但不会解释帧内容；它不知道数据包去向何方，也不知道其使用何种协议。除极特殊的情况外，企业网络中不应再使用集线器，我们也不鼓励在住宅（消费级）网络中使用它们。（为什么？因为交换机对网络带宽的利用效率要高得多，而且如今价格同样低廉。）
+
+### 交换机
+
+交换机在链路层连接以太网。它们的目的是以一种使其看起来像一个大型物理网络的方式连接两个物理网络。交换机是当今连接以太网设备的行业标准。
+
+交换机在硬件中接收、再生并转发数据包。交换机使用动态学习算法。它们会注意到哪些源地址来自一个端口，哪些来自另一个端口。它们仅在必要时在端口之间转发数据包。起初所有数据包都会被转发，但几秒钟后交换机就学会了大多数主机的位置，可以更有选择性。
+
+由于并非所有数据包都会在网络之间转发，连接到交换机的每一段电缆的流量饱和度都会低于所有机器都在同一根电缆上的情况。鉴于大多数通信往往是本地化的，表观带宽的提升可能非常显著。而且由于网络的逻辑模型不受交换机存在的影响，安装交换机几乎不会产生管理上的后果。
+
+如果网络中存在环路，交换机有时会变得混乱。这种混乱源于来自单个主机的的数据包似乎出现在交换机的两个（或更多）端口上。单个以太网不能有环路，但当你用路由器和交换机连接多个以太网时，拓扑可能包含到主机的多条路径。一些交换机可以通过保留备用路由来处理这种情况，以防主路由中断。它们对所看到的网络执行修剪操作，直到剩余的部分为网络中的每个节点只提供一条路径。一些交换机还可以处理同一两个网络之间的重复链路，并以轮询方式路由流量。
+
+交换机必须扫描每个数据包以确定是否应转发。它们的性能通常同时以数据包扫描速率和数据包转发速率来衡量。许多厂商在引用的性能数据中并未提及数据包大小；因此，实际性能可能低于宣传。
+
+尽管以太网交换硬件的速度一直在提高，但它仍然不是将超过一百台主机连接到单个逻辑段的合理技术。诸如“广播风暴”等问题经常困扰大型交换网络，因为广播流量必须转发到交换段中的所有端口。为了解决这个问题，请使用路由器在交换段之间隔离广播流量，从而创建多个逻辑以太网。
+
+选择交换机可能很困难。交换机市场是计算机行业竞争激烈的一个细分市场，并且充斥着甚至部分都不真实的营销宣传。在选择交换机厂商时，你应依赖独立的评估（例如杂志比较中出现的“烘焙测试”），而不是厂商自身提供的数据。近年来，一个厂商拥有“最佳”产品几个月的情况很常见，但随后在试图改进时完全破坏了其性能或可靠性，从而使另一家制造商跃居榜首。
+
+在所有情况下，请确保交换机的背板速度足够——这才是漫长一天结束时真正重要的数字。设计良好的交换机应具有超过其所有端口速度总和的背板速度。
+
+### 支持 VLAN 的交换机
+
+大型站点可以从能够通过软件配置将端口划分为称为虚拟局域网或 VLAN 的子组 的交换机中受益。VLAN 是一组属于同一逻辑段的端口，就好像这些端口连接到自己的专用交换机一样。这种划分提高了交换机隔离流量的能力，而该能力对安全性和性能都有益影响。
+
+VLAN 之间的流量由路由器处理，或者在某些情况下，由交换机内的路由模块或路由软件层处理。一种称为“VLAN 中继”的扩展系统（例如 IEEE 802.1Q 协议所规定的）允许物理上分离的交换机为同一逻辑 VLAN 提供服务。
+
+### 路由器
+
+路由器（又称“第 3 层交换机”）在网络层、OSI 网络模型的第 3 层引导流量。它们根据 TCP/IP 协议头中的信息将数据包送往最终目的地。除了简单地将数据包从一个地方移动到另一个地方外，路由器还可以执行其他功能，例如数据包过滤（用于安全）、优先级排序（用于服务质量）以及大局网络拓扑发现。有关路由实际工作原理的详细细节，请参阅第 15 章。
+
+路由器有两种形式：固定配置和模块化。固定配置路由器在工厂时已永久安装了特定的网络接口。它们通常适用于小型、专用应用。例如，具有 T1 接口和以太网接口的路由器可能是将小型公司连接到互联网的良好选择。
+
+模块化路由器具有插槽或总线架构，用户可以在此基础上添加接口。虽然这种方法通常更昂贵，但它确保了今后的更大灵活性。
+
+根据你的可靠性需求和预期流量负载，专用路由器可能比配置为充当路由器的 UNIX 或 Linux 系统更便宜，也可能不更便宜。然而，专用路由器通常能提供卓越的性能和可靠性。这是网络设计中通常建议前期多花钱以避免日后麻烦的一个领域。
+
+### 自动协商
+
+随着多种以太网标准的引入，设备需要识别其邻居的配置方式并相应调整其设置。例如，如果链路一侧认为
+
+network is running at 1 Gb/s and the other side of the link thinks it's running at 10 Mb/s. The Ethernet autonegotiation feature of the IEEE standards is designed to detect and solve this problem. And in some cases, it does. In other cases, it is easily misapplied and simply compounds the problem.
+
+The two golden rules of autonegotiation are these:
+
+- You must use autonegotiation on all interfaces capable of 1 Gb/s or above. It's required by the standard.
+
+- On interfaces limited to 100 Mb/s or below, you must either configure both ends of a link in autonegotiation mode, or you must manually configure the speed and duplex (half vs. full) on both sides. If you configure only one side in autonegotiation mode, it will not (in most cases) "learn" how the other side has been configured. The result will be a configuration mismatch and poor performance.
+
+To see how to set a network interface's autonegotiation policy, see the system-specific sections in the TCP/IP Networking chapter; they start on page 484.
+
+### Power over Ethernet
+
+Power over Ethernet (PoE) is an extension of UTP Ethernet (standardized as IEEE 802.3af) that transmits power to devices over the same UTP cable that carries the Ethernet signal. It's especially handy for Voice over IP (VoIP) telephones or wireless access points (to name just two examples) that need a relatively small amount of power and a network connection wherever they live.
