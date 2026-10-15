@@ -1,0 +1,45 @@
+
+mulher que precisava dele ali, naquele momento。
+– Dezenove – ela repetiu。 – Uma mulher feita。 Eu ajudava com a fazenda e ganhava um salário para a família。 E ele me bateu no rosto como se eu fosse uma criança, só por querer evoluir。 Aprender。 – Ela deixou a folha cair no chão。 – Então ele jogou o livro na lareira。
+
+Griff soltou uma imprecação e deslizou pelo banco para mais perto dela。 Ele tinha desistido de soltar o botão。 Não dava a mínima para as pessoas na festa, para o que poderiam pensar ou concluir。 No momento, seu único objetivo, nesse jardim – na vida, talvez – era protegê-la。 E fazer com que ela se sentisse segura, o que, ele desconfiava, seria uma tarefa mais difícil。 Pessoas demais tinham decepcionado Pauline nesse sentido。
+
+– Mas não teve importância。 – Ela levantou o queixo, corajosa。 – Eu consegui outro exemplar。 Dessa vez, eu o escondi em outro lugar。 Quando esse livro desapareceu, arrumei outro。 E depois outro e mais outro。 Até que encontrei um modo de vencê-lo de uma vez por todas。
+– Como?
+Um sorriso curvou os lábios dela。
+– Eu decorei o texto。 Página por página, de uma ponta à outra。 Guardei a coisa toda na memória。 Ele não pode arrancar isso de mim, pode?
+
+Com a ponta do dedo, ele virou o rosto dela para si。 Os olhos de Pauline brilhavam com o reflexo das tochas。 Ela era linda e corajosa。
+Griff ficou assombrado com o louco caleidoscópio de emoções que Pauline inspirava nele。 Violência, admiração, desejo ardente。 A ternura que preencheu o coração dele era quase grande demais。 Nenhuma mulher jamais fez com que ele sentisse essas coisas。 Não todas de uma vez。
+
+Ele aninhou o queixo dela em sua mão e acariciou a face linda que tinha recebido tratamento tão abominável。
+– Você nunca mais vai voltar para esse homem。
+– Não, não vou – ela disse。 – Vou ter minha própria biblioteca circulante, abastecida com todos os livros que uma dama recatada nunca deveria ler。 – Ela deu uma olhada para a casa。 – Assim que eu conseguir voltar para esse salão de festas e fazer por merecer。
+
+Ele estudou o perfil delicado dela, espantado com a força e a determinação gravadas ali。 Pauline não devia saber como era impressionante。 Talvez... Oh, droga。 Talvez ele devesse dizer para ela。 Abraçá-la, fazê-la olhar para ele e contar a verdade:
+Você é linda。 Inteligente。 Está me virando do avesso e não gosto disso。 Não quero gostar de você。 Já sofri demais com mulheres que invadiram meu coração e depois de uma semana me abandonaram。 Mas se eu não disser essas palavras agora mesmo, serei o mais baixo dos seres。 Então aqui vai: você é extraordinária。
+
+– Seu alfinete – ela disse。
+– O quê? – A mente dele deu cambalhotas。 Foi como se cavalos selvagens estivessem arrastando seus pensamentos para Patetaburgo, na Estupidolândia e, de repente, parassem bem diante de um precipício assustador。
+
+– Seu alfinete。 – Ela fitou, esperançosa, o diamante preso na gravata dele。 – É a solução。 Nós podemos usá-lo para cortar os fios。
+Certo。 Ela era inteligente demais para seu próprio bem。 Os dedos dela voaram para a gravata dele e começaram a puxar o diamante。
+– Como se solta isto?
+– Tem um fecho。 – Ele enfiou os dedos nas dobras de tecido para encontrá-lo。 – Aqui。 Eu seguro a parte de baixo e você o gira。
+Ela segurou a cabeça do alfinete com a ponta dos dedos e começou a soltá-la。
+– Cuidado agora – ele disse。 – Vá devagar。
+Do modo como aquela semana estava indo, não seria de admirar se ela soltasse o alfinete, escorregasse para frente no banco e enterrasse a ponta afiada em uma das artérias vitais dele。
+– Está quase solto – ela disse。
+Ele adorou o modo como as sobrancelhas delicadas de Pauline se moviam com a concentração, ou como o lábio inferior dela se dobrava sob os dentes。 Ah, aquilo era mau。 Finalmente, o alfinete dourado se soltou。
+– Arrá! – Ela o segurou diante dos olhos, que brilharam de triunfo, como se ela tivesse soltado a espada da pedra ou como se aquilo fosse a chave para a caverna de Aladdin。 O sorriso dela poderia ter iluminado a noite。 – Nós conseguimos!
+Ele não teve sorte。 Ela errou as artérias vitais de Griff, mas enterrou aquela coisa no coração dele。
+– Pronto – ela disse, soltando o botão。 – Nosso acordo está salvo。 Estamos livres um do outro。
+– Não estou certo disso。
+
+Ele a puxou para perto e tomou sua boca em um beijo。 Griff se perdeu nela, certificando-se de que o gosto de sua boca continuava o mesmo, apesar da roupa nova e elegante; que embora as curvas do corpo dela pudessem ser apertadas e moldadas para exibição pública, ele sabia como elas eram: macias, quentes, fortes e cheias de vida。 Ele a beijou, faminto, implacável, provando o sabor natural de framboesas maduras dos lábios dela, que ainda carregavam um toque inebriante de licor。 Ele foi mais longe e mais rápido do que qualquer homem decente iria, porque esperava que, a qualquer momento, ela o afastasse。 Mas não, Pauline apenas correspondeu ao beijo, trazendo-o para mais perto com uma inclinação da cabeça e um suspiro suave, etéreo。 Tão generosa, tão dolorosamente delicada。
+Quando ele se curvou para lhe beijar o pescoço, os dedos dela mergulharam em seu cabelo, enviando descargas de prazer pela coluna dele。 Encorajado, ele desceu a mão para apalpar o seio, mas apalpou um punhado de enchimento de algodão。
+– Maldito espartilho – ele grunhiu。
+– Pensei que você gostasse do espartilho。
+– Eu gosto disto。 – Ele deslizou um dedo por baixo do decote dela。 – Eu gosto de você。
+Ela suspirou enquanto ele descia mais os dedos, desenhando a curva do seio redondo。 Griff encontrou o bico teso do mamilo dela e o acariciou para um lado e para outro。
+

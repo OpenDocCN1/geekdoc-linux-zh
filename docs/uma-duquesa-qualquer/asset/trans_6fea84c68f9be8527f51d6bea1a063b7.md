@@ -1,0 +1,64 @@
+
+– Claro – respondeu o duque.
+– Mas... há vários anos que sirvo aristocratas em Spindle Cove. Todas me conhecem pelo nome. E se alguma delas estiver aqui, esta noite?
+– Simms é um nome comum. E Sussex é um lugar grande.
+– Elas têm olhos, além de orelhas. E se alguém me reconhecer?
+– Então a verdade virá à tona, o jogo ficará mais interessante e todos vamos rir às custas da minha mãe. – Ele endireitou o casaco. – Mas, falando sério, do modo que você está hoje? Ninguém irá reconhecê-la.
+
+Ele a mediu com um olhar demorado e possessivo. E, pela primeira vez nessa noite, Pauline pôde ver Halford bem iluminado e sem pressa.
+
+Minha nossa. Fazia três dias que eles se conheciam. Podia mesmo ser essa a primeira vez que ela o via recém-banhado, barbeado e bem-vestido?
+
+Parecia que sim. Se pudesse pensar que esses cuidados básicos não poderiam melhorar muito a atração masculina que ele exercia... mas melhorou. E como. O casaco preto e as calças creme ajustavam-se no corpo dele como uma segunda pele, abraçando cada contorno de seus ombros largos e suas coxas musculosas. Os pequenos toques de elegância – o rosto bem-barbeado, o cabelo penteado e a gravata ornamental – serviam para enfatizar a força bruta que jazia por baixo de tanto refinamento.
+
+Ele estava mais lindo do que nunca. E o cheiro dele... Oh, ele tinha o aroma de um cheiro excitante e febril. Quando Halford se aproximou, ela inspirou. Aquela colônia almiscarada inebriante – o criado pessoal dele devia usá-la nas camisas, ao passá-las –, estava misturada com aromas de sabão e pele limpa de homem.
+
+O que mais a abalou foi o brilho de fome no olhar dele enquanto a admirava. Como se fosse uma fera medindo sua presa. Avaliando o ponto mais macio para cravar seus dentes.
+
+*Será que ele havia se alimentado hoje?*, ela se perguntou, de modo repentino e absurdo. Mas ela se deteve antes de fazer a pergunta a ele. Parecia uma pergunta zelosa demais para se fazer, e ela não estava ali para zelar por ele. Não importa o quão tentador fosse. *Lembre-se disso, Pauline.*
+
+– Como está seu braço? – ela arriscou sussurrar. Ela não pôde evitar de se preocupar um pouco.
+– Está bem. Não foi nada.
+– Mas eu o vi sangrar.
+
+Ele dispensou a preocupação dela com um gesto rápido da mão.
+– Não se preocupe com meu braço, Simms. Precisamos conversar sobre seus seios.
+O rosto dela ficou quente como brasa. Pauline olhou ao redor para ver se ninguém tinha ouvido.
+
+– Eles parecem ter inchado e dobrado de tamanho. – Ele os avaliou descaradamente. – Eu deveria chamar um médico. Isso não pode ser saudável.
+Pauline corou novamente.
+– Você sabe muito bem que isso é efeito do espartilho. Minha saúde é perfeita.
+A não ser por aquelas palpitações desagradáveis no peito. E pela dificuldade repentina de respirar na presença dele.
+
+Halford estalou a língua.
+– É melhor que sua conduta seja deplorável.
+Isso não seria difícil.
+Quando eles, enfim, entraram na casa, um criado lhes ofereceu uma bandeja com cálices de ratafia. Pauline voltou atrás em sua decisão de não ingerir líquidos nessa noite. Ela aceitou um cálice e tomou um longo gole.
+
+Aquilo desceu como um chute nas costelas. Alguém tinha batizado aquela bebida com muito álcool.
+– Maldição! – ela exclamou, engasgada com o gosto que ficou na boca.
+O ambiente ficou silencioso. Em todo o hall, pessoas vestidas com elegância se viraram para encarar Pauline.
+
+– Tem razão, Srta. Simms – a duquesa interveio, virando o rosto para a grande pintura de uma embarcação na parede oposta. – Mármore. Essas colunas são feitas de mármore.
+Aos poucos a conversa voltou ao normal, mas Pauline não acreditou que a duquesa tivesse enganado alguém.
+
+Uma senhora bem-vestida de meia-idade se aproximou, ladeada por duas cópias mais jovens de si, suas filhas, era óbvio. As três mulheres fitaram o duque com interesse antes de encararem Pauline.
+– Vossas Graças – a mãe cumprimentou. – Que prazer vê-los aqui esta noite. Por favor, quem é sua encantadora amiga?
+
+– Srta. Simms – a duquesa respondeu –, estas são Lady Eugenia Harrowes e filhas.
+– Encantada. – Pauline fez uma mesura. – Lady Harrowes. Srtas. Harrowes.
+Apenas umas poucas palavras e ela se entregou. As duas jovens elegantes deram risinhos por trás de seus leques. Se as duas riam na sua cara, Pauline só podia imaginar o que falariam depois.
+
+– De onde você é, Srta. Simms? – a mãe perguntou.
+– Sussex, minha lady.
+– E quem é sua família?
+– O pai dela é proprietário de terras – a duquesa interveio. – Os pais não podiam acompanhá-la a Londres, então eu a convidei para uma visita.
+– Oh, Vossa Graça. – Lady Harrowes torceu a boca para Pauline. – Seu coração é tão grande.
+
+Ela e as filhas se afastaram em uma onda de risadinhas, fazendo Pauline se sentir imersa em seu escárnio.
+– Harrowes, garota – a duquesa a repreendeu, puxando-a de lado. – O nome da família dela é Harrowes.
+– O que foi que eu disse? – Pauline perguntou, franzindo o nariz.
+– Lady Horrores.
+– Oh. – Estremecendo, ela procurou Lady Harrowes na multidão. A julgar pela boca retorcida da mulher e pelo olhar arrogante que deu em sua direção, Pauline ficou em dúvida se Horrores não lhe era mais adequado.
+
+– Não, não – o duque disse. – Para mim, soou mais como Lady Hors-D’oeuvre. De qualquer modo, Horrores combinou com ela. A família toda é vil, e já estava na hora de

@@ -1,0 +1,95 @@
+
+
+– É uma valsa que estão tocando? – Griff perguntou, de repente. Ele olhou para a caderneta toda escrita que segurava, antes de devolvê-la. – É uma pena que sua caderneta esteja cheia, Srta. Harrowes. Acho que vou ter que dançar com a Srta. Simms, então.
+
+Ele a conduziu até o centro da pista de dança e deslizou o braço pelas costas dela, colocando a mão entre as escápulas. Juntos, começaram a valsar.
+
+Quase no mesmo instante, os outros casais começaram a sumir. Um a um, no começo. Depois dois ou três ao mesmo tempo. Quanto mais sozinhos eles ficavam, mais constrangida ela se sentia. Logo aquilo pareceu mágico. Ali estavam eles, dançando sob a total desaprovação da Sociedade. Parecia que a orquestra, o salão de bailes e todo aquele luxo do ambiente tinha sido preparado só para os dois.
+
+– Acredito ter cumprido minha parte do acordo – ela disse. – Não vou ser celebrada por Londres esta noite. Nem em qualquer outra.
+
+– Não vai mesmo.
+
+Com isso, ela pensou que Griff interromperia a dança, mas não. Ele a fez rodopiar uma vez após a outra.
+
+– Acho que já fizemos o bastante – ela sussurrou. – Sou um verdadeiro desastre.
+
+– Ah, sim. Uma catástrofe completa. Um fracasso perfeito e lindo. – Ele se afastou para admirá-la. – E eu não poderia estar mais orgulhoso.
+
+As palavras dele a envolveram como um abraço. Os dois sabiam que ela nunca teria sustentado a pretensão de ter uma criação aristocrática. Famílias como a Harrowes não se deixariam enganar. Em vez disso, ele acolheu Pauline por quem realmente era – de maneira pública e total, o que garantia que a sociedade nunca a aceitaria.
+
+Mas ao deixá-la fracassar, ele a tornou um sucesso. Finalmente, ela teve seu triunfo. A atendente de taverna não tinha conquistado a Sociedade, mas capturou seu duque mais esquivo. Uma caçadora vestindo a pele do raro tigre branco. Só esta noite.
+
+Ele a admirou com um olhar de adoração.
+
+– Radiante. Do mesmo modo que estava naquele primeiro dia.
+
+Ela riu.
+
+– Tenho certeza de que não estou nada parecida com aquele primeiro.
+
+– Está sim. Você brilhava.
+
+– Era o açúcar.
+
+– Não me convenceu. Acho que era você mesma. – A voz dele ficou suave, uma carícia. – Sempre foi você.
+
+Ela sentiu um caroço na garganta e engoliu em seco.
+
+Com o canto do olho, Pauline viu alguns dos guardas do Príncipe Regente confabulando em um canto, com as mãos nos sabres. Se os dois não saíssem logo da pista de dança, talvez fossem expulsos por guardas armados. Essa seria uma noite inesquecível.
+
+– Acho que só temos alguns minutos.
+
+– Então vamos deixar que eles contem o tempo – Griff disse. – Aqui estou eu, um duque, valsando com uma atendente de taverna e segurando-a indecentemente perto, para que todos vejam. – Ele estremeceu, para aumentar o efeito. – O que é isso que estou sentindo? Seria o tecido da Sociedade se rasgando?
+
+Pauline torceu a boca, esforçando-se para não rir.
+
+– Deve ser apenas a gota. Ouvi dizer que duques sofrem de gota.
+
+– Bem, ouvi dizer que garçonetes têm gosto de framboesas maduras. – Ele encostou os lábios nos dela.
+
+– Griff! – ela exclamou, boquiaberta.
+
+– Pronto. Agora beijei você, na frente de todos. Chocante. E, veja, vou beijar de novo. Ele parou de dançar e usou aqueles braços fortes para aproximá-la, tomando sua boca com um beijo apaixonado.
+
+Quando se separaram, ele ostentava um sorriso malicioso.
+
+– O que a Sra. Worthington diria?
+
+Ela não sabia da Sra. Worthington, mas em algum lugar, um relógio começou a badalar. O coração de Pauline falseou. A carruagem do correio.
+
+– Eu tenho que ir – ela disse. – Preciso ir, ou não vou chegar a tempo em casa. – Ela se soltou dos braços dele. – Sinto muito. Prometi para minha irmã. Você também prometeu.
+
+Ela se afastou apressada, atravessando a pista de dança, voltando pelas antecâmaras congestionadas, chegando ao vestíbulo e descendo os degraus o mais rápido que seus sapatos permitiam.
+
+– Espere – ele chamou do alto da escada.
+
+– Não – ela gritou por cima do ombro. – Não torne isto mais difícil, Griff.
+
+– Pauline, você não pode ir agora. Não assim.
+
+Ela tentou se apressar, mas os passos dele eram maiores que o dela, e muito. Aqueles malditos sapatos. Quando tropeçou de novo, ela chutou um para longe e jogou o outro por sobre o ombro.
+
+Griff se esquivou do sapato voador e a pegou pelo braço.
+
+– Espere.
+
+– Me deixe ir.
+
+– Não estou tentando detê-la – ele disse.
+
+Ela perdeu toda vontade de resistir e arregalou os olhos para ele.
+
+– Não está?
+
+– Não. – A expressão dele ficou séria. – Você precisa voltar para sua irmã e abrir a biblioteca circulante. É o seu sonho e você fez por merecer. Quanto a mim... também tenho trabalho a fazer. Acho que está na hora de eu me colocar à altura do tal legado Halford.
+
+– Sério?
+
+Ele concordou, solene.
+
+– Para começar, vou cumprir minha palavra. Prometi que a levaria para casa no sábado e é o que vou fazer.
+
+Era isso, Pauline se deu conta. Ele ia mesmo deixá-la ir. Ela voltaria para Spindle Cove e seria uma comerciante, enquanto ele se tornava um duque respeitável. Eles ficariam mais distantes do que nunca. Oh, Deus. Talvez nunca mais se encontrassem.
+
+– Mandei preparar minha carruagem e meus cavalos mais velozes para levar você para casa. Mas primeiro, eu lhe devo algo. – Ele remexeu no bolso.

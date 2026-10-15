@@ -2293,6 +2293,7 @@
 +   [终极 Rocky Linux 9 网络管理：精通 Rocky Linux 服务器管理、虚拟化、自动化以及使用 Docker、Ansible、KVM 和 AWS 的云部署](docs/ultimate-rocky-linux-9-for-network-administration-master-roc/README.md)
 +   [Ultimate SQL Server 与 Azure SQL 数据管理与现代化：在 Linux、云端和混合环境中部署、安全保护及优化 SQL Server 的全方位专家解决方案及性能调优策略](docs/ultimate-sql-server-and-azure-sql-for-data-management-and-mo/README.md)
 +   [专业人士的终极 UI/UX 设计](docs/ultimate-uiux-design-for-professionals/README.md)
++   [一位普通公爵夫人](docs/uma-duquesa-qualquer/README.md)
 +   [ArubaOS 6.x 版本入门指南](docs/understanding-arubaos-version-6x/README.md)
 +   [理解 Linux 内核：初学者指南：最简单、最易理解、学习和使用 Linux 内核的书籍。](docs/understanding-linux-kernel-absolute-beginners-guide-the-most/README.md)
 +   [Linux 内核开发理解：理解并修改 Linux 系统核心](docs/understanding-linux-kernel-development-understanding-and-mod/README.md)

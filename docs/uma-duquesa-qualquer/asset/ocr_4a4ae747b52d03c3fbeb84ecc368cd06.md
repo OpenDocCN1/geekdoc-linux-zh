@@ -1,0 +1,30 @@
+olhou para o rosto dele, que Griff estava sofrendo.
+– Preciso ir, meus queridos. Beth vai terminar a história.
+Os pequenos se agitaram e choramingaram, puxando as saias dela.
+– Você vai voltar, Srta. Simms?
+– Receio que não... Retorno para casa amanhã à noite. Eu tenho uma irmã que está com saudade de mim. E eu estou com saudade dela. – Pauline deu um sorriso cauteloso para Griff. – Talvez Sua Graça possa vir visitar vocês outro dia.
+– Eu... – ele começou, e o bebê uivou de novo. Griff se encolheu.
+– Eu sei – ela disse para ele e se apressou para pegar sua touca e seu xale. – Vamos agora mesmo.
+
+Eles avançaram a passos largos até o portão da frente. Pauline se esforçava para acompanhar o ritmo dele. Sabia que Griff queria ser mais rápido que as próprias emoções, determinado que estava a não ser alcançado pela crise emocional que aqueles gritos tinham iniciado.
+
+Mas ele não conseguiria ficar à frente de suas emoções para sempre. A tristeza acabaria por alcançá-lo, entretanto, Pauline não queria vê-lo deprimido ali. Não com tanta gente em volta.
+
+Ela se apressou na direção da entrada. Mas então, sem dizer palavra, ele virou e passou por uma porta lateral. Pauline mudou de direção e foi atrás dele, e os dois chegaram à rua. O rosto dele carregava a mesma expressão vazia, sem foco, do outro dia – quando ele vagou pelas ruas de Londres durante toda a noite.
+– Griff, espere! – ela chamou. – Você não pode me deixar para trás.
+– A carruagem está na frente. O cocheiro pode levar você para casa.
+– Mas e você?
+Ele gesticulou, a esmo, para as ruas anônimas e movimentadas.
+– Preciso caminhar por um tempo. Vai passar se eu puder... – a voz dele falhou.
+Ela sentiu um aperto no coração. Talvez ele estivesse conseguindo ser mais rápido do que suas emoções há meses. Mas essa era uma corrida que ele iria perder.
+– Só me deixe – ele pediu.
+– Não – ela disse quando chegaram ao meio-fio. – Não desta vez. Não vou deixar você sozinho.
+
+Com um gesto ágil, Pauline chamou um carro de aluguel.
+– Qual é o nome daquela igreja? – ela perguntou ao condutor. – Aquela do outro lado de Londres?
+O condutor, todo vestido de preto, virou seu nariz pontudo para ela.
+– Está falando de St. Paul?
+– Isso. Nós vamos até lá. – Ela entrou na carruagem, sabendo que Griff teria que a acompanhar. Ele não a deixaria ir sozinha.
+– Eu não quero ir para a droga de uma igreja. – Ele se deixou cair no assento à frente dela, dobrando as pernas na cabine apertada e escura.
+– Eu também não, na verdade. Eu só queria um destino que fosse bem distante. Eu sei que você precisa de um tempo, mas também precisa estar com alg...
+Ela mordeu o lábio. Ele não precisava de alguém, Griff precisava dela.

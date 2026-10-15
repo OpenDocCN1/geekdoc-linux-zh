@@ -1,0 +1,1 @@
+– Não – ela respondeu. – Oh, Colin, estou tão orgulhosa. – Ela apertou a mão dele. – Você está usando o método científico.

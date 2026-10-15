@@ -1,0 +1,67 @@
+
+
+– Não – ela respondeu. – Oh, Colin, estou tão orgulhosa. – Ela apertou a mão dele. – Você está usando o método científico.
+
+## Capítulo dezesseis
+
+Griff se manteve ocupado pelo restante do dia. Ele estava com a agenda repleta de compromissos naquela tarde, todos relacionados à administração de suas propriedades.
+
+Mas isso não foi o bastante. Todas as suas reuniões com advogados, capatazes e secretários foram como balas de canhão guardadas em uma caixa – eram pesadas, ocupavam o espaço... mas não deixavam a caixa cheia de verdade. Pensamentos sobre Pauline surgiam para ocupar cada espaço vazio, como um milhão de grãos de areia. Ou talvez fosse mais apropriado dizer cristais de açúcar.
+
+De algum modo, o fim da tarde chegou enquanto ele se rendia às atenções de seu criado pessoal. Griff surgiu uma hora depois, barbeado, vestido e completamente despreparado para a visão que descia pela escadaria.
+
+Bom Deus. Bastou um olhar para ela e Griff soube que tinha acabado. A noite era um fracasso antes mesmo de começar. Ninguém acreditaria que ela era uma trabalhadora comum. Não nessa noite, não com aquela aparência.
+
+Ela envergava um vestido rosa exuberante, com camadas translúcidas de saias que desciam, ondulantes, do corpete tomara-que-caia justo. Luvas até os cotovelos que compunham com o vestido. O cabelo estava encaracolado, fazendo voltas, e preso, mas de um modo que conseguia ser, sem esforço, encantador e elegante. Um feito e tanto. Fleur merecia um aumento de salário.
+
+A postura de Pauline também estava ótima. O pescoço era como uma coluna clara e esguia, e os ombros nus... ah, os ombros pareciam uma escultura feita com o luar. Delicada e serena, misteriosa e feminina. Um colar de ametistas claras mergulhava sensualmente no decote dela, refletindo a luz em mil facetas.
+
+Griff se lembrou de que era um duque e um libertino. Ele tinha visto muitas mulheres lindas em sua vida. Já viu vestidos mais refinados do que aquele e joias mais exuberantes. Racionalmente, ele sabia que Pauline Simms não poderia eclipsar tudo e todas que vieram antes dela. Mas, de algum modo, ela conseguia esse feito.
+
+Não havia um ponto que ele conseguia destacar, nem qualquer gesto em particular. Era apenas... Ela. Eu fico com ela.
+
+– Então? – ela disse.
+
+Afinal, ele encarou aqueles olhos verdes, brilhantes, felinos, inteligentes, encaixados no rosto em forma de coração. Nessa noite estavam ansiosos e vulneráveis.
+
+Bom senhor. Ela não fazia ideia. Pauline o tinha arrebatado ao ponto de fazê-lo babar, mas não fazia nenhuma ideia disso.
+
+Pauline levantou uma sobrancelha. *Ela está esperando sua reação. Reaja. Mas não demais. Só a medida certa. Uma ou duas palavras bem escolhidas.*
+
+– Bá – foi o que ele disse.
+Oh, diabos. Aquela sílaba malformada tinha mesmo escapado de sua garganta?
+– O que foi? – Pauline arregalou os olhos para ele.
+Parecia que sim. Ele limpou a garganta com um pigarro alto, depois procurou um modo de emendar o que disse.
+
+– Bom – ele pronunciou, pigarreando de novo. – Eu disse “bom”.
+Uma cor encantadora tingiu as faces de Pauline. Ainda assim, ela mordeu o lábio, parecendo insegura.
+
+– Que tipo de “bom”? – ela perguntou. – “Bom” no sentido de “muito ruim”, o que ajuda nosso objetivo? Ou “bom” no sentido de “bom de verdade”, o que o desagrada?
+
+Griff suspirou por dentro. O que ele iria dizer? “Bom” no sentido de *“Bom Deus, você é a coisa mais linda e radiante que já vi em toda minha vida. Estou sem fala, tremendo como um pateta diante de você”*. Isso esclarece a situação?
+
+– Bom no sentido de “bom” – ele disse. – Não me desagradou.
+Ela torceu o canto da boca.
+– Então isso é... bom.
+
+Aquela era, oficialmente, a conversa mais estúpida da qual Griff tinha participado, e isso incluía um debate com Del, ambos bêbados, sobre corrida de avestruzes.
+
+– A cor não é pavorosa? – Ela segurou uma prega da saia. – O vendedor de tecidos a chamou de “pétala com orvalho”, mas sua mãe disse que o tom era mais de “framboesa congelada”. O que você me diz?
+
+– Sou homem, Simms. A menos que estejamos discutindo mamilos de mulheres, não vejo motivo para procurar diferenças de tons.
+Ela apertou a boca em uma expressão de reprovação.
+
+– Seja que cor for, fica bem em você. – *Bem demais.* Ele ajeitou suas luvas de noite pretas e pegou o chapéu com Higgs. – Vamos indo.
+
+A carruagem estava pronta e à espera. Ele se voltou para Pauline. Era óbvio que ela precisava de ajuda com aquelas saias volumosas. Sem hesitar, ela aceitou a mão que ele lhe oferecia e a apertou com força, pegando emprestada a força dele. O aperto quente dos dedos recobertos de cetim quase acabou com Griff. Ele próprio estava desequilibrado quando subiu na carruagem e se sentou de frente para ela.
+
+Ele olhou pela janela, precisava recuperar o autocontrole. Ainda estavam saindo de casa, tinham a noite toda pela frente.
+
+Quando chegaram ao local em que deveriam atravessar o rio e desceram da carruagem, o sol já estava se pondo. O ar estava pesado com neblina e sombras. Havia um clima romântico de mistério, apesar das tentativas de Griff dissipá-lo.
+
+– Nós vamos cruzar o rio usando os barcos? – ela perguntou, olhando para o barco com a expressão de medo. Ela apertou o braço dele com mais força.
+
+– É o único modo de se chegar a Vauxhall – ele concordou. – Estão construindo uma ponte, mas ainda não está pronta.
+
+– Eu nunca estive em um barco em toda minha vida.
+
