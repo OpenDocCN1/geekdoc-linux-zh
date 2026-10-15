@@ -1,0 +1,200 @@
+
+- technical, specifications 344
+- Design Handoff, roles 341
+- Design Handoff, strategies
+  - continues beyond 342
+  - developers mind, designing 342
+  - embrace, flexibility 342
+- Design Handoff, tips
+  - Continuous Feedback, loop 346
+  - Design Tools, collaborative 347
+  - developers, involve 345
+  - documentation, detail 346
+  - Emphasize Design, consistency 346
+  - mindset, flexibility 346
+  - prototypes, interactive 346
+- Design Thinking 4
+- Design Thinking, benefits 31
+- Design Thinking, components
+  - Define 9 - 12
+  - Empathize 8, 9
+  - Ideate 12
+  - Prototype 14
+  - Test 16
+- Design Thinking, considerations
+  - age, appropriateness 28
+  - inclusivity 29
+  - long-term, engaging 28
+  - safety 28
+- Design Thinking/CPS, comparing 53
+- Design Thinking, importance
+  - assumptions, validating 6
+  - Empathy, building 7
+  - insights, gaining 6
+  - iterative, improving 6
+  - pain points, identifying 6
+- Design Thinking, industries
+  - Agility/Iteration, utilizing 29
+  - AI Digital, transformation 29
+  - augmented, reality 30
+  - comprehensive, integrating 30
+  - Design Education, evolution 30
+  - diversity, collaboration 29
+  - Human-Centered, solutions 29
+  - social, impact 29
+- Design Thinking, key points
+  - Brainstorming 31
+  - Empathy Maps 31
+- 人物画像 [30](#30)
+- 用户，映射 [31](#31)
+- 设计思维，方法论
+  - AirBnB [20](#20)
+  - UberEats [18](#18)
+- 设计思维，方法
+  - 头脑风暴 [13](#13)
+  - 思维，映射 [13](#13)
+  - 快速，原型制作 [13](#13)
+  - SCAMPER [13](#13)
+  - 六顶思考帽 [13](#13)
+  - 最糟糕的点子 [13](#13)
+- 设计思维，工具
+  - Canva [32](#32)
+  - 共情地图，模板 [32](#32)
+  - MindMeister [32](#32)
+  - Miro [32](#32)
+- 设计思维/UCD，对比 [60](#60)
+- 设计思维，工作流程 [5](#5)，[6](#6)
+- 日记研究 [97](#97)
+- 日记研究，挑战 [98](#98)
+- 日记研究，方法
+  - 有效技巧 [98](#98)
+  - 有效时机 [97](#97)
+- 日记研究，步骤
+  - 数据，分析 [98](#98)
+  - 格式，结构 [98](#98)
+  - 指导，提供 [98](#98)
+  - 监控，进展 [98](#98)
+  - 目标，定义 [98](#98)
+  - 试点测试 [98](#98)
+  - 招募，参与者 [98](#98)
+  - 报告，发现 [98](#98)
+
+## E
+- 共情地图 [159](#159)
+- 共情地图，方面
+  - 行为 [160](#160)
+  - 感受 [160](#160)
+  - 观察 [160](#160)
+- 想法 160
+- 共情地图，益处 161
+- 共情地图，目标 161
+- 共情地图，重要性 161
+- 共情地图，优化 161，162
+- 共情地图/人物画像，对比 163
+- 共情地图，结构 160
+- 共情地图，工具
+  - Canvanizer 169
+  - Mural 168
+  - Stormboard 169
+- 吸引人的人物画像
+  - 关于 140
+  - 益处 141
+  - 关键要素 140
+  - 结构 140
+- 体验地图 163
+- 体验地图，益处 165
+- 体验地图，组件 164
+- 体验地图，概念
+  - 行为 165
+  - 心态，感受 165
+  - 阶段 165
+  - 想法 165
+- 体验地图，工具
+  - Adobe XD 169
+  - Lucidchart 169
+  - Miro 169
+- 眼动追踪 106
+- 眼动追踪，元素
+  - 盲点 107
+    - 阅读，模式 107
+    - 绊倒 107
+- 眼动追踪，基础
+  - 热力图 107
+  - 扫视路径 107
+- 眼动追踪，局限性 109
+- 眼动追踪，方法
+  - 有效技巧 108
+  - 有效时机 107
+- 眼动追踪，步骤
+  - 数据，分析 108
+  - 设备，设置 108
+  - 目标，定义 108
+  - 参与者，选择 108
+  - 报告，发现 109
+  - 测试，构建 108
+  - 测试，执行 108
+
+## F
+- 虚构人物画像
+  - 关于 138
+  - 益处 139
+  - 关键要素 138
+  - 结构 139
+- 实地研究 101
+- 实地研究，挑战 104
+- 实地研究，方法
+  - 有效技巧 103
+  - 有效时机 102
+- 实地研究，阶段
+  - 跟进，问题 104
+  - 洞察，报告 104
+  - 迭代，实现 104
+  - 学习目标，识别 103
+  - 地点，选择 103
+  - 参与者 103
+  - 计划，观察 103
+  - 项目，开发 104
+  - 做笔记，观察 103
+  - 转录，分析 104
+- 五秒测试 112
+- 五秒测试，挑战 114
+- 五秒测试，关键问题 113，114
+- 五秒测试，方法
+  - 有效技巧 113
+  - 有效时机 112
+- 五秒测试，步骤
+  - 目标，定义 113
+  - 问题，创建 113
+  - 招募，测试 113
+  - 结果，分析 [113]
+  - 测试，设置 [113]
+- 焦点小组 [90]
+- 焦点小组，优势 [92]
+- 焦点小组，类型
+  - 有效技巧 [91]
+  - 有效时机 [90]
+
+## G
+- 礼物困境，场景
+  - 共情 [23]
+  - 头脑风暴 [25]
+  - 迭代–迭代 [27, 28]
+  - 原型 [25]
+  - 阶段，定义 [23, 24]
+  - 测试 [26]
+- 以目标为导向的人物画像
+  - 关于 [136](#136)
+  - 益处 [136, 137](#136)
+  - 关键要素 [136](#136)
+  - 结构 [136](#136)
+
+## H
+- 高保真原型 [231]
+- 高保真原型，优势
+  - 设计验证，增强 [233](#233)
+  - 细节，反馈 [233](#233)
+  - 精确，规范 [233](#233)
+  - 真实用户，体验 [233](#233)
+  - 风险，不一致 [233](#233)
+  - 利益相关者，沟通 [233](#233)
+  - 可用性，测试 [233](#233)
