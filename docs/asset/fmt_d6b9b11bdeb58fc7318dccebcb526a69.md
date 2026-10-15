@@ -1,0 +1,54 @@
+
+– Sra. Simms – ele disse, afinal –, talvez possa fazer a gentileza de nos oferecer uma bebida. Eu preciso dar uma palavrinha com seu marido.
+
+Com evidente alívio por ser dispensada, a Sra. Simms arrastou a filha para a cozinha.
+
+Griff afastou uma cadeira de vime da mesa e sentou. Ao se sentar na outra cadeira, o fazendeiro corpulento semicerrou os olhos.
+
+– O que eu posso fazer por Vossa Graça?
+
+– Diz respeito à sua filha.
+
+– Eu sabia – Amos Simms grunhiu. – O que essa garota fez agora?
+
+– Não é algo que ela tenha feito. É o que a minha mãe gostaria que ela fizesse.
+
+Simms deu um olhar astuto para a duquesa.
+
+– Sua Graça está precisando de uma copeira, então?
+
+– Não. Minha mãe gostaria de ter uma nora. Ela acredita que eu preciso de uma esposa, e afirma que pode transformar sua garota – ele acenou na direção da cozinha – em duquesa.
+
+O fazendeiro ficou em silêncio por um instante. Então o rosto dele se abriu em um sorriso com falhas entre os dentes. Ele riu de um modo baixo e seboso.
+
+– Pauline – ele disse. – Uma duquesa.
+
+– Espero que não se ofenda, Sr. Simms, se eu admitir que tenho dúvidas quanto ao sucesso dessa empreitada.
+
+– Uma duquesa... – O fazendeiro meneou a cabeça e continuou rindo.
+
+O tom grosseiro e sinistro da risada daquele homem fez Griff se remexer na cadeira. Claro que essa era uma ideia absurda, mas, ainda assim, um pai não deveria defender sua própria filha?
+
+– Eis minha oferta. – Griff pigarreou. – O homem tem apenas uma mãe, e eu decidi fazer a vontade da minha. E se eu levasse sua filha para Londres? Lá, minha mãe faria o possível para transformá-la de atendente de taverna a uma lady refinada e pronta para ser a esposa de um duque.
+
+Simms riu de novo.
+
+– É claro que, na possibilidade muito mais provável de tudo isso dar errado, nós lhe devolveremos sua filha. No mínimo ela voltaria para casa com alguns vestidos novos e tendo conhecido as coisas boas da vida.
+
+– Minha filha não precisa de vestidos novos. Nem das coisas boas da sua vida.
+
+Então a filha em questão voltou para pôr a mesa. A louça que colocou diante de Griff era, possivelmente, a xícara mais feia que ele já tinha visto – uma peça de porcelana mal pintada, sem dúvida feita em alguma fábrica de segunda linha e passada por muitos donos. Mas antes de soltar o pires, ela o girou para que a flor patética na xícara ficasse de frente para ele, e o lascado do pires ficasse escondido.
+
+O significado do gesto não passou despercebido por Griff. Ela era orgulhosa, sem dúvida. Também tinha a língua afiada e era ousada o bastante para enredar um duque e sua mãe-dragão. Nenhuma dessas características eram qualidades desejáveis em uma atendente, muito menos em uma nova noiva. Mas eram qualidades que Griff apreciava em geral, e ele começava a admirar esta Pauline Simms. Só um pouco, e só para si mesmo. Durante os poucos minutos na cozinha, ela tinha prendido o cabelo. Sua figura continuava sendo pouco notável, mas agora ele podia ver que ela era mais do que apenas um pouco bonita; ela tinha as maçãs do rosto altas, o nariz delicado e olhos puxados nos cantos, como os de um gato. Bem atraente, na verdade, de um modo rústico e rural. Todos os agricultores deviam ser loucos por ela.
+
+> Você jurou não se envolver com mulheres, uma voz o lembrou.
+
+Bem, esse juramento precisava ser bem analisado. Ele tinha jurado não se envolver com mulheres. Isso não significava que iria arrancar os próprios olhos. Um pouco de admiração descomprometida nunca fez mal a ninguém – e ele desconfiava que poderia fazer certo bem àquela mulher em especial.
+
+– Se você está decidido, nós podemos conversar – Simms disse e coçou o queixo. – Mas não posso deixar que leve-a embora assim, de qualquer jeito.
+
+Ótimo, Griff pensou. Nenhum pai bom da cabeça deveria deixar uma filha bonita e inteligente ir embora assim, com tanta facilidade.
+
+– Venha cá, Pauline – o fazendeiro ergueu a voz.
+
+Ela obedeceu, a boca formando uma linha tensa.

@@ -1,0 +1,28 @@
+
+– Da minha conta – ela completou por ele. – Eu sei. Você tem razão. Não é da minha conta, mas não pude deixar de perguntar. É muito estranho, Vossa Graça. Mesmo em meio a todos esses volumes velhos e mofados da biblioteca... eu acho que você é o livro mais difícil de ler desta sala. Assim que acho que consegui entendê-lo, você me deixa confusa outra vez.
+
+– Simms, eu sou um homem. Não sou tão complicado.
+
+Ele colocou o relógio de lado, com a intenção de pôr fim àquele interlúdio literário e mandá-la de volta ao quarto. Mas ao erguer os olhos, ele a viu. Por completo. E ele perdeu a voz.
+
+Ela estava empoleirada no segundo degrau mais alto da escada. A colcha tinha escorregado e se transformado em uma nuvem macia no chão. Pauline Simms flutuava acima dela – um filete de mulher, coberta pela camisola de algodão mais fina que ele já tinha visto. Aquela coisa já tinha sido usada, lavada e remendada tantas vezes, que parecia um rendado de teias de aranha, não um tecido de verdade. E quando ela colocou o corpo na frente da lamparina... A camisola ficou transparente por completo.
+
+Griff podia ver tudo. Ela não parecia em nada com um garoto. Não, ela era uma mulher. Os seios pequenos e redondos como maçãs eram encimados por mamilos escuros. A barriga era lisa. Quando ela se pendurou na escada, esticando-se na ponta dos pés para alcançar outro livro, a curva da silhueta dela foi para ele como uma canção conhecida. O pé em arco, a panturrilha esguia, a coxa suavemente mais grossa... e um traseiro redondo, palpável.
+
+O corpo dela não era uma figura curvilínea como as de Rubens. Nenhum artista a pintaria descansando sobre lençóis brancos. Havia algo de selvagem e fundamental nela, que inspiraria artistas a retratar uma ninfa ou dríade dançando. Ela possuía um corpo que sempre mostraria suas melhores qualidades em movimento. E nu. Que ótimo. Agora a imaginação dele se agitava com pensamentos de Pauline Simms nua e em movimento.
+
+Ela se virou na escada, encarando-o.
+
+*Olhos*, ele disse para si mesmo. *Concentre-se nos olhos.* Ela tinha olhos lindos, com aquele tom surpreendente de verde-folha e os cílios inacreditáveis de tão compridos. Griff não podia deixar seu olhar vaguear para nenhuma outra parte. Não para os seios empinados, nem para o provocante triângulo escuro aninhado entre as coxas.
+
+*Maldição.* Griff era um homem, como tinha acabado de dizer para ela. Não era complicado. A reação em seu baixo-ventre era pura, simples, com mais de dez centímetros extras de honestidade. Estava claro que ela não tinha noção de sua aparência. Não podia ter. Do contrário, ela pularia daquela escada no mesmo instante e se cobriria.
+
+– Onde estão os romances? – ela perguntou, tranquila, apoiando o cotovelo no degrau mais próximo.
+
+Um pensamento insidioso ocorreu a ele. Se ela não sabia por que Griff a encarava, ele podia ficar olhando pelo tempo que quisesse. Podia observar todos os detalhes dela e guardar visões suficientes para alimentar suas fantasias por meses.
+
+– Acho que os romances estão ali – ele respondeu, brusco, apontando para a parede em questão. Então ele colocou o relógio desmontado à frente dos olhos, como um escudo, bloqueando-a. Atrás do mecanismo, ele ergueu os olhos na direção do teto. Era melhor que alguém lá em cima acrescentasse um ponto na sua caderneta de boas ações, talvez agora o total de sua vida somasse cinco ou seis.
+
+– Você tem algum favorito para me recomendar? – ela perguntou.
+
+– Não. – Ele suspirou com impaciência. Griff desejou que ela parasse de ser tão amigável, enquanto ele se esforçava para parar de despi-la mentalmente. Na cabeça dele, ela estava a dois botões de ficar arruinada por completo.
