@@ -1,0 +1,123 @@
+
+- `[1]` `nlMatrixDSTimeMark*`
+- `[2]` `nlMatrixDSSourceAddress`
+- `[3]` `nlMatrixDSDestAddress`
+- `[4]` `nlMatrixDSPkts`
+- `[5]` `nlMatrixDSOctets`
+- `[6]` `nlMatrixDSCreateTime`
+
+- `[4]` `nlMatrixTopNControlTable`
+  - `[1]` `nlMatrixTopNControlEntry`
+    - `[1]` `nlMatrixTopNControlIndex*`
+    - `[2]` `nlMatrixTopNControlMatrixIndex`
+    - `[3]` `nlMatrixTopNControlRateBase`
+    - `[4]` `nlMatrixTopNControlTimeRemaining`
+    - `[5]` `nlMatrixTopNControlGeneratedReports`
+    - `[6]` `nlMatrixTopNControlDuration`
+    - `[7]` `nlMatrixTopNControlRequestedSize`
+    - `[8]` `nlMatrixTopNControlGrantedSize`
+    - `[9]` `nlMatrixTopNControlStartTime`
+    - `[10]` `nlMatrixTopNControlOwner`
+    - `[11]` `nlMatrixTopNControlStatus`
+
+- `[5]` `nlMatrixTopNTable`
+  - `[1]` `nlMatrixTopNEntry`
+    - `[1]` `nlMatrixTopNIndex*`
+    - `[2]` `nlMatrixTopNProtocolDirLocalIndex`
+    - `[3]` `nlMatrixTopNSourceAddress`
+    - `[4]` `nlMatrixTopNDestAddress`
+    - `[5]` `nlMatrixTopNPktRate`
+    - `[6]` `nlMatrixTopNReversePktRate`
+    - `[7]` `nlMatrixTopNOctetRate`
+    - `[8]` `nlMatrixTopNReverseOctetRate`
+
+- `[16]` `alHost`
+  - `[1]` `alHostTable`
+    - `[1]` `alHostEntry`
+      - `[1]` `alHostTimeMark*`
+      - `[2]` `alHostInPkts`
+      - `[3]` `alHostOutPkts`
+      - `[4]` `alHostInOctets`
+      - `[5]` `alHostOutOctets`
+      - `[6]` `alHostCreateTime`
+
+- `[17]` `alMatrix`
+  - `[1]` `alMatrixSDTable`
+    - `[1]` `alMatrixSDEntry`
+      - `[1]` `alMatrixSDTimeMark*`
+      - `[2]` `alMatrixSDPkts`
+      - `[3]` `alMatrixSDOctets`
+      - `[4]` `alMatrixSDCreateTime`
+  - `[2]` `alMatrixDSTable`
+    - `[1]` `alMatrixDSEntry`
+      - `[1]` `alMatrixDSTimeMark*`
+      - `[2]` `alMatrixDSPkts`
+      - `[3]` `alMatrixDSOctets`
+      - `[4]` `alMatrixDSCreateTime`
+  - `[3]` `alMatrixTopNControlTable`
+    - `[1]` `alMatrixTopNControlEntry`
+      - `[1]` `alMatrixTopNControlIndex*`
+      - `[2]` `alMatrixTopNControlMatrixIndex`
+      - `[3]` `alMatrixTopNControlRateBase`
+      - `[4]` `alMatrixTopNControlTimeRemaining`
+      - `[5]` `alMatrixTopNControlGeneratedReports`
+      - `[6]` `alMatrixTopNControlDuration`
+      - `[7]` `alMatrixTopNControlRequestedSize`
+      - `[8]` `alMatrixTopNControlGrantedSize`
+      - `[9]` `alMatrixTopNControlStartTime`
+      - `[10]` `alMatrixTopNControlOwner`
+      - `[11]` `alMatrixTopNControlStatus`
+  - `[4]` `alMatrixTopNTable`
+    - `[1]` `alMatrixTopNEntry`
+      - `[1]` `alMatrixTopNIndex*`
+      - `[2]` `alMatrixTopNProtocolDirLocalIndex`
+      - `[3]` `alMatrixTopNSourceAddress`
+      - `[4]` `alMatrixTopNDestAddress`
+      - `[5]` `alMatrixTopNAppProtocolDirLocalIndex`
+      - `[6]` `alMatrixTopNPktRate`
+      - `[7]` `alMatrixTopNReversePktRate`
+      - `[8]` `alMatrixTopNOctetRate`
+      - `[9]` `alMatrixTopNReverseOctetRate`
+
+- `[18]` `usrHistory`
+  - `[1]` `usrHistoryControlTable`
+    - `[1]` `usrHistoryControlEntry`
+      - `[1]` `usrHistoryControlIndex*`
+      - `[2]` `usrHistoryControlObjects`
+      - `[3]` `usrHistoryControlBucketsRequested`
+      - `[4]` `usrHistoryControlBucketsGranted`
+      - `[5]` `usrHistoryControlInterval`
+      - `[6]` `usrHistoryControlOwner`
+      - `[7]` `usrHistoryControlStatus`
+  - `[2]` `usrHistoryObjectTable`
+    - `[1]` `usrHistoryObjectEntry`
+      - `[1]` `usrHistoryObjectIndex*`
+      - `[2]` `usrHistoryObjectVariable`
+      - `[3]` `usrHistoryObjectSampleType`
+      - `[3]` `usrHistoryTable`
+    - `[1]` `usrHistoryEntry`
+      - `[1]` `usrHistorySampleIndex*`
+      - `[2]` `usrHistoryIntervalStart`
+      - `[3]` `usrHistoryIntervalEnd`
+      - `[4]` `usrHistoryAbsValue`
+      - `[5]` `usrHistoryValStatus`
+
+- `[19]` `probeConfig`
+  - `[1]` `probeCapabilities`
+  - `[2]` `probeSoftwareRev`
+  - `[3]` `probeHardwareRev`
+  - `[4]` `probeDateTime`
+  - `[5]` `probeResetControl`
+  - `[6]` `probeDownloadFile`
+  - `[7]` `probeDownloadTFTPServer`
+  - `[8]` `probeDownloadAction`
+  - `[9]` `probeDownloadStatus`
+  - `[10]` `serialConfigTable`
+    - `[1]` `serialConfigEntry`
+      - `[1]` `serialMode`
+      - `[2]` `serialProtocol`
+      - `[3]` `serialTimeout`
+      - `[4]` `serialModemInitString`
+      - `[5]` `serialModemHangUpString`
+      - `[6]` `serialModemConnectResp`
+      - `[7]` `serialModemNoConnectResp`
