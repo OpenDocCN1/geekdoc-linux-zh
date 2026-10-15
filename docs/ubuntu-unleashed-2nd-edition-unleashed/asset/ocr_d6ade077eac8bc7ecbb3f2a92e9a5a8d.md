@@ -1,0 +1,23 @@
+On the surface, less sounds like a very easy command; however, it has the infamy of being one of the few Linux commands that have a parameter for every letter of the alphabet. That is, -a does something, -b does something else, -c, -d, -e ... -x, -y, -z—they all do things, with some letters even differentiating between upper- and lowercase. Furthermore, it is only the parameter used to invoke less. After you are viewing your text, even more commands are available to you. Make no mistake—less is a complex beast to master.
+
+Input to less can be divided into two categories: what you type before running less and what you type while running it. The former category is easy, so we shall start there.
+
+We have already discussed how many parameters less is capable of taking, but they can be distilled down to three that are very useful: -M, -N, and +. Adding -M (this is different from -m) enables verbose prompting in less. Rather than just printing a colon and a flashing cursor, less prints the filename, the line numbers being shown, the total number of lines, and the percentage of how far you are through the file. Adding -N (again, this is different from -n) enables line numbering.
+
+The last option, +, allows you to pass a command to less for it to execute as it starts. To use this, you first need to know the commands available to you in less, which means we need to move onto the second category of less input: what you type while less is running.
+
+The basic navigation keys are the up, down, left, and right cursors; Home and End (for navigating to the start and end of a file); and Page Up and Page Down. Beyond that, the most common command is /, which initiates a text search. You type what you want to search for and press Enter to have less find the first match and highlight all subsequent matches. Type / again and press Enter to have less jump to the next match. The inverse of that is ?, which searches backward for text. Type ?, enter a search string, and press Enter to go to the first previous match of that string, or just use ? and press Enter to go to the next match preceding the current position. You can use / and ? interchangeably by searching for something with / and then using ? to go backward in the same search.
+
+Searching with / and ? is commonly used with the + command-line parameter from earlier, which passes less a command for execution after the file has loaded. For example, you can tell less to load a file and place the cursor at the first match for the search hello, like this:
+
+```
+less +/hello myfile.txt
+```
+
+Or, to place the cursor at the last match for the search hello:
+
+```
+less +?hello myfile.txt
+```
+
+Beyond the cursor keys, the controls primarily involve typing a number and then pressing a key. For example, to go to line 50 and type 50g, or to go to the 75% point of the file and type 75p. You can also place invisible mark points through the file by pressing m and then typing a single letter. Later, while in the same less session, you can press ' (a single

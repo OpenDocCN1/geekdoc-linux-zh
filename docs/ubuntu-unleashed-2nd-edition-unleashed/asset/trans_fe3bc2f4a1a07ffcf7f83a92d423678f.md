@@ -1,0 +1,58 @@
+
+
+![](img/e464b828c497c99e41f61d4c55f1c0db_735_0.png)
+
+FIGURE 30.1 KDE's KDevelop is a rapid prototyping and client-building tool for use with Linux.
+
+你可以开始通过逐步操作向导对话框来构建你的项目。当你点击 Create 按钮时，KDevelop 会自动生成通常在 KDE 客户端源目录中发现的所有文件（包括 configure 脚本，该脚本检查依赖项并构建客户端的 makefile）。要测试你的客户端，你可以先点击 Build 菜单的 Make 菜单项（或按 F8），也可以直接点击 Execute 菜单项（或按 F9），客户端会自动构建。你可以使用 KDevelop 创建 KDE 客户端、Konqueror 浏览器的插件、KDE kicker 面板小程序、KDE 桌面主题、基于 Qt 库的客户端，甚至是 GNOME 的程序。
+
+## Trolltech's Qt Designer
+
+与 KDevelop 相关并且在 Ubuntu 中可用的开发环境是 Trolltech 的 Qt Designer。你可以使用此程序为跨平台应用程序构建用户界面“表单”。Qt Designer 具有复杂的界面，支持绘制窗口、按钮和其他客户端控件。你可以从终端窗口的命令行像这样启动 Qt Designer：
+
+```
+$ designer &
+```
+
+你也可以通过点击 Programming 菜单下的 More Programming tools 菜单项来启动原型设计环境。Qt Designer 主窗口（见图 30.2）提供工具来快速构建和预览图形客户端。创建用于存放项目文件的文件夹后，首先选择 File, New Menu 来创建新项目。然后，你可以选择一个 C++ 项目并以 .pro 结尾的名称保存它。
+
+![](img/e464b828c497c99e41f61d4c55f1c0db_736_0.png)
+
+FIGURE 30.2 Trolltech's Qt Designer is, like KDevelop, a capable prototyping and client-building tool for use with Linux and X.
+
+接下来，你可以再次使用 File 菜单添加文件，但这次，你选择一个窗口、部件或对话框，具体取决于你希望添加到项目中的图形界面。在设计程序的 GUI 之后，你可以使用 Preview 菜单预览你的设计。如果你已添加足够必要的代码，你也可以测试新客户端的构建。你首先导航到项目的文件夹（使用 cd 命令），然后使用 qmake 和 make 命令，如下所示：
+
+```
+$ qmake -o Makefile myproject.pro
+$ make
+$ ./myproject
+```
+
+## The Glade Client for Developing in GNOME
+
+如果你更喜欢使用 GNOME 及其开发工具，Glade GTK+ GUI 构建器（glade-3 客户端）可以帮助你在为程序构建基本骨架时节省时间和精力。你可以从桌面面板的 Programming 菜单或从终端窗口的命令行启动 glade-3，如下所示：
+
+```
+$ glade-3 &
+```
+
+当你启动 Glade 时，会在你的主目录中创建一个名为 Projects 的目录，并且你会看到一个主窗口以及两个浮动的 Palette 和 Properties 窗口。 （见图 30.3，其中显示了一个基本 GNOME 客户端，其主窗口中添加了日历部件。）你可以使用 Glade 的 File 菜单保存空白项目，然后通过从 Palette 窗口中点击并添加用户界面元素开始构建你的客户端。例如，你可以先点击 Palette 窗口的 Gnome 按钮，然后点击创建你新客户端的主窗口。 一个带有菜单和工具栏的窗口会出现——这是新 GNOME 客户端的基本框架！
+
+![](img/e464b828c497c99e41f61d4c55f1c0db_737_0.png)
+
+FIGURE 30.3 You can use the GNOME Glade client to build and preview a graphical interface for a custom GNOME program.
+
+当你完成客户端构建后，你可以从 Project 窗口的 File 菜单中选择 Build Source Code，Glade 会为项目构建必要的源代码和脚本。然后，你可以通过在项目目录中执行 autogen.sh 脚本来构建项目的 configure 脚本，如下所示：
+
+```
+$ ./autogen.sh
+```
+
+在设置好项目后，与 KDevelop 项目一样，你就可以准备配置、构建和安装你的项目。要开始该过程，请执行以下操作：
+
+```
+# make install
+```
+
+在使用这些快速原型设计工具时，你需要添加代码来填充你新 KDE 或 GNOME 客户端的操作。但 kdevelop、designer 和 glade 可以帮助节省开发时间和精力。 使用这些环境创建一个可工作的骨架应用程序，然后再微调你新客户端的用户界面。
+

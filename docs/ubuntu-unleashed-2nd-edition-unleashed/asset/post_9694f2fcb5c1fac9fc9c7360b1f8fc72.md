@@ -1,0 +1,53 @@
+
+Flat file databases are unsuitable for multi-user environments—Depending on how the database is set up, it either enables only one user to access it at a time or allows two users to make changes simultaneously, and the changes could end up overwriting each other and cause data loss.
+
+These limitations obviously make the flat file database unsuitable for any kind of serious work in even a small business—much less in an enterprise environment. Relational databases, or relational database management systems (RDBMSs) to give them their full name, are good at finding the relationships between individual pieces of data. An RDBMS stores data in tables with fields much like those in spreadsheets, making the data searchable and sortable. RDBMSs are the focus of this chapter.
+
+Oracle, DB2, Microsoft SQL Server, and the freely available PostgreSQL and MySQL are all examples of RDBMSs. The following sections discuss how relational databases work and provide a closer look at some of the basic processes involved in administering and using databases. You will also learn about SQL, the standard language used to store, retrieve, and manipulate database data.
+
+## How Relational Databases Work
+
+An RDBMS stores data in tables, which you can visualize as spreadsheets. Each column in the table is a field; for example, a column might contain a name or an address. Each row in the table is an individual record. The table itself has a name you use to refer to that table when you want to get data out of it or put data into it. Figure 21.1 shows an example of a simple relational database that stores name and address information.
+
+| last_name | first_name | address | city | state | zip | phone |
+|---|---|---|---|---|---|---|
+| Doe | John | 501 Somestreet | Anytown | NY | 55011 | 555-555-1212 |
+| Doe | Jane | 501 Somestreet | Anytown | NY | 55011 | 555-555-1212 |
+| Palmer | John | 205 Anystreet | Sometown | NY | 55055 | 123-456-7890 |
+| Johnson | Robert | 100 Easystreet | Easytown | CT | 12345 | 111-222-3333 |
+
+FIGURE 21.1 In this visualization of how an RDBMS stores data, the database stores four records (rows) that include name and address information, divided into seven fields (columns) of data.
+
+In the example shown in Figure 21.1, the database contains only a single table. Most RDBMS setups are much more complex than this, with a single database containing multiple tables. Figure 21.2 shows an example of a database named sample_database that contains two tables.
+
+### phonebook
+
+| last_name | first_name | phone |
+|---|---|---|
+| Doe | John | 555-555-1212 |
+| Doe | Jane | 555-555-1212 |
+| Palmer | John | 555-123-4567 |
+| Johnson | Richard | 555-111-4321 |
+
+### cd_collection
+
+| id | title | artist | year | rating |
+|---|---|---|---|---|
+| 1 | Mindbomb | The The | 1989 | 4 |
+| 2 | For All You've Done | Hillsong | 2004 |  |
+| 3 | Trouser Jazz | Mr Scruff | 2002 | 5 |
+| 4 | Natural Elements | Acoustic Alchemy | 1988 | 3 |
+| 5 | Combat Rock | The Clash | 1982 | 4 |
+| 6 | Life for Rent | Dido | 2003 | 5 |
+| 7 | Adiemus 4 | Karl Jenkins | 2000 | 4 |
+| 8 | The Two Towers | Howard Shore | 2002 | 5 |
+
+FIGURE 21.2 A single database can contain two tables—in this case, phonebook and cd_collection.
+
+In the sample_database example, the phonebook table contains four records (rows) and each record hold three fields (columns) of data. The cd_collection table holds eight records, divided into five fields of data.
+
+If you are thinking that there is no logical relationship between the phonebook table and the cd_collection table in the sample_database example, you are correct. In a relational database, users can store multiple tables of data in a single database—even if the data in one table is unrelated to the data in others.
+
+For example, suppose you run a small company that sells widgets and you have a computerized database of customers. In addition to storing each customer's name, address, and phone number, you want to be able to look up outstanding order and invoice information for any of your customers. You could use three related tables in an RDBMS to store and organize customer data for just those purposes. Figure 21.3 shows an example of such a database.
+
+In this example in Figure 21.3, we have added a customer ID field to each customer record. This field holds a customer ID number that is the unique piece of information that can be used to link all other information for each customer to track orders and invoices. Each customer is given an ID unique to him; two customers might have the same data in their name fields, but their ID field values will never be the same. The Customer ID field data in the Orders and Overdue tables replaces the Last Name, First Name, and Shipping Address field information from the Customers table. Now, when you

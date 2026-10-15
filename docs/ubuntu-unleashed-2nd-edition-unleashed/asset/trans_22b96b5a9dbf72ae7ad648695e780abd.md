@@ -1,0 +1,145 @@
+
+
+当 FTP 用户尝试登录时，横幅将显示如下：
+
+```
+$ ftp shuttle2
+Connected to shuttle2.home.org.
+220-Welcome to Widget, Inc.'s FTP server.
+220-This server is only for use of authorized users.
+220-Third-party developers should use a mirror site.
+220-
+220-
+220 shuttle2 FTP server (Version wu-2.6.2-8) ready.
+504 AUTH GSSAPI not supported.
+504 AUTH KERBEROS_V4 not supported.
+KERBEROS_V4 rejected as an authentication type
+Name (shuttle2:phudson):
+```
+
+## NOTE
+
+请注意，横幅不会替换问候文本，该问候文本默认显示主机名和服务器信息，例如
+
+```
+220 shuttle2 FTP server (Version wu-2.6.2-8) ready.
+```
+
+要隐藏版本信息，请在 ftpaccess 中使用 greeting 命令并使用 terse 等关键字，如下所示：
+
+```
+greeting terse
+```
+
+然后 FTP 用户在登录文本中会看到如下简短消息：
+
+```
+220 FTP server ready.
+```
+
+此外，并非所有 FTP 客户端都能处理来自 FTP 服务器的多行响应。banner <path> 命令是横幅行将文件内容传递给客户端的方式。如果客户端无法中断多行响应，FTP 服务器对他们来说将毫无用处。您还应编辑默认横幅以删除身份和版本信息。
+
+## Display a File
+
+此行指定在用户登录时以及用户发出 cd 命令时向用户显示的文本文件：
+
+```
+message <path> {<when> {<class> ...}}
+```
+
+可选的 when 子句可以是 LOGIN 或 CWD=(dir)，其中 dir 是当前目录的名称。可选的 class 参数可使消息仅显示给特定类别或类别的用户。
+
+使用 messages 是一种很好的方法，可以提供有关站点上事物所在位置的信息，以及系统相关的信息，例如替代站点、可用数据的一般策略、服务器可用时间等。
+
+您可以使用 *magic cookies* 为显示的消息注入活力。Magic cookies 是符号常量，会被系统信息替换。表 23.1 列出了 message 命令的有效 magic cookies 及其表示。
+
+| Cookie | Description |
+|---|---|
+| `%t` | 本地时间（格式为 Thu Nov 15 17:12:42 1990） |
+| `%F` | CWD 分区中的可用空间（千字节）[并非所有系统都支持] |
+| `%C` | 当前工作目录 |
+| `%E` | `ftpaccess` 中定义的维护人员的电子邮件地址 |
+| `%R` | 远程主机名 |
+| `%L` | 本地主机名 |
+| `%u` | 通过 RFC931 身份验证确定的用户名 |
+| `%U` | 登录时提供的用户名 |
+| `%m` | 此类别允许的最大用户数 |
+| `%N` | 此类别中的当前用户数 |
+| `%B` | 分配磁盘块的绝对限制 |
+| `%b` | 磁盘块的首选限制 |
+| `%Q` | 当前块计数 |
+| `%I` | 分配的 inode 最大数量（+1） |
+| `%i` | 首选 inode 限制 |
+| `%q` | 已分配的 inode 当前数量 |
+| `%H` | 过度使用磁盘的时间限制 |
+| `%h` | 过度使用文件的时间限制 |
+
+**Ratios**
+
+| Cookie | Description |
+|---|---|
+| `%xu` | 已上传字节数 |
+| `%xd` | 已下载字节数 |
+| `%XR` | 上传/下载比率（1:n） |
+| `%xC` | 信用字节数 |
+| `%xT` | 时间限制（分钟） |
+| `%XE` | 登录以来的经过时间（分钟） |
+| `%xL` | 剩余时间 |
+| `%xU` | 上传限制 |
+| `%xD` | 下载限制 |
+
+要了解此命令的工作原理，请想象您想向所有登录 FTP 服务器的用户显示欢迎消息。以下条目
+
+```
+message /home/ftp/welcome.msg  login
+message /welcome.msg        login
+```
+
+会向所有登录服务器的真实用户显示 welcome.msg 文件的内容。第二条条目会向匿名用户显示相同的消息。
+
+welcome.msg 文件不会随软件包安装而创建，但您可以使用文本编辑器创建它。输入以下内容：
+
+```
+Welcome to the anonymous ftp service on %L!
+
+There are %N out of %M users logged in.
+
+Current system time is %T
+
+Please send email to %E if there are
+any problems with this service.
+
+Your current working directory is %C
+```
+
+将此文件保存为 /var/ftp/welcome.msg。通过连接到 FTP 服务器验证其是否有效：
+
+```
+220 FTP server ready.
+504 AUTH GSSAPI not supported.
+504 AUTH KERBEROS_V4 not supported.
+KERBEROS_V4 rejected as an authentication type
+Name (shuttle:phudson): anonymous
+331 Guest login ok, send your complete e-mail address as password.
+Password:
+230-Welcome to the anonymous ftp service on shuttle.home.org!
+230-
+230-There are 1 out of unlimited users logged in.
+230-
+230-Current system time is Mon Nov  3 10:57:06 2003
+230-
+230-Please send email to root@localhost if there are
+230-any problems with this service.
+230-Your current working directory is /
+```
+
+## Display Administrator's Email Address
+
+此行设置 FTP 管理员的电子邮件地址：
+
+```
+email <name>
+```
+
+此字符串在指定 %E magic cookie 时打印。此 magic cookie 用于 messages 行或 shutdown 文件中。您应在登录横幅消息中向用户显示此字符串，以便他们在 FTP 服务器出现问题时知道如何联系您（管理员）。
+

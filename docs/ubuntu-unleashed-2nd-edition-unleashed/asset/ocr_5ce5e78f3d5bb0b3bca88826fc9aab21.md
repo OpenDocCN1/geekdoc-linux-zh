@@ -1,0 +1,28 @@
+Another safe way to install a new version of Apache is to first back up any important configuration directories and files (such as /etc/apache2) and then use the apt-get command to remove the server. You can then install and test your new version and, if needed, easily restore your original server and settings.
+
+It is strongly recommended that you use Ubuntu's version of Apache until you really know what happens at system startup. No "uninstall" option is available when installing Apache from source!
+
+# Apache File Locations After a Build and Install
+
+Files are placed in various subdirectories of /usr/local/apache (or whatever directory you specified with the --prefix parameter) if you build the server from source. Before version 1.3.4, files were placed in /usr/local/etc/httpd.
+
+The following is a list of the directories used by Apache, as well as brief comments on their usage:
+
++   - /usr/local/apache/conf—This contains several subdirectories and the Apache configuration file, httpd.conf. Debian-based systems such as Ubuntu often rename this to apache2.conf, so your mileage may vary. See the section "Editing apache2.conf" later in this chapter to learn more about configuration files.
++   - /usr/local/apache—The cgi-bin, icons, and htdocs subdirectories contain the CGI programs, standard icons, and default HTML documents, respectively.
++   - /usr/local/apache/bin—The executable programs are placed in this directory.
++   - /usr/local/apache/logs—The server log files are placed in this directory. By default, there are two log files—access_log and error_log—but you can define any number of custom logs containing a variety of information (see the "Logging" section later in this chapter). The default location for Apache's logs as installed by Ubuntu is /var/log/apache2.
+
+# A Quick Guide to Getting Started with Apache
+
+Setting up, testing a web page, and starting Apache using Ubuntu can be accomplished in just a few steps. First, make sure that Apache is installed on your system. Either select it during installation or install the server and related package files (refer to Chapter 7 if you need to install the server software).
+
+Next, set up a home page for your system by editing (as root) the file named index.html under the /var/www directory on your system. Make a backup copy of the original page or www directory before you begin so you can restore your web server to its default state if necessary.
+
+Start Apache through the Services window (under System, Administration from the menu bar), making sure to enable "Web Server".
+
+You can also use the apache2 script under the /etc/init.d/ directory, like this:
+
+```
+sudo /etc/init.d/apache2 start
+```

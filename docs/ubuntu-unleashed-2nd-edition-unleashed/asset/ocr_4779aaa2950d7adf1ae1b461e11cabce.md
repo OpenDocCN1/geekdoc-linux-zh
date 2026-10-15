@@ -1,0 +1,21 @@
+Invest some time and experiment with your favorite search engine's features—the result will be more productive searches. In addition to sharpening your search skills, also take the time to choose the best search engine for your needs.
+
+# Google Is Your Friend
+
+Some of the fastest and most comprehensive search engines on the Web are powered by Linux, so it makes sense to use the best available resources. Out of the myriad number of websites with search engines, http://google.com stands out from the crowd, with 81 million or more users per month. The site uses advanced hardware and software to bring speed and efficiency to your searches. If you are looking for specific Linux answers, take advantage of Google's Linux page at http://google.com/linux.
+
+Why is Google (named after a math number) so powerful? You can get a quick overview from the Google folks at http://www.google.com/technology/. Part of its success is because of great algorithms, good programming, and simple interface design; but most users really seem to appreciate Google's uncanny capability to provide links to what you are looking for in the first page of a search return. Google's early success was also assured because the site ran its search engine on clusters of thousands of PCs running a version of Red Hat Linux! It is also rumored that an Ubuntu-based distribution is in use at Google, thought to be called Gubuntu.
+
+Google has the largest database size of any search engine on the Web, with more than eight billion web pages searched and indexed. The database size is important because empty search results are useless to online users, and the capability to return hits on esoteric subjects can make the difference between success and failure or satisfaction and frustration. Some of Google's features include a GoogleScout link to return similar pages on the results page, the capability to see the exact version of a web page as returned to a search engine (known as a cached feature), advanced searches, and more recently, a link to an active Usenet news feed!
+
+To get a better idea of what Google can offer you, browse to http://www.google.com/options/. You will find links to more than two dozen different services and tools covering specialized searches, databases, information links, translators, and other helpful browsing tools.
+
+# Ubuntu Package Listings
+
+You can quickly and easily view a list of the installed packages on your Ubuntu system, along with a short description of each package, by using synaptic.
+
+synaptic also shows you descriptions of each package so you can decide whether to have it installed. For more information on synaptic, refer to Chapter 7, "Managing Software."
+
+# Certification
+
+Linux certification courses are part of the rapidly growing information technology training industry. Hundreds of different vendors now offer courses about and testing of Linux skill sets. However, because Linux is open-source software, there are no formal rules or

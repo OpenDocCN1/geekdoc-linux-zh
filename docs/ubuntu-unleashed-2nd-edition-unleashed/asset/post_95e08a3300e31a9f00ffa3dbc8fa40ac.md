@@ -1,0 +1,115 @@
+
+When you call fopen(), you should store the return value. It is a resource known as a file handle, which the other file functions all need to do their jobs. The fread() function, for example, takes the file handle as its first parameter and the number of bytes to read as its second, returning the content in its return value. The fclose() function takes the file handle as its only parameter and frees up the file.
+
+So, we can write a simple loop to open a file, read it piece by piece, print the pieces, and then close the handle:
+
+```
+<?php
+$file = fopen("filea.txt", "rb");
+while (!feof($file)) {
+$content = fread($file, 1024);
+echo $content;
+}
+fclose($file);
+?>
+```
+
+That only leaves the fwrite() function, which takes the file handle as its first parameter and the string to write as its second. You can also provide an integer as the third parameter, specifying the number of bytes you want to write of the string, but if you exclude this, fwrite() writes the entire string.
+
+If you recall, you can use a as the second parameter to fopen() to append data to a file. So, we can combine that with fwrite() to have a script that adds a line of text to a file each time it is executed:
+
+```
+<?php
+$file = fopen("filea.txt", "ab");
+fwrite($file, "Testing\n");
+fclose($file);
+?>
+```
+
+To make that script a little more exciting, we can stir in a new function, filesize(), that takes a filename (not a file handle, but an actual filename string) as its only parameter and returns the file's size in bytes. Using that new function brings the script to this:
+
+```
+<?php
+$file = fopen("filea.txt", "ab");
+fwrite($file, "The filesize was " . filesize("filea.txt") . "\n");
+fclose($file);
+?>
+```
+
+Although PHP automatically cleans up file handles for you, it is still best to use fclose() yourself so you are always in control.
+
+## Miscellaneous
+
+Several functions do not fall under the other categories and so are covered here. The first one is isset(), which takes one or more variables as its parameters and returns true if they have been set. It is important to note that a variable with a value set to something that would be evaluated to false—such as 0 or an empty string—still returns true from isset() because it does not check the value of the variable. It merely checks that it is set; hence, the name.
+
+The unset() function also takes one or more variables as its parameters, simply deleting the variable and freeing up the memory. With these two, we can write a script that checks for the existence of a variable and, if it exists, deletes it (see Listing 29.5).
+
+### LISTING 29.5 Setting and Unsetting Variables
+
+```
+<?php
+$name = "Ildiko";
+if (isset($name)) {
+    echo "Name was set to $name\n";
+    unset($name);
+} else {
+    echo "Name was not set";
+}
+
+if (isset($name)) {
+    echo "Name was set to $name\n";
+    unset($name);
+} else {
+    echo "Name was not set";
+}
+?>
+```
+
+That script runs the same isset() check twice, but it unset()s the variable after the first check. As such, it prints "Name was set to Ildiko" and then "Name was not set".
+
+Perhaps the most frequently used function in PHP is exit, although purists will tell you that it is in fact a language construct rather than a function. exit terminates the processing of the script as soon as it is executed, meaning subsequent lines of code are not executed. That is really all there is to it; it barely deserves an example, but here is one just to make sure:
+
+```
+<?php
+exit;
+echo "Exit is a language construct!\n";
+?>
+```
+
+That script prints nothing because the exit comes before the echo.
+
+One function we can guarantee you will use a lot is var_dump(), which dumps out information about a variable, including its value, to the screen. This is invaluable for arrays because it prints every value and, if one or more of the elements is an array, it prints all the elements from those, and so on. To use this function, just pass it a variable as its only parameter:
+
+```
+<?php
+$drones = array("Graham", "Julian", "Nick", "Paul");
+var_dump($drones);
+?>
+```
+
+The output from that script looks like this:
+
+```
+array(4) {
+[0]=>
+string(6) "Graham"
+[1]=>
+string(6) "Julian"
+[2]=>
+string(4) "Nick"
+[3]=>
+string(4) "Paul"
+}
+```
+
+The var_dump() function sees a lot of use as a basic debugging technique because it is the easiest way to print variable data to the screen to verify it.
+
+Finally, we briefly discuss regular expressions, with the emphasis on briefly because regular expression syntax is covered elsewhere in this book and the only unique thing relevant to PHP are the functions you will use to run the expressions. You have the choice of either Perl-Compatible Regular Expressions (PCRE) or POSIX Extended regular expressions, but there really is little to choose between them in terms of functionality offered. For this chapter, we use the PCRE expressions because, to the best of our knowledge, they see more use by other PHP programmers.
+
+The main PCRE functions are preg_match(), preg_match_all(), preg_replace(), and preg_split(). We will start with preg_match() because it provides the most basic functionality by returning true if one string matches a regular expression. The first parameter to preg_match() is the regular expression you want to search for, and the second is the string to match. So, if we wanted to check whether a string had the word Best, Test, rest, zest, or any other word containing est preceded by any letter of either case, we could use this PHP code:
+
+```
+$result = preg_match('/[A-Za-z]est/', "This is a test");
+```
+
+Because the test string matches the expression, $result is set to 1 (true). If you change the string to a nonmatching result, you get 0 as the return value.

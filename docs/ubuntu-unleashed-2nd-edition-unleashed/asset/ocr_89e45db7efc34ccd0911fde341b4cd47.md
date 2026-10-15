@@ -1,0 +1,33 @@
+# TABLE 23.4 Magic Cookies for the ftpshut Command
+
+| Cookie | Description |
+|---|---|
+| %s | Time the system will be shut down |
+| %r | Time new connections will be denied |
+| %d | Time the current connections will be dropped |
+| %C | Current working directory |
+| %E | Server administrator's email address as specified in the ftpassess file |
+| %F | Available free space in the current working directories partition in kilobytes |
+| %L | Local host time |
+| %M | Maximum number of allowed connections in this user class |
+| %N | Current number of connections for this user class |
+| %R | Remote hostname |
+| %T | Local time, in the form of Fri Aug 31 21:04:00 2001 |
+| %U | Username given at login |
+
+When ftpshut is issued to the system, it creates a file that stores the necessary information. The ftprestart command removes this file for all servers, either canceling the impending shutdown or removing the shutdown file and restarting the FTP server. The ftprestart only has one optional argument, -v, to show version information.
+
+# Use /var/log/xferlog to View a Log of Server Transactions
+
+The xferlog file gives a log of what transactions have occurred with the FTP server. Depending on the settings in the /etc/ftpaccess file, the contents of this file can contain the files sent or received by who with a date stamp. Table 23.5 lists the fields of this file. The same information can also be found in the corresponding man page included in the wu-ftpd package.
+
+# TABLE 23.5 /var/log/xferlog Fields
+
+| Field | Description |
+|---|---|
+| current-time | Current local time in the form of DDD MMM dd hh:mm:ss YYYY, where DDD is the day of the week, MMM is the month, dd is the day of the month, hh is the hour, mm is the minutes, ss is the seconds, and YYYY is the year. |
+| transfer-time | Total time in seconds for the transfer. |
+| remote-host | Remote hostname. |
+| file-size | Size of the transferred file in bytes. |
+| filename | Name of the file. |
+| transfer-type | A single character indicating the transfer type. The types are a for ascii transfers. b for binary transfers. |

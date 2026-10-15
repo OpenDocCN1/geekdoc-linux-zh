@@ -1,0 +1,218 @@
+
+
+## 您的指南
+to Computer
+Technology
+
+Sams 已与 **InformIT.com** 合作，将技术信息带到您的桌面。依托 Sams 的作者和审阅者提供您感兴趣主题的额外信息，**InformIT.com** 提供您在其他地方找不到的免费、深入信息。
+
+## ARTICLES
+
+保持领先，获取数千篇免费文章、深入专题、访谈和信息技术参考推荐——全部由您所知所信赖的专家撰写。
+
+## ONLINE BOOKS
+
+从 **InformIT Online Books’** 600 多本可完全搜索的在线图书中即时获得答案。立即注册，享受前 14 天免费。
+
+## CATALOG
+
+在线浏览示例章节和作者简介，从超过 5,000 本图书中挑选最合适的图书。
+
+## Register this book!
+
+在 www.quepublishing.com 注册此书，解锁仅限本书所有者的专属权益。
+
+## What you'll receive with this book:
+
+- Hidden content
+- Additional content
+- Book errata
+- New templates, spreadsheets, or files to download
+- Increased membership discounts
+- Discount coupons
+- A chance to sign up to receive content updates, information on new editions, and more
+
+## Book registration is free and only takes a few easy steps.
+
+1. Go to www.samspublishing.com/bookstore/register.asp.
+2. Enter the book's ISBN (found above the barcode on the back of your book).
+3. You will be prompted to either register for or log-in to Samspublishing.com.
+4. Once you have completed your registration or log-in, you will be taken to your “My Registered Books” page.
+5. This page will list any benefits associated with each title you register, including links to content and coupon codes.
+
+The benefits of book registration vary with each book, so be sure to register every Sams Publishing book you own to see what else you might unlock at www.samspublishing.com/register!
+
+## Wouldn't it be great
+
+if the world's leading technical publishers joined forces to deliver their best tech books in a common digital reference platform?
+
+They have. Introducing **InformIT Online Books** powered by Safari.
+
+- **Specific answers to specific questions.**
+  InformIT Online Books' powerful search engine gives you relevance-ranked results in a matter of seconds.
+
+- **Immediate results.**
+  With InformIT Online Books, you can select the book you want and view the chapter or section you need immediately.
+
+- **Cut, paste, and annotate.**
+  Paste code to save time and eliminate typographical errors. Make notes on the material you find useful and choose whether or not to share them with your workgroup.
+
+- **Customized for your enterprise.**
+  Customize a library for you, your department, or your entire organization. You pay only for what you need.
+
+## Get your first 14 days FREE!
+
+InformIT Online Books is offering its members a 10-book subscription risk free for 14 days. Visit http://www.informit.com/onlinebooks for details.
+
+## What's On the DVD
+
+The book's DVD includes the binary version of Ubuntu 7—the equivalent of at least four CDs.
+
+## DESKTOPS
+
+- X.Org 7.2
+- GNOME 2.18.1
+
+## ACCESSIBILITY
+
+- GNOME On-screen keyboard
+- Screen reader and magnifier
+
+## ACCESSORIES
+
+- Alacarte Menu Editor
+- Ark
+- Calculator
+- Character Map
+- Dictionary
+- GVim Text Editor
+- KAlarm
+- KArm
+- Katapult
+- KCalc
+- KDE Groupware Wizard
+- KDEprintFax
+- KioViewer
+- Klipper
+- KNotes
+- KPager
+- KPalmDOC
+- KPilot
+- KSig
+- KTip
+- Mousepad
+- MultiSynK
+- Screenshot
+- SpeedCrunch
+- Terminal
+- Text Editor
+- Tomboy Notes
+- Xarchiver
+- Xfburn
+- Xfce 4 Appfinder
+- Xfce 4 Print Dialog
+- Xfce 4 Print Manager
+
+## EDUCATION
+
+- Kalzium
+- Kanagram
+- KBruch
+
+## EDUCATION (continued)
+
+- KEduca
+- KEduca-Editor
+- KHangMan
+- Kig
+- KLatin
+- KLettres
+- KmPlot
+- KPercentage
+- KStars
+- KTouch
+- KTurtle
+- Kverbos
+- KVocTrain
+- RazMol Molecular Graphics Visualization
+
+## GAMES
+
+- AisleRiot Solitaire
+- Atlantik
+- Atlantik Designer
+- Atomix
+- Blackjack
+- Chess
+- Educational suite gcompris
+- Five or More
+- Four-in-a-row
+- FreeCell Solitaire
+- Gnomeris
+- Iagno
+- KAsteroids
+- KAtomic
+- KBackgammon
+- KBattleship
+- KBlackBox
+- KBounce
+- Kenolaba
+- KFoulEggs
+- KGoldrunner
+- KJumpingCube
+- Klickety
+- Klotski
+- KMahjongg
+- K Mines
+- Kolf
+- Kolor Lines
+
+## GAMES (continued)
+
+- Konquest
+- KPoker
+- KReversi
+- KSirtet
+- KSmileTris
+- KSnakeRace
+- KSokoban
+- KSpaceDuel
+- KTron
+- KWin4
+- Lieutenant Skat
+- Mahjongg
+- Mines
+- Nibbles
+- Patience
+- Potato Guy
+- Robots
+- SameGame
+- Same GNOME
+- Shisen-Sho
+- Sudoku
+- Tali
+- Tetravex
+- TuxMath
+- TuxTyping
+
+## GRAPHICS
+
+- Dia
+- digiKam
+- Document Viewer
+- FontForge
+- F-Spot Photo Manager
+- GIMP Image Editor
+- GNU Paint
+- GQview
+- gThumb Image Viewer
+- Gwenview
+- Image Viewer
+- Inkscape Vector Illustrator
+- KFaxView
+- KGhostView
+- Kooka
+- KPDF
+- Krita
+- KSnapshot
+

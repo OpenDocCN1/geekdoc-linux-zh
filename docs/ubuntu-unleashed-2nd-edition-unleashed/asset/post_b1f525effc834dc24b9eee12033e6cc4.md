@@ -1,0 +1,125 @@
+
+- unset() function, 684
+- unshar command, 111
+- until loops (Perl), 630
+- until statements, 336-337
+- Update Manager
+    - package updates, 155
+    - software management, 148-149
+- Ubuntu first updates, 57
+- updates
+    - security
+        - network security, 720
+        - Ubuntu website, 103
+    - software management, 148-149
+- Ubuntu first updates, 57, 63-65
+- upgrades
+    - Apache Server, 446
+    - network security, 431
+- uplink ports, 401
+- uptime command, 352
+- USB devices
+    - printers, troubleshooting, 532
+    - scanners, 235
+    - Ubuntu installation, 35
+- USB drives, 367
+- use function (Perl), 633
+- Usenet newsgroups websites, 802-803, 636-637
+- USER (shell environment variable), 106
+- user accounts
+    - disk quotas, 287-289
+    - elevation of privileges, 266
+        - changing user identities, 281-283
+        - controlling via restricted shells, 285
+        - granting root privileges on occasion, 283-285
+    - Fetchmail, configuring in, 589-591
+    - file permissions, 267-268
+    - GID, 267
+    - group accounts, managing, 268-271
+    - login process, 286
+    - managing
+        - /etc/passwd, 276-278
+        - adding users, 274
+        - management tools, 272-274
+        - monitoring user activity, 275-276
+        - password security, 280-281
+        - shadow passwords, 278-279
+        - system password policies, 276
+    - MySQL, adding to, 495
+    - regular accounts, changing identities of, 281-283
+    - regular users, 266
+    - root accounts, 266-267, 282
+    - stereotypes, 268
+    - super users, 266
+    - system users, 267
+    - UID, 267
+    - usernames, creating, 275
+    - viewing, 266
+- User configuration directive (Apache Server), 453-454
+- user information directives (ftpaccess configuration file), Wu-Ftpd server configuration, 559-563
+- user jobs
+    - /var/spool/cron directories, 304
+    - running, 303
+- user permissions, assigning root accounts to, 122
+- user variables (shell scripts), 315
+- virtual file systems, 94
+- virtual hosts, Apache Server, 468-470
+- virus scanners, 593, 718
+- visudo command, granting root privileges on occasion, 284
+- VNC (Virtual Network Computing), 439-440
+- vncviewer remote session manager, monitoring graphical processes, 353
+- vorbis-tools, 224
+- vsftpd (Very Secure FTP) servers, 547, 551-552
+- vulnerability assessments (security), 713-714
+
+## W
+
+- w command, 307
+- -w file comparison operators, 327, 331
+- wallpaper, changing, 69
+- war driving, 715
+- .wav files, 213
+- weaknesses, assessing (security), 713-714
+- web browsers
+    - Epiphany, 159
+    - Konqueror, 159, 545
+    - Mozilla Firefox, 158-159
+    - Nautilus (GNOME), 546
+- web searches, 796-797
+- web servers, 479. See also Apache Server
+- webcams, 230
+- websites
+    - documentation, 22
+    - downloading for offline reading, 543
+- welcome.msg files, 562
+- WEP encryption, 84
+- wget command
+    - file transfers, 542-543
+    - websites, downloading for offline reading, 543
+- whatis command, on-line command synopses, 110
+- WHERE clauses, SELECT statements, 488
+- WHERE statements (SQL), 489
+- whereis command, 103, 110
+- which shell command, 757
+- while loops, 673
+    - Perl, 629
+    - Python, 651
+- while statements, 335-336
+- whitespace, SQL commands, 486
+- wildcards, 308, 571
+- window manager (X Window System), 130
+- Wine application, 199
+- WinModems, laptop configurations, 76-77
+- wireless networks, 399
+    - advantages of, 421
+    - choosing available protocols, 422
+    - configuring, 83-84
+    - encryption, 84
+    - security, 714-715
+    - support for, 420
+    - war driving, 715
+- wish command, 314
+- WITH PASSWORD segment (CREATE USER statement), 499
+- Wolfenstein: Enemy Territory, installing, 258
+- WordPerfect Office 2000 office suite, 198
+- worker MPM (multiprocessing module), Apache Server configuration, 456

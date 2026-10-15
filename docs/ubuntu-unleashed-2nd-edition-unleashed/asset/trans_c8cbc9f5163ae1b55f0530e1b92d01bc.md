@@ -1,0 +1,127 @@
+
+
+- unset() 函数，684
+- unshar 命令，111
+- until 循环（Perl），630
+- until 语句，336-337
+- Update Manager
+    - 软件包更新，155
+    - 软件管理，148-149
+- Ubuntu 首次更新，57
+- updates
+    - security
+        - 网络安全，720
+        - Ubuntu 网站，103
+    - 软件管理，148-149
+- Ubuntu 首次更新，57，63-65
+- upgrades
+    - Apache Server，446
+    - 网络安全，431
+- uplink 端口，401
+- uptime 命令，352
+- USB 设备
+    - 打印机，故障排除，532
+    - 扫描仪，235
+    - Ubuntu 安装，35
+- USB 驱动器，367
+- use 函数（Perl），633
+- Usenet 新闻组网站，802-803，636-637
+- USER（shell 环境变量），106
+- 用户账户
+    - 磁盘配额，287-289
+    - 权限提升，266
+        - 更改用户身份，281-283
+        - 通过受限 shell 控制，285
+        - 偶尔授予 root 权限，283-285
+    - Fetchmail 配置，589-591
+    - 文件权限，267-268
+    - GID，267
+    - 组账户管理，268-271
+    - 登录过程，286
+    - 管理
+        - /etc/passwd，276-278
+        - 添加用户，274
+        - 管理工具，272-274
+        - 监控用户活动，275-276
+        - 密码安全，280-281
+        - 影子密码，278-279
+        - 系统密码策略，276
+    - MySQL，添加至，495
+    - 普通账户，更改身份，281-283
+    - 普通用户，266
+    - root 账户，266-267，282
+    - 刻板印象，268
+    - 超级用户，266
+    - 系统用户，267
+    - UID，267
+    - 创建用户名，275
+    - 查看，266
+- User 配置指令（Apache Server），453-454
+- user information 指令（ftpaccess 配置文件），Wu-Ftpd 服务器配置，559-563
+- 用户作业
+    - /var/spool/cron 目录，304
+    - 运行，303
+- 用户权限，将 root 账户分配给，122
+- 用户变量（shell 脚本），315
+- 虚拟文件系统，94
+- 虚拟主机，Apache Server，468-470
+- 病毒扫描器，593，718
+- visudo 命令，偶尔授予 root 权限，284
+- VNC（Virtual Network Computing），439-440
+- vncviewer 远程会话管理器，监控图形进程，353
+- vorbis-tools，224
+- vsftpd（Very Secure FTP）服务器，547，551-552
+- 漏洞评估（安全），713-714
+
+## W
+
+- w 命令，307
+- -w 文件比较运算符，327，331
+- 壁纸，更改，69
+- war driving，715
+- .wav 文件，213
+- 弱点，评估（安全），713-714
+- web 浏览器
+    - Epiphany，159
+    - Konqueror，159，545
+    - Mozilla Firefox，158-159
+    - Nautilus（GNOME），546
+- web 搜索，796-797
+- web 服务器，479。另见 Apache Server
+- 网络摄像头，230
+- 网站
+    - 文档，22
+    - 下载以离线阅读，543
+- welcome.msg 文件，562
+- WEP 加密，84
+- wget 命令
+    - 文件传输，542-543
+    - 网站，下载以离线阅读，543
+- whatis 命令，在线命令概要，110
+- WHERE 子句，SELECT 语句，488
+- WHERE 语句（SQL），489
+- whereis 命令，103，110
+- which shell 命令，757
+- while 循环，673
+    - Perl，629
+    - Python，651
+- while 语句，335-336
+- 空白字符，SQL 命令，486
+- 通配符，308，571
+- 窗口管理器（X Window System），130
+- Wine 应用，199
+- WinModems，笔记本配置，76-77
+- 无线网络，399
+    - 优点，421
+    - 选择可用协议，422
+    - 配置，83-84
+    - 加密，84
+    - 安全，714-715
+    - 支持，420
+    - war driving，715
+- wish 命令，314
+- WITH PASSWORD 段（CREATE USER 语句），499
+- Wolfenstein: Enemy Territory，安装，258
+- WordPerfect Office 2000 办公套件，198
+- worker MPM（多处理模块），Apache Server 配置，456
+

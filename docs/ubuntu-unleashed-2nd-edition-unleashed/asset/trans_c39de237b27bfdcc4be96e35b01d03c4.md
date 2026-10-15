@@ -1,0 +1,165 @@
+
+
+- cdrecord -scanbus 命令，检索 CD 驱动器信息，202
+- Cedega，260-261
+- 认证课程网站，797-798
+- Cervisia（KDE 客户端），707
+- CGI，Apache Server 动态内容，472-473
+- .cgm 绘图文件格式，236
+- chattr 命令，文件系统优化，727
+- chgrp 命令，更改文件/目录权限，268
+- 芯片组（视频），219
+- chmod 命令，118-119，268，741
+- chown 命令，文件/目录权限，268
+- chsh 命令，105-106，274，344
+- classes
+  - networking，393
+  - Python
+    - defining in，653
+    - inheritance，655-657
+    - instances，creating，653
+    - methods，653
+    - object variables，654
+- CLI（Command Line Interface）
+  - basic commands list，737-738
+  - cat command，738-739
+  - cd command，739-741
+  - chmod command，741
+  - commands，combining，757-759
+  - cp command，741-742
+  - du command，742-743
+- command-line
+  - commands
+    - basic commands list，737-738
+    - cat command，738-739
+    - cd command，739-741
+    - chmod command，741
+    - combining commands，757-759
+    - cp command，741-742
+    - du command，742-743
+    - find command，743-745
+    - grep command，745-746
+    - less command，746-748
+    - ln command，749-750
+    - locate command，750
+    - ls command，750-752
+    - man command，752
+    - mkdir command，753
+    - mv command，753
+    - ps command，753-754
+    - reasons for using，736-737
+    - rm command，754-755
+    - screen command，759-760
+    - software management，APT，149-153
+    - tail command，755
+    - top command，755-757
+    - Ubuntu updates，64-65
+    - which command，757
+  - database clients，500
+  - processing，Perl coding example，638
+  - Python
+    - programming，653-657
+    - scripting，641-653
+- commands
+  - combining，757-759
+  - finding，103，110
+  - locations，printing via top shell command，757
+  - shell scripts，writing，344
+- comments
+  - in C/C++，695
+  - in shell scripts，311
+  - PHP，665
+- common log format（Apache Server），470
+- CommuniGate Pro，594
+- comparison of expressions
+  - pdksh shells versus bash shells
+    - file comparisons，327-328
+    - logical comparisons，328-329
+    - number comparisons，326-327
+    - string comparisons，324-325
+  - tcsh shell
+    - file comparisons，331-332
+    - logical comparisons，332-333
+    - number comparisons，330-331
+    - string comparisons，329
+- comparison operators（Perl），624
+- compiling kernels，780
+  - bzdisk directive，782
+  - bzImage directive，782
+  - multiple kernel versions，778
+  - retaining current kernel version，781
+  - speeding up，782
+  - troubleshooting，789
+  - zImage directive，782
+- compound operators（Perl），625
+- compressing
+  - directories，tar command-line backup software，377
+  - files，shell，111
+- CONCAT() function，488
+- concatenating strings（Python），646
+- conditional checks（Python conditional statements），650
+- conditional statements
+  - Perl，627-628
+  - PHP，669-671
+  - Python，650
+- conditions（PHP loops），673
+- config directive（SSI），475-476
+- configuration file backups，360
+- configure scripts，building Apache Server source code，447
+- configuring
+  - anonymous FTP servers，555
+  - Apache Server
+    - configuration directives，453-458
+    - httpd.conf configuration file，452
+    - MPM，455-456
+  - APT，766-767
+  - firewalls，718
+  - FTP server file-conversion actions
+    - add-on postfixes，569
+    - add-on prefixes，568
+    - example of，570
+    - external commands，569
+    - strip postfixes，568
+    - strip prefixes，568
+  - inetd daemons for wu-ftpd servers，551
+  - kernels
+    - make config utility，783
+    - make menuconfig utility，783-784
+    - make xconfig utility，784-785
+    - RAM disk images，788-789
+    - selecting kernel type，773
+    - subsections of，785-788
+  - MySQL
+    - data directory ownership，493
+    - initializing data directories，492
+    - initializing grant tables，492
+    - root user passwords，493
+  - PostgreSQL，initializing data directories，496-498
+  - Squid proxy server
+    - ACL，599-603
+    - client configuration，598
+    - examples of，604-605
+    - specifying client IP addresses，603-604
+  - Ubuntu
+    - CD/DVD drive assignments，82-83
+    - date/time resets，77-79
+    - firewalls，85
+    - first updates，63-65
+    - graphics drivers，67-68
+    - modems，75-77
+    - PCMCIA，80-81
+    - power management，77
+    - software repositories，66
+    - sudo command，63
+    - troubleshooting，62
+    - wireless networks，83-84
+  - vsftpd servers，552-553
+  - Wu-FTPd servers via ftpaccess configuration file，555-556
+    - access control directives，557-559
+    - cdpath directed commands，566-567
+    - permission control directives，564-566
+    - shutdown file structures，567
+    - system logging directives，563-564
+    - user information directives，559-563
+- consistency（ACID），database compliance comparisons，491
+

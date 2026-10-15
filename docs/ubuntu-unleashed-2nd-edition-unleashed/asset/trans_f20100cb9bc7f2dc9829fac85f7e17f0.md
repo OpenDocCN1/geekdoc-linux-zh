@@ -1,0 +1,65 @@
+
+
+ldapadd 命令用于将 LDIF 转换为实时的目录内容，最重要的是可以在 LDAP 服务器运行时执行。-x 参数表示仅使用基本身份验证，这意味着你需要提供 root 用户名和密码。-W 表示提示你输入密码。-D 允许你指定用户名对应的 DN；并且在 -D 之后，我们指定了 slapd.conf 中之前设置好的 root DN。最后，-f 表示使用以下文件中的 LDIF。
+
+当你运行它们时，会提示你输入之前设置的 root 密码。输入后，你应该会看到确认信息，条目被添加，例如：
+
+```
+adding new entry "cn=Paul Hudson,ou=People,dc=hudzilla,dc=org"
+```
+
+如果看到类似 ldap_bind: Can't contact LDAP server (-1) 的错误，你需要通过输入 /etc/init.d/slapd start 来启动 LDAP 服务器。其他错误的可能来源大多是输入错误。LDIF 是一种精确的格式，甚至对其空白字符的使用也很严格。
+
+要测试目录是否已填充并且你的配置设置是否正确，运行以下命令：
+
+```
+ldapsearch -x 'objectclass=*'
+```
+
+ldapsearch 命令的作用正如你所期望的：它从命令行查询 LDAP 目录。同样，-x 表示使用简单身份验证，不过在这种情况下你不需要提供任何凭据，因为你只是从目录中读取。objectclass=* 搜索指定返回任何 objectclass 的条目，因此搜索将返回目录中的所有条目。
+
+你可以修改搜索使其更具体。例如：
+
+```
+ldapsearch -x 'cn=Ni*'
+```
+
+该命令返回所有常用名称以 Ni 开头的人员。如果你的搜索得到结果，就准备好配置客户端了。
+
+> TIP
+> OpenLDAP 对其文件需要特定的权限。/var/lib/ldap 目录应由用户 ldap 和组 ldap 所有，权限为 600。如果遇到问题，请尝试运行 chmod 600 /var/lib/ldap。
+
+## Configuring Clients
+
+虽然 Ubuntu 附带了多种邮件客户端，但这里没有足够的篇幅涵盖所有。于是，我们讨论两种最常用的客户端：默认的 Evolution 和 Thunderbird。两者都是功能强大的消息解决方案，因此都与 LDAP 配合良好。在两者中，Thunderbird 似乎更容易配置。我们过去在 Evolution 上遇到过各种问题，而在 Thunderbird 上却能第一次就成功。
+
+## Evolution
+
+要为 Evolution 配置 LDAP，请点击 New 按钮旁边的箭头并选择 Address Book。会出现一个新屏幕，其第一个选项提示你输入要创建的地址簿类型。选择 On LDAP Servers。
+
+对于 Name，只需输入 Address book，对于 Server，输入你的 LDAP 服务器的 IP 地址（如果你在服务器上工作，则为 127.0.0.1），如图 26.1 所示。将端口保持为 389，这是 slapd 的默认值。切换到 Details 选项卡，并将 Search Base 设置为你的地址簿的 DN——例如 ou=People,dc=hudzilla,dc=org。将 Search Scope 设置为 Sub，以便 Evolution 执行全面搜索。完成后，点击 Add Address Book。
+
+虽然 Evolution 现在已配置为使用你的目录，但它还不会立即用于电子邮件地址自动补全。要启用它，请转到 Tools 菜单并点击 Settings。从左侧出现的选项中，点击 Autocompletion 并从列表中选择你的 LDAP 服务器。点击 Close，然后创建一个新的电子邮件消息。如果一切正常，输入某人姓名的一部分应该会弹出一个包含 LDAP 匹配项的框。
+
+![](img/e464b828c497c99e41f61d4c55f1c0db_644_0.png)
+
+FIGURE 26.1 Configuring Evolution to use LDAP for addresses is easy for anonymous connections.
+
+## Thunderbird
+
+Thunderbird 的配置比 Evolution 稍微容易一些，并且通常工作得更好，特别是对于具有多个 CN 的条目。要启用自动补全，请转到 Edit 菜单，点击 Preferences，然后从顶部选项卡中选择 Composition。
+
+在 Addressing 子选项卡中，勾选 Directory Server 复选框并点击其右侧的 Edit Directories 按钮。从出现的对话框中，点击 Add 以添加新目录。你可以随意命名，因为这只是用于显示目的。如图 26.2 所示，将 Hostname 字段设置为你的 LDAP 服务器的 IP 地址（如果你在服务器上工作，则为 127.0.0.1）。将 Base DN 设置为你的地址簿的 DN（例如 ou=People,dc=hudzilla,dc=org），并将端口号保持为 389。连续点击三次 OK 返回主界面。
+
+现在，点击 Write 创建一封新的电子邮件消息，并在 To 框中输入用户的几个首字母。如果一切正常，Thunderbird 应该会弹出一个包含 LDAP 匹配项的框。
+
+![](img/e464b828c497c99e41f61d4c55f1c0db_645_0.png)
+
+FIGURE 26.2 Thunderbird's options are buried deeper than Evolution's, but it does allow you to download the LDAP directory for offline use.
+
+## Administration
+
+在你设置好 LDAP 服务器和客户端后，它们在外部没有变化之前几乎不需要维护。具体来说，如果目录中的某人换工作、更改电话号码、结婚（更改姓氏），离职等等，你需要能够更新目录以反映这些变化。
+
+OpenLDAP 附带了一系列用于操作目录的工具，其中你已经见过 ldapadd。除此之外，你可以使用 ldapdelete 删除目录中的条目，以及使用 ldapmodify 修改条目。两者使用起来都很困难，但在其 man 手册中有适量的文档。
+

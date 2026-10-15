@@ -1,0 +1,30 @@
+# Shutting Down
+
+At some point, you are going to want to shut your computer down. As with most things in Linux, there are different ways to do it. You can use the Quit icon located in the upper-right corner of your screen or use the same button located in the System menu. Either way, you can choose to shut down or restart your system. You can also choose to hibernate (saves a copy of the running state to disk and shutdowns) or suspend (saves the current running state to memory). We would recommend using either shutdown or reboot to ensure you get a clean system when it comes back up.
+
+If you are working at the command line, you can immediately shut down your system by using the shutdown command like this:
+
+```
+```bash
+$ sudo shutdown -h now
+```
+```
+
+You can also use the shutdown command to restart your computer, as follows:
+
+```
+```bash
+$ sudo shutdown -r now
+```
+```
+
+For new users, installing Ubuntu is just the beginning of a new and highly rewarding journey on the path to learning Linux. See Chapter 5, “First Steps with Ubuntu,” for additional information about using Linux commands. For Ubuntu system administrators, the task ahead is to fine-tune the installation and to customize the server or user environment.
+
+# Reference
+
++   - http://www.ubuntu.com—The place to start when looking for news, information, and documentation about installing, configuring, and using Ubuntu.
++   - http://tinyurl.com/c2x5u—Symantec's PartitionMagic utility includes BootMagic, which can be used to support booting of Linux or, regrettably, other less-capable operating systems, such as Windows XP.
++   - http://www.v-com.com/product/System_Commander_Home.html—V Communications, Inc.'s System Commander, a commercial 4.2MB download that can be used to support booting of any operating system capable of running on today's PCs. An intelligent partitioning utility, Partition Commander, is included.
++   - http://www.nwc.com/columnists/1101colon.html—How to use Intel's Pre-execution Environment (PXE) protocol to remote boot workstations.
++   - http://www.gnu.org/software/grub/—Home page for the GRUB boot loader.
++   - http://elserv.ffm.fgan.de/~lermen/HOME.html—The somewhat outdated home of the LOADLIN Linux loader.

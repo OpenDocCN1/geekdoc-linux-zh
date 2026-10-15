@@ -2283,6 +2283,7 @@
 +   [Ubuntu 2017版实用指南](docs/ubuntu-unleashed-2017-edition-matthew-helmke-andrew-hudson-p/README.md)
 +   [Ubuntu 2019 版：涵盖 18.04, 18.10, 19.04](docs/ubuntu-unleashed-2019-edition-covering-18-04-18-10-19-04/README.md)
 +   [Ubuntu Unleashed 2019 版：涵盖 18.04, 18.10, 19.04 (第 13 版)](docs/ubuntu-unleashed-2019-edition-covering-1804-1810-1904-13th-e/README.md)
++   [Ubuntu 完全指南（第2版）](docs/ubuntu-unleashed-2nd-edition-unleashed/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
 +   [企业级 Linux 网络安全终极指南](docs/ultimate-linux-network-security-for-enterprises/README.md)
 +   [企业级 Linux 网络安全终极指南：精通高效高级网络安全技术，保护 Linux 网络并管理企业级网络服务](docs/ultimate-linux-network-security-for-enterprises-master-effec/README.md)

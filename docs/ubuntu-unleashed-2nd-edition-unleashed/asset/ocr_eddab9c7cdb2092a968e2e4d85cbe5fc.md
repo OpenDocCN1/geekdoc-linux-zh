@@ -1,0 +1,30 @@
+modem and are commonly referred to as *WinModems* due to the software being available only on Windows. Despite the release of binary-only drivers to enable use of some of these modems, these devices remain the bane of Linux notebook and some desktop users.
+
+You might find some support for Lucent (but not Lucent AMR), Motorola SM56-type, the IBM MWave, and Conexant HSF (not HCF) controllers. At the time of this writing, there was no support for any 3Com or U.S. Robotics controllerless modems. For links to drivers and more information, browse to the Linux WinModem web page at http://www.linmodems.org.
+
+# Configuring Power Management in Ubuntu
+
+*Advanced Configuration and Power Interface (ACPI)* enables workstations and servers to automatically turn off when instructed to shut down. Most often used by Linux mobile users, ACPI can help extend battery sessions through the use of intelligent storage-cell circuitry, CPU throttling (similar to, but not the same as safety thermal throttling incorporated by Intel in Pentium III and IV CPUs), and control of displays and hard drives.
+
+Most PCs support ACPI via the BIOS and hardware. ACPI support is configured, enabled, and then incorporated in the Linux kernel.
+
+ACPI information is constantly available through the acpi command, which looks like this:
+
+```
+```text
+$ acpi -V
+    Battery 1: charged, 100%
+    Thermal 1: ok, 47.0 degrees C
+    AC Adapter 1: on-line
+```
+```
+
+This example provides information such as battery charge status, percentage of charge, as well as current system temperature and status of the AC adapter.
+
+# Resetting the Date and Time
+
+The Ubuntu installer queries during installation for default time zone settings, and whether your computer’s hardware clock is set to *Greenwich mean time (GMT)*—more properly known as *UTC* or *coordinated universal time.
+
+Linux provides a system date and time; your computer hardware provides a hardware clock-based time. In many cases, it is possible for the two times to drift apart. Linux system time is based on the number of seconds elapsed since January 1, 1970. Your computer’s hardware time depends on the type of clock chips installed on your PC’s motherboard, and many motherboard chipsets are notoriously subject to drift.
+
+Keeping accurate time is not only important on a single workstation, but also critically important in a network environment. Backups, scheduled downtimes, and other network-wide actions need to be accurately coordinated.

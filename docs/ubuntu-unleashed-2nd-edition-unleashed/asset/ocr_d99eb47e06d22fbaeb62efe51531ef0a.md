@@ -1,0 +1,31 @@
+# Using the Network File System
+
+*Network File System (NFS)* is the protocol developed by Sun Microsystems that allows computers to use a remote file system as if it were a real part of the local machine. A common use of NFS is to allow users home directories to appear on every local machine they use, thus eliminating the need to have physical home directories. This opens up hot desking and other flexible working arrangements, especially because no matter where the user is, his home directory follows him around.
+
+Another popular use for NFS is to share binary files between similar computers. If you have a new version of a package that you want all machines to have, you have to the upgrade only on the NFS server, and all hosts running the same version of Ubuntu will have the same upgraded package.
+
+# Installing and Starting or Stopping NFS
+
+NFS is not installed by default on Ubuntu, so you need to install the nfs-common, nfs-kernel-server, and portmap packages. NFS itself consists of several programs that work together to provide the NFS server service. One is rpc.portmapper, which maps NFS requests to the correct daemon. Two others are rpc.nfsd, which is the NFS daemon, and rpc.mountd, which controls the mounting and unmounting of file systems.
+
+Ubuntu automatically adds NFS to the system startup scripts, so it will always be available after you have configured it. To check this, get the sysv-rc-conf utility using synaptic or apt-get, and it will show you that is enabled under the 2 column. If you need to manually start the NFS server, use the following command:
+
+```
+# /etc/init.d/nfs-kernel-server start
+Starting NFS services:              [ OK ]
+Starting NFS quotas:                [ OK ]
+Starting NFS daemon:                [ OK ]
+Starting NFS mountd:                [ OK ]
+```
+
+In this example, NFS has been started. Use the stop keyword instead to stop the service, or restart to restart the server. This approach to controlling NFS proves handy, especially after configuration changes have been made. See the next section on how to configure NFS support on your Ubuntu system.
+
+# NFS Server Configuration
+
+You can configure the NFS server by editing the /etc/exports file. This file is similar to the /etc/fstab file in that it is used to set the permissions for the file systems being exported. The entries look like this:
+
+```
+/file/system yourhost(options) *.yourdomain.com(options) 192.15.69.0/24(options)
+```
+
+This shows three common clients to which to share /file/system. The first, yourhost, shares /file/system to just one host. The second, .yourdomain.com, uses the asterisk (*)

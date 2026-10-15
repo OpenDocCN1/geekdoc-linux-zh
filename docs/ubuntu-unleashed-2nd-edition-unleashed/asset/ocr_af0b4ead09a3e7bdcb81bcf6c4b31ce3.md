@@ -1,0 +1,17 @@
+There is no GUI interface for Amanda. Configuration is done in the time-honored UNIX tradition of editing text configuration files located in /etc/amanda. The default installation in Ubuntu includes a sample cron file because it is expected that you will be using cron to run Amanda regularly. The client utilities are installed with the package am-utils; the Amanda server must be obtained from the Amanda website. As far as backup schemes are concerned, Amanda calculates an optimal scheme on-the-fly and schedules it accordingly. It can be forced to adhere to a traditional scheme, but other tools are possibly better suited for that job.
+
+The man page for Amanda (the client is amdump) is well written and useful, explaining both the configuration of Amanda as well as detailing the several programs that actually make up Amanda. The configuration files found in /etc/amanda are well commented; they provide a number of examples to assist you in configuration.
+
+The program's home page is http://www.amanda.org. There, you will find information on subscribing to the mail list, as well as links to Amanda-related projects and a FAQ.
+
+# Alternative Backup Software
+
+Commercial and other freeware backup products do exist; BRU and Veritas are good examples of effective commercial backup products. Here are some useful free software backup tools that are not installed with Ubuntu:
+
++   - flexbackup—This backup tool is a large file of Perl scripts that makes dump and restore easier to use. flexbackup's command syntax can be accessed by using the command with the -help argument. It also can use afio, cpio, and tar to create and restore archives locally or over a network using rsh or ssh if security is a concern. Its home page is http://www.flexbackup.org/.
+
++   - afio—This tool creates cpio-formatted archives, but handles input data corruption better than cpio (which does not handle data input corruption very well at all). It supports multi-volume archives during interactive operation and can make compressed archives. If you feel the need to use cpio, you might want to check out afio at http://freshmeat.net/projects/afio/.
+
++   - cdbbackup—Designed for the home or small office user, cdbbackup will work with any backup and will restore software that can read from stdin, write to stdout, and can handle linear devices such as tape drives. It makes it easier to use CD-Rs as the storage medium. Similar applications are available elsewhere as well; the home page for this application is at http://www.muempf.de/index.html.
+
+Many other alternative backup tools exist, but covering all of them is beyond the scope of this book. Two good places to look for free backup software are Freshmeat (http://www.freshmeat.net) and Google (http://www.google.com/linux).
