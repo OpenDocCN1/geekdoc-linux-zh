@@ -1,0 +1,12 @@
+
+`type` 成员被设置为唯一标识它的事件类型常量。例如，当 X 服务器向客户端应用程序发送 `GraphicsExpose` 事件时，它会带上 `XGraphicsExpose` 结构。
+
+```c
+typedef struct {
+    int type; /* 服务器处理的最后一个请求数 */
+    unsigned long serial;
+    Bool send_event; /* 如果此来自 SendEvent 请求则为真 */
+    Display *display; /* 读取事件的显示器 */
+    Window window;
+} XAnyEvent;
+```
