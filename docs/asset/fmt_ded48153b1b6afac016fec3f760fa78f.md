@@ -1,0 +1,102 @@
+
+节点间通信子系统（ICS）支持集群内成员之间的通信。它提供了本章引言中提到的道路和交通管制基础设施。在 TruCluster 的 V1.X 版本中，由于集群互连（CI）仅支持内存通道，因此不需要像 ICS 这样灵活的集群通信组件。将以太网用作集群成员之间通信介质的引入，为集群传输引入了另一个选项。基本上，集群软件必须支持在通信介质之间在 MC 和 LAN 之间进行选择的能力（就像在选择州际公路或当地道路之间）。ICS 的开发并不是为了支持 LAN 而事后补充，而是为了无缝地为未来的集群互连做好准备，并消除早期 TruCluster 软件中的依赖关系。
+
+ICS 提供了在集群成员之间承载通信的手段。它被组织为一个抽象层，这意味着随着底层硬件技术随时间变化，它不必发生根本性改变。ICS 分为两个层级：下层处理细节
+
+![](img/a0df85c2e542a8d6c913113908553aa4_537_0.png)
+
+### Figure 18-1: ICS Cluster Subsystem Communication
+
+传输数据，而上层为依赖 ICS 的服务提供硬件无关的接口。
+
+因此，集群软件组件（集群服务——如 `CFS`、`CLSM`、`CNX`、`CLUA`、`DLM`、`DRD`，以及未来其他服务）目前已构建，并且未来可以构建，以与 ICS 的高层进行通信，消除了处理底层硬件技术复杂性的必要性，并为组件之间提供更层次化的关系。高层 ICS 代码代表服务与适当的低层 ICS 软件进行通信。图 18-1 显示了 ICS 子系统如何融入集群子系统组件层次结构。它位于实际通信硬件之上，位于 `CFS`、`CNX`、`DLM` 和 `DRD` 等关键组件之下。ICS 之下将是构成硬件设备驱动程序的任何软件（Memory Channel、Ethernet、其他）。
+
+ICS 内部有两层软件：
+
+- High-level ICS (`ics_hl`)
+  - 用于集群子系统（`CFS`、`CLSM`、`CNX`、`DRD`、`DLM`、`CLUA`）。
+  - 为组件初始化提供硬件无关支持（由 `DRD` 使用）。
+  - 提供支持集群成员变更的信息（由 `CNX` 使用）。
+  - 提供高层服务器控制代码（由 `DLM` 使用）。
+  - 提供跨互连的通用数据传输（由 `CFS` 使用）。
+
+- Low-level ICS (`ics_ll_mct` or `ics_ll_tcp`)
+  - 提供传输特定（非硬件无关）的组件。
+  - 处理跨集群互连的实际数据发送和接收。
+  - 检测通信故障。
+  - 低层 ICS 软件仅由高层 ICS 中的例程调用。
+
+图 18-2 说明了 ICS 的结构。
+
+![](img/a0df85c2e542a8d6c913113908553aa4_538_0.png)
+
+### Figure 18-2: ICS Cluster Subsystem Communication – Detailed
+
+```
+# sman all sys attrs ics
+```
+
+| Section | Reference Page | Description |
+|---|---|---|
+
+| 5 | sys_attrs_ics_hl | `ics_hl` 子系统属性 |
+| 5 | sys_attrs_ics_ll_tcp | `ics-ll-tcp` 子系统属性 |
+| 5 | sys_attrs_icsnet | `icsnet` 子系统属性 |
+
+## 18.1.1 ICSNET
+
+ICSNET 是另一个与 ICS 高层软件接口的服务。ICSNET 本质上是一个网络驱动程序，它将 TCP/IP（或 UDP/IP）头和数据放在 CI 中，以 Ethernet 格式封装（尽管数据可能并未通过 Ethernet 发送）。考虑这样一种情况：信息从网络中获取，需要传递给除接收数据的成员之外的集群成员。假设该集群使用 Memory Channel 作为其 CI。与接收网络传输的集群成员物理连接的 Ethernet 设备将发出中断并导致 Ethernet 驱动程序的中断服务例程执行。
+
+最终，`netisr_thread` 内核线程将执行以处理中间层 IP 协议栈决策。数据将被存储在消息缓冲区结构中（称为 `mbufs`）。到目前为止，这都是网络活动的正常处理。此时的问题是，数据的处理
+
+可能发生在错误的集群成员上。（我们假设接收成员不是数据最终要发送到的成员。）数据应转发到目标成员，并在目标集群成员上的接收应用程序中完全处理。数据（在 `mbufs` 中）必须通过 CI（此处为 Memory Channel）发送到正确的集群成员，但 Memory Channel 可通过 ICS 访问（见图 18-2）。控制将按惯例转移到 `netisr_thread` 软件以通过 IP 栈处理数据，但 ICSNET 软件将被 `netisr_thread` 调用，以通过 Memory Channel（或在基于 LAN 的集群中为 Ethernet）将数据传递给目标集群成员。
+
+ICS 网络驱动程序（ICSNET）在集群的稳定运行期间用于将源自集群应用程序的消息（与集群内核服务相对）通过 CI 传输。集群内核服务直接与 ICS 接口，如图 18-2 所示。
+
+## 18.1.2 ICS Implementation
+
+ICS 使用客户端-服务器策略实现。请求在客户端服务（如 `CFS`、`CLSM`、`DRD`、`CLUA`、`DLM` 等）内开始执行；然后通过远程过程调用传输到 ICS 服务器执行。见图 18-2。ICS 服务器软件实现为潜在动态数量的守护进程。守护进程包含一个或多个线程，提供执行 ICS 客户端发出的 RPC 服务器端的上下文。支持客户端请求的守护进程数量可以根据单个客户端请求的需求而是静态的或动态的。
+
+ICS 子系统可能会根据工作负载和服务的性质请求创建更多守护进程。例如，为 `DLM` 创建的服务器端 ICS 守护进程数量将不是动态的，因为处理应按请求接收的顺序执行。另一方面，`DRD` 的守护进程数量将从根据 `DRD` 活动请求量而增长和缩小的池中获取。以下输出显示了一些支持 ICS 的守护进程。
+
+```
+# ps -eo pid,command | grep ics
+524291 [icssvr_nomen_dae]
+524292 [icssvr_throttle_]
+524293 [icssvr_daemon_fr]
+524294 [icssvr_daemon_fr]
+524295 [icssvr_nanny]
+524296 [icscli_throttle_]
+524298 [icssvr_daemon_fr]
+524299 [icssvr_daemon_fr]
+524300 [icssvr_daemon_fr]
+524301 [icssvr_daemon_fr]
+524302 [icssvr_daemon_fr]
+524303 [icssvr_daemon_pe]
+524304 [icssvr_daemon_pe]
+524305 [icssvr_daemon_pe]
+524306 [icssvr_daemon_pe]
+524307 [icssvr_daemon_pe]
+524308 [icsvvr_daemon_pe]
+524309 [icsvvr_daemon_fr]
+524310 [icsvvr_daemon_fr]
+524311 [icsvvr_daemon_fr]
+524312 [icsvvr_daemon_fr]
+524328 [icsvvr_daemon_pe]
+524929 [icsvvr_daemon_pe]
+524946 [icsvvr_daemon_pe]
+524947 [icsvvr_daemon_pe]
+525602 [icsvvr_daemon_fr]
+525603 [icsvvr_daemon_fr]
+```
+
+以下输出来自基于 Memory Channel 的集群。程序将在 BRUDEN 或 Digital Press 网站上提供（有关 URL，请参阅附录 B）。
+
+```
+# ./kernel_idle_threads | grep ics
+55:0x0fffffc00009c380:0x0fffffc0000a607b8:"ics_mct_thread"
+59:0x0fffffc00009d0d80:0x0fffffc0000a1038:"ics_mct_recv_nohandle"
+118:0x0fffffc0009eaa80:0x0fffffc0000a2888:"ics_mct_heapwalker_main"
+```
+
+以下输出是在基于 LAN 的集群上生成的。它显示了 16 个 ICS 内核线程。
