@@ -1,0 +1,1 @@
+lrwxr-xr-x 1 root 7 Jul 28 1988 sys -> usr/sys

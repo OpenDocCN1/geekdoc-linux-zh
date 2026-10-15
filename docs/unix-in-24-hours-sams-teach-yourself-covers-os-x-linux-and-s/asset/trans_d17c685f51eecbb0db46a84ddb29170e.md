@@ -1,0 +1,83 @@
+
+
+instead of being displayed on the screen.
+
+**filter** Filters are a particular type of Unix program that expects to work either with file redirection or as part of a pipeline. These programs read input from standard input, write output to standard output, and often don’t have any starting arguments.
+
+**inclusion range** This is a range of characters that a pattern must include.
+
+**left-rooted** Patterns that must occur at the beginning of a line are said to be left-rooted.
+
+**regular expression** This is a convenient notation for specifying complex patterns. Notable special characters are ^ to match the beginning of the line and $ to match the end of the line.
+
+**standard error** This is the same as standard output, but you can redirect standard error to a different location than standard output.
+
+**standard input** Unix programs always default to reading information from the user by reading the keyboard and watching what’s typed. With file redirection, input can come from a file, and with pipelines, input can be the result of a previous Unix command.
+
+**standard output** When processing information, Unix programs default to displaying the output on the screen, also known as standard output. With file redirection, output can easily be saved to a file; with pipelines, output can be sent to other programs.
+
+**wildcards** Wildcards are special characters that are interpreted by the Unix shell or other programs to have meanings other than the characters themselves. For example, * is a shell wildcard and creates a pattern that matches zero or more characters. When prefaced, for example, with the letter X (X*), this shell pattern will match all files beginning with X.
+
+## Exercises
+
+- 1. The placement of file-redirection characters is important to ensure that a command works correctly. Which of the following do you think will work, and why?
+
+[Click here to view code image](#)
+
+```
+    < file | wc       wc file <       wc < file
+    cat file | wc      cat < file | wc   wc | cat
+```
+
+Now try them and see whether you’re correct.
+
+- 2. Does the file size listed by `wc -c` always agree with the file size listed by the `ls` command? With the size indicated by `ls -s`? If there is any difference, why?
+
+- 3. What do you think would happen if you tried to sort a list of words by pretending they’re all numbers? Try it with the command `ls -1 | sort -n` to see what happens. Experiment with the variations.
+
+- 4. What wildcard expression would you use to find the following?
+  
+  - All files in the `/tmp` directory
+  - All files that contain a `w` in that directory
+  - All files that start with a `b`, contain an `e`, and end with `.c`
+
+- All files that either start with `test` or contain the pattern `hi` (notice that it can be more than one pattern)
+
+- 5. Create regular expressions to match the following:
+  - Lines that contain the words `hot` and `cold` (tricky!)
+  - Lines that contain the word `cat` but not `cats`
+  - Lines that begin with a numeral
+
+- 6. Use the `-v` flag with various `grep` commands and show the command and pattern needed to match lines that:
+  - Don’t contain `cabana`
+  - Don’t contain either `jazz` or `funk`
+  - Don’t contain `jazz`, `funk`, `disco`, `blues`, or `ska`
+
+## Preview of the Next Hour
+
+The next hour introduces you to many more commands that are ideal for working with pipelines and filters—commands that will help you move from being a Unix amateur to being a true expert, a wizard at the command line!
+
+## Hour 9. Slicing and Dicing Command-Pipe Data
+
+## Goals for This Hour
+
+In this hour, you will learn
+
+- About the `awk` programming system
+- How to use `cut` in pipes
+- About using `sed` and `tr` for in-line transformations
+
+By this point, you’ve learned enough about Unix to be able to build quite sophisticated command-line pipes, sequences of standard commands that offer flexibility and power. You need to add a couple of key tools to your toolkit to keep moving forward, however, and they’re the focus of this lesson.
+
+The first and most powerful of the tools is `awk`, a programming system built specifically to work with data streams. You can build very complex processing systems in `awk`, but in fact the most common `awk` programs are typically just a line or two long.
+
+Many modern Unix folk prefer Perl, but I find that Perl isn’t as pervasive across Unix, Linux, and other *nix platforms, so I’ll stick with `awk` for this lesson. I do cover Perl later in the book, though, in case you’re curious. If you’d prefer to just learn Perl, you can find a lot of really good tutorials on this sophisticated—and confusing—programming language.
+
+In addition to explaining `awk`, this hour also talks about three additional pipeline commands that you will doubtless find essential for your toolbox: `sed`, a stream editor; `tr`, a character mapping facility; and `cut`, a utility that makes it remarkably easy to slice individual columns of data out of a pipeline of information.
+
+There’s one interesting characteristic of `awk` that’s worth mentioning before we go further: It’s a powerful programming language, and you can use it to duplicate many of the actual utilities that are an essential part of the Unix operating system. In a moment, I’ll show you how to duplicate the `wc` command with a few lines of `awk`.
+
+Later in the book, in Hour 23, “Perl Programming in Unix,” we’ll explore the Perl programming language and how it’s integrated into modern Unix systems. Like `awk`, Perl has the ability to duplicate many of the most common Unix commands. Perl is also considerably more powerful and sophisticated than `awk`.
+
+Okay, true confession: I don’t recommend actually rewriting existing commands, but it is good to know which of the tools in the Unix toolbox are actually all-purpose utilities rather than just focused on a single, specific task.
+

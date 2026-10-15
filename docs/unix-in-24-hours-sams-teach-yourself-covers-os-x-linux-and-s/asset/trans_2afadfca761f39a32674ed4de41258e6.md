@@ -1,0 +1,103 @@
+
+
+computer account to connect and copy files from their archives. To use these systems, enter `ftp` as the account name and then enter your own email address as the password. (For example, I’d enter `ftp` as the account and then [taylor@intuitive.com](taylor@intuitive.com) as my password.) The most important commands available in `sftp` once you’re connected to a remote server are summarized in [Table 21.1](Table 21.1). The most important one to remember is `quit`, which you use when you’re done.
+
+| Command | Meaning |
+|---|---|
+| bye | Quit sftp. |
+| cd path | Change remote directory to path. |
+| chgrp grp path | Change group of file path to grp. |
+| chmod mode path | Change permissions of file path to mode. |
+| chown own path | Change owner of file path to own. |
+| df [-hi] [path] | Display statistics for current directory or file system containing path. |
+| exit | Quit sftp. |
+| get [-Ppr] remote [local] | Download file. |
+| reget remote [local] | Resume file download. |
+| help | Display this help text. |
+| lcd path | Change local directory to path. |
+| lls [ls-options [path]] | Display local directory listing. |
+| lmkdir path | Create local directory. |
+| ln [-s] oldpath newpath | Link remote file (-s for symlink). |
+| lpwd | Print local working directory. |
+| ls [-1afhlnrSt] [path] | Display remote directory listing. |
+| lumask umask | Set local umask to umask. |
+| mkdir path | Create remote directory. |
+| progress | Toggle display of progress meter. |
+| put [-Ppr] local [remote] | Upload file. |
+| pwd | Display remote working directory. |
+| quit | Quit sftp. |
+| rename oldpath newpath | Rename remote file. |
+| rm path | Delete remote file. |
+| rmdir path | Remove remote directory. |
+| symlink oldpath newpath | Symlink remote file. |
+| version | Show SFTP version. |
+| !command | Execute command in local shell. |
+| ! | Escape to local shell. |
+| ? | Synonym for help. |
+
+## TABLE 21.1 Valuable sftp Commands
+
+1. I want to pick up a file from intuitive that I saw earlier, when I used ssh to look at the remote system. To start sftp, I specify the account and host at the
+command line:
+
+Click here to view code image
+
+```
+$ sftp dtaylor@intuitive.com
+The authenticity of host 'intuitive.com (104.131.46.171)' can't be established.
+ECDSA key fingerprint is
+9e:f5:53:3d:3f:41:e1:ee:19:9b:ee:0e:11:11
+9:0c:df. Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'intuitive.com,104.131.46.171' (ECDSA) to list of
+known hosts.
+ dtaylor@intuitive.com's password: -
+```
+
+Since I haven’t used sftp to connect to the remote system before, it asks about the RSA encryption key. I’m sure that’s the right server, so yes gets me to the password prompt.
+
+Once I’ve correctly entered the remote account password, I’m ready to go:
+
+```
+Connected to intuitive.com.
+.
+sftp> _
+```
+
+2. Now I’m at the sftp program prompt, and any of the commands shown in Table 21.1 will work here. I use dir and ls to list my files in different formats:
+
+Click here to view code image
+
+```
+sftp> ls -l
+-rw-r--r--x 1 taylor users0 4941 Oct 4 1991 .Pnews.header
+-rw-r--r-- 1 taylor users0 2103 Sep 30 19:17 .article
+-rw-r--r-- 1 taylor users0 752 Apr 17 1998 .cshrc
+drwx-- 2 taylor daemon 4096 Dec 6 14:25 .elm
+-rw-r--r-- 1 taylor users0 28 Nov 5 09:50 .forward
+-rw-r--r-- 1 taylor users0 1237 Dec 13 09:40 .login
+-rw-r--r-- 1 taylor users0 6 Aug 6 1991 .logout
+-rw-r--r-- 1 taylor users0 538 Dec 6 14:32 .newsrc
+-rw-r--r-- 1 taylor users0 1610 Feb 17 1992 .plan
+-rw-r--r-- 1 taylor users0 0 Aug 6 1991 .pnewsxpert
+-rw-r--r-- 1 taylor users0 45 Feb 2 1993 .rlogin
+-rw-r--r-- 1 taylor users0 6 Feb 8 1993 .rnlock
+-rw-r--r-- 1 taylor users0 16767 Jan 27 1993 .rnsoft
+-rw-r--r-- 1 taylor users0 114 Apr 6 1998 .sig
+drwxr-xr-x 4 taylor users0 4096 Nov 13 11:09 .tin
+-rw-r--r-- 1 taylor users0 1861 Jun 2 1997 Global.Software
+-rw--- 1 taylor users0 21194 Oct 1 1995 Interactive.Unix
+drwx--- 4 taylor users0 4096 Nov 13 11:09 Mail
+drwxr-xr-x 2 taylor users0 4096 Nov 13 11:09 News
+drwxr-xr-x 2 taylor users0 4096 Nov 13 11:09 Src
+drwxr-xr-x 2 taylor users0 4096 Nov 13 11:09 bin
+-rw-r--r-- 1 taylor users0 12445 Sep 17 14:56 history.usenet.Z
+-rw-r--r-- 1 taylor users0 1237 Oct 18 20:55 login
+-rw-r--r-- 1 taylor users0 174 Nov 20 19:21 testme
+sftp> dir
+Mail News bin Global.Software history.usenet
+Src Interactive.Unix testme login
+sftp>
+```
+
+As you can see, there’s a surprising amount of difference between the dir command (which you use to get a directory listing in ftp) and the ls -l command. I definitely prefer the latter.
+

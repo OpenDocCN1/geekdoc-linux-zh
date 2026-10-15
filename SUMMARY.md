@@ -2338,6 +2338,7 @@
 +   [Unix 入门指南](docs/unix-for-the-beginning-mage/README.md)
 +   [UNIX 全攻略：从基础任务到系统管理](docs/unix-from-soup-to-nuts-from-basic-tasks-to-system-administra/README.md)
 +   [UNIX 技巧与门道](docs/unix-hints-and-hacks/README.md)
++   [24小时学会 Unix，Sams 自学：涵盖 OS X、Linux 和 Solaris](docs/unix-in-24-hours-sams-teach-yourself-covers-os-x-linux-and-s/README.md)
 +   [Unix 讲义](docs/unix-lecture-notes/README.md)
 +   [Unix & Linux shell 脚本入门指南](docs/unix-linux-shell-scripting-turorial/README.md)
 +   [UNIX 网络管理工具](docs/unix-network-management-tools/README.md)

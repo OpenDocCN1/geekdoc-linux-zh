@@ -1,0 +1,4 @@
+-rw------ 1 taylor 3843 Oct 10 16:22 iecc.list
+-rw-rw-r-- 1 taylor 280232 Oct 10 16:22 mailing.lists
+-rw-rw---- 1 taylor 1031 Oct 7 15:44 newlists
+-rwxr-x--- 1 taylor 64 Oct 9 09:31 the.script

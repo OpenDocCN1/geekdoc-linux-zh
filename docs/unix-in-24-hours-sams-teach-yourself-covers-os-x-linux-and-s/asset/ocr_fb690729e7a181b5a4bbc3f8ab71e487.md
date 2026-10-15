@@ -1,0 +1,6 @@
+```
+total 29
+drwx------  2 taylor      512 Nov 21 10:39 Archives/
+drwx------  3 taylor      512 Dec  3 02:03 InfoWorld/
+drwx------  2 taylor     1024 Dec  3 01:43 Mail/
+```

@@ -1,0 +1,11 @@
+I found myself stealing a peek at my own watch and overheard
+General Catbird's
+aide give him the latest.
+
+"He's not even here," went the aide.
+
+"Who?"
+
+"Banzai."
+
+"Where the hell is he?"

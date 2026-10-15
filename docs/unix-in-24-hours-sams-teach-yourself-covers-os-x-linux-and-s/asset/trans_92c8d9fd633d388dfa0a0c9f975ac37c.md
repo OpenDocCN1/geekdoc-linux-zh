@@ -1,0 +1,124 @@
+
+
+```
+janitor  ttys7   Dec  3 18:18  (age)
+mathisbp ttys8   Dec  3 23:17  (dov)
+janitor  ttys9   Dec  3 18:18  (age)
+cs541    ttysC   Dec  2 15:16  (solaria)
+yansong  ttysL   Dec  1 14:44  (math)
+ddps     ttysO   Nov 30 19:39  (localhost)
+md       ttysU   Dec  2 08:45  (muller)
+jac      ttysA   Dec  3 18:18  (localhost)
+eichsted ttysB   Dec  3 23:21  (pc1)
+sweet    ttysC   Dec  3 22:40  (dov)
+“big.output” 40 lines, 1659 characters
+```
+
+Type x a few times to delete a few characters from the beginning of the file:
+
+[Click here to view code image](#)
+
+```
+gtc      ttyrV   Dec  1 18:27  (magenta)
+tuyinhwa ttyrX   Dec  3 22:38  (expert)
+hollenst ttyrZ   Dec  3 22:14  (dov)
+brandt   ttyrb   Nov 28 23:03  (age)
+holmes   ttyrj   Dec  3 21:59  (age)
+```
+
+Now type u to undo the last deletion:
+
+[Click here to view code image](#)
+
+```
+gtc      ttyrV   Dec  1 18:27  (magenta)
+tuyinhwa ttyrX   Dec  3 22:38  (expert)
+hollenst ttyrZ   Dec  3 22:14  (dov)
+brandt   ttyrb   Nov 28 23:03  (age)
+holmes   ttyrj   Dec  3 21:59  (age)
+```
+
+If you type u again, what do you think will happen?
+
+[Click here to view code image](#)
+
+```
+gtc      ttyrV   Dec  1 18:27  (magenta)
+tuyinhwa ttyrX   Dec  3 22:38  (expert)
+hollenst ttyrZ   Dec  3 22:14  (dov)
+brandt   ttyrb   Nov 28 23:03  (age)
+holmes   ttyrj   Dec  3 21:59  (age)
+```
+
+The undo command alternates between the last command having happened and not having happened. To explain it a bit better, the `undo` command is an action unto itself, so the second time you type `u`, you’re undoing the undo command. Type `u` a few more times to convince yourself that this is the case.
+
+> **Note**
+> 
+> Caveat: Some versions of `vi` have a considerably more sophisticated undo capability, and the `u` key goes back, and back, and back until you’re looking at an empty file or the file in its original pre-edit form. If you have that version of `vi`, you’ll want to use the `:redo` command (type in the colon first) to go “forward in time” if you undo too far.
+
++   2. It’s time to make some bigger changes to the file. Type `dw` twice to delete the current word and the next word in the file. It should look something like this after the first `dw`:
+
+[Click here to view code image](#)
+
+```
+ttyrV   Dec  1 18:27   (magenta)
+tuyinhwa ttyrX  Dec  3 22:38   (expert)
+hollenst ttyrZ  Dec  3 22:14   (dov)
+brandt   ttyrb  Nov 28 23:03   (age)
+holmes   ttyrj  Dec  3 21:59   (age)
+```
+
+Then it should look like this after the second dw:
+
+[Click here to view code image](#)
+
+```
+       Dec  1 18:27   (magenta)
+tuyinhwa ttyrX  Dec  3 22:38   (expert)
+hollenst ttyrZ  Dec  3 22:14   (dov)
+brandt   ttyrb  Nov 28 23:03   (age)
+holmes   ttyrj  Dec  3 21:59   (age)
+```
+
+Type **u**. You see that you can undo only the most recent command. At this point, though, because I haven’t moved from the line I’m editing, the **U**, or restore-this-line command, will restore the line to its original state:
+
+[Click here to view code image](#)
+
+```
+leungtc  ttyrV  Dec  1 18:27   (magenta)
+tuyinhwa ttyrX  Dec  3 22:38   (expert)
+hollenst ttyrZ  Dec  3 22:14   (dov)
+brandt   ttyrb  Nov 28 23:03   (age)
+holmes   ttyrj  Dec  3 21:59   (age)
+```
+
+**3.** I really don’t want to see some of these folks in the output file, however. Fortunately, I can change the contents of this file by using the **dd** command to delete lines. When you’re using one of these two-letter commands, repeating the letter means to apply the command to the entire line. What if I want to delete the entries for `chinese` and `janitor`, both of which are visible on this screen?
+
+The first step is to use the cursor keys to move down to any place on the line for the `chinese` account, about halfway down the screen:
+
+[Click here to view code image](#)
+
+```
+chenlx2  ttyru  Dec  3 21:53   (mentor)
+leungtc  ttyS0  Nov 28 15:11   (gold)
+chinese  ttyS2  Dec  3 22:53   (excalibur)
+cdemmert ttyS5  Dec  3 23:00   (mentor)
+yuenca   ttyS6  Dec  3 23:00   (mentor)
+janitor  ttyS7  Dec  3 18:18   (age)
+mathisbp ttyS8  Dec  3 23:17   (dov)
+```
+
+If your cursor isn’t somewhere in the middle of this line, move it so that you aren’t at an edge.
+
+I had planned to remove this line completely, but perhaps I’d rather just remove the date, time, and name of the system (in parentheses) instead. To accomplish this, I don’t need to type `dw` many times, or even `x` many times but rather **D** to delete through the end of the line:
+
+[Click here to view code image](#)
+
+```
+chenlx2  ttyru  Dec  3 21:53   (mentor)
+leungtc  ttyS0  Nov 28 15:11   (gold)
+chinese  ttyS2  _
+cdemmert ttyS5  Dec  3 23:00   (mentor)
+yuenca   ttyS6  Dec  3 23:00   (mentor)
+```
+

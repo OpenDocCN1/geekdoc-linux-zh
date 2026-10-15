@@ -1,0 +1,5 @@
+```
+$ uncompress backup.tar.Z
+$ ls -l backup.tar
+-rw-r--r--  1 taylor  wheel  15800320 Feb  8 02:58 backup.tar
+```

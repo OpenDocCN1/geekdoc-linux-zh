@@ -1,0 +1,136 @@
+
+```
+% ls -l testme
+-rw-rw-r-- 1 taylor      0 Nov 15 09:11 testme
+% ls -l > testme
+% ls -l testme
+-rw-rw-r-- 1 taylor    120 Nov 15 09:12 testme
+```
+
+```
+% cat < testme
+total 127
+drw------- 2 taylor      512 Nov  6 14:20 Archives/
+drw------- 3 taylor      512 Nov 16 21:55 InfoWorld/
+drw------- 2 taylor     1024 Nov 19 14:14 Mail/
+drw------- 2 taylor      512 Oct  6 09:36 News/
+drw------- 3 taylor      512 Nov 11 10:48 OWL/
+drw------- 2 taylor      512 Oct 13 10:45 bin/
+-rw-rw---- 1 taylor    57683 Nov 20 20:10 bitnet.lists.Z
+-rw-rw---- 1 taylor    46195 Nov 20 06:19 drop.text.hqx
+-rw-rw---- 1 taylor    12556 Nov 16 09:49 keylime.pie
+drw------- 2 taylor      512 Oct 13 10:45 src/
+drwrxrwx--- 2 taylor      512 Nov  8 22:20 temp/
+-rw-rw---- 1 taylor        0 Nov 20 20:21 testme
+```
+
+```
+% sort < testme
+Archives/      OWL/           keylime.pie
+InfoWorld/     bin/           src/
+Mail/          bitnet.mailings-lists.Z  temp/
+News/          drop.text.hqx  testme
+```
+
+```
+% ls -s | sort -nr | head -5
+64 bitnet.mailin g-lists.Z
+46 drop.text.hqx
+13 keylime.pie
+1 testme
+1 temp/
+```
+
+```
+% tail -1 testme > lastline
+% cat lastline lastline lastline lastline > newtest2
+% cat newtest2
+News/              drop.text.hqx      testme
+News/              drop.text.hqx      testme
+News/              drop.text.hqx      testme
+News/              drop.text.hqx      testme
+```
+
+% uniq newtest2
+News/          drop.text.hqx          testme
+
+```
+% uniq -c newtest2
+    4 News/              drop.text.hqx      testme
+```
+
+```
+% echo *
+Archives InfoWorld Mail News OWL bin bitnet.mailing-lists.Z
+drop.text.hqx keylime.pie src temp testme
+```
+
+```
+% ls -F *s
+Archives:
+Interleaf.story  Tartan.story.Z  nextstep.txt.Z
+Opus.story       interactive.txt.Z  rae.assist.infoworld.Z
+
+News:
+mailing.lists.usenet  usenet.1  usenet.alt
+```
+
+```
+% echo News/*usenet*
+News/mailing.lists.usenet News/usenet.1 News/usenet.alt
+```
+
+```
+% cd OWL
+% ls -F
+Student.config  owl.c          owl.o
+WordMap/        owl.data       simple.editor.c
+owl*            owl.h          simple.editor.o
+```
+
+```
+% echo owl*
+
+owl owl.c owl.data owl.h owl.o
+```
+
+```
+% ls -ld [abkost]*
+-rw-rw---- 1 taylor      126 Dec  3 16:34 awkscript
+-rw-rw---- 1 taylor      165 Dec  3 16:42 bigfiles
+drwx----- 2 taylor      512 Oct 13 10:45 bin/
+-rw-rw---- 1 taylor    12556 Nov 16 09:49 keylime.pie
+-rw-rw---- 1 taylor     8729 Dec  2 21:19 owl.c
+-rw-rw---- 1 taylor      199 Dec  3 16:11 sample
+-rw-rw---- 1 taylor      207 Dec  3 16:11 sample2
+drwx----- 2 taylor      512 Oct 13 10:45 src/
+drwxrwx-- 2 taylor      512 Nov  8 22:20 temp/
+-rw-rw---- 1 taylor      582 Nov 27 18:29 testme
+```
+
+```
+% ls -ld [a-z]*
+-rw-rw---- 1 taylor      126 Dec  3 16:34 awkscript
+-rw-rw---- 1 taylor      165 Dec  3 16:42 bigfiles
+drwx----- 2 taylor      512 Oct 13 10:45 bin/
+-rw-rw---- 1 taylor    12556 Nov 16 09:49 keylime.pie
+-rw-rw---- 1 taylor     8729 Dec  2 21:19 owl.c
+-rw-rw---- 1 taylor      199 Dec  3 16:11 sample
+-rw-rw---- 1 taylor      207 Dec  3 16:11 sample2
+drwx----- 2 taylor      512 Oct 13 10:45 src/
+drwxrwx-- 2 taylor      512 Nov  8 22:20 temp/
+-rw-rw---- 1 taylor      582 Nov 27 18:29 testme
+```
+
+```
+% ls *[0-9._]*
+71075.446      ean_huts      matt_ruby      xd1f
+72303.2166     gordon_hat    netnews.postings
+bob_gull       john_welcher  siob_n
+dan_some       john_prage    v892127
+```
+
+```
+% grep bitnet testme
+Mail/               bitnet.mailing-lists.Z  temp/
+```

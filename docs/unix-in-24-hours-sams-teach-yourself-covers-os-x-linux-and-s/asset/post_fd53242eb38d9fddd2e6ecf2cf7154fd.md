@@ -1,0 +1,191 @@
+
+## Index
+
+### Symbols
+
+- `[ ] (square brackets), 150`
+- `( command, 238`
+- `) command, 238`
+- `:! command, 238`
+- `! command, 255`
+- `!! command, 238, 286`
+- `!$ command, 286`
+- `!* command, 286`
+- `!}` command, 238`
+- `! escape-to-Unix command, 232-237`
+- `!n command, 286`
+- `!ptrn command, 286`
+- `$ (dollar sign), 314`
+- `$ command, 205`
+- `* (asterisk), 125`
+- `+ (plus) sign, 220`
+- `, (comma), 222`
+- `. (dot), 49`
+- `/ (slash), 42, 46`
+- `: (colons), 46, 170, 214-219`
+- `:ab a bcd command, 238`
+- `:ab command, 238`
+- `:map a bcd command, 238`
+- `:map command, 238`
+- `:set nonumber command, 238`
+- `:set number command, 238`
+- `:s/old/new/ command, 238`
+- `:s/old/new/g command, 238`
+- `@ (at sign), 42`
+- `{ command, 238`
+- `^ (caret), 159`
+- `^a^b command, 286`
+- `^b command, 205`
+- `^d command, 205`
+- `^f command, 206`
+- `^g command, 238`
+- `^u command, 206`
+- `^v command, 238`
+- `| (pipe), 129`
+- `0 command, 206`
+- `-1 flag, 64, 70, 72`
+
+### A
+
+- A command, 257
+- a command, 205
+- -A flag, 379
+- -a flag, 64, 303, 379
+- absolute filenames, 47-56
+- access
+  - ! escape-to-Unix, 232-237
+  - concentric access models, 94
+  - CUPS (Common Unix Printing System), 349
+- adding. See inserting
+- Aho, Alfred, 169
+- aliases
+  - command shells, 286-290
+  - commands, 264, 327
+  - creating, 63
+- Alt key, 242
+- American Telephone and Telegraph (AT&T), 5
+- anonymous archives, FTP, 410-413
+- applications, GNOME, 445-452
+- applying
+  - cut command, 169-171
+  - find command, 420-422
+  - head program, 128-130
+  - PATH variables, 337-339
+  - permissions, 83-104
+- archives
+  - anonymous, FTP, 410-413
+  - compress command, 375-376
+  - cpio command, 377-379
+  - Linux package managers, 381-382
+  - tar commands, 366-372
+  - zip command, 372-375
+- arg list too long error, 460
+- arithmetic, programming shells, 316-317
+- asterisk (*), 125
+- at command, 457
+- at sign (@), 42
+- availability
+  - of command shells, 264-266
+  - disk space, checking, 77-79
+- The AWK Programming Language, 169
+- awk programs, 163-169
+  - commands, 304, 341
+  - navigating, 164
+
+### B
+
+- B command, 205, 257
+- b command, 205
+- background command. See bg (background) command
+- Backspace key, 182, 205
+- backups, 379-381. See also archives
+- bash (Bourne Again shell), 263, 265
+  - configuration files, navigating, 274-277
+  - history command, navigating, 280-281
+  - shells, programming, 326-331
+- Bash shells, 4
+- .bashrc file, 274
+- Bell Labs, 5
+- Berkeley Mail, 386. See also mailx command
+- bg (background) command, 299-302
+- bin directory, 42
+- Bourne, Stephen, 264
+- Bourne Again shell. See bash
+- Bourne shell. See sh
+- broken pipe error, 460
+- building mylocate scripts, 334-337
+
+### C
+
+- C, 6
+- C command, 225, 238, 257
+- c command, 225, 238
+- C shell. See csh
+- -C flag, 64
+- -c flag, 171, 371
+- C-a command, 248
+- calculating strings, numeric permissions, 98-100
+- CGI (Common Gateway Interface), 438
+- change command, 225-232
+- characters
+  - emacs editors, deleting, 249-252
+  - separator (directories), 45-46
+  - sets, 172
+- chmod command, 458
+  - directories, modifying, 92-94
+  - files, modifying, 94-98
+  - numeric mode, 98
+- C-k command, 252
+- clients, PuTTY, 406
+- closing vi editors, 181
+- C-n command, 248, 257
+- col command, 355-359
+- colons (:), 46, 170, 214-219
+- com domain, 395
+- combining flags, 64-65
+- comma (,), 222
+- command line
+  - email, sending from, 391-395
+  - pipes, 163
+    - cut command, 169-171
+    - inline editing, 171-175
+    - sed command, 172-175
+    - tr command, 172-175
+  - user interfaces, 4. See also shells
+- command prompts, navigating, 30-35
+- commands, 4, 10
+  - (, 238
+  - ), 238
+  - :!, 238
+  - :ab a bcd, 238
+  - !, 255
+  - !!, 238, 286
+  - !$, 286
+  - !*, 286
+  - !}, 238
+  - ! escape-to-Unix, 232-237
+  - !n, 286
+  - !ptrn, 286
+  - $, 314
+  - :ab, 238
+  - :map, 238
+  - :map a bcd, 238
+  - :s/old/new/, 238
+  - :s/old/new/g, 238
+  - :set nonumber, 238
+  - :set number, 238
+  - ^a^b, 286
+  - ^b, 205
+  - ^d, 205
+  - ^f, 206
+  - ^g, 238
+  - ^u, 206
+  - ^v, 238
+  - 0, 206
+  - A, 257
+  - a, 205
+  - at, 457
+  - aliases, 264, 327
+  - awk, 304, 341
+  - B, 205, 257
+  - b, 205

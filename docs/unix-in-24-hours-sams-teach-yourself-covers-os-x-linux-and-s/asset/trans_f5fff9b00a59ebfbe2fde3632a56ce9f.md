@@ -1,0 +1,144 @@
+
+
+```
+$ lynx -dump http://www.intuitive.com/tyu24/alice.tgz > alice.tgz
+```
+
+```
+$ curl -O http://www.intuitive.com/tyu24/alice.tgz
+```
+
+```
+$ curl 'http://test.domain/folder/file[1-10].txt'
+```
+
+## $ GET
+
+用法：GET [-options] <url>...
+
++   -m <method> 用于请求的 method（默认为 'GET'）
++   -f 即使 GET 认为方法非法也发出请求
++   -b <base> 使用指定的 URL 作为 base
++   -t <timeout> 设置超时值
++   -i <time> 在请求上设置 If-Modified-Since 头
++   -c <conttype> 对 POST、PUT、CHECKIN 使用此 content-type
++   -a 对内容 I/O 使用文本模式
++   -p <proxyurl> 使用此作为代理
++   -P 不要从环境加载代理设置
++   -H <header> 发送此 HTTP 头（你可以指定多个）
+
++   -u 在任何响应之前显示方法和 URL
++   -U 显示请求头（隐含 -u）
++   -s 显示响应状态码
++   -S 显示响应状态链
++   -e 显示响应头
++   -d 不显示内容
++   -o <format> 以各种方式处理 HTML 内容
+
++   -v 显示程序版本
++   -h 打印此消息
+
++   -x 额外调试输出
+
+```
+$ GET http://www.intuitive.com/tyu24/alice.txt | grep -i walrus
+```
+
+就在这时，她听到池子里不远处传来扑通的水声，于是游近了一些想弄清楚那是什么：起初她以为那一定是海象或河马，但随后她记起自己现在有多小，很快就看出来那只不过是一只像她自己一样滑进来的老鼠。
+
+```
+$
+```
+
+```
+$ GET http://www.intuitive.com/tyu24/alice.tgz > alice.tgz
+```
+
+读取当前汇率
+重复
+  向用户询问金额和货币
+  将其换算成美元
+  显示在另外五种货币中的等值
+直到完成
+
+```
+#!/usr/bin/perl
+
+&read_exchange_rate;    # read the exchange rate table into memory
+# now let's cycle, asking the user for input...
+
+print "Please enter the amount, appending the first ";
+print "letter of the name of\nthe currency that you're ";
+print "using (Euro, Franc, Yen, Rupee, Pound) - \n";
+print "the default value is US dollars.\n\n";
+print "Amount: ";
+
+while (<>) {
+
+    ($amnt,$curr) = &breakdown(chop($_));
+
+    $baseval = $amnt * (1/$rateof{$curr});    # translate into USD
+
+    printf("%.2f USD, ", $baseval * $rateof{'U'});
+    printf("%.2f Euro, ", $baseval * $rateof{'E'});
+    printf("%.2f Rupee, ", $baseval * $rateof{'R'});
+    printf("%.2f Swiss Franc, ", $baseval * $rateof{'F'});
+    printf("%.2f Yen, and ", $baseval * $rateof{'Y'});
+    printf("%.2f Pounds.\n\nAmount: ", $baseval * $rateof{'P'});
+}
+```
+
+```
+sub breakdown {
+    @line = split("", $_);      # split at space
+
+    $amnt = $line[0];
+    if ($#line == 1) {
+        $curr = $line[1];
+        $curr =~ tr/a-z/A-Z/;      # normalize to uppercase
+        $curr = substr($curr, 0, 1); # extract first char only
+    } else { $curr = "U"; }
+    return ($amnt, $curr);
+}
+```
+
+```
+sub read_exchange_rate {
+    open(EXCHRATES, "exchange.txt") ||
+        die "Can't find current exchange rates.\n";
+
+    while ( <EXCHRATES> ) {
+        chomp; my @fields = split;  # remove control chars, break up into words
+        $curr = $fields[0];
+        $val  = $fields[1];
+        $rateof{$curr} = $val;
+    }
+    close(EXCHRATE);
+}
+```
+
+```
+#!/bin/sh
+
+# Build a new exchange rate database by using the data on x-rates.com
+
+src=http://www.x-rates.com/table/?from=USD&amount=1
+srcUrl=http://www.x-rates.com/
+
+curl="/usr/bin/curl -s"      # -s enables silent mode
+
+currencies="(EUR|GBP|INR|CHF|JPY)"   # ISO symbols for currencies
+
+echo "U:1"      # make sure we get this into the output file
+
+$curl "$src" | grep '/graph/?from=USD' | grep -E "$currencies" | \
+    sort | uniq | \
+    sed 's/EUR/E/;s/GBP/P/;s/INR/R/;s/CHF/F/;s/JPY/Y/' | \
+    cut -d'<' -f2,3 | \
+    sed "s/'//g;s/>/:/g" | \
+    cut -d= -f5
+
+echo "# extracted from $srcUrl on $(date)"
+exit 0
+```
+

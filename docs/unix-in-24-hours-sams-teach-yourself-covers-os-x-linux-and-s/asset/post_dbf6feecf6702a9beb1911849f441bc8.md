@@ -1,0 +1,112 @@
+
+% umask
+07
+% umask 0
+% mkdir NEWDIR2
+% ls -ld NEWDIR2
+drwxrwxrwx  2 taylor        24 Nov   5 10:53 NEWDIR2
+% umask 222
+% mkdir NEWDIR3
+% ls -ld NEWDIR3
+dr-xr-xr-x  2 taylor        24 Nov   5 10:54 NEWDIR3
+
+% mkdir /tmp/testme
+% ls -l /tmp
+-rwx------ 1 zhongqi 22724 Nov  4 21:33 /tmp/a.out
+-rw------ 1 xujia 95594 Nov  4 23:10 /tmp/active.10122
+-rw-r--r-- 1 beast 572 Nov  5 05:59 /tmp/anon1
+-rw-rw---- 1 root 0 Nov  5 10:30 /tmp/bar.report
+-rw------ 1 qsc 0 Nov  5 00:18 /tmp/lh013813
+-rwx------ 1 steen 24953 Nov  5 10:40 /tmp/mbox.steen
+-rwx------ 1 techman 3711 Nov  5 10:45 /tmp/mbox.techman
+-rw-r--r-- 1 root 997536 Nov  5 10:58 /tmp/quotas
+-rw------ 1 zhongqi 163579 Nov  4 20:16 /tmp/sp500.1
+drwxrwx--- 2 taylor 24 Nov  5 10:56 testme
+-rw-r--r-- 1 aru 90 Nov  5 02:55 /tmp/trouble21972
+
+% cp .login login.copy
+% ls -ld .login login.copy
+-rw-------  1 taylor      1858 Oct 12 21:20 .login
+-rw-------  1 taylor      1858 Nov  5 12:08 login.copy
+
+% cp olddir newdir
+cp: olddir: Is a directory (not copied).
+
+cp: .: Is a directory (copying as plain file)
+
+% cp login.copy profile.copy NEWDIR
+% ls -l NEWDIR
+total 4
+-rw-------  1 taylor      1178 Nov  5 12:18 profile.copy
+-rw-------  1 taylor      1858 Nov  5 12:18 login.copy
+
+% ls -l login.copy
+-rw------ 1 taylor 1858 Nov  5 12:08 login.copy
+% mv login.copy new.login
+% ls -l login.copy new.login
+login.copy not found
+-rw------ 1 taylor 1858 Nov  5 12:08 new.login
+
+% cd NEWDIR
+% ls
+profile.copy  login.copy
+% mv profile.copy login.copy ..
+% ls -l
+total 0
+% ls -F ..
+Archives/      OWL/      mailing.lists.bitnet.Z
+InfoWorld/     PubAccessLists.Z  new.login
+LISTS          bin/      rumors.26Oct.Z
+Mail/          profile.copy  rumors.5Nov.Z
+NEWDIR/        educ      src/
+News/          login.copy
+
+% mv . new.dot
+mv: .: rename: Invalid argument
+
+% ls -l login.copy profile.copy
+-rw------- 1 taylor      1178 Nov  5 12:38 profile.copy
+-rw------- 1 taylor      1858 Nov  5 12:37 login.copy
+% cp profile.copy login.copy
+% ls -l login.copy profile.copy
+-rw------- 1 taylor      1178 Nov  5 12:38 profile.copy
+-rw------- 1 taylor      1178 Nov  5 12:38 login.copy
+
+% ls -l profile.copy login.copy
+-rw-------  1 taylor  1178 Nov 5 12:42 profile.copy
+-rw-------  1 taylor  1858 Nov 5 12:42 login.copy
+% mv profile.copy login.copy
+% ls -l profile.copy login.copy
+profile.copy not found
+-rw-------  1 taylor  1178 Nov 5 12:42 login.copy
+
+% ls -ld NEWDIR
+drwxrwxr-x  2 taylor      512 Nov  5 12:32 NEWDIR
+% mv NEWDIR New.Sample.Directory
+% ls -ld New.Sample.Directory
+drwxrwxr-x  2 taylor      512 Nov  5 12:32 New.Sample.Directory
+
+% mv New.Sample.Directory dave
+mv: New.Sample.Directory: rename: Not a directory
+
+% mkdir testdir
+% mv New.Sample.Directory testdir
+
+% mkdir test
+% touch test/sample.file
+% ls -l test
+total 0
+-rw-rw----  1 taylor           0 Nov  5 14:00 sample.file
+% rmdir test
+rmdir: test: Directory not empty
+
+% rmdir /tmp
+rmdir: /tmp: Permission denied
+% ls -l /tmp
+drwxrwxrwt 81 root      15872 Nov  5 14:07 /tmp
+
+% ls -l login.copy
+-rw------- 1 taylor      1178 Nov  5 13:00 login.copy
+% rm login.copy
+% ls -l login.copy
+login.copy not found

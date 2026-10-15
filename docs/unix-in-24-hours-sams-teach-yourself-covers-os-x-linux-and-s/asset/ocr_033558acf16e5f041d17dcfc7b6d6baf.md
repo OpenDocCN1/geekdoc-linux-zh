@@ -1,0 +1,17 @@
+# # A Brief History of Unix
+
+To understand why the Unix operating system has so many commands and why it’s still one of the premier multiuser, multitasking operating systems available, but also the most successful and the most powerful multichoice system for computers, you’ll have to travel back in time. You’ll need to learn where Unix was designed, the goals of the original programmers, and what has happened to Unix in the subsequent decades.
+
+Unlike DOS, Windows, OS/2, Mac OS X, Linux, NT, VMS, and just about any other operating system, Unix was created by a couple of programmers as a fun project. It evolved through the efforts of hundreds of programmers, each of whom was exploring unique ideas of particular aspects of OS design and user interaction. In this regard, Unix is not like other operating systems, needless to say!
+
+It all started back in the late 1960s, in a dark and stormy laboratory, deep in the recesses of the American Telephone and Telegraph (AT&T) corporate facility in New Jersey. Working with the Massachusetts Institute of Technology, AT&T Bell Labs was co-developing a massive, monolithic operating system called Multics. On the Bell Labs team were Ken Thompson, Dennis Ritchie, Brian Kernighan, and other members of the Computer Science Research Group who would prove to be key contributors to the new Unix operating system.
+
+When 1969 rolled around, Bell Labs was becoming increasingly disillusioned with Multics, an overly slow and expensive system that ran on General Electric mainframe computers that themselves were expensive to run and rapidly becoming obsolete. The problem was that Thompson and the group really liked the capabilities that Multics offered, particularly the individual-user environment implemented within a multiple-user system.
+
+In that same year, Thompson wrote a computer game called Space Travel, first on Multics and then on the GECOS (GE computer operating system). The game was a simulation of the movement of the major bodies of the solar system, with the player guiding a ship, observing the scenery, and attempting to land on the various planets and moons. The game wasn’t much fun on the GE computer, however, because performance was jerky and irregular, and, more importantly, it cost almost $100 in computing time for each game.
+
+In his quest to improve the game, Thompson found a little-used Digital Equipment Corporation PDP-7, and with some help from colleague Dennis Ritchie, he rewrote the game for the PDP-7. Development was done on the GE mainframe and hand-carried to the PDP-7 on paper tape.
+
+After he’d explored some of the capabilities of the PDP-7, Thompson couldn’t resist building onto the game, creating an underlying development and computing environment. This started with an implementation of an earlier file system he’d designed and then grew as Thompson added processes, simple file utilities (cp, mv), and a command interpreter that he called a shell. It wasn’t until the following year that the newly created system acquired its name, Unix, which Brian Kernighan suggested as a pun on Multics.
+
+The Thompson file system was built around the low-level concept of *i-nodes*, linked blocks of information that together compose the contents of a file or program. These i-

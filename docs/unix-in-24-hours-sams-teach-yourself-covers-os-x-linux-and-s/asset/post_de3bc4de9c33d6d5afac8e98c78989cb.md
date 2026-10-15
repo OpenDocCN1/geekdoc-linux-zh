@@ -1,0 +1,34 @@
+
+![](img/036fe100817eada43c999b050270081b_49_0.png)
+
+## FIGURE 3.1 A typical organizational hierarchy.
+
+You’ve doubtless seen this type of illustration before, and you know that a higher position indicates more control. Each position is controlled by the next highest position or row. The president is top dog in the organization, but each subsequent manager is also in control of his or her own small fiefdom.
+
+A file system is similar to an organizational chart. Imagine each of the managers in the illustration as a file folder and each of the employees as a piece of paper, filed in a particular folder. Open any file cabinet, and you probably see things organized this way: Filed papers are placed in labeled folders, and often these folders are filed in groups under specific topics. The drawer might then have a specific label to distinguish it from other drawers in the cabinet, and so on.
+
+That’s exactly what a hierarchical file system is all about. You want to have your files located in the most appropriate place in the file system, whether at the very top, in a folder, or in a nested series of folders. With careful use, a hierarchical file system can contain thousands of files and still allow users to find any individual file quickly.
+
+On my computer, the lessons of this book are organized in a hierarchical fashion, as shown in Figure 3.2.
+
+with the at sign (@) is a **symbolic link** (a pointer to another file or directory elsewhere in the file system), and everything else is a normal, plain file.
+
+As you can see from this example, and as you’ll immediately find when you try the command yourself, there is much variation in how different Unix systems organize the top-level directory. There are some directories and files in common, and once you start examining the contents of specific directories, you’ll find that hundreds of programs and files always show up in the same place from one Unix to another.
+
+It’s as if you’re a new file clerk at a law firm. Although this firm might have a specific approach to filing information, the approach may be similar to the filing system of other firms where you have worked in the past. If you know the underlying organization, you can quickly pick up the specifics of a particular organization.
+
+Try the command `ls -F /` on your computer system and try to identify, as previously explained, each of the directories in the listing you get.
+
+The output of the previous `ls` command shows the files and directories in the top level of your system. Next, you’ll learn about the commonly found directories.
+
+## The bin Directory
+
+In Unix parlance, programs are considered **executables** because users can execute them. (In this case, *execute* is a synonym for run, not an indication that you get to wander about murdering innocent applications!) When the program has been compiled, it is translated from source code—what a programmer might write in C++ or Java—into what’s called a **binary** format. Add the two together, and you have a common Unix description for an application—an executable binary.
+
+It’s no surprise that the original Unix developers decided to have a directory labeled `binaries` to store all the executable programs on the system. Remember the primitive teletypewriter discussed earlier? Having a slow system to talk with the computer had many ramifications you might not expect. The single most obvious one was that everything became quite concise. There were no lengthy words like `binaries` or `listfiles`, but rather there were succinct abbreviations; `bin` and `ls` are, respectively, the Unix equivalents.
+
+The bin directory (pronounce it to rhyme with “tin”) is where all the executable binaries were kept in early Unix. Over time, as more and more executables were added to Unix, having all the executables in one place proved unmanageable, and the bin directory split into multiple parts with different purposes (`/bin`, `/sbin`, `/usr/bin`).
+
+## The dev Directory
+
+Among the most important portions of any computer are its **device drivers**. Without them, you wouldn’t have any information on your screen (because the information arrives courtesy of the display device driver), you wouldn’t be able to enter information (because the information is read and given to the system by the keyboard device driver), and you wouldn’t be able to use your hard drive (which is managed by the disk device driver).
