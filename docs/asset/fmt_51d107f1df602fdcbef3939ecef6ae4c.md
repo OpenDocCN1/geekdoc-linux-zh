@@ -1,0 +1,120 @@
+
+```
+00: EXTENT 80C00000 00000000 00080000 00080000
+
+00: EXTENT 1F209FC0 47400010 1F209FF0 0008 47400010 ........
+
+00: LOCATE RECORD 01800001 00080000 00070000 01061000
+
+00: CCW 1F209FC8 85001000 1DE19000 0010 85041000 ........
+
+00: IDAL 0000000000DAAE0000
+
+00: -> 00000000208C790E* SIGA B2740000 0000000000000000 CC 0
+
+00: SCH 0006 DEV 0602
+
+00: FC 00000001 MASK 80000000 00010006
+
+00: -> 0000000000332258* SSCH MASK3300 0000000001F4844 CC 0
+
+00: SCH 0001 DEV 0100
+
+00: CPA 1F209FB8 PRM 010F4800 KEY 0 FPI C2 LPM F0
+
+00: VDEV 0100 CCW 63600020 1F209FD0 000 63600020 ........
+
+00: EXTENT 80C00000 00000000 00080000 00080000
+
+00: CCW 1F209FC0 47400010 1F209FF0 0008 47400010 ........
+
+00: LOCATE RECORD 01800001 00080000 00070000 01061000
+
+00: CCW 1F209FC8 85001000 1DE19000 0010 85041000 ........
+
+00: IDAL 0000000005CCB000
+
+00: -> 00000000208CB852* SIGA B2740000 0000000000000000 CC 0
+
+00: SCH 0006 DEV 0602
+
+00: FC 00000000 MASK 20000000 20000000
+
+00: -> 00000000208CB852* SIGA B2740000 0000000000000000 CC 0
+
+00:          SCH 0006  DEV 0602
+
+00:          FC 00000000  MASK  20000000  20000000
+```
+
+有关 z/VM `trace` 命令的更多信息，请参阅位于以下位置的 z/VM V5R3.0 系统操作，SC24-6121：
+http://publib.boulder.ibm.com/infocenter/zvm/v5r3/topic/com.ibm.zvm.v53.hcpb2/uc9a.htm#uc9a
+
+## 8.3 Linux activity logging and error analysis
+
+活动日志记录内置于每个 Linux 发行版中。无论发行版如何，所有与内核相关的消息和与守护进程相关的消息都会记录到一个公共目录中。这些消息可以是：
+
+- 信息消息：例如，有人通过 SSH 从某个 IP 地址登录到机器。
+- 警告消息：例如，守护进程的一个配置选项无法应用，但并未阻止守护进程启动。
+- 错误消息：例如，有人拔掉了网络接口的网线。
+
+浏览这些日志文件的内容是进行错误识别的第一步。
+
+### 8.3.1 Linux activity logging
+
+负责记录内核和用户活动的两个 Linux 守护进程：`klogd` 和 `syslog`，或 `syslog-ng`：
+
+- `klogd` 用于与内核相关的消息
+  `klogd` 是内核记录器。它拦截并转换内核本身发出的消息，并将其格式化后传递给 `syslog` 以进行归档。
+- `syslog` 及其变体用于用户空间中的所有内容
+  `syslog` 是用户空间记录器。它从系统中运行的各种守护进程收集信息，并将消息保存到文件中以供进一步参考。
+
+## Log files of interest
+
+无论发行版如何，日志文件都保存在一个名为 `/var/log` 的公共目录中。但是，日志文件的名称可能会因发行版而异。
+
+> 注意：`/var/log` 是发行版软件包提供的守护进程日志消息的标准位置。第三方软件大多数情况下会将其日志文件保存在不同的位置。
+
+当您查找错误时，`/var/log` 目录中最相关的文件在 SUSE Linux Enterprise Server 10 和 Red Hat Enterprise Linux 5 上，如下一节所述。
+
+## Files on SUSE Linux Enterprise Server 10
+
+文件如下：
+
+- 消息日志文件包含所有系统消息
+
+示例 8-14 显示了 qeth 驱动程序的一份报告，说明在 5 月 21 日 16:41:21 发生了网络故障。
+
+### Example 8-14 An extract of `/var/log/messages` log file on SLES10
+
+```
+May 21 15:17:15 lnxquill kernel: audit(1211397428.415:2): AppArmor (version 2.0-19.43.6320) initialized
+
+May 21 15:17:15 lnxquill syslog-ng[1206]: Changing permissions on special file /dev/xconsole
+
+May 21 15:17:15 lnxquill syslog-ng[1206]: Changing permissions on special file /dev/tty10
+
+May 21 15:17:15 lnxquill kernel:
+
+May 21 15:17:15 lnxquill kernel: Unable to find swap-space signature
+
+May 21 15:17:23 lnxquill kernel: eth0: no IPv6 routers present
+
+May 21 15:18:06 lnxquill sshd[1325]: Accepted keyboard-interactive/pam for root from 9.57.138.243 port 2805 ssh2
+
+May 21 16:17:11 lnxquill syslog-ng[1206]: STATS: dropped 0
+
+May 21 16:41:28 lnxquill kernel: qeth: Link failure on eth0 (CHPID 0x20) - there is a network problem or someone pulled the cable or disabled the port.
+
+May 21 16:41:28 lnxquill mingetty[1319]: ttyS0: invalid character for login name found
+
+May 21 16:42:05 lnxquill kernel: qeth: Link reestablished on eth0 (CHPID 0x20). Scheduling IP address reset.
+
+May 21 16:42:05 lnxquill kernel: qeth: Recovery of device 0.0.0600 started
+
+...
+
+May 21 16:42:05 lnxquill kernel: qeth: Device 0.0.0600/0.0.0601/0.0.0602 is a Guest LAN QDIO card (level: V530)
+
+May 21 16:42:05 lnxquill kernel: with link type GuestLAN QDIO (portname: )
+```
