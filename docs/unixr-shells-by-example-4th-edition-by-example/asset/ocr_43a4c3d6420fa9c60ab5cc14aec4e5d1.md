@@ -1,0 +1,48 @@
+# EXAMPLE 14.12 (CONTINUED)
+
+(The Output)
+
+```
+$ args a b c d
+1 The name of this script is args.
+2 The arguments are a b c d.
+3 The first argument is a.
+4 The second argument is b.
+5 The number of arguments is 4.
+8 All the positional parameters are Jake Nicky Scott.
+9 The number of positional parameters is 3.
+10 Good-bye for now, Jake.
+12 The date is Mar 25, 2004.
+13 The value of $oldargs is a b c d.
+15 Wed Mar 25
+```
+
+# EXPLANATION
+
++   1 The name of the script is stored in the $0 variable.
++   2 $* represents all of the positional parameters.
++   3 $1 represents the first positional parameter (command-line argument).
++   4 $2 represents the second positional parameter.
++   5 $# is the total number of positional parameters (command-line arguments).
++   6 All positional parameters are saved in a variable called oldargs.
++   7 The set command allows you to reset the positional parameters, clearing out the old list. Now, $1 is Jake, $2 is Nicky, and $3 is Scott.
++   8 $* represents all of the parameters, Jake, Nicky, and Scott.
++   9 $# represents the number of parameters, 3.
++   10 $1 is Jake.
++   11 After command substitution is performed (i.e., date is executed), the positional parameters are reset to the output of the date command.
++   12 The new values of $2, $3, and $6 are displayed.
++   13 The values saved in oldargs are printed.
++   14 The set command creates positional parameters from the values stored in oldargs.
++   15 The first three positional parameters are displayed.
+
+# EXAMPLE 14.13
+
+(The Script)
+
+```
+#!/bin/bash
+# Scriptname: checker
+# Script to demonstrate the use of special variable modifiers and arguments
+1 name=${1:?"requires an argument"}
+echo Hello $name
+```

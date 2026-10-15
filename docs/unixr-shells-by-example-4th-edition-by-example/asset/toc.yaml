@@ -1,0 +1,3246 @@
+- - '#'
+  - 15 调试 Shell 脚本 967
+- - '###'
+  - 15.5.4 调试 Bash 脚本 1016
+- - '#'
+  - 16 系统管理员与 Shell 1023
+- - '#'
+  - A 对 Shell 程序员有用的 UNIX/Linux 实用程序 1055
+- - '#'
+  - B Shell 比较 1103
+- - '#'
+  - 前言
+- - '#'
+  - ACKNOWLEDGMENTS
+- - '#'
+  - chapter
+- - '#'
+  - Introduction to UNIX/Linux Shells
+- - '####'
+  - 1.1 What Is UNIX? What Is Linux? A Little History
+- - '#####'
+  - 1.1.1 A Little Bit About UNIX
+- - '#####'
+  - 1.1.2 Why Linux?
+- - '#'
+  - The Free Software Foundation.
+- - '#'
+  - 1.2 Definition and Function of a Shell
+- - '###'
+  - 1.2.1 The UNIX Shells
+- - '#'
+  - 示例 1.1
+- - '#'
+  - 解释
+- - '#'
+  - 1.3 Shell 的历史
+- - '###'
+  - 1.3.1 Uses of the Shell
+- - '###'
+  - 1.3.2 Responsibilities of the Shell
+- - '#'
+  - 1.4 System Startup and the Login Shell
+- - '####'
+  - 1.4.1 Parsing the Command Line
+- - '#'
+  - 1.4.2 命令类型
+- - '#'
+  - 1.5 进程和 Shell
+- - '###'
+  - 1.5.1 正在运行哪些进程？
+- - '#'
+  - 示例 1.2
+- - '#'
+  - pstree/ptree 命令
+- - '#'
+  - 示例 1.3
+- - '#'
+  - wait 系统调用
+- - '#'
+  - exec 系统调用
+- - '#'
+  - exit 系统调用
+- - '#'
+  - 示例 1.4
+- - '#'
+  - 解释
+- - '#'
+  - 解释
+- - '#'
+  - 终止进程。
+- - '#'
+  - 示例 1.3
+- - '#'
+  - 解释
+- - '#'
+  - 1.6 环境和继承
+- - '###'
+  - 1.6.1 所有权和权限
+- - '#'
+  - EXAMPLE 1.6
+- - '###'
+  - 1.6.2 文件创建掩码
+- - '###'
+  - 1.6.3 更改权限和所有权
+- - '#'
+  - The chown Command.
+- - '#'
+  - chown --help
+- - '####'
+  - 'EXAMPLE 1: DOCUMENTATION'
+- - '####'
+  - EXAMPLE 1.4
+- - '####'
+  - EXPLANATION
+- - '#'
+  - 1.6.4 The Working Directory
+- - '###'
+  - EXAMPLE 1.10
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 1.6.5 Variables
+- - '###'
+  - EXAMPLE 1.11
+- - '#'
+  - 1.6.6 Redirection and Pipes
+- - '###'
+  - File Descriptors.
+- - '###'
+  - Redirection.
+- - '####'
+  - EXAMPLE 1.12
+- - '####'
+  - EXPLANATION
+- - '###'
+  - Pipes
+- - '####'
+  - 1.6.7 The Shell and Signals
+- - '####'
+  - 1.7 从脚本执行命令
+- - '####'
+  - EXPLANATION
+- - '#'
+  - 'Chapter 2: Shell Programming QuickStart'
+- - '###'
+  - 2.1 Taking a Peek at Shell Scripts
+- - '###'
+  - '2.2 Sample Scripts: Comparing the Major Shells'
+- - '###'
+  - Before Getting Started
+- - '###'
+  - The Purpose
+- - '#'
+  - 2.3 The C and TC Shell Syntax and Constructs
+- - '#'
+  - 表 2.1 C 和 TC Shell 语法和结构（续）
+- - '#'
+  - 表 2.1 C 和 TC Shell 语法和结构（续）
+- - '#'
+  - 表 2.1 C 和 TC Shell 语法和结构（续）
+- - '#'
+  - 示例 2.1
+- - '###'
+  - 2.3.1 C/TC Shell 脚本
+- - '#'
+  - 示例 2.2
+- - '#'
+  - The Party Program--Invitations to friends from the "guest" file
+- - '#'
+  - 示例 2.2（续）
+- - '#'
+  - 解释
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - 2.4 The Bourne Shell Syntax and Constructs
+- - '#'
+  - Table 2.2 Bourne Shell Syntax and Constructs
+- - '#'
+  - Table 2.2 Bourne Shell Syntax and Constructs (continued)
+- - '#'
+  - Table 2.2 Bourne Shell Syntax and Constructs (continued)
+- - '#'
+  - 表 2.2 Bourne Shell 语法和结构（续）
+- - '#'
+  - 表 2.2 Bourne Shell 语法和结构（续）
+- - '#'
+  - 循环
+- - '#'
+  - 示例
+- - '#'
+  - 表 2.2 Bourne Shell 语法和结构（续）
+- - '#'
+  - 示例
+- - '#'
+  - 表 2.2 Bourne Shell 语法和结构（续）
+- - '###'
+  - EXAMPLE
+- - '#'
+  - 2.4.1 Bourne Shell 脚本
+- - '###'
+  - EXAMPLE 2.4
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - 2.5 Korn Shell 结构
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '#'
+  - 命令替换
+- - '###'
+  - 示例
+- - '#'
+  - 运算符
+- - '###'
+  - 示例
+- - '#'
+  - 条件语句
+- - '###'
+  - 示例
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '###'
+  - EXAMPLE
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '###'
+  - EXAMPLE
+- - '###'
+  - EXAMPLE 2.5
+- - '###'
+  - EXAMPLE
+- - '#'
+  - 表 2.3 Korn Shell 语法和结构（续）
+- - '###'
+  - 2.5.1 Korn Shell 脚本
+- - '###'
+  - EXAMPLE 2.6
+- - '#'
+  - 示例 2.6（续）
+- - '#'
+  - 解释
+- - '#'
+  - 2.6 Bash Shell 构造
+- - '#'
+  - 表 2.4 Bash Shell Syntax and Constructs（续）
+- - '#'
+  - 表 2.4 Bash Shell 语法和结构（续）
+- - '#'
+  - 表 2.4 Bash Shell 语法和结构（续）
+- - '#'
+  - 条件语句
+- - '###'
+  - 示例
+- - '#'
+  - 表 2.4 Bash Shell 语法和结构（续）
+- - '#'
+  - 循环
+- - '#'
+  - 表 2.4 Bash Shell 语法和结构（续）
+- - '#'
+  - 函数
+- - '###'
+  - 示例
+- - '#'
+  - 2.6.1 Bash Shell 脚本
+- - '#'
+  - GNU bash version 2.x
+- - '#'
+  - The Party Program—Invitations to friends from the "guest" file
+- - '#'
+  - 2.6 Bash Shell 结构
+- - '###'
+  - 解释
+- - '#'
+  - 第3章
+- - '#'
+  - 正则表达式与模式匹配
+- - '###'
+  - 3.1 正则表达式
+- - '####'
+  - 3.1.1 定义和示例
+- - '####'
+  - 3.1.2 正则表达式元字符
+- - '#'
+  - 表 3.1 正则表达式元字符
+- - '#'
+  - 表 3.1 正则表达式元字符（续）
+- - '#'
+  - 许多使用 RE 元字符的 UNIX/Linux 程序支持的附加元字符
+- - '#'
+  - 示例 3.1
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.2
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.3
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.4
+- - '#'
+  - 解释
+- - '#'
+  - 示例 1.5
+- - '#'
+  - 解释
+- - '#'
+  - 示例 1.6
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.7
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.8
+- - '#'
+  - 3.2 组合正则表达式元字符
+- - '#'
+  - 3.2 组合正则表达式元字符
+- - '#'
+  - 示例 3.3
+- - '#'
+  - 解释
+- - '###'
+  - 3.2.1 更多正则表达式元字符
+- - '####'
+  - EXAMPLE 3.10
+- - '####'
+  - EXPLANATION
+- - '####'
+  - EXAMPLE 3.11
+- - '####'
+  - EXPLANATION
+- - '####'
+  - EXAMPLE 3.12
+- - '####'
+  - EXPLANATION
+- - '####'
+  - EXAMPLE 3.11
+- - '#'
+  - 说明
+- - '#'
+  - 示例 3.14
+- - '#'
+  - 说明
+- - '#'
+  - 章节
+- - '#'
+  - grep 家族
+- - '###'
+  - 4.1 grep 命令
+- - '####'
+  - 4.1.1 grep 的含义
+- - '#'
+  - 示例 4.2
+- - '#'
+  - 说明
+- - '####'
+  - 4.1.3 元字符
+- - '#'
+  - 示例 4.3
+- - '#'
+  - 说明
+- - '#'
+  - 表 4.1 grep 的正则表达式元字符
+- - '#'
+  - 表 4.1 grep 的正则表达式元字符（续）
+- - '#'
+  - 表 4.2 grep 的选项
+- - '####'
+  - 4.1.4 grep 与退出状态
+- - '###'
+  - EXAMPLE 4.4
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 4.2 使用正则表达式的 grep 示例
+- - '###'
+  - EXAMPLE 4.5
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 4.6
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 4.7
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 示例 4.8
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.9
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.10
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.11
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.12
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.13
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.14
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.15
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.16
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.17
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.18
+- - '###'
+  - 解释
+- - '#'
+  - EXAMPLE 4.19
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.20
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.21
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 4.3 grep 的选项
+- - '#'
+  - EXAMPLE 4.22
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.23
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.24
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.25
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 示例 4.26
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.27
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.28
+- - '#'
+  - 解释
+- - '#'
+  - 4.4 使用管道的 grep
+- - '#'
+  - 示例 4.29
+- - '#'
+  - 解释
+- - '####'
+  - 4.4.1 grep 回顾
+- - '#'
+  - 表 4.3 grep 回顾
+- - '#'
+  - 表 4.3 grep 回顾（续）
+- - '#'
+  - 4.5 egrep（扩展 grep）
+- - '#'
+  - 表 4.4 egrep 的正则表达式元字符
+- - '#'
+  - 表 4.4 egrep 的正则表达式元字符（续）
+- - '#'
+  - 4.5.1 egrep 示例
+- - '#'
+  - 示例 4.30
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.31
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.32
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.33
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.34
+- - '#'
+  - 解释
+- - '#'
+  - 示例 4.35
+- - '#'
+  - 解释
+- - '#'
+  - 4.5.2 egrep 回顾
+- - '#'
+  - 表 4.5 egrep 回顾
+- - '#'
+  - 表 4.5 egrep 回顾（续）
+- - '#'
+  - 4.6 fgrep（Fixed grep 或 Fast grep）
+- - '###'
+  - 示例 4.36
+- - '###'
+  - 解释
+- - '#'
+  - 4.7 Linux 和 GNU grep
+- - '###'
+  - 4.7.1 基本和扩展正则表达式
+- - '#'
+  - 表 4.6 GNU grep
+- - '#'
+  - 表 4.7 基本集合—GNU grep 的正则表达式元字符
+- - '#'
+  - 表 4.7 基本集合—GNU grep 的正则表达式元字符（续）
+- - '#'
+  - 表 4.8 扩展集合—用于 egrep 和 grep -E
+- - '#'
+  - POSIX 类。
+- - '#'
+  - 表 4.9 带括号的字符类
+- - '#'
+  - 示例 4.37
+- - '#'
+  - 示例 4.39
+- - '###'
+  - 解释
+- - '#'
+  - 示例 4.40
+- - '###'
+  - 解释
+- - '#'
+  - 4.9 grep -E 或 egrep（GNU 扩展 grep）
+- - '#'
+  - 表 4.10 egrep 的正则表达式元字符
+- - '#'
+  - 表 4.10 egrep 的正则表达式元字符（续）
+- - '#'
+  - 4.9.1 grep -E 和 egrep 示例
+- - '#'
+  - 示例 4.41
+- - '###'
+  - 解释
+- - '#'
+  - EXAMPLE 4.42
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.43
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.44
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.45
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.46
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.47
+- - '#'
+  - 4.9.2 Anomalies with Regular and Extended Variants of grep
+- - '#'
+  - EXAMPLE 4.48
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.49
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.30
+- - '#'
+  - 4.12 GNU grep with Options
+- - '#'
+  - 表 4.11 GNU grep 选项，适用于所有变体（-G、-E 和 -F）（续）
+- - '#'
+  - 4.13 带选项的 grep（UNIX 和 GNU）
+- - '###'
+  - 示例 4.53
+- - '###'
+  - 解释
+- - '###'
+  - 示例 4.54
+- - '###'
+  - 解释
+- - '###'
+  - 示例 4.35
+- - '###'
+  - 解释
+- - '###'
+  - 示例 4.56
+- - '###'
+  - 解释
+- - '###'
+  - 示例 4.57
+- - '#'
+  - EXAMPLE 4.58
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.59
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 4.13.1 GNU grep Options Examples
+- - '#'
+  - EXAMPLE 4.60
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.61
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.62
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.63
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.64
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.65
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.66
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.67
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.68
+- - '#'
+  - EXAMPLE 4.68 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 4.69
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 'LAB 1: grep 练习'
+- - '#'
+  - chapter
+- - '#'
+  - sed, 流线型编辑器
+- - '###'
+  - 5.1 什么是 sed？
+- - '###'
+  - 5.2 sed 的版本
+- - '#'
+  - 示例 5.1
+- - '#'
+  - 5.3 sed 如何工作？
+- - '#'
+  - 5.4 正则表达式
+- - '#'
+  - 示例 5.2
+- - '#'
+  - 解释
+- - '#'
+  - 示例 5.3
+- - '#'
+  - 解释
+- - '#'
+  - 5.5 寻址
+- - '#'
+  - 格式
+- - '#'
+  - 示例 5.3
+- - '#'
+  - 解释
+- - '#'
+  - 5.6 命令和选项
+- - '#'
+  - 表 5.1 sed 命令
+- - '#'
+  - 表 5.2 sed 选项
+- - '###'
+  - 5.6.1 如何使用 sed 修改文件
+- - '#'
+  - 示例 5.3
+- - '#'
+  - 解释
+- - '###'
+  - 5.6.2 GNU sed 选项
+- - '#'
+  - 示例 5.6
+- - '#'
+  - 解释
+- - '#'
+  - 5.7 错误消息和退出状态
+- - '#'
+  - 示例 5.7
+- - '#'
+  - EXAMPLE (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 5.8 Metacharacters
+- - '#'
+  - Table 5.3 sed's Regular Expression Metacharacters (continued)
+- - '#'
+  - 5.9 sed Examples
+- - '###'
+  - '5.9.1 Printing: The p Command'
+- - '#'
+  - EXAMPLE 5.8
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 5.9
+- - '#'
+  - EXPLANATION
+- - '###'
+  - '5.9.2 Deleting: The d Command'
+- - '#'
+  - 示例 5.10
+- - '#'
+  - 解释
+- - '#'
+  - 示例 5.11
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.12
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.13
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.3 替换：s 命令
+- - '#'
+  - 示例 5.14
+- - '#'
+  - 解释
+- - '#'
+  - 示例 5.15
+- - '#'
+  - 解释
+- - '#'
+  - 示例 3.16
+- - '###'
+  - 解释
+- - '#'
+  - 示例 3.17
+- - '###'
+  - 解释
+- - '#'
+  - 示例 3.18
+- - '###'
+  - 解释
+- - '#'
+  - 示例 5.19
+- - '###'
+  - 解释
+- - '###'
+  - 5.9.4 选择的行范围：逗号
+- - '#'
+  - 示例 5.20
+- - '###'
+  - 解释
+- - '#'
+  - 示例 5.21
+- - '###'
+  - 解释
+- - '#'
+  - 示例 5.22
+- - '###'
+  - 解释
+- - '###'
+  - 5.9.5 多次编辑：e 命令
+- - '####'
+  - EXAMPLE 5.23
+- - '####'
+  - EXPLANATION
+- - '###'
+  - 5.9.6 从文件读取：r 命令
+- - '####'
+  - EXAMPLE 5.24
+- - '####'
+  - EXPLANATION
+- - '###'
+  - 5.9.7 写入文件：w 命令
+- - '####'
+  - EXAMPLE 5.25
+- - '####'
+  - EXPLANATION
+- - '###'
+  - 5.9.8 追加：a 命令
+- - '####'
+  - EXAMPLE 5.26
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.9 插入：i 命令
+- - '###'
+  - 示例 5.27
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.10 更改：c 命令
+- - '###'
+  - 示例 5.28
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.11 下一个：n 命令
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.12 转换：y 命令
+- - '#'
+  - 解释
+- - '###'
+  - 5.9.13 退出：q 命令
+- - '####'
+  - EXAMPLE 5.31
+- - '####'
+  - EXAMPLE 5.32
+- - '###'
+  - 5.9.14 保持和获取：h 和 g 命令
+- - '####'
+  - EXAMPLE 5.33
+- - '####'
+  - EXAMPLE 5.34
+- - '####'
+  - EXAMPLE 5.35
+- - '#'
+  - 示例 5.36
+- - '#'
+  - 解释
+- - '###'
+  - 5.10.1 sed 脚本示例
+- - '#'
+  - 示例 5.38
+- - '#'
+  - 示例 5.38（续）
+- - '#'
+  - 解释
+- - '#'
+  - 示例 5.39
+- - '#'
+  - This script demonstrates the use of curly braces to nest addresses
+- - '#'
+  - and commands. Comments are preceded by a pound sign (#) and must
+- - '#'
+  - be on a line by themselves. Commands are terminated with a newline
+- - '#'
+  - or semicolon. If there is any text after a command, even one
+- - '#'
+  - 'space, you receive an error message:'
+- - '#'
+  - 'sed: Extra text at end of command:'
+- - '#'
+  - 示例 5.39（续）
+- - '#'
+  - 解释
+- - '###'
+  - 5.10.2 sed 复习
+- - '#'
+  - 表 5.4 sed 复习
+- - '#'
+  - 表 5.4 sed 复习（续）
+- - '#'
+  - 练习 2：sed 练习
+- - '#'
+  - chapter
+- - '#'
+  - The awk Utility
+- - '###'
+  - 6.1 What's awk? What's nawk? What's gawk?
+- - '####'
+  - 6.1.1 What Does awk Stand For?
+- - '####'
+  - 6.1.2 Which awk?
+- - '#'
+  - 6.2 awk 的格式
+- - '###'
+  - 6.2.1 从文件输入
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.1
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.2
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.3
+- - '#'
+  - 解释
+- - '###'
+  - 6.2.2 从命令输入
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.4
+- - '#'
+  - 解释
+- - '#'
+  - 6.3 awk 的工作原理
+- - '#'
+  - 6.4 格式化输出
+- - '###'
+  - 6.4.1 print 函数
+- - '####'
+  - EXAMPLE 6.5
+- - '####'
+  - EXPLANATION
+- - '###'
+  - Escape Sequences.
+- - '###'
+  - Table 6.1 print Escape Sequences
+- - '####'
+  - EXAMPLE 6.6
+- - '####'
+  - EXPLANATION
+- - '###'
+  - 6.4.2 OFMT 变量
+- - '####'
+  - EXAMPLE 6.7
+- - '####'
+  - EXPLANATION
+- - '###'
+  - 6.4.3 printf 函数
+- - '#'
+  - 示例 6.8
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.9
+- - '#'
+  - 解释
+- - '#'
+  - 表 6.2 printf 转换字符
+- - '#'
+  - 表 6.3 printf 修饰符
+- - '#'
+  - 表 6.4 printf 格式说明符
+- - '#'
+  - 6.5 从文件内部的 awk 命令
+- - '#'
+  - 示例 6.10
+- - '#'
+  - 解释
+- - '#'
+  - 6.6 记录和字段
+- - '###'
+  - 6.6.1 记录
+- - '###'
+  - 记录分隔符。
+- - '###'
+  - $0 变量。
+- - '#'
+  - 示例 6.11
+- - '#'
+  - 解释
+- - '###'
+  - NR 变量。
+- - '#'
+  - 示例 6.12
+- - '#'
+  - 解释
+- - '###'
+  - 6.6.2 字段
+- - '#'
+  - 示例 6.13
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.14
+- - '#'
+  - 解释
+- - '###'
+  - 6.6.3 字段分隔符
+- - '#'
+  - 在命令行更改字段分隔符
+- - '####'
+  - 示例 6.15
+- - '####'
+  - 解释
+- - '#'
+  - 使用多个字段分隔符
+- - '####'
+  - 示例 6.16
+- - '####'
+  - 解释
+- - '#'
+  - 输出字段分隔符
+- - '####'
+  - 示例 6.17
+- - '####'
+  - 解释
+- - '####'
+  - 示例 6.18
+- - '####'
+  - 解释
+- - '#'
+  - 6.7 模式与动作
+- - '###'
+  - 6.7.1 模式
+- - '#'
+  - 示例 6.19
+- - '#'
+  - 解释
+- - '###'
+  - 6.7.2 动作
+- - '#'
+  - 示例 6.20
+- - '#'
+  - 解释
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.21
+- - '#'
+  - 解释
+- - '#'
+  - 6.8 正则表达式
+- - '#'
+  - 示例 6.22
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.23
+- - '#'
+  - 解释
+- - '#'
+  - 表6.5 awk正则表达式元字符
+- - '#'
+  - 表6.6 不支持的元字符
+- - '#'
+  - 6.8 正则表达式
+- - '####'
+  - 6.8.1 匹配整行
+- - '####'
+  - 6.8.2 匹配运算符
+- - '#'
+  - 解释
+- - '#'
+  - POSIX 字符类。
+- - '#'
+  - 表 6.7 POSIX 添加的带括号字符类
+- - '#'
+  - 6.9 脚本文件中的 awk 命令
+- - '####'
+  - EXAMPLE 6.28
+- - '#'
+  - 解释
+- - '####'
+  - EXAMPLE 6.29
+- - '#'
+  - 解释
+- - '#'
+  - 解释（续）
+- - '#'
+  - 6.10 复习
+- - '####'
+  - 6.10.1 简单模式匹配
+- - '####'
+  - EXAMPLE 6.30
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.31
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.32
+- - '###'
+  - 解释
+- - '####'
+  - 6.10.2 简单动作
+- - '#'
+  - 示例 6.33
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.34
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.35
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.36
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.37
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.38
+- - '###'
+  - 解释
+- - '####'
+  - 6.10.3 模式和动作组合中的正则表达式
+- - '#'
+  - 示例 6.39
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.40
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.41
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.42
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.43
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.44
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.45
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.46
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.47
+- - '#'
+  - 解释
+- - '####'
+  - 6.10.4 输入字段分隔符
+- - '#'
+  - 示例 6.48
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.49
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.50
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.51
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.52
+- - '#'
+  - 解释
+- - '####'
+  - 6.10.5 awk 脚本编写
+- - '#'
+  - 示例 6.3
+- - '#'
+  - This is a comment
+- - '#'
+  - This is my first nawk script
+- - '#'
+  - 解释
+- - '#'
+  - 实验 3：awk 练习
+- - '#'
+  - 6.11 比较表达式
+- - '###'
+  - 6.11.1 关系和相等运算符
+- - '#'
+  - 表 6.8 关系运算符（续）
+- - '#'
+  - 示例 6.54
+- - '#'
+  - 解释
+- - '###'
+  - 6.11.2 条件表达式
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.55
+- - '###'
+  - 说明
+- - '###'
+  - 6.11.3 计算
+- - '###'
+  - 示例 6.56
+- - '###'
+  - 说明
+- - '#'
+  - 表 6.9 算术运算符
+- - '###'
+  - 6.11.4 逻辑运算符和复合模式
+- - '#'
+  - 表 6.10 逻辑运算符
+- - '####'
+  - 示例 6.57
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.38
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.59
+- - '####'
+  - 说明
+- - '###'
+  - 6.11.5 范围模式
+- - '####'
+  - 示例 6.60
+- - '####'
+  - 说明
+- - '###'
+  - 6.11.6 数据验证程序
+- - '#'
+  - 示例 6.61
+- - '#'
+  - 解释
+- - '#'
+  - 6.12 复习
+- - '####'
+  - 6.12.1 等值测试
+- - '#'
+  - 示例 6.62
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.63
+- - '#'
+  - 解释
+- - '#'
+  - 解释
+- - '####'
+  - 6.12.2 关系运算符
+- - '#'
+  - 示例 6.63
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.66
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.67
+- - '#'
+  - 解释
+- - '#'
+  - EXAMPLE 6.68
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 6.12.3 Logical Operators (&&, ||)
+- - '#'
+  - EXAMPLE 6.69
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.70
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 6.12.4 Logical NOT Operator (!)
+- - '#'
+  - EXAMPLE 6.71
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 6.12.5 Arithmetic Operators
+- - '#'
+  - EXAMPLE 6.72
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.73
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.74
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.75
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.76
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.77
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.78
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.79
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.80
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 6.12.6 范围运算符
+- - '###'
+  - 示例 6.81
+- - '###'
+  - 解释
+- - '####'
+  - 6.12.7 条件运算符
+- - '###'
+  - 示例 6.82
+- - '#'
+  - 'LAB 4: awk 练习'
+- - '#'
+  - 6.13 变量
+- - '###'
+  - 6.13.1 数字和字符串常量
+- - '###'
+  - 6.13.2 用户定义变量
+- - '#'
+  - 表 6.11 赋值运算符
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.86
+- - '#'
+  - 解释
+- - '#'
+  - 自增和自减运算符。
+- - '#'
+  - 命令行上的用户定义变量。
+- - '#'
+  - 示例 6.87
+- - '#'
+  - 解释
+- - '#'
+  - -v 选项 (nawk)。
+- - '#'
+  - 字段变量。
+- - '#'
+  - 示例 6.88
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.89
+- - '#'
+  - 解释
+- - '#'
+  - 表 6.12 内置变量
+- - '#'
+  - 表 6.12 内置变量（续）
+- - '#'
+  - 示例 6.90
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.91
+- - '#'
+  - 解释
+- - '###'
+  - 6.13.3 BEGIN 模式
+- - '#'
+  - 示例 6.92
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.93
+- - '#'
+  - 解释
+- - '###'
+  - 6.13.4 END 模式
+- - '#'
+  - 示例 6.94
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.95
+- - '#'
+  - 解释
+- - '#'
+  - 6.14 重定向和管道
+- - '###'
+  - 6.14.1 输出重定向
+- - '#'
+  - 示例 6.96
+- - '#'
+  - 解释
+- - '###'
+  - 6.14.2 输入重定向（getline）
+- - '####'
+  - 示例 6.97
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.98
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.99
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.100
+- - '####'
+  - 说明
+- - '####'
+  - 示例 6.101
+- - '####'
+  - 说明
+- - '#'
+  - 6.15 管道
+- - '####'
+  - 示例 6.102
+- - '####'
+  - 说明
+- - '###'
+  - 6.15.1 关闭文件和管道
+- - '#'
+  - 6.16 Review
+- - '####'
+  - 6.16.1 Increment and Decrement Operators
+- - '#'
+  - EXAMPLE 6.103
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.106
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.107
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 6.16.2 Built-In Variables
+- - '#'
+  - EXAMPLE 6.108
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.109
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 示例 6.112
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.113
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.114
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.115
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.118
+- - '#'
+  - 解释
+- - '####'
+  - 6.16.4  END 模式
+- - '#'
+  - EXAMPLE 6.119
+- - '###'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 6.120
+- - '###'
+  - EXPLANATION
+- - '###'
+  - 6.16.5 awk Script with BEGIN and END
+- - '#'
+  - EXAMPLE 6.121
+- - '#'
+  - Second awk script-- awk.sc2
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 6.16.6 The printf Function
+- - '###'
+  - EXAMPLE 6.122
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 'LAB 5: nawk EXERCISE'
+- - '#'
+  - 6.17 条件语句
+- - '###'
+  - 6.17.1 if 语句
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 6.127
+- - '###'
+  - EXPLANATION
+- - '###'
+  - 6.17.2 if/else 语句
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 6.128
+- - '###'
+  - EXPLANATION
+- - '###'
+  - 6.17.3 if/else 和 else if 语句
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 6.129
+- - '#'
+  - 6.18 循环
+- - '####'
+  - 6.18.1 while 循环
+- - '#'
+  - 示例 6.13
+- - '#'
+  - 解释
+- - '####'
+  - 6.18.2 for 循环
+- - '#'
+  - 示例 6.131
+- - '#'
+  - 解释
+- - '####'
+  - 6.18.3 循环控制
+- - '#'
+  - 示例 6.132
+- - '#'
+  - 解释
+- - '#'
+  - 6.19 程序控制语句
+- - '#'
+  - 6.20 数组
+- - '####'
+  - 6.20.1 关联数组的下标
+- - '###'
+  - 示例 6.135
+- - '###'
+  - 解释
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.136
+- - '###'
+  - 示例 6.136（续）
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.137
+- - '#'
+  - awk.sc 脚本
+- - '#'
+  - 示例 6.137（续）
+- - '#'
+  - 说明
+- - '#'
+  - 使用字段值作为数组下标
+- - '#'
+  - 示例 6.138
+- - '#'
+  - 示例 6.138（续）
+- - '#'
+  - 说明
+- - '#'
+  - 示例 6.139
+- - '#'
+  - 说明
+- - '#'
+  - 数组与 split 函数
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.140
+- - '#'
+  - 说明
+- - '#'
+  - delete 函数
+- - '#'
+  - 示例 6.141
+- - '#'
+  - 说明
+- - '#'
+  - 多维数组（nawk）
+- - '#'
+  - 示例 6.042
+- - '#'
+  - 解释
+- - '####'
+  - 6.20.2 处理命令行参数（nawk）
+- - '#'
+  - 示例 6.143
+- - '#'
+  - 脚本名：argv s
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.144
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.145
+- - '#'
+  - 脚本名：arging.sc
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.146
+- - '#'
+  - 解释
+- - '#'
+  - 6.21 awk 内建函数
+- - '####'
+  - 6.21.1 字符串函数
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.147
+- - '#'
+  - 解释
+- - '#'
+  - 格式
+- - '#'
+  - substr 函数。
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.151
+- - '###'
+  - 说明
+- - '#'
+  - match 函数。
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.152
+- - '###'
+  - 说明
+- - '###'
+  - 示例 6.133
+- - '###'
+  - 说明
+- - '#'
+  - split 函数。
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.134
+- - '###'
+  - 说明
+- - '#'
+  - sprintf 函数。
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.15
+- - '###'
+  - 说明
+- - '#'
+  - 6.22 内置算术函数
+- - '####'
+  - 6.22.1 整数函数
+- - '#'
+  - 6.22 内置算术函数
+- - '###'
+  - 示例 6.156
+- - '###'
+  - 解释
+- - '####'
+  - 6.22.2 随机数生成器
+- - '###'
+  - 示例 6.157
+- - '###'
+  - 示例 6.158
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.159
+- - '###'
+  - 解释
+- - '#'
+  - 6.23 用户定义函数 (nawk)
+- - '###'
+  - 格式
+- - '###'
+  - 示例 6.160
+- - '#'
+  - 'Scriptname: sorter'
+- - '#'
+  - It sorts numbers in ascending order
+- - '###'
+  - 解释
+- - '#'
+  - 6.24 复习
+- - '#'
+  - 示例 6.161
+- - '###'
+  - 说明
+- - '#'
+  - 示例 6.162
+- - '###'
+  - 说明
+- - '#'
+  - 示例 6.163
+- - '###'
+  - 说明
+- - '#'
+  - 示例 6.164
+- - '#'
+  - Awk script illustrating arrays
+- - '###'
+  - 说明
+- - '#'
+  - 示例 6.165
+- - '#'
+  - Awk script with special for loop
+- - '###'
+  - 说明
+- - '#'
+  - EXAMPLE 6.166
+- - '#'
+  - Awk and the special for loop
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 'LAB 6: awk EXERCISE'
+- - '#'
+  - 6.25 Odds and Ends
+- - '####'
+  - 6.25.1 Fixed Fields
+- - '#'
+  - EXAMPLE 6.167
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 空字段。
+- - '#'
+  - 示例 6.168
+- - '#'
+  - Preserving empty fields. Field width is fixed.
+- - '#'
+  - 解释
+- - '#'
+  - 带有 $、逗号或其他字符的数字。
+- - '#'
+  - 示例 6.169
+- - '#'
+  - 解释
+- - '####'
+  - 6.25.2 多行记录
+- - '#'
+  - 示例 6.170
+- - '#'
+  - 解释
+- - '####'
+  - 6.25.3 生成表单信件
+- - '#'
+  - 示例 6.171
+- - '#'
+  - 'form.awk is an awk script that requires access to 2 files: The'
+- - '#'
+  - first file is called "form.letter." This file contains the
+- - '#'
+  - format for a form letter. The awk script uses another file,
+- - '#'
+  - '"data.form," as its input file. This file contains the'
+- - '#'
+  - information that will be substituted into the form letters in
+- - '#'
+  - the place of the numbers preceded by pound signs. Today's date
+- - '#'
+  - is substituted in the place of "$date" in "form.letter."
+- - '#'
+  - Output of date is Fri Mar 2 14:35:50 PST 2004
+- - '#'
+  - 示例 6.171（续）
+- - '#'
+  - 说明
+- - '####'
+  - 6.25.4 与 Shell 的交互
+- - '#'
+  - 示例 6.172
+- - '#'
+  - This korn shell script will collect data for awk to use in
+- - '#'
+  - generating form letter(s). See above.
+- - '#'
+  - 说明
+- - '#'
+  - 'LAB 7: nawk 练习'
+- - '#'
+  - 6.26 awk 内置函数
+- - '####'
+  - 6.26.1 字符串函数
+- - '#'
+  - 示例 6.173
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.174
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.175
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.176
+- - '#'
+  - 解释
+- - '#'
+  - 示例 6.179
+- - '#'
+  - 解释
+- - '####'
+  - 6.26.2 使用 gawk 的时间函数
+- - '#'
+  - systime 函数。
+- - '#'
+  - 格式
+- - '#'
+  - 示例 6.182
+- - '#'
+  - 解释
+- - '#'
+  - strftime 函数。
+- - '#'
+  - 表 6.14 日期和时间格式规范
+- - '#'
+  - 解释
+- - '####'
+  - 6.26.3 命令行参数
+- - '###'
+  - 示例 6.184
+- - '#'
+  - Testing command-line arguments with ARGV and ARGC using a for loop.
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.185
+- - '###'
+  - 解释
+- - '####'
+  - 6.26.4 读取输入 (getline)
+- - '###'
+  - 示例 6.186
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.187
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.188
+- - '###'
+  - 解释
+- - '###'
+  - 示例 6.189
+- - '###'
+  - 解释
+- - '####'
+  - 6.26.5 控制函数
+- - '###'
+  - 示例 6.190
+- - '###'
+  - 解释
+- - '#'
+  - 示例 6.191
+- - '#'
+  - 说明
+- - '####'
+  - 6.2.6 用户自定义函数
+- - '#'
+  - 示例 6.192
+- - '#'
+  - 说明
+- - '####'
+  - 6.26.7 awk/gawk 命令行选项
+- - '#'
+  - 示例 6.193
+- - '#'
+  - 示例 6.193（续）
+- - '#'
+  - 交互式 Bourne shell
+- - '#'
+  - 7.1 简介
+- - '#'
+  - 7.2 环境
+- - '###'
+  - 7.2.1 初始化文件
+- - '###'
+  - /etc/profile 文件
+- - '#'
+  - 示例 7.1
+- - '#'
+  - The profile that all logins get before using their own .profile
+- - '#'
+  - Login and -su shells get /etc/profile services.
+- - '#'
+  - -rsh is given its environment in its own .profile.
+- - '#'
+  - EXPLANATION
+- - '#'
+  - The .profile File.
+- - '#'
+  - EXAMPLE 7.2
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.2.2 The Prompts
+- - '###'
+  - The Primary Prompt.
+- - '#'
+  - EXAMPLE 7.3
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 7.4
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.2.3 The Search Path
+- - '###'
+  - EXAMPLE 7.3
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.2.4 The hash Command
+- - '###'
+  - EXAMPLE 7.6
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.2.5 The dot Command
+- - '###'
+  - EXAMPLE 7.7
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 7.3 命令行
+- - '####'
+  - 7.3.1 退出状态
+- - '###'
+  - EXAMPLE 7.8
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXPLANATION (CONTINUED)
+- - '####'
+  - 7.3.2 命令行中的多个命令
+- - '###'
+  - EXAMPLE 7.9
+- - '###'
+  - EXPLANATION
+- - '###'
+  - Grouping Commands.
+- - '###'
+  - EXAMPLE 7.10
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.3.3 命令的条件执行
+- - '###'
+  - EXAMPLE 7.11
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 7.12
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.3.4 后台命令
+- - '###'
+  - EXAMPLE 7.13
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 7.4 Shell 元字符（通配符）
+- - '#'
+  - 表 7.1 Bourne Shell 元字符
+- - '#'
+  - 7.5 文件名替换
+- - '#'
+  - 表 7.2 Bourne Shell 元字符和文件名替换
+- - '#'
+  - 表 7.2 Bourne Shell 元字符和文件名替换（续）
+- - '####'
+  - 7.5.1 星号
+- - '#'
+  - 示例 7.14
+- - '#'
+  - 解释
+- - '####'
+  - 7.5.2 问号
+- - '#'
+  - 示例 7.15
+- - '#'
+  - 示例 7.13（续）
+- - '#'
+  - 解释
+- - '####'
+  - 7.5.3 方括号
+- - '#'
+  - 示例 7.16
+- - '#'
+  - 解释
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '####'
+  - 7.5.4 Escaping Metacharacters
+- - '#'
+  - EXAMPLE 7.17
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 7.6 Variables
+- - '####'
+  - 7.6.1 Local Variables
+- - '#'
+  - EXAMPLE 7.18
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - EXAMPLE 7.19
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 设置只读变量。只读变量不能被重新定义或取消设置。
+- - '###'
+  - EXAMPLE 7.20
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.6.2 环境变量
+- - '###'
+  - Table 7.3 Bourne Shell Environment Variables
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.6.3 列出已设置的变量
+- - '###'
+  - EXAMPLE 7.22
+- - '###'
+  - EXAMPLE 7.22 (CONTINUED)
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.6.4 取消设置变量
+- - '###'
+  - EXAMPLE 7.23
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.6.5 打印变量的值：echo 命令
+- - '###'
+  - 表 7.4 BSD echo 选项和 System V 转义序列
+- - '###'
+  - EXAMPLE 7.24
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 7.6.6 变量扩展修饰符
+- - '###'
+  - 表 7.5 Bourne Shell 变量修饰符
+- - '###'
+  - EXAMPLE 7.25
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 7.26
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 示例 7.27
+- - '#'
+  - 解释
+- - '#'
+  - 示例 7.28
+- - '#'
+  - 解释
+- - '####'
+  - 7.6.7 位置参数
+- - '#'
+  - 表 7.6 Bourne Shell 位置参数
+- - '#'
+  - 示例 7.29
+- - '#'
+  - 解释
+- - '#'
+  - 7.6 变量
+- - '####'
+  - 7.6.8 其他特殊变量
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - 7.7 Quoting
+- - '###'
+  - Table 7.8 Special Metacharacters Requiring Quotes
+- - '#'
+  - 7.7 Quoting
+- - '####'
+  - 7.7.1 The Backslash
+- - '#'
+  - EXAMPLE 7.31
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.7.2 Single Quotes
+- - '#'
+  - EXAMPLE 7.32
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.7.3 Double Quotes
+- - '#'
+  - EXAMPLE 7.33
+- - '#'
+  - 解释
+- - '#'
+  - 7.8 命令替换
+- - '#'
+  - 示例 7.34
+- - '#'
+  - 解释
+- - '#'
+  - 示例 7.36（续）
+- - '#'
+  - 解释
+- - '####'
+  - 7.9.2 列出和取消设置函数
+- - '#'
+  - 7.10 标准 I/O 和重定向
+- - '#'
+  - 表 7.9 重定向操作符
+- - '#'
+  - 示例 7.37
+- - '#'
+  - and error to /dev/null
+- - '#'
+  - error to where output is going
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.10.1 The exec Command and Redirection
+- - '#'
+  - Table 7.10 The exec Command
+- - '#'
+  - EXAMPLE 7.38
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 7.39
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 7.40
+- - '#'
+  - 解释
+- - '#'
+  - 7.11 管道
+- - '###'
+  - 示例 7.41
+- - '#'
+  - Using a pipe saves disk space and time.
+- - '#'
+  - 解释
+- - '#'
+  - 7.12 here 文档和输入
+- - '###'
+  - 示例 7.42
+- - '#'
+  - 解释
+- - '#'
+  - 解释（续）
+- - '#'
+  - EXAMPLE 7.43
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 7.44
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 7.12.1 Now What?
+- - '#'
+  - chapter
+- - '#'
+  - '8'
+- - '#'
+  - Programming the Bourne Shell
+- - '#'
+  - 8.1 Introduction
+- - '###'
+  - 8.1.1 The Steps in Creating a Shell Script
+- - '#'
+  - The First Line.
+- - '#'
+  - Comments.
+- - '#'
+  - 可执行语句和 Bourne Shell 构造。
+- - '#'
+  - 使脚本可执行。
+- - '###'
+  - EXAMPLE 8.1
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 脚本会话。
+- - '###'
+  - EXAMPLE 8.2
+- - '#'
+  - 'Written by: Barbara Born'
+- - '#'
+  - This is the first Bourne shell program of the day.
+- - '###'
+  - EXAMPLE 8.3
+- - '#'
+  - 'Scriptname: nosy'
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.4
+- - '#'
+  - 'Scriptname: printer_check'
+- - '#'
+  - Script to clear a hung up printer for SVR4
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 8.3  算术
+- - '###'
+  - 8.3.1  整数算术和 expr 命令
+- - '#'
+  - 表 8.2 expr 命令算术运算符
+- - '###'
+  - 示例 8.5
+- - '###'
+  - 解释
+- - '###'
+  - 8.3.2 浮点运算
+- - '###'
+  - 示例 8.6
+- - '###'
+  - 解释
+- - '#'
+  - 8.4 位置参数和命令行参数
+- - '###'
+  - 解释
+- - '####'
+  - 8.4.1 set 命令和位置参数
+- - '###'
+  - 示例 8.8
+- - '#'
+  - 'Scriptname: args'
+- - '#'
+  - Script to test command-line arguments
+- - '#'
+  - 示例 8.8（续）
+- - '###'
+  - 解释
+- - '#'
+  - 示例 8.9
+- - '#'
+  - 'Scriptname: checker'
+- - '#'
+  - Script to demonstrate the use of special variable modifiers and arguments
+- - '###'
+  - 解释
+- - '####'
+  - 8.4.2 $* 和 $@ 有何不同
+- - '#'
+  - 示例 8.10
+- - '#'
+  - 示例 8.10（续）
+- - '###'
+  - 解释
+- - '#'
+  - 表 8.4 字符串、整数和文件测试（续）
+- - '####'
+  - 8.5.1 测试退出状态：test 命令
+- - '#'
+  - 示例 8.11
+- - '#'
+  - 解释
+- - '####'
+  - 8.5.2 if 命令
+- - '#'
+  - 格式
+- - '#'
+  - 示例 8.12
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.13
+- - '#'
+  - 解释
+- - '####'
+  - 8.5.3 exit 命令和 ? 变量
+- - '#'
+  - 示例 8.14
+- - '#'
+  - 'Name: bigfiles'
+- - '#'
+  - 'Purpose: Use the find command to find any files in the root'
+- - '#'
+  - partition that have not been modified within the past n (any
+- - '#'
+  - number within 30 days) days and are larger than 20 blocks
+- - '#'
+  - (512-byte blocks)
+- - '####'
+  - 8.5.4 检查空值
+- - '#'
+  - 解释
+- - '####'
+  - 8.5.5 if/else 命令
+- - '#'
+  - 格式
+- - '#'
+  - 示例 8.16
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 8.17
+- - '#'
+  - 'Scriptname: idcheck'
+- - '#'
+  - 'purpose: check user ID to see if user is root.'
+- - '#'
+  - Only root has a uid of 0.
+- - '#'
+  - Format for id output:uid=9496(eillie) gid=40 groups=40
+- - '#'
+  - root's uid=0
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.5.6 The if/elif/else Command
+- - '#'
+  - FORMAT
+- - '#'
+  - EXAMPLE 8.18
+- - '#'
+  - 'Scriptname: tellme'
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.5.7 文件测试
+- - '###'
+  - EXAMPLE 8.19
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 8.5.8 空命令
+- - '###'
+  - EXAMPLE 8.20
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.21
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.22
+- - '#'
+  - Name:wholenun
+- - '#'
+  - Purpose:The expr command tests that the user enters an integer
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 8.5.9 case 命令
+- - '###'
+  - 格式
+- - '###'
+  - 示例 8.23
+- - '#'
+  - 'Scriptname: colors'
+- - '###'
+  - 解释
+- - '####'
+  - 8.5.10 使用 here 文档和 case 命令创建菜单
+- - '###'
+  - 示例 8.24
+- - '###'
+  - 解释
+- - '#'
+  - 8.6 循环命令
+- - '####'
+  - 8.6.1 for 命令
+- - '#'
+  - FORMAT
+- - '#'
+  - EXAMPLE 8.23
+- - '#'
+  - 'Scriptname: forloop'
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - EXAMPLE 8.26
+- - '#'
+  - 'Scriptname: mailer'
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 8.27
+- - '#'
+  - 'Scriptname: backup'
+- - '#'
+  - 'Purpose:'
+- - '#'
+  - Create backup files and store them in a backup directory
+- - '#'
+  - EXAMPLE 8.27 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.6.2 The $* and $@ Variables in Wordlists
+- - '#'
+  - EXAMPLE 8.28
+- - '#'
+  - 'Scriptname: greet'
+- - '#'
+  - Same as for name in $@
+- - '#'
+  - EXAMPLE 8.28
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 8.29
+- - '#'
+  - 'Scriptname: permx'
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.6.3 while 命令
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 8.30
+- - '#'
+  - 'Scriptname: num'
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.31
+- - '#'
+  - 'Scriptname: quiz'
+- - '###'
+  - EXPLANATION
+- - '#'
+  - Chapter 8 • Programming the Bourne Shell
+- - '###'
+  - EXAMPLE 8.32
+- - '#'
+  - 'Scriptname: sayit'
+- - '#'
+  - Type q to quit.
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 8.6.4 until 命令
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 8.33
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.34
+- - '#'
+  - 'Scriptname: hour'
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 8.6.5 循环控制命令
+- - '###'
+  - EXAMPLE 8.36
+- - '#'
+  - 'Name: doit'
+- - '#'
+  - 'Purpose: shift through command-line arguments'
+- - '#'
+  - 'Usage: doit [args]'
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 8.37
+- - '#'
+  - 'Scriptname: dater'
+- - '#'
+  - 'Purpose: set positional parameters with the set command'
+- - '#'
+  - and shift through the parameters.
+- - '###'
+  - EXPLANATION
+- - '###'
+  - The break Command.
+- - '###'
+  - FORMAT
+- - '#'
+  - 示例 8.38
+- - '#'
+  - 解释
+- - '#'
+  - continue 命令。
+- - '#'
+  - 格式
+- - '#'
+  - 示例 8.39
+- - '#'
+  - 'Scriptname: mail''em'
+- - '#'
+  - 'Purpose: To send a list'
+- - '#'
+  - 解释
+- - '####'
+  - 8.6.6 嵌套循环和循环控制
+- - '#'
+  - 示例 8.40
+- - '#'
+  - 'Scriptname: months'
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.6.7 I/O 重定向和子 shell
+- - '#'
+  - 将循环的输出重定向到文件。
+- - '#'
+  - EXAMPLE 8.41
+- - '#'
+  - 'Program name: numberit'
+- - '#'
+  - Put line numbers on all lines of memo
+- - '#'
+  - EXAMPLE 8.41 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.6 Looping Commands
+- - '#'
+  - EXAMPLE 8.4
+- - '#'
+  - This program demonstrates the scope of variables when
+- - '#'
+  - assigned within loops where the looping command uses
+- - '#'
+  - redirection. A subshell is started when the loop uses
+- - '#'
+  - redirection, making all variables created within the loop
+- - '#'
+  - local to the shell where the loop is being executed.
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 示例 8.43
+- - '#'
+  - 解释
+- - '####'
+  - 8.6.8 在后台运行循环
+- - '#'
+  - 示例 8.44
+- - '#'
+  - 解释
+- - '####'
+  - 8.6.9 exec 命令与循环
+- - '#'
+  - 示例 8.45
+- - '#'
+  - 'Scriptname: speller'
+- - '#'
+  - 'Purpose: Check and fix spelling errors in a file'
+- - '#'
+  - 解释
+- - '####'
+  - 8.6.10 IFS 与循环
+- - '#'
+  - 示例 8.36
+- - '#'
+  - 'Scriptname: runit'
+- - '#'
+  - IFS is the internal field separator and defaults to
+- - '#'
+  - spaces, tabs, and newlines.
+- - '#'
+  - In this script it is changed to a colon.
+- - '#'
+  - 示例 8.46（续）
+- - '#'
+  - 解释
+- - '#'
+  - 8.7 函数
+- - '###'
+  - 格式
+- - '#'
+  - 示例 8.47
+- - '#'
+  - 解释
+- - '####'
+  - 8.7.1 取消设置函数
+- - '###'
+  - 格式
+- - '####'
+  - 8.7.2 函数参数和返回值
+- - '#'
+  - 示例 8.48
+- - '#'
+  - 'Scriptname: do_increment'
+- - '#'
+  - 示例 8.48（续）
+- - '###'
+  - 说明
+- - '#'
+  - 8.7 函数
+- - '#'
+  - 示例 8.49
+- - '#'
+  - 'Scriptname: do_square'
+- - '###'
+  - 说明
+- - '####'
+  - 8.7.3 函数与 dot 命令
+- - '###'
+  - 示例 8.50
+- - '###'
+  - 说明
+- - '###'
+  - 示例 8.51
+- - '#'
+  - 'Scriptname: mainprog'
+- - '#'
+  - This is the main script that will call the function, addon
+- - '#'
+  - Variables set in the function are known in this shell.
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 8.8 Trapping Signals
+- - '#'
+  - Table 8.5 Signal Numbers and Signals a b
+- - '#'
+  - FORMAT
+- - '#'
+  - EXAMPLE 8.52
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 8.8.1 Resetting Signals
+- - '#'
+  - 示例 8.31
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.34
+- - '#'
+  - 解释
+- - '####'
+  - 8.8.2 忽略信号
+- - '#'
+  - 示例 8.53
+- - '#'
+  - 解释
+- - '####'
+  - 8.8.3 列出 Traps
+- - '#'
+  - 示例 8.56
+- - '#'
+  - 'Scriptname: trapping'
+- - '#'
+  - Script to illustrate the trap command and signals
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.36（续）
+- - '####'
+  - 8.8.4 函数中的 Traps
+- - '#'
+  - 示例 8.57
+- - '#'
+  - 解释
+- - '####'
+  - 8.8.5 调试
+- - '#'
+  - 表 8.6 调试选项
+- - '#'
+  - 示例 8.58
+- - '#'
+  - 示例 8.38（续）
+- - '#'
+  - 解释
+- - '#'
+  - 8.9 命令行
+- - '####'
+  - 8.9.1 使用 getopts 处理命令行选项
+- - '#'
+  - 示例 8.59
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.60
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.61
+- - '#'
+  - Program opts1
+- - '#'
+  - Using getopts -- First try --
+- - '#'
+  - 解释
+- - '#'
+  - EXAMPLE 8.62
+- - '#'
+  - EXAMPLE 8.62 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXAMPLE 8.63
+- - '#'
+  - Program opts3
+- - '#'
+  - Using getopts -- Third try --
+- - '#'
+  - EXAMPLE 8.63 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 示例 8-4
+- - '#'
+  - Program opts4
+- - '#'
+  - Using getopts - Fourth try
+- - '#'
+  - 解释
+- - '####'
+  - 8.9.2 eval 命令和解析命令行
+- - '#'
+  - 示例 8.63
+- - '#'
+  - 解释
+- - '#'
+  - 示例 8.66
+- - '#'
+  - 解释
+- - '####'
+  - 8.10 Shell 调用选项
+- - '#'
+  - 表 8.7 Shell 调用选项
+- - '#'
+  - 8.10 Shell 调用选项
+- - '####'
+  - 8.10.1 set 命令和选项
+- - '###'
+  - 解释
+- - '####'
+  - 8.10.2 Shell 内置命令
+- - '#'
+  - 实验 8：Bourne Shell—入门
+- - '#'
+  - 实验9：元字符
+- - '#'
+  - 实验10：重定向
+- - '#'
+  - 实验11：第一个脚本
+- - '#'
+  - 实验12：命令行参数
+- - '#'
+  - 实验13：获取用户输入
+- - '#'
+  - 'LAB 14: 条件语句'
+- - '#'
+  - 'LAB 15: 条件语句和文件测试'
+- - '#'
+  - 'LAB 16: case 语句'
+- - '#'
+  - 'LAB 17: 循环'
+- - '#'
+  - 实验18：函数
+- - '#'
+  - 章节
+- - '#'
+  - '9'
+- - '#'
+  - 交互式
+- - '#'
+  - C 和 TC Shell
+- - '#'
+  - 9.1 引言
+- - '###'
+  - 9.1.1 C/TC Shell 启动
+- - '#'
+  - 图 9.1 启动 C shell。
+- - '#'
+  - 9.2 环境
+- - '####'
+  - 9.2.1 初始化文件
+- - '#'
+  - .cshrc 和 .tcshrc 文件。
+- - '#'
+  - EXAMPLE 9.1
+- - '#'
+  - EXPLANATION
+- - '#'
+  - EXPLANATION (CONTINUED)
+- - '#'
+  - .login 文件。
+- - '#'
+  - EXAMPLE 9.2
+- - '#'
+  - If possible start the windows system.
+- - '#'
+  - Give a user a chance to bail out
+- - '#'
+  - 解释
+- - '####'
+  - 9.2.2 搜索路径
+- - '####'
+  - 9.2.3 rehash 命令
+- - '####'
+  - 9.2.4 hashstat 命令
+- - '####'
+  - 9.2.5 source 命令
+- - '####'
+  - 9.2.6 Shell 提示符
+- - '###'
+  - 主提示符。
+- - '###'
+  - 示例 9.3
+- - '###'
+  - 解释
+- - '###'
+  - 次提示符。
+- - '###'
+  - 示例 9.4
+- - '###'
+  - 解释
+- - '#'
+  - 9.3 C/TC Shell 命令行
+- - '####'
+  - 9.3.1 退出状态
+- - '#'
+  - 示例 9.5
+- - '#'
+  - 解释
+- - '####'
+  - 9.3.2 命令分组
+- - '#'
+  - 示例 9.6
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.7
+- - '#'
+  - 解释
+- - '####'
+  - 9.3.3 命令的条件执行
+- - '#'
+  - 示例 9.8
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.9
+- - '#'
+  - 解释
+- - '####'
+  - 9.3.4 后台命令
+- - '#'
+  - 示例 9.10
+- - '#'
+  - 解释
+- - '####'
+  - 9.3.5 命令行历史
+- - '#'
+  - 示例 9.11
+- - '#'
+  - 解释
+- - '#'
+  - 设置历史。
+- - '###'
+  - EXAMPLE 9.12
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 保存历史。
+- - '###'
+  - EXAMPLE 9.13
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 显示历史。
+- - '###'
+  - EXAMPLE 9.14
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 9.15
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 9.16
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 9.17
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 重新执行命令。
+- - '###'
+  - EXAMPLE 9.18
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 9.19
+- - '###'
+  - EXAMPLE 9.19 (CONTINUED)
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 说明（续）
+- - '#'
+  - 9.4 别名
+- - '####'
+  - 9.4.1 列出别名
+- - '###'
+  - 示例 9.20
+- - '#'
+  - 说明
+- - '####'
+  - 9.4.4 别名循环
+- - '###'
+  - 示例 9.23
+- - '#'
+  - 说明
+- - '#'
+  - 9.5 操作目录栈
+- - '####'
+  - 9.5.1 pushd 和 popd 命令
+- - '#'
+  - Table 9.1 Directory Stack Variables
+- - '#'
+  - EXAMPLE 9.24
+- - '#'
+  - EXAMPLE 9.23 (CONTINUED)
+- - '#'
+  - EXPLANATION
+- - '#'
+  - 9.6 Job Control
+- - '#'
+  - Table 9.2 Job Control Commands
+- - '####'
+  - 9.6.1 The Ampersand and Background Jobs
+- - '#'
+  - EXAMPLE 9.25
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 9.6.2 挂起键序列和后台作业
+- - '####'
+  - 9.6.3 jobs 命令
+- - '###'
+  - 示例 9.26
+- - '###'
+  - 解释
+- - '####'
+  - 9.6.4 前台和后台命令
+- - '###'
+  - 示例 9.27
+- - '###'
+  - 解释
+- - '#'
+  - 9.7 Shell 元字符
+- - '###'
+  - 表 9.3 Shell 元字符
+- - '#'
+  - 9.8 文件名替换
+- - '####'
+  - 9.8.1 星号
+- - '#'
+  - EXAMPLE 9.28
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 9.8.2 问号
+- - '#'
+  - EXAMPLE 9.29
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 9.8.3 方括号
+- - '#'
+  - EXAMPLE 9.30
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 9.8.4 花括号
+- - '#'
+  - EXAMPLE 9.31
+- - '#'
+  - EXPLANATION
+- - '####'
+  - 9.8.5 转义元字符
+- - '###'
+  - EXAMPLE 9.32
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 9.8.6 波浪号展开
+- - '###'
+  - EXAMPLE 9.33
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 9.8.7 文件名补全：filec 变量
+- - '###'
+  - EXAMPLE 9.34
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 9.8.8 使用 noglob 关闭元字符
+- - '###'
+  - EXAMPLE 9.35
+- - '###'
+  - EXPLANATION
+- - '#'
+  - 9.9 重定向和管道
+- - '###'
+  - Table 9.5 Redirection Metacharacters
+- - '#'
+  - 表 9.5 重定向元字符（续）
+- - '####'
+  - 9.9.1 重定向输入
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 9.36
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 9.9.2 here document
+- - '###'
+  - FORMAT
+- - '###'
+  - EXAMPLE 9.37
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXAMPLE 9.38
+- - '###'
+  - EXPLANATION
+- - '###'
+  - EXPLANATION (CONTINUED)
+- - '###'
+  - EXAMPLE 9.30
+- - '###'
+  - EXPLANATION
+- - '####'
+  - 9.9.3 重定向输出
+- - '###'
+  - FORMAT
+- - '#'
+  - 示例 9.40
+- - '#'
+  - 解释
+- - '####'
+  - 9.9.4 将输出追加到现有文件
+- - '#'
+  - 格式
+- - '#'
+  - 示例 9.41
+- - '#'
+  - 解释
+- - '####'
+  - 9.9.5 重定向输出和错误
+- - '#'
+  - 示例 9.42
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.43
+- - '#'
+  - 解释
+- - '####'
+  - 9.9.6 分离输出和错误
+- - '#'
+  - 示例 9.4
+- - '#'
+  - 解释
+- - '####'
+  - 9.9.7 noclobber 变量
+- - '###'
+  - 示例 9.43
+- - '###'
+  - 解释
+- - '#'
+  - 9.10 变量
+- - '#'
+  - 示例 9.46
+- - '#'
+  - 解释
+- - '####'
+  - 9.10.1 大括号
+- - '###'
+  - 示例 9.47
+- - '###'
+  - 解释
+- - '####'
+  - 9.10.2 本地变量
+- - '#'
+  - 设置本地变量。
+- - '#'
+  - 示例 9.36
+- - '###'
+  - 解释
+- - '#'
+  - 示例 9.49
+- - '###'
+  - 解释
+- - '#'
+  - 示例 9.50
+- - '###'
+  - 解释
+- - '#'
+  - 只读变量（tcsh）。
+- - '#'
+  - 示例 9.31
+- - '#'
+  - 内置局部变量。
+- - '####'
+  - 9.10.3 环境变量
+- - '#'
+  - 示例 9.32
+- - '#'
+  - 示例 9.52（续）
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.3
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.34
+- - '####'
+  - 9.10.4 数组
+- - '#'
+  - 示例 9.53
+- - '#'
+  - 示例9.55（续）
+- - '#'
+  - 说明
+- - '#'
+  - shift命令与数组。
+- - '#'
+  - 示例9.36
+- - '#'
+  - 说明
+- - '#'
+  - 从字符串创建数组。
+- - '#'
+  - 示例9.37
+- - '#'
+  - 说明
+- - '####'
+  - 9.10.5 特殊变量
+- - '#'
+  - 表9.7 变量及其含义
+- - '#'
+  - 示例9.36
+- - '#'
+  - 示例 9.50
+- - '#'
+  - 解释
+- - '#'
+  - 9.11 命令替换
+- - '#'
+  - 示例 9.60
+- - '#'
+  - 解释
+- - '####'
+  - 9.11.1 词表和命令替换
+- - '#'
+  - 示例 9.61
+- - '#'
+  - 示例 9.61 （续）
+- - '#'
+  - 解释
+- - '#'
+  - 示例 9.62
+- - '#'
+  - 说明
+- - '#'
+  - 9.12 引用
+- - '####'
+  - 9.12.1 反斜杠

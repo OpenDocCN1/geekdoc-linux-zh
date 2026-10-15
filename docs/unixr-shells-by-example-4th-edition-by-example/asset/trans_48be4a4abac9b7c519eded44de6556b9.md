@@ -1,0 +1,149 @@
+
+
+## EXPLANATION
+
++   1 ypmatch 命令在 NIS passwd 数据库中搜索其参数 name。因为用户不需要看到输出，标准输出和标准错误被重定向到 /dev/null，即 UNIX 位桶。
++   2 如果 ypmatch 命令的退出状态为 0，程序控制进入 then 语句并执行命令直到到达 else。
++   3 else 语句下的命令在 ypmatch 命令未能在 passwd 数据库中找到 $name 时执行；即 ypmatch 的退出状态必须为非零，else 块中的命令才会被执行。
++   4 如果 $name 的值在 passwd 数据库中未找到，此 echo 语句将被执行，程序以 1 退出，表示失败。
++   5 fi 终止了 if。
+
+## EXAMPLE 8.17
+
+(The Script)
+
+```
+#!/bin/sh
+# Scriptname: idcheck
+# purpose: check user ID to see if user is root.
+# Only root has a uid of 0.
+# Format for id output:uid=9496(eillie) gid=40 groups=40
+# root's uid=0
+```
+
+```
+1 id=`id | nawk -F'[=]' '{print $2}'`   # Get user ID
+echo your user id is: $id
+2 if [ $id -eq 0 ]
+then
+3     echo "you are superuser."
+4 else
+echo "you are not superuser."
+5 fi
+```
+
+(The Command Line)
+
+```
+$ idcheck
+your user id is: 9496
+you are not superuser.
+```
+
+```
+7 $ su
+Password:
+8 # idcheck
+your user id is: 0
+you are superuser
+```
+
+## EXPLANATION
+
++   1 id 命令通过管道传递给 awk 命令。awk 使用等号或左括号作为字段分隔符，从输出中提取用户 ID，并将输出赋给变量 id。
++   2 如果 id 的值等于 0，则执行第 3 行。
++   4 如果 id 不等于 0，则执行 else 语句。
++   5 fi 标记了 if 命令的结束。
++   6 idcheck 脚本由当前用户执行，其 UID 为 9496。
++   7 su 命令将用户切换为 root。
++   8 # 提示符表示超级用户 root 是新用户。root 的 UID 为 0。
+
+## 8.5.6 The if/elif/else Command
+
+if/elif/else 命令允许多路决策过程。如果 if 之后的命令失败，则测试 elif 之后的命令。如果该命令成功，则执行其 then 语句下的命令。如果 elif 之后的命令失败，则检查下一个 elif 命令。如果没有任何命令成功，则执行 else 命令。else 块称为默认值。
+
+## FORMAT
+
+```
+if command
+then
+    command(s)
+elif command
+then
+    commands(s)
+elif command
+then
+    command(s)
+else
+    command(s)
+fi
+```
+
+## EXAMPLE 8.18
+
+```
+(The Script)
+#!/bin/sh
+# Scriptname: tellme
+1 echo -n "How old are you? "
+read age
+```
+
+```
+2 if [ $age -lt 0 -o $age -gt 120 ]
+then
+    echo "Welcome to our planet! "
+    exit 1
+fi
+```
+
+```
+3 if [ $age -ge 0 -a $age -lt 13 ]
+then
+    echo "A child is a garden of verses"
+elif [ $age -ge 13 -a $age -lt 20 ]
+then
+    echo "Rebel without a cause"
+elif [ $age -ge 20 -a $age -lt 30 ]
+then
+    echo "You got the world by the tail!!!"
+elif [ $age -ge 30 -a $age -lt 40 ]
+then
+    echo "Thirty something..."
+```
+
+```
+4 else
+    echo "Sorry I asked"
+```
+
+```
+5 fi
+```
+
+(The Output)
+
+```
+$ tellme
+How old are you? 200
+Welcome to our planet!
+$ tellme
+How old are you? 13
+A child is a garden of verses
+$ tellme
+How old are you? 55
+Sorry I asked
+```
+
+## EXPLANATION
+
+1 用户被要求输入。输入被赋给变量 age。
+
+2 在方括号内执行数值测试。如果 age 小于 0 或大于 120，则执行 echo 命令，程序以退出状态 1 终止。交互式 shell 提示符将出现。
+
+3 在方括号内执行数值测试。如果 age 大于或等于 0 且小于 13，测试命令返回退出状态 0，即 true，然后执行 then 之后的语句。否则，程序控制转到 elif。如果该测试为假，则测试下一个 elif。
+
+4 else 构造是默认值。如果以上任何语句都不为真，则将执行 else 命令。
+
+5 fi 终止了初始的 if 语句。
+

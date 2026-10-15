@@ -1,0 +1,15 @@
+At first UNIX was adopted, at nominal cost, by scientific research institutions and universities and later spread to computer companies, government bodies, and manufacturing industries. In 1973, the U.S. Defense Advanced Research Projects Agency (DARPA) initiated a research program to develop a way to link computers together transparently across multiple networks using UNIX. This project, and the system of networks that emerged from the research, resulted in the birth of the Internet!
+
+By the late 1970s many of the students who had pioneered and experimented with UNIX in college were now working in industry and demanded a switch to UNIX, claiming that it was the most suitable operating system for a sophisticated programming environment. Soon a large number of vendors, large and small, started marketing their own versions of UNIX, optimizing it for their individual computer architectures. The two most prominent versions of UNIX were System V from AT&T and BSD UNIX, which was derived from AT&T’s version and developed at the University of California, Berkeley, in the early 1980s.
+
+(To see a chart of the many different versions of UNIX, over 80 flavors, see www.ugu.com/sui/ugu/show?ugu.flavors.) With so many versions of UNIX, applications and tools running on one system often could not run on another without considerable time and energy spent in making them compatible. This lack of uniformity fueled the rhetoric of competing vendors to abandon UNIX and stay with the older, non-UNIX proprietary systems, such as VMS, that had proven to be more consistent and reliable.
+
+It was time to standardize UNIX. A group of vendors got together and started the concept of “open systems,” whereby those participating would agree to conform to certain standards and specifications. UNIX was chosen as the basis for the new concept. A company called X/Open was formed to define the open systems platform, and many organizations began using X/Open as a basis for system design. X/Open is now a part of The Open Group and continues to develop a Single UNIX Specification.
+
+In early 1993, AT&T sold its UNIX System Laboratories to Novell. In 1995 Novell transferred the rights to the UNIX trademark and the specification (which subsequently became the Single UNIX Specification) to The Open Group (at the time X/Open), and sold SCO the UNIX system source code. Today UNIX-based systems are sold by a number of companies. The systems include Solaris from Sun Microsystems, HP-UX and Tru64 UNIX from Hewlett-Packard, and AIX from IBM. In addition there are many freely available UNIX and UNIX-compatible implementations, such as Linux, FreeBSD, and NetBSD.
+
+# 1.1.2 Why Linux?
+
+In 1991, Linus Torvalds, a Finnish college student, developed a UNIX-compatible operating system kernel at the University of Helsinki, Finland. It was designed to be UNIX on a PC. Although Linux mimics UNIX System V and BSD UNIX, it is not derived from licensed source code. Rather, it was developed independently by a group of developers from all over the world who were informally allied through the Internet.
+
+![](bbox=[0.68, 0.9, 0.95, 0.99])

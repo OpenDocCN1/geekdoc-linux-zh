@@ -1,0 +1,123 @@
+
+
+# 示例 1.5
+
+```
+(Zero or more of the preceding character (*))
+% vi picnic
+```
+
+I had a lovely time on our little picnic.
+Lovers were all around us. It is springtime. Oh
+Love, how much I adore you. Do you know
+the extent of my love? Oh, by the way, I think
+I lost my gloves somewhere out in that field of
+clover. Did you see them? I can only hope love
+is forever. I live for you. It's hard to get back in the
+groove.
+~
+~
+/o*ve/
+
+## 解释
+
+星号 (*) 匹配前一个字符的零个或多个。它就像星号粘在它前面的字符上并且只控制那个字符。在这种情况下，星号粘在字母 o 上。它只匹配字母 o 以及模式中出现的字母 o 的任意连续次数，甚至完全不出现 o。Vi 会搜索零个或多个字母 o 后跟 v 和 e，找到 love、loove、lvoe 等。
+
+a. 不要将此元字符与 shell 通配符 (*) 混淆。它们完全不同。Shell 星号匹配任意字符的零个或多个，而正则表达式星号匹配前一个字符的零个或多个。
+
+# 示例 1.6
+
+```
+(A set of characters ([]))
+% vi picnic
+```
+
+I had a lovely time on our little picnic.
+Lovers were all around us. It is springtime. Oh
+Love, how much I adore you. Do you know
+the extent of my love? Oh, by the way, I think
+I lost my gloves somewhere out in that field of
+clover. Did you see them? I can only hope love
+is forever. I live for you. It's hard to get back in the
+groove.
+~
+~
+/[lL]ove/
+
+## 解释
+
+方括号匹配一组字符中的一个。Vi 会搜索包含大写或小写 l 后跟 o、v 和 e 的正则表达式。
+
+# 示例 3.7
+
+(A range of characters ( [ - ] ))
+% vi picnic
+
+```
+I had a lovely time on our little picnic.
+Lovers were all around us. It is springtime. Oh
+love, how much I adore you. Do you know
+the extent of my love? Oh, by the way, I think
+I lost my gloves somewhere out in that field of
+clover. Did you see them? I can only hope love
+is forever. I live for you. It's hard to get back in the
+groove.
+~
+~
+/ove[a-z1]/
+```
+
+## 解释
+
+方括号中字符之间的连字符匹配一个字符范围。Vi 会搜索包含 o、v 和 e 后跟 ASCII 范围 a 到 z 之间的任意字符的正则表达式。由于这是 ASCII 范围，范围不能表示为 [z-a]。
+
+# 示例 3.8
+
+(Not one of the characters in the set ([A]))
+% vi picnic
+
+```
+I had a lovely time on our little picnic.
+Lovers were all around us. It is springtime. Oh
+love, how much I adore you. Do you know
+the extent of my love? Oh, by the way, I think
+I lost my gloves somewhere out in that field of
+clover. Did you see them? I can only hope love
+is forever. I live for you. It's hard to get back in the
+groove.
+~
+~
+/ove[^a-zA-Z0-9]/
+```
+
+## 3.2 组合正则表达式元字符
+
+方括号内的插入符号是否定元字符。它会搜索包含 o、v 和 e 后跟任意不在 ASCII 范围 a 到 z 之间、不在 A 到 Z 范围之间、且不是 0 到 9 之间的数字的字符的正则表达式。例如，它会找到后跟逗号、空格、句点等的字符，因为这些字符不在集合中。
+
+## 3.2 组合正则表达式元字符
+
+现在基本正则表达式元字符已经解释完毕，它们可以组合成更复杂的表达式。每个用正斜杠括起来的正则表达式示例都是搜索字符串，并与文本文件中的每一行进行匹配。
+
+# 示例 3.3
+
+*Note: The line numbers are NOT part of the text file. The vertical bars mark the left and right margins.*
+
+```
+1 |Christian Scott lives here and will put on a Christmas party. |
+2 |There are around 30 to 35 people invited.                 |
+3 |They are:                                               |
+4 |                                                     Tom|
+5 |Dan                                                   |
+6 | Rhonda Savage                                        |
+7 |Nicky and Kimberly.                                   |
+8 |Steve, Suzanne, Ginger and Larry.                     |
+```
+
+## 解释
+
+- a. `/^[A-Z]./` — 将找到以大写字母开头，后跟任意两个字符，后跟换行的所有行。将找到第 5 行的 Dan。
+- b. `/^[A-Z][a-z ]*[0-5]/` — 将找到以大写字母开头，后跟零个或多个小写字母或空格，后跟数字 3 和 0 到 5 之间的另一个数字的所有行。将找到第 2 行。
+- c. `/[a-z]*\./` — 将找到包含零个或多个小写字母，后跟字面句点的行。将找到第 1、2、7 和 8 行。
+- d. `/^\s*[A-Z][a-z]*\s$/` — 将找到以零个或多个空格开头（制表符不计为空格），后跟大写字母、两个小写字母和换行的行。将找到第 4 行的 Tom 和第 5 行的 Dan。
+- e. `/^[A-Za-z][^,]*$/` — 将找到以零个或多个大写和/或小写字母开头，后跟一个非逗号，后跟零个或多个大写或小写字母和换行的行。将找到第 5 行。
+

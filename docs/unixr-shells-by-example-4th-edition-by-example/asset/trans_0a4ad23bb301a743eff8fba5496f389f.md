@@ -1,0 +1,111 @@
+
+
+# 示例 12.14（续）
+
+```
+3 $ print $? 
+0
+# Success
+4 $ test $name = Tom
+5 $ print $? 
+0
+# Success
+6 $ test $name != Tom
+$ print $? 
+1
+# Failure
+7 $ [ $name = Tom ]
+# Brackets instead of the test command
+8 $ print $? 
+0
+9 $ [[ $name = [Tc]?m ]]
+# New ksh test command
+10 $ print $? 
+0
+```
+
+## 解释
+
+1 字符串 Tom 被赋给变量 name。
+
+2 grep 命令会在 datafile 中搜索字符串 Tom，如果搜索成功，则会显示找到的行。
+
+3 ? 变量，通过 $? 访问，包含最后执行的命令的退出状态，在本例中为 grep 的退出状态。如果 grep 成功找到字符串 Tom，它将返回退出状态 0。grep 命令执行成功。
+
+4 test 命令用于评估字符串和数字，并执行文件测试。如果表达式为真，则返回退出状态 0，如果表达式失败，则返回退出状态 1。等号前后必须有空格。
+
+5 检查 name 的值是否等于 Tom。test 命令返回退出状态 0，意味着 $name 确实求值为 Tom。
+
+6 检查 name 的值是否等于 Tom。test 命令返回退出状态 1，意味着 name 不等于 Tom。
+
+7 方括号是 test 命令的另一种记法。第一个方括号后必须有空格。表达式被测试以查看 $name 是否求值为字符串 Tom。
+
+8 test 的退出状态为 0。测试成功，因为 $name 等于 Tom。
+
+9 使用了新的 Korn shell 测试命令 [[。新的测试允许 shell 元字符扩展。如果变量匹配 Tom、tom、Tim、tim 等，测试将返回成功状态 0。
+
+10 变量 name 确实匹配以 T 或 t 开头并以 m 结尾的字符串，导致成功的退出状态 $? 为 0。
+
+## 12.5.2 旧的 test 命令
+
+test 命令用于评估条件表达式，返回 true 或 false。true 时返回零退出状态，false 时返回非零退出状态。可以使用 test 命令或方括号。Korn shell 引入了使用双方括号测试表达式的新方法。为了与 Bourne shell 向后兼容，可以使用 test 命令或单方括号使用旧式的 test。然而，Korn shell 程序员的首选方法是使用双方括号的新测试。完整的测试运算符列表（旧式和新式）见表 12.6。
+
+## 表 12.6 测试和逻辑运算符
+
+| Test/Operator | Tests For |
+|---|---|
+| String Testing | |
+| string1 = string2 | string1 is equal to string2 |
+| string1 != string2 | string1 is not equal to string2 |
+| string | string is not null |
+| -z string | length of string is zero |
+| -n string | length of string is nonzero |
+| EXAMPLE | test -n $word or [ -n $word ]<br>test tom = sue or [ tom = sue ] |
+| Integer Testing (Old-Style test Used with Bourne Shell) | |
+| int1 -eq int2 | int1 is equal to int2 |
+| int1 -ge int2 | int1 is greater than or equal to int2 |
+| int1 -gt int2 | int1 is greater than int2 |
+| int1 -le int2 | int1 is less than or equal to int2 |
+| int1 -lt int2 | int1 is less than int2 |
+| int1 -ne int2 | int1 is not equal to int2 |
+| Logical Operators (Old-Style test) | |
+| ! | NOT operator |
+| -a | AND operator |
+| -o | OR operator |
+
+## 表 12.6 测试和逻辑运算符（续）
+
+| Test/Operator | Tests For |
+|---|---|
+| File Testing (Old-Style test) | |
+| -b filename | Block special file |
+| -c filename | Character special file |
+| -d filename | Directory existence |
+| -f filename | File existence and not a directory |
+| -g filename | Set-group-ID is set |
+| -h filename | Symbolic link |
+| -k filename | Sticky bit is set |
+| -p filename | File is a named pipe |
+| -r filename | File is readable |
+| -s filename | File is nonzero size |
+| -u filename | Set-user-ID bit is set |
+| -w filename | File is writable |
+| -x filename | File is executable |
+
+## 12.5.3 新的 test 命令
+
+使用 [[ ... ]] 复合测试命令，可使用额外的运算符。可以在字符串匹配测试中使用通配符，并且消除了旧 test 的许多错误。新的字符串测试运算符列于表 12.7。
+
+## 表 12.7 字符串测试（新式测试）
+
+| String Testing Operator | Tests For |
+|---|---|
+| string = pattern | string matches patternᵃ |
+| string != pattern | string does not match pattern |
+| string1 < string2 | ASCII value of string1 is less than string2 |
+| string1 > string2 | ASCII value of string1 is greater than string2 |
+| -n string | string is nonzero in length, nonnull parameter |
+| -z string | string is zero in length, null parameter |
+
+a. On versions newer than 1988, the == operator is permitted.
+

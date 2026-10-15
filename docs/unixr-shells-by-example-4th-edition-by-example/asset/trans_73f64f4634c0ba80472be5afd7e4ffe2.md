@@ -1,0 +1,134 @@
+
+
+# 注释。
+
+注释是以井号开头的行。它们用于记录你的脚本。如果脚本没有注释，有时很难理解脚本 supposed to do。虽然注释很重要，但它们通常太稀少或根本未使用。尝试养成注释你所做工作的习惯，不仅是为了别人，也是为了你自己。两天后你可能不记得自己当时试图做什么。
+
+## 使脚本可执行。
+
+当你创建一个文件时，它不会被赋予执行权限。你需要此权限来运行脚本。使用 chmod 命令来打开执行权限。
+
+### EXAMPLE 10.1
+
+```
+1 % chmod +x myscript
+2 % ls -lF myscript
+-rwxr-xr-x 1 ellie 0 Jul 13:00 myscript*
+```
+
+### EXPLANATION
+
+- 1 chmod 命令用于为用户、组和其他人打开 myscript 文件的执行权限。
+- 2 ls 命令的输出表明所有用户对 myscript 文件都有执行权限。文件名末尾的星号（由 -F 选项产生）也表明这是一个可执行程序。
+
+## 一个示例脚本会话。
+
+在下面的示例中，用户将在编辑器中创建脚本。保存文件后，使用 chmod 命令打开执行权限，然后执行脚本。如果程序中有错误，C shell 会立即响应。
+
+### EXAMPLE 10.2
+
+```
+(The Script - info)
+#!/bin/csh -f
+# Scriptname: info
+1 echo Hello $ {LOGNAME}!
+2 echo The hour is `date +%H`
+3 echo "This machine is `uname -n`"
+4 echo The calendar for this month is
+5 cal
+6 echo The processes you are running are:
+7 ps -ef | grep "A $LOGNAME"
+8 echo "Thanks for coming. See you soon!\!\!"
+
+(The Command Line)
+% chmod +x info
+% info
+```
+
+### EXAMPLE 10.2 (CONTINUED)
+
+```
+1 Hello ellie!
+2 The hour is 09
+3 This machine is jody
+4 The calendar for this month is
+5 July 2004
+   S M Tu W Th F S
+      1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30 31
+7 The processes you are running are:
+< output of ps prints here >
+8 Thanks for coming. See you soon!!
+```
+
+### EXPLANATION
+
+1 用户被问候。变量 LOGNAME 保存用户名。在 BSD 系统上，使用 USER。大括号将变量与感叹号隔开。感叹号不需要转义，因为除非在其后附加字符，否则它不会被解释为历史字符。
+
+2 date 命令被包含在反引号中。shell 将执行命令替换，并将日期的输出，即当前小时，替换到 echo 字符串中。
+
+3 uname -n 命令显示机器名。
+
+4, 5 cal 命令未被包含在反引号中，因为当 shell 执行命令替换时，输出中的所有换行符都会被删除。这会产生一个看起来奇怪的日历。通过将 cal 命令单独放在一行上，格式得以保留。本月的日历被打印出来。
+
+6, 7 用户的进程被打印出来。对 BSD 使用 ps -aux，对 Linux 使用 ps au。
+字符串被打印出来。注意两个感叹号前面加上了反斜杠。这是为了防止历史替换。
+
+8
+
+> a. Linux 支持多种不同的样式选项，包括 UNIX98、BSD 和 GNU。请参阅你的 man 手册了解 ps。
+
+## 10.2 读取用户输入
+
+### 10.2.1 The $ < Variable
+
+为了使脚本具有交互性，使用一个特殊的 C shell 变量从标准输入读取到变量中。$ < 符号从标准输入读取一行，直到但不包括换行符，并将该行分配给一个变量。1
+
+> 1. 另一种读取一行输入的方法是 set variable = `head -1'。
+
+### EXAMPLE 10.3
+
+```
+(The Script - greeting)
+#!/bin/csh -f
+# The greeting script
+1 echo -n "What is your name? "
+2 set name = $<
+3 echo Greetings to you, $name.
+
+(The Command Line)
+% chmod +x greeting
+% greeting
+1 What is your name? Dan Savage
+3 Greetings to you, Dan Savage.
+```
+
+### EXPLANATION
+
+- 1 字符串被回显到屏幕上。-n 选项导致 echo 命令抑制字符串末尾的换行符。在某些版本的 echo 中，使用字符串末尾的 \c 来抑制换行；例如，echo hello\c。
+- 2 在终端上输入的任何内容，直到换行符，都作为字符串存储在 name 变量中。
+- 3 在执行变量替换后，字符串被打印出来。
+
+## 10.2.2 从输入字符串创建词列表
+
+由于 $ < > 变量的输入作为字符串存储，你可能希望将字符串拆分为词列表。
+
+### EXAMPLE 10.4
+
+```
+1 % echo What is your full name? 
+2 % set name = $<
+Lola Justin Lue
+3 % echo Hi $name[1]
+Hi Lola Justin Lue
+4 % echo $name[2]
+Subscript out of range.
+5 % set name = ( $name )
+6 % echo Hi $name[1]
+Hi Lola
+7 % echo $name[2] $name[3]
+Justin Lue
+```

@@ -1,0 +1,126 @@
+
+
+## 表 13.18 变量修饰符（续）
+
+| Modifier | Value |
+|---|---|
+| ${variable:offset:length} | Gets the substring of the value in variable starting at offset, length characters over. |
+
+a. Not available on bash versions prior to 2.0.
+
+Using the colon with any of the modifiers (-, +, ?, ) checks whether the variable is not set or is null; without the colon, a variable set to null is considered to be set.
+
+## EXAMPLE 13.60
+
+(Substitute Temporary Default Values)
+
+```
+1 $ fruit=peach
+2 $ echo ${fruit:-plum}
+   peach
+3 $ echo ${newfruit:-apple}
+   apple
+4 $ echo $newfruit
+5 $ echo $EDITOR   # More realistic example
+6 $ echo ${EDITOR:-/bin/vi}
+   /bin/vi
+7 $ echo $EDITOR
+8 $ name=
+   $ echo ${name-Joe}
+9 $ echo ${name:-Joe}
+   Joe
+```
+
+## EXPLANATION
+
+- 1 The variable fruit is assigned the value peach.
+- 2 The special modifier will check to see if the variable fruit has been set. If it has, the value is printed; if not, plum is substituted for fruit and its value is printed.
+- 3 The variable newfruit has not been set. The value apple will be temporarily substituted for newfruit.
+- 4 The setting was only temporary. The variable newfruit is not set.
+- 5 The environment variable EDITOR has not been set.
+- 6 The :- modifier substitutes EDITOR with /bin/vi.
+- 7 The EDITOR was never set. Nothing prints.
+- 8 The variable name is set to null. By not prefixing the modifier with a colon, the variable is considered to be set, even if to null, and the new value Joe is not assigned to name.
+- 9 The colon causes the modifier to check that a variable is either not set or is set to null. In either case, the value Joe will be substituted for name.
+
+## EXAMPLE 13.61
+
+(Substitute Permanent Default Values)
+
+```
+1  $ name=
+2  $ echo ${name:=Peter}
+   Peter
+3  $ echo $name
+   Peter
+4  $ echo ${EDITOR:=/bin/vi}
+   /bin/vi
+5  $ echo $EDITOR
+   /bin/vi
+```
+
+## EXPLANATION
+
+- 1. The variable name is assigned the null value.
+- 2. The special modifier := will check to see if the variable name has been set. If it has been set, it will not be changed; if it is either null or not set, it will be assigned the value to the right of the equal sign. Peter is assigned to name because the variable is set to null. The setting is permanent.
+- 3. The variable name still contains the value Peter.
+- 4. The value of the variable EDITOR is set to /bin/vi.
+- 5. The value of the variable EDITOR is displayed.
+
+## EXAMPLE 13.62
+
+(Substitute Temporary Alternate Value)
+
+```
+1  $ foo=grapes
+2  $ echo ${foo:-pears}
+   pears
+3  $ echo $foo
+   grapes
+```
+
+## EXPLANATION
+
+- 1. The variable foo has been assigned the value grapes.
+- 2. The special modifier :- will check to see if the variable has been set. If it has been set, pears will temporarily be substituted for foo; if not, null is returned.
+- 3. The variable foo now has its original value.
+
+## EXAMPLE 13.63
+
+(Creating Error Messages Based On Default Values)
+
+```
+1  $ echo ${namex:?'namex is undefined'}
+   namex: namex is undefined
+2  $ echo $y?
+   y: parameter null or not set
+```
+
+## EXPLANATION
+
+- 1. The :? modifier will check to see if the variable has been set. If not, the string to the right of the ? is printed to standard error, after the name of the variable. If in a script, the script exits.
+- 2. If a message is not provided after the ?, the shell sends a default message to standard error.
+
+## EXAMPLE 13.64
+
+(Creating Substring)
+
+```
+1  $ var=notebook
+2  $ echo ${var:0:4}
+   note
+3  $ echo ${var:4:4}
+   book
+4  $ echo ${var:0:2}
+   no
+```
+
+a. Not available in versions of bash prior to 2.x.
+
+## EXPLANATION
+
+- 1. The variable is assigned the value, notebook.
+- 2. The substring of var starts at offset 0, the n in notebook, and has a length of 4 characters, ending at the e.
+- 3. The substring of var starts at offset 4, the b in notebook, and has a length of 4 characters, ending at the k.
+- 4. The substring of var starts at offset 0, the n in notebook, and has a length of 2 characters, ending at the o.
+

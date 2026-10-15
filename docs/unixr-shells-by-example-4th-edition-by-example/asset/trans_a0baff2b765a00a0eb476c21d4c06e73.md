@@ -1,0 +1,157 @@
+
+
+# 空字段。
+
+如果数据存储在定宽字段中，则可能某些字段为空。在下面的示例中，`substr` 函数被用来保留字段，无论它们是否包含数据。
+
+## 示例 6.168
+
+```
+1 % cat db
+xxx xxx
+xxx abc xxx
+xxx a bbb
+xxx   xx
+
+% cat awkfix
+# Preserving empty fields. Field width is fixed.
+{
+2 f[1]=substr($0,1,3)
+3 f[2]=substr($0,5,3)
+4 f[3]=substr($0,9,3)
+5 line=sprintf("% -4s%-4s%-4s", f[1],f[2], f[3])
+6 print line
+}
+% nawk -f awkfix db
+xxx xxx
+xxx abc xxx
+xxx a bbb
+xxx   xx
+```
+
+## 解释
+
+- 1 文件 db 的内容被打印出来。文件中存在空字段。
+- 2 f 数组的第一个元素被赋值为记录的子字符串，从位置 1 开始，偏移量为 3。
+- 3 f 数组的第二个元素被赋值为记录的子字符串，从位置 5 开始，偏移量为 3。
+- 4 f 数组的第三个元素被赋值为记录的子字符串，从位置 9 开始，偏移量为 3。
+- 5 数组的元素在经过 `sprintf` 函数格式化后被赋给用户自定义变量 line。
+- 6 line 的值被打印出来，且空字段得以保留。
+
+# 带有 $、逗号或其他字符的数字。
+
+在下面的示例中，价格字段包含美元符号和逗号。脚本必须消除这些字符以便将价格相加得到总成本。这是通过使用 `gsub` 函数完成的。
+
+## 示例 6.169
+
+```
+% cat vendor
+access tech:gp237221:220:vax789:20/20/11/90:$1,043.00
+alisa systems:bp262292:280:macintosh:new updates:06/30/91:$456.00
+alisa systems:gp23435:260:vax8700:alisa talk:02/01/91:$1,598.50
+apple computer:zx342567:240:mcs:e-mail:06/25/90:$375.75
+caci:gp62313:280:sparc station:network11.5:05/12/91:$1,259.75
+datalogics:bp134255:260:microvax2:pagestation maint:07/01/90:$1,200.00
+dec:zx354612:220:microvax2:vms sms:07/20/90:$1,350.00
+
+% awk -F '{gsub(/\$/, ""); gsub(/,/,''); cost +=$7};\nEND{print "The total is $" cost}' vendor
+$7474
+```
+
+## 解释
+
+第一个 `gsub` 函数将字面美元符号（$）全局替换为空字符串，第二个 `gsub` 函数将逗号替换为空字符串。然后用户自定义的 cost 变量通过将第七个字段加到 cost 上并将结果赋回给 cost 来进行累加。在 END 块中，字符串 The total is $ 被打印出来，后跟 cost 的值。
+
+> a. 有关如何在程序中重新添加逗号的详细信息，请参阅 Alfred V. Aho、Brian W. Kernighan 和 Peter J. Weinberger 所著的 The AWK Programming Language（波士顿：Addison-Wesley，1988），第 72 页
+
+## 6.25.2 多行记录
+
+到目前为止使用的示例数据文件中，每条记录都单独占一行。在下面的示例数据文件 checkbook 中，记录由空行分隔，字段由换行符分隔。为了处理此文件，记录分隔符（RS）被赋值为 null，字段分隔符（FS）被赋值为换行符。
+
+## 示例 6.170
+
+```
+（输入文件）
+% cat checkbook
+1/1/04
+#125
+-695.00
+Mortgage
+
+1/1/04
+#126
+-56.89
+PCGE
+
+1/2/04
+#127
+-89.99
+Safeway
+
+1/3/04
++750.00
+Paycheck
+
+1/4/04
+#128
+-60.00
+Visa
+```
+
+（脚本）
+
+```
+% cat awkchecker
+1 BEGIN{RS=""; FS="\n"; ORS="\n\n"}
+2 {print NR, $1,$2,$3,$4}
+```
+
+（输出）
+
+```
+% nawk -f awkchecker checkbook
+1 1/2/04 #125 -695.00 Mortgage
+2 1/2/04 #126 -56.89 PG&E
+3 1/2/04 #127 -89.99 Safeway
+4 1/3/04 +750.00 Paycheck
+5 1/4/04 #128 -60.00 Visa
+```
+
+## 解释
+
+- 1. 在 BEGIN 块中，记录分隔符（RS）被赋值为 null，字段分隔符（FS）被赋值为换行符，输出记录分隔符（ORS）被赋值为两个换行符。现在每一行都是一个字段，每个输出记录由两个换行符分隔。
+- 2. 记录的编号被打印出来，后跟每个字段。
+
+## 6.25.3 生成表单信件
+
+下面的示例改编自 The AWK Programming Language 中的一个程序。其棘手之处在于跟踪实际正在处理的内容。输入文件名为 data.form。它仅包含数据。输入文件中的每个字段由冒号分隔。另一个文件名为 form.letter。它是用于创建信件的实际表单。此文件通过 `getline` 函数加载到 awk 的内存中。表单信件的每一行都存储在一个数组中。该程序从 data.form 获取数据，并通过用 form.letter 中以 # 和 $ 开头的特殊字符串的实际数据进行替换来创建信件。临时变量 temp 保存数据替换后实际显示的行。此程序允许你为 data.form 中列出的每个人创建个性化的表单信件。
+
+## 示例 6.171
+
+```
+（Awk 脚本）
+% cat form.awk
+# form.awk is an awk script that requires access to 2 files: The
+# first file is called "form.letter." This file contains the
+# format for a form letter. The awk script uses another file,
+# "data.form," as its input file. This file contains the
+# information that will be substituted into the form letters in
+# the place of the numbers preceded by pound signs. Today's date
+# is substituted in the place of "$date" in "form.letter."
+1 { BEGIN { FS=":"; n=1 }
+2 while(getline < "form.letter" > 0) {
+3   form[n++]= $0  # Store lines from form.letter in an array
+4   "date" | getline d; split(d, today, " ")
+# Output of date is Fri Mar 2 14:35:50 PST 2004
+5   thisday=today[2] "," today[3] "," today[6]
+6 }
+7 { for( i = 1; i <= n; i++ ) {
+8   temp=form[i]
+9   for ( j = 1; j <=NF; j++ ) {
+10    gsub("$date", thisday, temp)
+    gsub("#" j, $j, temp )
+11  }
+    print temp
+  }
+}
+```

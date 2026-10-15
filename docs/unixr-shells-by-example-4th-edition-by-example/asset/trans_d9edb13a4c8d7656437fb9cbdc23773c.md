@@ -1,0 +1,111 @@
+
+
+that invoked the function. Often functions are used to improve the modularity of a script. Once defined, they can be used repeatedly and even stored in another directory.
+
+Functions must be defined before they are invoked; there are two formats used to define them. One format came from the Bourne shell and the other is new with the Korn shell. Functions can be exported from one invocation of the shell to the next. The typeset command and unset command can be used to list and unset functions. See Table 11.17.
+
+**Table 11.17 Commands to List and Set Functions**
+
+| Command | Function |
+|---|---|
+| typeset -f | Lists functions and their definitions; functions is an alias for typeset -f |
+| typeset +f | Lists only function names |
+| unset -f name | Unsets a function |
+
+### 11.12.1 Defining Functions
+
+There are two acceptable formats for defining functions: the Bourne shell format (still allowed for upward compatibility) and the new Korn shell format. A function must be defined before it can be used.
+
+**FORMAT**
+
+``` 
+(Bourne Shell)
+functionname() { commands ; commands; }
+
+(Korn Shell)
+function functionname { commands; commands; }
+```
+
+**EXAMPLE 11.59**
+
+``` 
+1  $ function fun { pwd; ls; date; }
+
+2  $ fun
+/home/jody/ellie/prac
+abc   abc123  file2.bak  none    nothing  tmp
+abc1  abc2    file2      nonsense nowhere  touch
+abc122 file1  file2.bak noone    one
+Mon Feb 9 11:15:48 PST 2004
+
+3  $ function greet { print "Hi $1 and $2"; }
+
+4  $ greet tom joe        # Here $1 is tom and $2 is joe
+     Hi tom and joe
+
+5  $ set jane nina lizzy
+6  $ print $*
+     jane nina lizzy
+
+7  $ greet tom joe
+     Hi tom and joe
+
+8  $ print $1 $2
+     jane nina
+```
+
+**EXPLANATION**
+
+1. The function fun is named and defined. The name is followed by a list of commands enclosed in curly braces. Each command is separated by a semicolon. There must be a space after the first curly brace or you will get a syntax error such as ksh: syntax error: '}' unexpected. A function must be defined before it can be used.
+2. The function behaves like a script or an alias when invoked. Each of the commands in the function definition is executed in turn.
+3. There are two positional parameters used in the function greet. When arguments are given to the function, the positional parameters are assigned those values.
+4. The arguments to the function tom and joe are assigned to $1 and $2, respectively. The positional parameters in a function are private to the function and will not interfere with any used outside the function.
+5. The positional parameters are set at the command line. These variables have nothing to do with the ones set in the function.
+6. $* displays the values of the currently set positional parameters.
+7. The function greet is called. The values assigned to the positional parameters $1 and $2 are tom and joe, respectively.
+8. The positional variables assigned at the command line are unaffected by those set in the function.
+
+### 11.12.2 Functions and Aliases
+
+When processing the command line, the shell looks for aliases before special built-in commands and for special built-ins before functions. If a function has the same name as a built-in, the built-in will take priority over the function. An alias for a special built-in can be defined, and then the function name can be given the name of the alias to override the order of processing.
+
+**EXPLANATION**
+
+1. The typeset command, with the -f option, lists the function and its definition.
+2. The typeset command, with the +f option, lists only the names of defined functions.
+
+### 11.12.4 Unsetting Functions
+
+When a function is unset, it will be removed from the shell's memory.
+
+**EXAMPLE 11.62**
+
+``` 
+(The Command Line)
+1 $ typeset -f
+function fun
+{
+    pwd; ls; date;
+}
+function greet
+{
+    print "hi $1 and $2";
+}
+2 $ unset -f fun
+3 $ typeset -f
+function greet
+{
+    print "hi $1 and $2";
+ }
+```
+
+**EXPLANATION**
+
+1. The typeset -f command displays the function and its definition. Two functions, fun and greet, are displayed.
+2. The built-in command unset, with the -f option, undefines the fun function, removing it from the shell's memory.
+3. The fun function is no longer shown as one of the functions defined when the typeset -f command is executed.
+
+## 11.13 Standard I/O and Redirection
+
+The Korn shell opens three files (called streams) whenever a program is started: stdin, stdout, and stderr. Standard output normally goes to the screen, file descriptor 1. Standard error normally goes to the screen, file descriptor 2. Standard input, output, and error can be redirected to or from a file. See Table 11.18 for a list of redirection operators.
+

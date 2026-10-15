@@ -1,0 +1,126 @@
+
+rather than part of a pattern, it too must be enclosed in quotes. The logical operators && (AND) and || (OR) replace the -a and -o operators used with the simple test command. (See Example 14.17.)
+
+## Table 14.3 The test Command Operators
+
+| Test Operator | Tests True If |
+|---|---|
+| *String Test* | |
+| `[ string1 = string2 ]`<br>`[ string1==string2 ]` | String1 is equal to String2 (*space surrounding = required*).<br>(Can be used instead of the single = sign on bash versions 2.x.) |
+| `[ string1 != string2 ]` | String1 is not equal to String2 (*space surrounding != required*). |
+| `[ string ]` | String is not null. |
+| `[ -z string ]` | Length of string is zero. |
+| `[ -n string ]` | Length of string is nonzero. |
+| `[ -l string ]` | Length of string (number of characters). |
+| *Logical Test* | |
+| `[ string1 -a string2 ]` | Both string1 and string2 are true. |
+| `[ string1 -o string2 ]` | Either string1 or string2 is true. |
+| `[ ! string1 ]` | Not a string1 match. |
+| *Logical Test (Compound Test)* | |
+| `[[ pattern1 && pattern2 ]]` | Both pattern1 and pattern2 are true. |
+| `[[ pattern1 || pattern2 ]]` | Either pattern1 or pattern2 is true. |
+| `[[ ! pattern ]]` | Not a pattern match. |
+| *Integer Test* | |
+| `[ int1 -eq int2 ]` | Int1 is equal to int2. |
+| `[ int1 -ne int2 ]` | Int1 is not equal to int2. |
+| `[ int1 -gt int2 ]` | Int1 is greater than int2. |
+| `[ int1 -ge int2 ]` | Int1 is greater than or equal to int2. |
+
+```
+test -n $word  or  [ -n $word ]
+test tom = sue  or  [ tom = sue ]
+```
+
+## Table 14.3 The test Command Operators (continued)
+
+| Test Operator | Tests True If |
+|---|---|
+| [ int1 -lt int2 ] | Int1 is less than int2. |
+| [ int1 -le int2 ] | Int1 is less than or equal to int2. |
+
+## Binary Operators for File Testing
+
+|  |  |
+| [ file1 -nt file2 ] | True if file1 is newer than file2 (according to modification date). |
+| [ file1 -ot file2 ] | True if file1 is older than file2. |
+| [ file1 -ef file2 ] | True if file1 and file2 have the same device or inode numbers. |
+
+a. With the compound test, pattern can contain pattern-matching metacharacters; for exact string testing, pattern2 must be enclosed in quotes.
+
+## EXAMPLE 14.16
+
+(The test Command)
+(At the Command Line)
+
+```
+1 $ name=Tom
+2 $ grep "^name" /etc/passwd
+3 $ echo $?
+4 $ test $name != Tom
+5 $ echo $?
+1        # Failure
+6 $ [ $name = Tom ]    # Brackets replace the test command
+7 $ echo $?
+0
+8 $ [ $name = [Tt]?? ]
+$ echo $?
+1
+9 $ x=5
+$ y=20
+10 $ [ $x -gt $y ]
+$ echo $?
+1
+11 $ [ $x -le $y ]
+$ echo $?
+0
+```
+
+## EXPLANATION
+
++   1 The variable name is assigned the string Tom.
++   2 The grep command will search for string Tom in the passwd file.
+
+## EXPLANATION (CONTINUED)
+
+3 The $? variable contains the exit status of the last command executed, in this case, the exit status of grep. If grep is successful in finding the string Tom, it will return an exit status of 0. The grep command was successful.
+
+4 The test command is used to evaluate strings, numbers, and perform file testing. Like all commands, it returns an exit status. If the exit status is 0, the expression is true; if the exit status is 1, the expression evaluates to false. There must be spaces surrounding the equal sign. The value of name is tested to see if it is not equal to Tom.
+
+5 The test fails and returns an exit status of 1.
+
+6 The brackets are an alternate notation for the test command. There must be spaces after the first bracket. The expression is tested to see if name evaluates to the string Tom. Bash allows either a single or double equal sign to be used for equality of strings.
+
+7 The exit status of the test is 0. The test was successful because name is equal to Tom.
+
+8 The test command does not allow wildcard expansion. Because the question mark is treated as a literal character, the test fails. Tom and Tom[?] are not equal. The exit status is 1, indicating that the test in line 8 failed.
+
+9 x and y are given numeric values.
+
+10 The test command uses numeric relational operators to test its operands; in this example it tests whether $x is greater than (-gt) $y, and returns 0 exit status if true, 1 if false. (See Table 14.3 on page 881.)
+
+11 Tests if $x less than or equal to (-le) $y, returning 0 exit status if true, 1 if false.
+
+## EXAMPLE 14.17
+
+(The compound test command)(bash 2.x)
+
+```
+$ name=Tom; friend=Joseph
+1 $ [[ $name == [T]om ]]   # wildcards allowed
+$ echo $?
+0
+```
+
+```
+2 $ [[ $name == [T]om && $friend == "Jose" ]]
+$ echo $?
+1
+```
+
+```
+3 $ shopt -s extglob   # Turns on extended pattern matching
+4 $ name=Tommy
+5 $ [[ $name == [T]o+(m)y ]]
+$ echo $?
+0
+```
