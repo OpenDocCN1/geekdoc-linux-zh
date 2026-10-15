@@ -1,0 +1,46 @@
+
+## Multi-Protocol, Multicast Routing with the Multicast gated
+
+> The multicast version of gated (www.gated.org) handles PIM-SM, Protocol Independent Multicast-Dense Mode (PIM-DM), DVMRP, and Multicast Source Discover Protocol (MSDP) all in a single program. It's not featured in this chapter because it's not freely available, but for many this program is worth the cost. This is especially true if you need to run more than one multicast program, which you might just need to do. The reasons for this are discussed in the section, "The DVMRP Linux Daemon: mrouted."
+
+## Configuring pimd
+
+Since pimd is a single-function daemon, the configuration is really not that complex—at least when compared to a monster tool such as gated. The configuration data is kept in the file /etc/pimd.conf. While the order of the statements does not have to strictly follow what is about to be presented, I'll walk you through the contents you might want to add to this file.
+
+The /etc/pimd.conf file begins with the following statement:
+default_source_preference value
+
+Routers hold elections to determine which gets to be a site's upstream router. Because pimd is such a focused tool, you generally don't want it to win over something more general. Using a value of 101 here is a minimum for making sure that gated and other routing tools are going to win the election and leave pimd to do its PIM-SM handling. The next line is
+default_source_metric value
+
+This item sets the cost for sending data through this router. You want only PIM-SM data to go to this daemon; so once again, a high value is recommended to prevent accidental usage. The preferred default value is 1024.
+
+Though you can swap the first two statements around, you must have the next statement after you set default_source_metric. This item starts with
+phyint interface
+
+phyint refers to physical interface. You fill in Interface with a reference to the ethernet card or other network interface you're telling pimd about, either with the device's IP address or name (for example, eth0). If you just want to activate this interface with default values, you don't need to put anything else on the line. However, you do have some additional items you can add. The items are, in the order you would need to use them, as follows:
+
+- disable Do not send PIM-SM traffic through this interface nor listen for PIM-SM traffic from this interface.
+- preference pref. This interface's value in an election. It will have the default_source_preference if not assigned.
+- metric cost. The cost of sending data through this interface. It will have the default_source_metric if not assigned.
+
+Add one phyint line per interface on this router. If you don’t do this, pimd will simply assume that you want it to utilize all interfaces on the machine with the default values. If you set phyint for one or more interfaces but not for all, the missing ones will be assigned the defaults. After you have done this, start the next line with cand_rp
+
+cand_rp refers to Candidate Rendezvous Point (CRP). This statement specifies which interface on this machine should be included in RP elections. Additional options to choose from are, listed in the order used, as follows:
+
+- ipaddr. The default is the largest activated IP address. If you don’t want to utilize that interface, add the IP address of the interface to use as the next term.
+- time value. The number of seconds to wait between advertising this CRP. The default value is 60 seconds.
+- priority num. How important this CRP is compared to others. The lower the value here, the more important the CRP.
+
+The next line begins with cand_bootstrap_router
+
+Here you give the information for how this machine advertises itself as a Candidate BootStrap Router (CBSR). If you need to, add the ipaddr and/or priority items as defined earlier after cand_bootstrap_router. What follows is a series of statements that start with group_prefix
+
+Each group_prefix statement outlines the set of multicast addresses that CRP if it wins an election, will advertise to other routers. The two items you might include here are, listed in order, as follows:
+
+- groupaddr. A specific IP or network range that this router will handle. Remember that a single multicast network is written as a single IP address.
+- masklen len. The number of IP address segments taken up by the netmask. Remember that a multicast address is a Class D and has a netmask of 255.255.255.255, which means its length is 4.
+
+After this comes switch_data_threshold rvalue interval ivalue
+
+This statement defines the threshold at which transmission rates trigger the changeover from the shared tree to the RP tree; starting the line with switch_register_threshold does the opposite in the same format. (See Chapter 2, “Multicast Protocols,” for more details on the two PIM-SM trees.) Regardless of which of these you choose, the rvalue stands for the transmission rate in bits per second, and ivalue sets how often to sample the rate in seconds—with a recommended minimum of five seconds. It’s recommended by the pimd programmers to have ivalue the same in both statements.
