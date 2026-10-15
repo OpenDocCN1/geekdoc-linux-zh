@@ -2379,6 +2379,7 @@
 +   [Unix/Linux 生存指南](docs/unixlinux-survival-guide/README.md)
 +   [非官方 Red Hat RHCSA 8 & 9 考试 (EX200) 完全参考：红 Hat企业 Linux (RHEL) 8 & 9](docs/unofficial-red-hat-rhcsa-8-9-exam-ex200-complete-reference-r/README.md)
 +   [Linux 内核破解不靠谱指南](docs/unreliable-guide-to-hacking-the-linux-kernel/README.md)
++   [Linux 的 DB2 快速上手](docs/up-and-running-with-db2-for-linux-ibm-redbooks/README.md)
 +   [Linux 上的 DB2 快速指南](docs/up-and-running-with-db2-on-linux-title-from-title-screen---r/README.md)
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
 +   [Usenet：终极指南 (黑客、Linux、加密、PGP)](docs/usenet-the-ultimate-guide-hacking-linux-encryption-pgp/README.md)
