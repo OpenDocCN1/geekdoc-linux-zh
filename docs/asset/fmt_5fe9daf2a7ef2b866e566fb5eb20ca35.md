@@ -1,0 +1,118 @@
+
+主目录权限（留空为默认值）：
+是否使用基于密码的身份验证？[yes]：
+是否使用空密码？（yes/no）[no]：
+是否使用随机密码？（yes/no）[no]：
+输入密码：YYY
+再次输入密码：YYY
+创建后锁定账户？[no]：
+用户名  : sarwar
+密码    : ***
+全名    : Mansoor Sarwar
+Uid     : 1002
+Class   :
+Groups  : bob
+Home    : `/home/sarwar`
+Home Mode :
+Shell   : `/bin/sh`
+Locked  : no
+确定吗？（yes/no）：yes
+`adduser`: INFO: 成功将 (sarwar) 添加到用户数据库。
+添加另一个用户？（yes/no）：no
+再见！
+`[bob@pcbsd-1727] /usr/home/bob#`
+
+## EXERCISE 23.5
+
+使用 `adduser` 命令在你的 PC-BSD UNIX 系统上创建一个新的单一账户。确保使用你在练习 23.4 答案中做出的条目来覆盖系统上用户账户配置的默认值。
+
+以下示例展示了如何通过使用 `adduser -f filename` 命令同时创建多个用户账户。它假设你的系统上有一个名为 `bob` 的组，并且你拥有超级用户权限。如果你的系统上没有名为 `bob` 的组，请使用任何其他符合系统服务和安全要求的现有组来代替此示例。如果你创建用户账户时出现错误，你始终可以使用 `rmuser` 命令立即删除账户，可以单独删除也可以批量删除。
+
+### Example 23.2: PC-BSD adduser Batch Mode User Account Creation
+
+- 1. 使用你喜欢的文本编辑器在你的主目录中创建一个名为 `addusertest` 的文件。
+- 然后，将以下单行文本完全按所示输入到文件 `addusertest` 中：
+- `addusertest`:
+- `tob::bob:::AMR:/usr/home/tob:/bin/csh:xxx`
+- 保存文件并退出文本编辑器。
+
+根据之前所示以及系统上 `adduser` 手册页中的 `adduser -f` 选项要求，你需要在行上提供 10 个由冒号 (`:`) 分隔的字段。对于你刚刚输入到 `addusertest` 中的该行，这些 10 个字段中每个条目的含义如下（空白表示冒号字符之间没有任何内容）。
+`tob` 新的用户名。
+blank UID，留空时自动分配。
+`bob` 主 GID，在我们的例子中为 `bob`。
+blank 登录类，在我们的例子中为空。
+blank 密码老化，在我们的例子中为空，表示关闭。
+blank 账户过期，在我们的例子中为空，表示关闭。
+`AMR` 账户 gecos，即全名和描述。
+`/usr/home/tob` 用户账户主目录，`/usr/home/tob`。
+`/bin/csh` 默认登录 shell，在我们的例子中为 C shell。
+`xxx` 一个密码，在我们的例子中字面为 `xxx`。
+
+2. 以超级用户身份，在命令行输入以下内容：
+```
+# adduser -f addusertest
+```
+你的系统将响应你已成功将名为 `tob` 的用户账户添加到用户数据库。
+
+3. 要测试此新用户账户，请注销系统并以 `tob`（AMR）身份登录，密码为 `xxx`。
+
+## EXERCISE 23.6
+
+根据你在练习 23.4 中为用户账户及其配置要求制作的表格或图表，创建一个新用户账户文件。如 Example 23.2 所示，对于每个用户账户，你必须在文件中有一行包含 10 个以冒号分隔的字段，其中包含每个用户的配置。表格或图表设计决定了文件中的内容。
+
+### 23.3.1.1 Using rmuser to Delete Users
+
+要从系统中完全删除一个用户，请以超级用户身份使用命令 `rmuser`。该命令执行以下步骤：
+
+- a. 删除用户的 crontab 条目（如果存在）。
+- b. 删除属于该用户的任何 at 作业。
+- c. 终止该用户拥有的所有进程。
+- d. 从系统的本地密码文件中删除用户。
+- e. 可选地删除用户的主目录（如果它归用户所有）。
+- f. 从 `/var/mail` 中删除属于该用户的传入邮件文件。
+- g. 从临时文件存储区域（如 `/tmp`）中删除该用户拥有的所有文件。
+- h. 最后，从 `/etc/group` 中删除用户名所属的所有组。如果某个组变得为空并且组名与用户名相同，则该组将被删除。这补充了 `adduser` 创建的每个用户唯一的组。
+
+`rmuser` 不能用于删除超级用户账户。
+
+默认情况下，使用交互式对话模式，如以下示例所示。
+
+```
+# rmuser amy
+
+Matching password entry
+
+amy:*1001:1001::0:0:J. Random User:/home/amy:/usr/local/bin/zsh
+
+Is this the entry you wish to remove? yes
+
+Remove user's home directory (/home/amy)? yes
+
+Removing user (amy): mailspool home passwd.
+
+#
+```
+
+有关 `rmuser` 命令的更多信息，请参阅系统上 `rmuser` 的手册页。
+
+### 23.3.1.2 Creating, Modifying, and Deleting Groups Using a Text-Based Interface in PC-BSD
+
+我们还提供了 `pw` 命令的简写语法说明，展示了其 `group` 子命令选项。此命令允许你使用基于文本的界面在系统上管理（创建、删除、修改和显示）组。
+
+### SYNTAX
+
+```
+pw [-R rootdir] [-V etc dir] groupadd [group|gid] [-C config] [-q] [-n group] [-g gid] [-M members] [-o] [-h fd | -H fd] [-N] [-P] [-Y]
+
+pw [-R rootdir] [-V etc dir] groupdel [group|gid] [-n name] [-g gid] [-Y]
+
+pw [-R rootdir] [-V etc dir] groupmod [group|gid] [-C config] [-q] [-n name] [-g gid] [-M members] [-m newmembers] [-d oldmembers] [-h fd | -H fd] [-N] [-P] [-Y]
+
+pw [-R rootdir] [-V etc dir] groupshow [group|gid] [-n name] [-g gid] [-F] [-P] [-a]
+
+pw [-R rootdir] [-V etc dir] groupnext [-C config] [-q]
+
+pw [-R rootdir] [-V etc dir] lock [name|uid] [-C config] [-q]
+
+pw [-R rootdir] [-V etc dir] unlock [name|uid] [-C config] [-q]
+```
