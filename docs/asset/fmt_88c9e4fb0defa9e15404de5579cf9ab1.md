@@ -1,0 +1,152 @@
+
+当 `TAnyClass` 的对象被构造时，C++ 会自动为 `date_array` 中的每个对象调用默认的 `TDate()` 构造函数。同样，当 `TAnyClass` 对象被销毁或超出作用域时，C++ 会为每个数组对象调用 `~TDate()` 析构函数（如果存在）。无论程序如何创建 `TAnyClass` 对象，都不需要额外代码来保证这些构造函数和析构函数的调用。例如，要将该对象创建为全局变量，请按通常方式声明它：
+
+```cpp
+TAnyClass an_object;
+```
+
+这不仅构造了 `an_object`，还构造了 `date_array` 数据成员中的十个 `TDate` 对象。然而，与所有大型变量一样，使用 `TAnyClass` 指针可以实现更高效的内存使用：
+
+```cpp
+TAnyClass *a_pointer;
+```
+
+像对待其他指针一样初始化、使用和删除该指针：
+
+```cpp
+a_pointer = new TAnyClass;
+
+// ... use a_pointer here
+
+delete a_pointer;
+```
+
+你在本书中已经多次看到类似的编程。然而请注意，第一条语句不仅构造了 `TAnyClass` 对象，还构造了其包含的十个 `TDate` 对象的数组。无需使用多个指针、循环和 `delete` 语句。当 `new` 构造 `TAnyClass` 对象时，C++ 会自动为 `date_array` 中的每个 `TDate` 对象调用 `TDate()` 构造函数。同样，当 `TAnyClass` 指针被删除时，C++ 会自动为每个数组对象调用 `~TDate()` 析构函数（如果存在）。
+
+> Tip
+> 在设计程序时，尝试以对象而非函数为思路。例如，如果你需要一个包含十个对象的数组，请创建一个具有此类数组的类。然后你可以按需构造 resulting 对象，并让类处理初始化、存储和删除的内存管理细节。
+
+## 对象与模块化编程
+
+本书中的大多数示例程序都必然很短，并且为了简单起见，完全实现在单个源代码文本文件中。实际上，没有人会那样编写真正的程序。即使是中等规模的程序，最好也组织成单独编译的模块。你在第二部分“ C++ 基础”中已经看到了一些模块化编程的示例。为了演示如何对类对象使用类似的技术，以下各节介绍了 `TDate` 类的又一个版本。示例程序不仅仅是一个说明。它展示了如何使用面向对象编程封装现有函数和数据。结果是一个类 `TDate`，你可以在自己的代码中使用它来简化对 GNU C 库的日期和时间函数及数据类型的访问。
+
+## TDate 头文件
+
+单个模块可以实现一个或多个供其他模块使用的类。你可以独立于其他代码编写每个模块，并单独编译。这使得只需包含类模块的头文件并将主机链接到模块的编译后目标代码，就能轻松地将模块与许多主机程序共享。
+
+将类模块化的第一步是编写一个包含类声明的头文件。列表 13.6，`tdate.h`，展示了 `TDate` 类新版本的一个典型头文件。
+
+### LISTING 13.6 TDATE.H
+
+```cpp
+#ifndef __TDate_H
+
+#define __TDate_H  // Prevent multiple #includes
+
+#include <time.h>  // Need time_t
+
+class TDate {
+
+private:
+
+    time_t tv_time;  // Date and time as a time_t value
+
+public:
+
+    TDate();
+
+    TDate(int month, int day = 0, int year = 0);
+
+    void Update();
+
+    void Display();
+
+    const char *AsString();
+
+};
+
+#endif // __TDate_H
+```
+
+头文件声明了 `TDate` 类，但不包含任何函数实现（不过，头文件可以包含内联函数）。这个版本的 `TDate` 类与本章和前一章中的其他类相似。然而，新类存储日期的方式不同，不是作为单独的月份、日期和年份值，而是使用标准库头文件 `time.h` 中声明的 `time_t` 数据类型。为了获取该数据类型，`tdate.h` 头文件包含了 `time.h`。
+
+`tdate.h` 头文件以两个指令开始，防止其自身文本被包含多次。文件末尾有一个第三个指令与第一个对应。将三个指令一起审视——中间去掉类——以了解这些指令实现了什么：
+
+```cpp
+#ifndef __TDate_H
+
+#define __TDate_H
+
+... items processed only on the first include
+
+#endif
+```
+
+第一个指令（“如果未定义”）告诉编译器（实际上是预处理器），如果符号 `__TDate_H` 未定义，则应处理后续语句。其中第一个语句是另一个指令，它 `#define` 了 `__TDate_H` 符号。此后，下一次当另一个模块包含此头文件时，预处理器会识别出 `__TDate_H` 符号，并直接从 `#ifndef` 跳到文件末尾对应的 `#endif`。换句话说，头文件在第一次被包含时会被完整处理。如果被多次包含，预处理器会忽略文件的内容。因此，无论有多少个模块包含 `tdate.h`，`TDate` 类都只会被声明一次。
+
+> Note
+> “符号”如 `__TDate_H` 仅在编译期间存在。该符号不是程序的一部分，也不需要值。唯一重要的是该符号是否已被 `#define`。传统上会在符号名称前加上两个下划线，但这不是强制要求。
+
+回到 `TDate`，注意其两个声明的构造函数与你见过的其他大多数 `TDate` 类相同。正因如此，你可以在本章和前一章的大多数示例编程中使用新的 `TDate` 类，即使其内部数据表示已发生巨大变化。这一原则指出了将类中数据成员的访问限制为私有所带来的主要优势之一。因为 `TDate` 的数据对类是私有的，该数据表示可以通过仅更新类模块来轻松更改。类的使用者不受此更改的影响。
+
+> Tip
+> 通过始终将数据成员设为私有，并使用成员函数读取和写入私有数据，你可以大大简化未来对程序的更新。现在就遵循这一建议，你将来会多次感谢自己。
+
+## TDate 模块
+
+`TDate` 模块的第二个要素是其实现。最好将其放在另一个文件中，与类声明头文件分开，并且应以 `.cpp` 或其他被识别的 C++ 源代码文件名后缀结尾。列表 13.7，`tdate.cpp`，将 `TDate` 类作为单独模块实现。
+
+> 注意
+> `Tdate.cpp` 源代码文件并不是一个完整的程序。关于如何编译和使用独立模块的说明，请参阅下一节。
+
+## 清单 13.7 TDATE.CPP
+
+```cpp
+#include <iostream.h>
+
+#include "tdate.h"  // Also includes time.h
+
+// Buffer to hold date string. This buffer is used by all
+// TDate objects, and is overwritten by calls to member
+// functions.
+// String format: Fri 14-May-2004 (15 characters)
+#define BUF_SIZE 16
+
+char cbuf[BUF_SIZE];
+
+// Default constructor implementation
+TDate::TDate()
+{
+    Update(); // Initialize object date to today
+}
+
+// Parameterize constructor implementation
+TDate::TDate(int month, int day = 0, int year = 0)
+{
+    Update(); // Initialize object date to today
+    // Create a tm struct using tv_time data member
+    tm t = *localtime(&tv_time);
+    // Assign argument values if specified to struct
+    t.tm_mon = month - 1;
+    if (day > 0) t.tm_mday = day;
+    if (year > 0) t.tm_year = year - 1990;
+    // Convert struct back into tv_time value
+    tv_time = mktime(&t);
+}
+
+// Update time to "now"
+void TDate::Update()
+{
+    time(&tv_time); // Calls the standard time() function
+}
+
+// Write date and time to the standard output
+void TDate::Display()
+{
+    cout << AsString() << endl;
+}
+
+// Return date and time as a formatted string
+const char *TDate::AsString()
+{
+```
