@@ -1,0 +1,127 @@
+
+```
+root@44599667-9574-11e5-9cc9-08002738ba74:~ # service sshd onestart
+Generating RSA1 host key.
+2048 09:c9:e8:a8:b3:dc:5b:e6:22:9c:a8:f4:6b:76:da:c7:10
+root@44599667-9574-11e5-9cc9-08002738ba74 (RSA1)
+Generating RSA host key.
+2048 a4:03:c5:76:ed:41:80:77:20:3f:d6:99:89:37:4d
+root@44599667-9574-11e5-9cc9-08002738ba74 (RSA)
+Generating DSA host key.
+1024 78:4b:04:4b:e8:f5:09:a5:5f:0e:71:02:b4:c6:b2:7b
+root@44599667-9574-11e5-9cc9-08002738ba74 (DSA)
+Generating ECDSA host key.
+256 c7:98:87:dc:16:37:df:95:21:d0:24:04:75:a8:50:c3
+root@44599667-9574-11e5-9cc9-08002738ba74 (ECDSA)
+Generating ED25519 host key.
+256 53:08:ac:52:d3:3e:ba:53:9e:ec:0b:c6:42:22:bc:c8
+root@44599667-9574-11e5-9cc9-08002738ba74 (ED25519)
+Performing sanity check on sshd configuration.
+Starting sshd.
+root@44599667-9574-11e5-9cc9-08002738ba74:~ #
+```
+
+检查网络配置：
+
+```
+root@44599667-9574-11e5-9cc9-08002738ba74:~ # ifconfig
+em0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        options=9b<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWtagging,VLAN_HWCSUM>
+        ether 08:00:27:38:ba:74
+        inet 192.168.0.100 netmask 0xffffffff broadcast 192.168.0.100
+        media: Ethernet autoselect (1000baseT <full-duplex>)
+        status: active
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+        options=600003<RXCSUM,TXCSUM,RXCSUM_IPV6,TXCSUM_IPV6>
+root@44599667-9574-11e5-9cc9-08002738ba74:~ #
+```
+
+当我们登录到 `bobsecond` 的控制台时，修改该 jail 中的 `root` 密码：
+
+```
+root@44599667-9574-11e5-9cc9-08002738ba74:~ # passwd
+Changing local password for root
+New Password: xxxxx
+Retype New Password: xxxxx
+root@44599667-9574-11e5-9cc9-08002738ba74:~ #
+```
+
+要关闭到 `bobsecond` 的控制台连接，输入 `exit` 或 `logout`。
+
+重启和停止一个 jail：
+
+```
+[bob@pcbsd-1233] /usr/home/bob# iocage restart bobsecond
+* Soft restarting 44599667-9574-11e5-9cc9-08002738ba74
+(bobsecond)
+[bob@pcbsd-1233] /usr/home/bob#
+[bob@pcbsd-1233] /usr/home/bob# iocage stop bobsecond
+* Stopping 44599667-9574-11e5-9cc9-08002738ba74 (bobsecond)
++ Running pre-stop      OK
++ Stopping services     OK
++ Removing jail process OK
++ Running post-stop     OK
+rctl: RACCT/RCTL present, but disabled; enable using kern.
+racct.enable=1 tunable
+[bob@pcbsd-1233] /usr/home/bob#
+```
+
+销毁一个 jail：
+
+如果你希望从系统中移除一个 jail，可以将其销毁。你还必须确保该 jail 已停止，或处于 `down` 状态！
+
+首先使用 `iocage list` 查看我们定义了哪些 jail：
+
+```
+[bob@pcbsd-1233] /usr/home/bob# iocage list
+JID | UUID | BOOT | STATE | TAG
+--- | --- | --- | --- | ---
+2 | 44599667-9574-11e5-9cc9-08002738ba74 | off | up | bobsecond
+- | 527c21ff-9573-11e5-9cc9-08002738ba74 | off | down | 2015-11-27@17:57:04
+```
+
+然后使用 `iocage destroy` 彻底移除我们创建的第一个 jail：
+
+```
+[bob@pcbsd-1233] /usr/home/bob# iocage destroy 2015-11-27@17:57:04
+WARNING: this will destroy jail 527c21ff-9573-11e5-9cc9-08002738ba74
+Dataset: tank/iocage/jails/527c21ff-9573-11e5-9cc9-08002738ba74
+Are you sure ? y[N]: y
+Destroying: 527c21ff-9573-11e5-9cc9-08002738ba74
+[bob@pcbsd-1233] /usr/home/bob#
+```
+
+注意，在 `iocage destroy` 命令中，我们使用了第一个 jail 的标签作为其标识符。
+
+## 练习 25.4
+
+创建一个 jail，启动它，并设置相关属性，以便你能从宿主机以及局域网（LAN）上的其他计算机通过 ssh 进入该 jail。
+
+## 25.3 Solaris 区域虚拟化方法
+
+Solaris 区域用于虚拟化操作系统服务，并为运行应用程序提供隔离且安全的环境。非全局区域（通常简称为区域）是在单个 Solaris 操作系统实例内创建的虚拟化操作系统环境。该操作系统的单个实例称为全局区域。全局区域和任何非全局区域仅共享一个 Solaris 内核实例。
+
+### 25.3.1 非全局区域状态模型
+
+在进行一些区域安装示例之前，了解非全局区域可以处于哪些运行状态非常重要。下面的模型详细说明了这些状态，如图 25.1 所示。影响这些状态的示例命令也将在下面的模型描述中展示：
+
+如图 25.1 所示，非全局区域可以处于以下七种状态之一：
+
+Configured（已配置）：区域的配置已完成并提交到稳定存储。但是，区域应用环境中必须在初始引导后指定的那些元素尚不存在。
+
+Incomplete（未完成）：在安装或卸载操作期间，`zoneadm` 会将目标区域的状态设置为 `incomplete`。操作成功完成后，状态将设置为正确的状态。
+
+![](img/02e070097d401d3bf7de4bf1c470b267_1306_0.png)
+
+**图 25.1 非全局区域状态**
+
+可以使用 `zoneadm` 的 `mark` 子命令将已安装但损坏的区域标记为 `incomplete`。处于 `incomplete` 状态的区域会显示在 `zoneadm list -iv` 的输出中。
+
+Unavailable（不可用）：表示区域已安装，但无法验证、准备就绪、引导、附加或移动。区域在以下情况进入 `unavailable` 状态：
+
+- 当区域的存储不可用，且 `svc:/system/zones:default` 启动时，例如在系统引导期间
+- 当区域的存储不可用
+- 当基于归档的安装成功提取归档后失败时
+- 当区域的软件与全局区域的软件不兼容时，例如在不正确的 `-F`（强制）附加之后
+
+Installed（已安装）：区域的配置已在系统上实例化。使用 `zoneadm` 命令验证该配置能否在指定的 Solaris 系统上成功使用。软件包安装在区域的根路径下。在此状态下，区域没有关联的虚拟平台。
