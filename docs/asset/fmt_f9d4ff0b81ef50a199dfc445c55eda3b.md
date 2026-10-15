@@ -1,0 +1,44 @@
+
+- 数据仓库的良好条带大小为 `32 KB` 和 `64 KB`，对于高在线事务处理数据库 (`OLTP`)，则为 `16 KB` 或 `8 KB`。
+
+### 4.2 在单独的 z9 机器之间设置磁盘
+
+通常情况下，在 `z9` 机器之间设置磁盘时，第一个 `Linux` 虚拟机以读/写模式拥有磁盘，第二个虚拟机以读/写模式列出磁盘。
+
+由于 `Linux` 虚拟机位于不同的 `z9` 机器上，两个虚拟机的目录条目都将使用专用语句来定义共享的设备。例如，第一个节点将在目录条目中使用 `0340:1F1` 来定义虚拟设备，第二个节点将使用 `0340:1F1`。
+
+使用 `FICON/ECKD` 存储时，您不需要在 `Linux` 虚拟机上设置多路，因为通道子系统可以提供带有多个路径组的通道。使用 `FCP/SCSI` 磁盘时，我们建议实现 `DM` 多路以提供必要的容错能力。为了让 `Oracle ASM` 利用多路，在 `Oracle` 中分配磁盘时，必须指定 `DM` 多路设备（而不是 `FCP/SCSI` 设备）。
+
+`FCP/SCSI` 磁盘的另一个考虑因素是 `FCP` 通道。在 `Oracle RAC` 中，`SAN LUN` 可以在 `Linux` 虚拟机之间共享，但如果实现了 `DM` 多路，每个虚拟机都必须使用不同的 `FCP` 通道（或 `FCP` 通道组）。如果可用的 `FCP` 通道数量存在限制，这可能会引起关注。
+
+实施 `FCP` 磁盘的客户可能还想考虑 `N` 端口虚拟化。通过 `N` 端口虚拟化，`LUN` 可以直接分配给虚拟机，而不是所有运行在 `VM` 下的虚拟机。`N` 端口虚拟化首次在 `IBM System z9` 上支持，不支持 `z990` 或 `z980` 型号。详情参见《`Fibre Channel Protocol for Linux and vVM on IBM System z, SG24-7266`》。
+
+使用 `SAN/SCSI` 存储时，使用来自多个阵列和所有集群的磁盘非常重要。这将提供更好的 I/O 并发和负载均衡。图 4-2 展示了分配磁盘的正确方法。错误的方法是按顺序在一个 `Rank` 中分配所有存储，例如从 `5100` 到 `510F`。
+
+| FCP CHDR | FCP CHDR | FCP CHDR | FCP CHDR | FCP CHDR | FCP CHDR |
+|---|---|---|---|---|---|
+| | | | | | CHIDs - FICON Express 卡支持 2 个端口，可以是 FCP 或 FICON |
+| | | | | | |
+| FICON/FCP 交换机 | | | | | |
+| HA 槽 1 | HA 槽 2 | HA 槽 3 | HA 槽 4 | | |
+| 设备适配器 | Rank 1 | Rank 2 | 设备适配器 | | |
+| | Rank 9 | Rank 10 | | | |
+| 设备适配器 | Rank 3 | Rank 4 | 设备适配器 | | |
+| | Rank 5 | Rank 6 | 设备适配器 | | |
+| | Rank 13 | Rank 14 | | | |
+| 设备适配器 | Rank 7 | Rank 8 | 设备适配器 | | |
+| | Rank 15 | Rank 16 | | | |
+
+- 支持 `FCP` (`FCP` 端口) 的主机适配器 (`HA`)：每个主机适配器分为 4 个槽，每个槽 4 个端口，分为两个集群，缓存按集群组织！
+- 设备适配器对 (`DA`)：每个支持两个环路
+- 磁盘按 `Rank` 组织：每个 `Rank`（8 个物理磁盘）实现一个 `RAID 5` 阵列（带逻辑磁盘）
+
+图 4-2 分配磁盘的正确方法
+
+> *来源：Performance experience with Databases on Linux for IBM System z, by Kammerer, 见 http://www.ibm.com/developerworks/linux/linux390/index.html.*
+
+`Linux` 的逻辑卷管理 (`LVM`) 和 `Oracle` 的自动存储管理 (`ASM`) 都是 `dasd` 聚合条带和镜像工具。在设置 `Oracle` 数据库存储时，您应该使用其中一种。
+
+使用 `LVM` 时，应使用建议的条带设置：
+
+- 数据仓库的良好条带大小为 `32 KB` 和 `64 KB`，对于高在线事务处理数据库 (`OLTP`)，则为 `16 KB` 或 `8 KB`。
