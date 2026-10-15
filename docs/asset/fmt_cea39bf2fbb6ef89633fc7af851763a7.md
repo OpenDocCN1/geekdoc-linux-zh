@@ -1,0 +1,176 @@
+
+```
+[ejr@hobbes manipulate]$ head honey* | more
+==> honeyconsider <==
+Mother-in-law visits next week
+Cat mess in hall to clean up
+Cat mess in entry to clean up
+Cat mess in living room to clean up
+Toddler mess in family room to clean up
+Cat and toddler mess in den to clean up
+IRS called again today
+Neighbors on both sides looking for donations for the annual fund drive
+Boss called last Friday and said it’s urgent
+==> honeydo <==
+Take garbage out
+Clean litter box
+Clean diaper pails
+Clean litter box
+Mow lawn
+Edge lawn
+Clean litter box
+Polish swamp cooler
+Buff garage floor
+```
+
+代码清单 6.4 在 `more` 的帮助下，`head` 让你能按顺序查看多个文件的开头。
+
+## 使用 tail 查看文件结尾
+
+有时，你可能还需要使用 `tail`，它会显示文件的最后几行。`tail` 特别适合查看页脚或更新页脚中的信息（参见代码清单 6.5）。与 `head`（前面几页已介绍）一样，`tail` 也提供了多种查看文件的选项。
+
+### 使用 tail 查看文件结尾：
+
+- `tail honeydo`
+
+  在 shell 提示符下，输入 `tail` 后跟文件名。如代码清单 6.5 所示，屏幕将显示最后十行。
+
+### 查看指定行数：
+
+- `tail -15 honeydo`
+
+  这里，你只需添加要查看的具体行数（`-15`）。
+
+### 查看多个文件的结尾：
+
+- `tail honey* | more`
+
+  将 `tail` 命令和文件（用 `*` 表示多个文件）通过管道传给 `more`（代码清单 6.6）。
+
+### 提示
+
+- `head` 及其对应命令 `tail` 非常适合拆分长文件。使用 `wc -l` 计算行数。如果文件有 500 行，但你只关心开头和结尾的行，那么输入 `head -25 filename > newfilename` 将文件的前 25 行放入一个新文件。然后同样使用 `tail` 将文件的后 25 行放入另一个新文件。
+
+```
+[ejr@hobbes manipulate]$ tail honeydo
+Empty diaper pails
+Take garbage out.
+-End of today's list-
+
+Buy more garbage bags
+Get cleaning supplies at store
+Take cat to vet
+Fix lawnmower
+
+[ejr@hobbes manipulate]$
+```
+
+代码清单 6.5 `tail` 让你只需查看文件的结尾。
+
+```
+[ejr@hobbes manipulate]$ tail honey* | more
+==> honeydo <==
+Cat mess in entry to clean up
+Cat mess in living room to clean up
+Toddler mess in family room to clean up
+Cat and toddler mess in den to clean up
+IRS called again today
+Neighbors on both sides looking for donations
+for the annual fund drive
+Boss called last Friday and said it's urgent
+-End of today's list-
+
+==> honey* <==
+Empty diaper pails
+Take garbage out
+-End of today's list-
+
+Buy more garbage bags
+Get cleaning supplies at store
+Take cat to vet
+Fix lawnmower
+
+--More--
+```
+
+代码清单 6.6 将 `tail` 与 `more` 结合使用，以查看多个文件的结尾。
+
+## 使用 grep 查找文本
+
+你可以通过多个文件搜索特定的字符串，然后在屏幕上查看匹配文件列表。使用 `grep` 命令即可实现（`grep` 代表“全局正则表达式打印”，曾经是 `ed` 或 `vi` 中实用、如今却相当冷门的命令），如代码清单 6.7 所示。我们将展示，你可以给 `grep` 添加几个标志以获得略有不同的结果。
+
+### 使用 grep 查找文本字符串：
+
+- `grep bucket limericks`
+
+  在 shell 提示符下，输入 `grep`、要定位的文本（此处为 `bucket`）以及要搜索的文件（此处为 `limericks`）。`grep` 将返回文件中包含指定字符串的所有行，如代码清单 6.7 所示。
+
+- `grep -5 bucket limericks`
+
+  你可以指定在找到的文本字符串前后各显示若干行（比如 `-5`）。有时仅凭包含搜索字符串的那一行无法判断所需信息，因此在它周围添加几行有助于提供上下文（参见代码清单 6.8）。请注意，并非所有版本的 `grep` 都支持此选项，但对大多数版本有效。
+
+- `grep -c Nantucket limericks`
+
+  通过添加 `-c` 标志，你可以统计某个文本字符串在文件中出现的次数。
+
+- `grep -v Nantucket limericks`
+
+  或者，使用 `-v` 标志，你可以查找所有不包含指定字符串的行。
+
+- `grep -i nantucket limericks`
+
+  使用 `-i` 标志，你可以进行不区分大小写的搜索。这里，任何包含 `nantucket`、`Nantucket` 或 `nAntuCket` 的行都会被找到。
+
+```
+[ejr@hobbes manipulate]$ grep bucket limericks
+Who carried his lunch in a bucket,
+[ejr@hobbes manipulate]$
+```
+
+代码清单 6.7 使用 `grep` 查看文件中特定字符串的所有出现位置。
+
+```
+[ejr@hobbes manipulate]$ grep -5 bucket
+> limericks
+he strummed and he hummed,
+and sang dumdeedum,
+But him, a musician...who'd a thunk it?
+
+There once was a man from Nantucket,
+Who carried his lunch in a bucket,
+Said he with a sigh,
+As he ate a whole pie,
+If I just had a donut I'd dunk it.
+
+A nice young lady named Debbie,
+[ejr@hobbes manipulate]$
+```
+
+代码清单 6.8 `grep` 还能显示字符串匹配实例周围的上下文。
+
+### 提示
+
+- 使用 `-n` 标志（例如 `grep -n string file`）打印找到的每一行并显示行号。
+
+- 你可以对多个文件名使用 `grep`，例如 `grep Nantucket lim*` 或 `grep Nantucket lim* poetry humor`。
+
+- 如果想更灵活一些，你也可以搜索空格，但需要使用引号，例如 `grep "from Nantucket" limerick*`。
+
+- 了解 `grep` 的渊源，可以在酒吧里赢得书呆子式赌局。
+
+## 使用 grep 进行正则表达式搜索
+
+除了使用 `grep` 搜索简单的文本字符串外，你还可以使用 `grep` 搜索正则表达式。正则表达式有点像花哨的通配符，你使用符号来表示字符、数字或其他符号。使用正则表达式，你可以搜索文件的不同部分，例如行的末尾或与另一个指定文本字符串相邻的文本字符串。表 6.1 列出了一些更常见的正则表达式。
+
+```
+[e]r@hobbes manipulate]$ grep .logan limerick
+Worked hard all day on a slogan,
+You see, the slogan's still brogan.
+[e]r@hobbes manipulate]$
+```
+
+代码清单 6.9 使用 `grep` 与正则表达式创建花哨的通配符命令。
+
+### 使用 grep 进行正则表达式：
+
+- `grep .logan limerick`
