@@ -1,0 +1,21 @@
+an address can be all zeros or 255s.) The "10." network is reserved for local network use, and the "127." network is reserved for the loopback address of 127.0.0.1. Loopback addressing is used by TCP/IP to enable Linux network-related client and server programs to communicate on the same host. This address will not appear and is not accessible on your LAN.
+
+# NOTE
+
+Notice that zero is not included in Class A. The zero address is used for network-to-network broadcasts. Also, note that there are two other classes of networks. Classes D and E. Class D networks are reserved for multicast addresses and not for use by network hosts. Class E addresses are deemed experimental, and thus are not open for public addressing.
+
++   Class B—Consists of networks defined by the first two octets with the first ranging from 128 to 191. The "128." network is also reserved for local network use. There are 16,382 Class B networks—each with 65,534 possible hosts.
+
++   Class C—Consists of a network defined by the first three octets with the first ranging from 192 to 223. The "192." network is another that is reserved for local network use. There are a possible 2,097,150 Class C networks of up to 254 hosts each.
+
+No host portion of an IP address can be all zeros or 255s. These addresses are reserved for broadcast addresses. IP addresses with all zeros in the host portion are reserved for network-to-network broadcast addresses. IP addresses with all 255s in the host portion are reserved for local network broadcasts. Broadcast messages are not typically seen by users.
+
+These classes are the standard, but a netmask also determines what class your network is in. The netmask determines what part of an IP address represents the network and what part represents the host. Common netmasks for the different classes are
+
++   Class A—255.0.0.0
+
++   Class B—255.255.0.0
+
++   Class C—255.255.255.0
+
+Because of the allocation of IP addresses for Internet hosts, it is now impossible to get a Class A network. It is also nearly impossible to get a Class B network (all the addresses have been given out, but some companies are said to be willing to sell theirs), and Class C network availability is dropping rapidly with the continued growth of Internet use worldwide. See the following sidebar.

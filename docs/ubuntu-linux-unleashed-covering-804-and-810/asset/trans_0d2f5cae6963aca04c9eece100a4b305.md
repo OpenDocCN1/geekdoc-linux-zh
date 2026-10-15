@@ -1,0 +1,63 @@
+
+
+script 和其他兼容性原因)，许多新站点正在迁移到或开始使用最新稳定版本。
+
+下载 tar 文件后，你必须将其解压到临时目录中，例如 /tmp。解压此 tar 文件会创建一个名为 apache_version_number 的目录，其中 version_number 是你下载的版本（例如，apache_1.3.34）。
+
+编译源代码有两种方法——旧的、熟悉的方法（至少对于我们这些使用 Apache 多年的用户来说），通过编辑 Makefile 模板，以及使用 configure 脚本的新、简单方法。你将首先了解如何以简单的方式从源代码构建 Apache。configure 脚本提供了一种让源代码软件根据你的系统自动配置的方法。然而，在构建和安装 Apache 之前手动编辑配置文件，可以更好地控制软件的安装位置以及 Apache 中内置哪些功能或特性。
+
+## TIP
+
+与许多以源代码形式分发给 Linux 和其他类 UNIX 操作系统的软件包一样，提取源代码会产生一个包含 README 和 INSTALL 文件的目录。在尝试构建和安装软件之前，请务必阅读 INSTALL 文件。
+
+## 使用 ./configure 构建 Apache
+
+要以简单的方式构建 Apache，请在刚刚创建的目录中运行 ./configure 脚本。你可以提供 --prefix 参数将其安装到默认目录 /usr/local/apache/ 以外的目录。使用以下命令：
+
+```
+# ./configure --prefix=/preferred/directory/
+```
+
+这会生成用于编译服务器代码的 Makefile。
+
+接下来，输入 make 以编译服务器代码。编译完成后，以 root 身份输入 make install 以安装服务器。现在你可以通过配置文件来配置服务器。有关更多信息，请参阅“Runtime Server Configuration Settings”部分。
+
+## TIP
+
+从源代码安装新版本的 Apache 的更安全方法是使用 ln 命令将现有文件位置（在本章前面“Installing with APT”部分列出）创建符号链接到新文件位置。这种方法更安全，因为默认安装位置与软件包安装文件时使用的位置不同。如果不使用此安装方法，可能会导致你的 Web 服务器进程在系统启动时无法自动启动。
+
+另一种安全安装新版本 Apache 的方法是先备份任何重要的配置目录和文件（如 /etc/apache2），然后使用 apt-get 命令删除服务器。然后你可以安装和测试新版本，如果需要，可以轻松恢复原始服务器和设置。
+
+强烈建议你在使用 Ubuntu 的 Apache 版本，直到你真正了解系统启动时发生的情况为止！从源代码安装 Apache 时没有“卸载”选项！
+
+## 构建和安装后 Apache 的文件位置
+
+如果你从源代码构建服务器，文件将被放置在 /usr/local/apache（或你使用 --prefix 参数指定的目录）的各个子目录中。
+
+以下是 Apache 使用的目录列表，以及对其用法的简要说明：
+
+- /usr/local/apache/conf—此目录包含多个子目录和 Apache 配置文件 httpd.conf。基于 Debian 的系统（如 Ubuntu）通常将其重命名为 apache2.conf，因此因人而异。请参阅本章后面“Editing apache2.conf”部分，了解有关配置文件的更多信息。
+- /usr/local/apache—cgi-bin、icons 和 htdocs 子目录分别包含 CGI 程序、标准图标和默认 HTML 文档。
+- /usr/local/apache/bin—可执行程序放置在此目录中。
+- /usr/local/apache/logs—服务器日志文件放置在此目录中。默认情况下，有两个日志文件——access_log 和 error_log，但你可以定义任意数量包含各种信息的自定义日志（请参阅本章后面“Logging”部分）。Ubuntu 安装的 Apache 日志的默认位置是 /var/log/apache2。
+
+## Apache 快速入门指南
+
+在 Ubuntu 上设置、测试网页并启动 Apache 只需几个步骤即可完成。首先，确保 Apache 已安装在你的系统上。可以在安装期间选择它，或安装服务器和相关软件包文件（如果需要安装服务器软件，请参阅第 31 章）。
+
+接下来，通过以 root 身份编辑系统上 /var/www 目录下的名为 Index.html 的文件来设置你的主页。在开始之前，请备份原始页面或 ww 目录的副本，以便在必要时可以将 Web 服务器恢复到默认状态。
+
+通过服务窗口启动 Apache（在菜单栏的系统、系统管理下），确保启用“Web Server”。
+
+你也可以使用 /etc/init.d/ 目录下的 apache2 脚本，如下所示：
+
+```
+sudo /etc/init.d/apache2 start
+```
+
+然后你可以通过运行喜欢的浏览器并在 URL 中使用 localhost、你的系统主机名或其 Internet 协议（IP）地址来检查你的主页。例如，使用 links 文本浏览器，使用如下命令行：
+
+```
+# links http://localhost/
+```
+

@@ -1,0 +1,25 @@
+# Understanding Set User ID and Set Group ID Permissions
+
+Another type of permission is “set user ID”, known as suid, and “set group ID” (sgid) permissions. These settings, when used in a program, enable any user running that program to have program owner or group owner permissions for that program. These settings enable the program to be run effectively by anyone, without requiring that each user’s permissions be altered to include specific permissions for that program.
+
+One commonly used program with suid permissions is the passwd command:
+
+```
+$ ls -l /usr/bin/passwd
+-rwsr-xr-x 1 root root 29184 Nov 6 19:16 /usr/bin/passwd
+```
+
+This setting allows normal users to execute the command (as root) to make changes to a root-only accessible file, /etc/passwd.
+
+You can also assign similar permission with the chfn command. This command allows users to update or change finger information in /etc/passwd. You accomplish this permission modification by using a leading 4 (or the mnemonic s) in front of the three octal values.
+
+> NOTE
+> Other files that might have suid or guid permissions include at, rcp, rlogin, rsh, chage, chsh, ssh, cronatab, sudo, sendmail, ping, mount, and several Unix-to-Unix Copy (UUCP) utilities. Many programs (such as games) might also have this type of permission to access a sound device.
+
+Files or programs that have suid or guid permissions can sometimes present security holes because they bypass normal permissions. This problem is compounded if the permission extends to an executable binary (a command) with an inherent security flaw because it could lead to any system user or intruder gaining root access. In past exploits, this typically happened when a user fed a vulnerable command with unexpected input (such as a long pathname or option); the command would fail, and the user would be presented a root prompt. Although Linux developers are constantly on the lookout for poor programming practices, new exploits are found all the time, and can crop up unexpectedly, especially in newer software packages that haven’t had the benefit of peer developer review.
+
+Savvy Linux system administrators keep the number of suid or guid files present on a system to a minimum. The find command can be used to display all such files on your system:
+
+```
+# find / -type f -perm +4000 -exec ls -l {} \;
+```

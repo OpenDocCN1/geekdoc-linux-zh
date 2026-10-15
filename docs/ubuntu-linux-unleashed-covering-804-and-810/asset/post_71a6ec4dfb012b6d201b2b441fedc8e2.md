@@ -1,0 +1,52 @@
+
+## Alternative Backup Software
+
+Commercial and other freeware backup products do exist; BRU and Veritas are good examples of effective commercial backup products. Here are some useful free software backup tools that are not installed with Ubuntu:
+
+- **flexbackup**—This backup tool is a large file of Perl scripts that makes dump and restore easier to use. flexbackup's command syntax can be accessed by using the command with the -help argument. It also can use afio, cpio, and tar to create and restore archives locally or over a network using rsh or ssh if security is a concern. Its home page is http://www.flexbackup.org/.
+
+- **afio**—This tool creates cpio-formatted archives, but handles input data corruption better than cpio (which does not handle data input corruption very well at all). It supports multi-volume archives during interactive operation and can make compressed archives. If you feel the need to use cpio, you might want to check out afio at http://freshmeat.net/projects/afio/.
+
+- **cdbbackup**—Designed for the home or small office user, cdbbackup will work with any backup and will restore software that can read from stdin, write to stdout, and can handle linear devices such as tape drives. It makes it easier to use CD-Rs as the storage medium. Similar applications are available elsewhere as well; the home page for this application is at http://www.muemph.de/index.html.
+
+Many other alternative backup tools exist, but covering all of them is beyond the scope of this book. Two good places to look for free backup software are Freshmeat (http://www.freshmeat.net) and Google (http://www.google.com/linux).
+
+## Copying Files
+
+Often, when you have only a few files that you need to protect from loss or corruption, it might make better sense to simply copy the individual files to another storage medium rather than to create an archive of them. You can use the tar, cp, rsync, or even the cpio commands to do this, as well as a handy file management tool known as mc. Using tar is the traditional choice because older versions of cp did not handle symbolic links and permissions well at times, causing those attributes (characteristics of the file) to be lost; tar handled those file attributes in a better manner. cp has been improved to fix those problems, but tar is still more widely used. rsync has recently been added to Ubuntu and is an excellent choice for mirroring sets of files, especially when done over a network.
+
+To illustrate how to use file copying as a backup technique, the examples here show how to copy (not archive) a directory tree. This tree includes symbolic links and files that have special file permissions we need to keep intact.
+
+## Copying Files Using tar
+
+One choice for copying files into another location would be to use the tar command where you would create a tar file that would be piped to tar to be uncompressed in the new location. To accomplish this, first change to the source directory. Then, the entire command resembles
+
+```
+sudo tar cvf . files | { cd target_directory ; tar xpf - }
+```
+
+where files are the filenames you want to include; use * to include the entire current directory.
+
+Here is how the command shown works: You have already changed to the source directory and executed tar with the cvf - arguments that tell tar to
+
+- c—Create an archive.
+- v—Verbose; lists the files processed so we can see that it is working.
+- f—The filename of the archive will be what follows. (In this case, it is -.)
+- -—A buffer; a place to hold our data temporarily.
+
+The following tar commands can be useful for creating file copies for backup purposes:
+
+- l—Stay in the local file system (so you do not include remote volumes).
+- atime-preserve—Do not change access times on files, even though you are accessing them now, to preserve the old access information for archival purposes.
+
+The contents of the tar file (held for us temporarily in the buffer, which is named -) are then piped to the second expression, which will extract the files to the target directory. In shell programming (refer to Chapter 15, “Automating Tasks”), enclosing an expression in parentheses causes it to operate in a subshell and be executed first.
+
+First we change to the target directory, and then
+
+- x—Extract files from a tar archive.
+- p—Preserve permissions.
+- f—The filename will be -, the temporary buffer that holds the tared files.
+
+## Compressing, Encrypting, and Sending tar Streams
+
+The file copy techniques using the tar command in the previous section can also be used to quickly and securely copy a directory structure across a LAN or the Internet (using the ssh command). One way to make use of these techniques is to use the following command line to first compress the contents of a designated directory, and then decompress the compressed and encrypted archive stream into a designated directory on a remote host:

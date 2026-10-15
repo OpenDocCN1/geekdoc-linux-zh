@@ -1,0 +1,35 @@
+```
+$ cat >simple_script <<DONE
+> echo "this is a simple script"
+> DONE
+$ cat simple_script
+echo "this is a simple script"
+```
+
+In this example, the shell will feed the cat command you are typing (input) until the pattern DONE is recognized. The output file simple_script is then saved and its contents verified. This same technique can be used in scripts to create content based on the output of various commands and define an end-of-input or delimiter.
+
+# Piping Data
+
+Many Linux commands can be used in concert in a single, connected command line to transform data from one form to another. Stringing Linux commands together in this fashion is known as using or creating pipes. Pipes are created on the command line with the bar operator (|). For example, a pipe can be used to perform a complex task from a single command line like this:
+
+```
+$ find /d2 -name '*.txt' -print | xargs cat | \
+tr ' ' '\n' | sort | uniq >output.txt
+```
+
+This example takes the output of the find command to feed the cat command (via xargs) the name all text files under the /d2 command. The content of all matching files is then fed through the tr command to change each space in the data stream into a carriage return. The stream of words is then sorted, and identical adjacent lines are removed using the uniq command. The output, a raw list of words, is then saved in the file named output.txt.
+
+# Background Processing
+
+The shell allows you to start a command and then launch it into the background as a process by using an ampersand (&) at the end of a command line. This technique is often used at the command line of an X terminal window to start a client and return to the command line. For example, to launch another terminal window using the xterm client,
+
+```
+$ xterm &
+[3] 1437
+```
+
+The numbers echoed back show a number (3 in this example), which is a job number, or reference number for a shell process, and a Process ID number, or PID (1437 in this example). The xterm window session can be killed by using the shell's built-in kill command, along with the job number like this:
+
+```
+$ kill %3
+```

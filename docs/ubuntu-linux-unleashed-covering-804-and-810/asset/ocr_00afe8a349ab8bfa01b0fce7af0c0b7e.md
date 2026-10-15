@@ -1,0 +1,20 @@
+# CHAPTER 31
+
+# Managing Software
+
+In this chapter, we look at the options you have to manage your software in Ubuntu. If you are used to a Windows environment where you are reliant on visiting several different vendor websites to download updates, you are in for a shock! Updating a full Ubuntu installation, including all the application software, is as easy as running the Update Manager program. You will discover just how easy it is to install and even remove various software packages.
+
+Ubuntu provides a variety of tools for system resource management. The following sections introduce the graphical software management tools that you will use for most of your software management. (You will learn more about a collection of command-line tools in Chapter 30, “Command Line Masterclass.”) This chapter also covers monitoring and managing memory and disk storage on your system.
+
+# Using Add/Remove Applications for Software Management
+
+The Ubuntu graphical package-management tool identified in the Applications menu as Add/Remove is actually an application named gnome-app-install. Add/Remove Applications enables you to select packages arranged in categories and install or remove them. When you launch Add/Remove Applications, you are not prompted to enter your password; this is only required when making changes. You should see the Package Browsing screen, as shown in Figure 31.1.
+
+# IN THIS CHAPTER
+
++   - Using Add/Remove Applications for Software Management
++   - Using Synaptic for Software Management
++   - Staying Up-to-Date
++   - Working on the Command Line
++   - Compiling Software from Source
++   - Reference

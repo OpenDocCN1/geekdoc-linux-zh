@@ -1,0 +1,60 @@
+
+
+- nautilus—Gnome 的图形文件管理器和浏览器
+- ncftp—一款功能全面的基于文本的 FTP 程序
+- sftp—安全文件传输程序
+- smbclient—用于访问服务器上 SMB/CIFS 资源的 Samba FTP 客户端
+- vsftpd—非常安全的 FTP 守护进程
+- webcam—xawtv 附带的面向网络摄像头的 FTP 客户端
+
+## 参考资料
+- http://www.wu-ftpd.org/—Wu-FTP 官方网站。
+- http://www.cert.org/—计算机应急响应小组。
+- http://www.openssh.com/—OpenSSH 主页以及最新版 OpenSSH 及其组件客户端（如 sftp）的源代码。
+- http://www.cert.org/tech_tips/anonymous_ftp_config.html—CERT 匿名 FTP 配置指南。
+- http://vsftpd.beasts.org/—vsftpd FTP 服务器主页。
+- ftp://vsftpd.beasts.org/users/cevans/—vsftpd 服务器最新版本的下载站点。
+
+## 第 19 章
+## 处理电子邮件
+
+电子邮件仍然是互联网上占主导地位的通信方式。它快速、免费且易于使用。然而，后台发生的很多事情极其复杂，对于不太了解电子邮件处理方式的人来说，可能会显得很可怕。Ubuntu 配备了许多强大的应用程序，可帮助你构建从小型电子邮件服务器一直到能够处理数千条消息的大型服务器。
+
+本章将向你展示如何将 Ubuntu 配置为电子邮件服务器。我们将研究 Ubuntu 中可用的选项，并分析每个选项的优缺点。你还将了解邮件在 Linux 中是如何处理的，以及在较小程度上在 UNIX 中是如何处理的。
+
+### 电子邮件是如何发送和接收的
+
+电子邮件通过 SMTP 协议（简单邮件传输协议）以纯文本形式在世界各地的网络中传输。顾名思义，该协议本身相当基础，并已扩展添加了进一步的认证和错误报告/消息传递，以满足现代电子邮件日益增长的需求。邮件传输代理（MTA）在后台工作，将电子邮件从一台服务器传输到另一台服务器，使电子邮件能够发送到世界各地。你可能遇到过诸如 Sendmail、Postfix、Fetchmail、Exim 或 Qmail 之类的 MTA 软件。
+
+SMTP 允许电子邮件经过的每台计算机将其朝正确的方向转发到最终目的地。当你想到世界各地数以百万计的电子邮件服务器时，你不得不惊叹这一切竟如此简单。
+
+### 本章内容
+- 电子邮件是如何发送和接收的
+- Postfix 基本配置与操作
+- 使用 Fetchmail 检索邮件
+- 选择邮件投递代理
+- 邮件守护进程
+- Microsoft Exchange Server 的替代方案
+- 参考资料
+
+下面是一个简化的示例，说明电子邮件如何成功处理并发送到其目的地：
+
+1. andrew@hudson.org 编写一封电子邮件并发送给 paul@hudzilla.org。
+2. hudson.org 上的 MTA 接收 Andrew 的电子邮件，并将其排在同样等待发送的其他消息之后等待投递。
+3. hudson.org 上的 MTA 通过端口 25 联系 hudzilla.org 上的 MTA。在 hudzilla.org 确认连接后，hudson.org 上的 MTA 发送邮件消息。在 hudzilla.org 接受并确认收到消息后，连接关闭。
+4. hudzilla.org 上的 MTA 将邮件消息放入 Paul 的收件箱；Paul 下次登录时会被告知有新邮件。
+
+当然，在此过程中可能会出现一些问题。以下是一些示例：
+
+如果 hudzilla.org 上不存在 Paul 会怎样？在这种情况下，hudzilla.org 上的 MTA 将拒绝该电子邮件，并通知 hudson.org 上的 MTA 问题所在。然后，hudson.org 上的 MTA 将生成一封电子邮件并发送给 andrew@hudson.org，告知他 hudzilla.org 上不存在 Paul（或者，取决于电子邮件服务器的配置方式，可能会默默丢弃该消息，不向发件人给出任何问题提示）。
+
+如果 hudzilla.org 不响应 hudson.org 的连接尝试会怎样？（也许服务器因维护而停机。）hudson.org 上的 MTA 会通知发件人初始投递尝试失败。后续将按照服务器管理员决定的时间间隔继续尝试，直到到达截止期限，届时发件人将收到邮件无法投递的通知。
+
+### 邮件传输代理
+
+Ubuntu 提供了多种 MTA，每种都有其优缺点。通常，它们隐藏在 Ubuntu 的表层之下，默默地在世界各地的服务器之间传递邮件，几乎不需要维护。有些 MTA 极其强大，每天能够处理数十万条消息，而有些则更适用于较小的安装。其他 MTA 可能没有那么强大，但功能丰富。在下一节中，我们将介绍 Ubuntu 中一些更流行的 MTA。
+
+### Postfix
+
+Postfix 起源于 IBM Secure Mailer，但由 IBM 发布给社区。与 Sendmail 相比，它更易于管理，并且具有许多速度优势。Postfix 为 Sendmail 提供了一个无痛替代方案，你可以真正地用 Postfix 替换 Sendmail，而系统不会费任何周折。事实上，依赖 Sendmail 的应用程序将自动改用 Postfix 并继续正常工作（因为 Postfix 使用一个 Sendmail 包装器，使其他程序误以为 Postfix 就是 Sendmail）。如果你已经在运行 Sendmail，这个包装器（更准确地说是接口）会让切换到 Postfix 变得极其容易。Postfix 还
+

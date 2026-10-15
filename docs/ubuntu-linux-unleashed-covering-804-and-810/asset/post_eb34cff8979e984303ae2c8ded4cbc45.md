@@ -1,0 +1,74 @@
+
+If you have a host defined in your system's /etc/hosts file (see the section "Network Configuration Files" later in this chapter), you can configure and activate the interface according to the defined hostname like this:
+
+```
+$ sudo ifconfig eth0 dogdog.hudson.com up
+```
+
+Read the next section to see how to configure your system to work with your LAN.
+
+## /sbin/route
+
+The second command used to configure your network is the route command. route is used to build the routing tables (in memory) implemented for routing packets as well as displaying the routing information. It is used after ifconfig has initialized the interface. route is normally used to set up static routes to other networks via the gateway or to other hosts. The command configuration is like this:
+
+```
+$ route [options] [commands] [parameters]
+```
+
+To display the routing table, use the route command with no options. The display will look similar to this:
+
+```
+$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.2.0     *               255.255.255.0   U     0      0          0 eth0
+default         .               0.0.0.0         UG    0      0          0 eth0
+```
+
+In the first column, Destination is the IP address (or, if the host is in /etc/hosts or /etc/networks, the hostname) of the receiving host. The default entry is the default gateway for this machine. The Gateway column lists the gateway that the packets must go through to reach their destination. An asterisk (*) means that packets go directly to the host. Genmask is the netmask. The Flags column can have several possible entries. In our example, U verifies that the route is enabled and G specifies that Destination requires the use of a gateway. The Metric column displays the distance to the Destination. Some daemons use this to figure the easiest route to the Destination. The Ref column is used by some UNIX flavors to convey the references to the route. It's not used by Linux. The Use column indicates the number of times this entry has been looked up. Finally, the Iface column is the name of the interface for the corresponding entry.
+
+Using the -n option to the route command will give the same information, substituting IP addresses for names and asterisks (*), and looks like this:
+
+```
+# /sbin/route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.2.0     0.0.0.0         255.255.255.0   U     0      0          0 eth0
+0.0.0.0         192.168.2.1     0.0.0.0         UG    0      0          0 eth0
+```
+
+The route command can add to the table using the add option. With the add option, you can specify a host (-host) or a network (-net) as the destination. If no option is used, the route command assumes that you are configuring the host issuing the command. The most common uses for the route command are to add the default gateway for a host, for a host that has lost its routing table, or if the gateway address has changed. For example, to add a gateway with a specific IP address, you could use the following:
+
+```
+$ sudo route add default gw 149.112.50.65
+```
+
+Note that you could use a hostname instead of an IP address if desired. Another common use is to add the network to the routing table right after using the ifconfig command to configure the interface. Assuming that the 208.59.243.0 entry from the previous examples was missing, replace it using the following command:
+
+```
+$ sudo route add -net 208.59.243.0 netmask 255.255.255.0 dev eth0
+```
+
+You also can use route to configure a specific host for a direct (point-to-point) connection. For example, say that you have a home network of two computers. One of the computers has a modem through which it connects to your business network. You typically work at the other computer. You can use the route command to establish a connection through specific hosts using the following command:
+
+```
+$ sudo route add -host 198.135.62.25 gw 149.112.50.65
+```
+
+The preceding example makes the computer with the modem the gateway for the computer you are using. This type of command line is useful if you have a gateway or firewall connected to the Internet. There are many additional uses for the route command, such as manipulating the default packet size. See the man page for those uses.
+
+## /bin/netstat
+
+The netstat command is used to display the status of your network. It has several parameters that can display as much or as little information as you prefer. The services are listed by sockets (application-to-application connections between two computers). You can use netstat to display the information in Table 14.2.
+
+### TABLE 14.2 netstat Options
+
+| Option | Output |
+|---|---|
+| -g | Displays the multicast groups configured |
+| -i | Displays the interfaces configured by ifconfig |
+| -s | Lists a summary of activity for each protocol |
+| -v | Gives verbose output, listing both active and inactive sockets |
+| -c | Updates output every second (good for testing and troubleshooting) |
+| -e | Gives verbose output for active connections only |
+| -C | Displays information from the route cache and is good for looking at past connections |

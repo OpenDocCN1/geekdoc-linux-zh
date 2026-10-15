@@ -1,0 +1,35 @@
+# ## NOTE
+
+> > In Perl, “there is more than one way to do it.” This is the unofficial motto of Perl, and it comes up so often that it is usually abbreviated as TIMTOWTDI.
+
+You can use Perl at your shell’s command line to execute one-line Perl programs, but most often programs (usually ending in .pl) are run as a command. These programs generally work on any computer platform because Perl has been ported to just about every operating system. Perl is available by default when you install Ubuntu, and you will find its package files on the DVD included with this book.
+
+Perl programs are used to support a number of Ubuntu services, such as system logging. For example, the logwatch.pl program is run every morning at 4:20 a.m. by the crond (scheduling) daemon on your system. Other Ubuntu services supported by Perl include the following:
+
++   - Amanda for local and network backups
++   - Fax spooling with the faxrunq program
++   - Printing supported by Perl document filtering programs
++   - Hardware sensor monitoring setup using the sensors-detect Perl program
+
+# ## Perl Versions
+
+As of this writing, the current production version of Perl is 5.8.8 (which is Perl version 5 point 8, patch level 8).
+
+You can download the code from http://www.perl.com and build it yourself from source. You will occasionally find updated versions in APT format for Ubuntu, which can be installed by updating your system. See Chapter 7, “Managing Software,” to see how to quickly get a list of available updates for Ubuntu.
+
+You can determine what version of Perl you installed by typing `perl -v` at a shell prompt. If you are installing the latest Ubuntu distribution, you should have the latest version of Perl.
+
+# ## A Simple Perl Program
+
+This section introduces a very simple sample Perl program to get you started using Perl. Although trivial for experienced Perl hackers, a short example is necessary for new users who want to learn more about Perl.
+
+To introduce you to the absolute basics of Perl programming, Listing 23.1 illustrates a simple Perl program that prints a short message.
+
+# ### LISTING 23.1  A Simple Perl Program
+
+```
+```perl
+#!/usr/bin/perl
+print "Look at all the camels!\n";
+```
+```

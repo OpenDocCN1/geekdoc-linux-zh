@@ -1,0 +1,13 @@
+For the most part, Ubuntu will detect and configure the majority of graphics cards from the start, and even if it has problems, it will attempt to give you a display of some sort. This feature is known as BulletProof X, and it allows you access to tools that may help you fix your problem by trying different combinations of graphics cards and monitors.
+
+# Changing Ubuntu's Look and Feel
+
+GNOME, the default window manager for Ubuntu, has a number of options to change how it looks and feels. The default theme is Human; this takes a blend of the GNOME Clearlooks theme, mixes it with icons from the Tango Project, and adds a little spice direct from Ubuntu. However, it is not to everyone's taste, so in this section we look at changing the visual style of Ubuntu.
+
+# Changing the Desktop Background
+
+Perhaps the easiest and most dramatic change you can make is to change the default desktop background. It is as simple as right-clicking on the desktop and selecting the option to Change Desktop Background to see the dialog box shown in Figure 2.5. Ubuntu comes with a small selection of wallpapers to start with, but we recommend going to the Web to find a great selection. Our favorite site is http://www.gnome-look.org, where you can find a great selection of desktop wallpapers.
+
+![](bbox=[0.1, 0.65, 0.55, 0.92])
+
+FIGURE 2.5 Choose one of the default wallpapers, or use the Add Wallpaper option to select your own image file.

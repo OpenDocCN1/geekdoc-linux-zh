@@ -1,0 +1,209 @@
+
+- **disk usage, du shell command**, 669-670
+- **file contents, cat shell command**, 666-667
+- **GUI-based printers**, 187
+- **last lines of files, via tail shell command**, 682
+- **local printers**, 189, 192
+- **Mono parameters**, 629
+- **network printers**
+  - CUPS GUI, 399-400
+  - LAN, enabling on, 397-398
+  - SMB printing, 398
+  - overview of, 185-187
+  - references, 195
+  - resource usage, via top shell command, 682-684
+- **privileges**
+  - **MySQL**
+    - column-level privileges, 512
+    - database-level privileges, 512
+    - global-level privileges, 512
+    - granting/revoking in, 512-513
+    - table-level privileges, 512
+  - PostgreSQL, granting/revoking in, 517-518
+- **procedural language, database comparisons**, 510
+- **Process Listing view**, 297
+- **processes, listing via ps shell command**, 680-681
+- **Procmail MDA (mail delivery agents)**, 483-484
+- **productivity applications**, 133-134
+- **productivity suites**
+  - related commands, 151
+  - websites, 152
+- **programming languages, C/C++**
+  - development of, 613-614
+  - graphical development tools, 620-621
+  - project management tools, 614-619
+- **project management tools, C/C++ programming language**, 614
+  - autoconfig, 617
+  - debugging tools, 618-619
+  - make command, 615-617
+  - Subversion system, 617-618
+- **Project Planner (GNOME Office)**, 149
+- **promiscuous mode (NIC)**, 343, 645
+- **prompts, interactive interpreter (Python)**, 562
+- **protocols, FTP**, 439
+- **proxy servers**
+  - defining, 489
+  - **Squid**
+    - ACL, 491-495
+    - client configuration, 490
+    - configuration examples, 496-497
+    - installing, 490
+    - kill -SIGHUP command, 495
+    - specifying client IP addresses, 495-496
+  - uses of, 489
+- **ps command**, 290
+- **ps shell command**, 680-681
+- **psql client program, PostgreSQL database creation**, 516
+- **psql command (PostgreSQL)**, 524
+- **psql command-line client, exiting**, 517
+- **purging logs, Perl coding example**, 554-555
+- **pwd command**, 83
+- **PXE**, 235
+- **Python**
+  - `*` operator, 566
+  - `+` operator, 566-567
+  - conditional statements, conditional checks, 570
+  - dictionaries, 569
+  - for loops, 570
+  - functions, defining, 572-573
+  - infinite loops, 571
+  - installing, 561
+  - interactive interpreter, 562
+  - **lists**
+    - built-in methods, 568
+    - copying, 568
+    - mutability, 567
+    - nested lists, 567
+    - operator overloading, 567
+  - loop blocks, 571
+  - **loops**
+    - break keyword, 572
+    - continue keyword, 572
+    - multiline, 571
+  - **number-handling**
+    - floating-point values, 563
+    - integers, 563
+    - large numbers, 564
+    - number type conversions, 564
+    - numeric operators, 563
+  - **OOP**
+    - class definitions, 573
+    - class methods, 573
+    - classes, creating instances of, 573
+    - classes, inheritance, 575-577
+    - classes, object variables, 574
+    - constructor/destructor methods, 575
+  - scripts, executing, 562
+  - standard library modules, 577
+  - **strings**
+    - assigning value to, 564
+    - built-in methods, 566
+    - concatenating, 566
+    - immutable sequences, 564
+    - indexing, 565
+    - repeating, 566
+  - unofficial scripts/add-ons websites, 577
+  - van Rossum, Guido, 561
+  - while loops, 571
+- **Qmail MTA (mail transport agent)**, 473
+- **qt files**, 180
+- **query caches, MySQL optimization**, 660-661
+- **question mark (?), shell pattern-matching searches**, 250
+- **queues (print), creating**, 190-193
+## R
+- **RAID arrays**, 307
+- **RAM disk images (kernel)**, 720
+- **RARP (Reverse Address Resolution Protocol)**, 334
+- **raw files**, 156, 177
+- **rc.sysinit script**, 236
+- **rcp command, SSH servers**, 373
+- **RDBMS (Relational Database Management Systems)**
+  - data storage, 501
+  - **SQL**
+    - commands, whitespace, 504
+    - CREATE statements, 504
+    - creating tables, 503
+    - creating tables, 504
+    - INSERT statements, 504-505
+    - inserting data into tables, 504-505
+    - reserved keywords, 504
+    - retrieving data from databases, 505-507
+    - SELECT statements, 505
+    - table relations, 501-503
+- **reading man pages**, 108-109
+  - man shell command, 679
+- **recipes (Procmail)**, 483
+- **recompiling kernel**, 708
+- **recovery mode, booting into**, 322
+- **recovery plans**, 647-648
+- **redirection**, 248-252
+- **redo statements (Perl)**, 548–549
+- **references (PHP)**, 584
+- **regular expressions**, 430, 549–550
+- **relational databases**, 501
+- **relaying email, Postfix MTA**, 478
+- **remote access**
+  - key-based logins, 375–376
+  - **SSH servers**
+    - configuring, 372–373
+    - disabling SSH1, 373
+    - ftp command, 373
+    - rcp command, 373
+    - scp command, 374
+    - sftp command, 374–375
+    - ssh-keygen command, 375–376
+  - Telnet servers, configuring, 371
+  - VNC, 378
+  - XDMCP, 377
+- **remote clients, X Window System support**, 55
+- **remote files, copying to other remote servers**, 374
+- **remote servers**
+  - copying files to, 374
+  - security, 375–376
+- **Removable Drives and Media**, 39
+- **removable storage media**, 308
+- **removing modules**, 707
+- **renice command**, 292, 298
+- **repeat statements**, 280
+- **repeating strings in Python**, 566
+- **repositories (software), configuring**, 30–33
+- **rescue disc**, 320
+- **reserved SQL keywords**, 504
+- **resetting date/time**, 44
+  - date command, 45
+  - hwclock command, 45
+  - time-admin client, 46
+- **resource usage, printing via top shell command**, 682–684
+- **resources (PHP)**, 582
+- **restoring**
+  - files from backups, tar command-line backup software, 311–312
+  - MBR, 320
+- **Restricted Drivers Manager**, 199
+- **retrieving data from SQL databases**, 505–507
+- **return on investment (ROI)**, 729
+- **REVOKE statement (PostgreSQL)**, 517–518
+- **REVOKE statement (SQL)**, 513
+- **revoking privileges**
+  - MySQL, 512–513
+  - PostgreSQL, 517–518
+- **RhythmBox**, 157–161
+- **ripping music tracks**, 171
+- **rm shell command**, 681
+- **rmmod command, modular kernel management**, 706
+- **ROI (return on investment)**, 729
+- **root account**, 104
+  - creating, 105–106
+  - deleting, 106
+  - rebooting, 107
+- **remote server security**, 376
+- **system shutdown**, 106–107
+- **root privileges, granting**, 227
+- **root users**
+  - in LDAP
+    - assigning passwords to, 527
+    - defining, 526
+    - passwords, 511
+- **route network configuration tool**, 345–346
+- **routers**, 339
+- **rpm command, Apache Server source code, building**, 411–412
+- **rsh shell**, 247

@@ -1,0 +1,15 @@
+# The Root User
+
+If you've used other Linux distros then you are likely to be a little puzzled by the use of the sudo command. In short, Ubuntu allows the first user on the system access to full root privileges through the sudo command. It also disables the root account so no one can actually login with the username root.
+
+In other Linux distros you would change to the root user by issuing the command su - followed by the root password. This will land you at the root prompt, which is shown as a pound sign (#). From here you are able to execute any command you wish. To get to a root prompt in Ubuntu you need to execute the command sudo -i which, after you enter your password, will give you the prompt so familiar to other Linux distros. When you've finished working as root just type exit and hit Enter to get back to a normal user prompt ($).
+
+A regular user is someone who logs on to the system to make use of it for nonadministrative tasks such as word processing or email. These users do not need to make systemwide changes or manage other users. However, they might want to be able to change settings specific to them (for instance, a desktop background). Of course, depending on how draconian the root user is, regular users might not even be able to do that!
+
+The super user grants privileges to regular users by means of file and directory permissions (as covered in Chapter 4, "Command Line Quickstart"). For example, if the super user does not want you to change your settings in ~/.profile (the ~ is a shell shortcut representing your home directory), root can alter the permissions so that you may read from, but not write to, that file.
+
+# CAUTION
+
+Because of the potential for making a catastrophic error as the super user (using the command rm -rf / is the classic example, but do not ever try it!), always use your system as a regular user and become root only temporarily to do sysadmin duties. While you are on a multiuser system, consider this advice an absolute rule; if root were to delete the wrong file or kill the wrong process, the results could be disastrous for the business. On your home system, you can do as you please, and running as root makes many things easier, but less safe. In any setting, however, the risks of running as root are significant and we cannot stress how important it is to be careful when working as root.
+
+The third type of user is the system user. The system user is not a person, but rather an administrative account that the system uses during day-to-day running of various services. For example, the system user named apache owns the apache web server and all the associated files. Only itself and root can have access to these files—no one else can access or make changes to these files. System users do not have a home directory or password, nor do they permit access to the system through a login prompt.

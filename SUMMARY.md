@@ -2263,6 +2263,7 @@
 +   [Ubuntu Linux 2021版实战指南](docs/ubuntu-linux-unleashed-2021-edition/README.md)
 +   [Ubuntu Linux Unleashed 2021 版，第 14 版](docs/ubuntu-linux-unleashed-2021-edition-14th-edition/README.md)
 +   [Ubuntu Linux 实战 2021 版（涵盖 20.04、20.10 和 21.04）](docs/ubuntu-linux-unleashed-2021-edition-covers-2004-2010-and-210/README.md)
++   [Ubuntu Linux 完全掌握：涵盖 8.04 和 8.10](docs/ubuntu-linux-unleashed-covering-804-and-810/README.md)
 +   [Ubuntu 简易上手：基于项目的 Linux 入门指南](docs/ubuntu-made-easy-a-project-based-introduction-to-linux/README.md)
 +   [Ubuntu 简易教程：基于项目的 Linux 入门指南（涵盖 Ubuntu 12.04）](docs/ubuntu-made-easy-a-project-based-introduction-to-linux-cover/README.md)
 +   [Ubuntu 口袋指南与参考：日常使用的简洁伴侣](docs/ubuntu-pocket-guide-and-reference-a-concise-companion-for-da/README.md)

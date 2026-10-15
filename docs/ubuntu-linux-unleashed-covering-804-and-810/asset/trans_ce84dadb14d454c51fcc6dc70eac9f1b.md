@@ -1,0 +1,142 @@
+
+- elinks, 437
+- emacs, 728
+- emacs, 96
+- 电子邮件
+  - 自动回复器, 485
+  - 守护进程, 485
+  - Evolution, 531
+  - maildir 电子邮件目录格式, 473
+  - mbox 电子邮件目录格式, 474
+  - MDA, 474
+    - 选择, 483
+    - Fetchmail, 479-483
+    - Procmail, 483-484
+    - Spamassassin, 484
+    - Squirrelmail, 484
+    - 病毒扫描器, 485-487
+  - MTA
+    - 选择, 474
+    - Exim, 473
+    - Postfix, 472, 475-478
+    - Qmail, 473
+    - Sendmail, 473
+  - MUA, 474-475
+    - pine 目录格式, 474
+    - 以 root 身份读取, 479
+  - 发送/接收
+    - 概述, 471
+    - 通过 Perl, 553-554
+  - Thunderbird, 532
+- enable 命令, 194
+- 加密，无线网络, 49
+- 无限循环, 277-278
+- env 命令, 92
+- 环境变量（shell 脚本）, 258
+- epiphany 命令, 469
+- 等号（=），字符串表达式运算符, 267
+- 错误检查，Mono, 630-631
+- 转义字符
+  - /（反斜杠）作为转义字符, 266
+  - '（单引号）作为转义字符, 265
+- 转义序列，PHP, 585-586
+- ethereal 工具, 296
+- 评估备份策略, 304-305
+  - 完整备份策略，定期执行, 306
+  - 完整备份策略，使用增量备份, 306
+  - 镜像数据, 307
+  - RAID 阵列, 307
+  - 简单备份策略, 306
+- Evolution（GNOME Office）, 147
+- Evolution 电子邮件客户端, 531
+- Exchange Server（Microsoft），替代方案, 485-487
+- 感叹号（!）
+  - 逻辑比较运算符, 271
+  - 数字比较运算符, 275
+- 执行 shell 脚本, 254-255
+- 执行运算符（PHP）, 591
+- Exim MTA（邮件传输代理）, 473
+- 退出语句, 285
+- 退出 psql 命令行客户端（PostgreSQL）, 517
+- 表达式, 85, 248
+  - 表达式的比较
+    - pdksh shell 与 bash shell，文件比较, 270-271
+    - pdksh shell 与 bash shell，逻辑比较, 271-272
+    - pdksh shell 与 bash shell，数字比较, 268-270
+    - pdksh shell 与 bash shell，字符串比较, 267-268
+    - tcsh shell，文件比较, 274-275
+    - tcsh shell，逻辑比较, 275
+    - tcsh shell，数字比较, 273
+    - tcsh shell，字符串比较, 272
+- 外部命令（ftpconversion 文件）, 461
+- 外部计算机攻击，定义, 640
+- extract() 数组函数, 601
+- extraversion 级别（内核）, 709
+
+## F
+
+- 传真, 403
+- fclose() 文件函数, 603-604
+- FDDI（光纤分布式数据接口）网络, 336
+- Feisty Fawn, 731
+- Fetchmail MDA（邮件投递代理）, 479
+  - 配置
+    - 全局选项, 480
+    - 邮件服务器选项, 481
+    - 用户账户, 481-483
+  - 安装, 479
+- 光纤电缆, 338
+- 光纤 NIC（网络接口卡）, 336
+- 字段
+  - /var/log/xferlog, 468-469
+  - ftpwho 命令, 464
+- file 命令，确定文件压缩方法, 698
+- 文件比较（表达式的比较）, 270-275
+- 文件扩展名，bak, 27
+- 文件函数（PHP）
+  - fclose(), 603-604
+  - file_get_contents(), 602
+  - 文件句柄, 603
+  - file_put_contents(), 602
+  - filesize(), 603
+  - fopen(), 602-603
+  - fread(), 603
+  - fwrite(), 603
+- file_get_contents() 文件函数, 602
+- 文件句柄, 603
+- file_put_contents() 文件函数, 602
+- File Roller, 312
+- 文件共享
+  - NFS
+    - 客户端配置, 384-385
+    - 安装, 382
+    - 服务器配置, 383-384
+    - 启动/停止, 382
+  - Samba
+    - 通过 SWAT 配置, 392-394
+    - 连接状态报告, 390
+    - 安装, 386
+    - 通过 /etc/samba/smb.conf 文件手动配置, 387-389
+    - 挂载共享, 391-392
+    - SMB 协议, 385
+    - 启动 smbd 守护进程, 390-391
+    - SWAT, 385
+    - 通过 testparm 命令测试, 390
+- 文件系统
+  - 优化
+    - badblocks 命令, 655
+    - 禁用 atime, 655
+    - e2fsck 命令, 655
+    - tune2fs 命令, 654
+    - sync 命令, 654
+- 文件传输协议（FTP）, 439
+- 文件转换操作，配置 FTP 服务器, 460-462
+- 文件名通配符, 85
+- 文件
+  - /etc/fstab, 230
+  - 访问权限，更改, 669
+  - 分配, 100
+  - 内容，打印, 666-667
+  - 复制
+    - cp 命令, 318
+    - cp shell 命令, 669

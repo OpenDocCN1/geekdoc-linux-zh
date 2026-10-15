@@ -1,0 +1,97 @@
+
+- CREATE USER statement (PostgreSQL), 516
+  - createdb command (PostgreSQL), 524
+  - createuser command (PostgreSQL), 524
+- cron daemon
+  - repeatedly running tasks, 245–247
+  - scheduling tasks, 242
+- crontab files, editing, 246–247
+- CrossOver Office, 150
+- CUPS (Common UNIX Printing System), 185
+  - network printing
+    - enabling on LAN, 397–399
+    - printer entries, creating, 400
+    - SMB printing, 398
+- cupsd daemon, 187
+- current directory, listing files via ls shell command, 678–679
+- customizing Ubuntu
+  - desktop backgrounds, 34
+  - desktop color, 35
+  - input devices
+    - keyboard layouts, 40–41
+    - keyboard shortcuts, 40
+    - mouse configurations, 41
+  - Preferred Applications, 37–38
+  - Removable Drives and Media, 39
+- CustomLog directive (Apache Web server), 435
+- cvs command, 622
+
+## D
+
+- Daemons
+  - cupsd, 187
+  - mail, 485
+  - smbd
+    - smbclient command, 391
+    - smbstatus command, 390
+  - xinetd daemons, configuring for wu-ftpd, 444
+- Dapper Drake, 731
+- data directories (MySQL)
+  - initializing, 510
+  - ownership of, 510
+- data directories (PostgreSQL), initializing, 514–515
+- data integrity, database comparisons, 509
+- data locking, database comparisons, 508
+- data loss, reasons for, 302
+- data mirroring, 307
+- data pilots, 143
+- data storage in RDBMS, 501
+- database administrators (DBAs), responsibilities
+  - data integrity, 500
+  - database client installation/maintenance, 499
+  - database security, 500
+- database clients
+  - as middleware, 520
+  - command-line clients, 518
+  - local GUI database access, 520
+- MySQL
+  - command-line client, 521–522
+  - graphical clients, 523
+- PostgreSQL command-line client, 523
+- SSH database access, 518–520
+- web database access, 520–521
+- database-level privileges (MySQL), 512
+- databases
+  - access/permission issues, 518
+  - client/server model, 500
+  - comparisons, 507
+    - ACID compliance, 509
+    - data locking, 508
+    - procedural languages, 510
+    - speed, 507
+    - SQL subqueries, 509
+    - triggers, 510
+  - flat file, 500
+  - MySQL
+    - adding user accounts, 512
+    - creating, 511-512
+    - data directory ownership, 510
+    - granting/revoking privileges, 512-513
+    - initializing data directories, 510
+    - initializing grant tables, 510
+    - installing, 510-511
+    - root user passwords, 511
+  - PostgreSQL
+    - creating database users, 516
+    - creating databases, 515
+    - deleting database users, 517
+    - exiting psql command-line client, 517
+    - granting/revoking privileges, 517-518
+    - initializing data directories, 514-515
+    - installing, 513
+    - RPM distribution, 513
+    - starting postmaster program, 515
+  - RDBMS, 501
+    - data storage, 501
+    - SQL basics, 503-507
+    - table relations, 501, 503

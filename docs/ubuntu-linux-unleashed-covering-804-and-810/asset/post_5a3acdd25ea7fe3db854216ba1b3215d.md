@@ -1,0 +1,200 @@
+
+## File Operators
+
+These operators can be used as file comparison operators:
+
+- -d—To ascertain whether a file is a directory
+- -e—To ascertain whether a file exists
+- -f—To ascertain whether a file is a regular file
+- -o—To ascertain whether a user is the owner of a file
+- -r—To ascertain whether read permission is set for a file
+- -w—To ascertain whether write permission is set for a file
+- -x—To ascertain whether execute permission is set for a file
+- -z—To ascertain whether the file size is zero
+
+The following examples are based on a shell program called compare3, which is in a directory with a file called file1 and a subdirectory dir1 under the current directory. Assume that file1 has a permission of r-x (read and execute permission) and dir1 has a permission of rwx (read, write, and execute permission).
+
+The following is the code for the compare3 shell program:
+
+```
+#!/bin/tcsh
+if (-d dir1) then
+echo "dir1 is a directory"
+else
+echo "dir1 is not a directory"
+endif
+
+if (-f file1) then
+echo "file1 is a regular file"
+else
+echo "file1 is not a regular file"
+endif
+
+if (-r file1) then
+echo "file1 has read permission"
+else
+echo "file1 does not have read permission"
+endif
+
+if (-w file1) then
+echo "file1 has write permission"
+else
+echo "file1 does not have write permission"
+endif
+```
+
+```
+if (-x dir1) then
+ echo "dir1 has execute permission"
+else
+ echo "dir1 does not have execute permission"
+endif
+```
+
+```
+if (-z file1) then
+ echo "file1 has zero length"
+else
+ echo "file1 has greater than zero length"
+endif
+```
+
+If you execute the file compare3, you get the following results:
+
+dir1 is a directory
+file1 is a regular file
+file1 has read permission
+file1 does not have write permission
+dir1 has execute permission
+file1 has greater than zero length
+
+## Logical Operators
+
+Logical operators are used with conditional statements. These operators are used to negate a logical expression or to perform logical ANDs and ORs:
+
+- !—To negate a logical expression
+- &&—To logically AND two logical expressions
+- ||—To logically OR two logical expressions
+
+This example named logic uses the file and directory mentioned in the previous compare3 example.
+
+```
+#!/bin/tcsh
+if ( -x file1 && -x dir1 ) then
+ echo file1 and dir1 are executable
+else
+ echo at least one of file1 or dir1 are not executable
+endif
+
+if ( -w file1 || -w dir1 ) then
+ echo file1 or dir1 are writable
+else
+ echo neither file1 or dir1 are executable
+endif
+```
+
+```
+```sh
+if [ ! -w file1 ] then
+    echo file1 is not writable
+else
+    echo file1 is writable
+endif
+```
+```
+
+If you execute logic, it will yield the following result:
+
+```text
+file1 and dir1 are executable
+file1 or dir1 are writable
+file1 is not writable
+```
+
+## The for Statement
+
+The for statement is used to execute a set of commands once each time a specified condition is true. The statement has a number of formats. The first format used by pdksh and bash is as follows:
+
+```
+```sh
+for curvar in list
+do
+    statements
+done
+```
+```
+
+This form should be used if you want to execute statements once for each value in list. For each iteration, the current value of the list is assigned to curvar. List can be a variable containing a number of items or a list of values separated by spaces. The second format is as follows:
+
+```
+```sh
+for curvar
+do
+    statements
+done
+```
+```
+
+In this form, the statements are executed once for each of the positional parameters passed to the shell program. For each iteration, the current value of the positional parameter is assigned to the variable curvar.
+
+This form can also be written as follows:
+
+```
+```sh
+for curvar in $$*
+do
+    statements
+done
+```
+```
+
+Remember that $* gives you a list of positional parameters passed to the shell program, quoted in a manner consistent with the way the user originally invoked the command.
+
+Under tcsh, the for statement is called foreach. The format is as follows:
+
+```
+foreach curvar (list)
+    statements
+end
+```
+
+In this form, statements are executed once for each value in list, and, for each iteration, the current value of list is assigned to curvar.
+
+Suppose that you want to create a backup version of each file in a directory to a subdirectory called backup. You can do the following in pdksh and bash:
+
+```
+#!/bin/sh
+for filename in *
+do
+    cp $filename backup/$filename
+    if [ $? -ne 0 ]; then
+        echo "copy for $filename failed"
+    fi
+done
+```
+
+In the preceding example, a backup copy of each file is created. If the copy fails, a message is generated.
+
+The same example in tcsh is as follows:
+
+```
+#!/bin/tcsh
+foreach filename (`/bin/ls`)
+cp $filename backup/$filename
+if ($? != 0) then
+    echo "copy for $filename failed"
+endif
+end
+```
+
+## The while Statement
+
+The while statement can be used to execute a series of commands while a specified condition is true. The loop terminates as soon as the specified condition evaluates to false. It is possible that the loop will not execute at all if the specified condition initially evaluates to false. You should be careful with the while command because the loop will never terminate if the specified condition never evaluates to false.
+
+## Endless Loops Have Their Place In Shell Programs
+
+Endless loops can sometimes be useful. For example, you can easily construct a simple command that constantly monitors the 802.11b link quality of a network interface by using a few lines of script:
+
+```
+#!/bin/sh
+```

@@ -1,0 +1,46 @@
+
+
+- Gnumeric——这款电子表格程序让你能够以电子表格格式处理数字。除了一些最冷门的 Microsoft Excel 函数外，它几乎支持所有 Excel 函数，因此用户与 Excel 用户交换电子表格时基本不会遇到困难。
+- GIMP——这款图形应用程序允许你创建日常使用的图像。它可以导入和导出所有常见的图形文件格式。GIMP 类似于 Adobe 的 Photoshop 应用程序，将在第 7 章“多媒体应用程序”中介绍。
+- Evolution——Evolution 是一款邮件客户端，其界面与 Microsoft Outlook 类似，提供电子邮件、日程安排和日历功能。它将在第 5 章“在互联网上”中介绍。
+
+被称为 Gnome Office 的松散应用程序集合中还包含几个额外的应用程序，它们与 Ubuntu 已提供的应用程序功能重复。这些额外的 GNOME 应用程序并未包含在 Ubuntu 的默认安装中，以避免冗余。它们都可以从 Gnome Office 网站 http://www.gnome.org/gnome-office/ 获取。GIMP 和 Evolution 默认随 Ubuntu 提供。你需要使用 synaptic 来获取其余组件。
+
+Ubuntu 将 AbiWord 编辑器作为其 Extras 的一部分提供，如图 6.14 所示。AbiWord 可以导入 XML、Microsoft Word、RTF、UTF8、纯文本、WordPerfect、KWord 以及其他一些格式。AbiWord 的显著特点在于它使用插件或集成的辅助应用程序来扩展其功能。这些插件添加了语言翻译、HTML 编辑、同义词库、Linux 命令 shell 和在线词典等功能特性。如果你只需要一个简单而强大的文字处理应用程序，不妨试试 AbiWord。
+
+AbiWord 默认并未安装在 Ubuntu 中，因此你需要使用 apt-get 或 synaptic 来安装它。该软件包简单地称为 `abiword-gnome`，不过你可能想要安装元软件包 `gnome-office`，它将包含其他 Gnome Office 应用程序。
+
+安装 AbiWord 后，它会在“应用程序”菜单的“办公”子菜单下出现。只需单击图标即可启动该应用程序。
+
+如果你熟悉 Microsoft Works，那么你会觉得 AbiWord 的界面很熟悉，因为其设计者将界面基于 Works 设计。
+
+![](img/8f9e74e2b343ff525bebfb720a3d8441_177_0.png)
+
+图 6.14 AbiWord 是适用于 Ubuntu、GNOME 和 X11 的文字处理程序。它能处理一些 OpenOffice.org 无法处理的格式，但对 Microsoft Word 格式的支持还不完善。
+
+你可以使用 Gnumeric 电子表格应用程序进行财务计算和绘制数据图表，如图 6.15 所示。它可以导入逗号或制表符分隔的文件、文本或 Gnumeric XML 格式的文件，但只将文件保存为 XML 或文本格式。你需要像安装 AbiWord 一样，使用 apt-get 或 synaptic 来安装 Gnumeric。如果你已经安装了 `gnome-office` 软件包，那么 Gnumeric 将出现在“应用程序”->“办公”菜单下，名称为 “Gnumeric Spreadsheet”。
+
+按下回车键后，Gnumeric 主窗口会出现。你通过单击单元格，然后在文本框中输入来在电子表格中输入数据。要创建图表，你单击并拖动鼠标划过电子表格单元格以突出显示所需数据，然后点击 Gnumeric 工具栏中的“图表向导”图标。Gnumeric 的图表组件会启动，并引导你通过一系列对话框来创建图表。完成后，你可以单击并拖动电子表格的空白区域，图表就会出现。
+
+![](img/8f9e74e2b343ff525bebfb720a3d8441_177_1.png)
+
+图 6.15 GNOME 的 Gnumeric 是一款功能强大的财务数据编辑器——这里正在处理前面使用过的同一个电子表格。OpenOffice.org 和 KOffice 也提供电子表格应用程序。
+
+Project Planner 应用程序对于跟踪项目进度非常有用，很像 Windows 中的对应软件 Microsoft Project。主窗口显示后，你可以启动新项目或导入现有项目。该应用程序提供三种视图：资源、甘特图和任务。
+
+## 使用 KOffice
+
+KDE 办公套件 KOffice 的开发目的是与 KDE 桌面紧密集成。这种集成使得一个应用程序中的对象可以通过拖放方式插入到其他应用程序中，并且所有应用程序都可以相互通信，因此对象的变化会立即传达给其他应用程序。KDE 提供的应用程序集成显著提升了生产力。（某些 GNOME 桌面应用程序之间也共享类似的通信功能。）如果你使用 KDE 桌面而不是默认的 GNOME 桌面，你就可以享受这种集成带来的好处，以及 Konqueror 网页和文件浏览器的便利。
+
+KOffice 的文字处理器是 KWord。KWord 是一款基于框架的文字处理器，这意味着文档页面可以在框架集中进行格式化，框架集在封闭区域内包含文本、图形和对象。框架集可用于格式化页面上的文本，页面包含文本和图像，且这些文本需要围绕列排布，这使得 KWord 成为创建标准商务信函以外的文档（如通讯稿和宣传册）的绝佳选择。
+
+KWord 和 KOffice 的其他组件仍在开发中，缺乏 OpenOffice.org 和 AbiWord 的所有成熟功能。不过，它确实能够处理 OpenOffice.org 中的 OpenDocument 格式，并且对 Microsoft 文件格式具有有限的兼容性。
+
+你可以从“办公”菜单访问 KOffice 组件。
+
+KWord 会要求你为当前会话选择一个文档。KWord 客户端（如图 6.16 所示）提供了高级编辑功能，包括桌面出版。
+
+KOffice 的 KSpread 客户端是一款功能性的电子表格程序，提供图表功能。与 KWord 一样，可以从“办公”菜单访问 KSpread。
+
+KDE 在其 KOffice 及相关应用程序集合中还包含其他生产力客户端。这些客户端包括地址簿、时间跟踪器、计算器、记事本和日程安排器。其中一个流行的客户端是 Kontact，它提供每日、每周、工作日和每月的任务视图、待办事项列表以及带有后台提醒的预定约会。它还支持日志或日记功能，并且你可以与 Palm Pilot 同步信息。你可以从“办公”菜单启动此客户端。
+

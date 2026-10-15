@@ -1,0 +1,40 @@
+# CAUTION
+
+Although mysql allows you to specify the password on the command line after the -p option, and thus allows you to avoid having to type the password at the prompt, you should never invoke the client this way. Doing so causes your password to display in the process list, and the process list can be accessed by any user on the system. This is a major security hole, so you should never give your password on the mysql command line.
+
+You can access the MySQL server without specifying a database to use. After you log in, you use the help command to get a list of available commands, like this:
+
+```
+mysql> help
+```
+
+# MySQL commands:
+
+Note that all text commands must be first on line and end with ';'
+
++   help (\h) Display this help.
++   ? (\?) Synonym for 'help'.
++   clear (\c) Clear command.
++   connect (\r) Reconnect to the server. Optional arguments are db and host.
++   edit (\e) Edit command with $EDITOR.
++   ego (\G) Send command to mysql server, display result vertically.
++   exit (\q) Exit mysql. Same as quit.
++   go (\g) Send command to mysql server.
++   nopager (\n) Disable pager, print to stdout.
++   notee (\t) Don't write into outfile.
++   pager (\P) Set PAGER [to_pager]. Print the query results via PAGER.
++   print (\p) Print current command.
++   quit (\q) Quit mysql.
++   rehash (\#) Rebuild completion hash.
++   source (\.) Execute a SQL script file. Takes a file name as an argument.
++   status (\s) Get status information from the server.
++   tee (\T) Set outfile [to_outfile]. Append everything into given outfile.
++   use (\u) Use another database. Takes database name as argument.
+
+You can then access a database by using the use command and the name of a database that has been created (such as animals) and that you are authorized to connect to, like this:
+
+```
+mysql> use animals
+Database changed
+mysql>
+```

@@ -1,0 +1,53 @@
+
+
+files, as well as extract individual files from them. As if that was not enough, mc contains a File Undelete virtual file system for ext2/3 partitions. By using cd to "change directories" to an FTP server's URL, you can transfer files using the FTP protocol. The default font chosen for Ubuntu makes the display of mc ugly when used in a tty console (as opposed to an xterm), but does not affect its performance.
+
+Figure 13.4 shows a shot of the default dual-panel display. Pressing the F9 key drops down the menu, and pressing F1 displays the Help file. A "feature" in the default GNOME terminal intercepts the F10 key used to exit mc, so use F9 instead to access the menu item to quit, or simply click on the menu bar at the bottom with your mouse. The configuration files are well documented, and it would appear easy to extend the functionality of mc for your system if you understand shell scripting and regular expressions. It is an excellent choice for file management on servers not running X.
+
+![](img/8f9e74e2b343ff525bebfb720a3d8441_348_0.png)
+
+FIGURE 13.4 The Midnight Commander is a highly versatile file tool. If it does not display properly on your screen, launch it with the -a argument to force ASCII mode.
+
+## System Rescue
+
+There will come a time when you need to engage in system rescue efforts. This need arises when the system will not even start Linux so that you can recover any files. This problem is most frequently associated with the boot loader program or partition table, but it could be that critical system files have been inadvertently deleted or corrupted. If you have been making backups properly, these kinds of system failures are easily, though not quickly, recoverable through a full restore. Still, valuable current data might not have been backed up since the last scheduled backup, and the backup archives are found to be corrupt, incomplete, or missing. A full restore also takes time you might not have. If the problem causing the system failure is simply a damaged boot loader, a damaged partition table, a
+
+missing library, or misconfiguration, a quick fix can get the system up and running and the data can then be easily retrieved.
+
+In this section, we will first examine a way to back up and restore the boot loader itself or, having failed to do that, restore it by hand. Then we will look at a few alternatives to booting the damaged system so that we can inspect it, fix it, or retrieve data from it.
+
+## The Ubuntu Rescue Disc
+
+Ubuntu provides a rescue disc hidden in the installation DVD. To use it, insert the disc and reboot the computer, booting from the DVD just as you did when you installed Ubuntu originally.
+
+If necessary, you can perform all the operations discussed in this section from rescue mode.
+
+## Backing Up and Restoring the Master Boot Record
+
+The Master Boot Record (MBR) is the first 512 bytes of a hard disk. It contains the boot loader code in the first 446 bytes and the partition table in the next 64 bytes; the last two bytes identify that sector as the MBR. The MBR can become corrupted, so it makes sense to back it up.
+
+This example uses the dd command as root to back up the entire MBR. If the boot loader code changes from the time you make this image and restore the old code, the system will not boot when you restore it all; it is easy enough to keep a boot floppy handy and then re-run LILO if that is what you are using.
+
+To copy the entire MBR to a file, use this:
+
+```
+sudo dd if=/dev/hda of=/tmp/hdambr bs=512 count=1
+```
+
+To restore the entire MBR, use this:
+
+```
+sudo dd if=/tmp/hdambr of=/dev/hda bs=512 count=1
+```
+
+To restore only the partition table, skipping the boot loader code, use this:
+
+```
+sudo dd if=/tmp/hdambr of=/dev/hda bs=1 skip=446 count=66
+```
+
+Of course, it would be prudent to move the copy of the MBR to a floppy or other appropriate storage device. (The file is only 512 bytes in size.) You will need to be able to run dd on the system in order to restore it (which means that you will be using the Ubuntu rescue disc as described later, or any equivalent to it).
+
+## Booting the System from a Generic Boot Floppy
+
+If you failed to make a boot floppy or cannot locate the one you did make, any Linux boot floppy (a slightly older version or one borrowed from a friend) can be pressed into service as long as it has a reasonably similar kernel version. (The major and minor numbers match—for example, 2.6.5 would likely work with any 2.6 system, but not with a 2.4 system.) You would boot your system by manually specifying the root and boot parti-

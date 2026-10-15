@@ -1,0 +1,75 @@
+
+
+# 第20章
+
+## 代理与反向代理
+
+### 本章内容
+
+- ► 什么是代理服务器？
+- ► 安装 Squid
+- ► 配置客户端
+- ► 访问控制列表
+- ► 指定客户端IP地址
+- ► 示例配置
+- ► 参考
+
+在这个世界上，有两样东西永远不够：时间和带宽。Ubuntu 自带一个代理服务器——Squid——它能在你的服务器上缓存网络流量，使网站加载更快，用户消耗更少的带宽。
+
+## 什么是代理服务器？
+
+代理服务器位于客户端机器——你公司里的桌面电脑——与互联网之间。当客户端请求网站时，它们不会直接连接到网络并发送 HTTP 请求。相反，它们连接到本地代理服务器。代理随后将请求转发到网络，获取结果并将其交还给客户端。最简单地说，代理服务器只是在客户端和服务器之间增加了一层，那为什么还要费事呢？
+
+部署代理服务器的三个主要原因如下：
+
+- ► 内容控制——你想阻止人们在工作时间浪费时间看新闻或下载 MP3。
+- ► 速度——你想缓存常用站点以充分利用带宽。
+- ► 安全——你想监控人们在做什么。
+
+Squid 能够实现所有这些功能以及更多。
+
+## 安装 Squid
+
+与大多数 Ubuntu 软件一样，Squid 的安装通过 synaptic 处理。安装 Squid 后，它会自动在每次启动时启用。你可以通过在机器启动时运行 ps aux | grep squid 来检查这一点。如果出于某种原因那里什么都没有，请运行 /etc/init.d/squid start。
+
+## 配置客户端
+
+在配置新的 Squid 服务器之前，先设置本地网页浏览器使用它进行网络访问。这样做可以让你在处理配置文件时测试你的规则。
+
+要配置 Firefox，请从 Edit 菜单中选择 Preferences。从出现的对话框中，单击 Connection Settings 按钮（在 General 选项卡底部附近）并选择 Manual Proxy Configuration 选项。勾选下面的框。使用 Same Proxy for All Protocols；然后输入 127.0.0.1 作为 IP 地址，3128 作为端口号。图 20.1 显示了它应有的样子。如果你在配置远程客户端，请指定 Squid 服务器的 IP 地址而不是 127.0.0.1。
+
+![](img/8f9e74e2b343ff525bebfb720a3d8441_519_0.png)
+
+图 20.1 将 Firefox 设置为使用 127.0.0.1 会使其所有网络请求都通过 Squid 路由。
+
+对于 Konqueror，请转到 Settings 菜单并选择 Configure Konqueror。从左侧选项卡向下滚动到 Proxy，选择 Manually Specify the Proxy Settings，然后单击 Setup。输入 127.0.0.1 作为代理 IP 地址，3128 作为端口。与 Firefox 一样，如果你在配置远程客户端，请指定 Squid 服务器的 IP 地址而不是 127.0.0.1。
+
+Internet Explorer 的代理设置在 Tools/Internet Options 中。从 Connections 选项卡，单击 LAN Settings 按钮并启用 Use a Proxy Server for Your LAN 选项。输入地址为你的 Squid 机器的 IP，然后指定 3128 作为端口。
+
+## 访问控制列表
+
+主要的 Squid 配置文件是 /etc/squid/squid.conf，默认的 Ubuntu 配置文件充满了注释以帮助指导你。默认配置文件允许本地机器完全访问，但拒绝其余网络。这是安全起步的好地方；我们建议你在推广到其他机器之前先在自己（localhost）上尝试所有规则。
+
+开始之前，打开两个终端窗口。在第一个中，切换到目录 /var/log/squid 并运行此命令：
+
+```
+sudo tail -f access.log cache.log
+```
+
+这会读取两个文件中的最后几行，并且（多亏了 -f 标志）会跟随它们，以便任何更改都会显示在其中。这允许你在人们访问时观察 Squid 的行为。我们将此窗口称为“日志窗口”，请保持打开。在另一个窗口中（同样使用 sudo），在你喜欢的编辑器中打开文件 /etc/squid/squid.conf。此窗口称为“配置编辑器”，你也应保持打开。
+
+开始时，搜索字符串 acl all——这会带你到访问控制部分，这里需要做大部分工作。你可以在其他地方配置很多内容，但除非你有特殊要求，否则可以保留默认值。
+
+### NOTE
+
+Squid 的默认端口是 3128，但你可以通过编辑 http_port 行来更改它。或者，你可以通过设置多个 http_port 行让 Squid 监听多个端口：80、8000 和 8080 都是代理服务器常用的端口。
+
+acl 行构成了你的访问控制列表（ACL）。前 16 行左右定义了设置要监听的端口等的最小推荐配置。你可以安全地忽略这些。如果向下滚动更多（经过另一段简短的注释块），你会看到 http_access 行，它们与 acl 行结合起来决定谁可以做什么。你可以（也应该）混合匹配 acl 和 http_access 行以保持配置文件易于阅读。
+
+在第一组 http_access 行下方有一条类似 # INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS 的注释。这正是我们要做的。首先，不过，向下滚动几行；你应该会看到这两行：
+
+```
+http_access allow localhost
+http_access deny all
+```
+
